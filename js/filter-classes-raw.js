@@ -760,18 +760,18 @@ class ModalFilterClasses extends ModalFilter {
 		} else {
 			await this._pInit();
 
-			const $ovlLoading = $(`<div class="w-100 h-100 ve-flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($modalInner);
+			const $ovlLoading = $(`<div class="w-100 h-100 ve-flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($modalInner);
 
 			const $iptSearch = $(`<input class="form-control h-100" type="search" placeholder="Search...">`);
-			const $btnReset = $(`<button class="btn btn-default">Reset</button>`);
+			const $btnReset = $(`<button class="btn btn-default">重置</button>`);
 			const $wrpFormTop = $$`<div class="ve-flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
 
 			const $wrpFormBottom = $(`<div class="w-100"></div>`);
 
 			const $wrpFormHeaders = $(`<div class="input-group input-group--bottom ve-flex no-shrink">
 				<div class="btn btn-default disabled ve-col-1 pl-0"></div>
-				<button class="ve-col-9 sort btn btn-default btn-xs" data-sort="name">Name</button>
-				<button class="ve-col-2 pr-0 sort btn btn-default btn-xs ve-grow" data-sort="source">Source</button>
+				<button class="ve-col-9 sort btn btn-default btn-xs" data-sort="name">名称 </button>
+				<button class="ve-col-2 pr-0 sort btn btn-default btn-xs ve-grow" data-sort="source">资源 </button>
 			</div>`);
 
 			const $wrpForm = $$`<div class="ve-flex-col w-100 mb-2">${$wrpFormTop}${$wrpFormBottom}${$wrpFormHeaders}</div>`;

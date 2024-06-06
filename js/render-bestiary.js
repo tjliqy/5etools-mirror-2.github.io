@@ -61,7 +61,7 @@ class RenderBestiary {
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
 		${mon.save ? `<tr><td colspan="6"><strong>Saving Throws</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : ""}
-		${mon.skill ? `<tr><td colspan="6"><strong>Skills</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
+		${mon.skill ? `<tr><td colspan="6"><strong>技能 </strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
 		${mon.vulnerable ? `<tr><td colspan="6"><strong>Damage Vulnerabilities</strong> ${Parser.getFullImmRes(mon.vulnerable)}</td></tr>` : ""}
 		${mon.resist ? `<tr><td colspan="6"><strong>Damage Resistances</strong> ${Parser.getFullImmRes(mon.resist)}</td></tr>` : ""}
 		${mon.immune ? `<tr><td colspan="6"><strong>Damage Immunities</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : ""}

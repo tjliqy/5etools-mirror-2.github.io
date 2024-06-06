@@ -214,7 +214,7 @@ class PageUi {
 
 		$mnu.append(PageUi.__$getSideMenuDivider(true));
 
-		const $wrpSource = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label mr-2">Source</div></div>`).appendTo($mnu);
+		const $wrpSource = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label mr-2">资源 </div></div>`).appendTo($mnu);
 		this._allSources = BrewUtil2.getSources().sort((a, b) => SortUtil.ascSortLower(a.full, b.full))
 			.map(it => it.json);
 		this._$selSource = $$`

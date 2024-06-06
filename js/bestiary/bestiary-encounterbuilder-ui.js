@@ -81,7 +81,7 @@ export class EncounterBuilderUiBestiary extends EncounterBuilderUi {
 		const $btnLoadFromFile = $(`<button class="btn btn-default btn-xs">Load from File</button>`)
 			.click(evt => this._sublistManager.pHandleClick_upload({isAdditive: evt.shiftKey}));
 		const $btnCopyAsText = $(`<button class="btn btn-default btn-xs mr-2" title="SHIFT for Multi-Line Format">Copy as Text</button>`).click((evt) => this._handleClickCopyAsText(evt));
-		const $btnReset = $(`<button class="btn btn-danger btn-xs" title="SHIFT to Reset Players">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-danger btn-xs" title="SHIFT to Reset Players">重置</button>`)
 			.click((evt) => this._sublistManager.pHandleClick_new(evt));
 
 		const $btnBackToStatblocks = $(`<button class="btn btn-success btn-xs">Back to Stat Blocks</button>`).click((evt) => this._handleClickBackToStatblocks(evt));

@@ -2346,7 +2346,7 @@ class SearchWidget {
 
 	static _showLoadingModal () {
 		const {$modalInner, doClose} = UiUtil.getShowModal({isPermanent: true});
-		$(`<div class="ve-flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">Loading...</span></div>`).appendTo($modalInner);
+		$(`<div class="ve-flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">加载中...</span></div>`).appendTo($modalInner);
 		return doClose;
 	}
 	// endregion

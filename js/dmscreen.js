@@ -157,7 +157,7 @@ class Board {
 	}
 
 	doShowLoading () {
-		$(`<div class="dm-screen-loading"><span class="initial-message initial-message--large">Loading...</span></div>`).css({
+		$(`<div class="dm-screen-loading"><span class="initial-message initial-message--large">加载中...</span></div>`).css({
 			gridColumnStart: "1",
 			gridColumnEnd: String(this.width + 1),
 			gridRowStart: "1",

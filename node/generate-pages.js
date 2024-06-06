@@ -22,7 +22,7 @@ class _HtmlGeneratorListButtons extends _HtmlGenerator {
 	}
 
 	static getBtnSource () {
-		return `<button type="button" class="sort btn btn-default btn-xs ve-grow" data-sort="source">Source</button>`;
+		return `<button type="button" class="sort btn btn-default btn-xs ve-grow" data-sort="source">资源 </button>`;
 	}
 
 	/**

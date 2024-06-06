@@ -979,7 +979,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				${$tblGroupHeaders}
 			</tr>
 			<tr>
-				<th class="cls-tbl__col-level">Level</th>
+				<th class="cls-tbl__col-level">等级 </th>
 				<th class="cls-tbl__col-prof-bonus">Proficiency Bonus</th>
 				<th>Features</th>
 				${$tblHeaders}

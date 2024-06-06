@@ -5589,7 +5589,7 @@ Renderer.spell = class {
 			<tr><td colspan="6">
 				<table class="w-100 summary stripe-even-table">
 					<tr>
-						<th colspan="1">Level</th>
+						<th colspan="1">等级 </th>
 						<th colspan="1">School</th>
 						<th colspan="2">Casting Time</th>
 						<th colspan="2">Range</th>
@@ -6332,7 +6332,7 @@ Renderer.race = class {
 				<table class="w-100 summary stripe-even-table">
 					<tr>
 						<th class="ve-col-4 ve-text-center">Ability Scores</th>
-						<th class="ve-col-4 ve-text-center">Size</th>
+						<th class="ve-col-4 ve-text-center">尺寸 </th>
 						<th class="ve-col-4 ve-text-center">Speed</th>
 					</tr>
 					<tr>
@@ -7747,7 +7747,7 @@ Renderer.monster = class {
 				<div class="rd__compact-stat mt-2">
 					${mon.resource ? mon.resource.map(res => `<p><b>${res.name}</b> ${Renderer.monster.getRenderedResource(res)}</p>`).join("") : ""}
 					${mon.save ? `<p><b>Saving Throws</b> ${Renderer.monster.getSavesPart(mon)}</p>` : ""}
-					${mon.skill ? `<p><b>Skills</b> ${Renderer.monster.getSkillsString(renderer, mon)}</p>` : ""}
+					${mon.skill ? `<p><b>技能 </b> ${Renderer.monster.getSkillsString(renderer, mon)}</p>` : ""}
 					${mon.vulnerable ? `<p><b>Damage Vuln.</b> ${Parser.getFullImmRes(mon.vulnerable)}</p>` : ""}
 					${mon.resist ? `<p><b>Damage Res.</b> ${Parser.getFullImmRes(mon.resist)}</p>` : ""}
 					${mon.immune ? `<p><b>Damage Imm.</b> ${Parser.getFullImmRes(mon.immune)}</p>` : ""}

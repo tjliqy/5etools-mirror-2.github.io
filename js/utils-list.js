@@ -572,7 +572,7 @@ class SaveManager extends BaseComponent {
 
 		let isDescending = false;
 		const $btnSortName = $$`<button class="btn btn-default btn-xs w-100">
-			<span>Name</span>
+			<span>名称 </span>
 			${dispCaret}
 		</button>`
 			.click(evt => {

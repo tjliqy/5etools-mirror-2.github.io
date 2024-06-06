@@ -78,7 +78,7 @@ export class InitiativeTrackerConditionCustomEdit extends BaseComponent {
 		$$($modalInner)`
 			<div class="ve-flex-col mt-2 h-100 min-h-0">
 				<div class="ve-flex-vh-center w-100 mb-2 bb-1p-trans">
-					<div class="ve-col-5">Name</div>
+					<div class="ve-col-5">名称 </div>
 					<div class="ve-col-2">Color</div>
 					<div class="ve-col-4">Turns</div>
 					<div class="ve-col-1 ve-flex-v-center ve-flex-h-right">${$btnAdd}</div>

@@ -49,7 +49,7 @@ class MakeCards extends BaseComponent {
 	_render_configSection () {
 		const $wrpConfig = $(`#wrp_config`).empty();
 
-		const $btnResetDefaults = $(`<button class="btn btn-default btn-xs">Reset</button>`)
+		const $btnResetDefaults = $(`<button class="btn btn-default btn-xs">重置</button>`)
 			.click(() => {
 				Object.entries(MakeCards._AVAILABLE_TYPES)
 					.forEach(([entityType, typeMeta]) => {
@@ -63,7 +63,7 @@ class MakeCards extends BaseComponent {
 
 		$$($wrpConfig)`<h5 class="split-v-center"><div>New Card Defaults</div>${$btnResetDefaults}</h5>
 		<div class="ve-flex-v-center bold">
-			<div class="ve-col-4 ve-text-center pr-2">Type</div>
+			<div class="ve-col-4 ve-text-center pr-2">类型 </div>
 			<div class="ve-col-4 ve-text-center p-2">Color</div>
 			<div class="ve-col-4 ve-text-center pl-2">Icon</div>
 		</div>`;
@@ -184,9 +184,9 @@ class MakeCards extends BaseComponent {
 			});
 		$$`<div class="w-100 no-shrink ve-flex-v-center bold">
 			<div class="ve-col-1 mr-2 ve-flex-vh-center">${$cbSelAll}</div>
-			<div class="ve-col-3 mr-2 ve-flex-vh-center">Name</div>
-			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">Source</div>
-			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">Type</div>
+			<div class="ve-col-3 mr-2 ve-flex-vh-center">名称 </div>
+			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">资源 </div>
+			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">类型 </div>
 			<div class="ve-col-1-1 mr-2 ve-flex-vh-center">Color</div>
 			<div class="ve-col-1-1 mr-2 ve-flex-vh-center">Icon</div>
 			<div class="ve-col-1 mr-2 ve-flex-vh-center">Count</div>

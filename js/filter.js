@@ -154,10 +154,10 @@ class ModalFilter {
 
 		await this._pInit();
 
-		const $ovlLoading = $(`<div class="w-100 h-100 ve-flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($wrp);
+		const $ovlLoading = $(`<div class="w-100 h-100 ve-flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($wrp);
 
 		const $iptSearch = (opts.$iptSearch || $(`<input class="form-control lst__search lst__search--no-border-h h-100" type="search" placeholder="Search...">`)).disableSpellcheck();
-		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">Reset</button>`);
+		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">重置</button>`);
 		const $dispNumVisible = $(`<div class="lst__wrp-search-visible no-events ve-flex-vh-center"></div>`);
 
 		const $wrpIptSearch = $$`<div class="w-100 relative">
@@ -669,7 +669,7 @@ class FilterBox extends ProxyBase {
 		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Hide All</button>`)
 			.click(() => this.hideAllFilters());
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="${FilterBox.TITLE_BTN_RESET}">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="${FilterBox.TITLE_BTN_RESET}">重置</button>`)
 			.click(evt => this.reset(evt.shiftKey));
 
 		const $btnSettings = $(`<button class="btn btn-xs btn-default mr-3"><span class="glyphicon glyphicon-cog"></span></button>`)
@@ -749,7 +749,7 @@ class FilterBox extends ProxyBase {
 
 		const $rowResetAlwaysSave = UiUtil.$getAddModalRow($modalInner, "div").addClass("pr-2");
 		$rowResetAlwaysSave.append(`<span>Always Save on Close</span>`);
-		$(`<button class="btn btn-xs btn-default">Reset</button>`)
+		$(`<button class="btn btn-xs btn-default">重置</button>`)
 			.appendTo($rowResetAlwaysSave)
 			.click(async () => {
 				await StorageUtil.pRemove(FilterBox._STORAGE_KEY_ALWAYS_SAVE_UNCHANGED);
@@ -759,7 +759,7 @@ class FilterBox extends ProxyBase {
 
 	async _pOpenCombineAsModal () {
 		const {$modalInner} = await UiUtil.pGetShowModal({title: "Filter Combination Logic"});
-		const $btnReset = $(`<button class="btn btn-xs btn-default">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default">重置</button>`)
 			.click(() => {
 				Object.keys(this._combineAs).forEach(k => this._combineAs[k] = "and");
 				$sels.forEach($sel => $sel.val("0"));
@@ -4309,7 +4309,7 @@ class RangeFilter extends FilterBase {
 				stateProp: "_meta",
 			},
 		);
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">重置</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="ve-flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
@@ -4953,7 +4953,7 @@ class OptionsFilter extends FilterBase {
 	}
 
 	_$getHeaderControls () {
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">重置</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div class="ve-flex-v-center">${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="ve-flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();

@@ -2862,7 +2862,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 
 		const $sectDays = $$`<div class="no-shrink w-100">
 			<div class="split-v-center w-100 mb-1 mt-1">
-				<div>Name</div>
+				<div>名称 </div>
 				${metaDays.$btnAdd}
 			</div>
 			${metaDays.$wrpRows}
@@ -2872,7 +2872,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 
 		const $sectMonths = $$`<div class="no-shrink w-100">
 			<div class="ve-flex w-100 mb-1 mt-1">
-				<div class="w-100 ve-flex-v-center">Name</div>
+				<div class="w-100 ve-flex-v-center">名称 </div>
 				<div class="w-25 no-shrink ve-text-center mr-2">Days</div>
 				<div class="dm-time__spc-drag-header no-shrink mr-2"/>
 				${metaMonths.$btnAdd.addClass("no-shrink")}
@@ -2884,7 +2884,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 
 		const $sectSeasons = $$`<div class="no-shrink w-100">
 			<div class="ve-flex w-100 mb-1 mt-1">
-				<div class="w-100 ve-flex-v-center">Name</div>
+				<div class="w-100 ve-flex-v-center">名称 </div>
 				<div class="w-15 no-shrink ve-text-center mr-2 help-subtle" title="In hours. For example, to have the sun rise at 05:00, enter &quot;5&quot;.">Sunrise</div>
 				<div class="w-15 no-shrink ve-text-center mr-2 help-subtle" title="In hours. For example, to have the sun set at 22:00, enter &quot;22&quot;.">Sunset</div>
 				<div class="w-15 no-shrink ve-text-center mr-2 help-subtle" title="For example, to have a season start on the 1st day of the year, enter &quot;1&quot;.">Start</div>
@@ -2898,7 +2898,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 
 		const $sectYears = $$`<div class="no-shrink w-100">
 			<div class="ve-flex w-100 mb-1 mt-1">
-				<div class="w-100 ve-flex-v-center">Name</div>
+				<div class="w-100 ve-flex-v-center">名称 </div>
 				<div class="w-25 no-shrink ve-text-center mr-2">Year</div>
 				${metaYears.$btnAdd.addClass("no-shrink")}
 			</div>
@@ -2909,7 +2909,7 @@ class TimeTrackerRoot_Settings extends TimeTrackerComponent {
 
 		const $sectEras = $$`<div class="no-shrink w-100">
 			<div class="ve-flex w-100 mb-1 mt-1">
-				<div class="w-100 ve-flex-v-center">Name</div>
+				<div class="w-100 ve-flex-v-center">名称 </div>
 				<div class="w-15 no-shrink ve-text-center mr-2">Abbv.</div>
 				<div class="w-15 no-shrink ve-text-center mr-2">Start</div>
 				<div class="w-15 no-shrink ve-text-center mr-2">End</div>

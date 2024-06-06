@@ -1909,8 +1909,8 @@ class ManageBrewUi {
 
 		const $wrpBtnsSort = $$`<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom ve-flex no-shrink">
 			<label class="ve-col-0-5 pr-0 btn btn-default btn-xs ve-flex-vh-center">${$cbAll}</label>
-			<button class="ve-col-1 btn btn-default btn-xs" disabled>Type</button>
-			<button class="ve-col-3 btn btn-default btn-xs" data-sort="source">Source</button>
+			<button class="ve-col-1 btn btn-default btn-xs" disabled>类型 </button>
+			<button class="ve-col-3 btn btn-default btn-xs" data-sort="source">资源 </button>
 			<button class="ve-col-3 btn btn-default btn-xs" data-sort="authors">Authors</button>
 			<button class="ve-col-3 btn btn-default btn-xs" disabled>Origin</button>
 			<button class="ve-col-1-5 btn btn-default btn-xs ve-grow" disabled>&nbsp;</button>
@@ -2760,7 +2760,7 @@ class GetBrewUi {
 
 		const $btnAddSelected = $(`<button class="btn ${this._brewUtil.STYLE_BTN} btn-sm ve-col-0-5 ve-text-center" disabled title="Add Selected"><span class="glyphicon glyphicon-save"></button>`);
 
-		const $wrpRows = $$`<div class="list smooth-scroll max-h-unset"><div class="lst__row ve-flex-col"><div class="lst__wrp-cells lst--border lst__row-inner ve-flex w-100"><i>Loading...</i></div></div></div>`;
+		const $wrpRows = $$`<div class="list smooth-scroll max-h-unset"><div class="lst__row ve-flex-col"><div class="lst__wrp-cells lst--border lst__row-inner ve-flex w-100"><i>加载中...</i></div></div></div>`;
 
 		const $btnFilter = $(`<button class="btn btn-default btn-sm">Filter</button>`);
 
@@ -2775,7 +2775,7 @@ class GetBrewUi {
 			type: "checkbox",
 		});
 
-		const $btnReset = $(`<button class="btn btn-default btn-sm">Reset</button>`);
+		const $btnReset = $(`<button class="btn btn-default btn-sm">重置</button>`);
 
 		const $wrpMiniPills = $(`<div class="fltr__mini-view btn-group"></div>`);
 
@@ -2785,12 +2785,12 @@ class GetBrewUi {
 
 		const $wrpSort = $$`<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom ve-flex no-shrink">
 			<label class="ve-col-0-5 pr-0 btn btn-default btn-xs ve-flex-vh-center">${rdState.cbAll}</label>
-			<button class="ve-col-3-5 sort btn btn-default btn-xs" data-sort="name">Name</button>
+			<button class="ve-col-3-5 sort btn btn-default btn-xs" data-sort="name">名称 </button>
 			<button class="ve-col-3 sort btn btn-default btn-xs" data-sort="author">Author</button>
-			<button class="ve-col-1-2 sort btn btn-default btn-xs" data-sort="category">Category</button>
+			<button class="ve-col-1-2 sort btn btn-default btn-xs" data-sort="category">分类 </button>
 			<button class="ve-col-1-4 sort btn btn-default btn-xs" data-sort="modified">Modified</button>
 			${btnSortAddedPublished}
-			<button class="sort btn btn-default btn-xs ve-grow" disabled>Source</button>
+			<button class="sort btn btn-default btn-xs ve-grow" disabled>资源 </button>
 		</div>`;
 
 		$$($wrp)`
@@ -3245,7 +3245,7 @@ class ManageEditableBrewContentsUi extends BaseComponent {
 
 		const $btnToggleSummaryHidden = $(`<button class="btn btn-default" title="Toggle Filter Summary Display"><span class="glyphicon glyphicon-resize-small"></span></button>`);
 
-		const $btnReset = $(`<button class="btn btn-default">Reset</button>`);
+		const $btnReset = $(`<button class="btn btn-default">重置</button>`);
 
 		const $wrpMiniPills = $(`<div class="fltr__mini-view btn-group"></div>`);
 
@@ -3255,9 +3255,9 @@ class ManageEditableBrewContentsUi extends BaseComponent {
 		const $dispCntVisible = $(`<div class="lst__wrp-search-visible no-events ve-flex-vh-center"></div>`);
 		const $wrpBtnsSort = $$`<div class="filtertools manbrew__filtertools input-group input-group--bottom ve-flex no-shrink">
 			<label class="btn btn-default btn-xs ve-col-1 pr-0 ve-flex-vh-center">${$cbAll}</label>
-			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">Name</button>
-			<button class="ve-col-1 sort btn btn-default btn-xs" data-sort="source">Source</button>
-			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="category">Category</button>
+			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">名称 </button>
+			<button class="ve-col-1 sort btn btn-default btn-xs" data-sort="source">资源 </button>
+			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="category">分类 </button>
 		</div>`;
 
 		$$(tabMeta.$wrpTab)`
@@ -3435,7 +3435,7 @@ class ManageEditableBrewContentsUi extends BaseComponent {
 		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100 mt-1" placeholder="Search source...">`);
 		const $wrpBtnsSort = $$`<div class="filtertools manbrew__filtertools input-group input-group--bottom ve-flex no-shrink">
 			<label class="btn btn-default btn-xs ve-col-1 pr-0 ve-flex-vh-center">${$cbAll}</label>
-			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">Name</button>
+			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">名称 </button>
 			<button class="ve-col-2 sort btn btn-default btn-xs" data-sort="abbreviation">Abbreviation</button>
 			<button class="ve-col-4 sort btn btn-default btn-xs" data-sort="json">JSON</button>
 		</div>`;

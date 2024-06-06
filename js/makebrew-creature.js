@@ -2784,7 +2784,7 @@ class CreatureBuilder extends Builder {
 										} else doClose(true);
 									});
 
-								const $btnReset = $(`<button class="btn btn-sm btn-danger">Reset</button>`)
+								const $btnReset = $(`<button class="btn btn-sm btn-danger">重置</button>`)
 									.click(() => {
 										if (!confirm("Are you sure?")) return;
 										setState({
@@ -3137,7 +3137,7 @@ class CreatureBuilder extends Builder {
 			(this._$eles.$selVariantSources = this._$eles.$selVariantSources || []).push($selVariantSource);
 
 			const $ele = $$`<div class="ve-flex-col">
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">Source</span>${$selVariantSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">资源 </span>${$selVariantSource}</div>
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">Page</span>${$iptPage}</div>
 			</div>`;
 
@@ -3164,7 +3164,7 @@ class CreatureBuilder extends Builder {
 	__$getLegendaryGroupInput (cb) {
 		const [$row, $rowInner] = BuilderUi.getLabelledRowTuple("Legendary Group");
 
-		this._$selLegendaryGroup = $(`<select class="form-control form-control--minimal input-xs"><option value="-1">None</option></select>`)
+		this._$selLegendaryGroup = $(`<select class="form-control form-control--minimal input-xs"><option value="-1">无</option></select>`)
 			.change(() => {
 				const ix = Number(this._$selLegendaryGroup.val());
 				if (~ix) this._state.legendaryGroup = this._legendaryGroupCache[ix];
@@ -3310,8 +3310,8 @@ class CreatureBuilder extends Builder {
 			.on("change", () => doUpdateState());
 
 		const $stgExistingCreature = $$`<div class="ve-flex-col mb-2">
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--25">Name</span>${$iptExistingName}</div>
-			<div class="ve-flex-v-center"><span class="mr-2 mkbru__sub-name--25">Source</span>${$iptExistingSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--25">名称 </span>${$iptExistingName}</div>
+			<div class="ve-flex-v-center"><span class="mr-2 mkbru__sub-name--25">资源 </span>${$iptExistingSource}</div>
 		</div>`
 			.toggleVe(initialMode === "0");
 		// endregion

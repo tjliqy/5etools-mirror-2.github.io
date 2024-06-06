@@ -675,7 +675,7 @@ class Omnisearch {
 		`);
 	}
 }
-Omnisearch._PLACEHOLDER_TEXT = "Search everywhere...";
+Omnisearch._PLACEHOLDER_TEXT = "全局搜索...";
 Omnisearch._searchIndex = null;
 Omnisearch._adventureBookLookup = null; // A map of `<sourceLower>: (adventureCatId|bookCatId)`
 Omnisearch._pLoadSearch = null;
@@ -686,6 +686,6 @@ Omnisearch._MAX_RESULTS = 15;
 Omnisearch._showUaEtc = false;
 Omnisearch._hideBlocklisted = false;
 
-Omnisearch._STORAGE_NAME = "search";
+Omnisearch._STORAGE_NAME = "搜索";
 
 window.addEventListener("load", () => Omnisearch.init());

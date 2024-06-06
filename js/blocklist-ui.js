@@ -220,9 +220,9 @@ class BlocklistUi {
 			});
 
 		const $wrpFilterTools = $$`<div class="input-group input-group--bottom ve-flex no-shrink">
-			<button class="ve-col-4 sort btn btn-default btn-xs ve-grow" data-sort="source">Source</button>
-			<button class="ve-col-2 sort btn btn-default btn-xs" data-sort="category">Category</button>
-			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">Name</button>
+			<button class="ve-col-4 sort btn btn-default btn-xs ve-grow" data-sort="source">资源 </button>
+			<button class="ve-col-2 sort btn btn-default btn-xs" data-sort="category">分类 </button>
+			<button class="ve-col-5 sort btn btn-default btn-xs" data-sort="name">名称 </button>
 			<button class="ve-col-1 sort btn btn-default btn-xs" disabled>&nbsp;</button>
 		</div>`;
 
@@ -380,17 +380,17 @@ class BlocklistUi {
 
 		<div class="ve-flex-v-end ${this._isCompactUi ? "mb-2" : "mb-5"}">
 			<div class="ve-flex-col w-25 pr-2">
-				<label class="mb-1">Source</label>
+				<label class="mb-1">资源 </label>
 				${$selSource}
 			</div>
 
 			<div class="ve-flex-col w-25 px-2">
-				<label class="mb-1">Category</label>
+				<label class="mb-1">分类 </label>
 				${$selCategory}
 			</div>
 
 			<div class="ve-flex-col w-25 px-2">
-				<label class="mb-1">Name</label>
+				<label class="mb-1">名称 </label>
 				${this._$wrpSelName}
 			</div>
 

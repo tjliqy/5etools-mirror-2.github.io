@@ -411,7 +411,7 @@ class StatGenUi extends BaseComponent {
 		this._addHookAll("state", hkPoints);
 		hkPoints();
 
-		const $btnReset = $(`<button class="btn btn-default">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-default">重置</button>`)
 			.click(() => this._doReset());
 
 		const $btnRandom = $(`<button class="btn btn-default">Random</button>`)
@@ -494,7 +494,7 @@ class StatGenUi extends BaseComponent {
 				this._state.pb_rules = [...this._state.pb_rules, this._getDefaultState_pb_rule(score, cost)];
 			});
 
-		const $btnResetRules = $(`<button class="btn btn-danger btn-xs mr-2">Reset</button>`)
+		const $btnResetRules = $(`<button class="btn btn-danger btn-xs mr-2">重置</button>`)
 			.click(() => {
 				this._state.pb_rules = this._getDefaultStatePointBuyCosts().pb_rules;
 			});
@@ -1302,7 +1302,7 @@ class StatGenUi extends BaseComponent {
 				},
 			);
 
-			const $dispTashas = $(`<div class="ve-flex-col"><div class="italic ve-muted">Loading...</div></div>`);
+			const $dispTashas = $(`<div class="ve-flex-col"><div class="italic ve-muted">加载中...</div></div>`);
 			DataLoader.pCacheAndGet(UrlUtil.PG_VARIANTRULES, Parser.SRC_TCE, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_VARIANTRULES]({name: "Customizing Your Origin", source: Parser.SRC_TCE}))
 				.then(rule => {
 					$$($dispTashas.empty())`${Renderer.hover.$getHoverContent_stats(UrlUtil.PG_VARIANTRULES, rule)}<hr class="hr-3">`;

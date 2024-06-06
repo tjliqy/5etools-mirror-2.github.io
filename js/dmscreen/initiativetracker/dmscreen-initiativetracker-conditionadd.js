@@ -195,7 +195,7 @@ export class InitiativeTrackerConditionAdd extends BaseComponent {
 
 		return $$`
 			<div class="ve-flex-v-center mb-2">
-				<div class="small-caps ve-col-5 pr-1">Name</div>
+				<div class="small-caps ve-col-5 pr-1">名称 </div>
 				<div class="small-caps ve-col-2 px-1">Color</div>
 				<div class="small-caps ve-col-4 px-1">Duration</div>
 				<div class="ve-col-1 pl-1">&nbsp;</div>
