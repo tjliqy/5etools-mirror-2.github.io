@@ -38,7 +38,7 @@ function run (args) {
 
 		TagJsons.mutTagObject(json, {creaturesToTag: creatureList});
 
-		const outPath = args.inplace ? file : file.replace("./data/", "./trash/");
+		const outPath = args.inplace ? file : file.replace("./${DataUtil.data_dir()}/", "./trash/");
 		if (!args.inplace) {
 			const dirPart = outPath.split("/").slice(0, -1).join("/");
 			fs.mkdirSync(dirPart, {recursive: true});
@@ -71,12 +71,12 @@ function teardown () {
 }
 
 function loadSpells () {
-	const spellIndex = ut.readJson(`./data/spells/index.json`);
+	const spellIndex = ut.readJson(`./${DataUtil.data_dir()}/spells/index.json`);
 
 	return Object.entries(spellIndex).map(([source, filename]) => {
 		if (SourceUtil.isNonstandardSource(source)) return [];
 
-		return ut.readJson(`./data/spells/${filename}`).spell;
+		return ut.readJson(`./${DataUtil.data_dir()}/spells/${filename}`).spell;
 	}).flat();
 }
 

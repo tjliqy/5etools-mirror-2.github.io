@@ -120,7 +120,7 @@ class StatGenPage {
 
 	async _pLoadBackgrounds () {
 		return [
-			...(await DataUtil.loadJSON("data/backgrounds.json")).background,
+			...(await DataUtil.loadJSON("./${DataUtil.data_dir()}/backgrounds.json")).background,
 			...((await PrereleaseUtil.pGetBrewProcessed()).background || []),
 			...((await BrewUtil2.pGetBrewProcessed()).background || []),
 		]
@@ -132,7 +132,7 @@ class StatGenPage {
 
 	async _pLoadFeats () {
 		return [
-			...(await DataUtil.loadJSON("data/feats.json")).feat,
+			...(await DataUtil.loadJSON("./${DataUtil.data_dir()}/feats.json")).feat,
 			...((await PrereleaseUtil.pGetBrewProcessed()).feat || []),
 			...((await BrewUtil2.pGetBrewProcessed()).feat || []),
 		]

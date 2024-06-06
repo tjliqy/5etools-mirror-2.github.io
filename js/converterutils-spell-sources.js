@@ -152,7 +152,7 @@ class _SpellSourceClasses extends _SpellSource {
 	}
 
 	async pInit () {
-		this._mutAddSpellSourceLookup({spellSourceLookup: await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/sources.json`)});
+		this._mutAddSpellSourceLookup({spellSourceLookup: await DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/spells/sources.json`)});
 		this._mutAddSpellSourceLookup({spellSourceLookup: this._spellSourceLookupAdditional});
 	}
 
@@ -337,7 +337,7 @@ class _AdditionalSpellSourceFile extends _AdditionalSpellSource {
 	}
 
 	async _pLoadData () {
-		return DataUtil.loadJSON(`./data/${this._file}`);
+		return DataUtil.loadJSON(`./${DataUtil.data_dir()}/${this._file}`);
 	}
 
 	_getPropPath (ent) { return [ent.__prop, ...this._getPropPath_nameSource(ent)]; }

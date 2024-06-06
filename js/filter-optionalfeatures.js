@@ -199,7 +199,7 @@ class ModalFilterOptionalFeatures extends ModalFilter {
 
 	async _pLoadAllData () {
 		return [
-			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/optionalfeatures.json`)).optionalfeature,
+			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/optionalfeatures.json`)).optionalfeature,
 			...((await PrereleaseUtil.pGetBrewProcessed()).optionalfeature || []),
 			...((await BrewUtil2.pGetBrewProcessed()).optionalfeature || []),
 		];

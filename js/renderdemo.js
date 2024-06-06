@@ -1,6 +1,6 @@
 "use strict";
 
-const JSON_URL = "data/renderdemo.json";
+const JSON_URL = "./${DataUtil.data_dir()}/renderdemo.json";
 const STORAGE_LOCATION = "demoInput";
 
 window.addEventListener("load", async () => {

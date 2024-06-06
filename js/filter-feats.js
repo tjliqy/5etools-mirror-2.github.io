@@ -176,7 +176,7 @@ class ModalFilterFeats extends ModalFilter {
 
 	async _pLoadAllData () {
 		return [
-			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/feats.json`)).feat,
+			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/feats.json`)).feat,
 			...((await PrereleaseUtil.pGetBrewProcessed()).feat || []),
 			...((await BrewUtil2.pGetBrewProcessed()).feat || []),
 		];

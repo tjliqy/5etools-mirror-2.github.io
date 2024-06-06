@@ -12,13 +12,13 @@ console.log("Updating maps...");
 [
 	{
 		prop: "adventure",
-		index: `./data/adventures.json`,
-		dir: `./data/adventure`,
+		index: `./${DataUtil.data_dir()}/adventures.json`,
+		dir: `./${DataUtil.data_dir()}/adventure`,
 	},
 	{
 		prop: "book",
-		index: `./data/books.json`,
-		dir: `./data/book`,
+		index: `./${DataUtil.data_dir()}/books.json`,
+		dir: `./${DataUtil.data_dir()}/book`,
 	},
 ].forEach(({prop, index, dir}) => {
 	ut.readJson(index)[prop].forEach(head => {
@@ -29,5 +29,5 @@ console.log("Updating maps...");
 	});
 });
 
-fs.writeFileSync("data/generated/gendata-maps.json", JSON.stringify(out), "utf8");
+fs.writeFileSync("./${DataUtil.data_dir()}/generated/gendata-maps.json", JSON.stringify(out), "utf8");
 console.log("Updated maps.");

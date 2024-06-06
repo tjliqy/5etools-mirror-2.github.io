@@ -99,7 +99,7 @@
 		]);
 		ExcludeUtil.pInitialise().then(null); // don't await, as this is only used for search
 
-		DataUtil.loadJSON(`${Renderer.get().baseUrl}data/changelog.json`)
+		DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/changelog.json`)
 			.then(changelog => {
 				const $wrp = $(`#pagecontent`).empty();
 				UtilsChangelog.renderChangelog(changelog, $wrp);

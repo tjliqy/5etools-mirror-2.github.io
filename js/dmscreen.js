@@ -251,7 +251,7 @@ class Board {
 
 		// region rules
 		await (async () => {
-			const data = await DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json");
+			const data = await DataUtil.loadJSON(`${DataUtil.data_dir()}/generated/bookref-dmscreen-index.json`);
 			this.availRules.ALL = elasticlunr(function () {
 				this.addField("b");
 				this.addField("s");
@@ -277,7 +277,7 @@ class Board {
 		// adventures
 		await this._pDoBuildAdventureOrBookIndex({
 			adventureOrBookIdToSource,
-			dataPath: `data/adventures.json`,
+			dataPath: `${DataUtil.data_dir()}/adventures.json`,
 			dataProp: "adventure",
 			page: UrlUtil.PG_ADVENTURE,
 			indexStorage: this.availAdventures,
@@ -287,7 +287,7 @@ class Board {
 		// books
 		await this._pDoBuildAdventureOrBookIndex({
 			adventureOrBookIdToSource,
-			dataPath: `data/books.json`,
+			dataPath: `${DataUtil.data_dir()}/books.json`,
 			dataProp: "book",
 			page: UrlUtil.PG_BOOK,
 			indexStorage: this.availBooks,
@@ -3635,7 +3635,7 @@ class RuleLoader {
 		const $$$ = RuleLoader.cache;
 		if ($$$[book]) return $$$[book];
 
-		const data = await DataUtil.loadJSON(`data/generated/${book}.json`);
+		const data = await DataUtil.loadJSON(`${DataUtil.data_dir()}/generated/${book}.json`);
 		Object.keys(data.data).forEach(b => {
 			const ref = data.data[b];
 			if (!$$$[b]) $$$[b] = {};
@@ -3672,16 +3672,16 @@ class AdventureOrBookLoader {
 
 	_getIndexPath () {
 		switch (this._type) {
-			case "adventure": return `${Renderer.get().baseUrl}data/adventures.json`;
-			case "book": return `${Renderer.get().baseUrl}data/books.json`;
+			case "adventure": return `${Renderer.get().baseUrl}${DataUtil.data_dir()}/adventures.json`;
+			case "book": return `${Renderer.get().baseUrl}${DataUtil.data_dir()}/books.json`;
 			default: throw new Error(`Unknown loader type "${this._type}"`);
 		}
 	}
 
 	_getJsonPath (bookOrAdventure) {
 		switch (this._type) {
-			case "adventure": return `${Renderer.get().baseUrl}data/adventure/adventure-${bookOrAdventure.toLowerCase()}.json`;
-			case "book": return `${Renderer.get().baseUrl}data/book/book-${bookOrAdventure.toLowerCase()}.json`;
+			case "adventure": return `${Renderer.get().baseUrl}${DataUtil.data_dir()}/adventure/adventure-${bookOrAdventure.toLowerCase()}.json`;
+			case "book": return `${Renderer.get().baseUrl}${DataUtil.data_dir()}/book/book-${bookOrAdventure.toLowerCase()}.json`;
 			default: throw new Error(`Unknown loader type "${this._type}"`);
 		}
 	}

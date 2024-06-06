@@ -243,7 +243,7 @@ class NavBar {
 			BrewUtil2.pInit(),
 		]);
 		const [adventureBookIndex] = await Promise.all([
-			DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-nav-adventure-book-index.json`),
+			DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/generated/gendata-nav-adventure-book-index.json`),
 			ExcludeUtil.pInitialise(),
 		]);
 		const [prerelease, brew] = await Promise.all([

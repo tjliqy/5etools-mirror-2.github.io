@@ -8740,7 +8740,7 @@ Renderer.item = class {
 	}
 
 	static async _pGetSiteUnresolvedRefItems_pLoadItems () {
-		const itemData = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/items.json`);
+		const itemData = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/items.json`);
 		const items = itemData.item;
 		itemData.itemGroup.forEach(it => it._isItemGroup = true);
 		return [...items, ...itemData.itemGroup];
@@ -8748,7 +8748,7 @@ Renderer.item = class {
 
 	static async pGetSiteUnresolvedRefItems () {
 		const itemList = await Renderer.item._pGetSiteUnresolvedRefItems_pLoadItems();
-		const baseItemsJson = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/items-base.json`);
+		const baseItemsJson = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/items-base.json`);
 		const baseItems = await Renderer.item._pGetAndProcBaseItems(baseItemsJson);
 		const {genericVariants, linkedLootTables} = await Renderer.item._pGetCacheSiteGenericVariants();
 		const specificVariants = Renderer.item._createSpecificVariants(baseItems, genericVariants, {linkedLootTables});
@@ -8764,7 +8764,7 @@ Renderer.item = class {
 	static _pGettingSiteGenericVariants = null;
 	static async _pGetCacheSiteGenericVariants () {
 		Renderer.item._pGettingSiteGenericVariants = Renderer.item._pGettingSiteGenericVariants || (async () => {
-			const [genericVariants, linkedLootTables] = Renderer.item._getAndProcGenericVariants(await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/magicvariants.json`));
+			const [genericVariants, linkedLootTables] = Renderer.item._getAndProcGenericVariants(await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/magicvariants.json`));
 			return {genericVariants, linkedLootTables};
 		})();
 		return Renderer.item._pGettingSiteGenericVariants;
@@ -9075,7 +9075,7 @@ Renderer.item = class {
 		if (opts.baseItems) {
 			baseItems = opts.baseItems;
 		} else {
-			const baseItemData = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/items-base.json`);
+			const baseItemData = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/items-base.json`);
 			Renderer.item._addBasePropertiesAndTypes(baseItemData);
 			baseItems = [...baseItemData.baseitem, ...(opts.additionalBaseItems || [])];
 		}
@@ -9407,7 +9407,7 @@ Renderer.item = class {
 	static _pPopulatePropertyAndTypeReference = null;
 	static pPopulatePropertyAndTypeReference () {
 		Renderer.item._pPopulatePropertyAndTypeReference ||= (async () => {
-			const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/items-base.json`);
+			const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/items-base.json`);
 
 			Object.entries(Parser.ITEM_TYPE_JSON_TO_ABV).forEach(([abv, name]) => Renderer.item._addType({abbreviation: abv, name}));
 			data.itemProperty.forEach(p => Renderer.item._addProperty(p));

@@ -8,10 +8,10 @@ import {setUp, loadSpells, run, teardown} from "./util-tag-jsons.js";
 
 /**
  * Args:
- * file="./data/my-file.json"
- * filePrefix="./data/dir/"
+ * file="./${DataUtil.data_dir()}/my-file.json"
+ * filePrefix="./${DataUtil.data_dir()}/dir/"
  * inplace
- * bestiaryFile="./data/my-file.json"
+ * bestiaryFile="./${DataUtil.data_dir()}/my-file.json"
  */
 async function main () {
 	ut.ArgParser.parse();

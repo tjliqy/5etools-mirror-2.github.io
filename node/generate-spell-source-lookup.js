@@ -17,10 +17,10 @@ import {SpellSourceLookupBuilder} from "../js/converterutils-spell-sources.js";
 async function pMain () {
 	ut.patchLoadJson();
 
-	const index = ut.readJson("./data/spells/index.json");
+	const index = ut.readJson("./${DataUtil.data_dir()}/spells/index.json");
 	const jsonMetas = Object.values(index)
 		.map(filename => {
-			const path = `./data/spells/${filename}`;
+			const path = `./${DataUtil.data_dir()}/spells/${filename}`;
 			return {
 				path,
 				json: ut.readJson(path),
@@ -31,7 +31,7 @@ async function pMain () {
 
 	const lookup = await SpellSourceLookupBuilder.pGetLookup({spells: spellDatas});
 
-	fs.writeFileSync(`./data/generated/gendata-spell-source-lookup.json`, CleanUtil.getCleanJson(lookup, {isMinify: true}));
+	fs.writeFileSync(`./${DataUtil.data_dir()}/generated/gendata-spell-source-lookup.json`, CleanUtil.getCleanJson(lookup, {isMinify: true}));
 
 	ut.unpatchLoadJson();
 

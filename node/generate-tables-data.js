@@ -12,24 +12,24 @@ class GenTables {
 	static ADVENTURE_BLOCKLIST = {};
 
 	_getAdventureData () {
-		return ut.readJson(`./data/adventures.json`).adventure
+		return ut.readJson(`./${DataUtil.data_dir()}/adventures.json`).adventure
 			.map(idx => {
 				if (GenTables.ADVENTURE_BLOCKLIST[idx.id]) return null;
 				return {
 					adventure: idx,
-					adventureData: JSON.parse(fs.readFileSync(`./data/adventure/adventure-${idx.id.toLowerCase()}.json`, "utf-8")),
+					adventureData: JSON.parse(fs.readFileSync(`./${DataUtil.data_dir()}/adventure/adventure-${idx.id.toLowerCase()}.json`, "utf-8")),
 				};
 			})
 			.filter(Boolean);
 	}
 
 	_getBookData () {
-		return ut.readJson(`./data/books.json`).book
+		return ut.readJson(`./${DataUtil.data_dir()}/books.json`).book
 			.map(idx => {
 				if (GenTables.BOOK_BLOCKLIST[idx.id]) return null;
 				return {
 					book: idx,
-					bookData: JSON.parse(fs.readFileSync(`./data/book/book-${idx.id.toLowerCase()}.json`, "utf-8")),
+					bookData: JSON.parse(fs.readFileSync(`./${DataUtil.data_dir()}/book/book-${idx.id.toLowerCase()}.json`, "utf-8")),
 				};
 			})
 			.filter(Boolean);
@@ -46,7 +46,7 @@ class GenTables {
 		await this._pAddNamesData(output);
 
 		const toSave = JSON.stringify({table: output.tables, tableGroup: output.tableGroups});
-		fs.writeFileSync(`./data/generated/gendata-tables.json`, toSave, "utf-8");
+		fs.writeFileSync(`./${DataUtil.data_dir()}/generated/gendata-tables.json`, toSave, "utf-8");
 		console.log("Regenerated table data.");
 	}
 
@@ -108,7 +108,7 @@ class GenTables {
 	async _pAddVariantRuleData (output) {
 		return this._pAddGenericEntityData({
 			output,
-			path: `./data/variantrules.json`,
+			path: `./${DataUtil.data_dir()}/variantrules.json`,
 			props: ["variantrule"],
 		});
 	}
@@ -116,7 +116,7 @@ class GenTables {
 	async _pAddBackgroundData (output) {
 		return this._pAddGenericEntityData({
 			output,
-			path: `./data/backgrounds.json`,
+			path: `./${DataUtil.data_dir()}/backgrounds.json`,
 			props: ["background"],
 		});
 	}
@@ -146,7 +146,7 @@ class GenTables {
 	async _pAddEncountersData (output) {
 		return this._pAddEncounterOrNamesData({
 			output,
-			path: `./data/encounters.json`,
+			path: `./${DataUtil.data_dir()}/encounters.json`,
 			prop: "encounter",
 			fnGetNameCaption: Renderer.table.getConvertedEncounterTableName.bind(Renderer.table),
 			colLabel1: "Encounter",
@@ -156,7 +156,7 @@ class GenTables {
 	async _pAddNamesData (output) {
 		return this._pAddEncounterOrNamesData({
 			output,
-			path: `./data/names.json`,
+			path: `./${DataUtil.data_dir()}/names.json`,
 			prop: "name",
 			fnGetNameCaption: Renderer.table.getConvertedNameTableName.bind(Renderer.table),
 			colLabel1: "Name",

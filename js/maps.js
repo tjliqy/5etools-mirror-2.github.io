@@ -80,7 +80,7 @@ class MapsPage extends BaseComponent {
 	}
 
 	async _pGetMapData () {
-		const mapDataBase = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-maps.json`);
+		const mapDataBase = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/generated/gendata-maps.json`);
 
 		const mapData = {};
 

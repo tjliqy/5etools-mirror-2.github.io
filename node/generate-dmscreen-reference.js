@@ -16,7 +16,7 @@ const index = utB.UtilBookReference.getIndex(
 	},
 );
 
-fs.writeFileSync("data/generated/bookref-dmscreen.json", CleanUtil.getCleanJson(index, {isMinify: true}), "utf8");
+fs.writeFileSync("./${DataUtil.data_dir()}/generated/bookref-dmscreen.json", CleanUtil.getCleanJson(index, {isMinify: true}), "utf8");
 
 function flattenReferenceIndex (ref, skipHeaders) {
 	const outMeta = {
@@ -75,5 +75,5 @@ function flattenReferenceIndex (ref, skipHeaders) {
 	};
 }
 
-fs.writeFileSync("data/generated/bookref-dmscreen-index.json", JSON.stringify(flattenReferenceIndex(index.reference)), "utf8");
+fs.writeFileSync("./${DataUtil.data_dir()}/generated/bookref-dmscreen-index.json", JSON.stringify(flattenReferenceIndex(index.reference)), "utf8");
 console.log("Updated DM Screen references.");

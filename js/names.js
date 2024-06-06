@@ -3,7 +3,7 @@
 class NamesPage extends TableListPage {
 	constructor () {
 		super({
-			dataSource: "data/names.json",
+			dataSource: "./${DataUtil.data_dir()}/names.json",
 
 			dataProps: ["name"],
 		});

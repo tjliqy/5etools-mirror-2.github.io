@@ -183,8 +183,8 @@ class CreatureBuilder extends Builder {
 
 	async _pInit () {
 		const [bestiaryFluffIndex, jsonCreature, items] = await Promise.all([
-			DataUtil.loadJSON("data/bestiary/fluff-index.json"),
-			DataUtil.loadJSON("data/makebrew-creature.json"),
+			DataUtil.loadJSON("./${DataUtil.data_dir()}/bestiary/fluff-index.json"),
+			DataUtil.loadJSON("./${DataUtil.data_dir()}/makebrew-creature.json"),
 			Renderer.item.pBuildList(),
 			DataUtil.monster.pPreloadMeta(),
 		]);

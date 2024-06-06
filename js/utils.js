@@ -464,7 +464,7 @@ globalThis.SourceUtil = class {
 
 	static _subclassReprintLookup = {};
 	static async pInitSubclassReprintLookup () {
-		SourceUtil._subclassReprintLookup = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-subclass-lookup.json`);
+		SourceUtil._subclassReprintLookup = await DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/generated/gendata-subclass-lookup.json`);
 	}
 
 	static isSubclassReprinted (className, classSource, subclassShortName, subclassSource) {
@@ -3493,7 +3493,7 @@ class _DataUtilPropConfig {
 class _DataUtilPropConfigSingleSource extends _DataUtilPropConfig {
 	static _FILENAME = null;
 
-	static getDataUrl () { return `${Renderer.get().baseUrl}data/${this._FILENAME}`; }
+	static getDataUrl () { return `${Renderer.get().baseUrl}${DataUtil.data_dir()}/${this._FILENAME}`; }
 
 	static async loadJSON () { return this.loadRawJSON(); }
 	static async loadRawJSON () { return DataUtil.loadJSON(this.getDataUrl()); }
@@ -3510,7 +3510,7 @@ class _DataUtilPropConfigMultiSource extends _DataUtilPropConfig {
 	static _P_INDEX = null;
 
 	static pLoadIndex () {
-		this._P_INDEX = this._P_INDEX || DataUtil.loadJSON(`${Renderer.get().baseUrl}data/${this._DIR}/${this._isFluff ? `fluff-` : ""}index.json`);
+		this._P_INDEX = this._P_INDEX || DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/${this._DIR}/${this._isFluff ? `fluff-` : ""}index.json`);
 		return this._P_INDEX;
 	}
 
@@ -3545,7 +3545,7 @@ class _DataUtilPropConfigMultiSource extends _DataUtilPropConfig {
 
 		const fnLoad = isUnmerged ? DataUtil.loadRawJSON.bind(DataUtil) : DataUtil.loadJSON.bind(DataUtil);
 
-		let data = await fnLoad(`${Renderer.get().baseUrl}data/${this._DIR}/${file}`);
+		let data = await fnLoad(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/${this._DIR}/${file}`);
 		data = (data[this._PROP] || []).filter(MultiSourceUtil.isEntityIndexKeyMatch.bind(this, indexKey, this._PROP));
 
 		if (!this._IS_MUT_ENTITIES) return data;
@@ -3614,6 +3614,13 @@ globalThis.DataUtil = {
 	_loaded: {},
 	_merging: {},
 	_merged: {},
+	
+	data_dir () {
+		if (SessionStorageUtil.get("data_dir") == null){
+			SessionStorageUtil.set("data_dir", "data")
+		}
+		return SessionStorageUtil.get("data_dir");
+	},
 
 	async _pLoad ({url, id, isBustCache = false}) {
 		if (DataUtil._loading[id] && !isBustCache) {
@@ -3940,7 +3947,7 @@ globalThis.DataUtil = {
 			case "subclassFluff":
 			case "classFeature":
 			case "subclassFeature": {
-				const baseUrlPart = `${Renderer.get().baseUrl}data/${DataUtil._MULTI_SOURCE_PROP_TO_DIR[prop]}`;
+				const baseUrlPart = `${Renderer.get().baseUrl}${DataUtil.data_dir()}/${DataUtil._MULTI_SOURCE_PROP_TO_DIR[prop]}`;
 				const index = await DataUtil.loadJSON(`${baseUrlPart}/${DataUtil._MULTI_SOURCE_PROP_TO_INDEX_NAME[prop]}`);
 				if (index[source]) return DataUtil.loadJSON(`${baseUrlPart}/${index[source]}`);
 
@@ -4106,7 +4113,7 @@ globalThis.DataUtil = {
 			// Preload templates, if required
 			// TODO(Template) allow templates for other entity types
 			const templateData = entry._copy?._templates
-				? (await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/bestiary/template.json`))
+				? (await DataUtil.loadJSON(`${Renderer.get().baseUrl}${_data_url}/bestiary/template.json`))
 				: null;
 			return DataUtil.generic.copyApplier.getCopy(impl, MiscUtil.copyFast(it), entry, templateData, options);
 		},
@@ -5213,7 +5220,7 @@ globalThis.DataUtil = {
 		// endregion
 
 		static async _pInitPreData_ () {
-			this._SPELL_SOURCE_LOOKUP = await DataUtil.loadRawJSON(`${Renderer.get().baseUrl}data/generated/gendata-spell-source-lookup.json`);
+			this._SPELL_SOURCE_LOOKUP = await DataUtil.loadRawJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/generated/gendata-spell-source-lookup.json`);
 		}
 
 		static _mutEntity (sp, {sourcesLookup = null} = {}) {
@@ -5428,9 +5435,9 @@ globalThis.DataUtil = {
 			if (DataUtil.item._loadedRawJson) return DataUtil.item._loadedRawJson;
 
 			DataUtil.item._pLoadingRawJson = (async () => {
-				const urlItems = `${Renderer.get().baseUrl}data/items.json`;
-				const urlItemsBase = `${Renderer.get().baseUrl}data/items-base.json`;
-				const urlVariants = `${Renderer.get().baseUrl}data/magicvariants.json`;
+				const urlItems = `${Renderer.get().baseUrl}${DataUtil.data_dir()}/items.json`;
+				const urlItemsBase = `${Renderer.get().baseUrl}${DataUtil.data_dir()}/items-base.json`;
+				const urlVariants = `${Renderer.get().baseUrl}${DataUtil.data_dir()}/magicvariants.json`;
 
 				const [dataItems, dataItemsBase, dataVariants] = await Promise.all([
 					DataUtil.loadJSON(urlItems),
@@ -5753,8 +5760,8 @@ globalThis.DataUtil = {
 
 		static loadRawJSON () {
 			return DataUtil.class._pLoadRawJson = DataUtil.class._pLoadRawJson || (async () => {
-				const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/class/index.json`);
-				const allData = await Promise.all(Object.values(index).map(it => DataUtil.loadJSON(`${Renderer.get().baseUrl}data/class/${it}`)));
+				const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/class/index.json`);
+				const allData = await Promise.all(Object.values(index).map(it => DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/class/${it}`)));
 
 				return {
 					class: MiscUtil.copyFast(allData.map(it => it.class || []).flat()),
@@ -5877,7 +5884,7 @@ globalThis.DataUtil = {
 		static async pGetSubclassLookup () {
 			DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE = DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE || (async () => {
 				const subclassLookup = {};
-				Object.assign(subclassLookup, await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-subclass-lookup.json`));
+				Object.assign(subclassLookup, await DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/generated/gendata-subclass-lookup.json`));
 				DataUtil.class._CACHE_SUBCLASS_LOOKUP = subclassLookup;
 			})();
 			await DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE;
@@ -6001,8 +6008,8 @@ globalThis.DataUtil = {
 	table: class extends _DataUtilPropConfigCustom {
 		static async loadJSON () {
 			const datas = await Promise.all([
-				`${Renderer.get().baseUrl}data/generated/gendata-tables.json`,
-				`${Renderer.get().baseUrl}data/tables.json`,
+				`${Renderer.get().baseUrl}${DataUtil.data_dir()}/generated/gendata-tables.json`,
+				`${Renderer.get().baseUrl}${DataUtil.data_dir()}/tables.json`,
 			].map(url => DataUtil.loadJSON(url)));
 			const combined = {};
 			datas.forEach(data => {
@@ -6032,7 +6039,7 @@ globalThis.DataUtil = {
 
 		static async loadJSON () {
 			const rawData = await super.loadJSON();
-			const rawDataGenerated = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-variantrules.json`);
+			const rawDataGenerated = await DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/generated/gendata-variantrules.json`);
 
 			return {variantrule: [...rawData.variantrule, ...rawDataGenerated.variantrule]};
 		}
@@ -6054,7 +6061,7 @@ globalThis.DataUtil = {
 		}
 
 		static loadRawJSON () {
-			return DataUtil.deck._pLoadRawJson = DataUtil.deck._pLoadRawJson || DataUtil.loadJSON(`${Renderer.get().baseUrl}data/decks.json`);
+			return DataUtil.deck._pLoadRawJson = DataUtil.deck._pLoadRawJson || DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/decks.json`);
 		}
 
 		static async loadPrerelease () {

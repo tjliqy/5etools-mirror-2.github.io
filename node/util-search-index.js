@@ -48,14 +48,14 @@ class UtilSearchIndex {
 			.filter(indexMeta => opts.alternate ? indexMeta.alternateIndexes && indexMeta.alternateIndexes[opts.alternate] : true);
 
 		for (const indexMeta of toIndexMultiPart) {
-			const dataIndex = ut.readJson(`./data/${indexMeta.dir}/index.json`);
+			const dataIndex = ut.readJson(`./${DataUtil.data_dir()}/${indexMeta.dir}/index.json`);
 
 			const loadedFiles = Object.entries(dataIndex)
 				.sort(([kA], [kB]) => UtilSearchIndex._sortSources(kA, kB))
 				.map(([_, filename]) => filename);
 
 			for (const filename of loadedFiles) {
-				const filePath = `./data/${indexMeta.dir}/${filename}`;
+				const filePath = `./${DataUtil.data_dir()}/${indexMeta.dir}/${filename}`;
 				const contents = ut.readJson(filePath);
 				if (doLogging) console.log(`\tindexing ${filePath}`);
 				const optsNxt = {isNoFilter: noFilter};
@@ -70,7 +70,7 @@ class UtilSearchIndex {
 			.filter(indexMeta => opts.alternate ? indexMeta.alternateIndexes && indexMeta.alternateIndexes[opts.alternate] : true);
 
 		for (const indexMeta of toIndexSingle) {
-			const filePath = `./data/${indexMeta.file}`;
+			const filePath = `./${DataUtil.data_dir()}/${indexMeta.file}`;
 			const data = ut.readJson(filePath);
 
 			if (indexMeta.postLoad) indexMeta.postLoad(data);
@@ -107,7 +107,7 @@ class UtilSearchIndex {
 		const indexer = new Omnidexer(baseIndex);
 
 		await Promise.all(Omnidexer.TO_INDEX.filter(it => it.category === Parser.CAT_ID_ITEM).map(async ti => {
-			const filename = `./data/${ti.file}`;
+			const filename = `./${DataUtil.data_dir()}/${ti.file}`;
 			const data = ut.readJson(filename);
 
 			if (ti.postLoad) ti.postLoad(data);

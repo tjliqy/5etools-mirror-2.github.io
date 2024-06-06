@@ -49,7 +49,7 @@ class ConditionsDiseasesPage extends ListPage {
 		const pageFilter = new PageFilterConditionsDiseases();
 
 		super({
-			dataSource: "data/conditionsdiseases.json",
+			dataSource: "./${DataUtil.data_dir()}/conditionsdiseases.json",
 
 			pFnGetFluff: Renderer.condition.pGetFluff.bind(Renderer.condition),
 

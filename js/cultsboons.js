@@ -54,7 +54,7 @@ class CultsBoonsPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterCultsBoons();
 		super({
-			dataSource: "data/cultsboons.json",
+			dataSource: `${DataUtil.data_dir()}/cultsboons.json`,
 
 			pageFilter,
 
