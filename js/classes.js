@@ -91,6 +91,7 @@ class UtilClassesPage {
 			const renderer = Renderer.get();
 
 			if (depthArr) renderer.setDepthTracker(depthArr, {additionalPropsInherited: ["_isStandardSource"]});
+			else renderer.setDepthTracker([]);
 
 			entFluff.entries.filter(f => f.source === ent.source).forEach(f => f._isStandardSource = true);
 
@@ -168,11 +169,13 @@ class UtilClassesPage {
 		{
 			sc,
 			scFluff,
+			depthArr = null,
 		},
 	) {
 		return this._getRenderedClassSubclassFluff({
 			ent: sc,
 			entFluff: scFluff,
+			depthArr,
 			isAddLeadingHr: true,
 			isAddTrailingHr: true,
 		});
@@ -189,10 +192,12 @@ class UtilClassesPage {
 			];
 		}
 
-		return {
-			type: "gallery",
-			images: [...images],
-		};
+		return [
+			{
+				type: "gallery",
+				images: [...images],
+			},
+		];
 	}
 }
 
@@ -892,6 +897,8 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 					const isVisible = this._state[stateKey];
 					$(`[data-subclass-id="${stateKey}"]`).toggleVe(!!isVisible);
+
+					$(`[data-subclass-id-fluff="${stateKey}"]`).toggleVe(!!isVisible && this._state.isShowFluff);
 
 					if (!isFirstRun) hkIsShowNamePrefixes();
 				};
@@ -1701,15 +1708,15 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	_trackOutlineFluffData (depthData) { this._outlineData.fluff = depthData; }
 
 	_trackOutlineCfData (ixLvl, ixFeature, depthData) {
-		((this._outlineData.classFeatures = (this._outlineData.classFeatures || []))[ixLvl] =
-			(this._outlineData.classFeatures[ixLvl] || []))[ixFeature] =
-			depthData;
+		((this._outlineData.classFeatures ||= [])[ixLvl] ||= [])[ixFeature] = depthData;
 	}
 
 	_trackOutlineScData (stateKey, level, ixScFeature, depthData) {
-		((this._outlineData[stateKey] = (this._outlineData[stateKey] || []))[level] =
-			(this._outlineData[stateKey][level] || []))[ixScFeature] =
-			depthData;
+		(((this._outlineData.subclassFeatures ||= {})[stateKey] ||= [])[level] ||= [])[ixScFeature] = depthData;
+	}
+
+	_trackOutlineScFluffData (stateKey, level, ixScFeature, depthData) {
+		(((this._outlineData.subclassFluff ||= {})[stateKey] ||= [])[level] ||= [])[ixScFeature] = depthData;
 	}
 
 	_render_renderOutline () {
@@ -1841,6 +1848,11 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			.appendTo($wrpBody);
 	}
 
+	_render_renderOutline_isOutlineRenderable (depthEntry) {
+		return depthEntry.name
+			&& !depthEntry.data?.isNoOutline;
+	}
+
 	_render_renderOutline_renderFeature (
 		{
 			ixLvl,
@@ -1858,23 +1870,25 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		const depthData = MiscUtil.get(this._outlineData.classFeatures, ixLvl, ixFeature);
 
 		if (!this._state.isHideFeatures && depthData) {
-			depthData.filter(it => it.name).forEach(it => {
-				const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
-					it,
-					{
-						isForceStandardSource: it.source === this.activeClass.source,
-						prefix: "cls-nav__item--",
-					},
-				);
+			depthData
+				.filter(this._render_renderOutline_isOutlineRenderable.bind(this))
+				.forEach(it => {
+					const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
+						it,
+						{
+							isForceStandardSource: it.source === this.activeClass.source,
+							prefix: "cls-nav__item--",
+						},
+					);
 
-				this._render_renderOutline_doMakeItem({
-					depthData: it,
-					additionalCssClasses: additionalCssClassesRaw.join(" "),
-					filterValues,
-					isUseSubclassSources,
-					$wrpBody,
+					this._render_renderOutline_doMakeItem({
+						depthData: it,
+						additionalCssClasses: additionalCssClassesRaw.join(" "),
+						filterValues,
+						isUseSubclassSources,
+						$wrpBody,
+					});
 				});
-			});
 		}
 
 		const activeScStateKeys = this._getActiveSubclasses(true);
@@ -1886,23 +1900,25 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		if (activeScStateKeys.length) {
 			// If we didn't render the intro for gaining a subclass feature, do so now
 			if (this._state.isHideFeatures && depthData) {
-				depthData.filter(it => it.name).forEach(it => {
-					const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
-						it,
-						{
-							isSubclass: true,
-							isForceStandardSource: true,
-							prefix: "cls-nav__item--",
-						},
-					);
+				depthData
+					.filter(this._render_renderOutline_isOutlineRenderable.bind(this))
+					.forEach(it => {
+						const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
+							it,
+							{
+								isSubclass: true,
+								isForceStandardSource: true,
+								prefix: "cls-nav__item--",
+							},
+						);
 
-					this._render_renderOutline_doMakeItem({
-						depthData: it,
-						filterValues,
-						isUseSubclassSources,
-						$wrpBody,
+						this._render_renderOutline_doMakeItem({
+							depthData: it,
+							filterValues,
+							isUseSubclassSources,
+							$wrpBody,
+						});
 					});
-				});
 			}
 
 			this.activeClass.subclasses.forEach(sc => {
@@ -1914,25 +1930,52 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				if (!scLvlFeatures) return;
 
 				scLvlFeatures.forEach((scFeature, ixScFeature) => {
-					const depthData = MiscUtil.get(this._outlineData, stateKey, scFeature.level, ixScFeature);
-					depthData.filter(it => it.name).map(it => {
-						const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
-							it,
-							{
-								isSubclass: true,
-								isForceStandardSource: sc._isStandardSource,
-								prefix: "cls-nav__item--",
-							},
-						);
+					const depthData = MiscUtil.get(this._outlineData, "subclassFeatures", stateKey, scFeature.level, ixScFeature);
+					(depthData || [])
+						.filter(this._render_renderOutline_isOutlineRenderable.bind(this))
+						.map(it => {
+							const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
+								it,
+								{
+									isSubclass: true,
+									isForceStandardSource: sc._isStandardSource,
+									prefix: "cls-nav__item--",
+								},
+							);
 
-						this._render_renderOutline_doMakeItem({
-							depthData: it,
-							additionalCssClasses: additionalCssClassesRaw.join(" "),
-							filterValues,
-							isUseSubclassSources,
-							$wrpBody,
+							this._render_renderOutline_doMakeItem({
+								depthData: it,
+								additionalCssClasses: additionalCssClassesRaw.join(" "),
+								filterValues,
+								isUseSubclassSources,
+								$wrpBody,
+							});
 						});
-					});
+
+					if (!this._state.isShowFluff) return;
+
+					const depthDataFluff = MiscUtil.get(this._outlineData, "subclassFluff", stateKey, scFeature.level, ixScFeature);
+
+					(depthDataFluff || [])
+						.filter(this._render_renderOutline_isOutlineRenderable.bind(this))
+						.map(it => {
+							const additionalCssClassesRaw = UtilClassesPage.getColorStyleClasses(
+								it,
+								{
+									isSubclass: true,
+									isForceStandardSource: sc._isStandardSource,
+									prefix: "cls-nav__item--",
+								},
+							);
+
+							this._render_renderOutline_doMakeItem({
+								depthData: it,
+								additionalCssClasses: additionalCssClassesRaw.join(" "),
+								filterValues,
+								isUseSubclassSources,
+								$wrpBody,
+							});
+						});
 				});
 			});
 		}
@@ -2179,9 +2222,12 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 				this._trackOutlineScData(stateKey, ixLvl + 1, ixScFeature, depthArr);
 
-				const {rendered: rdScFluff} = UtilClassesPage.getRenderedSubclassFluff({sc, scFluff});
+				const depthArrSubclassFluff = [];
+				const {hasEntries, rendered: rdScFluff} = UtilClassesPage.getRenderedSubclassFluff({sc, scFluff, depthArr: depthArrSubclassFluff});
 
 				if (!rdScFluff?.length) return;
+
+				if (hasEntries) this._trackOutlineScFluffData(stateKey, ixLvl + 1, ixScFeature, depthArrSubclassFluff);
 
 				$(`<tr class="cls-main__sc-fluff" data-subclass-id-fluff="${UrlUtil.getStateKeySubclass(sc)}"><td colspan="6"></td></tr>`)
 					.fastSetHtml(rdScFluff)

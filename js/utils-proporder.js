@@ -420,6 +420,7 @@ PropOrder._GENERIC_FLUFF = [
 ];
 PropOrder._SPELL = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -536,6 +537,7 @@ PropOrder._SPELL_LIST = [
 ];
 PropOrder._ACTION = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -608,6 +610,7 @@ PropOrder._BOOK_DATA = [
 ];
 PropOrder._BACKGROUND = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -662,6 +665,8 @@ PropOrder._BACKGROUND__COPY_MOD = [
 ];
 PropOrder._LEGENDARY_GROUP = [
 	"name",
+	"alias",
+
 	"source",
 	"page",
 
@@ -680,6 +685,7 @@ PropOrder._LEGENDARY_GROUP__COPY_MOD = [
 ];
 PropOrder._CLASS = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -749,6 +755,7 @@ PropOrder._FOUNDRY_CLASS = [
 PropOrder._SUBCLASS = [
 	"name",
 	"shortName",
+	"alias",
 	"source",
 	"className",
 	"classSource",
@@ -853,6 +860,7 @@ PropOrder._ENTRY_DATA_OBJECT = [
 ];
 PropOrder._CLASS_FEATURE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -881,6 +889,7 @@ PropOrder._CLASS_FEATURE = [
 ];
 PropOrder._SUBCLASS_FEATURE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -973,6 +982,8 @@ PropOrder._FOUNDRY_SUBCLASS_FEATURE = [
 ];
 PropOrder._LANGUAGE = [
 	"name",
+	"alias",
+
 	"dialects",
 
 	"source",
@@ -1013,6 +1024,7 @@ PropOrder._NAME = [
 ];
 PropOrder._CONDITION = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1031,6 +1043,7 @@ PropOrder._CONDITION = [
 ];
 PropOrder._DISEASE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1048,6 +1061,7 @@ PropOrder._DISEASE = [
 ];
 PropOrder._STATUS = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1060,6 +1074,7 @@ PropOrder._STATUS = [
 ];
 PropOrder._CULT = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1079,6 +1094,7 @@ PropOrder._CULT = [
 ];
 PropOrder._BOON = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1100,6 +1116,7 @@ PropOrder._BOON = [
 ];
 PropOrder._DEITY = [
 	"name",
+	"alias",
 	"reprintAlias",
 	"altNames",
 
@@ -1153,6 +1170,7 @@ PropOrder._DEITY__COPY_MOD = [
 ];
 PropOrder._FEAT = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1206,6 +1224,7 @@ PropOrder._FEAT__COPY_MOD = [
 ];
 PropOrder._VEHICLE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1279,6 +1298,7 @@ PropOrder._VEHICLE = [
 ];
 PropOrder._VEHICLE_UPGRADE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1513,6 +1533,7 @@ PropOrder._ITEM_MASTERY = [
 ];
 PropOrder._OBJECT = [
 	"name",
+	"alias",
 
 	"isNpc",
 
@@ -1560,6 +1581,7 @@ PropOrder._OBJECT = [
 ];
 PropOrder._OPTIONALFEATURE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1613,6 +1635,7 @@ PropOrder._OPTIONALFEATURE__COPY_MOD = [
 ];
 PropOrder._PSIONIC = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1627,6 +1650,7 @@ PropOrder._PSIONIC = [
 ];
 PropOrder._REWARD = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1646,6 +1670,7 @@ PropOrder._REWARD = [
 ];
 PropOrder._VARIANTRULE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1782,6 +1807,7 @@ PropOrder._FOUNDRY_RACE_FEATURE__COPY_MOD = [
 ];
 PropOrder._TABLE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1812,6 +1838,7 @@ PropOrder._TABLE = [
 ];
 PropOrder._TRAP = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1845,6 +1872,7 @@ PropOrder._TRAP = [
 ];
 PropOrder._HAZARD = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1897,6 +1925,7 @@ PropOrder._RECIPE = [
 ];
 PropOrder._CHAROPTION = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1916,6 +1945,7 @@ PropOrder._CHAROPTION = [
 ];
 PropOrder._SKILL = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1926,6 +1956,7 @@ PropOrder._SKILL = [
 ];
 PropOrder._SENSE = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -1936,6 +1967,7 @@ PropOrder._SENSE = [
 ];
 PropOrder._DECK = [
 	"name",
+	"alias",
 
 	"source",
 	"page",
@@ -2008,6 +2040,15 @@ PropOrder._CITATION = [
 	"page",
 
 	"entries",
+];
+
+PropOrder._FOUNDRY_MAP = [
+	"name",
+
+	"source",
+
+	"lights",
+	"walls",
 ];
 
 PropOrder._PROP_TO_LIST = {
@@ -2099,6 +2140,7 @@ PropOrder._PROP_TO_LIST = {
 	"card": PropOrder._CARD,
 	"encounter": PropOrder._ENCOUNTER,
 	"citation": PropOrder._CITATION,
+	"foundryMap": PropOrder._FOUNDRY_MAP,
 };
 
 globalThis.PropOrder = PropOrder;
