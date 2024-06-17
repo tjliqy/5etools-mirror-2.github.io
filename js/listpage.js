@@ -1117,6 +1117,13 @@ class ListPage {
 
 		this.handleFilterChange();
 
+		var go_eng = document.getElementById("btn-go-english");
+		go_eng.addEventListener("click", () => {
+			var path = window.location.pathname;
+			var hash = window.location.hash;
+		  	window.open("https://5e.tools/"+path+hash, "_blank");  
+		})
+
 		await this._pOnLoad_pPostLoad();
 
 		window.dispatchEvent(new Event("toolsLoaded"));

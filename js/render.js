@@ -6542,7 +6542,7 @@ Renderer.race = class {
 			{
 				type: "section",
 				entries: [
-					"This race has multiple subraces, as listed below:",
+					"这个种族有多个亚种，如下所示:",
 					lst,
 				],
 			},
