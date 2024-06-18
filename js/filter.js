@@ -616,7 +616,7 @@ class FilterBox extends ProxyBase {
 
 		if (this._$wrpFormTop || this._$btnOpen) {
 			if (!this._$btnOpen) {
-				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
+				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">筛选</button>`)
 					.prependTo(this._$wrpFormTop);
 			} else if (!this._$btnOpen.parent().length) {
 				this._$btnOpen.prependTo(this._$wrpFormTop);
@@ -649,7 +649,7 @@ class FilterBox extends ProxyBase {
 			isIndestructible: true,
 			isClosed: true,
 			isEmpty: true,
-			title: "Filter", // Not shown due toe `isEmpty`, but useful for external overrides
+			title: "筛选", // Not shown due toe `isEmpty`, but useful for external overrides
 			cbClose: (isDataEntered) => this._pHandleHide(!isDataEntered),
 		});
 
@@ -664,9 +664,9 @@ class FilterBox extends ProxyBase {
 			this._filters.forEach(f => f.handleSearch(searchTerm));
 		});
 
-		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Show All</button>`)
+		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">显示全部</button>`)
 			.click(() => this.showAllFilters());
-		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Hide All</button>`)
+		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">隐藏全部</button>`)
 			.click(() => this.hideAllFilters());
 
 		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="${FilterBox.TITLE_BTN_RESET}">重置</button>`)
@@ -711,7 +711,7 @@ class FilterBox extends ProxyBase {
 			</div>
 			<div class="ve-flex-v-center mobile__ve-flex-col">
 				<div class="ve-flex-v-center mobile__m-1">
-					<div class="mr-2">Combine as</div>
+					<div class="mr-2">合并方式</div>
 					${$wrpBtnCombineFilters}
 				</div>
 				<div class="ve-flex-v-center mobile__m-1">
@@ -1872,25 +1872,25 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--all w-100`,
 			click: () => this._doSetPillsAll(),
-			html: "All",
+			html: "全选",
 		});
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--clear w-100`,
 			click: () => this._doSetPillsClear(),
-			html: "Clear",
+			html: "清除",
 		});
 		const btnNone = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--none w-100`,
 			click: () => this._doSetPillsNone(),
-			html: "None",
+			html: "全无",
 		});
 		const btnDefault = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} w-100`,
 			click: () => this._doSetPinsDefault(),
-			html: "Default",
+			html: "默认",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -1937,7 +1937,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "隐藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -2888,7 +2888,7 @@ class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA/etc.`,
-			html: `Core/Supplements`,
+			html: `核心/资源 Core/Supplements`,
 			click: evt => this._doSetPinsSupplements({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
 		});
 
@@ -2896,7 +2896,7 @@ class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA`,
-			html: `Adventures`,
+			html: `冒险Adventures`,
 			click: evt => this._doSetPinsAdventures({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
 		});
 
@@ -2904,7 +2904,7 @@ class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
-			html: `Partnered`,
+			html: `合作内容Partnered`,
 			click: evt => this._doSetPinsPartnered({isAdditive: evt.shiftKey}),
 		});
 
@@ -2912,7 +2912,7 @@ class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
-			html: `Homebrew`,
+			html: `自制内容Homebrew`,
 			click: evt => this._doSetPinsHomebrew({isAdditive: evt.shiftKey}),
 		});
 
@@ -2937,44 +2937,44 @@ class SourceFilter extends Filter {
 
 		const menu = ContextUtil.getMenu([
 			new ContextUtil.Action(
-				"Select All Standard Sources",
+				"选择所有标准资源",
 				() => this._doSetPinsStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Partnered Sources",
+				"选择所有合作资源",
 				() => this._doSetPinsPartnered(),
 			),
 			new ContextUtil.Action(
-				"Select All Non-Standard Sources",
+				"选择所有非标准资源",
 				() => this._doSetPinsNonStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Homebrew Sources",
+				"选择所有自制资源",
 				() => this._doSetPinsHomebrew(),
 			),
 			null,
 			new ContextUtil.Action(
-				`Select "Vanilla" Sources`,
+				`选择 "寻常" 资源`,
 				() => this._doSetPinsVanilla(),
 				{title: `Select a baseline set of sources suitable for any campaign.`},
 			),
 			new ContextUtil.Action(
-				"Select All Non-UA Sources",
+				"选择所有 非UA 资源",
 				() => this._doSetPinsNonUa(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Select SRD Sources",
+				"选择 SRD 资源",
 				() => this._doSetPinsSrd(),
 				{title: `Select System Reference Document Sources.`},
 			),
 			new ContextUtil.Action(
-				"Select Basic Rules Sources",
+				"选择标准规则资源",
 				() => this._doSetPinsBasicRules(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Invert Selection",
+				"反选",
 				() => this._doInvertPins(),
 			),
 			null,
@@ -2991,7 +2991,7 @@ class SourceFilter extends Filter {
 		const btnOnlyPrimary = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			html: `Include References`,
+			html: `包含引用`,
 			title: `Consider entities as belonging to every source they appear in (i.e. reprints) as well as their primary source`,
 			click: () => this._meta.isIncludeOtherSources = !this._meta.isIncludeOtherSources,
 		});
@@ -3492,7 +3492,7 @@ class AbilityScoreFilter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "隐藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -4314,7 +4314,7 @@ class RangeFilter extends FilterBase {
 
 		const $wrpSummary = $(`<div class="ve-flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);

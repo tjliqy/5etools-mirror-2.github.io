@@ -3,22 +3,22 @@
 class FilterCommon {
 	static getDamageVulnerableFilter () {
 		return this._getDamageResistVulnImmuneFilter({
-			header: "Vulnerabilities",
-			headerShort: "Vuln.",
+			header: "弱点Vulnerabilities",
+			headerShort: "弱点Vuln.",
 		});
 	}
 
 	static getDamageResistFilter () {
 		return this._getDamageResistVulnImmuneFilter({
-			header: "Resistance",
-			headerShort: "Res.",
+			header: "抗性Resistance",
+			headerShort: "抗性Res.",
 		});
 	}
 
 	static getDamageImmuneFilter () {
 		return this._getDamageResistVulnImmuneFilter({
-			header: "Immunity",
-			headerShort: "Imm.",
+			header: "免疫Immunity",
+			headerShort: "免疫Imm.",
 		});
 	}
 
@@ -59,7 +59,7 @@ class FilterCommon {
 
 	static getConditionImmuneFilter () {
 		return new Filter({
-			header: "Condition Immunity",
+			header: "条件免疫Condition Immunity",
 			items: this._CONDS,
 			displayFnMini: str => `Imm. ${str.toTitleCase()}`,
 			displayFnTitle: str => `Condition Immunity: ${str.toTitleCase()}`,

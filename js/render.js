@@ -6554,7 +6554,7 @@ Renderer.race = class {
 						entries: [
 							{
 								type: "entries",
-								name: "Traits",
+								name: "种族",
 								entries: [
 									...MiscUtil.copyFast(baseRace.entries),
 								],

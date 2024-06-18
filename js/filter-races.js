@@ -38,12 +38,12 @@ class PageFilterRaces extends PageFilter {
 	constructor () {
 		super();
 
-		this._sizeFilter = new Filter({header: "Size", displayFn: Parser.sizeAbvToFull, itemSortFn: PageFilterRaces.filterAscSortSize});
-		this._asiFilter = new AbilityScoreFilter({header: "Ability Scores (Including Subrace)"});
-		this._baseRaceFilter = new Filter({header: "Base Race"});
-		this._speedFilter = new Filter({header: "Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+		this._sizeFilter = new Filter({header: "体型Size", displayFn: Parser.sizeAbvToFull, itemSortFn: PageFilterRaces.filterAscSortSize});
+		this._asiFilter = new AbilityScoreFilter({header: "属性加值 (包括亚种)Ability Scores (Including Subrace)"});
+		this._baseRaceFilter = new Filter({header: "基础种族Base Race"});
+		this._speedFilter = new Filter({header: "速度Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
 		this._traitFilter = new Filter({
-			header: "Traits",
+			header: "种族Traits",
 			items: [
 				"Amphibious",
 				"Armor Proficiency",
@@ -55,7 +55,7 @@ class PageFilterRaces extends PageFilter {
 				"Monstrous Race",
 				"Natural Armor",
 				"Natural Weapon",
-				"NPC Race",
+				"NPC种族",
 				"Powerful Build",
 				"Skill Proficiency",
 				"Spellcasting",
@@ -71,10 +71,10 @@ class PageFilterRaces extends PageFilter {
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenceFilter = new MultiFilter({header: "伤害类型Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._languageFilter = new Filter({
-			header: "Languages",
+			header: "语言Languages",
 			items: [
 				"Abyssal",
 				"Celestial",
@@ -103,11 +103,11 @@ class PageFilterRaces extends PageFilter {
 			itemSortFn: SortUtil.ascSortLower,
 		});
 		this._ageFilter = new RangeFilter({
-			header: "Adult Age",
+			header: "成年年龄Adult Age",
 			isRequireFullRangeMatch: true,
 			isSparse: true,
-			displayFn: it => `${it} y.o.`,
-			displayFnTooltip: it => `${it} year${it === 1 ? "" : "s"} old`,
+			displayFn: it => `${it} 岁`,
+			displayFnTooltip: it => `${it} 岁`,
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
@@ -251,10 +251,10 @@ class ModalFilterRaces extends ModalFilter {
 
 	_$getColumnHeaders () {
 		const btnMeta = [
-			{sort: "name", text: "Name", width: "4"},
-			{sort: "ability", text: "Ability", width: "4"},
-			{sort: "size", text: "Size", width: "2"},
-			{sort: "source", text: "Source", width: "1"},
+			{sort: "name", text: "名称", width: "4"},
+			{sort: "ability", text: "能力", width: "4"},
+			{sort: "size", text: "体型", width: "2"},
+			{sort: "source", text: "资源", width: "1"},
 		];
 		return ModalFilter._$getFilterColumnHeaders(btnMeta);
 	}

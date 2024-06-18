@@ -1349,10 +1349,10 @@ class ListPage {
 	}
 
 	_renderListShowHide ({$wrpContent, $wrpList, $btnReset}) {
-		const $btnHideSearch = $(`<button class="btn btn-default" title="Hide Search Bar and Entry List">Hide</button>`);
+		const $btnHideSearch = $(`<button class="btn btn-default" title="Hide Search Bar and Entry List">隐藏</button>`);
 		$btnReset.before($btnHideSearch);
 
-		const $btnShowSearch = $(`<button class="btn btn-block btn-default btn-xs" type="button">Show List</button>`);
+		const $btnShowSearch = $(`<button class="btn btn-block btn-default btn-xs" type="button">查看列表</button>`);
 		const $wrpBtnShowSearch = $$`<div class="ve-col-12 mb-1 ve-hidden">${$btnShowSearch}</div>`.prependTo($wrpContent);
 
 		$btnHideSearch.click(() => {
@@ -1889,7 +1889,7 @@ class ListPage {
 
 	/* -------------------------------------------- */
 
-	_tabTitleStats = "Traits";
+	_tabTitleStats = "种族";
 
 	async _pDoLoadHash ({id, lockToken}) {
 		this._$pgContent.empty();
@@ -1955,13 +1955,13 @@ class ListPage {
 		const tabMetas = [
 			tabMetaStats,
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "信息",
 				fnChange: this._renderStats_onTabChangeFluff.bind(this),
 				fnPopulate: this._renderStats_doBuildFluffTab.bind(this, {ent, isImageTab: false}),
 				isVisible: hasFluffText,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "图片",
 				fnChange: this._renderStats_onTabChangeFluff.bind(this),
 				fnPopulate: this._renderStats_doBuildFluffTab.bind(this, {ent, isImageTab: true}),
 				isVisible: hasFluffImages,
@@ -1994,7 +1994,7 @@ class ListPage {
 
 		const actions = [
 			new ContextUtil.Action(
-				"Copy as JSON",
+				"复制为JSON",
 				async () => {
 					const fluffEntries = (await this._pFnGetFluff(ent))?.entries || [];
 					MiscUtil.pCopyTextToClipboard(JSON.stringify(fluffEntries, null, "\t"));
@@ -2002,7 +2002,7 @@ class ListPage {
 				},
 			),
 			new ContextUtil.Action(
-				"Copy as Markdown",
+				"复制为Markdown",
 				async () => {
 					const fluffEntries = (await this._pFnGetFluff(ent))?.entries || [];
 					const rendererMd = RendererMarkdown.get().setFirstSection(true);
