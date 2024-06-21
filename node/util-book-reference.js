@@ -25,10 +25,10 @@ const UtilBookReference = {
 	},
 
 	getIndex (...refTypes) {
-		const index = ut.readJson(`./${DataUtil.data_dir()}/books.json`);
+		const index = ut.readJson(`./data/books.json`);
 		const books = {};
 		index.book.forEach(b => {
-			books[b.id.toLowerCase()] = ut.readJson(`./${DataUtil.data_dir()}/book/book-${b.id.toLowerCase()}.json`);
+			books[b.id.toLowerCase()] = ut.readJson(`./data/book/book-${b.id.toLowerCase()}.json`);
 		});
 
 		const outJson = {

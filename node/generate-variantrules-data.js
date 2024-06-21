@@ -4,12 +4,12 @@ import * as ut from "./util.js";
 
 class GenVariantrules {
 	_doLoadAdventureData () {
-		return ut.readJson(`./${DataUtil.data_dir()}/adventures.json`).adventure
+		return ut.readJson(`./data/adventures.json`).adventure
 			.map(idx => {
 				if (GenVariantrules.ADVENTURE_ALLOWLIST[idx.id]) {
 					return {
 						adventure: idx,
-						adventureData: JSON.parse(fs.readFileSync(`./${DataUtil.data_dir()}/adventure/adventure-${idx.id.toLowerCase()}.json`, "utf-8")),
+						adventureData: JSON.parse(fs.readFileSync(`./data/adventure/adventure-${idx.id.toLowerCase()}.json`, "utf-8")),
 					};
 				}
 			})
@@ -17,12 +17,12 @@ class GenVariantrules {
 	}
 
 	_doLoadBookData () {
-		return ut.readJson(`./${DataUtil.data_dir()}/books.json`).book
+		return ut.readJson(`./data/books.json`).book
 			.map(idx => {
 				if (!GenVariantrules.BOOK_BLOCKLIST[idx.id]) {
 					return {
 						book: idx,
-						bookData: JSON.parse(fs.readFileSync(`./${DataUtil.data_dir()}/book/book-${idx.id.toLowerCase()}.json`, "utf-8")),
+						bookData: JSON.parse(fs.readFileSync(`./data/book/book-${idx.id.toLowerCase()}.json`, "utf-8")),
 					};
 				}
 			})
@@ -37,7 +37,7 @@ class GenVariantrules {
 		this._addBookAndAdventureData(output);
 
 		const toSave = JSON.stringify({variantrule: output.variantrule});
-		fs.writeFileSync(`./${DataUtil.data_dir()}/generated/gendata-variantrules.json`, toSave, "utf-8");
+		fs.writeFileSync(`./data/generated/gendata-variantrules.json`, toSave, "utf-8");
 		console.log("Regenerated variant rules data.");
 	}
 

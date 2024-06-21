@@ -34,11 +34,11 @@ async function pMain () {
 		{index: "books", dir: "book", prop: "book"},
 	]
 		.map(meta => {
-			const indexData = ut.readJson(`./${DataUtil.data_dir()}/${meta.index}.json`);
+			const indexData = ut.readJson(`./data/${meta.index}.json`);
 
 			indexData[meta.prop]
 				.forEach(contents => {
-					const filePath = `./${DataUtil.data_dir()}/${meta.dir}/${meta.prop}-${contents.id.toLowerCase()}.json`;
+					const filePath = `./data/${meta.dir}/${meta.prop}-${contents.id.toLowerCase()}.json`;
 					const data = ut.readJson(filePath);
 
 					walker.walk(

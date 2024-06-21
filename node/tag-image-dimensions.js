@@ -140,10 +140,10 @@ const files = [...(params.file || [])];
 
 // If no options specified, use default selection
 if (!dirs.length && !files.length) {
-	dirs.push("./${DataUtil.data_dir()}/adventure");
-	dirs.push("./${DataUtil.data_dir()}/book");
-	files.push("./${DataUtil.data_dir()}/decks.json");
-	files.push("./${DataUtil.data_dir()}/fluff-recipes.json");
+	dirs.push("./data/adventure");
+	dirs.push("./data/book");
+	files.push("./data/decks.json");
+	files.push("./data/fluff-recipes.json");
 }
 
 main({

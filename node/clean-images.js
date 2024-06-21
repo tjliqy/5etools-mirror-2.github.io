@@ -26,10 +26,10 @@ function cleanBestiaryFluffImages () {
 			.replace(/\//g, " ");
 	}
 
-	const ixFluff = JSON.parse(fs.readFileSync(`./${DataUtil.data_dir()}/bestiary/fluff-index.json`, "utf-8"));
+	const ixFluff = JSON.parse(fs.readFileSync(`./data/bestiary/fluff-index.json`, "utf-8"));
 	const imageNameToCreatureName = {};
 	Object.entries(ixFluff).forEach(([k, f]) => {
-		const path = `./${DataUtil.data_dir()}/bestiary/${f}`;
+		const path = `./data/bestiary/${f}`;
 		const fluff = JSON.parse(fs.readFileSync(path, "utf-8"));
 		ixFluff[k] = {path, json: fluff}; // store the parsed data in the index object, for later writing
 		fluff.monster.forEach(mon => {

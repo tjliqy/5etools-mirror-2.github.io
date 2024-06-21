@@ -62,12 +62,12 @@ class AreaTagger {
 }
 
 console.log(`Running area tagging pass...`);
-const adventureIndex = ut.readJson("./${DataUtil.data_dir()}/adventures.json");
-const bookIndex = ut.readJson("./${DataUtil.data_dir()}/books.json");
+const adventureIndex = ut.readJson("./data/adventures.json");
+const bookIndex = ut.readJson("./data/books.json");
 
 const doPass = (arr, type) => {
 	arr.forEach(meta => {
-		const areaTagger = new AreaTagger(`./${DataUtil.data_dir()}/${type}/${type}-${meta.id.toLowerCase()}.json`);
+		const areaTagger = new AreaTagger(`./data/${type}/${type}-${meta.id.toLowerCase()}.json`);
 		areaTagger.run();
 		console.log(`\tTagged ${meta.id}...`);
 	});
