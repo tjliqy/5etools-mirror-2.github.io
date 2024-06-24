@@ -1,598 +1,634 @@
 {
-	"action": [
-		{
-			"name": "Activate an Item",
-			"source": "DMG",
-			"page": 141,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"Activating some magic items requires a user to do something in particular, such as holding the item and uttering a command word, reading the item if it is a scroll, or drinking it if it is a potion. The description of each item category or individual item details how an item is activated. Certain items use one or more of the following rules related to their activation.",
-				"If an item requires an action to activate, that action isn't a function of the {@action Use an Object} action, so a feature such as the rogue's {@subclassFeature Fast Hands|Rogue||Thief||3} can't be used to activate the item.",
-				{
-					"type": "entries",
-					"name": "Command Word",
-					"entries": [
-						"A command word is a word or phrase that must be spoken audibly for the item to operate. A magic item that requires the user to speak a command word can't be activated in the area of any effect that prevents sound, such as the area created by the silence spell."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Consumables",
-					"entries": [
-						"Some items are used up when they are activated. A potion or elixir must be swallowed, or an oil applied to the body. The writing vanishes from a scroll when it is read. Once used, a consumable item loses its magic and no longer functions."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells",
-					"entries": [
-						"Some magic items allow the user to cast a spell from the item, often by expending charges from it. The spell is cast at the lowest possible spell and caster level, doesn't expend any of the user's spell slots, and requires no components unless the item's description says otherwise. The spell uses its normal casting time, range, and duration, and the user of the item must concentrate if the spell requires {@status concentration}. Certain items make exceptions to these rules, changing the casting time, duration, or other parts of a spell.",
-						"Many items, such as potions, bypass the casting of the spell and confer the spell's effects. Such an item still uses the spell's duration unless the item's description says otherwise.",
-						"A magic item, such as certain staffs, may require you to use your own spellcasting ability when you cast a spell from the item. If you have more than one spellcasting ability, you choose which one to use with the item. If you don't have a spellcasting ability\u2014perhaps you're a rogue with the Use Magic Device feature\u2014your spellcasting ability modifier is +0 for the item, and your proficiency bonus does apply."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Charges",
-					"entries": [
-						"Some magic items have charges that you expend to activate its properties. The number of charges an item has remaining is revealed when an identify spell is cast on the item, or when a creature attunes to the item. Additionally, when an item regains charges, the creature attuned to that item learns how many charges it regained."
-					]
-				}
-			]
-		},
-		{
-			"name": "Attack",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.",
-				"With this action, you make one melee or ranged attack. See the \"{@book Making an Attack|phb|9|making an attack}\" section for the rules that govern attacks.",
-				"Certain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action."
-			],
-			"seeAlsoAction": [
-				"Disarm|DMG",
-				"Grapple",
-				"Mark|DMG",
-				"Shove",
-				"Shove Aside|DMG",
-				"Two-Weapon Fighting"
-			]
-		},
-		{
-			"name": "Cast a Spell",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				"Varies"
-			],
-			"entries": [
-				"Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a casting time, which specifies whether the caster must use an action, a reaction, minutes, or even hours to cast the spell. Casting a spell is, therefore, not necessarily an action. Most spells do have a casting time of 1 action, so a spellcaster often uses his or her action in combat to cast such a spell. See {@book chapter 10|phb|10|casting a spell} for the rules on spellcasting."
-			]
-		},
-		{
-			"name": "Climb onto a Bigger Creature",
-			"source": "DMG",
-			"page": 271,
-			"fromVariant": "Action Options",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"If one creature wants to jump onto another creature, it can do so by {@action grapple||grappling}. A small or Medium creature has little chance of making a successful grapple against a Huge or Gargantuan creature, however, unless magic has granted the grappler supernatural might.",
-				"As an alternative, a suitably large opponent can be treated as terrain for the purpose of jumping onto its back or clinging to a limb. After making any ability checks necessary to get into position and onto the larger creature, the smaller creature uses its action to make a Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check contested by the target's Dexterity ({@skill Acrobatics}) check. If it wins the contest, the smaller creature successfully moves into the target creature's space, the smaller creature moves with the target and has advantage on attack rolls against it.",
-				"The smaller creature can move around within the larger creature's space, treating the space as {@quickref difficult terrain||3}. The larger creature's ability to attack the smaller creature depends on the smaller creature's location, and is left to your discretion. The larger creature can dislodge the smaller creature as an action\u2014knocking it off, scraping it against a wall, or grabbing and throwing it\u2014by making a Strength ({@skill Athletics}) check contested by the smaller creature's Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check. The smaller creature chooses which ability to use."
-			]
-		},
-		{
-			"name": "Dash",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.",
-				"Any increase or decrease to your speed changes this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash."
-			]
-		},
-		{
-			"name": "Disarm",
-			"source": "DMG",
-			"page": 271,
-			"fromVariant": "Action Options",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"A creature can use a weapon attack to knock a weapon or another item from a target's grasp. The attacker makes an attack roll contested by the target's Strength ({@skill Athletics}) check or Dexterity ({@skill Acrobatics}) check. If the attacker wins the contest, the attack causes no damage or other ill effect, but the defender drops the item.",
-				"The attacker has disadvantage on its attack roll if the target is holding the item with two or more hands. The target has advantage on its ability check if it is larger than the attacking creature, or disadvantage if it is smaller."
-			],
-			"seeAlsoAction": [
-				"Attack"
-			]
-		},
-		{
-			"name": "Disengage",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn."
-			]
-		},
-		{
-			"name": "Dodge",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are incapacitated (as explained in the appendix) or if your speed drops to 0."
-			]
-		},
-		{
-			"name": "Don or Doff a Shield",
-			"source": "PHB",
-			"page": 146,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"The time it takes to don or doff armor {@table Getting Into and Out of Armor; Donning and Doffing Armor|phb|depends on the armor's category}. A {@item shield|phb} can be donned or doffed as an action."
-			]
-		},
-		{
-			"name": "End Concentration",
-			"source": "PHB",
-			"page": 203,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				"Free"
-			],
-			"entries": [
-				"If a spell must be maintained with {@status concentration}, that fact appears in its Duration entry, and the spell specifies how long you can concentrate on it. You can end {@status concentration} at any time (no action required)."
-			]
-		},
-		{
-			"name": "Escape a Grapple",
-			"source": "PHB",
-			"page": 195,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"A {@condition grappled} creature can use its action to escape. To do so, it must succeed on a Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check contested by your Strength ({@skill Athletics}) check."
-			],
-			"seeAlsoAction": [
-				"Grapple"
-			]
-		},
-		{
-			"name": "Grapple",
-			"source": "PHB",
-			"page": 195,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"When you want to grab a creature or wrestle with it, you can use the {@action Attack} action to make a special melee attack, a grapple. If you're able to make multiple attacks with the {@action Attack} action, this attack replaces one of them. The target of your grapple must be no more than one size larger than you, and it must be within your reach.",
-				"Using at least one free hand, you try to seize the target by making a grapple check, a Strength ({@skill Athletics}) check contested by the target's Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (the target chooses the ability to use). You succeed automatically if the target is {@condition incapacitated}. If you succeed, you subject the target to the {@condition grappled} condition (see the appendix). The condition specifies the things that end it, and you can release the target whenever you like (no action required).",
-				{
-					"type": "entries",
-					"name": "Moving a Grappled Target",
-					"entries": [
-						"When you move, you can drag or carry the {@condition grappled} creature with you, but your speed is halved, unless the creature is two or more sizes smaller than you."
-					]
-				}
-			],
-			"seeAlsoAction": [
-				"Escape a Grapple"
-			]
-		},
-		{
-			"name": "Healing Surge",
-			"source": "DMG",
-			"page": 266,
-			"fromVariant": "Healing",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"As an action, a character can use a healing surge and spend up to half his or her Hit Dice. For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier. The character regains hit points equal to the total. The player can decide to spend an additional Hit Die after each roll.",
-				"A character who uses a healing surge can't do so again until he or she finishes a short or long rest. Under this optional rule, a character regains all spent Hit Dice at the end of a long rest. With a short rest, a character regains Hit Dice equal to his or her level divided by four (minimum of one dice)."
-			]
-		},
-		{
-			"name": "Help",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.",
-				"Alternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective. If your ally attacks the target before your next turn, the first attack roll is made with advantage."
-			]
-		},
-		{
-			"name": "Hide",
-			"source": "PHB",
-			"page": 192,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"When you take the Hide action, you make a Dexterity ({@skill Stealth}) check in an attempt to hide, following the rules in {@book chapter 7 |phb|7|hiding} for hiding. If you succeed, you gain certain benefits, as described in the \"{@book Unseen Attackers and Targets|PHB|9|unseen attackers and targets}\" section in the Player's Handbook."
-			]
-		},
-		{
-			"name": "Identify a Spell",
-			"source": "XGE",
-			"page": 85,
-			"fromVariant": "Spellcasting|XGE",
-			"time": [
-				{
-					"number": 1,
-					"unit": "reaction"
-				},
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"Sometimes a character wants to identify a spell that someone else is casting or that was already cast. To do so, a character can use their reaction to identify a spell as it's being cast, or they can use an action on their turn to identify a spell by its effect after it is cast.",
-				"If the character perceived the casting, the spell's effect, or both, the character can make an Intelligence ({@skill Arcana}) check with the reaction or action. The DC equals 15 + the spell's level. If the spell is cast as a class spell and the character is a member of that class, the check is made with advantage. For example, if the spellcaster casts a spell as a cleric, another cleric has advantage on the check to identify the spell. Some spells aren't associated with any class when they're cast, such as when a monster uses its Innate Spellcasting trait.",
-				"This Intelligence ({@skill Arcana}) check represents the fact that identifying a spell requires a quick mind and familiarity with the theory and practice of casting. This is true even for a character whose spellcasting ability is Wisdom or Charisma. Being able to cast spells doesn't by itself make you adept at deducing exactly what others are doing when they cast their spells."
-			]
-		},
-		{
-			"name": "Improvising an Action",
-			"source": "PHB",
-			"page": 193,
-			"basicRules": true,
-			"time": [
-				"Varies"
-			],
-			"entries": [
-				"Your character can do things not covered by the actions in this chapter, such as breaking down doors, intimidating enemies, sensing weaknesses in magical defenses, or calling for a parley with a foe. The only limits to the actions you can attempt are your imagination and your character's ability scores. See the descriptions of the ability scores in {@book chapter 7|phb|7|Ability Scores and Modifiers} for inspiration as you improvise.",
-				"When you describe an action not detailed elsewhere in the rules, the DM tells you whether that action is possible and what kind of roll you need to make, if any, to determine success or failure."
-			]
-		},
-		{
-			"name": "Mark",
-			"source": "DMG",
-			"page": 271,
-			"fromVariant": "Action Options",
-			"entries": [
-				"This option makes it easier for melee combatants to harry each other with opportunity attacks.",
-				"When a creature makes a melee attack, it can also mark its target. Until the end of the attacker's next turn, any opportunity attack it makes against the marked target has advantage. The opportunity attack doesn't expend the attacker's reaction, but the attacker can't make the attack if anything, such as the {@condition incapacitated} condition or the {@spell shocking grasp} spell, is preventing it from taking reactions. The attacker is limited to one opportunity attack per turn."
-			],
-			"seeAlsoAction": [
-				"Attack"
-			]
-		},
-		{
-			"name": "Opportunity Attack",
-			"source": "PHB",
-			"page": 195,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "reaction"
-				}
-			],
-			"entries": [
-				"In a fight, everyone is constantly watching for enemies to drop their guard. You can rarely move heedlessly past your foes without putting yourself in danger; doing so provokes an opportunity attack.",
-				"You can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack interrupts the provoking creature's movement, occurring right before the creature leaves your reach.",
-				"You can avoid provoking an opportunity attack by taking the {@action Disengage} action. You also don't provoke an opportunity attack when you teleport or when someone or something moves you without using your movement, action, or reaction. For example, you don't provoke an opportunity attack if an explosion hurls you out of a foe's reach or if gravity causes you to fall past an enemy."
-			]
-		},
-		{
-			"name": "Other Activity",
-			"source": "PHB",
-			"page": 190,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				"Varies"
-			],
-			"entries": [
-				"Your turn can include a variety of flourishes that require neither your action nor your move.",
-				"You can communicate however you are able, through brief utterances and gestures, as you take your turn.",
-				"You can also interact with one object or feature of the environment for free, during either your move or your action. For example, you could open a door during your move as you stride toward a foe, or you could draw your weapon as part of the same action you use to attack.",
-				"If you want to interact with a second object, you need to use your action. Some magic items and other special objects always require an action to use, as stated in their descriptions.",
-				"The DM might require you to use an action for any of these activities when it needs special care or when it presents an unusual obstacle. For instance, the DM could reasonably expect you to use an action to open a stuck door or turn a crank to lower a drawbridge.",
-				{
-					"type": "inset",
-					"name": "Interacting with Objects Around You",
-					"entries": [
-						"Here are a few examples of the sorts of thing you can do in tandem with your movement and action:",
-						{
-							"type": "list",
-							"items": [
-								"draw or sheathe a sword",
-								"open or close a door",
-								"withdraw a potion from your backpack",
-								"pick up a dropped axe",
-								"take a bauble from a table",
-								"remove a ring from your finger",
-								"stuff some food into your mouth",
-								"plant a banner in the ground",
-								"fish a few coins from your belt pouch",
-								"drink all the ale in a flagon",
-								"throw a lever or a switch",
-								"pull a torch from a sconce",
-								"take a book from a shelf you can reach",
-								"extinguish a small flame",
-								"don a mask",
-								"pull the hood of your cloak up and over your head",
-								"put your ear to a door",
-								"kick a small stone",
-								"turn a key in a lock",
-								"tap the floor with a 10-foot pole",
-								"hand an item to another character"
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Overrun",
-			"source": "DMG",
-			"page": 272,
-			"fromVariant": "Action Options",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				},
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"entries": [
-				"When a creature tries to move through a hostile creature's space, the mover can try to force its way through by overrunning the hostile creature. As an action or a bonus action, the mover makes a Strength ({@skill Athletics}) check contested by the hostile creature's Strength ({@skill Athletics}) check. The creature attempting the overrun has advantage on this check if it is larger than the hostile creature, or disadvantage if it is smaller. If the mover wins the contest, it can move through the hostile creature's space once this turn."
-			],
-			"seeAlsoAction": [
-				"Tumble|DMG"
-			]
-		},
-		{
-			"name": "Ready",
-			"source": "PHB",
-			"page": 193,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn, which lets you act using your reaction before the start of your next turn.",
-				"First, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"",
-				"When the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.",
-				"When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires {@status concentration} (explained in {@book chapter 10|phb|10|concentration}). If your {@status concentration} is broken, the spell dissipates without taking effect. For example, if you are {@status concentration||concentrating} on the web spell and ready magic missile, your web spell ends, and if you take damage before you release magic missile with your reaction, your {@status concentration} might be broken.",
-				"You have until the start of your next turn to use a readied action."
-			]
-		},
-		{
-			"name": "Search",
-			"source": "PHB",
-			"page": 193,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the DM might have you make a Wisdom ({@skill Perception}) check or an Intelligence ({@skill Investigation}) check."
-			]
-		},
-		{
-			"name": "Shove",
-			"source": "PHB",
-			"page": 195,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"Using the {@action Attack} action, you can make a special melee attack to shove a creature, either to knock it {@condition prone} or push it away from you. If you're able to make multiple attacks with the {@action Attack} action, this attack replaces one of them.",
-				"The target of your shove must be no more than one size larger than you, and it must be within your reach. You make a Strength ({@skill Athletics}) check contested by the target's Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check (the target chooses the ability to use). You succeed automatically if the target is {@condition incapacitated}. If you succeed, you either knock the target {@condition prone} or push it 5 feet away from you."
-			],
-			"seeAlsoAction": [
-				"Attack",
-				"Shove Aside|DMG"
-			]
-		},
-		{
-			"name": "Shove Aside",
-			"source": "DMG",
-			"page": 272,
-			"fromVariant": "Action Options",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"With this option, a creature uses the special {@action shove} attack from the {@book Player's Handbook|PHB|9|Shoving a Creature} to force a target to the side, rather than away. The attacker has disadvantage on its Strength ({@skill Athletics}) check when it does so. If that check is successful, the attacker moves the target 5 feet to a different space within its reach."
-			]
-		},
-		{
-			"name": "Stabilize a Creature",
-			"source": "PHB",
-			"page": 197,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"You can use your action to administer first aid to an {@condition unconscious} creature and attempt to stabilize it, which requires a successful DC 10 Wisdom ({@skill Medicine}) check.",
-				"A stable creature doesn't make death saving throws, even though it has 0 hit points, but it does remain {@condition unconscious}. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after {@dice 1d4} hours."
-			]
-		},
-		{
-			"name": "Tumble",
-			"source": "DMG",
-			"page": 272,
-			"fromVariant": "Action Options",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				},
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"entries": [
-				"A creature can try to tumble through a hostile creature's space, ducking and weaving past the opponent. As an action or a bonus action, the tumbler makes a Dexterity ({@skill Acrobatics}) check contested by the hostile creature's Dexterity ({@skill Acrobatics}) check. If the tumbler wins the contest, it can move through the hostile creature's space once this turn."
-			],
-			"seeAlsoAction": [
-				"Overrun|DMG"
-			]
-		},
-		{
-			"name": "Two-Weapon Fighting",
-			"source": "PHB",
-			"page": 195,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"entries": [
-				"When you take the {@action Attack} action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.",
-				"If either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it."
-			],
-			"seeAlsoAction": [
-				"Attack"
-			]
-		},
-		{
-			"name": "Use an Object",
-			"source": "PHB",
-			"page": 193,
-			"srd": true,
-			"basicRules": true,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn."
-			]
-		},
-		{
-			"name": "Waking Someone",
-			"source": "XGE",
-			"page": 77,
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"entries": [
-				"A creature that is naturally sleeping, as opposed to being in a magically or chemically induced sleep, wakes up if it takes any damage or if someone else uses an action to shake or slap the creature awake. A sudden loud noise\u2014such as yelling, thunder, or a ringing bell\u2014also awakens someone that is sleeping naturally.",
-				"Whispers don't disturb sleep, unless a sleeper's passive Wisdom ({@skill Perception}) score is 20 or higher and the whispers are within 10 feet of the sleeper. Speech at a normal volume awakens a sleeper if the environment is otherwise silent (no wind, birdsong, crickets, street sounds, or the like) and the sleeper has a passive Wisdom ({@skill Perception}) score of 15 or higher."
-			]
-		}
-	]
+  "action": [
+    {
+      "name": "激活物品",
+      "ENG_name": "Activate an Item",
+      "source": "DMG",
+      "page": 141,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "激活某些魔法物品需要使用者执行特定的动作，比如持有物品并说出命令词、阅读卷轴或饮用药水。每个物品类别或个别物品的描述中会详细说明如何激活该物品。某些物品的激活会使用以下一条或多条规则。",
+        "如果一个物品需要通过动作来激活，那么这个动作不属于{@action 使用物品}动作的功能，因此像盗贼的{@subclassFeature 快手|Rogue||Thief||3}这样的特性不能用来激活物品。",
+        {
+          "type": "entries",
+          "name": "命令语",
+          "ENG_name": "Command Word",
+          "entries": [
+            "命令词是必须大声说出的单词或短语，以便物品能够运作。需要使用者说出命令词的魔法物品不能在任何阻止声音的区域激活，例如由沉默术创造的区域。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "消耗品",
+          "ENG_name": "Consumables",
+          "entries": [
+            "一些物品在激活时会被消耗掉。药水或灵药必须被吞下，或者油膏要涂抹在身上。当卷轴被阅读时，上面的文字会消失。一旦使用，消耗品就会失去其魔法效果，不再起作用。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法术",
+          "ENG_name": "Spells",
+          "entries": [
+            "一些魔法物品允许使用者从物品中施放法术，通常是通过消耗物品的充能次数。法术以最低可能的法术等级和施法者等级施放，不会消耗使用者的法术位，除非物品的描述中另有说明，也不需要任何材料。法术使用其正常的施法时间、射程和持续时间，如果法术需要{@status 专注}，使用者必须集中精神。某些物品对这些规则有例外，改变了施法时间、持续时间或法术的其他部分。",
+            "许多物品，如药水，绕过施法过程直接赋予法术效果。除非物品的描述另有说明，否则此类物品仍然使用法术的持续时间。",
+            "一件魔法物品，比如某些法杖，可能需要你在从物品中施放法术时使用你自己的施法能力。如果你有多个施法能力，你可以选择使用哪一个。如果你没有施法能力——也许你是一个拥有使用魔法装置特性的盗贼——物品的施法能力调整值是+0，你的熟练加值仍然适用。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "充能",
+          "ENG_name": "Charges",
+          "entries": [
+            "一些魔法物品拥有你用来激活其属性的充能次数。当对物品施放鉴定术或者生物与物品产生共鸣时，物品剩余的充能次数会被揭示。此外，当物品恢复充能次数时，与该物品产生共鸣的生物会知道它恢复了多少充能次数。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "攻击",
+      "ENG_name": "Attack",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "在战斗中最常见的行动是攻击行动，无论你是挥舞剑、从弓上射箭，还是用拳头搏斗。",
+        "通过这个行动，你可以进行一次近战或远程攻击。请参阅《《{@book 进行攻击|phb|9|making an attack}》部分，了解管理攻击的规则。",
+        "猛推"
+      ],
+      "seeAlsoAction": [
+        "解除武装|DMG",
+        "擒抱",
+        "标记|DMG",
+        "推撞",
+        "推挤|DMG",
+        "战斗风格:双武器战斗"
+      ]
+    },
+    {
+      "name": "施展法术",
+      "ENG_name": "Cast a Spell",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        "不同"
+      ],
+      "entries": [
+        "施法者如巫师和牧师，以及许多怪物，可以使用法术在战斗中发挥巨大作用。每个法术都有施法时间，它指定了施法者必须使用动作、反应、分钟甚至小时来施放法术。因此，施放法术不一定是一个动作。大多数法术的施法时间是1个动作，所以施法者经常在战斗中使用他或她的动作来施放这样的法术。请参阅《《{@book 第10章|phb|10|casting a spell}》了解施法的规则。"
+      ]
+    },
+    {
+      "name": "爬到更大生物身上",
+      "ENG_name": "Climb onto a Bigger Creature",
+      "source": "DMG",
+      "page": 271,
+      "fromVariant": "动作选用项",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "如果一个生物想要跳到另一个生物身上，它可以通过{@action 擒抱||grappling}来实现。然而，一个小型或中型生物对一个大型或超大型生物进行成功的擒抱几乎没有机会，除非魔法赋予了擒抱者超自然的力量。",
+        "作为替代方案，一个足够大的对手可以被视为地形，用于跳到它的背上或附着在它的肢体上。在进行了任何必要的能力检查以进入位置并跳到较大的生物上之后，较小的生物使用它的行动来进行力量（{@skill 运动}）或敏捷（{@skill 杂技}）检查，与目标的敏捷（{@skill 杂技}）检查进行竞争。如果它赢得了竞争，较小的生物成功地移动到目标生物的空间，较小的生物随目标移动，并且在对它的攻击检定上具有优势。",
+        "较小的生物可以在较大的生物的空间内移动，将这个空间视为{@quickref 困难地形||3}。较大的生物攻击较小生物的能力取决于较小生物的位置，由你自行决定。较大的生物可以通过进行力量（{@skill 运动}）检查与较小生物的力量（{@skill 运动}）或敏捷（{@skill 杂技}）检查竞争，作为一个动作将较小生物驱逐出去——将其击落、刮在墙上或抓住并扔出去。较小的生物选择使用哪种能力。"
+      ]
+    },
+    {
+      "name": "疾走",
+      "ENG_name": "Dash",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "当你采取疾跑行动时，你在当前回合获得额外的移动力。增加的数值等于你的速度，在应用任何修正值之后。例如，如果你的速度是30英尺，如果你疾跑，在你的回合你可以移动最多60英尺。",
+        "你对速度的任何增加或减少都会使这个额外的移动力以相同的量改变。例如，如果你的速度从30英尺减少到15英尺，那么如果你疾跑，在这个回合你可以移动最多30英尺。"
+      ]
+    },
+    {
+      "name": "缴械",
+      "ENG_name": "Disarm",
+      "source": "DMG",
+      "page": 271,
+      "fromVariant": "动作选用项",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "生物可以使用武器攻击来击落目标手中的武器或其他物品。攻击者进行攻击检定，与目标的力量（{@skill 运动}）检定或敏捷（{@skill 杂技}）检定竞争。如果攻击者赢得竞争，攻击不会造成任何伤害或其他不良影响，但防御者会掉落物品。",
+        "如果目标用两只或更多手拿着物品，攻击者在其攻击检定上会有劣势。如果目标比攻击生物大，它在其能力检定上会有优势，或者如果它更小，则会有劣势。"
+      ],
+      "seeAlsoAction": [
+        "攻击"
+      ]
+    },
+    {
+      "name": "撤离",
+      "ENG_name": "Disengage",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "如果你采取脱离战斗行动，你在这个回合剩余时间内的移动不会引发机会攻击。"
+      ]
+    },
+    {
+      "name": "回避",
+      "ENG_name": "Dodge",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "当你采取闪避行动时，你完全专注于避免攻击。直到你的下一回合开始，任何针对你的攻击检定如果你能看到攻击者，则会有劣势，并且你在敏捷豁免投掷中具有优势。如果你失去能力（如附录中解释）或者你的速度降至0，则会失去这个好处。"
+      ]
+    },
+    {
+      "name": "着装与卸除盾牌",
+      "ENG_name": "Don or Doff a Shield",
+      "source": "PHB",
+      "page": 146,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "穿戴或卸下盔甲所需的时间根据盔甲的类别而不同，具体可参见《《{@table 穿戴和卸下盔甲；穿戴和卸下盔甲|phb}》。一个{@item 盾牌|phb}可以作为动作来装备或卸下。"
+      ]
+    },
+    {
+      "name": "停止专注",
+      "ENG_name": "End Concentration",
+      "source": "PHB",
+      "page": 203,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        "自由"
+      ],
+      "entries": [
+        "如果一个法术需要通过{@status 专注}来维持，这一点会显示在其持续时间条目中，并且法术会指定你可以专注多长时间。你可以随时结束{@status 专注}（无需动作）。"
+      ]
+    },
+    {
+      "name": "从擒抱中逃脱",
+      "ENG_name": "Escape a Grapple",
+      "source": "PHB",
+      "page": 195,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "一个处于{@condition 被擒抱}状态的生物可以使用它的行动来逃脱。为此，它必须在你的力量（{@skill 运动}）检定竞争中成功进行力量（{@skill 运动}）或敏捷（{@skill 杂技}）检定。"
+      ],
+      "seeAlsoAction": [
+        "擒抱"
+      ]
+    },
+    {
+      "name": "擒抱",
+      "ENG_name": "Grapple",
+      "source": "PHB",
+      "page": 195,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "当你想要抓住一个生物或与其搏斗时，你可以使用{@action 攻击}行动来进行一次特殊的近战攻击，即擒抱。如果你能够使用{@action 攻击}行动进行多次攻击，这次攻击将取代其中之一。你的擒抱目标的大小不能比你大一个等级以上，而且必须在你能够触及的范围内。",
+        "使用至少一只空闲的手，你尝试通过进行擒抱检定，即力量（{@skill 运动}）检定，与目标的力量（{@skill 运动}）或敏捷（{@skill 杂技}）检定竞争（目标选择使用的能力）。如果目标处于{@condition 失去能力}状态，你将自动成功。如果你成功，你将目标置于{@condition 被擒抱}状态（见附录）。该状态指定了结束的条件，你可以随时释放目标（无需动作）。",
+        {
+          "type": "entries",
+          "name": "移动被擒的目标",
+          "ENG_name": "Moving a Grappled Target",
+          "entries": [
+            "当你移动时，你可以拖拽或携带处于{@condition 被擒抱}状态的生物，但你的速度会减半，除非这个生物比你小两个或更多的尺寸。"
+          ]
+        }
+      ],
+      "seeAlsoAction": [
+        "从擒抱中逃脱"
+      ]
+    },
+    {
+      "name": "疗愈",
+      "ENG_name": "Healing Surge",
+      "source": "DMG",
+      "page": 266,
+      "fromVariant": "治疗",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "作为一个行动，一个角色可以使用治疗潮汐并花费高达他或她的生命骰的一半。对于以这种方式花费的每个生命骰，玩家滚动骰子并加上角色的体质调整值。角色恢复等于总和的生命值。玩家可以在每次滚动后决定额外花费一个生命骰。",
+        "使用治疗潮汐的角色在完成短暂或长时间的休息之前不能再这样做。在这个可选规则下，角色在长时间休息结束时恢复所有花费的生命骰。在短暂休息时，角色恢复的生命骰等于他或她的等级除以四（最少一个骰子）。"
+      ]
+    },
+    {
+      "name": "协助",
+      "ENG_name": "Help",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "你可以在完成任务的过程中帮助另一个生物。当你采取帮助行动时，你帮助的生物在你协助的任务的下一次能力检定中获得优势，前提是它在你下一回合开始前进行检定。",
+        "或者，你可以协助一个友好生物攻击你5英尺范围内的生物。你进行佯攻，分散目标注意力，或者以其他方式合作，使你的盟友的攻击更加有效。如果你的盟友在你下一回合之前攻击目标，第一次攻击检定将获得优势。"
+      ]
+    },
+    {
+      "name": "躲藏",
+      "ENG_name": "Hide",
+      "source": "PHB",
+      "page": 192,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "当你采取隐藏行动时，你进行一次敏捷（{@skill 隐匿}）检定，尝试隐藏，遵循《《{@book 第7章 |phb|7|hiding}》中隐藏的规则。如果你成功，你将获得特定的好处，如《《玩家手册》中的“{@book 看不见的攻击者和目标|PHB|9|unseen attackers and targets}”部分所述。"
+      ]
+    },
+    {
+      "name": "辨识法术",
+      "ENG_name": "Identify a Spell",
+      "source": "XGE",
+      "page": 85,
+      "fromVariant": "施法|XGE",
+      "time": [
+        {
+          "number": 1,
+          "unit": "反应"
+        },
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "有时，一个角色想要识别别人正在施放或已经施放的法术。为此，角色可以使用他们的反应来识别正在施放的法术，或者他们可以在自己的回合上使用动作来通过法术的效果识别法术。",
+        "如果角色感知到了施法过程、法术效果或两者，角色可以使用智力（奥术知识）检定来使用反应或动作识别法术。难度等级（DC）等于15加上法术等级。如果法术作为职业法术被施放，并且角色属于该职业，那么检定会有优势。例如，如果施法者作为牧师施放了一个法术，另一个牧师在识别法术的检定上会有优势。有些法术在施放时不与任何职业相关联，比如当怪物使用其天生施法特性时。",
+        "这个智力（奥术知识）检定代表了识别法术需要敏捷的思维以及对施法理论和实践的熟悉。这对于施法能力是智慧或魅力的角色来说也是真实的。能够施放法术本身并不直接让你擅长于推断别人施法时的确切行为。"
+      ]
+    },
+    {
+      "name": "即兴动作",
+      "ENG_name": "Improvising an Action",
+      "source": "PHB",
+      "page": 193,
+      "basicRules": true,
+      "time": [
+        "不同"
+      ],
+      "entries": [
+        "你的角色可以做一些本章节中未涵盖的事情，比如破门而入、恐吓敌人、感知魔法防御中的弱点，或者与敌人进行谈判。尝试行动的唯一限制是你的想象力和你的角色的能力值。在即兴创作时，请参阅《玩家手册》第7章《能力值和修正值》中能力值的描述以获得灵感。",
+        "当你描述一个规则中未详细说明的动作时，主持人（DM）会告诉你这个动作是否可行，以及你是否需要进行某种检定来决定成功或失败。"
+      ]
+    },
+    {
+      "name": "标记",
+      "ENG_name": "Mark",
+      "source": "DMG",
+      "page": 271,
+      "fromVariant": "动作选用项",
+      "entries": [
+        "这个选项使得近战战斗者更容易通过机会攻击相互骚扰。",
+        "当一个生物进行近战攻击时，它也可以标记其目标。直到攻击者下一个回合结束，它对标记目标进行的任何机会攻击都会获得优势。机会攻击不会消耗攻击者的反应，但如果有任何因素，如{@condition incapacitated}状态或{@spell shocking grasp}法术，阻止它采取反应，则攻击者无法进行攻击。攻击者每个回合限进行一次机会攻击。"
+      ],
+      "seeAlsoAction": [
+        "攻击"
+      ]
+    },
+    {
+      "name": "借机攻击",
+      "ENG_name": "Opportunity Attack",
+      "source": "PHB",
+      "page": 195,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "反应"
+        }
+      ],
+      "entries": [
+        "在战斗中，每个人都在不断地警惕敌人放松警惕。你很少能够不顾危险地从敌人身边经过；这样做会激起机会攻击。",
+        "当一个你能看见的敌对生物移动到你的触及范围之外时，你可以进行一次机会攻击。要进行机会攻击，你需要使用你的反应来进行一次近战攻击，攻击那个激起攻击的生物。这次攻击会打断激起攻击的生物的移动，在生物离开你的触及范围之前发生。",
+        "你可以通过采取{@action 脱离}行动来避免激起机会攻击。当你通过传送或某人或某物在不使用你的移动、行动或反应的情况下移动你时，你也不会激起机会攻击。例如，如果一次爆炸将你从敌人的触及范围抛出，或者重力导致你跌落过敌人，你就不会激起机会攻击。"
+      ]
+    },
+    {
+      "name": "其他行动",
+      "ENG_name": "Other Activity",
+      "source": "PHB",
+      "page": 190,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        "不同"
+      ],
+      "entries": [
+        "你的回合可以包括各种不需要你的行动或移动的华丽动作。",
+        "你可以在你回合中，通过简短的话语和手势进行交流。",
+        "你还可以免费与一个物体或环境特征互动，这可以在你的移动或动作期间进行。例如，你可以在向敌人走去时打开门，或者你可以在攻击动作中抽出武器。",
+        "如果你想与第二个物体互动，你需要使用你的动作。一些魔法物品和其他特殊物品总是需要动作来使用，正如它们描述中所说明的。",
+        "当DM认为需要特别小心或出现不寻常障碍时，可能会要求你使用动作来进行这些活动。例如，DM可以合理地期望你使用动作来打开一扇卡住的门或转动曲柄以降低吊桥。",
+        {
+          "type": "inset",
+          "name": "与身边物件互动",
+          "ENG_name": "Interacting with Objects Around You",
+          "entries": [
+            "以下是一些你可以与你的移动和动作一起做的事情的例子：",
+            {
+              "type": "list",
+              "items": [
+                "拔剑或收剑",
+                "开门或关门",
+                "从背包中取出药水",
+                "捡起掉落的斧头",
+                "从桌上拿起一件小装饰品",
+                "从手指上取下戒指",
+                "往嘴里塞些食物",
+                "在地上插上旗帜",
+                "从腰带包里掏出几个硬币",
+                "喝光酒壶里的麦芽酒",
+                "拉动一个杠杆或开关",
+                "从壁灯上拔下火把",
+                "从你能够到的书架上取一本书",
+                "扑灭一个小火焰",
+                "戴上面具",
+                "拉起斗篷的兜帽遮住头部",
+                "把耳朵贴在门上",
+                "踢一块小石头",
+                "用钥匙开锁",
+                "用10英尺长的杆子敲击地面",
+                "将物品递给另一个角色"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "强冲",
+      "ENG_name": "Overrun",
+      "source": "DMG",
+      "page": 272,
+      "fromVariant": "动作选用项",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        },
+        {
+          "number": 1,
+          "unit": "need-translate-9f9ae809-2fb4-11ef-ae1d-d1200322b32e"
+        }
+      ],
+      "entries": [
+        "冲撞\n当一个生物试图通过一个敌对生物的空间时，移动者可以尝试通过冲撞敌对生物来强行通过。作为动作或额外动作，移动者进行一次力量（{@skill Athletics}）检定，与敌对生物的力量（{@skill Athletics}）检定进行对抗。如果尝试冲撞的生物比敌对生物体型大，则在这个检定上有优势；如果体型小，则处于劣势。如果移动者赢得这场对抗，它可以在这个回合内通过敌对生物的空间一次。"
+      ],
+      "seeAlsoAction": [
+        "就绪"
+      ]
+    },
+    {
+      "name": "预备",
+      "ENG_name": "Ready",
+      "source": "PHB",
+      "page": 193,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "有时你想先发制人或等待特定情况再行动。为此，你可以在你的回合中采取准备动作，这让你可以在下一个回合开始前使用你的反应来行动。",
+        "首先，你决定什么可感知的情况会触发你的反应。然后，你选择对那个触发器作出的反应动作，或者选择以你的速度移动以响应它。例子包括“如果那个邪教徒踩到陷阱门，我会拉动打开它的杠杆”，以及“如果那个地精走到我旁边，我会走开。”",
+        "当触发条件发生时，你可以在触发条件结束后立即采取反应，或者忽略该触发条件。记住，每轮你只能采取一次反应。",
+        "当你准备一个法术时，你正常施放它但保留它的能量，当触发条件发生时，你可以用你的反应来释放它。要准备法术，法术必须有1个动作的施法时间，并且保留法术的魔法需要{@status concentration}（在{@book chapter 10|phb|10|concentration}中解释）。如果你的{@status concentration}被打破，法术就会消散而不会生效。例如，如果你正在{@status concentration||集中}在蛛网法术上并准备魔法飞弹，你的蛛网法术就会结束，如果你在用反应释放魔法飞弹之前受到伤害，你的{@status concentration}可能会被打破。",
+        "你有直到你的下一个回合开始之前使用准备好的动作。"
+      ]
+    },
+    {
+      "name": "搜索",
+      "ENG_name": "Search",
+      "source": "PHB",
+      "page": 193,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "当你采取搜索动作时，你集中注意力寻找某物。根据你搜索的性质，DM可能要求你进行一次智慧（{@skill Perception}）检定或智力（{@skill Investigation}）检定。"
+      ]
+    },
+    {
+      "name": "推撞",
+      "ENG_name": "Shove",
+      "source": "PHB",
+      "page": 195,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "使用{@action 攻击}动作，你可以进行一次特殊的近战攻击来推动一个生物，无论是将其推倒{@condition prone}还是将其推离你。如果你能够使用{@action 攻击}动作进行多次攻击，这次攻击将取代其中之一。",
+        "你推动的目标必须不比你大一个尺寸以上，并且必须在你的触及范围内。你进行一次力量（{@skill Athletics}）检定，与目标的力量（{@skill Athletics}）或敏捷（{@skill Acrobatics}）检定进行对抗（目标选择使用的能力）。如果目标处于{@condition incapacitated}状态，你自动成功。如果你成功，你可以选择将目标推倒为{@condition prone}状态，或者将其从你身边推开5英尺。"
+      ],
+      "seeAlsoAction": [
+        "攻击",
+        "推挤|DMG"
+      ]
+    },
+    {
+      "name": "挪移",
+      "ENG_name": "Shove Aside",
+      "source": "DMG",
+      "page": 272,
+      "fromVariant": "动作选用项",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "侧推\n使用这个选项，生物使用《玩家手册》中9页上描述的特殊的{@action shove}攻击来迫使目标向一侧移动，而不是推开。当攻击者这样做时，其力量（{@skill Athletics}）检定上会有劣势。如果该检定成功，攻击者将其目标移动5英尺到其触及范围内的不同空间。"
+      ]
+    },
+    {
+      "name": "稳定生物",
+      "ENG_name": "Stabilize a Creature",
+      "source": "PHB",
+      "page": 197,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "你可以使用你的动作来对一个{@condition unconscious}生物进行急救，并尝试稳定它的状态，这需要成功进行一次DC 10的智慧（{@skill Medicine}）检定。",
+        "A stable creature doesn't make death saving throws, even though it has 0 hit points, but it does remain {@condition unconscious}. The creature stops being stable, and must start making death saving throws again, if it takes any damage. A stable creature that isn't healed regains 1 hit point after {@dice 1d4} hours."
+      ]
+    },
+    {
+      "name": "翻滚",
+      "ENG_name": "Tumble",
+      "source": "DMG",
+      "page": 272,
+      "fromVariant": "动作选用项",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        },
+        {
+          "number": 1,
+          "unit": "need-translate-9f9ae809-2fb4-11ef-ae1d-d1200322b32e"
+        }
+      ],
+      "entries": [
+        "一个生物可以尝试翻滚穿过一个敌对生物的空间，低头和绕过对手。作为动作或奖励动作，翻滚者进行一次敏捷（{@skill Acrobatics}）检定，与敌对生物的敏捷（{@skill Acrobatics}）检定进行对抗。如果翻滚者赢得这场对抗，它可以在这个回合内一次通过敌对生物的空间。"
+      ],
+      "seeAlsoAction": [
+        "冲撞|DMG"
+      ]
+    },
+    {
+      "name": "战斗风格:双武器战斗",
+      "ENG_name": "Two-Weapon Fighting",
+      "source": "PHB",
+      "page": 195,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "need-translate-9f9ae809-2fb4-11ef-ae1d-d1200322b32e"
+        }
+      ],
+      "entries": [
+        "当你采取{@action 攻击}动作，并且用单手持有的轻武器进行攻击时，你可以使用奖励动作用另一只手中的不同轻武器进行攻击。除非该修正值是负数，否则你不会将能力修正值加到奖励攻击的伤害上。",
+        "如果任一武器具有投掷属性，你可以选择投掷该武器，而不是用它进行近战攻击。"
+      ],
+      "seeAlsoAction": [
+        "攻击"
+      ]
+    },
+    {
+      "name": "使用物件",
+      "ENG_name": "Use an Object",
+      "source": "PHB",
+      "page": 193,
+      "srd": true,
+      "basicRules": true,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "你通常在执行其他动作时与物品互动，例如当你在攻击时抽出剑。当一个物品需要你的动作来使用时，你采取使用物品动作。这个动作在你想要在你的回合中与多个物品互动时也很有用。"
+      ]
+    },
+    {
+      "name": "唤醒某人",
+      "ENG_name": "Waking Someone",
+      "source": "XGE",
+      "page": 77,
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "entries": [
+        "自然睡眠的生物，与被魔法或化学方式诱导睡眠的生物不同，如果它受到任何伤害，或者有人采取动作摇晃或拍打它以唤醒，它就会醒来。突然的响声——比如喊叫、雷声或铃声——也会唤醒自然睡眠的人。",
+        "低语不会打扰睡眠，除非睡眠者的被动智慧（{@skill Perception}）得分为20或更高，并且低语在睡眠者10英尺以内。如果环境完全安静（没有风声、鸟鸣、蟋蟀声、街道声音等），并且睡眠者的被动智慧（{@skill Perception}）得分为15或更高，那么正常音量的说话会唤醒睡眠者。"
+      ]
+    }
+  ]
 }
