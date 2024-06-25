@@ -1,3008 +1,3074 @@
 {
-	"class": [
-		{
-			"name": "Fighter",
-			"source": "PHB",
-			"page": 70,
-			"srd": true,
-			"basicRules": true,
-			"hd": {
-				"number": 1,
-				"faces": 10
-			},
-			"proficiency": [
-				"str",
-				"con"
-			],
-			"optionalfeatureProgression": [
-				{
-					"name": "Fighting Style",
-					"featureType": [
-						"FS:F"
-					],
-					"progression": {
-						"1": 1
-					}
-				}
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"heavy",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"acrobatics",
-								"animal handling",
-								"athletics",
-								"history",
-								"insight",
-								"intimidation",
-								"perception",
-								"survival"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) {@item chain mail|phb} or (b) {@item leather armor|phb}, {@item longbow|phb}, and {@item arrows (20)|phb|20 arrows}",
-					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) two {@item handaxe|phb|handaxes}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}"
-				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"chain mail|phb"
-						],
-						"b": [
-							"leather armor|phb",
-							"longbow|phb",
-							"arrows (20)|phb"
-						]
-					},
-					{
-						"a": [
-							{
-								"equipmentType": "weaponMartial"
-							},
-							"shield|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponMartial",
-								"quantity": 2
-							}
-						]
-					},
-					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
-						"b": [
-							{
-								"item": "handaxe|phb",
-								"quantity": 2
-							}
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"or": [
-						{
-							"str": 13,
-							"dex": 13
-						}
-					]
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
-			"classFeatures": [
-				"Fighting Style|Fighter||1",
-				"Second Wind|Fighter||1",
-				"Action Surge|Fighter||2",
-				{
-					"classFeature": "Martial Archetype|Fighter||3",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Fighter||4",
-				"Martial Versatility|Fighter||4|TCE",
-				"Extra Attack|Fighter||5",
-				"Ability Score Improvement|Fighter||6",
-				{
-					"classFeature": "Martial Archetype feature|Fighter||7",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Fighter||8",
-				"Indomitable|Fighter||9",
-				{
-					"classFeature": "Martial Archetype feature|Fighter||10",
-					"gainSubclassFeature": true
-				},
-				"Extra Attack (2)|Fighter||11",
-				"Ability Score Improvement|Fighter||12",
-				"Indomitable (two uses)|Fighter||13",
-				"Ability Score Improvement|Fighter||14",
-				{
-					"classFeature": "Martial Archetype feature|Fighter||15",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Fighter||16",
-				"Action Surge (two uses)|Fighter||17",
-				"Indomitable (three uses)|Fighter||17",
-				{
-					"classFeature": "Martial Archetype feature|Fighter||18",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Fighter||19",
-				"Extra Attack (3)|Fighter||20"
-			],
-			"subclassTitle": "Martial Archetype",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Battle Master",
-			"shortName": "Battle Master",
-			"source": "PHB",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 73,
-			"optionalfeatureProgression": [
-				{
-					"name": "Maneuvers",
-					"featureType": [
-						"MV:B"
-					],
-					"progression": {
-						"3": 3,
-						"7": 5,
-						"10": 7,
-						"15": 9
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Battle Master|Fighter||Battle Master||3",
-				"Additional Maneuvers|Fighter||Battle Master||7",
-				"Additional Superiority Die|Fighter||Battle Master||7",
-				"Know Your Enemy|Fighter||Battle Master||7",
-				"Additional Maneuvers|Fighter||Battle Master||10",
-				"Improved Combat Superiority (d10)|Fighter||Battle Master||10",
-				"Additional Maneuvers|Fighter||Battle Master||15",
-				"Additional Superiority Die|Fighter||Battle Master||15",
-				"Relentless|Fighter||Battle Master||15",
-				"Improved Combat Superiority (d12)|Fighter||Battle Master||18"
-			]
-		},
-		{
-			"name": "Champion",
-			"shortName": "Champion",
-			"source": "PHB",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"optionalfeatureProgression": [
-				{
-					"name": "Fighting Style",
-					"featureType": [
-						"FS:F"
-					],
-					"progression": {
-						"10": 1
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Champion|Fighter||Champion||3",
-				"Remarkable Athlete|Fighter||Champion||7",
-				"Additional Fighting Style|Fighter||Champion||10",
-				"Superior Critical|Fighter||Champion||15",
-				"Survivor|Fighter||Champion||18"
-			]
-		},
-		{
-			"name": "Eldritch Knight",
-			"shortName": "Eldritch Knight",
-			"source": "PHB",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 74,
-			"spellcastingAbility": "int",
-			"casterProgression": "1/3",
-			"cantripProgression": [
-				0,
-				0,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3
-			],
-			"spellsKnownProgression": [
-				0,
-				0,
-				3,
-				4,
-				4,
-				4,
-				5,
-				6,
-				6,
-				7,
-				8,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				11,
-				12,
-				13
-			],
-			"additionalSpells": [
-				{
-					"expanded": {
-						"3": [
-							{
-								"all": "level=0|class=Wizard"
-							},
-							{
-								"all": "level=1|class=Wizard"
-							}
-						],
-						"7": [
-							{
-								"all": "level=2|class=Wizard"
-							}
-						],
-						"13": [
-							{
-								"all": "level=3|class=Wizard"
-							}
-						],
-						"19": [
-							{
-								"all": "level=4|class=Wizard"
-							}
-						]
-					}
-				}
-			],
-			"subclassTableGroups": [
-				{
-					"subclasses": [
-						{
-							"name": "Eldritch Knight",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
-						"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
-					],
-					"rows": [
-						[
-							0,
-							0
-						],
-						[
-							0,
-							0
-						],
-						[
-							2,
-							3
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							5
-						],
-						[
-							2,
-							6
-						],
-						[
-							2,
-							6
-						],
-						[
-							3,
-							7
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							9
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							12
-						],
-						[
-							3,
-							13
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"subclasses": [
-						{
-							"name": "Eldritch Knight",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
-						"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
-						"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
-						"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
-					],
-					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						]
-					]
-				}
-			],
-			"subclassFeatures": [
-				"Eldritch Knight|Fighter||Eldritch Knight||3",
-				"War Magic|Fighter||Eldritch Knight||7",
-				"Eldritch Strike|Fighter||Eldritch Knight||10",
-				"Arcane Charge|Fighter||Eldritch Knight||15",
-				"Improved War Magic|Fighter||Eldritch Knight||18"
-			]
-		},
-		{
-			"name": "Purple Dragon Knight (Banneret)",
-			"shortName": "Purple Dragon Knight (Banneret)",
-			"source": "SCAG",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 128,
-			"subclassFeatures": [
-				"Purple Dragon Knight (Banneret)|Fighter||Purple Dragon Knight (Banneret)|SCAG|3",
-				"Royal Envoy|Fighter||Purple Dragon Knight (Banneret)|SCAG|7",
-				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|10",
-				"Bulwark|Fighter||Purple Dragon Knight (Banneret)|SCAG|15",
-				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Arcane Archer",
-			"shortName": "Arcane Archer",
-			"source": "XGE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 28,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"prestidigitation#c"
-						]
-					}
-				},
-				{
-					"known": {
-						"3": [
-							"druidcraft#c"
-						]
-					}
-				}
-			],
-			"optionalfeatureProgression": [
-				{
-					"name": "Arcane Shots",
-					"featureType": [
-						"AS"
-					],
-					"progression": {
-						"3": 2,
-						"7": 3,
-						"10": 4,
-						"15": 5,
-						"18": 6
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Arcane Archer|Fighter||Arcane Archer|XGE|3",
-				"Magic Arrow|Fighter||Arcane Archer|XGE|7",
-				"Curving Shot|Fighter||Arcane Archer|XGE|7",
-				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|7",
-				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|10",
-				"Ever-Ready Shot|Fighter||Arcane Archer|XGE|15",
-				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|15",
-				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|18"
-			]
-		},
-		{
-			"name": "Cavalier",
-			"shortName": "Cavalier",
-			"source": "XGE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 30,
-			"subclassFeatures": [
-				"Cavalier|Fighter||Cavalier|XGE|3",
-				"Warding Maneuver|Fighter||Cavalier|XGE|7",
-				"Hold the Line|Fighter||Cavalier|XGE|10",
-				"Ferocious Charger|Fighter||Cavalier|XGE|15",
-				"Vigilant Defender|Fighter||Cavalier|XGE|18"
-			]
-		},
-		{
-			"name": "Samurai",
-			"shortName": "Samurai",
-			"source": "XGE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 31,
-			"subclassFeatures": [
-				"Samurai|Fighter||Samurai|XGE|3",
-				"Elegant Courtier|Fighter||Samurai|XGE|7",
-				"Tireless Spirit|Fighter||Samurai|XGE|10",
-				"Rapid Strike|Fighter||Samurai|XGE|15",
-				"Strength before Death|Fighter||Samurai|XGE|18"
-			]
-		},
-		{
-			"name": "Scofflaw",
-			"shortName": "Scofflaw",
-			"source": "HWCS",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 41,
-			"subclassFeatures": [
-				"Scofflaw|Fighter||Scofflaw|HWCS|3",
-				"Misdirection|Fighter||Scofflaw|HWCS|7",
-				"Blindside|Fighter||Scofflaw|HWCS|10",
-				"Infamy|Fighter||Scofflaw|HWCS|15",
-				"Two For Flinching|Fighter||Scofflaw|HWCS|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Echo Knight",
-			"shortName": "Echo Knight",
-			"source": "EGW",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 183,
-			"subclassFeatures": [
-				"Echo Knight|Fighter||Echo Knight|EGW|3",
-				"Echo Avatar|Fighter||Echo Knight|EGW|7",
-				"Shadow Martyr|Fighter||Echo Knight|EGW|10",
-				"Reclaim Potential|Fighter||Echo Knight|EGW|15",
-				"Legion of One|Fighter||Echo Knight|EGW|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Psi Warrior",
-			"shortName": "Psi Warrior",
-			"source": "TCE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 42,
-			"additionalSpells": [
-				{
-					"innate": {
-						"18": {
-							"daily": {
-								"1": [
-									"telekinesis"
-								]
-							}
-						}
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Psi Warrior|Fighter||Psi Warrior|TCE|3",
-				"Telekinetic Adept|Fighter||Psi Warrior|TCE|7",
-				"Guarded Mind|Fighter||Psi Warrior|TCE|10",
-				"Bulwark of Force|Fighter||Psi Warrior|TCE|15",
-				"Telekinetic Master|Fighter||Psi Warrior|TCE|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Rune Knight",
-			"shortName": "Rune Knight",
-			"source": "TCE",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 44,
-			"optionalfeatureProgression": [
-				{
-					"name": "Runes",
-					"featureType": [
-						"RN"
-					],
-					"progression": {
-						"3": 2,
-						"7": 3,
-						"10": 4,
-						"15": 5
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Rune Knight|Fighter||Rune Knight|TCE|3",
-				"Runic Shield|Fighter||Rune Knight|TCE|7",
-				"Additional Rune Known|Fighter||Rune Knight|TCE|7",
-				"Great Stature|Fighter||Rune Knight|TCE|10",
-				"Additional Rune Known|Fighter||Rune Knight|TCE|10",
-				"Master of Runes|Fighter||Rune Knight|TCE|15",
-				"Additional Rune Known|Fighter||Rune Knight|TCE|15",
-				"Runic Juggernaut|Fighter||Rune Knight|TCE|18"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Fighting Style",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Archery"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Defense"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Dueling"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Great Weapon Fighting"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Protection"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Two-Weapon Fighting"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Blind Fighting|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Interception|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Superior Technique|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Thrown Weapon Fighting|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Unarmed Fighting|TCE"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Second Wind",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d10} + your fighter level.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again."
-			]
-		},
-		{
-			"name": "Action Surge",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
-			]
-		},
-		{
-			"name": "Martial Archetype",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you choose an archetype from the list available that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Martial Versatility",
-			"source": "TCE",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level fighter {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
-				{
-					"type": "list",
-					"items": [
-						"Replace a {@filter fighting style|optionalfeatures|feature type=FS:F} you know with another fighting style available to fighters.",
-						"If you know any {@filter maneuvers|optionalfeatures|feature type=MV:B} from the {@class fighter|phb|Battle Master|Battle Master|phb|2-0} archetype, you can replace one maneuver you know with a different maneuver."
-					]
-				}
-			]
-		},
-		{
-			"name": "Extra Attack",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 5,
-			"entries": [
-				"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn.",
-				"The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"When you reach 6th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Martial Archetype feature",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 7,
-			"entries": [
-				"At 7th level, you gain a feature granted by your Martial Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Indomitable",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 9,
-			"entries": [
-				"Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.",
-				"You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
-			]
-		},
-		{
-			"name": "Martial Archetype feature",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"At 10th level, you gain a feature granted by your Martial Archetype."
-			]
-		},
-		{
-			"name": "Extra Attack (2)",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 11,
-			"entries": [
-				"At 11th level, you can attack three times whenever you take the {@action Attack} action on your turn."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Indomitable (two uses)",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 13,
-			"entries": [
-				"At 13th level, you can use Indomitable twice between long rests."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"When you reach 14th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Martial Archetype feature",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 15,
-			"entries": [
-				"At 15th level, you gain a feature granted by your Martial Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Action Surge (two uses)",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, you can use Action Surge twice before a rest, but only once on the same turn."
-			]
-		},
-		{
-			"name": "Indomitable (three uses)",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, you can use Indomitable three times between long rests."
-			]
-		},
-		{
-			"name": "Martial Archetype feature",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 18,
-			"entries": [
-				"At 18th level, you gain a feature granted by your Martial Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Extra Attack (3)",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you can attack four times whenever you take the {@action Attack} action on your turn."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Echo Knight",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 3,
-			"entries": [
-				"A mysterious and feared frontline warrior of the Kryn Dynasty, the Echo Knight has mastered the art of using dunamis to summon the fading shades of unrealized timelines to aid them in battle. Surrounded by echoes of their own might, they charge into the fray as a cycling swarm of shadows and strikes.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Manifest Echo|Fighter||Echo Knight|EGW|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Unleash Incarnation|Fighter||Echo Knight|EGW|3"
-				}
-			]
-		},
-		{
-			"name": "Manifest Echo",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Echo Knight feature}",
-				"You can use a bonus action to magically manifest an echo of yourself in an unoccupied space you can see within 15 feet of you. This echo is a magical, translucent, gray image of you that lasts until it is destroyed, until you dismiss it as a bonus action, until you manifest another echo, or until you're {@condition incapacitated}.",
-				"Your echo has AC 14 + your proficiency bonus, 1 hit point, and immunity to all conditions. If it has to make a saving throw, it uses your saving throw bonus for the roll. It is the same size as you, and it occupies its space. On your turn, you can mentally command the echo to move up to 30 feet in any direction (no action required). If your echo is ever more than 30 feet from you at the end of your turn, it is destroyed.",
-				"You can use the echo in the following ways:",
-				{
-					"type": "list",
-					"items": [
-						"As a bonus action, you can teleport, magically swapping places with your echo at a cost of 15 feet of your movement, regardless of the distance between the two of you.",
-						"When you take the {@action Attack} action on your turn, any attack you make with that action can originate from your space or the echo's space. You make this choice for each attack.",
-						"When a creature that you can see within 5 feet of your echo moves at least 5 feet away from it, you can use your reaction to make an opportunity attack against that creature as if you were in the echo's space."
-					]
-				}
-			]
-		},
-		{
-			"name": "Unleash Incarnation",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Echo Knight feature}",
-				"You can heighten your echo's fury. Whenever you take the {@action Attack} action, you can make one additional melee attack from the echo's position.",
-				"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Echo Avatar",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Echo Knight feature}",
-				"You can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are {@condition deafened} and {@condition blinded}. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
-			]
-		},
-		{
-			"name": "Shadow Martyr",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Echo Knight feature}",
-				"You can make your echo throw itself in front of an attack directed at another creature that you can see. Before the attack roll is made, you can use your reaction to teleport the echo to an unoccupied space within 5 feet of the targeted creature. The attack roll that triggered the reaction is instead made against your echo.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Reclaim Potential",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Echo Knight feature}",
-				"You've learned to absorb the fleeting magic of your echo. When an echo of yours is destroyed by taking damage, you can gain a number of temporary hit points equal to {@dice 2d6} + your Constitution modifier, provided you don't already have temporary hit points.",
-				"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Legion of One",
-			"source": "EGW",
-			"page": 183,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Echo Knight",
-			"subclassSource": "EGW",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-level Echo Knight feature}",
-				"You can use a bonus action to create two echoes with your Manifest Echo feature, and these echoes can coexist. If you try to create a third echo, the previous two echoes are destroyed. Anything you can do from one echo's position can be done from the other's instead.",
-				"In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
-			]
-		},
-		{
-			"name": "Scofflaw",
-			"source": "HWCS",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Scofflaw",
-			"subclassSource": "HWCS",
-			"level": 3,
-			"entries": [
-				"A fighter who hits hard and fights dirty, the Scofflaw balks at the ideals of honor and tradition, doing what they need to survive. Rules are made to be broken, and the Scofflaw extends this logic to their fighting style. Using every trick at their disposal to gain the upper hand against their foes, the Scofflaw cows their enemy into submission, or overwhelms their defenses with a single cheap shot.",
-				"Scofflaws eventually trust their notorious reputation to do much of the work for them, gaining the ability to cause foes to quake with a single threat. Scofflaws are a diverse bunch that run the gamut from graceful yet deadly knaves to bruiser thugs. What ties them together is their belief that there's no such thing as a bad win.",
-				{
-					"type": "entries",
-					"name": "Bonus Proficiency",
-					"entries": [
-						"When you choose this Martial Archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Insight}, {@skill Intimidation}, {@skill Sleight of Hand}, or {@skill Stealth}. Alternatively, you may learn {@class rogue|phb|Thieves' Cant||phb|Thieves' Cant 1}."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Intimidating Banter",
-					"entries": [
-						"At 3rd level, you are adept at integrating insults and barbs into your fighting style. So long as you are in combat, you may choose to use Strength or Dexterity to make Charisma ability checks."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Brutal Brawler",
-					"entries": [
-						"At 3rd level, your tavernside scuffles have honed your ability to deal damage with just about anything that's handy. You have proficiency with improvised weapons, and treat any improvised weapon you handle as if it has the finesse quality.",
-						"Additionally, whenever you hit with an improvised weapon, you may spend a bonus action to break it over your opponent. Doing this destroys the weapon, but deals the maximum number each of the weapon's damage dice could deal to the target. Any additional dice added to the attack's damage roll are not affected by this ability.",
-						"At 10th level, the improvised weapons you wield become even more lethal in your hands. When you spend your bonus action to break an improvised weapon over your opponent, add an additional {@damage 2d6} to the weapon's base damage dice.",
-						"At 18th level, you have advantage on attacks you make with improvised weapons."
-					]
-				}
-			]
-		},
-		{
-			"name": "Misdirection",
-			"source": "HWCS",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Scofflaw",
-			"subclassSource": "HWCS",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you are adept at using words and gestures to taunt or fake-out your opponent, turning their lack of composure against them. This allows you to goad your foe into swinging in ways that can cause them to strike their allies, or which leave them open to a counterattack. As a bonus action you can misdirect an opponent within 5 feet of you. The target must succeed on an Intelligence saving throw against a DC equal to 8 + your proficiency bonus + your Strength or Dexterity modifier. On a failure, they must spend their reaction to attack a creature of your choice within 5 feet of them. If no other creatures are present within 5 feet of them, they waste their reaction attacking the air where you once were.",
-				"In order for you to misdirect a creature in this way they must be able to see, hear, or otherwise be able to understand you."
-			]
-		},
-		{
-			"name": "Blindside",
-			"source": "HWCS",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Scofflaw",
-			"subclassSource": "HWCS",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you are truly skilled at exploiting the openings you create in combat, hitting off-guard opponents with precise blows that are swift and deadly. You may use this technique against any creature that hasn't yet taken a turn in combat, or who you have successfully misdirected this turn. You may also apply this technique to any attack roll you make with advantage. On a hit, you exploit an opening in the target's defenses, dealing an extra {@damage 5d6} points of damage. Once you use this ability, you can't use it again until you have taken a short or long rest.",
-				"At 15th level, the damage dealt by your blindside increases to {@damage 7d6}.",
-				"At 18th level the damage dealt by your blindside increases to {@damage 9d6}. If you have no uses of this ability at the beginning of combat on your turn, you regain one use of it."
-			]
-		},
-		{
-			"name": "Infamy",
-			"source": "HWCS",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Scofflaw",
-			"subclassSource": "HWCS",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, your reputation precedes you, making it easy for you to strike fear into the hearts of anyone foolish enough to oppose you. As part of your {@action Attack} action, you can utter deadly threats to a single target within 30 feet of you, causing them to become {@condition frightened} of you for 1 minute on a failed Wisdom saving throw. An affected target may repeat this saving throw at the end of each of their turns, ending the effect on a success. The DC for this saving throw is 8 + your proficiency bonus + your Strength or Dexterity modifier. A creature who has witnessed or heard tales of your ruthlessness makes this saving throw with disadvantage.",
-				"In order for you to use this feature, a creature must be able to see, hear, or otherwise be able to understand you."
-			]
-		},
-		{
-			"name": "Two For Flinching",
-			"source": "HWCS",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Scofflaw",
-			"subclassSource": "HWCS",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, you have perfected the art of exploiting your opponent's weakness. Whenever you take the attack action against an opponent you have successfully misdirected this turn, or an opponent that is afflicted by a {@book condition|PHB|11}, you may make one additional attack against that opponent. You may only use this feature once per round."
-			]
-		},
-		{
-			"name": "Battle Master",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Student of War|Fighter||Battle Master||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Combat Superiority|Fighter||Battle Master||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Maneuvers|Fighter||Battle Master||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Maneuver Options|Fighter||Battle Master||3|TCE"
-				}
-			]
-		},
-		{
-			"name": "Combat Superiority",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you learn maneuvers that are fueled by special dice called superiority dice.",
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Maneuvers",
-							"entries": [
-								"You learn three maneuvers of your choice, which are listed under \"Maneuvers\" below. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
-								"You learn two additional maneuvers of your choice at 7th, 10th, and 15th level. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Superiority Dice",
-							"entries": [
-								"You have four superiority dice, which are {@dice d8}s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
-								"You gain another superiority die at 7th level and one more at 15th level."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Saving Throws",
-							"entries": [
-								"Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:",
-								{
-									"type": "abilityDc",
-									"name": "Maneuver",
-									"attributes": [
-										"str",
-										"dex"
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Maneuver Options",
-			"source": "TCE",
-			"page": 41,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level fighter {@variantrule optional class features|tce|optional feature}}",
-				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters but also to characters who have a special feature like the {@optfeature Superior Technique|TCE} fighting style or the {@feat Martial Adept} feat.",
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "options",
-							"entries": [
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Ambush|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Bait and Switch|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Brace|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Commanding Presence|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Grappling Strike|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Quick Toss|TCE"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Tactical Assessment|TCE"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Maneuvers",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"The maneuvers are presented in alphabetical order.",
-				{
-					"type": "options",
-					"count": 3,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Commander's Strike"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Disarming Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Distracting Strike"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Evasive Footwork"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Feinting Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Goading Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Lunging Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Maneuvering Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Menacing Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Parry"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Precision Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Pushing Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Rally"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Riposte"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Sweeping Attack"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Trip Attack"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Student of War",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} of your choice."
-			]
-		},
-		{
-			"name": "Additional Maneuvers",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you learn two additional maneuvers of your choice."
-			]
-		},
-		{
-			"name": "Additional Superiority Die",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"You gain another superiority die at 7th level."
-			]
-		},
-		{
-			"name": "Know Your Enemy",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"If you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
-				{
-					"type": "list",
-					"items": [
-						"Strength score",
-						"Dexterity score",
-						"Constitution score",
-						"Armor Class",
-						"Current hit points",
-						"Total class levels (if any)",
-						"Fighter class levels (if any)"
-					]
-				}
-			]
-		},
-		{
-			"name": "Additional Maneuvers",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn two additional maneuvers of your choice."
-			]
-		},
-		{
-			"name": "Improved Combat Superiority (d10)",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, your superiority dice turn into {@dice d10}s."
-			]
-		},
-		{
-			"name": "Additional Maneuvers",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, you learn two additional maneuvers of your choice."
-			]
-		},
-		{
-			"name": "Additional Superiority Die",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"You gain another superiority die at 15th level."
-			]
-		},
-		{
-			"name": "Relentless",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die."
-			]
-		},
-		{
-			"name": "Improved Combat Superiority (d12)",
-			"source": "PHB",
-			"page": 73,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Battle Master",
-			"subclassSource": "PHB",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, your superiority dice turn into {@dice d12}s."
-			]
-		},
-		{
-			"name": "Champion",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Improved Critical|Fighter||Champion||3"
-				}
-			]
-		},
-		{
-			"name": "Improved Critical",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
-			]
-		},
-		{
-			"name": "Remarkable Athlete",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus.",
-				"In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
-			]
-		},
-		{
-			"name": "Additional Fighting Style",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you can choose a second option from the Fighting Style class feature."
-			]
-		},
-		{
-			"name": "Superior Critical",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
-			]
-		},
-		{
-			"name": "Survivor",
-			"source": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Champion",
-			"subclassSource": "PHB",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
-			]
-		},
-		{
-			"name": "Eldritch Knight",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic\u2014abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Spellcasting|Fighter||Eldritch Knight||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Weapon Bond|Fighter||Eldritch Knight||3"
-				}
-			]
-		},
-		{
-			"name": "Spellcasting",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you reach 3rd level, you augment your martial prowess with the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
-				{
-					"type": "entries",
-					"name": "Cantrips",
-					"entries": [
-						"You learn two cantrips of your choice from the {@filter wizard spell list|spells|class=wizard}. You learn an additional wizard cantrip of your choice at 10th level."
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spell Slots",
-							"entries": [
-								"The Eldritch Knight Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-								"For example, if you know the 1st-level spell {@spell shield} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell shield} using either slot."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spells Known of 1st-Level and Higher",
-							"entries": [
-								"You know three 1st-level wizard spells of your choice, two of which you must choose from the abjuration and evocation spells on the wizard spell list.",
-								"The Spells Known column of the Eldritch Knight Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an abjuration or evocation spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-								"The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-								"Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an abjuration or evocation spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spellcasting Ability",
-							"entries": [
-								"Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
-								{
-									"type": "abilityDc",
-									"name": "Spell",
-									"attributes": [
-										"int"
-									]
-								},
-								{
-									"type": "abilityAttackMod",
-									"name": "Spell",
-									"attributes": [
-										"int"
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Weapon Bond",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.",
-				"Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are {@condition incapacitated}. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.",
-				"You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two."
-			]
-		},
-		{
-			"name": "War Magic",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"Beginning at 7th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
-			]
-		},
-		{
-			"name": "Eldritch Strike",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
-			]
-		},
-		{
-			"name": "Arcane Charge",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action."
-			]
-		},
-		{
-			"name": "Improved War Magic",
-			"source": "PHB",
-			"page": 74,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Eldritch Knight",
-			"subclassSource": "PHB",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action."
-			]
-		},
-		{
-			"name": "Purple Dragon Knight (Banneret)",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"entries": [
-				"Purple Dragon Knights are warriors who hail from the kingdom of Cormyr. Pledged to protect the crown, they take the fight against evil beyond the kingdom's borders. They are tasked with wandering the land as knights errant, relying on their judgment, bravery, and fidelity to guide them in defeating evildoers.",
-				"A Purple Dragon Knight inspires greatness in others by committing brave deeds in battle. The mere presence of a knight in a hamlet is enough to cause some orcs and bandits to seek easier prey. A lone knight is a skilled warrior, but a knight leading a band of allies can transform even the most poorly equipped militia into a ferocious war band.",
-				"A knight prefers to lead through deeds, not words. As a knight spearheads an attack, the knight's actions can awaken reserves of courage and conviction in allies that they never suspected they had.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Restriction: Knighthood|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Rallying Cry|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
-				}
-			]
-		},
-		{
-			"name": "Rallying Cry",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you learn how to inspire your allies to fight on past their injuries.",
-				"When you use your Second Wind feature, you can choose up to three creatures within 60 feet of you that are allied with you. Each one regains hit points equal to your fighter level, provided that the creature can see or hear you."
-			]
-		},
-		{
-			"name": "Restriction: Knighthood",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Purple Dragon Knights are tied to a specific order of Cormyrean knighthood.",
-				"Banneret serves as the generic name for this archetype if you use it in other campaign settings or to model warlords other than the Purple Dragon Knights."
-			]
-		},
-		{
-			"name": "Royal Envoy",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"A Purple Dragon Knight serves as an envoy of the Cormyrean crown. Knights of high standing are expected to conduct themselves with grace.",
-				"At 7th level, you gain proficiency in the {@skill Persuasion} skill. If you are already proficient in it, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Insight}, {@skill Intimidation}, or {@skill Performance}.",
-				"Your proficiency bonus is doubled for any ability check you make that uses {@skill Persuasion}. You receive this benefit regardless of the skill proficiency you gain from this feature."
-			]
-		},
-		{
-			"name": "Inspiring Surge",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, when you use your Action Surge feature, you can choose one creature within 60 feet of you that is allied with you. That creature can make one melee or ranged weapon attack with its reaction, provided that it can see or hear you.",
-				"Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
-			]
-		},
-		{
-			"name": "Bulwark",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Beginning at 15th level, you can extend the benefit of your Indomitable feature to an ally. When you decide to use Indomitable to reroll an Intelligence, a Wisdom, or a Charisma saving throw and you aren't {@condition incapacitated}, you can choose one ally within 60 feet of you that also failed its saving throw against the same effect. If that creature can see or hear you, it can reroll its saving throw and must use the new roll."
-			]
-		},
-		{
-			"name": "Inspiring Surge",
-			"source": "SCAG",
-			"page": 128,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Purple Dragon Knight (Banneret)",
-			"subclassSource": "SCAG",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
-			]
-		},
-		{
-			"name": "Psi Warrior",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Awake to the psionic power within, a Psi Warrior is a fighter who augments their physical might with psi-infused weapon strikes, telekinetic lashes, and barriers of mental force. Many githyanki train to become such warriors, as do some of the most disciplined high elves. In the world of Eberron, many young kalashtar dream of becoming Psi Warriors.",
-				"As a Psi Warrior, you might have honed your psionic abilities through solo discipline, unlocked it under the tutelage of a master, or refined it at an academy dedicated to wielding the mind's power as both weapon and shield.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Psionic Power|Fighter||Psi Warrior|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Psionic Power",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Psi Warrior feature}",
-				"You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
-				"Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.",
-				"When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
-				"The powers below use your Psionic Energy dice.",
-				{
-					"type": "options",
-					"style": "list-hang-notitle",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Protective Field|Fighter|TCE|Psi Warrior|TCE|3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Psionic Strike|Fighter|TCE|Psi Warrior|TCE|3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Telekinetic Movement|Fighter|TCE|Psi Warrior|TCE|3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Telekinetic Adept",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Psi Warrior feature}",
-				"You have mastered new ways to use your telekinetic abilities, detailed below.",
-				{
-					"type": "options",
-					"style": "list-hang-notitle",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Psi-Powered Leap|Fighter|TCE|Psi Warrior|TCE|7"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Telekinetic Thrust|Fighter|TCE|Psi Warrior|TCE|7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Guarded Mind",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Psi Warrior feature}",
-				"The psionic energy flowing through you has bolstered your mind. You have resistance to psychic damage. Moreover, if you start your turn {@condition charmed} or {@condition frightened}, you can expend a Psionic Energy die and end every effect on yourself subjecting you to those conditions."
-			]
-		},
-		{
-			"name": "Bulwark of Force",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Psi Warrior feature}",
-				"You can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by half cover for 1 minute or until you're {@condition incapacitated}.",
-				"Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
-			]
-		},
-		{
-			"name": "Telekinetic Master",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-level Psi Warrior feature}",
-				"Your ability to move creatures and objects with your mind is matched by few. You can cast the {@spell telekinesis} spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
-				"Once you cast the spell with this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
-			]
-		},
-		{
-			"name": "Rune Knight",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Rune Knights enhance their martial prowess using the supernatural power of runes, an ancient practice that originated with giants. Rune cutters can be found among any family of giants, and you likely learned your methods first or second hand from such a mystical artisan. Whether you found the giant's work carved into a hill or cave, learned of the runes from a sage, or met the giant in person, you studied the giant's craft and learned how to apply magic runes to empower your equipment.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Fighter||Rune Knight|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Rune Carver|Fighter||Rune Knight|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Giant's Might|Fighter||Rune Knight|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Bonus Proficiencies",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write {@language Giant}."
-			]
-		},
-		{
-			"name": "Giant's Might",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You have learned how to imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:",
-				{
-					"type": "list",
-					"items": [
-						"If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.",
-						"You have advantage on Strength checks and Strength saving throws.",
-						"Once on each of your turns, one of your attacks with a weapon or an unarmed strike can deal an extra {@damage 1d6} damage to a target on a hit."
-					]
-				},
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Rune Carver",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You can use magic runes to enhance your gear. You learn two runes of your choice, from among the runes described below, and each time you gain a level in this class, you can replace one rune you know with a different one from this feature. When you reach certain levels in this class, you learn additional runes, as shown in the Runes Known table.",
-				"Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.",
-				{
-					"type": "table",
-					"caption": "Runes Known",
-					"colLabels": [
-						"Fighter Level",
-						"Number of Runes"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"3rd",
-							"2"
-						],
-						[
-							"7th",
-							"3"
-						],
-						[
-							"10th",
-							"4"
-						],
-						[
-							"15th",
-							"5"
-						]
-					]
-				},
-				"The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.",
-				{
-					"type": "options",
-					"count": 2,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Cloud Rune|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Fire Rune|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Frost Rune|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Stone Rune|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Hill Rune|TCE",
-							"name": "Hill Rune (7th Level or Higher)"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Storm Rune|TCE",
-							"name": "Storm Rune (7th Level or Higher)"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Additional Rune Known",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Rune Knight feature}",
-				"You learn an additional Rune."
-			]
-		},
-		{
-			"name": "Runic Shield",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Rune Knight feature}",
-				"You learn to invoke your rune magic to protect your allies. When another creature you can see within 60 feet of you is hit by an attack roll, you can use your reaction to force the attacker to reroll the {@dice d20} and use the new roll.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Additional Rune Known",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Rune Knight feature}",
-				"You learn an additional Rune."
-			]
-		},
-		{
-			"name": "Great Stature",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Rune Knight feature}",
-				"The magic of your runes permanently alters you. When you gain this feature, roll {@dice 3d4}. You grow a number of inches in height equal to the roll.",
-				"Moreover, the extra damage you deal with your Giant's Might feature increases to {@dice 1d8}."
-			]
-		},
-		{
-			"name": "Additional Rune Known",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Rune Knight feature}",
-				"You learn an additional Rune."
-			]
-		},
-		{
-			"name": "Master of Runes",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Rune Knight feature}",
-				"You can invoke each rune you know from your Rune Carver feature twice, rather than once, and you regain all expended uses when you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Runic Juggernaut",
-			"source": "TCE",
-			"page": 44,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Rune Knight",
-			"subclassSource": "TCE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-level Rune Knight feature}",
-				"You learn how to amplify your rune-powered transformation. As a result, the extra damage you deal with the Giant's Might feature increases to {@dice 1d10}. Moreover, when you use that feature, your size can increase to Huge, and while you are that size, your reach increases by 5 feet."
-			]
-		},
-		{
-			"name": "Arcane Archer",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"An Arcane Archer studies a unique elven method of archery that weaves magic into attacks to produce supernatural effects. Arcane Archers are some of the most elite warriors among the elves. They stand watch over the fringes of elven domains, keeping a keen eye out for trespassers and using magic-infused arrows to defeat monsters and invaders before they can reach elven settlements. Over the centuries, the methods of these elf archers have been learned by members of other races who can also balance arcane aptitude with archery.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Archer Lore|Fighter||Arcane Archer|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Shot|Fighter||Arcane Archer|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Shot Options|Fighter||Arcane Archer|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Arcane Archer Lore",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you learn magical theory or some of the secrets of nature\u2014typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the {@skill Arcana} or the {@skill Nature} skill, and you choose to learn either the {@spell prestidigitation} or the {@spell druidcraft} cantrip."
-			]
-		},
-		{
-			"name": "Arcane Shot",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you learn to unleash special magical effects with some of your shots. When you gain this feature, you learn two Arcane Shot options of your choice (see \"Arcane Shot Options\" below).",
-				"Once per turn when you fire an arrow from a shortbow or longbow as part of the {@action Attack} action, you can apply one of your Arcane Shot options to that arrow. You decide to use the option when the arrow hits a creature, unless the option doesn't involve an attack roll. You have two uses of this ability, and you regain all expended uses of it when you finish a short or long rest.",
-				"You gain an additional Arcane Shot option of your choice when you reach certain levels in this class: 7th, 10th, 15th, and 18th level. Each option also improves when you become an 18th-level fighter."
-			]
-		},
-		{
-			"name": "Arcane Shot Options",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"The Arcane Shot feature lets you choose options for it at certain levels. The options are presented here in alphabetical order. They are all magical effects, and each one is associated with one of the schools of magic.",
-				"If an option requires a saving throw, your Arcane Shot save DC is calculated as follows:",
-				{
-					"type": "abilityDc",
-					"name": "Arcane Shot",
-					"attributes": [
-						"int"
-					]
-				},
-				{
-					"type": "options",
-					"count": 2,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Banishing Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Beguiling Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Bursting Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Enfeebling Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Grasping Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Piercing Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Seeking Arrow|XGE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Shadow Arrow|XGE"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Additional Arcane Shot Option",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 7th level."
-			]
-		},
-		{
-			"name": "Curving Shot",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
-			]
-		},
-		{
-			"name": "Magic Arrow",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target."
-			]
-		},
-		{
-			"name": "Additional Arcane Shot Option",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 10th level."
-			]
-		},
-		{
-			"name": "Additional Arcane Shot Option",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 15th level."
-			]
-		},
-		{
-			"name": "Ever-Ready Shot",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it."
-			]
-		},
-		{
-			"name": "Additional Arcane Shot Option",
-			"source": "XGE",
-			"page": 28,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Archer",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 18th level. Each option also improves when you become an 18th-level fighter."
-			]
-		},
-		{
-			"name": "Cavalier",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Fighter||Cavalier|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Born to the Saddle|Fighter||Cavalier|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Unwavering Mark|Fighter||Cavalier|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Bonus Proficiency",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
-			]
-		},
-		{
-			"name": "Born to the Saddle",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, your mastery as a rider becomes apparent. You have advantage on saving throws made to avoid falling off your mount. If you fall off your mount and descend no more than 10 feet, you can land on your feet if you're not {@condition incapacitated}.",
-				"Finally, mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed."
-			]
-		},
-		{
-			"name": "Unwavering Mark",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you can menace your foes, foiling their attacks and punishing them for harming others. When you hit a creature with a melee weapon attack, you can mark the creature until the end of your next turn. This effect ends early if you are {@condition incapacitated} or you die, or if someone else marks the creature.",
-				"While it is within 5 feet of you, a creature marked by you has disadvantage on any attack roll that doesn't target you.",
-				"In addition, if a creature marked by you deals damage to anyone other than you, you can make a special melee weapon attack against the marked creature as a bonus action on your next turn. You have advantage on the attack roll, and if it hits, the attack's weapon deals extra damage to the target equal to half your fighter level.",
-				"Regardless of the number of creatures you mark, you can make this special attack a number of times equal to your Strength modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Warding Maneuver",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll {@dice 1d8} as a reaction if you're wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target's AC against that attack. If the attack still hits, the target has resistance against the attack's damage.",
-				"You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Hold the Line",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you become a master of locking down your enemies. Creatures provoke an opportunity attack from you when they move 5 feet or more while within your reach, and if you hit a creature with an opportunity attack, the target's speed is reduced to 0 until the end of the current turn."
-			]
-		},
-		{
-			"name": "Ferocious Charger",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, you can run down your foes, whether you're mounted or not. If you move at least 10 feet in a straight line right before attacking a creature and you hit it with the attack, that target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition prone}. You can use this feature only once on each of your turns."
-			]
-		},
-		{
-			"name": "Vigilant Defender",
-			"source": "XGE",
-			"page": 30,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Cavalier",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Starting at 18th level, you respond to danger with extraordinary vigilance. In combat, you get a special reaction that you can take once on every creature's turn, except your turn. You can use this special reaction only to make an opportunity attack, and you can't use it on the same turn that you take your normal reaction."
-			]
-		},
-		{
-			"name": "Samurai",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A Samurai's resolve is nearly unbreakable, and the enemies in a Samurai's path have two choices: yield or die fighting.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Fighter||Samurai|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Fighting Spirit|Fighter||Samurai|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Bonus Proficiency",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
-			]
-		},
-		{
-			"name": "Fighting Spirit",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, your intensity in battle can shield you and help you strike true. As a bonus action on your turn, you can give yourself advantage on weapon attack rolls until the end of the current turn. When you do so, you also gain 5 temporary hit points. The number of temporary hit points increases when you reach certain levels in this class, increasing to 10 at 10th level and 15 at 15th level.",
-				"You can use this feature three times, and you regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Elegant Courtier",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"Starting at 7th level, your discipline and attention to detail allow you to excel in social situations. Whenever you make a Charisma ({@skill Persuasion}) check, you gain a bonus to the check equal to your Wisdom modifier.",
-				"Your self-control also causes you to gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
-			]
-		},
-		{
-			"name": "Tireless Spirit",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, when you roll initiative and have no uses of Fighting Spirit remaining, you regain one use."
-			]
-		},
-		{
-			"name": "Rapid Strike",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, you learn to trade accuracy for swift strikes. If you take the {@action Attack} action on your turn and have advantage on an attack roll against one of the targets, you can forgo the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You can do so no more than once per turn."
-			]
-		},
-		{
-			"name": "Strength before Death",
-			"source": "XGE",
-			"page": 31,
-			"className": "Fighter",
-			"classSource": "PHB",
-			"subclassShortName": "Samurai",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Starting at 18th level, your fighting spirit can delay the grasp of death. If you take damage that reduces you to 0 hit points and doesn't kill you outright, you can use your reaction to delay falling {@condition unconscious}, and you can immediately take an extra turn, interrupting the current turn. While you have 0 hit points during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throw failures can still kill you. When the extra turn ends, you fall {@condition unconscious} if you still have 0 hit points.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Protective Field",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "TCE",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 3,
-			"consumes": {
-				"name": "Psionic Energy Die"
-			},
-			"entries": [
-				"When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1), as you create a momentary shield of telekinetic force."
-			]
-		},
-		{
-			"name": "Psionic Strike",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "TCE",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 3,
-			"consumes": {
-				"name": "Psionic Energy Die"
-			},
-			"entries": [
-				"You can propel your weapons with psionic force. Once on each of your turns, immediately after you hit a target within 30 feet of you with an attack and deal damage to it with a weapon, you can expend one Psionic Energy die, rolling it and dealing force damage to the target equal to the number rolled plus your Intelligence modifier."
-			]
-		},
-		{
-			"name": "Telekinetic Movement",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "TCE",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"You can move an object or a creature with your mind. As an action, you target one loose object that is Large or smaller or one willing creature, other than yourself. If you can see the target and it is within 30 feet of you, you can move it up to 30 feet to an unoccupied space you can see. Alternatively, if it is a Tiny object, you can move it to or from your hand. Either way, you can move the target horizontally, vertically, or both. Once you take this action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
-			]
-		},
-		{
-			"name": "Psi-Powered Leap",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "TCE",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 7,
-			"entries": [
-				"As a bonus action, you can propel your body with your mind. You gain a flying speed equal to twice your walking speed until the end of the current turn. Once you take this bonus action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
-			]
-		},
-		{
-			"name": "Telekinetic Thrust",
-			"source": "TCE",
-			"page": 42,
-			"className": "Fighter",
-			"classSource": "TCE",
-			"subclassShortName": "Psi Warrior",
-			"subclassSource": "TCE",
-			"level": 7,
-			"entries": [
-				"When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. If the save fails, you can knock the target {@condition prone} or move it up to 10 feet in any direction horizontally."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "战士",
+      "ENG_name": "Fighter",
+      "source": "PHB",
+      "page": 70,
+      "srd": true,
+      "basicRules": true,
+      "hd": {
+        "number": 1,
+        "faces": 10
+      },
+      "proficiency": [
+        "力量",
+        "体质"
+      ],
+      "optionalfeatureProgression": [
+        {
+          "name": "need-translate-d5b49aae-3206-11ef-ae1d-d1200322b32e",
+          "ENG_name": "Fighting Style",
+          "featureType": [
+            "FS:F"
+          ],
+          "progression": {
+            "1": 1
+          }
+        }
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术",
+          "中等",
+          "重型",
+          "{@item shield|phb|盾牌}"
+        ],
+        "weapons": [
+          "简单",
+          "武术"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:特技",
+                "属性检定:驯兽",
+                "属性检定:运动",
+                "属性检定:历史",
+                "属性检定:洞悉",
+                "属性检定:威吓",
+                "属性检定:察觉",
+                "属性检定:求生"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a)一件{@item 锁子甲|phb} 或 (b)一件{@item 皮甲|phb}、一把{@item 长弓|phb}和{@item 箭(20)|phb|20支箭}",
+          "(a)一把{@filter 军用武器|items|source=phb|category=basic|type=martial weapon}和一面{@item 盾牌|phb} 或 (b)两把{@filter 军用武器|items|source=phb|category=basic|type=martial weapon}",
+          "(a)一把{@item 轻弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)二把{@item 手斧|phb}",
+          "(a)一套{@item 地城探险家套装|phb} 或 (b)一套{@item 探索者套装|phb}"
+        ],
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "锁子甲|phb"
+            ],
+            "b": [
+              "皮甲|phb",
+              "长弓",
+              "箭矢 (20)|phb"
+            ]
+          },
+          {
+            "a": [
+              {
+                "equipmentType": "武器（武术）"
+              },
+              "盾牌|PHB"
+            ],
+            "b": [
+              {
+                "equipmentType": "武器（武术）",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "a": [
+              "轻型十字弓|phb",
+              "弩箭（20）|phb"
+            ],
+            "b": [
+              {
+                "item": "手斧|phb",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "a": [
+              "探险者背包|phb"
+            ],
+            "b": [
+              "探险家背包|phb"
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "or": [
+            {
+              "str": 13,
+              "dex": 13
+            }
+          ]
+        },
+        "proficienciesGained": {
+          "armor": [
+            "光亮术",
+            "中等",
+            "{@item shield|phb|盾牌}"
+          ],
+          "weapons": [
+            "简单",
+            "武术"
+          ]
+        }
+      },
+      "classFeatures": [
+        "战斗风格|战士||1",
+        "再起|战士||1",
+        "行动激增|战士||2",
+        {
+          "classFeature": "战斗风格|战士||3",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|战士||4",
+        "武术多样性|战士||4|TCE",
+        "额外攻击|战士||5",
+        "能力值提升|战士||6",
+        {
+          "classFeature": "战斗风格特性|战士||7",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|战士||8",
+        "不屈|战士||9",
+        {
+          "classFeature": "战斗风格特性|战士||10",
+          "gainSubclassFeature": true
+        },
+        "额外攻击 (2)|战士||11",
+        "属性值提升|战士||12",
+        "不屈（两次使用）|战士||13",
+        "属性值提升|战士||14",
+        {
+          "classFeature": "战斗风格特性|战士||15",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|战士||16",
+        "行动激增（两次使用）|战士||17",
+        "不屈（三次使用）|战士||17",
+        {
+          "classFeature": "战斗风格特性|战士||18",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|战士||19",
+        "额外攻击 (3)|战士||20"
+      ],
+      "subclassTitle": "战士:武术范型",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "战斗大师",
+      "ENG_name": "Battle Master",
+      "shortName": "战斗大师",
+      "source": "PHB",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 73,
+      "optionalfeatureProgression": [
+        {
+          "name": "战技",
+          "ENG_name": "Maneuvers",
+          "featureType": [
+            "MV:B"
+          ],
+          "progression": {
+            "3": 3,
+            "7": 5,
+            "10": 7,
+            "15": 9
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "战斗大师|战士||战斗大师||3",
+        "额外机动|战士||战斗大师||7",
+        "额外优越骰|战士||战场主宰||7",
+        "了解你的敌人|战士||战斗大师||7",
+        "额外机动|战士||战斗大师||10",
+        "战斗优越性增强（d10）|战士||战场主宰||10",
+        "额外机动|战士||战场主宰||15",
+        "额外优势骰|战士||战斗大师||15",
+        "不屈不挠|战士||战斗大师||15",
+        "战斗优势增强（d12）|战士||战斗大师||18"
+      ]
+    },
+    {
+      "name": "勇士",
+      "ENG_name": "Champion",
+      "shortName": "勇士",
+      "source": "PHB",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "optionalfeatureProgression": [
+        {
+          "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+          "ENG_name": "Fighting Style",
+          "featureType": [
+            "FS:F"
+          ],
+          "progression": {
+            "10": 1
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "冠军|战士||冠军||3",
+        "卓越运动员|战士||冠军||7",
+        "额外战斗风格|战士||冠军||10",
+        "卓越暴击|战士||冠军||15",
+        "幸存者|战士||冠军||18"
+      ]
+    },
+    {
+      "name": "奥法骑士",
+      "ENG_name": "Eldritch Knight",
+      "shortName": "奥法骑士",
+      "source": "PHB",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 74,
+      "spellcastingAbility": "int",
+      "casterProgression": "1/3",
+      "cantripProgression": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "spellsKnownProgression": [
+        0,
+        0,
+        3,
+        4,
+        4,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        8,
+        9,
+        10,
+        10,
+        11,
+        11,
+        11,
+        12,
+        13
+      ],
+      "additionalSpells": [
+        {
+          "expanded": {
+            "3": [
+              {
+                "all": "等级=0|职业=巫师"
+              },
+              {
+                "all": "等级=1|职业=巫师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=2|职业=巫师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=3|职业=巫师"
+              }
+            ],
+            "19": [
+              {
+                "all": "等级=4|职业=巫师"
+              }
+            ]
+          }
+        }
+      ],
+      "subclassTableGroups": [
+        {
+          "subclasses": [
+            {
+              "name": "奥法骑士",
+              "ENG_name": "Eldritch Knight",
+              "source": "PHB"
+            }
+          ],
+          "colLabels": [
+            "{@filter 已知戏法|法术|等级=0|子类=战士：秘术骑士}",
+            "{@filter 已知法术|法术|子类=战士：奥术骑士}"
+          ],
+          "rows": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            3,
+            2,
+            4,
+            2,
+            4,
+            2,
+            4,
+            2,
+            5,
+            2,
+            6,
+            2,
+            6,
+            3,
+            7,
+            3,
+            8,
+            3,
+            8,
+            3,
+            9,
+            3,
+            10,
+            3,
+            10,
+            3,
+            11,
+            3,
+            11,
+            3,
+            11,
+            3,
+            12,
+            3,
+            13
+          ]
+        },
+        {
+          "title": "每个法术等级的法术位",
+          "subclasses": [
+            {
+              "name": "奥法骑士",
+              "ENG_name": "Eldritch Knight",
+              "source": "PHB"
+            }
+          ],
+          "colLabels": [
+            "{@filter 1级|法术|等级=1|子职业=战士：秘法骑士}",
+            "{@filter 第二级|法术|等级=2|子类=战士：奥术骑士}",
+            "{@filter 第三等级|法术|等级=3|子职业=战士:奥术骑士}",
+            "{@filter 第4级|法术|等级=4|子职业=战士：奥术骑士}"
+          ],
+          "rowsSpellProgression": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            1
+          ]
+        }
+      ],
+      "subclassFeatures": [
+        "奥术骑士|战士||奥术骑士||3",
+        "战魔法|战士||秘法骑士||7",
+        "奥术打击|战士||奥术骑士||10",
+        "奥术冲锋|战士||奥术骑士||15",
+        "强化战魔法|战士||秘法骑士||18"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将)",
+      "ENG_name": "Purple Dragon Knight (Banneret)",
+      "shortName": "紫龙骑士(旗将)",
+      "source": "SCAG",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 128,
+      "subclassFeatures": [
+        "紫龙骑士（旗手）|战士||紫龙骑士（旗手）|SCAG|3",
+        "皇家使者|战士||紫龙骑士（旗手）|SCAG|7",
+        "激励浪潮|战士||紫龙骑士（旗手）|SCAG|10",
+        "堡垒|战士||紫龙骑士（旗手）|SCAG|15",
+        "激励激增|战士||紫龙骑士（旌旗手）|SCAG|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "魔射手",
+      "ENG_name": "Arcane Archer",
+      "shortName": "魔射手",
+      "source": "XGE",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 28,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "戏法#c"
+            ]
+          }
+        },
+        {
+          "known": {
+            "3": [
+              "德鲁伊术#c"
+            ]
+          }
+        }
+      ],
+      "optionalfeatureProgression": [
+        {
+          "name": "奥术射击",
+          "ENG_name": "Arcane Shots",
+          "featureType": [
+            "AS"
+          ],
+          "progression": {
+            "3": 2,
+            "7": 3,
+            "10": 4,
+            "15": 5,
+            "18": 6
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "奥术射手|战士||奥术射手|XGE|3",
+        "魔法箭|战士||奥术射手|XGE|7",
+        "弯曲射击|战士||奥术射手|XGE|7",
+        "额外奥术射击选项|战士||奥术射手|XGE|7",
+        "额外奥术射击选项|战士||奥术射手|XGE|10",
+        "随时准备射击|战士||奥术射手|XGE|15",
+        "额外奥术射击选项|战士||奥术射手|XGE|15",
+        "额外奥术射击选项|战士||奥术射手|XGE|18"
+      ]
+    },
+    {
+      "name": "骑兵",
+      "ENG_name": "Cavalier",
+      "shortName": "骑兵",
+      "source": "XGE",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 30,
+      "subclassFeatures": [
+        "骑士|战士||骑士|XGE|3",
+        "守护机动|战士||骑士|XGE|7",
+        "坚守阵地|战士||骑士|XGE|10",
+        "凶猛冲锋者|战士||骑士|XGE|15",
+        "警戒守卫|战士||骑士|XGE|18"
+      ]
+    },
+    {
+      "name": "武士",
+      "ENG_name": "Samurai",
+      "shortName": "武士",
+      "source": "XGE",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 31,
+      "subclassFeatures": [
+        "武士|战士||武士|XGE|3",
+        "优雅贵族|战士||武士|XGE|7",
+        "不屈精神|战士||武士|XGE|10",
+        "快速打击|战士||武士|XGE|15",
+        "死前之力|战士||武士|XGE|18"
+      ]
+    },
+    {
+      "name": "法外狂徒",
+      "ENG_name": "Scofflaw",
+      "shortName": "法外狂徒",
+      "source": "HWCS",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 41,
+      "subclassFeatures": [
+        "蔑视法律者|战士||蔑视法律者|HWCS|3",
+        "误导|战士||无赖|HWCS|7",
+        "偷袭|战士||不法之徒|HWCS|10",
+        "恶名|战士||蔑视者|HWCS|15",
+        "双倍反击|战士||流氓|HWCS|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "回音骑士",
+      "ENG_name": "Echo Knight",
+      "shortName": "回音骑士",
+      "source": "EGW",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 183,
+      "subclassFeatures": [
+        "回声骑士|战士||回声骑士|EGW|3",
+        "回声化身|战士||回声骑士|EGW|7",
+        "影子殉道者|战士||回声骑士|EGW|10",
+        "重获潜能|战士||回声骑士|EGW|15",
+        "独行军团|战士||回声骑士|EGW|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "灵能武士",
+      "ENG_name": "Psi Warrior",
+      "shortName": "灵能武士",
+      "source": "TCE",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 42,
+      "additionalSpells": [
+        {
+          "innate": {
+            "18": {
+              "daily": {
+                "1": [
+                  "心灵遥控"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "灵能战士|战士||灵能战士|TCE|3",
+        "心灵感应专家|战士||灵能战士|TCE|7",
+        "警觉心智|战士||心灵战士|TCE|10",
+        "力量堡垒|战士||灵能战士|TCE|15",
+        "心灵遥控大师|战士||灵能战士|TCE|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "符文骑士",
+      "ENG_name": "Rune Knight",
+      "shortName": "符文骑士",
+      "source": "TCE",
+      "className": "战士",
+      "classSource": "PHB",
+      "page": 44,
+      "optionalfeatureProgression": [
+        {
+          "name": "符文",
+          "ENG_name": "Runes",
+          "featureType": [
+            "RN"
+          ],
+          "progression": {
+            "3": 2,
+            "7": 3,
+            "10": 4,
+            "15": 5
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "符文骑士|战士||符文骑士|TCE|3",
+        "符文盾牌|战士||符文骑士|TCE|7",
+        "额外符文已知|战士||符文骑士|TCE|7",
+        "高大身躯|战士||符文骑士|TCE|10",
+        "额外符文已知|战士||符文骑士|TCE|10",
+        "符文大师|战士||符文骑士|TCE|15",
+        "额外符文已知|战士||符文骑士|TCE|15",
+        "符文冲撞者|战士||符文骑士|TCE|18"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "ENG_name": "Fighting Style",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你选择了一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能选择相同的战斗风格选项超过一次，即使你再次获得选择机会。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:箭术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:防御"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:对决"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:巨武器战斗"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:守护"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:双武器战斗"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "盲斗|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "拦截|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "卓越技巧|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "投掷武器战斗|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "徒手格斗|TCE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战士:回气",
+      "ENG_name": "Second Wind",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d10} + your fighter level.",
+        "一旦你使用了这个特性，你必须完成一次短休或长休后才能再次使用它。"
+      ]
+    },
+    {
+      "name": "战士:动作如潮",
+      "ENG_name": "Action Surge",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "从第二级开始，你可以暂时超越自己的正常极限。在你的回合，你可以采取一个额外的行动。",
+        "一旦你使用了这个特性，你必须在下一次短休或长休之前才能再次使用它。从17级开始，你可以在休息前使用两次，但在同一回合中只能使用一次。"
+      ]
+    },
+    {
+      "name": "战士:武术范型",
+      "ENG_name": "Martial Archetype",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在第3级时，你从可用列表中选择一个你努力模仿的原型，它将影响你的战斗风格和技巧。你选择的原型将在第3级以及之后的第7级、第10级、第15级和第18级时赋予你特定的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "战士:替换武术",
+      "ENG_name": "Martial Versatility",
+      "source": "TCE",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4级战士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "每当你在这个职业中达到一个提供属性值提升特性的等级时，你可以做以下之一，正如你转移你的战斗实践的焦点：",
+        {
+          "type": "list",
+          "items": [
+            "将你已知的一个{@filter 战斗风格|optionalfeatures|feature type=FS:F}替换为战士可用的其他战斗风格。",
+            "如果你知道任何来自{@filter|phb|战斗大师|战斗大师|phb|2-0}职业原型的{@class|可选特性|特性类型=MV:B}，你可以用一个不同的技巧替换你所知道的一个技巧。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "额外攻击",
+      "ENG_name": "Extra Attack",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 5,
+      "entries": [
+        "从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。",
+        "当你达到这个职业的11级时，攻击次数增加到三次，当你达到这个职业的20级时，攻击次数增加到四次。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "当你达到第6级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用此特性将任何能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "武术范型能力",
+      "ENG_name": "Martial Archetype feature",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 7,
+      "entries": [
+        "在7级时，你获得了由你的战斗风格赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "战士:不屈",
+      "ENG_name": "Indomitable",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 9,
+      "entries": [
+        "从9级开始，你可以重掷一个失败的豁免投掷。如果你这样做，你必须使用新的投掷结果，并且在完成一次长休之前不能再使用这个特性。",
+        "从13级开始，你可以在长休之间使用这个特性两次；从17级开始，你可以在长休之间使用三次。"
+      ]
+    },
+    {
+      "name": "武术范型能力",
+      "ENG_name": "Martial Archetype feature",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "在第10级时，你获得了由你的战斗原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "额外攻击(2)",
+      "ENG_name": "Extra Attack (2)",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 11,
+      "entries": [
+        "在11级时，每当你在自己回合采取{@action 攻击}行动时，你可以攻击三次。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "不屈(2次)",
+      "ENG_name": "Indomitable (two uses)",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 13,
+      "entries": [
+        "在13级时，你可以在长时间休息之间使用不屈两次。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "当你达到14级时，你可以选择一项能力值提升2点，或者选择两项能力值各提升1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "武术范型能力",
+      "ENG_name": "Martial Archetype feature",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 15,
+      "entries": [
+        "在第15级时，你获得了由你的战斗原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "动作如潮(2次)",
+      "ENG_name": "Action Surge (two uses)",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，你可以在休息前使用行动激增特性两次，但在同一回合中只能使用一次。"
+      ]
+    },
+    {
+      "name": "不屈(3次)",
+      "ENG_name": "Indomitable (three uses)",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，你可以在长时间休息之间使用不屈三次。"
+      ]
+    },
+    {
+      "name": "武术范型能力",
+      "ENG_name": "Martial Archetype feature",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 18,
+      "entries": [
+        "在第18级时，你获得了由你的战斗原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "额外攻击(3)",
+      "ENG_name": "Extra Attack (3)",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "在20级时，每当你在自己回合采取{@action 攻击}动作时，你可以攻击四次。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "回音骑士",
+      "ENG_name": "Echo Knight",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 3,
+      "entries": [
+        "克林王朝的神秘而令人畏惧的前线战士，回声骑士精通使用潜能召唤未实现时间线的逐渐消逝的阴影来帮助他们在战斗中。被他们自己力量的回声所包围，他们像一群循环的阴影和打击一样冲入战斗。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "显现回声|战士||回声骑士|EGW|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "释放化身|战士||回声骑士|EGW|3"
+        }
+      ]
+    },
+    {
+      "name": "回音骑士:显现回音",
+      "ENG_name": "Manifest Echo",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第三级回声骑士特性}",
+        "你可以使用一个奖励动作，在你能看见的15英尺范围内的未被占据的空间中，魔法性地显现出一个自己的回声。这个回声是一个你魔法性的、半透明的、灰色的影像，它将持续存在，直到被摧毁，直到你使用奖励动作解散它，直到你显现另一个回声，或者直到你被{@condition 无力}。",
+        "你的回声具有AC 14 + 你的熟练加值，1点生命值，并且对所有状态免疫。如果它必须进行豁免投掷，它使用你的豁免投掷加值进行投掷。它的大小与你相同，并且它占据自己的空间。在你的回合上，你可以用心灵命令回声向任何方向移动最多30英尺（无需动作）。如果你的回声在你的回合结束时距离你超过30英尺，它将被摧毁。",
+        "你可以以以下方式使用回声：",
+        {
+          "type": "list",
+          "items": [
+            "作为一个奖励动作，你可以传送，以你的移动力15英尺的代价，魔法般地与你的回声交换位置，不论你们之间的距离。",
+            "当你在你的回合采取{@action 攻击}动作时，你用该动作进行的任何攻击都可以从你的空间或回声的空间发起。你需要为每次攻击做出这个选择。",
+            "当你的回声5英尺范围内可以看到的生物至少移动5英尺远离它时，你可以使用你的反应来做一次机会攻击，就好像你在回声的空间中一样。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "回音骑士:释放化身",
+      "ENG_name": "Unleash Incarnation",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第三级回声骑士特性}",
+        "你可以增强你的回声的愤怒。每当你采取{@action 攻击}动作时，你可以从回声的位置额外进行一次近战攻击。",
+        "你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
+      ]
+    },
+    {
+      "name": "回音骑士:回音化身",
+      "ENG_name": "Echo Avatar",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 7级回声骑士特性}",
+        "你可以暂时将你的意识转移到你的回声上。作为一个动作，你可以通过回声的眼睛看东西，通过它的耳朵听声音。在这段时间里，你处于{@condition 失聪}和{@condition 失明}状态。你可以持续这种效果最多10分钟，并且可以随时结束它（不需要动作）。当你的回声以这种方式被使用时，它可以离你最多1000英尺远而不会被摧毁。"
+      ]
+    },
+    {
+      "name": "回音骑士:阴影殉道者",
+      "ENG_name": "Shadow Martyr",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 10级回声骑士特性}",
+        "你可以使你的回声在针对你能看到的另一生物的攻击前投掷自己。在进行攻击掷骰之前，你可以使用你的反应将回声传送到目标生物5英尺范围内的未被占据的空间。触发反应的攻击掷骰改为对你的回声进行。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "回音骑士:回收潜能",
+      "ENG_name": "Reclaim Potential",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 15级回声骑士特性}",
+        "You've learned to absorb the fleeting magic of your echo. When an echo of yours is destroyed by taking damage, you can gain a number of temporary hit points equal to {@dice 2d6} + your Constitution modifier, provided you don't already have temporary hit points.",
+        "你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
+      ]
+    },
+    {
+      "name": "回音骑士:一人成军",
+      "ENG_name": "Legion of One",
+      "source": "EGW",
+      "page": 183,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "回音骑士",
+      "subclassSource": "EGW",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{@i 18级回声骑士特性}",
+        "你可以使用奖励动作通过你的显化回声特性来创造两个回声，这些回声可以共存。如果你试图创造第三个回声，前两个回声将被摧毁。你可以从一个回声的位置做到的事情也可以从另一个回声的位置做到。",
+        "此外，当你进行先攻检定且你的释放化身特性没有剩余使用次数时，你恢复该特性的一个使用次数。"
+      ]
+    },
+    {
+      "name": "法外狂徒",
+      "ENG_name": "Scofflaw",
+      "source": "HWCS",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "法外狂徒",
+      "subclassSource": "HWCS",
+      "level": 3,
+      "entries": [
+        "蔑视者是一个打击狠毒、战斗狡猾的战士，他们对荣誉和传统的理想不屑一顾，只做他们认为必须做的事情来生存。规则就是用来打破的，蔑视者将这种逻辑延伸到他们的战斗风格中。利用他们所能使用的每一个诡计来对抗敌人，蔑视者使敌人屈服，或者用一记卑鄙的攻击压倒他们的防御。",
+        "无赖最终依赖他们臭名昭著的名声来做很多工作，获得了用一个威胁就能让敌人颤抖的能力。无赖是一群多样化的人，从优雅而致命的恶棍到粗暴的暴徒都有。将他们联系在一起的是他们的信念，那就是没有所谓的坏胜利。",
+        {
+          "type": "entries",
+          "name": "武士:附赠熟练项",
+          "ENG_name": "Bonus Proficiency",
+          "entries": [
+            "当你在3级时选择这个战斗风格时，你可以选择以下技能中的一个获得熟练：{@skill 欺骗}、{@skill 洞察}、{@skill 恐吓}、{@skill 手法}或{@skill 潜行}。或者，你也可以学习{@class 盗贼|phb|盗贼密语||phb|盗贼密语 1}。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法外狂徒:危言耸听",
+          "ENG_name": "Intimidating Banter",
+          "entries": [
+            "在3级时，你擅长将侮辱和讽刺融入你的战斗风格。只要你处于战斗中，你可以选择使用力量或敏捷来进行魅力能力值检查。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法外狂徒:残暴斗殴",
+          "ENG_name": "Brutal Brawler",
+          "entries": [
+            "在3级时，你在酒馆边的打斗磨练了你用任何手边的东西造成伤害的能力。你对即兴武器有熟练度，并且将你处理的任何即兴武器视为具有灵巧特性。",
+            "此外，每当你使用简易武器命中目标时，你可以花费一个奖励动作将其砸向你的对手。这样做会破坏武器，但会对目标造成武器的每个伤害骰可能的最大伤害值。此能力不会影响到攻击的伤害骰中额外增加的伤害骰。",
+            "在10级时，你手中的临时武器变得更加致命。当你使用奖励动作将临时武器砸向你的对手时，向武器的基础伤害骰中额外添加{@damage 2d6}。",
+            "在18级时，你使用临时武器进行攻击时具有优势。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "策士:误导",
+      "ENG_name": "Misdirection",
+      "source": "HWCS",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "法外狂徒",
+      "subclassSource": "HWCS",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "在7级时，你擅长使用言语和手势来嘲讽或欺骗你的对手，将他们缺乏镇定转化为你的有利条件。这使你能够激怒你的敌人以一种可能让他们攻击自己盟友的方式挥动武器，或者让他们暴露出反击的机会。作为一个奖励动作，你可以误导你5英尺内的对手。目标必须进行一次智力豁免，对抗的DC等于8 + 你的熟练加值 + 你的力量或敏捷调整值。如果失败，他们必须使用反应来攻击你选择的5英尺内的生物。如果他们周围5英尺内没有其他生物，他们会浪费反应攻击你曾经所在位置的空气。",
+        "为了以这种方式误导生物，它们必须能够看到、听到或以其他方式理解你。"
+      ]
+    },
+    {
+      "name": "法外狂徒:涤瑕蹈隙",
+      "ENG_name": "Blindside",
+      "source": "HWCS",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "法外狂徒",
+      "subclassSource": "HWCS",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你真正擅长利用你在战斗中创造的空当，用迅速而致命的精准打击击中毫无防备的对手。你可以将这种技巧用于任何尚未在战斗中行动的生物，或者在这一回合中你已经成功误导的生物。你还可以将这种技巧应用于你利用优势进行的任何攻击检定。命中时，你利用目标防御中的空当，额外造成{@damage 5d6}点伤害。一旦你使用了这个能力，直到你进行短休息或长休息之前，你不能再使用它。",
+        "在第15级时，你的侧袭造成的伤害增加到{@damage 7d6}。",
+        "在18级时，你通过侧翼攻击造成的伤害增加至{@damage 9d6}。如果在战斗开始时你的这个能力没有使用次数，在你的回合上，你恢复一次使用次数。"
+      ]
+    },
+    {
+      "name": "法外狂徒:臭名远扬",
+      "ENG_name": "Infamy",
+      "source": "HWCS",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "法外狂徒",
+      "subclassSource": "HWCS",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在15级时，你的名声先于你，使得任何愚蠢到敢于反对你的人都能轻易地感到恐惧。作为你的{@action 攻击}动作的一部分，你可以对30英尺内的单个目标发出致命威胁，使他们在失败的智慧豁免下对你感到{@condition 恐惧}持续1分钟。受影响的目标可以在每个回合结束时重复这个豁免，成功则结束效果。这个豁免的DC是8 + 你的熟练加值 + 你的力量或敏捷调整值。一个目睹或听说过你无情行为的生物在进行这个豁免时处于劣势。",
+        "为了使用这个特性，生物必须能够看见、听见或以其他方式理解你。"
+      ]
+    },
+    {
+      "name": "法外狂徒:一刀不够，两刀来凑",
+      "ENG_name": "Two For Flinching",
+      "source": "HWCS",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "法外狂徒",
+      "subclassSource": "HWCS",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "在18级时，你已经完善了利用对手弱点的艺术。每当你在一个回合内对一个你已经成功误导的对手进行攻击动作，或者对手受到了{@book 状态|PHB|11}的影响，你可以对那个对手进行一次额外的攻击。你每轮只能使用这个特性一次。"
+      ]
+    },
+    {
+      "name": "战斗大师",
+      "ENG_name": "Battle Master",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "那些模仿战斗大师典型形象的人会运用世代相传的武术技巧。对于战斗大师来说，战斗是一个学术领域，有时包括战斗之外的学科，如武器制造和书法。并非每个战士都能吸收反映在战斗大师原型中的历史、理论和艺术课程，但那些做到的人是技能和知识都非常全面的战士。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战争学者|战士||战场主宰||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战斗优势|战士||战斗大师||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战术|战士||战斗大师||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "策略选项|战士||战场主宰||3|TCE"
+        }
+      ]
+    },
+    {
+      "name": "战斗大师:卓越战技",
+      "ENG_name": "Combat Superiority",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个子职业，你学会了由称为优越骰的特殊骰子驱动的战术。",
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "战技",
+              "ENG_name": "Maneuvers",
+              "entries": [
+                "你可以选择学习三种策略，这些策略列在下面的“策略”中。许多策略以某种方式增强攻击。每次攻击你只能使用一种策略。",
+                "在7级、10级和15级时，你可以选择学习两个额外的机动。每次学习新的机动时，你也可以用不同的机动替换你已知的一个机动。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "卓越骰",
+              "ENG_name": "Superiority Dice",
+              "entries": [
+                "You have four superiority dice, which are {@dice d8}s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
+                "你在第7级时获得另一个优势骰，第15级时再获得一个。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "豁免检定",
+              "ENG_name": "Saving Throws",
+              "entries": [
+                "你的一些策略需要你的目标进行豁免投掷以抵抗策略的效果。豁免投掷的DC（难度等级）计算方法如下：",
+                {
+                  "type": "abilityDc",
+                  "name": "战技",
+                  "ENG_name": "Maneuver",
+                  "attributes": [
+                    "力量",
+                    "敏捷"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战技选项",
+      "ENG_name": "Maneuver Options",
+      "source": "TCE",
+      "page": 41,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "header": 1,
+      "entries": [
+        "{@i 第三级战士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "如果你可以使用机动，以下机动被添加到你可以使用的选项列表中。机动对战场主宰可用，但也对具有特殊特性的角色可用，比如具有{@optfeature 卓越技巧|TCE}战斗风格或{@feat 战斗专家}特性。",
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "options",
+              "entries": [
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "伏击|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "诱敌深入|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "支撑|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "威严气质|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "摔跤打击|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "快速投掷|TCE"
+                },
+                {
+                  "type": "refOptionalfeature",
+                  "optionalfeature": "战术评估|TCE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战技",
+      "ENG_name": "Maneuvers",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "这些战术按字母顺序排列。",
+        {
+          "type": "options",
+          "count": 3,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:指挥官奇袭"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:缴械攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:扰乱打击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:灵巧步法"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:诡诈攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:挑衅攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:突刺攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:灵动攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:恐吓攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "格挡"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:精准攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:推撞攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:重整旗鼓"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:反击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:横扫攻击"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战技:摔绊攻击"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战争学徒",
+      "ENG_name": "Student of War",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你可以选择获得一种{@filter 工匠工具|items|source=phb|miscellaneous=mundane|type=artisan's tools}的熟练度。"
+      ]
+    },
+    {
+      "name": "额外战技",
+      "ENG_name": "Additional Maneuvers",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "在7级时，你可以选择学习两个额外的战术。"
+      ]
+    },
+    {
+      "name": "额外卓越骰",
+      "ENG_name": "Additional Superiority Die",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "你在7级时获得另一个优越骰。"
+      ]
+    },
+    {
+      "name": "战斗大师:知己知彼",
+      "ENG_name": "Know Your Enemy",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "如果你在战斗之外至少花费1分钟观察或与另一个生物互动，你可以了解与你自己相比它的某些能力信息。地下城主会告诉你这个生物在以下两个你选择的特征方面是你的对手、优越还是劣势：",
+        {
+          "type": "list",
+          "items": [
+            "力量值",
+            "敏捷得分",
+            "体质得分",
+            "护甲等级",
+            "当前生命值",
+            "总职业等级（如果有）",
+            "战士职业等级（如果有的话）"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "额外战技",
+      "ENG_name": "Additional Maneuvers",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你可以选择学习两个额外的机动。"
+      ]
+    },
+    {
+      "name": "精通战斗卓越(d10)",
+      "ENG_name": "Improved Combat Superiority (d10)",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "At 10th level, your superiority dice turn into {@dice d10}s."
+      ]
+    },
+    {
+      "name": "额外战技",
+      "ENG_name": "Additional Maneuvers",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在15级时，你可以选择学习两个额外的战术。"
+      ]
+    },
+    {
+      "name": "额外卓越骰",
+      "ENG_name": "Additional Superiority Die",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在15级时，你获得了另一个优势骰。"
+      ]
+    },
+    {
+      "name": "顽强",
+      "ENG_name": "Relentless",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，当你投掷先攻并且没有剩余的优越骰时，你恢复1个优越骰。"
+      ]
+    },
+    {
+      "name": "精通战斗卓越(d12)",
+      "ENG_name": "Improved Combat Superiority (d12)",
+      "source": "PHB",
+      "page": 73,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "战斗大师",
+      "subclassSource": "PHB",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "At 18th level, your superiority dice turn into {@dice d12}s."
+      ]
+    },
+    {
+      "name": "勇士",
+      "ENG_name": "Champion",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "典型的冠军专注于发展原始的身体力量，将其磨练至致命的完美。那些以这个原型为榜样的人将严格的训练与身体卓越结合起来，以造成毁灭性的打击。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "关键打击增强|战士||冠军||3"
+        }
+      ]
+    },
+    {
+      "name": "勇士:精通重击",
+      "ENG_name": "Improved Critical",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从你第3级选择这个原型开始，你的武器攻击在掷出19或20时会打出致命一击。"
+      ]
+    },
+    {
+      "name": "勇士:运动健将",
+      "ENG_name": "Remarkable Athlete",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "从7级开始，你可以将你的熟练加值的一半（向上取整）加到任何力量、敏捷或体质检查上，如果该检查原本不使用你的熟练加值。",
+        "此外，当你进行助跑的立定跳远时，你能够覆盖的距离会增加，增加的英尺数等于你的力量调整值。"
+      ]
+    },
+    {
+      "name": "勇士:额外战斗风格",
+      "ENG_name": "Additional Fighting Style",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你可以选择第二个战斗风格职业特性选项。"
+      ]
+    },
+    {
+      "name": "勇士:高效重击",
+      "ENG_name": "Superior Critical",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，你的武器攻击在掷出18-20时会打出致命一击。"
+      ]
+    },
+    {
+      "name": "生还者",
+      "ENG_name": "Survivor",
+      "source": "PHB",
+      "page": 72,
+      "srd": true,
+      "basicRules": true,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "勇士",
+      "subclassSource": "PHB",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "在18级时，你达到了战斗中坚韧的巅峰。在你的每个回合开始时，如果你的生命值不超过最大值的一半，你恢复生命值等于5加上你的体质调整值（如果生命值为0，则不获得此好处）。"
+      ]
+    },
+    {
+      "name": "奥法骑士",
+      "ENG_name": "Eldritch Knight",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "典型的奥术骑士将所有战士共有的战斗精通与对魔法的细致研究结合起来。奥术骑士使用与巫师相似的魔法技术。他们专注于研究八大魔法学派中的两个——防护学派和咒法学派。防护法术为奥术骑士在战斗中提供额外的保护，而咒法法术则能够一次性对多个敌人造成伤害，扩大了战士在战斗中的打击范围。这些骑士学习的法术数量相对较少，他们将法术记在脑海中，而不是保存在法术书中。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "施法|战士||奥术骑士||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "武器联结|战士||奥术骑士||3"
+        }
+      ]
+    },
+    {
+      "name": "施法",
+      "ENG_name": "Spellcasting",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你达到3级时，你通过施法能力增强了你的战斗能力。请查看{@book 第10章|PHB|10}了解施法的一般规则，以及{@book 第11章|PHB|11}了解{@filter 巫师法术列表|spells|class=wizard}。",
+        {
+          "type": "entries",
+          "name": "戏法",
+          "ENG_name": "Cantrips",
+          "entries": [
+            "你从{@filter 巫师法术列表|spells|class=wizard}中选择两个你想要学习的戏法。在10级时，你可以选择额外的一个巫师戏法。"
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "术士:施法能力",
+              "ENG_name": "Spell Slots",
+              "entries": [
+                "奥术骑士施法表格显示了你拥有多少个法术位来施放你的{@filter|法术|职业=巫师}，这些法术为1级及以上。要施放这些法术中的一个，你必须消耗一个法术位，其等级必须等于或高于该法术。当你完成一次长休息时，你恢复所有消耗的法术位。",
+                "例如，如果你知道1级法术{@spell 盾牌}，并且有一个1级和一个2级法术位可用，你可以使用任一法术位来施放{@spell 盾牌}。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "已知的1级及以上法术",
+              "ENG_name": "Spells Known of 1st-Level and Higher",
+              "entries": [
+                "你可以选择知道三个1级巫师法术，其中两个必须是从巫师法术列表中的防护学派和咒法学派法术中选择。",
+                "奥术骑士施法表中的已知法术列显示了你何时学习更多的1级或更高级别的巫师法术。这些法术必须是你选择的防护学派或咒法学派的法术，并且必须是你有法术位的等级。例如，当你在这个职业达到第7级时，你可以学习一个新的1级或2级法术。",
+                "你在8级、14级和20级学到的法术可以来自任何魔法学派。",
+                "每当你在本职业中提升一个等级时，你可以用巫师法术列表中你选择的另一个法术替换你所知的一个巫师法术。新法术的等级必须为你拥有法术位的等级，并且它必须是防护系或咒法系法术，除非你是在替换你在3级、8级、14级或20级时从任何魔法学派获得的法术。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "施法关键属性",
+              "ENG_name": "Spellcasting Ability",
+              "entries": [
+                "智力是你的巫师法术的施法能力，因为你是通过学习和记忆来学习你的法术的。每当法术提到你的施法能力时，你都会使用你的智力。此外，当你为施放的巫师法术设定豁免投掷的DC（难度等级）以及进行攻击掷骰时，也会使用你的智力调整值。",
+                {
+                  "type": "abilityDc",
+                  "name": "法术",
+                  "ENG_name": "Spell",
+                  "attributes": [
+                    "int"
+                  ]
+                },
+                {
+                  "type": "abilityAttackMod",
+                  "name": "法术",
+                  "ENG_name": "Spell",
+                  "attributes": [
+                    "int"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "奥法骑士:武器联结",
+      "ENG_name": "Weapon Bond",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你学习到一种仪式，可以在你和一件武器之间创造一个魔法联系。你需要在1小时内完成这个仪式，可以在短暂休息期间进行。仪式过程中，武器必须在你的触及范围内，仪式结束时你触摸武器，建立联系。",
+        "一旦你与武器建立了联系，除非处于{@condition 失去能力}状态，否则你不会被解除武装。如果它存在于同一存在位面，你可以在回合上以奖励动作召唤该武器，使其瞬间传送到你的手中。",
+        "你可以拥有最多两件绑定武器，但每次只能通过你的奖励动作召唤其中一件。如果你尝试与第三件武器绑定，必须与另外两件中的一件解除绑定。"
+      ]
+    },
+    {
+      "name": "战争魔法",
+      "ENG_name": "War Magic",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "从7级开始，当你使用动作来施放一个戏法时，你可以作为奖励动作进行一次武器攻击。"
+      ]
+    },
+    {
+      "name": "奥法骑士:秘法打击",
+      "ENG_name": "Eldritch Strike",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你学会了如何使你的武器攻击削弱生物对你法术的抵抗力。当你用武器攻击命中生物时，该生物在你下一个回合结束前对你施放的下一个法术的豁免投掷具有劣势。"
+      ]
+    },
+    {
+      "name": "奥法骑士:秘法冲锋",
+      "ENG_name": "Arcane Charge",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在第15级时，你获得了在使用行动激增时传送至你能看到的未被占据空间的能力，传送距离最多可达30英尺。你可以在额外行动之前或之后进行传送。"
+      ]
+    },
+    {
+      "name": "奥法骑士:精通战争魔法",
+      "ENG_name": "Improved War Magic",
+      "source": "PHB",
+      "page": 74,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "奥法骑士",
+      "subclassSource": "PHB",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，当你使用动作来施放一个法术时，你可以作为奖励动作进行一次武器攻击。"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将)",
+      "ENG_name": "Purple Dragon Knight (Banneret)",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "entries": [
+        "紫龙骑士是来自科米尔王国的战士。他们誓言保护王冠，将对抗邪恶的战斗扩展到王国边境之外。他们被赋予了作为游侠骑士的责任，依靠他们的判断力、勇气和忠诚来引导他们击败作恶者。",
+        "紫龙骑士通过在战斗中做出勇敢的行为来激励他人的伟大。一个骑士在村庄中的存在足以让一些兽人和强盗去寻找更容易的猎物。一个孤独的骑士是一个熟练的战士，但是一个领导着一群盟友的骑士可以将即使是装备最差的民兵转变为一支凶猛的战斗团队。",
+        "骑士更愿意通过行动而非言语来领导。当骑士带头发起攻击时，骑士的行为可以在盟友中唤醒他们从未意识到的勇气和信念储备。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "限制：骑士身份|战士||紫龙骑士（旗手）|SCAG|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "激励呐喊|战士||紫龙骑士（旌旗手）|SCAG|3"
+        }
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将):重整姿态",
+      "ENG_name": "Rallying Cry",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个原型，你学会了如何激励你的盟友在受伤后继续战斗。",
+        "当你使用你的“再度行动”特性时，你可以选择与你结盟且在你60英尺范围内的最多三个生物。每个生物恢复等于你的战士等级的生命值，前提是该生物能够看到你或听到你。"
+      ]
+    },
+    {
+      "name": "限制：骑士爵位",
+      "ENG_name": "Restriction: Knighthood",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "紫龙骑士与科米尔的特定骑士团有关联。",
+        "如果你在其他战役设置中使用此原型，或者用来塑造除了紫龙骑士之外的战争领主，旌旗手可以作为这个原型的通用名称。"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将):皇家特使",
+      "ENG_name": "Royal Envoy",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "紫龙骑士作为科米尔王冠的使者。地位高的骑士应该以优雅的方式行事。",
+        "在7级时，你获得了{@skill 说服}技能的熟练度。如果你已经熟练掌握它，你可以选择以下技能之一获得熟练度：{@skill 驯兽}、{@skill 洞察}、{@skill 恐吓}或{@skill 表演}。",
+        "你的熟练加值在使用{@skill}进行的能力检定时翻倍。无论从这个特性获得的技能熟练度如何，你都会获得这个好处。"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将):振奋之潮",
+      "ENG_name": "Inspiring Surge",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，当你使用你的行动激增特性时，你可以选择一个在你60英尺范围内并与你结盟的生物。如果这个生物能够看到你或听到你，它可以利用其反应进行一次近战或远程武器攻击。",
+        "从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将):意志壁垒",
+      "ENG_name": "Bulwark",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从第15级开始，你可以将你的不屈特性的好处扩展到一个盟友身上。当你决定使用不屈来重新掷一个智力、感知或魅力豁免骰，并且你不处于{@condition 失去能力}状态时，你可以选择一个在你60英尺范围内也未能通过相同效果豁免的盟友。如果那个生物能看见或听见你，它可以重新掷它的豁免骰，并且必须使用新的掷骰结果。"
+      ]
+    },
+    {
+      "name": "紫龙骑士(旗将):振奋之潮",
+      "ENG_name": "Inspiring Surge",
+      "source": "SCAG",
+      "page": 128,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "紫龙骑士(旗将)",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
+      ]
+    },
+    {
+      "name": "灵能武士",
+      "ENG_name": "Psi Warrior",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "觉醒内在的心灵力量，灵能战士是一位用心灵能量灌注的武器打击、心灵感应的鞭笞和精神力量屏障来增强其身体力量的战士。许多吉斯扬基人训练成为这样的战士，一些最有纪律的高等精灵也是如此。在艾伯伦世界中，许多年轻的卡拉斯塔人梦想成为灵能战士。",
+        "作为一个灵能战士，你可能通过独自修炼磨练了你的灵能能力，或在大师的指导下解锁了它，或在一个致力于将心灵力量作为武器和盾牌使用的学院中精炼了它。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "灵能力量|战士||灵能战士|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "灵能武士:灵能力量",
+      "ENG_name": "Psionic Power",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级灵能战士特性}",
+        "You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
+        "你的一些能力会消耗它们使用的灵能能量骰，如能力描述中指定的那样，如果你的所有骰子都已消耗，你就不能使用需要使用骰子的能力。当你完成一次长休息时，你恢复所有消耗的灵能能量骰。此外，作为一个奖励动作，你可以恢复一个已消耗的灵能能量骰，但直到你完成一次短休息或长休息之前，你不能再这样做。",
+        "When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
+        "以下能力使用你的灵能能量骰。",
+        {
+          "type": "options",
+          "style": "list-hang-notitle",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "防护场|战士|TCE|灵能战士|TCE|3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "灵能打击|战士|TCE|灵能战士|TCE|3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵感应移动|战士|TCE|灵能战士|TCE|3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "灵能武士:念力熟练",
+      "ENG_name": "Telekinetic Adept",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 7级灵能战士特性}",
+        "你已经掌握了使用你的念力能力的新的途径，具体如下。",
+        {
+          "type": "options",
+          "style": "list-hang-notitle",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵强化跳跃|战士|TCE|灵能战士|TCE|7"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵推力|战士|TCE|心灵战士|TCE|7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "灵能武士:意念守护",
+      "ENG_name": "Guarded Mind",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 10级灵能战士特性}",
+        "流经你的心灵能量增强了你的思维。你对心灵伤害具有抗性。此外，如果你在你的回合开始时处于{@condition 魅惑}或{@condition 恐惧}状态，你可以消耗一个心灵能量骰并结束所有使你受到这些状态影响的效果。"
+      ]
+    },
+    {
+      "name": "灵能武士:壁垒之力",
+      "ENG_name": "Bulwark of Force",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 15级灵能战士特性}",
+        "你可以用念力保护你自己和其他人。作为一个奖励动作，你可以选择你能看到的30英尺范围内的生物，数量最多等于你的智力调整值（最少为一个生物）。每个选定的生物在1分钟或直到你{@condition 无力}期间受到半个掩体的保护。",
+        "一旦你采取了这个奖励动作，在你完成一次长休之前，你不能再这样做，除非你消耗一个心灵能量骰来再次采取它。"
+      ]
+    },
+    {
+      "name": "灵能武士:念力宗师",
+      "ENG_name": "Telekinetic Master",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{@i 第18级灵能战士特性}",
+        "你用心灵移动生物和物体的能力是罕见的。你可以施放{@spell 心灵遥控}法术，无需任何材料，并且你的施法能力是智力。在你集中精神施放该法术的每个回合中，包括施放它的回合，你可以作为一个奖励动作进行一次武器攻击。",
+        "一旦你使用这个特性施放了法术，你就不能再次这样做，直到你完成一次长时间的休息，除非你消耗一个灵能能量骰再次施放它。"
+      ]
+    },
+    {
+      "name": "符文骑士",
+      "ENG_name": "Rune Knight",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "符文骑士利用符文的超自然力量增强他们的战斗技巧，这是一种起源于巨人的古老实践。在任何巨人家族中都可以找到符文雕刻者，你可能直接或间接地从这样一位神秘的工匠那里学到了你的方法。无论你是在山丘或洞穴中发现了巨人的作品，从智者那里了解到符文，还是亲自遇到了巨人，你研究了巨人的技艺，并学会了如何应用魔法符文来增强你的装备。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外熟练|战士||符文骑士|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "符文雕刻师|战士||符文骑士|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "巨人之力|战士||符文骑士|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "剑舞学院:附赠熟练项",
+      "ENG_name": "Bonus Proficiencies",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第3级符文骑士特性}",
+        "你获得了对{@item 铁匠工具|PHB}的熟练使用，并且你学会了说、读、写{@language 巨人语}。"
+      ]
+    },
+    {
+      "name": "符文骑士:巨人之力",
+      "ENG_name": "Giant's Might",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第3级符文骑士特性}",
+        "你学会了如何使自己充满巨人的力量。作为一个奖励动作，你神奇地获得了以下好处，持续时间为1分钟：",
+        {
+          "type": "list",
+          "items": [
+            "如果你比大型（Large）小，你将变成大型，你穿戴的任何物品也会随之变大。如果你所在的空间不允许你变成大型，你的尺寸将不会改变。",
+            "你在力量检定和力量豁免检定中具有优势。",
+            "在你的每个回合中，你可以使用武器或徒手攻击对目标造成额外的{@damage 1d6}伤害，如果命中的话。"
+          ]
+        },
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长休时，你恢复所有已使用的使用次数。"
+      ]
+    },
+    {
+      "name": "符文骑士:符文雕刻者",
+      "ENG_name": "Rune Carver",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第3级符文骑士特性}",
+        "你可以使用魔法符文来增强你的装备。你从下面的符文描述中选择两种符文学习，并且每次你在这个职业中升级时，你都可以从这个特性中选择一个不同的符文来替换你已知的一个符文。当你达到这个职业的特定等级时，你将学习到额外的符文，如符文已知表格所示。",
+        "每当你完成一次长时间的休息，你可以触摸与你知晓的符文数量相等的物品，并且在每个物品上刻上不同的符文。一个物品要符合资格，必须是武器、盔甲、盾牌、珠宝或你可以穿戴或手持的其他物品。你的符文会保留在物品上，直到你完成下一次长时间的休息，并且一个物品一次只能承载你的一个符文。",
+        {
+          "type": "table",
+          "caption": "已知符文",
+          "colLabels": [
+            "战士等级",
+            "符文数量"
+          ],
+          "colStyles": [
+            "col-6 text-center",
+            "col-6 text-center"
+          ],
+          "rows": [
+            "第三",
+            "2",
+            "第七",
+            "3",
+            "10级",
+            "4",
+            "15级",
+            "5"
+          ]
+        },
+        "当你学习符文时，以下符文可供你选择。如果一个符文有等级要求，你必须至少达到本职业的该等级才能学习该符文。如果一个符文需要进行豁免投掷，你的符文魔法豁免DC等于8 + 你的熟练加值 + 你的体质修正值。",
+        {
+          "type": "options",
+          "count": 2,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "云雾符文|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "火焰符文|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "霜冻符文|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "石肤符文|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "山地符文|TCE",
+              "name": "山地符文（7级或更高）",
+              "ENG_name": "Hill Rune (7th Level or Higher)"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "风暴符文|TCE",
+              "name": "风暴符文（7级或更高）",
+              "ENG_name": "Storm Rune (7th Level or Higher)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "额外符文已知",
+      "ENG_name": "Additional Rune Known",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 第7级符文骑士特性}",
+        "你学会了一个额外的符文。"
+      ]
+    },
+    {
+      "name": "符文骑士:符文之盾",
+      "ENG_name": "Runic Shield",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 第7级符文骑士特性}",
+        "You learn to invoke your rune magic to protect your allies. When another creature you can see within 60 feet of you is hit by an attack roll, you can use your reaction to force the attacker to reroll the {@dice d20} and use the new roll.",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "额外符文已知",
+      "ENG_name": "Additional Rune Known",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 第10级符文骑士特性}",
+        "你学会了一个额外的符文。"
+      ]
+    },
+    {
+      "name": "符文骑士:奇伟身躯",
+      "ENG_name": "Great Stature",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 第10级符文骑士特性}",
+        "The magic of your runes permanently alters you. When you gain this feature, roll {@dice 3d4}. You grow a number of inches in height equal to the roll.",
+        "Moreover, the extra damage you deal with your Giant's Might feature increases to {@dice 1d8}."
+      ]
+    },
+    {
+      "name": "额外符文已知",
+      "ENG_name": "Additional Rune Known",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 第15级符文骑士特性}",
+        "你学会了一个额外的符文。"
+      ]
+    },
+    {
+      "name": "符文骑士:符文大师",
+      "ENG_name": "Master of Runes",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 第15级符文骑士特性}",
+        "你可以从你的符文雕刻师特性中知道的每个符文召唤两次，而不是一次，并且在你完成短休息或长休息后恢复所有已消耗的使用次数。"
+      ]
+    },
+    {
+      "name": "符文骑士:符文主宰",
+      "ENG_name": "Runic Juggernaut",
+      "source": "TCE",
+      "page": 44,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "符文骑士",
+      "subclassSource": "TCE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{@i 第18级符文骑士特性}",
+        "You learn how to amplify your rune-powered transformation. As a result, the extra damage you deal with the Giant's Might feature increases to {@dice 1d10}. Moreover, when you use that feature, your size can increase to Huge, and while you are that size, your reach increases by 5 feet."
+      ]
+    },
+    {
+      "name": "魔射手",
+      "ENG_name": "Arcane Archer",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "奥术射手学习一种独特的精灵射箭方法，将魔法融入攻击中以产生超自然效果。奥术射手是精灵中最精英的战士之一。他们守望着精灵领域的边缘，敏锐地留意入侵者，并使用注入魔法的箭矢在怪物和入侵者到达精灵定居点之前将其击败。几个世纪以来，这些精灵射手的方法已被其他种族的成员学习，他们也能够平衡奥术天赋与射箭技艺。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奥术射手知识|战士||奥术射手|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奥术射击|战士||奥术射手|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奥术射击选项|战士||奥术射手|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "魔射手:魔箭学识",
+      "ENG_name": "Arcane Archer Lore",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你学习了魔法理论或自然界的一些秘密——这是精灵武术传统的典型实践者。你选择获得{@skill 奥术}或{@skill 自然}技能的熟练度，并且你选择学习{@spell 戏法}或{@spell 德鲁伊术}这个戏法。"
+      ]
+    },
+    {
+      "name": "魔射手:奥术射击",
+      "ENG_name": "Arcane Shot",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你学会了在一些射击中释放特殊的魔法效果。当你获得这个特性时，你可以选择学习两种奥术射击选项（见下文的“奥术射击选项”）。",
+        "在你的回合中，当你作为{@action 攻击}动作的一部分，从短弓或长弓射出一支箭时，你可以将你的一个奥术射击选项应用于该箭。当箭击中生物时，你决定使用该选项，除非该选项不涉及攻击检定。你拥有这个能力的两次使用次数，当你完成短休息或长休息时，你恢复所有已消耗的使用次数。",
+        "当你达到这个职业的特定等级时：7级、10级、15级和18级，你将获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
+      ]
+    },
+    {
+      "name": "奥术射击选项",
+      "ENG_name": "Arcane Shot Options",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "奥术射击特性允许你在特定等级选择选项。这些选项按照字母顺序在此列出。它们都是魔法效果，每一个都与魔法学派之一相关联。",
+        "如果一个选项需要进行豁免投掷，你的奥术射击豁免投掷DC的计算方式如下：",
+        {
+          "type": "abilityDc",
+          "name": "魔射手:奥术射击",
+          "ENG_name": "Arcane Shot",
+          "attributes": [
+            "int"
+          ]
+        },
+        {
+          "type": "options",
+          "count": 2,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "放逐之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "诱惑之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "爆裂之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "衰弱之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "抓握之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "穿透之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "追踪之箭|XGE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "影箭|XGE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "额外秘法射击选项",
+      "ENG_name": "Additional Arcane Shot Option",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "当你达到7级时，你将获得一个额外的奥术射击选项。"
+      ]
+    },
+    {
+      "name": "魔射手:曲线射击",
+      "ENG_name": "Curving Shot",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "在7级时，你学会了如何将偏离目标的箭矢导向一个新的目标。当你使用魔法箭进行攻击检定并未命中时，你可以使用一个奖励动作重新对原始目标60英尺范围内的不同目标进行攻击检定。"
+      ]
+    },
+    {
+      "name": "魔射手:注魔箭矢",
+      "ENG_name": "Magic Arrow",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "在7级时，你获得了将箭矢注入魔法的能力。每当你从短弓或长弓射出一支非魔法箭矢时，你可以使其成为魔法箭矢，以便克服对非魔法攻击和伤害的抗性和免疫。箭矢在击中或未命中目标后立即失去魔法效果。"
+      ]
+    },
+    {
+      "name": "额外秘法射击选项",
+      "ENG_name": "Additional Arcane Shot Option",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "当你达到10级时，你将获得一个额外的奥术射击选项。"
+      ]
+    },
+    {
+      "name": "额外秘法射击选项",
+      "ENG_name": "Additional Arcane Shot Option",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "当你达到15级时，你将获得一个额外的奥术射击选项。"
+      ]
+    },
+    {
+      "name": "魔射手:有箭无患",
+      "ENG_name": "Ever-Ready Shot",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，你的魔法箭术在战斗开始时随时可用。如果你进行先攻检定并且没有剩余的奥术射击使用次数，你恢复一次奥术射击的使用。"
+      ]
+    },
+    {
+      "name": "额外秘法射击选项",
+      "ENG_name": "Additional Arcane Shot Option",
+      "source": "XGE",
+      "page": 28,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "魔射手",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "当你达到18级时，你可以选择获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
+      ]
+    },
+    {
+      "name": "骑兵",
+      "ENG_name": "Cavalier",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "典型的骑士擅长骑战。骑士通常出生在贵族家庭，在宫廷中长大，无论是领导骑兵冲锋还是在国宴上进行机智对话，骑士都能游刃有余。骑士们还学会了如何保护他们负责的人免受伤害，经常作为上级和弱者的保护者。出于纠正错误或赢得声望的驱动，许多这样的战士离开了舒适的生活，开始了辉煌的冒险。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外熟练度|战士||骑士|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "生来骑马|战士||骑士|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "坚定不移的目标|战士||骑士|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "武士:附赠熟练项",
+      "ENG_name": "Bonus Proficiency",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个子类，你可以选择以下技能之一获得熟练度：动物驯养、历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
+      ]
+    },
+    {
+      "name": "骑兵:生而为骑",
+      "ENG_name": "Born to the Saddle",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你作为骑手的高超技艺变得显而易见。你在进行豁免投掷以避免从坐骑上摔下来时获得优势。如果你从坐骑上摔下来，并且下降不超过10英尺，你可以双脚着地，只要你不是{@condition 失去能力}。",
+        "最后，骑乘或下马只需要消耗你5英尺的移动距离，而不是你的速度的一半。"
+      ]
+    },
+    {
+      "name": "骑兵:坚定之印",
+      "ENG_name": "Unwavering Mark",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你可以威胁你的敌人，破坏他们的攻击并惩罚他们伤害他人。当你用近战武器攻击击中一个生物时，你可以标记这个生物，直到你的下一个回合结束。如果你被{@condition 失去能力}或者你死亡，或者有人标记了这个生物，这个效果会提前结束。",
+        "当被你标记的生物在你5英尺范围内时，它在进行任何不以你为目标的攻击检定时都会处于不利状态。",
+        "此外，如果被你标记的生物对除了你以外的任何人造成伤害，你可以在下一个回合上使用奖励动作对被标记的生物进行一次特殊的近战武器攻击。你在攻击骰上拥有优势，如果命中，攻击的武器对目标造成额外伤害，伤害值等于你战士等级的一半。",
+        "不论你标记了多少生物，你可以进行这种特殊攻击的次数等于你的力量调整值（最少一次），当你完成一次长时间的休息后，你会恢复所有已使用的攻击次数。"
+      ]
+    },
+    {
+      "name": "骑兵:守护战技",
+      "ENG_name": "Warding Maneuver",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll {@dice 1d8} as a reaction if you're wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target's AC against that attack. If the attack still hits, the target has resistance against the attack's damage.",
+        "你可以使用这个特性的次数等于你的体质调整值（最少一次），当你完成一次长时间休息后，你会恢复所有已使用的使用次数。"
+      ]
+    },
+    {
+      "name": "骑兵:坚守战线",
+      "ENG_name": "Hold the Line",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你成为了锁定敌人的大师。当生物在你的触及范围内移动5英尺或更多时，会激起你的反应攻击，如果你用反应攻击击中生物，目标的速度在当前回合结束前将被减少至0。"
+      ]
+    },
+    {
+      "name": "骑兵:冲锋陷阵",
+      "ENG_name": "Ferocious Charger",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，无论你是否骑马，你都可以追击你的敌人。如果你在直线移动至少10英尺后立即攻击一个生物，并且攻击命中，该目标必须进行一次力量豁免检定（难度等级（DC）为8 + 你的熟练加值 + 你的力量调整值），否则会被击倒{@condition prone}。每个回合中，你只能使用这个特性一次。"
+      ]
+    },
+    {
+      "name": "骑兵:警戒守卫",
+      "ENG_name": "Vigilant Defender",
+      "source": "XGE",
+      "page": 30,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "骑兵",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，你对危险的反应格外警觉。在战斗中，你获得了一个特殊的反应，你可以在每个生物的回合上使用一次，除了你自己的回合。你只能使用这个特殊反应来进行机会攻击，并且不能在同一回合中使用你的正常反应。"
+      ]
+    },
+    {
+      "name": "武士",
+      "ENG_name": "Samurai",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "武士是一位依靠不可动摇的战斗精神来战胜敌人的战士。武士的决心几乎是不可摧毁的，武士面前的敌人有两个选择：屈服或战斗至死。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奖励熟练度|战士||武士|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战斗精神|战士||武士|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "武士:附赠熟练项",
+      "ENG_name": "Bonus Proficiency",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个子类时，你可以选择以下技能之一获得熟练度：历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
+      ]
+    },
+    {
+      "name": "武士:战意",
+      "ENG_name": "Fighting Spirit",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你在战斗中的强烈意志可以保护你并帮助你准确击中目标。在你的回合作为奖励动作，你可以使自己在当前回合结束前的所有武器攻击检定上获得优势。当你这样做时，你还获得5点临时生命值。当你在这个职业达到特定等级时，临时生命值的数量会增加，10级时增加到10点，15级时增加到15点。",
+        "你可以使用这个特性三次，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "武士:雅臣",
+      "ENG_name": "Elegant Courtier",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "从7级开始，你的自律和对细节的关注使你在社交场合中表现出色。每当你进行魅力（说服）检定时，你会获得等同于你智慧调整值的检定加值。",
+        "你的自我控制能力还使你在智慧豁免检定中获得熟练度。如果你已经拥有这项熟练度，你可以选择在智力或魅力豁免检定中获得熟练度（由你选择）。"
+      ]
+    },
+    {
+      "name": "武士:不懈",
+      "ENG_name": "Tireless Spirit",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，当你进行先攻检定时，如果你的战斗精神使用次数已耗尽，你将恢复一次使用机会。"
+      ]
+    },
+    {
+      "name": "武士:燕返",
+      "ENG_name": "Rapid Strike",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，你学会以牺牲准确性换取快速打击。如果你在你的回合采取攻击行动，并且对其中一个目标的攻击检定具有优势，你可以放弃这次优势，以同一行动对那个目标进行额外的武器攻击。每回合你只能这样做一次。"
+      ]
+    },
+    {
+      "name": "武士:生死流转",
+      "ENG_name": "Strength before Death",
+      "source": "XGE",
+      "page": 31,
+      "className": "战士",
+      "classSource": "PHB",
+      "subclassShortName": "武士",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，你的战斗精神可以延缓死亡的降临。如果你受到的伤害使你的生命值降至0但并未直接致命，你可以使用你的反应来延迟昏迷，并立即进行额外的回合，打断当前的回合。在你额外的回合中，如果你的生命值仍然为0，受到的伤害会像平常一样导致死亡豁免失败，并且三次死亡豁免失败仍然可能致命。当额外的回合结束时，如果你的生命值仍然为0，你会昏迷。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "庇护力场",
+      "ENG_name": "Protective Field",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "TCE",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "consumes": {
+        "name": "灵能能量骰",
+        "ENG_name": "Psionic Energy Die"
+      },
+      "entries": [
+        "当你或你能看到的30英尺范围内的另一个生物受到伤害时，你可以使用你的反应消耗一个灵能能量骰，掷这个骰子，并减少受到的伤害，减少的数值等于掷骰结果加上你的智力调整值（最小减少值为1），因为你创造了一个瞬间的念力护盾。"
+      ]
+    },
+    {
+      "name": "灵能击打",
+      "ENG_name": "Psionic Strike",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "TCE",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "consumes": {
+        "name": "灵能能量骰",
+        "ENG_name": "Psionic Energy Die"
+      },
+      "entries": [
+        "你可以用灵能力量推动你的武器。在你的每个回合中，当你用武器攻击并成功命中30英尺内的目标并对其造成伤害后，你可以消耗一个灵能能量骰，掷出这个骰子，并对目标造成等于掷骰结果加上你的智力调整值的力场伤害。"
+      ]
+    },
+    {
+      "name": "念力控物",
+      "ENG_name": "Telekinetic Movement",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "TCE",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "你可以用你的意念移动一个物体或生物。作为一个动作，你选择一个松散的物体，它必须是大型或更小，或者是一个愿意的生物，除了你自己。如果你能看到目标，并且它在你30英尺范围内，你可以将它移动到30英尺内你能看到的未被占据的空间。或者，如果它是一个微小的物体，你可以将它移动到你的手中或从你的手中移动出去。无论是哪种方式，你可以水平移动目标，垂直移动，或者两者兼有。一旦你采取了这个动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取这个动作。"
+      ]
+    },
+    {
+      "name": "灵能跳跃",
+      "ENG_name": "Psi-Powered Leap",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "TCE",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 7,
+      "entries": [
+        "作为一个奖励动作，你可以用你的意念推动你的身体。直到当前回合结束，你获得等于你步行速度两倍的飞行速度。一旦你采取这个奖励动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取它。"
+      ]
+    },
+    {
+      "name": "心灵推力",
+      "ENG_name": "Telekinetic Thrust",
+      "source": "TCE",
+      "page": 42,
+      "className": "战士",
+      "classSource": "TCE",
+      "subclassShortName": "灵能武士",
+      "subclassSource": "TCE",
+      "level": 7,
+      "entries": [
+        "当你用你的灵能打击对目标造成伤害时，你可以迫使目标进行一次力量豁免检定，难度等级（DC）等于8加上你的熟练加值加上你的智力调整值。如果豁免失败，你可以使目标进入{@condition 倒地}状态，或者将其沿着任何方向水平移动最多10英尺。"
+      ]
+    }
+  ]
 }

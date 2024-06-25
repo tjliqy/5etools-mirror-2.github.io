@@ -1,139 +1,147 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		}
-	},
-	"monster": [
-		{
-			"name": "Hound of Ill Omen",
-			"source": "XGE",
-			"page": 50,
-			"summonedByClass": "Sorcerer|PHB",
-			"_copy": {
-				"name": "Dire Wolf",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "\\bwolf\\b",
-						"with": "hound"
-					},
-					"trait": [
-						{
-							"mode": "appendArr",
-							"items": [
-								{
-									"name": "Cloak of Shadows",
-									"entries": [
-										"The hound appears with a number of temporary hit points equal to half your sorcerer level."
-									]
-								},
-								{
-									"name": "Incorporeal Movement",
-									"entries": [
-										"The hound can move through other creatures and objects as if they were {@quickref difficult terrain||3}. The hound takes 5 force damage if it ends its turn inside an object."
-									]
-								},
-								{
-									"name": "Omen Sight",
-									"entries": [
-										"At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
-									]
-								},
-								{
-									"name": "Ever at Your Heels",
-									"entries": [
-										"On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
-									]
-								}
-							]
-						}
-					]
-				}
-			},
-			"size": [
-				"M"
-			],
-			"type": "monstrosity",
-			"traitTags": [
-				"Incorporeal Movement",
-				"Keen Senses",
-				"Pack Tactics"
-			],
-			"hasToken": true
-		},
-		{
-			"name": "Tiny Servant",
-			"source": "XGE",
-			"page": 169,
-			"size": [
-				"T"
-			],
-			"type": "construct",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 10,
-				"formula": "4d4"
-			},
-			"speed": {
-				"walk": 30,
-				"climb": 30
-			},
-			"str": 4,
-			"dex": 16,
-			"con": 10,
-			"int": 2,
-			"wis": 10,
-			"cha": 1,
-			"senses": [
-				"blindsight 60 ft. (blind beyond this radius)"
-			],
-			"passive": 10,
-			"immune": [
-				"poison",
-				"psychic"
-			],
-			"conditionImmune": [
-				"blinded",
-				"charmed",
-				"deafened",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"petrified",
-				"poisoned"
-			],
-			"action": [
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage."
-					]
-				}
-			],
-			"senseTags": [
-				"B"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM"
+      ]
+    }
+  },
+  "monster": [
+    {
+      "name": "幽影魔法:凶兆猎犬",
+      "ENG_name": "Hound of Ill Omen",
+      "source": "XGE",
+      "page": 50,
+      "summonedByClass": "术士|玩家手册",
+      "_copy": {
+        "name": "恐狼",
+        "ENG_name": "Dire Wolf",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "狼",
+            "with": "猎犬"
+          },
+          "trait": [
+            {
+              "mode": "appendArr",
+              "items": [
+                {
+                  "name": "暗影宗:幽影斗篷",
+                  "ENG_name": "Cloak of Shadows",
+                  "entries": [
+                    "该猎犬出现时拥有等同于你术士等级一半的临时生命值。"
+                  ]
+                },
+                {
+                  "name": "虚体移动",
+                  "ENG_name": "Incorporeal Movement",
+                  "entries": [
+                    "这只猎犬可以像通过{@quickref 困难地形||3}一样穿过其他生物和物体。如果猎犬在其回合结束时位于一个物体内部，则它会受到5点力量伤害。"
+                  ]
+                },
+                {
+                  "name": "预兆视觉",
+                  "ENG_name": "Omen Sight",
+                  "entries": [
+                    "在其回合开始时，猎犬自动知道其目标的位置。如果目标之前是隐藏的，那么对猎犬而言它不再隐藏。"
+                  ]
+                },
+                {
+                  "name": "永远跟随在您身后",
+                  "ENG_name": "Ever at Your Heels",
+                  "entries": [
+                    "在其回合，它只能通过最直接的路线向目标移动，并且只能使用其行动来攻击目标。这只猎犬可以进行机会攻击，但只能针对其目标。此外，当猎犬在目标5英尺范围内时，目标在对抗您施放的任何法术的豁免投掷上会有劣势。如果猎犬的生命值降至0，或者其目标的生命值降至0，或者5分钟后，猎犬就会消失。"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "traitTags": [
+        "虚体移动",
+        "敏锐感官",
+        "群体战术"
+      ],
+      "hasToken": true
+    },
+    {
+      "name": "微型仆役",
+      "ENG_name": "Tiny Servant",
+      "source": "XGE",
+      "page": 169,
+      "size": [
+        "T"
+      ],
+      "type": "construct",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 10,
+        "formula": "4d4"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 4,
+      "dex": 16,
+      "con": 10,
+      "int": 2,
+      "wis": 10,
+      "cha": 1,
+      "senses": [
+        "盲视60英尺（在此半径之外为盲）"
+      ],
+      "passive": 10,
+      "immune": [
+        "毁灭诅咒",
+        "心灵"
+      ],
+      "conditionImmune": [
+        "目盲",
+        "魅惑",
+        "耳聋",
+        "力竭",
+        "恐惧",
+        "麻痹",
+        "石化",
+        "中毒"
+      ],
+      "action": [
+        {
+          "name": "猛击",
+          "ENG_name": "Slam",
+          "entries": [
+            "{@atk 近战武器} 命中骰5，射程5英尺，一个目标。{@h}5（{@damage 1d4 + 3}）钝击伤害。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true
+    }
+  ]
 }

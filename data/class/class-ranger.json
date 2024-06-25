@@ -1,2649 +1,2597 @@
 {
-	"class": [
-		{
-			"name": "Ranger",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"hd": {
-				"number": 1,
-				"faces": 10
-			},
-			"proficiency": [
-				"str",
-				"dex"
-			],
-			"spellcastingAbility": "wis",
-			"casterProgression": "1/2",
-			"spellsKnownProgression": [
-				0,
-				2,
-				3,
-				3,
-				4,
-				4,
-				5,
-				5,
-				6,
-				6,
-				7,
-				7,
-				8,
-				8,
-				9,
-				9,
-				10,
-				10,
-				11,
-				11
-			],
-			"optionalfeatureProgression": [
-				{
-					"name": "Fighting Style",
-					"featureType": [
-						"FS:R"
-					],
-					"progression": {
-						"2": 1
-					}
-				}
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"animal handling",
-								"athletics",
-								"insight",
-								"investigation",
-								"nature",
-								"perception",
-								"stealth",
-								"survival"
-							],
-							"count": 3
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
-				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"scale mail|phb"
-						],
-						"b": [
-							"leather armor|phb"
-						]
-					},
-					{
-						"a": [
-							{
-								"item": "shortsword|phb",
-								"quantity": 2
-							}
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimpleMelee",
-								"quantity": 2
-							}
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							"longbow|phb",
-							"arrows (20)|phb"
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"dex": 13,
-					"wis": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"skills": [
-						{
-							"choose": {
-								"from": [
-									"animal handling",
-									"athletics",
-									"insight",
-									"investigation",
-									"nature",
-									"perception",
-									"stealth",
-									"survival"
-								],
-								"count": 1
-							}
-						}
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"{@filter Spells Known|spells|class=ranger}"
-					],
-					"rows": [
-						[
-							0
-						],
-						[
-							2
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							6
-						],
-						[
-							6
-						],
-						[
-							7
-						],
-						[
-							7
-						],
-						[
-							8
-						],
-						[
-							8
-						],
-						[
-							9
-						],
-						[
-							9
-						],
-						[
-							10
-						],
-						[
-							10
-						],
-						[
-							11
-						],
-						[
-							11
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Ranger}",
-						"{@filter 2nd|spells|level=2|class=Ranger}",
-						"{@filter 3rd|spells|level=3|class=Ranger}",
-						"{@filter 4th|spells|level=4|class=Ranger}",
-						"{@filter 5th|spells|level=5|class=Ranger}"
-					],
-					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Favored Enemy|Ranger||1",
-				"Favored Foe|Ranger||1|TCE",
-				"Natural Explorer|Ranger||1",
-				"Deft Explorer|Ranger||1|TCE",
-				"Fighting Style|Ranger||2",
-				"Spellcasting|Ranger||2",
-				"Spellcasting Focus|Ranger||2|TCE",
-				{
-					"classFeature": "Ranger Archetype|Ranger||3",
-					"gainSubclassFeature": true
-				},
-				"Primeval Awareness|Ranger||3",
-				"Primal Awareness|Ranger||3|TCE",
-				"Ability Score Improvement|Ranger||4",
-				"Martial Versatility|Ranger||4|TCE",
-				"Extra Attack|Ranger||5",
-				"Favored Enemy and Natural Explorer improvements|Ranger||6",
-				"Deft Explorer Improvement|Ranger||6|TCE",
-				{
-					"classFeature": "Ranger Archetype feature|Ranger||7",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Ranger||8",
-				"Land's Stride|Ranger||8",
-				"Hide in Plain Sight|Ranger||10",
-				"Nature's Veil|Ranger||10|TCE",
-				"Natural Explorer improvement|Ranger||10",
-				"Deft Explorer Improvement|Ranger||10|TCE",
-				{
-					"classFeature": "Ranger Archetype feature|Ranger||11",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Ranger||12",
-				"Vanish|Ranger||14",
-				"Favored Enemy improvement|Ranger||14",
-				{
-					"classFeature": "Ranger Archetype feature|Ranger||15",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Ranger||16",
-				"Feral Senses|Ranger||18",
-				"Ability Score Improvement|Ranger||19",
-				"Foe Slayer|Ranger||20"
-			],
-			"subclassTitle": "Ranger Archetype",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Beast Master",
-			"shortName": "Beast Master",
-			"source": "PHB",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 93,
-			"subclassFeatures": [
-				"Beast Master|Ranger||Beast Master||3",
-				"Exceptional Training|Ranger||Beast Master||7",
-				"Bestial Fury|Ranger||Beast Master||11",
-				"Share Spells|Ranger||Beast Master||15"
-			]
-		},
-		{
-			"name": "Hunter",
-			"shortName": "Hunter",
-			"source": "PHB",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 93,
-			"srd": true,
-			"subclassFeatures": [
-				"Hunter|Ranger||Hunter||3",
-				"Defensive Tactics|Ranger||Hunter||7",
-				"Multiattack|Ranger||Hunter||11",
-				"Superior Hunter's Defense|Ranger||Hunter||15"
-			]
-		},
-		{
-			"name": "Gloom Stalker",
-			"shortName": "Gloom Stalker",
-			"source": "XGE",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 41,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"disguise self"
-						],
-						"5": [
-							"rope trick"
-						],
-						"9": [
-							"fear"
-						],
-						"13": [
-							"greater invisibility"
-						],
-						"17": [
-							"seeming"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Gloom Stalker|Ranger||Gloom Stalker|XGE|3",
-				"Iron Mind|Ranger||Gloom Stalker|XGE|7",
-				"Stalker's Flurry|Ranger||Gloom Stalker|XGE|11",
-				"Shadowy Dodge|Ranger||Gloom Stalker|XGE|15"
-			]
-		},
-		{
-			"name": "Horizon Walker",
-			"shortName": "Horizon Walker",
-			"source": "XGE",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 42,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"protection from evil and good"
-						],
-						"5": [
-							"misty step"
-						],
-						"9": [
-							"haste"
-						],
-						"13": [
-							"banishment"
-						],
-						"17": [
-							"teleportation circle"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Horizon Walker|Ranger||Horizon Walker|XGE|3",
-				"Ethereal Step|Ranger||Horizon Walker|XGE|7",
-				"Distant Strike|Ranger||Horizon Walker|XGE|11",
-				"Spectral Defense|Ranger||Horizon Walker|XGE|15"
-			]
-		},
-		{
-			"name": "Monster Slayer",
-			"shortName": "Monster Slayer",
-			"source": "XGE",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 43,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"protection from evil and good"
-						],
-						"5": [
-							"zone of truth"
-						],
-						"9": [
-							"magic circle"
-						],
-						"13": [
-							"banishment"
-						],
-						"17": [
-							"hold monster"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Monster Slayer|Ranger||Monster Slayer|XGE|3",
-				"Supernatural Defense|Ranger||Monster Slayer|XGE|7",
-				"Magic-User's Nemesis|Ranger||Monster Slayer|XGE|11",
-				"Slayer's Counter|Ranger||Monster Slayer|XGE|15"
-			]
-		},
-		{
-			"name": "Fey Wanderer",
-			"shortName": "Fey Wanderer",
-			"source": "TCE",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 58,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"charm person"
-						],
-						"5": [
-							"misty step"
-						],
-						"9": [
-							"dispel magic"
-						],
-						"13": [
-							"dimension door"
-						],
-						"17": [
-							"mislead"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Fey Wanderer|Ranger||Fey Wanderer|TCE|3",
-				"Beguiling Twist|Ranger||Fey Wanderer|TCE|7",
-				"Fey Reinforcements|Ranger||Fey Wanderer|TCE|11",
-				"Misty Wanderer|Ranger||Fey Wanderer|TCE|15"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Swarmkeeper",
-			"shortName": "Swarmkeeper",
-			"source": "TCE",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 59,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"mage hand#c",
-							"faerie fire"
-						],
-						"5": [
-							"web"
-						],
-						"9": [
-							"gaseous form"
-						],
-						"13": [
-							"arcane eye"
-						],
-						"17": [
-							"insect plague"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Swarmkeeper|Ranger||Swarmkeeper|TCE|3",
-				"Writhing Tide|Ranger||Swarmkeeper|TCE|7",
-				"Mighty Swarm|Ranger||Swarmkeeper|TCE|11",
-				"Swarming Dispersal|Ranger||Swarmkeeper|TCE|15"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Drakewarden",
-			"shortName": "Drakewarden",
-			"source": "FTD",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"page": 15,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"thaumaturgy#c"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Drakewarden|Ranger||Drakewarden|FTD|3",
-				"Bond of Fang and Scale|Ranger||Drakewarden|FTD|7",
-				"Drake's Breath|Ranger||Drakewarden|FTD|11",
-				"Perfected Bond|Ranger||Drakewarden|FTD|15"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Deft Explorer",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 1,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Natural Explorer feature}",
-				"You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.",
-				{
-					"name": "Canny",
-					"type": "entries",
-					"entries": [
-						"Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.",
-						"You can also speak, read, and write two additional languages of your choice."
-					]
-				}
-			]
-		},
-		{
-			"name": "Favored Enemy",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-				"Choose a type of favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter beasts|bestiary|type=beast}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fey|bestiary|type=fey}, {@filter fiends|bestiary|type=fiend}, {@filter giants|bestiary|type=giant}, {@filter monstrosities|bestiary|type=monstrosity}, {@filter oozes|bestiary|type=ooze}, {@filter plants|bestiary|type=plant}, or {@filter undead|bestiary|type=undead}. Alternatively, you can select two races of {@filter humanoid|bestiary|type=humanoid} (such as {@creature gnoll||gnolls} and {@creature orc||orcs}) as favored enemies.",
-				"You have advantage on Wisdom ({@skill Survival}) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-				"When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-				"You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
-			]
-		},
-		{
-			"name": "Favored Foe",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 1,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Favored Enemy feature and works with the Foe Slayer feature}",
-				"When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your {@status concentration} (as if you were {@status concentration||concentrating} on a spell).",
-				"The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by {@dice 1d4}.",
-				"You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-				"This feature's extra damage increases when you reach certain levels in this class: to {@dice 1d6} at 6th level and to {@dice 1d8} at 14th level."
-			]
-		},
-		{
-			"name": "Natural Explorer",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-				"While traveling for an hour or more in your favored terrain, you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"Difficult terrain doesn't slow your group's travel.",
-						"Your group can't become lost except by magical means.",
-						"Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-						"If you are traveling alone, you can move stealthily at a normal pace.",
-						"When you forage, you find twice as much food as you normally would.",
-						"While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
-					]
-				},
-				"You choose additional favored terrain types at 6th and 10th level."
-			]
-		},
-		{
-			"name": "Fighting Style",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Archery"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Defense"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Dueling"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Two-Weapon Fighting"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Blind Fighting|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Druidic Warrior|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Thrown Weapon Fighting|TCE"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Spellcasting",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter ranger spell list|spells|class=ranger}.",
-				{
-					"type": "entries",
-					"name": "Spell Slots",
-					"entries": [
-						"The Ranger table shows how many spell slots you have to cast your {@filter ranger spells|spells|class=ranger} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"For example, if you know the 1st-level spell {@spell animal friendship} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell animal friendship} using either slot."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells Known of 1st Level and Higher",
-					"entries": [
-						"You know two 1st-level spells of your choice from the ranger spell list.",
-						"The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
-						"Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Ability",
-					"entries": [
-						"Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
-						{
-							"type": "abilityDc",
-							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
-						},
-						{
-							"type": "abilityAttackMod",
-							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Spellcasting Focus",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 2,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 2nd-level ranger {@variantrule optional class features|tce|optional feature}}",
-				"You can use a {@item druidic focus|phb} as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals."
-			]
-		},
-		{
-			"name": "Primal Awareness",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 3rd-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Primeval Awareness feature}",
-				"You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Primal Awareness Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell speak with animals}"
-						],
-						[
-							"5th",
-							"{@spell beast sense}"
-						],
-						[
-							"9th",
-							"{@spell speak with plants}"
-						],
-						[
-							"13th",
-							"{@spell locate creature}"
-						],
-						[
-							"17th",
-							"{@spell commune with nature}"
-						]
-					]
-				},
-				"You can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Primeval Awareness",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number."
-			]
-		},
-		{
-			"name": "Ranger Archetype",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you choose an archetype that you strive to emulate from the list of available archetypes. Your choice grants features at 3rd level, and again at 7th, 11th, and 15th level."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Martial Versatility",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level ranger {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice."
-			]
-		},
-		{
-			"name": "Extra Attack",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 5,
-			"entries": [
-				"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-			]
-		},
-		{
-			"name": "Deft Explorer Improvement",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 6,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"You gain an additional benefit when you reach 6th level in this class.",
-				{
-					"type": "entries",
-					"name": "Roving",
-					"entries": [
-						"Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed."
-					]
-				}
-			]
-		},
-		{
-			"name": "Favored Enemy and Natural Explorer improvements",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"At 6th level, you gain an additional favored terrain.",
-				"At 6th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
-			]
-		},
-		{
-			"name": "Ranger Archetype feature",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 7,
-			"entries": [
-				"At 7th level, you gain a feature granted to you by your Ranger Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Land's Stride",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"Starting at 8th level, moving through nonmagical {@quickref difficult terrain||3} costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-				"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such as those created by the {@spell entangle} spell."
-			]
-		},
-		{
-			"name": "Deft Explorer Improvement",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 10,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"You gain an additional benefit when you reach 10th level in this class.",
-				{
-					"type": "entries",
-					"name": "Tireless",
-					"entries": [
-						"As an action, you can give yourself a number of temporary hit points equal to {@dice 1d8} + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-						"In addition, whenever you finish a short rest, your {@condition exhaustion} level, if any, is decreased by 1."
-					]
-				}
-			]
-		},
-		{
-			"name": "Hide in Plain Sight",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.",
-				"Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity ({@skill Stealth}) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
-			]
-		},
-		{
-			"name": "Natural Explorer improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"You gain an additional favored terrain."
-			]
-		},
-		{
-			"name": "Nature's Veil",
-			"source": "TCE",
-			"page": 56,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 10,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 10th-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Hide in Plain Sight feature}",
-				"You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become {@condition invisible}, along with any equipment you are wearing or carrying, until the start of your next turn.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Ranger Archetype feature",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 11,
-			"entries": [
-				"At 11th level, you gain a feature granted to you by your Ranger Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Favored Enemy improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"At 14th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
-			]
-		},
-		{
-			"name": "Vanish",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
-			]
-		},
-		{
-			"name": "Ranger Archetype feature",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 15,
-			"entries": [
-				"At 15th level, you gain a feature granted to you by your Ranger Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Feral Senses",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 18,
-			"entries": [
-				"At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Foe Slayer",
-			"source": "PHB",
-			"page": 89,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Drakewarden",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 3,
-			"entries": [
-				"Your connection to the natural world takes the form of a draconic spirit, which can manifest in physical form as a drake. As your powers grow, your drake grows as well, blossoming from a small four-legged companion to a majestic winged creature large and strong enough for you to ride. Along the way, you gain an increasing share of the awe-inspiring power of dragons.",
-				"Consider the source of the draconic spirit you have bonded with. The Drakewarden Origin table offers examples.",
-				{
-					"type": "table",
-					"caption": "Drakewarden Origin",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
-					"rows": [
-						[
-							"1",
-							"You studied a dragon's scale or claw, or a trinket from a dragon's hoard, creating your bond through that token's lingering draconic magic."
-						],
-						[
-							"2",
-							"A secret order of rangers who collect and guard draconic lore taught you their ways."
-						],
-						[
-							"3",
-							"A dragon gave you a geode or gemstone to care for. To your surprise, the drake hatched from that stone."
-						],
-						[
-							"4",
-							"You ingested a few drops of dragon blood, forever infusing your nature magic with draconic power."
-						],
-						[
-							"5",
-							"An ancient Draconic inscription on a standing stone empowered you when you read it aloud."
-						],
-						[
-							"6",
-							"You had a vivid dream of a mysterious figure accompanied by seven yellow canaries, who warned you of impending doom. When you awoke, your drake was there, watching you."
-						]
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Draconic Gift|Ranger||Drakewarden|FTD|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Drake Companion|Ranger||Drakewarden|FTD|3"
-				}
-			]
-		},
-		{
-			"name": "Draconic Gift",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Drakewarden feature}",
-				"The bond you share with your drake creates a connection to dragonkind, granting you understanding and empowering your presence. You gain the following benefits:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Thaumaturgy",
-							"entry": "You learn the {@spell thaumaturgy} cantrip, which is a ranger spell for you."
-						},
-						{
-							"type": "item",
-							"name": "Tongue of Dragons",
-							"entry": "You learn to speak, read, and write Draconic or one other language of your choice."
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Drake Companion",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Drakewarden feature}",
-				"As an action, you can magically summon the drake that is bound to you. It appears in an unoccupied space of your choice within 30 feet of you.",
-				"The drake is friendly to you and your companions, and it obeys your commands. See its game statistics in the accompanying {@creature Drake Companion|FTD} stat block, which uses your proficiency bonus (PB) in several places. Whenever you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake, such as its color, its scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.",
-				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the drake can take any action of its choice, not just {@action Dodge}.",
-				"The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes.",
-				"Once you summon the drake, you can't do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it."
-			]
-		},
-		{
-			"name": "Bond of Fang and Scale",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Drakewarden feature}",
-				"The bond you share with your drake intensifies, protecting you and stoking the drake's fury. When you summon your drake, it grows wings on its back and gains a flying speed equal to its walking speed.",
-				"In addition, while your drake is summoned, you and the drake gain the following benefits:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Drake Mount",
-							"entries": [
-								"The drake grows to Medium size. Reflecting your special bond, you can use the drake as a mount if your size is Medium or smaller. While you are riding your drake, it can't use the flying speed of this feature."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Magic Fang",
-							"entries": [
-								"The drake's Bite attack deals an extra {@damage 1d6} damage of the type chosen for the drake's Draconic Essence."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Resistance",
-							"entries": [
-								"You gain resistance to the damage type chosen for the drake's Draconic Essence."
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Drake's Breath",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"{@i 11th-level Drakewarden feature}",
-				"As an action, you can exhale a 30-foot cone of damaging breath or cause your drake to exhale it. Choose acid, cold, fire, lightning, or poison damage (your choice doesn't have to match your drake's Draconic Essence). Each creature in the cone must make a Dexterity saving throw against your spell save DC, taking {@damage 8d6} damage on a failed save, or half as much damage on a successful one.",
-				"This damage increases to {@dice 10d6} when you reach 15th level in this class.",
-				"Once you use this feature, you can't do so again until you finish a long rest, unless you expend a spell slot of 3rd level or higher to use it again."
-			]
-		},
-		{
-			"name": "Perfected Bond",
-			"source": "FTD",
-			"page": 15,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Drakewarden",
-			"subclassSource": "FTD",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Drakewarden feature}",
-				"Your bond to your drake reaches the pinnacle of its power. While your drake is summoned, you and the drake gain the following benefits:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Empowered Bite",
-							"entries": [
-								"The drake's Bite attack deals an extra {@damage 1d6} damage of the type chosen for its Draconic Essence (for a total of {@damage 2d6} extra damage)."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Large Drake",
-							"entries": [
-								"The drake grows to Large size. When you ride your drake, it is no longer prohibited from using the flying speed of Bond of Fang and Scale."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Reflexive Resistance",
-							"entries": [
-								"When either you or the drake takes damage while you're within 30 feet of each other, you can use your reaction to give yourself or the drake resistance to that instance of damage. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Beast Master",
-			"source": "PHB",
-			"page": 93,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Ranger's Companion|Ranger||Beast Master||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Primal Companion|Ranger||Beast Master||3|TCE"
-				}
-			]
-		},
-		{
-			"name": "Primal Companion",
-			"source": "TCE",
-			"page": 61,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Beast Master variant feature, which replaces the Ranger's Companion feature}",
-				"You magically summon a primal beast, which draws strength from your bond with nature. The beast is friendly to you and your companions and obeys your commands. Choose its stat block\u2014{@creature Beast of the Land|TCE}, {@creature Beast of the Sea|TCE}, or {@creature Beast of the Sky|TCE}\u2014which uses your proficiency bonus (PB) in several places. You also determine the kind of animal the beast is, choosing a kind appropriate for the stat block. Whatever kind you choose, the beast bears primal markings, indicating its mystical origin.",
-				"In combat, the beast acts during your turn. It can move and use its reaction on its own, but the only action it takes is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. You can also sacrifice one of your attacks when you take the {@action Attack} action to command the beast to take the {@action Attack} action. If you are {@condition incapacitated}, the beast can take any action of its choice, not just {@action Dodge}.",
-				"If the beast has died within the last hour, you can use your action to touch it and expend a spell slot of 1st level or higher. The beast returns to life after 1 minute with all its hit points restored.",
-				"When you finish a long rest, you can summon a different primal beast. The new beast appears in an unoccupied space within 5 feet of you, and you choose its stat block and appearance. If you already have a beast from this feature, it vanishes when the new beast appears. The beast also vanishes if you die."
-			]
-		},
-		{
-			"name": "Ranger's Companion",
-			"source": "PHB",
-			"page": 93,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"You gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a {@filter beast that is no larger than Medium and that has a challenge rating of 1/4 or lower|bestiary|challenge rating=[&0;&1/4]|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}. Add your proficiency bonus to the beast's AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher. Like any creature, the beast can spend Hit Dice during a short rest.",
-				"The beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the {@action Attack}, {@action Dash}, {@action Disengage}, or {@action Help} action. If you don't issue a command, the beast takes the {@action Dodge} action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the {@action Attack} action.",
-				"If you are {@condition incapacitated} or absent, your beast companion acts on its own, focusing on protecting you and itself. It never requires your command to use its reaction, such as when making an opportunity attack.",
-				"While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.",
-				"If the beast dies, you can obtain a new companion by spending 8 hours magically bonding with a beast that isn't hostile to you and that meets the requirements."
-			]
-		},
-		{
-			"name": "Exceptional Training",
-			"source": "PHB",
-			"page": 93,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command the beast to take the {@action Dash}, {@action Disengage}, or {@action Help} action on its turn. In addition, the beast's attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
-			]
-		},
-		{
-			"name": "Bestial Fury",
-			"source": "PHB",
-			"page": 93,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"Starting at 11th level, when you command your beast companion to take the {@action Attack} action, the beast can make two attacks, or it can take the Multiattack action if it has that action."
-			]
-		},
-		{
-			"name": "Share Spells",
-			"source": "PHB",
-			"page": 93,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Beast Master",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you."
-			]
-		},
-		{
-			"name": "Hunter",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hunter's Prey|Ranger||Hunter||3"
-				}
-			]
-		},
-		{
-			"name": "Horde Breaker",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
-			]
-		},
-		{
-			"name": "Hunter's Prey",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain one of the following features of your choice.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Colossus Slayer|Ranger||Hunter||3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Giant Killer|Ranger||Hunter||3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Horde Breaker|Ranger||Hunter||3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Colossus Slayer",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra {@damage 1d8} damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
-			]
-		},
-		{
-			"name": "Giant Killer",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
-			]
-		},
-		{
-			"name": "Defensive Tactics",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you gain one of the following features of your choice.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Escape the Horde|Ranger||Hunter||7"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Multiattack Defense|Ranger||Hunter||7"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Steel Will|Ranger||Hunter||7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Escape the Horde",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"Opportunity attacks against you are made with disadvantage."
-			]
-		},
-		{
-			"name": "Multiattack Defense",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
-			]
-		},
-		{
-			"name": "Steel Will",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"You have advantage on saving throws against being {@condition frightened}."
-			]
-		},
-		{
-			"name": "Multiattack",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"At 11th level, you gain one of the following features of your choice.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Volley|Ranger||Hunter||11"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Whirlwind Attack|Ranger||Hunter||11"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Volley",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
-			]
-		},
-		{
-			"name": "Whirlwind Attack",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
-			]
-		},
-		{
-			"name": "Evasion",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"You can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or a {@spell lightning bolt} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
-			]
-		},
-		{
-			"name": "Stand Against the Tide",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
-			]
-		},
-		{
-			"name": "Superior Hunter's Defense",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, you gain one of the following features of your choice.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Evasion|Ranger||Hunter||15"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Stand Against the Tide|Ranger||Hunter||15"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Uncanny Dodge|Ranger||Hunter||15"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Uncanny Dodge",
-			"source": "PHB",
-			"page": 93,
-			"srd": true,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Hunter",
-			"subclassSource": "PHB",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
-			]
-		},
-		{
-			"name": "Fey Wanderer",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"A fey mystique surrounds you, thanks to the boon of an archfey, the shining fruit you ate from a talking tree, the magic spring you swam in, or some other auspicious event. However you acquired your fey magic, you are now a Fey Wanderer, a ranger who represents both the mortal and the fey realms. As you wander the multiverse, your joyful laughter brightens the hearts of the downtrodden, and your martial prowess strikes terror in your foes, for great is the mirth of the fey and dreadful is their fury.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Dreadful Strikes|Ranger||Fey Wanderer|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Fey Wanderer Magic|Ranger||Fey Wanderer|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Otherworldly Glamour|Ranger||Fey Wanderer|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Dreadful Strikes",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Fey Wanderer feature}",
-				"You can augment your weapon strikes with mind-scarring magic, drawn from the gloomy hollows of the Feywild. When you hit a creature with a weapon, you can deal an extra {@damage 1d4} psychic damage to the target, which can take this extra damage only once per turn.",
-				"The extra damage increases to {@dice 1d6} when you reach 11th level in this class."
-			]
-		},
-		{
-			"name": "Fey Wanderer Magic",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Fey Wanderer feature}",
-				"You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Fey Wanderer Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell charm person}"
-						],
-						[
-							"5th",
-							"{@spell misty step}"
-						],
-						[
-							"9th",
-							"{@spell dispel magic}"
-						],
-						[
-							"13th",
-							"{@spell dimension door}"
-						],
-						[
-							"17th",
-							"{@spell mislead}"
-						]
-					]
-				},
-				"You also possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
-				{
-					"type": "table",
-					"caption": "Feywild Gifts",
-					"colLabels": [
-						"d6",
-						"Gift"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"Illusory butterflies flutter around you while you take a short or long rest."
-						],
-						[
-							"2",
-							"Fresh, seasonal flowers sprout from your hair each dawn."
-						],
-						[
-							"3",
-							"You faintly smell of cinnamon, lavender, nutmeg, or another comforting herb or spice."
-						],
-						[
-							"4",
-							"Your shadow dances while no one is looking directly at it."
-						],
-						[
-							"5",
-							"Horns or antlers sprout from your head."
-						],
-						[
-							"6",
-							"Your skin and hair change color to match the season at each dawn."
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Otherworldly Glamour",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Fey Wanderer feature}",
-				"Your fey qualities give you a supernatural charm. As a result, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier (minimum of +1).",
-				"In addition, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Performance}, or {@skill Persuasion}."
-			]
-		},
-		{
-			"name": "Beguiling Twist",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Fey Wanderer feature}",
-				"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
-				"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
-			]
-		},
-		{
-			"name": "Fey Reinforcements",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"{@i 11th-level Fey Wanderer feature}",
-				"The royal courts of the Feywild have blessed you with the assistance of fey beings: you know {@spell summon fey|tce}. It doesn't count against the number of ranger spells you know, and you can cast it without a material component. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.",
-				"Whenever you start casting the spell, you can modify it so that it doesn't require {@status concentration}. If you do so, the spell's duration becomes 1 minute for that casting."
-			]
-		},
-		{
-			"name": "Misty Wanderer",
-			"source": "TCE",
-			"page": 58,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Fey Wanderer",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Fey Wanderer feature}",
-				"You can slip in and out of the Feywild to move in a blink of an eye: you can cast {@spell misty step} without expending a spell slot. You can do so a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest.",
-				"In addition, whenever you cast {@i misty step}, you can bring along one willing creature you can see within 5 feet of you. That creature teleports to an unoccupied space of your choice within 5 feet of your destination space."
-			]
-		},
-		{
-			"name": "Swarmkeeper",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Feeling a deep connection to the environment around them, some rangers reach out through their magical connection to the world and bond with a swarm of nature spirits. The swarm becomes a potent force in battle, as well as helpful company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Gathered Swarm|Ranger||Swarmkeeper|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Swarmkeeper Magic|Ranger||Swarmkeeper|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Gathered Swarm",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Swarmkeeper feature}",
-				"A swarm of intangible nature spirits has bonded itself to you and can assist you in battle. While you're alive, the swarm remains in your space, crawling on you or flying and skittering around you within your space. You determine its appearance, or you generate its appearance by rolling on the Swarm Appearance table.",
-				{
-					"type": "table",
-					"caption": "Swarm Appearance",
-					"colLabels": [
-						"d4",
-						"Appearance"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"Swarming insects"
-						],
-						[
-							"2",
-							"Miniature twig blights"
-						],
-						[
-							"3",
-							"Fluttering birds"
-						],
-						[
-							"4",
-							"Playful pixies"
-						]
-					]
-				},
-				"Once on each of your turns, you can cause the swarm to assist you in one of the following ways, immediately after you hit a creature with an attack:",
-				{
-					"type": "list",
-					"items": [
-						"The attack's target takes {@damage 1d6} piercing damage from the swarm.",
-						"The attack's target must succeed on a Strength saving throw against your spell save DC or be moved by the swarm up to 15 feet horizontally in a direction of your choice.",
-						"You are moved by the swarm 5 feet horizontally in a direction of your choice."
-					]
-				},
-				{
-					"type": "inset",
-					"name": "It's Your Swarm",
-					"entries": [
-						"A Swarmkeeper's swarm and spells are reflections of the character's bond with nature spirits. Take the opportunity to describe the swarm and the ranger's magic in play. For example, when your ranger casts gaseous form, they might appear to melt into the swarm, instead of a cloud of mist, or the {@spell arcane eye} spell could create an extension of your swarm that spies for you. Such descriptions don't change the effects of spells, but they are an exciting opportunity to explore your character's narrative through their class abilities. For more guidance on customizing spells, see the \"Personalizing Spells\" section in chapter 3.",
-						"Also, remember that the swarm's appearance is yours to customize, and don't feel confined to a single appearance. Perhaps the spirits' look changes with the ranger's mood or with the seasons. You decide!"
-					]
-				}
-			]
-		},
-		{
-			"name": "Swarmkeeper Magic",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Swarmkeeper feature}",
-				"You learn the {@spell mage hand} cantrip if you don't already know it. When you cast it, the hand takes the form of your swarming nature spirits.",
-				"You also learn an additional spell of 1st level or higher when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Swarmkeeper Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell faerie fire}"
-						],
-						[
-							"5th",
-							"{@spell web}"
-						],
-						[
-							"9th",
-							"{@spell gaseous form}"
-						],
-						[
-							"13th",
-							"{@spell arcane eye}"
-						],
-						[
-							"17th",
-							"{@spell insect plague}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Writhing Tide",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"{@i 7th-level Swarmkeeper feature}",
-				"You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are {@condition incapacitated}.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Mighty Swarm",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"{@i 11th-level Swarmkeeper feature}",
-				"Your Gathered Swarm grows mightier in the following ways:",
-				{
-					"type": "list",
-					"items": [
-						"The damage of Gathered Swarm increases to {@dice 1d8}.",
-						"If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature {@condition prone}.",
-						"When you are moved by Gathered Swarm, it gives you half cover until the start of your next turn."
-					]
-				}
-			]
-		},
-		{
-			"name": "Swarming Dispersal",
-			"source": "TCE",
-			"page": 59,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Swarmkeeper",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Swarmkeeper feature}",
-				"You can discorporate into your swarm, avoiding danger. When you take damage, you can use your reaction to give yourself resistance to that damage. You vanish into your swarm and then teleport to an unoccupied space that you can see within 30 feet of you, where you reappear with the swarm.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Gloom Stalker",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Gloom Stalker Magic|Ranger||Gloom Stalker|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Dread Ambusher|Ranger||Gloom Stalker|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Umbral Sight|Ranger||Gloom Stalker|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Dread Ambusher",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
-				"At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra {@damage 1d8} damage of the weapon's damage type."
-			]
-		},
-		{
-			"name": "Gloom Stalker Magic",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Gloom Stalker Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell disguise self}"
-						],
-						[
-							"5th",
-							"{@spell rope trick}"
-						],
-						[
-							"9th",
-							"{@spell fear}"
-						],
-						[
-							"13th",
-							"{@spell greater invisibility}"
-						],
-						[
-							"17th",
-							"{@spell seeming}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Umbral Sight",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain {@sense darkvision} out to a range of 60 feet. If you already have {@sense darkvision} from your race, its range increases by 30 feet.",
-				"You are also adept at evading creatures that rely on {@sense darkvision}. While in darkness, you are {@condition invisible} to any creature that relies on {@sense darkvision} to see you in that darkness."
-			]
-		},
-		{
-			"name": "Iron Mind",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
-			]
-		},
-		{
-			"name": "Stalker's Flurry",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
-			]
-		},
-		{
-			"name": "Shadowy Dodge",
-			"source": "XGE",
-			"page": 41,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Gloom Stalker",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
-			]
-		},
-		{
-			"name": "Horizon Walker",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Horizon Walker Magic|Ranger||Horizon Walker|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Detect Portal|Ranger||Horizon Walker|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Planar Warrior|Ranger||Horizon Walker|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Detect Portal",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest.",
-				"See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
-			]
-		},
-		{
-			"name": "Horizon Walker Magic",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Horizon Walker Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell protection from evil and good}"
-						],
-						[
-							"5th",
-							"{@spell misty step}"
-						],
-						[
-							"9th",
-							"{@spell haste}"
-						],
-						[
-							"13th",
-							"{@spell banishment}"
-						],
-						[
-							"17th",
-							"{@spell teleportation circle}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Planar Warrior",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
-				"As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra {@damage 1d8} force damage from the attack. When you reach 11th level in this class, the extra damage increases to {@dice 2d8}."
-			]
-		},
-		{
-			"name": "Ethereal Step",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Distant Strike",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
-				"If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
-			]
-		},
-		{
-			"name": "Spectral Defense",
-			"source": "XGE",
-			"page": 42,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Horizon Walker",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
-			]
-		},
-		{
-			"name": "Monster Slayer",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Monster Slayer Magic|Ranger||Monster Slayer|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hunter's Sense|Ranger||Monster Slayer|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Slayer's Prey|Ranger||Monster Slayer|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Hunter's Sense",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Monster Slayer Magic",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-				{
-					"type": "table",
-					"caption": "Monster Slayer Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell protection from evil and good}"
-						],
-						[
-							"5th",
-							"{@spell zone of truth}"
-						],
-						[
-							"9th",
-							"{@spell magic circle}"
-						],
-						[
-							"13th",
-							"{@spell banishment}"
-						],
-						[
-							"17th",
-							"{@spell hold monster}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Slayer's Prey",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra {@damage 1d6} damage from the weapon.",
-				"This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
-			]
-		},
-		{
-			"name": "Supernatural Defense",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 7,
-			"header": 2,
-			"entries": [
-				"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add {@dice 1d6} to your roll."
-			]
-		},
-		{
-			"name": "Magic-User's Nemesis",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 11,
-			"header": 2,
-			"entries": [
-				"At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Slayer's Counter",
-			"source": "XGE",
-			"page": 43,
-			"className": "Ranger",
-			"classSource": "PHB",
-			"subclassShortName": "Monster Slayer",
-			"subclassSource": "XGE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "游侠",
+      "ENG_name": "Ranger",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "hd": {
+        "number": 1,
+        "faces": 10
+      },
+      "proficiency": [
+        "力量",
+        "敏捷"
+      ],
+      "spellcastingAbility": "wis",
+      "casterProgression": "1/2",
+      "spellsKnownProgression": [
+        0,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9,
+        10,
+        10,
+        11,
+        11
+      ],
+      "optionalfeatureProgression": [
+        {
+          "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+          "ENG_name": "Fighting Style",
+          "featureType": [
+            "FS:R"
+          ],
+          "progression": {
+            "2": 1
+          }
+        }
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术",
+          "中等",
+          "{@item 盾牌|phb|shields}"
+        ],
+        "weapons": [
+          "简单",
+          "武术"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:驯兽",
+                "属性检定:运动",
+                "属性检定:洞悉",
+                "属性检定:调查",
+                "属性检定:自然",
+                "属性检定:察觉",
+                "属性检定:隐匿",
+                "属性检定:求生"
+              ],
+              "count": 3
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a) {@item 鳞甲|phb} 或 (b) {@item 皮甲|phb}",
+          "(a) 两把短剑或 (b) 两把简单近战武器",
+          "(a) 一个{@item dungeoneer's pack|phb}或(b) 一个{@item explorer's pack|phb}",
+          "一把《玩家手册》中的长弓和一壶《玩家手册》中的箭（20支）"
+        ],
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "鳞甲|PHB"
+            ],
+            "b": [
+              "皮甲|phb"
+            ]
+          },
+          {
+            "a": [
+              {
+                "item": "短剑",
+                "quantity": 2
+              }
+            ],
+            "b": [
+              {
+                "equipmentType": "简单近战武器",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "a": [
+              "探险者背包|phb"
+            ],
+            "b": [
+              "探险家背包|phb"
+            ]
+          },
+          {
+            "_": [
+              "长弓",
+              "箭矢 (20)|phb"
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "dex": 13,
+          "wis": 13
+        },
+        "proficienciesGained": {
+          "armor": [
+            "光亮术",
+            "中等",
+            "{@item 盾牌|phb|shields}"
+          ],
+          "skills": [
+            {
+              "choose": {
+                "from": [
+                  "属性检定:驯兽",
+                  "属性检定:运动",
+                  "属性检定:洞悉",
+                  "属性检定:调查",
+                  "属性检定:自然",
+                  "属性检定:察觉",
+                  "属性检定:隐匿",
+                  "属性检定:求生"
+                ],
+                "count": 1
+              }
+            }
+          ],
+          "weapons": [
+            "简单",
+            "武术"
+          ]
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "{\"filter Spells Known|spells|class=ranger\"}"
+          ],
+          "rows": [
+            0,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6,
+            6,
+            7,
+            7,
+            8,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            11
+          ]
+        },
+        {
+          "title": "每个法术等级的法术位",
+          "colLabels": [
+            "{@filter 1级|spells|level=1|class=Ranger}",
+            "{@filter 2级法术|spells|level=2|class=Ranger}",
+            "{@filter 第三级|法术|等级=3|职业=游侠}",
+            "{@filter 4级法术|ranger|level=4}",
+            "{@filter 5th|法术|等级=5|职业=游侠}"
+          ],
+          "rowsSpellProgression": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            4,
+            3,
+            3,
+            1,
+            0,
+            4,
+            3,
+            3,
+            1,
+            0,
+            4,
+            3,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            3,
+            2,
+            4,
+            3,
+            3,
+            3,
+            2
+          ]
+        }
+      ],
+      "classFeatures": [
+        "宿敌|游侠||1",
+        "偏爱之敌|游侠||1|TCE",
+        "自然探索者|游侠||1",
+        "灵巧探险家|游侠||1|TCE",
+        "战斗风格|游侠||2",
+        "施法|游侠||2",
+        "施法焦点|游侠||2|TCE",
+        {
+          "classFeature": "游侠原型|游侠||3",
+          "gainSubclassFeature": true
+        },
+        "原始意识|游侠||3",
+        "原始意识|游侠||3|TCE",
+        "能力值提升|游侠||4",
+        "战斗多样性|游侠||4|TCE",
+        "额外攻击|游侠||5",
+        "偏爱之敌和自然探索能力提升|游侠||6",
+        "灵巧探险家提升|游侠||6|TCE",
+        {
+          "classFeature": "游侠职业特征|游侠||7",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|游侠||8",
+        "大地步|游侠||8",
+        "隐身于众|游侠||10",
+        "自然的面纱|游侠||10|TCE",
+        "自然探索者提升|游侠||10",
+        "灵巧探索者提升|游侠||10|TCE",
+        {
+          "classFeature": "游侠职业特征|游侠||11",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|游侠||12",
+        "消失|游侠||14",
+        "宿敌能力提升|游侠||14",
+        {
+          "classFeature": "游侠原型特性|游侠||15",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|游侠||16",
+        "野性感知|游侠||18",
+        "能力值提升|游侠||19",
+        "仇敌终结者|游侠||20"
+      ],
+      "subclassTitle": "游侠:游侠范型",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "驯兽师",
+      "ENG_name": "Beast Master",
+      "shortName": "驯兽师",
+      "source": "PHB",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 93,
+      "subclassFeatures": [
+        "野兽伙伴|游侠||野兽伙伴||3",
+        "卓越训练|游侠||野兽伙伴||7",
+        "野兽狂怒|游侠||兽王||11",
+        "共享法术|游侠|驯兽师||15"
+      ]
+    },
+    {
+      "name": "猎人",
+      "ENG_name": "Hunter",
+      "shortName": "猎人",
+      "source": "PHB",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 93,
+      "srd": true,
+      "subclassFeatures": [
+        "猎人|游侠||猎人||3",
+        "防御战术|游侠||猎人||7",
+        "多重攻击|游侠||猎人||11",
+        "卓越猎手防御|游侠|猎人||15"
+      ]
+    },
+    {
+      "name": "幽域追踪者",
+      "ENG_name": "Gloom Stalker",
+      "shortName": "幽域追踪者",
+      "source": "XGE",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 41,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "易容术"
+            ],
+            "5": [
+              "通天绳"
+            ],
+            "9": [
+              "恐惧术"
+            ],
+            "13": [
+              "高等隐形术"
+            ],
+            "17": [
+              "伪装术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "幽影潜行者|游侠||幽影潜行者|XGE|3",
+        "铁意志|游侠|幽暗追踪者|XGE|7",
+        "潜行者狂暴|游侠||暗影潜行者|XGE|11",
+        "幽影闪避|游侠||幽暗追踪者|XGE|15"
+      ]
+    },
+    {
+      "name": "边界行者",
+      "ENG_name": "Horizon Walker",
+      "shortName": "边界行者",
+      "source": "XGE",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 42,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "防护善恶"
+            ],
+            "5": [
+              "迷踪步"
+            ],
+            "9": [
+              "加速术"
+            ],
+            "13": [
+              "放逐术"
+            ],
+            "17": [
+              "传送法阵"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "地平线行者|游侠||地平线行者|XGE|3",
+        "灵界步|游侠|地平线行者|XGE|7",
+        "远距离打击|游侠||地平线行者|XGE|11",
+        "幽魂防御|游侠||地平线行者|XGE|15"
+      ]
+    },
+    {
+      "name": "怪物杀手",
+      "ENG_name": "Monster Slayer",
+      "shortName": "怪物杀手",
+      "source": "XGE",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 43,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "防护善恶"
+            ],
+            "5": [
+              "诚实之域"
+            ],
+            "9": [
+              "防护法阵"
+            ],
+            "13": [
+              "放逐术"
+            ],
+            "17": [
+              "怪物定身术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "怪物猎手|游侠||怪物猎手|XGE|3",
+        "超自然防御|游侠||怪物猎人|XGE|7",
+        "施法者的克星|游侠||怪物猎人|XGE|11",
+        "杀手反击|游侠|怪物杀手|XGE|15"
+      ]
+    },
+    {
+      "name": "妖精漫游者",
+      "ENG_name": "Fey Wanderer",
+      "shortName": "妖精漫游者",
+      "source": "TCE",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 58,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "魅惑人类"
+            ],
+            "5": [
+              "迷踪步"
+            ],
+            "9": [
+              "解除魔法"
+            ],
+            "13": [
+              "次元门"
+            ],
+            "17": [
+              "假象术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "仙女游侠|游侠||仙女游侠|TCE|3",
+        "迷人转折|游侠||仙女游侠|TCE|7",
+        "仙女援军|游侠||仙女游荡者|TCE|11",
+        "迷雾漫游者|游侠|仙女漫游者|TCE|15"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "集群守卫",
+      "ENG_name": "Swarmkeeper",
+      "shortName": "集群守卫",
+      "source": "TCE",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 59,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "#c魔法手",
+              "妖火术"
+            ],
+            "5": [
+              "蛛网术"
+            ],
+            "9": [
+              "气化形体"
+            ],
+            "13": [
+              "秘法眼"
+            ],
+            "17": [
+              "疫病虫群"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "虫群守护者|游侠||虫群守护者|TCE|3",
+        "涌动潮汐|游侠|虫群守护者|TCE|7",
+        "强大虫群|游侠||虫群守护者|TCE|11",
+        "群散分散|游侠||群蜂守护者|TCE|15"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "龙兽守卫",
+      "ENG_name": "Drakewarden",
+      "shortName": "龙兽守卫",
+      "source": "FTD",
+      "className": "游侠",
+      "classSource": "PHB",
+      "page": 15,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "奇迹术#c"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "龙卫游侠|游侠||龙卫游侠|FTD|3",
+        "爪鳞之盟|游侠||龙卫|FTD|7",
+        "龙息|游侠|龙卫守护者|FTD|11",
+        "完美联结|游侠||龙卫|FTD|15"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "游侠:熟练探险家",
+      "ENG_name": "Deft Explorer",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 1,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 1级游侠{@variantrule 可选职业特性|tce|可选特性}，替代自然探索特性}",
+        "你是一个无与伦比的探险家和生存者，无论是在荒野中还是在旅途中与他人打交道。你获得了下面列出的机智好处，并且当你在这个职业达到6级和10级时，你将获得额外的好处。",
+        {
+          "name": "精明",
+          "ENG_name": "Canny",
+          "type": "entries",
+          "entries": [
+            "选择你的一个技能熟练度。当你使用所选技能进行能力检定时，你的熟练加值翻倍。",
+            "你还可以讲、读和写两种你选择的额外语言。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "游侠:宿敌",
+      "ENG_name": "Favored Enemy",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "从1级开始，你在研究、追踪、狩猎甚至与某种特定类型的敌人交谈方面有着丰富的经验。",
+        "选择一种你偏爱的敌人类型：{@filter 异怪|bestiary|type=aberration}, {@filter 野兽|bestiary|type=beast}, {@filter 天界生物|bestiary|type=celestial}, {@filter 构造体|bestiary|type=construct}, {@filter 龙类|bestiary|type=dragon}, {@filter 元素生物|bestiary|type=elemental}, {@filter 仙女|bestiary|type=fey}, {@filter 恶魔|bestiary|type=fiend}, {@filter 巨人|bestiary|type=giant}, {@filter 怪异生物|bestiary|type=monstrosity}, {@filter 软泥怪|bestiary|type=ooze}, {@filter 植物|bestiary|type=plant}, 或者 {@filter 亡灵|bestiary|type=undead}。或者，你可以选择两种{@filter 类人生物|bestiary|type=humanoid}（例如{@creature 豺狼人||豺狼人}和{@creature 兽人||兽人}）作为你偏爱的敌人。",
+        "你在追踪你偏爱的敌人时，对智慧（{@skill 求生})检定有优势，同时在智力检定上回忆有关他们的信息也有优势。",
+        "当你获得这个特性时，如果它们会说话，你还可以学习一种你选择的你偏爱敌人的语言。",
+        "在6级和14级时，你选择一个额外的宿敌以及一个相关联的语言。随着你等级的提升，你的选择应该反映出你在冒险中遇到的怪物类型。"
+      ]
+    },
+    {
+      "name": "游侠:夙敌",
+      "ENG_name": "Favored Foe",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 1,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 1级游侠 {@variantrule 可选职业特性|tce|可选特性}，它替代了偏爱之敌特性，并与杀手之敌特性一起工作}",
+        "当你用攻击检定命中一个生物时，你可以借助与自然的神秘联系将目标标记为你的偏爱之敌，持续1分钟或直到你失去{@status concentration}（就好像你在{@status concentration||集中}法术一样）。",
+        "The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by {@dice 1d4}.",
+        "你可以使用这个特性来标记宿敌，次数等于你的熟练加值，当你完成一次长时间休息时，你恢复所有已消耗的使用次数。",
+        "This feature's extra damage increases when you reach certain levels in this class: to {@dice 1d6} at 6th level and to {@dice 1d8} at 14th level."
+      ]
+    },
+    {
+      "name": "游侠:自然探索者",
+      "ENG_name": "Natural Explorer",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你对一种自然环境特别熟悉，并擅长在这样的地区旅行和生存。选择一种偏爱的地形：北极、海岸、沙漠、森林、草原、山脉、沼泽或地下世界。当你进行与你的偏爱地形相关的智力或智慧检定时，如果你使用的是你熟练的技能，你的熟练加值会翻倍。",
+        "当你在你的偏爱地形中旅行超过一个小时，你将获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "困难地形不会减慢你们队伍的移动速度。",
+            "除了魔法手段外，你的队伍不会迷路。",
+            "即使你在旅行时忙于其他活动（如搜寻、导航或追踪），你仍然保持对危险的警觉。",
+            "如果你独自旅行，你可以以正常速度悄无声息地移动。",
+            "当你搜寻食物时，你找到的食物是正常情况下的两倍。",
+            "在追踪其他生物时，你还会了解到它们的确切数量、大小以及它们通过该地区的时间。"
+          ]
+        },
+        "你在6级和10级时选择额外的偏爱地形类型。"
+      ]
+    },
+    {
+      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "ENG_name": "Fighting Style",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "在2级时，你选择了一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能多次选择战斗风格选项，即使你以后有机会再次选择。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:箭术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:防御"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:对决"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "战斗风格:双武器战斗"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "盲斗|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "德鲁伊战士|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "投掷武器战斗|TCE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "施法",
+      "ENG_name": "Spellcasting",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "当你达到2级时，你已经学会了如何像德鲁伊一样利用自然的魔法本质来施放法术。请参阅《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 游侠法术列表|spells|class=ranger}。",
+        {
+          "type": "entries",
+          "name": "术士:施法能力",
+          "ENG_name": "Spell Slots",
+          "entries": [
+            "游侠表显示你拥有多少个法术位来施放1级及更高级别的{@filter 游侠法术|spells|class=ranger}。要施放这些法术之一，你必须消耗一个法术位，其等级等于或高于该法术的等级。当你完成一次长时间的休息后，你会恢复所有已消耗的法术位。",
+            "例如，如果你知道一级法术{@spell 动物友谊}，并且有一个一级和二级法术位可用，你可以使用任一法术位来施放{@spell 动物友谊}。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "1级及更高等级已知法术",
+          "ENG_name": "Spells Known of 1st Level and Higher",
+          "entries": [
+            "你从游侠法术列表中选择两个1级法术。",
+            "游侠表格中的“已知法术”列显示了你何时学习更多你选择的游侠法术。这些法术中的每一个都必须是你有法术位的等级。例如，当你在这个职业达到5级时，你可以学习一个新1级或2级的法术。",
+            "此外，当你在此职业中获得等级时，你可以选择一个你知道的游侠法术，并用游侠法术列表中的另一个法术替换它，这个新法术也必须是你拥有法术位的等级。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "施法关键属性",
+          "ENG_name": "Spellcasting Ability",
+          "entries": [
+            "智慧是你的施法能力属性，因为你的魔法源自你对自然的协调。每当法术提到你的施法能力时，你都会使用你的智慧。此外，当你为施放的游侠法术设定豁免难度等级（DC）以及进行法术攻击检定时，你会使用你的智慧调整值。",
+            {
+              "type": "abilityDc",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "wis"
+              ]
+            },
+            {
+              "type": "abilityAttackMod",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "wis"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "游侠:法器",
+      "ENG_name": "Spellcasting Focus",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 2,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 2级游侠 {@variantrule 可选职业特性|tce|可选特性}}",
+        "你可以使用一个德鲁伊法术焦点作为你的游侠法术的施法焦点。德鲁伊法术焦点可能是一枝槲寄生或冬青，由紫杉或其他特殊木材制成的魔杖或法杖，从活树中完整取出的法杖，或者包含神圣动物的羽毛、毛皮、骨头和牙齿的物品。"
+      ]
+    },
+    {
+      "name": "游侠:原始意识",
+      "ENG_name": "Primal Awareness",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 3级游侠{@variantrule 可选职业特性|tce|optional feature}，替代原始意识特性}",
+        "你可以通过自然的内在联系集中你的意识：如果你尚未知晓，当你达到此职业的特定等级时，你可以学习额外的法术，如原始意识法术表所示。这些法术不计入你所知的游侠法术数量。",
+        {
+          "type": "table",
+          "caption": "原始意识法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 与动物交谈}",
+            "第五",
+            "{@spell 野兽感知}",
+            "第九",
+            "{@spell 植物交谈}",
+            "13级",
+            "{@spell 定位生物}",
+            "17级",
+            "{@spell 与自然沟通}"
+          ]
+        },
+        "你可以在不消耗法术位的情况下施展这些法术中的每一个。一旦你以这种方式施展了一个法术，直到你完成一次长时间休息之前，你不能再这样做。"
+      ]
+    },
+    {
+      "name": "游侠:原初意识",
+      "ENG_name": "Primeval Awareness",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "从3级开始，你可以使用你的行动并消耗一个游侠法术位来集中你的意识，感知你周围区域的情况。根据你消耗的法术位等级，你可以感知1英里内（或者在你偏爱的地形内高达6英里）是否存在以下类型的生物：畸变怪、天界生物、龙、元素生物、仙女、恶魔、以及亡灵。这个特性不会揭示生物的位置或数量。"
+      ]
+    },
+    {
+      "name": "游侠:游侠范型",
+      "ENG_name": "Ranger Archetype",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在3级时，你从可用的原型列表中选择一个你努力效仿的原型。你的选择在3级时赋予特性，并在7级、11级和15级时再次赋予特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "战士:替换武术",
+      "ENG_name": "Martial Versatility",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4级游侠{@variantrule 可选职业特性|tce|可选特性}}",
+        "每当你达到这个职业的等级，该等级授予属性值提升特性时，你可以用另一种游侠可用的战斗风格替换你所知的战斗风格。这种替换代表了你在武术实践中的焦点转移。"
+      ]
+    },
+    {
+      "name": "额外攻击",
+      "ENG_name": "Extra Attack",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 5,
+      "entries": [
+        "从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+      ]
+    },
+    {
+      "name": "熟练探险家强化",
+      "ENG_name": "Deft Explorer Improvement",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 6,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "当你在这个职业达到6级时，你将获得额外的好处。",
+        {
+          "type": "entries",
+          "name": "越野",
+          "ENG_name": "Roving",
+          "entries": [
+            "你的步行速度增加5英尺，你获得的攀爬速度和游泳速度等于你的步行速度。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "宿敌和自然探索者强化",
+      "ENG_name": "Favored Enemy and Natural Explorer improvements",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "在6级时，你获得一个额外的偏爱地形。",
+        "在6级时，你选择一个额外的偏爱敌人，以及一个相关联的语言。你的选择应该反映你在冒险中遇到的怪物类型。"
+      ]
+    },
+    {
+      "name": "游侠范型能力",
+      "ENG_name": "Ranger Archetype feature",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 7,
+      "entries": [
+        "当你达到7级时，你将获得由你的游侠原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "大地结社:大地行者",
+      "ENG_name": "Land's Stride",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "从8级开始，通过非魔法的{@quickref 困难地形||3}不会额外消耗你的移动力。你还可以穿过非魔法的植物，而不会被它们减慢速度，如果它们有荆棘、刺或类似的危险，也不会受到伤害。",
+        "此外，你在对抗那些被魔法创造或操纵以阻碍移动的植物时，你有优势骰，例如由{@spell 纠缠术}法术创造的植物。"
+      ]
+    },
+    {
+      "name": "熟练探险家强化",
+      "ENG_name": "Deft Explorer Improvement",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 10,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "当你在此职业中达到10级时，你获得一个额外的好处。",
+        {
+          "type": "entries",
+          "name": "不知疲倦",
+          "ENG_name": "Tireless",
+          "entries": [
+            "As an action, you can give yourself a number of temporary hit points equal to {@dice 1d8} + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+            "此外，每当你完成一次短休息时，如果你有任何{@condition exhaustion}等级，它将减少1。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "游侠:遁术",
+      "ENG_name": "Hide in Plain Sight",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "从10级开始，你可以花费1分钟为自己制造伪装。你必须能够获取新鲜的泥土、灰尘、植物、煤烟和其他自然产生的材料，以便制造你的伪装。",
+        "一旦你以这种方式伪装，你可以尝试通过紧贴至少和你一样高和宽的实体表面，比如树木或墙壁，来隐藏自己。只要你保持在那里不动或不采取行动，你在敏捷（{@skill 潜行})检定上获得+10的加值。一旦你移动或采取行动或反应，你必须重新伪装自己以获得此好处。"
+      ]
+    },
+    {
+      "name": "自然探索者强化",
+      "ENG_name": "Natural Explorer improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "你获得了一个额外的偏爱地形。"
+      ]
+    },
+    {
+      "name": "自然面纱",
+      "ENG_name": "Nature's Veil",
+      "source": "TCE",
+      "page": 56,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 10,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 10级游侠 {@variantrule 可选职业特性|tce|可选特性}，它替代了隐身于众特性}",
+        "你借助自然之力短暂地隐藏自己。作为一个奖励动作，你可以神奇地变得{@condition 隐形}，连同你穿戴或携带的任何装备，直到你下一回合开始。",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "游侠范型能力",
+      "ENG_name": "Ranger Archetype feature",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 11,
+      "entries": [
+        "当你达到11级时，你将获得由你的游侠原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "宿敌强化",
+      "ENG_name": "Favored Enemy improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在14级时，你选择一个额外的宿敌以及一个相关联的语言。你的选择应该反映出你在冒险中遇到的怪物类型。"
+      ]
+    },
+    {
+      "name": "游侠:无踪步",
+      "ENG_name": "Vanish",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "从14级开始，你可以在你的回合上将{@action 隐藏}动作作为奖励动作使用。此外，你不能被非魔法手段追踪，除非你选择留下踪迹。"
+      ]
+    },
+    {
+      "name": "游侠范型能力",
+      "ENG_name": "Ranger Archetype feature",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 15,
+      "entries": [
+        "在15级时，你获得了由你的游侠原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游侠:野性感官",
+      "ENG_name": "Feral Senses",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 18,
+      "entries": [
+        "当你达到18级时，你获得了超自然的感知能力，这有助于你与看不见的生物战斗。当你攻击一个看不见的生物时，你看不见它并不会对你的攻击检定造成不利影响。此外，只要你和该生物之间没有障碍，且你没有处于{@condition 失明}或{@condition 失聪}状态，你将能够感知到任何在你30英尺范围内的{@condition 隐形}生物的位置。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游侠:屠灭众敌",
+      "ENG_name": "Foe Slayer",
+      "source": "PHB",
+      "page": 89,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "在20级时，你成为了你敌人无与伦比的猎手。在你的每一个回合中，你可以将你的智慧调整值加到你对偏爱的敌人进行的攻击检定或伤害检定上。你可以在掷骰之前或之后选择使用这个特性，但在掷骰的任何效果应用之前。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "龙兽守卫",
+      "ENG_name": "Drakewarden",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 3,
+      "entries": [
+        "你与自然世界的联系以龙族精神的形式出现，它可以以幼龙的实体形态显现。随着你力量的增长，你的幼龙也会成长，从一个四足伙伴成长为一个雄伟的有翼生物，足够大且足够强壮，可以让你骑乘。在这个过程中，你获得了越来越多的令人敬畏的龙族力量。",
+        "考虑你与之结盟的龙族精神的来源。龙卫起源表提供了示例。",
+        {
+          "type": "table",
+          "caption": "龙卫起源",
+          "colLabels": [
+            "d6",
+            "当我还是婴儿时，我被浸泡在多头蛇的血液中，我的伤口愈合得太快，无法成为致命的伤害。"
+          ],
+          "colStyles": [
+            "col-1 text-center",
+            "col-11"
+          ],
+          "rows": [
+            "1",
+            "你研究过龙的鳞片或爪子，或者来自龙的宝藏的小饰品，通过那个令牌上残留的龙族魔法创造了你的联系。",
+            "2",
+            "一个秘密的游侠组织，他们收集和守护龙类知识，并教会了你他们的方式。",
+            "3",
+            "一条龙给了你一个晶洞或宝石来照顾。令你惊讶的是，幼龙从那块石头中孵化出来。",
+            "4",
+            "你摄取了几滴龙血，永远将你的自然魔法与龙族力量融合。",
+            "5",
+            "一块立石上古老的龙族铭文在你大声朗读时赋予了你力量。",
+            "6",
+            "你做了一个生动的梦，梦中有一个神秘的人物，身边伴随着七只黄色的金丝雀，他们警告你即将到来的灾难。当你醒来时，你的龙卫在那里，注视着你。"
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "龙族赠礼|游侠|龙卫守护者|FTD|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "龙伴|游侠||龙卫|FTD|3"
+        }
+      ]
+    },
+    {
+      "name": "龙兽守卫:龙族赠礼",
+      "ENG_name": "Draconic Gift",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级龙卫特性}",
+        "你与你的幼龙之间的联系创造了与龙族的联系，赋予你理解力并增强你的存在。你获得以下好处：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "奇术",
+              "ENG_name": "Thaumaturgy",
+              "entry": "你学会了{@spell 神迹}戏法，对你来说这是一个游侠法术。"
+            },
+            {
+              "type": "item",
+              "name": "龙语",
+              "ENG_name": "Tongue of Dragons",
+              "entry": "你学会说、读、写龙语或你选择的其他一种语言。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "龙兽守卫:龙兽伙伴",
+      "ENG_name": "Drake Companion",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级龙卫特性}",
+        "作为一个动作，你可以魔法召唤与你绑定的幼龙。它出现在你30英尺范围内你选择的未被占据的空间内。",
+        "这只龙兽对你和你的同伴是友好的，并且它服从你的命令。请参阅随附的{@creature 龙兽伙伴|FTD}统计数据块中的游戏统计数据，它在几个地方使用了你的熟练加值（PB）。每当你召唤龙兽时，从它的龙族精华特性中选择一种伤害类型。你可以决定龙兽的外观特征，如它的颜色、它的鳞片质地，或任何可见的龙族精华效果；你的选择不会影响它的游戏统计数据。",
+        "在战斗中，龙族伙伴共享你的先攻计数，但它会在你之后立即行动。它可以自主移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 闪避}动作，除非你在你的回合上使用奖励动作命令它采取其他动作。那个动作可以是其属性块中的一个，也可以是其他动作。如果你处于{@condition 无法行动}状态，龙族伙伴可以采取任何它选择的动作，而不仅仅是{@action 闪避}。",
+        "这只龙兽会一直存在，直到它的生命值降至0点，或者你再次使用这个特性来召唤龙兽，或者直到你死亡。当龙兽消失时，它穿戴或携带的任何物品都会留下。",
+        "一旦你召唤了幼龙，除非你消耗1级或更高级别的法术位来召唤它，否则你不能再次召唤，直到你完成一次长时间的休息。"
+      ]
+    },
+    {
+      "name": "龙兽守卫:牙鳞之联",
+      "ENG_name": "Bond of Fang and Scale",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 7级龙卫特性}",
+        "你与幼龙之间的联结加强，保护你并激发幼龙的愤怒。当你召唤你的幼龙时，它的背上长出翅膀，并获得了等于其行走速度的飞行速度。",
+        "此外，当你的幼龙被召唤时，你和幼龙获得以下好处：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "龙族坐骑",
+              "ENG_name": "Drake Mount",
+              "entries": [
+                "这只龙兽成长到中型大小。反映你们特殊的联系，如果你的体型是中型或更小，你可以使用这只龙兽作为坐骑。当你骑乘你的龙兽时，它不能使用这个特性的飞行速度。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "魔法之牙",
+              "ENG_name": "Magic Fang",
+              "entries": [
+                "幼龙的咬击攻击会额外造成{@damage 1d6}点选定的幼龙龙族精华类型的伤害。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "提升抗力",
+              "ENG_name": "Resistance",
+              "entries": [
+                "你获得了对幼龙的龙族精华所选择的伤害类型的抗性。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "龙兽守卫:龙兽吐息",
+      "ENG_name": "Drake's Breath",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "{@i 11级龙卫守护者特性}",
+        "作为一个动作，你可以呼出一道30英尺的锥形伤害性气息，或者让你的幼龙呼出它。选择酸液、寒冷、火焰、闪电或毒素伤害（你的选择不必与你的幼龙的龙族精华匹配）。每个在锥形区域内的生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 8d6}伤害，成功则伤害减半。",
+        "This damage increases to {@dice 10d6} when you reach 15th level in this class.",
+        "一旦你使用这个特性，除非你消耗3级或更高级别的法术位再次使用它，否则直到你完成一次长时间的休息前都不能再次使用。"
+      ]
+    },
+    {
+      "name": "龙兽守卫:完美联结",
+      "ENG_name": "Perfected Bond",
+      "source": "FTD",
+      "page": 15,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "龙兽守卫",
+      "subclassSource": "FTD",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 15级龙卫游侠特性}",
+        "你与你的龙兽之间的联系达到了力量的巅峰。当你的龙兽被召唤出来时，你和龙兽获得以下好处：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "强化咬击",
+              "ENG_name": "Empowered Bite",
+              "entries": [
+                "幼龙的咬击攻击会额外造成{@damage 1d6}点伤害，类型为你为其龙族精华选择的类型（总计{@damage 2d6}点额外伤害）。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "大型龙兽",
+              "ENG_name": "Large Drake",
+              "entries": [
+                "这只龙兽成长为大型生物。当你骑乘你的龙兽时，它不再被禁止使用《爪牙之约》中的飞行速度。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "反射性抗性",
+              "ENG_name": "Reflexive Resistance",
+              "entries": [
+                "当你或龙兽在彼此30英尺范围内受到伤害时，你可以使用你的反应来给予自己或龙兽对该次伤害的抗性。你可以使用这个反应的次数等于你的熟练加值，并且在完成一次长时间休息后恢复所有已使用的使用次数。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "驯兽师",
+      "ENG_name": "Beast Master",
+      "source": "PHB",
+      "page": 93,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "驯兽师职业特征体现了文明种族与世界上的野兽之间的友谊。野兽和游侠在目标上的统一，共同作为一体来对抗威胁文明和荒野的怪物。效仿驯兽师职业特征意味着致力于这一理想，与动物作为伙伴和朋友一起工作。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "游侠伙伴|游侠||野兽伙伴||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "原始伙伴|游侠|驯兽师||3|TCE"
+        }
+      ]
+    },
+    {
+      "name": "驯兽师:原初伴侣",
+      "ENG_name": "Primal Companion",
+      "source": "TCE",
+      "page": 61,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "header": 1,
+      "entries": [
+        "{@i 3级野兽伙伴变体特性，替代游侠伙伴特性}",
+        "你通过魔法召唤了一个原始野兽，它从你与自然的联系中汲取力量。这个野兽对你和你的同伴友好，并服从你的命令。选择它的统计块—{@creature 陆地野兽|TCE}，{@creature 海洋野兽|TCE}，或者{@creature 天空野兽|TCE}—它在多个地方使用你的熟练加值(PB)。你还确定野兽的类型，选择一个适合统计块的类型。无论你选择哪种类型，野兽都有原始标记，表明它的神秘起源。",
+        "在战斗中，野兽在你的回合行动。它可以自主移动并使用其反应，但它唯一采取的动作是{@action 闪避}动作，除非你在你的回合上使用奖励动作命令它采取其他动作。那个动作可以是其属性块中的一个，也可以是其他动作。你还可以牺牲你在{@action 攻击}动作中的一次攻击，命令野兽采取{@action 攻击}动作。如果你处于{@condition 无法行动}状态，野兽可以采取任何它选择的动作，而不仅仅是{@action 闪避}。",
+        "如果野兽在最近一小时内死亡，你可以使用你的行动来触摸它，并消耗一个1级或更高级别的法术位。野兽在1分钟后复活，所有生命值恢复。",
+        "当你完成一次长时间休息后，你可以召唤一个不同的原始野兽。这个新的野兽出现在你5英尺范围内的一个未被占据的空间内，你选择它的属性块和外观。如果你已经有了这个特性的野兽，当新野兽出现时，旧的野兽会消失。如果你死亡，这个野兽也会消失。"
+      ]
+    },
+    {
+      "name": "驯兽师:游侠伴侣",
+      "ENG_name": "Ranger's Companion",
+      "source": "PHB",
+      "page": 93,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "你获得了一个野兽伙伴，它陪伴你一起冒险，并训练有素地与你并肩作战。选择一个{@filter 不大于中型且挑战等级为1/4或更低的野兽|bestiary|challenge rating=[&0;&1/4]|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。将你的熟练加值加到野兽的AC（护甲等级）、攻击卷和伤害卷上，以及它熟练的任何豁免检定和技能上。它的生命值最大值等于其正常最大值或你的游侠等级的四倍，以较高者为准。像任何生物一样，野兽可以在短暂休息期间花费生命骰。",
+        "野兽尽可能地服从你的命令。它在你主动权时行动。在你的回合上，你可以口头命令野兽移动（你不需要采取行动）。你可以使用你的行动口头命令它采取{@action 攻击}、{@action 冲锋}、{@action 解除}或{@action 帮助}行动。如果你不发出命令，野兽会采取{@action 闪避}行动。一旦你拥有额外攻击特性，当你命令野兽采取{@action 攻击}行动时，你自己可以进行一次武器攻击。",
+        "如果你处于{@condition 无法行动}状态或不在场，你的野兽伙伴会自行行动，专注于保护你和它自己。它在使用反应时，例如进行机会攻击时，永远不需要你的命令。",
+        "当只有你和野兽一起在你的宿敌地形中旅行时，你可以以正常速度悄无声息地移动。",
+        "如果这只野兽死亡，你可以通过花费8小时使用魔法与你不是敌对且符合要求的野兽建立联系，来获得一个新的伙伴。"
+      ]
+    },
+    {
+      "name": "驯兽师:特殊训练",
+      "ENG_name": "Exceptional Training",
+      "source": "PHB",
+      "page": 93,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "从7级开始，在你的野兽伙伴不进行攻击的任何回合中，你可以使用奖励动作命令野兽在其回合上执行{@action 冲锋}、{@action 脱离战斗}或{@action 协助}动作。此外，野兽的攻击现在被视为魔法攻击，以克服对非魔法攻击和伤害的抗性和免疫。"
+      ]
+    },
+    {
+      "name": "驯兽师:兽性狂怒",
+      "ENG_name": "Bestial Fury",
+      "source": "PHB",
+      "page": 93,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "从11级开始，当你命令你的野兽伙伴采取{@action 攻击}行动时，野兽可以进行两次攻击，或者如果它有那个行动，也可以采取多重攻击行动。"
+      ]
+    },
+    {
+      "name": "驯兽师:法术共享",
+      "ENG_name": "Share Spells",
+      "source": "PHB",
+      "page": 93,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "驯兽师",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，当你施放一个以自己为目标的法术时，如果野兽伙伴在你30英尺范围内，你也可以用这个法术影响它。"
+      ]
+    },
+    {
+      "name": "猎人",
+      "ENG_name": "Hunter",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "模仿猎人原型意味着接受你作为文明与荒野恐怖之间屏障的角色。当你走上猎人的道路时，你学会了专门针对你所面临的威胁的战斗技巧，从狂暴的食人魔和兽人大军到高耸的巨人和恐怖的龙。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "猎手猎物|游侠|猎人||3"
+        }
+      ]
+    },
+    {
+      "name": "灭族者",
+      "ENG_name": "Horde Breaker",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在你的每个回合中，当你进行一次武器攻击时，你可以用同一把武器对原始目标5英尺范围内且在你武器射程内的另一个生物再进行一次攻击。"
+      ]
+    },
+    {
+      "name": "猎人:猎物",
+      "ENG_name": "Hunter's Prey",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你可以选择以下特性之一。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "巨人杀手|游侠||猎人||3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "巨人杀手|游侠||猎人||3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "群敌击溃者|游侠|猎人||3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巨怪猎者",
+      "ENG_name": "Colossus Slayer",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "你的坚韧可以消磨最强大的敌人。当你用武器攻击命中一个生物时，如果它的生命值没有达到最大值，该生物会额外承受{@damage 1d8}点伤害。每个回合你只能造成一次这种额外伤害。"
+      ]
+    },
+    {
+      "name": "巨人杀手",
+      "ENG_name": "Giant Killer",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "当一个大型或更大的生物在你5英尺范围内对你进行攻击，无论命中或未命中，只要你能看到该生物，你都可以使用你的反应立即在其攻击后攻击该生物。"
+      ]
+    },
+    {
+      "name": "猎人:防守战术",
+      "ENG_name": "Defensive Tactics",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "在7级时，你可以选择以下特性之一。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "逃离兽群|游侠||猎人||7"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "多重攻击防御|游侠||猎人||7"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "钢铁意志|游侠|猎人||7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "逃离众敌",
+      "ENG_name": "Escape the Horde",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "针对你的借机攻击具有劣势。"
+      ]
+    },
+    {
+      "name": "防御多重攻击",
+      "ENG_name": "Multiattack Defense",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "当一个生物用攻击命中你时，在该回合剩余时间内，你对那个生物进行的所有后续攻击的AC获得+4的加值。"
+      ]
+    },
+    {
+      "name": "钢铁意志",
+      "ENG_name": "Steel Will",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "你在对抗{@condition 惊吓}状态的豁免骰上具有优势。"
+      ]
+    },
+    {
+      "name": "多重攻击",
+      "ENG_name": "Multiattack",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "当你达到11级时，你可以选择以下特性之一。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "齐射|游侠||猎人||11"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "旋风攻击|游侠|猎人||11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "箭雨",
+      "ENG_name": "Volley",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "你可以使用你的行动，对在你武器射程内你能看到的某个点周围10英尺范围内的任意数量生物进行远程攻击。和平常一样，你需要为每个目标准备弹药，并且你需要为每个目标分别进行攻击检定。"
+      ]
+    },
+    {
+      "name": "剑刃风暴",
+      "ENG_name": "Whirlwind Attack",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "你可以使用你的行动对在你5英尺范围内的所有生物进行近战攻击，每个目标分别进行攻击检定。"
+      ]
+    },
+    {
+      "name": "反射闪避",
+      "ENG_name": "Evasion",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "你可以灵活地躲避某些区域效果，比如红龙的火焰呼吸或一个{@spell 闪电束}法术。当你受到允许你进行敏捷豁免以承受一半伤害的效果时，如果你成功通过豁免检定，你不会受到伤害；如果你失败，你只承受一半伤害。"
+      ]
+    },
+    {
+      "name": "逆潮而立",
+      "ENG_name": "Stand Against the Tide",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "当一个敌对生物用近战攻击未命中你时，你可以使用你的反应迫使那个生物对另一个你选择的生物（不能是它自己）重复同样的攻击。"
+      ]
+    },
+    {
+      "name": "猎人:高效猎人防术",
+      "ENG_name": "Superior Hunter's Defense",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在15级时，你可以选择以下一个特性。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "闪避|游侠||猎人||15"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "对抗潮汐|游侠||猎人|15"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "超凡闪避|游侠||猎人||15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "直觉闪避",
+      "ENG_name": "Uncanny Dodge",
+      "source": "PHB",
+      "page": 93,
+      "srd": true,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "猎人",
+      "subclassSource": "PHB",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "当一个你能看到的攻击者用攻击击中你时，你可以使用你的反应来将攻击对你的伤害减半。"
+      ]
+    },
+    {
+      "name": "妖精漫游者",
+      "ENG_name": "Fey Wanderer",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "由于一位大仙女的恩赐、你从一棵会说话的树上吃下的闪亮果实、你游过的魔法泉水，或某些其他吉祥事件，你周围笼罩着仙女的神秘气息。无论你是如何获得仙女魔法的，你现在都是一个仙女漫游者，一个代表凡人和仙女领域的游侠。当你漫游多元宇宙时，你愉快的笑声照亮了受压迫者的心灵，你的战斗技巧让你的敌人感到恐惧，因为仙女的喜悦是伟大的，他们的愤怒是可怕的。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "恐惧打击|游侠||仙女游侠|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "仙女漫游者魔法|游侠|仙女漫游者|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "异界魅力|游侠||仙女游荡者|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "妖精漫游者:哀惧灵袭",
+      "ENG_name": "Dreadful Strikes",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第三级仙女游侠特性}",
+        "你可以用来自仙女领域阴郁角落的心灵创伤魔法增强你的武器攻击。当你用武器击中一个生物时，你可以对目标额外造成{@damage 1d4}点心灵伤害，该目标每回合只能受到这种额外伤害一次。",
+        "The extra damage increases to {@dice 1d6} when you reach 11th level in this class."
+      ]
+    },
+    {
+      "name": "妖精漫游者:妖精漫游者魔法",
+      "ENG_name": "Fey Wanderer Magic",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第三级仙女游侠特性}",
+        "当你达到这个职业的特定等级时，你会学习到额外的法术，如仙女游荡者法术表所示。每个法术对你来说都算作游侠法术，但它不计入你所知的游侠法术数量。",
+        {
+          "type": "table",
+          "caption": "仙女漫游者法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 魅惑人类}",
+            "第五",
+            "{@spell 雾隐步伐}",
+            "第九",
+            "{@spell 解除魔法}",
+            "13级",
+            "{@spell 次元之门}",
+            "17级",
+            "{@spell 误导}"
+          ]
+        },
+        "你还拥有来自仙女盟友或仙女力量之地的超自然祝福。从仙女荒野赠礼表中选择你的祝福，或随机确定。",
+        {
+          "type": "table",
+          "caption": "仙女领域赠礼",
+          "colLabels": [
+            "d6",
+            "赠礼"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "当你进行短休或长休时，幻觉蝴蝶在你周围飞舞。",
+            "2",
+            "每天黎明，新鲜的时令花朵从你的头发中绽放。",
+            "3",
+            "你身上隐约散发着肉桂、薰衣草、肉豆蔻或其他令人安心的草药或香料的香味。",
+            "4",
+            "当没有人直接看向你的影子时，你的影子会起舞。",
+            "5",
+            "你的头上长出了角或鹿角。",
+            "6",
+            "你的皮肤和头发的颜色会在每个黎明时根据季节变化。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "妖精漫游者:妖冶娴都",
+      "ENG_name": "Otherworldly Glamour",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 第三级仙女游侠特性}",
+        "你的仙女特质赋予了你一种超自然的吸引力。因此，每当你进行魅力检定时，你会获得等同于你的智慧调整值的加值（最少为+1）。",
+        "此外，你可以选择以下一项技能并获得熟练：{@skill 欺骗}、{@skill 表演}或{@skill 说服}。"
+      ]
+    },
+    {
+      "name": "妖精漫游者:妖思魅缕",
+      "ENG_name": "Beguiling Twist",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 7级仙女游侠特性}",
+        "仙女领域的魔法守护着你的心灵。你在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投掷中具有优势。",
+        "此外，每当你或你能看到的120英尺内的生物成功通过对抗{@condition 魅惑}或{@condition 恐惧}的豁免投掷时，你可以使用你的反应迫使你能看到的120英尺内的另一个生物进行对抗你法术豁免DC的智慧豁免投掷。如果豁免失败，目标将被你{@condition 魅惑}或{@condition 恐惧}（你选择）持续1分钟。目标可以在每个回合的末尾重复豁免投掷，成功则结束此效果。"
+      ]
+    },
+    {
+      "name": "妖精漫游者:精宸所与",
+      "ENG_name": "Fey Reinforcements",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "{@i 11级仙女漫游者特性}",
+        "仙女界的皇家宫廷赋予了你仙女生物的帮助：你知道{@spell 召唤仙女|tce}。它不计入你所知的游侠法术数量，并且你可以无需材料成分来施放它。你还可以在没有法术位的情况下施放它一次，当你完成一次长时间休息后，你会恢复这样做的能力。",
+        "每当你开始施放法术时，你可以修改它，使其不需要{@status 专注}。如果你这样做，该法术的持续时间变为那次施法的1分钟。"
+      ]
+    },
+    {
+      "name": "妖精漫游者:雾行漫游",
+      "ENG_name": "Misty Wanderer",
+      "source": "TCE",
+      "page": 58,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "妖精漫游者",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 第十五级仙女游侠特性}",
+        "你可以在仙女界之间穿梭，眨眼间移动：你可以无需消耗法术位来施放{@spell 雾隐步伐}。你可以这样做的次数等于你的智力调整值（最少一次），并且在完成一次长时间休息后，你会恢复所有已使用的使用次数。",
+        "此外，每当你施放{@i 雾隐步伐}时，你可以带上一个你可以看到的、愿意的生物，该生物必须在你5英尺范围内。该生物会传送到你选择的未被占据的空间，该空间必须在你的目的地空间5英尺内。"
+      ]
+    },
+    {
+      "name": "集群守卫",
+      "ENG_name": "Swarmkeeper",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "一些游侠感受到与周围环境的深厚联系，他们通过与世界的魔法联系伸出援手，与一群自然精灵结成伙伴。这群精灵在战斗中成为强大的力量，也是游侠有益的伴侣。有些虫群守护者是被排斥者或隐士，他们宁愿与自己的随从虫群在一起，而不是与他人的不适打交道。其他虫群守护者则喜欢建立充满活力的社区，为所有他们认为是他们虫群一部分的人的共同利益而工作。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "聚集虫群|游侠||虫群守护者|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "群蜂守护者魔法|游侠||群蜂守护者|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "集群守卫:蜂聚集群",
+      "ENG_name": "Gathered Swarm",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级虫群守护者特性}",
+        "一群无形的自然精灵与你结成了契约，可以在战斗中协助你。只要你还活着，这群精灵就会停留在你的空间内，在你身上爬行或在你的空间内飞行和快速移动。你可以决定它的外观，或者通过在群蜂外观表上掷骰来生成它的外观。",
+        {
+          "type": "table",
+          "caption": "虫群外观",
+          "colLabels": [
+            "d4",
+            "外观"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "群聚昆虫",
+            "2",
+            "微型小树枝枯萎病",
+            "3",
+            "飘动的鸟儿",
+            "4",
+            "顽皮的小精灵"
+          ]
+        },
+        "在你的每个回合中，一旦你用攻击命中一个生物，你可以立即让虫群以下列方式之一协助你：",
+        {
+          "type": "list",
+          "items": [
+            "攻击目标从群蜂那里受到{@damage 1d6}点穿刺伤害。",
+            "攻击的目标必须成功通过一次力量豁免检定，对抗你的法术豁免DC，否则会被群蜂移动最多15英尺的水平距离，方向由你选择。",
+            "你被虫群水平移动5英尺至你选择的方向。"
+          ]
+        },
+        {
+          "type": "inset",
+          "name": "集群守卫:你的集群",
+          "ENG_name": "It's Your Swarm",
+          "entries": [
+            "虫群守护者的虫群和法术是角色与自然精灵联系的反映。抓住机会描述虫群和游侠的魔法在游戏中的表现。例如，当你的游侠施放气态形态时，他们可能会看起来融化进虫群中，而不是变成一团雾气，或者{@spell 奥术之眼}法术可以创造出你的虫群的延伸，为你进行侦查。这样的描述不会改变法术的效果，但它们是探索你的角色通过他们的职业能力叙述的激动人心的机会。有关自定义法术的更多指导，请参阅第3章中的“个性化法术”部分。",
+            "此外，请记住，群蜂的外观由你来定制，并且不要局限于单一的外观。也许精灵的外观会随着游侠的心情或季节而变化。由你决定！"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "集群守卫:集群守卫魔法",
+      "ENG_name": "Swarmkeeper Magic",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级虫群守护者特性}",
+        "如果你尚未知晓，你将学会{@spell 魔法之手}戏法。当你施放它时，手会呈现你的虫群本性精灵的形状。",
+        "当你达到此职业的特定等级时，你还学习到额外的1级或更高级别的法术，如群蜂守护者法术表所示。每个法术对你来说都算作游侠法术，但它不计入你所知的游侠法术数量。",
+        {
+          "type": "table",
+          "caption": "虫群守护者法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 仙女之火}",
+            "第五",
+            "{@spell 蛛网}",
+            "第九",
+            "{@spell 气态形态}",
+            "13级",
+            "{@spell 奥术之眼}",
+            "17级",
+            "{@spell 昆虫瘟疫}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "集群守卫:翻腾浪涌",
+      "ENG_name": "Writhing Tide",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "{@i 第七级虫群守护者特性}",
+        "你可以将你的虫群的一部分凝聚成一个集中的团块，将你抬起。作为奖励动作，你获得10英尺的飞行速度并且可以悬停。这个效果持续1分钟，或者直到你处于{@condition 无法行动}状态。",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "集群守卫:壮大集群",
+      "ENG_name": "Mighty Swarm",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "{@i 11级虫群守护者特性}",
+        "你的聚集虫群在以下方面变得更加强大：",
+        {
+          "type": "list",
+          "items": [
+            "The damage of Gathered Swarm increases to {@dice 1d8}.",
+            "如果一个生物未能通过豁免检定以避免被聚集虫群移动，你还可以导致虫群将生物击倒为{@condition 倒地}状态。",
+            "当你被聚集虫群移动时，它在你下一个回合开始前为你提供半个掩体。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "集群守卫:群逸逃散",
+      "ENG_name": "Swarming Dispersal",
+      "source": "TCE",
+      "page": 59,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "集群守卫",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 15级虫群守护者特性}",
+        "你可以解体进入你的虫群，避开危险。当你受到伤害时，你可以使用你的反应给自己提供对该伤害的抗性。你消失在你的虫群中，然后传送到你可以看到的30英尺内的未被占据的空间，你和虫群一起重新出现。",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "幽域追踪者",
+      "ENG_name": "Gloom Stalker",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "幽影追踪者在最黑暗的地方如鱼得水：深入地下、在阴暗的小巷、原始森林，以及任何光线昏暗的地方。大多数人进入这样的地方都会感到恐惧，但幽影追踪者大胆地进入黑暗，寻求在威胁到达更广阔世界之前进行伏击。这样的游侠经常出现在幽暗地域，但他们会去任何邪恶潜伏在阴影中的地方。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "幽暗追踪者魔法|游侠||幽暗追踪者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "恐怖伏击者|游侠|幽暗追踪者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "幽影视觉|游侠||幽暗追踪者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "幽域追踪者:恐惧伏击",
+      "ENG_name": "Dread Ambusher",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你掌握了伏击的艺术。你可以使自己的先攻骰获得等于你的智慧调整值的加值。",
+        "在每场战斗的第一个回合开始时，你的步行速度增加10英尺，效果持续到该回合结束。如果你在那个回合采取了{@action 攻击}动作，你可以作为该动作的一部分额外进行一次武器攻击。如果这次攻击命中，目标将额外受到{@damage 1d8}点武器伤害类型的伤害。"
+      ]
+    },
+    {
+      "name": "幽域追踪者:幽域追踪者魔法",
+      "ENG_name": "Gloom Stalker Magic",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你在这个职业达到特定等级时，你会额外学习一个法术，如幽暗追踪者法术表所示。这个法术对你来说算作游侠法术，但它不计入你所知的游侠法术数量。",
+        {
+          "type": "table",
+          "caption": "幽暗追踪者法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 伪装自己}",
+            "第五",
+            "{@spell 绳结戏法}",
+            "第九",
+            "{@spell 恐惧}",
+            "13级",
+            "{@spell 高级隐形}",
+            "17级",
+            "{@spell 幻象}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "幽域追踪者:阴影视野",
+      "ENG_name": "Umbral Sight",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你获得了{@sense 黑暗视觉}，范围达到60英尺。如果你的种族已经拥有{@sense 黑暗视觉}，其范围增加30英尺。",
+        "你也擅长躲避依赖{@sense 黑暗视觉}的生物。在黑暗中，对于任何依赖{@sense 黑暗视觉}在黑暗中看到你的生物来说，你是{@condition 隐形}的。"
+      ]
+    },
+    {
+      "name": "幽域追踪者:钢铁意志",
+      "ENG_name": "Iron Mind",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "到了7级，你已经磨练了抵抗猎物心灵改变能力的能力。你获得了对智慧豁免检定的熟练。如果你已经拥有这项熟练，你将获得对智力或魅力豁免检定的熟练（自选）。"
+      ]
+    },
+    {
+      "name": "幽域追踪者:追猎如风",
+      "ENG_name": "Stalker's Flurry",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "在11级时，你学会了以出人意料的速度攻击，可以将未命中转变为另一次打击。在你的每个回合中，当你的武器攻击未命中时，你可以作为同一动作的一部分进行另一次武器攻击。"
+      ]
+    },
+    {
+      "name": "暗影闪避",
+      "ENG_name": "Shadowy Dodge",
+      "source": "XGE",
+      "page": 41,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "幽域追踪者",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，你可以以出人意料的方式躲避，身边环绕着超自然的阴影。每当一个生物对你进行攻击检定时，并且没有优势加成，你可以使用你的反应来使其检定处于劣势。你必须在知道攻击检定结果之前使用这个特性。"
+      ]
+    },
+    {
+      "name": "边界行者",
+      "ENG_name": "Horizon Walker",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "地平线行者守护世界，抵御来自其他位面的威胁或那些试图用异界魔法破坏凡间领域的威胁。他们寻找位面传送门并监视它们，必要时进入内层位面和外层位面追击敌人。这些游侠也是多元宇宙中所有致力于保护生命和位面秩序的力量的朋友——尤其是仁慈的龙类、仙女和元素生物。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "地平线行者魔法|游侠||地平界行者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "侦测门户|游侠||地平线行者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "位面战士|游侠|地平线行者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "边界行者:侦测传送门",
+      "ENG_name": "Detect Portal",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你获得了魔法感知位面传送门的能力。作为一个动作，你可以侦测到离你1英里内最近的位面传送门的距离和方向。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。",
+        "请参阅《地下城主指南》第2章中的“位面旅行”部分，了解位面门户的示例。"
+      ]
+    },
+    {
+      "name": "边界行者:边界行者魔法",
+      "ENG_name": "Horizon Walker Magic",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你达到这个职业的特定等级时，你会额外学习一个法术，如地平界行者法术表所示。这个法术对你来说算作游侠法术，但它不计入你所知游侠法术的数量。",
+        {
+          "type": "table",
+          "caption": "地平线行者法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 防护邪恶善良}",
+            "第五",
+            "{@spell 雾隐步伐}",
+            "第九",
+            "{@spell 迅捷}",
+            "13级",
+            "{@spell 放逐术}",
+            "17级",
+            "{@spell 传送法阵}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "边界行者:位面战士",
+      "ENG_name": "Planar Warrior",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你达到3级时，你学会借助多元宇宙的能量来增强你的攻击。",
+        "As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra {@damage 1d8} force damage from the attack. When you reach 11th level in this class, the extra damage increases to {@dice 2d8}."
+      ]
+    },
+    {
+      "name": "边界行者:以太漫步",
+      "ENG_name": "Ethereal Step",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "当你达到7级时，你学会穿过以太位面。作为一个奖励动作，你可以使用这个特性施放{@spell 以太化}法术，无需消耗法术位，但法术效果在当前回合结束时终止。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "边界行者:闪现打击",
+      "ENG_name": "Distant Strike",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "当你达到11级时，你获得了瞬间穿越位面的能力。当你采取{@action 攻击}动作时，你可以在每次攻击前传送最多10英尺到一个你能看到的未被占据的空间。",
+        "如果你用动作攻击了至少两个不同的生物，你可以使用它对第三个生物进行一次额外的攻击。"
+      ]
+    },
+    {
+      "name": "边界行者:灵体防御",
+      "ENG_name": "Spectral Defense",
+      "source": "XGE",
+      "page": 42,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "边界行者",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "当你达到15级时，你在位面间移动的能力使你能够在战斗中穿过位面边界，减少对你的伤害。当你从攻击中受到伤害时，你可以使用你的反应来使自己对此回合内该攻击的所有伤害获得抗性。"
+      ]
+    },
+    {
+      "name": "怪物杀手",
+      "ENG_name": "Monster Slayer",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "你致力于追捕夜间生物和使用阴森魔法的施法者。怪物猎人寻找吸血鬼、龙、邪恶仙女、恶魔以及其他魔法威胁。经过超自然技巧的训练以克服这样的怪物，猎人是挖掘和击败强大、神秘敌人的专家。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "怪物猎手魔法|游侠||怪物猎手|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "猎人感知|游侠||怪物猎手|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "猎人猎物|游侠||怪物猎人|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "怪物杀手:猎手感知",
+      "ENG_name": "Hunter's Sense",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你达到3级时，你获得了凝视生物并神奇地判断如何最大程度伤害它能力。作为一个动作，选择一个你能在你60英尺内看到的生物。你立刻了解到这个生物是否有任何伤害免疫、抗性或弱点，以及它们是什么。如果这个生物对占卜魔法隐藏，你感觉到它没有任何伤害免疫、抗性或弱点。",
+        "你可以使用这个特性的次数等于你的智慧调整值（最少一次）。当你完成一次长休息时，你恢复所有已使用的它。"
+      ]
+    },
+    {
+      "name": "怪物杀手:怪物杀手魔法",
+      "ENG_name": "Monster Slayer Magic",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你在这个职业达到特定等级时，你可以额外学习一个法术，如怪物猎手法术表所示。这个法术对你来说算作游侠法术，但它不计入你所知的游侠法术数量。",
+        {
+          "type": "table",
+          "caption": "怪物猎人法术",
+          "colLabels": [
+            "游侠等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 防护邪恶善良}",
+            "第五",
+            "{@spell 真实区域}",
+            "第九",
+            "{@spell 魔法圈}",
+            "13级",
+            "{@spell 放逐术}",
+            "17级",
+            "{@spell 定身怪物}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "怪物杀手:狩猎开始",
+      "ENG_name": "Slayer's Prey",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你可以集中你的怒火对准一个敌人，增加你对它造成的伤害。作为一个奖励动作，你指定一个你能在你60英尺内看到的生物作为这个特性的目标。每个回合中，每当你首次用武器攻击击中该目标时，它将从武器那里额外承受{@damage 1d6}点伤害。",
+        "这个好处持续到你完成一次短休或长休。如果你指定不同的生物，它会提前结束。"
+      ]
+    },
+    {
+      "name": "怪物杀手:异能防护",
+      "ENG_name": "Supernatural Defense",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 7,
+      "header": 2,
+      "entries": [
+        "At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add {@dice 1d6} to your roll."
+      ]
+    },
+    {
+      "name": "怪物杀手:魔法使的克星",
+      "ENG_name": "Magic-User's Nemesis",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 11,
+      "header": 2,
+      "entries": [
+        "当你达到11级时，你获得了挫败他人魔法的能力。当你看到一个生物在你60英尺内施放法术或进行传送时，你可以使用你的反应尝试魔法上挫败它。该生物必须成功通过一次对抗你法术豁免DC的智力豁免检定，否则它的法术或传送失败并被浪费。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "怪物杀手:杀手反制",
+      "ENG_name": "Slayer's Counter",
+      "source": "XGE",
+      "page": 43,
+      "className": "游侠",
+      "classSource": "PHB",
+      "subclassShortName": "怪物杀手",
+      "subclassSource": "XGE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "当你达到15级时，你获得了在猎物试图破坏你时反击的能力。如果你的屠戮猎物特性的目标迫使你进行一次豁免检定，你可以使用你的反应对目标进行一次武器攻击。你在进行豁免检定之前立即进行这次攻击。如果你的攻击命中，你的豁免检定自动成功，除此之外攻击还有正常效果。"
+      ]
+    }
+  ]
 }

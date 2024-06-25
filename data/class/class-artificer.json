@@ -1,2215 +1,2532 @@
 {
-	"class": [
-		{
-			"name": "Artificer",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"hd": {
-				"number": 1,
-				"faces": 8
-			},
-			"proficiency": [
-				"con",
-				"int"
-			],
-			"spellcastingAbility": "int",
-			"casterProgression": "artificer",
-			"preparedSpells": "<$level$> / 2 + <$int_mod$>",
-			"cantripProgression": [
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4
-			],
-			"optionalfeatureProgression": [
-				{
-					"name": "Infusions",
-					"featureType": [
-						"AI"
-					],
-					"progression": [
-						0,
-						4,
-						4,
-						4,
-						4,
-						6,
-						6,
-						6,
-						6,
-						8,
-						8,
-						8,
-						8,
-						10,
-						10,
-						10,
-						10,
-						12,
-						12,
-						12
-					]
-				}
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					{
-						"proficiency": "firearms",
-						"optional": true
-					}
-				],
-				"tools": [
-					"{@item thieves' tools|PHB}",
-					"{@item tinker's tools|PHB}",
-					"one type of {@item artisan's tools|PHB} of your choice"
-				],
-				"toolProficiencies": [
-					{
-						"thieves' tools": true,
-						"tinker's tools": true,
-						"anyArtisansTool": 1
-					}
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"history",
-								"investigation",
-								"medicine",
-								"nature",
-								"perception",
-								"sleight of hand"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} of your choice",
-					"a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-					"(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
-					"{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
-				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"_": [
-							{
-								"equipmentType": "weaponSimple",
-								"quantity": 2
-							}
-						]
-					},
-					{
-						"_": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						]
-					},
-					{
-						"a": [
-							"studded leather armor|phb"
-						],
-						"b": [
-							"scale mail|phb"
-						]
-					},
-					{
-						"_": [
-							"thieves' tools|phb",
-							"dungeoneer's pack|phb"
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"int": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"tools": [
-						"{@item thieves' tools|PHB}",
-						"{@item tinker's tools|PHB}"
-					],
-					"toolProficiencies": [
-						{
-							"thieves' tools": true,
-							"tinker's tools": true
-						}
-					]
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"{@filter Infusions Known|optionalfeatures|feature type=ai|source=TCE}",
-						"Infused Items",
-						"{@filter Cantrips Known|spells|level=0|class=artificer}"
-					],
-					"rows": [
-						[
-							0,
-							0,
-							2
-						],
-						[
-							4,
-							2,
-							2
-						],
-						[
-							4,
-							2,
-							2
-						],
-						[
-							4,
-							2,
-							2
-						],
-						[
-							4,
-							2,
-							2
-						],
-						[
-							6,
-							3,
-							2
-						],
-						[
-							6,
-							3,
-							2
-						],
-						[
-							6,
-							3,
-							2
-						],
-						[
-							6,
-							3,
-							2
-						],
-						[
-							8,
-							4,
-							3
-						],
-						[
-							8,
-							4,
-							3
-						],
-						[
-							8,
-							4,
-							3
-						],
-						[
-							8,
-							4,
-							3
-						],
-						[
-							10,
-							5,
-							4
-						],
-						[
-							10,
-							5,
-							4
-						],
-						[
-							10,
-							5,
-							4
-						],
-						[
-							10,
-							5,
-							4
-						],
-						[
-							12,
-							6,
-							4
-						],
-						[
-							12,
-							6,
-							4
-						],
-						[
-							12,
-							6,
-							4
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Artificer}",
-						"{@filter 2nd|spells|level=2|class=Artificer}",
-						"{@filter 3rd|spells|level=3|class=Artificer}",
-						"{@filter 4th|spells|level=4|class=Artificer}",
-						"{@filter 5th|spells|level=5|class=Artificer}"
-					],
-					"rowsSpellProgression": [
-						[
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Optional Rule: Firearm Proficiency|Artificer|TCE|1",
-				"Magical Tinkering|Artificer|TCE|1",
-				"Spellcasting|Artificer|TCE|1",
-				"Infuse Item|Artificer|TCE|2",
-				{
-					"classFeature": "Artificer Specialist|Artificer|TCE|3",
-					"gainSubclassFeature": true
-				},
-				"The Right Tool for the Job|Artificer|TCE|3",
-				"Ability Score Improvement|Artificer|TCE|4",
-				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|5",
-					"gainSubclassFeature": true
-				},
-				"Tool Expertise|Artificer|TCE|6",
-				"Flash of Genius|Artificer|TCE|7",
-				"Ability Score Improvement|Artificer|TCE|8",
-				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|9",
-					"gainSubclassFeature": true
-				},
-				"Magic Item Adept|Artificer|TCE|10",
-				"Spell-Storing Item|Artificer|TCE|11",
-				"Ability Score Improvement|Artificer|TCE|12",
-				"Magic Item Savant|Artificer|TCE|14",
-				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|15",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Artificer|TCE|16",
-				"Magic Item Master|Artificer|TCE|18",
-				"Ability Score Improvement|Artificer|TCE|19",
-				"Soul of Artifice|Artificer|TCE|20"
-			],
-			"subclassTitle": "Artificer Specialist",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Alchemist",
-			"shortName": "Alchemist",
-			"source": "TCE",
-			"className": "Artificer",
-			"classSource": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"3": [
-							"healing word",
-							"ray of sickness"
-						],
-						"5": [
-							"flaming sphere",
-							"melf's acid arrow"
-						],
-						"9": [
-							"gaseous form",
-							"mass healing word"
-						],
-						"13": [
-							"blight",
-							"death ward"
-						],
-						"17": [
-							"cloudkill",
-							"raise dead"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Alchemist|Artificer|TCE|Alchemist|TCE|3",
-				"Alchemical Savant|Artificer|TCE|Alchemist|TCE|5",
-				"Restorative Reagents|Artificer|TCE|Alchemist|TCE|9",
-				"Chemical Mastery|Artificer|TCE|Alchemist|TCE|15"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Armorer",
-			"shortName": "Armorer",
-			"source": "TCE",
-			"className": "Artificer",
-			"classSource": "TCE",
-			"page": 15,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"3": [
-							"magic missile",
-							"thunderwave"
-						],
-						"5": [
-							"mirror image",
-							"shatter"
-						],
-						"9": [
-							"hypnotic pattern",
-							"lightning bolt"
-						],
-						"13": [
-							"fire shield",
-							"greater invisibility"
-						],
-						"17": [
-							"passwall",
-							"wall of force"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Armorer|Artificer|TCE|Armorer|TCE|3",
-				"Extra Attack|Artificer|TCE|Armorer|TCE|5",
-				"Armor Modifications|Artificer|TCE|Armorer|TCE|9",
-				"Perfected Armor|Artificer|TCE|Armorer|TCE|15"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Artillerist",
-			"shortName": "Artillerist",
-			"source": "TCE",
-			"className": "Artificer",
-			"classSource": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"3": [
-							"shield",
-							"thunderwave"
-						],
-						"5": [
-							"scorching ray",
-							"shatter"
-						],
-						"9": [
-							"fireball",
-							"wind wall"
-						],
-						"13": [
-							"ice storm",
-							"wall of fire"
-						],
-						"17": [
-							"cone of cold",
-							"wall of force"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Artillerist|Artificer|TCE|Artillerist|TCE|3",
-				"Arcane Firearm|Artificer|TCE|Artillerist|TCE|5",
-				"Explosive Cannon|Artificer|TCE|Artillerist|TCE|9",
-				"Fortified Position|Artificer|TCE|Artillerist|TCE|15"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Battle Smith",
-			"shortName": "Battle Smith",
-			"source": "TCE",
-			"className": "Artificer",
-			"classSource": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"additionalSpells": [
-				{
-					"prepared": {
-						"3": [
-							"heroism",
-							"shield"
-						],
-						"5": [
-							"branding smite",
-							"warding bond"
-						],
-						"9": [
-							"aura of vitality",
-							"conjure barrage"
-						],
-						"13": [
-							"aura of purity",
-							"fire shield"
-						],
-						"17": [
-							"banishing smite",
-							"mass cure wounds"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Battle Smith|Artificer|TCE|Battle Smith|TCE|3",
-				"Extra Attack|Artificer|TCE|Battle Smith|TCE|5",
-				"Arcane Jolt|Artificer|TCE|Battle Smith|TCE|9",
-				"Improved Defender|Artificer|TCE|Battle Smith|TCE|15"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Magical Tinkering",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 1,
-			"entries": [
-				"{@i 1st-level artificer feature}",
-				"You've learned how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
-				{
-					"type": "list",
-					"items": [
-						"The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
-						"Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.",
-						"The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.",
-						"A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."
-					]
-				},
-				"The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.",
-				"You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies."
-			]
-		},
-		{
-			"name": "Optional Rule: Firearm Proficiency",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 1,
-			"entries": [
-				"The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in {@book chapter 9|DMG|9|Firearms} of the {@book Dungeon Master's Guide|DMG} and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
-			]
-		},
-		{
-			"name": "Spellcasting",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 1,
-			"entries": [
-				"{@i 1st-level artificer feature}",
-				"You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.",
-				{
-					"type": "entries",
-					"name": "Tools Required",
-					"entries": [
-						"You produce your artificer spell effects through your tools. You must have a spellcasting focus\u2014specifically {@item thieves' tools|phb} or some kind of {@item artisan's tools|phb|artisan's tool}\u2014in hand when you cast any spell with this Spellcasting feature (meaning the spell has an 'M' component when you cast it). You must be proficient with the tool to use it in this way. See {@book chapter 5|PHB|4}, \"Equipment,\" in the {@book Player's Handbook|PHB} for descriptions of these tools.",
-						"After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.",
-						{
-							"type": "inset",
-							"name": "The Magic of Artifice",
-							"entries": [
-								"As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast {@spell cure wounds} using {@item alchemist's supplies|PHB}, you could be quickly producing a salve. If you cast it using {@item tinker's tools|PHB}, you might have a miniature mechanical spider that binds wounds. When you cast {@spell poison spray}, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.",
-								"The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace {@spell cure wounds} with {@spell heat metal}, you might be altering the device you use to heal\u2014perhaps modifying a tool so that it channels heat instead of healing energy.",
-								"Such details don't limit you in any way or provide you with any benefit beyond the spell's effects. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself from other spellcasters."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Cantrips (0-Level Spells)",
-					"entries": [
-						"At 1st level, you know two cantrips of your choice from the {@filter artificer spell list|spells|level=0|class=Artificer}. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.",
-						"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Preparing and Casting Spells",
-					"entries": [
-						"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of artificer spells that are available for you to cast, choosing from the {@filter artificer spell list|spells|class=Artificer}. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Ability",
-					"entries": [
-						"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
-						{
-							"type": "abilityDc",
-							"name": "Spell",
-							"attributes": [
-								"int"
-							]
-						},
-						{
-							"type": "abilityAttackMod",
-							"name": "Spell",
-							"attributes": [
-								"int"
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Ritual Casting",
-					"entries": [
-						"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
-					]
-				}
-			]
-		},
-		{
-			"name": "Infuse Item",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 2,
-			"entries": [
-				"{@i 2nd-level artificer feature}",
-				"You've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
-				{
-					"type": "refClassFeature",
-					"classFeature": "Infusions Known|Artificer|TCE|2"
-				},
-				{
-					"type": "inset",
-					"name": "Artificer Infusions",
-					"entries": [
-						"Artificers have invented numerous magical infusions, extraordinary processes that rapidly create magic items. To many, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete.",
-						"The description of each of the following infusions details the type of item that can receive it, along with whether the resulting magic item requires attunement.",
-						"Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.",
-						"Unless an infusion's description says otherwise, you can't learn an infusion more than once."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Infusing an Item",
-					"entries": [
-						"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"Attunement\" in chapter 7 of the {@book Dungeon Master's Guide|DMG}).",
-						"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.",
-						"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies.",
-						"If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
-					]
-				}
-			]
-		},
-		{
-			"name": "Infusions Known",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"When you gain this feature, pick four artificer infusions to learn, choosing from the \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=TCE}\" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
-				"Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
-			]
-		},
-		{
-			"name": "Artificer Specialist",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 3,
-			"entries": [
-				"{@i 3rd-level artificer feature}",
-				"Choose the type of specialist you are, each of which is detailed at the end of the class's description. Your choice grants you features at 5th level and again at 9th and 15th level."
-			]
-		},
-		{
-			"name": "The Right Tool for the Job",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 3,
-			"entries": [
-				"{@i 3rd-level artificer feature}",
-				"You've learned how to produce exactly the tool you need: with {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand, you can magically create one set of {@item artisan's tools|PHB} in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 4,
-			"entries": [
-				"{@i 4th-level artificer feature}",
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Artificer Specialist Feature",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 5,
-			"entries": [
-				"{@i 5th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
-			]
-		},
-		{
-			"name": "Tool Expertise",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 6,
-			"entries": [
-				"{@i 6th-level artificer feature}",
-				"Your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
-			]
-		},
-		{
-			"name": "Flash of Genius",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 7,
-			"entries": [
-				"{@i 7th-level artificer feature}",
-				"You've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
-				"You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 8,
-			"entries": [
-				"{@i 8th-level artificer feature}",
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Artificer Specialist Feature",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 9,
-			"entries": [
-				"{@i 9th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
-			]
-		},
-		{
-			"name": "Magic Item Adept",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 10,
-			"entries": [
-				"{@i 10th-level artificer feature}",
-				"You've achieved a profound understanding of how to use and make magic items:",
-				{
-					"type": "list",
-					"items": [
-						"You can attune to up to four magic items at once.",
-						"If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
-					]
-				}
-			]
-		},
-		{
-			"name": "Spell-Storing Item",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 11,
-			"entries": [
-				"{@i 11th-level artificer feature}",
-				"You can now store a spell in an object. Whenever you finish a long rest, you can touch one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} that requires 1 action to cast (you needn't have it prepared).",
-				"While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires {@status concentration}, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 12,
-			"entries": [
-				"{@i 12th-level artificer feature}",
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Magic Item Savant",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 14,
-			"entries": [
-				"{@i 14th-level artificer feature}",
-				"Your skill with magic items deepens:",
-				{
-					"type": "list",
-					"items": [
-						"You can attune to up to five magic items at once.",
-						"You ignore all class, race, spell, and level requirements on attuning to or using a magic item."
-					]
-				}
-			]
-		},
-		{
-			"name": "Artificer Specialist Feature",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 15,
-			"entries": [
-				"{@i 15th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 16,
-			"entries": [
-				"{@i 16th-level artificer feature}",
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Magic Item Master",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 18,
-			"entries": [
-				"{@i 18th-level artificer feature}",
-				"You can now attune to up to six magic items at once."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 19,
-			"entries": [
-				"{@i 19th-level artificer feature}",
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Soul of Artifice",
-			"source": "TCE",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 54
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"level": 20,
-			"entries": [
-				"{@i 20th-level artificer feature}",
-				"You have developed a mystical connection to your magic items, which you can draw on for protection:",
-				{
-					"type": "list",
-					"items": [
-						"You gain a +1 bonus to all saving throws per magic item you are currently attuned to.",
-						"If you're reduced to 0 hit points but not killed outright, you can use your reaction to end one of your artificer infusions, causing you to drop to 1 hit point instead of 0."
-					]
-				}
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Alchemist",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"An Alchemist is an expert at combining reagents to produce mystical effects. Alchemists use their creations to give life and to leech it away. Alchemy is the oldest of artificer traditions, and its versatility has long been valued during times of war and peace.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Alchemist|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Alchemist Spells|Artificer|TCE|Alchemist|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Experimental Elixir|Artificer|TCE|Alchemist|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Alchemist Spells",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
-				{
-					"type": "table",
-					"caption": "Alchemist Spells",
-					"colLabels": [
-						"Artificer Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell healing word}, {@spell ray of sickness}"
-						],
-						[
-							"5th",
-							"{@spell flaming sphere}, {@spell Melf's acid arrow}"
-						],
-						[
-							"9th",
-							"{@spell gaseous form}, {@spell mass healing word}"
-						],
-						[
-							"13th",
-							"{@spell blight}, {@spell death ward}"
-						],
-						[
-							"17th",
-							"{@spell cloudkill}, {@spell raise dead}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Experimental Elixir",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Beginning at 3rd level, whenever you finish a long rest, you can magically produce an {@i experimental elixir} in an empty flask you touch. Roll on the Experimental Elixir table for the elixir's effect, which is triggered when someone drinks the elixir. As an action, a creature can drink the elixir or administer it to an {@condition incapacitated} creature.",
-				"Creating an {@i experimental elixir} requires you to have {@item alchemist's supplies|PHB} on your person, and any elixir you create with this feature lasts until it is drunk or until the end of your next long rest.",
-				"When you reach certain levels in this class, you can make more elixirs at the end of a long rest: two at 6th level and three at 15th level. Roll for each elixir's effect separately. Each elixir requires its own flask.",
-				"You can create additional {@i experimental elixirs} by expending a spell slot of 1st level or higher for each one. When you do so, you use your action to create the elixir in an empty flask you touch, and you choose the elixir's effect from the Experimental Elixir table.",
-				{
-					"type": "table",
-					"caption": "Experimental Elixir",
-					"colLabels": [
-						"d6",
-						"Effect"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"{@b Healing}. The drinker regains a number of hit points equal to {@dice 2d4} + your Intelligence modifier."
-						],
-						[
-							"2",
-							"{@b Swiftness}. The drinker's walking speed increases by 10 feet for 1 hour."
-						],
-						[
-							"3",
-							"{@b Resilience}. The drinker gains a +1 bonus to AC for 10 minutes."
-						],
-						[
-							"4",
-							"{@b Boldness}. The drinker can roll a {@dice d4} and add the number rolled to every attack roll and saving throw they make for the next minute."
-						],
-						[
-							"5",
-							"{@b Flight}. The drinker gains a flying speed of 10 feet for 10 minutes."
-						],
-						[
-							"6",
-							"{@b Transformation}. The drinker's body is transformed as if by the {@spell alter self} spell. The drinker determines the transformation caused by the spell, the effects of which last for 10 minutes."
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Tool Proficiency",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item alchemist's supplies|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
-			]
-		},
-		{
-			"name": "Alchemical Savant",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 5,
-			"header": 2,
-			"entries": [
-				"At 5th level, you develop masterful command of magical chemicals, enhancing the healing and damage you create through them. Whenever you cast a spell using your {@item alchemist's supplies|PHB} as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1)."
-			]
-		},
-		{
-			"name": "Restorative Reagents",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, you can incorporate restorative reagents into some of your works:",
-				{
-					"type": "list",
-					"items": [
-						"Whenever a creature drinks an {@i experimental elixir} you created, the creature gains temporary hit points equal to {@dice 2d6} + your Intelligence modifier (minimum of 1 temporary hit point).",
-						"You can cast {@spell lesser restoration} without expending a spell slot and without preparing the spell, provided you use {@item alchemist's supplies|PHB} as the spellcasting focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
-					]
-				}
-			]
-		},
-		{
-			"name": "Chemical Mastery",
-			"source": "TCE",
-			"page": 14,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 58
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"By 15th level, you have been exposed to so many chemicals that they pose little risk to you, and you can use them to quickly end certain ailments:",
-				{
-					"type": "list",
-					"items": [
-						"You gain resistance to acid damage and poison damage, and you are immune to the {@condition poisoned} condition.",
-						"You can cast {@spell greater restoration} and {@spell heal} without expending a spell slot, without preparing the spell, and without material components, provided you use {@item alchemist's supplies|PHB} as the spellcasting focus. Once you cast either spell with this feature, you can't cast that spell with it again until you finish a long rest."
-					]
-				}
-			]
-		},
-		{
-			"name": "Armorer",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tools of the Trade|Artificer|TCE|Armorer|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Armorer Spells|Artificer|TCE|Armorer|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Armor|Artificer|TCE|Armorer|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Armor Model|Artificer|TCE|Armorer|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Dampening Field",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"type": "item",
-			"entries": [
-				"You have advantage on Dexterity ({@skill Stealth}) checks. If the armor normally imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal."
-			]
-		},
-		{
-			"name": "Defensive Field",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"type": "item",
-			"entries": [
-				"As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Lightning Launcher",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"type": "item",
-			"entries": [
-				"A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals {@damage 1d6} lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra {@damage 1d6} lightning damage to that target."
-			]
-		},
-		{
-			"name": "Powered Steps",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"type": "item",
-			"entries": [
-				"Your walking speed increases by 5 feet."
-			]
-		},
-		{
-			"name": "Thunder Gauntlets",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"type": "item",
-			"entries": [
-				"Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals {@damage 1d8} thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else."
-			]
-		},
-		{
-			"name": "Arcane Armor",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Armorer feature}",
-				"Your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have {@item smith's tools|PHB} in hand.",
-				"You gain the following benefits while wearing this armor:",
-				{
-					"type": "list",
-					"items": [
-						"If the armor normally has a Strength requirement, the arcane armor lacks this requirement for you.",
-						"You can use the arcane armor as a spellcasting focus for your artificer spells.",
-						"The armor attaches to you and can't be removed against your will. It also expands to cover your entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces any missing limbs, functioning identically to a limb it replaces.",
-						"You can doff or don the armor as an action. The armor continues to be Arcane Armor until you don another suit of armor or you die."
-					]
-				}
-			]
-		},
-		{
-			"name": "Armor Model",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Armorer feature}",
-				"You can customize your Arcane Armor. When you do so, choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you special benefits while you wear it.",
-				"Each model includes a special weapon. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.",
-				"You can change the armor's model whenever you finish a short or long rest, provided you have {@item smith's tools|PHB} in hand.",
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Guardian",
-							"entries": [
-								"You design your armor to be in the front line of conflict. It has the following features:",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										{
-											"type": "refSubclassFeature",
-											"subclassFeature": "Thunder Gauntlets|Artificer|TCE|Armorer|TCE|3"
-										},
-										{
-											"type": "refSubclassFeature",
-											"subclassFeature": "Defensive Field|Artificer|TCE|Armorer|TCE|3"
-										}
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Infiltrator",
-							"entries": [
-								"You customize your armor for subtle undertakings. It has the following features:",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										{
-											"type": "refSubclassFeature",
-											"subclassFeature": "Lightning Launcher|Artificer|TCE|Armorer|TCE|3"
-										},
-										{
-											"type": "refSubclassFeature",
-											"subclassFeature": "Powered Steps|Artificer|TCE|Armorer|TCE|3"
-										},
-										{
-											"type": "refSubclassFeature",
-											"subclassFeature": "Dampening Field|Artificer|TCE|Armorer|TCE|3"
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Armorer Spells",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Armorer feature}",
-				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
-				{
-					"type": "table",
-					"caption": "Armorer Spells",
-					"colLabels": [
-						"Artificer Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell magic missile}, {@spell thunderwave}"
-						],
-						[
-							"5th",
-							"{@spell mirror image}, {@spell shatter}"
-						],
-						[
-							"9th",
-							"{@spell hypnotic pattern}, {@spell lightning bolt}"
-						],
-						[
-							"13th",
-							"{@spell fire shield}, {@spell greater invisibility}"
-						],
-						[
-							"17th",
-							"{@spell passwall}, {@spell wall of force}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Tools of the Trade",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Armorer feature}",
-				"You gain proficiency with heavy armor. You also gain proficiency with {@item smith's tools|PHB}. If you already have this tool proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
-			]
-		},
-		{
-			"name": "Extra Attack",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 5,
-			"header": 2,
-			"entries": [
-				"{@i 5th-level Armorer feature}",
-				"You can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
-			]
-		},
-		{
-			"name": "Armor Modifications",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"{@i 9th-level Armorer feature}",
-				"You learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor."
-			]
-		},
-		{
-			"name": "Perfected Armor",
-			"source": "TCE",
-			"page": 15,
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Armorer",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"{@i 15th-level Armorer feature}",
-				"Your Arcane Armor gains additional benefits based on its model, as shown below.",
-				{
-					"type": "entries",
-					"name": "Guardian",
-					"entries": [
-						"When a Huge or smaller creature you can see ends its turn within 30 feet of you, you can use your reaction to magically force it to make a Strength saving throw against your spell save DC. On a failed save, you pull the creature up to 25 feet directly to an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
-						"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Infiltrator",
-					"entries": [
-						"Any creature that takes lightning damage from your Lightning Launcher glimmers with magical light until the start of your next turn. The glimmering creature sheds dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light jolts it if it attacks you. In addition, the next attack roll against it has advantage, and if that attack hits, the target takes an extra {@damage 1d6} lightning damage."
-					]
-				}
-			]
-		},
-		{
-			"name": "Artillerist",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield. This destructive power was valued by all the armies of the Last War. Now that the war is over, some members of this specialization have sought to build a more peaceful world by using their powers to fight the resurgence of strife in Khorvaire.",
-				"The gnome artificer Vi, an unlikely yet key member of House Cannith's warforged project, has been especially vocal about making things right: \"It's about time we fixed things instead of blowing them all to hell.\"",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Artillerist|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Artillerist Spells|Artificer|TCE|Artillerist|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Artillerist Spells",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
-				{
-					"type": "table",
-					"caption": "Artillerist Spells",
-					"colLabels": [
-						"Artificer Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell shield}, {@spell thunderwave}"
-						],
-						[
-							"5th",
-							"{@spell scorching ray}, {@spell shatter}"
-						],
-						[
-							"9th",
-							"{@spell fireball}, {@spell wind wall}"
-						],
-						[
-							"13th",
-							"{@spell ice storm}, {@spell wall of fire}"
-						],
-						[
-							"17th",
-							"{@spell cone of cold}, {@spell wall of force}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Eldritch Cannon",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you learn how to create a magical cannon. Using {@item woodcarver's tools|PHB} or {@item smith's tools|PHB}, you can take an action to magically create a Small or Tiny eldritch cannon in an unoccupied space on a horizontal surface within 5 feet of you. A Small eldritch cannon occupies its space, and a Tiny one can be held in one hand.",
-				"Once you create a cannon, you can't do so again until you finish a long rest or until you expend a spell slot of 1st level or higher. You can have only one cannon at a time and can't create one while your cannon is present.",
-				"The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
-				"When you create the cannon, you determine its appearance and whether it has legs. You also decide which type it is, choosing from the options on the Eldritch Cannons table. On each of your turns, you can take a bonus action to cause the cannon to activate if you are within 60 feet of it. As part of the same bonus action, you can direct the cannon to walk or climb up to 15 feet to an unoccupied space, provided it has legs.",
-				{
-					"type": "table",
-					"caption": "Eldritch Cannons",
-					"colLabels": [
-						"Cannon",
-						"Activation"
-					],
-					"colStyles": [
-						"col-2",
-						"col-10"
-					],
-					"rows": [
-						[
-							"{@object Eldritch Cannon, Flamethrower|TCE|Flamethrower}",
-							"The cannon exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking {@damage 2d8} fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."
-						],
-						[
-							"{@object Eldritch Cannon, Force Ballista|TCE|Force Ballista}",
-							"Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes {@damage 2d8} force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon."
-						],
-						[
-							"{@object Eldritch Cannon, Protector|TCE|Protector}",
-							"The cannon emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of it a number of temporary hit points equal to {@damage 1d8} + your Intelligence modifier (minimum of +1)."
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Tool Proficiency",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item woodcarver's tools|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
-			]
-		},
-		{
-			"name": "Arcane Firearm",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 5,
-			"header": 2,
-			"entries": [
-				"At 5th level, you know how to turn a wand, staff, or rod into an arcane firearm, a conduit for your destructive spells. When you finish a long rest, you can use {@item woodcarver's tools|PHB} to carve special sigils into a wand, staff, or rod and thereby turn it into your arcane firearm. The sigils disappear from the object if you later carve them on a different item. The sigils otherwise last indefinitely.",
-				"You can use your arcane firearm as a spellcasting focus for your artificer spells. When you cast an artificer spell through the firearm, roll a {@damage d8}, and you gain a bonus to one of the spell's damage rolls equal to the number rolled."
-			]
-		},
-		{
-			"name": "Explosive Cannon",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, every eldritch cannon you create is more destructive:",
-				{
-					"type": "list",
-					"items": [
-						"The cannon's damage rolls all increase by {@damage 1d8}.",
-						"As an action, you can command the cannon to detonate if you are within 60 feet of it. Doing so destroys the cannon and forces each creature within 20 feet of it to make a Dexterity saving throw against your spell save DC, taking {@damage 3d8} force damage on a failed save or half as much damage on a successful one."
-					]
-				}
-			]
-		},
-		{
-			"name": "Fortified Position",
-			"source": "TCE",
-			"page": 17,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 59
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"Starting at 15th level, you're a master at forming well-defended emplacements using Eldritch Cannon:",
-				{
-					"type": "list",
-					"items": [
-						"You and your allies have half cover while within 10 feet of a cannon you create with Eldritch Cannon, as a result of a shimmering field of magical protection that the cannon emits.",
-						"You can now have two cannons at the same time. You can create two with the same action (but not the same spell slot), and you can activate both of them with the same bonus action. You determine whether the cannons are identical to each other or different. You can't create a third cannon while you have two."
-					]
-				}
-			]
-		},
-		{
-			"name": "Battle Smith",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both material and personnel. To aid in their work, Battle Smiths are usually accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender.",
-				"Battle Smiths played a key role in House Cannith's work on battle constructs and the original warforged, and after the Last War, these artificers led efforts to aid those who were injured in the war's horrific battles.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Battle Smith|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Battle Smith Spells|Artificer|TCE|Battle Smith|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Battle Ready|Artificer|TCE|Battle Smith|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Steel Defender|Artificer|TCE|Battle Smith|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Battle Ready",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you reach 3rd level, your combat training and your experiments with magic have paid off in two ways:",
-				{
-					"type": "list",
-					"items": [
-						"You gain proficiency with martial weapons.",
-						"When you attack with a magic weapon, you can use your Intelligence modifier, instead of Strength or Dexterity modifier, for the attack and damage rolls."
-					]
-				}
-			]
-		},
-		{
-			"name": "Battle Smith Spells",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Battle Smith Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
-				{
-					"type": "table",
-					"caption": "Battle Smith Spells",
-					"colLabels": [
-						"Artificer Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"3rd",
-							"{@spell heroism}, {@spell shield}"
-						],
-						[
-							"5th",
-							"{@spell branding smite}, {@spell warding bond}"
-						],
-						[
-							"9th",
-							"{@spell aura of vitality}, {@spell conjure barrage}"
-						],
-						[
-							"13th",
-							"{@spell aura of purity}, {@spell fire shield}"
-						],
-						[
-							"17th",
-							"{@spell banishing smite}, {@spell mass cure wounds}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Steel Defender",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"By 3rd level, your tinkering has borne you a faithful companion, a {@creature steel defender|tce}. It is friendly to you and your companions, and it obeys your commands. See this creature's game statistics in the steel defender stat block, which uses your proficiency bonus (PB) in several places. You determine the creature's appearance and whether it has two legs or four; your choice has no effect on its game statistics.",
-				"In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the defender can take any action of its choice, not just {@action Dodge}.",
-				"If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. If it has died within the last hour, you can use your {@item smith's tools|PHB} as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The steel defender returns to life after 1 minute with all its hit points restored.",
-				"At the end of a long rest, you can create a new steel defender if you have your {@item smith's tools|PHB} with you. If you already have a steel defender from this feature, the first one immediately perishes. The defender also perishes if you die."
-			]
-		},
-		{
-			"name": "Tool Proficiency",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item smith's tools|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
-			]
-		},
-		{
-			"name": "Extra Attack",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 5,
-			"header": 2,
-			"entries": [
-				"Starting at 5th level, you can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
-			]
-		},
-		{
-			"name": "Arcane Jolt",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"At 9th level, you learn new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack or your steel defender hits a target, you can channel magical energy through the strike to create one of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"The target takes an extra {@damage 2d6} force damage.",
-						"Choose one creature or object you can see within 30 feet of the target. Healing energy flows into the chosen recipient, restoring {@dice 2d6} hit points to it."
-					]
-				},
-				"You can use this energy a number of times equal to your Intelligence modifier (minimum of once), but you can do so no more than once on a turn. You regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Improved Defender",
-			"source": "TCE",
-			"page": 18,
-			"otherSources": [
-				{
-					"source": "ERLW",
-					"page": 60
-				}
-			],
-			"className": "Artificer",
-			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
-			"subclassSource": "TCE",
-			"level": 15,
-			"header": 2,
-			"entries": [
-				"At 15th level, your Arcane Jolt and steel defender become more powerful:",
-				{
-					"type": "list",
-					"items": [
-						"The extra damage and the healing of your Arcane Jolt both increase to {@damage 4d6}.",
-						"Your steel defender gains a +2 bonus to Armor Class.",
-						"Whenever your steel defender uses its Deflect Attack, the attacker takes force damage equal to {@damage 1d4} + your Intelligence modifier."
-					]
-				}
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "奇械师",
+      "ENG_name": "Artificer",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "hd": {
+        "number": 1,
+        "faces": 8
+      },
+      "proficiency": [
+        "体质",
+        "int"
+      ],
+      "spellcastingAbility": "int",
+      "casterProgression": "1/3",
+      "preparedSpells": "<$level$> / 2 + <$int_mod$>",
+      "cantripProgression": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "optionalfeatureProgression": [
+        {
+          "name": "need-translate-d7a402b2-3206-11ef-ae1d-d1200322b32e",
+          "ENG_name": "Infusions",
+          "featureType": [
+            "AI"
+          ],
+          "progression": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            8,
+            8,
+            8,
+            8,
+            10,
+            10,
+            10,
+            10,
+            12,
+            12,
+            12
+          ]
+        }
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术",
+          "中等",
+          "{@item 盾牌|phb|shields}"
+        ],
+        "weapons": [
+          "简单",
+          {
+            "proficiency": "枪械",
+            "optional": true
+          }
+        ],
+        "tools": [
+          "{@item 盗贼工具|phb}",
+          "{@item 修理工具|PHB}",
+          "one type of {@item 工匠工具|phb} of your choice"
+        ],
+        "toolProficiencies": [
+          {
+            "thieves' tools": true,
+            "tinker's tools": true,
+            "anyArtisansTool": 1
+          }
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:奥秘",
+                "属性检定:历史",
+                "属性检定:调查",
+                "属性检定:医药",
+                "属性检定:自然",
+                "属性检定:察觉",
+                "属性检定:巧手"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "你选择的任意两种{@filter 简单武器|items|source=phb|category=basic|type=simple weapon}",
+          "一把{@item 轻型弩|phb}和{@item 弩箭(20支)|phb|20 bolts}",
+          "(a) {@item 钉甲皮甲|phb} 或 (b) {@item 鳞甲|phb}",
+          "{@item 盗贼工具|phb} and a {@item dungeoneer's pack|phb}"
+        ],
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "_": [
+              {
+                "equipmentType": "简易武器",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "_": [
+              "轻型十字弓|phb",
+              "弩箭（20）|phb"
+            ]
+          },
+          {
+            "a": [
+              "硬皮甲|PHB"
+            ],
+            "b": [
+              "鳞甲|PHB"
+            ]
+          },
+          {
+            "_": [
+              "盗贼工具|phb",
+              "探险者背包|phb"
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "int": 13
+        },
+        "proficienciesGained": {
+          "armor": [
+            "光亮术",
+            "中等",
+            "{@item 盾牌|phb|shields}"
+          ],
+          "tools": [
+            "{@item 盗贼工具|phb}",
+            "{@item 修补匠工具|PHB}"
+          ],
+          "toolProficiencies": [
+            {
+              "thieves' tools": true,
+              "tinker's tools": true
+            }
+          ]
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "{@filter 已知注入|可选特性|特性类型=ai|来源=TCE}",
+            "注入物品",
+            "{@filter 已知戏法|法术|等级=0|职业=炼金术士}"
+          ],
+          "rows": [
+            0,
+            0,
+            2,
+            4,
+            2,
+            2,
+            4,
+            2,
+            2,
+            4,
+            2,
+            2,
+            4,
+            2,
+            2,
+            6,
+            3,
+            2,
+            6,
+            3,
+            2,
+            6,
+            3,
+            2,
+            6,
+            3,
+            2,
+            8,
+            4,
+            3,
+            8,
+            4,
+            3,
+            8,
+            4,
+            3,
+            8,
+            4,
+            3,
+            10,
+            5,
+            4,
+            10,
+            5,
+            4,
+            10,
+            5,
+            4,
+            10,
+            5,
+            4,
+            12,
+            6,
+            4,
+            12,
+            6,
+            4,
+            12,
+            6,
+            4
+          ]
+        },
+        {
+          "title": "每个法术等级的法术位",
+          "colLabels": [
+            "{@filter 1级|法术|等级=1|职业=炼金术士}",
+            "{@filter 第二级|法术|等级=2|职业=炼金术士}",
+            "{@filter 3级|法术|等级=3|职业=炼金术士}",
+            "{@filter 第四级|法术|等级=4|职业=炼金术士}",
+            "{@filter 5级|法术|等级=5|职业=炼金术士}"
+          ],
+          "rowsSpellProgression": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            4,
+            3,
+            3,
+            1,
+            0,
+            4,
+            3,
+            3,
+            1,
+            0,
+            4,
+            3,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            3,
+            2,
+            4,
+            3,
+            3,
+            3,
+            2
+          ]
+        }
+      ],
+      "classFeatures": [
+        "可选规则：火器熟练度|炼金术士|TCE|1",
+        "魔法修补|炼金术士|TCE|1",
+        "施法|炼金术士|TCE|1",
+        "物品注法|炼金术士|TCE|2",
+        {
+          "classFeature": "炼金术士专家|炼金术士|TCE|3",
+          "gainSubclassFeature": true
+        },
+        "正确的工具|炼金术士|TCE|3",
+        "能力值提升|炼金术士|TCE|4",
+        {
+          "classFeature": "炼金术士专长特性|炼金术士|TCE|5",
+          "gainSubclassFeature": true
+        },
+        "工具专精|炼金术士|TCE|6",
+        "天才闪光|炼金术士|TCE|7",
+        "属性值提升|炼金术士|TCE|8",
+        {
+          "classFeature": "炼金术士专家特性|炼金术士|TCE|9",
+          "gainSubclassFeature": true
+        },
+        "魔法物品精通|炼金术士|TCE|10",
+        "法术储存物品|炼金术士|TCE|11",
+        "属性值提升|炼金术士|TCE|12",
+        "魔法物品专家|炼金术士|TCE|14",
+        {
+          "classFeature": "炼金术士专长特性|炼金术士|TCE|15",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|炼金术士|TCE|16",
+        "魔法物品大师|炼金术士|TCE|18",
+        "属性值提升|炼金术士|TCE|19",
+        "造物之魂|炼金术士|TCE|20"
+      ],
+      "subclassTitle": "奇械师专业",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "炼金术士[未校对]",
+      "ENG_name": "Alchemist",
+      "shortName": "炼金术士",
+      "ENG_shortName": "Alchemist",
+      "source": "TCE",
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "治疗词",
+              "疾病射线"
+            ],
+            "5": [
+              "火球术",
+              "梅尔夫的酸性箭"
+            ],
+            "9": [
+              "气态形态",
+              "群体治疗词"
+            ],
+            "13": [
+              "枯萎",
+              "死亡护壁"
+            ],
+            "17": [
+              "云雾杀",
+              "复活死者"
+            ]
+          }
+        }
+      ],
+      "ENG_additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "healing word",
+              "ray of sickness"
+            ],
+            "5": [
+              "flaming sphere",
+              "melf's acid arrow"
+            ],
+            "9": [
+              "gaseous form",
+              "mass healing word"
+            ],
+            "13": [
+              "blight",
+              "death ward"
+            ],
+            "17": [
+              "cloudkill",
+              "raise dead"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "炼金术士|术士|TCE|炼金术士|TCE|3",
+        "炼金术士专家|术士|TCE|炼金术士|TCE|5",
+        "恢复性试剂|术士|TCE|炼金术士|TCE|9",
+        "化学掌握|术士|TCE|炼金术士|TCE|15"
+      ],
+      "ENG_subclassFeatures": [
+        "Alchemist|Artificer|TCE|Alchemist|TCE|3",
+        "Alchemical Savant|Artificer|TCE|Alchemist|TCE|5",
+        "Restorative Reagents|Artificer|TCE|Alchemist|TCE|9",
+        "Chemical Mastery|Artificer|TCE|Alchemist|TCE|15"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "盔甲匠[未校对]",
+      "ENG_name": "Armorer",
+      "shortName": "盔甲匠",
+      "ENG_shortName": "Armorer",
+      "source": "TCE",
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "page": 15,
+      "additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "魔法飞弹",
+              "雷波"
+            ],
+            "5": [
+              "镜像术",
+              "震碎"
+            ],
+            "9": [
+              "催眠图案",
+              "闪电箭"
+            ],
+            "13": [
+              "火焰护盾",
+              "高等隐形"
+            ],
+            "17": [
+              "穿墙术",
+              "力场墙"
+            ]
+          }
+        }
+      ],
+      "ENG_additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "magic missile",
+              "thunderwave"
+            ],
+            "5": [
+              "mirror image",
+              "shatter"
+            ],
+            "9": [
+              "hypnotic pattern",
+              "lightning bolt"
+            ],
+            "13": [
+              "fire shield",
+              "greater invisibility"
+            ],
+            "17": [
+              "passwall",
+              "wall of force"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "盔甲匠|术士|TCE|盔甲匠|TCE|3",
+        "额外攻击|术士|TCE|盔甲匠|TCE|5",
+        "盔甲改造|术士|TCE|盔甲匠|TCE|9",
+        "完美盔甲|术士|TCE|盔甲匠|TCE|15"
+      ],
+      "ENG_subclassFeatures": [
+        "Armorer|Artificer|TCE|Armorer|TCE|3",
+        "Extra Attack|Artificer|TCE|Armorer|TCE|5",
+        "Armor Modifications|Artificer|TCE|Armorer|TCE|9",
+        "Perfected Armor|Artificer|TCE|Armorer|TCE|15"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "炮手[未校对]",
+      "ENG_name": "Artillerist",
+      "shortName": "炮手",
+      "ENG_shortName": "Artillerist",
+      "source": "TCE",
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "护盾",
+              "雷波"
+            ],
+            "5": [
+              "灼热射线",
+              "震碎"
+            ],
+            "9": [
+              "火球术",
+              "风墙"
+            ],
+            "13": [
+              "冰风暴",
+              "火墙"
+            ],
+            "17": [
+              "寒冰锥",
+              "力场墙"
+            ]
+          }
+        }
+      ],
+      "ENG_additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "shield",
+              "thunderwave"
+            ],
+            "5": [
+              "scorching ray",
+              "shatter"
+            ],
+            "9": [
+              "fireball",
+              "wind wall"
+            ],
+            "13": [
+              "ice storm",
+              "wall of fire"
+            ],
+            "17": [
+              "cone of cold",
+              "wall of force"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "炮手|术士|TCE|炮手|TCE|3",
+        "奥术火器|术士|TCE|炮手|TCE|5",
+        "爆炸大炮|术士|TCE|炮手|TCE|9",
+        "加固阵地|术士|TCE|炮手|TCE|15"
+      ],
+      "ENG_subclassFeatures": [
+        "Artillerist|Artificer|TCE|Artillerist|TCE|3",
+        "Arcane Firearm|Artificer|TCE|Artillerist|TCE|5",
+        "Explosive Cannon|Artificer|TCE|Artillerist|TCE|9",
+        "Fortified Position|Artificer|TCE|Artillerist|TCE|15"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "战斗工匠[未校对]",
+      "ENG_name": "Battle Smith",
+      "shortName": "战斗工匠",
+      "ENG_shortName": "Battle Smith",
+      "source": "TCE",
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "英勇",
+              "护盾"
+            ],
+            "5": [
+              "烙印打击",
+              "守护结界"
+            ],
+            "9": [
+              "活力光环",
+              "召唤弹幕"
+            ],
+            "13": [
+              "纯净光环",
+              "火焰护盾"
+            ],
+            "17": [
+              "放逐打击",
+              "群体治疗"
+            ]
+          }
+        }
+      ],
+      "ENG_additionalSpells": [
+        {
+          "prepared": {
+            "3": [
+              "heroism",
+              "shield"
+            ],
+            "5": [
+              "branding smite",
+              "warding bond"
+            ],
+            "9": [
+              "aura of vitality",
+              "conjure barrage"
+            ],
+            "13": [
+              "aura of purity",
+              "fire shield"
+            ],
+            "17": [
+              "banishing smite",
+              "mass cure wounds"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "战斗工匠|术士|TCE|战斗工匠|TCE|3",
+        "额外攻击|术士|TCE|战斗工匠|TCE|5",
+        "奥术冲击|术士|TCE|战斗工匠|TCE|9",
+        "改进的守卫|术士|TCE|战斗工匠|TCE|15"
+      ],
+      "ENG_subclassFeatures": [
+        "Battle Smith|Artificer|TCE|Battle Smith|TCE|3",
+        "Extra Attack|Artificer|TCE|Battle Smith|TCE|5",
+        "Arcane Jolt|Artificer|TCE|Battle Smith|TCE|9",
+        "Improved Defender|Artificer|TCE|Battle Smith|TCE|15"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "魔法工艺",
+      "ENG_name": "Magical Tinkering",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 1,
+      "entries": [
+        "{@i 一级炼金术士特性}",
+        "你学会了如何将一丝魔法注入到普通物品中。要使用这个能力，你必须手持{@item 盗贼工具|PHB}或{@item 工匠工具|PHB}。然后，你可以作为动作触摸一个小的非魔法物品，并赋予它以下你选择的魔法属性之一：",
+        {
+          "type": "list",
+          "items": [
+            "该物体在5英尺半径内发出明亮的光芒，并在额外的5英尺内发出微弱的光。",
+            "每当被生物触碰，该物体会发出录制的信息，距离最远可达10英尺。你在赋予物体这个属性时说出信息，录制的长度不能超过6秒。",
+            "该物体持续发出你选择的气味或非语言声音（风声、波涛声、鸟鸣声等）。所选现象在10英尺范围内可感知。",
+            "静态视觉效果出现在物体的一个表面上。这个效果可以是一幅画，多达25个单词的文本，线条和形状，或者这些元素的混合，随你喜欢。"
+          ]
+        },
+        "所选属性永久持续。作为一项动作，你可以触摸物体并提前结束该属性。",
+        "你可以赋予多个物体魔法，每次使用此特性时触摸一个物体，尽管单个物体一次只能承受一个属性。你一次可以用此特性影响的物体的最大数量等于你的智力调整值（最少一个物体）。如果你试图超过你的最大数量，最旧的属性会立即结束，然后新属性生效。"
+      ]
+    },
+    {
+      "name": "可选规则：火器熟练",
+      "ENG_name": "Optional Rule: Firearm Proficiency",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 1,
+      "entries": [
+        "在 D&D 多元宇宙的各个角落都发现了火药武器的制造和使用。如果你的 DM 使用记载于{@book 《地下城主指南》|DMG}中的{@book 第九章的火器规则|DMG|9|Firearms}，并且你的奇械师已经接触过这些武器的操作，就能获得这些武器的熟练。"
+      ],
+      "ENG_entries": [
+        "The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in {@book chapter 9|DMG|9|Firearms} of the {@book Dungeon Master's Guide|DMG} and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
+      ]
+    },
+    {
+      "name": "施法",
+      "ENG_name": "Spellcasting",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 1,
+      "entries": [
+        "{@i 一级炼金术士特性}",
+        "你已经研究了魔法的运作以及如何施放法术，通过物体来引导魔法。对于观察者来说，你看起来并不是以传统的方式施放法术；你似乎能够从平凡的物品和奇异的发明中创造出奇迹。",
+        {
+          "type": "entries",
+          "name": "必备工具",
+          "ENG_name": "Tools Required",
+          "entries": [
+            "你通过你的工具产生炼金术士的法术效果。当你使用这个施法特性施放任何法术时（意味着施放时法术具有'M'成分），你必须持有施法焦点——具体来说，是盗贼工具或某种工匠工具。你必须精通该工具才能以这种方式使用它。请参阅《玩家手册》第5章“装备”，了解这些工具的描述。",
+            "在你2级获得注入物品特性后，你也可以使用任何带有你注入的任何物品作为施法焦点。",
+            {
+              "type": "inset",
+              "name": "技艺的魔法",
+              "ENG_name": "The Magic of Artifice",
+              "entries": [
+                "作为炼金术士，你在施放法术时使用工具。在描述你的施法时，想一想你是如何使用一个工具来执行法术效果的。如果你使用炼金术工具施放{@spell cure wounds}，你可能正在迅速制作一种药膏。如果你使用修补匠工具施放它，你可能有一个小型机械蜘蛛来包扎伤口。当你施放{@spell poison spray}时，你可以抛洒有害化学物质，或者使用一根喷射毒液的魔杖。法术的效果与其他任何职业的施法者相同，但你施法的方式是特殊的。",
+                "当你准备法术时，也适用相同的原则。作为炼金术士，你不是通过研究魔法书或祈祷来准备法术。相反，你使用你的工具并创造你将用来产生效果的专用物品。如果你用{@spell heat metal}替换{@spell cure wounds}，你可能正在改变你用来治疗的装置——也许修改一个工具，使其传递热量而不是治疗能量。",
+                "这些细节不会以任何方式限制你，也不会提供超出法术效果的任何好处。你不必解释你是如何使用工具来施放法术的。但是，创造性地描述你的施法是一个有趣的方式，可以让你与其他施法者区分开来。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "戏法",
+          "ENG_name": "Cantrips (0-Level Spells)",
+          "entries": [
+            "在1级时，你可以选择两个来自{@filter 炼金术士法术列表|法术|等级=0|职业=炼金术士}的戏法。在更高等级时，如炼金术士表格中的已知戏法列所示，你可以选择学习更多的炼金术士戏法。",
+            "当你在此职业中升级时，你可以将你所知的一个炼金术士戏法替换为炼金术士法术列表中的另一个戏法。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法术的准备和施展",
+          "ENG_name": "Preparing and Casting Spells",
+          "entries": [
+            "炼金术士表格显示了你拥有多少法术位来施放你的炼金术士法术。要施放一个1级或更高等级的炼金术士法术，你必须消耗一个该法术等级或更高等级的法术位。当你完成一次长时间休息时，你将恢复所有消耗的法术位。",
+            "你准备可供施放的炼金术士法术列表，从{@filter 炼金术士法术列表|法术|职业=炼金术士}中选择。当你这样做时，选择的炼金术士法术数量等于你的智力调整值加上炼金术士等级的一半，向下取整（最少一个法术）。法术必须是你拥有法术位的等级。",
+            "例如，如果你是一个5级的炼金术士，你有四个1级和两个2级法术位。智力为14，你准备的法术列表可以包括四个1级或2级的法术，任意组合。如果你准备了1级的法术{@spell cure wounds}，你可以使用1级或2级法术位来施放它。施放法术不会将其从你准备的法术列表中移除。",
+            "当你完成一次长时间休息时，你可以更改你准备的法术列表。准备新的炼金术士法术列表需要花费时间来调整你的施法焦点：每个法术位等级的法术至少需要1分钟。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "施法关键属性",
+          "ENG_name": "Spellcasting Ability",
+          "entries": [
+            "智力是你的炼金术士法术的施法能力；你对魔法背后的理论的理解使你能够以更高的技巧使用这些法术。每当炼金术士法术提及你的施法能力时，你都会使用你的智力。此外，当你为施放的炼金术士法术设定豁免骰的难度等级（DC）以及进行法术攻击检定时，你也会使用你的智力调整值。",
+            {
+              "type": "abilityDc",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "int"
+              ]
+            },
+            {
+              "type": "abilityAttackMod",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "int"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "仪式施法",
+          "ENG_name": "Ritual Casting",
+          "entries": [
+            "如果法术具有仪式标签并且你已经准备好了这个法术，你可以将炼金术士法术作为仪式来施放。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "物品注法",
+      "ENG_name": "Infuse Item",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 2,
+      "entries": [
+        "{@i 二级炼金术士特性}",
+        "你获得了将某些魔法注入到普通物品中的能力，使这些物品变成魔法物品。",
+        {
+          "type": "refClassFeature",
+          "classFeature": "已知注入|炼金术士|TCE|2"
+        },
+        {
+          "type": "inset",
+          "name": "奇械师注法",
+          "ENG_name": "Artificer Infusions",
+          "entries": [
+            "炼金术士发明了众多的魔法注入，这些非凡的过程能够迅速创造出魔法物品。对许多人来说，炼金术士就像是奇迹工作者，他们能在几小时内完成其他人需要几周才能完成的事情。",
+            "下面每个注入的描述都详细说明了哪些类型的项目可以接受它，以及由此产生的魔法物品是否需要调谐。",
+            "一些注入指定了最低炼金术士等级。在你至少达到那个等级之前，你无法学习这样的注入。",
+            "除非注入的描述另有说明，否则你不能多次学习同一个注入。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "为物品进行注法",
+          "ENG_name": "Infusing an Item",
+          "entries": [
+            "每当你完成一次长时间休息时，你可以触摸一个非魔法物品，并赋予它你的炼金术士注入之一，将其变成魔法物品。注入只适用于注入描述中指定的特定类型的物体。如果物品需要调谐，你可以在注入物品的瞬间自己调谐到它。如果你决定以后调谐物品，你必须使用《地下城主指南》第7章中“调谐”的正常过程。",
+            "你的注入在物品中永久存在，但当你死亡时，注入会在等同于你的智力调整值（最少1天）的天数后消失。如果你为了另一个注入而放弃对当前注入的了解，注入也会消失。",
+            "在一次长时间休息结束时，你可以注入多个非魔法物品；你可以注入物品的最大数量显示在炼金术士表格中的注入物品列。你必须触摸每一个物品，并且你的每一个注入在同一时间只能存在于一个物品中。此外，任何一个物品在同一时间不能承载你的多个注入。如果你试图超过你的注入最大数量，最旧的注入会立即结束，然后新的注入生效。",
+            "如果一个注入在包含其他物品的物品上结束，比如一个储物袋，其内容物会无害地出现在其空间内及其周围。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "已知注法",
+      "ENG_name": "Infusions Known",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 2,
+      "header": 1,
+      "entries": [
+        "当你获得这个特性时，从职业描述末尾的{@filter 奇械师注法|optionalfeatures|feature type=ai|source=ERLW}列表中选择选择四个奇械师注法习得。当你提升奇械师等级时，还能够根据\"奇械师职业表\"的\"已知注法\"习得更多注法。",
+        "当你提升一个奇械师等级时，你能够习得一个新的奇械师注法来来替换一个原有的已知注法。"
+      ],
+      "ENG_entries": [
+        "When you gain this feature, pick four artificer infusions to learn, choosing from the \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=TCE}\" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
+        "Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
+      ]
+    },
+    {
+      "name": "奇械师专业",
+      "ENG_name": "Artificer Specialist",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 3,
+      "entries": [
+        "{@i 三级炼金术士特性}",
+        "选择你的专家类型，每种类型都在本职业描述的末尾详细说明。你的选择将在5级、9级和15级时赋予你特性。"
+      ]
+    },
+    {
+      "name": "称手工具",
+      "ENG_name": "The Right Tool for the Job",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 3,
+      "entries": [
+        "{@i 三级炼金术士特性}",
+        "你学会了如何制作你需要的确切工具：手中持有盗贼工具或工匠工具，你可以在距离你5英尺内未被占据的空间中神奇地创造出一套工匠工具。这个创造需要1小时的不间断工作，可以与短暂休息或长时间休息同时进行。尽管是魔法的产物，但这些工具是非魔法的，并且当你再次使用这个特性时它们会消失。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 4,
+      "entries": [
+        "{@i 四级炼金术士特性}",
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "奇械师专业能力",
+      "ENG_name": "Artificer Specialist Feature",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 5,
+      "entries": [
+        "{@i 五级炼金术士特性}",
+        "你获得了由你的炼金术士专家选择赋予的特性。"
+      ]
+    },
+    {
+      "name": "工具专精",
+      "ENG_name": "Tool Expertise",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 6,
+      "entries": [
+        "{@i 六级炼金术士特性}",
+        "你现在进行任何使用工具熟练度的能力检定时，熟练加值翻倍。"
+      ]
+    },
+    {
+      "name": "灵光一闪",
+      "ENG_name": "Flash of Genius",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 7,
+      "entries": [
+        "{@i 七级炼金术士特性}",
+        "你已经获得了在压力下想出解决方案的能力。当你或你能看到的30英尺内的另一个生物进行能力检定或豁免检定时，你可以使用你的反应将你的智力调整值加到骰上。",
+        "你可以使用这个特性的次数等于你的智力调整值（最少一次）。当你完成一次长时间休息时，你将恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 8,
+      "entries": [
+        "{@i 八级炼金术士特性}",
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "奇械师专业能力",
+      "ENG_name": "Artificer Specialist Feature",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 9,
+      "entries": [
+        "{@i 九级炼金术士特性}",
+        "你获得了由你的炼金术士专家选择赋予的特性。"
+      ]
+    },
+    {
+      "name": "魔法物品熟稔",
+      "ENG_name": "Magic Item Adept",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 10,
+      "entries": [
+        "{@i 十级炼金术士特性}",
+        "你已经对如何使用和制造魔法物品有了深刻的理解：",
+        {
+          "type": "list",
+          "items": [
+            "你可以同时与多达四个魔法物品共鸣。",
+            "如果你制造一个普通或不常见的魔法物品，它所需的时间是正常时间的四分之一，而且成本只有通常黄金的一半。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "储法物品",
+      "ENG_name": "Spell-Storing Item",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 11,
+      "entries": [
+        "{@i 十一级炼金术士特性}",
+        "现在你可以将一个法术储存在物品中。每当你完成一次长时间休息时，你可以触摸一件{@filter 简单或军用武器|items|source=phb|category=basic|type=martial weapon;simple weapon}或者一个你可以用作施法焦点的物品，并将一个法术储存在其中，选择一个来自{@filter 炼金术士法术列表|spells|class=Artificer|cast time=action|level=1;2}的1级或2级法术，该法术需要1个动作来施放（你不必已经准备好它）。",
+        "持有该物品的生物可以采取一个动作，使用你的施法能力调整值来产生法术的效果。如果法术需要{@status 专注}，生物必须专注。法术会保留在物品中，直到它被使用次数等于你的智力调整值的两倍（最少两次）或者直到你再次使用这个特性来在物品中储存一个法术。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 12,
+      "entries": [
+        "{@i 十二级炼金术士特性}",
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "魔法物品专家",
+      "ENG_name": "Magic Item Savant",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 14,
+      "entries": [
+        "{@i 十四级炼金术士特性}",
+        "你对魔法物品的熟练度加深了：",
+        {
+          "type": "list",
+          "items": [
+            "你可以同时调谐多达五个魔法物品。",
+            "在调谐或使用魔法物品时，你忽略了所有的职业、种族、法术和等级要求。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "奇械师专业能力",
+      "ENG_name": "Artificer Specialist Feature",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 15,
+      "entries": [
+        "{@i 十五级炼金术士特性}",
+        "你获得了由你的炼金术士专家选择赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 16,
+      "entries": [
+        "{@i 16级炼金术士特性}",
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "魔法物品大师",
+      "ENG_name": "Magic Item Master",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 18,
+      "entries": [
+        "{@i 十八级炼金术士特性}",
+        "你现在可以同时与多达六件魔法物品共鸣。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 19,
+      "entries": [
+        "{@i 十九级炼金术士特性}",
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "奇械之魂",
+      "ENG_name": "Soul of Artifice",
+      "source": "TCE",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 54
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 20,
+      "entries": [
+        "{@i 20级炼金术士特性}",
+        "你已经与你的魔法物品发展出了一种神秘的联系，你可以利用这种联系来获得保护：",
+        {
+          "type": "list",
+          "items": [
+            "你每调谐一个魔法物品，所有豁免检定就获得+1的加值。",
+            "如果你被降至0点生命值但没有立即死亡，你可以使用你的反应结束你的一个炼金术士注入，使你的生命值降至1点而不是0。"
+          ]
+        }
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "炼金师",
+      "ENG_name": "Alchemist",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "炼金师是将奇异的原料混合在一起以产生种种新物质的专家，炼金师的创造物能用来延续生命，也能用来夺走生命。炼金术是最古老的奇械师技艺，它的多功能性在战争与和平时都长期受到重视。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "本职工具|Artificer|TCE|Alchemist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "炼金师法术|Artificer|TCE|Alchemist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "实验性灵药|Artificer|TCE|Alchemist|TCE|3"
+        }
+      ],
+      "ENG_entries": [
+        "An Alchemist is an expert at combining reagents to produce mystical effects. Alchemists use their creations to give life and to leech it away. Alchemy is the oldest of artificer traditions, and its versatility has long been valued during times of war and peace.",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Tool Proficiency|Artificer|TCE|Alchemist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Alchemist Spells|Artificer|TCE|Alchemist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Experimental Elixir|Artificer|TCE|Alchemist|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "炼金师法术",
+      "ENG_name": "Alchemist Spells",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你达到这个职业的特定等级时，你总是准备了一些特定的法术，如炼金术士法术表格所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术的数量。",
+        {
+          "type": "table",
+          "caption": "炼金师法术",
+          "colLabels": [
+            "炼金术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 治愈之言}, {@spell 疾病射线}",
+            "第五",
+            "{@spell 火焰球}, {@spell 梅尔夫的酸性箭}",
+            "第九",
+            "{@spell 气态形态}, {@spell 群体治疗之语}",
+            "13级",
+            "{@spell 枯萎}, {@spell 防死结界}",
+            "17级",
+            "{@spell 云杀}, {@spell 复活死者}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "实验性灵药",
+      "ENG_name": "Experimental Elixir",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，每当你完成一次长时间的休息，你可以在触摸的空瓶中神奇地制造出一个{@i 实验性药剂}。在实验性药剂表上掷骰子以确定药剂的效果，当有人喝下药剂时触发效果。作为一个动作，生物可以喝下药剂或给{@condition 失去能力}的生物服用。",
+        "创建一个{@i 实验性药剂}需要你随身携带{@item 炼金术士工具|PHB}，并且你通过这个特性创造的任何药剂将持续有效直到被喝掉或直到你下一次长时间休息结束。",
+        "当你达到这个职业的特定等级时，你可以在完成长时间休息后制作更多的药剂：6级时两个，15级时三个。每个药剂的效果需要单独掷骰。每个药剂都需要自己的烧瓶。",
+        "你可以为每一个额外的{@i 实验性药剂}消耗一个1级或更高等级的法术位。当你这样做时，你采取动作在你所触摸的空瓶中创造药剂，并且你从实验性药剂表格中选择药剂的效果。",
+        {
+          "type": "table",
+          "caption": "实验性灵药",
+          "colLabels": [
+            "d6",
+            "影响"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "{@b Healing}. The drinker regains a number of hit points equal to {@dice 2d4} + your Intelligence modifier.",
+            "2",
+            "{@b 迅捷}。饮用者在1小时内步行速度增加10英尺。",
+            "3",
+            "{@b 坚韧}。饮用者在接下来的10分钟内获得AC+1的加成。",
+            "4",
+            "{@b Boldness}. The drinker can roll a {@dice d4} and add the number rolled to every attack roll and saving throw they make for the next minute.",
+            "5",
+            "{@b 飞行}。饮用者在接下来的10分钟内获得10英尺的飞行速度。",
+            "6",
+            "{@b 变身}。饮用者的身体会像被施放了{@spell 变化自我}法术一样发生转变。饮用者决定由法术引起的转变，这些效果持续10分钟。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "本职工具",
+      "ENG_name": "Tool Proficiency",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个专长时，你获得对{@item 炼金术工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得其他一种类型的{@item 工匠工具|PHB}的熟练度。"
+      ]
+    },
+    {
+      "name": "炼金术掌握",
+      "ENG_name": "Alchemical Savant",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 5,
+      "header": 2,
+      "entries": [
+        "在5级时，你对魔法化学药品的掌握达到了高超的水平，这增强了你通过它们创造的治疗和伤害。每当你使用你的{@item 炼金术工具|PHB}作为施法焦点来施放法术时，你可以为法术的一个掷骰获得加成。这个掷骰必须是恢复生命值的掷骰，或者是造成酸蚀、火焰、死灵或毒素伤害的伤害掷骰，加成值等于你的智力调整值（最少为+1）。"
+      ]
+    },
+    {
+      "name": "复原药剂",
+      "ENG_name": "Restorative Reagents",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，你可以将恢复性试剂融入你的一些作品中：",
+        {
+          "type": "list",
+          "items": [
+            "Whenever a creature drinks an {@i experimental elixir} you created, the creature gains temporary hit points equal to {@dice 2d6} + your Intelligence modifier (minimum of 1 temporary hit point).",
+            "你可以在不消耗法术位且未准备法术的情况下施放{@spell 次级复原}，前提是你使用{@item 炼金术工具|PHB}作为施法焦点。你可以这样做的次数等于你的智力调整值（最少一次），并且在你完成一次长时间休息后，你恢复所有已消耗的使用次数。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "化学专家",
+      "ENG_name": "Chemical Mastery",
+      "source": "TCE",
+      "page": 14,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 58
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "炼金师",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "到了15级，你已经接触了如此多的化学物质，以至于它们对你几乎没有风险，你可以利用它们迅速结束某些疾病：",
+        {
+          "type": "list",
+          "items": [
+            "你对酸蚀伤害和毒素伤害获得抗性，并且你对{@condition 中毒}状态免疫。",
+            "你可以在不消耗法术位、不准备法术、不使用材料组件的情况下施放{@spell 高级复原}和{@spell 治疗}，前提是你使用{@item 炼金术工具|PHB}作为施法焦点。一旦你使用这个特性施放了任一法术，直到你完成一次长时间休息之前，你不能再使用它来施放那个法术。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "装甲师",
+      "ENG_name": "Armorer",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "对于装甲师专业的奇械师来说，装甲就像是第二层皮肤。这一装甲能够增强奇械师的魔法，释放强力的攻击，产生绝佳的防护。这些奇械师与他们的装甲之间有着强力的纽带，在他们经过实验并改进装甲的魔法性能后，甚至能够合二为一。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "本职工具|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "装甲师法术|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奥能装甲|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "装甲型号|Artificer|TCE|Armorer|TCE|3"
+        }
+      ],
+      "ENG_entries": [
+        "An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Tools of the Trade|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Armorer Spells|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Arcane Armor|Artificer|TCE|Armorer|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Armor Model|Artificer|TCE|Armorer|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "抑制场[未校对]",
+      "ENG_name": "Dampening Field",
+      "source": "TCE",
+      "page": 15,
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "subclassShortName": "盔甲匠",
+      "ENG_subclassShortName": "Armorer",
+      "subclassSource": "TCE",
+      "level": 3,
+      "type": "item",
+      "entries": [
+        "你在敏捷（潜行技能）检定上有优势。如果盔甲通常会使此类检定处于劣势，则优势和劣势相互抵消，如同常规。"
+      ],
+      "ENG_entries": [
+        "You have advantage on Dexterity ({@skill Stealth}) checks. If the armor normally imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal."
+      ]
+    },
+    {
+      "name": "防御场[未校对]",
+      "ENG_name": "Defensive Field",
+      "source": "TCE",
+      "page": 15,
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "subclassShortName": "盔甲匠",
+      "ENG_subclassShortName": "Armorer",
+      "subclassSource": "TCE",
+      "level": 3,
+      "type": "item",
+      "entries": [
+        "作为奖励动作，你可以获得相当于你在该职业中的等级的临时生命值，这将替换你现有的任何临时生命值。如果你脱下盔甲，你将失去这些临时生命值。你可以使用这个奖励动作的次数等于你的熟练加值，并且在你完成一次长时间休息后恢复所有已用的次数。"
+      ],
+      "ENG_entries": [
+        "As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+      ]
+    },
+    {
+      "name": "闪电发射器[未校对]",
+      "ENG_name": "Lightning Launcher",
+      "source": "TCE",
+      "page": 15,
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "subclassShortName": "盔甲匠",
+      "ENG_subclassShortName": "Armorer",
+      "subclassSource": "TCE",
+      "level": 3,
+      "type": "item",
+      "entries": [
+        "你的一个盔甲拳头上或胸部（由你选择）出现了一个宝石状的节点。它被视为一种简单的远程武器，正常射程为90英尺，长射程为300英尺，并且在命中时造成{@damage 1d6}闪电伤害。每当你的回合用它击中一个生物时，你可以对该目标造成额外的{@damage 1d6}闪电伤害。"
+      ],
+      "ENG_entries": [
+        "A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals {@damage 1d6} lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra {@damage 1d6} lightning damage to that target."
+      ]
+    },
+    {
+      "name": "动力步伐[未校对]",
+      "ENG_name": "Powered Steps",
+      "source": "TCE",
+      "page": 15,
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "subclassShortName": "盔甲匠",
+      "ENG_subclassShortName": "Armorer",
+      "subclassSource": "TCE",
+      "level": 3,
+      "type": "item",
+      "entries": [
+        "你的步行速度增加5英尺。"
+      ],
+      "ENG_entries": [
+        "Your walking speed increases by 5 feet."
+      ]
+    },
+    {
+      "name": "雷霆护手[未校对]",
+      "ENG_name": "Thunder Gauntlets",
+      "source": "TCE",
+      "page": 15,
+      "className": "术士",
+      "ENG_className": "Artificer",
+      "classSource": "TCE",
+      "subclassShortName": "盔甲匠",
+      "ENG_subclassShortName": "Armorer",
+      "subclassSource": "TCE",
+      "level": 3,
+      "type": "item",
+      "entries": [
+        "当你没有持握任何东西时，盔甲的每个护手都被视为一种简单的近战武器，并且在命中时造成{@damage 1d8}雷霆伤害。被护手击中的生物在攻击其他目标时，直到你的下个回合开始前，攻击骰有劣势，因为盔甲在生物攻击其他人时会神奇地发出干扰脉冲。"
+      ],
+      "ENG_entries": [
+        "Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals {@damage 1d8} thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else."
+      ]
+    },
+    {
+      "name": "奥能装甲",
+      "ENG_name": "Arcane Armor",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级装甲师特性}",
+        "你对冶金的钻研让你的盔甲成为了实现你奇械师魔法的渠道。只要你手持{@item 铁匠工具|PHB}，就能以一个动作将你正穿着的一套重甲变成奥能装甲。",
+        "在穿着奥能装甲时，你获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "如果你的盔甲通常对穿戴者的力量有要求，奥能装甲能让你无视它。",
+            "你能够将奥能装甲作为你奇械师法术的法器。",
+            "穿在你身上的奥能装甲除非你自愿，否则无法移除。同时，奥能装甲能够扩展到复盖你的整个身体，并替换你所有缺失的肢体，替换肢体的部分拥有和正常肢体一样的功能。",
+            "你能以一个动作穿着或脱下装甲。护甲会一直保持奥能装甲的功能，直到你穿着另一套盔甲或你死亡。"
+          ]
+        }
+      ],
+      "ENG_entries": [
+        "{@i 3rd-level Armorer feature}",
+        "Your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have {@item smith's tools|PHB} in hand.",
+        "You gain the following benefits while wearing this armor:",
+        {
+          "type": "list",
+          "items": [
+            "If the armor normally has a Strength requirement, the arcane armor lacks this requirement for you.",
+            "You can use the arcane armor as a spellcasting focus for your artificer spells.",
+            "The armor attaches to you and can't be removed against your will. It also expands to cover your entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces any missing limbs, functioning identically to a limb it replaces.",
+            "You can doff or don the armor as an action. The armor continues to be Arcane Armor until you don another suit of armor or you die."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "装甲型号",
+      "ENG_name": "Armor Model",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级装甲师特性}",
+        "你能够定制你的奥能装甲。当你这么做时，能够从以下两种型号中选择其一：守护者 或 渗透者。你选择的型号会在你穿着时提供特殊的好处。",
+        "每种型号都包括一种特殊武器。当你使用该武器攻击时，你可以使用你的智力调整值，而不是力量或敏捷，来进行攻击和伤害检定。",
+        "只要你手上有{@item 铁匠工具|PHB}，就可以在完成一次短休或长休后更换你的装甲型号。",
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "守护者",
+              "ENG_name": "Guardian",
+              "entries": [
+                "你将装甲设计为适合冲锋陷阵。它拥有下列特性：",
+                {
+                  "type": "list",
+                  "style": "list-hang-notitle",
+                  "items": [
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "雷霆护手|炼金术士|TCE|盔甲匠|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "防御力场|炼金术士|TCE|盔甲匠|TCE|3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "渗透者",
+              "ENG_name": "Infiltrator",
+              "entries": [
+                "你出于某些特殊需要对你的装甲进行了定制。它拥有下列特性：",
+                {
+                  "type": "list",
+                  "style": "list-hang-notitle",
+                  "items": [
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "闪电发射器|炼金术士|TCE|盔甲匠|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "动力步伐|炼金术士|TCE|盔甲匠|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "减震力场|炼金术士|TCE|盔甲匠|TCE|3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ENG_entries": [
+        "{@i 3rd-level Armorer feature}",
+        "You can customize your Arcane Armor. When you do so, choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you special benefits while you wear it.",
+        "Each model includes a special weapon. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.",
+        "You can change the armor's model whenever you finish a short or long rest, provided you have {@item smith's tools|PHB} in hand.",
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "Guardian",
+              "entries": [
+                "You design your armor to be in the front line of conflict. It has the following features:",
+                {
+                  "type": "list",
+                  "style": "list-hang-notitle",
+                  "items": [
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "Thunder Gauntlets|Artificer|TCE|Armorer|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "Defensive Field|Artificer|TCE|Armorer|TCE|3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Infiltrator",
+              "entries": [
+                "You customize your armor for subtle undertakings. It has the following features:",
+                {
+                  "type": "list",
+                  "style": "list-hang-notitle",
+                  "items": [
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "Lightning Launcher|Artificer|TCE|Armorer|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "Powered Steps|Artificer|TCE|Armorer|TCE|3"
+                    },
+                    {
+                      "type": "refSubclassFeature",
+                      "subclassFeature": "Dampening Field|Artificer|TCE|Armorer|TCE|3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "装甲师法术",
+      "ENG_name": "Armorer Spells",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级装甲师特性}",
+        "只要你达到相应的职业等级，装甲师法术表格中的法术总是被视为已准备。这些法术对你来说是奇械师法术，且不会计入你可以准备法术的总数。",
+        {
+          "type": "table",
+          "caption": "装甲师法术",
+          "colLabels": [
+            "奇械师等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 魔法飞弹}, {@spell 雷鸣波}",
+            "第五",
+            "{@spell 镜像术}, {@spell 破碎术}",
+            "第九",
+            "{催眠图样}, {闪电箭}",
+            "13级",
+            "{@spell 火盾}, {@spell 隐形术}",
+            "17级",
+            "{@spell 穿墙术}, {@spell 力量墙}"
+          ]
+        }
+      ],
+      "ENG_entries": [
+        "{@i 3rd-level Armorer feature}",
+        "You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+        {
+          "type": "table",
+          "caption": "Armorer Spells",
+          "colLabels": [
+            "Artificer Level",
+            "Spell"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            [
+              "3rd",
+              "{@spell magic missile}, {@spell thunderwave}"
+            ],
+            [
+              "5th",
+              "{@spell mirror image}, {@spell shatter}"
+            ],
+            [
+              "9th",
+              "{@spell hypnotic pattern}, {@spell lightning bolt}"
+            ],
+            [
+              "13th",
+              "{@spell fire shield}, {@spell greater invisibility}"
+            ],
+            [
+              "17th",
+              "{@spell passwall}, {@spell wall of force}"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "本职工具",
+      "ENG_name": "Tools of the Trade",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级装甲师特性}",
+        "你获得重甲的熟练。你同时获得{@item 铁匠工具|PHB}的熟练，如果你已经熟练于此工具，作为代替，你能获得另一种{@item 工匠工具|phb}的熟练。"
+      ],
+      "ENG_entries": [
+        "{@i 3rd-level Armorer feature}",
+        "You gain proficiency with heavy armor. You also gain proficiency with {@item smith's tools|PHB}. If you already have this tool proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
+      ]
+    },
+    {
+      "name": "额外攻击",
+      "ENG_name": "Extra Attack",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 5,
+      "header": 2,
+      "entries": [
+        "{@i 5级装甲师特性}",
+        "每当你在自己回合执行{@action 攻击}动作时，你可以发动两次攻击，而非一次。"
+      ],
+      "ENG_entries": [
+        "{@i 5th-level Armorer feature}",
+        "You can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
+      ]
+    },
+    {
+      "name": "装甲改造",
+      "ENG_name": "Armor Modifications",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "{@i 9级装甲师特性}",
+        "你习得了如何通过奇械师注法对你的奥能装甲进行特殊改造。奥能装甲现在你进行注法时，能够被视为下列独立物品：盔甲（胸甲）、靴子、护腕和武器。每件物品都能进行一次注法，此外，你的注法物品的上限增加2，但增加的部分只能用于为奥能装甲的一部分注法。"
+      ],
+      "ENG_entries": [
+        "{@i 9th-level Armorer feature}",
+        "You learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor."
+      ]
+    },
+    {
+      "name": "完美装甲",
+      "ENG_name": "Perfected Armor",
+      "source": "TCE",
+      "page": 15,
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "装甲师",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "{@i 15级装甲师特性}",
+        "你的奥能装甲根据其型号获得下列额外好处。",
+        {
+          "type": "entries",
+          "name": "守护者",
+          "ENG_name": "Guardian",
+          "entries": [
+            "对你奥能装甲能量系统的改进使你能够释放强大的拉力。当你可见的一个体型为巨型或更小的生物在距离你30尺内的地方结束其回合时，你能以一个反应迫使该生物对你的法术豁免DC进行一个力量豁免检定，失败将被拉向你最多30尺。如果你将目标拉到距离你5尺的地方，作为此反应的一部分，你能对该生物进行一次近战武器攻击。",
+            "你能够执行此反应的次数等于你的熟练加值，在完成一次长休后将恢复所有可用次数。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "渗透者",
+          "ENG_name": "Infiltrator",
+          "entries": [
+            "任何被你闪电发射器造成闪电伤害的生物将在你的下个回合到来前发光。发光的生物会放出5尺半径的微光光照，当它试图攻击你时，光芒会突然增强，使其在针对你的攻击检定中具有劣势。另外，下次针对发光生物的攻击检定具有优势。如果那次攻击命中，将额外造成{@damage 1d6}闪电伤害。"
+          ]
+        }
+      ],
+      "ENG_entries": [
+        "{@i 15th-level Armorer feature}",
+        "Your Arcane Armor gains additional benefits based on its model, as shown below.",
+        {
+          "type": "entries",
+          "name": "Guardian",
+          "entries": [
+            "When a Huge or smaller creature you can see ends its turn within 30 feet of you, you can use your reaction to magically force it to make a Strength saving throw against your spell save DC. On a failed save, you pull the creature up to 25 feet directly to an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
+            "You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Infiltrator",
+          "entries": [
+            "Any creature that takes lightning damage from your Lightning Launcher glimmers with magical light until the start of your next turn. The glimmering creature sheds dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light jolts it if it attacks you. In addition, the next attack roll against it has advantage, and if that attack hits, the target takes an extra {@damage 1d6} lightning damage."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "魔炮师",
+      "ENG_name": "Artillerist",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "魔炮师是在战场上投射能量、炮弹和爆炸物的专家。这种破坏力在终末战争中受到所有军队的重视。而现在，战争已经结束，这一专业的部分人员开始试图运用自己的力量来消灭科瓦雷中的战争火种，从而建立一个更加和平的世界。",
+        "看上去不像，但事实上是卡尼斯家族战俑计划关键人物的侏儒奇械师Vi一直都大力宣扬要做正确的事：\"现在这个时代，应该致力于修复，而不是把一切都轰下地狱。\"",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "本职工具|Artificer|TCE|Artillerist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "魔炮师法术|Artificer|TCE|Artillerist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "魔能炮台|Artificer|TCE|Artillerist|TCE|3"
+        }
+      ],
+      "ENG_entries": [
+        "An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield. This destructive power was valued by all the armies of the Last War. Now that the war is over, some members of this specialization have sought to build a more peaceful world by using their powers to fight the resurgence of strife in Khorvaire.",
+        "The gnome artificer Vi, an unlikely yet key member of House Cannith's warforged project, has been especially vocal about making things right: \"It's about time we fixed things instead of blowing them all to hell.\"",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Tool Proficiency|Artificer|TCE|Artillerist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Artillerist Spells|Artificer|TCE|Artillerist|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "魔炮师法术",
+      "ENG_name": "Artillerist Spells",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你达到这个职业的特定等级时，你总是准备好了某些法术，如炮手法术表所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术数量。",
+        {
+          "type": "table",
+          "caption": "魔炮师法术",
+          "colLabels": [
+            "炼金术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 盾牌术}, {@spell 雷鸣波}",
+            "第五",
+            "{@spell 灼热射线}, {@spell 震碎}",
+            "第九",
+            "{@spell 火球术}, {@spell 风墙}",
+            "13级",
+            "{@spell 冰风暴}, {@spell 火墙}",
+            "17级",
+            "{@spell 寒冰锥}, {@spell 力场墙}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "魔能炮台",
+      "ENG_name": "Eldritch Cannon",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你学会了如何创造一个魔法炮。使用{@item woodcarver's tools|PHB}或{@item smith's tools|PHB}，你可以采取行动，在距离你5英尺内的平坦表面上的未占空间中，神奇地创造一个小型或超小型的奥术炮。一个小型奥术炮占据其空间，而超小型的可以用一只手拿着。",
+        "一旦你创建了一门大炮，在你完成一次长时间的休息或者消耗一个1级或更高级别的法术位之前，你不能再创建大炮。同时，你一次只能拥有一门大炮，并且当你的大炮在场时，你不能创建新的大炮。",
+        "The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
+        "当你创建大炮时，你决定它的外观以及它是否有腿。你还决定它的类型，从奥术大炮表中选择选项。在你的每个回合中，如果你在大炮60英尺范围内，你可以采取一个奖励行动来激活大炮。作为同一奖励行动的一部分，如果大炮有腿，你可以指示大炮走到或爬上最多15英尺到达一个未被占据的空间。",
+        {
+          "type": "table",
+          "caption": "奥术炮",
+          "colLabels": [
+            "火炮",
+            "激活"
+          ],
+          "colStyles": [
+            "col-2",
+            "col-10"
+          ],
+          "rows": [
+            "{@object 奥术炮，火焰喷射器|TCE|火焰喷射器}",
+            "大炮在你指定的相邻15英尺锥形区域内喷吐火焰。该区域内的每个生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 2d8}火焰伤害，成功则伤害减半。火焰会点燃区域内任何未穿戴或携带的易燃物品。",
+            "{@object 奥术炮，力量弩炮|TCE|力量弩炮}",
+            "进行一次远程法术攻击，攻击起源于加农炮，目标是距离它120英尺内的生物或物体。命中时，目标承受{@damage 2d8}力量伤害，如果目标是生物，则会被推向远离加农炮最多5英尺。",
+            "{@object 奥术大炮，守护者|TCE|守护者}",
+            "大炮发出一股正能量，赋予自身以及你选择的10英尺范围内的每个生物等同于{@damage 1d8}加上你的智力调整值（最少+1）的临时生命值。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "本职工具",
+      "ENG_name": "Tool Proficiency",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个专长，你获得{@item woodcarver's tools|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item artisan's tools|PHB}的熟练度。"
+      ]
+    },
+    {
+      "name": "奥法火器",
+      "ENG_name": "Arcane Firearm",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 5,
+      "header": 2,
+      "entries": [
+        "在5级时，你学会了如何将魔杖、法杖或法棒转变为奥术火器，作为你毁灭性法术的导体。当你完成一次长时间的休息后，你可以使用{@item 木雕工具|PHB}在魔杖、法杖或法棒上雕刻特殊的符文，从而将其转变为你的奥术火器。如果你后来在不同的物品上雕刻这些符文，它们会从物品上消失。否则，这些符文会无限期地持续存在。",
+        "你可以将你的奥术枪械作为施法焦点来施展你的工匠法术。当你通过枪械施放工匠法术时，掷一个{@damage d8}，你获得的加成等于掷出的数字，加到法术的一次伤害骰上。"
+      ]
+    },
+    {
+      "name": "高爆炮台",
+      "ENG_name": "Explosive Cannon",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，你所创造的每一个奥术炮都更具破坏性：",
+        {
+          "type": "list",
+          "items": [
+            "大炮的伤害骰增加{@damage 1d8}。",
+            "作为动作，如果你在炮台60英尺范围内，你可以命令其引爆。引爆会摧毁炮台，并迫使每个在炮台20英尺范围内的生物进行一次敏捷豁免检定，对抗你的法术豁免DC，失败则受到{@damage 3d8}点力量伤害，成功则伤害减半。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "坚固要塞",
+      "ENG_name": "Fortified Position",
+      "source": "TCE",
+      "page": 17,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 59
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "魔炮师",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "从15级开始，你成为使用奥术大炮形成坚固阵地的大师：",
+        {
+          "type": "list",
+          "items": [
+            "当你使用奥术炮创造的炮台在你10英尺范围内时，你和你的盟友获得半个掩体，这是由于炮台发出的闪烁的魔法保护场的结果。",
+            "你现在可以同时拥有两门大炮。你可以用同一个动作（但不能是同一个法术位）创建两门，并且可以用同一个额外动作激活它们。你可以决定这两门大炮是否彼此相同或不同。当你拥有两门大炮时，你不能创建第三门大炮。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战地匠师",
+      "ENG_name": "Battle Smith",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "军队需要保护，但当防卫战失败时，需要有人来进行重整。身为守护者和医生的结合，战地匠师是进行防卫，以及重整工事与人员的专家。战地匠师大多都携带一个由自己制造的防卫性随从——钢铁守卫来辅助自己。无数士兵都曾讲述过关于濒临死亡的自己被一名战地匠师，以及他的钢铁守卫所拯救的故事。",
+        "战地匠师在卡尼斯家族制造战斗构装体和最初的战俑时扮演了关键的角色。在终末战争过后，这些奇械师致力于救助在恐怖的战争中受伤的人。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "本职工具|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战地匠师法术|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战斗准备|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "钢铁守卫|Artificer|TCE|Battle Smith|TCE|3"
+        }
+      ],
+      "ENG_entries": [
+        "Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both material and personnel. To aid in their work, Battle Smiths are usually accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender.",
+        "Battle Smiths played a key role in House Cannith's work on battle constructs and the original warforged, and after the Last War, these artificers led efforts to aid those who were injured in the war's horrific battles.",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Tool Proficiency|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Battle Smith Spells|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Battle Ready|Artificer|TCE|Battle Smith|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "Steel Defender|Artificer|TCE|Battle Smith|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "战斗准备",
+      "ENG_name": "Battle Ready",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你达到3级时，你的战斗训练和你对魔法的实验在两个方面都取得了回报：",
+        {
+          "type": "list",
+          "items": [
+            "你获得了武术武器的熟练度。",
+            "当你使用魔法武器攻击时，你可以使用你的智力调整值，而不是力量或敏捷调整值，来进行攻击和伤害的掷骰。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战地匠师法术",
+      "ENG_name": "Battle Smith Spells",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你达到这个职业的特定等级时，你总是准备了某些法术，如战斗铁匠法术表所示。这些法术对你来说算作工匠法术，但它们不计入你准备的工匠法术数量。",
+        {
+          "type": "table",
+          "caption": "战地匠师法术",
+          "colLabels": [
+            "炼金术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第三",
+            "{@spell 英勇}, {@spell 盾牌}",
+            "第五",
+            "{@spell 烙印打击}, {@spell 守护联结}",
+            "第九",
+            "{@spell 生命光环}, {@spell 召唤弹幕}",
+            "13级",
+            "{@spell 纯净光环}, {@spell 火焰护盾}",
+            "17级",
+            "{@spell 放逐打击}, {@spell 群体治疗伤口}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "钢铁守卫",
+      "ENG_name": "Steel Defender",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "到了3级，你的巧手制造了一个忠实的伙伴，一个{@creature 钢制守卫者|tce}。它对你和你的同伴友好，并且服从你的命令。查看这个生物的游戏统计数据在钢制守卫者的统计块中，它在几个地方使用了你的熟练加值（PB）。你决定这个生物的外观以及它有两条腿还是四条腿；你的选择对它的游戏统计数据没有影响。",
+        "在战斗中，防御者共享你的先攻值，但在你之后立即行动。它可以自行移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 躲避}动作，除非你在你的回合上采取奖励行动命令它采取其他动作。那个动作可以是它能力值块中的一个，或者是其他一些动作。如果你被{@condition 失去能力}，防御者可以采取任何它选择的动作，而不仅仅是{@action 躲避}。",
+        "If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. If it has died within the last hour, you can use your {@item smith's tools|PHB} as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The steel defender returns to life after 1 minute with all its hit points restored.",
+        "在完成一次长时间的休息后，如果你随身携带了你的{@item 铁匠工具|PHB}，你可以创建一个新的钢铁守卫。如果你已经通过这个特性拥有了一个钢铁守卫，那么第一个守卫会立即消失。如果你死亡，守卫也会消失。"
+      ]
+    },
+    {
+      "name": "本职工具",
+      "ENG_name": "Tool Proficiency",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个专长，你获得对{@item 铁匠工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item 工匠工具|PHB}的熟练度。"
+      ]
+    },
+    {
+      "name": "额外攻击",
+      "ENG_name": "Extra Attack",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 5,
+      "header": 2,
+      "entries": [
+        "从5级开始，每当你在回合中采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+      ]
+    },
+    {
+      "name": "奥能震荡",
+      "ENG_name": "Arcane Jolt",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "在9级时，你学会了新的将奥术能量引导出来以造成伤害或治疗的方法。当你用魔法武器攻击命中目标，或者你的钢铁守卫攻击命中目标时，你可以通过这次攻击引导魔法能量来创造以下效果之一：",
+        {
+          "type": "list",
+          "items": [
+            "目标额外承受{@damage 2d6}力量伤害。",
+            "Choose one creature or object you can see within 30 feet of the target. Healing energy flows into the chosen recipient, restoring {@dice 2d6} hit points to it."
+          ]
+        },
+        "你可以使用这种能量的次数等于你的智力调整值（最少一次），但你在一个回合中不能使用超过一次。当你完成长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "改良守卫",
+      "ENG_name": "Improved Defender",
+      "source": "TCE",
+      "page": 18,
+      "otherSources": [
+        {
+          "source": "ERLW",
+          "page": 60
+        }
+      ],
+      "className": "奇械师",
+      "classSource": "TCE",
+      "subclassShortName": "战地匠师",
+      "subclassSource": "TCE",
+      "level": 15,
+      "header": 2,
+      "entries": [
+        "在15级时，你的奥术冲击和钢铁防御者变得更加强大：",
+        {
+          "type": "list",
+          "items": [
+            "你的奥术冲击造成的额外伤害以及治疗量都增加到{@damage 4d6}。",
+            "你的钢铁守卫获得+2的护甲等级加值。",
+            "每当你的钢制守卫者使用其偏转攻击时，攻击者会受到等于{@damage 1d4} + 你的智力调整值的力量伤害。"
+          ]
+        }
+      ]
+    }
+  ]
 }

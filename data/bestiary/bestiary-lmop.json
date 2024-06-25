@@ -1,786 +1,821 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "LMoP"
-			}
-		}
-	},
-	"monster": [
-		{
-			"name": "Ash Zombie",
-			"source": "LMoP",
-			"page": 31,
-			"reprintedAs": [
-				"Ash Zombie|PaBTSO"
-			],
-			"size": [
-				"M"
-			],
-			"type": "undead",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				8
-			],
-			"hp": {
-				"average": 22,
-				"formula": "3d8 + 9"
-			},
-			"speed": {
-				"walk": 20
-			},
-			"str": 13,
-			"dex": 6,
-			"con": 16,
-			"int": 3,
-			"wis": 6,
-			"cha": 5,
-			"save": {
-				"wis": "+0"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 8,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
-			],
-			"languages": [
-				"understands all languages it spoke in life but can't speak"
-			],
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Undead Fortitude",
-					"entries": [
-						"If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
-					]
-				},
-				{
-					"name": "Ash Puff",
-					"entries": [
-						"The first time the zombie takes damage, any living creature within 5 feet of the zombie must succeed on a {@dc 10} Constitution saving throw or gain disadvantage on attack rolls, saving throws, and ability checks for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on it early with a successful save."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Undead Fortitude"
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"CS",
-				"LF"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Evil Mage",
-			"source": "LMoP",
-			"page": 57,
-			"otherSources": [
-				{
-					"source": "RMBRE"
-				}
-			],
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"L",
-				"E"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 22,
-				"formula": "5d8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 9,
-			"dex": 14,
-			"con": 11,
-			"int": 17,
-			"wis": 12,
-			"cha": 11,
-			"save": {
-				"int": "+5",
-				"wis": "+3"
-			},
-			"skill": {
-				"arcana": "+5",
-				"history": "+5"
-			},
-			"passive": 11,
-			"languages": [
-				"Common",
-				"Draconic",
-				"Dwarvish",
-				"Elvish"
-			],
-			"cr": "1",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The mage is a 4th-level spellcaster that uses Intelligence as its spellcasting ability (spell save {@dc 13}; {@hit 5} to hit with spell attacks). The mage knows the following spells from the wizard's spell list:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell shocking grasp}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell charm person}",
-								"{@spell magic missile}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell misty step}"
-							]
-						}
-					},
-					"ability": "int"
-				}
-			],
-			"action": [
-				{
-					"name": "Quarterstaff",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d8 - 1}) bludgeoning damage."
-					]
-				}
-			],
-			"altArt": [
-				{
-					"name": "Evil Mage",
-					"source": "RMBRE"
-				}
-			],
-			"attachedItems": [
-				"quarterstaff|phb"
-			],
-			"languageTags": [
-				"C",
-				"D",
-				"DR",
-				"E"
-			],
-			"damageTags": [
-				"B"
-			],
-			"damageTagsSpell": [
-				"L",
-				"O"
-			],
-			"spellcastingTags": [
-				"CW"
-			],
-			"miscTags": [
-				"MLW",
-				"MW"
-			],
-			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Gundren Rockseeker",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 41,
-			"reprintedAs": [
-				"Gundren Rockseeker|PaBTSO"
-			],
-			"_copy": {
-				"name": "Commoner",
-				"source": "MM",
-				"_templates": [
-					{
-						"name": "Mountain Dwarf",
-						"source": "PHB"
-					}
-				]
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Mormesk the Wraith",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 59,
-			"reprintedAs": [
-				"Mormesk the Wraith|PaBTSO"
-			],
-			"size": [
-				"M"
-			],
-			"type": "undead",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 45,
-				"formula": "6d8 + 18"
-			},
-			"speed": {
-				"walk": 0,
-				"fly": 60
-			},
-			"str": 6,
-			"dex": 16,
-			"con": 16,
-			"int": 12,
-			"wis": 14,
-			"cha": 15,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 12,
-			"resist": [
-				"acid",
-				"cold",
-				"fire",
-				"lightning",
-				"thunder",
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks that aren't silvered",
-					"cond": true
-				}
-			],
-			"immune": [
-				"necrotic",
-				"poison"
-			],
-			"conditionImmune": [
-				"charmed",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained"
-			],
-			"languages": [
-				"Common",
-				"Infernal"
-			],
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Incorporeal Movement",
-					"entries": [
-						"The wraith can move through an object or another creature, but can't stop there."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"entries": [
-						"While in sunlight, the wraith has disadvantage on attack rolls and on Wisdom ({@skill Perception}) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Life Drain",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}16 ({@damage 3d8 + 3}) necrotic damage, and the target must succeed on a {@dc 13} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. If this attack reduces the target's hit point maximum to 0, the target dies. This reduction to the target's hit point maximum lasts until the target finishes a long rest."
-					]
-				}
-			],
-			"traitTags": [
-				"Incorporeal Movement",
-				"Sunlight Sensitivity"
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"C",
-				"I"
-			],
-			"damageTags": [
-				"N"
-			],
-			"miscTags": [
-				"HPR",
-				"MW"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Nezznar the Black Spider",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 59,
-			"reprintedAs": [
-				"Nezznar the Spider|PaBTSO"
-			],
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"elf"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				11,
-				{
-					"ac": 14,
-					"condition": "with {@spell mage armor}",
-					"braces": true
-				}
-			],
-			"hp": {
-				"average": 27,
-				"formula": "6d8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 9,
-			"dex": 13,
-			"con": 10,
-			"int": 16,
-			"wis": 14,
-			"cha": 13,
-			"save": {
-				"int": "+5",
-				"wis": "+4"
-			},
-			"skill": {
-				"arcana": "+5",
-				"perception": "+4",
-				"stealth": "+3"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 14,
-			"languages": [
-				"Elvish",
-				"Undercommon"
-			],
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Nezznar can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell dancing lights}"
-					],
-					"daily": {
-						"1e": [
-							"{@spell darkness}",
-							"{@spell faerie fire} (save {@dc 12})"
-						]
-					}
-				},
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Nezznar is a 4th-level spellcaster that uses Intelligence as his spellcasting ability (spell save {@dc 13}; {@hit 5} to hit with spell attacks). Nezznar has the following spells prepared from the wizard's spell list:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell mage hand}",
-								"{@spell ray of frost}",
-								"{@spell shocking grasp}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell invisibility}",
-								"{@spell suggestion}"
-							]
-						}
-					},
-					"ability": "int"
-				}
-			],
-			"trait": [
-				{
-					"name": "Special Equipment",
-					"entries": [
-						"Nezznar has a {@item spider staff|lmop}."
-					]
-				},
-				{
-					"name": "Fey Ancestry",
-					"entries": [
-						"Nezznar has advantage on saving throws against being {@condition charmed}, and magic can't put him to sleep."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"entries": [
-						"Nezznar has disadvantage on attack rolls when he or his target is in sunlight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Spider Staff",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage plus 3 ({@damage 1d6}) poison damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Fey Ancestry",
-				"Sunlight Sensitivity"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"languageTags": [
-				"E",
-				"U"
-			],
-			"damageTags": [
-				"B",
-				"I"
-			],
-			"damageTagsSpell": [
-				"C",
-				"L",
-				"O"
-			],
-			"spellcastingTags": [
-				"CW",
-				"I"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"invisible"
-			],
-			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Nundro Rockseeker",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 50,
-			"reprintedAs": [
-				"Nundro Rockseeker|PaBTSO"
-			],
-			"_copy": {
-				"name": "Commoner",
-				"source": "MM",
-				"_templates": [
-					{
-						"name": "Mountain Dwarf",
-						"source": "PHB"
-					}
-				]
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Redbrand Ruffian",
-			"source": "LMoP",
-			"page": 61,
-			"reprintedAs": [
-				"Redbrand Ruffian|PaBTSO"
-			],
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"{@item studded leather armor|phb|studded leather}"
-					]
-				}
-			],
-			"hp": {
-				"average": 16,
-				"formula": "3d8 + 3"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 11,
-			"dex": 14,
-			"con": 12,
-			"int": 9,
-			"wis": 9,
-			"cha": 11,
-			"skill": {
-				"intimidation": "+2"
-			},
-			"passive": 9,
-			"languages": [
-				"Common"
-			],
-			"cr": "1/2",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The ruffian makes two melee attacks."
-					]
-				},
-				{
-					"name": "Shortsword",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"shortsword|phb"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MLW",
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Sildar Hallwinter",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 61,
-			"reprintedAs": [
-				"Sildar Hallwinter|PaBTSO"
-			],
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"N",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"{@item chain mail|phb}"
-					]
-				}
-			],
-			"hp": {
-				"average": 27,
-				"formula": "5d8 + 5"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 13,
-			"dex": 10,
-			"con": 12,
-			"int": 10,
-			"wis": 11,
-			"cha": 10,
-			"save": {
-				"str": "+3",
-				"con": "+3"
-			},
-			"skill": {
-				"perception": "+2"
-			},
-			"passive": 12,
-			"languages": [
-				"Common"
-			],
-			"cr": "1",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Sildar makes two melee attacks."
-					]
-				},
-				{
-					"name": "Longsword",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) slashing damage."
-					]
-				},
-				{
-					"name": "Heavy Crossbow",
-					"entries": [
-						"{@atk rw} {@hit 2} to hit, range 100/400 ft., one target. {@h}5 ({@damage 1d10}) piercing damage."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Parry",
-					"entries": [
-						"When an attacker hits Sildar with a melee attack and Sildar can see the attacker, he can roll {@dice 1d6} and add the number rolled to his AC against the triggering attack, provided that he's wielding a melee weapon."
-					]
-				}
-			],
-			"attachedItems": [
-				"heavy crossbow|phb",
-				"longsword|phb"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Parry"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MLW",
-				"MW",
-				"RNG",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Venomfang",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LMoP",
-			"page": 63,
-			"_copy": {
-				"name": "Young Green Dragon",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the dragon",
-						"with": "Venomfang",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM"
+      ]
+    },
+    "otherSources": {
+      "monster": {
+        "MM": "迷失矿井"
+      }
+    }
+  },
+  "monster": [
+    {
+      "name": "灰烬僵尸",
+      "ENG_name": "Ash Zombie",
+      "source": "LMoP",
+      "page": 31,
+      "reprintedAs": [
+        "灰烬僵尸|PaBTSO"
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        8
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "3d8 + 9"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "str": 13,
+      "dex": 6,
+      "con": 16,
+      "int": 3,
+      "wis": 6,
+      "cha": 5,
+      "save": {
+        "wis": "+0"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 8,
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "中毒"
+      ],
+      "languages": [
+        "能理解它生前所说的所有语言，但不能说话"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "不死韧性",
+          "ENG_name": "Undead Fortitude",
+          "entries": [
+            "如果伤害使僵尸的生命值降至0点，除非伤害是辐射性伤害或来自致命一击，否则它必须进行一次体质豁免，难度等级为5加上所受伤害。成功时，僵尸的生命值会降至1点。"
+          ]
+        },
+        {
+          "name": "灰烬喷吐",
+          "ENG_name": "Ash Puff",
+          "entries": [
+            "当僵尸第一次受到伤害时，任何在僵尸5英尺范围内的生物必须进行一次DC 10的体质豁免投掷，否则在接下来的1分钟内，在攻击骰、豁免投掷和能力检定上都会处于劣势。生物可以在自己的回合结束时重复进行豁免投掷，如果成功则可以提前结束这个效果。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "猛击",
+          "ENG_name": "Slam",
+          "entries": [
+            "{@atk 近战武器} 命中：3，射程5英尺，一个目标。{@h}4 ({@damage 1d6 + 1}) 钝击伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "不死韧性"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "CS",
+        "LF"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "savingThrowForced": [
+        "属性检定:体质"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "邪恶法师",
+      "ENG_name": "Evil Mage",
+      "source": "LMoP",
+      "page": 57,
+      "otherSources": [
+        {
+          "source": "RMBRE"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "human"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 9,
+      "dex": 14,
+      "con": 11,
+      "int": 17,
+      "wis": 12,
+      "cha": 11,
+      "save": {
+        "int": "+5",
+        "wis": "+3"
+      },
+      "skill": {
+        "arcana": "+5",
+        "history": "+5"
+      },
+      "passive": 11,
+      "languages": [
+        "普通",
+        "龙族血脉",
+        "矮人语",
+        "精灵语"
+      ],
+      "cr": "1",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "该法师是一个4级施法者，使用智力作为其施法能力（法术豁免{@dc 13}；法术攻击命中需要{@hit 5}）。法师知道以下来自巫师法术列表的法术："
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell 光亮术}",
+                "{@spell 法师之手}",
+                "{@spell 电爪}"
+              ]
+            },
+            "1": {
+              "slots": 4,
+              "spells": [
+                "{@spell 魅惑人类}",
+                "{@spell 魔法飞弹}"
+              ]
+            },
+            "2": {
+              "slots": 3,
+              "spells": [
+                "{@spell 人类定身术}",
+                "{@spell 迷踪步}"
+              ]
+            }
+          },
+          "ability": "int"
+        }
+      ],
+      "action": [
+        {
+          "name": "长棍",
+          "ENG_name": "Quarterstaff",
+          "entries": [
+            "{@atk 近战武器} {@hit 命中1} 命中，射程5英尺，一个目标。{@h}3 ({@damage 1d8 - 1}) 钝击伤害。"
+          ]
+        }
+      ],
+      "altArt": [
+        {
+          "name": "邪恶法师",
+          "ENG_name": "Evil Mage",
+          "source": "RMBRE"
+        }
+      ],
+      "attachedItems": [
+        "长棍|PHB"
+      ],
+      "languageTags": [
+        "C",
+        "D",
+        "DR",
+        "E"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "damageTagsSpell": [
+        "L",
+        "O"
+      ],
+      "spellcastingTags": [
+        "CW"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW"
+      ],
+      "savingThrowForcedSpell": [
+        "属性检定:敏捷",
+        "属性检定:感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "贡德伦·岩寻",
+      "ENG_name": "Gundren Rockseeker",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 41,
+      "reprintedAs": [
+        "冈德伦·岩石探寻者|PaBTSO"
+      ],
+      "_copy": {
+        "name": "平民",
+        "ENG_name": "Commoner",
+        "source": "MM",
+        "_templates": [
+          {
+            "name": "矮人:山地矮人",
+            "ENG_name": "Mountain Dwarf",
+            "source": "PHB"
+          }
+        ]
+      },
+      "hasToken": true
+    },
+    {
+      "name": "莫梅斯克，幽魂",
+      "ENG_name": "Mormesk the Wraith",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 59,
+      "reprintedAs": [
+        "莫梅斯克之魂|PaBTSO"
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d8 + 18"
+      },
+      "speed": {
+        "walk": 0,
+        "fly": 60
+      },
+      "str": 6,
+      "dex": 16,
+      "con": 16,
+      "int": 12,
+      "wis": 14,
+      "cha": 15,
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 12,
+      "resist": [
+        "酸性",
+        "寒冷",
+        "火",
+        "闪电",
+        "雷鸣伤害",
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击且非银质的",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "死灵",
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "被擒",
+        "麻痹",
+        "石化",
+        "中毒",
+        "伏地",
+        "束缚"
+      ],
+      "languages": [
+        "普通",
+        "地狱语"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "虚体移动",
+          "ENG_name": "Incorporeal Movement",
+          "entries": [
+            "幽魂可以穿过物体或其他生物，但不能停留在那里。"
+          ]
+        },
+        {
+          "name": "日光敏感",
+          "ENG_name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the wraith has disadvantage on attack rolls and on Wisdom ({@skill 察觉}) checks that rely on sight."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "生命吸取",
+          "ENG_name": "Life Drain",
+          "entries": [
+            "{@atk 近战武器} 命中判定为5，射程5英尺，单一生物。{@h}造成16点（{@damage 3d8 + 3}）死灵伤害，目标必须进行一次DC 13的体质豁免投掷，否则其生命值上限减少等同于受到的伤害。如果这次攻击将目标的生命值上限减少至0，目标将死亡。这种对目标生命值上限的减少持续到目标完成一次长休息。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "虚体移动",
+        "日光敏感"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "I"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "miscTags": [
+        "高防护等级(High Protection Rating)",
+        "MW"
+      ],
+      "savingThrowForced": [
+        "属性检定:体质"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "黑蜘蛛内兹纳",
+      "ENG_name": "Nezznar the Black Spider",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 59,
+      "reprintedAs": [
+        "Nezznar the Spider"
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "elf"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        11,
+        {
+          "ac": 14,
+          "condition": "with {@spell 法师护甲}",
+          "braces": true
+        }
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "6d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 9,
+      "dex": 13,
+      "con": 10,
+      "int": 16,
+      "wis": 14,
+      "cha": 13,
+      "save": {
+        "int": "+5",
+        "wis": "+4"
+      },
+      "skill": {
+        "arcana": "+5",
+        "perception": "+4",
+        "stealth": "+3"
+      },
+      "senses": [
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 14,
+      "languages": [
+        "精灵语",
+        "地下通用语"
+      ],
+      "cr": "2",
+      "spellcasting": [
+        {
+          "name": "天生施法",
+          "ENG_name": "Innate Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Nezznar天生能够施展以下法术，无需任何材料成分："
+          ],
+          "will": [
+            "{@spell 舞光术}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell 黑暗术}",
+              "{@spell 妖火术} (save {@dc 12})"
+            ]
+          }
+        },
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "内兹纳是一名4级施法者，使用智力作为他的施法能力（法术豁免{@dc 13}；{@hit 5}命中法术攻击）。内兹纳从巫师的法术列表中准备了以下法术："
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell 法师之手}",
+                "{@spell 冷冻射线}",
+                "{@spell 电爪}"
+              ]
+            },
+            "1": {
+              "slots": 4,
+              "spells": [
+                "{@spell 法师护甲}",
+                "{@spell 魔法飞弹}",
+                "{@spell 护盾术}"
+              ]
+            },
+            "2": {
+              "slots": 3,
+              "spells": [
+                "{@spell 隐形术}",
+                "{@spell 暗示术}"
+              ]
+            }
+          },
+          "ability": "int"
+        }
+      ],
+      "trait": [
+        {
+          "name": "特殊装备",
+          "ENG_name": "Special Equipment",
+          "entries": [
+            "Nezznar拥有一根{@item 蜘蛛法杖|lmop}。"
+          ]
+        },
+        {
+          "name": "精类血统",
+          "ENG_name": "Fey Ancestry",
+          "entries": [
+            "Nezznar has advantage on saving throws against being {@condition 魅惑}, and magic can't put him to sleep."
+          ]
+        },
+        {
+          "name": "日光敏感",
+          "ENG_name": "Sunlight Sensitivity",
+          "entries": [
+            "当Nezznar或其目标处于阳光下时，他在攻击检定时具有劣势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "蜘蛛法杖",
+          "ENG_name": "Spider Staff",
+          "entries": [
+            "{@atk 近战武器} {@hit 命中1} 命中，射程5英尺，一个目标。{@h}2 ({@damage 1d6 - 1}) 钝击伤害加上3 ({@damage 1d6}) 毒素伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "精类血统",
+        "日光敏感"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "languageTags": [
+        "E",
+        "U"
+      ],
+      "damageTags": [
+        "B",
+        "I"
+      ],
+      "damageTagsSpell": [
+        "C",
+        "L",
+        "O"
+      ],
+      "spellcastingTags": [
+        "CW",
+        "I"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "conditionInflictSpell": [
+        "隐形"
+      ],
+      "savingThrowForcedSpell": [
+        "属性检定:敏捷",
+        "属性检定:感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "努恩德罗·岩石探寻者",
+      "ENG_name": "Nundro Rockseeker",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 50,
+      "reprintedAs": [
+        "Nundro Rockseeker|PaBTSO"
+      ],
+      "_copy": {
+        "name": "平民",
+        "ENG_name": "Commoner",
+        "source": "MM",
+        "_templates": [
+          {
+            "name": "矮人:山地矮人",
+            "ENG_name": "Mountain Dwarf",
+            "source": "PHB"
+          }
+        ]
+      },
+      "hasToken": true
+    },
+    {
+      "name": "红标流氓",
+      "ENG_name": "Redbrand Ruffian",
+      "source": "LMoP",
+      "page": 61,
+      "reprintedAs": [
+        "红牌流氓|PaBTSO"
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "human"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 14,
+          "from": [
+            "{@item 带钉皮甲|phb|带钉皮甲}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 16,
+        "formula": "3d8 + 3"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 14,
+      "con": 12,
+      "int": 9,
+      "wis": 9,
+      "cha": 11,
+      "skill": {
+        "intimidation": "+2"
+      },
+      "passive": 9,
+      "languages": [
+        "普通"
+      ],
+      "cr": "1/2",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "这个流氓进行了两次近战攻击。"
+          ]
+        },
+        {
+          "name": "短剑",
+          "ENG_name": "Shortsword",
+          "entries": [
+            "{@atk 近战攻击} 命中骰：4，触及范围5英尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "短剑"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "Sildar Hallwinter",
+      "ENG_name": "Sildar Hallwinter",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 61,
+      "reprintedAs": [
+        "希尔达·霍尔温特|PaBTSO"
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "human"
+        ]
+      },
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 16,
+          "from": [
+            "{@item 锁子甲|phb}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "5d8 + 5"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 13,
+      "dex": 10,
+      "con": 12,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "save": {
+        "str": "+3",
+        "con": "+3"
+      },
+      "skill": {
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "普通"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Sildar 进行两次近战攻击。"
+          ]
+        },
+        {
+          "name": "长剑",
+          "ENG_name": "Longsword",
+          "entries": [
+            "{@atk 近战} {@hit 3}命中，触及5英尺，一个目标。{@h}5 ({@damage 1d8 + 1}) 斩击伤害。"
+          ]
+        },
+        {
+          "name": "重弩",
+          "ENG_name": "Heavy Crossbow",
+          "entries": [
+            "{@atk 远程武器} 命中2，射程100/400英尺，单一目标。{@h}5（{@damage 1d10}）穿刺伤害。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "格挡",
+          "ENG_name": "Parry",
+          "entries": [
+            "When an attacker hits Sildar with a melee attack and Sildar can see the attacker, he can roll {@dice 1d6} and add the number rolled to his AC against the triggering attack, provided that he's wielding a melee weapon."
+          ]
+        }
+      ],
+      "attachedItems": [
+        "重型弩|PHB",
+        "长剑"
+      ],
+      "actionTags": [
+        "多重攻击",
+        "格挡"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW",
+        "射程",
+        "RW"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "毒牙",
+      "ENG_name": "Venomfang",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LMoP",
+      "page": 63,
+      "_copy": {
+        "name": "少年绿龙",
+        "ENG_name": "Young Green Dragon",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "龙",
+            "with": "毒牙",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true
+    }
+  ]
 }

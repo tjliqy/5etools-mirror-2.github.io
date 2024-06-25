@@ -1,96 +1,115 @@
 {
-	"spell": [
-		{
-			"name": "Create Magen",
-			"source": "IDRotF",
-			"page": 318,
-			"level": 7,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a vial of quicksilver worth 500 gp and a life-sized human doll, both of which the spell consumes, and an intricate crystal rod worth at least 1,500 gp that is not consumed",
-					"cost": 50000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"While casting the spell, you place a vial of quicksilver in the chest of a life-sized human doll stuffed with ash or dust. You then stitch up the doll and drip your blood on it. At the end of the casting, you tap the doll with a crystal rod, transforming it into a {@filter magen|bestiary|search=magen|source=IDRotF} clothed in whatever the doll was wearing. The type of magen is chosen by you during the casting of the spell. See {@adventure appendix C|IDRotF|21} for different kinds of magen and their statistics.",
-				"When the magen appears, your hit point maximum decreases by an amount equal to the magen's challenge rating (minimum reduction of 1). Only a {@spell wish} spell can undo this reduction to your hit point maximum.",
-				"Any magen you create with this spell obeys your commands without question."
-			],
-			"areaTags": [
-				"ST"
-			]
-		},
-		{
-			"name": "Frost Fingers",
-			"source": "IDRotF",
-			"page": 318,
-			"level": 1,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "cone",
-				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"Freezing cold blasts from your fingertips in a 15-foot cone. Each creature in that area must make a Constitution saving throw, taking {@damage 2d8} cold damage on a failed save, or half as much damage on a successful one.",
-				"The cold freezes nonmagical liquids in the area that aren't being worn or carried."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
-					]
-				}
-			],
-			"damageInflict": [
-				"cold"
-			],
-			"savingThrow": [
-				"constitution"
-			],
-			"areaTags": [
-				"N"
-			]
-		}
-	]
+  "spell": [
+    {
+      "name": "创造魔卫",
+      "ENG_name": "Create Magen",
+      "source": "IDRotF",
+      "page": 318,
+      "level": 7,
+      "school": "T",
+      "time": [
+        {
+          "number": 1,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一小瓶价值 500gp 的水银和一个真人大小的人偶，作为法术的耗材；以及一支复杂的水晶权杖，价值至少 1500gp，法术不会消耗该材料",
+          "cost": 50000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "施展该法术时，你将一小瓶水银放置在一个填充着灰烬和尘土的真人大小的人偶的胸口里。然后你缝合好人偶，将你的血滴在上面。在施法结束时，你用一支水晶权杖在人偶上轻轻一点，将它转化为一个穿着人偶所穿着的衣服的{@filter 魔卫|bestiary|search=magen|source=IDRotF}。魔卫的类型由你在施法时选择，查阅{@adventure 附录C|IDRotF|21}以找到不同类型的魔卫以及它们的数据。",
+        "当魔卫出现时，你的最大生命值减少一定值，其数值等同于该魔卫的挑战等级（至少减少1点）。只有一道{@spell 祈愿术}才能撤销此减值",
+        "任何你用该法术创造的魔卫会毫无异议地执行你的命令。"
+      ],
+      "areaTags": [
+        "ST"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "冷冻一指",
+      "ENG_name": "Frost Fingers",
+      "source": "IDRotF",
+      "page": 318,
+      "level": 1,
+      "school": "V",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "cone",
+        "distance": {
+          "type": "feet",
+          "amount": 15
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "彻骨之寒从你的指尖爆发而出，覆盖15尺锥形的范围。每个处于该区域内的生物都必须进行一次体质豁免，豁免失败者将受到{@damage 2d8}冷冻伤害，豁免成功则伤害减半。",
+        "此等寒冷将冻结法术范围内任何未被着装或携带的非魔法液体。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "使用2环或更高法术位施展该法术时，你使用的法术位每比1环高一环，法术伤害就增加{@dice 1d8}。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "寒冷"
+      ],
+      "savingThrow": [
+        "属性检定:体质"
+      ],
+      "areaTags": [
+        "N"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1,2318 +1,2378 @@
 {
-	"class": [
-		{
-			"name": "Barbarian",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"hd": {
-				"number": 1,
-				"faces": 12
-			},
-			"proficiency": [
-				"str",
-				"con"
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"animal handling",
-								"athletics",
-								"intimidation",
-								"nature",
-								"perception",
-								"survival"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=u~u~sand}",
-					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
-				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"greataxe|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponMartialMelee"
-							}
-						]
-					},
-					{
-						"a": [
-							{
-								"item": "handaxe|phb",
-								"quantity": 2
-							}
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"_": [
-							"explorer's pack|phb",
-							{
-								"item": "javelin|phb",
-								"quantity": 4
-							}
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"str": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"Rages",
-						"Rage Damage"
-					],
-					"rows": [
-						[
-							"2",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"2",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"3",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"3",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"3",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 2
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"4",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"5",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"5",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"5",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"5",
-							{
-								"type": "bonus",
-								"value": 3
-							}
-						],
-						[
-							"5",
-							{
-								"type": "bonus",
-								"value": 4
-							}
-						],
-						[
-							"6",
-							{
-								"type": "bonus",
-								"value": 4
-							}
-						],
-						[
-							"6",
-							{
-								"type": "bonus",
-								"value": 4
-							}
-						],
-						[
-							"6",
-							{
-								"type": "bonus",
-								"value": 4
-							}
-						],
-						[
-							"Unlimited",
-							{
-								"type": "bonus",
-								"value": 4
-							}
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Rage|Barbarian||1",
-				"Unarmored Defense|Barbarian||1",
-				"Danger Sense|Barbarian||2",
-				"Reckless Attack|Barbarian||2",
-				{
-					"classFeature": "Primal Path|Barbarian||3",
-					"gainSubclassFeature": true
-				},
-				"Primal Knowledge|Barbarian||3|TCE",
-				"Ability Score Improvement|Barbarian||4",
-				"Extra Attack|Barbarian||5",
-				"Fast Movement|Barbarian||5",
-				{
-					"classFeature": "Path Feature|Barbarian||6",
-					"gainSubclassFeature": true
-				},
-				"Feral Instinct|Barbarian||7",
-				"Instinctive Pounce|Barbarian||7|TCE",
-				"Ability Score Improvement|Barbarian||8",
-				"Brutal Critical (1 die)|Barbarian||9",
-				{
-					"classFeature": "Path feature|Barbarian||10",
-					"gainSubclassFeature": true
-				},
-				"Relentless Rage|Barbarian||11",
-				"Ability Score Improvement|Barbarian||12",
-				"Brutal Critical (2 dice)|Barbarian||13",
-				{
-					"classFeature": "Path feature|Barbarian||14",
-					"gainSubclassFeature": true
-				},
-				"Persistent Rage|Barbarian||15",
-				"Ability Score Improvement|Barbarian||16",
-				"Brutal Critical (3 dice)|Barbarian||17",
-				"Indomitable Might|Barbarian||18",
-				"Ability Score Improvement|Barbarian||19",
-				"Primal Champion|Barbarian||20"
-			],
-			"subclassTitle": "Primal Path",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Path of the Berserker",
-			"shortName": "Berserker",
-			"source": "PHB",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 49,
-			"srd": true,
-			"subclassFeatures": [
-				"Path of the Berserker|Barbarian||Berserker||3",
-				"Mindless Rage|Barbarian||Berserker||6",
-				"Intimidating Presence|Barbarian||Berserker||10",
-				"Retaliation|Barbarian||Berserker||14"
-			]
-		},
-		{
-			"name": "Path of the Totem Warrior",
-			"shortName": "Totem Warrior",
-			"source": "PHB",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 50,
-			"additionalSpells": [
-				{
-					"innate": {
-						"3": {
-							"ritual": [
-								"beast sense",
-								"speak with animals"
-							]
-						},
-						"10": {
-							"ritual": [
-								"commune with nature"
-							]
-						}
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Path of the Totem Warrior|Barbarian||Totem Warrior||3",
-				"Aspect of the Beast|Barbarian||Totem Warrior||6",
-				"Spirit Walker|Barbarian||Totem Warrior||10",
-				"Totemic Attunement|Barbarian||Totem Warrior||14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Path of the Battlerager",
-			"shortName": "Battlerager",
-			"source": "SCAG",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 121,
-			"subclassFeatures": [
-				"Path of the Battlerager|Barbarian||Battlerager|SCAG|3",
-				"Reckless Abandon|Barbarian||Battlerager|SCAG|6",
-				"Battlerager Charge|Barbarian||Battlerager|SCAG|10",
-				"Spiked Retribution|Barbarian||Battlerager|SCAG|14"
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian",
-			"shortName": "Ancestral Guardian",
-			"source": "XGE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 9,
-			"spellcastingAbility": "wis",
-			"additionalSpells": [
-				{
-					"innate": {
-						"10": [
-							"augury",
-							"clairvoyance"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Path of the Ancestral Guardian|Barbarian||Ancestral Guardian|XGE|3",
-				"Spirit Shield|Barbarian||Ancestral Guardian|XGE|6",
-				"Consult the Spirits|Barbarian||Ancestral Guardian|XGE|10",
-				"Vengeful Ancestors|Barbarian||Ancestral Guardian|XGE|14"
-			]
-		},
-		{
-			"name": "Path of the Storm Herald",
-			"shortName": "Storm Herald",
-			"source": "XGE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 10,
-			"subclassFeatures": [
-				"Path of the Storm Herald|Barbarian||Storm Herald|XGE|3",
-				"Storm Soul|Barbarian||Storm Herald|XGE|6",
-				"Shielding Storm|Barbarian||Storm Herald|XGE|10",
-				"Raging Storm|Barbarian||Storm Herald|XGE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Path of the Zealot",
-			"shortName": "Zealot",
-			"source": "XGE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 11,
-			"subclassFeatures": [
-				"Path of the Zealot|Barbarian||Zealot|XGE|3",
-				"Fanatical Focus|Barbarian||Zealot|XGE|6",
-				"Zealous Presence|Barbarian||Zealot|XGE|10",
-				"Rage beyond Death|Barbarian||Zealot|XGE|14"
-			]
-		},
-		{
-			"name": "Path of the Beast",
-			"shortName": "Beast",
-			"source": "TCE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 24,
-			"subclassFeatures": [
-				"Path of the Beast|Barbarian||Beast|TCE|3",
-				"Bestial Soul|Barbarian||Beast|TCE|6",
-				"Infectious Fury|Barbarian||Beast|TCE|10",
-				"Call the Hunt|Barbarian||Beast|TCE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Path of Wild Magic",
-			"shortName": "Wild Magic",
-			"source": "TCE",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 25,
-			"subclassFeatures": [
-				"Path of Wild Magic|Barbarian||Wild Magic|TCE|3",
-				"Bolstering Magic|Barbarian||Wild Magic|TCE|6",
-				"Unstable Backlash|Barbarian||Wild Magic|TCE|10",
-				"Controlled Surge|Barbarian||Wild Magic|TCE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Path of the Juggernaut",
-			"shortName": "Juggernaut",
-			"source": "TDCSR",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 165,
-			"subclassFeatures": [
-				"Path of the Juggernaut|Barbarian|PHB|Juggernaut|TDCSR|3",
-				"Demolishing Might|Barbarian|PHB|Juggernaut|TDCSR|6",
-				"Resolute Stance|Barbarian|PHB|Juggernaut|TDCSR|6",
-				"Thunderous Blows (10th Level)|Barbarian|PHB|Juggernaut|TDCSR|10",
-				"Hurricane Strike|Barbarian|PHB|Juggernaut|TDCSR|10",
-				"Unstoppable|Barbarian|PHB|Juggernaut|TDCSR|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Path of the Giant",
-			"shortName": "Giant",
-			"source": "BGG",
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"page": 1,
-			"spellcastingAbility": "wis",
-			"additionalSpells": [
-				{
-					"innate": {
-						"3": [
-							"druidcraft#c"
-						]
-					}
-				},
-				{
-					"innate": {
-						"3": [
-							"thaumaturgy#c"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Path of the Giant|Barbarian||Giant|BGG|3",
-				"Elemental Cleaver|Barbarian||Giant|BGG|6",
-				"Mighty Impel|Barbarian||Giant|BGG|10",
-				"Demiurgic Colossus|Barbarian||Giant|BGG|14"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Rage",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.",
-				"While raging, you gain the following benefits if you aren't wearing heavy armor:",
-				{
-					"type": "list",
-					"items": [
-						"You have advantage on Strength checks and Strength saving throws.",
-						"When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
-						"You have resistance to bludgeoning, piercing, and slashing damage."
-					]
-				},
-				"If you are able to cast spells, you can't cast them or concentrate on them while raging.",
-				"Your rage lasts for 1 minute. It ends early if you are knocked {@condition unconscious} or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.",
-				"Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th."
-			]
-		},
-		{
-			"name": "Unarmored Defense",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
-			]
-		},
-		{
-			"name": "Danger Sense",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be {@condition blinded}, {@condition deafened}, or {@condition incapacitated}."
-			]
-		},
-		{
-			"name": "Reckless Attack",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn."
-			]
-		},
-		{
-			"name": "Primal Knowledge",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 3rd-level barbarian {@variantrule optional class features|tce|optional feature}}",
-				"When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level."
-			]
-		},
-		{
-			"name": "Primal Path",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you choose a path that shapes the nature of your rage from the list of available paths. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Extra Attack",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 5,
-			"entries": [
-				"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-			]
-		},
-		{
-			"name": "Fast Movement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 5,
-			"entries": [
-				"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
-			]
-		},
-		{
-			"name": "Path Feature",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"At 6th level, you gain a feature from your Primal Path."
-			]
-		},
-		{
-			"name": "Feral Instinct",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 7,
-			"entries": [
-				"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
-				"Additionally, if you are {@quickref Surprise|PHB|3|0|surprised} at the beginning of combat and aren't {@condition incapacitated}, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
-			]
-		},
-		{
-			"name": "Instinctive Pounce",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 7,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 7th-level barbarian {@variantrule optional class features|tce|optional feature}}",
-				"As part of the bonus action you take to enter your rage, you can move up to half your speed."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Brutal Critical (1 die)",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 9,
-			"entries": [
-				"Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",
-				"This increases to two additional dice at 13th level and three additional dice at 17th level."
-			]
-		},
-		{
-			"name": "Path feature",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"At 10th level, you gain a feature from your Primal Path."
-			]
-		},
-		{
-			"name": "Relentless Rage",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 11,
-			"entries": [
-				"Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
-				"Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Brutal Critical (2 dice)",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 13,
-			"entries": [
-				"At 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.",
-				"This increases to three additional dice at 17th level."
-			]
-		},
-		{
-			"name": "Path feature",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"At 14th level, you gain a feature from your Primal Path."
-			]
-		},
-		{
-			"name": "Persistent Rage",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 15,
-			"entries": [
-				"Beginning at 15th level, your rage is so fierce that it ends early only if you fall {@condition unconscious} or if you choose to end it."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Brutal Critical (3 dice)",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
-			]
-		},
-		{
-			"name": "Indomitable Might",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 18,
-			"entries": [
-				"Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Primal Champion",
-			"source": "PHB",
-			"page": 46,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Giant Power",
-			"source": "BGG",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 3,
-			"entries": [
-				"{@i 3rd-Level Path of the Giant Feature}",
-				"When you choose this path, you learn to speak, read, and write Giant or one other language of your choice if you already know Giant. Additionally, you learn a cantrip of your choice: either {@spell druidcraft} or {@spell thaumaturgy}. Wisdom is your spellcasting ability for this spell."
-			]
-		},
-		{
-			"name": "Giant's Havoc",
-			"source": "BGG",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 3,
-			"entries": [
-				"{@i 3rd-Level Path of the Giant Feature}",
-				"Your rages pull strength from the primal might of giants, transforming you into a hulking force of destruction. While raging, you gain the following benefits:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Crushing Throw",
-							"entry": "When you make a successful ranged attack with a thrown weapon using Strength, you can add your Rage Damage bonus to the attack's damage roll."
-						},
-						{
-							"type": "item",
-							"name": "Giant Stature",
-							"entry": "Your reach increases by 5 feet, and if you are smaller than Large, you become Large, along with anything you are wearing. If there isn't enough room for you to increase your size, your size doesn't change."
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Path of the Giant",
-			"source": "BGG",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 3,
-			"entries": [
-				"Barbarians who walk the Path of the Giant draw strength from the same primal forces as giants. As they rage, these barbarians surge with elemental power and grow in size, taking on forms that evoke the glory of giants. Some barbarians look like oversized versions of themselves, perhaps with a hint of elemental energy flaring in their eyes and around their weapons. Others transform more dramatically, taking on the appearance of an actual giant or a form similar to an Elemental, wreathed in fire, frost, or lightning.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Giant Power|Barbarian||Giant|BGG|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Giant's Havoc|Barbarian||Giant|BGG|3"
-				}
-			]
-		},
-		{
-			"name": "Elemental Cleaver",
-			"source": "BGG",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-Level Path of the Giant Feature}",
-				"Your bond with the elemental might of giants grows, and you learn to infuse weapons with primordial energy.",
-				"When you enter your rage, you can choose one weapon that you are holding and infuse it with one of the following damage types: acid, cold, fire, thunder, or lightning. While you wield the infused weapon during your rage, the weapon's damage type changes to the chosen type, it deals an extra {@dice 1d6} damage of the chosen type when it hits, and it gains the thrown property, with a normal range of 20 feet and a long range of 60 feet. If you throw the weapon, it reappears in your hand the instant after it hits or misses a target. The infused weapon's benefits are suppressed while a creature other than you wields it.",
-				"While raging and holding the infused weapon, you can use a bonus action to change the infused weapon's current damage type to another one from the damage type options above."
-			]
-		},
-		{
-			"name": "Mighty Impel",
-			"source": "BGG",
-			"page": 12,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-Level Path of the Giant Feature}",
-				"Your connection to giant strength allows you to hurl both allies and enemies on the battlefield. As a bonus action while raging, you can choose one Medium or smaller creature within your reach and move it to an unoccupied space you can see within 30 feet of yourself. An unwilling creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) to avoid the effect.",
-				"If, at the end of this movement, the thrown creature isn't on a surface or liquid that can support it, the creature falls, taking damage as normal and landing {@condition prone}."
-			]
-		},
-		{
-			"name": "Demiurgic Colossus",
-			"source": "BGG",
-			"page": 12,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Giant",
-			"subclassSource": "BGG",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-Level Path of the Giant Feature}",
-				"The primordial power of your rage intensifies. When you rage, your reach increases by 10 feet, your size can increase to Large or Huge (your choice), and you can use your Mighty Impel to move creatures that are Large or smaller.",
-				"In addition, the extra damage dealt by your Elemental Cleaver feature increases to {@dice 2d6}."
-			]
-		},
-		{
-			"name": "Path of the Berserker",
-			"source": "PHB",
-			"page": 49,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Berserker",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Frenzy|Barbarian||Berserker||3"
-				}
-			]
-		},
-		{
-			"name": "Frenzy",
-			"source": "PHB",
-			"page": 49,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Berserker",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of {@condition exhaustion}."
-			]
-		},
-		{
-			"name": "Mindless Rage",
-			"source": "PHB",
-			"page": 49,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Berserker",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, you can't be {@condition charmed} or {@condition frightened} while raging. If you are {@condition charmed} or {@condition frightened} when you enter your rage, the effect is suspended for the duration of the rage."
-			]
-		},
-		{
-			"name": "Intimidating Presence",
-			"source": "PHB",
-			"page": 49,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Berserker",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be {@condition frightened} of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the {@condition frightened} creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
-				"If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
-			]
-		},
-		{
-			"name": "Retaliation",
-			"source": "PHB",
-			"page": 49,
-			"srd": true,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Berserker",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
-			]
-		},
-		{
-			"name": "Bear",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment."
-			]
-		},
-		{
-			"name": "Eagle",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the {@action Dash} action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease."
-			]
-		},
-		{
-			"name": "Path of the Totem Warrior",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage.",
-				"Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Spirit Seeker|Barbarian||Totem Warrior||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Totem Spirit|Barbarian||Totem Warrior||3"
-				}
-			]
-		},
-		{
-			"name": "Wolf",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."
-			]
-		},
-		{
-			"name": "Spirit Seeker",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the {@spell beast sense} and {@spell speak with animals} spells, but only as rituals, as described in {@book chapter 10|PHB|10|rituals}."
-			]
-		},
-		{
-			"name": "Totem Spirit",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object\u2014an amulet or similar adornment\u2014that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
-				"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||3|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||3|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Bear",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects."
-			]
-		},
-		{
-			"name": "Eagle",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks."
-			]
-		},
-		{
-			"name": "Wolf",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace."
-			]
-		},
-		{
-			"name": "Aspect of the Beast",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||6"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||6"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||6|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||6|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||6"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Spirit Walker",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you can cast the {@spell commune with nature} spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
-			]
-		},
-		{
-			"name": "Bear",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be {@condition frightened}."
-			]
-		},
-		{
-			"name": "Eagle",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft."
-			]
-		},
-		{
-			"name": "Wolf",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature {@condition prone} when you hit it with melee weapon attack."
-			]
-		},
-		{
-			"name": "Totemic Attunement",
-			"source": "PHB",
-			"page": 50,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||14"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||14"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||14|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||14|SCAG"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||14"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Path of the Battlerager",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"entries": [
-				"Known as Kuldjargh (literally \"axe idiot\") in Dwarvish, battleragers are dwarf followers of the gods of war and take the Path of the Battlerager. They specialize in wearing bulky, {@item spiked armor|scag} and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Restriction\u2014Dwarves Only|Barbarian||Battlerager|SCAG|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Battlerager Armor|Barbarian||Battlerager|SCAG|3"
-				}
-			]
-		},
-		{
-			"name": "Battlerager Armor",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this path at 3rd level, you gain the ability to use {@item spiked armor|scag} as a weapon.",
-				"While you are wearing {@item spiked armor|scag} and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes at a target within 5 feet of you. If the attack hits, the spikes deal {@damage 1d4} piercing damage. You use your Strength modifier for the attack and damage rolls.",
-				"Additionally, when you use the {@action Attack} action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds."
-			]
-		},
-		{
-			"name": "Restriction\u2014Dwarves Only",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
-				"Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."
-			]
-		},
-		{
-			"name": "Reckless Abandon",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
-			]
-		},
-		{
-			"name": "Battlerager Charge",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Beginning at 10th level, you can take the {@action Dash} action as a bonus action while you are raging."
-			]
-		},
-		{
-			"name": "Spiked Retribution",
-			"source": "SCAG",
-			"page": 121,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Battlerager",
-			"subclassSource": "SCAG",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't {@condition incapacitated}, and are wearing {@item spiked armor|scag}."
-			]
-		},
-		{
-			"name": "Path of the Beast",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Barbarians who walk the Path of the Beast draw their rage from a bestial spark burning within their souls. That beast bursts forth in the throes of rage, physically transforming the barbarian.",
-				"Such a barbarian might be inhabited by a primal spirit or be descended from shape-shifters. You can choose the origin of your feral might or determine it by rolling on the Origin of the Beast table.",
-				{
-					"type": "table",
-					"caption": "Origin of the Beast",
-					"colLabels": [
-						"d4",
-						"Origin"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"One of your parents is a lycanthrope, and you've inherited some of their curse."
-						],
-						[
-							"2",
-							"You are descended from an archdruid and inherited the ability to partially change shape."
-						],
-						[
-							"3",
-							"A fey spirit gifted you with the ability to adopt different bestial aspects."
-						],
-						[
-							"4",
-							"An ancient animal spirit dwells within you, allowing you to walk this path."
-						]
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Form of the Beast|Barbarian||Beast|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Form of the Beast",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Path of the Beast feature}",
-				"When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.",
-				"You choose the weapon's form each time you rage:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Bite",
-							"entry": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals {@damage 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
-						},
-						{
-							"type": "item",
-							"name": "Claws",
-							"entry": "Each of your hands transforms into a claw, which you can use as a weapon if it's empty. It deals {@damage 1d6} slashing damage on a hit. Once on each of your turns when you attack with a claw using the {@action Attack} action, you can make one additional claw attack as part of the same action."
-						},
-						{
-							"type": "item",
-							"name": "Tail",
-							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d8} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Bestial Soul",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Path of the Beast feature}",
-				"The feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
-				"You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish your next short or long rest:",
-				{
-					"type": "list",
-					"items": [
-						"You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
-						"You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
-						"When you jump, you can make a Strength ({@skill Athletics}) check and extend your jump by a number of feet equal to the check's total. You can make this special check only once per turn."
-					]
-				}
-			]
-		},
-		{
-			"name": "Infectious Fury",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Path of the Beast feature}",
-				"When you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
-				{
-					"type": "list",
-					"items": [
-						"The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
-						"The target takes {@damage 2d12} psychic damage."
-					]
-				},
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Call the Hunt",
-			"source": "TCE",
-			"page": 24,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Beast",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Path of the Beast feature}",
-				"The beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature).",
-				"You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can each use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a {@dice d6} and gain a bonus to the damage equal to the number rolled.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Path of Wild Magic",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Many places in the multiverse abound with beauty, intense emotion, and rampant magic; the Feywild, the Upper Planes, and other realms of supernatural power radiate with such forces and can profoundly influence people. As folk of deep feeling, barbarians are especially susceptible to these wild influences, with some barbarians being transformed by the magic. These magic-suffused barbarians walk the Path of Wild Magic. Elf, tiefling, aasimar, and genasi barbarians often seek this path, eager to manifest the otherworldly magic of their ancestors.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Magic Awareness|Barbarian||Wild Magic|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Wild Surge|Barbarian||Wild Magic|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Magic Awareness",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Path of Wild Magic feature}",
-				"As an action, you can open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60 feet of you that isn't behind total cover. When you sense a spell, you learn which school of magic it belongs to.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Wild Surge",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Path of Wild Magic feature}",
-				"The magical energy roiling inside you sometimes erupts from you. When you enter your rage, roll on the Wild Magic table to determine the magical effect produced.",
-				"If the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
-				{
-					"type": "table",
-					"caption": "Wild Magic",
-					"colLabels": [
-						"d8",
-						"Magical Effect"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"Shadowy tendrils lash around you. Each creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take {@damage 1d12} necrotic damage. You also gain {@dice 1d12} temporary hit points."
-						],
-						[
-							"2",
-							"You teleport up to 30 feet to an unoccupied space you can see. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
-						],
-						[
-							"3",
-							"An intangible spirit, which looks like a {@creature flumph} or a {@creature pixie} (your choice), appears within 5 feet of one creature of your choice that you can see within 30 feet of you. At the end of the current turn, the spirit explodes, and each creature within 5 feet of it must succeed on a Dexterity saving throw or take {@damage 1d6} force damage. Until your rage ends, you can use this effect again, summoning another spirit, on each of your turns as a bonus action."
-						],
-						[
-							"4",
-							"Magic infuses one weapon of your choice that you are holding. Until your rage ends, the weapon's damage type changes to force, and it gains the light and thrown properties, with a normal range of 20 feet and a long range of 60 feet. If the weapon leaves your hand, the weapon reappears in your hand at the end of the current turn."
-						],
-						[
-							"5",
-							"Whenever a creature hits you with an attack roll before your rage ends, that creature takes {@damage 1d6} force damage, as magic lashes out in retribution."
-						],
-						[
-							"6",
-							"Until your rage ends, you are surrounded by multi colored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus."
-						],
-						[
-							"7",
-							"Flowers and vines temporarily grow around you. Until your rage ends, the ground within 15 feet of you is {@quickref difficult terrain||3} for your enemies."
-						],
-						[
-							"8",
-							"A bolt of light shoots from your chest. Another creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take {@damage 1d6} radiant damage and be {@condition blinded} until the start of your next turn. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
-						]
-					],
-					"data": {
-						"tableInclude": true
-					}
-				}
-			]
-		},
-		{
-			"name": "Bolstering Magic",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Path of Wild Magic feature}",
-				"You can harness your wild magic to bolster yourself or a companion. As an action, you can touch one creature (which can be yourself) and confer one of the following benefits of your choice to that creature:",
-				{
-					"type": "list",
-					"items": [
-						"For 10 minutes, the creature can roll a {@dice d3} whenever making an attack roll or an ability check and add the number rolled to the {@dice d20} roll.",
-						"Roll a {@dice d3}. The creature regains one expended spell slot, the level of which equals the number rolled or lower (the creature's choice). Once a creature receives this benefit, that creature can't receive it again until after a long rest."
-					]
-				},
-				"You can take this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Unstable Backlash",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Path of Wild Magic feature}",
-				"When you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."
-			]
-		},
-		{
-			"name": "Controlled Surge",
-			"source": "TCE",
-			"page": 25,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Wild Magic",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Path of Wild Magic feature}",
-				"Whenever you roll on the Wild Magic table, you can roll the die twice and choose which of the two effects to unleash. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
-			]
-		},
-		{
-			"name": "Path of the Juggernaut",
-			"source": "TDCSR",
-			"page": 165,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 3,
-			"entries": [
-				"Barbarians who follow the Path of the Juggernaut stand so resolutely that none can deter them, and they swing their weapons with such force that all who stand against them are flung aside. In might and in spirit, juggernauts are immovable object and unstoppable force all at once.",
-				"Juggernaut barbarians can be found all over Tal'Dorei, and are common among the goliath warriors of the {@book Rivermaw herd|TDCSR|3|Rivermaw Herd} that wanders the {@book Dividing Plains|TDCSR|3|Dividing Plains}. Some {@book dwarves|TDCSR|4|dwarves} and humanoid survivalists of the {@book Cliffkeep Mountains|TDCSR|3|Cliffkeep Mountains} adopt this fighting style as an extension of their rugged determinism. And a number of stalwart juggernauts hail from the jungles of the {@book Rifenmist Peninsula|TDCSR|3|Rifenmist Peninsula}, having cast off the oppressive yoke of the {@book Iron Authority|TDCSR|3|Tz'Arrm, Helm of the Emperor}.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Thunderous Blows|Barbarian|PHB|Juggernaut|TDCSR|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Spirit of the Mountain|Barbarian|PHB|Juggernaut|TDCSR|3"
-				}
-			]
-		},
-		{
-			"name": "Spirit of the Mountain",
-			"source": "TDCSR",
-			"page": 166,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you harness your fury to anchor your feet to the ground, becoming a bulwark of strength. While you are raging, you can't be knocked {@condition prone} or moved along the ground against your will."
-			]
-		},
-		{
-			"name": "Thunderous Blows",
-			"source": "TDCSR",
-			"page": 165,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, your rage instills you with the strength to shove and smash your way through your foes, making any battlefield your domain. When you hit a creature with a melee attack while you're raging, you can push that creature up to 5 feet away from you in a direction of your choice. A creature that is Huge or larger makes a Strength {@quickref saving throws|PHB|2|1|saving throw} with a DC equal to 8 + your proficiency bonus + your Strength modifier. On a success, the creature is not pushed.",
-				{
-					"type": "inset",
-					"name": "Rules Tip: Forced Movement",
-					"page": 166,
-					"entries": [
-						"Usually when one creature moves out of a hostile creature's reach, the hostile creature can use its reaction to make an {@action opportunity attack}. However, forced movement\u2014such as being pushed by a Path of the Juggernaut barbarian's {@subclassFeature Thunderous Blows|Barbarian|PHB|Juggernaut|TDCSR|3} feature\u2014doesn't provoke {@action opportunity attack|PHB|opportunity attacks}.",
-						"Likewise, a juggernaut barbarian's {@subclassFeature Hurricane Strike|Barbarian|PHB|Juggernaut|TDCSR|10} feature allows an ally to make a melee weapon attack as a reaction only if the foe ends its forced movement within 5 feet of the ally. If a foe is pushed through other spaces within 5 feet of your allies, those allies can't make normal {@action opportunity attack|PHB|opportunity attacks} against the foe."
-					]
-				}
-			]
-		},
-		{
-			"name": "Demolishing Might",
-			"source": "TDCSR",
-			"page": 166,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, your melee weapon attacks deal an extra {@damage 1d8} damage to constructs, and deal double damage to objects and structures."
-			]
-		},
-		{
-			"name": "Resolute Stance",
-			"source": "TDCSR",
-			"page": 166,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Also at 6th level, you can temporarily refocus your combat ability to make yourself a bulwark of defense. At the start of your turn (no action required), you can assume a defensive stance that lasts until the start of your next turn. While in this stance, you can't be {@condition grappled}, attack rolls against you have {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}, and your weapon attacks are made with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}."
-			]
-		},
-		{
-			"name": "Hurricane Strike",
-			"source": "TDCSR",
-			"page": 166,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, your blows can hurl foes through the air and into the attacks of your allies. As a reaction when you push a creature at least 5 feet, you can then leap into an unoccupied space next to the creature. If you do so, the creature must succeed on a Strength {@quickref saving throws|PHB|2|1|saving throw} with a DC equal to 8 + your proficiency bonus + your Strength modifier or be knocked {@condition prone}. This leap costs no movement and does not provoke {@action opportunity attack|PHB|opportunity attacks}.",
-				"Additionally, whenever you push a creature into a space within 5 feet of one of your allies, the ally can use its reaction to make a melee weapon attack against that creature."
-			]
-		},
-		{
-			"name": "Thunderous Blows (10th Level)",
-			"source": "TDCSR",
-			"page": 165,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, you can push a creature up to 10 feet when you hit it with a melee attack while you're raging."
-			]
-		},
-		{
-			"name": "Unstoppable",
-			"source": "TDCSR",
-			"page": 166,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Juggernaut",
-			"subclassSource": "TDCSR",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, your fury in battle makes you unstoppable. While you're raging, your speed cannot be reduced, and you are immune to the {@condition frightened}, {@condition paralyzed}, {@condition prone}, and {@condition stunned} conditions.",
-				"If you are {@condition frightened}, {@condition paralyzed}, or {@condition stunned}, you can still use a bonus action to enter a rage (even if you can't otherwise take actions). You aren't affected by any of these conditions while you're raging."
-			]
-		},
-		{
-			"name": "Path of the Ancestral Guardian",
-			"source": "XGE",
-			"page": 9,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"Some barbarians hail from cultures that revere their ancestors. These tribes teach that the warriors of the past linger in the world as mighty spirits, who can guide and protect the living. When a barbarian who follows this path rages, the barbarian contacts the spirit world and calls on these guardian spirits for aid.",
-				"Barbarians who draw on their ancestral guardians can better fight to protect their tribes and their allies. In order to cement ties to their ancestral guardians, barbarians who follow this path cover themselves in elaborate tattoos that celebrate their ancestors' deeds. These tattoos tell sagas of victories against terrible monsters and other fearsome rivals.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Ancestral Protectors|Barbarian||Ancestral Guardian|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Ancestral Protectors",
-			"source": "XGE",
-			"page": 9,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends."
-			]
-		},
-		{
-			"name": "Spirit Shield",
-			"source": "XGE",
-			"page": 9,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 2d6}.",
-				"When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d6} at 10th level and by {@dice 4d6} at 14th level."
-			]
-		},
-		{
-			"name": "Consult the Spirits",
-			"source": "XGE",
-			"page": 9,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the {@spell augury} or {@spell clairvoyance} spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of {@spell clairvoyance} invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
-				"After you cast either spell in this way, you can't use this feature again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Vengeful Ancestors",
-			"source": "XGE",
-			"page": 9,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Ancestral Guardian",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage equal to the damage that your Spirit Shield prevents."
-			]
-		},
-		{
-			"name": "Path of the Storm Herald",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"All barbarians harbor a fury within. Their rage grants them superior strength, durability, and speed. Barbarians who follow the Path of the Storm Herald learn to transform that rage into a mantle of primal magic, which swirls around them. When in a fury, a barbarian of this path taps into the forces of nature to create powerful magical effects.",
-				"Storm heralds are typically elite champions who train alongside druids, rangers, and others sworn to protect nature. Other storm heralds hone their craft in lodges in regions wracked by storms, in the frozen reaches at the world's end, or deep in the hottest deserts.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Storm Aura|Barbarian||Storm Herald|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Storm Aura",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
-				"Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.",
-				"If your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Storm Soul",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, the storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|6"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|6"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|6"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Shielding Storm",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
-			]
-		},
-		{
-			"name": "Raging Storm",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, the power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|14"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|14"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|14"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Path of the Zealot",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
-				"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Fury|Barbarian||Zealot|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Warrior of the Gods|Barbarian||Zealot|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Divine Fury",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to {@dice 1d6} + half your barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature."
-			]
-		},
-		{
-			"name": "Warrior of the Gods",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, your soul is marked for endless battle. If a spell, such as {@spell raise dead}, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
-			]
-		},
-		{
-			"name": "Fanatical Focus",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, the divine power that fuels your rage can protect you. If you fail a saving throw while you're raging, you can reroll it, and you must use the new roll. You can use this ability only once per rage."
-			]
-		},
-		{
-			"name": "Zealous Presence",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Rage beyond Death",
-			"source": "XGE",
-			"page": 11,
-			"className": "Barbarian",
-			"classSource": "PHB",
-			"subclassShortName": "Zealot",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
-				"While you're raging, having 0 hit points doesn't knock you {@condition unconscious}. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends, and you die then only if you still have 0 hit points."
-			]
-		},
-		{
-			"name": "Elk",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift."
-			]
-		},
-		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps."
-			]
-		},
-		{
-			"name": "Elk",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. The elk spirit helps you roam far and fast."
-			]
-		},
-		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 6,
-			"entries": [
-				"You gain proficiency in two skills from the following list: {@skill Athletics}, {@skill Acrobatics}, {@skill Stealth}, and {@skill Survival}. The cat spirit hones your survival instincts."
-			]
-		},
-		{
-			"name": "Elk",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked {@condition prone} and take bludgeoning damage equal to {@dice 1d12} + your Strength modifier."
-			]
-		},
-		{
-			"name": "Tiger",
-			"source": "SCAG",
-			"page": 122,
-			"className": "Barbarian",
-			"classSource": "SCAG",
-			"subclassShortName": "Totem Warrior",
-			"subclassSource": "PHB",
-			"level": 14,
-			"entries": [
-				"While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
-			]
-		},
-		{
-			"name": "Desert",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
-			]
-		},
-		{
-			"name": "Sea",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes {@damage 1d6} lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to {@dice 2d6} at 10th level, {@dice 3d6} at 15th level, and {@dice 4d6} at 20th level."
-			]
-		},
-		{
-			"name": "Tundra",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
-			]
-		},
-		{
-			"name": "Desert",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 6,
-			"entries": [
-				"You gain resistance to fire damage, and you don't suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire."
-			]
-		},
-		{
-			"name": "Sea",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 6,
-			"entries": [
-				"You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet."
-			]
-		},
-		{
-			"name": "Tundra",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 6,
-			"entries": [
-				"You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."
-			]
-		},
-		{
-			"name": "Desert",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 14,
-			"entries": [
-				"Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to half your barbarian level."
-			]
-		},
-		{
-			"name": "Sea",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 14,
-			"entries": [
-				"When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked {@condition prone}, as if struck by a wave."
-			]
-		},
-		{
-			"name": "Tundra",
-			"source": "XGE",
-			"page": 10,
-			"className": "Barbarian",
-			"classSource": "XGE",
-			"subclassShortName": "Storm Herald",
-			"subclassSource": "XGE",
-			"level": 14,
-			"entries": [
-				"Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "野蛮人",
+      "ENG_name": "Barbarian",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "hd": {
+        "number": 1,
+        "faces": 12
+      },
+      "proficiency": [
+        "力量",
+        "体质"
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术",
+          "中等",
+          "{@item shield|phb|盾牌}"
+        ],
+        "weapons": [
+          "简单",
+          "武术"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:驯兽",
+                "属性检定:运动",
+                "属性检定:威吓",
+                "属性检定:自然",
+                "属性检定:察觉",
+                "属性检定:求生"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a)一把{@item 巨斧|phb} 或 (b)任意一把{@filter 军用近战武器|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
+          "(a)二把{@item 手斧|phb} 或 (b)任意一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}",
+          "一套{@item 探索者套装|phb}，和四把{@item 标枪|phb}"
+        ],
+        "goldAlternative": "{@dice 2d4 × 10|2d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "双手巨斧|PHB"
+            ],
+            "b": [
+              {
+                "equipmentType": "武术武器"
+              }
+            ]
+          },
+          {
+            "a": [
+              {
+                "item": "手斧|phb",
+                "quantity": 2
+              }
+            ],
+            "b": [
+              {
+                "equipmentType": "简易武器"
+              }
+            ]
+          },
+          {
+            "_": [
+              "探险家背包|phb",
+              {
+                "item": "标枪",
+                "quantity": 4
+              }
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "str": 13
+        },
+        "proficienciesGained": {
+          "armor": [
+            "{@item shield|phb|盾牌}"
+          ],
+          "weapons": [
+            "简单",
+            "武术"
+          ]
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "狂暴次数",
+            "狂暴伤害"
+          ],
+          "rows": [
+            "2",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "2",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "5",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "unlimited",
+            {
+              "type": "bonus",
+              "value": 4
+            }
+          ]
+        }
+      ],
+      "classFeatures": [
+        "愤怒|野蛮人||1",
+        "无甲防御|野蛮人||1",
+        "危险感知|野蛮人||2",
+        "鲁莽攻击|野蛮人||2",
+        {
+          "classFeature": "原始之路|野蛮人||3",
+          "gainSubclassFeature": true
+        },
+        "原始知识|野蛮人||3|TCE",
+        "能力值提升|野蛮人||4",
+        "额外攻击|野蛮人||5",
+        "快速移动|野蛮人||5",
+        {
+          "classFeature": "道路特性|野蛮人||6",
+          "gainSubclassFeature": true
+        },
+        "野性直觉|野蛮人||7",
+        "本能扑击|野蛮人||7|TCE",
+        "能力值提升|野蛮人||8",
+        "残酷暴击（1骰）|野蛮人||9",
+        {
+          "classFeature": "职业特性|野蛮人||10",
+          "gainSubclassFeature": true
+        },
+        "无情狂怒|野蛮人||11",
+        "能力值提升|野蛮人||12",
+        "残酷暴击（2骰子）|野蛮人||13",
+        {
+          "classFeature": "职业特性|野蛮人||14",
+          "gainSubclassFeature": true
+        },
+        "持续愤怒|野蛮人||15",
+        "能力值提升|野蛮人||16",
+        "残酷暴击（3骰）|野蛮人||17",
+        "不屈之力|野蛮人||18",
+        "能力值提升|野蛮人||19",
+        "原始冠军|野蛮人||20"
+      ],
+      "subclassTitle": "野蛮人:原初道途",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "狂战士道途",
+      "ENG_name": "Path of the Berserker",
+      "shortName": "狂战士",
+      "source": "PHB",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 49,
+      "srd": true,
+      "subclassFeatures": [
+        "狂战士之道|野蛮人||狂战士||3",
+        "无意识狂怒|野蛮人|狂战士||6",
+        "威慑存在|野蛮人||狂战士||10",
+        "反击|野蛮人||狂战士||14"
+      ]
+    },
+    {
+      "name": "图腾武者道途",
+      "ENG_name": "Path of the Totem Warrior",
+      "shortName": "图腾勇士",
+      "source": "PHB",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 50,
+      "additionalSpells": [
+        {
+          "innate": {
+            "3": {
+              "ritual": [
+                "野兽知觉",
+                "动物交谈术"
+              ]
+            },
+            "10": {
+              "ritual": [
+                "问道自然"
+              ]
+            }
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "图腾战士之路|野蛮人|图腾战士||3",
+        "野兽之相|野蛮人||图腾战士||6",
+        "灵行者|野蛮人||图腾战士||10",
+        "图腾调谐|野蛮人||图腾战士||14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "战狂道途",
+      "ENG_name": "Path of the Battlerager",
+      "shortName": "战狂",
+      "source": "SCAG",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 121,
+      "subclassFeatures": [
+        "战斗狂战士之路|野蛮人||战斗狂战士|SCAG|3",
+        "鲁莽狂奔|野蛮人||战斗狂怒者|SCAG|6",
+        "战斗狂徒冲锋|野蛮人||战斗狂徒|SCAG|10",
+        "尖刺复仇|野蛮人||战斗狂怒者|SCAG|14"
+      ]
+    },
+    {
+      "name": "先祖守卫道途",
+      "ENG_name": "Path of the Ancestral Guardian",
+      "shortName": "先祖守卫",
+      "source": "XGE",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 9,
+      "spellcastingAbility": "wis",
+      "additionalSpells": [
+        {
+          "innate": {
+            "10": [
+              "卜筮",
+              "锐眼术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "祖先守护者之路|野蛮人||祖先守护者|XGE|3",
+        "灵魂盾牌|野蛮人||祖先守护者|XGE|6",
+        "咨询灵魂|野蛮人||祖先守护者|XGE|10",
+        "复仇祖先|野蛮人||祖先守护者|XGE|14"
+      ]
+    },
+    {
+      "name": "风暴先驱道途",
+      "ENG_name": "Path of the Storm Herald",
+      "shortName": "风暴先声",
+      "source": "XGE",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 10,
+      "subclassFeatures": [
+        "风暴使者之路|野蛮人||风暴使者|XGE|3",
+        "风暴之魂|野蛮人||风暴使者|XGE|6",
+        "护盾风暴|野蛮人||风暴使者|XGE|10",
+        "愤怒风暴|野蛮人|风暴使者|XGE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "狂热者道途",
+      "ENG_name": "Path of the Zealot",
+      "shortName": "狂热者",
+      "source": "XGE",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 11,
+      "subclassFeatures": [
+        "狂热者之路|野蛮人|狂热者|XGE|3",
+        "狂热专注|野蛮人||狂热者|XGE|6",
+        "热忱威严|野蛮人||狂信徒|XGE|10",
+        "超越死亡的愤怒|野蛮人||狂热者|XGE|14"
+      ]
+    },
+    {
+      "name": "野兽道途",
+      "ENG_name": "Path of the Beast",
+      "shortName": "野兽",
+      "source": "TCE",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 24,
+      "subclassFeatures": [
+        "野兽之路|野蛮人||野兽|TCE|3",
+        "野兽之魂|野蛮人|野兽|TCE|6",
+        "传染狂怒|野蛮人||野兽|TCE|10",
+        "呼唤狩猎|野蛮人||野兽|TCE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "狂野魔法道途",
+      "ENG_name": "Path of Wild Magic",
+      "shortName": "狂野魔法",
+      "source": "TCE",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 25,
+      "subclassFeatures": [
+        "野性魔法之路|野蛮人||野性魔法|TCE|3",
+        "鼓舞魔法|野蛮人|野性魔法|TCE|6",
+        "不稳定反击|野蛮人||野魔法|TCE|10",
+        "控制性涌动|野蛮人||野性魔法|TCE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "巨像道途",
+      "ENG_name": "Path of the Juggernaut",
+      "shortName": "巨型战车",
+      "source": "TDCSR",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 165,
+      "subclassFeatures": [
+        "巨无霸之路|野蛮人|PHB|巨无霸|TDCSR|3",
+        "破坏之力|野蛮人|PHB|巨人行者|TDCSR|6",
+        "坚决姿态|野蛮人|PHB|巨无霸|TDCSR|6",
+        "雷霆打击（10级）|野蛮人|PHB|巨兽|TDCSR|10",
+        "飓风打击|野蛮人|PHB|巨型战车|TDCSR|10",
+        "不可阻挡|野蛮人|PHB|巨无霸|TDCSR|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "巨人道途",
+      "ENG_name": "Path of the Giant",
+      "shortName": "巨人",
+      "source": "BGG",
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "page": 1,
+      "spellcastingAbility": "wis",
+      "additionalSpells": [
+        {
+          "innate": {
+            "3": [
+              "德鲁伊术#c"
+            ]
+          }
+        },
+        {
+          "innate": {
+            "3": [
+              "奇迹术#c"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "巨人之路|野蛮人||巨人|BGG|3",
+        "元素斩|野蛮人||巨人|BGG|6",
+        "强力推动|野蛮人||巨人|BGG|10",
+        "造物巨像|野蛮人||巨人|BGG|14"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "野蛮人:狂暴",
+      "ENG_name": "Rage",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "在战斗中，你以原始的狂野战斗。在你的回合，你可以作为奖励行动进入狂暴状态。",
+        "在狂暴状态下，如果你没有穿戴重甲，你将获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "你在力量检定和力量豁免检定中具有优势。",
+            "当你使用力量进行近战武器攻击时，你的伤害骰获得+2的加值。这个加值随着你的等级提升而增加。",
+            "你对钝击、穿刺和斩击伤害具有抗性。"
+          ]
+        },
+        "如果你能够施放法术，在狂暴状态下你不能施放法术或集中精神维持法术。",
+        "你的狂暴持续1分钟。如果你被击昏或你的回合结束时，你从上次回合以来没有攻击过一个敌对生物或在此期间受到伤害，狂暴会提前结束。你也可以在你的回合作为一个奖励行动结束你的狂暴。",
+        "一旦你狂暴的次数达到了你的野蛮人等级所允许的最大次数，你必须完成一次长时间的休息才能再次狂暴。你在1级时可以狂暴2次，在3级时3次，在6级时4次，在12级时5次，在17级时6次。"
+      ]
+    },
+    {
+      "name": "无甲防御",
+      "ENG_name": "Unarmored Defense",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "当你没有穿戴任何护甲时，你的护甲等级等于10加上你的敏捷调整值加上你的体质调整值。即使使用盾牌，你仍然可以获得这个好处。"
+      ]
+    },
+    {
+      "name": "野蛮人:险境感知",
+      "ENG_name": "Danger Sense",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "在2级时，你获得了一种难以置信的感知能力，能够察觉到周围事物的异常，这让你在躲避危险时获得优势。对于你能看见的效果，如陷阱和法术，你在敏捷豁免投掷上具有优势。要获得此好处，你不能处于{@condition blinded}（失明）、{@condition deafened}（失聪）或{@condition incapacitated}（失去能力）状态。"
+      ]
+    },
+    {
+      "name": "野蛮人:鲁莽攻击",
+      "ENG_name": "Reckless Attack",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "从2级开始，你可以抛开所有对防御的顾虑，以疯狂的绝望进行攻击。在你的回合进行第一次攻击时，你可以选择鲁莽攻击。这样做将使你在这个回合使用力量进行的近战武器攻击检定获得优势，但在你的下一个回合之前，对你进行的攻击检定也获得优势。"
+      ]
+    },
+    {
+      "name": "野蛮人:原初学识",
+      "ENG_name": "Primal Knowledge",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 第3级野蛮人 {@variantrule 可选职业特性|tce|可选特性}}",
+        "当你达到3级时，以及在10级时再次，你可以选择一项从野蛮人1级可用技能列表中的技能并变得熟练。"
+      ]
+    },
+    {
+      "name": "野蛮人:原初道途",
+      "ENG_name": "Primal Path",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在3级时，你从可用路径列表中选择一条路径，这将塑造你的狂暴的本质。你的选择将在3级时赋予你特性，并在6级、10级和14级时再次赋予你特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "额外攻击",
+      "ENG_name": "Extra Attack",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 5,
+      "entries": [
+        "从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+      ]
+    },
+    {
+      "name": "野蛮人:快速移动",
+      "ENG_name": "Fast Movement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 5,
+      "entries": [
+        "从5级开始，当你不穿戴重甲时，你的速度增加10英尺。"
+      ]
+    },
+    {
+      "name": "道途能力",
+      "ENG_name": "Path Feature",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "在6级时，你从你的原始之路获得一个特性。"
+      ]
+    },
+    {
+      "name": "野蛮人:野性直觉",
+      "ENG_name": "Feral Instinct",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 7,
+      "entries": [
+        "到7级时，你的本能如此敏锐，你在先攻骰上获得优势。",
+        "此外，如果你在战斗开始时处于{@quickref Surprise|PHB|3|0|惊讶}状态并且没有处于{@condition incapacitated}状态，你可以在你的第一回合正常行动，但前提是你必须在那个回合做其他任何事情之前进入狂暴状态。"
+      ]
+    },
+    {
+      "name": "野蛮人:直觉猛扑",
+      "ENG_name": "Instinctive Pounce",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 7,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 7级野蛮人 {@variantrule 可选职业特性|tce|可选特性}}",
+        "作为你进入狂暴状态的奖励动作的一部分，你可以移动至多你速度的一半。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "凶蛮重击(1颗骰)",
+      "ENG_name": "Brutal Critical (1 die)",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 9,
+      "entries": [
+        "从9级开始，在确定近战攻击致命一击的额外伤害时，你可以额外掷一个武器伤害骰。",
+        "这在13级时增加到两个额外骰子，在17级时增加到三个额外骰子。"
+      ]
+    },
+    {
+      "name": "道途能力",
+      "ENG_name": "Path feature",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "在10级时，你从你的原始之路获得一个特性。"
+      ]
+    },
+    {
+      "name": "野蛮人:坚韧狂暴",
+      "ENG_name": "Relentless Rage",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 11,
+      "entries": [
+        "从11级开始，你的狂暴可以让你在遭受严重伤害时继续战斗。如果你在狂暴状态下生命值降至0点且没有直接死亡，你可以进行一次DC 10的体质豁免投掷。如果你成功，你的生命值将降至1点。",
+        "每次使用此特性后，DC（难度等级）增加5。当你完成短休或长休后，DC重置为10。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "凶蛮重击(2颗骰)",
+      "ENG_name": "Brutal Critical (2 dice)",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 13,
+      "entries": [
+        "在13级时，当你在近战攻击中进行致命一击时，你可以额外掷两个武器伤害骰来确定额外伤害。",
+        "这在17级时增加到三个额外骰子。"
+      ]
+    },
+    {
+      "name": "道途能力",
+      "ENG_name": "Path feature",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在14级时，你从你的原始之路获得一个特性。"
+      ]
+    },
+    {
+      "name": "野蛮人:持久狂暴",
+      "ENG_name": "Persistent Rage",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 15,
+      "entries": [
+        "从15级开始，你的狂暴变得如此猛烈，它只会在你陷入{@condition 无意识}或选择结束它时提前结束。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "凶蛮重击(3颗骰)",
+      "ENG_name": "Brutal Critical (3 dice)",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，当你在近战攻击中进行致命一击时，你可以额外掷三个武器伤害骰来确定额外伤害。"
+      ]
+    },
+    {
+      "name": "野蛮人:不屈勇武",
+      "ENG_name": "Indomitable Might",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 18,
+      "entries": [
+        "从18级开始，如果你的力量检定总和小于你的力量值，你可以使用该力量值代替总和。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "野蛮人:原初斗士",
+      "ENG_name": "Primal Champion",
+      "source": "PHB",
+      "page": 46,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "在20级时，你体现了荒野的力量。你的力量和体质得分增加4点。这些得分的最大值现在是24。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "巨人之力",
+      "ENG_name": "Giant Power",
+      "source": "BGG",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 3,
+      "entries": [
+        "{@i 3级巨人之路特性}",
+        "当你选择这条路径时，你学会说、读、写巨人语或你自己选择的另一种语言（如果你已经知道巨人语）。此外，你可以选择学习一个你选择的戏法：要么是{@spell 德鲁伊之术}要么是{@spell 魔法术}。对于这个法术，智慧是你的施法能力。"
+      ]
+    },
+    {
+      "name": "巨人道途:巨人之灾",
+      "ENG_name": "Giant's Havoc",
+      "source": "BGG",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 3,
+      "entries": [
+        "{@i 3级巨人之路特性}",
+        "你的狂暴从巨人的原始力量中汲取力量，将你变成一个巨大的毁灭力量。在狂暴状态下，你将获得以下好处：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "粉碎投掷",
+              "ENG_name": "Crushing Throw",
+              "entry": "当你使用力量进行投掷武器的远程攻击并成功命中时，你可以将你的狂暴伤害加值加到攻击的伤害骰上。"
+            },
+            {
+              "type": "item",
+              "name": "巨人体型",
+              "ENG_name": "Giant Stature",
+              "entry": "你的触及范围增加5英尺，如果你比大型（Large）小，你将变成大型，你穿戴的任何物品也会随之变大。如果空间不足以让你增大体型，你的体型将不会改变。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巨人道途",
+      "ENG_name": "Path of the Giant",
+      "source": "BGG",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 3,
+      "entries": [
+        "选择巨人之路的野蛮人从与巨人相同的原始力量中汲取力量。当他们狂暴时，这些野蛮人会涌动着元素力量，体型增大，呈现出唤起巨人荣耀的形态。一些野蛮人看起来像是自己放大的版本，他们的眼睛和武器周围可能闪烁着元素能量的暗示。其他野蛮人的变化更为戏剧性，他们的外观变成了真正的巨人或类似于元素生物的形态，被火焰、霜冻或闪电所环绕。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "巨人之力|野蛮人|巨人|BGG|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "巨人的浩劫|野蛮人|巨人|BGG|3"
+        }
+      ]
+    },
+    {
+      "name": "巨人道途:元素战刃",
+      "ENG_name": "Elemental Cleaver",
+      "source": "BGG",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级巨人之路特性}",
+        "你与巨人元素力量的联系增强，你学会了将武器注入原始能量。",
+        "When you enter your rage, you can choose one weapon that you are holding and infuse it with one of the following damage types: acid, cold, fire, thunder, or lightning. While you wield the infused weapon during your rage, the weapon's damage type changes to the chosen type, it deals an extra {@dice 1d6} damage of the chosen type when it hits, and it gains the thrown property, with a normal range of 20 feet and a long range of 60 feet. If you throw the weapon, it reappears in your hand the instant after it hits or misses a target. The infused weapon's benefits are suppressed while a creature other than you wields it.",
+        "在狂暴状态下并持有注入武器时，你可以使用奖励动作将注入武器的当前伤害类型更改为上述伤害类型选项中的另一个。"
+      ]
+    },
+    {
+      "name": "巨人道途:伟力推动",
+      "ENG_name": "Mighty Impel",
+      "source": "BGG",
+      "page": 12,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 10级巨人之路特性}",
+        "你与巨人之力的联系使你能够在战场上投掷盟友和敌人。在狂暴状态下作为奖励动作，你可以选择你触及范围内的一个中等体型或更小的生物，并将其移动到你能看到的30英尺内的未被占据的空间。不愿意的生物必须成功进行力量豁免检定（DC等于8 + 你的熟练加值 + 你的力量调整值）以避免效果。",
+        "如果在这次移动结束时，被投掷的生物不在可以支撑它的表面或液体上，该生物就会坠落，正常受到伤害并处于{@condition 俯卧}状态。"
+      ]
+    },
+    {
+      "name": "巨人道途:创世巨像",
+      "ENG_name": "Demiurgic Colossus",
+      "source": "BGG",
+      "page": 12,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨人",
+      "subclassSource": "BGG",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级巨人之路特性}",
+        "你的狂暴原始力量变得更加强烈。当你狂暴时，你的触及范围增加10英尺，你的体型可以增加到大型（Large）或超大型（Huge）（由你选择），并且你可以使用你的强力推动来移动大型或更小的生物。",
+        "In addition, the extra damage dealt by your Elemental Cleaver feature increases to {@dice 2d6}."
+      ]
+    },
+    {
+      "name": "狂战士道途",
+      "ENG_name": "Path of the Berserker",
+      "source": "PHB",
+      "page": 49,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂战士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "对于一些野蛮人来说，狂暴是一种手段——目的是暴力。狂战士之路是一条无拘无束的愤怒之路，沾满了鲜血。当你进入狂战士的狂暴状态时，你在战斗的混乱中感到兴奋，不顾自己的健康或福祉。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "狂暴|野蛮人|狂战士||3"
+        }
+      ]
+    },
+    {
+      "name": "狂战士道途:狂怒",
+      "ENG_name": "Frenzy",
+      "source": "PHB",
+      "page": 49,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂战士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级选择这条路径时，你可以在狂暴时进入狂暴状态。如果你这样做，在狂暴持续期间，你可以在每个回合之后作为额外动作进行一次近战武器攻击。当你的狂暴结束时，你将遭受一级{@condition 疲劳}状态。"
+      ]
+    },
+    {
+      "name": "狂战士道途:无我狂暴",
+      "ENG_name": "Mindless Rage",
+      "source": "PHB",
+      "page": 49,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂战士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，当你处于狂暴状态时，你不能被{@condition charmed}（魅惑）或{@condition frightened}（恐惧）。如果你在进入狂暴状态时处于{@condition charmed}或{@condition frightened}状态，该效果在狂暴持续期间会被暂停。"
+      ]
+    },
+    {
+      "name": "狂战士道途:威慑之姿",
+      "ENG_name": "Intimidating Presence",
+      "source": "PHB",
+      "page": 49,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂战士",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你可以使用你的行动来用你威胁性的存在恐吓某人。当你这样做时，选择一个你能在30英尺内看到的生物。如果这个生物能看见或听见你，它必须进行一次智力豁免检定（DC等于8 + 你的熟练加值 + 你的魅力调整值），否则直到你下一个回合结束时被{@condition 惊吓}。在随后的回合中，你可以使用你的行动来延长这个效果对{@condition 惊吓}生物的持续时间，直到你下一个回合结束。如果生物在其回合结束时不在视线范围内或距离你超过60英尺，这个效果就会结束。",
+        "如果生物成功通过其豁免检定，你在接下来的24小时内不能再次对那个生物使用这个特性。"
+      ]
+    },
+    {
+      "name": "狂战士道途:报偿",
+      "ENG_name": "Retaliation",
+      "source": "PHB",
+      "page": 49,
+      "srd": true,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂战士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，当你受到距离你5英尺内的生物造成的伤害时，你可以使用你的反应对那个生物进行一次近战武器攻击。"
+      ]
+    },
+    {
+      "name": "熊",
+      "ENG_name": "Bear",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "当处于狂暴状态时，你对所有伤害具有抗性，除了心灵伤害。熊之精神使你足够坚韧，能够承受任何惩罚。"
+      ]
+    },
+    {
+      "name": "鹰",
+      "ENG_name": "Eagle",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "当你在狂暴状态下且不穿戴重甲时，其他生物对你进行的机会攻击检定具有劣势，你可以在你的回合将{@action 冲刺}动作作为奖励动作使用。鹰的精神使你成为一个捕食者，能够轻松地穿梭于战斗之中。"
+      ]
+    },
+    {
+      "name": "图腾武者道途",
+      "ENG_name": "Path of the Totem Warrior",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "图腾战士之路是一段精神之旅，野蛮人接受一个精神动物作为向导、保护者和灵感来源。在战斗中，你的图腾精神赋予你超自然的力量，为你的野蛮狂暴增添魔法动力。",
+        "大多数野蛮人部落认为图腾动物是某个特定氏族的亲属。在这种情况下，一个人拥有超过一个图腾动物精神是不寻常的，尽管也有例外。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "灵魂探寻者|野蛮人||图腾战士||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "图腾之灵|野蛮人||图腾战士||3"
+        }
+      ]
+    },
+    {
+      "name": "狼",
+      "ENG_name": "Wolf",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "当你处于狂暴状态时，你的朋友在对距离你5英尺内的任何敌对你生物进行近战攻击时具有优势。狼的精神使你成为猎人的领袖。"
+      ]
+    },
+    {
+      "name": "图腾武者道途:精魄寻者",
+      "ENG_name": "Spirit Seeker",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "你选择的是一条与自然世界协调一致的道路，赋予你与野兽的亲缘关系。在3级时，当你选择这条道路，你获得了施放{@spell 野兽感知}和{@spell 与动物对话}法术的能力，但只能作为仪式，如{@book 第10章|PHB|10|仪式}中所述。"
+      ]
+    },
+    {
+      "name": "图腾武者道途:图腾精魄",
+      "ENG_name": "Totem Spirit",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，当你选择这条路径，你选择一个图腾之灵并获得它的特征。你必须制作或获得一个物理图腾物品——一个护身符或类似的装饰品——它结合了图腾动物的皮毛或羽毛、爪子、牙齿或骨头。根据你的选择，你还会获得一些让你想起你的图腾之灵的微小身体特征。例如，如果你有熊图腾之灵，你可能异常多毛且皮肤厚实，或者如果你的图腾是鹰，你的眼睛会变成鲜亮的黄色。",
+        "你的图腾动物可能是与这里列出的动物相关，但更适合你的家乡的动物。例如，你可以选择鹰或秃鹫来代替鹰。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "熊|野蛮人||图腾战士||3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "鹰|野蛮人||图腾战士||3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "麋鹿|野蛮人|SCAG|图腾战士||3|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "虎|野蛮人|SCAG|图腾战士||3|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "狼|野蛮人||图腾战士||3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "熊",
+      "ENG_name": "Bear",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "entries": [
+        "你获得了熊的力量。你的携带能力（包括最大负载和最大举起重量）翻倍，并且在进行力量检定以推动、拉动、举起或破坏物体时具有优势。"
+      ]
+    },
+    {
+      "name": "鹰",
+      "ENG_name": "Eagle",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "entries": [
+        "你获得了鹰的视力。你可以毫不费力地看到1英里远的地方，能够分辨出即使是非常细小的细节，就好像你在看距离你不到100英尺的东西一样。此外，昏暗的光线不会给你的智慧（{@skill 感知}）检定带来劣势。"
+      ]
+    },
+    {
+      "name": "狼",
+      "ENG_name": "Wolf",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "entries": [
+        "你获得了狼的狩猎直觉。你可以在快速移动时追踪其他生物，并且在正常移动时可以悄无声息地移动。"
+      ]
+    },
+    {
+      "name": "兽之形",
+      "ENG_name": "Aspect of the Beast",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你根据你选择的图腾动物获得一个魔法益处。你可以选择与3级时相同的动物，或者选择一个不同的动物。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "熊|野蛮人||图腾战士||6"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "鹰|野蛮人||图腾战士||6"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "麋鹿|野蛮人|SCAG|图腾战士||6|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "虎|野蛮人|SCAG|图腾战士||6|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "狼|野蛮人||图腾战士||6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "精魂行者",
+      "ENG_name": "Spirit Walker",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你可以施放{@spell 与自然沟通}法术，但只能作为仪式。当你这样做时，你为图腾之灵或野兽之相选择的一种动物的精神版本会出现在你面前，传达你寻求的信息。"
+      ]
+    },
+    {
+      "name": "熊",
+      "ENG_name": "Bear",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在你狂暴时，任何对你怀有敌意的生物如果在你5英尺范围内，对除你或其他具有此特性的角色外的目标进行攻击检定时具有劣势。如果敌人看不见或听不见你，或者它不能被{@condition 惊吓}，则对此效果免疫。"
+      ]
+    },
+    {
+      "name": "鹰",
+      "ENG_name": "Eagle",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在狂暴状态下，你的飞行速度等同于你当前的行走速度。这个好处只能在短暂的爆发中工作；如果你的回合结束时你在空中，而没有其他东西支撑你，你就会坠落。"
+      ]
+    },
+    {
+      "name": "狼",
+      "ENG_name": "Wolf",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在你狂暴时，你可以在你的回合使用额外动作，当你用近战武器攻击击中一个大型或更小的生物时，将其击倒为{@condition 俯卧}状态。"
+      ]
+    },
+    {
+      "name": "图腾武者道途:图腾同调",
+      "ENG_name": "Totemic Attunement",
+      "source": "PHB",
+      "page": 50,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你根据你选择的一个图腾动物获得一个魔法好处。你可以选择之前选择过的相同动物，或者选择一个不同的动物。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "熊|野蛮人||图腾战士||14"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "鹰|野蛮人||图腾战士||14"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "麋鹿|野蛮人|SCAG|图腾战士||14|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "虎|野蛮人|SCAG|图腾战士||14|SCAG"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "狼|野蛮人||图腾战士||14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "战狂道途",
+      "ENG_name": "Path of the Battlerager",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "entries": [
+        "在矮人语中被称为Kuldjargh（字面意思是“斧头白痴”），战斗狂战士是战神的矮人追随者，他们选择了战斗狂战士之路。他们专门穿着笨重的{@item 带刺盔甲|scag}，并投身于战斗，用自己的身体进行打击，并让自己沉浸在战斗的狂怒之中。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "限制—仅限矮人|野蛮人||战斗狂战士|SCAG|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战斗狂战士装甲|野蛮人||战斗狂战士|SCAG|3"
+        }
+      ]
+    },
+    {
+      "name": "战狂道途:战狂装甲",
+      "ENG_name": "Battlerager Armor",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这条道路，你获得了将{@item 带刺盔甲|scag}用作武器的能力。",
+        "当你穿戴着{@item 带刺装甲|scag}并且在狂暴状态下时，你可以使用奖励动作对距离你5英尺内的目标进行一次近战武器攻击，使用你的装甲刺。如果攻击命中，刺会造成{@damage 1d4}穿刺伤害。你使用你的力量调整值来进行攻击和伤害骰。",
+        "此外，当你使用{@action 攻击}动作去摔跤一个生物时，如果你的摔跤检定成功，目标会受到3点穿刺伤害。"
+      ]
+    },
+    {
+      "name": "限制—仅限矮人",
+      "ENG_name": "Restriction—Dwarves Only",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "只有矮人可以走上战斗狂战士之路。战斗狂战士在矮人社会和文化中占据了一个特殊的位置。",
+        "你的地下城主（DM）可以取消这个限制，以更好地适应战役。这个限制存在于被遗忘的国度中。它可能不适用于你的地下城主的设定或你地下城主版本的国度。"
+      ]
+    },
+    {
+      "name": "战狂道途:凶蛮无羁",
+      "ENG_name": "Reckless Abandon",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，当你在狂暴状态下使用鲁莽攻击时，你还会获得等同于你体质调整值（最少为1）的临时生命值。如果你的狂暴结束时还有剩余的临时生命值，它们就会消失。"
+      ]
+    },
+    {
+      "name": "战狂道途:战狂冲锋",
+      "ENG_name": "Battlerager Charge",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你可以在狂暴状态下将{@action 冲刺}动作作为奖励动作进行。"
+      ]
+    },
+    {
+      "name": "战狂道途:钉刺反冲",
+      "ENG_name": "Spiked Retribution",
+      "source": "SCAG",
+      "page": 121,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "战狂",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，当一个生物在你5英尺范围内用近战攻击击中你时，如果你处于狂暴状态，没有处于{@condition 失去能力}状态，并且穿戴着{@item 带刺盔甲|scag}，攻击者会受到3点穿刺伤害。"
+      ]
+    },
+    {
+      "name": "野兽道途",
+      "ENG_name": "Path of the Beast",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "野兽",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "选择野兽之路的野蛮人从他们灵魂深处燃烧的野兽之火中汲取狂暴之力。在狂暴的挣扎中，野兽爆发出来，使野蛮人的身体发生物理变化。",
+        "这样的野蛮人可能被原始精神所占据，或者是变形者的后代。你可以选择你的野性力量的起源，或者通过掷骰子在野兽起源表上决定。",
+        {
+          "type": "table",
+          "caption": "野兽起源",
+          "colLabels": [
+            "d4",
+            "当我还是婴儿时，我被浸泡在多头蛇的血液中，我的伤口愈合得太快，无法成为致命的伤害。"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "你的父母之一是狼人，你继承了他们的一些诅咒。",
+            "2",
+            "你是从一个大德鲁伊那里继承了部分变形能力。",
+            "3",
+            "一个仙女之灵赋予了你采纳不同野兽特征的能力。",
+            "4",
+            "一个古老的动物之灵栖息在你体内，使你能够走上这条道路。"
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "野兽形态|野蛮人||野兽|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "野兽道途:野兽之形",
+      "ENG_name": "Form of the Beast",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "野兽",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级野兽之路特性}",
+        "当你进入狂暴状态时，你可以变身，揭示你内在的野兽之力。直到狂暴结束，你显现出一个天然武器。它对你来说被视为一种简单的近战武器，当你用它攻击时，你可以像平常一样将你的力量调整值加到攻击和伤害骰上。",
+        "每次狂暴时，你选择武器的形式：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "啃咬",
+              "ENG_name": "Bite",
+              "entry": "你的嘴巴变成了野兽的口鼻或巨大的颚部（由你选择）。命中时造成{@damage 1d8}穿刺伤害。每当你在回合中用这次咬击伤害生物时，如果你的生命值少于一半，你将根据你的熟练加值恢复一定数量的生命值。"
+            },
+            {
+              "type": "item",
+              "name": "爪抓",
+              "ENG_name": "Claws",
+              "entry": "你的每只手都变成了爪子，如果手是空的，你可以将其用作武器。它在命中时造成{@damage 1d6}斩击伤害。每次在你的回合，当你使用{@action 攻击}动作用爪子攻击时，你可以作为同一动作的一部分进行一次额外的爪子攻击。"
+            },
+            {
+              "type": "item",
+              "name": "尾击",
+              "ENG_name": "Tail",
+              "entry": "You grow a lashing, spiny tail, which deals {@damage 1d8} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "野兽道途:兽性之魂",
+      "ENG_name": "Bestial Soul",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "野兽",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级野兽之路特性}",
+        "你内在的野性力量增强，使你的野兽形态中的天然武器在克服对非魔法攻击和伤害的抗性和免疫方面被视为魔法武器。",
+        "你也可以改变你的形态，以帮助你适应周围环境。当你完成一次短休或长休时，选择以下好处之一，持续到你完成下一次短休或长休：",
+        {
+          "type": "list",
+          "items": [
+            "你获得了等同于你行走速度的游泳速度，并且你可以在水下呼吸。",
+            "你获得的攀爬速度等同于你的行走速度，你可以攀爬困难的表面，包括在天花板上倒挂，而无需进行能力检定。",
+            "当你跳跃时，你可以进行一次力量（{@skill 运动}）检定，并将你的跳跃距离延长等于检定结果的总和的英尺数。你每个回合只能进行这一次特殊检定。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "野兽道途:感染之怒",
+      "ENG_name": "Infectious Fury",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "野兽",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{\"i\" : \"10级野兽之路特性\"}",
+        "当你在狂暴状态下用你的天然武器击中生物时，你体内的野兽可以诅咒你的目标，使其陷入狂暴。目标必须进行一次智力豁免检定（DC等于8 + 你的体质调整值 + 你的熟练加值），否则将遭受以下效果之一（由你选择）：",
+        {
+          "type": "list",
+          "items": [
+            "目标必须使用其反应来对另一个你能看到的生物进行近战攻击。",
+            "目标承受{@damage 2d12}精神伤害。"
+          ]
+        },
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "野兽道途:狩猎之唤",
+      "ENG_name": "Call the Hunt",
+      "source": "TCE",
+      "page": 24,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "野兽",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级野兽之路特性}",
+        "你内在的野兽变得如此强大，以至于你可以将它的凶猛传播给其他人，并从他们加入你的狩猎中获得韧性。当你进入狂暴状态时，你可以选择与你能看到的、在你30英尺范围内的其他自愿生物数量，数量等于你的体质调整值（最少一个生物）。",
+        "You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can each use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a {@dice d6} and gain a bonus to the damage equal to the number rolled.",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "狂野魔法道途",
+      "ENG_name": "Path of Wild Magic",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "多元宇宙中的许多地方充满了美丽、强烈的情感和猖獗的魔法；仙女王国、上层位面和其他超自然力量的领域都散发着这样的力量，并且可以深刻地影响人们。作为情感深沉的族群，野蛮人特别容易受到这些野性影响，一些野蛮人被魔法所转变。这些充满魔法的野蛮人走上了野魔法之路。精灵、提夫林、阿斯莫、和吉斯扬人野蛮人经常寻求这条道路，渴望显现他们祖先的异界魔法。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "魔法感知|野蛮人||野性魔法|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "野性涌动|野蛮人||野性魔法|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "狂野魔法道途:魔法察觉",
+      "ENG_name": "Magic Awareness",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级野魔法之路特性}",
+        "作为动作，你可以开启你的感知，察觉集中的魔法存在。直到你下一个回合结束，你知道任何不在完全遮蔽物后的法术或魔法物品的位置，只要它们在你60英尺范围内。当你感知到一个法术时，你将了解到它属于哪个魔法学派。",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "狂野魔法道途:狂野浪潮",
+      "ENG_name": "Wild Surge",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级野魔法之路特性}",
+        "你体内翻滚的魔法能量有时会从你身上爆发出来。当你进入狂暴状态时，在野性魔法表上掷骰以确定产生的魔法效果。",
+        "如果效果需要进行豁免投掷，则DC等于8加上你的熟练加值加上你的体质调整值。",
+        {
+          "type": "table",
+          "caption": "狂野魔法",
+          "colLabels": [
+            "d8",
+            "魔法效果"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "Shadowy tendrils lash around you. Each creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take {@damage 1d12} necrotic damage. You also gain {@dice 1d12} temporary hit points.",
+            "2",
+            "你传送至你能看到的未被占据的空间，最多30英尺。在你的狂暴结束之前，你可以在每个回合使用额外动作再次使用这个效果。",
+            "3",
+            "一个无形的精神体，看起来像一个{@creature 弗拉姆普}或者一个{@creature 仙女}（你选择），出现在你能在30英尺内看到的一个生物的5英尺范围内。在当前回合结束时，精神体爆炸，并且每个在其5英尺范围内的生物必须成功进行一次敏捷豁免投掷，否则将受到{@damage 1d6}力量伤害。直到你的狂暴结束，你可以在每个回合作为奖励动作再次使用这个效果，召唤另一个精神体。",
+            "4",
+            "你选择的一件武器被魔法充满，直到你的狂暴结束，该武器的伤害类型变为力场，并获得轻巧和投掷属性，正常射程为20英尺，长射程为60英尺。如果武器离开了你的手，它将在当前回合结束时重新出现在你的手中。",
+            "5",
+            "在你狂暴结束之前，每当一个生物用攻击检定击中你时，那个生物就会受到{@damage 1d6}力量伤害，因为魔法以报复的形式爆发出来。",
+            "6",
+            "在你的狂暴结束之前，你被五彩缤纷的保护光包围；你的AC获得+1的加值，而且在你10英尺范围内的盟友也获得相同的加值。",
+            "7",
+            "花朵和藤蔓暂时在你周围生长。在你的狂暴结束之前，你周围15英尺内的地面对敌人来说是{@quickref 困难地形||3}。",
+            "8",
+            "一束光线从你的胸口射出。你能在30英尺内看到的另一个生物必须成功进行一次体质豁免投掷，否则将受到{@damage 1d6}辐射伤害，并在下一回合开始前处于{@condition 失明}状态。直到你的狂暴结束，你可以在每个回合作为奖励动作再次使用这个效果。"
+          ],
+          "data": {
+            "tableInclude": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "狂野魔法道途:振奋魔法",
+      "ENG_name": "Bolstering Magic",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级野魔法之路特性}",
+        "你可以利用你的野性魔法来加强自己或同伴。作为动作，你可以触摸一个生物（也可以是你自己），并根据你的选择给予该生物以下一项好处：",
+        {
+          "type": "list",
+          "items": [
+            "For 10 minutes, the creature can roll a {@dice d3} whenever making an attack roll or an ability check and add the number rolled to the {@dice d20} roll.",
+            "Roll a {@dice d3}. The creature regains one expended spell slot, the level of which equals the number rolled or lower (the creature's choice). Once a creature receives this benefit, that creature can't receive it again until after a long rest."
+          ]
+        },
+        "你可以进行这个动作的次数等于你的熟练加值，当你完成一次长休时，你将重新获得所有已使用的次数。"
+      ]
+    },
+    {
+      "name": "狂野魔法道途:无常反冲",
+      "ENG_name": "Unstable Backlash",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 第10级荒野魔法之路特性}",
+        "当你在狂暴期间陷入危险，你体内的魔法可能会爆发出来；在你受到伤害或在狂暴状态下未能通过豁免投掷后，你可以立即使用你的反应在野性魔法表上掷骰，并立即产生掷出的效应。这个效应将取代你当前的野性魔法效应。"
+      ]
+    },
+    {
+      "name": "狂野魔法道途:掌控浪潮",
+      "ENG_name": "Controlled Surge",
+      "source": "TCE",
+      "page": 25,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级野性魔法之路特性}",
+        "每当你在野性魔法表上掷骰时，你可以掷两次骰子，并从两次掷出的效应中选择一个释放。如果你两次掷出的数字相同，你可以忽略这个数字，并从表上选择任何效应。"
+      ]
+    },
+    {
+      "name": "巨像道途",
+      "ENG_name": "Path of the Juggernaut",
+      "source": "TDCSR",
+      "page": 165,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 3,
+      "entries": [
+        "遵循巨兽之路的野蛮人在战斗中坚定不移，无人能够阻挡他们，他们挥舞武器的力量如此之大，以至于所有阻挡他们的人都被抛向一旁。在力量和精神上，巨兽既是不可移动的物体，又是不可阻挡的力量。",
+        "巨无霸野蛮人可以在塔尔多瑞全境找到，特别是在流浪于分界平原的巨人族战士中很常见。一些矮人和悬崖山脉的人形生物生存主义者采用这种战斗方式作为他们坚韧决心的延伸。还有一些坚定的巨无霸来自瑞芬雾半岛的丛林，他们摆脱了铁权的压迫枷锁。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "雷霆打击|野蛮人|PHB|巨兽|TDCSR|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "山之灵|野蛮人|PHB|巨兽|TDCSR|3"
+        }
+      ]
+    },
+    {
+      "name": "巨像道途:高山之魂",
+      "ENG_name": "Spirit of the Mountain",
+      "source": "TDCSR",
+      "page": 166,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你利用你的愤怒将双脚锚定在地面上，成为力量的堡垒。当你在狂暴状态下时，你不会被击倒或违背你的意愿在地面上移动。"
+      ]
+    },
+    {
+      "name": "巨像道途:雷鸣猛推",
+      "ENG_name": "Thunderous Blows",
+      "source": "TDCSR",
+      "page": 165,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从你3级选择这条路径开始，你的狂暴赋予你力量，可以推挤和粉碎你的敌人，使任何战场都成为你的领地。当你在狂暴状态下用近战攻击击中生物时，你可以将那个生物推向你选择的方向，距离最多5英尺。体型为大型或更大的生物必须进行力量豁免投掷，难度等级（DC）等于8加上你的熟练加值加上你的力量调整值。如果成功，生物不会被推动。",
+        {
+          "type": "inset",
+          "name": "规则提示：强制移动",
+          "ENG_name": "Rules Tip: Forced Movement",
+          "page": 166,
+          "entries": [
+            "通常情况下，当一个生物从敌对生物的触及范围内移动出来时，敌对生物可以使用其反应来进行一次{@action 机会攻击}。然而，强制移动——比如被巨兽之路野蛮人的{@subclassFeature 雷霆打击|Barbarian|PHB|Juggernaut|TDCSR|3}特性推动——不会引发{@action 机会攻击|PHB|机会攻击}。",
+            "同样，巨无霸野蛮人的{@subclassFeature 飓风打击|野蛮人|PHB|巨无霸|TDCSR|10}特性允许一个盟友如果敌人的强制移动结束时在盟友5英尺内，则可以作为反应进行近战武器攻击。如果敌人被推动穿过在盟友5英尺内的其他空间，那些盟友不能对敌人进行正常的{@action 机会攻击|PHB|机会攻击}。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巨像道途:摧枯拉朽",
+      "ENG_name": "Demolishing Might",
+      "source": "TDCSR",
+      "page": 166,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你的近战武器攻击对构造生物造成额外的{@damage 1d8}伤害，并且对物体和结构造成双倍伤害。"
+      ]
+    },
+    {
+      "name": "巨像道途:坚不可移",
+      "ENG_name": "Resolute Stance",
+      "source": "TDCSR",
+      "page": 166,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "同样在6级时，你可以暂时重新集中你的战斗能力，使自己成为防御的堡垒。在你的回合开始时（无需动作），你可以采取一种持续到你下一个回合开始的防御姿态。在这种姿态中，你不能被{@condition 抓住}，对你进行的攻击检定具有{@quickref 优势和劣势|PHB|2|0|劣势}，并且你的武器攻击是用{@quickref 优势和劣势|PHB|2|0|劣势}进行的。"
+      ]
+    },
+    {
+      "name": "巨像道途:旋风打击",
+      "ENG_name": "Hurricane Strike",
+      "source": "TDCSR",
+      "page": 166,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你的打击可以将敌人抛向空中，进入你盟友的攻击范围。当你作为反应将一个生物至少推动5英尺时，你可以随后跳到生物旁边的未被占据的空间。如果你这样做，生物必须进行一次力量{@quickref 豁免投掷|PHB|2|1|豁免骰}，难度等级（DC）等于8加上你的熟练加值加上你的力量调整值，否则将被击成{@condition 倒地}。这次跳跃不消耗移动力，也不会引发{@action 机会攻击|PHB|opportunity attacks}。",
+        "此外，每当你将一个生物推向距离你的一个盟友5英尺内的空间时，该盟友可以使用其反应对那个生物进行近战武器攻击。"
+      ]
+    },
+    {
+      "name": "雷霆打击（10级）",
+      "ENG_name": "Thunderous Blows (10th Level)",
+      "source": "TDCSR",
+      "page": 165,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，当你在狂暴状态下用近战攻击击中生物时，你可以将其推动最多10英尺远。"
+      ]
+    },
+    {
+      "name": "巨像道途:势不可挡",
+      "ENG_name": "Unstoppable",
+      "source": "TDCSR",
+      "page": 166,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "巨型战车",
+      "subclassSource": "TDCSR",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你在战斗中的狂暴使你变得不可阻挡。当你处于狂暴状态时，你的速度不能被降低，你对{@condition 恐惧}、{@condition 麻痹}、{@condition 倒地}和{@condition 昏迷}状态免疫。",
+        "如果你处于{@condition 惊恐}、{@condition 麻痹}或{@condition 昏迷}状态，你仍然可以使用一个奖励动作进入狂暴（即使你无法执行其他动作）。在狂暴状态下，你不会受这些状态的影响。"
+      ]
+    },
+    {
+      "name": "先祖守卫道途",
+      "ENG_name": "Path of the Ancestral Guardian",
+      "source": "XGE",
+      "page": 9,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "先祖守卫",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "一些野蛮人来自尊崇祖先的文化。这些部落教导说，过去的战士作为强大的灵魂在世界上徘徊，可以指导和保护生者。当遵循这条道路的野蛮人狂暴时，野蛮人与灵界接触，并召唤这些守护灵魂寻求帮助。",
+        "利用祖先守护者力量的野蛮人能更好地战斗以保护他们的部落和盟友。为了巩固与祖先守护者的联系，遵循这条道路的野蛮人会在身上纹上复杂的纹身，以庆祝他们祖先的事迹。这些纹身讲述了对抗可怕怪物和其他可怕对手的胜利传说。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "祖先守护者|野蛮人||祖先守护者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "先祖守卫道途:先祖护卫",
+      "ENG_name": "Ancestral Protectors",
+      "source": "XGE",
+      "page": 9,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "先祖守卫",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这条道路时，幽灵战士会在你进入狂暴时出现。在你狂暴期间，你在你的回合第一次用攻击击中生物时，该生物就会成为战士们的目标，他们会妨碍其攻击。直到你的下一个回合开始，该目标在任何不是针对你的攻击检定上都会处于劣势，并且当目标用攻击击中除你之外的其他生物时，那个生物对该攻击造成的伤害具有抗性。如果你的狂暴提前结束，对目标的效果也会提前结束。"
+      ]
+    },
+    {
+      "name": "先祖守卫道途:精魂之盾",
+      "ENG_name": "Spirit Shield",
+      "source": "XGE",
+      "page": 9,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "先祖守卫",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 2d6}.",
+        "When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d6} at 10th level and by {@dice 4d6} at 14th level."
+      ]
+    },
+    {
+      "name": "先祖守卫道途:问道精魂",
+      "ENG_name": "Consult the Spirits",
+      "source": "XGE",
+      "page": 9,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "先祖守卫",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你获得了与祖先灵魂交流的能力。当你这么做时，你施放{@spell augury}或{@spell clairvoyance}法术，无需使用法术位或材料成分。与创建一个球形感应器不同，这种使用{@spell clairvoyance}的方式无形中将你的一位祖先灵魂召唤到选定的位置。智慧是你的施法能力属性，用于这些法术。",
+        "以这种方式施放任一法术后，直到你完成一次短休或长休之前，你不能再使用这个特性。"
+      ]
+    },
+    {
+      "name": "先祖守卫道途:仇魂先祖",
+      "ENG_name": "Vengeful Ancestors",
+      "source": "XGE",
+      "page": 9,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "先祖守卫",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你的祖先之灵变得足够强大以进行反击。当你使用灵魂盾牌减少攻击的伤害时，攻击者会受到等同于你的灵魂盾牌所防止的伤害量的力量伤害。"
+      ]
+    },
+    {
+      "name": "风暴先驱道途",
+      "ENG_name": "Path of the Storm Herald",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "所有野蛮人都怀有内在的狂怒。他们的狂暴赋予他们超凡的力量、耐久和速度。遵循风暴使者之路的野蛮人学会将这种狂暴转化为原始魔法的斗篷，围绕在他们周围。当处于狂暴状态时，这条道路的野蛮人利用自然力量创造出强大的魔法效果。",
+        "风暴使者通常是与德鲁伊、游侠以及其他誓言保护自然的精英战士一同训练的。其他风暴使者在风暴肆虐的地区的小屋中磨练他们的技艺，在世界尽头的冰封地带，或者在最热的沙漠深处。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "风暴光环|野蛮人||风暴使者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "风暴先驱道途:风暴灵光",
+      "ENG_name": "Storm Aura",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你愤怒时，你散发出一种暴风雨般的魔法光环。这个光环从你身体向外延伸10英尺，在任何方向上，但不会穿过完全覆盖的地方。",
+        "你的光环在你进入狂暴时激活，并且你可以在每个回合作为奖励动作再次激活这个效果。选择沙漠、海洋或苔原。你的光环效果取决于所选择的环境，具体如下所述。你可以在每次提升这个职业等级时更改你的环境选择。",
+        "如果你的光环效果需要进行豁免投掷，难度等级等于8加上你的熟练加值加上你的体质调整值。",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "沙漠|野蛮人|XGE|风暴使者|XGE|3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "海洋|野蛮人|XGE|风暴使者|XGE|3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "苔原|野蛮人|XGE|风暴使者|XGE|3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "风暴先驱道途:风暴之魂",
+      "ENG_name": "Storm Soul",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，即使在您的光环未激活时，风暴也会赋予您一些好处。这些好处基于您为风暴光环选择的环境。",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "沙漠|野蛮人|XGE|风暴使者|XGE|6"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "海洋|野蛮人|XGE|风暴使者|XGE|6"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "苔原|野蛮人|XGE|风暴使者|XGE|6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "风暴先驱道途:风暴之盾",
+      "ENG_name": "Shielding Storm",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你学会了利用你对风暴的掌控来保护他人。你所选择的每个生物在处于你的风暴光环内时，会获得从风暴之魂特性获得的伤害抗性。"
+      ]
+    },
+    {
+      "name": "狂怒风暴",
+      "ENG_name": "Raging Storm",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你引导的风暴之力变得更加强大，向敌人猛烈地打击。效果基于你为风暴光环选择的环境。",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "沙漠|野蛮人|XGE|风暴使者|XGE|14"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "海洋|野蛮人|XGE|风暴使者|XGE|14"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "苔原|野蛮人|XGE|风暴使者|XGE|14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "狂热者道途",
+      "ENG_name": "Path of the Zealot",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "一些神祇激励其信徒投身于凶猛的战斗狂怒之中。这些野蛮人是狂热者——将他们的愤怒转化为强大神力展示的战士。",
+        "在D&D世界中的各种神祇激励其追随者走上这条道路。被遗忘的国度中的Tempus，以及灰鹰世界中的Hextor和Erythnul都是典型的例子。总的来说，激励狂热者的神祇是战斗、毁灭和暴力的神。并非所有这些神都是邪恶的，但很少有善良的。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "神之狂怒|野蛮人||狂热者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战神使者|野蛮人||狂热者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "狂热者道途:神性之怒",
+      "ENG_name": "Divine Fury",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to {@dice 1d6} + half your barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature."
+      ]
+    },
+    {
+      "name": "狂热者道途:神之勇者",
+      "ENG_name": "Warrior of the Gods",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你的灵魂被标记为无尽的战斗。如果一个法术，比如{@spell 复活术}，其唯一效果是将你恢复生命（而不是不死），施法者在对你施放该法术时不需要材料成分。"
+      ]
+    },
+    {
+      "name": "狂热者道途:专心炽志",
+      "ENG_name": "Fanatical Focus",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，激发你狂暴的神力可以保护你。如果你在狂暴状态下未能通过一次豁免投掷，你可以重投它，并必须使用新的投掷结果。每次狂暴状态下你只能使用这个能力一次。"
+      ]
+    },
+    {
+      "name": "狂热者道途:狂热威仪",
+      "ENG_name": "Zealous Presence",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "在10级时，你学会了引导神力来激励他人的狂热。作为一个奖励动作，你释放出充满神能的战斗呐喊。在你60英尺范围内，能够听到你的最多十个其他生物，在下一个回合开始之前攻击骰和豁免投掷获得优势。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "狂热者道途:怒不畏死",
+      "ENG_name": "Rage beyond Death",
+      "source": "XGE",
+      "page": 11,
+      "className": "野蛮人",
+      "classSource": "PHB",
+      "subclassShortName": "狂热者",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，激发你狂暴的神力允许你无视致命打击。",
+        "当你处于狂暴状态时，生命值降至0点不会让你进入{@condition 昏迷}状态。你仍然必须进行死亡豁免投掷，并且在生命值为0点时承受正常的伤害效果。然而，如果你因未通过死亡豁免投掷而将死，你不会死去，直到你的狂暴状态结束，并且只有在狂暴状态结束时你仍然生命值为0点时才会死亡。"
+      ]
+    },
+    {
+      "name": "麋鹿",
+      "ENG_name": "Elk",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "当你处于狂暴状态并且没有穿戴重型护甲时，你的步行速度增加15英尺。麋鹿之灵使你异常迅捷。"
+      ]
+    },
+    {
+      "name": "老虎",
+      "ENG_name": "Tiger",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在狂暴状态下，你可以将你的跳远距离增加10英尺，将你的跳高距离增加3英尺。老虎之灵增强了你的跳跃能力。"
+      ]
+    },
+    {
+      "name": "麋鹿",
+      "ENG_name": "Elk",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "entries": [
+        "无论是骑马还是步行，你的行进速度都会加倍，同样，当你的同伴在你60英尺范围内且你没有处于{@condition 无力}状态时，他们的行进速度也会加倍，最多可以影响十个同伴。麋鹿之灵帮助你走得又远又快。"
+      ]
+    },
+    {
+      "name": "老虎",
+      "ENG_name": "Tiger",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 6,
+      "entries": [
+        "你从以下列表中获得两项技能的熟练度：{@skill 运动}，{@skill 杂技}，{@skill 隐匿}，和{@skill 生存}。猫之灵磨练了你的生存本能。"
+      ]
+    },
+    {
+      "name": "麋鹿",
+      "ENG_name": "Elk",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "entries": [
+        "While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked {@condition prone} and take bludgeoning damage equal to {@dice 1d12} + your Strength modifier."
+      ]
+    },
+    {
+      "name": "老虎",
+      "ENG_name": "Tiger",
+      "source": "SCAG",
+      "page": 122,
+      "className": "野蛮人",
+      "classSource": "剑海岸冒险者指南",
+      "subclassShortName": "图腾勇士",
+      "subclassSource": "PHB",
+      "level": 14,
+      "entries": [
+        "当你处于狂暴状态时，如果在对一个大型或更小的目标进行近战武器攻击之前，你直线移动至少20英尺直接朝向它，你可以使用一个奖励动作再对该目标进行一次近战武器攻击。"
+      ]
+    },
+    {
+      "name": "沙漠",
+      "ENG_name": "Desert",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "当这个效果被激活时，你光环中的所有其他生物都会受到2点火焰伤害。当你在这个职业中达到特定等级时，伤害会增加，5级时增加到3点，10级时增加到4点，15级时增加到5点，20级时增加到6点。"
+      ]
+    },
+    {
+      "name": "海",
+      "ENG_name": "Sea",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes {@damage 1d6} lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to {@dice 2d6} at 10th level, {@dice 3d6} at 15th level, and {@dice 4d6} at 20th level."
+      ]
+    },
+    {
+      "name": "冻原",
+      "ENG_name": "Tundra",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "当这个效果被激活时，你选择的光环中的每个生物获得2点临时生命值，因为冰冷的灵魂使它对痛苦麻木。当你在这个职业中达到特定等级时，临时生命值会增加，5级时增加到3点，10级时增加到4点，15级时增加到5点，20级时增加到6点。"
+      ]
+    },
+    {
+      "name": "沙漠",
+      "ENG_name": "Desert",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 6,
+      "entries": [
+        "你获得了对火焰伤害的抗性，并且不会受到《地下城主指南》中描述的极端高温的影响。此外，作为一个动作，你可以触摸一个没有被其他人穿戴或携带的易燃物体，并将其点燃。"
+      ]
+    },
+    {
+      "name": "海",
+      "ENG_name": "Sea",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 6,
+      "entries": [
+        "你获得了对雷电伤害的抗性，并且可以在水下呼吸。你还获得了30英尺的游泳速度。"
+      ]
+    },
+    {
+      "name": "冻原",
+      "ENG_name": "Tundra",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 6,
+      "entries": [
+        "你获得了对寒冷伤害的抗性，并且不会受到《地下城主指南》中描述的极端寒冷的影响。此外，作为一个动作，你可以触摸水，将其变成一个5英尺的冰块，这个冰块在1分钟后融化。如果立方体内有生物，则此动作失败。"
+      ]
+    },
+    {
+      "name": "沙漠",
+      "ENG_name": "Desert",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 14,
+      "entries": [
+        "当一个生物在你的光环范围内用攻击命中你后，你可以使用你的反应迫使那个生物进行敏捷豁免。豁免失败时，该生物受到等于你野蛮人等级一半的火焰伤害。"
+      ]
+    },
+    {
+      "name": "海",
+      "ENG_name": "Sea",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 14,
+      "entries": [
+        "当你的攻击击中了在你光环范围内的生物时，你可以使用你的反应迫使那个生物进行力量豁免。豁免失败时，该生物被击倒{@condition prone}，就好像被波浪击中一样。"
+      ]
+    },
+    {
+      "name": "冻原",
+      "ENG_name": "Tundra",
+      "source": "XGE",
+      "page": 10,
+      "className": "野蛮人",
+      "classSource": "XGE",
+      "subclassShortName": "风暴先声",
+      "subclassSource": "XGE",
+      "level": 14,
+      "entries": [
+        "每当你的风暴光环效果被激活时，你可以选择一个你可以在光环中看到的生物。那个生物必须成功进行一次力量豁免，否则其速度将被减少到0，直到你的下一个回合开始，因为魔法霜覆盖了它。"
+      ]
+    }
+  ]
 }

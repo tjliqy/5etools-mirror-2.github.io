@@ -1,378 +1,461 @@
 {
-	"spell": [
-		{
-			"name": "Distort Value",
-			"source": "AI",
-			"page": 75,
-			"level": 1,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 8
-					}
-				}
-			],
-			"entries": [
-				"Do you need to squeeze a few more gold pieces out of a merchant as you try to sell that weird octopus statue you liberated from the chaos temple? Do you need to downplay the worth of some magical assets when the tax collector stops by? Distort value has you covered.",
-				"You cast this spell on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusory flourishes or polish to it, or reducing its perceived value by half with the help of illusory scratches, dents, and other unsightly features. Anyone examining the object can ascertain its true value with a successful Intelligence ({@skill Investigation}) check against your spell save DC."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the maximum size of the object increases by 1 foot for each slot level above 1st."
-					]
-				}
-			]
-		},
-		{
-			"name": "Fast Friends",
-			"source": "AI",
-			"page": 75,
-			"level": 3,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 30
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"When you need to make sure something gets done, you can't rely on vague promises, sworn oaths, or binding contracts of employment. When you cast this spell, choose one humanoid within range that can see and hear you, and that can understand you. The creature must succeed on a Wisdom saving throw or become {@condition charmed} by you for the duration. While the creature is {@condition charmed} in this way, it undertakes to perform any services or activities you ask of it in a friendly manner, to the best of its ability.",
-				"You can set the creature new tasks when a previous task is completed, or if you decide to end its current task. If the service or activity might cause harm to the creature, or if it conflicts with the creature's normal activities and desires, the creature can make another Wisdom saving throw to try to end the effect. This save is made with advantage if you or your companions are fighting the creature. If the activity would result in certain death for the creature, the spell ends.",
-				"When the spell ends, the creature knows it was {@condition charmed} by you."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
-					]
-				}
-			],
-			"conditionInflict": [
-				"charmed"
-			],
-			"savingThrow": [
-				"wisdom"
-			],
-			"affectsCreatureType": [
-				"humanoid"
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"areaTags": [
-				"MT",
-				"ST"
-			]
-		},
-		{
-			"name": "Gift of Gab",
-			"source": "AI",
-			"page": 76,
-			"level": 2,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "reaction",
-					"condition": "which you take when you speak to another creature"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"r": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				{
-					"type": "quote",
-					"entries": [
-						"When I met Jim Darkmagic, I wondered how he got anything done in that outfit. I have since learned that most of his talents involve standing and talking. His outfit is perfect for that."
-					],
-					"by": "Môrgæn"
-				},
-				"Jim Darkmagic is said to have invented this spell, originally calling it {@i I said what?!} Have you ever been talking to the local monarch and accidentally mentioned how their son looks like your favorite hog from when you were growing up on the family farm? We've all been there! But rather than being beheaded for an honest slip of the tongue, you can pretend it never happened\u2014by ensuring that no one knows it happened.",
-				"When you cast this spell, you skillfully reshape the memories of listeners in your immediate area, so that each creature of your choice within 5 feet of you forgets everything you said within the last 6 seconds. Those creatures then remember that you actually said the words you speak as the verbal component of the spell."
-			],
-			"areaTags": [
-				"MT"
-			]
-		},
-		{
-			"name": "Incite Greed",
-			"source": "AI",
-			"page": 76,
-			"level": 3,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 30
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a gem worth at least 50 gp",
-					"cost": 5000
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"When you cast this spell, you present the gem used as the material component and choose any number of creatures within range that can see you. Each target must succeed on a Wisdom saving throw or be {@condition charmed} by you until the spell ends, or until you or your companions do anything harmful to it. While {@condition charmed} in this way, a creature can do nothing but use its movement to approach you in a safe manner. While an affected creature is within 5 feet of you, it cannot move, but simply stares greedily at the gem you present.",
-				"At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
-			],
-			"conditionInflict": [
-				"charmed"
-			],
-			"savingThrow": [
-				"wisdom"
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"areaTags": [
-				"MT"
-			]
-		},
-		{
-			"name": "Jim's Glowing Coin",
-			"source": "AI",
-			"page": 76,
-			"level": 2,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"s": true,
-				"m": "a coin",
-				"r": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"Of the many tactics employed by master magician and renowned adventurer Jim Darkmagic, the old glowing coin trick is a time-honored classic. When you cast the spell, you hurl the coin that is the spell's material component to any spot within range. The coin lights up as if under the effect of a {@spell light} spell. Each creature of your choice that you can see within 30 feet of the coin must succeed on a Wisdom saving throw or be distracted for the duration. While distracted, a creature has disadvantage on Wisdom ({@skill Perception}) checks and initiative rolls."
-			],
-			"savingThrow": [
-				"wisdom"
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"areaTags": [
-				"MT"
-			]
-		},
-		{
-			"name": "Jim's Magic Missile",
-			"source": "AI",
-			"page": 76,
-			"level": 1,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"r": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				{
-					"type": "quote",
-					"entries": [
-						"Jim's magic missile is an ancient and powerful spell, as well as being the name of my band in Wizard Academy."
-					],
-					"by": "Jim Darkmagic"
-				},
-				"Any apprentice wizard can cast a boring old magic missile. Sure, it always strikes its target. Yawn. Do away with the drudgery of your grandfather's magic with this improved version of the spell, as used by Jim Darkmagic!",
-				"You create three twisting, whistling, hypoallergenic, gluten-free darts of magical force. Each dart targets a creature of your choice that you can see within range. Make a ranged spell attack for each missile. On a hit, a missile deals {@damage 2d4} force damage to its target.",
-				"If the attack roll scores a critical hit, the target of that missile takes {@damage 5d4} force damage instead of you rolling damage twice for a critical hit. If the attack roll for any missile is a 1, all missiles miss their targets and blow up in your face, dealing 1 force damage per missile to you."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st."
-					]
-				}
-			],
-			"damageInflict": [
-				"force"
-			],
-			"spellAttack": [
-				"R"
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"areaTags": [
-				"MT",
-				"ST"
-			]
-		},
-		{
-			"name": "Motivational Speech",
-			"source": "AI",
-			"page": 77,
-			"level": 3,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				{
-					"type": "quote",
-					"entries": [
-						"I once heard a motivational speech by Jim and it was the worst ninety seconds of my life. What does Omin see in him, anyway?"
-					],
-					"by": "Walnut Dankgrass"
-				},
-				"You address allies, staff, or innocent bystanders to exhort and inspire them to greatness, whether they have anything to get excited about or not. Choose up to five creatures within range that can hear you. For the duration, each affected creature gains 5 temporary hit points and has advantage on Wisdom saving throws. If an affected creature is hit by an attack, it has advantage on the next attack roll it makes. Once an affected creature loses the temporary hit points granted by this spell, the spell ends for that creature."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd."
-					]
-				}
-			],
-			"miscTags": [
-				"ADV",
-				"SGT",
-				"THP"
-			],
-			"areaTags": [
-				"MT"
-			]
-		}
-	]
+  "spell": [
+    {
+      "name": "扭曲价值",
+      "ENG_name": "Distort Value",
+      "source": "AI",
+      "page": 75,
+      "level": 1,
+      "school": "I",
+      "time": [
+        {
+          "number": 1,
+          "unit": "分钟"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 8
+          }
+        }
+      ],
+      "entries": [
+        "当你试图卖掉从混沌神殿中解放出来的那座奇异章鱼雕像时，你是否需要从那个无良商人口袋里再压榨几块黄金？当收税员驻足你的身前时，你是否需要贬低一些魔法资产的价值呢？扭曲价值法术为你保驾护航。",
+        "你施展此法术于边长不超过1尺的一个物件上，以幻术的滋养和抛光来加倍它看起来的价值，或者是用虚幻的划痕、凹陷和其他不雅的特征来减半它看起来的价值。任何检查物件的人，可以通过智力（{@skill 调查}）检定对抗你的法术DC，若成功将会确定它的真实价值。 "
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效果",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用2环或更高的法术位施放该法术时，使用的法术位每高一环，目标物件的最大尺寸就可以增加1尺。"
+          ]
+        }
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Bard",
+            "source": "PHB"
+          },
+          {
+            "name": "Sorcerer",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "快速交友",
+      "ENG_name": "Fast Friends",
+      "source": "AI",
+      "page": 75,
+      "level": 3,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "如果你想要确保某件事情完成，你不能依赖于含糊不清的承诺、宣誓或雇佣合同。当你施展此法术时，选择一个能看见、能听见、并且能理解你的，在施法距离内的类人生物。这个生物必须通过一次感知豁免，否则将会在持续期间内被你{@condition 魅惑}。当生物因为这种方式被{@condition 魅惑}时，它将承诺尽其所能地以友好的方式履行你所要求的任何服务或者是活动。",
+        "在这个生物之前的任务完成时，或者你决定中止它的当前任务时，你可以为它布置一个新任务。如果这项活动或任务可能伤害这个生物，或者与这个生物的正常活动和欲望相违背时，生物可以进行另一次感知豁免来尝试中止这个效果。如果你或者你的同伴正在与这个生物交战，他对此豁免具有优势。如果你要求的活动在结果上会确实地导致这个生物死亡，法术将会结束。",
+        "当法术结束时，这个生物知道他曾经被你所{@condition 魅惑}。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效果",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用4环或更高的法术位施放该法术时，使用的法术位每高一环，你就可以多指定一个额外的目标。"
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "魅惑"
+      ],
+      "savingThrow": [
+        "属性检定:感知"
+      ],
+      "miscTags": [
+        "中士"
+      ],
+      "areaTags": [
+        "ST",
+        "MT"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Bard",
+            "source": "PHB"
+          },
+          {
+            "name": "Cleric",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      },
+      "affectsCreatureType": [
+        "类人生物"
+      ]
+    },
+    {
+      "name": "巧舌如簧",
+      "ENG_name": "Gift of Gab",
+      "source": "AI",
+      "page": 76,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "反应",
+          "condition": "当你与另一个生物说话时采取"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "r": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        {
+          "type": "quote",
+          "entries": [
+            "我最开始见到吉姆·黑法 Jim Darkmagic 那时，我就在想他是怎么穿着这身搞定那么多事的。后来我才知道他最大的天赋就是站着说话。那这身行头确实完美。"
+          ],
+          "by": "摩根 Môrgæn"
+        },
+        "据说是吉姆·黑法 Jim Darkmagic 发明了这个魔法，并且它最开始的名字叫{@i 我说啥来着？！}。你有没有曾经在与当地领主开玩笑时，不小心提到他的儿子长得像你家农场里那只你最喜欢的猪？我们过去都经历过！不过你可以确保没人知道这件事情，来假装它从未发生过，以此来避免因为一次诚实的失言而丢掉脑袋。",
+        "当你施展这个法术时，你可以通过巧妙的操作修整你周围听众的记忆，从而使在你周围5尺内、每一个你所选择的生物立即忘掉在最后六秒中你所说过的每一句话。之后，他们会记住你实际上说的是作为这个法术言语成分的那些话语。"
+      ],
+      "areaTags": [
+        "MT"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Bard",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "鼓动贪欲",
+      "ENG_name": "Incite Greed",
+      "source": "AI",
+      "page": 76,
+      "level": 3,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块至少价值 50gp 的宝石",
+          "cost": 5000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "当你施展这个法术时，你将展现作为法术材料成分的宝石，并且选择施法距离内能看见你的、任意数量的生物。每一个目标都必须成功通过一次感知豁免检定，否则将会被你{@condition 魅惑}直到法术结束，或者直到你或你的同伴做了任何有害于他的事情。当生物被这种方式{@condition 魅惑}时，它们除了以安全的方式花费移动力来接近你以外，不能做任何其他的事情。当一个受影响的生物到达你的5尺之内，它将不能移动，只是贪婪地注视着你所展现的宝石。",
+        "受影响的目标每个回合结束时，可以再进行一次感知豁免检定。如果它成功，对于那个目标的效果将结束。"
+      ],
+      "conditionInflict": [
+        "魅惑"
+      ],
+      "savingThrow": [
+        "属性检定:感知"
+      ],
+      "miscTags": [
+        "中士"
+      ],
+      "areaTags": [
+        "MT"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Cleric",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "吉姆的发光硬币",
+      "ENG_name": "Jim's Glowing Coin",
+      "source": "AI",
+      "page": 76,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "s": true,
+        "m": "一枚硬币",
+        "r": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "在魔术大师、大冒险家吉姆·黑法 Jim Darkmagic 运用过的许多骗术中，\"发光的旧硬币\"是其中最为经典的。 当你施法时，你将作为法术材料成分的硬币丢往法术距离内任意一点。这枚硬币将会像处于{@spell 光亮术}法术影响一般闪闪发光。在硬币周围30尺内，你所能看到、并且由你选择的每一个生物必须通过一次感知豁免检定，否则将会在持续时间内被硬币所分心。在被分心时，生物在感知（{@skill 察觉}）检定和先攻检定中具有劣势。"
+      ],
+      "savingThrow": [
+        "属性检定:感知"
+      ],
+      "miscTags": [
+        "中士"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "吉姆的魔法飞弹",
+      "ENG_name": "Jim's Magic Missile",
+      "source": "AI",
+      "page": 76,
+      "level": 1,
+      "school": "V",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "r": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        {
+          "type": "quote",
+          "entries": [
+            "吉姆的魔法飞弹是个久远又强大的法术，也是我在法师学院里的乐队的的名字。"
+          ],
+          "by": "吉姆·黑法 Jim Darkmagic"
+        },
+        "每一个法师学徒都会施展无聊的古董魔法飞弹。啊哈，它总是击中目标。（哈欠）。别再干你祖父流传下来的苦差事了，来像吉姆·黑法 Jim Darkmagic 那样，用这个改进版本的法术吧！",
+        "你创造了三个扭曲着的、尖啸着的、低致敏的、无麸质的魔法力场飞镖。每一枚飞弹都瞄准一个在法术距离内由你选择的可见生物。为每一枚飞弹进行远程攻击检定。若命中，飞弹将对这个目标造成{@damage 2d4}力场伤害。",
+        "如果这次攻击检定形成了一次重击，取代正常重击形成的两次伤害骰的是，那枚飞弹的目标将直接受到{@damage 5d4}力场伤害。但是如果任何一个飞弹的攻击检定为1，所有飞弹都会丢失他们的目标并且在你的脸上爆炸，此时每一枚飞弹都会对你造成1点伤害。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效果",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用2环或更高的法术位施放该法术时，使用的法术位每高一环，法术就可以多创造一枚飞镖，但是版权成分也会增加 1 gp。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "力量"
+      ],
+      "spellAttack": [
+        "R"
+      ],
+      "miscTags": [
+        "中士"
+      ],
+      "areaTags": [
+        "ST",
+        "MT"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "励志演讲",
+      "ENG_name": "Motivational Speech",
+      "source": "AI",
+      "page": 77,
+      "level": 3,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "分钟"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "quote",
+          "entries": [
+            "听过吉姆的一次励志演讲，那是我人生最弱智的九十秒。真不知道欧米到底看中了他哪里。"
+          ],
+          "by": "沃尔纳特·邓格拉斯 Walnut Dankgrass"
+        },
+        "你向盟友、工作人员或是无辜的旁观者发出劝诫，激励他们向往崇高的目标，不管到底有没有发生什么让他们兴奋的事情。选择施法距离内最多5个可以听见你的生物。在持续时间中，每个生物都可以得到5点临时生命值，并且在感知豁免中具有优势。如果一个受影响的生物被一次攻击击中，它将在下一个它所进行的攻击检定中具有优势。一旦一个受影响的生物失去了这个法术所提供的临时生命值，这个法术就对它结束了。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效果",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用4环或更高的法术位施放该法术时，使用的法术位每高一环，提供的临时生命值就增加5点。"
+          ]
+        }
+      ],
+      "miscTags": [
+        "前进",
+        "中士",
+        "临时生命值"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    }
+  ]
 }

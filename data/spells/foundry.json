@@ -1,1328 +1,1423 @@
 {
-	"spell": [
-		{
-			"name": "Abi-Dalzim's Horrid Wilting",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Alarm",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Antipathy/Sympathy",
-			"source": "PHB",
-			"system": {
-				"target.value": 1,
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Arcane Gate",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Armor of Agathys",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"5",
-						"temphp"
-					]
-				]
-			}
-		},
-		{
-			"name": "Blade Barrier",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Blade Ward",
-			"source": "PHB",
-			"effects": [
-				{
-					"changes": [
-						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
-							"value": "bludgeoning",
-							"priority": 20
-						},
-						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
-							"value": "piercing",
-							"priority": 20
-						},
-						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
-							"value": "slashing",
-							"priority": 20
-						}
-					],
-					"duration": {
-						"rounds": 1
-					}
-				}
-			]
-		},
-		{
-			"name": "Bones of the Earth",
-			"source": "XGE",
-			"system": {
-				"target.value": 3,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Booming Blade",
-			"source": "TCE",
-			"system": {
-				"actionType": "mwak",
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature",
-				"damage.parts": [
-					[
-						"(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[on hit]",
-						"thunder"
-					]
-				],
-				"damage.versatile": "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d8[on willing movement]",
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Call Lightning",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Calm Emotions",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Chaos Bolt",
-			"source": "XGE",
-			"system": {
-				"damage.parts": [
-					[
-						"2d8 + 1d6",
-						""
-					]
-				],
-				"formula": ""
-			}
-		},
-		{
-			"name": "Circle of Death",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Cloud of Daggers",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Cloudkill",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Confusion",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Conjure Volley",
-			"source": "PHB",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Control Flames",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Control Water",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Control Winds",
-			"source": "XGE",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Cordon of Arrows",
-			"source": "PHB",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Create Bonfire",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Creation",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Darkness",
-			"source": "PHB",
-			"system": {
-				"target.value": 15,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Dawn",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Daylight",
-			"source": "PHB",
-			"system": {
-				"target.value": 120,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Delayed Blast Fireball",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Dust Devil",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Earthquake",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Entangle",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "square"
-			}
-		},
-		{
-			"name": "Erupting Earth",
-			"source": "XGE",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Evard's Black Tentacles",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "square"
-			}
-		},
-		{
-			"name": "Fabricate",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Faerie Fire",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Fire Storm",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Fireball",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Flame Blade",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"(floor((@item.level) / 2) + 2)d6",
-						"fire"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Flame Strike",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Flaming Sphere",
-			"source": "PHB",
-			"system": {
-				"target.value": 3,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Fog Cloud",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Forcecage",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Frostbite",
-			"source": "XGE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Gate",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Grease",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "square"
-			}
-		},
-		{
-			"name": "Green-Flame Blade",
-			"source": "TCE",
-			"system": {
-				"actionType": "mwak",
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature",
-				"damage.parts": [
-					[
-						"(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[on hit]",
-						"fire"
-					],
-					[
-						"@mod + (floor(((@details.level + @details.spellLevel) + 1) / 6))d8[splash]",
-						"fire"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Gust",
-			"source": "XGE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Hallucinatory Terrain",
-			"source": "PHB",
-			"system": {
-				"target.value": 150,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Healing Spirit",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Hex",
-			"source": "PHB",
-			"system": {
-				"target.value": 1,
-				"target.units": null,
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Hunger of Hadar",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Hunter's Mark",
-			"source": "PHB",
-			"system": {
-				"target.value": 1,
-				"target.units": null,
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Hypnotic Pattern",
-			"source": "PHB",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Ice Knife",
-			"source": "XGE",
-			"system": {
-				"damage.parts": [
-					[
-						"1d10[to target]",
-						"piercing"
-					],
-					[
-						"(floor(@item.level + 1))d6[splash]",
-						"cold"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Ice Storm",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Illusory Dragon",
-			"source": "XGE",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "cone"
-			}
-		},
-		{
-			"name": "Immolation",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Incendiary Cloud",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Infestation",
-			"source": "XGE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Insect Plague",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Lightning Arrow",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"((@item.level) + 1)[on hit]",
-						"lightning"
-					],
-					[
-						"((@item.level) - 1)d8[area]",
-						"lightning"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Lightning Lure",
-			"source": "TCE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Maddening Darkness",
-			"source": "XGE",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Maelstrom",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Magic Circle",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Magic Missile",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"(1d4 + 1) * (2 + @item.level)",
-						"force"
-					]
-				]
-			}
-		},
-		{
-			"name": "Magic Stone",
-			"source": "XGE",
-			"system": {
-				"activation.cost": 1,
-				"activation.type": "action",
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature",
-				"range.value": 60,
-				"range.units": "ft",
-				"damage.parts": [
-					[
-						"1d6 + @mod",
-						"bludgeoning"
-					]
-				]
-			}
-		},
-		{
-			"name": "Major Image",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Mass Cure Wounds",
-			"source": "PHB",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Maximilian's Earthen Grasp",
-			"source": "XGE",
-			"system": {
-				"damage.parts": [
-					[
-						"2d6",
-						"bludgeoning"
-					]
-				]
-			}
-		},
-		{
-			"name": "Melf's Acid Arrow",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"4d4[immediate]",
-						"acid"
-					],
-					[
-						"(@item.level)d4[end of turn]",
-						"acid"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Meteor Swarm",
-			"source": "PHB",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Mind Sliver",
-			"source": "TCE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Minor Illusion",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Mold Earth",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Moonbeam",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Mordenkainen's Private Sanctum",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Move Earth",
-			"source": "PHB",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "square"
-			}
-		},
-		{
-			"name": "Otiluke's Freezing Sphere",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Otto's Irresistible Dance",
-			"source": "PHB",
-			"system": {
-				"target.value": 1,
-				"target.units": null,
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Phantasmal Force",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Plant Growth",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Prismatic Wall",
-			"source": "PHB",
-			"system": {
-				"target.value": 90,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Programmed Illusion",
-			"source": "PHB",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Purify Food and Drink",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Pyrotechnics",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Reverse Gravity",
-			"source": "PHB",
-			"system": {
-				"target.value": 50,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Sapping Sting",
-			"source": "EGW",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Shape Water",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Shatter",
-			"source": "PHB",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Sickening Radiance",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Silence",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Silent Image",
-			"source": "PHB",
-			"system": {
-				"target.value": 15,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Sleep",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Sleet Storm",
-			"source": "PHB",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Slow",
-			"source": "PHB",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Snilloc's Snowball Swarm",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Spike Growth",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Spirit Guardians",
-			"source": "PHB",
-			"system": {
-				"target.value": null,
-				"target.units": null,
-				"target.type": "self",
-				"range.value": 15,
-				"range.units": "ft"
-			}
-		},
-		{
-			"name": "Spirit Shroud",
-			"source": "TCE",
-			"system": {
-				"damage.parts": [],
-				"scaling.mode": "none",
-				"scaling.formula": "",
-				"formula": "(floor(((@item.level) - 1) / 2))d8"
-			}
-		},
-		{
-			"name": "Spiritual Weapon",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"(floor((@item.level) / 2))d8 + @mod",
-						"force"
-					]
-				],
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Stinking Cloud",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Storm Sphere",
-			"source": "XGE",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Sunburst",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Sword Burst",
-			"source": "TCE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "creature",
-				"range.units": "special"
-			}
-		},
-		{
-			"name": "Synaptic Static",
-			"source": "XGE",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Teleport",
-			"source": "PHB",
-			"system": {
-				"target.value": 9,
-				"target.type": "creatures"
-			}
-		},
-		{
-			"name": "Teleportation Circle",
-			"source": "PHB",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Temple of the Gods",
-			"source": "XGE",
-			"system": {
-				"target.value": 120,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Thorn Whip",
-			"source": "PHB",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature"
-			}
-		},
-		{
-			"name": "Thunder Step",
-			"source": "XGE",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Thunderclap",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "creature",
-				"range.units": "special"
-			}
-		},
-		{
-			"name": "Tidal Wave",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Toll the Dead",
-			"source": "XGE",
-			"system": {
-				"target.value": 1,
-				"target.units": "",
-				"target.type": "creature",
-				"damage.parts": [
-					[
-						"(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d8[if uninjured]",
-						"necrotic"
-					]
-				],
-				"damage.versatile": "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d12[if injured]",
-				"scaling.mode": "none",
-				"scaling.formula": ""
-			}
-		},
-		{
-			"name": "Transmute Rock",
-			"source": "XGE",
-			"system": {
-				"target.value": 40,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Vitriolic Sphere",
-			"source": "XGE",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "sphere",
-				"damage.parts": [
-					[
-						"10d4",
-						"acid"
-					]
-				],
-				"formula": "5d4[acid]"
-			}
-		},
-		{
-			"name": "Wall of Fire",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Force",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Ice",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Light",
-			"source": "XGE",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Sand",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Stone",
-			"source": "PHB",
-			"system": {
-				"target.value": 100,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Thorns",
-			"source": "PHB",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Wall of Water",
-			"source": "XGE",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Watery Sphere",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Web",
-			"source": "PHB",
-			"system": {
-				"target.value": 20,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Weird",
-			"source": "PHB",
-			"system": {
-				"target.value": 30,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Whirlwind",
-			"source": "XGE",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "cylinder"
-			}
-		},
-		{
-			"name": "Wind Wall",
-			"source": "PHB",
-			"system": {
-				"target.value": 50,
-				"target.units": "ft",
-				"target.type": "wall"
-			}
-		},
-		{
-			"name": "Witch Bolt",
-			"source": "PHB",
-			"system": {
-				"damage.parts": [
-					[
-						"1d12",
-						"lightning"
-					]
-				]
-			}
-		},
-		{
-			"name": "Wither and Bloom",
-			"source": "SCC",
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "radius"
-			}
-		},
-		{
-			"name": "Word of Radiance",
-			"source": "XGE",
-			"system": {
-				"target.value": 5,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		},
-		{
-			"name": "Wrath of Nature",
-			"source": "XGE",
-			"system": {
-				"target.value": 60,
-				"target.units": "ft",
-				"target.type": "cube"
-			}
-		},
-		{
-			"name": "Zone of Truth",
-			"source": "PHB",
-			"system": {
-				"target.value": 15,
-				"target.units": "ft",
-				"target.type": "sphere"
-			}
-		}
-	]
+  "spell": [
+    {
+      "name": "亚比达奇凋死术",
+      "ENG_name": "Abi-Dalzim's Horrid Wilting",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "警报术",
+      "ENG_name": "Alarm",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "嫌恶/共感术",
+      "ENG_name": "Antipathy/Sympathy",
+      "source": "PHB",
+      "system": {
+        "target.value": 1,
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "秘法之门",
+      "ENG_name": "Arcane Gate",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "艾嘉西斯之铠",
+      "ENG_name": "Armor of Agathys",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "5",
+          "临时生命值"
+        ]
+      }
+    },
+    {
+      "name": "剑刃障壁",
+      "ENG_name": "Blade Barrier",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "剑刃防护",
+      "ENG_name": "Blade Ward",
+      "source": "PHB",
+      "effects": [
+        {
+          "changes": [
+            {
+              "key": "系统特性.抗性.数值",
+              "mode": "自定义",
+              "value": "钝击",
+              "priority": 20
+            },
+            {
+              "key": "系统特性.抗性.数值",
+              "mode": "自定义",
+              "value": "穿刺",
+              "priority": 20
+            },
+            {
+              "key": "系统特性.抗性.数值",
+              "mode": "自定义",
+              "value": "斩击",
+              "priority": 20
+            }
+          ],
+          "duration": {
+            "rounds": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "大地之骨",
+      "ENG_name": "Bones of the Earth",
+      "source": "XGE",
+      "system": {
+        "target.value": 3,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "轰雷剑",
+      "ENG_name": "Booming Blade",
+      "source": "TCE",
+      "system": {
+        "actionType": "木瓦克",
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物",
+        "damage.parts": [
+          "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
+          "雷鸣伤害"
+        ],
+        "damage.versatile": "((@details.level + @details.spellLevel) + 1) / 6 向下取整 + 1)d8[在自愿移动时]",
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "召雷术",
+      "ENG_name": "Call Lightning",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "安定心神",
+      "ENG_name": "Calm Emotions",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "混乱箭",
+      "ENG_name": "Chaos Bolt",
+      "source": "XGE",
+      "system": {
+        "damage.parts": [
+          "2d8 + 1d6",
+          ""
+        ],
+        "formula": ""
+      }
+    },
+    {
+      "name": "死亡之环",
+      "ENG_name": "Circle of Death",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "匕首之云",
+      "ENG_name": "Cloud of Daggers",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "死云术",
+      "ENG_name": "Cloudkill",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "困惑术",
+      "ENG_name": "Confusion",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "召唤箭雨",
+      "ENG_name": "Conjure Volley",
+      "source": "PHB",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "控火",
+      "ENG_name": "Control Flames",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "操控水体",
+      "ENG_name": "Control Water",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "操控风相",
+      "ENG_name": "Control Winds",
+      "source": "XGE",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "警戒箭阵",
+      "ENG_name": "Cordon of Arrows",
+      "source": "PHB",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "创造篝火",
+      "ENG_name": "Create Bonfire",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "造物术",
+      "ENG_name": "Creation",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "黑暗术",
+      "ENG_name": "Darkness",
+      "source": "PHB",
+      "system": {
+        "target.value": 15,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "拂晓之光",
+      "ENG_name": "Dawn",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "昼明术",
+      "ENG_name": "Daylight",
+      "source": "PHB",
+      "system": {
+        "target.value": 120,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "延迟爆裂火球",
+      "ENG_name": "Delayed Blast Fireball",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "尘卷风",
+      "ENG_name": "Dust Devil",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "地震术",
+      "ENG_name": "Earthquake",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "纠缠术",
+      "ENG_name": "Entangle",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "方形"
+      }
+    },
+    {
+      "name": "土石爆发",
+      "ENG_name": "Erupting Earth",
+      "source": "XGE",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "艾伐黑触手",
+      "ENG_name": "Evard's Black Tentacles",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "方形"
+      }
+    },
+    {
+      "name": "鬼斧神工",
+      "ENG_name": "Fabricate",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "妖火术",
+      "ENG_name": "Faerie Fire",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "火焰风暴",
+      "ENG_name": "Fire Storm",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "火球术",
+      "ENG_name": "Fireball",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "火焰刀",
+      "ENG_name": "Flame Blade",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "(floor((@item.level) / 2) + 2)d6",
+          "火"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "焰击术",
+      "ENG_name": "Flame Strike",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "炽焰法球",
+      "ENG_name": "Flaming Sphere",
+      "source": "PHB",
+      "system": {
+        "target.value": 3,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "云雾术",
+      "ENG_name": "Fog Cloud",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "力场监牢",
+      "ENG_name": "Forcecage",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "霜噬",
+      "ENG_name": "Frostbite",
+      "source": "XGE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "异界之门",
+      "ENG_name": "Gate",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "油腻术",
+      "ENG_name": "Grease",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "方形"
+      }
+    },
+    {
+      "name": "翠炎剑",
+      "ENG_name": "Green-Flame Blade",
+      "source": "TCE",
+      "system": {
+        "actionType": "木瓦克",
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物",
+        "damage.parts": [
+          "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
+          "火",
+          "@mod + (floor(((@details.level + @details.spellLevel) + 1) / 6))d8[splash]",
+          "火"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "舞风",
+      "ENG_name": "Gust",
+      "source": "XGE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "幻景",
+      "ENG_name": "Hallucinatory Terrain",
+      "source": "PHB",
+      "system": {
+        "target.value": 150,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "治愈精魂",
+      "ENG_name": "Healing Spirit",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "脆弱诅咒",
+      "ENG_name": "Hex",
+      "source": "PHB",
+      "system": {
+        "target.value": 1,
+        "target.units": null,
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "哈达之欲",
+      "ENG_name": "Hunger of Hadar",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "猎人印记",
+      "ENG_name": "Hunter's Mark",
+      "source": "PHB",
+      "system": {
+        "target.value": 1,
+        "target.units": null,
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "催眠图纹",
+      "ENG_name": "Hypnotic Pattern",
+      "source": "PHB",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "冰刃",
+      "ENG_name": "Ice Knife",
+      "source": "XGE",
+      "system": {
+        "damage.parts": [
+          "1d10[对目标]",
+          "穿刺",
+          "(@item.level + 1) 取整 d6[溅射]",
+          "寒冷"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "冰风暴",
+      "ENG_name": "Ice Storm",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "幻象巨龙",
+      "ENG_name": "Illusory Dragon",
+      "source": "XGE",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "cone"
+      }
+    },
+    {
+      "name": "燔焚术",
+      "ENG_name": "Immolation",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "焚云术",
+      "ENG_name": "Incendiary Cloud",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "虫群孳生",
+      "ENG_name": "Infestation",
+      "source": "XGE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "疫病虫群",
+      "ENG_name": "Insect Plague",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "闪电箭矢",
+      "ENG_name": "Lightning Arrow",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "((@item.level) + 1)[命中时]",
+          "闪电",
+          "((@item.level) - 1)d8[区域]",
+          "闪电"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "闪电牵引",
+      "ENG_name": "Lightning Lure",
+      "source": "TCE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "发狂黑暗",
+      "ENG_name": "Maddening Darkness",
+      "source": "XGE",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "大漩涡",
+      "ENG_name": "Maelstrom",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "防护法阵",
+      "ENG_name": "Magic Circle",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "魔法飞弹",
+      "ENG_name": "Magic Missile",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "(1d4 + 1) * (2 + 物品等级)",
+          "力量"
+        ]
+      }
+    },
+    {
+      "name": "魔石术",
+      "ENG_name": "Magic Stone",
+      "source": "XGE",
+      "system": {
+        "activation.cost": 1,
+        "activation.type": "肉体雕塑者",
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物",
+        "range.value": 60,
+        "range.units": "ft",
+        "damage.parts": [
+          "1d6 + @mod",
+          "钝击"
+        ]
+      }
+    },
+    {
+      "name": "强效幻影",
+      "ENG_name": "Major Image",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "群体治疗伤势",
+      "ENG_name": "Mass Cure Wounds",
+      "source": "PHB",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "马克西米利安大地之攫",
+      "ENG_name": "Maximilian's Earthen Grasp",
+      "source": "XGE",
+      "system": {
+        "damage.parts": [
+          "2d6",
+          "钝击"
+        ]
+      }
+    },
+    {
+      "name": "马友夫强酸箭",
+      "ENG_name": "Melf's Acid Arrow",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "4d4[立即]",
+          "酸性",
+          "(@item.level)d4[回合结束时]",
+          "酸性"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "流星爆",
+      "ENG_name": "Meteor Swarm",
+      "source": "PHB",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "心灵之楔",
+      "ENG_name": "Mind Sliver",
+      "source": "TCE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "次级幻象",
+      "ENG_name": "Minor Illusion",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "铸土",
+      "ENG_name": "Mold Earth",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "月华之光",
+      "ENG_name": "Moonbeam",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "魔邓肯私人密室",
+      "ENG_name": "Mordenkainen's Private Sanctum",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "地动术",
+      "ENG_name": "Move Earth",
+      "source": "PHB",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "方形"
+      }
+    },
+    {
+      "name": "欧提路克冰冻法球",
+      "ENG_name": "Otiluke's Freezing Sphere",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "奥图狂舞术",
+      "ENG_name": "Otto's Irresistible Dance",
+      "source": "PHB",
+      "system": {
+        "target.value": 1,
+        "target.units": null,
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "魅影之力",
+      "ENG_name": "Phantasmal Force",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "植物滋长",
+      "ENG_name": "Plant Growth",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "虹光法墙",
+      "ENG_name": "Prismatic Wall",
+      "source": "PHB",
+      "system": {
+        "target.value": 90,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "预置幻象",
+      "ENG_name": "Programmed Illusion",
+      "source": "PHB",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "净化饮食",
+      "ENG_name": "Purify Food and Drink",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "烟火表演",
+      "ENG_name": "Pyrotechnics",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "重力反转",
+      "ENG_name": "Reverse Gravity",
+      "source": "PHB",
+      "system": {
+        "target.value": 50,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "削弱芒刺",
+      "ENG_name": "Sapping Sting",
+      "source": "EGW",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "塑水",
+      "ENG_name": "Shape Water",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "粉碎音波",
+      "ENG_name": "Shatter",
+      "source": "PHB",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "致病光辉",
+      "ENG_name": "Sickening Radiance",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "沉默术",
+      "ENG_name": "Silence",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "无声幻影",
+      "ENG_name": "Silent Image",
+      "source": "PHB",
+      "system": {
+        "target.value": 15,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "睡眠术",
+      "ENG_name": "Sleep",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "雪雨暴",
+      "ENG_name": "Sleet Storm",
+      "source": "PHB",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "缓速术",
+      "ENG_name": "Slow",
+      "source": "PHB",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "史尼洛雪球群",
+      "ENG_name": "Snilloc's Snowball Swarm",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "荆棘丛生",
+      "ENG_name": "Spike Growth",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "灵体守卫",
+      "ENG_name": "Spirit Guardians",
+      "source": "PHB",
+      "system": {
+        "target.value": null,
+        "target.units": null,
+        "target.type": "self",
+        "range.value": 15,
+        "range.units": "ft"
+      }
+    },
+    {
+      "name": "魂灵环绕",
+      "ENG_name": "Spirit Shroud",
+      "source": "TCE",
+      "system": {
+        "damage.parts": [],
+        "scaling.mode": "无",
+        "scaling.formula": "",
+        "formula": "((@item.level - 1) / 2) 向下取整)d8"
+      }
+    },
+    {
+      "name": "灵体武器",
+      "ENG_name": "Spiritual Weapon",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "(floor((@item.level) / 2))d8 + @mod",
+          "力量"
+        ],
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "臭云术",
+      "ENG_name": "Stinking Cloud",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "暴风法球",
+      "ENG_name": "Storm Sphere",
+      "source": "XGE",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "阳炎爆",
+      "ENG_name": "Sunburst",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "剑刃爆发",
+      "ENG_name": "Sword Burst",
+      "source": "TCE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "生物",
+        "range.units": "special"
+      }
+    },
+    {
+      "name": "突触噪乱",
+      "ENG_name": "Synaptic Static",
+      "source": "XGE",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "传送术",
+      "ENG_name": "Teleport",
+      "source": "PHB",
+      "system": {
+        "target.value": 9,
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "传送法阵",
+      "ENG_name": "Teleportation Circle",
+      "source": "PHB",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "诸神殿堂",
+      "ENG_name": "Temple of the Gods",
+      "source": "XGE",
+      "system": {
+        "target.value": 120,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "荆棘之鞭",
+      "ENG_name": "Thorn Whip",
+      "source": "PHB",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物"
+      }
+    },
+    {
+      "name": "雷霆步",
+      "ENG_name": "Thunder Step",
+      "source": "XGE",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "鸣雷破",
+      "ENG_name": "Thunderclap",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "生物",
+        "range.units": "special"
+      }
+    },
+    {
+      "name": "潮涌浪",
+      "ENG_name": "Tidal Wave",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "亡者丧钟",
+      "ENG_name": "Toll the Dead",
+      "source": "XGE",
+      "system": {
+        "target.value": 1,
+        "target.units": "",
+        "target.type": "生物",
+        "damage.parts": [
+          "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d8[如果未受伤]",
+          "死灵"
+        ],
+        "damage.versatile": "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d12[如果受伤]",
+        "scaling.mode": "无",
+        "scaling.formula": ""
+      }
+    },
+    {
+      "name": "转化岩石",
+      "ENG_name": "Transmute Rock",
+      "source": "XGE",
+      "system": {
+        "target.value": 40,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "硫酸法球",
+      "ENG_name": "Vitriolic Sphere",
+      "source": "XGE",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "sphere",
+        "damage.parts": [
+          "10d4",
+          "酸性"
+        ],
+        "formula": "5d4[酸液]"
+      }
+    },
+    {
+      "name": "火墙术",
+      "ENG_name": "Wall of Fire",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "力墙术",
+      "ENG_name": "Wall of Force",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "冰墙术",
+      "ENG_name": "Wall of Ice",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "光墙术",
+      "ENG_name": "Wall of Light",
+      "source": "XGE",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "沙墙术",
+      "ENG_name": "Wall of Sand",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "石墙术",
+      "ENG_name": "Wall of Stone",
+      "source": "PHB",
+      "system": {
+        "target.value": 100,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "棘墙术",
+      "ENG_name": "Wall of Thorns",
+      "source": "PHB",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "水墙术",
+      "ENG_name": "Wall of Water",
+      "source": "XGE",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "水体法球",
+      "ENG_name": "Watery Sphere",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "蛛网术",
+      "ENG_name": "Web",
+      "source": "PHB",
+      "system": {
+        "target.value": 20,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "怪影杀手",
+      "ENG_name": "Weird",
+      "source": "PHB",
+      "system": {
+        "target.value": 30,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "龙卷旋风",
+      "ENG_name": "Whirlwind",
+      "source": "XGE",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "效应范围:柱状"
+      }
+    },
+    {
+      "name": "风墙术",
+      "ENG_name": "Wind Wall",
+      "source": "PHB",
+      "system": {
+        "target.value": 50,
+        "target.units": "ft",
+        "target.type": "墙壁"
+      }
+    },
+    {
+      "name": "巫术箭",
+      "ENG_name": "Witch Bolt",
+      "source": "PHB",
+      "system": {
+        "damage.parts": [
+          "1d12",
+          "闪电"
+        ]
+      }
+    },
+    {
+      "name": "靡叶生华",
+      "ENG_name": "Wither and Bloom",
+      "source": "SCC",
+      "system": {
+        "target.value": 10,
+        "target.units": "ft",
+        "target.type": "radius"
+      }
+    },
+    {
+      "name": "光耀祷词",
+      "ENG_name": "Word of Radiance",
+      "source": "XGE",
+      "system": {
+        "target.value": 5,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    },
+    {
+      "name": "自然之怒",
+      "ENG_name": "Wrath of Nature",
+      "source": "XGE",
+      "system": {
+        "target.value": 60,
+        "target.units": "ft",
+        "target.type": "cube"
+      }
+    },
+    {
+      "name": "诚实之域",
+      "ENG_name": "Zone of Truth",
+      "source": "PHB",
+      "system": {
+        "target.value": 15,
+        "target.units": "ft",
+        "target.type": "sphere"
+      }
+    }
+  ]
 }

@@ -1,3335 +1,3130 @@
 {
-	"class": [
-		{
-			"name": "Sorcerer",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"hd": {
-				"number": 1,
-				"faces": 6
-			},
-			"proficiency": [
-				"con",
-				"cha"
-			],
-			"spellcastingAbility": "cha",
-			"casterProgression": "full",
-			"cantripProgression": [
-				4,
-				4,
-				4,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6
-			],
-			"spellsKnownProgression": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				12,
-				13,
-				13,
-				14,
-				14,
-				15,
-				15,
-				15,
-				15
-			],
-			"optionalfeatureProgression": [
-				{
-					"name": "Metamagic",
-					"featureType": [
-						"MM"
-					],
-					"progression": {
-						"3": 2,
-						"10": 3,
-						"17": 4
-					}
-				}
-			],
-			"startingProficiencies": {
-				"weapons": [
-					"{@item dagger|phb|daggers}",
-					"{@item dart|phb|darts}",
-					"{@item sling|phb|slings}",
-					"{@item quarterstaff|phb|quarterstaffs}",
-					"{@item light crossbow|phb|light crossbows}"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"deception",
-								"insight",
-								"intimidation",
-								"persuasion",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"Two {@item dagger|phb|daggers}"
-				],
-				"goldAlternative": "{@dice 3d4 × 10|3d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"component pouch|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "focusSpellcastingArcane"
-							}
-						]
-					},
-					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							{
-								"item": "dagger|phb",
-								"quantity": 2
-							}
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"cha": 13
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"Sorcery Points"
-					],
-					"rows": [
-						[
-							0
-						],
-						[
-							2
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							5
-						],
-						[
-							6
-						],
-						[
-							7
-						],
-						[
-							8
-						],
-						[
-							9
-						],
-						[
-							10
-						],
-						[
-							11
-						],
-						[
-							12
-						],
-						[
-							13
-						],
-						[
-							14
-						],
-						[
-							15
-						],
-						[
-							16
-						],
-						[
-							17
-						],
-						[
-							18
-						],
-						[
-							19
-						],
-						[
-							20
-						]
-					]
-				},
-				{
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=sorcerer}",
-						"{@filter Spells Known|spells|class=sorcerer}"
-					],
-					"rows": [
-						[
-							4,
-							2
-						],
-						[
-							4,
-							3
-						],
-						[
-							4,
-							4
-						],
-						[
-							5,
-							5
-						],
-						[
-							5,
-							6
-						],
-						[
-							5,
-							7
-						],
-						[
-							5,
-							8
-						],
-						[
-							5,
-							9
-						],
-						[
-							5,
-							10
-						],
-						[
-							6,
-							11
-						],
-						[
-							6,
-							12
-						],
-						[
-							6,
-							12
-						],
-						[
-							6,
-							13
-						],
-						[
-							6,
-							13
-						],
-						[
-							6,
-							14
-						],
-						[
-							6,
-							14
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"colLabels": [
-						"{@filter 1st|spells|level=1|class=sorcerer}",
-						"{@filter 2nd|spells|level=2|class=sorcerer}",
-						"{@filter 3rd|spells|level=3|class=sorcerer}",
-						"{@filter 4th|spells|level=4|class=sorcerer}",
-						"{@filter 5th|spells|level=5|class=sorcerer}",
-						"{@filter 6th|spells|level=6|class=sorcerer}",
-						"{@filter 7th|spells|level=7|class=sorcerer}",
-						"{@filter 8th|spells|level=8|class=sorcerer}",
-						"{@filter 9th|spells|level=9|class=sorcerer}"
-					],
-					"rowsSpellProgression": [
-						[
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							2,
-							1,
-							1
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Spellcasting|Sorcerer||1",
-				{
-					"classFeature": "Sorcerous Origin|Sorcerer||1",
-					"gainSubclassFeature": true
-				},
-				"Font of Magic|Sorcerer||2",
-				"Metamagic|Sorcerer||3",
-				"Metamagic Options|Sorcerer||3|TCE",
-				"Ability Score Improvement|Sorcerer||4",
-				"Sorcerous Versatility|Sorcerer||4|TCE",
-				"Magical Guidance|Sorcerer||5|TCE",
-				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||6",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Sorcerer||8",
-				"Metamagic|Sorcerer||10",
-				"Ability Score Improvement|Sorcerer||12",
-				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||14",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Sorcerer||16",
-				"Metamagic|Sorcerer||17",
-				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||18",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Sorcerer||19",
-				"Sorcerous Restoration|Sorcerer||20"
-			],
-			"subclassTitle": "Sorcerous Origin",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Draconic Bloodline",
-			"shortName": "Draconic",
-			"source": "PHB",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 102,
-			"srd": true,
-			"subclassFeatures": [
-				"Draconic Bloodline|Sorcerer||Draconic||1",
-				"Elemental Affinity|Sorcerer||Draconic||6",
-				"Dragon Wings|Sorcerer||Draconic||14",
-				"Draconic Presence|Sorcerer||Draconic||18"
-			]
-		},
-		{
-			"name": "Wild Magic",
-			"shortName": "Wild",
-			"source": "PHB",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 103,
-			"subclassFeatures": [
-				"Wild Magic|Sorcerer||Wild||1",
-				"Bend Luck|Sorcerer||Wild||6",
-				"Controlled Chaos|Sorcerer||Wild||14",
-				"Spell Bombardment|Sorcerer||Wild||18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Pyromancer (PSK)",
-			"shortName": "Pyromancer (PSK)",
-			"source": "PSK",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 9,
-			"subclassFeatures": [
-				"Pyromancer (PSK)|Sorcerer||Pyromancer (PSK)|PSK|1",
-				"Fire in the Veins|Sorcerer||Pyromancer (PSK)|PSK|6",
-				"Pyromancer's Fury|Sorcerer||Pyromancer (PSK)|PSK|14",
-				"Fiery Soul|Sorcerer||Pyromancer (PSK)|PSK|18"
-			]
-		},
-		{
-			"name": "Divine Soul",
-			"shortName": "Divine Soul",
-			"source": "XGE",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 50,
-			"additionalSpells": [
-				{
-					"name": "Good",
-					"known": {
-						"1": [
-							"cure wounds"
-						]
-					},
-					"expanded": {
-						"1": [
-							{
-								"all": "level=0|class=Cleric"
-							},
-							{
-								"all": "level=1|class=Cleric"
-							}
-						],
-						"3": [
-							{
-								"all": "level=2|class=Cleric"
-							}
-						],
-						"5": [
-							{
-								"all": "level=3|class=Cleric"
-							}
-						],
-						"7": [
-							{
-								"all": "level=4|class=Cleric"
-							}
-						],
-						"9": [
-							{
-								"all": "level=5|class=Cleric"
-							}
-						],
-						"11": [
-							{
-								"all": "level=6|class=Cleric"
-							}
-						],
-						"13": [
-							{
-								"all": "level=7|class=Cleric"
-							}
-						],
-						"15": [
-							{
-								"all": "level=8|class=Cleric"
-							}
-						],
-						"17": [
-							{
-								"all": "level=9|class=Cleric"
-							}
-						]
-					}
-				},
-				{
-					"name": "Evil",
-					"known": {
-						"1": [
-							"inflict wounds"
-						]
-					},
-					"expanded": {
-						"1": [
-							{
-								"all": "level=0|class=Cleric"
-							},
-							{
-								"all": "level=1|class=Cleric"
-							}
-						],
-						"3": [
-							{
-								"all": "level=2|class=Cleric"
-							}
-						],
-						"5": [
-							{
-								"all": "level=3|class=Cleric"
-							}
-						],
-						"7": [
-							{
-								"all": "level=4|class=Cleric"
-							}
-						],
-						"9": [
-							{
-								"all": "level=5|class=Cleric"
-							}
-						],
-						"11": [
-							{
-								"all": "level=6|class=Cleric"
-							}
-						],
-						"13": [
-							{
-								"all": "level=7|class=Cleric"
-							}
-						],
-						"15": [
-							{
-								"all": "level=8|class=Cleric"
-							}
-						],
-						"17": [
-							{
-								"all": "level=9|class=Cleric"
-							}
-						]
-					}
-				},
-				{
-					"name": "Law",
-					"known": {
-						"1": [
-							"bless"
-						]
-					},
-					"expanded": {
-						"1": [
-							{
-								"all": "level=0|class=Cleric"
-							},
-							{
-								"all": "level=1|class=Cleric"
-							}
-						],
-						"3": [
-							{
-								"all": "level=2|class=Cleric"
-							}
-						],
-						"5": [
-							{
-								"all": "level=3|class=Cleric"
-							}
-						],
-						"7": [
-							{
-								"all": "level=4|class=Cleric"
-							}
-						],
-						"9": [
-							{
-								"all": "level=5|class=Cleric"
-							}
-						],
-						"11": [
-							{
-								"all": "level=6|class=Cleric"
-							}
-						],
-						"13": [
-							{
-								"all": "level=7|class=Cleric"
-							}
-						],
-						"15": [
-							{
-								"all": "level=8|class=Cleric"
-							}
-						],
-						"17": [
-							{
-								"all": "level=9|class=Cleric"
-							}
-						]
-					}
-				},
-				{
-					"name": "Chaos",
-					"known": {
-						"1": [
-							"bane"
-						]
-					},
-					"expanded": {
-						"1": [
-							{
-								"all": "level=0|class=Cleric"
-							},
-							{
-								"all": "level=1|class=Cleric"
-							}
-						],
-						"3": [
-							{
-								"all": "level=2|class=Cleric"
-							}
-						],
-						"5": [
-							{
-								"all": "level=3|class=Cleric"
-							}
-						],
-						"7": [
-							{
-								"all": "level=4|class=Cleric"
-							}
-						],
-						"9": [
-							{
-								"all": "level=5|class=Cleric"
-							}
-						],
-						"11": [
-							{
-								"all": "level=6|class=Cleric"
-							}
-						],
-						"13": [
-							{
-								"all": "level=7|class=Cleric"
-							}
-						],
-						"15": [
-							{
-								"all": "level=8|class=Cleric"
-							}
-						],
-						"17": [
-							{
-								"all": "level=9|class=Cleric"
-							}
-						]
-					}
-				},
-				{
-					"name": "Neutrality",
-					"known": {
-						"1": [
-							"protection from evil and good"
-						]
-					},
-					"expanded": {
-						"1": [
-							{
-								"all": "level=0|class=Cleric"
-							},
-							{
-								"all": "level=1|class=Cleric"
-							}
-						],
-						"3": [
-							{
-								"all": "level=2|class=Cleric"
-							}
-						],
-						"5": [
-							{
-								"all": "level=3|class=Cleric"
-							}
-						],
-						"7": [
-							{
-								"all": "level=4|class=Cleric"
-							}
-						],
-						"9": [
-							{
-								"all": "level=5|class=Cleric"
-							}
-						],
-						"11": [
-							{
-								"all": "level=6|class=Cleric"
-							}
-						],
-						"13": [
-							{
-								"all": "level=7|class=Cleric"
-							}
-						],
-						"15": [
-							{
-								"all": "level=8|class=Cleric"
-							}
-						],
-						"17": [
-							{
-								"all": "level=9|class=Cleric"
-							}
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Divine Soul|Sorcerer||Divine Soul|XGE|1",
-				"Empowered Healing|Sorcerer||Divine Soul|XGE|6",
-				"Otherworldly Wings|Sorcerer||Divine Soul|XGE|14",
-				"Unearthly Recovery|Sorcerer||Divine Soul|XGE|18"
-			]
-		},
-		{
-			"name": "Shadow Magic",
-			"shortName": "Shadow",
-			"source": "XGE",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 50,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"darkness"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Shadow Magic|Sorcerer||Shadow|XGE|1",
-				"Hound of Ill Omen|Sorcerer||Shadow|XGE|6",
-				"Shadow Walk|Sorcerer||Shadow|XGE|14",
-				"Umbral Form|Sorcerer||Shadow|XGE|18"
-			]
-		},
-		{
-			"name": "Storm Sorcery",
-			"shortName": "Storm",
-			"source": "XGE",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 51,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 137
-				}
-			],
-			"subclassFeatures": [
-				"Storm Sorcery|Sorcerer||Storm|XGE|1",
-				"Heart of the Storm|Sorcerer||Storm|XGE|6",
-				"Storm Guide|Sorcerer||Storm|XGE|6",
-				"Storm's Fury|Sorcerer||Storm|XGE|14",
-				"Wind Soul|Sorcerer||Storm|XGE|18"
-			]
-		},
-		{
-			"name": "Aberrant Mind",
-			"shortName": "Aberrant Mind",
-			"source": "TCE",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 66,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": [
-							"mind sliver|tce#c",
-							"arms of Hadar",
-							"dissonant whispers"
-						],
-						"3": [
-							"calm emotions",
-							"detect thoughts"
-						],
-						"5": [
-							"hunger of Hadar",
-							"sending"
-						],
-						"7": [
-							"Evard's black tentacles",
-							"summon aberration|TCE"
-						],
-						"9": [
-							"Rary's telepathic bond",
-							"telekinesis"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Aberrant Mind|Sorcerer||Aberrant Mind|TCE|1",
-				"Psionic Sorcery|Sorcerer||Aberrant Mind|TCE|6",
-				"Psychic Defenses|Sorcerer||Aberrant Mind|TCE|6",
-				"Revelation in Flesh|Sorcerer||Aberrant Mind|TCE|14",
-				"Warping Implosion|Sorcerer||Aberrant Mind|TCE|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Clockwork Soul",
-			"shortName": "Clockwork Soul",
-			"source": "TCE",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 68,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": [
-							"alarm",
-							"protection from evil and good"
-						],
-						"3": [
-							"aid",
-							"lesser restoration"
-						],
-						"5": [
-							"dispel magic",
-							"protection from energy"
-						],
-						"7": [
-							"freedom of movement",
-							"summon construct|TCE"
-						],
-						"9": [
-							"greater restoration",
-							"wall of force"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Clockwork Soul|Sorcerer||Clockwork Soul|TCE|1",
-				"Bastion of Law|Sorcerer||Clockwork Soul|TCE|6",
-				"Trance of Order|Sorcerer||Clockwork Soul|TCE|14",
-				"Clockwork Cavalcade|Sorcerer||Clockwork Soul|TCE|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Runechild",
-			"shortName": "Runechild",
-			"source": "TDCSR",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 176,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"longstrider",
-							"protection from evil and good"
-						],
-						"5": [
-							"lesser restoration",
-							"protection from poison"
-						],
-						"9": [
-							"glyph of warding",
-							"magic circle"
-						],
-						"13": [
-							"death ward",
-							"freedom of movement"
-						],
-						"17": [
-							"greater restoration",
-							"telekinesis"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Runechild|Sorcerer|PHB|Runechild|TDCSR|1",
-				"Glyph of Aegis (6th Level)|Sorcerer|PHB|Runechild|TDCSR|6",
-				"Sigilic Augmentation|Sorcerer|PHB|Runechild|TDCSR|6",
-				"Manifest Inscriptions|Sorcerer|PHB|Runechild|TDCSR|6",
-				"Glyph of Aegis (14th Level)|Sorcerer|PHB|Runechild|TDCSR|14",
-				"Runic Torrent|Sorcerer|PHB|Runechild|TDCSR|14",
-				"Arcane Exemplar|Sorcerer|PHB|Runechild|TDCSR|18"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Lunar Sorcery",
-			"shortName": "Lunar",
-			"source": "DSotDQ",
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"page": 34,
-			"additionalSpells": [
-				{
-					"name": "Full Moon",
-					"known": {
-						"1": [
-							"shield",
-							"ray of sickness",
-							"color spray"
-						],
-						"3": [
-							"lesser restoration",
-							"blindness/deafness",
-							"alter self"
-						],
-						"5": [
-							"dispel magic",
-							"vampiric touch",
-							"phantom steed"
-						],
-						"7": [
-							"death ward",
-							"confusion",
-							"hallucinatory terrain"
-						],
-						"9": [
-							"Rary's telepathic bond",
-							"hold monster",
-							"mislead"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"Lunar Sorcery|Sorcerer||Lunar|DSotDQ|1",
-				"Lunar Boons|Sorcerer||Lunar|DSotDQ|6",
-				"Waxing and Waning|Sorcerer||Lunar|DSotDQ|6",
-				"Lunar Empowerment|Sorcerer||Lunar|DSotDQ|14",
-				"Lunar Phenomenon|Sorcerer||Lunar|DSotDQ|18"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Sorcerous Origin",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins.",
-				"Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
-			]
-		},
-		{
-			"name": "Spellcasting",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter sorcerer spell list|spells|class=sorcerer}.",
-				{
-					"type": "entries",
-					"name": "Cantrips",
-					"entries": [
-						"At 1st level, you know four cantrips of your choice from the sorcerer spell list. You learn an additional sorcerer cantrip of your choice at 4th level and another at 10th level."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spell Slots",
-					"entries": [
-						"The Sorcerer table shows how many spell slots you have to cast your {@filter sorcerer spells|spells|class=sorcerer} of 1st level and higher. To cast one of these sorcerer spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"For example, if you know the 1st-level spell {@spell burning hands} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell burning hands} using either slot."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells Known of 1st Level and Higher",
-					"entries": [
-						"You know two 1st-level spells of your choice from the sorcerer spell list.",
-						"You learn an additional sorcerer spell of your choice at each level except 12th, 14th, 16th, 18th, 19th, and 20th. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
-						"Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Ability",
-					"entries": [
-						"Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.",
-						{
-							"type": "abilityDc",
-							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
-						},
-						{
-							"type": "abilityAttackMod",
-							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Focus",
-					"entries": [
-						"You can use an {@item arcane focus|phb} as a spellcasting focus for your sorcerer spells."
-					]
-				}
-			]
-		},
-		{
-			"name": "Flexible Casting",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"You can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. You learn other ways to use your sorcery points as you reach higher levels.",
-				{
-					"type": "entries",
-					"name": "Creating Spell Slots",
-					"entries": [
-						"You can transform unexpended sorcery points into one spell slot as a bonus action on your turn. The created spell slots vanish at the end of a long rest. The Creating Spell Slots table shows the cost of creating a spell slot of a given level. You can create spell slots no higher in level than 5th.",
-						{
-							"type": "table",
-							"caption": "Creating Spell Slots",
-							"colLabels": [
-								"Spell Slot Level",
-								"Sorcery Point Cost"
-							],
-							"colStyles": [
-								"col-6 text-center",
-								"col-6 text-center"
-							],
-							"rows": [
-								[
-									"1st",
-									"2"
-								],
-								[
-									"2nd",
-									"3"
-								],
-								[
-									"3rd",
-									"5"
-								],
-								[
-									"4th",
-									"6"
-								],
-								[
-									"5th",
-									"7"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Converting a Spell Slot to Sorcery Points",
-					"entries": [
-						"As a bonus action on your turn, you can expend one spell slot and gain a number of sorcery points equal to the slot's level."
-					]
-				}
-			]
-		},
-		{
-			"name": "Font of Magic",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
-				{
-					"type": "refClassFeature",
-					"classFeature": "Sorcery Points|Sorcerer||2"
-				},
-				{
-					"type": "refClassFeature",
-					"classFeature": "Flexible Casting|Sorcerer||2"
-				}
-			]
-		},
-		{
-			"name": "Sorcery Points",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 2,
-			"header": 1,
-			"entries": [
-				"You have 2 sorcery points, and you gain one additional point every time you level up, to a maximum of 20 at level 20. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest."
-			]
-		},
-		{
-			"name": "Metamagic",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.",
-				"You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
-				{
-					"type": "options",
-					"count": 2,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Careful Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Distant Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Empowered Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Extended Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Heightened Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Quickened Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Subtle Spell"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Twinned Spell"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Metamagic Options",
-			"source": "TCE",
-			"page": 65,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 3rd-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"When you choose Metamagic options, you have access to the following additional options.",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Seeking Spell|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Transmuted Spell|TCE"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Sorcerous Versatility",
-			"source": "TCE",
-			"page": 65,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
-				{
-					"type": "list",
-					"items": [
-						"Replace one of the options you chose for the Metamagic feature with a different {@filter Metamagic option|optionalfeatures|Feature Type=MM} available to you.",
-						"Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter sorcerer spell list|spells|level=0|class=Sorcerer}."
-					]
-				}
-			]
-		},
-		{
-			"name": "Magical Guidance",
-			"source": "TCE",
-			"page": 65,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 5,
-			"isClassFeatureVariant": true,
-			"consumes": {
-				"name": "Sorcery Point"
-			},
-			"entries": [
-				"{@i 5th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"You can tap into your inner wellspring of magic to try to conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the {@dice d20}, and you must use the new roll, potentially turning the failure into a success."
-			]
-		},
-		{
-			"name": "Sorcerous Origin feature",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"At 6th level, you gain a feature granted by your Sorcerous Origin."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Metamagic",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"At 10th level, you learn an additional metamagic option."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Sorcerous Origin feature",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"At 14th level, you gain a feature granted by your Sorcerous Origin."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Metamagic",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, you learn an additional metamagic option."
-			]
-		},
-		{
-			"name": "Sorcerous Origin feature",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 18,
-			"entries": [
-				"At 18th level, you gain a feature granted by your Sorcerous Origin."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Sorcerous Restoration",
-			"source": "PHB",
-			"page": 99,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Lunar Sorcery",
-			"source": "DSotDQ",
-			"page": 34,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Lunar",
-			"subclassSource": "DSotDQ",
-			"level": 1,
-			"entries": [
-				"On many worlds, the moon is a revered celestial body with magical properties. On Krynn, the gods of magic are associated with the world's three moons. On the world of Toril, the god Selûne uses the light of the moon to battle darkness. On Eberron, scholars of the Draconic Prophecy decipher ancient secrets from the waxing and waning of that world's twelve moons.",
-				"You or someone from your lineage has been exposed to the concentrated magic of the moon (or moons) of your world, imbuing you with lunar magic. Perhaps your ancestor was involved in a druidic ritual involving an eclipse, or maybe a mystical fragment of a moon crashed near you. However you came to have your magic, your connection to the moon is obvious when you cast sorcerer spells\u2014perhaps making your pupils glow with the color of a moon from your world, causing spectral manifestations of lunar phases to orbit you, or some other effect.",
-				{
-					"type": "entries",
-					"name": "Lunar Embodiment",
-					"entries": [
-						"{@i 1st-Level Lunar Sorcery Feature}",
-						"You learn additional spells when you reach certain levels in this class, as shown on the Lunar Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-						{
-							"type": "table",
-							"caption": "Lunar Spells",
-							"colLabels": [
-								"Sorcerer Level",
-								"Full Moon Spell",
-								"New Moon Spell",
-								"Crescent Moon Spell"
-							],
-							"colStyles": [
-								"col-1-1 text-center",
-								"col-3-3",
-								"col-3-3",
-								"col-3-3"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell shield}",
-									"{@spell ray of sickness}",
-									"{@spell color spray}"
-								],
-								[
-									"3rd",
-									"{@spell lesser restoration}",
-									"{@spell blindness/deafness}",
-									"{@spell alter self}"
-								],
-								[
-									"5th",
-									"{@spell dispel magic}",
-									"{@spell vampiric touch}",
-									"{@spell phantom steed}"
-								],
-								[
-									"7th",
-									"{@spell death ward}",
-									"{@spell confusion}",
-									"{@spell hallucinatory terrain}"
-								],
-								[
-									"9th",
-									"{@spell Rary's telepathic bond}",
-									"{@spell hold monster}",
-									"{@spell mislead}"
-								]
-							]
-						},
-						"Whenever you finish a long rest, you can choose what lunar phase manifests its power through your magic: Full Moon, New Moon, or Crescent Moon. While in the chosen phase, you can cast one 1st-level spell of the associated phase in the Lunar Spells table once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Moon Fire",
-					"entries": [
-						"{@i 1st-Level Lunar Sorcery Feature}",
-						"You can call down the radiant light of the moon on command. You learn the {@spell sacred flame} spell, which doesn't count against the number of sorcerer cantrips you know. When you cast the spell, you can target one creature as normal or target two creatures within range that are within 5 feet of each other."
-					]
-				}
-			]
-		},
-		{
-			"name": "Lunar Boons",
-			"source": "DSotDQ",
-			"page": 34,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Lunar",
-			"subclassSource": "DSotDQ",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-Level Lunar Sorcery Feature}",
-				"The current phase of your Lunar Embodiment can affect your Metamagic feature. Each Lunar Embodiment phase is associated with certain schools of magic, as shown here:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Full Moon",
-							"entries": [
-								"{@filter Abjuration and divination spells|spells|class=sorcerer|school=A;D}"
-							]
-						},
-						{
-							"type": "item",
-							"name": "New Moon",
-							"entries": [
-								"{@filter Enchantment and necromancy spells|spells|class=sorcerer|school=E;N}"
-							]
-						},
-						{
-							"type": "item",
-							"name": "Crescent Moon",
-							"entries": [
-								"{@filter Illusion and transmutation spells|spells|class=sorcerer|school=I;T}"
-							]
-						}
-					]
-				},
-				"Whenever you use Metamagic on a spell of a school of magic associated with your current Lunar Embodiment phase, you can reduce the sorcery points spent by 1 (minimum 0). You can reduce the sorcery points spent for your Metamagic a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Waxing and Waning",
-			"source": "DSotDQ",
-			"page": 35,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Lunar",
-			"subclassSource": "DSotDQ",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point"
-			},
-			"entries": [
-				"{@i 6th-Level Lunar Sorcery Feature}",
-				"You gain greater control over the phases of your lunar magic. As a bonus action, you can spend 1 sorcery point to change your current Lunar Embodiment phase to a different one.",
-				"You can now cast one 1st-level spell from each lunar phase of the Lunar Spells table once without expending a spell slot, provided your current phase is the same as the lunar phase spell. Once you cast a lunar phase spell in this way, you can't do so again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Lunar Empowerment",
-			"source": "DSotDQ",
-			"page": 35,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Lunar",
-			"subclassSource": "DSotDQ",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-Level Lunar Sorcery Feature}",
-				"The power of a lunar phase saturates your being. While you are in a Lunar Embodiment phase, you also gain the following benefit associated with that phase:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Full Moon",
-							"entries": [
-								"You can use a bonus action to shed bright light in a 10-foot radius and dim light for an additional 10 feet or to douse the light. In addition, you and creatures of your choice have advantage on Intelligence ({@skill Investigation}) and Wisdom ({@skill Perception}) checks while within the bright light you shed."
-							]
-						},
-						{
-							"type": "item",
-							"name": "New Moon",
-							"entries": [
-								"You have advantage on Dexterity ({@skill Stealth}) checks. In addition, while you are entirely in darkness, attack rolls have disadvantage against you."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Crescent Moon",
-							"entries": [
-								"You have resistance to necrotic and radiant damage."
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Lunar Phenomenon",
-			"source": "DSotDQ",
-			"page": 35,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Lunar",
-			"subclassSource": "DSotDQ",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-Level Lunar Sorcery feature}",
-				"As a bonus action, you can tap into a special power of your current Lunar Embodiment phase. Alternatively, as part of the bonus action you take to change your lunar phase using the Waxing and Waning feature, you can immediately use the power of the lunar phase you are entering:",
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "Full Moon",
-							"entries": [
-								"You radiate moonlight for a moment. Each creature of your choice within 30 feet of you must succeed on a Constitution saving throw against your spell save DC or be {@condition blinded} until the end of its next turn. In addition, one creature of your choice in that area regains {@dice 3d8} hit points."
-							]
-						},
-						{
-							"type": "item",
-							"name": "New Moon",
-							"entries": [
-								"You momentarily emanate gloom. Each creature of your choice within 30 feet of you must succeed on a Dexterity saving throw against your spell save DC or take {@damage 3d10} necrotic damage and have its speed reduced to 0 until the end of its next turn. In addition, you become {@condition invisible} until the end of your next turn, or until immediately after you make an attack roll or cast a spell."
-							]
-						},
-						{
-							"type": "item",
-							"name": "Crescent Moon",
-							"entries": [
-								"You can magically teleport to an unoccupied space you can see within 60 feet of yourself. You can bring along one willing creature you can see within 5 feet of yourself. That creature teleports to an unoccupied space of your choice that you can see within 5 feet of your destination space. In addition, you and that creature gain resistance to all damage until the start of your next turn."
-							]
-						}
-					]
-				},
-				"Once you use one of these bonus action benefits, you can't use that benefit again until you finish a long rest, unless you spend 5 sorcery points to use it again."
-			]
-		},
-		{
-			"name": "Draconic Bloodline",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Dragon Ancestor|Sorcerer||Draconic||1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Draconic Resilience|Sorcerer||Draconic||1"
-				}
-			]
-		},
-		{
-			"name": "Draconic Resilience",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.",
-				"Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier."
-			]
-		},
-		{
-			"name": "Dragon Ancestor",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
-				{
-					"type": "table",
-					"caption": "Draconic Ancestry",
-					"colLabels": [
-						"Dragon",
-						"Damage Type"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"Black",
-							"{@filter Acid|spells|damage type=acid|class=sorcerer}"
-						],
-						[
-							"Blue",
-							"{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
-						],
-						[
-							"Brass",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
-						],
-						[
-							"Bronze",
-							"{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
-						],
-						[
-							"Copper",
-							"{@filter Acid|spells|damage type=acid|class=sorcerer}"
-						],
-						[
-							"Gold",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
-						],
-						[
-							"Green",
-							"{@filter Poison|spells|damage type=poison|class=sorcerer}"
-						],
-						[
-							"Red",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
-						],
-						[
-							"Silver",
-							"{@filter Cold|spells|damage type=cold|class=sorcerer}"
-						],
-						[
-							"White",
-							"{@filter Cold|spells|damage type=cold|class=sorcerer}"
-						]
-					]
-				},
-				"You can speak, read, and write {@language Draconic}. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
-			]
-		},
-		{
-			"name": "Elemental Affinity",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point"
-			},
-			"entries": [
-				"Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour."
-			]
-		},
-		{
-			"name": "Dragon Wings",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.",
-				"You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them."
-			]
-		},
-		{
-			"name": "Draconic Presence",
-			"source": "PHB",
-			"page": 102,
-			"srd": true,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Draconic",
-			"subclassSource": "PHB",
-			"level": 18,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point",
-				"amount": 5
-			},
-			"entries": [
-				"Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or {@condition frightened}. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your {@status concentration} (as if you were casting a {@status concentration} spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be {@condition charmed} (if you chose awe) or {@condition frightened} (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours."
-			]
-		},
-		{
-			"name": "Wild Magic",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Wild Magic Surge|Sorcerer||Wild||1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tides of Chaos|Sorcerer||Wild||1"
-				}
-			]
-		},
-		{
-			"name": "Tides of Chaos",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.",
-				"Any time before you regain the use of this feature, the DM can have you roll on the {@table Wild Magic Surge|PHB} table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature."
-			]
-		},
-		{
-			"name": "Wild Magic Surge",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a {@dice d20}. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild Magic Surge can happen once per turn.",
-				"If a Wild Magic effect is a spell, it's too wild to be affected by Metamagic. If it normally requires {@status concentration}, it doesn't require {@status concentration} in this case; the spell lasts for its full duration.",
-				{
-					"type": "table",
-					"caption": "Wild Magic Surge",
-					"colLabels": [
-						"{@dice d100}",
-						"Effect"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
-					"rows": [
-						[
-							"01-02",
-							"Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls."
-						],
-						[
-							"03-04",
-							"For the next minute, you can see any {@condition invisible} creature if you have line of sight to it."
-						],
-						[
-							"05-06",
-							"A {@filter modron|bestiary|source=mm|search=modron} chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later."
-						],
-						[
-							"07-08",
-							"You cast {@spell fireball} as a 3rd-level spell centered on yourself."
-						],
-						[
-							"09-10",
-							"You cast {@spell magic missile} as a 5th-level spell."
-						],
-						[
-							"11-12",
-							"Roll a {@dice d10}. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow."
-						],
-						[
-							"13-14",
-							"You cast {@spell confusion} centered on yourself."
-						],
-						[
-							"15-16",
-							"For the next minute, you regain 5 hit points at the start of each of your turns."
-						],
-						[
-							"17-18",
-							"You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face."
-						],
-						[
-							"19-20",
-							"You cast {@spell grease} centered on yourself."
-						],
-						[
-							"21-22",
-							"Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw."
-						],
-						[
-							"23-24",
-							"Your skin turns a vibrant shade of blue. A {@spell remove curse} spell can end this effect."
-						],
-						[
-							"25-26",
-							"An eye appears on your forehead for the next minute. During that time, you have advantage on Wisdom ({@skill Perception}) checks that rely on sight."
-						],
-						[
-							"27-28",
-							"For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action."
-						],
-						[
-							"29-30",
-							"You teleport up to 60 feet to an unoccupied space of your choice that you can see."
-						],
-						[
-							"31-32",
-							"You are transported to the Astral Plane until the end of your next turn, after which time you return to the space you previously occupied or the nearest unoccupied space if that space is occupied."
-						],
-						[
-							"33-34",
-							"Maximize the damage of the next damaging spell you cast within the next minute."
-						],
-						[
-							"35-36",
-							"Roll a {@dice d10}. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older."
-						],
-						[
-							"37-38",
-							"{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
-						],
-						[
-							"39-40",
-							"You regain {@dice 2d10} hit points."
-						],
-						[
-							"41-42",
-							"You turn into a potted plant until the start of your next turn. While a plant, you are {@condition incapacitated} and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts."
-						],
-						[
-							"43-44",
-							"For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns."
-						],
-						[
-							"45-46",
-							"You cast {@spell levitate} on yourself."
-						],
-						[
-							"47-48",
-							"A {@creature unicorn} controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later."
-						],
-						[
-							"49-50",
-							"You can't speak for the next minute. Whenever you try, pink bubbles float out of your mouth."
-						],
-						[
-							"51-52",
-							"A spectral shield hovers near you for the next minute, granting you a +2 bonus to AC and immunity to {@spell magic missile}."
-						],
-						[
-							"53-54",
-							"You are immune to being intoxicated by alcohol for the next {@dice 5d6} days."
-						],
-						[
-							"55-56",
-							"Your hair falls out but grows back within 24 hours."
-						],
-						[
-							"57-58",
-							"For the next minute, any flammable object you touch that isn't being worn or carried by another creature bursts into flame."
-						],
-						[
-							"59-60",
-							"You regain your lowest-level expended spell slot."
-						],
-						[
-							"61-62",
-							"For the next minute, you must shout when you speak."
-						],
-						[
-							"63-64",
-							"You cast {@spell fog cloud} centered on yourself."
-						],
-						[
-							"65-66",
-							"Up to three creatures you choose within 30 feet of you take {@damage 4d10} lightning damage."
-						],
-						[
-							"67-68",
-							"You are {@condition frightened} by the nearest creature until the end of your next turn."
-						],
-						[
-							"69-70",
-							"Each creature within 30 feet of you becomes {@condition invisible} for the next minute. The invisibility ends on a creature when it attacks or casts a spell."
-						],
-						[
-							"71-72",
-							"You gain resistance to all damage for the next minute."
-						],
-						[
-							"73-74",
-							"A random creature within 60 feet of you becomes {@condition poisoned} for {@dice 1d4} hours."
-						],
-						[
-							"75-76",
-							"You glow with bright light in a 30-foot radius for the next minute. Any creature that ends its turn within 5 feet of you is {@condition blinded} until the end of its next turn."
-						],
-						[
-							"77-78",
-							"You cast {@spell polymorph} on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
-						],
-						[
-							"79-80",
-							"Illusory butterflies and flower petals flutter in the air within 10 feet of you for the next minute."
-						],
-						[
-							"81-82",
-							"You can take one additional action immediately."
-						],
-						[
-							"83-84",
-							"Each creature within 30 feet of you takes {@damage 1d10} necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt."
-						],
-						[
-							"85-86",
-							"You cast {@spell mirror image}."
-						],
-						[
-							"87-88",
-							"You cast {@spell fly} on a random creature within 60 feet of you."
-						],
-						[
-							"89-90",
-							"You become {@condition invisible} for the next minute. During that time, other creatures can't hear you. The invisibility ends if you attack or cast a spell."
-						],
-						[
-							"91-92",
-							"If you die within the next minute, you immediately come back to life as if by the {@spell reincarnate} spell."
-						],
-						[
-							"93-94",
-							"Your size increases by one size category for the next minute."
-						],
-						[
-							"95-96",
-							"You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute."
-						],
-						[
-							"97-98",
-							"You are surrounded by faint, ethereal music for the next minute."
-						],
-						[
-							"99-00",
-							"You regain all expended sorcery points."
-						]
-					],
-					"data": {
-						"tableInclude": true
-					}
-				}
-			]
-		},
-		{
-			"name": "Bend Luck",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point",
-				"amount": 2
-			},
-			"entries": [
-				"Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll {@dice 1d4} and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur."
-			]
-		},
-		{
-			"name": "Controlled Chaos",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the {@table Wild Magic Surge|PHB} table, you can roll twice and use either number."
-			]
-		},
-		{
-			"name": "Spell Bombardment",
-			"source": "PHB",
-			"page": 103,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Wild",
-			"subclassSource": "PHB",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn."
-			]
-		},
-		{
-			"name": "Pyromancer (PSK)",
-			"source": "PSK",
-			"page": 9,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Pyromancer (PSK)",
-			"subclassSource": "PSK",
-			"level": 1,
-			"entries": [
-				"Your innate magic manifests in fire. You are your fire, and your fire is you.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Heart of Fire|Sorcerer||Pyromancer (PSK)|PSK|1"
-				}
-			]
-		},
-		{
-			"name": "Heart of Fire",
-			"source": "PSK",
-			"page": 9,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Pyromancer (PSK)",
-			"subclassSource": "PSK",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, whenever you start casting a spell of 1st level or higher that deals fire damage, fiery magic erupts from you. This eruption causes creatures of your choice that you can see within 10 feet of you to take fire damage equal to half your sorcerer level (minimum of 1)."
-			]
-		},
-		{
-			"name": "Fire in the Veins",
-			"source": "PSK",
-			"page": 9,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Pyromancer (PSK)",
-			"subclassSource": "PSK",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you gain resistance to fire damage. In addition, spells you cast ignore resistance to fire damage."
-			]
-		},
-		{
-			"name": "Pyromancer's Fury",
-			"source": "PSK",
-			"page": 9,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Pyromancer (PSK)",
-			"subclassSource": "PSK",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal fire damage to the attacker. The damage equals your sorcerer level, and ignores resistance to fire damage."
-			]
-		},
-		{
-			"name": "Fiery Soul",
-			"source": "PSK",
-			"page": 9,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Pyromancer (PSK)",
-			"subclassSource": "PSK",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, you gain immunity to fire damage. In addition, any spell or effect you create ignores resistance to fire damage and treats immunity to fire damage as resistance to fire damage."
-			]
-		},
-		{
-			"name": "Aberrant Mind",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"An alien influence has wrapped its tendrils around your mind, giving you psionic power. You can now touch other minds with that power and alter the world around you by using it to control the magical energy of the multiverse. Will this power shine from you as a hopeful beacon to others? Or will you be a source of terror to those who feel the stab of your mind and witness the strange manifestations of your might?",
-				"As an Aberrant Mind sorcerer, you decide how you acquired your powers. Were you born with them? Or did an event later in life leave you shining with psionic awareness? Consult the Aberrant Origins table for a possible origin of your power.",
-				{
-					"type": "table",
-					"caption": "Aberrant Origins",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"You were exposed to the Far Realm's warping influence. You are convinced that a tentacle is now growing on you, but no one else can see it."
-						],
-						[
-							"2",
-							"A psychic wind from the Astral Plane carried psionic energy to you. When you use your powers, faint motes of light sparkle around you."
-						],
-						[
-							"3",
-							"You once suffered the dominating powers of an aboleth, leaving a psychic splinter in your mind."
-						],
-						[
-							"4",
-							"You were implanted with a mind flayer tadpole, but the ceremorphosis never completed. And now its psionic power is yours. When you use it, your flesh shines with a strange mucus."
-						],
-						[
-							"5",
-							"As a child, you had an imaginary friend that looked like a flumph or a strange platypus-like creature. One day, it gifted you with psionic powers, which have ended up being not so imaginary."
-						],
-						[
-							"6",
-							"Your nightmares whisper the truth to you: your psionic powers are not your own. You draw them from your parasitic twin!"
-						]
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Psionic Spells|Sorcerer||Aberrant Mind|TCE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Telepathic Speech|Sorcerer||Aberrant Mind|TCE|1"
-				}
-			]
-		},
-		{
-			"name": "Psionic Spells",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Aberrant Mind feature}",
-				"You learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a {@filter divination or an enchantment spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=D;E|level=1;2;3;4;5}.",
-				{
-					"type": "table",
-					"caption": "Psionic Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1st",
-							"{@spell arms of Hadar}, {@spell dissonant whispers}, {@spell mind sliver|tce}"
-						],
-						[
-							"3rd",
-							"{@spell calm emotions}, {@spell detect thoughts}"
-						],
-						[
-							"5th",
-							"{@spell hunger of Hadar}, {@spell sending}"
-						],
-						[
-							"7th",
-							"{@spell Evard's black tentacles}, {@spell summon aberration|TCE}"
-						],
-						[
-							"9th",
-							"{@spell Rary's telepathic bond}, {@spell telekinesis}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Telepathic Speech",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Aberrant Mind feature}",
-				"You can form a telepathic connection between your mind and the mind of another. As a bonus action, choose one creature you can see within 30 feet of you. You and the chosen creature can speak telepathically with each other while the two of you are within a number of miles of each other equal to your Charisma modifier (minimum of 1 mile). To understand each other, you each must speak mentally in a language the other knows.",
-				"The telepathic connection lasts for a number of minutes equal to your sorcerer level. It ends early if you are {@condition incapacitated} or die or if you use this ability to form a connection with a different creature."
-			]
-		},
-		{
-			"name": "Psionic Sorcery",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Aberrant Mind feature}",
-				"When you cast any spell of 1st level or higher from your Psionic Spells feature, you can cast it by expending a spell slot as normal or by spending a number of sorcery points equal to the spell's level.",
-				"If you cast the spell using sorcery points, it requires no verbal or somatic components, and it requires no material components, unless they are consumed by the spell."
-			]
-		},
-		{
-			"name": "Psychic Defenses",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Aberrant Mind feature}",
-				"You gain resistance to psychic damage, and you have advantage on saving throws against being {@condition charmed} or {@condition frightened}."
-			]
-		},
-		{
-			"name": "Revelation in Flesh",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Aberrant Mind feature}",
-				"You can unleash the aberrant truth hidden within yourself. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 10 minutes. For each sorcery point you spend, you can gain one of the following benefits of your choice, the effects of which last until the transformation ends:",
-				{
-					"type": "list",
-					"items": [
-						"You can see any {@condition invisible} creature within 60 feet of you, provided it isn't behind total cover. Your eyes also turn black or become writhing sensory tendrils.",
-						"You gain a flying speed equal to your walking speed, and you can hover. As you fly, your skin glistens with mucus or shines with an otherworldly light.",
-						"You gain a swimming speed equal to twice your walking speed, and you can breathe underwater. Moreover, gills grow from your neck or fan out from behind your ears, your fingers become webbed, or you grow writhing cilia that extend through your clothing.",
-						"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
-					]
-				}
-			]
-		},
-		{
-			"name": "Warping Implosion",
-			"source": "TCE",
-			"page": 66,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Aberrant Mind",
-			"subclassSource": "TCE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-level Aberrant Mind feature}",
-				"You can unleash your aberrant power as a space-warping anomaly. As an action, you can teleport to an unoccupied space you can see within 120 feet of you. Immediately after you disappear, each creature within 30 feet of the space you left must make a Strength saving throw against your spell save DC. On a failed save, a creature takes {@damage 3d10} force damage and is pulled straight toward the space you left, ending in an unoccupied space as close to your former space as possible. On a successful save, the creature takes half as much damage and isn't pulled.",
-				"Once you use this feature, you can't do so again until you finish a long rest, unless you spend 5 sorcery points to use it again."
-			]
-		},
-		{
-			"name": "Clockwork Soul",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"The cosmic force of order has suffused you with magic. That power arises from Mechanus or a realm like it-a plane of existence shaped entirely by clockwork efficiency. You, or someone from your lineage, might have become entangled in the machinations of the modrons, the orderly beings who inhabit Mechanus. Perhaps your ancestor even took part in the Great Modron March. Whatever its origin within you, the power of order can seem strange to others, but for you, it is part of a vast and glorious system.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Clockwork Magic|Sorcerer||Clockwork Soul|TCE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Restore Balance|Sorcerer||Clockwork Soul|TCE|1"
-				}
-			]
-		},
-		{
-			"name": "Clockwork Magic",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Clockwork Soul feature}",
-				"You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an {@filter abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=A;T|level=1;2;3;4;5}.",
-				{
-					"type": "table",
-					"caption": "Clockwork Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1st",
-							"{@spell alarm}, {@spell protection from evil and good}"
-						],
-						[
-							"3rd",
-							"{@spell aid}, {@spell lesser restoration}"
-						],
-						[
-							"5th",
-							"{@spell dispel magic}, {@spell protection from energy}"
-						],
-						[
-							"7th",
-							"{@spell freedom of movement}, {@spell summon construct|TCE}"
-						],
-						[
-							"9th",
-							"{@spell greater restoration}, {@spell wall of force}"
-						]
-					]
-				},
-				"In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
-				{
-					"type": "table",
-					"caption": "Manifestations of Order",
-					"colLabels": [
-						"d6",
-						"Manifestation"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"Spectral cogwheels hover behind you."
-						],
-						[
-							"2",
-							"The hands of a clock spin in your eyes."
-						],
-						[
-							"3",
-							"Your skin glows with a brassy sheen."
-						],
-						[
-							"4",
-							"Floating equations and geometric objects overlay your body."
-						],
-						[
-							"5",
-							"Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."
-						],
-						[
-							"6",
-							"The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Restore Balance",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Clockwork Soul feature}",
-				"Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a {@dice d20} with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Bastion of Law",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point"
-			},
-			"entries": [
-				"{@i 6th-level Clockwork Soul feature}",
-				"You can tap into the grand equation of existence to imbue a creature with a shimmering shield of order. As an action, you can expend 1 to 5 sorcery points to create a magical ward around yourself or another creature you can see within 30 feet of you. The ward lasts until you finish a long rest or until you use this feature again.",
-				"The ward is represented by a number of {@dice d8}s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can expend a number of those dice, roll them, and reduce the damage taken by the total rolled on those dice."
-			]
-		},
-		{
-			"name": "Trance of Order",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Clockwork Soul feature}",
-				"You gain the ability to align your consciousness to the endless calculations of Mechanus. As a bonus action, you can enter this state for 1 minute. For the duration, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the {@dice d20} as a 10.",
-				"Once you use this bonus action, you can't use it again until you finish a long rest, unless you spend 5 sorcery points to use it again."
-			]
-		},
-		{
-			"name": "Clockwork Cavalcade",
-			"source": "TCE",
-			"page": 68,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Clockwork Soul",
-			"subclassSource": "TCE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"{@i 18th-level Clockwork Soul feature}",
-				"You summon spirits of order to expunge disorder around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, and they create the following effects within the cube before vanishing:",
-				{
-					"type": "list",
-					"items": [
-						"The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.",
-						"Any damaged objects entirely in the cube are repaired instantly.",
-						"Every spell of 6th level or lower ends on creatures and objects of your choice in the cube."
-					]
-				},
-				"Once you use this action, you can't use it again until you finish a long rest, unless you spend 7 sorcery points to use it again."
-			]
-		},
-		{
-			"name": "Runechild",
-			"source": "TDCSR",
-			"page": 176,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"The mysterious weave and flow of magic is feared by many folk across Exandria. But while some spellcasters must study the essence and nature of magic in the hope of learning to harness it, sorcerers possess an innate talent to sculpt and wield the errant strands of power that shape the world. For some sorcerers, the body becomes a conduit for this power, which is collected and stored in the form of natural runes\u2014and which sees a sorcerer named as a Runechild.",
-				"The talents of a Runechild are rare, and sorcerers with this origin are sought after for study by mages and scholars alike, driven by a prevalent belief that the secrets of their runes can help understand the mysteries of magic. Others sometimes seek to enslave Runechild sorcerers, using their bodies as tortured spell batteries for diabolic pursuits. Runechild sorcerers were subjugated throughout the {@book Age of Arcanum|TDCSR|1|Age of Arcanum}, and many of their contemporaries now search for ways to hide their essence\u2014a task that isn't easy given the revealing nature of their gifts.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Essence Runes|Sorcerer|PHB|Runechild|TDCSR|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Runic Magic|Sorcerer|PHB|Runechild|TDCSR|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Glyph of Aegis|Sorcerer|PHB|Runechild|TDCSR|1"
-				}
-			]
-		},
-		{
-			"name": "Essence Runes",
-			"source": "TDCSR",
-			"page": 177,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 1,
-			"header": 2,
-			"entries": [
-				"At 1st level, your body begins to express your innate magic as runes traced out across your skin. You start with 1 essence rune, and gain an additional rune whenever you gain a level in this class. These runes can manifest anywhere on your body, though the first usually manifests on the forehead. Your essence runes remain invisible when inert.",
-				"At the end of a turn during which you spent one or more sorcery points, a number of your essence runes equal to the number of sorcery points you spent begin to glow with stored energy, becoming charged runes. You use these charged runes to power your Runechild subclass features. Also, as a bonus action, you may spend a sorcery point to convert two essence runes into two charged runes.",
-				"If you have no sorcery points and no charged runes, you can convert a single essence rune into a charged rune as an action.",
-				"If you have 5 or more charged runes, you emit bright light in a 5-foot radius and dim light for an additional 5 feet.",
-				"If you expend a charged rune to use one of your Runechild features, it returns to being an inert essence rune. Any charged runes also revert to inert essence runes after you finish a {@quickref resting|PHB|2|0|long rest}."
-			]
-		},
-		{
-			"name": "Glyph of Aegis",
-			"source": "TDCSR",
-			"page": 177,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 1,
-			"header": 2,
-			"entries": [
-				"Starting at 1st level, you can release the stored arcane power within your runes to absorb or deflect threatening attacks. Whenever you take damage, you can expend any number of charged runes as a reaction. Roll a number of {@dice d6|d6s} equal to the number of runes you expended, and reduce the damage by the total."
-			]
-		},
-		{
-			"name": "Runic Magic",
-			"source": "TDCSR",
-			"page": 177,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 1,
-			"header": 2,
-			"entries": [
-				"Beginning at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Runic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-				"When you gain a level in this class, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be {@filter an abjuration or transmutation spell from the sorcerer, warlock, or wizard spell list|spells|school=A;T|class=Sorcerer;Warlock;Wizard}.",
-				{
-					"type": "table",
-					"caption": "Runic Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1st",
-							"{@spell longstrider}, {@spell protection from evil and good}"
-						],
-						[
-							"3rd",
-							"{@spell lesser restoration}, {@spell protection from poison}"
-						],
-						[
-							"5th",
-							"{@spell glyph of warding}, {@spell magic circle}"
-						],
-						[
-							"7th",
-							"{@spell death ward}, {@spell freedom of movement}"
-						],
-						[
-							"9th",
-							"{@spell greater restoration}, {@spell telekinesis}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Glyph of Aegis (6th Level)",
-			"source": "TDCSR",
-			"page": 177,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"When you reach 6th level, you can touch a creature as an action and expend up to 3 charged runes to transfer your protective power to it for up to 1 hour. The next time that creature takes damage within the next hour, it rolls {@dice 1d6} per charged rune spent and reduces the damage by the total. You can't transfer this power to a creature already under the effect of Glyph of Aegis."
-			]
-		},
-		{
-			"name": "Manifest Inscriptions",
-			"source": "TDCSR",
-			"page": 178,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Also at 6th level, you can reveal hidden glyphs and enchantments that surround you. As an action, you expend one charged rune to reveal hidden or invisible arcane traps, marks, runes, wards, sensors, or glyphs within 60 feet of you. They glow with dim light in a 5-foot radius for 1 minute.",
-				"You have {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Intelligence ({@skill Arcana}) checks to discern the nature of any magic revealed in this way for the duration. If the glyphs you reveal mean something in a language you can't read, you can understand them while they are glowing as if you knew that language."
-			]
-		},
-		{
-			"name": "Sigilic Augmentation",
-			"source": "TDCSR",
-			"page": 178,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you can channel your runes to temporarily bolster your physical capabilities. When you make a Strength, Dexterity, or Constitution ability check, you can expend a charged rune as a reaction to gain {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on the roll.",
-				"In addition, when you are forced to make a Strength, Dexterity, or Constitution {@quickref saving throws|PHB|2|1|saving throw}, you can use your reaction and expend a charged rune to gain {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on the {@quickref saving throws|PHB|2|1|saving throw}. Once you use this feature in this way, you can't use it in this way again until you complete a {@quickref resting|PHB|2|0|long rest}."
-			]
-		},
-		{
-			"name": "Glyph of Aegis (14th Level)",
-			"source": "TDCSR",
-			"page": 177,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Your Glyph of Aegis die becomes a {@dice d8} at 14th level."
-			]
-		},
-		{
-			"name": "Runic Torrent",
-			"source": "TDCSR",
-			"page": 178,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Upon reaching 14th level, you can channel runic energy to overpower even the staunchest defenses. When you cast a spell, you can expend 2 charged runes to cause the spell to deal force damage instead of its usual damage types. Additionally, all creatures targeted by the spell or within the spell's area must succeed on a Strength {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC or be knocked prone or pushed up to 15 feet away from the spell's point of origin (your choice).",
-				"Once you use this feature, you can't do so again until you complete a {@quickref resting|PHB|2|0|short or long rest}."
-			]
-		},
-		{
-			"name": "Arcane Exemplar",
-			"source": "TDCSR",
-			"page": 178,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Runechild",
-			"subclassSource": "TDCSR",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"Starting at 18th level, you can use a bonus action and expend a charged rune to become a being of pure magical energy. While in your exemplar form, you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"You have a flying speed of 60 feet.",
-						"Creatures have {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage} on {@quickref saving throws|PHB|2|1} against your sorcerer spells.",
-						"You have resistance to damage dealt by spells.",
-						"Whenever you cast a spell of 1st level or higher, you regain hit points equal to the spell's level."
-					]
-				},
-				"Your exemplar form lasts until the end of your turn. However, you can expend a charged rune at the end of your turn (no action required) to extend the duration until the end of your next turn. When your exemplar form ends, you are {@condition stunned} until the end of your next turn.",
-				"Once you use this feature, you can't use it again until you complete a {@quickref resting|PHB|2|0|long rest}."
-			]
-		},
-		{
-			"name": "Divine Soul",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 1,
-			"entries": [
-				"Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and sent to fight in a god's name.",
-				"Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen vessel of divine magic.",
-				"A Divine Soul, with a natural magnetism, is seen as a threat by some religious hierarchies. As an outsider who commands sacred power, a Divine Soul can undermine an existing order by claiming a direct tie to the divine.",
-				"In some cultures, only those who can claim the power of a Divine Soul may command religious power. In these lands, ecclesiastical positions are dominated by a few bloodlines and preserved over generations.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Magic|Sorcerer||Divine Soul|XGE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Favored by the Gods|Sorcerer||Divine Soul|XGE|1"
-				}
-			]
-		},
-		{
-			"name": "Divine Magic",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Your link to the divine allows you to learn spells from the cleric class. When your Spellcasting feature lets you learn or replace a sorcerer cantrip or a sorcerer spell of 1st level or higher, you can choose the new spell from the cleric spell list or the sorcerer spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.",
-				"In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer spell for you, but it doesn't count against your number of sorcerer spells known. If you later replace this spell, you must replace it with a spell from the cleric spell list.",
-				{
-					"type": "table",
-					"colLabels": [
-						"Affinity",
-						"Spell"
-					],
-					"colStyles": [
-						"col-6",
-						"col-6"
-					],
-					"rows": [
-						[
-							"Good",
-							"{@spell cure wounds}"
-						],
-						[
-							"Evil",
-							"{@spell inflict wounds}"
-						],
-						[
-							"Law",
-							"{@spell bless}"
-						],
-						[
-							"Chaos",
-							"{@spell bane}"
-						],
-						[
-							"Neutrality",
-							"{@spell protection from evil and good}"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Favored by the Gods",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll {@dice 2d4} and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Empowered Healing",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point"
-			},
-			"entries": [
-				"Starting at 6th level, the divine energy coursing through you can empower healing spells. Whenever you or an ally within 5 feet of you rolls dice to determine the number of hit points a spell restores, you can spend 1 sorcery point to reroll any number of those dice once, provided you aren't {@condition incapacitated}. You can use this feature only once per turn."
-			]
-		},
-		{
-			"name": "Otherworldly Wings",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you can use a bonus action to manifest a pair of spectral wings from your back. While the wings are present, you have a flying speed of 30 feet. The wings last until you're {@condition incapacitated}, you die, or you dismiss them as a bonus action.",
-				"The affinity you chose for your Divine Magic feature determines the appearance of the spectral wings: eagle wings for good or law, bat wings for evil or chaos, and dragonfly wings for neutrality."
-			]
-		},
-		{
-			"name": "Unearthly Recovery",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Divine Soul",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, you gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half of your hit points remaining, you can regain a number of hit points equal to half your hit point maximum.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Shadow Magic",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 1,
-			"entries": [
-				"You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it.",
-				"The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk for your character.",
-				{
-					"type": "table",
-					"caption": "Shadow Sorcerer Quirks",
-					"colLabels": [
-						"d6",
-						"Quirk"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"You are always icy cold to the touch."
-						],
-						[
-							"2",
-							"When you are asleep, you don't appear to breathe (though you must still breathe to survive)."
-						],
-						[
-							"3",
-							"You barely bleed, even when badly injured."
-						],
-						[
-							"4",
-							"Your heart beats once per minute. This event sometimes surprises you."
-						],
-						[
-							"5",
-							"You have trouble remembering that living creatures and corpses should be treated differently."
-						],
-						[
-							"6",
-							"You blinked. Once. Last week."
-						]
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Eyes of the Dark|Sorcerer||Shadow|XGE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Strength of the Grave|Sorcerer||Shadow|XGE|1"
-				}
-			]
-		},
-		{
-			"name": "Eyes of the Dark",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you have {@sense darkvision} with a range of 120 feet.",
-				"When you reach 3rd level in this class, you learn the {@spell darkness} spell, which doesn't count against your number of sorcerer spells known. In addition, you can cast it by spending 2 sorcery points or by expending a spell slot. If you cast it with sorcery points, you can see through the {@spell darkness} created by the spell."
-			]
-		},
-		{
-			"name": "Strength of the Grave",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, your existence in a twilight state between life and death makes you difficult to defeat. When damage reduces you to 0 hit points, you can make a Charisma saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hit point. You can't use this feature if you are reduced to 0 hit points by radiant damage or by a critical hit.",
-				"After the saving throw succeeds, you can't use this feature again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Hound of Ill Omen",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point",
-				"amount": 3
-			},
-			"entries": [
-				"At 6th level, you gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you can spend 3 sorcery points to magically summon a {@creature hound of ill omen|XGE} to target one creature you can see within 120 feet of you. The hound uses the {@creature dire wolf}'s statistics (see the Monster Manual or appendix C in the Player's Handbook), with the following changes:",
-				{
-					"type": "list",
-					"items": [
-						"The hound is size Medium, not Large, and it counts as a monstrosity, not a beast.",
-						"It appears with a number of temporary hit points equal to half your sorcerer level.",
-						"It can move through other creatures and objects as if they were {@quickref difficult terrain||3}. The hound takes 5 force damage if it ends its turn inside an object.",
-						"At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
-					]
-				},
-				"The hound appears in an unoccupied space of your choice within 30 feet of the target. Roll initiative for the hound. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
-			]
-		},
-		{
-			"name": "Shadow Walk",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action, you can magically teleport up to 120 feet to an unoccupied space you can see that is also in dim light or darkness."
-			]
-		},
-		{
-			"name": "Umbral Form",
-			"source": "XGE",
-			"page": 50,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Shadow",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"consumes": {
-				"name": "Sorcery Point",
-				"amount": 6
-			},
-			"entries": [
-				"Starting at 18th level, you can spend 6 sorcery points as a bonus action to magically transform yourself into a shadowy form. In this form, you have resistance to all damage except force and radiant damage, and you can move through other creatures and objects as if they were {@quickref difficult terrain||3}. You take 5 force damage if you end your turn inside an object.",
-				"You remain in this form for 1 minute. It ends early if you are {@condition incapacitated}, if you die, or if you dismiss it as a bonus action."
-			]
-		},
-		{
-			"name": "Storm Sorcery",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 1,
-			"entries": [
-				"Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as djinn. Whatever the case, the magic of the storm permeates your being.",
-				"Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Wind Speaker|Sorcerer||Storm|XGE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tempestuous Magic|Sorcerer||Storm|XGE|1"
-				}
-			]
-		},
-		{
-			"name": "Tempestuous Magic",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you can use a bonus action on your turn to cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10 feet without provoking opportunity attacks."
-			]
-		},
-		{
-			"name": "Wind Speaker",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. Knowing this language allows you to understand and be understood by those who speak its dialects: {@language Primordial||Aquan}, {@language Primordial||Auran}, {@language Primordial||Ignan}, and {@language Primordial||Terran}."
-			]
-		},
-		{
-			"name": "Heart of the Storm",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you gain resistance to lightning and thunder damage. In addition, whenever you start casting a spell of 1st level or higher that deals lightning or thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10 feet of you to take lightning or thunder damage (choose each time this ability activates) equal to half your sorcerer level."
-			]
-		},
-		{
-			"name": "Storm Guide",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you gain the ability to subtly control the weather around you.",
-				"If it is raining, you can use an action to cause the rain to stop falling in a 20-foot-radius sphere centered on you. You can end this effect as a bonus action.",
-				"If it is windy, you can use a bonus action each round to choose the direction that the wind blows in a 100-foot-radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature doesn't alter the speed of the wind."
-			]
-		},
-		{
-			"name": "Storm's Fury",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal lightning damage to the attacker. The damage equals your sorcerer level. The attacker must also make a Strength saving throw against your sorcerer spell save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
-			]
-		},
-		{
-			"name": "Wind Soul",
-			"source": "XGE",
-			"page": 51,
-			"className": "Sorcerer",
-			"classSource": "PHB",
-			"subclassShortName": "Storm",
-			"subclassSource": "XGE",
-			"level": 18,
-			"header": 2,
-			"entries": [
-				"At 18th level, you gain immunity to lightning and thunder damage.",
-				"You also gain a magical flying speed of 60 feet. As an action, you can reduce your flying speed to 30 feet for 1 hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a magical flying speed of 30 feet for 1 hour. Once you reduce your flying speed in this way, you can't do so again until you finish a short or long rest."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "术士",
+      "ENG_name": "Sorcerer",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "hd": {
+        "number": 1,
+        "faces": 6
+      },
+      "proficiency": [
+        "体质",
+        "cha"
+      ],
+      "spellcastingAbility": "cha",
+      "casterProgression": "full",
+      "cantripProgression": [
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "spellsKnownProgression": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        12,
+        13,
+        13,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15
+      ],
+      "optionalfeatureProgression": [
+        {
+          "name": "need-translate-f756c420-3206-11ef-ae1d-d1200322b32e",
+          "ENG_name": "Metamagic",
+          "featureType": [
+            "MM"
+          ],
+          "progression": {
+            "3": 2,
+            "10": 3,
+            "17": 4
+          }
+        }
+      ],
+      "startingProficiencies": {
+        "weapons": [
+          "{@item dagger|phb|匕首}",
+          "{@item dart|phb|飞镖}",
+          "{@item sling|phb|投石索}",
+          "{@item quarterstaff|phb|长棍}",
+          "{@item light crossbow|phb|轻弩}"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:奥秘",
+                "属性检定:欺瞒",
+                "属性检定:洞悉",
+                "属性检定:威吓",
+                "属性检定:游说",
+                "属性检定:宗教"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a)一把{@item 轻弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}",
+          "(a)一个{@item 材料包|phb} 或 (b)一个{@item 奥术法器|phb}",
+          "(a)一套{@item 地城探险家套装|phb} 或 (b)一套{@item 探索者套装|phb}",
+          "二把{@item 匕首|phb}"
+        ],
+        "goldAlternative": "{@dice 3d4 × 10|3d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "轻型十字弓|phb",
+              "弩箭（20）|phb"
+            ],
+            "b": [
+              {
+                "equipmentType": "简易武器"
+              }
+            ]
+          },
+          {
+            "a": [
+              "组件袋|phb"
+            ],
+            "b": [
+              {
+                "equipmentType": "专注施法（奥术）"
+              }
+            ]
+          },
+          {
+            "a": [
+              "探险者背包|phb"
+            ],
+            "b": [
+              "探险家背包|phb"
+            ]
+          },
+          {
+            "_": [
+              {
+                "item": "匕首|phb",
+                "quantity": 2
+              }
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "cha": 13
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "术法点"
+          ],
+          "rows": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "colLabels": [
+            "{@filter 已知戏法|spells|level=0|class=Sorcerer}",
+            "{@filter 已知法术|spells|class=Sorcerer}"
+          ],
+          "rows": [
+            4,
+            2,
+            4,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6,
+            5,
+            7,
+            5,
+            8,
+            5,
+            9,
+            5,
+            10,
+            6,
+            11,
+            6,
+            12,
+            6,
+            12,
+            6,
+            13,
+            6,
+            13,
+            6,
+            14,
+            6,
+            14,
+            6,
+            15,
+            6,
+            15,
+            6,
+            15,
+            6,
+            15
+          ]
+        },
+        {
+          "title": "法术位/每环",
+          "colLabels": [
+            "{@filter 1环|spells|level=1|class=Sorcerer}",
+            "{@filter 2环|spells|level=2|class=Sorcerer}",
+            "{@filter 3环|spells|level=3|class=Sorcerer}",
+            "{@filter 4环|spells|level=4|class=Sorcerer}",
+            "{@filter 5环|spells|level=5|class=Sorcerer}",
+            "{@filter 6环|spells|level=6|class=Sorcerer}",
+            "{@filter 7环|spells|level=7|class=Sorcerer}",
+            "{@filter 8环|spells|level=8|class=Sorcerer}",
+            "{@filter 9环|spells|level=9|class=Sorcerer}"
+          ],
+          "rowsSpellProgression": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0,
+            4,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1,
+            4,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        }
+      ],
+      "classFeatures": [
+        "施法|术士||1",
+        {
+          "classFeature": "神秘起源|术士||1",
+          "gainSubclassFeature": true
+        },
+        "魔法之源|术士||2",
+        "超魔|术士||3",
+        "魔法变体选项|术士||3|TCE",
+        "能力值提升|术士||4",
+        "术士多样性|术士||4|TCE",
+        "魔法指导|术士||5|TCE",
+        {
+          "classFeature": "术士起源特性|术士||6",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|术士||8",
+        "超魔法|术士||10",
+        "能力值提升|术士||12",
+        {
+          "classFeature": "神秘起源特性|术士||14",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|术士||16",
+        "超魔|术士||17",
+        {
+          "classFeature": "神秘起源特性|术士||18",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|术士||19",
+        "术士恢复|术士||20"
+      ],
+      "subclassTitle": "术士:术法起源",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "龙族血脉",
+      "ENG_name": "Draconic Bloodline",
+      "shortName": "龙族血脉",
+      "source": "PHB",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 102,
+      "srd": true,
+      "subclassFeatures": [
+        "龙血传承|术士||龙族||1",
+        "元素亲和|术士||龙族||6",
+        "龙翼|术士||龙族||14",
+        "龙族威严|术士||龙血血脉||18"
+      ]
+    },
+    {
+      "name": "狂野魔法",
+      "ENG_name": "Wild Magic",
+      "shortName": "狂野魔法",
+      "source": "PHB",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 103,
+      "subclassFeatures": [
+        "野性魔法|术士||野性||1",
+        "弯曲运气|术士||野性||6",
+        "控制混沌|术士||野性||14",
+        "法术轰炸|术士||野性||18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "火焰术士(PSK)",
+      "ENG_name": "Pyromancer (PSK)",
+      "shortName": "火焰术士(PSK)",
+      "source": "PSK",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 9,
+      "subclassFeatures": [
+        "火焰术士 (PSK)|术士||火焰术士 (PSK)|PSK|1",
+        "血脉中的火焰|术士||火焰法师（PSK）|PSK|6",
+        "火焰术士的狂怒|术士||火焰术士 (PSK)|PSK|14",
+        "炽热之魂|术士||火焰术士 (PSK)||PSK|18"
+      ]
+    },
+    {
+      "name": "神圣之魂",
+      "ENG_name": "Divine Soul",
+      "shortName": "神圣之魂",
+      "source": "XGE",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 50,
+      "additionalSpells": [
+        {
+          "name": "好的",
+          "ENG_name": "Good",
+          "known": {
+            "1": [
+              "治疗伤势"
+            ]
+          },
+          "expanded": {
+            "1": [
+              {
+                "all": "等级=0|职业=牧师"
+              },
+              {
+                "all": "等级=1|职业=牧师"
+              }
+            ],
+            "3": [
+              {
+                "all": "等级=2|职业=牧师"
+              }
+            ],
+            "5": [
+              {
+                "all": "等级=3|职业=牧师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=4|职业=牧师"
+              }
+            ],
+            "9": [
+              {
+                "all": "等级=5|职业=牧师"
+              }
+            ],
+            "11": [
+              {
+                "all": "等级=6|职业=牧师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=7|职业=牧师"
+              }
+            ],
+            "15": [
+              {
+                "all": "等级=8|职业=牧师"
+              }
+            ],
+            "17": [
+              {
+                "all": "等级=9|职业=牧师"
+              }
+            ]
+          }
+        },
+        {
+          "name": "邪恶",
+          "ENG_name": "Evil",
+          "known": {
+            "1": [
+              "造成伤势"
+            ]
+          },
+          "expanded": {
+            "1": [
+              {
+                "all": "等级=0|职业=牧师"
+              },
+              {
+                "all": "等级=1|职业=牧师"
+              }
+            ],
+            "3": [
+              {
+                "all": "等级=2|职业=牧师"
+              }
+            ],
+            "5": [
+              {
+                "all": "等级=3|职业=牧师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=4|职业=牧师"
+              }
+            ],
+            "9": [
+              {
+                "all": "等级=5|职业=牧师"
+              }
+            ],
+            "11": [
+              {
+                "all": "等级=6|职业=牧师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=7|职业=牧师"
+              }
+            ],
+            "15": [
+              {
+                "all": "等级=8|职业=牧师"
+              }
+            ],
+            "17": [
+              {
+                "all": "等级=9|职业=牧师"
+              }
+            ]
+          }
+        },
+        {
+          "name": "律法",
+          "ENG_name": "Law",
+          "known": {
+            "1": [
+              "祝福术"
+            ]
+          },
+          "expanded": {
+            "1": [
+              {
+                "all": "等级=0|职业=牧师"
+              },
+              {
+                "all": "等级=1|职业=牧师"
+              }
+            ],
+            "3": [
+              {
+                "all": "等级=2|职业=牧师"
+              }
+            ],
+            "5": [
+              {
+                "all": "等级=3|职业=牧师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=4|职业=牧师"
+              }
+            ],
+            "9": [
+              {
+                "all": "等级=5|职业=牧师"
+              }
+            ],
+            "11": [
+              {
+                "all": "等级=6|职业=牧师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=7|职业=牧师"
+              }
+            ],
+            "15": [
+              {
+                "all": "等级=8|职业=牧师"
+              }
+            ],
+            "17": [
+              {
+                "all": "等级=9|职业=牧师"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Chaos",
+          "ENG_name": "Chaos",
+          "known": {
+            "1": [
+              "灾祸术"
+            ]
+          },
+          "expanded": {
+            "1": [
+              {
+                "all": "等级=0|职业=牧师"
+              },
+              {
+                "all": "等级=1|职业=牧师"
+              }
+            ],
+            "3": [
+              {
+                "all": "等级=2|职业=牧师"
+              }
+            ],
+            "5": [
+              {
+                "all": "等级=3|职业=牧师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=4|职业=牧师"
+              }
+            ],
+            "9": [
+              {
+                "all": "等级=5|职业=牧师"
+              }
+            ],
+            "11": [
+              {
+                "all": "等级=6|职业=牧师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=7|职业=牧师"
+              }
+            ],
+            "15": [
+              {
+                "all": "等级=8|职业=牧师"
+              }
+            ],
+            "17": [
+              {
+                "all": "等级=9|职业=牧师"
+              }
+            ]
+          }
+        },
+        {
+          "name": "中立",
+          "ENG_name": "Neutrality",
+          "known": {
+            "1": [
+              "防护善恶"
+            ]
+          },
+          "expanded": {
+            "1": [
+              {
+                "all": "等级=0|职业=牧师"
+              },
+              {
+                "all": "等级=1|职业=牧师"
+              }
+            ],
+            "3": [
+              {
+                "all": "等级=2|职业=牧师"
+              }
+            ],
+            "5": [
+              {
+                "all": "等级=3|职业=牧师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=4|职业=牧师"
+              }
+            ],
+            "9": [
+              {
+                "all": "等级=5|职业=牧师"
+              }
+            ],
+            "11": [
+              {
+                "all": "等级=6|职业=牧师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=7|职业=牧师"
+              }
+            ],
+            "15": [
+              {
+                "all": "等级=8|职业=牧师"
+              }
+            ],
+            "17": [
+              {
+                "all": "等级=9|职业=牧师"
+              }
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "神圣灵魂|术士||神圣灵魂|XGE|1",
+        "强化治疗|术士||神圣灵魂|XGE|6",
+        "异界之翼|术士||神圣灵魂|XGE|14",
+        "超凡恢复|术士||神圣灵魂|XGE|18"
+      ]
+    },
+    {
+      "name": "幽影魔法",
+      "ENG_name": "Shadow Magic",
+      "shortName": "阴影",
+      "source": "XGE",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 50,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "黑暗术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "暗影魔法|术士||暗影|XGE|1",
+        "不祥之兆的猎犬|术士||阴影|XGE|6",
+        "影行|术士||暗影|XGE|14",
+        "幽影形态|术士||阴影|XGE|18"
+      ]
+    },
+    {
+      "name": "风暴术法",
+      "ENG_name": "Storm Sorcery",
+      "shortName": "风暴先驱道途:狂怒风暴raging",
+      "source": "XGE",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 51,
+      "otherSources": [
+        {
+          "source": "SCAG",
+          "page": 137
+        }
+      ],
+      "subclassFeatures": [
+        "风暴魔法|术士||风暴|XGE|1",
+        "风暴之心|术士||风暴||XGE|6",
+        "风暴向导|术士||风暴|XGE|6",
+        "风暴之怒|术士||风暴|XGE|14",
+        "风之魂|术士||风暴|XGE|18"
+      ]
+    },
+    {
+      "name": "畸变心智",
+      "ENG_name": "Aberrant Mind",
+      "shortName": "畸变心智",
+      "source": "TCE",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 66,
+      "additionalSpells": [
+        {
+          "known": {
+            "1": [
+              "心灵碎片|TCE#C",
+              "哈达之臂",
+              "噪音暗语"
+            ],
+            "3": [
+              "安定心神",
+              "侦测思想"
+            ],
+            "5": [
+              "哈达之欲",
+              "短讯术"
+            ],
+            "7": [
+              "艾伐黑触手",
+              "召唤异怪|TCE"
+            ],
+            "9": [
+              "拉瑞心灵联结",
+              "心灵遥控"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "异变心智|术士||异变心智|TCE|1",
+        "灵能术法|术士||异变心灵|TCE|6",
+        "心灵防御|术士||异常心智|TCE|6",
+        "肉体启示|术士||异常心智|TCE|14",
+        "扭曲内爆|术士||异常心智|TCE|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "时械之魂",
+      "ENG_name": "Clockwork Soul",
+      "shortName": "时械之魂",
+      "source": "TCE",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 68,
+      "additionalSpells": [
+        {
+          "known": {
+            "1": [
+              "警报术",
+              "防护善恶"
+            ],
+            "3": [
+              "援助术",
+              "次级复原术"
+            ],
+            "5": [
+              "解除魔法",
+              "防护能量"
+            ],
+            "7": [
+              "行动自如",
+              "召唤构造体|tce"
+            ],
+            "9": [
+              "高等复原术",
+              "力墙术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "发条灵魂|术士||发条灵魂|TCE|1",
+        "法律堡垒|术士||发条灵魂|TCE|6",
+        "秩序恍惚|术士||发条之魂|TCE|14",
+        "发条游行|术士||发条灵魂|TCE|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "符文之子",
+      "ENG_name": "Runechild",
+      "shortName": "符文之子",
+      "source": "TDCSR",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 176,
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "大步奔行",
+              "防护善恶"
+            ],
+            "5": [
+              "次级复原术",
+              "防护毒素"
+            ],
+            "9": [
+              "守卫铭文",
+              "防护法阵"
+            ],
+            "13": [
+              "防死护咒",
+              "行动自如"
+            ],
+            "17": [
+              "高等复原术",
+              "心灵遥控"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "符文之子|术士|PHB|符文之子|TDCSR|1",
+        "守护符咒（6级）|术士|PHB|符文之子|TDCSR|6",
+        "硅灵增强|术士|PHB|符文之子|TDCSR|6",
+        "显现铭文|术士|PHB|符文之子|TDCSR|6",
+        "圣盾符纹（14级）|术士|PHB|符文之子|TDCSR|14",
+        "符文洪流|术士|PHB|符文之子|TDCSR|14",
+        "奥术典范|术士|PHB|符文之子|TDCSR|18"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "月之术法",
+      "ENG_name": "Lunar Sorcery",
+      "shortName": "月之",
+      "source": "DSotDQ",
+      "className": "术士",
+      "classSource": "PHB",
+      "page": 34,
+      "additionalSpells": [
+        {
+          "name": "满月",
+          "ENG_name": "Full Moon",
+          "known": {
+            "1": [
+              "护盾术",
+              "致病射线",
+              "七彩喷射"
+            ],
+            "3": [
+              "次级复原术",
+              "目盲/耳聋术",
+              "变造自身"
+            ],
+            "5": [
+              "解除魔法",
+              "吸血鬼之触",
+              "魅影驹"
+            ],
+            "7": [
+              "防死护咒",
+              "困惑术",
+              "幻景"
+            ],
+            "9": [
+              "拉瑞心灵联结",
+              "怪物定身术",
+              "假象术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "月神魔法|术士||月神|DSotDQ|1",
+        "月之恩赐|术士||月之|DSotDQ|6",
+        "盈亏变化|术士||月相|DSotDQ|6",
+        "月之强化|术士||月之|DSotDQ|14",
+        "月相现象|术士||月之|DSotDQ|18"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "术士:术法起源",
+      "ENG_name": "Sorcerous Origin",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "选择一个术士起源，它描述了你天生魔法力量的来源，从可用起源列表中选择。",
+        "当你在1级时选择此选项时，以及在6级、14级和18级时，你将获得特性。"
+      ]
+    },
+    {
+      "name": "施法",
+      "ENG_name": "Spellcasting",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你过去的经历，或者父母或祖先的生活，给你留下了不可磨灭的印记，赋予了你奥术魔法。这个魔法源泉，无论其起源如何，都是你施法的燃料。请参见《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 术士法术列表|法术|职业=术士}。",
+        {
+          "type": "entries",
+          "name": "戏法",
+          "ENG_name": "Cantrips",
+          "entries": [
+            "在1级时，你从术士法术列表中选择四个零级法术。你在4级时额外选择一个术士零级法术，10级时再选择一个。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "术士:施法能力",
+          "ENG_name": "Spell Slots",
+          "entries": [
+            "术士表格显示了你拥有多少法术位来施放1级及以上的{@filter 术士法术|法术|职业=术士}。要施放这些术士法术之一，你必须消耗一个法术位，其等级等于或高于法术的等级。当你完成一次长休时，你恢复所有消耗的法术位。",
+            "例如，如果你知道1级法术{@spell burning hands}，并且有一个1级和2级法术位可用，你可以使用任一法术位施放{@spell burning hands}。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "1级及更高等级已知法术",
+          "ENG_name": "Spells Known of 1st Level and Higher",
+          "entries": [
+            "你从术士法术列表中选择两个1级法术。",
+            "除了12级、14级、16级、18级、19级和20级之外，在每个等级你都可以学习一个额外的术士法术，这个法术由你自己选择。这些法术必须是一个你拥有法术位的等级。例如，当你达到这个职业的3级时，你可以学习一个新的1级或2级法术。",
+            "此外，当你在此职业中获得等级时，你可以选择一个你所知道的术士法术，并将其替换为术士法术列表中的另一个法术，该法术也必须是你拥有法术位的等级。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "施法关键属性",
+          "ENG_name": "Spellcasting Ability",
+          "entries": [
+            "魅力是你施放术士法术的施法能力，因为你的魔法力量依赖于你将意志投射到世界的能力。每当法术提到你的施法能力时，你都会使用你的魅力。此外，当你为施放的术士法术设定豁免难度等级（DC）以及进行法术攻击检定时，你也会使用你的魅力调整值。",
+            {
+              "type": "abilityDc",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "cha"
+              ]
+            },
+            {
+              "type": "abilityAttackMod",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "cha"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "游侠:法器",
+          "ENG_name": "Spellcasting Focus",
+          "entries": [
+            "你可以使用一个{@item arcane focus|phb}作为你的术士法术的施法焦点。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "易变施法",
+      "ENG_name": "Flexible Casting",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 2,
+      "header": 1,
+      "entries": [
+        "你可以使用你的奥术点数来获得额外的法术位，或者牺牲法术位来获得额外的奥术点数。随着你达到更高的等级，你将学习到使用奥术点数的其他方式。",
+        {
+          "type": "entries",
+          "name": "创造法术位",
+          "ENG_name": "Creating Spell Slots",
+          "entries": [
+            "你可以将未使用的奥术点转化为一个法术位，作为你的回合中的一个奖励动作。创建的法术位在长休息结束时消失。创建法术位表格显示了创建一个特定等级法术位的成本。你不能创建高于5级的法术位。",
+            {
+              "type": "table",
+              "caption": "创造法术位",
+              "colLabels": [
+                "法术位等级",
+                "术士点消耗"
+              ],
+              "colStyles": [
+                "col-6 text-center",
+                "col-6 text-center"
+              ],
+              "rows": [
+                "第一",
+                "2",
+                "第二",
+                "3",
+                "第三",
+                "5",
+                "第四",
+                "6",
+                "第五",
+                "7"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "将法术位转换为术士点",
+          "ENG_name": "Converting a Spell Slot to Sorcery Points",
+          "entries": [
+            "在你的回合上，你可以作为奖励动作消耗一个法术位，并获得等于该法术位等级的奥术点数。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "术士:魔力泉涌",
+      "ENG_name": "Font of Magic",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "在2级时，你触及了你内在的深层魔法源泉。这个源泉由术士点数表示，它允许你创造各种魔法效果。",
+        {
+          "type": "refClassFeature",
+          "classFeature": "术士点|术士||2"
+        },
+        {
+          "type": "refClassFeature",
+          "classFeature": "灵活施法|术士||2"
+        }
+      ]
+    },
+    {
+      "name": "术法点",
+      "ENG_name": "Sorcery Points",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 2,
+      "header": 1,
+      "entries": [
+        "你有2个奥术点数，每次升级时你会额外获得一个点数，最高可达20级时的20点。你的奥术点数永远不能超过表格中显示的你等级对应的点数。当你完成一次长休时，你恢复所有消耗的奥术点数。"
+      ]
+    },
+    {
+      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "ENG_name": "Metamagic",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在3级时，你获得了根据需要扭曲你的法术的能力。你可以选择获得以下两种魔法变体选项。在10级和17级时，你将再获得一个。",
+        "当你施放法术时，除非另有说明，否则你只能使用一种魔法塑形选项。",
+        {
+          "type": "options",
+          "count": 2,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:谨慎法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:远程法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:强效法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:延效法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:升阶法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:瞬发法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:精妙法术"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "超魔法:孪生法术"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "超魔法选项",
+      "ENG_name": "Metamagic Options",
+      "source": "TCE",
+      "page": 65,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 3级术士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "当你选择超魔选项时，你可以使用以下额外的选项。",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "追踪法术|TCE"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "转化法术|TCE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "术士:法力变换",
+      "ENG_name": "Sorcerous Versatility",
+      "source": "TCE",
+      "page": 65,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4级术士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "每当你在这个职业中达到一个提供属性值提升特性的等级时，你可以选择以下一种方式，代表你体内的魔法以新的方式流动：",
+        {
+          "type": "list",
+          "items": [
+            "将你为魔法塑形特性选择的一个选项替换为你可用的不同的{@filter 魔法塑形选项|可选特性|特性类型=MM}。",
+            "从这个职业的法术施放特性中替换一个你已学习的戏法，换成术士法术列表中的另一个戏法。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "术士:魔法指引",
+      "ENG_name": "Magical Guidance",
+      "source": "TCE",
+      "page": 65,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 5,
+      "isClassFeatureVariant": true,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point"
+      },
+      "entries": [
+        "{@i 5级术士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "You can tap into your inner wellspring of magic to try to conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the {@dice d20}, and you must use the new roll, potentially turning the failure into a success."
+      ]
+    },
+    {
+      "name": "术法起源能力",
+      "ENG_name": "Sorcerous Origin feature",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "在6级时，你获得了由你的神秘起源赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "ENG_name": "Metamagic",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "在10级时，你学习到了一个额外的魔法变体选项。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "术法起源能力",
+      "ENG_name": "Sorcerous Origin feature",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在14级时，你获得了由你的术士起源赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "ENG_name": "Metamagic",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，你学会了一个额外的魔法塑形选项。"
+      ]
+    },
+    {
+      "name": "术法起源能力",
+      "ENG_name": "Sorcerous Origin feature",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 18,
+      "entries": [
+        "在18级时，你获得了由你的术士起源赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "术士:术法复苏",
+      "ENG_name": "Sorcerous Restoration",
+      "source": "PHB",
+      "page": 99,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "在20级时，每当你完成一次短休息，你将恢复4点已消耗的术士点。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "月之术法",
+      "ENG_name": "Lunar Sorcery",
+      "source": "DSotDQ",
+      "page": 34,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "月之",
+      "subclassSource": "命运石之门",
+      "level": 1,
+      "entries": [
+        "在许多世界中，月亮是一个具有魔法属性的受人尊敬的天体。在克莱恩世界，魔法之神与世界的三个月亮有关。在托瑞尔世界，塞尔菲神使用月亮之光与黑暗作战。在艾伯伦世界，龙预言的学者们从那个世界十二个月亮的盈亏中解读古老的秘密。",
+        "你或你的血统中有人接触到了你世界中月亮（或多个月亮）的浓缩魔法，赋予了你月之魔法。也许你的祖先参与了一个涉及日食的德鲁伊仪式，或者一个神秘的月亮碎片在你附近坠落。无论你是如何获得魔法的，当你施放术士法术时，你与月亮的联系是显而易见的——可能是让你的瞳孔闪烁着你世界中月亮的颜色，导致你周围出现月相的幽灵表现，或者有其他效果。",
+        {
+          "type": "entries",
+          "name": "月之术法:月之化身",
+          "ENG_name": "Lunar Embodiment",
+          "entries": [
+            "{@i 1级月神术特性}",
+            "当你达到这个职业的特定等级时，你会学习额外的法术，如月之法术表所示。这些法术对你来说都算作术士法术，但它们不会计入你所知道的术士法术的数量。",
+            {
+              "type": "table",
+              "caption": "月之法术",
+              "colLabels": [
+                "术士等级",
+                "满月法术",
+                "新月法术",
+                "新月法术"
+              ],
+              "colStyles": [
+                "col-1-1 text-center",
+                "col-3-3",
+                "col-3-3",
+                "col-3-3"
+              ],
+              "rows": [
+                "第一",
+                "{防护法术}",
+                "{@spell 疾病射线}",
+                "{@spell 彩色喷射}",
+                "第三",
+                "{@spell 次级复原}",
+                "{@spell 失明/耳聋}",
+                "{@spell 变形自己}",
+                "第五",
+                "{@spell 解除魔法}",
+                "{@spell 吸血鬼之触}",
+                "{幻化坐骑}",
+                "第七",
+                "{@spell 死亡防护}",
+                "{@spell 混乱}",
+                "{@spell 幻觉地形}",
+                "第九",
+                "{\"spell\": \"瑞尔的心灵感应\"}",
+                "{@spell 定身怪物}",
+                "{@spell 误导}"
+              ]
+            },
+            "每当你完成一次长休后，你可以选择通过你的魔法展现力量的月相：满月、新月或残月。在选定的月相期间，你可以在不消耗法术位的情况下，从月相法术表中施放一个与该月相相关的1级法术一次。一旦你以这种方式施放了一个法术，直到你完成一次长休之前，你不能再这样做。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "月之术法:月火",
+          "ENG_name": "Moon Fire",
+          "entries": [
+            "{@i 1级月神术特性}",
+            "你可以随意召唤月亮的光辉。你学会了{@spell 圣洁之火}法术，它不计入你所知的术士零级法术数量。当你施放这个法术时，你可以像平常一样选择一个生物作为目标，或者选择两个在范围内且彼此相距不超过5英尺的生物作为目标。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "月之术法:月之恩泽",
+      "ENG_name": "Lunar Boons",
+      "source": "DSotDQ",
+      "page": 34,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "月之",
+      "subclassSource": "命运石之门",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{6级月之术士特性}",
+        "你的月相化身的当前阶段可以影响你的超魔特性。每个月相化身阶段都与特定的魔法学派相关联，如下所示：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "满月",
+              "ENG_name": "Full Moon",
+              "entries": [
+                "{防护和占卜法术}"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "New Moon",
+              "entries": [
+                "{@filter 魅惑和死灵法术|法术|职业=术士|学派=E;N}"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "Crescent Moon",
+              "entries": [
+                "{\"filter\": \"幻象和变化法术|法术|职业=术士|学派=I;T\"}"
+              ]
+            }
+          ]
+        },
+        "每当你使用超魔法对与你当前月之化身阶段相关的魔法学派的法术时，你可以将消耗的奥术点数减少1（最少为0）。你可以减少你的超魔法消耗的奥术点数的次数等于你的熟练加值，当你完成一次长休时，你恢复所有消耗的使用次数。"
+      ]
+    },
+    {
+      "name": "月之术法:阴晴圆缺",
+      "ENG_name": "Waxing and Waning",
+      "source": "DSotDQ",
+      "page": 35,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "月之",
+      "subclassSource": "命运石之门",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point"
+      },
+      "entries": [
+        "{6级月之术士特性}",
+        "你对月神魔法的阶段获得了更大的控制力。作为一个奖励行动，你可以消耗1点术士点来改变你当前的月神化身阶段为不同的阶段。",
+        "现在，只要你当前的月相与月相法术表中的月相法术相同，你就可以不消耗法术位一次性施放每个月相的1级法术，每个月相法术限一次。一旦你以这种方式施放了月相法术，直到你完成一次长休息之前，你不能再这样做。"
+      ]
+    },
+    {
+      "name": "月之术法:月之赋能",
+      "ENG_name": "Lunar Empowerment",
+      "source": "DSotDQ",
+      "page": 35,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "月之",
+      "subclassSource": "命运石之门",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{\"i\": \"14级月相术士特性\"}",
+        "月相的力量渗透了你的存在。当你处于月之化身的阶段时，你还会获得与该阶段相关联的以下好处：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "满月",
+              "ENG_name": "Full Moon",
+              "entries": [
+                "你可以使用奖励动作在10英尺半径内散发明亮的光芒，并在额外的10英尺内散发昏暗的光芒，或者熄灭光芒。此外，你和你选择的生物在你所散发的明亮光芒范围内进行智力（{@skill 调查}）和智慧（{@skill 感知}）检定时具有优势。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "New Moon",
+              "entries": [
+                "你在敏捷（{@skill 潜行})检定时具有优势。此外，当你完全处于黑暗中时，对你的攻击检定具有劣势。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "Crescent Moon",
+              "entries": [
+                "你对死灵和光辉伤害具有抗性。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "月之术法:月之异象",
+      "ENG_name": "Lunar Phenomenon",
+      "source": "DSotDQ",
+      "page": 35,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "月之",
+      "subclassSource": "命运石之门",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{18级月之术士特性}",
+        "作为一个奖励动作，你可以利用你当前月相化身阶段的特殊力量。或者，作为你使用盈亏特性改变月相的奖励动作的一部分，你可以立即使用你正在进入的月相阶段的力量：",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "满月",
+              "ENG_name": "Full Moon",
+              "entries": [
+                "You radiate moonlight for a moment. Each creature of your choice within 30 feet of you must succeed on a Constitution saving throw against your spell save DC or be {@condition blinded} until the end of its next turn. In addition, one creature of your choice in that area regains {@dice 3d8} hit points."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "New Moon",
+              "entries": [
+                "你短暂地散发出阴郁的气息。你选择的30英尺范围内的每个生物必须成功进行一次敏捷豁免检定，对抗你的法术豁免DC，否则将受到{@damage 3d10}死灵伤害，并在其下一个回合结束前速度减至0。此外，直到你的下一个回合结束，或在你进行攻击检定或施放法术后立即，你将变为{@condition 隐形}。"
+              ]
+            },
+            {
+              "type": "item",
+              "name": "新月",
+              "ENG_name": "Crescent Moon",
+              "entries": [
+                "你可以魔法传送到自己60英尺内可以看到的未被占据的空间。你可以带上一个你可以看到的、愿意的生物，距离你5英尺以内。该生物传送到你选择的、你可以看到的、距离你目的地5英尺内的未被占据的空间。此外，你和那个生物直到你的下个回合开始前获得所有伤害的抗性。"
+              ]
+            }
+          ]
+        },
+        "一旦你使用了这些奖励动作中的一个，直到你完成一次长休之前，你不能再使用该奖励动作，除非你花费5个奥术点数再次使用它。"
+      ]
+    },
+    {
+      "name": "龙族血脉",
+      "ENG_name": "Draconic Bloodline",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你的天生魔法来自于与你的血液或祖先血液混合的龙族魔法。大多数有这种起源的术士追溯他们的血统回到古代一个与龙达成协议的强大术士，或者甚至声称有龙族血统。这些血统中有些在世界上已经确立，但大多数是隐秘的。任何术士都可能是新血统的第一人，这是由于契约或其他特殊情况的结果。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "龙族祖先|术士||龙族||1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "龙裔韧性|术士||龙裔||1"
+        }
+      ]
+    },
+    {
+      "name": "龙族血脉:龙族体魄",
+      "ENG_name": "Draconic Resilience",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "当魔法流经你的身体时，它会导致你的龙族祖先的物理特征显现出来。在1级时，你的生命值上限增加1，并且每当你在这个职业中获得等级时，生命值上限再次增加1。",
+        "此外，你的部分皮肤被一层薄而有光泽的龙鳞覆盖。当你没有穿戴护甲时，你的AC等于13加上你的敏捷调整值。"
+      ]
+    },
+    {
+      "name": "龙族血脉:巨龙先祖",
+      "ENG_name": "Dragon Ancestor",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你选择一种龙作为你的祖先。每种龙相关的伤害类型将用于你之后获得的特性。",
+        {
+          "type": "table",
+          "caption": "龙族血统",
+          "colLabels": [
+            "龙",
+            "伤害类型"
+          ],
+          "colStyles": [
+            "col-6 text-center",
+            "col-6 text-center"
+          ],
+          "rows": [
+            "黑色",
+            "{酸性伤害法术}",
+            "蓝色",
+            "{@filter 闪电|法术|伤害类型=闪电|职业=术士}",
+            "黄铜",
+            "{@filter 火焰|法术|伤害类型=火焰|职业=术士}",
+            "青铜",
+            "{@filter 闪电|法术|伤害类型=闪电|职业=术士}",
+            "铜",
+            "{酸性伤害法术}",
+            "黄金",
+            "{@filter 火焰|法术|伤害类型=火焰|职业=术士}",
+            "绿色",
+            "{@filter 毒素|法术|伤害类型=毒素|职业=术士}",
+            "红色",
+            "{@filter 火焰|法术|伤害类型=火焰|职业=术士}",
+            "银",
+            "{寒冷伤害法术}",
+            "白色",
+            "{寒冷伤害法术}"
+          ]
+        },
+        "你可以说、读、写{@language 龙语}。此外，每当你在与龙互动时进行魅力检定时，如果熟练加值适用于该检定，则你的熟练加值翻倍。"
+      ]
+    },
+    {
+      "name": "龙族血脉:元素亲和",
+      "ENG_name": "Elemental Affinity",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point"
+      },
+      "entries": [
+        "从6级开始，当你施放一个与你龙族血统相关的伤害类型的法术时，你可以将你的魅力调整值加到该法术的一个伤害骰上。同时，你可以花费1点术士点数，在接下来的1小时内对该伤害类型获得抗性。"
+      ]
+    },
+    {
+      "name": "龙族血脉:龙翼",
+      "ENG_name": "Dragon Wings",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你获得了从背后长出一对龙翼的能力，获得等同于你当前速度的飞行速度。你可以在你的回合中作为一个奖励动作来创造这些翅膀。它们会持续存在，直到你以一个奖励动作在你的回合中解散它们。",
+        "如果盔甲不是为容纳你的翅膀而制作的，你就不能在穿戴盔甲时显现翅膀，而且如果不是为容纳你的翅膀而制作的衣物可能会在你显现翅膀时被破坏。"
+      ]
+    },
+    {
+      "name": "龙族血脉:真龙姿态",
+      "ENG_name": "Draconic Presence",
+      "source": "PHB",
+      "page": 102,
+      "srd": true,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "龙族血脉",
+      "subclassSource": "PHB",
+      "level": 18,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point",
+        "amount": 5
+      },
+      "entries": [
+        "从18级开始，你可以引导你龙族祖先的可怕存在，使得你周围的人变得敬畏或{@condition frightened}。作为一个动作，你可以消耗5点术士点来借助这股力量，散发出敬畏或恐惧的光环（你选择）到60英尺的距离。持续1分钟或直到你失去{@status concentration}（就像你在施放一个需要{@status concentration}的法术一样），每个敌对生物在其回合开始时如果处于这个光环内，必须进行一次智力豁免投掷，否则会被{@condition charmed}（如果你选择的是敬畏）或{@condition frightened}（如果你选择的是恐惧），直到光环结束。成功通过这次豁免投掷的生物在接下来的24小时内对你的光环免疫。"
+      ]
+    },
+    {
+      "name": "狂野魔法",
+      "ENG_name": "Wild Magic",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你的内在魔法来自于构成秩序之下的混沌力量。你可能曾经暴露于某种原始魔法之下，或许是通过通往混沌之地、元素位面或神秘远域的位面门户。也许你曾被强大的仙女生物祝福或被恶魔标记。或者你的魔法可能是你出生时的偶然，没有明显的原因或理由。无论如何，这种混沌魔法在你体内翻腾，等待任何释放的机会。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "野性魔法涌动|术士||野性||1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "混沌潮汐|术士||野性||1"
+        }
+      ]
+    },
+    {
+      "name": "狂野魔法:混沌之潮",
+      "ENG_name": "Tides of Chaos",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你可以操纵机会和混乱的力量，以在一次攻击检定、能力检定或豁免投掷中获得优势。一旦你这样做了，你必须完成一次长时间休息，才能再次使用这个特性。",
+        "在你重新获得这个特性的使用之前，DM可以在你施放1级或更高级别的术士法术后立即要求你掷骰子查看{@table 野性魔法涌动|PHB}表格。然后你重新获得这个特性的使用。"
+      ]
+    },
+    {
+      "name": "狂野魔法:狂野魔法浪涌",
+      "ENG_name": "Wild Magic Surge",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a {@dice d20}. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild Magic Surge can happen once per turn.",
+        "如果野魔法效果是一个法术，它太狂野了，无法受到超魔效果的影响。如果它通常需要{@status concentration}，那么在这种情况下它不需要{@status concentration}；法术将持续其完整持续时间。",
+        {
+          "type": "table",
+          "caption": "狂野魔法:狂野魔法浪涌",
+          "colLabels": [
+            "{@dice d100}",
+            "影响"
+          ],
+          "colStyles": [
+            "col-1 text-center",
+            "col-11"
+          ],
+          "rows": [
+            "01-02",
+            "在接下来的一分钟内，每次你的回合开始时，都要在这个表格上进行掷骰，忽略后续掷骰的这个结果。",
+            "03-04",
+            "在接下来的一分钟内，如果你能直视到它，你可以看见任何处于{@condition 隐形}状态的生物。",
+            "05-06",
+            "一个由DM选择并控制的{@filter modron|bestiary|source=mm|search=modron}出现在你5英尺范围内的未被占据的空间内，然后在1分钟后消失。",
+            "07-08",
+            "你将自己为中心，将{火球术}作为3级法术施放。",
+            "09-10",
+            "你将{@spell 魔法飞弹}施放为一个5级法术。",
+            "11-12",
+            "Roll a {@dice d10}. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow.",
+            "13-14",
+            "你以自己为中心施放{@spell 混乱}法术。",
+            "15-16",
+            "在接下来的一分钟内，你在每个回合开始时恢复5点生命值。",
+            "17-18",
+            "你长出了一个由羽毛制成的长胡子，它会一直保留，直到你打喷嚏，那时羽毛会从你的脸上爆炸般地飞出。",
+            "19-20",
+            "你将自己为中心，施放了{润滑剂}。",
+            "21-22",
+            "生物在下一分钟内对你施放的下一个涉及豁免投掷的法术进行豁免投掷时具有劣势。",
+            "23-24",
+            "你的皮肤变成了一种鲜艳的蓝色。一个{@spell 解除诅咒}法术可以结束这个效果。",
+            "25-26",
+            "在接下来的一分钟内，你的额头上出现了一只眼睛。在那段时间里，你在依赖视力的智力（感知）检定上具有优势。",
+            "27-28",
+            "在接下来的一分钟内，所有施法时间为1个动作的法术，施法时间变为1个奖励动作。",
+            "29-30",
+            "你传送至你能看到的、选择的未被占据的空间，最多60英尺。",
+            "31-32",
+            "你被传送到星界，直到你的下一个回合结束，之后你将返回到你之前占据的空间，或者如果那个空间被占据了，就返回到最近的未被占据的空间。",
+            "33-34",
+            "最大化你接下来一分钟内施放的下一个造成伤害的法术的伤害。",
+            "35-36",
+            "Roll a {@dice d10}. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older.",
+            "37-38",
+            "{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute.",
+            "39-40",
+            "You regain {@dice 2d10} hit points.",
+            "41-42",
+            "你变成一个盆栽植物，直到你的下个回合开始。作为一个植物，你处于{@condition incapacitated}状态，并对所有伤害具有脆弱性。如果你的生命值降至0点，你的盆栽破碎，你变回原形。",
+            "43-44",
+            "在接下来的一分钟内，你可以在每个回合作为奖励动作传送最多20英尺。",
+            "45-46",
+            "你对自己施放了{飘浮}。",
+            "47-48",
+            "一只由DM控制的{独角兽}出现在你5英尺范围内的一个空间内，然后在1分钟后消失。",
+            "49-50",
+            "接下来的一分钟内你不能说话。每当你尝试说话时，粉红色的泡泡会从你的嘴里飘出来。",
+            "51-52",
+            "接下来的一分钟内，一个幽灵般的盾牌在你附近盘旋，为你提供了+2的AC加值以及对{@spell 魔法飞弹}的免疫。",
+            "53-54",
+            "You are immune to being intoxicated by alcohol for the next {@dice 5d6} days.",
+            "55-56",
+            "你的头发脱落，但在24小时内会长回来。",
+            "57-58",
+            "在接下来的一分钟内，你触摸的任何易燃物体，如果不是被另一个生物穿戴或携带，就会突然起火。",
+            "59-60",
+            "你恢复了你最低等级的已消耗法术位。",
+            "61-62",
+            "接下来的一分钟内，你必须大声喊叫着说话。",
+            "63-64",
+            "你以自己为中心施放了{@spell 雾云}法术。",
+            "65-66",
+            "你选择的在你30英尺范围内的最多三个生物受到{4d10}点闪电伤害。",
+            "67-68",
+            "直到你的下一个回合结束，你被最近的生物{@condition frightened}。",
+            "69-70",
+            "接下来的一分钟内，你周围30英尺内的所有生物变为{@condition 隐形}。当生物进行攻击或施放法术时，其隐形状态结束。",
+            "71-72",
+            "在接下来的一分钟内，你对所有伤害获得抗性。",
+            "73-74",
+            "A random creature within 60 feet of you becomes {@condition poisoned} for {@dice 1d4} hours.",
+            "75-76",
+            "在接下来的一分钟内，你在30英尺半径内发出明亮的光芒。任何在其回合结束时在你5英尺范围内的生物将{致盲}，直到其下一个回合结束。",
+            "77-78",
+            "你对自己施放了{@spell 变形术}。如果你未能通过豁免检定，你将在法术持续时间内变成一只羊。",
+            "79-80",
+            "在接下来的一分钟内，幻觉中的蝴蝶和花瓣在你周围10英尺内飞舞。",
+            "81-82",
+            "你可以立即进行一次额外的动作。",
+            "83-84",
+            "在你30英尺范围内的每个生物受到{1d10}点死灵伤害。你恢复等同于造成死灵伤害总和的生命值。",
+            "85-86",
+            "你施放了{@spell 镜像术}。",
+            "87-88",
+            "你对距离你60英尺范围内的随机生物施放{@spell 飞行}。",
+            "89-90",
+            "在接下来的一分钟内，你变得{隐形}。在那段时间里，其他生物无法听到你的声音。如果你攻击或施放法术，隐形效果将结束。",
+            "91-92",
+            "如果你在接下来的一分钟内死亡，你将立即像通过{@spell 转生术}法术一样复活。",
+            "93-94",
+            "在接下来的一分钟内，你的体型增加一个尺寸类别。",
+            "95-96",
+            "你和所有在你周围30英尺内的生物在接下来的一分钟内对穿刺伤害获得易伤。",
+            "97-98",
+            "在接下来的一分钟内，你周围环绕着微弱的幽灵音乐。",
+            "99-00",
+            "你恢复了所有已消耗的术士点数。"
+          ],
+          "data": {
+            "tableInclude": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "狂野魔法:扭曲幸运",
+      "ENG_name": "Bend Luck",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point",
+        "amount": 2
+      },
+      "entries": [
+        "Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll {@dice 1d4} and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur."
+      ]
+    },
+    {
+      "name": "狂野魔法:掌控混沌",
+      "ENG_name": "Controlled Chaos",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你获得了对你野性魔法涌动的一定程度控制。每当你在《玩家手册》中的野性魔法涌动表掷骰时，你可以掷两次骰子，并选择使用任何一个数字。"
+      ]
+    },
+    {
+      "name": "狂野魔法:法术轰击",
+      "ENG_name": "Spell Bombardment",
+      "source": "PHB",
+      "page": 103,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "狂野魔法",
+      "subclassSource": "PHB",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，你的法术的有害能量变得更加强烈。当你为法术掷伤害骰并掷出任何骰子上可能的最高点数时，选择其中一个骰子，重新掷一次并将该掷加到伤害上。每个回合你只能使用这个特性一次。"
+      ]
+    },
+    {
+      "name": "火焰术士(PSK)",
+      "ENG_name": "Pyromancer (PSK)",
+      "source": "PSK",
+      "page": 9,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "火焰术士(PSK)",
+      "subclassSource": "PSK",
+      "level": 1,
+      "entries": [
+        "你的天生魔法以火的形式显现。你就是你的火焰，你的火焰就是你。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "火焰之心|术士||火焰法师 (PSK)|PSK|1"
+        }
+      ]
+    },
+    {
+      "name": "火焰之心",
+      "ENG_name": "Heart of Fire",
+      "source": "PSK",
+      "page": 9,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "火焰术士(PSK)",
+      "subclassSource": "PSK",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，每当你开始施放1级或更高级别的造成火焰伤害的法术时，炽热的魔法就会从你身上爆发出来。这次爆发会导致你能看到的10英尺范围内的生物选择受到等于你术士等级一半的火焰伤害（最少为1）。"
+      ]
+    },
+    {
+      "name": "火焰在血脉中",
+      "ENG_name": "Fire in the Veins",
+      "source": "PSK",
+      "page": 9,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "火焰术士(PSK)",
+      "subclassSource": "PSK",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你获得对火焰伤害的抗性。此外，你施放的法术无视对火焰伤害的抗性。"
+      ]
+    },
+    {
+      "name": "火焰术士的狂怒",
+      "ENG_name": "Pyromancer's Fury",
+      "source": "PSK",
+      "page": 9,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "火焰术士(PSK)",
+      "subclassSource": "PSK",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，当你被近战攻击击中时，你可以使用你的反应来对攻击者造成火焰伤害。伤害等于你的术士等级，并且无视对火焰伤害的抗性。"
+      ]
+    },
+    {
+      "name": "炽热之魂",
+      "ENG_name": "Fiery Soul",
+      "source": "PSK",
+      "page": 9,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "火焰术士(PSK)",
+      "subclassSource": "PSK",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "在18级时，你对火焰伤害获得免疫。此外，你创造的任何法术或效果忽略对火焰伤害的抗性，并将对火焰伤害的免疫视为对火焰伤害的抗性。"
+      ]
+    },
+    {
+      "name": "畸变心智",
+      "ENG_name": "Aberrant Mind",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "一种异域的影响已经将其触手缠绕在你的思想上，赋予了你心灵感应的力量。现在，你可以用这种力量触摸其他心灵，并利用它控制多元宇宙的魔法能量来改变你周围的世界。这种力量会成为他人希望的灯塔吗？还是会成为那些感受到你心灵刺痛和见证你力量奇异表现的人的恐怖之源？",
+        "作为一位异变心智术士，你决定你是如何获得你的能力的。你是天生就拥有它们吗？还是生活中后来发生的某个事件让你闪耀着灵能意识？参考异变起源表来确定你力量的可能起源。",
+        {
+          "type": "table",
+          "caption": "异常起源",
+          "colLabels": [
+            "d6",
+            "当我还是婴儿时，我被浸泡在多头蛇的血液中，我的伤口愈合得太快，无法成为致命的伤害。"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "你暴露在远域的扭曲影响之下。你坚信自己身上现在长出了触手，但其他人都看不见它。",
+            "2",
+            "来自星界的精神风将灵能能量传递给你。当你使用你的能力时，微弱的光点在你周围闪烁。",
+            "3",
+            "你曾经遭受过一只阿波罗斯的支配力量，在你心中留下了一块心灵碎片。",
+            "4",
+            "你的脑中被植入了一只心智蝌蚪，但脑蝌蚪的变形过程从未完成。现在它的心灵异能属于你。当你使用它时，你的肉体会散发出一种奇怪的粘液。",
+            "5",
+            "小时候，你有一个看起来像flumph或者像奇异鸭嘴兽生物的想象中的朋友。有一天，它赋予了你灵能力量，这些力量最终证明并非那么虚构。",
+            "6",
+            "你的噩梦向你低语真相：你的灵能力量并非属于你自己。你的力量来自你寄生的双胞胎兄弟！"
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "灵能法术|术士||异常心智|TCE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "心灵感应交流|术士||异常心智|TCE|1"
+        }
+      ]
+    },
+    {
+      "name": "畸变心智:灵能法术",
+      "ENG_name": "Psionic Spells",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级畸变心智特性}",
+        "当你达到这个职业的特定等级时，你会学习到额外的法术，如灵能法术表所示。这些法术对你来说都算作术士法术，但它们不会计入你所知的术士法术数量。",
+        "每当你获得一个术士等级时，你可以用另一个同等级的法术替换你从这个特性获得的法术。新法术必须是来自术士、术士或巫师法术列表中的{@filter 占卜或附魔法术|spells|class=sorcerer;warlock;wizard|school=D;E|level=1;2;3;4;5}。",
+        {
+          "type": "table",
+          "caption": "畸变心智:灵能法术",
+          "colLabels": [
+            "术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第一",
+            "{\"spell\": \"arms of Hadar\", \"spell\": \"dissonant whispers\", \"spell\": \"mind sliver|tce\"}",
+            "第三",
+            "{\"spell\": \"calm emotions\", \"spell\": \"detect thoughts\"}",
+            "第五",
+            "{@spell Hadar的饥饿}, {@spell 发送}",
+            "第七",
+            "{@spell 埃瓦尔德的黑暗触手}, {@spell 召唤畸变生物|TCE}",
+            "第九",
+            "{@spell 瑞尔的心灵感应}, {@spell 心灵遥控}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "畸变心智:传心谈话",
+      "ENG_name": "Telepathic Speech",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级畸变心智特性}",
+        "你可以在你和另一个生物的心智之间形成心灵感应连接。作为奖励行动，选择一个你能看到的，距离你30英尺以内的生物。在你俩之间的距离等于你的魅力调整值（最少1英里）的英里数内，你和选定的生物可以心灵感应交流。为了理解对方，你们必须在对方知道的语言中进行心灵交流。",
+        "心灵感应连接持续时间为你的术士等级相等的分钟数。如果你被{@condition incapacitated}或死亡，或者你使用这个能力与不同的生物建立连接，它将提前结束。"
+      ]
+    },
+    {
+      "name": "畸变心智:灵能术法",
+      "ENG_name": "Psionic Sorcery",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级畸变心智特性}",
+        "当你从你的灵能魔法特性中施放任何1级或更高级别的法术时，你可以选择正常消耗一个法术位来施放它，或者消耗等于法术等级的若干点奥术点数。",
+        "如果你使用奥术点数施放法术，它不需要任何口头或肢体成分，并且不需要任何材料成分，除非法术需要消耗它们。"
+      ]
+    },
+    {
+      "name": "畸变心智:心灵防御",
+      "ENG_name": "Psychic Defenses",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级畸变心智特性}",
+        "你获得对心灵伤害的抗性，并且在对抗被{@condition 魅惑}或{@condition 恐惧}状态的豁免投骰上拥有优势。"
+      ]
+    },
+    {
+      "name": "血肉启示",
+      "ENG_name": "Revelation in Flesh",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级畸变心智特性}",
+        "你可以释放隐藏在你体内的畸变真相。作为奖励行动，你可以消耗1个或更多的奥术点来施放魔法，使你的身体在10分钟内发生变化。对于你消耗的每个奥术点，你可以选择以下任一好处，这些效果将持续到变形结束：",
+        {
+          "type": "list",
+          "items": [
+            "你可以看见任何在你60英尺范围内的{@condition 隐形}生物，前提是它们不在完全遮蔽物后面。你的眼睛也会变黑或变成扭动的感觉触须。",
+            "你获得等同于你行走速度的飞行速度，并且你可以悬停。当你飞行时，你的皮肤会因黏液而发亮，或以超凡的光芒闪耀。",
+            "你获得的游泳速度等于你行走速度的两倍，并且你可以在水下呼吸。此外，鳃从你的颈部长出，或从你耳后展开，你的手指变成蹼状，或者你长出穿过衣物扭动的纤毛。",
+            "你的身体，以及你穿戴或携带的任何装备，变得黏滑且柔软。你可以在任何宽仅1英寸的空间中移动而不被挤压，并且你可以花费5英尺的移动来逃脱非魔法的束缚或被{@condition 摔跤}。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "畸变心智:扭曲爆裂",
+      "ENG_name": "Warping Implosion",
+      "source": "TCE",
+      "page": 66,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "畸变心智",
+      "subclassSource": "TCE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{@i 18级畸变心智特性}",
+        "你可以释放你的畸变力量，作为一种扭曲空间的异常现象。作为动作，你可以传送到你能看到的120英尺内的未被占据的空间。在你消失后，每个在你离开的空间30英尺范围内的生物必须进行力量豁免投骰，对抗你的法术豁免DC。如果豁免失败，生物会受到{@damage 3d10}力量伤害，并被直接拉向你离开的空间，结束时位于尽可能靠近你原来空间的未被占据的空间。如果豁免成功，生物受到的伤害减半，且不会被拉走。",
+        "一旦你使用了这个特性，你就不能再次使用，直到你完成一次长时间的休息，除非你花费5点奥术点数再次使用它。"
+      ]
+    },
+    {
+      "name": "时械之魂",
+      "ENG_name": "Clockwork Soul",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "宇宙秩序之力已经用魔法渗透了你。这种力量来自于机械境或类似的地方——一个完全由钟表效率塑造的存在平面。你或你的血统中某人可能已经卷入了莫德隆人的阴谋之中，这些有序的存在居住在机械境。也许你的祖先甚至参与了伟大的莫德隆行军。无论其在你体内的起源如何，对他人来说，秩序的力量可能看起来很奇怪，但对你来说，它是广阔而辉煌体系的一部分。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "发条魔法|术士||发条之魂|TCE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "恢复平衡|术士||发条之魂|TCE|1"
+        }
+      ]
+    },
+    {
+      "name": "时械之魂:时械法术",
+      "ENG_name": "Clockwork Magic",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级发条之魂特性}",
+        "当你达到这个职业的特定等级时，你会学习到额外的法术，如发条法术表所示。这些法术中的每一个对你来说都算作术士法术，但它们不会计入你所知道的术士法术数量。",
+        "每当你获得术士等级时，你可以用同一等级的另一个法术替换你从这个特性中获得的一个法术。新法术必须是来自术士、术士或巫师法术列表中的{@filter 咒法或变化法术|法术|职业=术士；术士；巫师|学派=A;T|等级=1;2;3;4;5}。",
+        {
+          "type": "table",
+          "caption": "发条法术",
+          "colLabels": [
+            "术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第一",
+            "{@spell 警报}, {@spell 防护邪恶与善良}",
+            "第三",
+            "{@spell 援助}, {@spell 小复原}",
+            "第五",
+            "{@spell 解除魔法}, {@spell 防护能量伤害}",
+            "第七",
+            "{@spell 自由移动}, {@spell 召唤构造体|TCE}",
+            "第九",
+            "{@spell 高级复原}, {@spell 力量墙}"
+          ]
+        },
+        "此外，查阅秩序显化表，并选择或随机确定当你施放任何术士法术时，你与秩序的联系以何种方式显化。",
+        {
+          "type": "table",
+          "caption": "秩序显化",
+          "colLabels": [
+            "d6",
+            "表现"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "幽灵齿轮在你背后盘旋。",
+            "2",
+            "时钟的指针在你眼中旋转。",
+            "3",
+            "你的皮肤闪烁着黄铜般的光泽。",
+            "4",
+            "浮动的方程式和几何图形覆盖在你的身体上。",
+            "5",
+            "你的施法焦点暂时变成了一个微小的发条机械装置。",
+            "6",
+            "齿轮的滴答声或时钟的敲击声可以被你和受你魔法影响的人听到。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "时械之魂:归复平衡",
+      "ENG_name": "Restore Balance",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级发条之魂特性}",
+        "Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a {@dice d20} with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "时械之魂:律令之壁",
+      "ENG_name": "Bastion of Law",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point"
+      },
+      "entries": [
+        "{@i 6级发条之魂特性}",
+        "你可以利用存在的宏大方程式，赋予一个生物以秩序的闪亮盾牌。作为动作，你可以消耗1到5点奥术点数，在你自己或另一个你能看到的，距离你30英尺以内的生物周围创造一个魔法防护。这个防护持续到你完成一次长时间的休息，或者直到你再次使用这个特性。",
+        "The ward is represented by a number of {@dice d8}s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can expend a number of those dice, roll them, and reduce the damage taken by the total rolled on those dice."
+      ]
+    },
+    {
+      "name": "时械之魂:序列意识",
+      "ENG_name": "Trance of Order",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级发条之魂特性}",
+        "You gain the ability to align your consciousness to the endless calculations of Mechanus. As a bonus action, you can enter this state for 1 minute. For the duration, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the {@dice d20} as a 10.",
+        "一旦你使用了这个奖励动作，你就不能再次使用，直到你完成一次长时间的休息，除非你花费5点奥术点数再次使用它。"
+      ]
+    },
+    {
+      "name": "时械之魂:时械矩阵",
+      "ENG_name": "Clockwork Cavalcade",
+      "source": "TCE",
+      "page": 68,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "时械之魂",
+      "subclassSource": "TCE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "{@i 18级发条之魂特性}",
+        "你召唤秩序之魂来清除你周围的混乱。作为动作，你从自己开始召唤这些灵魂在一个30英尺的立方体中。这些灵魂看起来像莫德隆或其他你选择的构造体。这些灵魂是无形的，不可战胜的，它们在立方体中创造以下效果，然后消失：",
+        {
+          "type": "list",
+          "items": [
+            "这些灵魂可以恢复最多100点生命值，你可以在立方体内的任意数量的生物中选择分配。",
+            "立方体内的任何损坏的物体都会立即被修复。",
+            "立方体内你选择的生物和物体上的任何6级或更低级别的法术都会立即结束。"
+          ]
+        },
+        "一旦你使用了这个动作，你就不能再次使用，直到你完成一次长时间的休息，除非你花费7点奥术点数再次使用它。"
+      ]
+    },
+    {
+      "name": "符文之子",
+      "ENG_name": "Runechild",
+      "source": "TDCSR",
+      "page": 176,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "魔法的神秘编织和流动在Exandria各地的许多人中引起了恐惧。但是，尽管一些施法者必须研究魔法的本质和性质，希望学会驾驭它，术士却拥有天生的才能来塑造和运用塑造世界的力量的流浪线。对于一些术士来说，身体成为这种力量的导体，以自然符文的形式被收集和储存——这使得术士被称为符文之子。",
+        "符文之子的天赋是罕见的，具有这种起源的术士被魔法师和学者们寻求研究，他们普遍相信他们的符文的秘密可以帮助理解魔法的奥秘。其他人有时试图奴役符文之子术士，利用他们的身体作为折磨的法术电池，用于恶魔的追求。在《奥术时代》中，符文之子术士被征服，他们的许多同代人现在正在寻找隐藏他们本质的方法——考虑到他们天赋的揭示性质，这并不是一项容易的任务。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "本质符文|术士|PHB|符文之子|TDCSR|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "符文魔法|术士|PHB|符文之子|TDCSR|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "守护符印|术士|PHB|符文之子|TDCSR|1"
+        }
+      ]
+    },
+    {
+      "name": "符文之子:本源符文",
+      "ENG_name": "Essence Runes",
+      "source": "TDCSR",
+      "page": 177,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 1,
+      "header": 2,
+      "entries": [
+        "在1级时，你的身体开始以符文的形式表达你天生的魔法，这些符文遍布你的皮肤。你从1个本质符文开始，每当你在本职业中升级时，就会额外获得一个符文。这些符文可以在你身体的任何地方显现，尽管第一个通常出现在额头上。当你的本质符文处于静止状态时，它们是看不见的。",
+        "在你消耗一个或多个奥术点数的回合结束时，与你消耗的奥术点数相等的本质符文数量开始以储存的能量发光，变成充能符文。你使用这些充能符文来激活你的符文之子子类特性。此外，作为奖励动作，你可以消耗一个奥术点数将两个本质符文转换成两个充能符文。",
+        "如果你没有任何奥术点数和充能符文，你可以将一个本质符文转换成一个充能符文，作为一个动作。",
+        "如果你有5个或更多的充能符文，你在5英尺半径内发出明亮的光芒，并且在额外的5英尺内发出微光。",
+        "如果你消耗一个充能符文来使用你的符文之子特性之一，它将变回一个静止的本质符文。任何充能符文在完成一次{@quickref 长休息|PHB|2|0|long rest}后也会变回静止的本质符文。"
+      ]
+    },
+    {
+      "name": "符文之子:坚盾刻文",
+      "ENG_name": "Glyph of Aegis",
+      "source": "TDCSR",
+      "page": 177,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 1,
+      "header": 2,
+      "entries": [
+        "从1级开始，你可以释放符文中储存的奥术力量来吸收或偏转威胁性的攻击。每当你受到伤害时，你可以作为反应消耗任意数量的充能符文。掷出与你消耗的符文数量相等的{@dice d6|d6s}，并将受到的伤害减少总和。"
+      ]
+    },
+    {
+      "name": "符文之子:符文魔法",
+      "ENG_name": "Runic Magic",
+      "source": "TDCSR",
+      "page": 177,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 1,
+      "header": 2,
+      "entries": [
+        "从1级开始，当你达到这个职业的特定等级时，你会学习到额外的法术，如符文法术表所示。这些法术中的每一个对你来说都算作术士法术，但它们不会计入你所知道的术士法术数量。",
+        "每当你在本职业中升级时，你可以用同一等级的另一个法术替换你从这个特性中获得的法术。新法术必须是来自术士、术士或巫师法术列表中的{@filter 咒法或变化法术|法术|学派=A;T|职业=术士；术士；巫师}。",
+        {
+          "type": "table",
+          "caption": "符文法术",
+          "colLabels": [
+            "术士等级",
+            "法术"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "第一",
+            "{@spell 健步如飞}, {@spell 防护邪恶与善良}",
+            "第三",
+            "{@spell 小复原}, {@spell 防护毒素}",
+            "第五",
+            "{@spell 守护符文}, {@spell 魔法结界}",
+            "第七",
+            "{@spell 防死护身}, {@spell 自由移动}",
+            "第九",
+            "{@spell 高级复原}, {@spell 心灵遥控}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "守护符印（6级）",
+      "ENG_name": "Glyph of Aegis (6th Level)",
+      "source": "TDCSR",
+      "page": 177,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "When you reach 6th level, you can touch a creature as an action and expend up to 3 charged runes to transfer your protective power to it for up to 1 hour. The next time that creature takes damage within the next hour, it rolls {@dice 1d6} per charged rune spent and reduces the damage by the total. You can't transfer this power to a creature already under the effect of Glyph of Aegis."
+      ]
+    },
+    {
+      "name": "显现铭文",
+      "ENG_name": "Manifest Inscriptions",
+      "source": "TDCSR",
+      "page": 178,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "同样在6级时，你可以揭示围绕你的隐藏铭文和魔法。作为动作，你消耗一个充能符文来揭示你周围60英尺内的隐藏或不可见的奥术陷阱、标记、符文、防护、传感器或铭文。它们在5英尺半径内发出微光，持续1分钟。",
+        "在这段时间内，你对智力（{@skill 奥术}）检定有{@quickref 优势和劣势|PHB|2|0|advantage}，以辨别以这种方式揭示的任何魔法的本质。如果你揭示的铭文在你无法阅读的语言中有意义，你可以在它们发光时理解它们，就好像你知道那种语言一样。"
+      ]
+    },
+    {
+      "name": "符文之子:符印强化",
+      "ENG_name": "Sigilic Augmentation",
+      "source": "TDCSR",
+      "page": 178,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你可以引导你的符文来暂时增强你的身体能力。当你进行力量、敏捷或体质能力检定时，你可以作为反应消耗一个充能符文，以获得检定的{@quickref 优势和劣势|PHB|2|0|advantage}。",
+        "此外，当你被迫进行力量、敏捷或体质的{@quickref 豁免投骰|PHB|2|1|saving throw}时，你可以使用你的反应并消耗一个充能符文来获得{@quickref 豁免投骰|PHB|2|1|saving throw}的{@quickref 优势和劣势|PHB|2|0|advantage}。一旦你以这种方式使用这个特性，直到你完成一次{@quickref 休息|PHB|2|0|long rest}之前，你不能再以这种方式使用它。"
+      ]
+    },
+    {
+      "name": "守护符印（14级）",
+      "ENG_name": "Glyph of Aegis (14th Level)",
+      "source": "TDCSR",
+      "page": 177,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "Your Glyph of Aegis die becomes a {@dice d8} at 14th level."
+      ]
+    },
+    {
+      "name": "符文之子:符文涌流",
+      "ENG_name": "Runic Torrent",
+      "source": "TDCSR",
+      "page": 178,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "达到14级时，你可以引导符文能量来压倒甚至最坚固的防御。当你施放一个法术时，你可以消耗2个充能符文，使法术造成力量伤害，而不是其通常的伤害类型。此外，被法术目标的所有生物或在法术区域内的所有生物必须成功进行力量{@quickref 豁免投骰|PHB|2|1|saving throw}，对抗你的法术豁免DC，否则会被击倒或被推向远离法术起点（你选择）最多15英尺。",
+        "一旦你使用了这个特性，你就不能再次使用，直到你完成一次{@quickref 休息|PHB|2|0|short or long rest}。"
+      ]
+    },
+    {
+      "name": "符文之子:奥法化身",
+      "ENG_name": "Arcane Exemplar",
+      "source": "TDCSR",
+      "page": 178,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "符文之子",
+      "subclassSource": "TDCSR",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "从18级开始，你可以使用奖励动作并消耗一个充能符文，变成一个纯粹的魔法能量生物。在你的典范形态中，你获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "你拥有60英尺的飞行速度。",
+            "生物对你的术士法术的{@quickref 豁免投骰|PHB|2|1}有{@quickref 优势和劣势|PHB|2|0|disadvantage}。",
+            "你对法术造成的伤害具有抗性。",
+            "每当你施放1级或更高级别的法术时，你恢复等于法术等级的生命值。"
+          ]
+        },
+        "你的典范形态持续到你的回合结束。然而，你可以在你的回合结束时消耗一个充能符文（无需动作）来延长持续时间，直到你下一个回合结束。当你的典范形态结束时，直到你下一个回合结束，你将处于{@condition 昏迷}状态。",
+        "一旦你使用了这个特性，你就不能再次使用，直到你完成一次{@quickref 休息|PHB|2|0|long rest}。"
+      ]
+    },
+    {
+      "name": "神圣之魂",
+      "ENG_name": "Divine Soul",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 1,
+      "entries": [
+        "有时，激发术士的魔法火花来自灵魂深处闪烁的神圣之源。拥有这样一个受到祝福的灵魂意味着你的天生魔法可能来自于与神性存在的遥远但强大的家族联系。也许你的祖先是一位天使，被转变为凡人，并被派去以神的名义战斗。",
+        "或者你的出生可能与古老的预言相吻合，将你标记为神的仆人或神圣魔法的选定容器。",
+        "神圣灵魂，拥有自然的魅力，被一些宗教等级制度视为威胁。作为一个掌握神圣力量的外来者，神圣灵魂可以通过声称与神明有直接联系来破坏现有的秩序。",
+        "在一些文化中，只有那些能够宣称拥有神圣灵魂力量的人才能指挥宗教力量。在这些地区，教会职位由少数血统掌控，并代代相传。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "神圣魔法|术士||神圣灵魂|XGE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "神灵眷顾|术士||神圣灵魂|XGE|1"
+        }
+      ]
+    },
+    {
+      "name": "神圣之魂:神圣魔法",
+      "ENG_name": "Divine Magic",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "你与神明的联系使你能够从牧师职业中学习法术。当你的施法特性允许你学习或替换一个术士的戏法或1级或更高级别的术士法术时，你可以选择新的法术来自牧师法术列表或术士法术列表。你必须遵守选择法术的所有其他限制，它对你来说就变成了一个术士法术。",
+        "此外，选择一个与你神圣力量来源的亲和性：善良、邪恶、守序、混乱或中立。你将根据这个亲和性学习一个额外的法术，如下所示。它对你来说是术士法术，但不计入你所知的术士法术数量。如果你后来替换这个法术，你必须用牧师法术列表中的法术来替换它。",
+        {
+          "type": "table",
+          "colLabels": [
+            "亲和性",
+            "法术"
+          ],
+          "colStyles": [
+            "col-6",
+            "col-6"
+          ],
+          "rows": [
+            "好的",
+            "{@spell 治疗伤口}",
+            "邪恶",
+            "{@spell 施加伤害}",
+            "律法",
+            "{@spell 祝福}",
+            "Chaos",
+            "{@spell 厄运}",
+            "中立",
+            "{@spell 防护邪恶善良}"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "神圣之魂:众神眷恩",
+      "ENG_name": "Favored by the Gods",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll {@dice 2d4} and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest."
+      ]
+    },
+    {
+      "name": "神圣之魂:强效治疗",
+      "ENG_name": "Empowered Healing",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point"
+      },
+      "entries": [
+        "从6级开始，流经你的神圣能量可以强化治疗法术。每当你或你的盟友在距离你5英尺内的范围内掷骰子以确定法术恢复的生命值点数时，你可以花费1点术士点数重新掷任意数量的骰子一次，前提是你不是{@condition incapacitated}。每个回合只能使用这个特性一次。"
+      ]
+    },
+    {
+      "name": "神圣之魂:异界光翼",
+      "ENG_name": "Otherworldly Wings",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你可以使用奖励动作从你的背部显现出一对幽灵翅膀。当翅膀存在时，你拥有30英尺的飞行速度。翅膀会持续存在，直到你{@condition incapacitated}、死亡，或者你作为奖励动作解散它们。",
+        "你选择的神圣魔法特性的亲和力决定了幽灵翅膀的外观：鹰翅膀代表善良或守序，蝙蝠翅膀代表邪恶或混乱，蜻蜓翅膀代表中立。"
+      ]
+    },
+    {
+      "name": "神圣之魂:神赐痊愈",
+      "ENG_name": "Unearthly Recovery",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "神圣之魂",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "在18级时，你获得了克服严重伤害的能力。当你的生命值少于最大值的一半时，你可以作为奖励动作恢复等同于你生命值最大值一半的生命值。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "幽影魔法",
+      "ENG_name": "Shadow Magic",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 1,
+      "entries": [
+        "你是来自阴影之地的生物，因为你的天赋魔法本身就来自阴影界。你可能追溯到那个地方的实体血统，或者你可能暴露在它的邪恶能量下并被它转变。",
+        "阴影魔法的力量给你的物理存在蒙上了一层奇怪的阴霾。维持你生命的生命火花被压抑，仿佛它在与你灵魂中充满的黑暗能量作斗争，努力保持活力。你可以选择或在阴影术士怪癖表上掷骰子，为你的角色创造一个怪癖。",
+        {
+          "type": "table",
+          "caption": "暗影术士特质",
+          "colLabels": [
+            "d6",
+            "我经常不小心用我神的名字（或另一位神的名字）来称呼别人。"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "你的触感总是冰冷刺骨。",
+            "2",
+            "当你睡着时，你看起来不会呼吸（尽管你仍然需要呼吸来生存）。",
+            "3",
+            "你即使受到严重伤害也几乎不流血。",
+            "4",
+            "你的心跳每分钟跳动一次。这个事件有时会令你惊讶。",
+            "5",
+            "你总是难以记住活生生的生物和尸体应该被区别对待。",
+            "6",
+            "你眨了眼。一次。上周。"
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "黑暗之眼|术士||阴影|XGE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "坟墓之力|术士||暗影|XGE|1"
+        }
+      ]
+    },
+    {
+      "name": "幽影魔法:幽暗之瞳",
+      "ENG_name": "Eyes of the Dark",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你有{@sense darkvision}，范围为120英尺。",
+        "当你达到这个职业的3级时，你学会了{@spell darkness}法术，它不计入你所知的术士法术数量。此外，你可以花费2点术法点数或消耗一个法术位来施放它。如果你用术法点数施放它，你可以通过法术创造的{@spell darkness}看到东西。"
+      ]
+    },
+    {
+      "name": "幽影魔法:终焉之力",
+      "ENG_name": "Strength of the Grave",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你在生与死之间的暮光状态使你难以被击败。当伤害使你的生命值降至0时，你可以进行一次魅力豁免投掷（DC 5 + 受到的伤害）。成功时，你的生命值反而降至1。如果你因辐射伤害或被致命一击而降至0生命值，则不能使用此特性。",
+        "在豁免成功之后，直到你完成一次长时间休息之前，你不能再使用这个特性。"
+      ]
+    },
+    {
+      "name": "幽影魔法:凶兆猎犬",
+      "ENG_name": "Hound of Ill Omen",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point",
+        "amount": 3
+      },
+      "entries": [
+        "在6级时，你获得了召唤一只嚎叫的黑暗生物来骚扰你的敌人的能力。作为一个奖励动作，你可以花费3点术法点数来魔法召唤一只{@creature hound of ill omen|XGE}，以目标为你能看到的120英尺内的一只生物。这个恶兆猎犬使用{@creature dire wolf}的统计数据（见《怪物手册》或《玩家手册》附录C），并有以下变化：",
+        {
+          "type": "list",
+          "items": [
+            "这只猎犬是中型，而不是大型，它属于怪物，而不是野兽。",
+            "它出现时拥有相当于你术士等级一半的临时生命值。",
+            "它可以穿过其他生物和物体，就好像它们是{@quickref difficult terrain||3}一样。如果猎犬在其回合结束时位于一个物体内部，它将受到5点力量伤害。",
+            "在其回合开始时，猎犬自动知道其目标的位置。如果目标之前是隐藏的，那么对猎犬而言它不再隐藏。"
+          ]
+        },
+        "猎犬出现在你选择的30英尺范围内目标附近未被占据的空间。为猎犬掷先攻。在其回合，它只能通过最直接的路线向目标移动，并且只能使用其行动来攻击目标。猎犬可以进行机会攻击，但只能针对其目标。此外，当猎犬在目标5英尺范围内时，目标在对抗你施放的任何法术的豁免投掷上处于劣势。如果猎犬的生命值降至0，或者其目标的生命值降至0，或者5分钟后，猎犬会消失。"
+      ]
+    },
+    {
+      "name": "幽影魔法:幽影漫步",
+      "ENG_name": "Shadow Walk",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你获得了从一个阴影步入另一个阴影的能力。当你处于昏暗或黑暗中时，作为奖励动作，你可以神奇地传送至你能看到的、同样处于昏暗或黑暗中的未被占据的空间，传送距离最多可达120英尺。"
+      ]
+    },
+    {
+      "name": "幽影魔法:幽暗之形",
+      "ENG_name": "Umbral Form",
+      "source": "XGE",
+      "page": 50,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "阴影",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "consumes": {
+        "name": "奥术点",
+        "ENG_name": "Sorcery Point",
+        "amount": 6
+      },
+      "entries": [
+        "从18级开始，你可以花费6点术士点数作为奖励动作，通过魔法将自己转变为一种阴影形态。在这个形态中，你对所有伤害都有抗性，除了力量伤害和辐射伤害，并且你可以像穿过{@quickref difficult terrain||3}一样穿过其他生物和物体。如果你在回合结束时位于一个物体内部，你将受到5点力量伤害。",
+        "你以这种形态保持1分钟。如果你被{@condition incapacitated}，死亡，或者作为奖励动作解除它，形态会提前结束。"
+      ]
+    },
+    {
+      "name": "风暴术法",
+      "ENG_name": "Storm Sorcery",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 1,
+      "entries": [
+        "你的天赋魔法来自于元素空气的力量。许多拥有这种力量的人可以将他们的魔法追溯到由大洪水引起的濒死经历，但也许你出生在一场如此强大的呼啸风暴中，以至于人们仍在讲述它的故事，或者你的血统可能包括像巨灵这样的强大空气生物的影响。无论哪种情况，风暴的魔法渗透了你的存在。",
+        "风暴术士是船员中不可或缺的成员。他们的魔法允许他们控制他们所在区域的风和天气。他们的能力在抵御鲨鱼人、海盗和其他水上威胁的攻击中也证明非常有用。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "风语者|术士||风暴|XGE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "狂风暴雨魔法|术士||风暴|XGE|1"
+        }
+      ]
+    },
+    {
+      "name": "风暴术法:暴风魔法",
+      "ENG_name": "Tempestuous Magic",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你可以在你的回合上使用奖励动作，使得元素风的旋转气流短暂地环绕你，这可以在你施放1级或更高级别的法术之前或之后立即进行。这样做可以让你飞行最多10英尺，而不会引发机会攻击。"
+      ]
+    },
+    {
+      "name": "风暴术法:风语者",
+      "ENG_name": "Wind Speaker",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "你指挥的奥术魔法融入了元素空气。你可以说话、阅读和书写{@language Primordial}。知道这种语言可以让你理解和被说其方言的人理解：{@language Primordial||Aquan}、{@language Primordial||Auran}、{@language Primordial||Ignan}和{@language Primordial||Terran}。"
+      ]
+    },
+    {
+      "name": "风暴术法:风暴之心",
+      "ENG_name": "Heart of the Storm",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你获得了对雷电伤害的抗性。此外，每当你开始施放1级或更高级别的法术，并且该法术造成雷电或雷鸣伤害时，暴风雨魔法会从你身上爆发出来。这种爆发会导致你能看到的10英尺内的生物（你每次激活此能力时选择）受到雷电或雷鸣伤害（每次选择），等于你的术士等级的一半。"
+      ]
+    },
+    {
+      "name": "风暴术法:风暴导向",
+      "ENG_name": "Storm Guide",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你获得了微妙控制周围天气的能力。",
+        "如果正在下雨，你可以使用一个动作让以你为中心的20英尺半径范围内的雨停止下落。你可以作为一个奖励动作结束这个效果。",
+        "如果天气有风，你可以在每个回合使用奖励动作选择一个方向，使得以你为中心的100英尺半径范围内的风朝这个方向吹。风将一直朝这个方向吹，直到你的下一个回合结束。这个特性不会改变风的速度。"
+      ]
+    },
+    {
+      "name": "风暴术法:暴风狂怒",
+      "ENG_name": "Storm's Fury",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，当你被近战攻击击中时，你可以使用你的反应来对攻击者造成雷电伤害。伤害等于你的术士等级。攻击者还必须进行力量豁免投掷，对抗你的术士法术豁免DC。如果豁免失败，攻击者会被直线推开，距离你最多20英尺。"
+      ]
+    },
+    {
+      "name": "风暴术法:清风之灵",
+      "ENG_name": "Wind Soul",
+      "source": "XGE",
+      "page": 51,
+      "className": "术士",
+      "classSource": "PHB",
+      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassSource": "XGE",
+      "level": 18,
+      "header": 2,
+      "entries": [
+        "在18级时，你获得对电击和雷鸣伤害的免疫。",
+        "你还获得了60英尺的魔法飞行速度。作为一个动作，你可以将你的飞行速度减少到30英尺，持续1小时，并选择距离你30英尺内的生物数量，等于3加上你的智力调整值。所选生物在1小时内获得30英尺的魔法飞行速度。一旦你以这种方式减少你的飞行速度，直到你完成短暂或长时间的休息之前，你不能再这样做。"
+      ]
+    }
+  ]
 }

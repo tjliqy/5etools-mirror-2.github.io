@@ -1,1371 +1,1398 @@
 {
-	"class": [
-		{
-			"name": "Mystic",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"hd": {
-				"number": 1,
-				"faces": 8
-			},
-			"proficiency": [
-				"int",
-				"wis"
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"history",
-								"insight",
-								"medicine",
-								"nature",
-								"perception",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item spear|phb} or (b) a {@item mace|phb}",
-					"(a) {@item leather armor|phb} or (b) {@item studded leather armor|phb}",
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
-				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"spear|phb"
-						],
-						"b": [
-							"mace|phb"
-						]
-					},
-					{
-						"a": [
-							"leather armor|phb"
-						],
-						"b": [
-							"studded leather armor|phb"
-						]
-					},
-					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
-					}
-				]
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"{@filter Talents Known|psionics|type=T}",
-						"{@filter Disciplines Known|psionics|type=D}",
-						"Psi Points",
-						"Psi Limit"
-					],
-					"rows": [
-						[
-							1,
-							1,
-							4,
-							2
-						],
-						[
-							1,
-							1,
-							6,
-							2
-						],
-						[
-							2,
-							2,
-							14,
-							3
-						],
-						[
-							2,
-							2,
-							17,
-							3
-						],
-						[
-							2,
-							3,
-							27,
-							5
-						],
-						[
-							2,
-							3,
-							32,
-							5
-						],
-						[
-							2,
-							4,
-							38,
-							6
-						],
-						[
-							2,
-							4,
-							44,
-							6
-						],
-						[
-							2,
-							5,
-							57,
-							7
-						],
-						[
-							3,
-							5,
-							64,
-							7
-						],
-						[
-							3,
-							5,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							7,
-							64,
-							7
-						],
-						[
-							3,
-							7,
-							64,
-							7
-						],
-						[
-							4,
-							7,
-							64,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Psionics|Mystic|UATheMysticClass|1",
-				"Psionic Disciplines and Talents|Mystic|UATheMysticClass|1",
-				"Using a Discipline|Mystic|UATheMysticClass|1",
-				{
-					"classFeature": "Mystic Order|Mystic|UATheMysticClass|1",
-					"gainSubclassFeature": true
-				},
-				"Mystical Recovery|Mystic|UATheMysticClass|2",
-				"Telepathy|Mystic|UATheMysticClass|2",
-				{
-					"classFeature": "Mystic Order feature|Mystic|UATheMysticClass|3",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Mystic|UATheMysticClass|4",
-				"Strength of Mind|Mystic|UATheMysticClass|4",
-				{
-					"classFeature": "Mystic Order feature|Mystic|UATheMysticClass|6",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Mystic|UATheMysticClass|8",
-				"Potent Psionics (1d8)|Mystic|UATheMysticClass|8",
-				"Consumptive Power|Mystic|UATheMysticClass|10",
-				"Psionic Mastery (1/Day)|Mystic|UATheMysticClass|11",
-				"Ability Score Improvement|Mystic|UATheMysticClass|12",
-				"Psionic Mastery (2/Day)|Mystic|UATheMysticClass|13",
-				{
-					"classFeature": "Mystic Order feature|Mystic|UATheMysticClass|14",
-					"gainSubclassFeature": true
-				},
-				"Potent Psionics (2d8)|Mystic|UATheMysticClass|14",
-				"Psionic Mastery (3/Day)|Mystic|UATheMysticClass|15",
-				"Ability Score Improvement|Mystic|UATheMysticClass|16",
-				"Psionic Mastery (4/Day)|Mystic|UATheMysticClass|17",
-				"Ability Score Improvement|Mystic|UATheMysticClass|19",
-				"Psionic Body|Mystic|UATheMysticClass|20"
-			],
-			"subclassTitle": "Mystic Order",
-			"hasFluff": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Order of the Avatar",
-			"shortName": "Avatar",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 5,
-			"subclassFeatures": [
-				"Order of the Avatar|Mystic|UATheMysticClass|Avatar|UATheMysticClass|1",
-				"Avatar of Battle|Mystic|UATheMysticClass|Avatar|UATheMysticClass|3",
-				"Avatar of Healing|Mystic|UATheMysticClass|Avatar|UATheMysticClass|6",
-				"Avatar of Speed|Mystic|UATheMysticClass|Avatar|UATheMysticClass|14"
-			]
-		},
-		{
-			"name": "Order of the Awakened",
-			"shortName": "Awakened",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 6,
-			"subclassFeatures": [
-				"Order of the Awakened|Mystic|UATheMysticClass|Awakened|UATheMysticClass|1",
-				"Psionic Investigation|Mystic|UATheMysticClass|Awakened|UATheMysticClass|3",
-				"Psionic Surge|Mystic|UATheMysticClass|Awakened|UATheMysticClass|6",
-				"Spectral Form|Mystic|UATheMysticClass|Awakened|UATheMysticClass|14"
-			]
-		},
-		{
-			"name": "Order of the Immortal",
-			"shortName": "Immortal",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 6,
-			"subclassFeatures": [
-				"Order of the Immortal|Mystic|UATheMysticClass|Immortal|UATheMysticClass|1",
-				"Psionic Resilience|Mystic|UATheMysticClass|Immortal|UATheMysticClass|3",
-				"Surge of Health|Mystic|UATheMysticClass|Immortal|UATheMysticClass|6",
-				"Immortal Will|Mystic|UATheMysticClass|Immortal|UATheMysticClass|14"
-			]
-		},
-		{
-			"name": "Order of the Nomad",
-			"shortName": "Nomad",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 7,
-			"subclassFeatures": [
-				"Order of the Nomad|Mystic|UATheMysticClass|Nomad|UATheMysticClass|1",
-				"Memory of One Thousand Steps|Mystic|UATheMysticClass|Nomad|UATheMysticClass|3",
-				"Superior Teleportation|Mystic|UATheMysticClass|Nomad|UATheMysticClass|6",
-				"Effortless Journey|Mystic|UATheMysticClass|Nomad|UATheMysticClass|14"
-			]
-		},
-		{
-			"name": "Order of the Soul Knife",
-			"shortName": "Soul Knife",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 7,
-			"subclassFeatures": [
-				"Order of the Soul Knife|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|1",
-				"Hone the Blade|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|3",
-				"Consumptive Knife|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|6",
-				"Phantom Knife|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|14"
-			]
-		},
-		{
-			"name": "Order of the Wu Jen",
-			"shortName": "Wu Jen",
-			"source": "UATheMysticClass",
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"page": 8,
-			"subclassFeatures": [
-				"Order of the Wu Jen|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|1",
-				"Elemental Attunement|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|3",
-				"Arcane Dabbler|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|6",
-				"Elemental Mastery|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|14"
-			]
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Mystic Order",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"At 1st level, you choose a Mystic Order from the list of available orders. Each order specializes in a specific approach to psionics.",
-				"Your order gives you features when you choose it at 1st level and additional features at 3rd, 6th, and 14th level."
-			]
-		},
-		{
-			"name": "Psionic Disciplines and Talents",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"{@filter Psionic talents|psionics|type=T} and {@filter disciplines|psionics|type=D} are the heart of a mystic's craft. They are the mental exercises and psionic formulae used to forge will into tangible, magical effects.",
-				"Psionic disciplines were each discovered by different orders and tend to reflect their creators' specialties. However, a mystic can learn any discipline regardless of its associated order."
-			]
-		},
-		{
-			"name": "Psionics",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"As a student of psionics, you can master and use psionic talents and disciplines, the rules for which appear at the end of this document. Psionics is a special form of magic use, distinct from spellcasting.",
-				{
-					"type": "entries",
-					"name": "Psionic Talents",
-					"entries": [
-						"A {@filter psionic talent|psionics|type=T} is a minor psionic effect you have mastered. At 1st level, you know one psionic talent of your choice. You learn additional talents of your choice at higher levels. The Talents Known column of the Mystic table shows the total number of talents you know at each level; when that number goes up for you, choose a new talent."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Psionic Disciplines",
-					"entries": [
-						"A {@filter psionic discipline|psionics|type=D} is a rigid set of mental exercises that allows a mystic to manifest psionic power. A mystic masters only a few disciplines at a time.",
-						"At 1st level, you know one psionic discipline of your choice. The Disciplines Known column of the Mystic table shows the total number of disciplines you know at each level; when that number goes up for you, choose a new discipline.",
-						"In addition, whenever you gain a level in this class, you can replace one discipline you know with a different one of your choice."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Psi Points",
-					"entries": [
-						"You have an internal reservoir of energy that can be devoted to psionic disciplines you know. This energy is represented by psi points. Each psionic discipline describes effects you can create with it by spending a certain number of psi points. A psionic talent requires no psi points.",
-						"The number of psi points you have is based on your mystic level, as shown in the Psi Points column of the Mystic table. The number shown for your level is your psi point maximum. Your psi point total returns to its maximum when you finish a long rest. The number of psi points you have can't go below 0 or over your maximum."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Psi Limit",
-					"entries": [
-						"Though you have access to a potent amount of psionic energy, it takes training and practice to channel that energy. There is a limit on the number of psi points you can spend to activate a psionic discipline. The limit is based on your mystic level, as shown in the Psi Limit column of the Mystic table. For example, as a 3rd-level mystic, you can spend no more than 3 psi points on a discipline each time you use it, no matter how many psi points you have."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Psychic Focus",
-					"entries": [
-						"You can focus psionic energy on one of your psionic disciplines to draw ongoing benefits from it. As a bonus action, you can choose one of your psionic disciplines and gain its psychic focus benefit, which is detailed in that discipline's description. The benefit lasts until you are {@condition incapacitated} or until you use another bonus action to choose a different focus benefit.",
-						"You can have only one psychic focus benefit at a time, and using the psychic focus of one discipline doesn't limit your ability to use other disciplines."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Psionic Ability",
-					"entries": [
-						"Intelligence is your psionic ability for your psionic disciplines. You use your Intelligence modifier when setting the saving throw DC for a psionic discipline or when making an attack roll with one.",
-						{
-							"type": "abilityDc",
-							"name": "Discipline",
-							"attributes": [
-								"int"
-							]
-						},
-						{
-							"type": "abilityAttackMod",
-							"name": "Discipline",
-							"attributes": [
-								"int"
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Using a Discipline",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"Each psionic discipline has several ways you can use it, all contained in its description. The discipline specifies the type of action and number of psi points it requires. It also details whether you must concentrate on its effects, how many targets it affects, what saving throws it requires, and so on.",
-				"The following sections go into more detail on using a discipline. Psionic disciplines are magical and function similarly to spells.",
-				{
-					"type": "entries",
-					"name": "Psychic Focus",
-					"entries": [
-						"The Psychic Focus section of a discipline describes the benefit you gain when you choose that discipline for your psychic focus."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Effect Options and Psi Points",
-					"entries": [
-						"A discipline provides different options for how to use it with your psi points. Each effect option has a name, and the psi point cost of that option appears in parentheses after its name. You must spend that number of psi points to use that option, while abiding by your psi limit. If you don't have enough psi points left, or the cost is above your psi limit, you can't use the option.",
-						"Some options show a range of psi points, rather than a specific cost. To use that option, you must spend a number of points within that point range, still abiding by your psi limit. Some options let you spend additional psi points to increase a discipline's potency. Again, you must abide by your psi limit, and you must spend all the points when you first use the discipline; you can't decide to spend additional points once you see the discipline in action.",
-						"Each option notes specific information about its effect, including any action required to use it and its range."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Components",
-					"entries": [
-						"Disciplines don't require the components that many spells require. Using a discipline requires no spoken words, gestures, or materials. The power of psionics comes from the mind."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Duration",
-					"entries": [
-						"An effect option in a discipline specifies how long its effect lasts.",
-						{
-							"type": "entries",
-							"name": "Instantaneous",
-							"entries": [
-								"If no duration is specified, the effect of the option is instantaneous."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Concentration",
-							"entries": [
-								"Some options require {@status concentration} to maintain their effects. This requirement is noted with \"conc.\" after the option's psi point cost. The \"conc.\" notation is followed by the maximum duration of the {@status concentration}. For example, if an option says \"conc., 1 min.,\" you can concentrate on its effect for up to 1 minute.",
-								"Concentrating on a discipline follows the same rules as {@status concentration||concentrating} on a spell. This rule means you can't concentrate on a spell and a discipline at the same time, nor can you concentrate on two disciplines at the same time. See {@book chapter 10|PHB|10}, \"Spellcasting,\" in the Player's Handbook for how {@status concentration} works."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Targets and Areas of Effect",
-					"entries": [
-						"Psionic disciplines use the same rules as spells for determining targets and areas of effect, as presented in {@book chapter 10|PHB|10}, \"Spellcasting,\" of the Player's Handbook."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Saving Throws and Attack Rolls",
-					"entries": [
-						"If a discipline requires a saving throw, it specifies the type of save and the results of a successful or failed saving throw. The DC is determined by your psionic ability.",
-						"Some disciplines require you to make an attack roll to determine whether the discipline's effect hits its target. The attack roll uses your psionic ability."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Combining Psionic Effects",
-					"entries": [
-						"The effects of different psionic disciplines add together while the durations of the disciplines overlap. Likewise, different options from a psionic discipline combine if they are active at the same time. However, a specific option from a psionic discipline doesn't combine with itself if the option is used multiple times. Instead, the most potent effect\u2014usually dependent on how many psi points were used to create the effect\u2014applies while the durations of the effects overlap.",
-						"Psionics and spells are separate effects, and therefore their benefits and drawbacks overlap. A psionic effect that reproduces a spell is an exception to this rule."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mystical Recovery",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 2,
-			"entries": [
-				"Starting at 2nd level, you can draw vigor from the psi energy you use to power your psionic disciplines.",
-				"Immediately after you spend psi points on a psionic discipline, you can take a bonus action to regain hit points equal to the number of psi points you spent."
-			]
-		},
-		{
-			"name": "Telepathy",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 2,
-			"entries": [
-				"At 2nd level, your mind awakens to the ability to communicate via telepathy. You can telepathically speak to any creature you can see within 120 feet of you in this manner. You don't need to share a language with the creature for it to understand your telepathic messages, but the creature must be able to understand at least one language or be telepathic itself."
-			]
-		},
-		{
-			"name": "Mystic Order feature",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you gain another feature from your Mystic Order."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-			]
-		},
-		{
-			"name": "Strength of Mind",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 4,
-			"entries": [
-				"Even the simplest psionic technique requires a deep understanding of how psionic energy can augment mind and body. This understanding allows you to alter your defenses to better deal with threats.",
-				"Starting at 4th level, you can replace your proficiency in Wisdom saving throws whenever you finish a short or long rest. To do so, choose Strength, Dexterity, Constitution, or Charisma. You gain proficiency in saves using that ability, instead of Wisdom. This change lasts until you finish your next short or long rest."
-			]
-		},
-		{
-			"name": "Mystic Order feature",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 6,
-			"entries": [
-				"At 6th level, you gain another feature from your Mystic Order."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 8,
-			"entries": [
-				"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-			]
-		},
-		{
-			"name": "Potent Psionics (1d8)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 8,
-			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon attacks with psychic energy. Once on each of your turns when you hit a creature with a weapon, you can deal an extra {@damage 1d8} psychic damage to that target. When you reach 14th level, this extra damage increases to {@dice 2d8}.",
-				"In addition, you add your Intelligence modifier to any damage roll you make for a {@filter psionic talent|psionics|type=T}."
-			]
-		},
-		{
-			"name": "Consumptive Power",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 10,
-			"entries": [
-				"At 10th level, you gain the ability to sacrifice your physical durability in exchange for psionic power. When activating a psionic discipline, you can pay its psi point cost with your hit points, instead of using any psi points. Your current hit points and hit point maximum are both reduced by the number of hit points you spend. This reduction can't be lessened in any way, and the reduction to your hit point maximum lasts until you finish a long rest.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Psionic Mastery (1/Day)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 11,
-			"entries": [
-				"Beginning at 11th level, your mastery of psionic energy allows you to push your mind beyond its normal limits. As an action, you gain 9 special psi points that you can spend only on disciplines that require an action or a bonus action to use. You can use all 9 points on one discipline, or you can spread them across multiple disciplines. You can't also spend your normal psi points on these disciplines; you can spend only the special points gained from this feature. When you finish a long rest, you lose any of these special points that you haven't spent.",
-				"If more than one of the disciplines you activate with these points require {@status concentration}, you can concentrate on all of them. Activating one of them ends any effect you were already {@status concentration||concentrating} on, and if you begin {@status concentration||concentrating} on an effect that doesn't use these special points, the disciplines end that you're {@status concentration||concentrating} on.",
-				"At 15th level, the pool of psi points you gain from this feature increases to 11.",
-				"You have one use of this feature, and you regain any expended use of it with a long rest. You gain one additional use of this feature at 13th, 15th, and 17th level."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 12,
-			"entries": [
-				"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-			]
-		},
-		{
-			"name": "Psionic Mastery (2/Day)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 13,
-			"entries": [
-				"At 13th level, you can use your Psionic Mastery twice per day."
-			]
-		},
-		{
-			"name": "Mystic Order feature",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 14,
-			"entries": [
-				"At 14th level, you gain another feature from your Mystic Order."
-			]
-		},
-		{
-			"name": "Potent Psionics (2d8)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 14,
-			"entries": [
-				"At 14th level, your Potent Psionics damage increased to {@dice 2d8}."
-			]
-		},
-		{
-			"name": "Psionic Mastery (3/Day)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 15,
-			"entries": [
-				"At 15th level, you can use your Psionic Mastery three times per day."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 16,
-			"entries": [
-				"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-			]
-		},
-		{
-			"name": "Psionic Mastery (4/Day)",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 17,
-			"entries": [
-				"At 17th level, you can use your Psionic Mastery four times per day."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 19,
-			"entries": [
-				"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-			]
-		},
-		{
-			"name": "Psionic Body",
-			"source": "UATheMysticClass",
-			"page": 1,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"level": 20,
-			"entries": [
-				"At 20th level, your mastery of psionic power causes your mind to transcend the body. Your physical form is infused with psionic energy. You gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"You gain resistance to bludgeoning, piercing, and slashing damage.",
-						"You no longer age.",
-						"You are immune to disease, poison damage, and the {@condition poisoned} condition.",
-						"If you die, roll a {@dice d20}. On a 10 or higher, you discorporate with 0 hit points, instead of dying, and you fall {@condition unconscious}. You and your gear disappear. You appear at a spot of your choice {@dice 1d3} days later on the plane of existence where you died, having gained the benefits of one long rest."
-					]
-				}
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Order of the Avatar",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"Mystics of the Order of the Avatar delve into the world of emotion, mastering their inner life to such an extent that they can manipulate and amplify the emotions of others with the same ease that an artist shapes clay. Known as Avatars, these mystics vary from tyrants to inspiring leaders who are loved by their followers.",
-				"Avatars can bring out extreme emotions in the people around them. For their allies, they can lend hope, ferocity, and courage, transforming a fighting band into a deadly, unified force. For their enemies, they bring fear, disgust, and trepidation that can make even the most hardened veteran act like a shaky rookie.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Disciplines|Mystic|UATheMysticClass|Avatar|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Armor Training|Mystic|UATheMysticClass|Avatar|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Armor Training",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain proficiency with medium armor and shields."
-			]
-		},
-		{
-			"name": "Bonus Disciplines",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn two additional psionic disciplines of your choice. They must be chosen from among the {@filter Avatar disciplines|psionics|type=D|order=Avatar}."
-			]
-		},
-		{
-			"name": "Avatar of Battle",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Starting at 3rd level, you project an inspiring aura. While you aren't {@condition incapacitated}, each ally within 30 feet of you who can see you gains a +2 bonus to initiative rolls."
-			]
-		},
-		{
-			"name": "Avatar of Healing",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Beginning at 6th level, you project an aura of resilience. While you aren't {@condition incapacitated}, each ally within 30 feet of you who can see you regains additional hit points equal to your Intelligence modifier (minimum of 0) whenever they regain hit points from a psionic discipline."
-			]
-		},
-		{
-			"name": "Avatar of Speed",
-			"source": "UATheMysticClass",
-			"page": 5,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Avatar",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you project an aura of speed. While you aren't {@condition incapacitated}, any ally within 30 feet of you who can see you can take the {@action Dash} action as a bonus action."
-			]
-		},
-		{
-			"name": "Order of the Awakened",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"Mystics dedicated to the Order of the Awakened seek to unlock the full potential of the mind. By transcending the physical, the Awakened hope to attain a state of being focused on pure intellect and mental energy.",
-				"The Awakened are skilled at bending minds and unleashing devastating psionic attacks, and they can read the secrets of the world through psionic energy. Awakened mystics who take to adventuring excel at unraveling mysteries, solving puzzles, and defeating monsters by turning them into unwilling pawns.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Disciplines|Mystic|UATheMysticClass|Awakened|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Awakened Talent|Mystic|UATheMysticClass|Awakened|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Awakened Talent",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain proficiency with two of the following skills of your choice: {@skill Animal Handling}, {@skill Deception}, {@skill Insight}, {@skill Intimidation}, {@skill Investigation}, {@skill Perception}, and {@skill Persuasion}."
-			]
-		},
-		{
-			"name": "Bonus Disciplines",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn two additional psionic disciplines of your choice. They must be chosen from among the {@filter Awakened disciplines|psionics|type=D|order=Awakened}."
-			]
-		},
-		{
-			"name": "Psionic Investigation",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Starting at 3rd level, you can focus your mind to read the psionic imprint left on an object. If you hold an object and concentrate on it for 10 minutes (as if {@status concentration||concentrating} on a psionic discipline), you learn a few basic facts about it. You gain a mental image from the object's point of view, showing the last creature to hold the object within the past 24 hours.",
-				"You also learn of any events that have occurred within 20 feet of the object within the past hour. The events you perceive unfold from the object's perspective. You see and hear such events as if you were there, but can't use other senses.",
-				"Additionally, you can embed an intangible psionic sensor within the object. For the next 24 hours, you can use an action to learn the object's location relative to you (its distance and direction) and to look at the object's surroundings from its point of view as if you were there. This perception lasts until the start of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Psionic Surge",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can overload your psychic focus to batter down an opponent's defenses. You can impose disadvantage on a target's saving throw against a discipline or talent you use, but at the cost of using your psychic focus. Your psychic focus immediately ends if it's active, and you can't use it until you finish a short or long rest.",
-				"You can't use this feature if you can't use your psychic focus."
-			]
-		},
-		{
-			"name": "Spectral Form",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Awakened",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain the ability to become a ghostly figure of psionic energy. As an action, you can transform into a transparent, ghostly version of yourself. While in this form, you have resistance to all damage, move at half speed, and can pass through objects and creatures while moving but can't willingly end your movement in their spaces. The form lasts for 10 minutes or until you use an action to end it.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Order of the Immortal",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"The Order of the Immortal uses psionic energy to augment and modify the physical form. Followers of this order are known as Immortals. They use psionic energy to modify their bodies, strengthening them against attack and turning themselves into living weapons.",
-				"Their mastery of the physical form grants them their name, for Immortals are notoriously difficult to kill.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Disciplines|Mystic|UATheMysticClass|Immortal|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Immortal Durability|Mystic|UATheMysticClass|Immortal|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Bonus Disciplines",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn two additional psionic disciplines of your choice. They must be chosen from among the {@filter Immortal disciplines|psionics|type=D|order=Immortal}."
-			]
-		},
-		{
-			"name": "Immortal Durability",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, your hit point maximum increases by 1 per mystic level.",
-				"In addition, while you aren't wearing armor or wielding a shield, your base AC equals 10 + your Dexterity modifier + your Constitution modifier."
-			]
-		},
-		{
-			"name": "Psionic Resilience",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Starting at 3rd level, your psionic energy grants you extraordinary fortitude. At the start of each of your turns, you gain temporary hit points equal to your Intelligence modifier (minimum of 0) if you have at least 1 hit point."
-			]
-		},
-		{
-			"name": "Surge of Health",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can draw on your psychic focus to escape death's grasp. As a reaction when you take damage, you can halve that damage against you. Your psychic focus immediately ends if it's active, and you can't use it until you finish a short or long rest.",
-				"You can't use this feature if you can't use your psychic focus."
-			]
-		},
-		{
-			"name": "Immortal Will",
-			"source": "UATheMysticClass",
-			"page": 6,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Immortal",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you can draw on your reserves of psionic power to survive beyond death. At the end of your turn while at 0 hit points, you can spend 5 psi points to immediately regain a number of hit points equal to your mystic level + your Constitution modifier."
-			]
-		},
-		{
-			"name": "Order of the Nomad",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"Mystics of the Order of the Nomad keep their minds in a strange, rarified state. They seek to accumulate as much knowledge as possible, as they quest to unravel the mysteries of the multiverse and seek the underlying structure of all things. At the same time, they perceive a bizarre, living web of knowledge they call the noosphere.",
-				"Nomads, as their name indicates, delight in travel, exploration, and discovery. They desire to accumulate as much knowledge as possible, and the pursuit of secrets and hidden lore can become an obsession for them.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Disciplines|Mystic|UATheMysticClass|Nomad|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Breadth of Knowledge|Mystic|UATheMysticClass|Nomad|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Bonus Disciplines",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn two additional psionic disciplines of your choice. They must be chosen from among the {@filter Nomad disciplines|psionics|type=D|order=Nomad}."
-			]
-		},
-		{
-			"name": "Breadth of Knowledge",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain the ability to extend your knowledge. When you finish a long rest, you gain two proficiencies of your choice: two tools, two skills, or one of each. You can replace one or both of these selections with languages. This benefit lasts until you finish a long rest."
-			]
-		},
-		{
-			"name": "Memory of One Thousand Steps",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"At 3rd level, you gain the ability to use psionics to recall your steps. As a reaction when you are hit by an attack, you can teleport to an unoccupied space that you occupied since the start of your last turn, and the attack misses you. Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Superior Teleportation",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you gain a superior talent for teleportation. When you use a psionic discipline to teleport any distance, you can increase that distance by up to 10 feet."
-			]
-		},
-		{
-			"name": "Effortless Journey",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Nomad",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, your mind can mystically move your body. Once on each of your turns, you can forfeit up to 30 feet of your movement to teleport the distance you forfeited. You must teleport to an unoccupied space you can see."
-			]
-		},
-		{
-			"name": "Order of the Soul Knife",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"The Order of the Soul Knife sacrifices the breadth of knowledge other mystics gain to focus on a specific psionic technique. These mystics learn to manifest a deadly weapon of pure psychic energy that they can use to cleave through foes.",
-				"Soul knives vary widely in their approach to this path. Some follow it out of a desire to achieve martial perfection. Others are ruthless assassins who seek to become the perfect killer.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Martial Training|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Soul Knife|Mystic|UATheMysticClass|Soul Knife|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Martial Training",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain proficiency with medium armor and martial weapons."
-			]
-		},
-		{
-			"name": "Soul Knife",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you gain the ability to manifest a blade of psychic energy. As a bonus action, you create scintillating knives of energy that project from both of your fists. You can't hold anything in your hands while manifesting these blades. You can dismiss them as a bonus action.",
-				"For you, a soul knife is a martial melee weapon with the light and finesse properties. It deals {@damage 1d8} psychic damage on a hit.",
-				"As a bonus action, you can prepare to use the blades to parry; you gain a +2 bonus to AC until the start of your next turn or until you are {@condition incapacitated}."
-			]
-		},
-		{
-			"name": "Hone the Blade",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Starting at 3rd level, you can spend psi points to augment your soul knife's attack rolls and damage. You gain a bonus to attack and damage rolls with your soul knives depending on the number of psi points spent, as shown on the table below. This bonus lasts for 10 minutes.",
-				{
-					"type": "table",
-					"colLabels": [
-						"Psi Points",
-						"Attack and Damage Bonus"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"2",
-							"+1"
-						],
-						[
-							"5",
-							"+2"
-						],
-						[
-							"7",
-							"+4"
-						]
-					]
-				}
-			]
-		},
-		{
-			"name": "Consumptive Knife",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, whenever you slay an enemy creature with a soul knife attack, you immediately regain 2 psi points."
-			]
-		},
-		{
-			"name": "Phantom Knife",
-			"source": "UATheMysticClass",
-			"page": 7,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Soul Knife",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you can make an attack that phases through most defenses. As an action, you can make one attack with your soul knife. Treat the target's AC as 10 against this attack, regardless of the target's actual AC."
-			]
-		},
-		{
-			"name": "Order of the Wu Jen",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"entries": [
-				"The Order of the Wu Jen features some of the most devoted mystics. These mystics seek to lock themselves away from the world, denying the limits of the physical world and replacing it with a reality that they create for themselves. Known as wu jens, these mystics cast their minds into the world, seize control of its fundamental principles, and rebuild it.",
-				"In practical terms, wu jens excel at controlling the forces of the natural world. They can hurl objects with their minds, control the four elements, and alter reality to fit their desires.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Disciplines|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hermit's Study|Mystic|UATheMysticClass|Wu Jen|UATheMysticClass|1"
-				}
-			]
-		},
-		{
-			"name": "Bonus Disciplines",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn two additional psionic disciplines of your choice. They must be chosen from among the {@filter Wu Jen disciplines|psionics|type=D|order=Wu Jen}."
-			]
-		},
-		{
-			"name": "Hermit's Study",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain proficiency with two of the following skills of your choice: {@skill Animal Handling}, {@skill Arcana}, {@skill History}, {@skill Insight}, {@skill Medicine}, {@skill Nature}, {@skill Perception}, {@skill Religion}, or {@skill Survival}."
-			]
-		},
-		{
-			"name": "Elemental Attunement",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 3,
-			"header": 2,
-			"entries": [
-				"Starting at 3rd level, when a creature's resistance reduces the damage dealt by a psionic discipline of yours, you can spend 1 psi point to cause that use of the discipline to ignore the creature's resistance. You can't spend this point if doing so would increase the discipline's cost above your psi limit."
-			]
-		},
-		{
-			"name": "Arcane Dabbler",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you learn three wizard spells of your choice and always have them prepared. The spells must be of {@filter 1st through 3rd level|spells|level=1;2;3|class=wizard}.",
-				"As a bonus action, you can spend psi points to create spell slots that you can use to cast these spells, as well as other spells you are capable of casting. The psi-point cost of each spell slot is detailed on the table below.",
-				{
-					"type": "table",
-					"colLabels": [
-						"Spell Slot Level",
-						"Psi Cost"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
-					"rows": [
-						[
-							"1st",
-							"2"
-						],
-						[
-							"2nd",
-							"3"
-						],
-						[
-							"3rd",
-							"5"
-						],
-						[
-							"4th",
-							"6"
-						],
-						[
-							"5th",
-							"7"
-						]
-					]
-				},
-				"The spell slot remains until you use it or finish a long rest. You must observe your psi limit when spending psi points to create a spell slot.",
-				"Whenever you gain a level in this class, you can replace on of the chosen wizard spells with a different {@filter wizard spell of 1st through 3rd level|spells|level=1;2;3|class=wizard}."
-			]
-		},
-		{
-			"name": "Elemental Mastery",
-			"source": "UATheMysticClass",
-			"page": 8,
-			"className": "Mystic",
-			"classSource": "UATheMysticClass",
-			"subclassShortName": "Wu Jen",
-			"subclassSource": "UATheMysticClass",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, if you have resistance to a type of damage, you can spend 2 psi points as a reaction when you take damage of that type to ignore that damage; you gain immunity to that damage type until the end of your next turn."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "神秘师",
+      "ENG_name": "Mystic",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "hd": {
+        "number": 1,
+        "faces": 8
+      },
+      "proficiency": [
+        "int",
+        "wis"
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术"
+        ],
+        "weapons": [
+          "简单"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:奥秘",
+                "属性检定:历史",
+                "属性检定:洞悉",
+                "属性检定:医药",
+                "属性检定:自然",
+                "属性检定:察觉",
+                "属性检定:宗教"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a) 一支{@item 长矛|phb}或者 (b) 一把{@item 钉头锤|phb}",
+          "(a) {@item 皮甲|phb} 或者 (b) {@item 钉甲皮甲|phb}",
+          "(a) 一把{@item 轻型弩|phb}和{@item 弩箭(20)|phb|20支箭}或 (b) 任何{@filter 简单武器|items|source=phb|category=basic|type=simple weapon}",
+          "(a) 一个学者包或 (b) 一个探险家包"
+        ],
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "长矛"
+            ],
+            "b": [
+              "钉头锤"
+            ]
+          },
+          {
+            "a": [
+              "皮甲|phb"
+            ],
+            "b": [
+              "硬皮甲|PHB"
+            ]
+          },
+          {
+            "a": [
+              "轻型十字弓|phb",
+              "弩箭（20）|phb"
+            ],
+            "b": [
+              {
+                "equipmentType": "简易武器"
+              }
+            ]
+          },
+          {
+            "a": [
+              "学者包|phb"
+            ],
+            "b": [
+              "探险家背包|phb"
+            ]
+          }
+        ]
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "{@filter 已知才能|psionics|type=T}",
+            "{@filter 已知纪律|psionics|type=D}",
+            "灵能点",
+            "心灵限制"
+          ],
+          "rows": [
+            1,
+            1,
+            4,
+            2,
+            1,
+            1,
+            6,
+            2,
+            2,
+            2,
+            14,
+            3,
+            2,
+            2,
+            17,
+            3,
+            2,
+            3,
+            27,
+            5,
+            2,
+            3,
+            32,
+            5,
+            2,
+            4,
+            38,
+            6,
+            2,
+            4,
+            44,
+            6,
+            2,
+            5,
+            57,
+            7,
+            3,
+            5,
+            64,
+            7,
+            3,
+            5,
+            64,
+            7,
+            3,
+            6,
+            64,
+            7,
+            3,
+            6,
+            64,
+            7,
+            3,
+            6,
+            64,
+            7,
+            3,
+            7,
+            64,
+            7,
+            3,
+            7,
+            64,
+            7,
+            4,
+            7,
+            64,
+            7,
+            4,
+            8,
+            71,
+            7,
+            4,
+            8,
+            71,
+            7,
+            4,
+            8,
+            71,
+            7
+          ]
+        }
+      ],
+      "classFeatures": [
+        "灵能|神秘术士|UA神秘术士职业|1",
+        "心灵学派与才能|神秘师|UATheMysticClass|1",
+        "使用纪律|神秘术士|UA神秘术士职业|1",
+        {
+          "classFeature": "神秘秩序|神秘主义者|UATheMysticClass|1",
+          "gainSubclassFeature": true
+        },
+        "神秘恢复|神秘师|UATheMysticClass|2",
+        "心灵感应|神秘术士|UA神秘术士职业|2",
+        {
+          "classFeature": "神秘秩序特性|神秘术士|UA神秘术士职业|3",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|神秘师|UATheMysticClass|4",
+        "心智之力|神秘术士|UA神秘术士职业|4",
+        {
+          "classFeature": "神秘秩序特性|神秘主义者|UATheMysticClass|6",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|神秘师|UATheMysticClass|8",
+        "灵能强化 (1d8)|神秘术士|UA神秘术士职业|8",
+        "消耗性力量|神秘师|UATheMysticClass|10",
+        "灵能精通 (每日1次)|神秘术士|UA神秘术士职业|11",
+        "能力值提升|神秘主义者|UATheMysticClass|12",
+        "心灵掌握（每日2次）|神秘师|UATheMysticClass|13",
+        {
+          "classFeature": "神秘秩序特性|神秘术士|UA神秘术士职业|14",
+          "gainSubclassFeature": true
+        },
+        "灵能强化 (2d8)|神秘术士|UA神秘术士职业|14",
+        "心灵掌握（每日3次）|神秘师|UATheMysticClass|15",
+        "能力值提升|神秘主义者|UATheMysticClass|16",
+        "灵能精通 (每日4次)|神秘术士|UA神秘术士职业|17",
+        "属性值提升|神秘师|UATheMysticClass|19",
+        "灵能之体|神秘术士|UA神秘术士职业|20"
+      ],
+      "subclassTitle": "神秘秩序",
+      "hasFluff": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "化身秩序",
+      "ENG_name": "Order of the Avatar",
+      "shortName": "化身",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 5,
+      "subclassFeatures": [
+        "化身秩序|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|1",
+        "战斗化身|神秘师|UATheMysticClass|化身|UATheMysticClass|3",
+        "治愈化身|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|6",
+        "速度化身|神秘主义者|未授权的神秘主义者职业类|化身|未授权的神秘主义者职业类|14"
+      ]
+    },
+    {
+      "name": "觉醒秩序",
+      "ENG_name": "Order of the Awakened",
+      "shortName": "觉醒",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 6,
+      "subclassFeatures": [
+        "觉醒秩序|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|1",
+        "心灵探查|神秘师|UATheMysticClass|觉醒|UATheMysticClass|3",
+        "灵能激流|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|6",
+        "幻影形态|神秘师|UATheMysticClass|觉醒|UATheMysticClass|14"
+      ]
+    },
+    {
+      "name": "不朽秩序",
+      "ENG_name": "Order of the Immortal",
+      "shortName": "不朽",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 6,
+      "subclassFeatures": [
+        "不朽秩序|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|1",
+        "心灵韧性|神秘师|UATheMysticClass|不朽|UATheMysticClass|3",
+        "健康激流|神秘主义者|未授权的神秘主义者职业类|不朽|未授权的神秘主义者职业类|6",
+        "不朽意志|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|14"
+      ]
+    },
+    {
+      "name": "游牧秩序",
+      "ENG_name": "Order of the Nomad",
+      "shortName": "游牧民",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 7,
+      "subclassFeatures": [
+        "游牧秩序|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1",
+        "千步记忆|神秘师|UATheMysticClass|游牧|UATheMysticClass|3",
+        "高级传送|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|6",
+        "轻松旅程|神秘主义者|未授权的神秘主义者职业类|游牧民|未授权的神秘主义者职业类|14"
+      ]
+    },
+    {
+      "name": "灵魂刀秩序",
+      "ENG_name": "Order of the Soul Knife",
+      "shortName": "灵魂之刃",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 7,
+      "subclassFeatures": [
+        "灵魂刀秩序|神秘师|UATheMysticClass|灵魂刀|UATheMysticClass|1",
+        "磨砺刀锋|神秘术士|UA神秘术士职业|灵魂之刃|UA神秘术士职业|3",
+        "消耗性刀刃|神秘师|UATheMysticClass|灵魂刀|UATheMysticClass|6",
+        "幻影刀|神秘术士|UA神秘术士职业|灵魂之刃|UA神秘术士职业|14"
+      ]
+    },
+    {
+      "name": "吴进秩序",
+      "ENG_name": "Order of the Wu Jen",
+      "shortName": "巫师",
+      "source": "UATheMysticClass",
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "page": 8,
+      "subclassFeatures": [
+        "武者秩序|神秘术士|UA神秘术士职业|武者|UA神秘术士职业|1",
+        "元素协调|神秘师|UATheMysticClass|巫者|UATheMysticClass|3",
+        "奥术涉猎者|神秘师|UATheMysticClass|巫者|UATheMysticClass|6",
+        "元素掌控|神秘术士|UA神秘术士职业|武者|UA神秘术士职业|14"
+      ]
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "神秘秩序",
+      "ENG_name": "Mystic Order",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "在1级时，你从可用的神秘秩序列表中选择一个神秘秩序。每个秩序都专门研究一种特定的灵能力方法。",
+        "当你在1级选择秩序时，你的秩序会赋予你特性，并且在3级、6级和14级时会获得额外的特性。"
+      ]
+    },
+    {
+      "name": "心灵学派与才能",
+      "ENG_name": "Psionic Disciplines and Talents",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "{@filter 灵能天赋|灵能|类型=T} 和 {@filter 纪律|灵能|类型=D} 是神秘术士技艺的核心。它们是用于将意志锻造成有形魔法效果的精神练习和灵能公式。",
+        "灵能力纪律是由不同的秩序发现的，并且往往反映了其创造者的专业。然而，一个神秘主义者可以学习任何纪律，不论其所属的秩序。"
+      ]
+    },
+    {
+      "name": "心灵能力",
+      "ENG_name": "Psionics",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "作为心灵能力的学习者，你可以掌握并使用心灵才能和学派，其规则出现在本文档末尾。心灵能力是一种特殊形式的魔法使用，与施法不同。",
+        {
+          "type": "entries",
+          "name": "灵能天赋",
+          "ENG_name": "Psionic Talents",
+          "entries": [
+            "一个{@filter 灵能力天赋|psionics|type=T}是你掌握的小型灵能力效果。在1级时，你选择一个你了解的灵能力天赋。在更高等级时，你可以选择额外的天赋。神秘主义者表格中的天赋已知列显示了你在每个等级时知道的天赋总数；当这个数字增加时，选择一个新的天赋。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "灵能纪律",
+          "ENG_name": "Psionic Disciplines",
+          "entries": [
+            "一个心灵学派是一组严格的心理练习，它允许神秘师展现心灵力量。一个神秘师一次只能掌握少数几个学派。",
+            "在1级时，你可以选择知道一种灵能纪律。神秘术士表格中的纪律已知列显示了你在每个等级时知道的纪律总数；当这个数字增加时，选择一个新的纪律。",
+            "此外，每当你在本职业中升级时，你可以用一个不同的学派替换你所知道的一个学派。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "灵能点",
+          "ENG_name": "Psi Points",
+          "entries": [
+            "你有一个内部能量储备，可以用于你知道的灵能纪律。这个能量由灵能点表示。每种灵能纪律都描述了你可以通过花费一定数量的灵能点来创造的效果。灵能天赋不需要灵能点。",
+            "你拥有的灵能点数基于你的神秘主义者等级，如神秘主义者表格中的灵能点列所示。你等级对应的数字是你的灵能点最大值。你完成一次长时间休息后，你的灵能点总数会恢复到最大值。你的灵能点数不能低于0或超过你的最大值。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "心灵限制",
+          "ENG_name": "Psi Limit",
+          "entries": [
+            "尽管你可以接触到大量的心灵能量，但需要训练和实践才能引导这种能量。激活心灵学派时，你可以花费的心灵点数有一个限制。这个限制基于你的神秘师等级，如神秘师表格中的“心灵限制”列所示。例如，作为一个3级神秘师，每次使用学派时，你花费的心灵点数不得超过3点，无论你拥有多少心灵点。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "心灵专注",
+          "ENG_name": "Psychic Focus",
+          "entries": [
+            "你可以将灵能能量集中于你的灵能纪律之一，以从中获得持续的好处。作为一个奖励动作，你可以选择你的一个灵能纪律，并获得其心灵专注的好处，这在该纪律的描述中详细说明。这个好处持续到你被{@condition incapacitated}或者直到你使用另一个奖励动作选择不同的专注好处。",
+            "你一次只能拥有一个心灵焦点的益处，并且使用一个纪律的心灵焦点不会限制你使用其他纪律的能力。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "心灵能力",
+          "ENG_name": "Psionic Ability",
+          "entries": [
+            "智力是你的心灵学派的心灵能力。当你为心灵学派设定豁免投掷的难度等级（DC）或者使用心灵学派进行攻击检定时，你将使用你的智力调整值。",
+            {
+              "type": "abilityDc",
+              "name": "纪律",
+              "ENG_name": "Discipline",
+              "attributes": [
+                "int"
+              ]
+            },
+            {
+              "type": "abilityAttackMod",
+              "name": "纪律",
+              "ENG_name": "Discipline",
+              "attributes": [
+                "int"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "使用纪律",
+      "ENG_name": "Using a Discipline",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "每个灵能力纪律都有几种使用方式，都包含在其描述中。该纪律指定了所需的行动类型和灵能点数。它还详细说明了是否需要集中精神维持其效果，它影响多少目标，需要哪些豁免投掷等等。",
+        "以下部分将更详细地介绍如何使用学派。心灵学派是魔法的，其运作方式与法术类似。",
+        {
+          "type": "entries",
+          "name": "心灵专注",
+          "ENG_name": "Psychic Focus",
+          "entries": [
+            "纪律的心灵专注部分描述了当你选择该纪律作为你的心灵专注时所获得的好处。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "效果选项和心灵点",
+          "ENG_name": "Effect Options and Psi Points",
+          "entries": [
+            "一个纪律提供了使用你的灵能点的不同选项。每种效果选项都有一个名称，其灵能点成本在名称后的括号中显示。你必须花费指定数量的灵能点来使用该选项，同时遵守你的灵能限制。如果你没有足够的灵能点剩余，或者成本超过了你的灵能限制，你就不能使用该选项。",
+            "有些选项显示的是灵能点数的范围，而不是特定的消耗。要使用该选项，你必须在该点数范围内花费一定数量的点数，同时仍然遵守你的灵能限制。有些选项允许你花费额外的灵能点数来增加纪律的效力。同样，你必须遵守你的灵能限制，并且必须在首次使用纪律时花费所有点数；你不能在看到纪律生效后决定花费额外点数。",
+            "每个选项都注明了其效果的特定信息，包括使用它所需的任何动作及其范围。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法术成分",
+          "ENG_name": "Components",
+          "entries": [
+            "纪律不需要许多法术所需的材料。使用纪律不需要言语、手势或材料。灵能的力量来自于心灵。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "持续时间",
+          "ENG_name": "Duration",
+          "entries": [
+            "纪律中的一个效果选项指定了其效果持续的时间。",
+            {
+              "type": "entries",
+              "name": "即效",
+              "ENG_name": "Instantaneous",
+              "entries": [
+                "如果没有指定持续时间，选项的效果是瞬间的。"
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "专注",
+              "ENG_name": "Concentration",
+              "entries": [
+                "有些选项需要{@status 专注}来维持它们的效果。这个要求会在选项的灵能点成本后用“conc.”注明。“conc.”符号后面跟着{@status 专注}的最大持续时间。例如，如果一个选项说“conc., 1 min.,”，你可以专注其效果最多1分钟。",
+                "专注于一个学派遵循与法术专注相同的规则。这意味着你不能同时专注于一个法术和一个学派，也不能同时专注于两个学派。请参见《玩家手册》第10章“施法”，了解{@status concentration}的工作原理。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "目标和效果区域",
+          "ENG_name": "Targets and Areas of Effect",
+          "entries": [
+            "灵能纪律使用与法术相同的规则来确定目标和效果区域，如《玩家手册》第10章“施法”中所述。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "豁免检定与攻击检定",
+          "ENG_name": "Saving Throws and Attack Rolls",
+          "entries": [
+            "如果一个纪律需要进行豁免投掷，它会指定豁免的类型以及成功或失败豁免投掷的结果。难度等级由你的灵能力决定。",
+            "有些纪律需要你进行攻击检定来确定纪律的效果是否击中目标。攻击检定使用你的灵能力。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "组合心灵效果",
+          "ENG_name": "Combining Psionic Effects",
+          "entries": [
+            "不同灵能纪律的效果在纪律的持续时间重叠时会累加。同样，如果一个灵能纪律的不同选项同时激活，它们也会结合在一起。然而，如果多次使用同一个选项，这个特定的选项不会与自身结合。相反，在效果持续时间重叠时，最强大的效果（通常取决于用于创造效果的灵能点数）将适用。",
+            "心灵能力和法术是独立的效果，因此它们的益处和劣势会相互重叠。复制法术的心灵效果是这一规则的例外。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "神秘恢复",
+      "ENG_name": "Mystical Recovery",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 2,
+      "entries": [
+        "从2级开始，你可以从你用来驱动心灵学派的心灵能量中汲取活力。",
+        "在你花费灵能点数在灵能纪律上之后，你可以立即采取一个奖励动作来恢复等于你花费的灵能点数的生命值。"
+      ]
+    },
+    {
+      "name": "心灵感应",
+      "ENG_name": "Telepathy",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 2,
+      "entries": [
+        "在2级时，你的心灵觉醒了通过心灵感应进行交流的能力。你可以用这种方式心灵感应地与任何你能在120英尺内看到的生物交谈。你不需要与生物共享语言，它就能理解你的心灵感应信息，但生物必须至少能理解一种语言，或者它本身必须是心灵感应的。"
+      ]
+    },
+    {
+      "name": "神秘秩序特性",
+      "ENG_name": "Mystic Order feature",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "entries": [
+        "在3级时，你从你的神秘秩序中获得另一个特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
+      ]
+    },
+    {
+      "name": "心灵之力",
+      "ENG_name": "Strength of Mind",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 4,
+      "entries": [
+        "即使是最简单的灵能技术也需要深刻理解灵能能量如何增强心智和身体。这种理解让你能够改变你的防御，以更好地应对威胁。",
+        "从4级开始，你可以在完成短休或长休后替换你在智力豁免投掷中的熟练度。为此，请选择力量、敏捷、体质或魅力。你将使用该能力进行豁免投掷的熟练度，代替智力。此变更将持续到你完成下一次短休或长休。"
+      ]
+    },
+    {
+      "name": "神秘秩序特性",
+      "ENG_name": "Mystic Order feature",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "entries": [
+        "在6级时，你从你的神秘秩序中获得另一个特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 8,
+      "entries": [
+        "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
+      ]
+    },
+    {
+      "name": "灵能强化 (1d8)",
+      "ENG_name": "Potent Psionics (1d8)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 8,
+      "entries": [
+        "At 8th level, you gain the ability to infuse your weapon attacks with psychic energy. Once on each of your turns when you hit a creature with a weapon, you can deal an extra {@damage 1d8} psychic damage to that target. When you reach 14th level, this extra damage increases to {@dice 2d8}.",
+        "此外，你在进行任何灵能天赋的{@filter psionic talent|psionics|type=T}伤害骰时，都会加上你的智力调整值。"
+      ]
+    },
+    {
+      "name": "消耗性力量",
+      "ENG_name": "Consumptive Power",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 10,
+      "entries": [
+        "在10级时，你获得了以牺牲你的身体耐久性来换取灵能力力的能力。当你激活一个灵能力纪律时，你可以用你的生命值支付它的灵能点成本，而不是使用任何灵能点。你当前的生命值和生命值最大值都减少了你花费的生命值数量。这种减少无法以任何方式减轻，并且对你生命值最大值的减少持续到你完成一次长时间休息。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "心灵掌握（每日1次）",
+      "ENG_name": "Psionic Mastery (1/Day)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 11,
+      "entries": [
+        "从11级开始，你对灵能能量的掌握允许你将思维推向超出正常极限。作为一个动作，你获得9个特殊的灵能点，你只能将这些点数用于需要动作或奖励动作来使用的纪律。你可以将所有9点用于一个纪律，或者将它们分散到多个纪律上。你不能将你的普通灵能点数用于这些纪律；你只能使用从这个特性获得的特殊点数。当你完成一次长时间的休息时，你将失去所有未花费的这些特殊点数。",
+        "如果你激活的学派中有多个需要{@status concentration}，你可以专注于它们所有。激活它们中的一个会结束你之前已经{@status concentration||专注}的任何效果，如果你开始{@status concentration||专注}于一个不使用这些特殊点的效果，那么那些你正在{@status concentration||专注}的学派就会结束。",
+        "在15级时，你从这个特性获得的灵能点池增加到11点。",
+        "你有一次使用这个特性的机会，并且你可以通过长时间的休息来恢复任何已消耗的使用次数。你在13级、15级和17级时，会额外获得一次使用这个特性的机会。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 12,
+      "entries": [
+        "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
+      ]
+    },
+    {
+      "name": "心灵掌握（每日2次）",
+      "ENG_name": "Psionic Mastery (2/Day)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 13,
+      "entries": [
+        "在13级时，你可以每天使用灵能精通两次。"
+      ]
+    },
+    {
+      "name": "神秘秩序特性",
+      "ENG_name": "Mystic Order feature",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "entries": [
+        "在14级时，你从你的神秘秩序中获得另一个特性。"
+      ]
+    },
+    {
+      "name": "灵能强化 (2d8)",
+      "ENG_name": "Potent Psionics (2d8)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "entries": [
+        "At 14th level, your Potent Psionics damage increased to {@dice 2d8}."
+      ]
+    },
+    {
+      "name": "心灵掌握（每日3次）",
+      "ENG_name": "Psionic Mastery (3/Day)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 15,
+      "entries": [
+        "在15级时，你每天可以使用你的灵能力掌控三次。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 16,
+      "entries": [
+        "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
+      ]
+    },
+    {
+      "name": "灵能精通 (每日4次)",
+      "ENG_name": "Psionic Mastery (4/Day)",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 17,
+      "entries": [
+        "在17级时，你可以每天使用心灵掌握四次。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 19,
+      "entries": [
+        "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
+      ]
+    },
+    {
+      "name": "灵能之体",
+      "ENG_name": "Psionic Body",
+      "source": "UATheMysticClass",
+      "page": 1,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "level": 20,
+      "entries": [
+        "在20级时，你对灵能力的掌握使你的意识超越了身体。你的身体形态被灵能力量注入。你获得了以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "你对钝击、刺穿和斩击伤害获得抗性。",
+            "你不再老化。",
+            "你对疾病、毒素伤害以及中毒状态免疫。",
+            "If you die, roll a {@dice d20}. On a 10 or higher, you discorporate with 0 hit points, instead of dying, and you fall {@condition unconscious}. You and your gear disappear. You appear at a spot of your choice {@dice 1d3} days later on the plane of existence where you died, having gained the benefits of one long rest."
+          ]
+        }
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "化身秩序",
+      "ENG_name": "Order of the Avatar",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "化身秩序的神秘术士深入情感的世界，他们如此精通自己的内心生活，以至于能够像艺术家塑造泥土一样轻松地操纵和放大他人的情感。这些被称为化身的神秘术士从暴君到激励人心的领袖各不相同，他们的追随者对他们爱戴有加。",
+        "化身能够在他们周围的人中引发极端情绪。对于他们的盟友，他们可以借予希望、凶猛和勇气，将战斗团队转变为致命而统一的力量。对于他们的敌人，他们带来恐惧、厌恶和忧虑，这可以使即使是最老练的退伍军人表现得像一个不稳定的新手。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外学派|神秘师|UATheMysticClass|化身|UATheMysticClass|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "护甲训练|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|1"
+        }
+      ]
+    },
+    {
+      "name": "护甲训练",
+      "ENG_name": "Armor Training",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你对中型护甲和盾牌获得熟练度。"
+      ]
+    },
+    {
+      "name": "额外学派",
+      "ENG_name": "Bonus Disciplines",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 化身纪律|psionics|type=D|order=Avatar}中选择。"
+      ]
+    },
+    {
+      "name": "战争领域:战斗化身",
+      "ENG_name": "Avatar of Battle",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "Starting at 3rd level, you project an inspiring aura. While you aren't {@condition 无力}, each ally within 30 feet of you who can see you gains a +2 bonus to initiative rolls."
+      ]
+    },
+    {
+      "name": "治愈化身",
+      "ENG_name": "Avatar of Healing",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "Beginning at 6th level, you project an aura of resilience. While you aren't {@condition 无力}, each ally within 30 feet of you who can see you regains additional hit points equal to your Intelligence modifier (minimum of 0) whenever they regain hit points from a psionic discipline."
+      ]
+    },
+    {
+      "name": "速度化身",
+      "ENG_name": "Avatar of Speed",
+      "source": "UATheMysticClass",
+      "page": 5,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "化身",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "Starting at 14th level, you project an aura of speed. While you aren't {@condition 无力}, any ally within 30 feet of you who can see you can take the {@action 疾走} action as a bonus action."
+      ]
+    },
+    {
+      "name": "觉醒秩序",
+      "ENG_name": "Order of the Awakened",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "致力于觉醒秩序的神秘主义者寻求解锁心灵的全部潜能。通过超越物质，觉醒者希望达到一种专注于纯粹智慧和精神能量的存在状态。",
+        "觉醒者擅长弯曲心灵并释放毁灭性的灵能攻击，他们可以通过灵能能量阅读世界的秘密。选择冒险的觉醒神秘术士擅长解开谜团，解决难题，并通过将怪物变成不情愿的棋子来击败它们。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|觉醒|未授权的神秘主义者职业类|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "觉醒天赋|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|1"
+        }
+      ]
+    },
+    {
+      "name": "觉醒天赋",
+      "ENG_name": "Awakened Talent",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "At 1st level, you gain proficiency with two of the following skills of your choice: {@skill 驯兽}, {@skill 欺瞒}, {@skill 洞悉}, {@skill 威吓}, {@skill 调查}, {@skill 察觉}, and {@skill 说服}."
+      ]
+    },
+    {
+      "name": "额外学派",
+      "ENG_name": "Bonus Disciplines",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 觉醒纪律|psionics|type=D|order=Awakened}中选择。"
+      ]
+    },
+    {
+      "name": "灵能调查",
+      "ENG_name": "Psionic Investigation",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "从3级开始，你可以集中精神读取留在物体上的灵能印记。如果你握住一个物体并集中精神观察它10分钟（就像在集中精神使用灵能纪律一样），你可以了解一些关于它的基本信息。你从物体的视角获得一个心灵图像，显示过去24小时内最后一个持有该物体的生物。",
+        "你还了解到在过去一小时内，在物体20英尺范围内发生的任何事件。你所感知到的事件是从物体的视角展开的。你看到和听到这些事件，就好像你当时在场一样，但你无法使用其他感官。",
+        "此外，你可以在物体内部嵌入一个无形的灵能传感器。在接下来的24小时内，你可以使用一个动作来了解物体相对于你的位置（它的距离和方向），并从物体的视角观察物体周围的环境，就好像你在那里一样。这种感知持续到你的下一个回合开始。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "灵能力波动",
+      "ENG_name": "Psionic Surge",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你可以使你的心灵专注过载，以打破对手的防御。你可以对目标对你使用的纪律或天赋的豁免投掷施加劣势，但代价是使用你的心灵专注。如果你的心灵专注处于激活状态，它将立即结束，并且直到你完成一次短休或长休之前不能再次使用。",
+        "如果你不能使用你的心灵专注，你就不能使用这个特性。"
+      ]
+    },
+    {
+      "name": "幽灵形态",
+      "ENG_name": "Spectral Form",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "觉醒",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你获得了变成灵能力量的幽灵般形象的能力。作为一个动作，你可以将自己转变成半透明的幽灵版本。在这种形态下，你对所有伤害都有抗性，移动速度减半，并且可以在移动时穿过物体和生物，但不能自愿地在它们的空间中结束你的移动。这种形态持续10分钟，或者直到你使用一个动作来结束它。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "不朽秩序",
+      "ENG_name": "Order of the Immortal",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "不朽秩序使用灵能能量来增强和改变身体形态。这个秩序的追随者被称为不朽者。他们利用灵能能量来改变他们的身体，使其更能抵抗攻击，并将自身变成活生生的武器。",
+        "他们对身体形态的掌握赋予了他们不朽者的名号，因为众所周知，不朽者极难被杀死。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|不朽|未授权的神秘主义者职业类|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "不朽耐久性|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|1"
+        }
+      ]
+    },
+    {
+      "name": "额外学派",
+      "ENG_name": "Bonus Disciplines",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你可以选择学习两个额外的灵能纪律。它们必须从{@filter 不朽纪律|psionics|type=D|order=Immortal}中选择。"
+      ]
+    },
+    {
+      "name": "不朽耐久性",
+      "ENG_name": "Immortal Durability",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你的生命值最大值每级神秘主义者等级增加1点。",
+        "此外，当你没有穿戴护甲或持有盾牌时，你的基础AC等于10加上你的敏捷调整值加上你的体质调整值。"
+      ]
+    },
+    {
+      "name": "灵能力韧性",
+      "ENG_name": "Psionic Resilience",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "从3级开始，你的灵能能量赋予你非凡的坚韧。在每个回合开始时，如果你至少有1点生命值，你将获得等同于你的智力调整值（最少为0）的临时生命值。"
+      ]
+    },
+    {
+      "name": "健康激流",
+      "ENG_name": "Surge of Health",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你可以借助你的心灵焦点逃脱死亡的魔爪。当你受到伤害时，你可以作为反应减半对你造成的伤害。如果你的心灵焦点处于激活状态，它将立即结束，并且在你完成一次短休或长休之前你无法再次使用。",
+        "如果你不能使用你的心灵专注，你就不能使用这个特性。"
+      ]
+    },
+    {
+      "name": "不朽意志",
+      "ENG_name": "Immortal Will",
+      "source": "UATheMysticClass",
+      "page": 6,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "不朽",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你可以借助你的灵能力量在死亡之后存活。在你的回合结束时，如果你的生命值为0，你可以花费5个灵能点立即恢复等于你的神秘术士等级加上你的体质调整值的生命值。"
+      ]
+    },
+    {
+      "name": "游牧秩序",
+      "ENG_name": "Order of the Nomad",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "游牧民秩序的神秘主义者保持着一种奇异而稀有的心态。他们致力于积累尽可能多的知识，因为他们致力于解开多元宇宙的奥秘并寻找万物的潜在结构。与此同时，他们感知到一个他们称之为智域的奇异、活生生的知识网络。",
+        "正如他们的名字所示，游牧民喜欢旅行、探索和发现。他们渴望积累尽可能多的知识，对秘密和隐藏的知识的追求可能成为他们的痴迷。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "奖励纪律|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "广博知识|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1"
+        }
+      ]
+    },
+    {
+      "name": "额外学派",
+      "ENG_name": "Bonus Disciplines",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 游牧者学科|psionics|type=D|order=Nomad}中选择。"
+      ]
+    },
+    {
+      "name": "广博的知识",
+      "ENG_name": "Breadth of Knowledge",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你获得了扩展知识的能力。当你完成一次长时间的休息后，你可以选择获得两项熟练度：两种工具、两项技能，或者每种各一项。你可以用语言替换其中的一或两项选择。这项好处持续到你完成下一次长时间的休息。"
+      ]
+    },
+    {
+      "name": "千步记忆",
+      "ENG_name": "Memory of One Thousand Steps",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "在3级时，你获得了使用灵能回忆你的步伐的能力。当你被攻击击中时，你可以作为反应传送到自你上个回合开始以来你所占据的未被占据的空间，攻击将错过你。一旦你使用了这个特性，直到你完成一次短休或长休之前都不能再次使用。"
+      ]
+    },
+    {
+      "name": "卓越传送",
+      "ENG_name": "Superior Teleportation",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你获得了卓越的传送天赋。当你使用灵能纪律进行传送时，你可以将该距离增加最多10英尺。"
+      ]
+    },
+    {
+      "name": "轻松之旅",
+      "ENG_name": "Effortless Journey",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "游牧民",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你的意识可以神秘地移动你的身体。在你的每个回合中，你可以放弃最多30英尺的移动距离来传送相同距离。你必须传送到一个你能看到的未被占据的空间。"
+      ]
+    },
+    {
+      "name": "灵魂刀秩序",
+      "ENG_name": "Order of the Soul Knife",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "灵魂之刃秩序放弃了其他神秘主义者所获得的知识广度，专注于一种特定的灵能力技巧。这些神秘主义者学会显现一把由纯粹精神能量构成的致命武器，可以用来砍穿敌人。",
+        "灵魂刀刃在这条道路上的方法各不相同。有些人追求它是为了达到武术的完美。其他人则是无情的刺客，他们寻求成为完美的杀手。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "武术训练|神秘主义者|UATheMysticClass|灵魂之刃|UATheMysticClass|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "灵魂刀|神秘者|UA神秘者职业|灵魂刀|UA神秘者职业|1"
+        }
+      ]
+    },
+    {
+      "name": "军事训练",
+      "ENG_name": "Martial Training",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你对中型护甲和军用武器获得熟练度。"
+      ]
+    },
+    {
+      "name": "灵魂之刃",
+      "ENG_name": "Soul Knife",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你获得了显现心灵能量刀刃的能力。作为奖励动作，你创造了从你双拳射出的能量刀刃。在显现这些刀刃时，你不能手持任何物品。你可以作为奖励动作将它们解散。",
+        "对你而言，灵魂之刃是一种具有轻巧和灵巧属性的武术近战武器。命中时造成{@damage 1d8}心灵伤害。",
+        "As a bonus action, you can prepare to use the blades to parry; you gain a +2 bonus to AC until the start of your next turn or until you are {@condition 无力}."
+      ]
+    },
+    {
+      "name": "磨砺刀锋",
+      "ENG_name": "Hone the Blade",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "从3级开始，你可以花费灵能点来增强你的灵魂之刃的攻击检定和伤害。根据你花费的灵能点数，你的灵魂之刃的攻击和伤害检定将获得额外的加值，如下表所示。这个加值持续10分钟。",
+        {
+          "type": "table",
+          "colLabels": [
+            "灵能点",
+            "攻击和伤害加成"
+          ],
+          "colStyles": [
+            "col-6 text-center",
+            "col-6 text-center"
+          ],
+          "rows": [
+            "2",
+            "+1",
+            "5",
+            "+2",
+            "7",
+            "+4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "消耗刀",
+      "ENG_name": "Consumptive Knife",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，每当你使用灵魂之刃攻击击败一个敌人生物时，你将立即恢复2点灵能点。"
+      ]
+    },
+    {
+      "name": "幻影刀",
+      "ENG_name": "Phantom Knife",
+      "source": "UATheMysticClass",
+      "page": 7,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "灵魂之刃",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你可以进行一种可以穿透大多数防御的攻击。作为一个动作，你可以用你的灵魂刀进行一次攻击。将目标的AC视为10，无论目标的实际AC如何。"
+      ]
+    },
+    {
+      "name": "吴进秩序",
+      "ENG_name": "Order of the Wu Jen",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "entries": [
+        "武者秩序拥有一些最虔诚的神秘主义者。这些神秘主义者寻求将自己与世界隔绝，否认物质世界的限制，并用他们为自己创造的现实来取代它。被称为武者们的这些神秘主义者将他们的意识投射到世界中，掌握其基本原理，并重建它。",
+        "实际上，武者擅长控制自然世界的力量。他们可以用意念投掷物体，控制四种元素，并改变现实以适应他们的愿望。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|巫剑士|未授权的神秘主义者职业类|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "隐士研究|神秘者|UA神秘者职业|巫师|UA神秘者职业|1"
+        }
+      ]
+    },
+    {
+      "name": "额外学派",
+      "ENG_name": "Bonus Disciplines",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 武者学科|psionics|type=D|order=Wu Jen}中选择。"
+      ]
+    },
+    {
+      "name": "隐士研究",
+      "ENG_name": "Hermit's Study",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "At 1st level, you gain proficiency with two of the following skills of your choice: {@skill 驯兽}, {@skill 奥秘}, {@skill 历史}, {@skill 洞悉}, {@skill 医疗}, {@skill 自然}, {@skill 察觉}, {@skill 宗教}, or {@skill 生存}."
+      ]
+    },
+    {
+      "name": "元素调律",
+      "ENG_name": "Elemental Attunement",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 3,
+      "header": 2,
+      "entries": [
+        "从3级开始，当生物的抗性减少了你的灵能纪律造成的伤害时，你可以花费1点灵能点使该次纪律的使用忽略生物的抗性。如果这样做会使纪律的成本超过你的灵能极限，则不能花费这个点。"
+      ]
+    },
+    {
+      "name": "奥术涉猎者",
+      "ENG_name": "Arcane Dabbler",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你可以选择学习三个你选择的巫师法术，并且总是准备好它们。这些法术必须是{@filter 1级至3级|spells|level=1;2;3|class=wizard}的。",
+        "作为奖励动作，你可以花费灵能点来创建法术位，你可以用这些法术位来施放这些法术，以及你能够施放的其他法术。每个法术位的灵能点成本详见下表。",
+        {
+          "type": "table",
+          "colLabels": [
+            "法术位等级",
+            "灵能消耗"
+          ],
+          "colStyles": [
+            "col-6 text-center",
+            "col-6 text-center"
+          ],
+          "rows": [
+            "第一",
+            "2",
+            "第二",
+            "3",
+            "第三",
+            "5",
+            "第四",
+            "6",
+            "第五",
+            "7"
+          ]
+        },
+        "法术位在你使用它或完成一次长时间的休息之前一直保留。在花费灵能点创建法术位时，你必须遵守你的灵能极限。",
+        "每当你在本职业中获得一个等级时，你可以用一个不同的{@filter 1级至3级的巫师法术|spells|level=1;2;3|class=wizard}替换你选择的巫师法术之一。"
+      ]
+    },
+    {
+      "name": "元素掌控",
+      "ENG_name": "Elemental Mastery",
+      "source": "UATheMysticClass",
+      "page": 8,
+      "className": "神秘师",
+      "classSource": "未授权的神秘主义者职业类",
+      "subclassShortName": "巫师",
+      "subclassSource": "未授权的神秘主义者职业类",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，如果你对某种伤害类型有抗性，你可以在受到该类型伤害时作为反应花费2点灵能点来忽略该伤害；直到你的下一个回合结束，你对那种伤害类型获得免疫。"
+      ]
+    }
+  ]
 }

@@ -1,2277 +1,2258 @@
 {
-	"class": [
-		{
-			"name": "Rogue",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"hd": {
-				"number": 1,
-				"faces": 8
-			},
-			"proficiency": [
-				"dex",
-				"int"
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple",
-					"{@item hand crossbow|phb|hand crossbows}",
-					"{@item longsword|phb|longswords}",
-					"{@item rapier|phb|rapiers}",
-					"{@item shortsword|phb|shortswords}"
-				],
-				"tools": [
-					"{@item thieves' tools|PHB}"
-				],
-				"toolProficiencies": [
-					{
-						"thieves' tools": true
-					}
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"acrobatics",
-								"athletics",
-								"deception",
-								"insight",
-								"intimidation",
-								"investigation",
-								"perception",
-								"performance",
-								"persuasion",
-								"sleight of hand",
-								"stealth"
-							],
-							"count": 4
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
-					"(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
-					"(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
-					"{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
-				],
-				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"rapier|phb"
-						],
-						"b": [
-							"shortsword|phb"
-						]
-					},
-					{
-						"a": [
-							"shortbow|phb",
-							"arrows (20)|phb"
-						],
-						"b": [
-							"shortsword|phb"
-						]
-					},
-					{
-						"a": [
-							"burglar's pack|phb"
-						],
-						"b": [
-							"dungeoneer's pack|phb"
-						],
-						"c": [
-							"explorer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							"Leather armor|phb",
-							{
-								"item": "dagger|phb",
-								"quantity": 2
-							},
-							"thieves' tools|phb"
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"dex": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light"
-					],
-					"skills": [
-						{
-							"choose": {
-								"from": [
-									"acrobatics",
-									"athletics",
-									"deception",
-									"insight",
-									"intimidation",
-									"investigation",
-									"perception",
-									"performance",
-									"persuasion",
-									"sleight of hand",
-									"stealth"
-								],
-								"count": 1
-							}
-						}
-					],
-					"tools": [
-						"{@item thieves' tools|PHB}"
-					],
-					"toolProficiencies": [
-						{
-							"thieves' tools": true
-						}
-					]
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"Sneak Attack"
-					],
-					"rows": [
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 2,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 2,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 3,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 3,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 4,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 4,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 5,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 5,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 6,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 6,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 7,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 7,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 8,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 8,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 9,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 9,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 10,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						],
-						[
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 10,
-										"faces": 6
-									}
-								],
-								"rollable": true
-							}
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Expertise|Rogue||1",
-				"Sneak Attack|Rogue||1",
-				"Thieves' Cant|Rogue||1",
-				"Cunning Action|Rogue||2",
-				{
-					"classFeature": "Roguish Archetype|Rogue||3",
-					"gainSubclassFeature": true
-				},
-				"Steady Aim|Rogue||3|TCE",
-				"Ability Score Improvement|Rogue||4",
-				"Uncanny Dodge|Rogue||5",
-				"Expertise|Rogue||6",
-				"Evasion|Rogue||7",
-				"Ability Score Improvement|Rogue||8",
-				{
-					"classFeature": "Roguish Archetype feature|Rogue||9",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Rogue||10",
-				"Reliable Talent|Rogue||11",
-				"Ability Score Improvement|Rogue||12",
-				{
-					"classFeature": "Roguish Archetype feature|Rogue||13",
-					"gainSubclassFeature": true
-				},
-				"Blindsense|Rogue||14",
-				"Slippery Mind|Rogue||15",
-				"Ability Score Improvement|Rogue||16",
-				{
-					"classFeature": "Roguish Archetype feature|Rogue||17",
-					"gainSubclassFeature": true
-				},
-				"Elusive|Rogue||18",
-				"Ability Score Improvement|Rogue||19",
-				"Stroke of Luck|Rogue||20"
-			],
-			"subclassTitle": "Roguish Archetype",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "Arcane Trickster",
-			"shortName": "Arcane Trickster",
-			"source": "PHB",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 97,
-			"spellcastingAbility": "int",
-			"casterProgression": "1/3",
-			"cantripProgression": [
-				0,
-				0,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3
-			],
-			"spellsKnownProgression": [
-				0,
-				0,
-				3,
-				4,
-				4,
-				4,
-				5,
-				6,
-				6,
-				7,
-				8,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				11,
-				12,
-				13
-			],
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"mage hand#c"
-						]
-					},
-					"expanded": {
-						"3": [
-							{
-								"all": "level=0|class=Wizard"
-							},
-							{
-								"all": "level=1|class=Wizard"
-							}
-						],
-						"7": [
-							{
-								"all": "level=2|class=Wizard"
-							}
-						],
-						"13": [
-							{
-								"all": "level=3|class=Wizard"
-							}
-						],
-						"19": [
-							{
-								"all": "level=4|class=Wizard"
-							}
-						]
-					}
-				}
-			],
-			"subclassTableGroups": [
-				{
-					"subclasses": [
-						{
-							"name": "Arcane Trickster",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|subclass=Rogue: Arcane Trickster}",
-						"{@filter Spells Known|spells|subclass=Rogue: Arcane Trickster}"
-					],
-					"rows": [
-						[
-							0,
-							0
-						],
-						[
-							0,
-							0
-						],
-						[
-							3,
-							3
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							5
-						],
-						[
-							3,
-							6
-						],
-						[
-							3,
-							6
-						],
-						[
-							4,
-							7
-						],
-						[
-							4,
-							8
-						],
-						[
-							4,
-							8
-						],
-						[
-							4,
-							9
-						],
-						[
-							4,
-							10
-						],
-						[
-							4,
-							10
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							12
-						],
-						[
-							4,
-							13
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"subclasses": [
-						{
-							"name": "Arcane Trickster",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter 1st|spells|level=1|subclass=Rogue: Arcane Trickster}",
-						"{@filter 2nd|spells|level=2|subclass=Rogue: Arcane Trickster}",
-						"{@filter 3rd|spells|level=3|subclass=Rogue: Arcane Trickster}",
-						"{@filter 4th|spells|level=4|subclass=Rogue: Arcane Trickster}"
-					],
-					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						]
-					]
-				}
-			],
-			"subclassFeatures": [
-				"Arcane Trickster|Rogue||Arcane Trickster||3",
-				"Magical Ambush|Rogue||Arcane Trickster||9",
-				"Versatile Trickster|Rogue||Arcane Trickster||13",
-				"Spell Thief|Rogue||Arcane Trickster||17"
-			]
-		},
-		{
-			"name": "Assassin",
-			"shortName": "Assassin",
-			"source": "PHB",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 97,
-			"subclassFeatures": [
-				"Assassin|Rogue||Assassin||3",
-				"Infiltration Expertise|Rogue||Assassin||9",
-				"Impostor|Rogue||Assassin||13",
-				"Death Strike|Rogue||Assassin||17"
-			]
-		},
-		{
-			"name": "Thief",
-			"shortName": "Thief",
-			"source": "PHB",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"subclassFeatures": [
-				"Thief|Rogue||Thief||3",
-				"Supreme Sneak|Rogue||Thief||9",
-				"Use Magic Device|Rogue||Thief||13",
-				"Thief's Reflexes|Rogue||Thief||17"
-			]
-		},
-		{
-			"name": "Inquisitive",
-			"shortName": "Inquisitive",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 45,
-			"subclassFeatures": [
-				"Inquisitive|Rogue||Inquisitive|XGE|3",
-				"Steady Eye|Rogue||Inquisitive|XGE|9",
-				"Unerring Eye|Rogue||Inquisitive|XGE|13",
-				"Eye for Weakness|Rogue||Inquisitive|XGE|17"
-			]
-		},
-		{
-			"name": "Mastermind",
-			"shortName": "Mastermind",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 46,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 135
-				}
-			],
-			"subclassFeatures": [
-				"Mastermind|Rogue||Mastermind|XGE|3",
-				"Insightful Manipulator|Rogue||Mastermind|XGE|9",
-				"Misdirection|Rogue||Mastermind|XGE|13",
-				"Soul of Deceit|Rogue||Mastermind|XGE|17"
-			]
-		},
-		{
-			"name": "Scout",
-			"shortName": "Scout",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 47,
-			"subclassFeatures": [
-				"Scout|Rogue||Scout|XGE|3",
-				"Superior Mobility|Rogue||Scout|XGE|9",
-				"Ambush Master|Rogue||Scout|XGE|13",
-				"Sudden Strike|Rogue||Scout|XGE|17"
-			]
-		},
-		{
-			"name": "Swashbuckler",
-			"shortName": "Swashbuckler",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 48,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 135
-				}
-			],
-			"subclassFeatures": [
-				"Swashbuckler|Rogue||Swashbuckler|XGE|3",
-				"Panache|Rogue||Swashbuckler|XGE|9",
-				"Elegant Maneuver|Rogue||Swashbuckler|XGE|13",
-				"Master Duelist|Rogue||Swashbuckler|XGE|17"
-			]
-		},
-		{
-			"name": "Phantom",
-			"shortName": "Phantom",
-			"source": "TCE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 62,
-			"subclassFeatures": [
-				"Phantom|Rogue||Phantom|TCE|3",
-				"Tokens of the Departed|Rogue||Phantom|TCE|9",
-				"Ghost Walk|Rogue||Phantom|TCE|13",
-				"Death's Friend|Rogue||Phantom|TCE|17"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Soulknife",
-			"shortName": "Soulknife",
-			"source": "TCE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 63,
-			"subclassFeatures": [
-				"Soulknife|Rogue||Soulknife|TCE|3",
-				"Soul Blades|Rogue||Soulknife|TCE|9",
-				"Psychic Veil|Rogue||Soulknife|TCE|13",
-				"Rend Mind|Rogue||Soulknife|TCE|17"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Expertise",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with {@item thieves' tools|phb}. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
-				"At 6th level, you can choose two more of your proficiencies (in skills or with {@item thieves' tools|phb}) to gain this benefit."
-			]
-		},
-		{
-			"name": "Sneak Attack",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra {@damage 1d6} damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.",
-				"You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't {@condition incapacitated}, and you don't have disadvantage on the attack roll.",
-				"The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table."
-			]
-		},
-		{
-			"name": "Thieves' Cant",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.",
-				"In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run."
-			]
-		},
-		{
-			"name": "Cunning Action",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the {@action Dash}, {@action Disengage}, or {@action Hide} action."
-			]
-		},
-		{
-			"name": "Roguish Archetype",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities from the list of available archetypes. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
-			]
-		},
-		{
-			"name": "Steady Aim",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 3,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 3rd-level rogue {@variantrule optional class features|tce|optional feature}}",
-				"As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Uncanny Dodge",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 5,
-			"entries": [
-				"Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
-			]
-		},
-		{
-			"name": "Expertise",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"At 6th level, you can choose two more of your proficiencies (in skills or with {@item thieves' tools|phb}) to gain the benefit of Expertise."
-			]
-		},
-		{
-			"name": "Evasion",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 7,
-			"entries": [
-				"Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an {@spell ice storm} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Roguish Archetype feature",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 9,
-			"entries": [
-				"At 9th level, you gain a feature granted by your Roguish Archetype."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"When you reach 10th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Reliable Talent",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 11,
-			"entries": [
-				"By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a {@dice d20} roll of 9 or lower as a 10."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Roguish Archetype feature",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 13,
-			"entries": [
-				"At 13th level, you gain a feature granted by your Roguish Archetype."
-			]
-		},
-		{
-			"name": "Blindsense",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or {@condition invisible} creature within 10 feet of you."
-			]
-		},
-		{
-			"name": "Slippery Mind",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 15,
-			"entries": [
-				"By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Roguish Archetype feature",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, you gain a feature granted by your Roguish Archetype."
-			]
-		},
-		{
-			"name": "Elusive",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 18,
-			"entries": [
-				"Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't {@condition incapacitated}."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Stroke of Luck",
-			"source": "PHB",
-			"page": 94,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the {@dice d20} roll as a 20.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "Arcane Trickster",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Spellcasting|Rogue||Arcane Trickster||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Mage Hand Legerdemain|Rogue||Arcane Trickster||3"
-				}
-			]
-		},
-		{
-			"name": "Mage Hand Legerdemain",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, when you cast {@spell mage hand}, you can make the spectral hand {@condition invisible}, and you can perform the following additional tasks with it:",
-				{
-					"type": "list",
-					"items": [
-						"You can stow one object the hand is holding in a container worn or carried by another creature.",
-						"You can retrieve an object in a container worn or carried by another creature.",
-						"You can use {@item thieves' tools|phb} to pick locks and disarm traps at range."
-					]
-				},
-				"You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity ({@skill Sleight of Hand}) check contested by the creature's Wisdom ({@skill Perception}) check.",
-				"In addition, you can use the bonus action granted by your Cunning Action to control the hand."
-			]
-		},
-		{
-			"name": "Spellcasting",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you reach 3rd level, you gain the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Cantrips",
-							"entries": [
-								"You learn three cantrips: {@spell mage hand} and two other cantrips of your choice from the wizard spell list. You learn another wizard cantrip of your choice at 10th level."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spell Slots",
-							"entries": [
-								"The Arcane Trickster Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-								"For example, if you know the 1st-level spell {@spell charm person} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell charm person} using either slot."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spells Known of 1st-Level and Higher",
-							"entries": [
-								"You know three 1st-level wizard spells of your choice, two of which you must choose from the enchantment and illusion spells on the wizard spell list.",
-								"The Spells Known column of the Arcane Trickster Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an enchantment or illusion spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-								"The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-								"Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an enchantment or illusion spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "Spellcasting Ability",
-							"entries": [
-								"Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
-								{
-									"type": "abilityDc",
-									"name": "Spell",
-									"attributes": [
-										"int"
-									]
-								},
-								{
-									"type": "abilityAttackMod",
-									"name": "Spell",
-									"attributes": [
-										"int"
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Magical Ambush",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
-			]
-		},
-		{
-			"name": "Versatile Trickster",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"At 13th level, you gain the ability to distract targets with your {@spell mage hand}. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
-			]
-		},
-		{
-			"name": "Spell Thief",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Arcane Trickster",
-			"subclassSource": "PHB",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.",
-				"Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Assassin",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"You focus your training on the grim art of death. Those who adhere to this archetype are diverse\u2014hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.",
-				"Your archetype grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Assassinate|Rogue||Assassin||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Rogue||Assassin||3"
-				}
-			]
-		},
-		{
-			"name": "Assassinate",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is {@quickref Surprise|PHB|3|0|surprised} is a critical hit."
-			]
-		},
-		{
-			"name": "Bonus Proficiencies",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency with the {@item disguise kit|phb} and the {@item poisoner's kit|phb}."
-			]
-		},
-		{
-			"name": "Infiltration Expertise",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.",
-				"Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
-			]
-		},
-		{
-			"name": "Impostor",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerism.",
-				"Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma ({@skill Deception}) check you make to avoid detection."
-			]
-		},
-		{
-			"name": "Death Strike",
-			"source": "PHB",
-			"page": 97,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Assassin",
-			"subclassSource": "PHB",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is {@quickref Surprise|PHB|3|0|surprised}, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
-			]
-		},
-		{
-			"name": "Thief",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 3,
-			"entries": [
-				"You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Fast Hands|Rogue||Thief||3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Second-Story Work|Rogue||Thief||3"
-				}
-			]
-		},
-		{
-			"name": "Fast Hands",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity ({@skill Sleight of Hand}) check, use your {@item thieves' tools|phb} to disarm a trap or open a lock, or take the {@action Use an Object} action."
-			]
-		},
-		{
-			"name": "Second-Story Work",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
-				"In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
-			]
-		},
-		{
-			"name": "Supreme Sneak",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, you have advantage on a Dexterity ({@skill Stealth}) check if you move no more than half your speed on the same turn."
-			]
-		},
-		{
-			"name": "Use Magic Device",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items."
-			]
-		},
-		{
-			"name": "Thief's Reflexes",
-			"source": "PHB",
-			"page": 97,
-			"srd": true,
-			"basicRules": true,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Thief",
-			"subclassSource": "PHB",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature when you are {@quickref Surprise|PHB|3|0|surprised}."
-			]
-		},
-		{
-			"name": "Phantom",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Many rogues walk a fine line between life and death, risking their own lives and taking the lives of others. While adventuring on that line, some rogues discover a mystical connection to death itself. These rogues take knowledge from the dead and become immersed in negative energy, eventually becoming like ghosts. Thieves' guilds value them as highly effective information gatherers and spies.",
-				"Many shadar-kai of the Shadowfell are masters of these macabre techniques, and some are willing to teach this path. In places like Thay in the Forgotten Realms and Karrnath in Eberron, where many necromancers practice their craft, a Phantom can become a wizard's confidant and right hand. In temples of gods of death, the Phantom might work as an agent to track down those who try to cheat death and to recover knowledge that might otherwise be lost to the grave.",
-				"How did you discover this grim power? Did you sleep in a graveyard and awaken to your new abilities? Or did you cultivate them in a temple or thieves' guild dedicated to a deity of death?",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Whispers of the Dead|Rogue||Phantom|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Wails from the Grave|Rogue||Phantom|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Wails from the Grave",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Phantom feature}",
-				"As you nudge someone closer to the grave, you can channel the power of death to harm someone else as well. Immediately after you deal your Sneak Attack damage to a creature on your turn, you can target a second creature that you can see within 30 feet of the first creature. Roll half the number of Sneak Attack dice for your level (round up), and the second creature takes necrotic damage equal to the roll's total, as wails of the dead sound around them for a moment.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Whispers of the Dead",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Phantom feature}",
-				"Echoes of those who have died cling to you. Whenever you finish a short or long rest, you can choose one skill or tool proficiency that you lack and gain it, as a ghostly presence shares its knowledge with you. You lose this proficiency when you use this feature to choose a different proficiency that you lack."
-			]
-		},
-		{
-			"name": "Tokens of the Departed",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"{@i 9th-level Phantom feature}",
-				"When a life ends in your presence, you're able to snatch a token from the departing soul, a sliver of its life essence that takes physical form: as a reaction when a creature you can see dies within 30 feet of you, you can open your free hand and cause a Tiny trinket to appear there, a soul trinket. The DM determines the trinket's form or has you roll on the {@item Trinket|phb|Trinkets} table in the {@i Player's Handbook} to generate it. You can have a maximum number of soul trinkets equal to your proficiency bonus, and you can't create one while at your maximum.",
-				"You can use soul trinkets in the following ways:",
-				{
-					"type": "list",
-					"items": [
-						"While a soul trinket is on your person, you have advantage on death saving throws and Constitution saving throws, for your vitality is enhanced by the life essence within the object.",
-						"When you deal Sneak Attack damage on your turn, you can destroy one of your soul trinkets that's on your person and then immediately use Wails from the Grave, without expending a use of that feature.",
-						"As an action, you can destroy one of your soul trinkets, no matter where it's located. When you do so, you can ask the spirit associated with the trinket one question. The spirit appears to you and answers in a language it knew in life. It's under no obligation to be truthful, and it answers as concisely as possible, eager to be free. The spirit knows only what it knew in life, as determined by the DM."
-					]
-				}
-			]
-		},
-		{
-			"name": "Ghost Walk",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"{@i 13th-level Phantom feature}",
-				"You can phase partially into the realm of the dead, becoming like a ghost. As a bonus action, you assume a spectral form. While in this form, you have a flying speed of 10 feet, you can hover, and attack rolls have disadvantage against you. You can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but you take {@damage 1d10} force damage if you end your turn inside a creature or an object.",
-				"You stay in this form for 10 minutes or until you end it as a bonus action. To use this feature again, you must finish a long rest or destroy one of your soul trinkets as part of the bonus action you use to activate Ghost Walk."
-			]
-		},
-		{
-			"name": "Death's Friend",
-			"source": "TCE",
-			"page": 62,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Phantom",
-			"subclassSource": "TCE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"{@i 17th-level Phantom feature}",
-				"Your association with death has become so close that you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"When you use your Wails from the Grave, you can deal the necrotic damage to both the first and the second creature.",
-						"At the end of a long rest, a soul trinket appears in your hand if you don't have any soul trinkets, as the spirits of the dead are drawn to you."
-					]
-				}
-			]
-		},
-		{
-			"name": "Soulknife",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"Most assassins strike with physical weapons, and many burglars and spies use {@item thieves' tools|PHB} to infiltrate secure locations. In contrast, a Soulknife strikes and infiltrates with the mind, cutting through barriers both physical and psychic. These rogues discover psionic power within themselves and channel it to do their roguish work. They find easy employment as members of thieves' guilds, though they are often mistrusted by rogues who are leery of anyone using strange mind powers to conduct their business. Most governments would also be happy to employ a Soulknife as a spy.",
-				"Amid the trees of ancient forests on the Material Plane and in the Feywild, some wood elves walk the path of the Soulknife, serving as silent, lethal guardians of their woods. In the endless war among the gith, a githzerai is encouraged to become a Soulknife when stealth is required against the githyanki foe.",
-				"As a Soulknife, your psionic abilities might have haunted you since you were a child, only revealing their full potential as you experienced the stress of adventure. Or you might have sought out a reclusive order of psychic adepts and spent years learning how to manifest your power.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Psionic Power|Rogue||Soulknife|TCE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Psychic Blades|Rogue||Soulknife|TCE|3"
-				}
-			]
-		},
-		{
-			"name": "Psionic Power",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Soulknife feature}",
-				"You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
-				"Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.",
-				"When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
-				"The powers below use your Psionic Energy dice.",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Psi-Bolstered Knack|Rogue|TCE|Soulknife|TCE|3"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Psychic Whispers|Rogue|TCE|Soulknife|TCE|3"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Psychic Blades",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"{@i 3rd-level Soulknife feature}",
-				"You can manifest your psionic power as shimmering blades of psychic energy. Whenever you take the {@action Attack} action, you can manifest a psychic blade from your free hand and make the attack with that blade. This magic blade is a simple melee weapon with the finesse and thrown properties. It has a normal range of 60 feet and no long range, and on a hit, it deals psychic damage equal to {@dice 1d6} plus the ability modifier you used for the attack roll. The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals damage.",
-				"After you attack with the blade, you can make a melee or ranged weapon attack with a second psychic blade as a bonus action on the same turn, provided your other hand is free to create it. The damage die of this bonus attack is {@dice 1d4}, instead of {@dice 1d6}."
-			]
-		},
-		{
-			"name": "Soul Blades",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"{@i 9th-level Soulknife feature}",
-				"Your Psychic Blades are now an expression of your psi-suffused soul, giving you these powers that use your Psionic Energy dice:",
-				{
-					"type": "options",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Homing Strikes|Rogue|TCE|Soulknife|TCE|9"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Psychic Teleportation|Rogue|TCE|Soulknife|TCE|9"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Psychic Veil",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"{@i 13th-level Soulknife feature}",
-				"You can weave a veil of psychic static to mask yourself. As an action, you can magically become {@condition invisible}, along with anything you are wearing or carrying, for 1 hour or until you dismiss this effect (no action required). This invisibility ends early immediately after you deal damage to a creature or you force a creature to make a saving throw.",
-				"Once you use this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to use this feature again."
-			]
-		},
-		{
-			"name": "Rend Mind",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"{@i 17th-level Soulknife feature}",
-				"You can sweep your Psychic Blades directly through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Dexterity modifier). If the save fails, the target is {@condition stunned} for 1 minute. The {@condition stunned} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-				"Once you use this feature, you can't do so again until you finish a long rest, unless you expend three Psionic Energy dice to use it again."
-			]
-		},
-		{
-			"name": "Inquisitive",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"As an archetypal Inquisitive, you excel at rooting out secrets and unraveling mysteries. You rely on your sharp eye for detail, but also on your finely honed ability to read the words and deeds of other creatures to determine their true intent. You excel at defeating creatures that hide among and prey upon ordinary folk, and your mastery of lore and your keen deductions make you well equipped to expose and end hidden evils.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Ear for Deceit|Rogue||Inquisitive|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Eye for Detail|Rogue||Inquisitive|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Insightful Fighting|Rogue||Inquisitive|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Ear for Deceit",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you develop a talent for picking out lies. Whenever you make a Wisdom ({@skill Insight}) check to determine whether a creature is lying, treat a roll of 7 or lower on the {@dice d20} as an 8."
-			]
-		},
-		{
-			"name": "Eye for Detail",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you can use a bonus action to make a Wisdom ({@skill Perception}) check to spot a hidden creature or object or to make an Intelligence ({@skill Investigation}) check to uncover or decipher clues."
-			]
-		},
-		{
-			"name": "Insightful Fighting",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"At 3rd level, you gain the ability to decipher an opponent's tactics and develop a counter to them. As a bonus action, you can make a Wisdom ({@skill Insight}) check against a creature you can see that isn't {@condition incapacitated}, contested by the target's Charisma ({@skill Deception}) check. If you succeed, you can use your Sneak Attack against that target even if you don't have advantage on the attack roll, but not if you have disadvantage on it.",
-				"This benefit lasts for 1 minute or until you successfully use this feature against a different target."
-			]
-		},
-		{
-			"name": "Steady Eye",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, you have advantage on any Wisdom ({@skill Perception}) or Intelligence ({@skill Investigation}) check if you move no more than half your speed on the same turn."
-			]
-		},
-		{
-			"name": "Unerring Eye",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"Beginning at 13th level, your senses are almost impossible to foil. As an action, you sense the presence of illusions, shapechangers not in their original form, and other magic designed to deceive the senses within 30 feet of you, provided you aren't {@condition blinded} or {@condition deafened}. You sense that an effect is attempting to trick you, but you gain no insight into what is hidden or into its true nature.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
-			]
-		},
-		{
-			"name": "Eye for Weakness",
-			"source": "XGE",
-			"page": 45,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Inquisitive",
-			"subclassSource": "XGE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"At 17th level, you learn to exploit a creature's weaknesses by carefully studying its tactics and movement. While your Insightful Fighting feature applies to a creature, your Sneak Attack damage against that creature increases by {@dice 3d6}."
-			]
-		},
-		{
-			"name": "Mastermind",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"Your focus is on people and on the influence and secrets they have. Many spies, courtiers, and schemers follow this archetype, leading lives of intrigue. Words are your weapons as often as knives or poison, and secrets and favors are some of your favorite treasures.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Master of Intrigue|Rogue||Mastermind|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Master of Tactics|Rogue||Mastermind|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Master of Intrigue",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency with the {@item disguise kit|phb}, the {@item forgery kit|phb}, and one {@item gaming set|PHB} of your choice. You also learn two languages of your choice.",
-				"Additionally, you can unerringly mimic the speech patterns and accent of a creature that you hear speak for at least 1 minute, enabling you to pass yourself off as a native speaker of a particular land, provided that you know the language."
-			]
-		},
-		{
-			"name": "Master of Tactics",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you can use the {@action Help} action as a bonus action. Additionally, when you use the {@action Help} action to aid an ally in attacking a creature, the target of that attack can be within 30 feet of you, rather than within 5 feet of you, if the target can see or hear you."
-			]
-		},
-		{
-			"name": "Insightful Manipulator",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"Starting at 9th level, if you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
-				{
-					"type": "list",
-					"items": [
-						"Intelligence score",
-						"Wisdom score",
-						"Charisma score",
-						"Class levels (if any)"
-					]
-				},
-				"At the DM's option, you might also realize you know a piece of the creature's history or one of its personality traits, if it has any."
-			]
-		},
-		{
-			"name": "Misdirection",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"Beginning at 13th level, you can sometimes cause another creature to suffer an attack meant for you. When you are targeted by an attack while a creature within 5 feet of you is granting you cover against that attack, you can use your reaction to have the attack target that creature instead of you."
-			]
-		},
-		{
-			"name": "Soul of Deceit",
-			"source": "XGE",
-			"page": 46,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Mastermind",
-			"subclassSource": "XGE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"Starting at 17th level, your thoughts can't be read by telepathy or other means, unless you allow it. You can present false thoughts by succeeding on a Charisma ({@skill Deception}) check contested by the mind reader's Wisdom ({@skill Insight}) check.",
-				"Additionally, no matter what you say, magic that would determine if you are telling the truth indicates you are being truthful if you so choose, and you can't be compelled to tell the truth by magic."
-			]
-		},
-		{
-			"name": "Scout",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"You are skilled in stealth and surviving far from the streets of a city, allowing you to scout ahead of your companions during expeditions. Rogues who embrace this archetype are at home in the wilderness and among barbarians and rangers, and many Scouts serve as the eyes and ears of war bands. Ambusher, spy, bounty hunter\u2014these are just a few of the roles that Scouts assume as they range the world.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Skirmisher|Rogue||Scout|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Survivalist|Rogue||Scout|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Skirmisher",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, you are difficult to pin down during a fight. You can move up to half your speed as a reaction when an enemy ends its turn within 5 feet of you. This movement doesn't provoke opportunity attacks."
-			]
-		},
-		{
-			"name": "Survivalist",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency in the {@skill Nature} and {@skill Survival} skills if you don't already have it. Your proficiency bonus is doubled for any ability check you make that uses either of those proficiencies."
-			]
-		},
-		{
-			"name": "Superior Mobility",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"At 9th level, your walking speed increases by 10 feet. If you have a climbing or swimming speed, this increase applies to that speed as well."
-			]
-		},
-		{
-			"name": "Ambush Master",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"Starting at 13th level, you excel at leading ambushes and acting first in a fight.",
-				"You have advantage on initiative rolls. In addition, the first creature you hit during the first round of a combat becomes easier for you and others to strike; attack rolls against that target have advantage until the start of your next turn."
-			]
-		},
-		{
-			"name": "Sudden Strike",
-			"source": "XGE",
-			"page": 47,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Scout",
-			"subclassSource": "XGE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"Starting at 17th level, you can strike with deadly speed. If you take the {@action Attack} action on your turn, you can make one additional attack as a bonus action. This attack can benefit from your Sneak Attack even if you have already used it this turn, but you can't use your Sneak Attack against the same target more than once in a turn."
-			]
-		},
-		{
-			"name": "Swashbuckler",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 3,
-			"entries": [
-				"You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.",
-				"A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent.",
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Fancy Footwork|Rogue||Swashbuckler|XGE|3"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Rakish Audacity|Rogue||Swashbuckler|XGE|3"
-				}
-			]
-		},
-		{
-			"name": "Fancy Footwork",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"When you choose this archetype at 3rd level, you learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature can't make opportunity attacks against you for the rest of your turn."
-			]
-		},
-		{
-			"name": "Rakish Audacity",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 3,
-			"header": 1,
-			"entries": [
-				"Starting at 3rd level, your confidence propels you into battle. You can give yourself a bonus to your initiative rolls equal to your Charisma modifier.",
-				"You also gain an additional way to use your Sneak Attack; you don't need advantage on your attack roll to use Sneak Attack against a creature if you are within 5 feet of it, no other creatures are within 5 feet of you, and you don't have disadvantage on the attack roll. All the other rules for Sneak Attack still apply to you."
-			]
-		},
-		{
-			"name": "Panache",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 9,
-			"header": 2,
-			"entries": [
-				"At 9th level, your charm becomes extraordinarily beguiling. As an action, you can make a Charisma ({@skill Persuasion}) check contested by a creature's Wisdom ({@skill Insight}) check. The creature must be able to hear you, and the two of you must share a language.",
-				"If you succeed on the check and the creature is hostile to you, it has disadvantage on attack rolls against targets other than you and can't make opportunity attacks against targets other than you. This effect lasts for 1 minute, until one of your companions attacks the target or affects it with a spell, or until you and the target are more than 60 feet apart.",
-				"If you succeed on the check and the creature isn't hostile to you, it is {@condition charmed} by you for 1 minute. While {@condition charmed}, it regards you as a friendly acquaintance. This effect ends immediately if you or your companions do anything harmful to it."
-			]
-		},
-		{
-			"name": "Elegant Maneuver",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 13,
-			"header": 2,
-			"entries": [
-				"Starting at 13th level, you can use a bonus action on your turn to gain advantage on the next Dexterity ({@skill Acrobatics}) or Strength ({@skill Athletics}) check you make during the same turn."
-			]
-		},
-		{
-			"name": "Master Duelist",
-			"source": "XGE",
-			"page": 48,
-			"className": "Rogue",
-			"classSource": "PHB",
-			"subclassShortName": "Swashbuckler",
-			"subclassSource": "XGE",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"Beginning at 17th level, your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you can roll it again with advantage. Once you do so, you can't use this feature again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Psi-Bolstered Knack",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "TCE",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 3,
-			"consumes": {
-				"name": "Psionic Energy Die"
-			},
-			"entries": [
-				"When your nonpsionic training fails you, your psionic power can help: if you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds."
-			]
-		},
-		{
-			"name": "Psychic Whispers",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "TCE",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 3,
-			"entries": [
-				"You can establish telepathic communication between yourself and others-perfect for quiet infiltration. As an action, choose one or more creatures you can see, up to a number of creatures equal to your proficiency bonus, and then roll one Psionic Energy die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can't use this telepathy if it can't speak any languages, and a creature can end the telepathic connection at any time (no action required). You and the creature don't need to speak a common language to understand each other.",
-				"The first time you use this power after each long rest, you don't expend the Psionic Energy die. All other times you use the power, you expend the die."
-			]
-		},
-		{
-			"name": "Homing Strikes",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "TCE",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 9,
-			"entries": [
-				"If you make an attack roll with your Psychic Blades and miss the target, you can roll one Psionic Energy die and add the number rolled to the attack roll. If this causes the attack to hit, you expend the Psionic Energy die."
-			]
-		},
-		{
-			"name": "Psychic Teleportation",
-			"source": "TCE",
-			"page": 63,
-			"className": "Rogue",
-			"classSource": "TCE",
-			"subclassShortName": "Soulknife",
-			"subclassSource": "TCE",
-			"level": 9,
-			"entries": [
-				"As a bonus action, you manifest one of your Psychic Blades, expend one Psionic Energy die and roll it, and throw the blade at an unoccupied space you can see, up to a number of feet away equal to 10 times the number rolled. You then teleport to that space, and the blade vanishes."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "游荡者",
+      "ENG_name": "Rogue",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "hd": {
+        "number": 1,
+        "faces": 8
+      },
+      "proficiency": [
+        "敏捷",
+        "int"
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术"
+        ],
+        "weapons": [
+          "简单",
+          "{@item hand crossbow|phb|手弩}",
+          "{@item longsword|phb|长剑}",
+          "{@item rapier|phb|刺剑}",
+          "{@item shortsword|phb|短剑}"
+        ],
+        "tools": [
+          "{@item 盗贼工具|phb}"
+        ],
+        "toolProficiencies": [
+          {
+            "thieves' tools": true
+          }
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:特技",
+                "属性检定:运动",
+                "属性检定:欺瞒",
+                "属性检定:洞悉",
+                "属性检定:威吓",
+                "属性检定:调查",
+                "属性检定:察觉",
+                "属性检定:表演",
+                "属性检定:游说",
+                "属性检定:巧手",
+                "属性检定:隐匿"
+              ],
+              "count": 4
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a)一把{@item 刺剑|phb} 或 (b)一把{@item 短剑|phb}",
+          "(a)一把{@item 短弓|phb}和一个装有{@item 箭(20)|phb|20支箭}的{@item 箭袋|phb} 或 (b)一把{@item 短剑|phb}",
+          "(a)一套{@item 窃贼套装|phb}, (b)一套{@item 地城探险家套装|phb}, 或 (c)一套{@item 探索者套装|phb}",
+          "一件{@item 皮甲|phb}、二把{@item 匕首|phb}、和一套{@item 盗贼工具|phb}"
+        ],
+        "goldAlternative": "{@dice 4d4 × 10|4d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "细剑|PHB"
+            ],
+            "b": [
+              "短剑"
+            ]
+          },
+          {
+            "a": [
+              "短弓|玩家手册",
+              "箭矢 (20)|phb"
+            ],
+            "b": [
+              "短剑"
+            ]
+          },
+          {
+            "a": [
+              "盗贼包|PHB"
+            ],
+            "b": [
+              "探险者背包|phb"
+            ],
+            "c": [
+              "探险家背包|phb"
+            ]
+          },
+          {
+            "_": [
+              "皮甲|phb",
+              {
+                "item": "匕首|phb",
+                "quantity": 2
+              },
+              "盗贼工具|phb"
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "dex": 13
+        },
+        "proficienciesGained": {
+          "armor": [
+            "光亮术"
+          ],
+          "skills": [
+            {
+              "choose": {
+                "from": [
+                  "属性检定:特技",
+                  "属性检定:运动",
+                  "属性检定:欺瞒",
+                  "属性检定:洞悉",
+                  "属性检定:威吓",
+                  "属性检定:调查",
+                  "属性检定:察觉",
+                  "属性检定:表演",
+                  "属性检定:游说",
+                  "属性检定:巧手",
+                  "属性检定:隐匿"
+                ],
+                "count": 1
+              }
+            }
+          ],
+          "tools": [
+            "{@item 盗贼工具|PHB}"
+          ],
+          "toolProficiencies": [
+            {
+              "thieves' tools": true
+            }
+          ]
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "偷袭伤害"
+          ],
+          "rows": [
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 1,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 1,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 2,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 2,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 3,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 3,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 4,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 4,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 5,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 5,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 6,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 6,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 7,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 7,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 8,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 8,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 9,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 9,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 10,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            },
+            {
+              "type": "dice",
+              "toRoll": [
+                {
+                  "number": 10,
+                  "faces": 6
+                }
+              ],
+              "rollable": true
+            }
+          ]
+        }
+      ],
+      "classFeatures": [
+        "专长|盗贼||1",
+        "偷袭|流氓||1",
+        "盗贼密语|盗贼||1",
+        "狡猾行动|盗贼||2",
+        {
+          "classFeature": "流氓原型|盗贼||3",
+          "gainSubclassFeature": true
+        },
+        "稳定瞄准|盗贼||3|TCE",
+        "能力值提升|盗贼||4",
+        "灵巧闪避|盗贼||5",
+        "专家级|盗贼||6",
+        "闪避|盗贼||7",
+        "能力值提升|盗贼||8",
+        {
+          "classFeature": "盗贼原型特性|盗贼||9",
+          "gainSubclassFeature": true
+        },
+        "能力值提升|盗贼||10",
+        "可靠天赋|盗贼||11",
+        "能力值提升|盗贼||12",
+        {
+          "classFeature": "盗贼原型特性|盗贼||13",
+          "gainSubclassFeature": true
+        },
+        "盲感|盗贼||14",
+        "滑溜心智|盗贼||15",
+        "能力值提升|盗贼||16",
+        {
+          "classFeature": "盗贼原型特性|盗贼||17",
+          "gainSubclassFeature": true
+        },
+        "难以捉摸|盗贼||18",
+        "能力值提升|盗贼||19",
+        "幸运一击|盗贼||20"
+      ],
+      "subclassTitle": "游荡者:游荡者范型",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "诡术师",
+      "ENG_name": "Arcane Trickster",
+      "shortName": "诡术师",
+      "source": "PHB",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 97,
+      "spellcastingAbility": "int",
+      "casterProgression": "1/3",
+      "cantripProgression": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "spellsKnownProgression": [
+        0,
+        0,
+        3,
+        4,
+        4,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        8,
+        9,
+        10,
+        10,
+        11,
+        11,
+        11,
+        12,
+        13
+      ],
+      "additionalSpells": [
+        {
+          "known": {
+            "3": [
+              "#c魔法手"
+            ]
+          },
+          "expanded": {
+            "3": [
+              {
+                "all": "等级=0|职业=巫师"
+              },
+              {
+                "all": "等级=1|职业=巫师"
+              }
+            ],
+            "7": [
+              {
+                "all": "等级=2|职业=巫师"
+              }
+            ],
+            "13": [
+              {
+                "all": "等级=3|职业=巫师"
+              }
+            ],
+            "19": [
+              {
+                "all": "等级=4|职业=巫师"
+              }
+            ]
+          }
+        }
+      ],
+      "subclassTableGroups": [
+        {
+          "subclasses": [
+            {
+              "name": "诡术师",
+              "ENG_name": "Arcane Trickster",
+              "source": "PHB"
+            }
+          ],
+          "colLabels": [
+            "{@filter 已知戏法|法术|等级=0|子类=盗贼：奥术诡术师}",
+            "{@filter 已知法术|法术|子类=盗贼：奥术诡术师}"
+          ],
+          "rows": [
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            4,
+            3,
+            4,
+            3,
+            4,
+            3,
+            5,
+            3,
+            6,
+            3,
+            6,
+            4,
+            7,
+            4,
+            8,
+            4,
+            8,
+            4,
+            9,
+            4,
+            10,
+            4,
+            10,
+            4,
+            11,
+            4,
+            11,
+            4,
+            11,
+            4,
+            12,
+            4,
+            13
+          ]
+        },
+        {
+          "title": "每个法术等级的法术位",
+          "subclasses": [
+            {
+              "name": "诡术师",
+              "ENG_name": "Arcane Trickster",
+              "source": "PHB"
+            }
+          ],
+          "colLabels": [
+            "{@filter 1级|法术|等级=1|子类=盗贼：奥术诡术师}",
+            "{@filter 第2级|法术|等级=2|子类=盗贼：奥术诡术师}",
+            "{@filter 第三级|法术|等级=3|子类=盗贼：奥术诡术师}",
+            "{@filter 4级|法术|等级=4|子类=盗贼：奥术诡术师}"
+          ],
+          "rowsSpellProgression": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            2,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            0,
+            4,
+            3,
+            3,
+            1,
+            4,
+            3,
+            3,
+            1
+          ]
+        }
+      ],
+      "subclassFeatures": [
+        "奥术诡术师|盗贼||奥术诡术师||3",
+        "魔法伏击|盗贼||奥术诡术师||9",
+        "多才多艺的诡术师|盗贼||奥术诡术师||13",
+        "法术窃贼|盗贼||奥术诡术师||17"
+      ]
+    },
+    {
+      "name": "刺客",
+      "ENG_name": "Assassin",
+      "shortName": "刺客",
+      "source": "PHB",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 97,
+      "subclassFeatures": [
+        "刺客|盗贼||刺客||3",
+        "潜入专家|盗贼||刺客||9",
+        "冒牌者|盗贼||刺客||13",
+        "致命打击|盗贼||刺客||17"
+      ]
+    },
+    {
+      "name": "盗贼",
+      "ENG_name": "Thief",
+      "shortName": "盗贼",
+      "source": "PHB",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "subclassFeatures": [
+        "盗贼|盗贼||盗贼||3",
+        "至高潜行|盗贼||窃贼||9",
+        "使用魔法装置|盗贼||小偷||13",
+        "小偷的反应|盗贼||小偷||17"
+      ]
+    },
+    {
+      "name": "调查员",
+      "ENG_name": "Inquisitive",
+      "shortName": "调查员",
+      "source": "XGE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 45,
+      "subclassFeatures": [
+        "好奇者|盗贼||好奇者|XGE|3",
+        "稳定目光|盗贼||审问者|XGE|9",
+        "不偏不倚之眼|盗贼||好奇者|XGE|13",
+        "洞察弱点|盗贼||好奇者|XGE|17"
+      ]
+    },
+    {
+      "name": "策士",
+      "ENG_name": "Mastermind",
+      "shortName": "策士",
+      "source": "XGE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 46,
+      "otherSources": [
+        {
+          "source": "SCAG",
+          "page": 135
+        }
+      ],
+      "subclassFeatures": [
+        "策划者|盗贼||策划者|XGE|3",
+        "洞察操纵者|盗贼||策划者|XGE|9",
+        "误导|盗贼||心智主宰者|XGE|13",
+        "欺骗之魂|盗贼||策划者|XGE|17"
+      ]
+    },
+    {
+      "name": "斥候",
+      "ENG_name": "Scout",
+      "shortName": "斥候",
+      "source": "XGE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 47,
+      "subclassFeatures": [
+        "侦察兵|盗贼||侦察兵|XGE|3",
+        "卓越机动性|盗贼||侦察者|XGE|9",
+        "伏击大师|盗贼||侦查员|XGE|13",
+        "突袭|盗贼||侦察兵|XGE|17"
+      ]
+    },
+    {
+      "name": "风流剑客",
+      "ENG_name": "Swashbuckler",
+      "shortName": "风流剑客",
+      "source": "XGE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 48,
+      "otherSources": [
+        {
+          "source": "SCAG",
+          "page": 135
+        }
+      ],
+      "subclassFeatures": [
+        "风骚剑客|盗贼||风骚剑客|XGE|3",
+        "风度|盗贼||风雅剑客|XGE|9",
+        "优雅机动|盗贼||海盗|XGE|13",
+        "大师决斗家|盗贼||风骚剑客|XGE|17"
+      ]
+    },
+    {
+      "name": "鬼魅",
+      "ENG_name": "Phantom",
+      "shortName": "鬼魅",
+      "source": "TCE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 62,
+      "subclassFeatures": [
+        "幻影|盗贼||幻影|TCE|3",
+        "逝者之币|盗贼||幻影|TCE|9",
+        "幽魂行走|盗贼||幻影|TCE|13",
+        "死亡之友|盗贼||幻影|TCE|17"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "魂刃",
+      "ENG_name": "Soulknife",
+      "shortName": "魂刃",
+      "source": "TCE",
+      "className": "游荡者",
+      "classSource": "PHB",
+      "page": 63,
+      "subclassFeatures": [
+        "灵刃|盗贼||灵刃|TCE|3",
+        "灵刃|盗贼||灵刃|TCE|9",
+        "心灵面纱|盗贼||灵刃|TCE|13",
+        "心灵撕裂|盗贼||灵刃|TCE|17"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "吟游诗人:专精",
+      "ENG_name": "Expertise",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "在1级时，选择两项你的技能熟练度，或者选择一项技能熟练度以及你对{@item 盗贼工具|phb}的熟练度。当你使用所选熟练度进行任何能力检定时，你的熟练加值会翻倍。",
+        "在6级时，你可以选择两项你的熟练项（在技能或使用{@item thieves' tools|phb}}）来获得此好处。"
+      ]
+    },
+    {
+      "name": "偷袭",
+      "ENG_name": "Sneak Attack",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "从1级开始，你知道如何巧妙地打击并利用敌人的分心。每回合一次，如果你在攻击检定上有优势，你可以对被你击中的生物额外造成{@damage 1d6}伤害。攻击必须使用灵巧武器或远程武器。",
+        "如果目标的另一个敌人在其5英尺范围内，该敌人没有处于{@condition incapacitated}状态，且你没有攻击检定的劣势，你不需要优势来进行攻击掷骰。",
+        "随着你在本职业中等级的提升，额外伤害的量会增加，如盗贼表格中的偷袭列所示。"
+      ]
+    },
+    {
+      "name": "盗贼黑话",
+      "ENG_name": "Thieves' Cant",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "在你的盗贼训练中，你学会了盗贼的隐语，这是一种秘密的方言、行话和代码的混合，允许你在看似普通的对话中隐藏信息。只有知道盗贼隐语的生物才能理解这样的信息。传达这样的信息比直接说出同样的想法需要四倍的时间。",
+        "此外，你理解一套用于传递简短信息的秘密手势和符号，例如某个区域是否危险或盗贼公会的领地，附近是否有赃物，或者某个区域的人是否容易成为目标，或者是否会为逃亡的盗贼提供安全的藏身之处。"
+      ]
+    },
+    {
+      "name": "巧妙动作",
+      "ENG_name": "Cunning Action",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "从2级开始，你的快速思考和敏捷让你能够快速移动和行动。你可以在战斗中的每一回合使用一次额外动作。这个动作只能用于执行{@action 冲刺}、{@action 脱离战斗}或{@action 隐藏}动作。"
+      ]
+    },
+    {
+      "name": "游荡者:游荡者范型",
+      "ENG_name": "Roguish Archetype",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在3级时，你从可用的原型列表中选择一个你模仿的原型，以行使你的盗贼能力。你的原型选择在3级时赋予你特性，然后在9级、13级和17级时再次赋予你特性。"
+      ]
+    },
+    {
+      "name": "游荡者:手稳就准",
+      "ENG_name": "Steady Aim",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 3,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 第三级盗贼{@variantrule 可选职业特性|tce|可选特性}}",
+        "作为一个奖励动作，你使自己在当前回合的下一次攻击检定上获得优势。只有在本回合你没有移动的情况下，你才能使用这个奖励动作，并且在使用奖励动作之后，直到当前回合结束，你的速度变为0。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "直觉闪避",
+      "ENG_name": "Uncanny Dodge",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 5,
+      "entries": [
+        "从5级开始，当一个你能看到的攻击者用攻击命中你时，你可以使用你的反应来将对你的攻击伤害减半。"
+      ]
+    },
+    {
+      "name": "吟游诗人:专精",
+      "ENG_name": "Expertise",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "在6级时，你可以选择两项你的熟练技能（在技能或使用{@item thieves' tools|phb}}）以获得专精的益处。"
+      ]
+    },
+    {
+      "name": "反射闪避",
+      "ENG_name": "Evasion",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 7,
+      "entries": [
+        "从7级开始，你可以灵活地躲避某些区域效果，例如红龙的火焰呼吸或{@spell 冰风暴}法术。当你遭受允许你进行敏捷豁免检定以只承受一半伤害的效果时，如果你成功通过豁免检定，你将不承受任何伤害；如果你失败，你只承受一半伤害。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游荡者范型能力",
+      "ENG_name": "Roguish Archetype feature",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 9,
+      "entries": [
+        "在9级时，你获得了由你的盗贼原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "当你达到10级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游荡者:可靠才能",
+      "ENG_name": "Reliable Talent",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 11,
+      "entries": [
+        "By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a {@dice d20} roll of 9 or lower as a 10."
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游荡者范型能力",
+      "ENG_name": "Roguish Archetype feature",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 13,
+      "entries": [
+        "在13级时，你获得了由你的盗贼原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "游荡者:听声辨位",
+      "ENG_name": "Blindsense",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "从14级开始，如果你能听到，你能感知到任何隐藏或{@condition 隐形}生物在你10英尺范围内的位置。"
+      ]
+    },
+    {
+      "name": "游荡者:圆滑心智",
+      "ENG_name": "Slippery Mind",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 15,
+      "entries": [
+        "到了15级，你已经获得了更强的精神力量。你在智力豁免投掷上获得熟练。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游荡者范型能力",
+      "ENG_name": "Roguish Archetype feature",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，你获得了由你的盗贼原型赋予的特性。"
+      ]
+    },
+    {
+      "name": "游荡者:飘忽不定",
+      "ENG_name": "Elusive",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 18,
+      "entries": [
+        "从18级开始，你变得如此善于躲避，以至于攻击者很少能占据上风。只要你没有处于{@condition incapacitated}状态，就没有攻击检定能对你获得优势。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "游荡者:幸运一击",
+      "ENG_name": "Stroke of Luck",
+      "source": "PHB",
+      "page": 94,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the {@dice d20} roll as a 20.",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "诡术师",
+      "ENG_name": "Arcane Trickster",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "一些盗贼通过魔法增强了他们精细的潜行和敏捷技能，学会了魅惑和幻象的技巧。这些盗贼中包括扒手和窃贼，但也包括恶作剧者、麻烦制造者以及相当数量的冒险者。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "施法|盗贼||奥术诡术师||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "法师之手戏法|盗贼||奥术诡术师||3"
+        }
+      ]
+    },
+    {
+      "name": "诡术师:法师之手诈术",
+      "ENG_name": "Mage Hand Legerdemain",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你施放{@spell mage hand}时，你可以使这个幽灵手{@condition invisible}，并且你可以用它执行以下额外的任务：",
+        {
+          "type": "list",
+          "items": [
+            "你可以将手拿着的一个物品放入另一个生物穿戴或携带的容器中。",
+            "你可以从一个被另一个生物穿着或携带的容器中取出一个物品。",
+            "你可以使用{@item thieves' tools|phb}在一定距离内撬锁和解除陷阱。"
+          ]
+        },
+        "如果你成功通过一次敏捷（{@skill 手法})检定，并与生物的智力（{@skill 感知})检定竞争成功，你可以在不被生物注意到的情况下执行这些任务之一。",
+        "此外，你可以使用你的狡猾行动所赋予的奖励行动来控制这只手。"
+      ]
+    },
+    {
+      "name": "施法",
+      "ENG_name": "Spellcasting",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你达到3级时，你获得了施放法术的能力。参见《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 巫师法术列表|spells|class=wizard}。",
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "戏法",
+              "ENG_name": "Cantrips",
+              "entries": [
+                "你学会了三个戏法：{@spell 法师之手}以及你从巫师法术列表中选择的另外两个戏法。在10级时，你将从巫师法术列表中再选择一个戏法学习。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "术士:施法能力",
+              "ENG_name": "Spell Slots",
+              "entries": [
+                "奥术诡术师法术施法表显示了你拥有多少法术位来施放1级和更高级别的{@filter 巫师法术|法术|职业=巫师}。要施放这些法术之一，你必须消耗一个法术位，其等级等于或高于该法术。当你完成一次长时间的休息时，你恢复所有消耗的法术位。",
+                "例如，如果你知道1级法术{@spell 魅惑人类}，并且有一个1级和一个2级法术位可用，你可以使用任一法术位来施放{@spell 魅惑人类}。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "已知的1级及以上法术",
+              "ENG_name": "Spells Known of 1st-Level and Higher",
+              "entries": [
+                "你知晓三个1级巫师法术，你可以选择，其中两个必须是从巫师法术列表中的魅惑和幻象法术中选择。",
+                "奥术诡术师法术施法表中的已知法术列显示了你何时学习更多的1级或更高级别的巫师法术。这些法术中的每一个必须是你选择的附魔或幻术法术，并且必须是你拥有法术位的等级。例如，当你在这个职业达到7级时，你可以学习一个新的1级或2级法术。",
+                "你在8级、14级和20级学到的法术可以来自任何魔法学派。",
+                "每当你在本职业中升级时，你可以将你所知的巫师法术中的一个替换为巫师法术列表中你选择的另一个法术。新法术必须是你拥有法术位的等级，并且必须是附魔或幻术法术，除非你正在替换你在3级、8级、14级或20级从任何魔法学派获得的法术。"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "entries": [
+            {
+              "type": "entries",
+              "name": "施法关键属性",
+              "ENG_name": "Spellcasting Ability",
+              "entries": [
+                "智力是你的法术施法能力，因为你通过专注学习和记忆来学习你的法术。每当法术提及你的法术施法能力时，你都使用你的智力。此外，当你为施放的巫师法术设定豁免投掷的DC（难度等级）以及进行法术攻击投掷时，你使用你的智力调整值。",
+                {
+                  "type": "abilityDc",
+                  "name": "法术",
+                  "ENG_name": "Spell",
+                  "attributes": [
+                    "int"
+                  ]
+                },
+                {
+                  "type": "abilityAttackMod",
+                  "name": "法术",
+                  "ENG_name": "Spell",
+                  "attributes": [
+                    "int"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "诡术师:诡术伏击",
+      "ENG_name": "Magical Ambush",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，如果你在对生物施放法术时对其处于隐藏状态，该生物在本回合对该法术的所有豁免投掷上将处于劣势。"
+      ]
+    },
+    {
+      "name": "诡术师:万能诡术",
+      "ENG_name": "Versatile Trickster",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "在13级时，你获得了使用你的{@spell 法师之手}分散目标注意力的能力。在你的回合上，作为一个奖励动作，你可以指定一个在法术创造的幽灵手5英尺范围内的生物。这样做可以让你在本回合对该生物的所有攻击检定上获得优势。"
+      ]
+    },
+    {
+      "name": "诡术师:法术窃贼",
+      "ENG_name": "Spell Thief",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "诡术师",
+      "subclassSource": "PHB",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "在17级时，你获得了一种魔法能力，能够从另一个施法者那里偷取施放法术的知识。",
+        "当一个生物施放一个以你为目标或将你包括在其作用范围内的法术后，你可以立即使用反应来迫使该生物进行法术豁免投掷，使用其施法能力调整值。难度等级等于你的法术豁免DC。如果豁免失败，你将抵消该法术对你的效果，并且如果你可以施放至少1级的法术（它不需要是巫师法术），你将窃取该法术的知识。在接下来的8小时内，你知道这个法术，并可以使用你的法术位来施放它。在8小时过去之前，该生物不能施放那个法术。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "刺客",
+      "ENG_name": "Assassin",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "你专注于死亡的残酷艺术。坚持这一原型的人是多样化的——雇佣杀手、间谍、赏金猎人，甚至是特别任命的祭司，他们被训练来消灭他们神祇的敌人。隐秘、毒药和伪装帮助你以致命的效率消灭你的敌人。",
+        "你的原型在3级时赋予你特性，然后在9级、13级和17级时再次赋予你特性。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "暗杀|盗贼||刺客||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外熟练度|盗贼||刺客||3"
+        }
+      ]
+    },
+    {
+      "name": "刺杀",
+      "ENG_name": "Assassinate",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，当你出其不意地攻击敌人时最为致命。你对任何尚未在战斗中轮到回合的生物进行攻击检定时拥有优势。此外，你对被{@quickref Surprise|PHB|3|0|突袭}的生物造成的任何命中都是致命一击。"
+      ]
+    },
+    {
+      "name": "剑舞学院:附赠熟练项",
+      "ENG_name": "Bonus Proficiencies",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个原型，你获得了对{@item 伪装工具包|phb}和{@item 毒药工具包|phb}的熟练度。"
+      ]
+    },
+    {
+      "name": "刺客:专业渗透",
+      "ENG_name": "Infiltration Expertise",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，你可以始终如一地为自己创造虚假身份。你必须花费7天和25金币来建立一个身份的历史、职业和关系。你不能建立属于别人的身份。例如，你可能会获得适当的服装、介绍信和官方看起来的认证，以确立自己作为一个来自遥远城市的贸易公司的成员，以便你可以混入其他富有商人的公司中。",
+        "此后，如果你采用这个新身份作为伪装，其他生物会相信你就是那个人，除非有明显的理由不相信。"
+      ]
+    },
+    {
+      "name": "刺客:冒充者",
+      "ENG_name": "Impostor",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "在13级时，你获得了准确无误地模仿另一个人的言语、书写和行为的能力。你必须至少花费三个小时研究这个人行为的这三个组成部分，聆听言语、检查笔迹和观察举止。",
+        "你的伪装对于偶然的观察者来说是难以察觉的。如果一个警惕的生物怀疑有什么不对劲，你在任何魅力（{@skill 欺骗}）检定上都有优势，以避免被发现。"
+      ]
+    },
+    {
+      "name": "刺客:致命一击",
+      "ENG_name": "Death Strike",
+      "source": "PHB",
+      "page": 97,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "刺客",
+      "subclassSource": "PHB",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "从17级开始，你成为了瞬间死亡的大师。当你攻击并击中一个处于{@quickref 突袭|PHB|3|0|突袭}状态的生物时，它必须进行一次体质豁免投掷（难度等级 8 + 你的敏捷修正值 + 你的熟练加值）。如果豁免失败，你对生物的攻击伤害翻倍。"
+      ]
+    },
+    {
+      "name": "盗贼",
+      "ENG_name": "Thief",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 3,
+      "entries": [
+        "你磨练了盗窃艺术的技能。盗贼、强盗、扒手和其他罪犯通常遵循这种原型，但那些自视为专业寻宝者、探险家、挖掘者和调查员的盗贼也是如此。除了提高你的敏捷和潜行能力外，你还学习了对深入古代遗迹、阅读不熟悉的语言以及使用你通常无法使用的物品有用的技能。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "快手|盗贼||小偷||3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "攀爬屋顶|盗贼||小偷||3"
+        }
+      ]
+    },
+    {
+      "name": "盗贼:快手",
+      "ENG_name": "Fast Hands",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你可以使用你的狡猾行动所赋予的奖励动作来进行敏捷（{@skill 手法}）检定，使用你的{@item 盗贼工具|phb}来解除陷阱或打开锁，或者进行{@action 使用物品}动作。"
+      ]
+    },
+    {
+      "name": "盗贼:梁上君子",
+      "ENG_name": "Second-Story Work",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个原型，你获得了比正常更快的攀爬能力；攀爬不再消耗你额外的移动力。",
+        "此外，当你进行助跑跳跃时，你覆盖的距离会增加，增加的英尺数等于你的敏捷修正值。"
+      ]
+    },
+    {
+      "name": "盗贼:极效潜行",
+      "ENG_name": "Supreme Sneak",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，如果你在同一回合内移动的距离不超过你速度的一半，你在敏捷（{@skill 潜行}）检定上具有优势。"
+      ]
+    },
+    {
+      "name": "盗贼:使用魔法装置",
+      "ENG_name": "Use Magic Device",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "到了13级，你对魔法的运作已经足够了解，以至于你甚至可以在物品不为你设计时即兴使用它们。在使用魔法物品时，你忽略了所有职业、种族和等级的要求。"
+      ]
+    },
+    {
+      "name": "盗贼:窃盗本能",
+      "ENG_name": "Thief's Reflexes",
+      "source": "PHB",
+      "page": 97,
+      "srd": true,
+      "basicRules": true,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "盗贼",
+      "subclassSource": "PHB",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "当你达到17级时，你已经变得擅长设置伏击并迅速逃离危险。在任何战斗的第一轮中，你可以进行两次回合。你的第一个回合按照你正常的先攻顺序进行，第二个回合在你的先攻顺序减去10后进行。当你处于{@quickref 突袭|PHB|3|0|突袭}状态时，你不能使用这个特性。"
+      ]
+    },
+    {
+      "name": "鬼魅",
+      "ENG_name": "Phantom",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "许多盗贼在生与死的边缘行走，冒着自己的生命危险并夺走他人的生命。在这条线上冒险时，一些盗贼发现了与死亡本身的神秘联系。这些盗贼从死者那里获取知识，沉浸在负能量中，最终变得像幽灵一样。盗贼公会将他们视为高效的信息收集者和间谍。",
+        "许多暗影界的沙达凯是这些阴森技巧的大师，有些愿意教授这条道路。在被遗忘的国度中的泰瑟或艾伯伦的卡纳斯等地方，许多死灵法师在那里练习他们的技艺，幻影可以成为巫师的密友和得力助手。在死神的神庙中，幻影可能作为代理人追踪那些试图欺骗死亡的人，并恢复那些否则可能会被埋葬的知识。",
+        "你是如何发现这种阴森力量的？你是在墓地中睡觉并醒来发现自己的新能力吗？还是你在供奉死神的神庙或盗贼公会中培养了它们？",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "死者低语|盗贼||幻影|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "坟墓中的哀嚎|盗贼||幻影|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "鬼魅:墓穴惊嚎",
+      "ENG_name": "Wails from the Grave",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级幻影特性}",
+        "当你将某人推向坟墓时，你可以引导死亡的力量来伤害另一个人。在你的回合上，对一个生物造成偷袭伤害后，你可以选择一个在第一个生物30英尺内你能看到的第二个生物作为目标。投掷等于你偷袭骰数量一半的骰子（如果结果是小数则向上取整），第二个生物会受到等同于投掷总和的死灵伤害，因为死者的哀嚎在他们周围响起片刻。",
+        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+      ]
+    },
+    {
+      "name": "鬼魅:亡者余声",
+      "ENG_name": "Whispers of the Dead",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级幻影特性}",
+        "那些死去之人的回声依附于你。每当你完成一次短休或长休，你可以选择一项你所不具备的技能或工具熟练度并获得它，因为一位幽灵般的存在与你分享了它的知识。当你使用这个特性选择另一项你所不具备的熟练度时，你将失去这项熟练度。"
+      ]
+    },
+    {
+      "name": "鬼魅:逝者遗物",
+      "ENG_name": "Tokens of the Departed",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "{@i 第九级幻影特性}",
+        "当你面前的生命终结时，你能够从离去的灵魂中夺取一个代币，这是它生命本质的一小部分，以实物形式出现：当一个你能看到的生物在你30英尺范围内死亡时，你可以作为反应打开你的空手，让一个小小的饰品出现在那里，一个灵魂饰品。DM决定饰品的形式，或者让你在《玩家手册》中的{@item 饰品|phb|饰品}表格上掷骰子来生成它。你可以拥有的灵魂饰品的最大数量等于你的熟练加值，而且当你达到最大数量时，你不能创造新的。",
+        "你可以以以下方式使用灵魂饰品：",
+        {
+          "type": "list",
+          "items": [
+            "当灵魂饰品在你身上时，你在死亡豁免检定和体质豁免检定上拥有优势，因为你的生命力被物品中的生命本质所增强。",
+            "在你的回合中，当你造成偷袭伤害时，你可以摧毁你身上的一个灵魂饰品，然后立即使用墓地哀嚎，而不需要消耗该特性的使用次数。",
+            "作为一个动作，你可以摧毁你的一个灵魂饰品，无论它位于何处。当你这样做时，你可以向与该饰品相关的灵体提出一个问题。灵体会出现在你面前，并用它生前知道的语言回答。它没有义务说实话，并且尽可能简洁地回答，渴望自由。灵体只知道它生前所知道的事情，由DM决定。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "鬼魅:幽灵漫步",
+      "ENG_name": "Ghost Walk",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "{@i 13级幻影特性}",
+        "你可以部分地进入死者的领域，变得像鬼魂一样。作为一个奖励动作，你进入一个幽灵形态。在这个形态下，你有10英尺的飞行速度，你可以悬浮，并且对你的攻击检定有劣势。你还可以像穿过困难地形一样穿过生物和物体，但如果你的回合结束时位于生物或物体内部，你会受到{@damage 1d10}点力场伤害。",
+        "你保持这种形态10分钟，或者直到你作为奖励行动结束它。要再次使用这个特性，你必须完成一次长时间休息，或者作为你用来激活幽灵行走的奖励行动的一部分，摧毁你的一个灵魂饰品。"
+      ]
+    },
+    {
+      "name": "鬼魅:死亡之友",
+      "ENG_name": "Death's Friend",
+      "source": "TCE",
+      "page": 62,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "鬼魅",
+      "subclassSource": "TCE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "{@i 17级幻影特性}",
+        "你与死亡的联系变得如此紧密，以至于你获得了以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "当你使用你的坟墓哀嚎时，你可以对第一个和第二个生物都造成死灵伤害。",
+            "在长时间的休息结束时，如果你没有灵魂饰品，一个灵魂饰品会出现在你的手中，因为死者的灵魂被你吸引。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "魂刃",
+      "ENG_name": "Soulknife",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "大多数刺客使用物理武器进行攻击，许多盗贼和间谍使用{@item thieves' tools|PHB}来潜入安全地点。相比之下，心灵刀则使用心灵进行攻击和潜入，穿越物理和心灵上的障碍。这些流氓发现自己内心中的灵能力量，并将其引导用于他们流氓般的工作。他们在盗贼公会中容易找到工作，尽管他们常常被那些对使用奇怪心灵力量进行业务的人持怀疑态度的流氓所不信任。大多数政府也会乐于雇佣一个心灵刀作为间谍。",
+        "在物质界的古老森林和仙女野地中，一些木精灵遵循着灵魂刀刃的道路，作为他们森林的沉默、致命的守护者。在吉斯族之间的无尽战争中，当需要对吉斯雅基敌人采取隐秘行动时，鼓励吉斯泽瑞成为灵魂刀刃。",
+        "作为灵魂刀刃，你的灵能能力可能自你小时候就困扰着你，只有在你经历了冒险的压力后才显露出它们的全部潜力。或者你可能寻找了一个隐居的心灵大师组织，并花费多年时间学习如何显现你的力量。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "灵能力量|流氓||心灵刀|TCE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "心灵之刃|流氓||心灵刀|TCE|3"
+        }
+      ]
+    },
+    {
+      "name": "灵能武士:灵能力量",
+      "ENG_name": "Psionic Power",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级灵魂刀刃特性}",
+        "You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
+        "你的一些能力会消耗它们使用的灵能能量骰，如能力描述中指定的那样，如果你的所有骰子都已消耗，你就不能使用需要使用骰子的能力。当你完成一次长休息时，你恢复所有消耗的灵能能量骰。此外，作为一个奖励动作，你可以恢复一个已消耗的灵能能量骰，但直到你完成一次短休息或长休息之前，你不能再这样做。",
+        "When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
+        "以下能力使用你的灵能能量骰。",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵强化技巧|盗贼|TCE|灵魂刀刃|TCE|3"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵低语|流氓|TCE|心灵刀|TCE|3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "低语学院:心灵之刃",
+      "ENG_name": "Psychic Blades",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "{@i 3级灵魂刀刃特性}",
+        "You can manifest your psionic power as shimmering blades of psychic energy. Whenever you take the {@action Attack} action, you can manifest a psychic blade from your free hand and make the attack with that blade. This magic blade is a simple melee weapon with the finesse and thrown properties. It has a normal range of 60 feet and no long range, and on a hit, it deals psychic damage equal to {@dice 1d6} plus the ability modifier you used for the attack roll. The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals damage.",
+        "After you attack with the blade, you can make a melee or ranged weapon attack with a second psychic blade as a bonus action on the same turn, provided your other hand is free to create it. The damage die of this bonus attack is {@dice 1d4}, instead of {@dice 1d6}."
+      ]
+    },
+    {
+      "name": "魂刃:灵魂之刃",
+      "ENG_name": "Soul Blades",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "{@i 第九级心灵刀特性}",
+        "你的心灵之刃现在是你充满灵能的灵魂的体现，赋予你使用灵能力量骰的这些能力：",
+        {
+          "type": "options",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "追踪打击|流氓|TCE|心灵刀|TCE|9"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "心灵传送|盗贼|TCE|灵魂刀刃|TCE|9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "魂刃:灵能面纱",
+      "ENG_name": "Psychic Veil",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "{@i 13级灵魂刀刃特性}",
+        "你可以编织一层心灵静电来掩盖自己。作为一个动作，你可以神奇地变得{@condition invisible}，包括你穿戴或携带的任何东西，持续1小时或直到你解除这个效果（无需动作）。在你对生物造成伤害或迫使生物进行豁免检定后，这个隐形效果会立即提前结束。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你都不能再次使用，除非你消耗一个灵能力量骰来再次使用这个特性。"
+      ]
+    },
+    {
+      "name": "魂刃:撕裂心智",
+      "ENG_name": "Rend Mind",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "{@i 17级灵魂刀刃特性}",
+        "你可以将你的心灵之刃直接扫过生物的心智。当你使用心灵之刃对生物造成偷袭伤害时，你可以迫使目标进行一次智力豁免检定（DC等于8 + 你的熟练加值 + 你的敏捷修正）。如果豁免失败，目标将处于{@condition stunned}状态，持续1分钟。处于{@condition stunned}状态的目标可以在每个回合结束时重复进行豁免检定，成功则结束该效果。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你都不能再次使用，除非你消耗三个灵能力量骰来再次使用它。"
+      ]
+    },
+    {
+      "name": "调查员",
+      "ENG_name": "Inquisitive",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "作为一个典型的好奇者，你在挖掘秘密和解开谜团方面表现卓越。你依赖于你对细节敏锐的观察力，同时也依赖于你对其他生物言行的精细解读能力，以确定他们的真实意图。你在击败隐藏在普通人中并捕食他们的生物方面表现出色，你对知识的掌握和你敏锐的推理使你非常适合揭露和终结隐藏的邪恶。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "识破谎言|流氓||审问者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "洞察细节|流氓||审问者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "洞察战斗|盗贼||好奇者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "调查员:辨谎之耳",
+      "ENG_name": "Ear for Deceit",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "When you choose this archetype at 3rd level, you develop a talent for picking out lies. Whenever you make a Wisdom ({@skill Insight}) check to determine whether a creature is lying, treat a roll of 7 or lower on the {@dice d20} as an 8."
+      ]
+    },
+    {
+      "name": "调查员:鉴识之眼",
+      "ENG_name": "Eye for Detail",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你可以使用奖励行动来进行一次智力（感知）检定，以发现隐藏的生物或物体，或者进行一次智力（调查）检定，以揭露或解读线索。"
+      ]
+    },
+    {
+      "name": "调查员:战术洞悉",
+      "ENG_name": "Insightful Fighting",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "在3级时，你获得了解读对手战术并制定对策的能力。作为一个奖励动作，你可以对一个你能看到且没有被{@condition incapacitated}的生物进行一次智力（{@skill Insight}）检定，与目标的魅力（{@skill Deception}）检定相对抗。如果你成功，即使在攻击检定上没有优势，你也可以对那个目标使用偷袭攻击，但如果在攻击检定上有劣势，则不能使用。",
+        "这项好处持续1分钟，或者直到你成功地用这个特性对付不同的目标。"
+      ]
+    },
+    {
+      "name": "调查员:目不转睛",
+      "ENG_name": "Steady Eye",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，如果你在同一回合内移动的距离不超过你速度的一半，你在任何智力（感知）或智力（调查）检定上都有优势。"
+      ]
+    },
+    {
+      "name": "调查员:火眼金睛",
+      "ENG_name": "Unerring Eye",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "从13级开始，你的感觉几乎不可能被欺骗。作为一个动作，你可以感知到30英尺范围内的幻象、未处于原始形态的变形者以及其他旨在欺骗感官的魔法，前提是你没有被{@condition blinded}或{@condition deafened}。你能感觉到有效果试图欺骗你，但你无法获得隐藏事物或其真实性质的任何洞察。",
+        "你可以使用这个特性的次数等于你智慧属性的调整值（最少一次），并且当你完成一次长时间的休息后，你将重新获得所有已消耗的使用次数。"
+      ]
+    },
+    {
+      "name": "调查员:伺隙锐瞳",
+      "ENG_name": "Eye for Weakness",
+      "source": "XGE",
+      "page": 45,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "调查员",
+      "subclassSource": "XGE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "At 17th level, you learn to exploit a creature's weaknesses by carefully studying its tactics and movement. While your Insightful Fighting feature applies to a creature, your Sneak Attack damage against that creature increases by {@dice 3d6}."
+      ]
+    },
+    {
+      "name": "策士",
+      "ENG_name": "Mastermind",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "你的重点是人以及他们拥有的影响和秘密。许多间谍、宫廷人物和阴谋家遵循这种原型，过着充满阴谋的生活。言语是你的武器，就像刀剑或毒药一样频繁，而秘密和恩惠是你的一些最喜欢的宝藏。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "阴谋大师|流氓||幕后黑手|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "战术大师|盗贼||智谋者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "策士:谋陷大师",
+      "ENG_name": "Master of Intrigue",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个原型，你获得了使用{@item disguise kit|phb}（伪装工具包）、{@item forgery kit|phb}（伪造工具包）以及你选择的一个{@item gaming set|PHB}（游戏套装）的熟练度。你还可以学习两种你选择的语言。",
+        "此外，你可以无误地模仿你听到的生物的说话方式和口音，至少需要听对方说话1分钟，这样你就可以冒充某个特定地区的母语者，前提是你知道那种语言。"
+      ]
+    },
+    {
+      "name": "策士:战术大师",
+      "ENG_name": "Master of Tactics",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你可以使用{@action Help}动作作为奖励动作。此外，当你使用{@action Help}动作帮助盟友攻击生物时，如果目标能看到或听到你，那么目标可以在你30英尺范围内，而不是必须在你5英尺范围内。"
+      ]
+    },
+    {
+      "name": "策士:帷幄之士",
+      "ENG_name": "Insightful Manipulator",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "从9级开始，如果你在战斗之外至少花费1分钟观察或与另一个生物互动，你可以了解与其相比你自己的某些能力信息。DM会告诉你，在这个生物与你相比，在以下两项你选择的特征中，它是你的对手、优越还是劣势：",
+        {
+          "type": "list",
+          "items": [
+            "智力得分",
+            "智力得分",
+            "魅力得分",
+            "职业等级（如果有）"
+          ]
+        },
+        "在DM的选项中，如果你知道的话，你可能还会意识到你知道这个生物的一段历史或者它的一个性格特征，如果它有的话。"
+      ]
+    },
+    {
+      "name": "策士:误导",
+      "ENG_name": "Misdirection",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "从13级开始，有时你可以让另一个生物承受原本针对你的攻击。当你被攻击并且一个生物在你5英尺范围内为你提供了掩护时，你可以使用你的反应让攻击目标改为那个生物而不是你。"
+      ]
+    },
+    {
+      "name": "策士:瞒天之魂",
+      "ENG_name": "Soul of Deceit",
+      "source": "XGE",
+      "page": 46,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "策士",
+      "subclassSource": "XGE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "从17级开始，你的思想不能被心灵感应或其他方式读取，除非你允许。你可以通过成功进行魅力（欺骗）检定，与心灵阅读者的智力（洞察）检定相对抗，来呈现虚假的思想。",
+        "此外，无论你说什么，如果你选择这样做，魔法会显示你是在说真话，而且你不能被魔法强迫说出真话。"
+      ]
+    },
+    {
+      "name": "斥候",
+      "ENG_name": "Scout",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "你擅长隐秘行动，并且在远离城市街道的地方生存，这让你能够在探险时在同伴前面侦察。选择这种原型的盗贼在荒野中如鱼得水，与野蛮人和游侠相处融洽，许多侦察者担任战争团队的耳目。伏击者、间谍、赏金猎人——这些只是侦察者在周游世界时扮演的几种角色。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "游击者|流氓||侦查者|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "生存专家|流氓||侦查者|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "斥候:散兵战术",
+      "ENG_name": "Skirmisher",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，在战斗中你很难被固定住。当一个敌人在其回合结束时距离你5英尺以内，你可以作为反应移动至多你速度的一半。这种移动不会引发机会攻击。"
+      ]
+    },
+    {
+      "name": "斥候:生存专家",
+      "ENG_name": "Survivalist",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个职业分支，如果你还没有的话，你会获得对{@skill Nature}和{@skill Survival}技能的熟练度。你对使用这些熟练度的任何能力检定的熟练加值会翻倍。"
+      ]
+    },
+    {
+      "name": "斥候:优异灵活",
+      "ENG_name": "Superior Mobility",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "在9级时，你的步行速度增加10英尺。如果你有攀爬或游泳速度，这个增加也适用于那个速度。"
+      ]
+    },
+    {
+      "name": "斥候:伏击大师",
+      "ENG_name": "Ambush Master",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "从13级开始，你擅长领导伏击并在战斗中先发制人。",
+        "你在主动权检定上拥有优势。此外，在战斗的第一轮中，你首次击中的第一个生物会变得更容易被你和其他人击中；直到你的下一个回合开始之前，对该目标的攻击检定拥有优势。"
+      ]
+    },
+    {
+      "name": "斥候:瞬息打击",
+      "ENG_name": "Sudden Strike",
+      "source": "XGE",
+      "page": 47,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "斥候",
+      "subclassSource": "XGE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "从17级开始，你可以以致命的速度攻击。如果你在你的回合上采取{@action Attack}动作，你可以作为一个奖励动作进行一次额外的攻击。这次攻击即使在这回合已经使用过，也可以从你的偷袭中受益，但你不能在同一回合中对同一目标使用偷袭超过一次。"
+      ]
+    },
+    {
+      "name": "风流剑客",
+      "ENG_name": "Swashbuckler",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 3,
+      "entries": [
+        "你专注于刀剑艺术的训练，依赖速度、优雅和魅力三者并重。虽然有些战士是穿着重甲的野蛮人，你的战斗方式看起来几乎像是一场表演。决斗者和海盗通常属于这种原型。",
+        "一个剑客擅长单挑，并且可以在安全地躲避对手的同时使用两种武器战斗。",
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "花式步法|盗贼||游侠|XGE|3"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "大胆无畏|盗贼||游侠|XGE|3"
+        }
+      ]
+    },
+    {
+      "name": "游荡剑客:梦幻舞步",
+      "ENG_name": "Fancy Footwork",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "当你在3级时选择这个职业分支，你学会了如何打击并随后无报复地溜走。在你的回合中，如果你对一个生物进行近战攻击，该生物在你回合剩余时间内不能对你进行机会攻击。"
+      ]
+    },
+    {
+      "name": "游荡剑客:潇洒无畏",
+      "ENG_name": "Rakish Audacity",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 3,
+      "header": 1,
+      "entries": [
+        "从3级开始，你的自信推动你进入战斗。你可以给自己的先攻骰增加等于你的魅力调整值的加值。",
+        "此外，你还获得了使用偷袭攻击的另一种方式；如果你在生物5英尺范围内，没有其他生物在你5英尺范围内，并且你的攻击检定没有劣势，你就不需要在攻击检定上具有优势就可以对生物使用偷袭攻击。偷袭攻击的所有其他规则仍然适用于你。"
+      ]
+    },
+    {
+      "name": "游荡剑客:潇洒气质",
+      "ENG_name": "Panache",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 9,
+      "header": 2,
+      "entries": [
+        "在9级时，你的魅力变得非常迷人。作为一项行动，你可以进行一次魅力（说服）检定，与生物的智力（洞察）检定相对抗。该生物必须能听到你说话，并且你们必须共享一种语言。",
+        "如果你在检定中成功了，并且生物对你有敌意，它在对除了你之外的目标进行攻击检定时会有劣势，并且不能对除了你之外的目标进行机会攻击。这个效果持续1分钟，直到你的一个同伴攻击目标或用法术影响它，或者直到你和目标相距超过60英尺。",
+        "如果你在检定中成功，并且该生物对你没有敌意，它将被你{@condition 魅惑}1分钟。在{@condition 魅惑}状态下，它将你视为一个友好的熟人。如果你或你的同伴对它做任何有害的事情，这个效果会立即结束。"
+      ]
+    },
+    {
+      "name": "游荡剑客:优雅战技",
+      "ENG_name": "Elegant Maneuver",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 13,
+      "header": 2,
+      "entries": [
+        "从13级开始，你可以在你的回合上使用奖励动作，在该回合内你下一次进行的敏捷（{@skill Acrobatics}）或力量（{@skill Athletics}）检定时获得优势。"
+      ]
+    },
+    {
+      "name": "游荡剑客:决斗大师",
+      "ENG_name": "Master Duelist",
+      "source": "XGE",
+      "page": 48,
+      "className": "游荡者",
+      "classSource": "PHB",
+      "subclassShortName": "风流剑客",
+      "subclassSource": "XGE",
+      "level": 17,
+      "header": 2,
+      "entries": [
+        "从17级开始，你对刀剑的掌握让你能够在战斗中将失败转化为成功。如果你的攻击骰失败，你可以再次以优势重新掷骰。一旦你这样做了，直到你完成一次短暂或长时间的休息之前，你不能再使用这个特性。"
+      ]
+    },
+    {
+      "name": "灵能诀窍",
+      "ENG_name": "Psi-Bolstered Knack",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "TCE",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 3,
+      "consumes": {
+        "name": "灵能能量骰",
+        "ENG_name": "Psionic Energy Die"
+      },
+      "entries": [
+        "当你的非灵能力训练失败时，你的灵能力量可以提供帮助：如果你在使用你熟练的技能或工具的能力检定中失败，你可以掷一个灵能能量骰并把掷出的数字加到检定上，可能将失败转变为成功。如果检定成功，你才消耗这个骰子。"
+      ]
+    },
+    {
+      "name": "心灵低语",
+      "ENG_name": "Psychic Whispers",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "TCE",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 3,
+      "entries": [
+        "你可以在你自己和其他人之间建立心灵感应通讯——非常适合安静的潜入。作为一项行动，选择你可以看到的一只或多只生物，数量等于你的熟练加值，然后掷一个灵能力量骰。在掷出的数字相等的小时数内，选定的生物可以与你进行心灵感应对话，你也可以与他们进行心灵感应对话。发送或接收消息（不需要行动），你和另一个生物必须在彼此1英里范围内。如果一个生物不能说任何语言，它就不能使用这种心灵感应，一个生物可以随时结束心灵感应连接（不需要行动）。你和生物不需要说共同的语言就能理解对方。",
+        "每次长休后第一次使用这个能力时，你不消耗灵能能量骰。所有其他使用这个能力的时候，你都需要消耗骰子。"
+      ]
+    },
+    {
+      "name": "寻的攻击",
+      "ENG_name": "Homing Strikes",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "TCE",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 9,
+      "entries": [
+        "如果你使用你的心灵之刃进行攻击骰并错过了目标，你可以掷一个灵能力量骰，并将掷出的数字加到攻击骰上。如果这使得攻击命中，你将消耗灵能力量骰。"
+      ]
+    },
+    {
+      "name": "心灵传送",
+      "ENG_name": "Psychic Teleportation",
+      "source": "TCE",
+      "page": 63,
+      "className": "游荡者",
+      "classSource": "TCE",
+      "subclassShortName": "魂刃",
+      "subclassSource": "TCE",
+      "level": 9,
+      "entries": [
+        "作为一个奖励动作，你显现出你的一个心灵之刃，消耗一个灵能能量骰并掷出它，然后将刀刃投掷到你能看到的一个未被占据的空间，距离等于掷出的数字乘以10英尺。然后你传送到那个空间，刀刃随之消失。"
+      ]
+    }
+  ]
 }

@@ -1,2526 +1,2475 @@
 {
-	"class": [
-		{
-			"name": "Warlock",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"hd": {
-				"number": 1,
-				"faces": 8
-			},
-			"proficiency": [
-				"wis",
-				"cha"
-			],
-			"spellcastingAbility": "cha",
-			"casterProgression": "pact",
-			"cantripProgression": [
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4
-			],
-			"spellsKnownProgression": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				12,
-				12,
-				13,
-				13,
-				14,
-				14,
-				15,
-				15
-			],
-			"spellsKnownProgressionFixedByLevel": {
-				"11": {
-					"6": 1
-				},
-				"13": {
-					"7": 1
-				},
-				"15": {
-					"8": 1
-				},
-				"17": {
-					"9": 1
-				}
-			},
-			"optionalfeatureProgression": [
-				{
-					"name": "Eldritch Invocations",
-					"featureType": [
-						"EI"
-					],
-					"progression": [
-						0,
-						2,
-						2,
-						2,
-						3,
-						3,
-						4,
-						4,
-						5,
-						5,
-						5,
-						6,
-						6,
-						6,
-						7,
-						7,
-						7,
-						8,
-						8,
-						8
-					]
-				},
-				{
-					"name": "Pact Boon",
-					"featureType": [
-						"PB"
-					],
-					"progression": {
-						"3": 1
-					}
-				}
-			],
-			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"deception",
-								"history",
-								"intimidation",
-								"investigation",
-								"nature",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
-					"{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}"
-				],
-				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
-				"defaultData": [
-					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "weaponSimple"
-							}
-						]
-					},
-					{
-						"a": [
-							"component pouch|phb"
-						],
-						"b": [
-							{
-								"equipmentType": "focusSpellcastingArcane"
-							}
-						]
-					},
-					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"dungeoneer's pack|phb"
-						]
-					},
-					{
-						"_": [
-							"Leather armor|phb",
-							{
-								"equipmentType": "weaponSimple"
-							},
-							{
-								"item": "dagger|phb",
-								"quantity": 2
-							}
-						]
-					}
-				]
-			},
-			"multiclassing": {
-				"requirements": {
-					"cha": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light"
-					],
-					"weapons": [
-						"simple"
-					]
-				}
-			},
-			"classTableGroups": [
-				{
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Warlock}",
-						"{@filter Spells Known|spells|class=Warlock}",
-						"Spell Slots",
-						"Slot Level",
-						"{@filter Invocations Known|optionalfeatures|feature type=ei}"
-					],
-					"rows": [
-						[
-							2,
-							2,
-							1,
-							"{@filter 1st|spells|level=1|class=Warlock}",
-							0
-						],
-						[
-							2,
-							3,
-							2,
-							"{@filter 1st|spells|level=1|class=Warlock}",
-							2
-						],
-						[
-							2,
-							4,
-							2,
-							"{@filter 2nd|spells|level=2|class=Warlock}",
-							2
-						],
-						[
-							3,
-							5,
-							2,
-							"{@filter 2nd|spells|level=2|class=Warlock}",
-							2
-						],
-						[
-							3,
-							6,
-							2,
-							"{@filter 3rd|spells|level=3|class=Warlock}",
-							3
-						],
-						[
-							3,
-							7,
-							2,
-							"{@filter 3rd|spells|level=3|class=Warlock}",
-							3
-						],
-						[
-							3,
-							8,
-							2,
-							"{@filter 4th|spells|level=4|class=Warlock}",
-							4
-						],
-						[
-							3,
-							9,
-							2,
-							"{@filter 4th|spells|level=4|class=Warlock}",
-							4
-						],
-						[
-							3,
-							10,
-							2,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							5
-						],
-						[
-							4,
-							10,
-							2,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							5
-						],
-						[
-							4,
-							11,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							5
-						],
-						[
-							4,
-							11,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							6
-						],
-						[
-							4,
-							12,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							6
-						],
-						[
-							4,
-							12,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							6
-						],
-						[
-							4,
-							13,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							7
-						],
-						[
-							4,
-							13,
-							3,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							7
-						],
-						[
-							4,
-							14,
-							4,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							7
-						],
-						[
-							4,
-							14,
-							4,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							8
-						],
-						[
-							4,
-							15,
-							4,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							8
-						],
-						[
-							4,
-							15,
-							4,
-							"{@filter 5th|spells|level=5|class=Warlock}",
-							8
-						]
-					]
-				}
-			],
-			"classFeatures": [
-				"Pact Magic|Warlock||1",
-				{
-					"classFeature": "Otherworldly Patron|Warlock||1",
-					"gainSubclassFeature": true
-				},
-				"Eldritch Invocations|Warlock||2",
-				"Pact Boon|Warlock||3",
-				"Ability Score Improvement|Warlock||4",
-				"Eldritch Versatility|Warlock||4|TCE",
-				{
-					"classFeature": "Otherworldly Patron feature|Warlock||6",
-					"gainSubclassFeature": true
-				},
-				"Ability Score Improvement|Warlock||8",
-				{
-					"classFeature": "Otherworldly Patron feature|Warlock||10",
-					"gainSubclassFeature": true
-				},
-				"Mystic Arcanum (6th level)|Warlock||11",
-				"Ability Score Improvement|Warlock||12",
-				"Mystic Arcanum (7th level)|Warlock||13",
-				{
-					"classFeature": "Otherworldly Patron feature|Warlock||14",
-					"gainSubclassFeature": true
-				},
-				"Mystic Arcanum (8th level)|Warlock||15",
-				"Ability Score Improvement|Warlock||16",
-				"Mystic Arcanum (9th level)|Warlock||17",
-				"Ability Score Improvement|Warlock||19",
-				"Eldritch Master|Warlock||20"
-			],
-			"subclassTitle": "Otherworldly Patron",
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	],
-	"subclass": [
-		{
-			"name": "The Archfey",
-			"shortName": "Archfey",
-			"source": "PHB",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 108,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"faerie fire",
-							"sleep"
-						],
-						"s2": [
-							"calm emotions",
-							"phantasmal force"
-						],
-						"s3": [
-							"blink",
-							"plant growth"
-						],
-						"s4": [
-							"dominate beast",
-							"greater invisibility"
-						],
-						"s5": [
-							"dominate person",
-							"seeming"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Archfey|Warlock||Archfey||1",
-				"Misty Escape|Warlock||Archfey||6",
-				"Beguiling Defenses|Warlock||Archfey||10",
-				"Dark Delirium|Warlock||Archfey||14"
-			]
-		},
-		{
-			"name": "The Fiend",
-			"shortName": "Fiend",
-			"source": "PHB",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 109,
-			"srd": true,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"burning hands",
-							"command"
-						],
-						"s2": [
-							"blindness/deafness",
-							"scorching ray"
-						],
-						"s3": [
-							"fireball",
-							"stinking cloud"
-						],
-						"s4": [
-							"fire shield",
-							"wall of fire"
-						],
-						"s5": [
-							"flame strike",
-							"hallow"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Fiend|Warlock||Fiend||1",
-				"Dark One's Own Luck|Warlock||Fiend||6",
-				"Fiendish Resilience|Warlock||Fiend||10",
-				"Hurl Through Hell|Warlock||Fiend||14"
-			]
-		},
-		{
-			"name": "The Great Old One",
-			"shortName": "Great Old One",
-			"source": "PHB",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 109,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"dissonant whispers",
-							"Tasha's hideous laughter"
-						],
-						"s2": [
-							"detect thoughts",
-							"phantasmal force"
-						],
-						"s3": [
-							"clairvoyance",
-							"sending"
-						],
-						"s4": [
-							"dominate beast",
-							"Evard's black tentacles"
-						],
-						"s5": [
-							"dominate person",
-							"telekinesis"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Great Old One|Warlock||Great Old One||1",
-				"Entropic Ward|Warlock||Great Old One||6",
-				"Thought Shield|Warlock||Great Old One||10",
-				"Create Thrall|Warlock||Great Old One||14"
-			]
-		},
-		{
-			"name": "The Undying",
-			"shortName": "Undying",
-			"source": "SCAG",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 139,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": [
-							"spare the dying#c"
-						]
-					},
-					"expanded": {
-						"s1": [
-							"false life",
-							"ray of sickness"
-						],
-						"s2": [
-							"blindness/deafness",
-							"silence"
-						],
-						"s3": [
-							"feign death",
-							"speak with dead"
-						],
-						"s4": [
-							"aura of life",
-							"death ward"
-						],
-						"s5": [
-							"contagion",
-							"legend lore"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Undying|Warlock||Undying|SCAG|1",
-				"Defy Death|Warlock||Undying|SCAG|6",
-				"Undying Nature|Warlock||Undying|SCAG|10",
-				"Indestructible Life|Warlock||Undying|SCAG|14"
-			]
-		},
-		{
-			"name": "The Celestial",
-			"shortName": "Celestial",
-			"source": "XGE",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 54,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": [
-							"sacred flame#c",
-							"light#c"
-						]
-					},
-					"expanded": {
-						"s1": [
-							"cure wounds",
-							"guiding bolt"
-						],
-						"s2": [
-							"flaming sphere",
-							"lesser restoration"
-						],
-						"s3": [
-							"daylight",
-							"revivify"
-						],
-						"s4": [
-							"guardian of faith",
-							"wall of fire"
-						],
-						"s5": [
-							"flame strike",
-							"greater restoration"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Celestial|Warlock||Celestial|XGE|1",
-				"Radiant Soul|Warlock||Celestial|XGE|6",
-				"Celestial Resilience|Warlock||Celestial|XGE|10",
-				"Searing Vengeance|Warlock||Celestial|XGE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "The Hexblade",
-			"shortName": "Hexblade",
-			"source": "XGE",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 55,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"shield",
-							"wrathful smite"
-						],
-						"s2": [
-							"blur",
-							"branding smite"
-						],
-						"s3": [
-							"blink",
-							"elemental weapon"
-						],
-						"s4": [
-							"phantasmal killer",
-							"staggering smite"
-						],
-						"s5": [
-							"banishing smite",
-							"cone of cold"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Hexblade|Warlock||Hexblade|XGE|1",
-				"Accursed Specter|Warlock||Hexblade|XGE|6",
-				"Armor of Hexes|Warlock||Hexblade|XGE|10",
-				"Master of Hexes|Warlock||Hexblade|XGE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "The Fathomless",
-			"shortName": "Fathomless",
-			"source": "TCE",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 72,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"create or destroy water",
-							"thunderwave"
-						],
-						"s2": [
-							"gust of wind",
-							"silence"
-						],
-						"s3": [
-							"lightning bolt",
-							"sleet storm"
-						],
-						"s4": [
-							"control water",
-							"summon elemental|tce"
-						],
-						"s5": [
-							"Bigby's hand",
-							"cone of cold"
-						]
-					},
-					"known": {
-						"10": {
-							"daily": {
-								"1": [
-									"Evard's black tentacles"
-								]
-							}
-						}
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Fathomless|Warlock||Fathomless|TCE|1",
-				"Oceanic Soul|Warlock||Fathomless|TCE|6",
-				"Guardian Coil|Warlock||Fathomless|TCE|6",
-				"Grasping Tentacles|Warlock||Fathomless|TCE|10",
-				"Fathomless Plunge|Warlock||Fathomless|TCE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "The Genie",
-			"shortName": "Genie",
-			"source": "TCE",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 73,
-			"additionalSpells": [
-				{
-					"name": "Dao",
-					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"sanctuary"
-						],
-						"s2": [
-							"phantasmal force",
-							"spike growth"
-						],
-						"s3": [
-							"create food and water",
-							"meld into stone"
-						],
-						"s4": [
-							"phantasmal killer",
-							"stone shape"
-						],
-						"s5": [
-							"creation",
-							"wall of stone"
-						]
-					}
-				},
-				{
-					"name": "Djinni",
-					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"thunderwave"
-						],
-						"s2": [
-							"phantasmal force",
-							"gust of wind"
-						],
-						"s3": [
-							"create food and water",
-							"wind wall"
-						],
-						"s4": [
-							"phantasmal killer",
-							"greater invisibility"
-						],
-						"s5": [
-							"creation",
-							"seeming"
-						]
-					}
-				},
-				{
-					"name": "Efreeti",
-					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"burning hands"
-						],
-						"s2": [
-							"phantasmal force",
-							"scorching ray"
-						],
-						"s3": [
-							"create food and water",
-							"fireball"
-						],
-						"s4": [
-							"phantasmal killer",
-							"fire shield"
-						],
-						"s5": [
-							"creation",
-							"flame strike"
-						]
-					}
-				},
-				{
-					"name": "Marid",
-					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"fog cloud"
-						],
-						"s2": [
-							"phantasmal force",
-							"blur"
-						],
-						"s3": [
-							"create food and water",
-							"sleet storm"
-						],
-						"s4": [
-							"phantasmal killer",
-							"control water"
-						],
-						"s5": [
-							"creation",
-							"cone of cold"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Genie|Warlock||Genie|TCE|1",
-				"Elemental Gift|Warlock||Genie|TCE|6",
-				"Sanctuary Vessel|Warlock||Genie|TCE|10",
-				"Limited Wish|Warlock||Genie|TCE|14"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "The Undead",
-			"shortName": "Undead",
-			"source": "VRGR",
-			"className": "Warlock",
-			"classSource": "PHB",
-			"page": 30,
-			"additionalSpells": [
-				{
-					"expanded": {
-						"s1": [
-							"bane",
-							"false life"
-						],
-						"s2": [
-							"blindness/deafness",
-							"phantasmal force"
-						],
-						"s3": [
-							"phantom steed",
-							"speak with dead"
-						],
-						"s4": [
-							"death ward",
-							"greater invisibility"
-						],
-						"s5": [
-							"antilife shell",
-							"cloudkill"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				"The Undead|Warlock||Undead|VRGR|1",
-				"Grave Touched|Warlock||Undead|VRGR|6",
-				"Necrotic Husk|Warlock||Undead|VRGR|10",
-				"Spirit Projection|Warlock||Undead|VRGR|14"
-			],
-			"hasFluffImages": true
-		}
-	],
-	"classFeature": [
-		{
-			"name": "Otherworldly Patron",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
-			]
-		},
-		{
-			"name": "Pact Magic",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter warlock spell list|spells|class=warlock}.",
-				{
-					"type": "entries",
-					"name": "Cantrips",
-					"entries": [
-						"You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spell Slots",
-					"entries": [
-						"The Warlock table shows how many spell slots you have to cast your {@filter warlock spells|spells|class=warlock} of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
-						"For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell {@spell witch bolt}, you must spend one of those slots, and you cast it as a 3rd-level spell."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spells Known of 1st Level and Higher",
-					"entries": [
-						"At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
-						"The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
-						"Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Ability",
-					"entries": [
-						"Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
-						{
-							"type": "abilityDc",
-							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
-						},
-						{
-							"type": "abilityAttackMod",
-							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
-						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Focus",
-					"entries": [
-						"You can use an {@item arcane focus|phb} as a spellcasting focus for your warlock spells."
-					]
-				}
-			]
-		},
-		{
-			"name": "Eldritch Invocations",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 2,
-			"entries": [
-				"In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
-				"At 2nd level, you gain two eldritch invocations of your choice. A list of the available options can be found on the {@filter Optional Features|optionalfeatures|Feature Type=EI} page. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.",
-				"Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
-				"If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class."
-			]
-		},
-		{
-			"name": "Pact Boon",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 3,
-			"entries": [
-				"At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
-				{
-					"type": "options",
-					"count": 1,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Pact of the Chain"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Pact of the Blade"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Pact of the Tome"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Pact of the Talisman|TCE"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 4,
-			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Eldritch Versatility",
-			"source": "TCE",
-			"page": 70,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
-			"entries": [
-				"{@i 4th-level warlock {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:",
-				{
-					"type": "list",
-					"items": [
-						"Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the {@filter warlock spell list|spells|level=0|class=Warlock}.",
-						"Replace the option you chose for the Pact Boon feature with one of that feature's other options.",
-						"If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level."
-					]
-				},
-				"If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
-			]
-		},
-		{
-			"name": "Otherworldly Patron feature",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 6,
-			"entries": [
-				"At 6th level, you gain a feature granted by your Otherworldly Patron."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 8,
-			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Otherworldly Patron feature",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 10,
-			"entries": [
-				"At 10th level, you gain a feature granted by your Otherworldly Patron."
-			]
-		},
-		{
-			"name": "Mystic Arcanum (6th level)",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 11,
-			"entries": [
-				"At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 6th-level spell from the warlock spell list|spells|level=6|class=Warlock} as this arcanum.",
-				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
-				"At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 12,
-			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Mystic Arcanum (7th level)",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 13,
-			"entries": [
-				"At 13th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 7th-level spell from the warlock spell list|spells|level=7|class=Warlock} as this arcanum.",
-				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
-			]
-		},
-		{
-			"name": "Otherworldly Patron feature",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 14,
-			"entries": [
-				"At 14th level, you gain a feature granted by your Otherworldly Patron."
-			]
-		},
-		{
-			"name": "Mystic Arcanum (8th level)",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 15,
-			"entries": [
-				"At 15th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 8th-level spell from the warlock spell list|spells|level=8|class=Warlock} as this arcanum.",
-				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 16,
-			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Mystic Arcanum (9th level)",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 17,
-			"entries": [
-				"At 17th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 9th-level spell from the warlock spell list|spells|level=9|class=Warlock} as this arcanum.",
-				"You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
-			]
-		},
-		{
-			"name": "Ability Score Improvement",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 19,
-			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-			]
-		},
-		{
-			"name": "Eldritch Master",
-			"source": "PHB",
-			"page": 105,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"level": 20,
-			"entries": [
-				"At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
-			]
-		}
-	],
-	"subclassFeature": [
-		{
-			"name": "The Archfey",
-			"source": "PHB",
-			"page": 108,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Archfey",
-			"subclassSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten before the mortal races were born. This being's motivations are often inscrutable, and sometimes whimsical, and might involve a striving for greater magical power or the settling of age-old grudges. Beings of this sort include the Prince of Frost; the Queen of Air and Darkness, ruler of the Gloaming Court; Titania of the Summer Court; her consort Oberon, the Green Lord; Hyrsam, the Prince of Fools; and ancient hags.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Archfey lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Archfey Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell faerie fire}, {@spell sleep}"
-								],
-								[
-									"2nd",
-									"{@spell calm emotions}, {@spell phantasmal force}"
-								],
-								[
-									"3rd",
-									"{@spell blink}, {@spell plant growth}"
-								],
-								[
-									"4th",
-									"{@spell dominate beast}, {@spell greater invisibility}"
-								],
-								[
-									"5th",
-									"{@spell dominate person}, {@spell seeming}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Fey Presence|Warlock||Archfey||1"
-				}
-			]
-		},
-		{
-			"name": "Fey Presence",
-			"source": "PHB",
-			"page": 108,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Archfey",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all {@condition charmed} or {@condition frightened} by you (your choice) until the end of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Misty Escape",
-			"source": "PHB",
-			"page": 108,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Archfey",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn {@condition invisible} and teleport up to 60 feet to an unoccupied space you can see. You remain {@condition invisible} until the start of your next turn or until you attack or cast a spell.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Beguiling Defenses",
-			"source": "PHB",
-			"page": 108,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Archfey",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being {@condition charmed}, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be {@condition charmed} by you for 1 minute or until the creature takes any damage."
-			]
-		},
-		{
-			"name": "Dark Delirium",
-			"source": "PHB",
-			"page": 108,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Archfey",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute or until your {@status concentration} is broken (as if you are {@status concentration||concentrating} on a spell). This effect ends early if the creature takes any damage.",
-				"Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.",
-				"You must finish a short or long rest before you can use this feature again."
-			]
-		},
-		{
-			"name": "The Fiend",
-			"source": "PHB",
-			"page": 109,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fiend",
-			"subclassSource": "PHB",
-			"level": 1,
-			"entries": [
-				"You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Fiend Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell burning hands}, {@spell command}"
-								],
-								[
-									"2nd",
-									"{@spell blindness/deafness}, {@spell scorching ray}"
-								],
-								[
-									"3rd",
-									"{@spell fireball}, {@spell stinking cloud}"
-								],
-								[
-									"4th",
-									"{@spell fire shield}, {@spell wall of fire}"
-								],
-								[
-									"5th",
-									"{@spell flame strike}, {@spell hallow}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Dark One's Blessing|Warlock||Fiend||1"
-				}
-			]
-		},
-		{
-			"name": "Dark One's Blessing",
-			"source": "PHB",
-			"page": 109,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fiend",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1)."
-			]
-		},
-		{
-			"name": "Dark One's Own Luck",
-			"source": "PHB",
-			"page": 109,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fiend",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a {@dice d10} to your roll. You can do so after seeing the initial roll but before any of the roll's effects occur.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Fiendish Resilience",
-			"source": "PHB",
-			"page": 109,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fiend",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from magical weapons or silver weapons ignores this resistance."
-			]
-		},
-		{
-			"name": "Hurl Through Hell",
-			"source": "PHB",
-			"page": 109,
-			"srd": true,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fiend",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.",
-				"At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes {@damage 10d10} psychic damage as it reels from its horrific experience.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "The Great Old One",
-			"source": "PHB",
-			"page": 109,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Great Old One",
-			"subclassSource": "PHB",
-			"level": 1,
-			"entries": [
-				"Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to draw your magic from it. Entities of this type include Ghaunadar, called That Which Lurks; Tharizdun, the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable beings.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Great Old One lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Great Old One Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell dissonant whispers}, {@spell Tasha's hideous laughter}"
-								],
-								[
-									"2nd",
-									"{@spell detect thoughts}, {@spell phantasmal force}"
-								],
-								[
-									"3rd",
-									"{@spell clairvoyance}, {@spell sending}"
-								],
-								[
-									"4th",
-									"{@spell dominate beast}, {@spell Evard's black tentacles}"
-								],
-								[
-									"5th",
-									"{@spell dominate person}, {@spell telekinesis}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Awakened Mind|Warlock||Great Old One||1"
-				}
-			]
-		},
-		{
-			"name": "Awakened Mind",
-			"source": "PHB",
-			"page": 109,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Great Old One",
-			"subclassSource": "PHB",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language."
-			]
-		},
-		{
-			"name": "Entropic Ward",
-			"source": "PHB",
-			"page": 109,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Great Old One",
-			"subclassSource": "PHB",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"At 6th level, you learn to magically ward yourself against attack and to turn an enemy's failed strike into good luck for yourself. When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage if you make it before the end of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Thought Shield",
-			"source": "PHB",
-			"page": 109,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Great Old One",
-			"subclassSource": "PHB",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, your thoughts can't be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do."
-			]
-		},
-		{
-			"name": "Create Thrall",
-			"source": "PHB",
-			"page": 109,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Great Old One",
-			"subclassSource": "PHB",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"At 14th level, you gain the ability to infect a humanoid's mind with the alien magic of your patron. You can use your action to touch an {@condition incapacitated} humanoid. That creature is then {@condition charmed} by you until a {@spell remove curse} spell is cast on it, the {@condition charmed} condition is removed from it, or you use this feature again.",
-				"You can communicate telepathically with the {@condition charmed} creature as long as the two of you are on the same plane of existence."
-			]
-		},
-		{
-			"name": "The Undying",
-			"source": "SCAG",
-			"page": 139,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undying",
-			"subclassSource": "SCAG",
-			"level": 1,
-			"entries": [
-				"Death holds no sway over your patron, who has unlocked the secrets of everlasting life, although such a prize\u2014like all power\u2014comes at a price. Once mortal, the Undying has seen mortal lifetimes pass like the seasons, like the flicker of endless days and nights. It has the secrets of the ages to share, secrets of life and death. Beings of this sort include Vecna, Lord of the Hand and the Eye; the dread Iuz; the lich-queen Vol; the Undying Court of Aerenal; Vlaakith, lich-queen of the githyanki; and the deathless wizard Fistandantalus.",
-				"In the Realms, Undying patrons include Larloch the Shadow King, legendary master of Warlock's Crypt, and Gilgeam, the God-King of Unther.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Undying lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Undying Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell false life}, {@spell ray of sickness}"
-								],
-								[
-									"2nd",
-									"{@spell blindness/deafness}, {@spell silence}"
-								],
-								[
-									"3rd",
-									"{@spell feign death}, {@spell speak with dead}"
-								],
-								[
-									"4th",
-									"{@spell aura of life}, {@spell death ward}"
-								],
-								[
-									"5th",
-									"{@spell contagion}, {@spell legend lore}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Among the Dead|Warlock||Undying|SCAG|1"
-				}
-			]
-		},
-		{
-			"name": "Among the Dead",
-			"source": "SCAG",
-			"page": 139,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undying",
-			"subclassSource": "SCAG",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you learn the {@spell spare the dying} cantrip, which counts as a warlock cantrip for you. You also have advantage on saving throws against any disease.",
-				"Additionally, undead have difficulty harming you. If an undead targets you directly with an attack or a harmful spell, that creature must make a Wisdom saving throw against your spell save DC (an undead needn't make the save when it includes you in an area effect, such as the explosion of {@spell fireball}). On a failed save, the creature must choose a new target or forfeit targeting someone instead of you, potentially wasting the attack or spell. On a successful save, the creature is immune to this effect for 24 hours. An undead is also immune to this effect for 24 hours if you target it with an attack or a harmful spell."
-			]
-		},
-		{
-			"name": "Defy Death",
-			"source": "SCAG",
-			"page": 139,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undying",
-			"subclassSource": "SCAG",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can give yourself vitality when you cheat death or when you help someone else cheat it. You can regain hit points equal to {@dice 1d8} + your Constitution modifier (minimum of 1 hit point) when you succeed on a death saving throw or when you stabilize a creature with {@spell spare the dying}.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Undying Nature",
-			"source": "SCAG",
-			"page": 139,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undying",
-			"subclassSource": "SCAG",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Beginning at 10th level, you can hold your breath indefinitely, and you don't require food, water, or sleep, although you still require rest to reduce {@condition exhaustion} and still benefit from finishing short and long rests.",
-				"In addition, you age at a slower rate. For every 10 years that pass, your body ages only 1 year, and you are immune to being magically aged."
-			]
-		},
-		{
-			"name": "Indestructible Life",
-			"source": "SCAG",
-			"page": 139,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undying",
-			"subclassSource": "SCAG",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"When you reach 14th level, you partake some of the true secrets of the Undying. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d8} + your warlock level. Additionally, if you put a severed body part of yours back in place when you use this feature, the part reattaches.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "The Fathomless",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"You have plunged into a pact with the deeps. An entity of the ocean, the Elemental Plane of Water, or another otherworldly sea now allows you to draw on its thalassic power. Is it merely using you to learn about terrestrial realms, or does it want you to open cosmic floodgates and drown the world?",
-				"Perhaps you were born into a generational cult that venerates the Fathomless and its spawn. Or you might have been shipwrecked and on the brink of drowning when your patron's grasp offered you a chance at life. Whatever the reason for your pact, the sea and its unknown depths call to you.",
-				"Entities of the deep that might empower a warlock include krakens, ancient water elementals, godlike hallucinations dreamed into being by kuo-toa, merfolk demigods, and sea hag covens.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"{@i 1st-level Fathomless feature}",
-						"The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Fathomless Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell create or destroy water}, {@spell thunderwave}"
-								],
-								[
-									"2nd",
-									"{@spell gust of wind}, {@spell silence}"
-								],
-								[
-									"3rd",
-									"{@spell lightning bolt}, {@spell sleet storm}"
-								],
-								[
-									"4th",
-									"{@spell control water}, {@spell summon elemental|tce} (water only)"
-								],
-								[
-									"5th",
-									"{@spell Bigby's hand} (appears as a tentacle), {@spell cone of cold}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Tentacle of the Deeps|Warlock||Fathomless|TCE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Gift of the Sea|Warlock||Fathomless|TCE|1"
-				}
-			]
-		},
-		{
-			"name": "Gift of the Sea",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Fathomless feature}",
-				"You gain a swimming speed of 40 feet, and you can breathe underwater."
-			]
-		},
-		{
-			"name": "Tentacle of the Deeps",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Fathomless feature}",
-				"You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.",
-				"When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes {@damage 1d8} cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to {@dice 2d8}.",
-				"As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.",
-				"You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Guardian Coil",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Fathomless feature}",
-				"Your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by {@dice 1d8}. When you reach 10th level in this class, the damage reduced by the tentacle increases to {@dice 2d8}."
-			]
-		},
-		{
-			"name": "Oceanic Soul",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Fathomless feature}",
-				"You are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs."
-			]
-		},
-		{
-			"name": "Grasping Tentacles",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Fathomless feature}",
-				"You learn the spell {@spell Evard's black tentacles}. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.",
-				"Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your {@status concentration} on this spell."
-			]
-		},
-		{
-			"name": "Fathomless Plunge",
-			"source": "TCE",
-			"page": 72,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Fathomless",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Fathomless feature}",
-				"You can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "The Genie",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"You have made a pact with one of the rarest kinds of genie, a noble genie. Such entities rule vast fiefs on the Elemental Planes and have great influence over lesser genies and elemental creatures. Noble genies are varied in their motivations, but most are arrogant and wield power that rivals that of lesser deities. They delight in turning the table on mortals, who often bind genies into servitude, and readily enter into pacts that expand their reach.",
-				"You choose your patron's kind or determine it randomly, using the Genie Kind table.",
-				{
-					"type": "table",
-					"caption": "Genie Kind",
-					"colLabels": [
-						"d4",
-						"Kind",
-						"Element"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-5",
-						"col-5"
-					],
-					"rows": [
-						[
-							1,
-							"{@creature Dao}",
-							"Earth"
-						],
-						[
-							2,
-							"{@creature Djinni}",
-							"Air"
-						],
-						[
-							3,
-							"{@creature Efreeti}",
-							"Fire"
-						],
-						[
-							4,
-							"{@creature Marid}",
-							"Water"
-						]
-					]
-				},
-				{
-					"name": "Expanded Spell List",
-					"type": "entries",
-					"entries": [
-						"{@i 1st-level Genie feature}",
-						"The Genie lets you choose from an expanded list of spells when you learn a warlock spell. The Genie Expanded Spells table shows the genie spells that are added to the warlock spell list for you, along with the spells associated in the table with your patron's kind: dao, djinni, efreeti, or marid.",
-						{
-							"type": "table",
-							"caption": "Genie Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Genie Spells",
-								"Dao Spells",
-								"Djinni Spells",
-								"Efreeti Spells",
-								"Marid Spells"
-							],
-							"colStyles": [
-								"col-1 text-center",
-								"col-2-2",
-								"col-2-2",
-								"col-2-2",
-								"col-2-2",
-								"col-2-2"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell detect evil and good}",
-									"{@spell sanctuary}",
-									"{@spell thunderwave}",
-									"{@spell burning hands}",
-									"{@spell fog cloud}"
-								],
-								[
-									"2nd",
-									"{@spell phantasmal force}",
-									"{@spell spike growth}",
-									"{@spell gust of wind}",
-									"{@spell scorching ray}",
-									"{@spell blur}"
-								],
-								[
-									"3rd",
-									"{@spell create food and water}",
-									"{@spell meld into stone}",
-									"{@spell wind wall}",
-									"{@spell fireball}",
-									"{@spell sleet storm}"
-								],
-								[
-									"4th",
-									"{@spell phantasmal killer}",
-									"{@spell stone shape}",
-									"{@spell greater invisibility}",
-									"{@spell fire shield}",
-									"{@spell control water}"
-								],
-								[
-									"5th",
-									"{@spell creation}",
-									"{@spell wall of stone}",
-									"{@spell seeming}",
-									"{@spell flame strike}",
-									"{@spell cone of cold}"
-								],
-								[
-									"9th",
-									"{@spell wish}",
-									"\u2014",
-									"\u2014",
-									"\u2014",
-									"\u2014"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Genie's Vessel|Warlock||Genie|TCE|1"
-				}
-			]
-		},
-		{
-			"name": "Genie's Vessel",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Genie feature}",
-				"Your patron gifts you a magical vessel that grants you a measure of the genie's power. The vessel is a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.",
-				{
-					"type": "table",
-					"caption": "Genie's Vessel",
-					"colLabels": [
-						"d6",
-						"Vessel"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"1",
-							"Oil lamp"
-						],
-						[
-							"2",
-							"Urn"
-						],
-						[
-							"3",
-							"Ring with a compartment"
-						],
-						[
-							"4",
-							"Stoppered bottle"
-						],
-						[
-							"5",
-							"Hollow statuette"
-						],
-						[
-							"6",
-							"Ornate lantern"
-						]
-					]
-				},
-				"While you are touching the vessel, you can use it in the following ways:",
-				{
-					"type": "options",
-					"style": "list-hang-notitle",
-					"entries": [
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Bottled Respite|Warlock|TCE|Genie|TCE|1"
-						},
-						{
-							"type": "refSubclassFeature",
-							"subclassFeature": "Genie's Wrath|Warlock|TCE|Genie|TCE|1"
-						}
-					]
-				},
-				"The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.",
-				"If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die."
-			]
-		},
-		{
-			"name": "Elemental Gift",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Genie feature}",
-				"You begin to take on characteristics of your patron's kind. You now have resistance to a damage type determined by your patron's kind: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).",
-				"In addition, as a bonus action, you can give yourself a flying speed of 30 feet that lasts for 10 minutes, during which you can hover. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
-			]
-		},
-		{
-			"name": "Sanctuary Vessel",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Genie feature}",
-				"When you enter your Genie's Vessel via the Bottled Respite feature, you can now choose up to five willing creatures that you can see within 30 feet of you, and the chosen creatures are drawn into the vessel with you.",
-				"As a bonus action, you can eject any number of creatures from the vessel, and everyone is ejected if you leave or die or if the vessel is destroyed.",
-				"In addition, anyone (including you) who remains within the vessel for at least 10 minutes gains the benefit of finishing a short rest, and anyone can add your proficiency bonus to the number of hit points they regain if they spend any Hit Dice as part of a short rest there."
-			]
-		},
-		{
-			"name": "Limited Wish",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Genie feature}",
-				"You entreat your patron to grant you a small wish. As an action, you can speak your desire to your Genie's Vessel, requesting the effect of one {@filter spell that is 6th level or lower and has a casting time of 1 action|spells|cast time=action|level=0;1;2;3;4;5;6}. The spell can be from any class's spell list, and you don't need to meet the requirements in that spell, including costly components; the spell simply takes effect as part of this action.",
-				"Once you use this feature, you can't use it again until you finish {@dice 1d4} long rests."
-			]
-		},
-		{
-			"name": "The Undead",
-			"source": "VRGR",
-			"page": 30,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undead",
-			"subclassSource": "VRGR",
-			"level": 1,
-			"entries": [
-				"You've made a pact with a deathless being, a creature that defies the cycle and life and death, forsaking its mortal shell so it might eternally pursue its unfathomable ambitions. For such beings, time and morality are fleeting things, the concerns of those for whom grains of sand still rush through life's hourglass. Having once been mortal themselves, these ancient undead know firsthand the paths of ambition and the routes past the doors of death. They eagerly share this profane knowledge, along with other secrets, with those who work their will among the living.",
-				"Beings of this type include the demilich Acererak, the vampire tyrant Kas the Bloody-Handed, the githyanki lich-queen Vlaakith, the dracolich Dragotha, the undead pharaoh Ankhtepot, and the elusive Darklord, Azalin Rex.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"{@i 1st-level Undead feature}",
-						"The Undead lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Undead Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell bane}, {@spell false life}"
-								],
-								[
-									"2nd",
-									"{@spell blindness/deafness}, {@spell phantasmal force}"
-								],
-								[
-									"3rd",
-									"{@spell phantom steed}, {@spell speak with dead}"
-								],
-								[
-									"4th",
-									"{@spell death ward}, {@spell greater invisibility}"
-								],
-								[
-									"5th",
-									"{@spell antilife shell}, {@spell cloudkill}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Form of Dread|Warlock||Undead|VRGR|1"
-				}
-			]
-		},
-		{
-			"name": "Form of Dread",
-			"source": "VRGR",
-			"page": 30,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undead",
-			"subclassSource": "VRGR",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"{@i 1st-level Undead feature}",
-				"You manifest an aspect of your patron's dreadful power. As a bonus action, you transform for 1 minute. You gain the following benefits while transformed:",
-				{
-					"type": "list",
-					"items": [
-						"You gain temporary hit points equal to {@dice 1d10} + your warlock level.",
-						"Once during each of your turns, when you hit a creature with an attack roll, you can force it to make a Wisdom saving throw, and if the saving throw fails, the target is {@condition frightened} of you until the end of your next turn.",
-						"You are immune to the {@condition frightened} condition."
-					]
-				},
-				"You can transform a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-				"The appearance of your Form of Dread reflects some aspect of your patron. For example, your form could be a shroud of shadows forming the crown and robes of your lich patron, or your body might glow with glyphs from ancient funerary rites and be surrounded by desert winds, suggesting your mummy patron."
-			]
-		},
-		{
-			"name": "Grave Touched",
-			"source": "VRGR",
-			"page": 30,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undead",
-			"subclassSource": "VRGR",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"{@i 6th-level Undead feature}",
-				"Your patron's powers have a profound effect on your body and magic. You don't need to eat, drink, or breathe.",
-				"In addition, once during each of your turns, when you hit a creature with an attack roll and roll damage against the creature, you can replace the damage type with necrotic damage. While you are using your Form of Dread, you can roll one additional damage die when determining the necrotic damage the target takes."
-			]
-		},
-		{
-			"name": "Necrotic Husk",
-			"source": "VRGR",
-			"page": 30,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undead",
-			"subclassSource": "VRGR",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"{@i 10th-level Undead feature}",
-				"Your connection to undeath and necrotic energy now saturates your body. You have resistance to necrotic damage. If you are transformed using your Form of Dread, you instead become immune to necrotic damage.",
-				"In addition, when you would be reduced to 0 hit points, you can use your reaction to drop to 1 hit point instead and cause your body to erupt with deathly energy. Each creature of your choice that is within 30 feet of you takes necrotic damage equal to {@damage 2d10} + your warlock level. You then gain 1 level of {@condition exhaustion}. Once you use this reaction, you can't do so again until you finish {@dice 1d4} long rests."
-			]
-		},
-		{
-			"name": "Spirit Projection",
-			"source": "VRGR",
-			"page": 30,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Undead",
-			"subclassSource": "VRGR",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"{@i 14th-level Undead feature}",
-				"Your spirit can become untethered from your physical form. As an action, you can project your spirit from your body. The body you leave behind is {@condition unconscious} and in a state of suspended animation.",
-				"Your spirit resembles your mortal form in almost every way, replicating your game statistics but not your possessions. Any damage or other effects that apply to your spirit or physical body affects the other. Your spirit can remain outside your body for up to 1 hour or until your {@status concentration} is broken (as if {@status concentration||concentrating} on a spell). When your projection ends, your spirit returns to your body or your body magically teleports to your spirit's space (your choice).",
-				"While projecting your spirit, you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"Your spirit and body gain resistance to bludgeoning, piercing, and slashing damage.",
-						"When you cast a spell of the conjuration or necromancy school, the spell doesn't require verbal or somatic components or material components that lack a gold cost.",
-						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were {@quickref difficult terrain||3}, but you take {@dice 1d10} force damage if you end your turn inside a creature or an object.",
-						"While you are using your Form of Dread, once during each of your turns when you deal necrotic damage to a creature, you regain hit points equal to half the amount of necrotic damage dealt."
-					]
-				},
-				"Once you use this feature, you can't do so again until you finish a long rest."
-			]
-		},
-		{
-			"name": "The Celestial",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 1,
-			"entries": [
-				"Your patron is a powerful being of the Upper Planes. You have bound yourself to an ancient empyrean, solar, ki-rin, unicorn, or other entity that resides in the planes of everlasting bliss. Your pact with that being allows you to experience the barest touch of the holy light that illuminates the multiverse.",
-				"Being connected to such power can cause changes in your behavior and beliefs. You might find yourself driven to annihilate the undead, to defeat fiends, and to protect the innocent. At times, your heart might also be filled with a longing for the celestial realm of your patron, and a desire to wander that paradise for the rest of your days. But you know that your mission is among mortals for now, and that your pact binds you to bring light to the dark places of the world.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Celestial lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Celestial Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell cure wounds}, {@spell guiding bolt}"
-								],
-								[
-									"2nd",
-									"{@spell flaming sphere}, {@spell lesser restoration}"
-								],
-								[
-									"3rd",
-									"{@spell daylight}, {@spell revivify}"
-								],
-								[
-									"4th",
-									"{@spell guardian of faith}, {@spell wall of fire}"
-								],
-								[
-									"5th",
-									"{@spell flame strike}, {@spell greater restoration}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Cantrips|Warlock||Celestial|XGE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Healing Light|Warlock||Celestial|XGE|1"
-				}
-			]
-		},
-		{
-			"name": "Bonus Cantrips",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you learn the {@spell sacred flame} and {@spell light} cantrips. They count as warlock cantrips for you, but they don't count against your number of cantrips known."
-			]
-		},
-		{
-			"name": "Healing Light",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you gain the ability to channel celestial energy to heal wounds. You have a pool of {@dice d6}s that you spend to fuel this healing. The number of dice in the pool equals 1 + your warlock level.",
-				"As a bonus action, you can heal one creature you can see within 60 feet of you, spending dice from the pool. The maximum number of dice you can spend at once equals your Charisma modifier (minimum of one die). Roll the dice you spend, add them together, and restore a number of hit points equal to the total.",
-				"Your pool regains all expended dice when you finish a long rest."
-			]
-		},
-		{
-			"name": "Radiant Soul",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, your link to the Celestial allows you to serve as a conduit for radiant energy. You have resistance to radiant damage, and when you cast a spell that deals radiant or fire damage, you can add your Charisma modifier to one radiant or fire damage roll of that spell against one of its targets."
-			]
-		},
-		{
-			"name": "Celestial Resilience",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"Starting at 10th level, you gain temporary hit points whenever you finish a short or long rest. These temporary hit points equal your warlock level + your Charisma modifier. Additionally, choose up to five creatures you can see at the end of the rest. Those creatures each gain temporary hit points equal to half your warlock level + your Charisma modifier."
-			]
-		},
-		{
-			"name": "Searing Vengeance",
-			"source": "XGE",
-			"page": 54,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Celestial",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, the radiant energy you channel allows you to resist death. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to {@dice 2d8} + your Charisma modifier, and it is {@condition blinded} until the end of the current turn.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
-			]
-		},
-		{
-			"name": "The Hexblade",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 1,
-			"entries": [
-				"You have made your pact with a mysterious entity from the Shadowfell\u2014a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.",
-				"Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends.",
-				{
-					"type": "entries",
-					"name": "Expanded Spell List",
-					"entries": [
-						"The Hexblade lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-						{
-							"type": "table",
-							"caption": "Hexblade Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1st",
-									"{@spell shield}, {@spell wrathful smite}"
-								],
-								[
-									"2nd",
-									"{@spell blur}, {@spell branding smite}"
-								],
-								[
-									"3rd",
-									"{@spell blink}, {@spell elemental weapon}"
-								],
-								[
-									"4th",
-									"{@spell phantasmal killer}, {@spell staggering smite}"
-								],
-								[
-									"5th",
-									"{@spell banishing smite}, {@spell cone of cold}"
-								]
-							]
-						}
-					]
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hexblade's Curse|Warlock||Hexblade|XGE|1"
-				},
-				{
-					"type": "refSubclassFeature",
-					"subclassFeature": "Hex Warrior|Warlock||Hexblade|XGE|1"
-				}
-			]
-		},
-		{
-			"name": "Hex Warrior",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.",
-				"The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type."
-			]
-		},
-		{
-			"name": "Hexblade's Curse",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 1,
-			"header": 1,
-			"entries": [
-				"Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are {@condition incapacitated}. Until the curse ends, you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.",
-						"Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the {@dice d20}.",
-						"If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point)."
-					]
-				},
-				"You can't use this feature again until you finish a short or long rest."
-			]
-		},
-		{
-			"name": "Accursed Specter",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a {@creature specter}, the statistics for which are in the Monster Manual. When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).",
-				"The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.",
-				"Once you bind a specter with this feature, you can't use the feature again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Armor of Hexes",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 10,
-			"header": 2,
-			"entries": [
-				"At 10th level, your hex grows more powerful. If the target cursed by your Hexblade's Curse hits you with an attack roll, you can use your reaction to roll a {@dice d6}. On a 4 or higher, the attack instead misses you, regardless of its roll."
-			]
-		},
-		{
-			"name": "Master of Hexes",
-			"source": "XGE",
-			"page": 55,
-			"className": "Warlock",
-			"classSource": "PHB",
-			"subclassShortName": "Hexblade",
-			"subclassSource": "XGE",
-			"level": 14,
-			"header": 2,
-			"entries": [
-				"Starting at 14th level, you can spread your Hexblade's Curse from a slain creature to another creature. When the creature cursed by your Hexblade's Curse dies, you can apply the curse to a different creature you can see within 30 feet of you, provided you aren't {@condition incapacitated}. When you apply the curse in this way, you don't regain hit points from the death of the previously cursed creature."
-			]
-		},
-		{
-			"name": "Bottled Respite",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "TCE",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest."
-			]
-		},
-		{
-			"name": "Genie's Wrath",
-			"source": "TCE",
-			"page": 73,
-			"className": "Warlock",
-			"classSource": "TCE",
-			"subclassShortName": "Genie",
-			"subclassSource": "TCE",
-			"level": 1,
-			"entries": [
-				"Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid)."
-			]
-		}
-	]
+  "class": [
+    {
+      "name": "契术师",
+      "ENG_name": "Warlock",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "hd": {
+        "number": 1,
+        "faces": 8
+      },
+      "proficiency": [
+        "wis",
+        "cha"
+      ],
+      "spellcastingAbility": "cha",
+      "casterProgression": "pact",
+      "cantripProgression": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "spellsKnownProgression": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        10,
+        11,
+        11,
+        12,
+        12,
+        13,
+        13,
+        14,
+        14,
+        15,
+        15
+      ],
+      "spellsKnownProgressionFixedByLevel": {
+        "11": {
+          "6": 1
+        },
+        "13": {
+          "7": 1
+        },
+        "15": {
+          "8": 1
+        },
+        "17": {
+          "9": 1
+        }
+      },
+      "optionalfeatureProgression": [
+        {
+          "name": "邪术师:魔能祈唤",
+          "ENG_name": "Eldritch Invocations",
+          "featureType": [
+            "EI"
+          ],
+          "progression": [
+            0,
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "name": "邪术师:魔契恩泽",
+          "ENG_name": "Pact Boon",
+          "featureType": [
+            "PB"
+          ],
+          "progression": {
+            "3": 1
+          }
+        }
+      ],
+      "startingProficiencies": {
+        "armor": [
+          "光亮术"
+        ],
+        "weapons": [
+          "简单"
+        ],
+        "skills": [
+          {
+            "choose": {
+              "from": [
+                "属性检定:奥秘",
+                "属性检定:欺瞒",
+                "属性检定:历史",
+                "属性检定:威吓",
+                "属性检定:调查",
+                "属性检定:自然",
+                "属性检定:宗教"
+              ],
+              "count": 2
+            }
+          }
+        ]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a)一把{@item 轻弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}",
+          "(a)一个{@item 材料包|phb} 或 (b)一个{@item 奥术法器|phb}",
+          "(a)一套{@item 学者套装|phb} 或 (b)一套{@item 地城探险家套装|phb}",
+          "一件{@item 皮甲|phb}、任意一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}、以及二把{@item 匕首|phb}"
+        ],
+        "goldAlternative": "{@dice 4d4 × 10|4d4 × 10|起始金钱}",
+        "defaultData": [
+          {
+            "a": [
+              "轻型十字弓|phb",
+              "弩箭（20）|phb"
+            ],
+            "b": [
+              {
+                "equipmentType": "简易武器"
+              }
+            ]
+          },
+          {
+            "a": [
+              "组件袋|phb"
+            ],
+            "b": [
+              {
+                "equipmentType": "专注施法（奥术）"
+              }
+            ]
+          },
+          {
+            "a": [
+              "学者包|phb"
+            ],
+            "b": [
+              "探险者背包|phb"
+            ]
+          },
+          {
+            "_": [
+              "皮甲|phb",
+              {
+                "equipmentType": "简易武器"
+              },
+              {
+                "item": "匕首|phb",
+                "quantity": 2
+              }
+            ]
+          }
+        ]
+      },
+      "multiclassing": {
+        "requirements": {
+          "cha": 13
+        },
+        "proficienciesGained": {
+          "armor": [
+            "光亮术"
+          ],
+          "weapons": [
+            "简单"
+          ]
+        }
+      },
+      "classTableGroups": [
+        {
+          "colLabels": [
+            "{@filter 已知戏法|spells|level=0|class=Warlock}",
+            "{@filter 已知法术|spells|class=Warlock}",
+            "法术位",
+            "环阶",
+            "{@filter 已知祈唤|optionalfeatures|feature type=ei}"
+          ],
+          "rows": [
+            2,
+            2,
+            1,
+            "{@filter 1环|spells|level=1|class=Warlock}",
+            0,
+            2,
+            3,
+            2,
+            "{@filter 1环|spells|level=1|class=Warlock}",
+            2,
+            2,
+            4,
+            2,
+            "{@filter 2环|spells|level=2|class=Warlock}",
+            2,
+            3,
+            5,
+            2,
+            "{@filter 2环|spells|level=2|class=Warlock}",
+            2,
+            3,
+            6,
+            2,
+            "{@filter 3环|spells|level=3|class=Warlock}",
+            3,
+            3,
+            7,
+            2,
+            "{@filter 3环|spells|level=3|class=Warlock}",
+            3,
+            3,
+            8,
+            2,
+            "{@filter 4环|spells|level=4|class=Warlock}",
+            4,
+            3,
+            9,
+            2,
+            "{@filter 4环|spells|level=4|class=Warlock}",
+            4,
+            3,
+            10,
+            2,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            5,
+            4,
+            10,
+            2,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            5,
+            4,
+            11,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            5,
+            4,
+            11,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            6,
+            4,
+            12,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            6,
+            4,
+            12,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            6,
+            4,
+            13,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            7,
+            4,
+            13,
+            3,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            7,
+            4,
+            14,
+            4,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            7,
+            4,
+            14,
+            4,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            8,
+            4,
+            15,
+            4,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            8,
+            4,
+            15,
+            4,
+            "{@filter 5环|spells|level=5|class=Warlock}",
+            8
+          ]
+        }
+      ],
+      "classFeatures": [
+        "契约魔法|术士||1",
+        {
+          "classFeature": "异界之主|术士||1",
+          "gainSubclassFeature": true
+        },
+        "奥术祈唤|术士||2",
+        "契约恩惠|术士||3",
+        "能力值提升|术士||4",
+        "奥术多样性|术士||4|TCE",
+        {
+          "classFeature": "异界恩主特性|术士||6",
+          "gainSubclassFeature": true
+        },
+        "属性值提升|术士||8",
+        {
+          "classFeature": "异界之主特性|术士||10",
+          "gainSubclassFeature": true
+        },
+        "神秘奥术（6级）|术士||11",
+        "属性值提升|术士||12",
+        "神秘奥术（7级）|术士||13",
+        {
+          "classFeature": "异界恩人特性|术士||14",
+          "gainSubclassFeature": true
+        },
+        "神秘奥术（8级）|术士||15",
+        "属性值提升|术士||16",
+        "神秘奥术（9级）|术士||17",
+        "能力值提升|术士||19",
+        "奥术大师|术士||20"
+      ],
+      "subclassTitle": "邪术师:异界宗主",
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ],
+  "subclass": [
+    {
+      "name": "至高妖精宗主",
+      "ENG_name": "The Archfey",
+      "shortName": "至高妖精",
+      "source": "PHB",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 108,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "妖火术",
+              "睡眠术"
+            ],
+            "s2": [
+              "安定心神",
+              "魅影之力"
+            ],
+            "s3": [
+              "闪现术",
+              "植物滋长"
+            ],
+            "s4": [
+              "支配野兽",
+              "高等隐形术"
+            ],
+            "s5": [
+              "支配人类",
+              "伪装术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "仙灵之主|术士||仙灵||1",
+        "雾隐逃生|术士|仙女|6",
+        "迷惑防御|术士|仙女|10",
+        "黑暗狂喜|术士||仙灵||14"
+      ]
+    },
+    {
+      "name": "邪魔宗主",
+      "ENG_name": "The Fiend",
+      "shortName": "邪魔",
+      "source": "PHB",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 109,
+      "srd": true,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "燃烧之手",
+              "命令术"
+            ],
+            "s2": [
+              "目盲/耳聋术",
+              "灼热射线"
+            ],
+            "s3": [
+              "火球术",
+              "臭云术"
+            ],
+            "s4": [
+              "火焰护盾",
+              "火墙术"
+            ],
+            "s5": [
+              "焰击术",
+              "圣居"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "恶魔|术士||恶魔||1",
+        "黑暗之主的幸运|术士||恶魔||6",
+        "恶魔韧性|术士||恶魔||10",
+        "地狱投掷|术士|恶魔|14"
+      ]
+    },
+    {
+      "name": "旧日支配者宗主",
+      "ENG_name": "The Great Old One",
+      "shortName": "旧日支配者",
+      "source": "PHB",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 109,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "噪音暗语",
+              "塔莎狂笑术"
+            ],
+            "s2": [
+              "侦测思想",
+              "魅影之力"
+            ],
+            "s3": [
+              "锐眼术",
+              "短讯术"
+            ],
+            "s4": [
+              "支配野兽",
+              "艾伐黑触手"
+            ],
+            "s5": [
+              "支配人类",
+              "心灵遥控"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "古老存在|术士|古老存在|1",
+        "混沌护盾|术士||古老存在||6",
+        "思维护盾|术士||古老存在||10",
+        "创造奴仆|术士||伟大的古老者||14"
+      ]
+    },
+    {
+      "name": "不朽者宗主",
+      "ENG_name": "The Undying",
+      "shortName": "​不朽者",
+      "source": "SCAG",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 139,
+      "additionalSpells": [
+        {
+          "known": {
+            "1": [
+              "怜悯将死之人#c"
+            ]
+          },
+          "expanded": {
+            "s1": [
+              "摹造生命",
+              "致病射线"
+            ],
+            "s2": [
+              "目盲/耳聋术",
+              "沉默术"
+            ],
+            "s3": [
+              "假死术",
+              "死者交谈术"
+            ],
+            "s4": [
+              "生命灵光",
+              "防死护咒"
+            ],
+            "s5": [
+              "疫病术",
+              "通晓传奇"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "不朽者|术士|不朽者|SCAG|1",
+        "挑战死亡|术士||不朽者|SCAG|6",
+        "不朽本质|术士||不死|SCAG|10",
+        "不灭生命|术士||不朽者|SCAG|14"
+      ]
+    },
+    {
+      "name": "天界宗主",
+      "ENG_name": "The Celestial",
+      "shortName": "天界",
+      "source": "XGE",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 54,
+      "additionalSpells": [
+        {
+          "known": {
+            "1": [
+              "#c圣洁之火",
+              "光#c"
+            ]
+          },
+          "expanded": {
+            "s1": [
+              "治疗伤势",
+              "光导箭"
+            ],
+            "s2": [
+              "炽焰法球",
+              "次级复原术"
+            ],
+            "s3": [
+              "昼明术",
+              "回生术"
+            ],
+            "s4": [
+              "虔诚守卫",
+              "火墙术"
+            ],
+            "s5": [
+              "焰击术",
+              "高等复原术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "天界生物|术士|天界|XGE|1",
+        "光辉之魂|术士||天界生物|XGE|6",
+        "天界韧性|术士||天界|XGE|10",
+        "灼热复仇|术士||天界|XGE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "咒剑宗主",
+      "ENG_name": "The Hexblade",
+      "shortName": "咒剑",
+      "source": "XGE",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 55,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "护盾术",
+              "激愤斩"
+            ],
+            "s2": [
+              "朦胧术",
+              "烙印斩"
+            ],
+            "s3": [
+              "闪现术",
+              "元素武器"
+            ],
+            "s4": [
+              "魅影杀手",
+              "惊震斩"
+            ],
+            "s5": [
+              "放逐斩",
+              "寒冰锥"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "咒刃|术士||咒刃|XGE|1",
+        "诅咒幽灵|术士||咒刃|XGE|6",
+        "诅咒护甲|术士|诅咒之刃|XGE|10",
+        "诅咒大师|术士|六刃|XGE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "深海意志宗主",
+      "ENG_name": "The Fathomless",
+      "shortName": "深海意志",
+      "source": "TCE",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 72,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "造水/枯水术",
+              "雷鸣波"
+            ],
+            "s2": [
+              "造风术",
+              "沉默术"
+            ],
+            "s3": [
+              "闪电束",
+              "雪雨暴"
+            ],
+            "s4": [
+              "操控水体",
+              "召唤元素生物|tce"
+            ],
+            "s5": [
+              "毕格比之掌",
+              "寒冰锥"
+            ]
+          },
+          "known": {
+            "10": {
+              "daily": {
+                "1": [
+                  "艾伐黑触手"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "深渊之主|术士||深渊之主|TCE|1",
+        "海洋之魂|术士||深不可测|TCE|6",
+        "守护之环|术士||深渊者|TCE|6",
+        "抓握触手|术士|深不可测|TCE|10",
+        "深渊之跃|术士|深渊|TCE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "巨灵宗主",
+      "ENG_name": "The Genie",
+      "shortName": "巨灵",
+      "source": "TCE",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 73,
+      "additionalSpells": [
+        {
+          "name": "土巨灵(达奥)",
+          "ENG_name": "Dao",
+          "expanded": {
+            "9": [
+              "祈愿术"
+            ],
+            "s1": [
+              "侦测善恶",
+              "圣域术"
+            ],
+            "s2": [
+              "魅影之力",
+              "荆棘丛生"
+            ],
+            "s3": [
+              "创造饮食",
+              "融身入石"
+            ],
+            "s4": [
+              "魅影杀手",
+              "塑石术"
+            ],
+            "s5": [
+              "造物术",
+              "石墙术"
+            ]
+          }
+        },
+        {
+          "name": "气巨灵(镇尼)",
+          "ENG_name": "Djinni",
+          "expanded": {
+            "9": [
+              "祈愿术"
+            ],
+            "s1": [
+              "侦测善恶",
+              "雷鸣波"
+            ],
+            "s2": [
+              "魅影之力",
+              "造风术"
+            ],
+            "s3": [
+              "创造饮食",
+              "风墙术"
+            ],
+            "s4": [
+              "魅影杀手",
+              "高等隐形术"
+            ],
+            "s5": [
+              "造物术",
+              "伪装术"
+            ]
+          }
+        },
+        {
+          "name": "火巨灵(伊夫利特)",
+          "ENG_name": "Efreeti",
+          "expanded": {
+            "9": [
+              "祈愿术"
+            ],
+            "s1": [
+              "侦测善恶",
+              "燃烧之手"
+            ],
+            "s2": [
+              "魅影之力",
+              "灼热射线"
+            ],
+            "s3": [
+              "创造饮食",
+              "火球术"
+            ],
+            "s4": [
+              "魅影杀手",
+              "火焰护盾"
+            ],
+            "s5": [
+              "造物术",
+              "焰击术"
+            ]
+          }
+        },
+        {
+          "name": "水巨灵(玛利德)",
+          "ENG_name": "Marid",
+          "expanded": {
+            "9": [
+              "祈愿术"
+            ],
+            "s1": [
+              "侦测善恶",
+              "云雾术"
+            ],
+            "s2": [
+              "魅影之力",
+              "朦胧术"
+            ],
+            "s3": [
+              "创造饮食",
+              "雪雨暴"
+            ],
+            "s4": [
+              "魅影杀手",
+              "操控水体"
+            ],
+            "s5": [
+              "造物术",
+              "寒冰锥"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "灯灵|术士||精灵|TCE|1",
+        "元素赠礼|术士|精灵|TCE|6",
+        "庇护之器|术士|精灵|TCE|10",
+        "有限愿望|术士||精灵|TCE|14"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "死灵宗主",
+      "ENG_name": "The Undead",
+      "shortName": "死灵",
+      "source": "VRGR",
+      "className": "契术师",
+      "classSource": "PHB",
+      "page": 30,
+      "additionalSpells": [
+        {
+          "expanded": {
+            "s1": [
+              "灾祸术",
+              "摹造生命"
+            ],
+            "s2": [
+              "目盲/耳聋术",
+              "魅影之力"
+            ],
+            "s3": [
+              "魅影驹",
+              "死者交谈术"
+            ],
+            "s4": [
+              "防死护咒",
+              "高等隐形术"
+            ],
+            "s5": [
+              "反活物护罩",
+              "死云术"
+            ]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "亡灵|术士||亡灵|VRGR|1",
+        "墓地触摸|术士|亡灵|VRGR|6",
+        "死灵外壳|术士||亡灵|VRGR|10",
+        "灵魂投影|术士||亡灵|VRGR|14"
+      ],
+      "hasFluffImages": true
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "邪术师:异界宗主",
+      "ENG_name": "Otherworldly Patron",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "在1级时，你与一个来自其他世界的生物达成了协议，该生物从可用的守护者列表中选择。你的选择在1级时赋予你特性，并且在6级、10级和14级时再次赋予你特性。"
+      ]
+    },
+    {
+      "name": "邪术师:契约魔法",
+      "ENG_name": "Pact Magic",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你的奥术研究以及你的守护者赋予你的魔法使你能够施展法术。请查看《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 术士法术列表|法术|职业=术士}。",
+        {
+          "type": "entries",
+          "name": "戏法",
+          "ENG_name": "Cantrips",
+          "entries": [
+            "你可以选择两个来自术士法术列表的戏法。随着等级的提升，如术士表格中的戏法已知列所示，你可以选择学习更多的术士戏法。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "术士:施法能力",
+          "ENG_name": "Spell Slots",
+          "entries": [
+            "术士表格显示了你拥有多少个法术位来施放你的1至5级的{@filter 术士法术|spells|class=warlock}。表格还显示了这些法术位的等级；你的所有法术位都是同一等级。要施放你的1级或更高等级的术士法术，你必须消耗一个法术位。当你完成短休或长休时，你恢复所有消耗的法术位。",
+            "例如，当你达到5级时，你有两个3级法术位。要施放1级法术{@spell witch bolt}，你必须使用其中一个法术位，并且将其作为3级法术来施放。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "1级及更高等级已知法术",
+          "ENG_name": "Spells Known of 1st Level and Higher",
+          "entries": [
+            "在1级时，你可以从术士法术列表中选择两个1级的法术。",
+            "术士表格中的已知法术列显示了你何时可以学习更多你选择的1级及以上级别的术士法术。你选择的法术等级不能高于表格中对应你等级的法术位等级列所示的等级。例如，当你达到6级时，你将学习一个新的术士法术，它可以是1级、2级或3级。",
+            "此外，当你在此职业中升级时，你可以选择一个你所知道的术士法术，并用术士法术列表中的另一个法术替换它，这个新法术也必须是你有法术位的等级。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "施法关键属性",
+          "ENG_name": "Spellcasting Ability",
+          "entries": [
+            "魅力是你的术士法术的施法能力，所以当法术提到你的施法能力时，你将使用你的魅力。此外，当设定你施放的术士法术的豁免难度等级（DC）时，以及在使用该法术进行攻击检定时，你将使用你的魅力调整值。",
+            {
+              "type": "abilityDc",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "cha"
+              ]
+            },
+            {
+              "type": "abilityAttackMod",
+              "name": "法术",
+              "ENG_name": "Spell",
+              "attributes": [
+                "cha"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "游侠:法器",
+          "ENG_name": "Spellcasting Focus",
+          "entries": [
+            "你可以使用一个{@item arcane focus|phb}作为你的术士法术的施法焦点。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "邪术师:魔能祈唤",
+      "ENG_name": "Eldritch Invocations",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 2,
+      "entries": [
+        "在你的神秘知识研究中，你发掘了奥术咒语，这些是被禁止的知识片段，它们赋予了你持久的魔法能力。",
+        "在2级时，你可以选择两个奥术咒语。可用选项的列表可以在{@filter 可选特性|可选特性|特性类型=EI}页面找到。当你获得特定的术士等级时，你将根据术士表格中的咒语已知列获得额外的咒语选择。",
+        "此外，当你在这个职业中升级时，你可以选择一个你已知的咒语并用那个等级你能学到的另一个咒语替换它。",
+        "如果奥术祈唤有先决条件，你必须满足这些条件才能学习它。你可以在满足其先决条件的同时学习这个祈唤。等级先决条件指的是你在本职业中的等级。"
+      ]
+    },
+    {
+      "name": "邪术师:魔契恩泽",
+      "ENG_name": "Pact Boon",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 3,
+      "entries": [
+        "在3级时，你的异界恩人因为你的忠诚服务而赐予你一份礼物。你可以选择以下特性之一。",
+        {
+          "type": "options",
+          "count": 1,
+          "entries": [
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "链之魔契"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "刃之魔契"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "书之魔契"
+            },
+            {
+              "type": "refOptionalfeature",
+              "optionalfeature": "护符契约|TCE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 4,
+      "entries": [
+        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "邪术师:替换魔能",
+      "ENG_name": "Eldritch Versatility",
+      "source": "TCE",
+      "page": 70,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4级术士 {@variantrule 可选职业特性|tce|可选特性}}",
+        "每当你在这个职业中达到一个提供能力值提升特性的等级时，你可以选择以下之一，代表你在神秘学研究中的焦点变化：",
+        {
+          "type": "list",
+          "items": [
+            "用来自{@filter 术士法术列表|spells|level=0|class=Warlock}中的另一个戏法替换你从这个职业的契约魔法特性中学到的一个戏法。",
+            "将你为契约恩惠特性选择的选项替换为该特性的其他选项之一。",
+            "如果您达到12级或更高，可以用相同等级的另一个术士法术替换您神秘奥术特性中的一个法术。"
+          ]
+        },
+        "如果这个变化使你不符合任何奥术祈唤的条件，你现在还必须替换它们，选择你符合条件的祈唤。"
+      ]
+    },
+    {
+      "name": "异界宗主能力",
+      "ENG_name": "Otherworldly Patron feature",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 6,
+      "entries": [
+        "在6级时，你获得了由你的异界守护者赋予的特性。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 8,
+      "entries": [
+        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "异界宗主能力",
+      "ENG_name": "Otherworldly Patron feature",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 10,
+      "entries": [
+        "在10级时，你获得了由你的异界恩主赋予的特性。"
+      ]
+    },
+    {
+      "name": "玄奥秘法(6环)",
+      "ENG_name": "Mystic Arcanum (6th level)",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 11,
+      "entries": [
+        "在11级时，你的守护者赋予你一个名为奥术秘法的魔法秘密。从术士法术列表中选择一个{@filter 6级法术|spells|level=6|class=Warlock}作为这个奥术秘法。",
+        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。",
+        "在更高等级时，你获得更多你选择的术士法术，可以以这种方式施放：在13级时一个7级法术，15级时一个8级法术，以及17级时一个9级法术。当你完成一次长休时，你恢复所有神秘奥术的使用次数。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 12,
+      "entries": [
+        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "玄奥秘法(7环)",
+      "ENG_name": "Mystic Arcanum (7th level)",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 13,
+      "entries": [
+        "在13级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个{@filter 7级法术|法术|等级=7|职业=术士}作为这个奥术。",
+        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+      ]
+    },
+    {
+      "name": "异界宗主能力",
+      "ENG_name": "Otherworldly Patron feature",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 14,
+      "entries": [
+        "在14级时，您获得了由您的异界赞助者赋予的特性。"
+      ]
+    },
+    {
+      "name": "玄奥秘法(8环)",
+      "ENG_name": "Mystic Arcanum (8th level)",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 15,
+      "entries": [
+        "在15级时，你的恩人赐予你一个名为秘术的魔法秘密。从术士法术列表中选择一个{@filter 8级法术|spells|level=8|class=Warlock}作为这个秘术。",
+        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 16,
+      "entries": [
+        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "玄奥秘法(9环)",
+      "ENG_name": "Mystic Arcanum (9th level)",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 17,
+      "entries": [
+        "在17级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个9级法术作为这个奥术。",
+        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+      ]
+    },
+    {
+      "name": "属性值提升",
+      "ENG_name": "Ability Score Improvement",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 19,
+      "entries": [
+        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+      ]
+    },
+    {
+      "name": "邪术师:魔能掌控",
+      "ENG_name": "Eldritch Master",
+      "source": "PHB",
+      "page": 105,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "level": 20,
+      "entries": [
+        "在20级时，你可以在祈求你的守护者时，利用你内在的神秘力量来恢复已消耗的法术位。你可以花费1分钟祈求你的守护者帮助，以恢复你从契约魔法特性中消耗的所有法术位。一旦你通过这个特性恢复了法术位，你必须完成一次长时间休息才能再次这样做。"
+      ]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "至高妖精宗主",
+      "ENG_name": "The Archfey",
+      "source": "PHB",
+      "page": 108,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "至高妖精",
+      "subclassSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你的守护者是仙女之王或女士，是传说中的生物，拥有在凡人种族诞生之前就被遗忘的秘密。这个存在的动机通常是难以理解的，有时是异想天开的，可能涉及追求更大的魔法力量或解决古老的仇恨。这类生物包括霜之王子；暮光宫廷的统治者，黑暗与空气的女王；夏季宫廷的泰坦尼亚；她的配偶奥伯伦，绿之主；愚者王子海萨姆；以及古老的女巫。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "仙女让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "仙灵扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 仙灵之火}, {@spell 睡眠}",
+                "第二",
+                "{@spell 安抚情绪}, {@spell 幻象力量}",
+                "第三",
+                "{@spell 闪烁}, {@spell 植物生长}",
+                "第四",
+                "{@spell 支配野兽}, {@spell 高等隐形}",
+                "第五",
+                "{@spell 控制人类}, {@spell 幻象}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "仙灵存在|术士||仙灵||1"
+        }
+      ]
+    },
+    {
+      "name": "至高妖精宗主:妖精仪态",
+      "ENG_name": "Fey Presence",
+      "source": "PHB",
+      "page": 108,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "至高妖精",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你的守护者赋予你投射仙女迷人而可怕的存在感的能力。作为一个动作，你可以使源自你的10英尺立方体内的每个生物进行一次对抗你的术士法术豁免DC的智慧豁免。未能通过豁免的生物将被你选择的{@condition charmed}（魅惑）或{@condition frightened}（恐惧）状态影响，直到你的下一回合结束。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "雾遁",
+      "ENG_name": "Misty Escape",
+      "source": "PHB",
+      "page": 108,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "至高妖精",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你可以在受到伤害时化作一团雾气消失。当你受到伤害时，你可以使用你的反应来变得{@condition 隐形}，并传送至你能看到的60英尺内的未被占据的空间。你保持{@condition 隐形}状态，直到你的下一回合开始，或者直到你攻击或施放法术。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "至高妖精宗主:斗转星移",
+      "ENG_name": "Beguiling Defenses",
+      "source": "PHB",
+      "page": 108,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "至高妖精",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你的恩主教你如何将敌人影响心智的魔法反击回去。你对被{@condition 魅惑}免疫，当另一个生物试图魅惑你时，你可以使用你的反应尝试将魅惑反击回那个生物。该生物必须对你的术士法术豁免DC进行一次智力豁免，否则将被你{@condition 魅惑}1分钟，或者直到该生物受到任何伤害。"
+      ]
+    },
+    {
+      "name": "至高妖精宗主:幻影黑幕",
+      "ENG_name": "Dark Delirium",
+      "source": "PHB",
+      "page": 108,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "至高妖精",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你可以将一个生物投入虚幻领域。作为一个动作，选择一个你能在60英尺内看到的生物。它必须进行一次对抗你术士法术豁免难度等级（DC）的智慧豁免。豁免失败时，它将被你魅惑或恐惧（你选择）1分钟，或者直到你的专注被打破（就好像你在专注施法）。如果生物受到任何伤害，这个效果会提前结束。",
+        "在这个幻象结束之前，生物认为它迷失在一个你选择的雾气蒙蒙的领域中。生物只能看到和听到它自己、你和这个幻象。",
+        "你必须完成一次短休息或长休息后才能再次使用这个特性。"
+      ]
+    },
+    {
+      "name": "邪魔宗主",
+      "ENG_name": "The Fiend",
+      "source": "PHB",
+      "page": 109,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "邪魔",
+      "subclassSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你与来自存在低层平面的恶魔签订了契约，这些生物的目标是邪恶的，即使你努力反对这些目标。这些生物渴望腐蚀或毁灭一切事物，最终包括你自己。足够强大的恶魔可以签订契约，包括诸如Demogorgon、Orcus、Fraz'Urb-luu和Baphomet等恶魔领主；Asmodeus、Dispater、Mephistopheles和Belial等大恶魔；特别强大的深渊恶魔和巴洛魔；以及ultroloths和其他yugoloths的领主。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "恶魔让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "恶魔扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 焰击手}, {@spell 命令}",
+                "第二",
+                "{@spell 盲目/耳聋}, {@spell 灼热射线}",
+                "第三",
+                "{@spell 火球术}, {@spell 恶臭云雾}",
+                "第四",
+                "{@spell 火焰护盾}, {@spell 火墙}",
+                "第五",
+                "{@spell 火焰打击}, {@spell 神圣领域}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "黑暗之主的祝福|术士||恶魔||1"
+        }
+      ]
+    },
+    {
+      "name": "邪魔宗主:黑暗赐福",
+      "ENG_name": "Dark One's Blessing",
+      "source": "PHB",
+      "page": 109,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "邪魔",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，当你将一个敌对生物的生命值降至0时，你获得等同于你的感知调整值加上你的术士等级（最少为1）的临时生命值。"
+      ]
+    },
+    {
+      "name": "邪魔宗主:黑暗强运",
+      "ENG_name": "Dark One's Own Luck",
+      "source": "PHB",
+      "page": 109,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "邪魔",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a {@dice d10} to your roll. You can do so after seeing the initial roll but before any of the roll's effects occur.",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "邪魔宗主:邪魔体魄",
+      "ENG_name": "Fiendish Resilience",
+      "source": "PHB",
+      "page": 109,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "邪魔",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你可以在完成短休息或长休息时选择一种伤害类型。你将对该伤害类型获得抗性，直到你通过此特性选择不同的类型。魔法武器或银质武器造成的伤害无视此抗性。"
+      ]
+    },
+    {
+      "name": "邪魔宗主:直坠噩梦",
+      "ENG_name": "Hurl Through Hell",
+      "source": "PHB",
+      "page": 109,
+      "srd": true,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "邪魔",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，当你用攻击击中一个生物时，你可以使用这个特性立即将目标传送到低层平面。生物消失并在噩梦般的景象中穿梭。",
+        "在你的下一轮结束时，目标返回到它之前占据的空间，或者是最近的未被占据的空间。如果目标不是恶魔，它将因其可怕的经历而受到{@damage 10d10}精神伤害。",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "旧日支配者宗主",
+      "ENG_name": "The Great Old One",
+      "source": "PHB",
+      "page": 109,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "旧日支配者",
+      "subclassSource": "PHB",
+      "level": 1,
+      "entries": [
+        "你的守护者是一个神秘实体，其本质与现实的本质完全不同。它可能来自遥远的领域，即现实之外的空间，或者可能是传说中的古老神灵之一。其动机对凡人来说是难以理解的，其知识如此庞大和古老，以至于即使是最大的图书馆也相形见绌，无法比拟它所掌握的庞大秘密。伟大的古老者可能对你的存在一无所知或完全漠不关心，但你学到的秘密允许你从它那里汲取魔法。这类实体包括被称为潜伏者的Ghaunadar；被束缚的神Tharizdun；夜蛇Dendar；返回者Zargon；伟大的克苏鲁；以及其他深不可测的存在。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "古老存在让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "古老存在扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 不和谐低语}, {@spell 塔莎的恶毒笑声}",
+                "第二",
+                "{@spell 侦测思想}, {@spell 幻象力量}",
+                "第三",
+                "{@spell 洞察术}, {@spell 传讯术}",
+                "第四",
+                "{@spell 支配野兽}, {@spell 伊瓦德的黑暗触手}",
+                "第五",
+                "{@spell 支配人类}, {@spell 心灵遥控}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "觉醒心智|术士||古老存在||1"
+        }
+      ]
+    },
+    {
+      "name": "旧日支配者宗主:唤醒心灵",
+      "ENG_name": "Awakened Mind",
+      "source": "PHB",
+      "page": 109,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "旧日支配者",
+      "subclassSource": "PHB",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你异乎寻常的知识赋予了你触摸其他生物心智的能力。你可以心灵感应地与任何你能在30英尺内看到生物交流。生物不需要与你共享语言就能理解你的心灵感应话语，但生物必须至少能理解一种语言。"
+      ]
+    },
+    {
+      "name": "旧日支配者宗主:熵光结界",
+      "ENG_name": "Entropic Ward",
+      "source": "PHB",
+      "page": 109,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "旧日支配者",
+      "subclassSource": "PHB",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "在6级时，你学会了用魔法保护自己免受攻击，并将敌人的失败攻击转变为自己的好运。当一个生物对你进行攻击检定时，你可以使用你的反应来使该检定不利。如果攻击未命中你，在你下一个回合结束前，你对生物的下一次攻击检定将具有优势。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "旧日支配者宗主:思维之盾",
+      "ENG_name": "Thought Shield",
+      "source": "PHB",
+      "page": 109,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "旧日支配者",
+      "subclassSource": "PHB",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你的思想不能被心灵感应或其他方式读取，除非你允许。你还对精神伤害有抗性，并且每当一个生物对你造成精神伤害时，那个生物也会受到与你相同的伤害。"
+      ]
+    },
+    {
+      "name": "旧日支配者宗主:创造奴仆",
+      "ENG_name": "Create Thrall",
+      "source": "PHB",
+      "page": 109,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "旧日支配者",
+      "subclassSource": "PHB",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "在14级时，你获得了用你守护者的异域魔法感染人形生物心智的能力。你可以使用你的行动来触摸一个{@condition 无力}的人形生物。那个生物随后被你{@condition 魅惑}，直到有{@spell 移除诅咒}法术施加在它身上，{@condition 魅惑}状态被移除，或者你再次使用这个特性。",
+        "只要你和被魅惑的生物处于同一存在平面上，你就可以通过心灵感应与该生物沟通。"
+      ]
+    },
+    {
+      "name": "不朽者宗主",
+      "ENG_name": "The Undying",
+      "source": "SCAG",
+      "page": 139,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "​不朽者",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 1,
+      "entries": [
+        "死亡对你的恩主没有任何影响，他已经解开了永生的秘密，尽管这样的奖赏——像所有力量一样——是有代价的。曾是凡人的不死之身已经看到凡人的一生如同季节般流逝，如同无尽日日夜夜的闪烁。它拥有分享岁月的秘密，生命和死亡的秘密。这类生物包括Vecna，手与眼之主；可怕的Iuz；巫妖女王Vol；Aerenal的不死法庭；githyanki的巫妖女王Vlaakith；以及不死巫师Fistandantalus。",
+        "在领域中，不朽的恩人包括传说中的术士之墓的主人拉洛奇（Larloch the Shadow King），以及昂瑟尔（Unther）的神王吉尔吉姆（Gilgeam）。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "不死族让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "不死扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 虚假生命}, {@spell 疾病射线}",
+                "第二",
+                "{@spell 盲目/耳聋}, {@spell 沉默}",
+                "第三",
+                "{@spell 伪装死亡}, {@spell 与死者对话}",
+                "第四",
+                "{@spell 生命光环}, {@spell 死亡防护}",
+                "第五",
+                "{@spell 疫病}, {@spell 传说知识}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "与死者同行|术士|不朽者|SCAG|1"
+        }
+      ]
+    },
+    {
+      "name": "不朽者宗主:历经死亡",
+      "ENG_name": "Among the Dead",
+      "source": "SCAG",
+      "page": 139,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "​不朽者",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你学会了{@spell spare the dying}戏法，这对你来说算作术士戏法。此外，你对任何疾病的豁免投掷具有优势。",
+        "此外，亡灵很难伤害你。如果一个亡灵直接用攻击或有害法术以你为目标，那个生物必须进行一次对抗你法术豁免难度等级（DC）的智慧豁免（当亡灵将你包含在区域效果中时，如{@spell 火球}的爆炸，亡灵不需要进行豁免）。豁免失败时，生物必须选择一个新的目标或放弃以你为目标，可能会浪费这次攻击或法术。豁免成功时，生物在接下来的24小时内对这种效果免疫。如果你用攻击或有害法术以亡灵为目标，亡灵也将在接下来的24小时内对这种效果免疫。"
+      ]
+    },
+    {
+      "name": "不朽者宗主:反抗死亡",
+      "ENG_name": "Defy Death",
+      "source": "SCAG",
+      "page": 139,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "​不朽者",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "Starting at 6th level, you can give yourself vitality when you cheat death or when you help someone else cheat it. You can regain hit points equal to {@dice 1d8} + your Constitution modifier (minimum of 1 hit point) when you succeed on a death saving throw or when you stabilize a creature with {@spell spare the dying}.",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "不朽者宗主:不朽之理",
+      "ENG_name": "Undying Nature",
+      "source": "SCAG",
+      "page": 139,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "​不朽者",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，你可以无限期地屏住呼吸，你也不需要食物、水或睡眠，尽管你仍然需要休息来减少{@condition 力竭}，并且仍然从完成短暂休息和长时间休息中获益。",
+        "此外，你的衰老速度会减慢。每过10年，你的身体只老化1年，并且你对魔法造成的老化免疫。"
+      ]
+    },
+    {
+      "name": "不朽者宗主:永恒生命",
+      "ENG_name": "Indestructible Life",
+      "source": "SCAG",
+      "page": 139,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "​不朽者",
+      "subclassSource": "剑海岸冒险者指南",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "When you reach 14th level, you partake some of the true secrets of the Undying. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d8} + your warlock level. Additionally, if you put a severed body part of yours back in place when you use this feature, the part reattaches.",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "深海意志宗主",
+      "ENG_name": "The Fathomless",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "你已经与深渊签订了契约。海洋的实体、水元素位面或另一个异界海洋现在允许你借助其海洋力量。它是否只是在利用你来了解陆地领域，还是它希望你打开宇宙的洪水之门并淹没世界？",
+        "或许你出生在一个崇拜深不可测及其后代的世代相传的邪教中。或者你可能遭遇船难，在溺水边缘时你的恩主的掌握给了你一次生命的机会。无论你与恩主签订契约的原因是什么，大海及其未知的深处都在呼唤你。",
+        "可能赋予术士力量的深海实体包括巨型乌贼、古老的水元素、由库托亚族幻想成真的神性幻觉、半人马半神以及海巫婆的女巫会。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "{@i 深不可测1级特性}",
+            "深渊之主允许你在学会术士法术时从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "深不可测扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 制造或毁灭水}, {@spell 雷鸣波}",
+                "第二",
+                "{@spell 强风}, {@spell 沉默}",
+                "第三",
+                "{@spell 闪电箭}, {@spell 冰雹风暴}",
+                "第四",
+                "{@spell 控制水源}, {@spell 召唤元素|tce}（仅限水元素）",
+                "第五",
+                "{@spell Bigby之手}（呈现为触手形态）, {@spell 寒冰锥}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "深渊触手|术士||深不可测|TCE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "海洋之赐|术士|深不可测|TCE|1"
+        }
+      ]
+    },
+    {
+      "name": "深海意志宗主:海洋馈赠",
+      "ENG_name": "Gift of the Sea",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 深不可测1级特性}",
+        "你的游泳速度增加到40英尺，并且你可以在水下呼吸。"
+      ]
+    },
+    {
+      "name": "深海意志宗主:深海触手",
+      "ENG_name": "Tentacle of the Deeps",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 深不可测1级特性}",
+        "你可以神奇地召唤一个幽灵触手来攻击你的敌人。作为一个奖励动作，你可以在你60英尺内能看到的某点创造一个10英尺长的触手。这个触手持续1分钟，或者直到你使用这个特性来创造另一个触手。",
+        "When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes {@damage 1d8} cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to {@dice 2d8}.",
+        "在你的回合上，作为奖励行动，你可以使触手移动最多30英尺，并重新进行攻击。",
+        "你可以召唤触手的次数等于你的熟练加值，当你完成一次长休息时，你将重新获得所有已消耗的使用次数。"
+      ]
+    },
+    {
+      "name": "深海意志宗主:守卫缠绕",
+      "ENG_name": "Guardian Coil",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级深不可测特性}",
+        "Your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by {@dice 1d8}. When you reach 10th level in this class, the damage reduced by the tentacle increases to {@dice 2d8}."
+      ]
+    },
+    {
+      "name": "深海意志宗主:海渊魂灵",
+      "ENG_name": "Oceanic Soul",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级深不可测特性}",
+        "你现在在深海中更加如鱼得水。你对寒冷伤害获得抗性。此外，当你完全浸没在水中时，任何也完全浸没在水中的生物都能理解你的语言，你也能听懂他们的语言。"
+      ]
+    },
+    {
+      "name": "深海意志宗主:擒握触手",
+      "ENG_name": "Grasping Tentacles",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{\"i 10th-level Fathomless feature\"}",
+        "你学会了法术{@spell 伊瓦德的黑暗触手}。它对你来说是术士法术，但不计入你所知法术的数量。你还可以不使用法术位就施放它一次，并且在完成长时间休息后再次获得这样做的能力。",
+        "每当你施展这个法术时，你的守护者的魔法会增强你，赋予你等于你的术士等级数的临时生命值。此外，伤害不能打破你对这个法术的{@status concentration}。"
+      ]
+    },
+    {
+      "name": "深海意志宗主:海渊传送",
+      "ENG_name": "Fathomless Plunge",
+      "source": "TCE",
+      "page": 72,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "深海意志",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级深渊特性}",
+        "你可以用魔法打开通往水域的临时通道。作为一个动作，你可以将自己和在你30英尺内你能看到的最多五名其他愿意的生物传送走。在一阵触手的旋转中，你们都消失了，然后在你曾见过的水域（池塘大小或更大）或其30英尺范围内重新出现，每个人出现在彼此30英尺内的未被占据的空间中。",
+        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "巨灵宗主",
+      "ENG_name": "The Genie",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "你与一种极为罕见的灯神——贵族灯神——缔结了契约。这些实体统治着元素位面上广阔的领地，并对低级灯神和元素生物有着巨大的影响力。贵族灯神的动机多种多样，但大多数都傲慢自大，他们拥有与低级神祇相媲美的力量。他们喜欢颠覆凡人的规则，因为凡人经常将灯神束缚为仆役，并且他们愿意进入扩大自己影响力的契约。",
+        "你选择你的恩主的种类或使用神灵种类表随机决定。",
+        {
+          "type": "table",
+          "caption": "精灵种类",
+          "colLabels": [
+            "d4",
+            "善良",
+            "元素"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-5",
+            "col-5"
+          ],
+          "rows": [
+            1,
+            "{@creature 道}",
+            "土",
+            2,
+            "{@creature 吉尼}",
+            "气",
+            3,
+            "{@creature 伊夫里特}",
+            "火",
+            4,
+            "{@creature 马里德}",
+            "饮食:饮水"
+          ]
+        },
+        {
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "type": "entries",
+          "entries": [
+            "{@i 1级灯神特性}",
+            "精灵让你在学会术士法术时可以从扩展的法术列表中选择。精灵扩展法术表显示了对你来说被添加到术士法术列表中的精灵法术，以及与你守护者种类相关联的法术：道（dao）、精灵（djinni）、伊弗里特（efreeti）或马里德（marid）。",
+            {
+              "type": "table",
+              "caption": "贵族灯神扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "灯神法术",
+                "道术",
+                "精灵法术",
+                "伊夫利特法术",
+                "马里德法术"
+              ],
+              "colStyles": [
+                "col-1 text-center",
+                "col-2-2",
+                "col-2-2",
+                "col-2-2",
+                "col-2-2",
+                "col-2-2"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 侦测邪恶与善良}",
+                "{@spell 避难所}",
+                "{@spell 雷鸣波}",
+                "{@spell 炽热之手}",
+                "{@spell 雾云术}",
+                "第二",
+                "{@spell 幻象力量}",
+                "{@spell 荆棘生长}",
+                "{@spell 狂风之息}",
+                "{@spell 灼热射线}",
+                "{@spell 模糊}",
+                "第三",
+                "{@spell 制造食物和水}",
+                "{@spell 融入石中}",
+                "{@spell 风墙}",
+                "{@spell 火球术}",
+                "{@spell 冰雹风暴}",
+                "第四",
+                "{@spell 幻象杀手}",
+                "{@spell 塑石术}",
+                "{@spell 高级隐形}",
+                "{@spell 火焰护盾}",
+                "{@spell 控制水源}",
+                "第五",
+                "{@spell 创造术}",
+                "{@spell 石墙}",
+                "{@spell 幻象}",
+                "{@spell 火焰冲击}",
+                "{@spell 寒冰锥}",
+                "第九",
+                "{@spell 许愿}",
+                "—",
+                "—",
+                "—",
+                "—"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "精灵之器|术士|精灵|TCE|1"
+        }
+      ]
+    },
+    {
+      "name": "巨灵宗主:巨灵器皿",
+      "ENG_name": "Genie's Vessel",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级灯神特性}",
+        "你的恩主赠予你一个魔法容器，它赋予你一定程度的神灵之力。这个容器是一个微小的物体，你可以将其作为施放术士法术的法术焦点。你可以决定这个物体是什么，或者通过在神灵之器表上掷骰来随机决定它是什么。",
+        {
+          "type": "table",
+          "caption": "巨灵宗主:巨灵器皿",
+          "colLabels": [
+            "d6",
+            "容器"
+          ],
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "rows": [
+            "1",
+            "油灯",
+            "2",
+            "骨灰盒",
+            "3",
+            "带有隔间的戒指",
+            "4",
+            "塞住的瓶子",
+            "5",
+            "空心小雕像",
+            "6",
+            "华丽的灯笼"
+          ]
+        },
+        "当你触摸这个容器时，你可以用以下方式使用它：",
+        {
+          "type": "options",
+          "style": "list-hang-notitle",
+          "entries": [
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "瓶中喘息|术士|TCE|精灵|TCE|1"
+            },
+            {
+              "type": "refSubclassFeature",
+              "subclassFeature": "神灵之怒|术士|TCE|神灵|TCE|1"
+            }
+          ]
+        },
+        "容器的AC等于你的法术豁免难度等级（DC）。其生命值等于你的术士等级加上你的熟练加值，并且对毒素和精神伤害免疫。",
+        "如果容器被摧毁或者你失去了它，你可以进行1小时的仪式来从你的恩人那里获得一个替代品。这个仪式可以在短休息或长休息期间进行，如果之前的容器仍然存在，它将被摧毁。当你死亡时，容器会在元素力量的闪光中消失。"
+      ]
+    },
+    {
+      "name": "巨灵宗主:元素赐福",
+      "ENG_name": "Elemental Gift",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级神灵特性}",
+        "你开始拥有你恩人种类的特征。你现在对由你恩人种类决定的一种伤害类型具有抗性：钝击（刀）、雷击（灯神）、火焰（伊夫利特）或寒冷（马里德）。",
+        "此外，作为奖励行动，你可以给自己一个持续10分钟的飞行速度30英尺，在此期间你可以悬停。你可以使用这个奖励行动的次数等于你的熟练加值，并且在完成长时间休息后恢复所有已使用的使用次数。"
+      ]
+    },
+    {
+      "name": "巨灵宗主:器皿庇护所",
+      "ENG_name": "Sanctuary Vessel",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 10级神灵特性}",
+        "当您通过瓶中慰藉特性进入您的神灯容器时，您现在可以选择多达五个您能看到的、愿意的生物，并且这些选定的生物会随您一起被拉入容器中。",
+        "作为一个奖励动作，你可以从容器中驱逐任意数量的生物，如果你离开、死亡或容器被摧毁，所有人都会被驱逐出去。",
+        "此外，任何（包括你）在容器内停留至少10分钟的人将获得完成短暂休息的好处，任何人还可以将你的熟练加值加到他们在容器内进行短暂休息时恢复的生命值中，如果他们花费任何生命骰来作为短暂休息的一部分。"
+      ]
+    },
+    {
+      "name": "巨灵宗主:有限祈愿术",
+      "ENG_name": "Limited Wish",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{@i 14级灯神特性}",
+        "你恳求你的恩主赐予你一个小愿望。作为一个动作，你可以向你的神灵之器表达你的愿望，请求实现一个{@filter 6级或更低级别且施法时间为1个动作的法术|法术|施法时间=动作|级别=0;1;2;3;4;5;6}的效果。法术可以来自任何职业的法术列表，你不需要满足该法术的要求，包括昂贵的成分；该法术简单地作为这个动作的一部分而生效。",
+        "Once you use this feature, you can't use it again until you finish {@dice 1d4} long rests."
+      ]
+    },
+    {
+      "name": "死灵宗主",
+      "ENG_name": "The Undead",
+      "source": "VRGR",
+      "page": 30,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "死灵",
+      "subclassSource": "VRGR",
+      "level": 1,
+      "entries": [
+        "你与一个不朽的存在缔结了契约，这个生物违背了生死循环，放弃了它的凡人躯壳，以便永恒地追求其深不可测的野心。对于这样的存在来说，时间和道德是短暂的事物，是那些对生命沙漏中沙粒仍然匆匆流逝的人的关切。这些古老的亡灵曾经也是凡人，他们亲身经历了野心之路和通往死亡之门的路线。他们渴望分享这种亵渎的知识以及其他秘密，与那些在生者中实现他们意志的人。",
+        "这类生物包括半巫妖阿瑟拉克（Acererak）、吸血鬼暴君卡斯（Kas the Bloody-Handed）、吉斯洋基巫妖女王弗拉基斯（Vlaakith）、龙巫妖德拉戈萨（Dragotha）、不死法老安赫特波（Ankhtepot）以及难以捉摸的黑暗领主阿扎林·雷克斯（Azalin Rex）。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "{@i 1级亡灵特性}",
+            "亡灵让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "亡灵扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 厄运}, {@spell 虚假生命}",
+                "第二",
+                "{@spell 致盲/耳聋}, {@spell 幻象力量}",
+                "第三",
+                "{@spell 幻象坐骑}, {@spell 与死者对话}",
+                "第四",
+                "{@spell 死亡护壁}, {@spell 高等隐形}",
+                "第五",
+                "{@spell 反生命外壳}, {@spell 云杀}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "恐怖形态|术士||亡灵|VRGR|1"
+        }
+      ]
+    },
+    {
+      "name": "战栗形态",
+      "ENG_name": "Form of Dread",
+      "source": "VRGR",
+      "page": 30,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "死灵",
+      "subclassSource": "VRGR",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "{@i 1级亡灵特性}",
+        "你显现出你守护者的可怕力量的一个方面。作为奖励行动，你变身持续1分钟。在变身期间，你获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "You gain temporary hit points equal to {@dice 1d10} + your warlock level.",
+            "在你的每个回合中，每当你用攻击检定命中一个生物时，你可以迫使它进行一次智力豁免投掷，如果豁免失败，目标将在你下一个回合结束前对你感到{@condition 恐惧}。",
+            "你对{@condition 惊恐}状态免疫。"
+          ]
+        },
+        "你可以变身的次数等于你的熟练加值，并且在完成长时间休息后你将重新获得所有已用尽的使用次数。",
+        "你的恐怖形态（Form of Dread）的外观反映了你的赞助者（patron）的某些方面。例如，你的形式可能是由阴影构成的，形成你巫妖赞助者的王冠和长袍，或者你的身体可能因古代葬礼仪式的符文而发光，并被沙漠之风环绕，暗示你的木乃伊赞助者。"
+      ]
+    },
+    {
+      "name": "死灵宗主:坟冢之触",
+      "ENG_name": "Grave Touched",
+      "source": "VRGR",
+      "page": 30,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "死灵",
+      "subclassSource": "VRGR",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "{@i 6级亡灵特性}",
+        "你恩人的力量对你的身体和魔法产生了深远的影响。你不需要进食、饮水或呼吸。",
+        "此外，在你的每个回合中，当你用攻击骰命中一个生物并对其造成伤害时，你可以将伤害类型替换为死灵伤害。在使用你的恐怖形态时，你可以在确定目标承受的死灵伤害时多掷一个伤害骰。"
+      ]
+    },
+    {
+      "name": "死灵宗主:死疽躯壳",
+      "ENG_name": "Necrotic Husk",
+      "source": "VRGR",
+      "page": 30,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "死灵",
+      "subclassSource": "VRGR",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "{@i 10级亡灵特性}",
+        "你与亡灵和死灵能量的联系现在弥漫你的身体。你对死灵伤害有抗性。如果你使用恐惧形态进行变身，你反而会对死灵伤害免疫。",
+        "In addition, when you would be reduced to 0 hit points, you can use your reaction to drop to 1 hit point instead and cause your body to erupt with deathly energy. Each creature of your choice that is within 30 feet of you takes necrotic damage equal to {@damage 2d10} + your warlock level. You then gain 1 level of {@condition exhaustion}. Once you use this reaction, you can't do so again until you finish {@dice 1d4} long rests."
+      ]
+    },
+    {
+      "name": "死灵宗主:灵魂投射",
+      "ENG_name": "Spirit Projection",
+      "source": "VRGR",
+      "page": 30,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "死灵",
+      "subclassSource": "VRGR",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "{\"i 14th-level Undead feature\"}",
+        "你的精神可以与你的物理形态分离。作为一个动作，你可以将你的精神从你的身体中投射出来。你留下的身体处于{@condition 无意识}状态，并处于暂停动画的状态。",
+        "你的精神几乎在各个方面都类似于你的凡人形态，复制了你的游戏统计数据，但不包括你的财产。任何适用于你的精神或身体的伤害或其他效果都会影响另一个。你的精神可以在你的身体外保持长达1小时，或者直到你的{@status 专注}被打破（就好像{@status 专注||专注}在施法上）。当你的精神投影结束时，你的精神返回到你的身体，或者你的身体神奇地传送到你精神的空间（由你选择）。",
+        "在投射你的灵魂时，你获得了以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "你的精神和身体获得了对钝击、穿刺和斩击伤害的抗性。",
+            "当你施放召唤术或死灵术学派的法术时，该法术不需要语言或肢体成分，也不需要没有黄金成本的物质成分。",
+            "You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were {@quickref difficult terrain||3}, but you take {@dice 1d10} force damage if you end your turn inside a creature or an object.",
+            "当你使用你的恐怖形态时，在你的每个回合中，每当你对一个生物造成死灵伤害时，你恢复的生命值等于造成死灵伤害的一半。"
+          ]
+        },
+        "一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再这样做。"
+      ]
+    },
+    {
+      "name": "天界宗主",
+      "ENG_name": "The Celestial",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 1,
+      "entries": [
+        "你的守护者是上层界的一个强大存在。你与一个古老的天界生物、太阳灵、麒麟、独角兽或其他居住在永恒幸福的位面的实体缔结了契约。你与那个存在的契约让你能够体验到照亮多元宇宙的圣光的一丝丝触碰。",
+        "与这样的力量相连可能会引起你行为和信仰的变化。你可能发现自己被驱使去消灭亡灵，击败恶魔，保护无辜者。有时，你的心也可能充满了对你恩人天界领域的向往，渴望在你的余生中漫游那个天堂。但你知道，你目前的使命是在凡人之中，你的契约将你束缚于为世界上的黑暗之地带来光明。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "天界让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "天界扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 治愈伤口}, {@spell 引导之光}",
+                "第二",
+                "{@spell 火焰球}, {@spell 次级复原}",
+                "第三",
+                "{@spell 白昼}, {@spell 复苏}",
+                "第四",
+                "{@spell 信仰守卫}, {@spell 火墙}",
+                "第五",
+                "{@spell 天火降临}, {@spell 高等复原}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "额外戏法|术士||天界生物|XGE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "治愈之光|术士|天界|XGE|1"
+        }
+      ]
+    },
+    {
+      "name": "天界宗主:额外戏法",
+      "ENG_name": "Bonus Cantrips",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你学会了{@spell 神圣火焰}和{@spell 光亮}戏法。它们对你来说算作术士戏法，但它们不计入你所知戏法的数量。"
+      ]
+    },
+    {
+      "name": "天界宗主:治愈之光",
+      "ENG_name": "Healing Light",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "At 1st level, you gain the ability to channel celestial energy to heal wounds. You have a pool of {@dice d6}s that you spend to fuel this healing. The number of dice in the pool equals 1 + your warlock level.",
+        "作为一个奖励动作，你可以治疗一个你能看到的60英尺内的一个生物，消耗来自池子的骰子。你一次能消耗的最大骰子数等于你的的魅力调整值（最少一个骰子）。掷出你消耗的骰子，将它们加在一起，并恢复等于总数的生命值。",
+        "当您完成一次长休息时，您的骰池恢复所有消耗的骰子。"
+      ]
+    },
+    {
+      "name": "天界宗主:光耀之魂",
+      "ENG_name": "Radiant Soul",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你与天界的联系使你能够成为辐射能量的传导体。你对辐射伤害有抗性，当你施放一个造成辐射或火焰伤害的法术时，你可以将你的感知调整值加到该法术对其中一个目标的一个辐射或火焰伤害骰上。"
+      ]
+    },
+    {
+      "name": "天界宗主:天界韧性",
+      "ENG_name": "Celestial Resilience",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "从10级开始，每当你完成短休息或长休息时，你将获得临时生命值。这些临时生命值等于你的术士等级加上你的的魅力调整值。此外，在休息结束时，选择你能看到的最多五个生物。这些生物每个将获得等于你的术士等级的一半加上你的魅力调整值的临时生命值。"
+      ]
+    },
+    {
+      "name": "天界宗主:灼光复仇",
+      "ENG_name": "Searing Vengeance",
+      "source": "XGE",
+      "page": 54,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "天界",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "Starting at 14th level, the radiant energy you channel allows you to resist death. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to {@dice 2d8} + your Charisma modifier, and it is {@condition blinded} until the end of the current turn.",
+        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+      ]
+    },
+    {
+      "name": "咒剑宗主",
+      "ENG_name": "The Hexblade",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 1,
+      "entries": [
+        "你与来自影界的神秘实体缔结了契约——这是一种在有感知的魔法武器中显现的力量，这些武器是用影界的物质雕刻而成的。黑刃剑是这些武器中最有名的，这些武器随着时间的推移遍布了整个多元宇宙。这些武器背后的阴影力量可以为与它缔结契约的术士提供力量。许多六刃术士创造了模仿在影界形成的武器。其他人则放弃了这样的武器，满足于将那个位面的黑暗魔法编织进他们的施法之中。",
+        "因为人们知道渡鸦女王锻造了这些武器中的第一个，许多学者推测她和这股力量是一体的，认为这些武器以及咒刃术士是她用来在物质位面上操纵事件以实现她难以理解的目的的工具。",
+        {
+          "type": "entries",
+          "name": "死灵宗主:扩展法术列表",
+          "ENG_name": "Expanded Spell List",
+          "entries": [
+            "咒剑使让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+            {
+              "type": "table",
+              "caption": "咒剑扩展法术",
+              "colLabels": [
+                "法术环阶",
+                "法术"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-10"
+              ],
+              "rows": [
+                "第一",
+                "{@spell 盾牌}, {@spell 愤怒打击}",
+                "第二",
+                "{@spell 模糊术}, {@spell 烙印打击}",
+                "第三",
+                "{@spell 瞬移}, {@spell 元素武器}",
+                "第四",
+                "{@spell 幻象杀手}, {@spell 震撼打击}",
+                "第五",
+                "{@spell 放逐打击}, {@spell 冰霜锥}"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "咒刃的诅咒|术士||咒刃|XGE|1"
+        },
+        {
+          "type": "refSubclassFeature",
+          "subclassFeature": "六刃战士|术士|六刃|XGE|1"
+        }
+      ]
+    },
+    {
+      "name": "咒剑宗主:巫咒战士",
+      "ENG_name": "Hex Warrior",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "在1级时，你获得了必要的训练，以有效地武装自己进行战斗。你对中型盔甲、盾牌和武术武器获得了熟练度。",
+        "你的恩主的影响还允许你神秘地通过特定的武器传达你的意志。每当你完成一次长时间休息时，你可以触摸一件你熟练且没有双手特性的武器。当你用那件武器攻击时，你可以使用你的魅力调整值，而不是力量或敏捷，来进行攻击和伤害判定。这个好处持续到你完成下一次长时间休息。如果你后来获得了契约之刃特性，这个好处会扩展到你用那个特性召唤的每一个契约武器，无论武器的类型。"
+      ]
+    },
+    {
+      "name": "咒剑宗主:咒剑诅咒",
+      "ENG_name": "Hexblade's Curse",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 1,
+      "header": 1,
+      "entries": [
+        "从1级开始，你获得了给某人施加恶毒诅咒的能力。作为奖励行动，选择一个你能看到的30英尺内的一个生物。目标被诅咒持续1分钟。如果目标死亡、你死亡或你被{@condition 无力}，则诅咒会提前结束。直到诅咒结束，你获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "你对被诅咒目标的伤害骰获得加值。该加值等于你的熟练加值。",
+            "Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the {@dice d20}.",
+            "如果被诅咒的目标死亡，你恢复的生命值等于你的术士等级加上你的魅力调整值（最少为1点生命值）。"
+          ]
+        },
+        "在你完成短暂或长时间休息之前，你不能再次使用这个特性。"
+      ]
+    },
+    {
+      "name": "咒剑宗主:咒缚幽灵",
+      "ENG_name": "Accursed Specter",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 6,
+      "header": 2,
+      "entries": [
+        "从6级开始，你可以诅咒你杀死的人的灵魂，暂时将其绑定为你服务。当你杀死一个人形生物时，你可以使其灵魂从尸体中升起成为一个{@creature specter}，其统计数据在《怪物手册》中。当幽灵出现时，它获得等于你术士等级一半的临时生命值。为幽灵掷先攻骰，它有自己的回合。它服从你的口头命令，并在攻击判定上获得一个特殊加值，等于你的魅力调整值（最少为+0）。",
+        "这个幽灵会一直为你服务，直到你下一次长时间休息结束，届时它会消失到来世。",
+        "一旦你使用这个特性绑定了一个幽灵，直到你完成一次长休息之前，你不能再使用这个特性。"
+      ]
+    },
+    {
+      "name": "咒剑宗主:巫咒盔甲",
+      "ENG_name": "Armor of Hexes",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 10,
+      "header": 2,
+      "entries": [
+        "At 10th level, your hex grows more powerful. If the target cursed by your Hexblade's Curse hits you with an attack roll, you can use your reaction to roll a {@dice d6}. On a 4 or higher, the attack instead misses you, regardless of its roll."
+      ]
+    },
+    {
+      "name": "咒剑宗主:巫咒大师",
+      "ENG_name": "Master of Hexes",
+      "source": "XGE",
+      "page": 55,
+      "className": "契术师",
+      "classSource": "PHB",
+      "subclassShortName": "咒剑",
+      "subclassSource": "XGE",
+      "level": 14,
+      "header": 2,
+      "entries": [
+        "从14级开始，你可以将你的咒剑之咒从一个被杀死的生物传播到另一个生物。当你的咒剑之咒所诅咒的生物死亡时，你可以将诅咒施加给你能看到的30英尺内的另一个生物，只要你不是{@condition 失去能力}。当你以这种方式施加诅咒时，你不会从之前被诅咒生物的死亡中恢复生命值。"
+      ]
+    },
+    {
+      "name": "瓶中小憩",
+      "ENG_name": "Bottled Respite",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "TCE",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "作为一个动作，你可以神奇地消失并进入你的容器，它留在你离开的空间。容器的内部是一个超维度空间，形状为20英尺半径的圆柱体，高20英尺，并且类似于你的容器。内部配备了垫子和低桌子，并且温度舒适。在内部时，你可以听到容器周围区域的声音，就好像你在它的空间里一样。你可以在容器内停留的时间最多等于你的熟练加值的两倍小时数。如果你使用奖励动作离开、死亡或容器被摧毁，你可以提前离开容器。当你退出容器时，你出现在最靠近它的未被占据的空间。留在容器中的任何物品都留在那里，直到被搬出，如果容器被摧毁，存放在那里的每个物品都会无害地出现在容器前空间的最靠近的未被占据的空间。一旦你进入容器，你就不能再次进入，直到你完成一次长时间休息。"
+      ]
+    },
+    {
+      "name": "巨灵之怒",
+      "ENG_name": "Genie's Wrath",
+      "source": "TCE",
+      "page": 73,
+      "className": "契术师",
+      "classSource": "TCE",
+      "subclassShortName": "巨灵",
+      "subclassSource": "TCE",
+      "level": 1,
+      "entries": [
+        "在你的每个回合中，每当你用攻击骰命中目标时，你可以对目标造成额外伤害，等于你的熟练加值。这种伤害的类型由你的恩主决定：钝击（刀）、雷击（神灵）、火焰（伊夫利特）或寒冷（马里德）。"
+      ]
+    }
+  ]
 }
