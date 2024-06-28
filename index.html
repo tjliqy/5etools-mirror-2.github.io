@@ -6,7 +6,7 @@
 	<!--5ETOOLS_ANALYTICS-->
 	<!--5ETOOLS_ADCODE-->
 	<meta charset="utf-8">
-	<meta name="description" content="A suite of browser-based tools for 5th Edition  Dungeons &amp; Dragons players and Dungeon Masters.">
+	<meta name="description" content="A suite of tools for 5th Edition Dungeons &amp; Dragons players and Dungeon Masters.">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -57,17 +57,20 @@
 	<script type="text/javascript" src="js/navigation.js"></script>
 	<script type="text/javascript" src="js/browsercheck.js"></script>
 </head>
+
 <body>
+
+<div class="overlay-noise"></div>
+
 <header class="hidden-xs hidden-sm page__header">
 	<div class="container ve-flex-v-baseline">
-		<h1 class="page__title no-wrap my-0 page__title no-wrap my-0--home">5e-<span>tools</span></h1>
+		<h1 class="page__title no-wrap my-0 my-0--home" id="page__title">5e<span>tools</span></h1>
 		<p class="page__subtitle no-wrap my-0" id="page__subtitle">一套为了《龙与地下城5E》玩家和地下城主而存在的工具。</p>
 	</div>
 </header>
 
 <nav class="container page__nav" id="navigation">
-	<ul class="nav nav-pills page__nav-inner" id="navbar">
-	</ul>
+	<ul class="nav nav-pills page__nav-inner" id="navbar"></ul>
 </nav>
 
 <div class="container">
@@ -217,8 +220,8 @@
 		<h3>使用 Roll20？</h3>
 		<p>安装 <a href="https://ssstormy.github.io/roll20-enhancement-suite/" rel="noopener noreferrer">
 			Roll20 增强套件</a> 以及 油猴脚本Tampermonkey (<a
-			href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" rel="noopener noreferrer">Chrome</a>/<a
-			href="https://addons.mozilla.org/firefox/addon/tampermonkey/" rel="noopener noreferrer">Firefox</a>)，点击这个
+				href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" rel="noopener noreferrer">Chrome</a>/<a
+				href="https://addons.mozilla.org/firefox/addon/tampermonkey/" rel="noopener noreferrer">Firefox</a>)，点击这个
 			<a href="https://github.com/TheGiddyLimit/betterR20/raw/development/dist/betteR20-5etools.user.js" id="betteR20_link" rel="noopener noreferrer">链接</a>获取 betteR20 脚本。</p>
 		<p>查看<a href="https://wiki.tercept.net/en/betteR20" rel="noopener noreferrer">wiki</a>上的安装指南和使用手册。</p>
 
@@ -252,8 +255,11 @@
 	</p>
 </footer>
 <div class="cancer__footer-pad"></div>
+
 <!--5ETOOLS_SCRIPT_ANCHOR-->
 <!--5ETOOLS_AD_ADHESION-->
+
+<script type="text/javascript" src="lib/jquery.js"></script>
 <script type="text/javascript" src="js/parser.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/utils-ui.js"></script>
@@ -263,12 +269,14 @@
 <script type="text/javascript" src="js/filter.js"></script>
 <script type="text/javascript" src="js/utils-dataloader.js"></script>
 <script type="text/javascript" src="js/utils-brew.js"></script>
+<script type="module" src="js/utils-config.js"></script>
 <script type="text/javascript" src="js/render.js"></script>
 <script type="text/javascript" src="js/render-dice.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
 <script type="text/javascript" src="js/hist.js"></script>
 <script type="module" src="js/index.js"></script>
-<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="js/list2.js"></script>
 <script type="text/javascript" src="lib/elasticlunr.js"></script>
+
 </body>
 </html>
