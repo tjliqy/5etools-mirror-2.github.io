@@ -1117,13 +1117,6 @@ class ListPage {
 
 		this.handleFilterChange();
 
-		var go_eng = document.getElementById("btn-go-english");
-		go_eng.addEventListener("click", () => {
-			var path = window.location.pathname;
-			var hash = window.location.hash;
-		  	window.open("https://5e.tools/"+path+hash, "_blank");  
-		})
-
 		await this._pOnLoad_pPostLoad();
 
 		window.dispatchEvent(new Event("toolsLoaded"));
@@ -1905,6 +1898,13 @@ class ListPage {
 		});
 
 		const tabMetasAdditional = this._renderStats_getTabMetasAdditional({ent});
+
+		var go_eng = document.getElementById("btn-go-english");
+		go_eng.addEventListener("click", () => {
+			var path = window.location.pathname;
+			var hash = ent['ENG_name']+'_'+ent['source'];
+		  	window.open("https://5e.tools/"+path+"#"+hash, "_blank");  
+		})
 
 		Renderer.utils.bindTabButtons({
 			tabButtons: [tabMetaStats, ...tabMetasAdditional].filter(it => it.isVisible),
