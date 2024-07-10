@@ -6,12 +6,12 @@
       ]
     },
     "internalCopies": [
-      "怪物"
+      "monster"
     ],
     "otherSources": {
       "monster": {
-        "HotDQ": "轮回之塔",
-        "MM": "轮回之塔"
+        "HotDQ": "RoT",
+        "MM": "RoT"
       }
     }
   },
@@ -186,8 +186,8 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 小幻象}",
-                "{@spell 霜冻射线}"
+                "{@spell 次级幻象}",
+                "{@spell 冷冻射线}"
               ]
             },
             "1": {
@@ -195,22 +195,22 @@
               "spells": [
                 "{@spell 魅惑人类}",
                 "{@spell 侦测魔法}",
-                "{防护法术}",
+                "{@spell 护盾术}",
                 "{@spell 雷鸣波}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 飞刀云}",
-                "{@spell 定身术}",
+                "{@spell 匕首之云}",
+                "{@spell 人类定身术}",
                 "{@spell 识破隐形}"
               ]
             },
             "3": {
               "slots": 3,
               "spells": [
-                "{@spell 活化死物}",
+                "{@spell 活化死尸}",
                 "{@spell 解除魔法}"
               ]
             },
@@ -218,14 +218,14 @@
               "slots": 3,
               "spells": [
                 "{@spell 火焰护盾}",
-                "{@spell 高级隐形}"
+                "{@spell 高等隐形术}"
               ]
             },
             "5": {
               "slots": 2,
               "spells": [
-                "{@spell 云雾杀}",
-                "{@spell 石墙}"
+                "{@spell 死云术}",
+                "{@spell 石墙术}"
               ]
             }
           },
@@ -233,9 +233,9 @@
         }
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true
     },
@@ -267,7 +267,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -315,14 +315,14 @@
           "name": "龙之狂热者",
           "ENG_name": "Dragon Fanatic",
           "entries": [
-            "The dragonfang has advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}. While the dragonfang can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonfang ignores the effects of being {@condition 魅惑} or {@condition 恐惧}."
+            "龙牙在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免检定中具有优势。当龙牙能看到一个龙或者对它友好的更高级别的龙之教团成员时，龙牙忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
           ]
         },
         {
           "name": "狂信徒优势",
           "ENG_name": "Fanatic Advantage",
           "entries": [
-            "Once per turn, if the dragonfang makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 ({@dice 3d6}) damage."
+            "每回合一次，如果龙牙在攻击检定时获得优势并且命中，目标将额外受到10点（{@dice 3d6}）伤害。"
           ]
         },
         {
@@ -336,7 +336,7 @@
           "name": "群体战术",
           "ENG_name": "Pack Tactics",
           "entries": [
-            "The dragonfang has advantage on an attack roll against a creature if at least one of the dragonfang's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
+            "如果至少有一个龙牙的盟友在生物的5英尺范围内，并且盟友没有处于{@condition 无力}状态，则龙牙在对该生物的攻击检定上具有优势。"
           ]
         }
       ],
@@ -352,19 +352,19 @@
           "name": "短剑",
           "ENG_name": "Shortsword",
           "entries": [
-            "{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@dice 2d6}) damage of the type to which the dragonfang has resistance."
+            "{@atk 近战武器} {@hit 6} hit，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害，加上7 ({@dice 2d6}) 点与龙牙有抗性的类型的伤害。"
           ]
         },
         {
           "name": "龙息宝珠（每日2次）",
           "ENG_name": "Orb of Dragon's Breath (2/Day)",
           "entries": [
-            "{@atk rs} {@hit 5} to hit, range 50 ft., one target. {@h}22 ({@dice 5d8}) damage of the type to which the dragonfang has damage resistance."
+            "{@atk rs} {@hit 5} 命中，射程50英尺，一个目标。{@h}22 ({@dice 5d8}) 点伤害，类型为龙牙具有伤害抗性的类型。"
           ]
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "群体战术"
@@ -415,7 +415,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -463,14 +463,14 @@
           "name": "龙之狂热者",
           "ENG_name": "Dragon Fanatic",
           "entries": [
-            "The dragonsoul has advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}. While the dragonsoul can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonsoul ignores the effects of being {@condition 魅惑} or {@condition 恐惧}."
+            "龙魂在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免检定中具有优势。当龙魂能看到一个龙或等级更高的对它友好的龙之教团成员时，龙魂忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
           ]
         },
         {
           "name": "狂信徒优势",
           "ENG_name": "Fanatic Advantage",
           "entries": [
-            "Once per turn, if the dragonsoul makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 ({@dice 3d6}) damage."
+            "每回合一次，如果龙魂在攻击检定上获得优势并且命中，目标将额外受到10点（{@dice 3d6}）伤害。"
           ]
         },
         {
@@ -484,7 +484,7 @@
           "name": "群体战术",
           "ENG_name": "Pack Tactics",
           "entries": [
-            "The dragonsoul has advantage on an attack roll against a creature if at least one of the dragonsoul's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
+            "如果至少有一个龙魂的盟友在生物5英尺范围内，并且该盟友没有处于{@condition 无力}状态，则龙魂对生物的攻击检定具有优势。"
           ]
         }
       ],
@@ -500,19 +500,19 @@
           "name": "短剑",
           "ENG_name": "Shortsword",
           "entries": [
-            "{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 10 ({@dice 3d6}) damage of the type to which the dragonsoul has resistance."
+            "{@atk 近战武器} {@hit 命中7} 命中，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害，加上10 ({@dice 3d6}) 点与龙魂抗性相同类型的额外伤害。"
           ]
         },
         {
           "name": "龙息宝珠（每日3次）",
           "ENG_name": "Orb of Dragon's Breath (3/Day)",
           "entries": [
-            "{@atk rs} {@hit 7} to hit, range 90 ft., one target. {@h}27 ({@dice 6d8}) damage of the type to which the dragonsoul has damage resistance."
+            "{@atk rs} {@hit 7} 命中，射程90英尺，单一目标。{@h}27 ({@dice 6d8}) 点伤害，伤害类型与龙魂的伤害抗性相同。"
           ]
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "群体战术"
@@ -605,7 +605,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         },
         {
@@ -879,7 +879,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d8}) cold damage. If the target is a Medium or smaller creature it is {@condition 被擒} (escape {@dc 11}). Until this grapple ends, the toad can't bite another target."
+            "{@atk 近战武器} {@hit 3} hit，射程5英尺，一个目标。{@h}4 ({@damage 1d8}) 冰霜伤害。如果目标是中型或更小的生物，则会被{@condition 缠绕}（逃脱{@dc 11}）。直到这个缠绕结束，蟾蜍不能再咬另一个目标。"
           ]
         }
       ],
@@ -1052,7 +1052,7 @@
         }
       ],
       "_copy": {
-        "name": "部落勇士",
+        "name": "部族武者",
         "ENG_name": "Tribal Warrior",
         "source": "MM"
       },
@@ -1089,7 +1089,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -1147,7 +1147,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "While in sunlight, Naergoth has disadvantage on attack rolls, as well as on Wisdom ({@skill 察觉}) checks that rely on sight."
+            "在日光下，Naergoth在攻击检定上处于劣势，以及在依靠视力的感知（{@skill 察觉}）检定上也处于劣势。"
           ]
         }
       ],
@@ -1170,7 +1170,7 @@
           "name": "长剑",
           "ENG_name": "Longsword",
           "entries": [
-            "{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) slashing damage, or 10 ({@dice 1d10 + 5}) if used with two hands, plus 10 ({@damage 3d6}) necrotic damage."
+            "{@atk 近战武器} 命中骰：9，射程5英尺，单一目标。{@h}9（{@damage 1d8 + 5}）斩击伤害，或双手使用时为10（{@dice 1d10 + 5}），外加10（{@damage 3d6}）死灵伤害。"
           ]
         },
         {
@@ -1182,8 +1182,8 @@
         }
       ],
       "attachedItems": [
-        "长弓",
-        "长剑"
+        "长弓|PHB",
+        "长剑|PHB"
       ],
       "traitTags": [
         "日光敏感"
@@ -1211,7 +1211,7 @@
         "RW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -1327,12 +1327,12 @@
           "name": "毒雾（每日2次）",
           "ENG_name": "Poisonous Cloud (2/Day)",
           "entries": [
-            "Poison gas fills a 20-foot-radius sphere centered on a point Neronvain can see within 50 feet of him. The gas spreads around corners and remains until the start of Neronvain's next turn. Each creature that starts its turn in the gas must succeed on a {@dc 16} Constitution saving throw or be {@condition 中毒} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "毒气充满以Neronvain可见的某点为中心，半径为20英尺的球形区域。毒气可以绕过角落，直到Neronvain下一回合开始时仍会存在。每个在其回合开始时位于毒气中的生物必须进行一次DC 16的体质豁免投掷，否则将被{@condition poisoned}状态影响1分钟。生物可以在每个回合结束时重复进行豁免投掷，成功则结束该效果。"
           ]
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "精类血统"
@@ -1363,7 +1363,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -1514,7 +1514,7 @@
           "name": "特殊装备",
           "ENG_name": "Special Equipment",
           "entries": [
-            "Severin 拥有龙后面具（{@item Mask of the Dragon Queen|rot}）。"
+            "Severin 拥有龙后面具（{@item 龙后面具|轮回之塔}）。"
           ]
         },
         {
@@ -1586,7 +1586,7 @@
           "name": "地狱锁链（消耗3个行动）",
           "ENG_name": "Hellish Chains (Costs 3 Actions)",
           "entries": [
-            "Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and {@condition 束缚}. The {@condition 束缚} target takes 21 ({@damage 6d6}) fire damage at the start of each of its turns. At the end of its turns, the target can make a {@dc 17} Strength saving throw, ending the effect on itself on a success."
+            "Severin 瞄准他能看到的30英尺内的一只生物。目标被火焰的魔法链条缠绕并处于{@condition restrained}状态。处于{@condition restrained}状态的目标在每个回合开始时受到21点（{@damage 6d6}）火焰伤害。在其回合结束时，目标可以进行一次DC 17的力量豁免检定，成功则结束该效果。"
           ]
         }
       ],
@@ -1608,8 +1608,8 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:力量"
+        "敏捷",
+        "力量"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -1820,7 +1820,7 @@
           "name": "多头",
           "ENG_name": "Multiple Heads",
           "entries": [
-            "Tiamat can take one reaction per turn, rather than only one per round. She also has advantage on saving throws against being knocked {@condition 昏迷}. If she fails a saving throw against an effect that would stun a creature, one of her unspent legendary actions is spent."
+            "提亚玛特每回合可以进行一次反应，而不是每轮一次。她对被击昏的豁免检定也有优势。如果她在对抗使生物昏迷的效果的豁免检定失败，她将消耗一个未使用的传奇行动。"
           ]
         },
         {
@@ -1857,7 +1857,7 @@
           "name": "骇人威仪",
           "ENG_name": "Frightful Presence",
           "entries": [
-            "Each creature of Tiamat's choice that is within 240 feet of Tiamat and aware of her must succeed on a {@dc 26} Wisdom saving throw or become {@condition 恐惧} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Tiamat's Frightful Presence for the next 24 hours."
+            "在提亚马特240英尺范围内且意识到她存在的每个生物，必须成功进行一次{@dc 26}智力豁免检定，否则会在1分钟内变为{@condition 恐惧}。生物可以在每个回合结束时重复豁免检定，成功则结束此效果。如果生物的豁免检定成功或效果对其结束，该生物在接下来的24小时内对提亚马特的恐怖存在免疫。"
           ]
         }
       ],
@@ -1954,12 +1954,12 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力"
+        "魅力"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -1983,7 +1983,7 @@
         "source": "RoT",
         "_templates": [
           {
-            "name": "矮人:山地矮人",
+            "name": "山地矮人",
             "ENG_name": "Mountain Dwarf",
             "source": "PHB"
           }

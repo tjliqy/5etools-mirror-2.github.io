@@ -69,7 +69,7 @@
           "name": "复生",
           "ENG_name": "Rejuvenation",
           "entries": [
-            "When the plant dies, it returns to life in the place where it died {@dice 1d12} months later, unless the ground where it took root is sown with salt or soaked with poison."
+            "当这株植物死亡时，除非它扎根的土壤被撒盐或浸泡在毒液中，否则它会在死亡地点在{@dice 1d12}个月后复活。"
           ]
         },
         {
@@ -132,7 +132,7 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -218,7 +218,7 @@
           "name": "粉碎拥抱",
           "ENG_name": "Crushing Embrace",
           "entries": [
-            "无骨生物将其身体缠绕在它所{@condition grappled}的大型或更小生物上。当无骨生物附着时，目标将被{@condition blinded}并且无法呼吸。目标必须在无骨生物的每个回合开始时成功进行一次{@dc 13}力量豁免检定，否则将受到5 ({@damage 1d4 + 3})的钝击伤害。如果某物移动了目标，无骨生物会随之移动。无骨生物可以通过花费5英尺的移动来自行脱离。一个生物，包括目标，可以使用它的行动尝试脱离无骨生物并迫使其移动到最近的未被占据的空间，通过成功的{@dc 13}力量检定来做到这一点。当无骨生物死亡时，它会从它附着的任何生物上脱离。"
+            "无骨生物将其身体缠绕在它所{@condition 被擒}的大型或更小生物上。当无骨生物附着时，目标将被{@condition 目盲}并且无法呼吸。目标必须在无骨生物的每个回合开始时成功进行一次{@dc 13}力量豁免检定，否则将受到5 ({@damage 1d4 + 3})的钝击伤害。如果某物移动了目标，无骨生物会随之移动。无骨生物可以通过花费5英尺的移动来自行脱离。一个生物，包括目标，可以使用它的行动尝试脱离无骨生物并迫使其移动到最近的未被占据的空间，通过成功的{@dc 13}力量检定来做到这一点。当无骨生物死亡时，它会从它附着的任何生物上脱离。"
           ]
         }
       ],
@@ -246,7 +246,7 @@
         "被擒"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -326,21 +326,21 @@
             "大脑天生的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。它能够天生施放以下法术，无需任何材料："
           ],
           "will": [
-            "{@spell 寒冰之触}（见下方\"行动\"）",
+            "{@spell 寒颤之触}（见下方\"行动\"）",
             "{@spell 侦测思想}",
-            "{@spell 魔法手}",
-            "{@spell 真实区域}"
+            "{@spell 法师之手}",
+            "{@spell 诚实之域}"
           ],
           "daily": {
             "3e": [
               "{@spell 魅惑人类}",
-              "{@spell 定身术}"
+              "{@spell 人类定身术}"
             ],
             "1e": [
-              "{@spell 强迫}",
-              "{@spell 定身怪物}",
-              "{@spell 睡眠}（3级版本）",
-              "{@spell 塔莎的恶毒笑声}"
+              "{@spell 强迫术}",
+              "{@spell 怪物定身术}",
+              "{@spell 沉眠}（3级版本）",
+              "{@spell 塔莎狂笑术}"
             ]
           },
           "ability": "int"
@@ -351,7 +351,7 @@
           "name": "侦测知性",
           "ENG_name": "Detect Sentience",
           "entries": [
-            "大脑能够感知到300英尺范围内任何智力为3或更高生物的存在和位置，无论是否有障碍物阻隔，除非该生物受到{@spell 心智屏障}法术的保护。"
+            "大脑能够感知到300英尺范围内任何智力为3或更高生物的存在和位置，无论是否有障碍物阻隔，除非该生物受到{@spell 心灵屏障}法术的保护。"
           ]
         },
         {
@@ -381,7 +381,7 @@
           "name": "心灵震爆 {@recharge 5}",
           "ENG_name": "Mind Blast {@recharge 5}",
           "entries": [
-            "大脑通过魔法发出心灵能量，形成一个60英尺的圆锥形区域。在该区域内的每个生物必须进行一次智力豁免检定（{@dc 14}），若失败则受到17点（{@damage 3d8 + 4}）心灵伤害，并在1分钟内处于{@condition 昏迷}状态。生物可以在自己的每个回合结束时重复进行豁免检定，若成功则结束此效果。"
+            "大脑通过魔法发出心灵能量，形成一个60英尺的圆锥形区域。在该区域内的每个生物必须进行一次智力豁免检定（{@dc 14}），若失败则受到17点（{@damage 3d8 + 4}）心灵伤害，并在1分钟内处于{@condition 震慑}状态。生物可以在自己的每个回合结束时重复进行豁免检定，若成功则结束此效果。"
           ]
         }
       ],
@@ -420,11 +420,11 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:智力"
+        "智力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:感知"
+        "魅力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -493,7 +493,7 @@
           "ENG_name": "Larval Burst (1/Day)",
           "entries": [
             "食尸鬼释放出一群幼虫，形成一个以自身为中心的10英尺半径的球形区域。该区域内的每个生物都必须进行一次{@dc 13}体质豁免投掷，否则将被{@condition 中毒}。以这种方式{@condition 中毒}的生物在每个回合开始时会受到7 ({@damage 2d6})点毒素伤害，因为幼虫在体内繁殖。生物可以在每个回合结束时重复豁免投掷，成功则结束该效果。任何治愈疾病或移除{@condition 中毒}状态的效果都会立即杀死体内的幼虫，结束该效果。",
-            "If a creature is reduced to 0 hit points by the infestation, it dies. The larvae remain in the corpse, and one survives to become a fully grown carrion stalker in {@dice 1d4} weeks. Any effect that cures diseases or removes the {@condition poisoned} condition that targets the corpse instantly kills the larvae."
+            "如果一个生物因虫害减少到0生命值，它将死亡。幼虫留在尸体中，其中一个会存活下来，在{@dice 1d4}周内成长为一个完全长大的食腐者。任何治愈疾病或移除{@condition 中毒}状态的效果，如果作用于尸体，会立即杀死幼虫。"
           ]
         }
       ],
@@ -516,7 +516,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -571,7 +571,7 @@
           "name": "虚假物品",
           "ENG_name": "False Object",
           "entries": [
-            "如果食尸鬼在战斗开始时处于静止状态，它在主动权检定时具有优势。此外，如果一个生物没有观察到食尸鬼移动或行动，该生物必须成功进行一次智力（{@dc 15}）感知（{@skill Perception}）检定，才能辨别出食尸鬼是有生命的。"
+            "如果食尸鬼在战斗开始时处于静止状态，它在主动权检定时具有优势。此外，如果一个生物没有观察到食尸鬼移动或行动，该生物必须成功进行一次智力（{@dc 15}）感知（{@skill 察觉}）检定，才能辨别出食尸鬼是有生命的。"
           ]
         },
         {
@@ -587,15 +587,15 @@
           "name": "银针",
           "ENG_name": "Silver Needle",
           "entries": [
-            "{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}1 piercing damage plus 3 ({@damage 1d6}) necrotic damage, and the target must succeed on a {@dc 12} Charisma saving throw or become cursed for 1 minute. While cursed in this way, the target's speed is reduced by 10 feet, and it must roll a {@dice 1d4} and subtract the number rolled from each ability check or attack roll it makes."
+            "{@atk 近战武器} {@hit 4}命中，射程5英尺，一个生物。{@h}1点穿刺伤害加上3点（{@damage 1d6}）死灵伤害，目标必须进行一次{@dc 12}魅力豁免检定，否则在1分钟内受到诅咒。在这种诅咒下，目标的移动速度减少10英尺，并且必须掷一个{@dice 1d4}，并将掷出的数字从它进行的每个能力检定或攻击检定中减去。"
           ]
         },
         {
           "name": "灵魂交换",
           "ENG_name": "Soul Swap",
           "entries": [
-            "食尸鬼幼虫针对其银针诅咒的15英尺内可见生物。除非目标受到{@spell protection from evil and good}法术的保护，否则必须成功进行一次{@dc 12}魅力豁免检定，否则其意识将与食尸鬼幼虫交换。食尸鬼幼虫控制目标的身体，目标将处于{@condition unconscious}状态1小时，之后它将控制食尸鬼幼虫的身体。控制目标身体时，食尸鬼幼虫保留其智力、智慧和魅力得分。它使用被控制身体的其他统计数据，但不会获得目标的知识、职业特性或熟练度。",
-            "如果食腐者的身体被摧毁，食腐者和目标都会死亡。对被控制的身体施放的{@spell protection from evil and good}法术可以将食腐者驱逐出去，并将两个生物的意识返回到它们原来的身体。如果被控制的身体受到食腐者的银针伤害，交换也会被取消。"
+            "食尸鬼幼虫针对其银针诅咒的15英尺内可见生物。除非目标受到{@spell 防护善恶}法术的保护，否则必须成功进行一次{@dc 12}魅力豁免检定，否则其意识将与食尸鬼幼虫交换。食尸鬼幼虫控制目标的身体，目标将处于{@condition 昏迷}状态1小时，之后它将控制食尸鬼幼虫的身体。控制目标身体时，食尸鬼幼虫保留其智力、智慧和魅力得分。它使用被控制身体的其他统计数据，但不会获得目标的知识、职业特性或熟练度。",
+            "如果食腐者的身体被摧毁，食腐者和目标都会死亡。对被控制的身体施放的{@spell 防护善恶}法术可以将食腐者驱逐出去，并将两个生物的意识返回到它们原来的身体。如果被控制的身体受到食腐者的银针伤害，交换也会被取消。"
           ]
         }
       ],
@@ -613,7 +613,7 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:魅力"
+        "魅力"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -713,8 +713,8 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:智力"
+        "体质",
+        "智力"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -733,7 +733,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -779,7 +779,7 @@
           "name": "无头召唤（短休或长休后重充）",
           "ENG_name": "Headless Summoning (Recharges after a Short or Long Rest)",
           "entries": [
-            "如果杜拉汉的生命值降至0点，它不会死亡或进入{@condition 无意识}状态。相反，它恢复97点生命值。此外，它在距离它5英尺内的未被占据的空间中召唤三个{@creature 死亡之头|VRGR|死亡之头}，每种类型各一个。死亡之头受杜拉汉控制，并在主动权顺序中紧随杜拉汉之后立即行动。此外，杜拉汉现在可以使用“神话动作”部分中的选项。如果队伍在杜拉汉使用无头召唤后击败它，额外奖励5900经验值（总计11800经验值）。"
+            "如果杜拉汉的生命值降至0点，它不会死亡或进入{@condition 昏迷}状态。相反，它恢复97点生命值。此外，它在距离它5英尺内的未被占据的空间中召唤三个{@creature 死亡之头|VRGR|死亡头颅}，每种类型各一个。死亡之头受杜拉汉控制，并在主动权顺序中紧随杜拉汉之后立即行动。此外，杜拉汉现在可以使用“神话动作”部分中的选项。如果队伍在杜拉汉使用无头召唤后击败它，额外奖励5900经验值（总计11800经验值）。"
           ]
         },
         {
@@ -863,7 +863,7 @@
         }
       ],
       "attachedItems": [
-        "战斧|phb"
+        "战斧|PHB"
       ],
       "traitTags": [
         "传奇抗性",
@@ -893,8 +893,8 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1112,7 +1112,7 @@
           "name": "虚体移动",
           "ENG_name": "Incorporeal Movement",
           "entries": [
-            "绞刑架说话者可以像通过{@quickref 困难地形||3}一样穿过其他生物和物体。如果它在物体内部结束回合，它将受到5点（{@damage 1d10}）力量伤害。"
+            "绞刑架说话者可以像通过{@quickref 困难地型||3}一样穿过其他生物和物体。如果它在物体内部结束回合，它将受到5点（{@damage 1d10}）力量伤害。"
           ]
         },
         {
@@ -1128,7 +1128,7 @@
           "name": "预知触摸",
           "ENG_name": "Foretelling Touch",
           "entries": [
-            "{@atk ms} {@hit 7} to hit, reach 5 ft., one creature. {@h}15 ({@damage 2d10 + 4}) psychic damage, and the target must roll a {@dice d4} and subtract the number rolled from the next attack roll or saving throw it makes before the start of the gallows speaker's next turn."
+            "{@atk 近战武器攻击} 命中骰：7，射程5英尺，单一生物。{@h}造成15点（{@damage 2d10 + 4}）精神伤害，目标必须掷一个{@dice d4}，并在绞刑者下一次回合开始前，从下一次攻击骰或豁免骰中减去掷出的数字。"
           ]
         },
         {
@@ -1154,7 +1154,7 @@
         "Y"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1266,7 +1266,7 @@
           "name": "超自然胆汁 {@recharge 5}",
           "ENG_name": "Unearthly Bile {@recharge 5}",
           "entries": [
-            "使者在120英尺范围内的一个点为中心，向30英尺半径的球形区域内喷射胆汁，溅射到区域内的所有生物。该区域内的每个生物都必须进行一次{@dc 23}敏捷豁免检定，失败则受到55（{@damage 10d10}）酸性伤害，成功则伤害减半。对于每个未能通过豁免检定的生物，一个{@creature 喋喋不休的吞噬者}（见其在《怪物手册》中的条目）将出现在该生物30英尺范围内可以支撑它的表面上的一个未被占据的空间。喋喋不休的吞噬者在使者之后的同一先攻顺序上行动，它们的攻击和伤害骰获得+7的加值，并战斗直到被摧毁。当使者死亡时，它们会消失。"
+            "使者在120英尺范围内的一个点为中心，向30英尺半径的球形区域内喷射胆汁，溅射到区域内的所有生物。该区域内的每个生物都必须进行一次{@dc 23}敏捷豁免检定，失败则受到55（{@damage 10d10}）酸性伤害，成功则伤害减半。对于每个未能通过豁免检定的生物，一个{@creature 惧噬体}（见其在《怪物手册》中的条目）将出现在该生物30英尺范围内可以支撑它的表面上的一个未被占据的空间。喋喋不休的吞噬者在使者之后的同一先攻顺序上行动，它们的攻击和伤害骰获得+7的加值，并战斗直到被摧毁。当使者死亡时，它们会消失。"
           ]
         }
       ],
@@ -1282,7 +1282,7 @@
           "name": "扭曲空间（消耗2个行动）",
           "ENG_name": "Warp Space (Costs 2 Actions)",
           "entries": [
-            "使者使得它能看到的90英尺范围内的20英尺正方形地面，在它下一个回合开始前变成牙齿和嘴巴。这个区域在持续时间内变为{@quickref 困难地形||3}。任何生物在这种地形上每移动5英尺，都会受到10点（{@damage 3d6}）穿刺伤害。"
+            "使者使得它能看到的90英尺范围内的20英尺正方形地面，在它下一个回合开始前变成牙齿和嘴巴。这个区域在持续时间内变为{@quickref 困难地型||3}。任何生物在这种地形上每移动5英尺，都会受到10点（{@damage 3d6}）穿刺伤害。"
           ]
         },
         {
@@ -1318,8 +1318,8 @@
         "射程"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1372,7 +1372,7 @@
           "name": "魔法过敏（1/日）",
           "ENG_name": "Magic Allergy (1/Day)",
           "entries": [
-            "Immediately after a creature within 30 feet of the gremishka casts a spell, the gremishka can spontaneously react to the magic. Roll a {@dice d6} to determine the effect:",
+            "在30英尺范围内的生物对格雷米什卡施放法术后，格雷米什卡可以立即自发地对魔法做出反应。掷一个{@dice d6}来确定效果：",
             {
               "type": "item",
               "name": "1-2",
@@ -1383,7 +1383,7 @@
               "type": "item",
               "name": "3-4",
               "ENG_name": "3-4",
-              "entry": "The gremishka surges with magical energy and regains 3 ({@dice 1d6}) hit points."
+              "entry": "格瑞米斯卡涌动着魔法能量，并恢复3点（{@dice 1d6}）生命值。"
             },
             {
               "type": "item",
@@ -1410,7 +1410,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1429,7 +1429,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -1477,17 +1477,17 @@
             "审判官施放以下法术之一，不需要任何材料，使用魅力作为施法能力（法术豁免{@dc 15}）:"
           ],
           "will": [
-            "{@spell 奥术之眼}",
-            "{@spell 安抚情绪}",
+            "{@spell 秘法眼}",
+            "{@spell 安定心神}",
             "{@spell 侦测魔法}",
             "{@spell 侦测思想}",
             "{@spell 解除魔法}",
-            "{@spell 传讯术}",
-            "{@spell 暗示}"
+            "{@spell 短讯术}",
+            "{@spell 暗示术}"
           ],
           "daily": {
             "1e": [
-              "{@spell 群体暗示}",
+              "{@spell 群体暗示术}",
               "{@spell 修改记忆}"
             ]
           },
@@ -1507,14 +1507,14 @@
           "name": "银色长剑",
           "ENG_name": "Silver Longsword",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@dice 1d10 + 4}) if used with two hands, plus 18 ({@damage 4d8}) force damage."
+            "{@atk 近战武器} 命中骰：7，射程5英尺，单一目标。{@h}8点（{@damage 1d8 + 4}）斩击伤害，或者双手使用时9点（{@dice 1d10 + 4}），外加18点（{@damage 4d8}）力量伤害。"
           ]
         },
         {
           "name": "心灵之火",
           "ENG_name": "Mind Fire",
           "entries": [
-            "审判官瞄准它能看到的120英尺范围内的一个生物。目标必须进行一次智力豁免检定（{@dc 15}），若失败则受到17点（{@damage 3d8 + 4}）心灵伤害，并在审判官下一个回合开始前处于{@condition 昏迷}状态。"
+            "审判官瞄准它能看到的120英尺范围内的一个生物。目标必须进行一次智力豁免检定（{@dc 15}），若失败则受到17点（{@damage 3d8 + 4}）心灵伤害，并在审判官下一个回合开始前处于{@condition 震慑}状态。"
           ]
         },
         {
@@ -1557,12 +1557,12 @@
         "无力"
       ],
       "savingThrowForced": [
-        "属性检定:智力",
-        "属性检定:感知"
+        "智力",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:感知"
+        "魅力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1581,7 +1581,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -1634,13 +1634,13 @@
             "{@spell 侦测魔法}",
             "{@spell 侦测思想}",
             "{@spell 解除魔法}",
-            "{@spell 传讯术}"
+            "{@spell 短讯术}"
           ],
           "daily": {
             "1e": [
-              "{@spell 次元之门}",
-              "{@spell 飞行}",
-              "{@spell 高级隐形}"
+              "{@spell 次元门}",
+              "{@spell 飞行术}",
+              "{@spell 高等隐形术}"
             ]
           },
           "ability": "wis",
@@ -1668,7 +1668,7 @@
           "name": "银色长剑",
           "ENG_name": "Silver Longsword",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@dice 1d10 + 4}) if used with two hands, plus 18 ({@damage 4d8}) force damage."
+            "{@atk 近战武器} 命中骰：7，射程5英尺，单一目标。{@h}8点（{@damage 1d8 + 4}）斩击伤害，或者双手使用时9点（{@dice 1d10 + 4}），外加18点（{@damage 4d8}）力量伤害。"
           ]
         }
       ],
@@ -1710,7 +1710,7 @@
         "隐形"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1781,15 +1781,15 @@
           "will": [
             "{@spell 侦测魔法}",
             "{@spell 解除魔法}",
-            "{@spell 飘浮}",
+            "{@spell 浮空术}",
             "{@spell 法师护甲}",
-            "{@spell 魔法手}",
-            "{@spell 传讯术}"
+            "{@spell 法师之手}",
+            "{@spell 短讯术}"
           ],
           "daily": {
             "1e": [
-              "{\"spell\": \"\\u5965\\u8482\\u7559\\u514B\\u7684\\u5F3A\\u95E8\\u7403\"}",
-              "{@spell 心灵感应}"
+              "{@spell 欧提路克魔封法球}",
+              "{@spell 心灵遥控}"
             ]
           },
           "ability": "int",
@@ -1815,14 +1815,14 @@
           "name": "银色长剑",
           "ENG_name": "Silver Longsword",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@dice 1d10 + 4}) if used with two hands, plus 18 ({@damage 4d8}) force damage."
+            "{@atk 近战武器} 命中骰：7，射程5英尺，单一目标。{@h}8点（{@damage 1d8 + 4}）斩击伤害，或者双手使用时9点（{@dice 1d10 + 4}），外加18点（{@damage 4d8}）力量伤害。"
           ]
         },
         {
           "name": "内爆 {@recharge 4}",
           "ENG_name": "Implode {@recharge 4}",
           "entries": [
-            "以审判官能看到的120英尺范围内的某点为中心，20英尺半径范围内的每个生物都必须进行一次体质豁免检定（{@dc 15}）。若失败，则受到31点（{@damage 6d8 + 4}）力量伤害，并被击倒{@condition 倒地}，移动到离球体中心最近的未被占据的空间。在球体范围内的大型和小型物体，如果没有被穿戴或携带，会自动受到损害并被类似地移动。"
+            "以审判官能看到的120英尺范围内的某点为中心，20英尺半径范围内的每个生物都必须进行一次体质豁免检定（{@dc 15}）。若失败，则受到31点（{@damage 6d8 + 4}）力量伤害，并被击倒{@condition 伏地}，移动到离球体中心最近的未被占据的空间。在球体范围内的大型和小型物体，如果没有被穿戴或携带，会自动受到损害并被类似地移动。"
           ]
         }
       ],
@@ -1865,11 +1865,11 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1900,7 +1900,7 @@
         {
           "ac": 19,
           "from": [
-            "{@item 鳞甲|phb}"
+            "{@item 鳞甲|PHB}"
           ]
         }
       ],
@@ -1965,11 +1965,11 @@
           ],
           "daily": {
             "1": [
-              "{@spell 位面转移}（仅限自身）"
+              "{@spell 异界传送}（仅限自身）"
             ],
             "3e": [
-              "{@spell 变形自己}",
-              "{@spell 命令}",
+              "{@spell 变造自身}",
+              "{@spell 命令术}",
               "{@spell 侦测魔法}"
             ]
           },
@@ -1988,7 +1988,7 @@
           "name": "魔法抗性光环",
           "ENG_name": "Magic Resistance Aura",
           "entries": [
-            "持有{@item 忘忧草|VRGR}时，伊索尔德在她周围10英尺半径内创造一个光环。当这个光环激活时，伊索尔德和所有在光环内对她友好的生物在对抗法术和其他魔法效果的豁免投掷中具有优势。"
+            "持有{@item 忘忧|VRGR}时，伊索尔德在她周围10英尺半径内创造一个光环。当这个光环激活时，伊索尔德和所有在光环内对她友好的生物在对抗法术和其他魔法效果的豁免投掷中具有优势。"
           ]
         }
       ],
@@ -2023,7 +2023,7 @@
         }
       ],
       "attachedItems": [
-        "nepenthe|vrgr"
+        "忘忧|VRGR"
       ],
       "senseTags": [
         "D"
@@ -2060,11 +2060,11 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:感知"
+        "魅力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2127,8 +2127,8 @@
           "ENG_name": "Jiangshi Weaknesses",
           "entries": [
             "僵尸有以下缺陷：",
-            "{@i 自己倒影的恐惧。} 如果僵尸看到自己的倒影，如果可能，它会立即使用反应来尽可能远离倒影。",
-            "{@i 对圣徽敏感。} 当僵尸穿着或触摸圣徽时，它自动失败于对抗驱散亡灵效果的豁免投掷。"
+            "{@i 对自己的倒影感到恐惧。} 如果僵尸看到自己的倒影，如果可能，它会立即使用反应来尽可能远离倒影。",
+            "{@i 对圣徽易感。} 当僵尸穿着或触摸圣徽时，它自动失败于对抗驱散亡灵效果的豁免投掷。"
           ]
         },
         {
@@ -2178,7 +2178,7 @@
       ],
       "actionTags": [
         "多重攻击",
-        "变形者"
+        "变形生物"
       ],
       "languageTags": [
         "LF"
@@ -2191,7 +2191,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2333,7 +2333,7 @@
           "name": "心灵鞭笞（消耗3个行动点）",
           "ENG_name": "Psychic Lash (Costs 3 Actions)",
           "entries": [
-            "使者针对其视线范围内30英尺内的生物，并用心灵攻击该生物的心智。目标必须进行一次{@dc 21} 智慧豁免，否则将受到36 ({@damage 8d8}) 心灵伤害，并在下一回合开始前处于{@condition 昏迷}状态。"
+            "使者针对其视线范围内30英尺内的生物，并用心灵攻击该生物的心智。目标必须进行一次{@dc 21} 智慧豁免，否则将受到36 ({@damage 8d8}) 心灵伤害，并在下一回合开始前处于{@condition 震慑}状态。"
           ]
         }
       ],
@@ -2346,7 +2346,7 @@
       ],
       "actionTags": [
         "多重攻击",
-        "变形者"
+        "变形生物"
       ],
       "languageTags": [
         "TP",
@@ -2365,7 +2365,7 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -2518,7 +2518,7 @@
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "traitTags": [
         "传奇抗性",
@@ -2529,7 +2529,7 @@
       ],
       "actionTags": [
         "多重攻击",
-        "变形者"
+        "变形生物"
       ],
       "languageTags": [
         "C",
@@ -2548,8 +2548,8 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:力量"
+        "体质",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2631,7 +2631,7 @@
           "name": "复生",
           "ENG_name": "Rejuvenation",
           "entries": [
-            "Unless its lifeless remains are splashed with holy water or placed in a vessel under the effects of the {@spell hallow} spell, the destroyed necrichor re-forms in {@dice 1d10} days, regaining all its hits points and appearing in the place it died or in the nearest unoccupied space."
+            "除非它的无生命残骸被圣水泼洒，或者放置在受到{@spell 圣居}法术影响的容器中，否则被摧毁的死灵魔将在{@dice 1d10}天后重新形成，恢复其所有生命值，并出现在它死去的地方或最近的未被占据的空间。"
           ]
         },
         {
@@ -2707,7 +2707,7 @@
         "麻痹"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2817,7 +2817,7 @@
           "ENG_name": "Bite",
           "entries": [
             "{@atk 近战武器} 命中{@hit 8}，射程5英尺，一个生物。{@h}9点（{@damage 1d8 + 5}）穿刺伤害加上7点（{@damage 2d6}）死灵伤害。如果目标的生命值有任何缺失，它反而受到11点（{@damage 2d10}）死灵伤害。",
-            "The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the nosferatu regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0. A Humanoid slain in this way and then buried in the ground rises as a nosferatu after {@dice 1d10} days."
+            "目标的生命值上限会因为所受的死灵伤害而减少，减少的量等于所受的死灵伤害，而诺斯费拉图则会恢复等同于该量的生命值。这种减少持续到目标完成一次长时间的休息。如果目标的生命值上限被减少到0，目标就会死亡。以这种方式被杀死并埋葬在地下的人形生物，在{@dice 1d10}天后会以诺斯费拉图的形式复活。"
           ]
         },
         {
@@ -2855,7 +2855,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2904,7 +2904,7 @@
           "name": "生命假象",
           "ENG_name": "Semblance of Life",
           "entries": [
-            "荚果生物是被食体植物消化的生物的身体副本。荚果生物拥有被消化生物的记忆，并表现得像那个生物，但偶尔会有失误。熟悉被消化生物的观察者可以通过成功的{@dc 20} 智慧（{@skill 洞察}）检定识别出这些差异，或者如果荚果生物做了与被消化生物既定信仰或行为直接矛盾的事情，则可以自动识别。荚果生物死亡时，创造它的食体植物死亡时，或者食体植物解散它时（无需动作），它会融化成泥浆。"
+            "荚果生物是被食体植物消化的生物的身体副本。荚果生物拥有被消化生物的记忆，并表现得像那个生物，但偶尔会有失误。熟悉被消化生物的观察者可以通过成功的{@dc 20} 智慧（{@skill 洞悉}）检定识别出这些差异，或者如果荚果生物做了与被消化生物既定信仰或行为直接矛盾的事情，则可以自动识别。荚果生物死亡时，创造它的食体植物死亡时，或者食体植物解散它时（无需动作），它会融化成泥浆。"
           ]
         },
         {
@@ -3056,68 +3056,80 @@
                 "col-11"
               ],
               "rows": [
-                "1",
-                {
-                  "type": "entries",
-                  "name": "恐惧",
-                  "ENG_name": "Dread",
-                  "entries": [
-                    "现在可以听到围绕牧师的诡异低语。任何非亡灵生物如果在牧师30英尺范围内开始其回合，必须成功进行一次DC 15的智慧豁免检定，否则直到该生物的下一个回合开始时都会因牧师而{@condition frightened}。"
-                  ]
-                },
-                "2",
-                {
-                  "type": "entries",
-                  "name": "灵质的",
-                  "ENG_name": "Ectoplasmic",
-                  "entries": [
-                    "一种异世界的粘液从牧师身上滴落，片刻后消失，留下一滩绿色的污渍。当任何生物在其回合开始时距离牧师10英尺以内，牧师可以减少该生物的速度10英尺，直到该生物的下一个回合开始，在此期间生物被灵质覆盖。此外，作为一项动作，牧师可以使用粘液使自己看起来和感觉像任何中体型或小体型的生物，同时保留其游戏统计数据。这种变形持续8小时，或直到牧师的生命值降至0点。"
-                  ]
-                },
-                "3",
-                {
-                  "type": "entries",
-                  "name": "吸血鬼的",
-                  "ENG_name": "Vampiric",
-                  "entries": [
-                    "当牧师对任何生物造成死灵伤害时，牧师获得等于该死灵伤害一半数量的临时生命值。牧师的移动速度也增加10英尺。"
-                  ]
-                },
-                "4",
-                {
-                  "type": "entries",
-                  "name": "炽热",
-                  "ENG_name": "Blazing",
-                  "entries": [
-                    "牧师脱落其肉体，其骨骼崩溃，只留下头骨。其状态栏被{@creature flameskull}的状态栏所替代，但它保留了其奥斯布斯纹身特性，并且它造成的所有火焰伤害变为死灵伤害。奥斯布斯纹身现在出现在头骨的前额上，像是被雕刻上去的。"
-                  ]
-                },
-                "5",
-                {
-                  "type": "entries",
-                  "name": "幽灵的",
-                  "ENG_name": "Spectral",
-                  "entries": [
-                    "The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
-                  ]
-                },
-                "6",
-                {
-                  "type": "entries",
-                  "name": "致命的",
-                  "ENG_name": "Deathly",
-                  "entries": [
-                    "牧师的面容变得骨白，其挑战等级增加1。它可以每天各施放一次{@spell 活化死尸}和{@spell 创造亡灵}，使用智力作为施法能力，并获得了以下行动：",
-                    {
-                      "type": "entries",
-                      "name": "死亡之环（法术；{@recharge 5|m})",
-                      "ENG_name": "Circle of Death (Spell; {@recharge 5|m})",
-                      "entries": [
-                        "Each creature in a 60-foot-radius sphere centered on a point the priest can see within 150 feet of it must make a DC 15 Constitution saving throw, taking 28 ({@dice 8d6}) necrotic damage on a failed save, or half as much damage on a successful one.)"
-                      ]
-                    }
-                  ]
-                }
+                [
+                  "1",
+                  {
+                    "type": "entries",
+                    "name": "恐惧",
+                    "ENG_name": "Dread",
+                    "entries": [
+                      "现在可以听到围绕牧师的诡异低语。任何非亡灵生物如果在牧师30英尺范围内开始其回合，必须成功进行一次DC 15的智慧豁免检定，否则直到该生物的下一个回合开始时都会因牧师而{@condition 恐惧}。"
+                    ]
+                  }
+                ],
+                [
+                  "2",
+                  {
+                    "type": "entries",
+                    "name": "灵质的",
+                    "ENG_name": "Ectoplasmic",
+                    "entries": [
+                      "一种异世界的粘液从牧师身上滴落，片刻后消失，留下一滩绿色的污渍。当任何生物在其回合开始时距离牧师10英尺以内，牧师可以减少该生物的速度10英尺，直到该生物的下一个回合开始，在此期间生物被灵质覆盖。此外，作为一项动作，牧师可以使用粘液使自己看起来和感觉像任何中体型或小体型的生物，同时保留其游戏统计数据。这种变形持续8小时，或直到牧师的生命值降至0点。"
+                    ]
+                  }
+                ],
+                [
+                  "3",
+                  {
+                    "type": "entries",
+                    "name": "吸血鬼的",
+                    "ENG_name": "Vampiric",
+                    "entries": [
+                      "当牧师对任何生物造成死灵伤害时，牧师获得等于该死灵伤害一半数量的临时生命值。牧师的移动速度也增加10英尺。"
+                    ]
+                  }
+                ],
+                [
+                  "4",
+                  {
+                    "type": "entries",
+                    "name": "炽热",
+                    "ENG_name": "Blazing",
+                    "entries": [
+                      "牧师脱落其肉体，其骨骼崩溃，只留下头骨。其状态栏被{@creature 燃烧颅骨}的状态栏所替代，但它保留了其奥斯布斯纹身特性，并且它造成的所有火焰伤害变为死灵伤害。奥斯布斯纹身现在出现在头骨的前额上，像是被雕刻上去的。"
+                    ]
+                  }
+                ],
+                [
+                  "5",
+                  {
+                    "type": "entries",
+                    "name": "幽灵的",
+                    "ENG_name": "Spectral",
+                    "entries": [
+                      "牧师现在看起来像鬼魂，其挑战等级增加1。它对所有伤害类型获得抗性，除了力量、辐射和精神伤害，并且对辐射伤害易伤。它还可以像通过困难地形一样穿过生物和物体（{@quickref 困难地型||3}），但如果它的回合结束时位于生物或物体内部，则会受到5点（{@dice 1d10}）力量伤害。"
+                    ]
+                  }
+                ],
+                [
+                  "6",
+                  {
+                    "type": "entries",
+                    "name": "致命的",
+                    "ENG_name": "Deathly",
+                    "entries": [
+                      "牧师的面容变得骨白，其挑战等级增加1。它可以每天各施放一次{@spell 活化死尸}和{@spell 创造不死生物}，使用智力作为施法能力，并获得了以下行动：",
+                      {
+                        "type": "entries",
+                        "name": "死亡之环（法术；{@recharge 5|m})",
+                        "ENG_name": "Circle of Death (Spell; {@recharge 5|m})",
+                        "entries": [
+                          "以牧师能看到的150英尺内某点为中心，60英尺半径范围内的每个生物都必须进行一次DC 15的体质豁免投掷，失败则受到28点（{@dice 8d6}）死灵伤害，成功则伤害减半。"
+                        ]
+                      }
+                    ]
+                  }
+                ]
               ]
             }
           ]
@@ -3158,7 +3170,7 @@
                 "name": "炽热恩赐",
                 "ENG_name": "Blazing Boon",
                 "entries": [
-                  "牧师脱落其肉体，其骨骼崩溃，只留下头骨。其状态栏被{@creature flameskull}的状态栏所替代，但它保留了其奥斯布斯纹身特性，并且它造成的所有火焰伤害变为死灵伤害。奥斯布斯纹身现在出现在头骨的前额上，像是被雕刻上去的。"
+                  "牧师脱落其肉体，其骨骼崩溃，只留下头骨。其状态栏被{@creature 燃烧颅骨}的状态栏所替代，但它保留了其奥斯布斯纹身特性，并且它造成的所有火焰伤害变为死灵伤害。奥斯布斯纹身现在出现在头骨的前额上，像是被雕刻上去的。"
                 ]
               }
             }
@@ -3177,7 +3189,7 @@
                 "name": "死亡之环（法术；{@recharge 5|m})",
                 "ENG_name": "Circle of Death (Spell; {@recharge 5|m})",
                 "entries": [
-                  "Each creature in a 60-foot-radius sphere centered on a point the priest can see within 150 feet of it must make a DC 15 Constitution saving throw, taking 28 ({@dice 8d6}) necrotic damage on a failed save, or half as much damage on a successful one.)"
+                  "以牧师能看到的150英尺内某点为中心，60英尺半径范围内的每个生物都必须进行一次DC 15的体质豁免投掷，失败则受到28点（{@dice 8d6}）死灵伤害，成功则伤害减半。"
                 ]
               }
             }
@@ -3193,14 +3205,14 @@
               ],
               "will": [
                 {
-                  "entry": "{@spell 死亡领域}",
+                  "entry": "{@spell 死亡之环}",
                   "hidden": true
                 }
               ],
               "daily": {
                 "1e": [
-                  "{@spell 活化死物}",
-                  "{@spell 创造亡灵}"
+                  "{@spell 活化死尸}",
+                  "{@spell 创造不死生物}"
                 ]
               },
               "ability": "int",
@@ -3220,7 +3232,7 @@
                 "name": "恐惧恩赐",
                 "ENG_name": "Dread Boon",
                 "entries": [
-                  "现在可以听到围绕牧师的诡异低语。任何非亡灵生物如果在牧师30英尺范围内开始其回合，必须成功进行一次DC 15的智慧豁免检定，否则直到该生物的下一个回合开始时都会因牧师而{@condition frightened}。"
+                  "现在可以听到围绕牧师的诡异低语。任何非亡灵生物如果在牧师30英尺范围内开始其回合，必须成功进行一次DC 15的智慧豁免检定，否则直到该生物的下一个回合开始时都会因牧师而{@condition 恐惧}。"
                 ]
               }
             }
@@ -3258,7 +3270,7 @@
                 "name": "幽灵恩惠",
                 "ENG_name": "Spectral Boon",
                 "entries": [
-                  "The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+                  "牧师现在看起来像鬼魂，其挑战等级增加1。它对所有伤害类型获得抗性，除了力量、辐射和精神伤害，并且对辐射伤害易伤。它还可以像通过困难地形一样穿过生物和物体（{@quickref 困难地型||3}），但如果它的回合结束时位于生物或物体内部，则会受到5点（{@dice 1d10}）力量伤害。"
                 ]
               }
             }
@@ -3402,7 +3414,7 @@
           "name": "镰刀碎片",
           "ENG_name": "Scything Shrapnel",
           "entries": [
-            "目标受到14（{@damage 4d6}）斩击伤害，并且法器消失。在目标的每个回合开始时，由于碎片留下的伤口，目标受到10（{@damage 3d6}）死灵伤害。如果目标恢复任何生命值，或者一个生物采取行动来止血，这需要成功的{@dc 15}智慧（{@skill 医学}）检定，则伤口结束。"
+            "目标受到14（{@damage 4d6}）斩击伤害，并且法器消失。在目标的每个回合开始时，由于碎片留下的伤口，目标受到10（{@damage 3d6}）死灵伤害。如果目标恢复任何生命值，或者一个生物采取行动来止血，这需要成功的{@dc 15}智慧（{@skill 医药}）检定，则伤口结束。"
           ]
         }
       ],
@@ -3411,7 +3423,7 @@
           "name": "不可阻挡的前进",
           "ENG_name": "Implacable Advance",
           "entries": [
-            "巨型机械以它的速度移动，忽略{@quickref 困难地形||3}。如果其路径上的任何物体没有被穿戴或携带，则会受到55（{@damage 10d10}）钝击伤害。"
+            "巨型机械以它的速度移动，忽略{@quickref 困难地型||3}。如果其路径上的任何物体没有被穿戴或携带，则会受到55（{@damage 10d10}）钝击伤害。"
           ]
         },
         {
@@ -3451,8 +3463,8 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:力量"
+        "敏捷",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3539,7 +3551,7 @@
           "name": "杀手的刀",
           "ENG_name": "Slasher's Knife",
           "entries": [
-            "{@atk mw,rw} {@hit 7} to hit, reach 5 ft. or range 30/60 ft., one target. {@h}6 ({@damage 1d4 + 4}) slashing damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it suffers a lingering wound that causes it to take 7 ({@damage 2d6}) necrotic damage at the start of each of its turns. Each time the slasher hits the wounded target with this attack, the damage dealt by the wound increases by 3 ({@dice 1d6}). The wound ends if the target regains hit points or if a creature uses an action to stanch the wound, which requires a successful {@dc 15} Wisdom ({@skill Medicine}) check."
+            "{@atk 近战武器，远程武器} {@hit 7}命中，射程5英尺或射程30/60英尺，一个目标。{@h}6点（{@damage 1d4 + 4}）斩击伤害加上21点（{@damage 6d6}）死灵伤害。如果目标是一个生物，它将遭受持续伤害，在它的每个回合开始时受到7点（{@damage 2d6}）死灵伤害。每次当攻击者用这次攻击击中受伤的目标时，伤口造成的伤害增加3点（{@dice 1d6}）。如果目标恢复生命值或一个生物使用动作来止血，伤口就会结束，这需要成功的{@dc 15}智力（{@skill 医学知识}）检定。"
           ]
         }
       ],
@@ -3643,7 +3655,7 @@
           "name": "吸血蝠心灵感应",
           "ENG_name": "Stirge Telepathy",
           "entries": [
-            "斯特里戈伊可以魔法命令其周围120英尺内的所有{@creature 吸血鬼蝠}，使用一种有限的心灵感应。"
+            "斯特里戈伊可以魔法命令其周围120英尺内的所有{@creature 蚊蝠}，使用一种有限的心灵感应。"
           ]
         }
       ],
@@ -3673,7 +3685,7 @@
           "name": "贪婪之子（每日一次）",
           "ENG_name": "Ravenous Children (1/Day)",
           "entries": [
-            "The strigoi magically summons {@dice 1d4 + 2} {@creature stirge||stirges} (see their entry in the Monster Manual) in unoccupied spaces it can see within 30 feet of it. The stirges are under the strigoi's control and act immediately after the strigoi in the initiative order. The stirges disappear after 1 hour, when the strigoi dies, or when the strigoi dismisses them (no action required)."
+            "斯特里戈伊通过魔法召唤{@dice 1d4 + 2}只{@creature 蚊蝠||蝠蝇}（详见怪物手册中的条目）到它能看到的30英尺范围内的未被占据的空间。这些蚂蟥受斯特里戈伊控制，并在斯特里戈伊在先攻顺序中行动后立即行动。蚂蟥在1小时后消失，或者当斯特里戈伊死亡，或者当斯特里戈伊解散它们时（无需动作）。"
           ]
         }
       ],
@@ -3869,7 +3881,7 @@
           "ENG_name": "Infestation",
           "entries": [
             "{@atk 近战武器攻击} {@hit 3}命中，射程0英尺，一群生物中的目标。{@h}10（{@damage 4d4}）穿刺伤害，如果群集的生命值或更少是其一半，则为5（{@damage 2d4}）穿刺伤害。被群集伤害的生物必须进行一次{@dc 12}体质豁免检定，否则会感染疾病。",
-            "Each time the diseased creature finishes a long rest, roll a {@dice d6} to determine the disease's effect:",
+            "每次患病生物完成一次长时间休息，掷一个{@dice d6}来确定疾病的效应：",
             {
               "type": "list",
               "style": "list-hang-notitle",
@@ -3879,7 +3891,7 @@
                   "name": "1-2",
                   "ENG_name": "1-2",
                   "entries": [
-                    "该生物将处于{@condition blinded}状态，直到完成一次长时间的休息。"
+                    "该生物将处于{@condition 目盲}状态，直到完成一次长时间的休息。"
                   ]
                 },
                 {
@@ -3887,7 +3899,7 @@
                   "name": "3-4",
                   "ENG_name": "3-4",
                   "entries": [
-                    "The creature's hit point maximum decreases by 5 ({@dice 2d4}), and the reduction can't be removed until the disease ends. The creature dies if its hit point maximum drops to 0."
+                    "该生物的最大生命值减少5点（{@dice 2d4}），并且直到疾病结束前，这种减少不能被移除。如果生物的最大生命值降至0，它将死亡。"
                   ]
                 },
                 {
@@ -3917,7 +3929,7 @@
         "目盲"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4138,7 +4150,7 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -4167,7 +4179,7 @@
                   "name": "擒抱者",
                   "ENG_name": "Grappler",
                   "entries": [
-                    "袋人对任何被它{@condition grappled}的生物进行攻击检定时具有优势。"
+                    "袋人对任何被它{@condition 被擒}的生物进行攻击检定时具有优势。"
                   ]
                 },
                 {
@@ -4181,7 +4193,7 @@
                   "name": "异类心智",
                   "ENG_name": "Alien Mind",
                   "entries": [
-                    "如果一个生物试图读取行李员的思想，那个生物必须成功进行一次{@dc 8}智力豁免检定，否则将被{@condition stunned}状态持续1分钟。处于{@condition stunned}状态的生物可以在自己的每个回合结束时重复进行豁免检定，成功则结束该效果。"
+                    "如果一个生物试图读取行李员的思想，那个生物必须成功进行一次{@dc 8}智力豁免检定，否则将被{@condition 震慑}状态持续1分钟。处于{@condition 震慑}状态的生物可以在自己的每个回合结束时重复进行豁免检定，成功则结束该效果。"
                   ]
                 }
               ]
@@ -4319,42 +4331,50 @@
                 "col-11"
               ],
               "rows": [
-                "1",
-                {
-                  "type": "entries",
-                  "name": "异常盔甲",
-                  "ENG_name": "Aberrant Armor",
-                  "entries": [
-                    "这个恐怖生物的身体被石化的木头、外星水晶、生锈的机械装置、雕刻的石头或外骨骼所装甲。"
-                  ]
-                },
-                "2",
-                {
-                  "type": "entries",
-                  "name": "令人厌恶的肢体",
-                  "ENG_name": "Loathsome Limbs",
-                  "entries": [
-                    "这个怪物的身体拥有蜘蛛般的腿、多关节的附肢或挥舞的触手。"
-                  ]
-                },
-                "3",
-                {
-                  "type": "entries",
-                  "name": "可塑体",
-                  "ENG_name": "Malleable Mass",
-                  "entries": [
-                    "这个恐怖生物的身体由一团无骨的肉体、阴影触须或雾气组成。"
-                  ]
-                },
-                "4",
-                {
-                  "type": "entries",
-                  "name": "流淌的器官",
-                  "ENG_name": "Oozing Organs",
-                  "entries": [
-                    "这个恐怖生物的身体可能因为内外翻转，而暴露出内脏、肿胀的寄生虫或胶状的外皮。"
-                  ]
-                }
+                [
+                  "1",
+                  {
+                    "type": "entries",
+                    "name": "异常盔甲",
+                    "ENG_name": "Aberrant Armor",
+                    "entries": [
+                      "这个恐怖生物的身体被石化的木头、外星水晶、生锈的机械装置、雕刻的石头或外骨骼所装甲。"
+                    ]
+                  }
+                ],
+                [
+                  "2",
+                  {
+                    "type": "entries",
+                    "name": "令人厌恶的肢体",
+                    "ENG_name": "Loathsome Limbs",
+                    "entries": [
+                      "这个怪物的身体拥有蜘蛛般的腿、多关节的附肢或挥舞的触手。"
+                    ]
+                  }
+                ],
+                [
+                  "3",
+                  {
+                    "type": "entries",
+                    "name": "可塑体",
+                    "ENG_name": "Malleable Mass",
+                    "entries": [
+                      "这个恐怖生物的身体由一团无骨的肉体、阴影触须或雾气组成。"
+                    ]
+                  }
+                ],
+                [
+                  "4",
+                  {
+                    "type": "entries",
+                    "name": "流淌的器官",
+                    "ENG_name": "Oozing Organs",
+                    "entries": [
+                      "这个恐怖生物的身体可能因为内外翻转，而暴露出内脏、肿胀的寄生虫或胶状的外皮。"
+                    ]
+                  }
+                ]
               ]
             },
             {
@@ -4369,42 +4389,50 @@
                 "col-11"
               ],
               "rows": [
-                "1",
-                {
-                  "type": "entries",
-                  "name": "迷人诅咒 {@recharge 5}",
-                  "ENG_name": "Beguiling Hex {@recharge 5}",
-                  "entries": [
-                    "The horror expels a wave of mind-altering magic. Each creature within 30 feet of the horror must make a DC 15 Wisdom saving throw, taking 33 ({@dice 6d10}) psychic damage and being {@condition incapacitated} until the end of the creature's next turn on a failed save, or taking half as much damage on a successful one."
-                  ]
-                },
-                "2",
-                {
-                  "type": "entries",
-                  "name": "胆汁诅咒{@recharge 5}",
-                  "ENG_name": "Bile Hex {@recharge 5}",
-                  "entries": [
-                    "The horror expels acidic bile in a 60-foot line that is 5 feet wide. Each creature in that line must succeed on a DC 15 Dexterity saving throw or be covered in bile. A creature covered in bile takes 31 ({@dice 7d8}) acid damage at the start of each of its turns until it or another creature uses its action to scrape or wash off the bile that covers it."
-                  ]
-                },
-                "3",
-                {
-                  "type": "entries",
-                  "name": "石化咒语 {@recharge 5}",
-                  "ENG_name": "Petrifying Hex {@recharge 5}",
-                  "entries": [
-                    "The horror expels petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 15 Constitution saving throw or take 14 ({@dice 4d6}) necrotic damage and be {@condition restrained} as it begins to turn to stone. A {@condition restrained} creature must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the {@spell greater restoration} spell or other magic."
-                  ]
-                },
-                "4",
-                {
-                  "type": "entries",
-                  "name": "窃取现实咒语 {@recharge 5}",
-                  "ENG_name": "Reality-Stealing Hex {@recharge 5}",
-                  "entries": [
-                    "The horror expels a wave of perception-distorting energy. Each creature within 30 feet of the horror must make a DC 15 Wisdom saving throw. On a failed save, the target takes 22 ({@dice 5d8}) psychic damage and is {@condition deafened} until the end of its next turn. If the saving throw fails by 5 or more, the target is also {@condition blinded} until the end of its next turn."
-                  ]
-                }
+                [
+                  "1",
+                  {
+                    "type": "entries",
+                    "name": "迷人诅咒 {@recharge 5}",
+                    "ENG_name": "Beguiling Hex {@recharge 5}",
+                    "entries": [
+                      "这个恐怖生物释放出一种改变心智的魔法波。每个在恐怖生物30英尺范围内的生物都必须进行一次DC 15的智慧豁免掷骰，失败则受到33点（{@dice 6d10}）心灵伤害，并在生物的下个回合结束前处于{@condition 无力}状态，成功则受到一半的伤害。"
+                    ]
+                  }
+                ],
+                [
+                  "2",
+                  {
+                    "type": "entries",
+                    "name": "胆汁诅咒{@recharge 5}",
+                    "ENG_name": "Bile Hex {@recharge 5}",
+                    "entries": [
+                      "这个恐怖生物沿着60英尺长、5英尺宽的直线喷射酸性胆汁。处于这条直线上的每个生物都必须进行一次DC 15的敏捷豁免检定，否则会被胆汁覆盖。被胆汁覆盖的生物在其每个回合开始时会受到31点（{@dice 7d8}）酸性伤害，直到它或另一个生物采取行动刮掉或洗掉覆盖其身上的胆汁。"
+                    ]
+                  }
+                ],
+                [
+                  "3",
+                  {
+                    "type": "entries",
+                    "name": "石化咒语 {@recharge 5}",
+                    "ENG_name": "Petrifying Hex {@recharge 5}",
+                    "entries": [
+                      "该恐怖生物在30英尺的锥形区域内释放石化气体。在该区域内的每个生物必须进行一次DC 15的体质豁免检定，否则将受到14点（{@dice 4d6}）的死灵伤害，并被{@condition 受限}，开始变成石头。被{@condition 受限}的生物在其下一回合结束时必须重复进行豁免检定。成功则目标生物的此效果结束。失败则目标生物被{@condition 石化}，直到通过{spell 高等复原术}法术或其他魔法解除。"
+                    ]
+                  }
+                ],
+                [
+                  "4",
+                  {
+                    "type": "entries",
+                    "name": "窃取现实咒语 {@recharge 5}",
+                    "ENG_name": "Reality-Stealing Hex {@recharge 5}",
+                    "entries": [
+                      "这个恐怖生物释放出一种扭曲感知的波动能量。距离恐怖生物30英尺内的每个生物都必须进行一次DC 15的智力豁免掷骰。豁免失败的生物会受到22点（{@dice 5d8}）精神伤害，并在其下一回合结束前处于{@condition 耳聋}状态。如果豁免掷骰失败超过5点，目标还将在其下一回合结束前处于{@condition 目盲}状态。"
+                    ]
+                  }
+                ]
               ]
             },
             {
@@ -4419,49 +4447,57 @@
                 "col-11"
               ],
               "rows": [
-                "1",
-                {
-                  "type": "entries",
-                  "name": "骨刃",
-                  "ENG_name": "Bone Blade",
-                  "entries": [
-                    "这个怪物的肢体末端是一把由骨头制成的刀片，它造成的是斩击伤害而不是钝击伤害。此外，当掷骰结果为19或20时，它会产生致命一击，并且致命伤害的骰子要掷三次，而不是两次。"
-                  ]
-                },
-                "2",
-                {
-                  "type": "entries",
-                  "name": "腐蚀性伪足",
-                  "ENG_name": "Corrosive Pseudopod",
-                  "entries": [
-                    "The horror's limb attack deals an extra 9 ({@dice 2d8}) acid damage."
-                  ]
-                },
-                "3",
-                {
-                  "type": "entries",
-                  "name": "抓握触手",
-                  "ENG_name": "Grasping Tentacle",
-                  "entries": [
-                    "这个恐怖生物的肢体是一条抓握触手。当恐怖生物用这个肢体击中一个生物时，该生物也会被{@condition 抓住}（逃脱DC 16）。这个肢体一次只能抓住一个生物。"
-                  ]
-                },
-                "4",
-                {
-                  "type": "entries",
-                  "name": "有毒肢体",
-                  "ENG_name": "Poisonous Limb",
-                  "entries": [
-                    "The horror's limb deals piercing damage instead of bludgeoning damage. In addition, when the horror hits a creature with this limb, the creature must succeed on a DC 15 Constitution saving throw or take 7 ({@dice 2d6}) poison damage and be {@condition poisoned} until the end of its next turn."
-                  ]
-                }
+                [
+                  "1",
+                  {
+                    "type": "entries",
+                    "name": "骨刃",
+                    "ENG_name": "Bone Blade",
+                    "entries": [
+                      "这个怪物的肢体末端是一把由骨头制成的刀片，它造成的是斩击伤害而不是钝击伤害。此外，当掷骰结果为19或20时，它会产生致命一击，并且致命伤害的骰子要掷三次，而不是两次。"
+                    ]
+                  }
+                ],
+                [
+                  "2",
+                  {
+                    "type": "entries",
+                    "name": "腐蚀性伪足",
+                    "ENG_name": "Corrosive Pseudopod",
+                    "entries": [
+                      "怪物的肢体攻击额外造成9点（{@dice 2d8}）酸液伤害。"
+                    ]
+                  }
+                ],
+                [
+                  "3",
+                  {
+                    "type": "entries",
+                    "name": "抓握触手",
+                    "ENG_name": "Grasping Tentacle",
+                    "entries": [
+                      "这个恐怖生物的肢体是一条抓握触手。当恐怖生物用这个肢体击中一个生物时，该生物也会被{@condition 抓住}（逃脱DC 16）。这个肢体一次只能抓住一个生物。"
+                    ]
+                  }
+                ],
+                [
+                  "4",
+                  {
+                    "type": "entries",
+                    "name": "有毒肢体",
+                    "ENG_name": "Poisonous Limb",
+                    "entries": [
+                      "这个恐怖生物的肢体造成的是穿刺伤害，而不是钝击伤害。此外，当恐怖生物用这个肢体击中一个生物时，该生物必须进行一次DC 15的体质豁免检定，否则将受到7点（{@dice 2d6}）毒素伤害，并在它的下个回合结束前处于{@condition 中毒}状态。"
+                    ]
+                  }
+                ]
               ]
             }
           ],
           "_version": {
             "name": "难以名状的恐怖（定制版）",
             "ENG_name": "Unspeakable Horror (Customized)",
-            "addAs": "need-translate-4531785d-2fb7-11ef-ae1d-d1200322b32e"
+            "addAs": "trait"
           }
         }
       ],
@@ -4495,8 +4531,8 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:力量"
+        "体质",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4572,7 +4608,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在日光下，心灵蝠有攻击检定的劣势，以及在依赖视觉的智力（{@skill Perception}）检定上也有劣势。"
+            "在日光下，心灵蝠有攻击检定的劣势，以及在依赖视觉的智力（{@skill 察觉}）检定上也有劣势。"
           ]
         },
         {
@@ -4653,8 +4689,8 @@
         "无力"
       ],
       "savingThrowForced": [
-        "属性检定:智力",
-        "属性检定:感知"
+        "智力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4717,7 +4753,7 @@
       "cr": "2",
       "trait": [
         {
-          "name": "变形者",
+          "name": "变形生物",
           "ENG_name": "Shapechanger",
           "entries": [
             "狼人乌鸦可以使用它的行动来变化成乌鸦-人形混合体或变成乌鸦，或者恢复其人类形态。除了体型之外，每种形态的统计数据都相同。它所穿戴或携带的任何装备都不会被转变。如果它死亡，它将恢复其人类形态。"
@@ -4770,11 +4806,11 @@
       ],
       "attachedItems": [
         "手弩|PHB",
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "再生",
-        "变形者"
+        "变形生物"
       ],
       "actionTags": [
         "多重攻击"
@@ -4793,7 +4829,7 @@
         "RW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4894,7 +4930,7 @@
           "ENG_name": "Flesh Entomb {@recharge 5}",
           "entries": [
             "僵尸向它能看到的30英尺内的生物投掷一团分离的尸体。目标必须成功进行一次{@dc 16}力量豁免检定，否则将受到16点（{@damage 3d10}）钝击伤害，如果目标是大型或更小的生物，它将被死肉埋葬。",
-            "被埋在死肉中的生物处于{@condition 受限}状态，对死肉外的攻击和其他效果有完全防护，并且在其每个回合开始时受到10点（{@damage 3d6}）死灵伤害。如果死肉被摧毁，生物可以被释放。死肉是一个大号物体，具有AC 10，25生命值，并对毒素和心灵伤害免疫。"
+            "被埋在死肉中的生物处于{@condition 束缚}状态，对死肉外的攻击和其他效果有完全防护，并且在其每个回合开始时受到10点（{@damage 3d6}）死灵伤害。如果死肉被摧毁，生物可以被释放。死肉是一个大号物体，具有AC 10，25生命值，并对毒素和心灵伤害免疫。"
           ]
         }
       ],
@@ -4925,8 +4961,8 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:力量"
+        "体质",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -5049,7 +5085,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true

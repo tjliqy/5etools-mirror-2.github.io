@@ -1,585 +1,628 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"MPP"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MPP": "ToFW",
-				"MM": "ToFW",
-				"DMG": "ToFW"
-			}
-		}
-	},
-	"monster": [
-		{
-			"name": "Aza Dowling",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 17,
-			"_copy": {
-				"name": "Society of Sensation Muse",
-				"source": "MPP",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The muse",
-						"with": "Aza",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Ebonclaw",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 50,
-			"_copy": {
-				"name": "Saber-Toothed Tiger",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The tiger",
-						"with": "Ebonclaw",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"L",
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Eyestalk of Gzemnid",
-			"source": "ToFW",
-			"page": 88,
-			"_copy": {
-				"name": "Purple Worm",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "\\bworm\\b",
-						"with": "eyestalk"
-					},
-					"action": [
-						{
-							"mode": "replaceArr",
-							"replace": "Multiattack",
-							"items": {
-								"name": "Multiattack",
-								"entries": [
-									"The eyestalk attacks with its bite and uses Eradication Gaze."
-								]
-							}
-						},
-						{
-							"mode": "replaceArr",
-							"replace": "Tail Stinger",
-							"items": {
-								"name": "Eradication Gaze {@recharge 5}",
-								"entries": [
-									"The eyestalk creates an area of magical devastation in a 150-foot cone. Any creature in that area must succeed on a {@dc 16} Dexterity saving throw or take 55 ({@damage 10d10}) necrotic damage. If this damage reduces a creature to 0 hit points, its body becomes a pile of fine violet dust."
-								]
-							}
-						}
-					]
-				}
-			},
-			"tokenCredit": "@hamosart",
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Farrow",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 17,
-			"_copy": {
-				"name": "Spy",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The spy",
-						"with": "Farrow",
-						"flags": "i"
-					}
-				}
-			},
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"elf"
-				]
-			},
-			"alignment": [
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Gertrube",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 18,
-			"_copy": {
-				"name": "Thug",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The thug",
-						"with": "Gertrube",
-						"flags": "i"
-					}
-				}
-			},
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"C",
-				"E"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Giant Whirlwyrm",
-			"source": "ToFW",
-			"page": 55,
-			"_copy": {
-				"name": "Behir",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "behir",
-						"with": "whirlwyrm"
-					},
-					"action": {
-						"mode": "replaceArr",
-						"replace": "Lightning Breath {@recharge 5}",
-						"items": {
-							"name": "Thunder Breath {@recharge 5}",
-							"entries": [
-								"The whirlwyrm exhales a line of thunder that is 20 feet long and 5 feet wide. Each creature in that line must make a {@dc 16} Dexterity saving throw, taking 66 ({@damage 12d10}) thunder damage on a failed save, or half as much damage on a successful one."
-							]
-						}
-					}
-				}
-			},
-			"speed": {
-				"walk": 50,
-				"swim": 60
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Josbert Plum",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 17,
-			"_copy": {
-				"name": "Harmonium Peacekeeper",
-				"source": "MPP",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the peacekeeper",
-						"with": "Josbert",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Kal the Crisp",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 17,
-			"_copy": {
-				"name": "Hands of Havoc Fire Starter",
-				"source": "MPP",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The fire starter",
-						"with": "Kal",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Kopoha",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 61,
-			"_copy": {
-				"name": "Empyrean",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The empyrean",
-						"with": "Kopoha",
-						"flags": "i"
-					},
-					"action": {
-						"mode": "removeArr",
-						"names": "Maul"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"G"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Modron Planar Incarnate",
-			"source": "ToFW",
-			"page": 92,
-			"_copy": {
-				"name": "Planar Incarnate",
-				"source": "MPP",
-				"_mod": {
-					"trait": {
-						"mode": "removeArr",
-						"names": "Planar Form"
-					},
-					"action": [
-						{
-							"mode": "replaceArr",
-							"replace": "Energy Bolt",
-							"items": {
-								"name": "Energy Bolt",
-								"entries": [
-									"{@atk rs} {@hit 12} to hit, range 120 ft., one target. {@h}32 ({@damage 5d12}) necrotic damage."
-								]
-							}
-						},
-						{
-							"mode": "replaceArr",
-							"replace": "Planar Exhalation {@recharge 5}",
-							"items": {
-								"name": "Planar Exhalation {@recharge 5}",
-								"entries": [
-									"The incarnate exhales concentrated energy native to its plane in a 60-foot cone. Each creature in that area must make a {@dc 23} Constitution saving throw. On a failed save, a creature takes 52 ({@damage 8d12}) necrotic damage, and the creature has the {@condition blinded} condition until the end of the incarnate's next turn. On a successful save, a creature takes half as much damage only."
-								]
-							}
-						}
-					]
-				}
-			},
-			"type": "fiend",
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Morte",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 10,
-			"otherSources": [
-				{
-					"source": "MPP"
-				}
-			],
-			"size": [
-				"T"
-			],
-			"type": "undead",
-			"alignment": [
-				"C",
-				"G"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 22,
-				"formula": "4d4 + 12"
-			},
-			"speed": {
-				"walk": 0,
-				"fly": {
-					"number": 30,
-					"condition": "(hover)"
-				},
-				"canHover": true
-			},
-			"str": 10,
-			"dex": 16,
-			"con": 16,
-			"int": 13,
-			"wis": 10,
-			"cha": 12,
-			"skill": {
-				"arcana": "+3",
-				"stealth": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 10,
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"bludgeoning"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"poisoned"
-			],
-			"languages": [
-				"Common"
-			],
-			"cr": "1/4",
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
-					]
-				}
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Ophelia",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 49,
-			"_copy": {
-				"name": "Elephant",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The elephant",
-						"with": "Ophelia",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"L",
-				"G"
-			],
-			"int": 10,
-			"wis": 14,
-			"cha": 14,
-			"languages": [
-				"Common"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Parvaz",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 50,
-			"_copy": {
-				"name": "Giant Eagle",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The eagle",
-						"with": "Parvaz",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"N"
-			],
-			"int": 16,
-			"cha": 14,
-			"languages": [
-				"Common"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "R04M",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 75,
-			"_copy": {
-				"name": "Monodrone",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The monodrone",
-						"with": "R04M",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"N",
-				"G"
-			],
-			"int": 8,
-			"languages": [
-				"Common",
-				"Modron"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Shariel",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 65,
-			"_copy": {
-				"name": "Deva",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The deva",
-						"with": "Shariel",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Vecna Impersonator",
-			"source": "ToFW",
-			"page": 26,
-			"_copy": {
-				"name": "Doppelganger",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "doppelganger",
-						"with": "impersonator"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Whirlwyrm",
-			"source": "ToFW",
-			"page": 52,
-			"_copy": {
-				"name": "Giant Crocodile",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "crocodile",
-						"with": "whirlwyrm"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "X01",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 91,
-			"_copy": {
-				"name": "Hexton Modron",
-				"source": "MPP",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The hexton",
-						"with": "X01",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Zaythir",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "ToFW",
-			"page": 32,
-			"_copy": {
-				"name": "Githzerai Uniter",
-				"source": "MPP",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "The githzerai",
-						"with": "Zaythir",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM",
+        "MPP"
+      ]
+    },
+    "otherSources": {
+      "monster": {
+        "MPP": "ToFW",
+        "MM": "ToFW",
+        "DMG": "ToFW"
+      }
+    }
+  },
+  "monster": [
+    {
+      "name": "阿扎·道林",
+      "ENG_name": "Aza Dowling",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 17,
+      "_copy": {
+        "name": "感觉团·缪斯乐师",
+        "ENG_name": "Society of Sensation Muse",
+        "source": "MPP",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "缪斯",
+            "with": "阿扎",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true
+    },
+    {
+      "name": "Ebonclaw",
+      "ENG_name": "Ebonclaw",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 50,
+      "_copy": {
+        "name": "剑齿虎",
+        "ENG_name": "Saber-Toothed Tiger",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "老虎",
+            "with": "Ebonclaw",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "L",
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Gzemnid的眼柄",
+      "ENG_name": "Eyestalk of Gzemnid",
+      "source": "ToFW",
+      "page": 88,
+      "_copy": {
+        "name": "紫虫",
+        "ENG_name": "Purple Worm",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "\\u5b54\\u866b",
+            "with": "触手眼"
+          },
+          "action": [
+            {
+              "mode": "replaceArr",
+              "replace": "多重攻击",
+              "items": {
+                "name": "多重攻击",
+                "ENG_name": "Multiattack",
+                "entries": [
+                  "触手眼用其咬击攻击，并使用根除凝视。"
+                ]
+              }
+            },
+            {
+              "mode": "replaceArr",
+              "replace": "尾刺",
+              "items": {
+                "name": "根除凝视 {@recharge 5}",
+                "ENG_name": "Eradication Gaze {@recharge 5}",
+                "entries": [
+                  "眼柄在150英尺的锥形区域内造成魔法毁灭。该区域内的任何生物都必须通过敏捷豁免检定（DC 16），否则将受到55点（{10d10}）死灵伤害。如果此伤害使生物的生命值降至0点，则其身体将化为一堆细小的紫罗兰色尘埃。"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "tokenCredit": "哈莫萨特",
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "法罗",
+      "ENG_name": "Farrow",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 17,
+      "_copy": {
+        "name": "密探",
+        "ENG_name": "Spy",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "间谍",
+            "with": "法罗",
+            "flags": "i"
+          }
+        }
+      },
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "elf"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "格特鲁布",
+      "ENG_name": "Gertrube",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 18,
+      "_copy": {
+        "name": "暴徒",
+        "ENG_name": "Thug",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "暴徒",
+            "with": "格特鲁布",
+            "flags": "i"
+          }
+        }
+      },
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "human"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "巨型漩涡蠕虫",
+      "ENG_name": "Giant Whirlwyrm",
+      "source": "ToFW",
+      "page": 55,
+      "_copy": {
+        "name": "青足龙蛇",
+        "ENG_name": "Behir",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "青足龙蛇",
+            "with": "漩涡蠕虫"
+          },
+          "action": {
+            "mode": "replaceArr",
+            "replace": "闪电吐息{@recharge 5}",
+            "items": {
+              "name": "雷霆之息 {@recharge 5}",
+              "ENG_name": "Thunder Breath {@recharge 5}",
+              "entries": [
+                "龙卷风龙呼出一道20英尺长、5英尺宽的雷电。那条线上的每个生物都必须进行一次敏捷豁免检定（DC 16），失败则受到66点（{12d10}）雷鸣伤害，成功则伤害减半。"
+              ]
+            }
+          }
+        }
+      },
+      "speed": {
+        "walk": 50,
+        "swim": 60
+      },
+      "hasToken": true
+    },
+    {
+      "name": "乔斯伯特·普拉姆",
+      "ENG_name": "Josbert Plum",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 17,
+      "_copy": {
+        "name": "和谐营·和平卫士",
+        "ENG_name": "Harmonium Peacekeeper",
+        "source": "MPP",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "和平守护者",
+            "with": "Josbert",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Kal the Crisp",
+      "ENG_name": "Kal the Crisp",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 17,
+      "_copy": {
+        "name": "祸乱之手·纵火狂徒",
+        "ENG_name": "Hands of Havoc Fire Starter",
+        "source": "MPP",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "火种",
+            "with": "卡尔",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true
+    },
+    {
+      "name": "Kopoha",
+      "ENG_name": "Kopoha",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 61,
+      "_copy": {
+        "name": "至高天",
+        "ENG_name": "Empyrean",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "天界",
+            "with": "Kopoha",
+            "flags": "i"
+          },
+          "action": {
+            "mode": "removeArr",
+            "names": "巨锤"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "魔方体位面化身",
+      "ENG_name": "Modron Planar Incarnate",
+      "source": "ToFW",
+      "page": 92,
+      "_copy": {
+        "name": "位面显化",
+        "ENG_name": "Planar Incarnate",
+        "source": "MPP",
+        "_mod": {
+          "trait": {
+            "mode": "removeArr",
+            "names": "位面形态"
+          },
+          "action": [
+            {
+              "mode": "replaceArr",
+              "replace": "能量光束",
+              "items": {
+                "name": "能量光束",
+                "ENG_name": "Energy Bolt",
+                "entries": [
+                  "{@atk rs} 命中骰12点命中，射程120英尺，一个目标。{@h}32点（{@damage 5d12}）死灵伤害。"
+                ]
+              }
+            },
+            {
+              "mode": "replaceArr",
+              "replace": "位面呼气{@recharge 5}",
+              "items": {
+                "name": "位面呼气{@recharge 5}",
+                "ENG_name": "Planar Exhalation {@recharge 5}",
+                "entries": [
+                  "化身在其60英尺锥形区域内呼出其位面特有的浓缩能量。该区域内的每个生物必须进行一次DC 23的体质豁免投掷。失败则生物受到52点（8d12）死灵伤害，并且直到化身的下一回合结束时生物处于{@condition 盲目}状态。成功则生物只受到一半的伤害。"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "fiend",
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "莫特",
+      "ENG_name": "Morte",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 10,
+      "otherSources": [
+        {
+          "source": "MPP"
+        }
+      ],
+      "size": [
+        "T"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "4d4 + 12"
+      },
+      "speed": {
+        "walk": 0,
+        "fly": {
+          "number": 30,
+          "condition": "悬停"
+        },
+        "canHover": true
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 16,
+      "int": 13,
+      "wis": 10,
+      "cha": 12,
+      "skill": {
+        "arcana": "+3",
+        "stealth": "+5"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 10,
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "vulnerable": [
+        "钝击"
+      ],
+      "conditionImmune": [
+        "力竭",
+        "中毒"
+      ],
+      "languages": [
+        "普通"
+      ],
+      "cr": "1/4",
+      "action": [
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中骰：5，射程5英尺，一个目标。{@h}5（{@damage 1d4 + 3}）穿刺伤害。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "奥菲莉亚",
+      "ENG_name": "Ophelia",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 49,
+      "_copy": {
+        "name": "象",
+        "ENG_name": "Elephant",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "大象",
+            "with": "奥菲莉亚",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "int": 10,
+      "wis": 14,
+      "cha": 14,
+      "languages": [
+        "普通"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Parvaz",
+      "ENG_name": "Parvaz",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 50,
+      "_copy": {
+        "name": "巨鹰",
+        "ENG_name": "Giant Eagle",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "鹰",
+            "with": "Parvaz",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "N"
+      ],
+      "int": 16,
+      "cha": 14,
+      "languages": [
+        "普通"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "R04M",
+      "ENG_name": "R04M",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 75,
+      "_copy": {
+        "name": "单元冢",
+        "ENG_name": "Monodrone",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "单声体",
+            "with": "R04M",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "int": 8,
+      "languages": [
+        "普通",
+        "魔冢"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "莎莉尔",
+      "ENG_name": "Shariel",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 65,
+      "_copy": {
+        "name": "天神使徒",
+        "ENG_name": "Deva",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "提婆",
+            "with": "莎莉尔",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "维克纳冒充者",
+      "ENG_name": "Vecna Impersonator",
+      "source": "ToFW",
+      "page": 26,
+      "_copy": {
+        "name": "变形怪",
+        "ENG_name": "Doppelganger",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "二重身",
+            "with": "冒名顶替者"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "漩涡蠕虫",
+      "ENG_name": "Whirlwyrm",
+      "source": "ToFW",
+      "page": 52,
+      "_copy": {
+        "name": "巨鳄",
+        "ENG_name": "Giant Crocodile",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "鳄鱼",
+            "with": "漩涡蠕虫"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "X01",
+      "ENG_name": "X01",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 91,
+      "_copy": {
+        "name": "六次魔冢",
+        "ENG_name": "Hexton Modron",
+        "source": "MPP",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "赫克斯顿",
+            "with": "X01",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "扎伊瑟",
+      "ENG_name": "Zaythir",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "ToFW",
+      "page": 32,
+      "_copy": {
+        "name": "吉斯泽莱统念者",
+        "ENG_name": "Githzerai Uniter",
+        "source": "MPP",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "吉斯泽莱",
+            "with": "扎伊瑟",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    }
+  ]
 }

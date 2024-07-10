@@ -1,1631 +1,1721 @@
 {
-	"monster": [
-		{
-			"name": "Dream Eater",
-			"source": "MCV2DC",
-			"page": 3,
-			"size": [
-				"M"
-			],
-			"type": "aberration",
-			"alignment": [
-				"C",
-				"E"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				15
-			],
-			"hp": {
-				"average": 77,
-				"formula": "14d8 + 14"
-			},
-			"speed": {
-				"walk": 0,
-				"fly": {
-					"number": 50,
-					"condition": "(hover)"
-				},
-				"canHover": true
-			},
-			"str": 15,
-			"dex": 20,
-			"con": 13,
-			"int": 12,
-			"wis": 16,
-			"cha": 21,
-			"senses": [
-				"blindsight 120 ft. (blind beyond this radius)"
-			],
-			"passive": 13,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"psychic"
-			],
-			"conditionImmune": [
-				"blinded",
-				"charmed",
-				"frightened",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"restrained"
-			],
-			"languages": [
-				"Deep Speech",
-				"telepathy 120 ft."
-			],
-			"cr": "7",
-			"trait": [
-				{
-					"name": "Ghastly Visions",
-					"entries": [
-						"Each creature that starts its turn within 30 feet of the dream eater must make a {@dc 16} Wisdom saving throw. On a failed save, the creature is {@condition frightened} of the dream eater until the start of the creature's next turn. If a creature's saving throw is successful, the creature is immune to this dream eater's Ghastly Visions trait for the next 24 hours."
-					]
-				},
-				{
-					"name": "Incorporeal Movement",
-					"entries": [
-						"The dream eater can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The dream eater has advantage on saving throws against spells and other magical effects."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The dream eater makes two Ensnaring Shriek attacks."
-					]
-				},
-				{
-					"name": "Ensnaring Shriek",
-					"entries": [
-						"{@atk ms,rs} {@hit 8} to hit, reach 15 ft. or range 60 ft., one target. {@h}12 ({@damage 2d6 + 5}) psychic damage, and if the target is a Medium or smaller creature, the target must succeed on a {@dc 16} Charisma saving throw or be pulled up to 15 feet toward the dream eater."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Engulfing Nightmare",
-					"entries": [
-						"The dream eater targets one creature within 5 feet of itself. The target must succeed on a {@dc 16} Wisdom saving throw or be engulfed by the dream eater, as the dream eater envelops the creature in a miasma of its worst fears.",
-						"When the dream eater engulfs a target, the dream eater enters its space, and the target immediately takes 10 ({@damage 3d6}) psychic damage. An engulfed target is {@condition restrained} and {@condition blinded}, and it takes an additional 10 ({@damage 3d6}) psychic damage at the start of each of the dream eater's turns. When the dream eater moves, the engulfed target moves with it.",
-						"The dream eater can have only one target engulfed at a time. An engulfed target escapes at the start of its turn by making a {@dc 16} Wisdom saving throw. On a successful save, the target escapes; the target is no longer engulfed, and it enters a space of its choice within 5 feet of the dream eater. A creature within 15 feet of the dream eater also can use its action to attempt to free an engulfed target. Doing so requires the creature to use its action to make a {@dc 16} Charisma ({@skill Persuasion}) check to convince the engulfed target the nightmare isn't real, with the target escaping on a success. The creature making the check takes 10 ({@damage 3d6}) psychic damage, regardless of the check's success or failure, as its mind brushes against the nightmare."
-					]
-				}
-			],
-			"traitTags": [
-				"Incorporeal Movement",
-				"Magic Resistance"
-			],
-			"senseTags": [
-				"B"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"DS",
-				"TP"
-			],
-			"damageTags": [
-				"O",
-				"Y"
-			],
-			"miscTags": [
-				"RCH"
-			],
-			"conditionInflict": [
-				"blinded",
-				"frightened",
-				"restrained"
-			],
-			"savingThrowForced": [
-				"charisma",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Ember",
-			"isNamedCreature": true,
-			"source": "MCV2DC",
-			"page": 5,
-			"size": [
-				"H"
-			],
-			"type": {
-				"type": "dragon",
-				"tags": [
-					"adult chromatic"
-				]
-			},
-			"alignment": [
-				"C",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 20,
-					"from": [
-						"special equipment"
-					]
-				}
-			],
-			"hp": {
-				"average": 270,
-				"formula": "20d12 + 140"
-			},
-			"speed": {
-				"walk": 40,
-				"climb": 40,
-				"fly": 80
-			},
-			"str": 28,
-			"dex": 10,
-			"con": 25,
-			"int": 17,
-			"wis": 14,
-			"cha": 22,
-			"save": {
-				"dex": "+7",
-				"con": "+14",
-				"wis": "+9",
-				"cha": "+13"
-			},
-			"skill": {
-				"perception": "+16",
-				"religion": "+10",
-				"stealth": "+14"
-			},
-			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
-			],
-			"passive": 26,
-			"immune": [
-				"fire"
-			],
-			"languages": [
-				"Abyssal",
-				"Common",
-				"Draconic"
-			],
-			"cr": "22",
-			"trait": [
-				{
-					"name": "Calescent Aura",
-					"entries": [
-						"At the start of Ember's turn, Ember can force any number of creatures of his choice within 10 feet of himself to make a {@dc 22} Constitution saving throw. On a failed save, a creature takes 7 ({@damage 2d6}) fire damage and is {@condition frightened} of Ember until the start of its next turn."
-					]
-				},
-				{
-					"name": "Legendary Resistance (5/Day)",
-					"entries": [
-						"If Ember fails a saving throw, he can choose to succeed instead."
-					]
-				},
-				{
-					"name": "Special Equipment",
-					"entries": [
-						"In battle, Ember dons magical plate armor custom-forged for his use. While wearing the armor, Ember adds his Charisma modifier to his weapon damage rolls (included in the attack descriptions), and his AC can't be lower than 20."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Ember makes one Bite attack and two Claw attacks."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}26 ({@damage 2d10 + 15}) piercing damage plus 13 ({@damage 2d6 + 6}) fire damage."
-					]
-				},
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 5 ft., one target. {@h}22 ({@damage 2d6 + 15}) slashing damage."
-					]
-				},
-				{
-					"name": "Firestorm Breath {@recharge 5}",
-					"entries": [
-						"Ember exhales roiling flames and ash in a 90-foot cone. Each creature in that area must make a {@dc 22} Dexterity saving throw. On a failed save, a creature takes 56 ({@damage 16d6}) fire damage and is pushed up to 30 feet away from Ember and knocked {@condition prone}. On a successful save, a creature takes half as much damage with no other effects. If a creature is reduced to 0 hit points by this effect, the creature immediately dies, and its body is reduced to ash."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Alter Shape",
-					"entries": [
-						"Ember magically transforms into a vulture or a mage and retains his alignment, damage immunities, hit points, and Hit Dice, as well as his Intelligence, Wisdom, and Charisma scores. This transformation ends if Ember is reduced to 0 hit points or if he uses another bonus action to end it."
-					]
-				}
-			],
-			"legendary": [
-				{
-					"name": "Pursuit",
-					"entries": [
-						"Ember moves up to 40 feet in a straight line toward one creature he can see. This movement ignores opportunity attacks."
-					]
-				},
-				{
-					"name": "Searing Bite (Costs 2 Actions)",
-					"entries": [
-						"Ember makes one Bite attack. If the attack hits, it deals an additional 7 ({@damage 2d6}) fire damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Legendary Resistances"
-			],
-			"senseTags": [
-				"B",
-				"SD"
-			],
-			"actionTags": [
-				"Breath Weapon",
-				"Multiattack"
-			],
-			"languageTags": [
-				"AB",
-				"C",
-				"DR"
-			],
-			"damageTags": [
-				"F",
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"frightened",
-				"prone"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Forest Master",
-			"source": "MCV2DC",
-			"page": 6,
-			"size": [
-				"L"
-			],
-			"type": {
-				"type": "celestial",
-				"tags": [
-					"unicorn"
-				]
-			},
-			"alignment": [
-				"N",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 105,
-				"formula": "14d10 + 28"
-			},
-			"speed": {
-				"walk": 50
-			},
-			"str": 18,
-			"dex": 14,
-			"con": 15,
-			"int": 13,
-			"wis": 19,
-			"cha": 17,
-			"save": {
-				"int": "+4",
-				"wis": "+7"
-			},
-			"skill": {
-				"insight": "+7",
-				"nature": "+4",
-				"perception": "+7"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 17,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"charmed",
-				"paralyzed",
-				"poisoned"
-			],
-			"languages": [
-				"Celestial",
-				"Elvish",
-				"Sylvan",
-				"telepathy 60 ft."
-			],
-			"cr": "8",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The Forest Master casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
-					],
-					"will": [
-						"{@spell druidcraft}",
-						"{@spell fog cloud}",
-						"{@spell guidance}"
-					],
-					"daily": {
-						"2e": [
-							"{@spell goodberry}",
-							"{@spell greater restoration}",
-							"{@spell pass without trace}",
-							"{@spell speak with plants}"
-						]
-					},
-					"ability": "wis",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Legendary Resistance (2/Day)",
-					"entries": [
-						"If the Forest Master fails a saving throw, he can choose to succeed instead."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The Forest Master has advantage on saving throws against spells and other magical effects."
-					]
-				},
-				{
-					"name": "Master of Beasts",
-					"entries": [
-						"The Forest Master can comprehend and communicate with any Beast, even if the Beast knows no languages."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The Forest Master makes either two Hooves attacks, two Moon Bolt attacks, or one of each."
-					]
-				},
-				{
-					"name": "Hooves",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Moon Bolt",
-					"entries": [
-						"{@atk rs} {@hit 7} to hit, range 60 ft., one target. {@h}11 ({@damage 2d6 + 4}) radiant damage."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Erupting Briars {@recharge 4}",
-					"entries": [
-						"The Forest Master touches his horn to the earth and causes a 5-foot-tall wall of briars to erupt in a 90-foot line that is 10 feet wide. When the wall appears, each creature in its area is pushed into the nearest unoccupied space adjacent to the wall and must make a {@dc 15} Dexterity saving throw, taking 27 ({@damage 6d8}) piercing damage on a failed save or half as much damage on a successful one.",
-						"The wall of briars lasts until the start of the Forest Master's next turn. The wall blocks line of sight and counts as difficult terrain for all creatures except the Forest Master. The first time a creature enters the wall's area on a turn, that creature must succeed on a {@dc 15} Dexterity saving throw or take 13 ({@damage 3d8}) piercing damage."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Misty Escape",
-					"entries": [
-						"If the Forest Master takes damage from a melee attack, he, along with any equipment he is wearing or carrying, teleports to an unoccupied space within 30 feet that he can see."
-					]
-				}
-			],
-			"traitTags": [
-				"Legendary Resistances",
-				"Magic Resistance"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"CE",
-				"E",
-				"S",
-				"TP"
-			],
-			"damageTags": [
-				"B",
-				"P",
-				"R"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Foresworn",
-			"source": "MCV2DC",
-			"page": 7,
-			"size": [
-				"M"
-			],
-			"type": "undead",
-			"alignment": [
-				"L",
-				"G"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"{@item plate armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 82,
-				"formula": "11d8 + 33"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 20,
-			"dex": 14,
-			"con": 17,
-			"int": 12,
-			"wis": 18,
-			"cha": 10,
-			"save": {
-				"str": "+8",
-				"wis": "+7"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 14,
-			"resist": [
-				"necrotic",
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"frightened",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained",
-				"unconscious"
-			],
-			"languages": [
-				"the languages it knew in life"
-			],
-			"cr": "6",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The foresworn casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
-					],
-					"daily": {
-						"1": [
-							"{@spell wall of force}"
-						],
-						"2e": [
-							"{@spell command}",
-							"{@spell detect evil and good}"
-						]
-					},
-					"ability": "wis",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Duty-Bound",
-					"entries": [
-						"The foresworn is bound to enacting a singular duty it pledged itself to in life. While this duty is incomplete, whenever the foresworn is destroyed, it re-forms at its previous location after 3 ({@dice 1d6}) days, with all its hit points restored."
-					]
-				},
-				{
-					"name": "Incorporeal Movement",
-					"entries": [
-						"The foresworn can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
-					]
-				},
-				{
-					"name": "Unusual Nature",
-					"entries": [
-						"The foresworn doesn't require air, food, drink, or sleep."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The foresworn makes three Spectral Polearm attacks."
-					]
-				},
-				{
-					"name": "Spectral Polearm",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) force damage."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Phantasmic Battalion {@recharge 5}",
-					"entries": [
-						"The foresworn summons a battalion of ghostly soldiers to its aid. The ghostly soldiers fill a 10-foot-cube centered on the foresworn, move with the foresworn when the foresworn moves, and last until the start of the foresworn's next turn. While the ghostly soldiers are present, the area they occupy is considered difficult terrain for all creatures except the foresworn, and the foresworn's reach for melee weapon attacks increases by 10 feet."
-					]
-				}
-			],
-			"traitTags": [
-				"Incorporeal Movement",
-				"Unusual Nature"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"LF"
-			],
-			"damageTags": [
-				"O"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"prone"
-			],
-			"savingThrowForcedSpell": [
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Irda Seeker",
-			"source": "MCV2DC",
-			"page": 8,
-			"size": [
-				"M"
-			],
-			"type": "giant",
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 27,
-				"formula": "5d8 + 5"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 15,
-			"con": 12,
-			"int": 11,
-			"wis": 14,
-			"cha": 16,
-			"save": {
-				"dex": "+4",
-				"cha": "+5"
-			},
-			"skill": {
-				"insight": "+6",
-				"perception": "+6",
-				"stealth": "+4"
-			},
-			"senses": [
-				"darkvision 60 ft.",
-				"truesight 5 ft."
-			],
-			"passive": 16,
-			"languages": [
-				"Common",
-				"Giant",
-				"Sylvan"
-			],
-			"cr": "1",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The seeker uses Augment Physicality, if available, and makes two Crystal Blade attacks."
-					]
-				},
-				{
-					"name": "Crystal Blade",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) force damage, plus 7 ({@damage 2d6}) force damage if the seeker is Large."
-					]
-				},
-				{
-					"name": "Augment Physicality (1/Day)",
-					"entries": [
-						"For 1 minute, the seeker magically heightens its physical ability and increases in size, along with anything it is wearing or carrying. While augmented, the seeker is Large, and makes Strength and Dexterity saving throws with advantage. If the seeker lacks the room to become Large, it attains the maximum size possible in the space available."
-					]
-				},
-				{
-					"name": "Change Shape (1/Day)",
-					"entries": [
-						"The seeker magically transforms to look and feel like a Medium Humanoid it has seen. Any equipment the seeker is wearing or carrying isn't transformed, and the seeker's statistics don't change. The seeker reverts to its true form if the seeker is reduced to 0 hit points or if the seeker uses an action to end the transformation."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Veil Walk {@recharge 4}",
-					"entries": [
-						"The seeker, along with any equipment it is wearing or carrying, turns {@condition invisible} and teleports to an unoccupied space it can see within 30 feet of itself. The seeker remains {@condition invisible} until the start of its next turn or until immediately after the seeker makes an attack roll, whichever comes first."
-					]
-				}
-			],
-			"senseTags": [
-				"D",
-				"U"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Shapechanger"
-			],
-			"languageTags": [
-				"C",
-				"GI",
-				"S"
-			],
-			"damageTags": [
-				"O"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Irda Veil Keeper",
-			"source": "MCV2DC",
-			"page": 9,
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "giant",
-				"tags": [
-					"sorcerer"
-				]
-			},
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 49,
-				"formula": "9d8 + 9"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 9,
-			"dex": 16,
-			"con": 13,
-			"int": 14,
-			"wis": 17,
-			"cha": 19,
-			"save": {
-				"int": "+4",
-				"wis": "+5",
-				"cha": "+6"
-			},
-			"skill": {
-				"arcana": "+4",
-				"insight": "+7",
-				"perception": "+7"
-			},
-			"senses": [
-				"darkvision 60 ft.",
-				"truesight 5 ft."
-			],
-			"passive": 17,
-			"conditionImmune": [
-				"charmed",
-				"frightened"
-			],
-			"languages": [
-				"Common",
-				"Giant",
-				"Sylvan"
-			],
-			"cr": "4",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The veil keeper casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 14}):"
-					],
-					"will": [
-						"{@spell dancing lights}",
-						"{@spell minor illusion}"
-					],
-					"daily": {
-						"1": [
-							"{@spell hallucinatory terrain} (as an action)"
-						],
-						"2e": [
-							"{@spell invisibility}",
-							"{@spell major image}",
-							"{@spell phantasmal force}"
-						]
-					},
-					"ability": "cha",
-					"displayAs": "action"
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The veil keeper uses Augment Physicality, if available, and makes two Mirage Flare attacks."
-					]
-				},
-				{
-					"name": "Mirage Flare",
-					"entries": [
-						"{@atk ms,rs} {@hit 6} to hit, reach 5 ft. or range 60 ft., one target. {@h}11 ({@damage 2d6 + 4}) radiant damage, and the target must succeed on a {@dc 14} Wisdom saving throw or be {@condition charmed} by the veil keeper until the start of the veil keeper's next turn. While {@condition charmed} in this way, a creature is {@condition incapacitated} as it is beset by hypnotic, illusory visions."
-					]
-				},
-				{
-					"name": "Augment Physicality (1/Day)",
-					"entries": [
-						"For 1 minute, the veil keeper magically obscures it location, heightens its physical ability, and increases in size, along with anything it is wearing or carrying. While the veil keeper is augmented, attack rolls against it have disadvantage, it is Large, and it makes Strength and Dexterity saving throws with advantage. If the veil keeper lacks the room to become Large, it attains the maximum size possible in the space available. These augmentations end if the veil keeper is {@condition incapacitated}."
-					]
-				},
-				{
-					"name": "Change Shape (3/Day)",
-					"entries": [
-						"The veil keeper magically transforms to look and feel like a Medium Humanoid it has seen. Any equipment the veil keeper is wearing or carrying isn't transformed, and the veil keeper's statistics don't change. The veil keeper reverts to its true form if the veil keeper is reduced to 0 hit points or if the veil keeper uses an action to end the transformation."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Obscuring Mist",
-					"entries": [
-						"If a creature that the veil keeper can see within 30 feet of itself is targeted by an attack, the veil keeper surrounds the creature with illusory mist, granting the creature half cover until the start of the veil keeper's next turn."
-					]
-				}
-			],
-			"senseTags": [
-				"D",
-				"U"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Shapechanger"
-			],
-			"languageTags": [
-				"C",
-				"GI",
-				"S"
-			],
-			"damageTags": [
-				"R"
-			],
-			"damageTagsSpell": [
-				"Y"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"conditionInflict": [
-				"charmed",
-				"incapacitated"
-			],
-			"conditionInflictSpell": [
-				"invisible"
-			],
-			"savingThrowForced": [
-				"wisdom"
-			],
-			"savingThrowForcedSpell": [
-				"intelligence"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Nevermind Gnome Inventor",
-			"source": "MCV2DC",
-			"page": 10,
-			"size": [
-				"S"
-			],
-			"type": "humanoid",
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"{@item leather armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 36,
-				"formula": "8d6 + 8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 8,
-			"dex": 17,
-			"con": 13,
-			"int": 18,
-			"wis": 11,
-			"cha": 14,
-			"save": {
-				"dex": "+5",
-				"int": "+6"
-			},
-			"skill": {
-				"arcana": "+6",
-				"investigation": "+6",
-				"perception": "+2"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 12,
-			"languages": [
-				"Common",
-				"Gnomish"
-			],
-			"cr": "2",
-			"trait": [
-				{
-					"name": "Always Thinking Ahead",
-					"entries": [
-						"The inventor has advantage on initiative rolls."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The inventor makes two Flying Fangtrap attacks. It can replace one of these attacks with Thunderscream Gadget if it's available."
-					]
-				},
-				{
-					"name": "Flying Fangtrap",
-					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 60 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage, and the creature must succeed on a {@dc 14} Dexterity saving throw or have its speed reduced to 0 until the start of the inventor's next turn."
-					]
-				},
-				{
-					"name": "Thunderscream Gadget {@recharge 5}",
-					"entries": [
-						"The inventor produces a gadget that emits a screeching wave of sound in a 30-foot cone originating from the inventor. Each creature in that area must make a {@dc 14} Constitution saving throw, taking 10 ({@damage 3d6}) thunder damage on a failed save or half as much damage on a successful one."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Flash Powder",
-					"entries": [
-						"If the inventor is damaged by a creature it can see within 15 feet of itself, the inventor retaliates by flinging brilliantly explosive powder at the creature. The creature must succeed on a {@dc 14} Dexterity saving throw or be {@condition blinded} until the end of its next turn."
-					]
-				}
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"G"
-			],
-			"damageTags": [
-				"P",
-				"T"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RW"
-			],
-			"conditionInflict": [
-				"blinded"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Nevermind Gnome Mastermind",
-			"source": "MCV2DC",
-			"page": 11,
-			"size": [
-				"S"
-			],
-			"type": "humanoid",
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"{@item leather armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 82,
-				"formula": "15d6 + 30"
-			},
-			"speed": {
-				"walk": 30,
-				"climb": 30
-			},
-			"str": 9,
-			"dex": 18,
-			"con": 14,
-			"int": 20,
-			"wis": 11,
-			"cha": 15,
-			"save": {
-				"dex": "+7",
-				"con": "+5",
-				"int": "+8"
-			},
-			"skill": {
-				"arcana": "+8",
-				"investigation": "+8",
-				"perception": "+3"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 13,
-			"languages": [
-				"Common",
-				"Gnomish"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Always Thinking Ahead",
-					"entries": [
-						"The mastermind has advantage on initiative rolls."
-					]
-				},
-				{
-					"name": "Spider Climb",
-					"entries": [
-						"The mastermind can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check. This trait doesn't function if the mastermind is grappling creatures in both of its clockwork claws."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The mastermind makes two Clockwork Claw attacks. The mastermind can replace one of these attacks with Generate Gadget if it's available."
-					]
-				},
-				{
-					"name": "Clockwork Claw",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 20 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, and if the target is a Medium or smaller creature, the target is {@condition grappled} (escape {@dc 15}). Until this grapple ends, the target takes 10 ({@damage 3d6}) piercing damage at the start of each of the mastermind's turns. The mastermind has two claws, each of which can grapple only one target."
-					]
-				},
-				{
-					"name": "Generate Gadget {@recharge 5}",
-					"entries": [
-						"The mastermind quickly assembles a clockwork gadget, producing one of the following effects (the mastermind's choice):"
-					]
-				},
-				{
-					"name": "Chattergrab",
-					"entries": [
-						"Parts of this gadget look like gnashing metal teeth. This gadget hurtles toward a creature the mastermind can see within 60 feet of itself. The creature must succeed on a {@dc 16} Dexterity saving throw or take 31 ({@damage 7d8}) piercing damage and be {@condition incapacitated} until the start of the mastermind's next turn."
-					]
-				},
-				{
-					"name": "Phasmoball",
-					"entries": [
-						"The mastermind launches this gadget to a point the mastermind can see within 30 feet of itself, where the gadget unleashes a cloud of mind-warping gases in a 10-foot-radius sphere. Each creature within the sphere must succeed on a {@dc 16} Wisdom saving throw or take 11 ({@damage 2d10}) psychic damage and be {@condition frightened} of the mastermind until the start of the mastermind's next turn."
-					]
-				},
-				{
-					"name": "Thunderscream",
-					"entries": [
-						"This gadget emits a screeching wave of sound in a 30-foot cone originating from the mastermind. Each creature in that area must make a {@dc 16} Constitution saving throw, taking 21 ({@damage 6d6}) thunder damage on a failed save or half as much damage on a successful one."
-					]
-				}
-			],
-			"traitTags": [
-				"Spider Climb"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"G"
-			],
-			"damageTags": [
-				"P",
-				"T",
-				"Y"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"frightened",
-				"grappled",
-				"incapacitated"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Thanoi Hunter",
-			"source": "MCV2DC",
-			"page": 12,
-			"size": [
-				"M"
-			],
-			"type": "monstrosity",
-			"alignment": [
-				"A"
-			],
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"{@item hide armor|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 32,
-				"formula": "5d8 + 10"
-			},
-			"speed": {
-				"walk": 30,
-				"swim": 30
-			},
-			"str": 18,
-			"dex": 14,
-			"con": 15,
-			"int": 12,
-			"wis": 16,
-			"cha": 11,
-			"save": {
-				"str": "+6",
-				"con": "+4"
-			},
-			"skill": {
-				"athletics": "+6",
-				"perception": "+5",
-				"survival": "+5"
-			},
-			"passive": 15,
-			"immune": [
-				"cold"
-			],
-			"languages": [
-				"Aquan",
-				"Common"
-			],
-			"cr": "1",
-			"trait": [
-				{
-					"name": "Hold Breath",
-					"entries": [
-						"The hunter can hold its breath for up to 10 minutes."
-					]
-				},
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The hunter has advantage on an attack roll against a creature if at least one of the hunter's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The hunter makes one Bone Harpoon attack and one Tusk attack."
-					]
-				},
-				{
-					"name": "Bone Harpoon",
-					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 10 ft. or range 20/60 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage. Hit or Miss: The harpoon returns to the hunter's hand."
-					]
-				},
-				{
-					"name": "Tusk",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d4 + 4}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Hold Breath",
-				"Pack Tactics"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"AQ",
-				"C"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RCH",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Traag Draconian",
-			"source": "MCV2DC",
-			"page": 13,
-			"size": [
-				"L"
-			],
-			"type": "monstrosity",
-			"alignment": [
-				"C",
-				"E"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 68,
-				"formula": "8d10 + 24"
-			},
-			"speed": {
-				"walk": 40
-			},
-			"str": 21,
-			"dex": 10,
-			"con": 17,
-			"int": 6,
-			"wis": 8,
-			"cha": 9,
-			"save": {
-				"str": "+8",
-				"con": "+6"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 9,
-			"conditionImmune": [
-				"charmed",
-				"frightened"
-			],
-			"languages": [
-				"Common",
-				"Draconic"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Blood Frenzy",
-					"entries": [
-						"The draconian has advantage on melee attack rolls against any creature that doesn't have all its hit points."
-					]
-				},
-				{
-					"name": "Controlled Fall",
-					"entries": [
-						"If the draconian falls and isn't {@condition incapacitated}, it subtracts up to 50 feet from the fall when calculating the fall's damage."
-					]
-				},
-				{
-					"name": "Death Throes",
-					"entries": [
-						"If the draconian is reduced to 0 hit points, its body erupts into sludge that fills a 10-foot-radius sphere. Each creature within that area must succeed on a {@dc 14} Dexterity saving throw or be covered in the sludge for 1 minute. While covered in the sludge, a creature's speed is halved. A creature can use its action to scrape the sludge off itself or another creature within 5 feet of itself."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The draconian makes two Claw attacks."
-					]
-				},
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}14 ({@damage 2d8 + 5}) slashing damage."
-					]
-				},
-				{
-					"name": "Flaming Carnage {@recharge 5}",
-					"entries": [
-						"The draconian indulges its rage, wreathing itself in fire and moving up to its speed. The draconian can enter creatures' spaces during this move. During this movement, when the draconian enters a creature's space, the creature must make a {@dc 14} Dexterity saving throw. On a failed save, the creature takes 22 ({@damage 4d10}) fire damage and is knocked {@condition prone}. On a successful save, the creature takes half as much damage and is pushed to the nearest space out of the draconian's path. A creature can be affected by this draconian's Flaming Carnage only once during a turn."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Violent Retaliation",
-					"entries": [
-						"If a creature within 10 feet of the draconian hits it with an attack, the draconian can make one Claw attack against that creature. If the Claw attack hits, it deals an additional 4 ({@damage 1d8}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Death Burst"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"DR"
-			],
-			"damageTags": [
-				"F",
-				"S"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Verminaard",
-			"isNamedCreature": true,
-			"source": "MCV2DC",
-			"page": 15,
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"cleric",
-					"human"
-				]
-			},
-			"alignment": [
-				"L",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 20,
-					"from": [
-						"{@item +2 plate armor}"
-					]
-				}
-			],
-			"hp": {
-				"average": 143,
-				"formula": "22d8 + 44"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 22,
-			"dex": 13,
-			"con": 15,
-			"int": 16,
-			"wis": 18,
-			"cha": 17,
-			"save": {
-				"wis": "+10",
-				"cha": "+9"
-			},
-			"skill": {
-				"perception": "+16",
-				"religion": "+9"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 26,
-			"immune": [
-				"fire"
-			],
-			"conditionImmune": [
-				"charmed",
-				"frightened"
-			],
-			"languages": [
-				"Abyssal",
-				"Common",
-				"Draconic"
-			],
-			"cr": "17",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Verminaard casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 18}):"
-					],
-					"will": [
-						"{@spell light}",
-						"{@spell thaumaturgy}"
-					],
-					"daily": {
-						"2e": [
-							"{@spell bane}",
-							"{@spell fear}",
-							"{@spell freedom of movement}",
-							"{@spell greater restoration}",
-							"{@spell hold monster}",
-							"{@spell revivify}"
-						]
-					},
-					"ability": "wis",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Draconic Command",
-					"entries": [
-						"Whenever a Dragon or a creature with the Draconic Devotion trait within 30 feet of Verminaard makes an attack roll, the creature can roll a {@dice d4} and add the number rolled to the attack roll."
-					]
-				},
-				{
-					"name": "Legendary Resistance (3/Day)",
-					"entries": [
-						"If Verminaard fails a saving throw, he can choose to succeed instead."
-					]
-				},
-				{
-					"name": "Special Equipment",
-					"entries": [
-						"Verminaard wears {@item +2 plate armor} and wields the mace {@item Nightbringer|MCV2DC}, which grants him darkvision as well as immunity to fire damage and to the {@condition charmed} and {@condition frightened} conditions (included above)."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Verminaard makes two Nightbringer attacks and uses Malediction."
-					]
-				},
-				{
-					"name": "Nightbringer",
-					"entries": [
-						"{@atk mw} {@hit 15} to hit, reach 5 ft., one target. {@h}12 ({@damage 1d6 + 9}) bludgeoning damage plus 10 ({@damage 4d4}) radiant damage. If the target is a creature, the target must succeed on a {@dc 20} Constitution saving throw or be {@condition blinded} until the start of Verminaard's next turn."
-					]
-				},
-				{
-					"name": "Malediction",
-					"entries": [
-						"Verminaard utters an unholy word, causing profane fire to descend on one creature Verminaard can see within 60 feet of himself. The creature must make a {@dc 18} Dexterity saving throw, taking 11 ({@damage 2d10}) necrotic damage plus 11 ({@damage 2d10}) radiant damage on a failed save or half as much damage on a successful one."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Dragon Queen's Favor (5/Day)",
-					"entries": [
-						"Verminaard or one creature he can see within 60 feet of himself magically regains 17 ({@dice 2d12 + 4}) hit points."
-					]
-				}
-			],
-			"legendary": [
-				{
-					"name": "Tactical Movement",
-					"entries": [
-						"Verminaard moves up to his speed or commands a mount he is riding to move up to its speed. This movement doesn't provoke opportunity attacks."
-					]
-				},
-				{
-					"name": "Fervent Strike (Costs 2 Actions)",
-					"entries": [
-						"Verminaard makes one Nightbringer attack. If this attack hits, it deals an additional 7 ({@damage 2d6}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Cast a Spell (Costs 3 Actions)",
-					"entries": [
-						"Verminaard uses Spellcasting."
-					]
-				}
-			],
-			"attachedItems": [
-				"nightbringer|mcv2dc"
-			],
-			"traitTags": [
-				"Legendary Resistances"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"AB",
-				"C",
-				"DR"
-			],
-			"damageTags": [
-				"B",
-				"N",
-				"R"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflict": [
-				"blinded"
-			],
-			"conditionInflictSpell": [
-				"frightened",
-				"paralyzed"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
-			],
-			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	]
+  "monster": [
+    {
+      "name": "梦境吞噬者",
+      "ENG_name": "Dream Eater",
+      "source": "MCV2DC",
+      "page": 3,
+      "size": [
+        "M"
+      ],
+      "type": "aberration",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 77,
+        "formula": "14d8 + 14"
+      },
+      "speed": {
+        "walk": 0,
+        "fly": {
+          "number": 50,
+          "condition": "悬停"
+        },
+        "canHover": true
+      },
+      "str": 15,
+      "dex": 20,
+      "con": 13,
+      "int": 12,
+      "wis": 16,
+      "cha": 21,
+      "senses": [
+        "盲视 120 英尺（此半径之外盲视无效）"
+      ],
+      "passive": 13,
+      "resist": [
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "心灵"
+      ],
+      "conditionImmune": [
+        "目盲",
+        "魅惑",
+        "恐惧",
+        "被擒",
+        "麻痹",
+        "石化",
+        "束缚"
+      ],
+      "languages": [
+        "深渊语",
+        "心灵感应 120 英尺"
+      ],
+      "cr": "7",
+      "trait": [
+        {
+          "name": "恐怖幻象",
+          "ENG_name": "Ghastly Visions",
+          "entries": [
+            "每个在其回合开始时处于梦境吞噬者30英尺范围内的生物必须进行一次{@dc 16} 智慧豁免检定。豁免失败的生物将直到其下一回合开始时对梦境吞噬者感到{@condition 恐惧}。如果生物的豁免检定成功，该生物在接下来的24小时内对梦境吞噬者的幽灵幻象特性免疫。"
+          ]
+        },
+        {
+          "name": "虚体移动",
+          "ENG_name": "Incorporeal Movement",
+          "entries": [
+            "梦境吞噬者可以像穿越困难地形一样穿越其他生物和物体。如果它在物体内部结束回合，则会受到5 ({@damage 1d10}) 点力量伤害。"
+          ]
+        },
+        {
+          "name": "魔法抗性",
+          "ENG_name": "Magic Resistance",
+          "entries": [
+            "梦境吞噬者在对抗法术和其他魔法效果的豁免检定中具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "梦境吞噬者进行两次捕梦尖叫攻击。"
+          ]
+        },
+        {
+          "name": "缠绕尖叫",
+          "ENG_name": "Ensnaring Shriek",
+          "entries": [
+            "{@atk 近战法术攻击, 远程法术攻击} {@hit 8}命中，触及15英尺或射程60英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 心灵伤害，如果目标是中等大小或更小的生物，则目标必须成功进行一次魅力豁免检定（DC 16），否则会被拉向梦境吞噬者最多15英尺。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "吞噬噩梦",
+          "ENG_name": "Engulfing Nightmare",
+          "entries": [
+            "梦境吞噬者以自身5英尺范围内的一个生物为目标。目标必须成功进行一次智慧豁免检定（DC 16），否则将被梦境吞噬者吞没，因为梦境吞噬者将生物包裹在其最糟糕恐惧的迷雾之中。",
+            "当梦境吞噬者吞没一个目标时，梦境吞噬者进入其空间，目标立即受到10 ({@damage 3d6}) 点精神伤害。被吞没的目标处于{@condition 束缚}和{@condition 目盲}状态，并在梦境吞噬者的每个回合开始时额外受到10 ({@damage 3d6}) 点精神伤害。当梦境吞噬者移动时，被吞没的目标也随之移动。",
+            "食梦者一次只能吞没一个目标。被吞没的目标在其回合开始时可以通过进行一次智慧豁免检定（{@dc 16}）来逃脱。成功则目标逃脱；目标不再被吞没，并可以选择进入食梦者5英尺范围内的任意空间。距离食梦者15英尺内的生物也可以使用其动作尝试解救被吞没的目标。为此，该生物需要使用其动作进行一次魅力（说服）检定（{@dc 16}），以说服被吞没的目标噩梦不是真实的，如果成功，目标逃脱。进行检定的生物无论检定成功与否，都会受到10（{@damage 3d6}）点心灵伤害，因为它的心灵触碰到了噩梦。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "虚体移动",
+        "魔法抗性"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "DS",
+        "TP"
+      ],
+      "damageTags": [
+        "O",
+        "Y"
+      ],
+      "miscTags": [
+        "射程"
+      ],
+      "conditionInflict": [
+        "目盲",
+        "恐惧",
+        "束缚"
+      ],
+      "savingThrowForced": [
+        "魅力",
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "余烬",
+      "ENG_name": "Ember",
+      "isNamedCreature": true,
+      "source": "MCV2DC",
+      "page": 5,
+      "size": [
+        "H"
+      ],
+      "type": {
+        "type": "dragon",
+        "tags": [
+          "adult chromatic"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 20,
+          "from": [
+            "特殊装备"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 270,
+        "formula": "20d12 + 140"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40,
+        "fly": 80
+      },
+      "str": 28,
+      "dex": 10,
+      "con": 25,
+      "int": 17,
+      "wis": 14,
+      "cha": 22,
+      "save": {
+        "dex": "+7",
+        "con": "+14",
+        "wis": "+9",
+        "cha": "+13"
+      },
+      "skill": {
+        "perception": "+16",
+        "religion": "+10",
+        "stealth": "+14"
+      },
+      "senses": [
+        "盲视 60 英尺",
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 26,
+      "immune": [
+        "火"
+      ],
+      "languages": [
+        "深渊",
+        "普通",
+        "龙族血脉"
+      ],
+      "cr": "22",
+      "trait": [
+        {
+          "name": "炽热光环",
+          "ENG_name": "Calescent Aura",
+          "entries": [
+            "在Ember的回合开始时，Ember可以迫使他选择的在他10英尺范围内的任意数量的生物进行一次体质豁免检定（DC 22）。如果检定失败，生物将受到7（{2d6}）点火焰伤害，并且直到其下一回合开始前都会对Ember感到{@condition frightened}。"
+          ]
+        },
+        {
+          "name": "传奇抗性（每日5次）",
+          "ENG_name": "Legendary Resistance (5/Day)",
+          "entries": [
+            "如果艾伯未能通过豁免检定，他可以选择成功。"
+          ]
+        },
+        {
+          "name": "特殊装备",
+          "ENG_name": "Special Equipment",
+          "entries": [
+            "在战斗中，Ember穿戴为他特制的魔法板甲。穿着这套盔甲时，Ember将他的魅力调整值加到他的武器伤害检定上（包含在攻击描述中），并且他的AC（护甲等级）不能低于20。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "埃姆伯进行一次咬击和两次爪击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 16} 命中，触及范围 10 英尺，一个目标。{@h}26 ({@damage 2d10 + 15}) 穿刺伤害加上 13 ({@damage 2d6 + 6}) 火焰伤害。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 近战武器} {@hit 16}命中，触及5英尺，一个目标。{@h}22 ({@damage 2d6 + 15}) 斩击伤害。"
+          ]
+        },
+        {
+          "name": "烈焰风暴吐息 {@recharge 5}",
+          "ENG_name": "Firestorm Breath {@recharge 5}",
+          "entries": [
+            "埃姆伯呼出滚滚火焰和灰烬，形成一个90英尺长的锥形区域。该区域内的每个生物必须进行一次{@dc 22} 敏捷豁免检定。如果检定失败，生物将受到56 ({@damage 16d6}) 火焰伤害，并被推向埃姆伯远离30英尺的距离，同时被击倒为{@condition 伏地}状态。如果检定成功，生物受到的伤害减半，且没有其他效果。如果生物因此效果的命中点数降至0点，生物立即死亡，其身体化为灰烬。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "改变形态",
+          "ENG_name": "Alter Shape",
+          "entries": [
+            "艾伯通过魔法变身为秃鹫或法师，并保留他的阵营、伤害免疫、生命值和生命骰，以及他的智力、智慧和魅力得分。如果艾伯的生命值降至0或如果他使用另一个奖励动作来结束它，这种变身就会结束。"
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "追击",
+          "ENG_name": "Pursuit",
+          "entries": [
+            "Ember 向他能看到的一个生物直线移动最多40英尺。这种移动无视机会攻击。"
+          ]
+        },
+        {
+          "name": "灼热撕咬（消耗2个动作）",
+          "ENG_name": "Searing Bite (Costs 2 Actions)",
+          "entries": [
+            "埃姆伯进行一次咬击。如果攻击命中，它会造成额外的7 ({@damage 2d6}) 火焰伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "传奇抗性"
+      ],
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "龙息武器",
+        "多重攻击"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "F",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "恐惧",
+        "伏地"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "森林主宰",
+      "ENG_name": "Forest Master",
+      "source": "MCV2DC",
+      "page": 6,
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "celestial",
+        "tags": [
+          "unicorn"
+        ]
+      },
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 16,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 105,
+        "formula": "14d10 + 28"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 15,
+      "int": 13,
+      "wis": 19,
+      "cha": 17,
+      "save": {
+        "int": "+4",
+        "wis": "+7"
+      },
+      "skill": {
+        "insight": "+7",
+        "nature": "+4",
+        "perception": "+7"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 17,
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "麻痹",
+        "中毒"
+      ],
+      "languages": [
+        "天界",
+        "精灵语",
+        "森林",
+        "心灵感应 60 英尺"
+      ],
+      "cr": "8",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "森林大师施展以下任意一个法术，不需要材料成分，并使用智慧作为施法能力（法术豁免{@dc 15}）:"
+          ],
+          "will": [
+            "{@spell 德鲁伊伎俩}",
+            "{@spell 云雾术}",
+            "{@spell 神导术}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell 神莓术}",
+              "{@spell 高等复原术}",
+              "{@spell 行踪无迹}",
+              "{@spell 植物交谈术}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "传奇抗性（每日2次）",
+          "ENG_name": "Legendary Resistance (2/Day)",
+          "entries": [
+            "如果森林大师未能通过豁免检定，他可以选择成功。"
+          ]
+        },
+        {
+          "name": "魔法抗性",
+          "ENG_name": "Magic Resistance",
+          "entries": [
+            "森林大师在对抗法术和其他魔法效果的豁免检定中拥有优势。"
+          ]
+        },
+        {
+          "name": "兽群主宰",
+          "ENG_name": "Master of Beasts",
+          "entries": [
+            "森林大师能够理解并与任何野兽沟通，即使这些野兽不懂任何语言。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "森林大师进行两次蹄击攻击，两次月光箭攻击，或者各一次。"
+          ]
+        },
+        {
+          "name": "蹄击",
+          "ENG_name": "Hooves",
+          "entries": [
+            "{@atk 近战武器攻击} {@hit 命中骰 7}命中，射程 5 英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 钝击伤害。"
+          ]
+        },
+        {
+          "name": "月之箭",
+          "ENG_name": "Moon Bolt",
+          "entries": [
+            "{@atk 远程法术攻击} {@hit 7}命中，射程60英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 辐射伤害。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "爆发荆棘 {@recharge 4}",
+          "ENG_name": "Erupting Briars {@recharge 4}",
+          "entries": [
+            "森林大师将他的角触地，使得一道90英尺长、10英尺高的荆棘墙在一条线上爆发出来。当墙壁出现时，在其区域内的每个生物都会被推到墙壁旁边最近的未被占据的空间，并且必须进行一次{@dc 15}敏捷豁免检定，如果失败将受到27 ({@damage 6d8}) 穿刺伤害，如果成功则伤害减半。",
+            "荆棘墙持续到森林主宰的下一回合开始。这堵墙阻挡视线，并对所有生物（除了森林主宰）算作困难地形。当生物在一回合中首次进入墙的区域时，该生物必须成功进行一次敏捷豁免检定（DC 15），否则将受到13点（{@damage 3d8}）穿刺伤害。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "雾遁",
+          "ENG_name": "Misty Escape",
+          "entries": [
+            "如果森林大师受到近战攻击的伤害，他以及他穿戴或携带的任何装备都会传送到他能看到的30英尺内的未被占据的空间。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "传奇抗性",
+        "魔法抗性"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "CE",
+        "E",
+        "S",
+        "TP"
+      ],
+      "damageTags": [
+        "B",
+        "P",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "誓约者",
+      "ENG_name": "Foresworn",
+      "source": "MCV2DC",
+      "page": 7,
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        {
+          "ac": 18,
+          "from": [
+            "{@item 板甲|PHB}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "11d8 + 33"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 20,
+      "dex": 14,
+      "con": 17,
+      "int": 12,
+      "wis": 18,
+      "cha": 10,
+      "save": {
+        "str": "+8",
+        "wis": "+7"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 14,
+      "resist": [
+        "死灵",
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "力竭",
+        "恐惧",
+        "被擒",
+        "麻痹",
+        "石化",
+        "中毒",
+        "伏地",
+        "束缚",
+        "昏迷"
+      ],
+      "languages": [
+        "它生前所知的语言"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "先誓者施放以下任意一个法术，无需材料组件，并使用智慧作为施法能力（法术豁免{@dc 15}）："
+          ],
+          "daily": {
+            "1": [
+              "{@spell 力墙术}"
+            ],
+            "2e": [
+              "{@spell 命令术}",
+              "{@spell 侦测善恶}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "职责束缚",
+          "ENG_name": "Duty-Bound",
+          "entries": [
+            "先知被束缚于执行它生前承诺的唯一任务。只要这个任务未完成，每当先知被摧毁，它就会在3（{@dice 1d6}）天后在之前的位置重新形成，所有生命值完全恢复。"
+          ]
+        },
+        {
+          "name": "虚体移动",
+          "ENG_name": "Incorporeal Movement",
+          "entries": [
+            "先誓者可以像通过困难地形一样穿过其他生物和物体。如果它在物体内部结束回合，它将受到5 ({@damage 1d10}) 点力量伤害。"
+          ]
+        },
+        {
+          "name": "非凡本质",
+          "ENG_name": "Unusual Nature",
+          "entries": [
+            "先誓者不需要空气、食物、饮料或睡眠。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "誓约者进行三次幽灵长柄武器攻击。"
+          ]
+        },
+        {
+          "name": "幽灵长兵器",
+          "ENG_name": "Spectral Polearm",
+          "entries": [
+            "{@atk 近战} 命中骰 8，触及范围 5 英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 力量伤害。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "幻象军团 {@recharge 5}",
+          "ENG_name": "Phantasmic Battalion {@recharge 5}",
+          "entries": [
+            "先知召唤一群幽灵士兵来助战。这些幽灵士兵填充在先知为中心的10英尺立方体内，当先知移动时它们也会随之移动，并持续到先知下个回合开始。当幽灵士兵存在时，它们占据的区域对所有生物（除了先知）来说被视为困难地形，并且先知的近战武器攻击范围增加10英尺。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "虚体移动",
+        "非凡本质"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "LF"
+      ],
+      "damageTags": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "conditionInflictSpell": [
+        "伏地"
+      ],
+      "savingThrowForcedSpell": [
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "伊尔达探索者",
+      "ENG_name": "Irda Seeker",
+      "source": "MCV2DC",
+      "page": 8,
+      "size": [
+        "M"
+      ],
+      "type": "giant",
+      "alignment": [
+        "A"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "5d8 + 5"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 15,
+      "con": 12,
+      "int": 11,
+      "wis": 14,
+      "cha": 16,
+      "save": {
+        "dex": "+4",
+        "cha": "+5"
+      },
+      "skill": {
+        "insight": "+6",
+        "perception": "+6",
+        "stealth": "+4"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。",
+        "真视 5 英尺"
+      ],
+      "passive": 16,
+      "languages": [
+        "普通",
+        "巨人",
+        "森林"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "如果可用，探索者使用增强体质，并进行两次水晶刀刃攻击。"
+          ]
+        },
+        {
+          "name": "水晶刀锋",
+          "ENG_name": "Crystal Blade",
+          "entries": [
+            "{@atk 近战武器} 命中骰：4，射程5英尺，一个目标。{@h}5（{@damage 1d6 + 2}）力量伤害，如果探求者是大型生物，则额外造成7（{@damage 2d6}）力量伤害。"
+          ]
+        },
+        {
+          "name": "增强体质（每日1次）",
+          "ENG_name": "Augment Physicality (1/Day)",
+          "entries": [
+            "持续1分钟，探索者通过魔法增强其身体能力并增大尺寸，它穿戴或携带的任何物品也会随之增大。在增强状态下，探索者体型变为大型，并且在进行力量和敏捷豁免检定时具有优势。如果探索者没有足够的空间变为大型，它将达到可用空间内的最大尺寸。"
+          ]
+        },
+        {
+          "name": "变形（每日1次）",
+          "ENG_name": "Change Shape (1/Day)",
+          "entries": [
+            "探索者通过魔法变身，看起来和感觉上像它见过的中型人形生物。探索者穿戴或携带的任何装备不会发生变化，探索者的统计数据也不会改变。如果探索者的生命值降至0或使用动作结束变身，探索者将恢复其真实形态。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "面纱行走 {@recharge 4}",
+          "ENG_name": "Veil Walk {@recharge 4}",
+          "entries": [
+            "探索者及其携带或穿戴的任何装备变为{@condition 隐形}状态，并传送到自身30英尺范围内可见的未被占据的空间。探索者保持{@condition 隐形}状态，直到其下一回合开始或直到探索者立即进行攻击检定，以先到者为准。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D",
+        "U"
+      ],
+      "actionTags": [
+        "多重攻击",
+        "变形生物"
+      ],
+      "languageTags": [
+        "C",
+        "GI",
+        "S"
+      ],
+      "damageTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "伊尔达面纱守护者",
+      "ENG_name": "Irda Veil Keeper",
+      "source": "MCV2DC",
+      "page": 9,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "giant",
+        "tags": [
+          "sorcerer"
+        ]
+      },
+      "alignment": [
+        "A"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 49,
+        "formula": "9d8 + 9"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 9,
+      "dex": 16,
+      "con": 13,
+      "int": 14,
+      "wis": 17,
+      "cha": 19,
+      "save": {
+        "int": "+4",
+        "wis": "+5",
+        "cha": "+6"
+      },
+      "skill": {
+        "arcana": "+4",
+        "insight": "+7",
+        "perception": "+7"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。",
+        "真视 5 英尺"
+      ],
+      "passive": 17,
+      "conditionImmune": [
+        "魅惑",
+        "恐惧"
+      ],
+      "languages": [
+        "普通",
+        "巨人",
+        "森林"
+      ],
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "面纱守护者施展以下法术之一，不需要材料成分，并使用魅力作为施法能力（法术豁免{@dc 14}）："
+          ],
+          "will": [
+            "{@spell 舞光术}",
+            "{@spell 次级幻象}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell 幻景}（作为动作）"
+            ],
+            "2e": [
+              "{@spell 隐形术}",
+              "{@spell 强效幻影}",
+              "{@spell 魅影之力}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "面纱守护者使用增强体质（如果可用），并进行两次幻象闪光攻击。"
+          ]
+        },
+        {
+          "name": "幻象闪光",
+          "ENG_name": "Mirage Flare",
+          "entries": [
+            "{@atk 近战武器, 远程武器} 命中：6，射程：5英尺或60英尺，一个目标。{@h}11（{@damage 2d6 + 4}）辐射伤害，目标必须成功进行一次智慧豁免检定（{@dc 14}），否则在面纱守护者的下一个回合开始前被{@condition 魅惑}。以这种方式被{@condition 魅惑}的生物处于{@condition 无力}状态，因为它被催眠的幻觉所困扰。"
+          ]
+        },
+        {
+          "name": "增强体质（每日1次）",
+          "ENG_name": "Augment Physicality (1/Day)",
+          "entries": [
+            "持续1分钟，面纱守护者通过魔法模糊其位置，增强其身体能力，并增大其体型，以及它所穿戴或携带的任何物品。当面纱守护者被增强时，对它的攻击检定处于劣势，它变为大型生物，并且在进行力量和敏捷豁免检定时具有优势。如果面纱守护者没有足够的空间变大，它将达到可用空间内的最大尺寸。如果面纱守护者被{@condition 无力}，这些增强效果将结束。"
+          ]
+        },
+        {
+          "name": "改变形态（每日3次）",
+          "ENG_name": "Change Shape (3/Day)",
+          "entries": [
+            "面纱守护者可以通过魔法变换其外观和触感，使其看起来和感觉到像是一个它所见过的中等体型的人形生物。面纱守护者穿戴或携带的任何装备不会被变换，且其统计数据不会改变。如果面纱守护者的命中点数降至0点，或者如果面纱守护者使用动作来结束变形，它将恢复其真实形态。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "遮蔽雾",
+          "ENG_name": "Obscuring Mist",
+          "entries": [
+            "如果面纱守护者能看到的30英尺内的生物被攻击，面纱守护者会用幻雾包围该生物，直到面纱守护者的下一回合开始时，该生物获得半遮蔽状态。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D",
+        "U"
+      ],
+      "actionTags": [
+        "多重攻击",
+        "变形生物"
+      ],
+      "languageTags": [
+        "C",
+        "GI",
+        "S"
+      ],
+      "damageTags": [
+        "R"
+      ],
+      "damageTagsSpell": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "conditionInflict": [
+        "魅惑",
+        "无力"
+      ],
+      "conditionInflictSpell": [
+        "隐形"
+      ],
+      "savingThrowForced": [
+        "感知"
+      ],
+      "savingThrowForcedSpell": [
+        "智力"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "别在意，侏儒发明家",
+      "ENG_name": "Nevermind Gnome Inventor",
+      "source": "MCV2DC",
+      "page": 10,
+      "size": [
+        "S"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "A"
+      ],
+      "ac": [
+        {
+          "ac": 14,
+          "from": [
+            "{@item 皮甲|PHB}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 36,
+        "formula": "8d6 + 8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 17,
+      "con": 13,
+      "int": 18,
+      "wis": 11,
+      "cha": 14,
+      "save": {
+        "dex": "+5",
+        "int": "+6"
+      },
+      "skill": {
+        "arcana": "+6",
+        "investigation": "+6",
+        "perception": "+2"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 12,
+      "languages": [
+        "普通",
+        "侏儒语"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "总是提前思考",
+          "ENG_name": "Always Thinking Ahead",
+          "entries": [
+            "发明家在先攻骰上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "发明家进行两次飞行捕熊夹攻击。如果可用，它可以将其中一次攻击替换为雷霆尖叫装置。"
+          ]
+        },
+        {
+          "name": "飞行捕牙陷阱",
+          "ENG_name": "Flying Fangtrap",
+          "entries": [
+            "{@atk 近战，远程} {@hit 5}命中，触及5英尺或射程60英尺，一个目标。{@h}8 ({@damage 1d10 + 3})穿刺伤害，并且生物必须成功进行一次敏捷豁免检定（DC 14），否则其速度将减少至0，直到发明者的下一回合开始。"
+          ]
+        },
+        {
+          "name": "雷吼装置 {@recharge 5}",
+          "ENG_name": "Thunderscream Gadget {@recharge 5}",
+          "entries": [
+            "发明家制造了一个装置，它在发明家周围30英尺的锥形区域内发出刺耳的声波。该区域内的每个生物都必须进行一次体质豁免检定（{@dc 14}），失败则受到10点（{@damage 3d6}）雷霆伤害，成功则伤害减半。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "闪光粉",
+          "ENG_name": "Flash Powder",
+          "entries": [
+            "如果发明家被它15英尺范围内能看到的生物伤害，发明家会反击，向生物投掷闪亮的爆炸性粉末。该生物必须成功进行一次敏捷豁免检定（DC 14），否则直到其下个回合结束时将被{@condition 致盲}。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "G"
+      ],
+      "damageTags": [
+        "P",
+        "T"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "RW"
+      ],
+      "conditionInflict": [
+        "目盲"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "遗忘侏儒主谋",
+      "ENG_name": "Nevermind Gnome Mastermind",
+      "source": "MCV2DC",
+      "page": 11,
+      "size": [
+        "S"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "A"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "{@item 皮甲|PHB}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "15d6 + 30"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 9,
+      "dex": 18,
+      "con": 14,
+      "int": 20,
+      "wis": 11,
+      "cha": 15,
+      "save": {
+        "dex": "+7",
+        "con": "+5",
+        "int": "+8"
+      },
+      "skill": {
+        "arcana": "+8",
+        "investigation": "+8",
+        "perception": "+3"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 13,
+      "languages": [
+        "普通",
+        "侏儒语"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "总是提前思考",
+          "ENG_name": "Always Thinking Ahead",
+          "entries": [
+            "主脑在先攻骰上拥有优势。"
+          ]
+        },
+        {
+          "name": "蛛行术",
+          "ENG_name": "Spider Climb",
+          "entries": [
+            "主谋能够攀爬困难的表面，包括在天花板上倒挂着，而无需进行能力检定。如果主谋用它的两个发条爪子抓住生物，这个特性将不会生效。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "主谋进行两次发条爪攻击。如果可用，主谋可以用生成小工具替换这些攻击中的一次。"
+          ]
+        },
+        {
+          "name": "发条爪",
+          "ENG_name": "Clockwork Claw",
+          "entries": [
+            "{@atk 近战武器} 命中：7，射程：20英尺，一个目标。{@h}11（{@damage 2d6 + 4}）穿刺伤害，如果目标是中型或更小的生物，则目标被{@condition 抓住}（逃脱{@dc 15}）。直到这次抓住结束，目标在主谋的每个回合开始时受到10（{@damage 3d6}）穿刺伤害。主谋有两个爪子，每个爪子只能抓住一个目标。"
+          ]
+        },
+        {
+          "name": "生成装置 {@recharge 5}",
+          "ENG_name": "Generate Gadget {@recharge 5}",
+          "entries": [
+            "主脑迅速组装一个发条装置，产生以下效果之一（主脑选择）："
+          ]
+        },
+        {
+          "name": "喋喋不休的抓手",
+          "ENG_name": "Chattergrab",
+          "entries": [
+            "这个装置的部分看起来像是咬合的金属牙齿。这个装置向主脑可见的60英尺内的生物疾飞而去。生物必须成功进行一次敏捷豁免检定（DC 16），否则将受到31点（{@damage 7d8}）穿刺伤害，并在主脑的下一回合开始前处于{@condition 无力}状态。"
+          ]
+        },
+        {
+          "name": "幽魂球",
+          "ENG_name": "Phasmoball",
+          "entries": [
+            "主谋将这个装置发射到自己视线范围内30英尺内的某点，装置在10英尺半径的球形区域内释放出一团扭曲心智的气体。每个在球形区域内的生物必须进行一次{@dc 16}智力豁免检定，否则将受到11 ({@damage 2d10}) 点精神伤害，并在主谋的下一个回合开始前对主谋感到{@condition 恐惧}。"
+          ]
+        },
+        {
+          "name": "雷鸣怒吼",
+          "ENG_name": "Thunderscream",
+          "entries": [
+            "这个装置在主谋周围30英尺的锥形区域内发出刺耳的声波。该区域内的每个生物都必须进行一次体质豁免检定（{@dc 16}），失败则受到21点（{@damage 6d6}）雷霆伤害，成功则伤害减半。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "蛛行术"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "G"
+      ],
+      "damageTags": [
+        "P",
+        "T",
+        "Y"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "恐惧",
+        "被擒",
+        "无力"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷",
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "索诺伊猎人",
+      "ENG_name": "Thanoi Hunter",
+      "source": "MCV2DC",
+      "page": 12,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "A"
+      ],
+      "ac": [
+        {
+          "ac": 14,
+          "from": [
+            "{@item 兽皮甲|PHB}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 32,
+        "formula": "5d8 + 10"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 15,
+      "int": 12,
+      "wis": 16,
+      "cha": 11,
+      "save": {
+        "str": "+6",
+        "con": "+4"
+      },
+      "skill": {
+        "athletics": "+6",
+        "perception": "+5",
+        "survival": "+5"
+      },
+      "passive": 15,
+      "immune": [
+        "寒冷"
+      ],
+      "languages": [
+        "水族",
+        "普通"
+      ],
+      "cr": "1",
+      "trait": [
+        {
+          "name": "屏息",
+          "ENG_name": "Hold Breath",
+          "entries": [
+            "猎人可以屏住呼吸长达10分钟。"
+          ]
+        },
+        {
+          "name": "群体战术",
+          "ENG_name": "Pack Tactics",
+          "entries": [
+            "如果至少有一名猎人的盟友在生物5英尺范围内，并且盟友不是{@condition 无力}状态，猎人对生物的攻击检定有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "猎人进行一次骨矛攻击和一次獠牙攻击。"
+          ]
+        },
+        {
+          "name": "骨制鱼叉",
+          "ENG_name": "Bone Harpoon",
+          "entries": [
+            "{@atk 近战，远程} 命中骰 6，触及范围 10 英尺或射程 20/60 英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 穿刺伤害。命中或未命中：鱼叉返回到猎人手中。"
+          ]
+        },
+        {
+          "name": "獠牙",
+          "ENG_name": "Tusk",
+          "entries": [
+            "{@atk 近战} {@hit 6}命中，射程5英尺，一个目标。{@h}6（{@damage 1d4 + 4}）斩击伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "屏息",
+        "群体战术"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "AQ",
+        "C"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MW",
+        "射程",
+        "RW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "拖拉格·德拉科尼亚",
+      "ENG_name": "Traag Draconian",
+      "source": "MCV2DC",
+      "page": 13,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        {
+          "ac": 14,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 68,
+        "formula": "8d10 + 24"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 21,
+      "dex": 10,
+      "con": 17,
+      "int": 6,
+      "wis": 8,
+      "cha": 9,
+      "save": {
+        "str": "+8",
+        "con": "+6"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 9,
+      "conditionImmune": [
+        "魅惑",
+        "恐惧"
+      ],
+      "languages": [
+        "普通",
+        "龙族血脉"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "鲜血狂热",
+          "ENG_name": "Blood Frenzy",
+          "entries": [
+            "龙裔对所有未满生命值的生物进行近战攻击检定时具有优势。"
+          ]
+        },
+        {
+          "name": "控制坠落",
+          "ENG_name": "Controlled Fall",
+          "entries": [
+            "如果龙裔生物倒下并未处于{@condition 无力}状态，它在计算跌落伤害时可以从跌落距离中减去最多50英尺。"
+          ]
+        },
+        {
+          "name": "死亡焚爆",
+          "ENG_name": "Death Throes",
+          "entries": [
+            "如果龙裔生物降至0生命值，其身体会爆裂成泥浆，形成一个10英尺半径的球体。该区域内的每个生物必须成功进行一次敏捷豁免检定（DC 14），否则会被泥浆覆盖1分钟。被泥浆覆盖时，生物的移动速度减半。生物可以使用其行动来刮掉自己身上或5英尺范围内其他生物身上的泥浆。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "龙人进行两次爪击攻击。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 挥砍} 命中骰 8，触及范围 10 英尺，一个目标。{@h}14 ({@damage 2d8 + 5}) 斩击伤害。"
+          ]
+        },
+        {
+          "name": "烈焰屠杀 {@recharge 5}",
+          "ENG_name": "Flaming Carnage {@recharge 5}",
+          "entries": [
+            "龙裔沉溺于其愤怒之中，周围环绕着火焰并以它的速度移动。龙裔可以在这次移动中进入其他生物的空间。在这次移动过程中，当龙裔进入一个生物的空间时，该生物必须进行一次敏捷豁免检定（DC 14）。如果检定失败，生物将受到22（{4d10}）点火焰伤害并被击倒{@condition prone}。如果检定成功，生物受到一半的伤害并被推向龙裔路径之外最近的空位。一个生物在一个回合中只能被这个龙裔的火焰屠杀影响一次。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "暴力反击",
+          "ENG_name": "Violent Retaliation",
+          "entries": [
+            "如果距离龙裔10英尺内的生物攻击它，龙裔可以对该生物进行一次爪击攻击。如果爪击攻击命中，它将额外造成4 ({@damage 1d8}) 斩击伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "死亡自爆"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "F",
+        "S"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "伏地"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "维尔米纳德",
+      "ENG_name": "Verminaard",
+      "isNamedCreature": true,
+      "source": "MCV2DC",
+      "page": 15,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "cleric",
+          "human"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 20,
+          "from": [
+            "{@item +2 板甲}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 143,
+        "formula": "22d8 + 44"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 22,
+      "dex": 13,
+      "con": 15,
+      "int": 16,
+      "wis": 18,
+      "cha": 17,
+      "save": {
+        "wis": "+10",
+        "cha": "+9"
+      },
+      "skill": {
+        "perception": "+16",
+        "religion": "+9"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 26,
+      "immune": [
+        "火"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "恐惧"
+      ],
+      "languages": [
+        "深渊",
+        "普通",
+        "龙族血脉"
+      ],
+      "cr": "17",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "维尔米纳德施放以下任意一个法术，无需材料组件，并使用智慧作为施法能力（法术豁免{@dc 18}）:"
+          ],
+          "will": [
+            "{@spell 光亮术}",
+            "{@spell 奇术}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell 灾祸术}",
+              "{@spell 恐惧术}",
+              "{@spell 行动自如}",
+              "{@spell 高等复原术}",
+              "{@spell 怪物定身术}",
+              "{@spell 回生术}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "龙族命令",
+          "ENG_name": "Draconic Command",
+          "entries": [
+            "每当维尔米纳德30英尺范围内的龙或者具有龙族奉献特性的生物进行攻击检定时，该生物可以掷一个{@dice d4}骰子，并将掷出的数字加到攻击检定上。"
+          ]
+        },
+        {
+          "name": "传奇抗性 (3/日)",
+          "ENG_name": "Legendary Resistance (3/Day)",
+          "entries": [
+            "如果维尔米纳德未能通过豁免投掷，他可以选择成功。"
+          ]
+        },
+        {
+          "name": "特殊装备",
+          "ENG_name": "Special Equipment",
+          "entries": [
+            "维尔米纳德穿戴{@item +2 板甲}，并挥舞着钉头锤{@item 黑夜使者|mcv2dc}，这使他获得了黑暗视觉以及对火焰伤害和{@condition 魅惑}和{@condition 恐惧}状态的免疫（已包含在上面）。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Verminaard 进行两次夜行者攻击并使用诅咒。"
+          ]
+        },
+        {
+          "name": "黑夜使者",
+          "ENG_name": "Nightbringer",
+          "entries": [
+            "{@atk 近战武器} {@hit 15} 命中，触及范围 5 英尺，一个目标。{@h}12 ({@damage 1d6 + 9}) 钝击伤害加上 10 ({@damage 4d4}) 辐射伤害。如果目标是一个生物，则目标必须进行一次 {@dc 20} 体质豁免检定，否则直到 Verminaard 下一回合开始时将被 {@condition blinded}。"
+          ]
+        },
+        {
+          "name": "诅咒",
+          "ENG_name": "Malediction",
+          "entries": [
+            "维尔米纳德念出一句邪恶的咒语，使亵渎之火降临在他60英尺范围内能看到的一个生物上。该生物必须进行一次敏捷豁免检定（DC 18），失败则受到11（{@damage 2d10}）点死灵伤害加上11（{@damage 2d10}）点辐射伤害，成功则伤害减半。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "龙后之宠 (每日5次)",
+          "ENG_name": "Dragon Queen's Favor (5/Day)",
+          "entries": [
+            "维尔米纳德或他60英尺内可见的一个生物通过魔法恢复了17点生命值（{@dice 2d12 + 4}）。"
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "战术移动",
+          "ENG_name": "Tactical Movement",
+          "entries": [
+            "Verminaard 以他的速度前进，或命令他骑乘的坐骑以它的速度前进。这种移动不会引发机会攻击。"
+          ]
+        },
+        {
+          "name": "热忱打击（消耗2个行动）",
+          "ENG_name": "Fervent Strike (Costs 2 Actions)",
+          "entries": [
+            "维尔米纳德进行一次夜行者攻击。如果这次攻击命中，则额外造成7点（{@damage 2d6}）钝击伤害。"
+          ]
+        },
+        {
+          "name": "施放法术 (消耗 3动作)",
+          "ENG_name": "Cast a Spell (Costs 3 Actions)",
+          "entries": [
+            "维尔米纳德使用法术施放。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "黑夜使者|mcv2dc"
+      ],
+      "traitTags": [
+        "传奇抗性"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "B",
+        "N",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "conditionInflict": [
+        "目盲"
+      ],
+      "conditionInflictSpell": [
+        "恐惧",
+        "麻痹"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷"
+      ],
+      "savingThrowForcedSpell": [
+        "魅力",
+        "敏捷",
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
 }

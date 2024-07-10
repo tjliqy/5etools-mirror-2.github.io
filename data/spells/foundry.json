@@ -21,7 +21,7 @@
       }
     },
     {
-      "name": "嫌恶/共感术",
+      "name": "嫌恶术/关怀术",
       "ENG_name": "Antipathy/Sympathy",
       "source": "PHB",
       "system": {
@@ -30,7 +30,7 @@
       }
     },
     {
-      "name": "秘法之门",
+      "name": "秘法门",
       "ENG_name": "Arcane Gate",
       "source": "PHB",
       "system": {
@@ -45,13 +45,15 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "5",
-          "临时生命值"
+          [
+            "5",
+            "临时生命值"
+          ]
         ]
       }
     },
     {
-      "name": "剑刃障壁",
+      "name": "剑刃护壁",
       "ENG_name": "Blade Barrier",
       "source": "PHB",
       "system": {
@@ -68,20 +70,20 @@
         {
           "changes": [
             {
-              "key": "系统特性.抗性.数值",
-              "mode": "自定义",
+              "key": "system.traits.dr.value",
+              "mode": "CUSTOM",
               "value": "钝击",
               "priority": 20
             },
             {
-              "key": "系统特性.抗性.数值",
-              "mode": "自定义",
+              "key": "system.traits.dr.value",
+              "mode": "CUSTOM",
               "value": "穿刺",
               "priority": 20
             },
             {
-              "key": "系统特性.抗性.数值",
-              "mode": "自定义",
+              "key": "system.traits.dr.value",
+              "mode": "CUSTOM",
               "value": "斩击",
               "priority": 20
             }
@@ -93,7 +95,7 @@
       ]
     },
     {
-      "name": "大地之骨",
+      "name": "地之骨",
       "ENG_name": "Bones of the Earth",
       "source": "XGE",
       "system": {
@@ -112,8 +114,10 @@
         "target.units": "",
         "target.type": "生物",
         "damage.parts": [
-          "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
-          "雷鸣伤害"
+          [
+            "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
+            "雷鸣伤害"
+          ]
         ],
         "damage.versatile": "((@details.level + @details.spellLevel) + 1) / 6 向下取整 + 1)d8[在自愿移动时]",
         "scaling.mode": "无",
@@ -146,14 +150,16 @@
       "source": "XGE",
       "system": {
         "damage.parts": [
-          "2d8 + 1d6",
-          ""
+          [
+            "2d8 + 1d6",
+            ""
+          ]
         ],
         "formula": ""
       }
     },
     {
-      "name": "死亡之环",
+      "name": "死亡法阵",
       "ENG_name": "Circle of Death",
       "source": "PHB",
       "system": {
@@ -193,17 +199,17 @@
       }
     },
     {
-      "name": "召唤箭雨",
+      "name": "万箭齐发",
       "ENG_name": "Conjure Volley",
       "source": "PHB",
       "system": {
         "target.value": 40,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
-      "name": "控火",
+      "name": "控火术",
       "ENG_name": "Control Flames",
       "source": "XGE",
       "system": {
@@ -273,13 +279,13 @@
       }
     },
     {
-      "name": "拂晓之光",
+      "name": "拂晓",
       "ENG_name": "Dawn",
       "source": "XGE",
       "system": {
         "target.value": 30,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -303,7 +309,7 @@
       }
     },
     {
-      "name": "尘卷风",
+      "name": "龙卷尘暴",
       "ENG_name": "Dust Devil",
       "source": "XGE",
       "system": {
@@ -333,7 +339,7 @@
       }
     },
     {
-      "name": "土石爆发",
+      "name": "土石喷发",
       "ENG_name": "Erupting Earth",
       "source": "XGE",
       "system": {
@@ -363,7 +369,7 @@
       }
     },
     {
-      "name": "妖火术",
+      "name": "妖火",
       "ENG_name": "Faerie Fire",
       "source": "PHB",
       "system": {
@@ -398,8 +404,10 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "(floor((@item.level) / 2) + 2)d6",
-          "火"
+          [
+            "(floor((@item.level) / 2) + 2)d6",
+            "火"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
@@ -412,7 +420,7 @@
       "system": {
         "target.value": 10,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -485,17 +493,21 @@
         "target.units": "",
         "target.type": "生物",
         "damage.parts": [
-          "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
-          "火",
-          "@mod + (floor(((@details.level + @details.spellLevel) + 1) / 6))d8[splash]",
-          "火"
+          [
+            "((@details.level + @details.spellLevel) + 1) ÷ 6 向下取整)d8[命中时]",
+            "火"
+          ],
+          [
+            "@mod + (floor(((@details.level + @details.spellLevel) + 1) / 6))d8[splash]",
+            "火"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
       }
     },
     {
-      "name": "舞风",
+      "name": "舞风术",
       "ENG_name": "Gust",
       "source": "XGE",
       "system": {
@@ -515,7 +527,7 @@
       }
     },
     {
-      "name": "治愈精魂",
+      "name": "治愈之魂",
       "ENG_name": "Healing Spirit",
       "source": "XGE",
       "system": {
@@ -570,10 +582,14 @@
       "source": "XGE",
       "system": {
         "damage.parts": [
-          "1d10[对目标]",
-          "穿刺",
-          "(@item.level + 1) 取整 d6[溅射]",
-          "寒冷"
+          [
+            "1d10[对目标]",
+            "穿刺"
+          ],
+          [
+            "(@item.level + 1) 取整 d6[溅射]",
+            "寒冷"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
@@ -586,11 +602,11 @@
       "system": {
         "target.value": 20,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
-      "name": "幻象巨龙",
+      "name": "幻影巨龙",
       "ENG_name": "Illusory Dragon",
       "source": "XGE",
       "system": {
@@ -600,7 +616,7 @@
       }
     },
     {
-      "name": "燔焚术",
+      "name": "焚烧术",
       "ENG_name": "Immolation",
       "source": "XGE",
       "system": {
@@ -645,10 +661,14 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "((@item.level) + 1)[命中时]",
-          "闪电",
-          "((@item.level) - 1)d8[区域]",
-          "闪电"
+          [
+            "((@item.level) + 1)[命中时]",
+            "闪电"
+          ],
+          [
+            "((@item.level) - 1)d8[区域]",
+            "闪电"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
@@ -665,7 +685,7 @@
       }
     },
     {
-      "name": "发狂黑暗",
+      "name": "疯狂之暗",
       "ENG_name": "Maddening Darkness",
       "source": "XGE",
       "system": {
@@ -691,7 +711,7 @@
       "system": {
         "target.value": 10,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -700,8 +720,10 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "(1d4 + 1) * (2 + 物品等级)",
-          "力量"
+          [
+            "(1d4 + 1) * (2 + 物品等级)",
+            "力量"
+          ]
         ]
       }
     },
@@ -718,13 +740,15 @@
         "range.value": 60,
         "range.units": "ft",
         "damage.parts": [
-          "1d6 + @mod",
-          "钝击"
+          [
+            "1d6 + @mod",
+            "钝击"
+          ]
         ]
       }
     },
     {
-      "name": "强效幻影",
+      "name": "高等幻影",
       "ENG_name": "Major Image",
       "source": "PHB",
       "system": {
@@ -734,7 +758,7 @@
       }
     },
     {
-      "name": "群体治疗伤势",
+      "name": "群体疗伤术",
       "ENG_name": "Mass Cure Wounds",
       "source": "PHB",
       "system": {
@@ -744,13 +768,15 @@
       }
     },
     {
-      "name": "马克西米利安大地之攫",
+      "name": "麦克斯米利安的地之攫",
       "ENG_name": "Maximilian's Earthen Grasp",
       "source": "XGE",
       "system": {
         "damage.parts": [
-          "2d6",
-          "钝击"
+          [
+            "2d6",
+            "钝击"
+          ]
         ]
       }
     },
@@ -760,10 +786,14 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "4d4[立即]",
-          "酸性",
-          "(@item.level)d4[回合结束时]",
-          "酸性"
+          [
+            "4d4[立即]",
+            "酸性"
+          ],
+          [
+            "(@item.level)d4[回合结束时]",
+            "酸性"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
@@ -790,7 +820,7 @@
       }
     },
     {
-      "name": "次级幻象",
+      "name": "次级幻影",
       "ENG_name": "Minor Illusion",
       "source": "PHB",
       "system": {
@@ -800,7 +830,7 @@
       }
     },
     {
-      "name": "铸土",
+      "name": "塑土术",
       "ENG_name": "Mold Earth",
       "source": "XGE",
       "system": {
@@ -816,7 +846,7 @@
       "system": {
         "target.value": 5,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -840,7 +870,7 @@
       }
     },
     {
-      "name": "欧提路克冰冻法球",
+      "name": "欧提路克冰封法球",
       "ENG_name": "Otiluke's Freezing Sphere",
       "source": "PHB",
       "system": {
@@ -850,7 +880,7 @@
       }
     },
     {
-      "name": "奥图狂舞术",
+      "name": "奥图迷舞",
       "ENG_name": "Otto's Irresistible Dance",
       "source": "PHB",
       "system": {
@@ -890,7 +920,7 @@
       }
     },
     {
-      "name": "预置幻象",
+      "name": "预置幻影",
       "ENG_name": "Programmed Illusion",
       "source": "PHB",
       "system": {
@@ -900,7 +930,7 @@
       }
     },
     {
-      "name": "净化饮食",
+      "name": "净化食粮",
       "ENG_name": "Purify Food and Drink",
       "source": "PHB",
       "system": {
@@ -910,7 +940,7 @@
       }
     },
     {
-      "name": "烟火表演",
+      "name": "烟火术",
       "ENG_name": "Pyrotechnics",
       "source": "XGE",
       "system": {
@@ -920,13 +950,13 @@
       }
     },
     {
-      "name": "重力反转",
+      "name": "反转重力",
       "ENG_name": "Reverse Gravity",
       "source": "PHB",
       "system": {
         "target.value": 50,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -940,7 +970,7 @@
       }
     },
     {
-      "name": "塑水",
+      "name": "操水术",
       "ENG_name": "Shape Water",
       "source": "XGE",
       "system": {
@@ -960,7 +990,7 @@
       }
     },
     {
-      "name": "致病光辉",
+      "name": "致病辐射",
       "ENG_name": "Sickening Radiance",
       "source": "XGE",
       "system": {
@@ -990,7 +1020,7 @@
       }
     },
     {
-      "name": "睡眠术",
+      "name": "睡眠",
       "ENG_name": "Sleep",
       "source": "PHB",
       "system": {
@@ -1006,11 +1036,11 @@
       "system": {
         "target.value": 40,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
-      "name": "缓速术",
+      "name": "缓慢术",
       "ENG_name": "Slow",
       "source": "PHB",
       "system": {
@@ -1040,7 +1070,7 @@
       }
     },
     {
-      "name": "灵体守卫",
+      "name": "灵体卫士",
       "ENG_name": "Spirit Guardians",
       "source": "PHB",
       "system": {
@@ -1049,6 +1079,22 @@
         "target.type": "self",
         "range.value": 15,
         "range.units": "ft"
+      }
+    },
+    {
+      "name": "死神灵魄",
+      "ENG_name": "Spirit of Death",
+      "source": "BMT",
+      "system": {
+        "summons": {
+          "profiles": [
+            {
+              "name": "收割者之魂",
+              "ENG_name": "Reaper Spirit",
+              "uuid": "@生物[收割者精灵]|bmt"
+            }
+          ]
+        }
       }
     },
     {
@@ -1068,8 +1114,10 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "(floor((@item.level) / 2))d8 + @mod",
-          "力量"
+          [
+            "(floor((@item.level) / 2))d8 + @mod",
+            "力量"
+          ]
         ],
         "scaling.mode": "无",
         "scaling.formula": ""
@@ -1086,13 +1134,361 @@
       }
     },
     {
-      "name": "暴风法球",
+      "name": "风暴法球",
       "ENG_name": "Storm Sphere",
       "source": "XGE",
       "system": {
         "target.value": 20,
         "target.units": "ft",
         "target.type": "sphere"
+      }
+    },
+    {
+      "name": "异怪召唤术",
+      "ENG_name": "Summon Aberration",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "match": {
+            "proficiency": true,
+            "attacks": true,
+            "saves": true
+          },
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@item.level - 4) * 10",
+            "attackDamage": "@物品等级"
+          },
+          "profiles": [
+            {
+              "name": "巨眼怪族",
+              "ENG_name": "Beholderkin",
+              "uuid": "@生物[异变精灵（眼魔族）]|tce"
+            },
+            {
+              "name": "斯拉德",
+              "ENG_name": "Slaad",
+              "uuid": "@生物[异变灵（斯拉德）]|tce"
+            },
+            {
+              "name": "星种",
+              "ENG_name": "Star Spawn",
+              "uuid": "@生物[异常之魂（星之后裔）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "野兽召唤术",
+      "ENG_name": "Summon Beast",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@item.level - 2) * 5",
+            "attackDamage": "@物品等级"
+          },
+          "match": {
+            "proficiency": true,
+            "attacks": true
+          },
+          "profiles": [
+            {
+              "name": "气",
+              "ENG_name": "Air",
+              "uuid": "@生物[野兽之灵（空气）]|tce"
+            },
+            {
+              "name": "大地",
+              "ENG_name": "Land",
+              "uuid": "@creature[野兽灵（陆地）]|tce"
+            },
+            {
+              "name": "饮水",
+              "ENG_name": "Water",
+              "uuid": "@creature[野兽精灵（水）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "天界召唤术",
+      "ENG_name": "Summon Celestial",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "match": {
+            "proficiency": true,
+            "attacks": true
+          },
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@物品等级 - 5) * 10",
+            "attackDamage": "@物品等级",
+            "healing": "@物品等级"
+          },
+          "profiles": [
+            {
+              "name": "复仇者",
+              "ENG_name": "Avenger",
+              "uuid": "@生物[天界灵（复仇者）]|tce"
+            },
+            {
+              "name": "防御者",
+              "ENG_name": "Defender",
+              "uuid": "@生物[天界精灵（守护者）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "构装召唤术",
+      "ENG_name": "Summon Construct",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@物品等级 - 4) * 15",
+            "attackDamage": "@物品等级"
+          },
+          "match": {
+            "proficiency": true,
+            "attacks": true,
+            "saves": true
+          },
+          "profiles": [
+            {
+              "name": "粘土",
+              "ENG_name": "Clay",
+              "uuid": "@creature[构造灵（粘土）]|tce"
+            },
+            {
+              "name": "金属",
+              "ENG_name": "Metal",
+              "uuid": "@生物[构造体之灵（金属）]|tce"
+            },
+            {
+              "name": "石头",
+              "ENG_name": "Stone",
+              "uuid": "@生物[构造体之魂（石头）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "龙类灵魄召唤术",
+      "ENG_name": "Summon Draconic Spirit",
+      "source": "FTD",
+      "system": {
+        "summons": {
+          "profiles": [
+            {
+              "name": "多彩的",
+              "ENG_name": "Chromatic",
+              "uuid": "@生物[龙族精灵（彩色）]|堕落至黑暗"
+            },
+            {
+              "name": "宝石",
+              "ENG_name": "Gem",
+              "uuid": "@生物[龙族之灵（宝石）]|堕落至黑暗"
+            },
+            {
+              "name": "金属的",
+              "ENG_name": "Metallic",
+              "uuid": "@生物[龙灵（金属）]|堕落至黑暗"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "元素召唤术",
+      "ENG_name": "Summon Elemental",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@item.level - 4) * 10",
+            "attackDamage": "@物品等级"
+          },
+          "match": {
+            "proficiency": true,
+            "attacks": true
+          },
+          "profiles": [
+            {
+              "name": "气",
+              "ENG_name": "Air",
+              "uuid": "@生物[元素之魂（空气）]|tce"
+            },
+            {
+              "name": "土",
+              "ENG_name": "Earth",
+              "uuid": "@creature[元素灵（土）]|tce"
+            },
+            {
+              "name": "火",
+              "ENG_name": "Fire",
+              "uuid": "@生物[元素精灵（火）]|tce"
+            },
+            {
+              "name": "饮水",
+              "ENG_name": "Water",
+              "uuid": "@creature[元素精灵（水）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "精类召唤术",
+      "ENG_name": "Summon Fey",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@物品等级 - 3) * 10",
+            "attackDamage": "@物品等级"
+          },
+          "match": {
+            "proficiency": true,
+            "attacks": true,
+            "saves": true
+          },
+          "profiles": [
+            {
+              "name": "愤怒",
+              "ENG_name": "Fuming",
+              "uuid": "@creature[仙女灵（冒烟的）]|tce"
+            },
+            {
+              "name": "欢欣",
+              "ENG_name": "Mirthful",
+              "uuid": "@生物[仙女之魂（欢乐）]|tce"
+            },
+            {
+              "name": "诡诈",
+              "ENG_name": "Tricksy",
+              "uuid": "@生物[仙女精灵（淘气）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "邪魔召唤术",
+      "ENG_name": "Summon Fiend",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "15 * @物品等级",
+            "attackDamage": "@物品等级",
+            "saveDamage": "@物品等级"
+          },
+          "match": {
+            "attacks": true,
+            "proficiency": true,
+            "saves": true
+          },
+          "profiles": [
+            {
+              "name": "恶魔",
+              "ENG_name": "Demon",
+              "uuid": "@creature[恶魔灵体]|tce"
+            },
+            {
+              "name": "恶魔",
+              "ENG_name": "Devil",
+              "uuid": "@生物[恶魔之魂（恶魔）]|tce"
+            },
+            {
+              "name": "尤格罗特",
+              "ENG_name": "Yugoloth",
+              "uuid": "@creature[邪恶灵体（尤格罗斯）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "暗影衍体召唤术",
+      "ENG_name": "Summon Shadowspawn",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "match": {
+            "attacks": true,
+            "saves": true
+          },
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@物品等级 - 3) * 15",
+            "attackDamage": "@物品等级"
+          },
+          "profiles": [
+            {
+              "name": "狂怒",
+              "ENG_name": "Fury",
+              "uuid": "@生物[影灵（狂怒）]|tce"
+            },
+            {
+              "name": "绝望",
+              "ENG_name": "Despair",
+              "uuid": "@creature[阴影精灵（绝望）]|tce"
+            },
+            {
+              "name": "恐惧术",
+              "ENG_name": "Fear",
+              "uuid": "@生物[阴影灵（恐惧）]|tce"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "亡灵召唤术",
+      "ENG_name": "Summon Undead",
+      "source": "TCE",
+      "system": {
+        "summons": {
+          "bonuses": {
+            "ac": "@物品等级",
+            "hp": "(@物品等级 - 3) * 10",
+            "attackDamage": "@物品等级"
+          },
+          "match": {
+            "attacks": true,
+            "proficiency": true,
+            "saves": true
+          },
+          "profiles": [
+            {
+              "name": "幽灵般的",
+              "ENG_name": "Ghostly",
+              "uuid": "@生物[不死生物（幽灵）]|tce"
+            },
+            {
+              "name": "恶臭",
+              "ENG_name": "Putrid",
+              "uuid": "@creature[不死生物[腐臭的]|tce"
+            },
+            {
+              "name": "骷髅",
+              "ENG_name": "Skeletal",
+              "uuid": "@生物[不死灵（骷髅）]|tce"
+            }
+          ]
+        }
       }
     },
     {
@@ -1117,7 +1513,7 @@
       }
     },
     {
-      "name": "突触噪乱",
+      "name": "突触静止",
       "ENG_name": "Synaptic Static",
       "source": "XGE",
       "system": {
@@ -1146,7 +1542,7 @@
       }
     },
     {
-      "name": "诸神殿堂",
+      "name": "神庙术",
       "ENG_name": "Temple of the Gods",
       "source": "XGE",
       "system": {
@@ -1187,7 +1583,7 @@
       }
     },
     {
-      "name": "潮涌浪",
+      "name": "潮涌",
       "ENG_name": "Tidal Wave",
       "source": "XGE",
       "system": {
@@ -1205,8 +1601,10 @@
         "target.units": "",
         "target.type": "生物",
         "damage.parts": [
-          "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d8[如果未受伤]",
-          "死灵"
+          [
+            "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d8[如果未受伤]",
+            "死灵"
+          ]
         ],
         "damage.versatile": "(floor(((@details.level + @details.spellLevel) + 1) / 6) + 1)d12[如果受伤]",
         "scaling.mode": "无",
@@ -1224,7 +1622,7 @@
       }
     },
     {
-      "name": "硫酸法球",
+      "name": "浓酸球",
       "ENG_name": "Vitriolic Sphere",
       "source": "XGE",
       "system": {
@@ -1232,8 +1630,10 @@
         "target.units": "ft",
         "target.type": "sphere",
         "damage.parts": [
-          "10d4",
-          "酸性"
+          [
+            "10d4",
+            "酸性"
+          ]
         ],
         "formula": "5d4[酸液]"
       }
@@ -1249,7 +1649,7 @@
       }
     },
     {
-      "name": "力墙术",
+      "name": "力场墙",
       "ENG_name": "Wall of Force",
       "source": "PHB",
       "system": {
@@ -1319,7 +1719,7 @@
       }
     },
     {
-      "name": "水体法球",
+      "name": "碧水法球",
       "ENG_name": "Watery Sphere",
       "source": "XGE",
       "system": {
@@ -1349,13 +1749,13 @@
       }
     },
     {
-      "name": "龙卷旋风",
+      "name": "旋风术",
       "ENG_name": "Whirlwind",
       "source": "XGE",
       "system": {
         "target.value": 10,
         "target.units": "ft",
-        "target.type": "效应范围:柱状"
+        "target.type": "柱状"
       }
     },
     {
@@ -1374,8 +1774,10 @@
       "source": "PHB",
       "system": {
         "damage.parts": [
-          "1d12",
-          "闪电"
+          [
+            "1d12",
+            "闪电"
+          ]
         ]
       }
     },

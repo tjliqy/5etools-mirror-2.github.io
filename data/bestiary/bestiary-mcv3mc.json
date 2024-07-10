@@ -1,575 +1,605 @@
 {
-	"monster": [
-		{
-			"name": "Blaze",
-			"source": "MCV3MC",
-			"page": 3,
-			"otherSources": [
-				{
-					"source": "LK"
-				}
-			],
-			"size": [
-				"M"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 75,
-				"formula": "10d8 + 30"
-			},
-			"speed": {
-				"walk": 20,
-				"fly": {
-					"number": 20,
-					"condition": "(vertical movement only; hover)"
-				},
-				"canHover": true
-			},
-			"str": 16,
-			"dex": 17,
-			"con": 16,
-			"int": 6,
-			"wis": 10,
-			"cha": 7,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 10,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"fire"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Blaze Rod",
-					"entries": [
-						"When the blaze drops to 0 hit points, it disappears in a cloud of smoke and has a 50 percent chance of leaving behind a glowing rod worth 100 gp. The rod sheds dim light in a 5-foot radius. As an action, a creature can try to snap the rod, doing so with a successful {@dc 14} Strength check. The snapped rod releases its fiery energy in a 5-foot-radius sphere centered on itself. Each creature in that area must make a {@dc 14} Dexterity saving throw, taking 6 ({@damage 1d12}) fire damage on a failed save, or half as much damage on a successful one."
-					]
-				},
-				{
-					"name": "Heat Aura",
-					"entries": [
-						"Any creature that starts its turn within 5 feet of the blaze takes 3 ({@damage 1d6}) fire damage."
-					]
-				},
-				{
-					"name": "Illumination",
-					"entries": [
-						"The blaze sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
-					]
-				},
-				{
-					"name": "Water Susceptibility",
-					"entries": [
-						"The blaze takes 1 cold damage for every 5 feet it moves in water, for every gallon of water splashed on it, or whenever it starts its turn in the rain."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The blaze makes three Fiery Doom attacks."
-					]
-				},
-				{
-					"name": "Fiery Doom",
-					"entries": [
-						"{@atk ms,rs} {@hit 6} to hit; reach 5 ft. or ranged 60 ft., one target. {@h}8 ({@damage 1d10 + 3}) fire damage, and the target catches fire if it's a creature or a flammable object. Until a creature takes an action to extinguish the fire, the burning target takes 3 ({@damage 1d6}) fire damage at the end of each of its turns."
-					]
-				}
-			],
-			"traitTags": [
-				"Illumination"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"C",
-				"F"
-			],
-			"miscTags": [
-				"AOE"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Creeper",
-			"source": "MCV3MC",
-			"page": 4,
-			"otherSources": [
-				{
-					"source": "LK"
-				}
-			],
-			"size": [
-				"M"
-			],
-			"type": "monstrosity",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 19,
-				"formula": "3d8 + 6"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 11,
-			"con": 14,
-			"int": 6,
-			"wis": 8,
-			"cha": 3,
-			"skill": {
-				"perception": "+3",
-				"stealth": "+4"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 13,
-			"immune": [
-				"lightning"
-			],
-			"conditionImmune": [
-				"exhaustion"
-			],
-			"cr": "1/2",
-			"trait": [
-				{
-					"name": "Bizarre Physiology",
-					"entries": [
-						"The creeper can't take actions except for {@action Dash}, {@action Disengage}, {@action Hide}, and {@action Search}. It can't take bonus actions or reactions."
-					]
-				},
-				{
-					"name": "Creeper Head",
-					"entries": [
-						"When a creeper drops to 0 hit points from a charged creeper's explosion (see the Destruction trait), it dies and its head falls off. A creeper's fallen head is hollow and can be worn as a mask with eye and mouth openings."
-					]
-				},
-				{
-					"name": "Destruction",
-					"entries": [
-						"When it ends its turn within 10 feet of a Humanoid that it can see, the creeper stops moving and emits a hiss loud enough to be heard by creatures within 30 feet of itself.",
-						"If the creeper drops to 0 hit points before the start of its next turn, the hissing stops, and the creeper dies. Otherwise, at the start of the creeper's next turn, one of following things happens:",
-						{
-							"type": "list",
-							"items": [
-								"If there are no Humanoids within 10 feet of the hissing creeper, it stops hissing. It then uses any available movement to approach the nearest Humanoid it can see.",
-								"If there are one or more Humanoids within 10 feet of the hissing creeper, the creeper explodes in a ball of energy that fills a 20-foot-radius sphere centered on itself. This energy spreads around corners. The creeper is destroyed, and every other creature in the explosion's area must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save, or half as much damage on a successful one. Increase this damage by 7 ({@dice 2d6}) if the creeper is charged (see \"Electrical Charge\" below). Objects in the area that aren't being worn or carried take 14 ({@damage 4d6}) lightning damage, or 21 ({@damage 6d6}) lightning damage if the creeper is charged."
-							]
-						}
-					]
-				},
-				{
-					"name": "Electrical Charge",
-					"entries": [
-						"Whenever the creeper is subjected to lightning damage, it takes no damage and instead becomes charged for 1 minute. While charged, the creeper emits dim blue light in a 5-foot radius."
-					]
-				},
-				{
-					"name": "Fear of Felines",
-					"entries": [
-						"The creeper has the {@condition frightened} condition whenever it starts its turn within 60 feet of a feline creature it can see. The condition lasts until the start of the creeper's next turn."
-					]
-				}
-			],
-			"senseTags": [
-				"D"
-			],
-			"damageTags": [
-				"L"
-			],
-			"miscTags": [
-				"AOE"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Ender Dragon",
-			"source": "MCV3MC",
-			"page": 5,
-			"otherSources": [
-				{
-					"source": "LK"
-				}
-			],
-			"size": [
-				"G"
-			],
-			"type": "dragon",
-			"alignment": [
-				"C",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 22,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 350,
-				"formula": "20d20 + 140"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 120
-			},
-			"str": 27,
-			"dex": 14,
-			"con": 25,
-			"int": 10,
-			"wis": 15,
-			"cha": 19,
-			"save": {
-				"con": "+13",
-				"int": "+6",
-				"wis": "+8"
-			},
-			"skill": {
-				"perception": "+14",
-				"stealth": "+8"
-			},
-			"senses": [
-				"darkvision 240 ft."
-			],
-			"passive": 24,
-			"resist": [
-				"fire"
-			],
-			"immune": [
-				"necrotic"
-			],
-			"conditionImmune": [
-				"charmed",
-				"frightened"
-			],
-			"languages": [
-				"Draconic"
-			],
-			"cr": "19",
-			"trait": [
-				{
-					"name": "Dragon Egg",
-					"entries": [
-						"When the Ender Dragon drops to 0 hit points, it radiates beams of purple light and then disappears, leaving behind an inert, jet-black dragon egg worth 5,000 gp."
-					]
-				},
-				{
-					"name": "Legendary Resistance (4/Day)",
-					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The dragon makes one Bite attack and uses Beating Wings."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 14} to hit; reach 15 ft., one target. {@h}18 ({@damage 3d6 + 8}) piercing damage plus 7 ({@damage 2d6}) necrotic damage."
-					]
-				},
-				{
-					"name": "Beating Wings",
-					"entries": [
-						"The dragon beats its great wings. Each creature within 15 feet of the dragon must succeed on a {@dc 21} Dexterity saving throw or take 10 ({@damage 1d4 + 8}) bludgeoning damage, be pushed 10 feet away from the dragon, and have the {@condition prone} condition."
-					]
-				},
-				{
-					"name": "Harmful Breath {@recharge 5}",
-					"entries": [
-						"The dragon exhales putrid gas in a 60-foot cone. Each creature in that area must make a {@dc 21} Constitution saving throw, taking 52 ({@damage 15d6}) necrotic damage on a failed save, or half as much damage on a successful one. The dragon then chooses a point it can see where the cone makes contact with the ground. That point becomes the center of a 10-foot-high, 10-foot-radius cylinder of lingering gas that disappears at the start of the dragon's next turn. Any creature that starts its turn in the cylinder takes 10 ({@damage 3d6}) necrotic damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Legendary Resistances"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"actionTags": [
-				"Breath Weapon",
-				"Multiattack"
-			],
-			"languageTags": [
-				"DR"
-			],
-			"damageTags": [
-				"B",
-				"N",
-				"P"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Enderman",
-			"source": "MCV3MC",
-			"page": 6,
-			"otherSources": [
-				{
-					"source": "LK"
-				}
-			],
-			"size": [
-				"M"
-			],
-			"type": "aberration",
-			"alignment": [
-				"C",
-				"N"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				14
-			],
-			"hp": {
-				"average": 78,
-				"formula": "12d8 + 24"
-			},
-			"speed": {
-				"walk": 40
-			},
-			"str": 15,
-			"dex": 18,
-			"con": 15,
-			"int": 10,
-			"wis": 18,
-			"cha": 11,
-			"save": {
-				"str": "+5",
-				"con": "+5"
-			},
-			"skill": {
-				"perception": "+7",
-				"stealth": "+7",
-				"survival": "+7"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 17,
-			"resist": [
-				"necrotic"
-			],
-			"languages": [
-				"Endspeech"
-			],
-			"cr": "6",
-			"trait": [
-				{
-					"name": "Evasive Teleportation",
-					"entries": [
-						"Whenever it takes damage or is the target of a ranged attack, the Enderman can teleport, along with any equipment it is wearing or carrying, to an unoccupied space it can see within 20 feet of itself (no action required). If this effect is triggered by a ranged attack, the Enderman teleports just before the attack hits, causing the attack to miss it. This trait is suppressed while the Enderman has the {@condition incapacitated} condition."
-					]
-				},
-				{
-					"name": "Implosion",
-					"entries": [
-						"When the Enderman drops to 0 hit points, it dies as its body implodes. Roll a {@dice d10}. On a roll of 9 or less, the Enderman leaves no remains. On a roll of 10, the Enderman leaves behind a glowing, purple orb called an Ender pearl, worth 500 gp. A creature can throw the pearl up to 60 feet; if the pearl lands in an unoccupied space big enough to contain the creature, the creature teleports to that space, along with any equipment it is wearing or carrying, and the pearl disappears."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"entries": [
-						"While in sunlight, the Enderman has disadvantage on attack rolls."
-					]
-				},
-				{
-					"name": "Water Susceptibility",
-					"entries": [
-						"The Enderman takes 1 cold damage for every 5 feet it moves in water, for every gallon of water splashed on it, or whenever it starts its turn in the rain."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The Enderman makes two Slam attacks."
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit; reach 10 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage plus 9 ({@damage 2d8}) necrotic damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Sunlight Sensitivity"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"B",
-				"C",
-				"N"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Wolf of the Overworld",
-			"source": "MCV3MC",
-			"page": 7,
-			"otherSources": [
-				{
-					"source": "LK"
-				}
-			],
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 11,
-				"formula": "2d8 + 2"
-			},
-			"speed": {
-				"walk": 40
-			},
-			"str": 12,
-			"dex": 15,
-			"con": 12,
-			"int": 3,
-			"wis": 12,
-			"cha": 6,
-			"skill": {
-				"perception": "+5",
-				"stealth": "+4"
-			},
-			"passive": 15,
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition incapacitated} condition."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit; reach 5 ft., one target. {@h}7 ({@damage 2d4 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 11} Strength saving throw or have the {@condition prone} condition."
-					]
-				}
-			],
-			"traitTags": [
-				"Pack Tactics"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"savingThrowForced": [
-				"strength"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	]
+  "monster": [
+    {
+      "name": "烈焰人",
+      "ENG_name": "Blaze",
+      "source": "MCV3MC",
+      "page": 3,
+      "otherSources": [
+        {
+          "source": "LK"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 75,
+        "formula": "10d8 + 30"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": {
+          "number": 20,
+          "condition": "（仅限垂直移动；悬停）"
+        },
+        "canHover": true
+      },
+      "str": 16,
+      "dex": 17,
+      "con": 16,
+      "int": 6,
+      "wis": 10,
+      "cha": 7,
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 10,
+      "resist": [
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "火"
+      ],
+      "conditionImmune": [
+        "力竭",
+        "被擒",
+        "麻痹",
+        "石化",
+        "中毒",
+        "伏地",
+        "束缚"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "烈焰棒",
+          "ENG_name": "Blaze Rod",
+          "entries": [
+            "当烈焰生物的生命值降至0点时，它会在一团烟雾中消失，并有50%的几率留下一根发光的棒子，价值100金币。这根棒子在5英尺半径内散发出微弱的光线。作为一个动作，生物可以尝试折断这根棒子，如果成功进行一次难度为14的力量检查，则可以折断。折断的棒子会在自身为中心的5英尺半径球体内释放其炽热能量。该区域内的每个生物都必须进行一次难度为14的敏捷豁免投掷，失败则受到6点（{@damage 1d12}）火焰伤害，成功则伤害减半。"
+          ]
+        },
+        {
+          "name": "热能光环",
+          "ENG_name": "Heat Aura",
+          "entries": [
+            "任何生物在其回合开始时如果在烈焰5英尺范围内，则受到3点（{@damage 1d6}）火焰伤害。"
+          ]
+        },
+        {
+          "name": "照明",
+          "ENG_name": "Illumination",
+          "entries": [
+            "烈焰在20英尺半径内散发出明亮的光芒，并在额外的20英尺内散发出微弱的光芒。"
+          ]
+        },
+        {
+          "name": "水体敏感",
+          "ENG_name": "Water Susceptibility",
+          "entries": [
+            "烈焰人在水中每移动5英尺就会受到1点寒冷伤害，每被泼洒1加仑水也会受到1点寒冷伤害，或者每当它在雨中开始其回合时。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "烈焰生物进行三次炽热末日攻击。"
+          ]
+        },
+        {
+          "name": "炽热末日",
+          "ENG_name": "Fiery Doom",
+          "entries": [
+            "{@atk 近战，远程} 命中：6；射程5英尺或远程60英尺，一个目标。{@h}8（{@damage 1d10 + 3}）火焰伤害，如果目标是一个生物或易燃物体，它将着火。除非生物采取行动扑灭火焰，否则燃烧的目标在其每个回合结束时会额外受到3（{@damage 1d6}）火焰伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "照明"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "C",
+        "F"
+      ],
+      "miscTags": [
+        "范围伤害"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "苦力怕(爬行者)",
+      "ENG_name": "Creeper",
+      "source": "MCV3MC",
+      "page": 4,
+      "otherSources": [
+        {
+          "source": "LK"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        {
+          "ac": 12,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 19,
+        "formula": "3d8 + 6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 11,
+      "con": 14,
+      "int": 6,
+      "wis": 8,
+      "cha": 3,
+      "skill": {
+        "perception": "+3",
+        "stealth": "+4"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 13,
+      "immune": [
+        "闪电"
+      ],
+      "conditionImmune": [
+        "力竭"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "奇异生理学",
+          "ENG_name": "Bizarre Physiology",
+          "entries": [
+            "爬行者除了{@action 疾走}（冲刺）、{@action 撤离}（脱离战斗）、{@action 躲藏}（隐藏）和{@action 搜索}（搜索）之外，不能采取其他行动。它不能采取额外行动或反应。"
+          ]
+        },
+        {
+          "name": "苦力怕头",
+          "ENG_name": "Creeper Head",
+          "entries": [
+            "当爬行者因被充电爬行者的爆炸（见毁灭特性）而降至0生命值时，它会死亡，其头部会脱落。爬行者脱落的头部是空的，可以作为面具佩戴，具有眼睛和嘴巴的开口。"
+          ]
+        },
+        {
+          "name": "毁灭",
+          "ENG_name": "Destruction",
+          "entries": [
+            "当它在自己的回合结束时处于它能看到的类人生物10英尺范围内时，爬行者停止移动，并发出足够响亮的嘶嘶声，足以让自身周围30英尺内的生物听到。",
+            "如果爬行者在它的下回合开始前降至0点生命值，嘶嘶声停止，爬行者死亡。否则，在爬行者的下回合开始时，会发生以下事情之一：",
+            {
+              "type": "list",
+              "items": [
+                "如果嘶嘶作响的爬行者周围10英尺内没有类人生物，它就会停止嘶嘶声。然后它将使用所有可用的移动能力去接近它能看到的最近的类人生物。",
+                "如果嘶嘶作响的爬行者周围10英尺内有一个人形生物或多个，爬行者就会在以自身为中心的20英尺半径球体内爆炸，形成一个能量球。这种能量可以绕过角落传播。爬行者被摧毁，爆炸区域内的每个其他生物都必须进行一次DC 12的敏捷豁免检定，失败则受到14点（4d6）闪电伤害，成功则伤害减半。如果爬行者被充电（见下文的“电气充电”），则此伤害增加7点（2d6）。区域内未被穿戴或携带的物体受到14点（4d6）闪电伤害，如果爬行者被充电，则受到21点（6d6）闪电伤害。"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "电气充能",
+          "ENG_name": "Electrical Charge",
+          "entries": [
+            "每当苦力怕受到雷电伤害时，它不会受到伤害，而是会充电1分钟。在充电状态下，苦力怕会在5英尺半径内发出微弱的蓝光。"
+          ]
+        },
+        {
+          "name": "猫科动物恐惧症",
+          "ENG_name": "Fear of Felines",
+          "entries": [
+            "当爬行者在其回合开始时，如果它能看到60英尺范围内的猫科生物，它就会处于{@condition 恐惧}状态。这个状态持续到爬行者的下一个回合开始。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "L"
+      ],
+      "miscTags": [
+        "范围伤害"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "末影龙",
+      "ENG_name": "Ender Dragon",
+      "source": "MCV3MC",
+      "page": 5,
+      "otherSources": [
+        {
+          "source": "LK"
+        }
+      ],
+      "size": [
+        "G"
+      ],
+      "type": "dragon",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 22,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 350,
+        "formula": "20d20 + 140"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 120
+      },
+      "str": 27,
+      "dex": 14,
+      "con": 25,
+      "int": 10,
+      "wis": 15,
+      "cha": 19,
+      "save": {
+        "con": "+13",
+        "int": "+6",
+        "wis": "+8"
+      },
+      "skill": {
+        "perception": "+14",
+        "stealth": "+8"
+      },
+      "senses": [
+        "黑暗视觉 240 英尺"
+      ],
+      "passive": 24,
+      "resist": [
+        "火"
+      ],
+      "immune": [
+        "死灵"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "恐惧"
+      ],
+      "languages": [
+        "龙族血脉"
+      ],
+      "cr": "19",
+      "trait": [
+        {
+          "name": "龙蛋",
+          "ENG_name": "Dragon Egg",
+          "entries": [
+            "当末影龙的生命值降至0点时，它会散发出紫色光芒的光束，然后消失，留下一个不活跃的、漆黑的龙蛋，价值5,000金币。"
+          ]
+        },
+        {
+          "name": "传奇抗性（每日4次）",
+          "ENG_name": "Legendary Resistance (4/Day)",
+          "entries": [
+            "如果龙未能通过豁免检定，它可以选择成功。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "龙进行一次咬击，并使用振翅攻击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中骰：14命中；攻击距离15英尺，单一目标。{@h}18点（{@damage 3d6 + 8}）穿刺伤害加上7点（{@damage 2d6}）死灵伤害。"
+          ]
+        },
+        {
+          "name": "振翅",
+          "ENG_name": "Beating Wings",
+          "entries": [
+            "龙拍打着它巨大的翅膀。龙周围15英尺内的每一生物必须进行一次敏捷豁免检定（DC 21），否则将受到10（{1d4 + 8}）点钝击伤害，被推向远离龙10英尺的地方，并且进入{prone}状态。"
+          ]
+        },
+        {
+          "name": "有害气息 {@recharge 5}",
+          "ENG_name": "Harmful Breath {@recharge 5}",
+          "entries": [
+            "龙呼出恶臭气体，形成一个60英尺的锥形区域。该区域内的每个生物必须进行一次DC 21的体质豁免检定，失败则受到52点（15d6）死灵伤害，成功则伤害减半。随后龙选择一个它能看到的点，这个点是锥形气体接触地面的地方。这个点成为10英尺高、10英尺半径的持续气体圆柱的中心，该圆柱在龙下一轮开始时消失。任何在其回合开始时位于圆柱内的生物将受到10点（3d6）死灵伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "传奇抗性"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "龙息武器",
+        "多重攻击"
+      ],
+      "languageTags": [
+        "DR"
+      ],
+      "damageTags": [
+        "B",
+        "N",
+        "P"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "伏地"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "末影人",
+      "ENG_name": "Enderman",
+      "source": "MCV3MC",
+      "page": 6,
+      "otherSources": [
+        {
+          "source": "LK"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "aberration",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 78,
+        "formula": "12d8 + 24"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 15,
+      "dex": 18,
+      "con": 15,
+      "int": 10,
+      "wis": 18,
+      "cha": 11,
+      "save": {
+        "str": "+5",
+        "con": "+5"
+      },
+      "skill": {
+        "perception": "+7",
+        "stealth": "+7",
+        "survival": "+7"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 17,
+      "resist": [
+        "死灵"
+      ],
+      "languages": [
+        "结束语"
+      ],
+      "cr": "6",
+      "trait": [
+        {
+          "name": "闪避传送",
+          "ENG_name": "Evasive Teleportation",
+          "entries": [
+            "每当末影人受到伤害或成为远程攻击的目标时，它可以连同其穿戴或携带的装备一起传送到它能看到的20英尺内的未被占据的空间（无需行动）。如果这个效果是由远程攻击触发的，末影人会在攻击命中前瞬间传送，导致攻击落空。当末影人处于{@condition 无力}状态时，这个特性会被抑制。"
+          ]
+        },
+        {
+          "name": "内爆",
+          "ENG_name": "Implosion",
+          "entries": [
+            "当末影人的生命值降至0时，它的身体会内爆而死亡。掷一个{@dice d10}骰子。如果掷出9或更低，末影人不会留下任何遗骸。如果掷出10，末影人会留下一个发光的紫色球体，称为末影珍珠，价值500金币。生物可以将珍珠投掷至60英尺远；如果珍珠落在一个足够大的空地上，可以容纳生物，生物会连同它所穿戴或携带的任何装备一起传送到那个空间，珍珠随之消失。"
+          ]
+        },
+        {
+          "name": "日光敏感",
+          "ENG_name": "Sunlight Sensitivity",
+          "entries": [
+            "当在阳光中时，末影人攻击检定有劣势。"
+          ]
+        },
+        {
+          "name": "水体敏感",
+          "ENG_name": "Water Susceptibility",
+          "entries": [
+            "末影人在水中每移动5英尺就会受到1点寒冷伤害，每被泼洒1加仑水也会受到1点寒冷伤害，或者每当它在雨中开始其回合时。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "末影人进行两次猛击攻击。"
+          ]
+        },
+        {
+          "name": "猛击",
+          "ENG_name": "Slam",
+          "entries": [
+            "{@atk 近战武器} {@hit 7}hit；射程10英尺，一个目标。{@h}8 ({@damage 1d8 + 4})钝击伤害加上9 ({@damage 2d8})死灵伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "日光敏感"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "B",
+        "C",
+        "N"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "主世界的狼",
+      "ENG_name": "Wolf of the Overworld",
+      "source": "MCV3MC",
+      "page": 7,
+      "otherSources": [
+        {
+          "source": "LK"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "beast",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 13,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 12,
+      "dex": 15,
+      "con": 12,
+      "int": 3,
+      "wis": 12,
+      "cha": 6,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+4"
+      },
+      "passive": 15,
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "群体战术",
+          "ENG_name": "Pack Tactics",
+          "entries": [
+            "如果至少有一只狼的盟友在生物5英尺范围内，并且盟友没有处于{@condition 无力}状态，则狼对生物进行攻击检定时具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 4} 命中；射程 5 英尺，单一目标。{@h}7 ({@damage 2d4 + 2}) 穿刺伤害。如果目标是一个生物，它必须成功进行一次 {@dc 11} 力量豁免检定，否则会受到 {@condition 倒地} 状态。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "群体战术"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "savingThrowForced": [
+        "力量"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
 }

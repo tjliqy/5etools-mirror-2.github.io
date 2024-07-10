@@ -73,6 +73,63 @@
           "title": "术法点"
         }
       ]
+    },
+    {
+      "name": "奇械师",
+      "ENG_name": "Artificer",
+      "source": "TCE",
+      "advancement": [
+        {
+          "type": "ScaleValue",
+          "configuration": {
+            "identifier": "注入",
+            "type": "number",
+            "scale": {
+              "2": {
+                "value": 2
+              },
+              "6": {
+                "value": 3
+              },
+              "10": {
+                "value": 4
+              },
+              "14": {
+                "value": 5
+              },
+              "18": {
+                "value": 6
+              }
+            }
+          },
+          "title": "注入物品"
+        },
+        {
+          "type": "ScaleValue",
+          "configuration": {
+            "identifier": "注入",
+            "type": "number",
+            "scale": {
+              "2": {
+                "value": 4
+              },
+              "6": {
+                "value": 6
+              },
+              "10": {
+                "value": 8
+              },
+              "14": {
+                "value": 10
+              },
+              "18": {
+                "value": 12
+              }
+            }
+          },
+          "title": "已知注法"
+        }
+      ]
     }
   ],
   "subclass": [
@@ -99,7 +156,7 @@
               }
             }
           },
-          "title": "锻造领域:神圣打击"
+          "title": "神圣打击"
         }
       ]
     },
@@ -126,7 +183,7 @@
               }
             }
           },
-          "title": "锻造领域:神圣打击"
+          "title": "神圣打击"
         }
       ]
     },
@@ -153,7 +210,7 @@
               }
             }
           },
-          "title": "锻造领域:神圣打击"
+          "title": "神圣打击"
         }
       ]
     },
@@ -188,7 +245,7 @@
               }
             }
           },
-          "title": "低语学院:心灵之刃"
+          "title": "心灵之刃"
         }
       ]
     },
@@ -215,7 +272,35 @@
               }
             }
           },
-          "title": "锻造领域:神圣打击"
+          "title": "神圣打击"
+        }
+      ]
+    },
+    {
+      "name": "炼金师",
+      "ENG_name": "Alchemist",
+      "source": "TCE",
+      "className": "奇械师",
+      "classSource": "TCE",
+      "advancement": [
+        {
+          "type": "ScaleValue",
+          "configuration": {
+            "identifier": "灵药",
+            "type": "string",
+            "scale": {
+              "3": {
+                "value": "1"
+              },
+              "6": {
+                "value": "2"
+              },
+              "15": {
+                "value": "3"
+              }
+            }
+          },
+          "title": "最大炼金创造"
         }
       ]
     },
@@ -242,7 +327,7 @@
               }
             }
           },
-          "title": "锻造领域:神圣打击"
+          "title": "神圣打击"
         }
       ]
     }
@@ -258,7 +343,7 @@
       "ignoreSrdEffects": true
     },
     {
-      "name": "野蛮人:原初学识",
+      "name": "原初学识",
       "ENG_name": "Primal Knowledge",
       "source": "TCE",
       "className": "野蛮人",
@@ -269,12 +354,12 @@
           {
             "choose": {
               "from": [
-                "属性检定:驯兽",
-                "属性检定:运动",
-                "属性检定:威吓",
-                "属性检定:自然",
-                "属性检定:察觉",
-                "属性检定:求生"
+                "驯兽",
+                "运动",
+                "威吓",
+                "自然",
+                "察觉",
+                "求生"
               ]
             }
           }
@@ -282,7 +367,7 @@
       }
     },
     {
-      "name": "野蛮人:快速移动",
+      "name": "快速移动",
       "ENG_name": "Fast Movement",
       "source": "PHB",
       "className": "野蛮人",
@@ -294,7 +379,7 @@
           "changes": [
             {
               "key": "flags.dnd5e.observantFeat",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 10"
             }
           ]
@@ -315,7 +400,7 @@
           "changes": [
             {
               "key": "近战致命伤害骰",
-              "mode": "升级",
+              "mode": "UPGRADE",
               "value": 1
             }
           ]
@@ -335,7 +420,7 @@
           "changes": [
             {
               "key": "近战致命伤害骰",
-              "mode": "升级",
+              "mode": "UPGRADE",
               "value": 2
             }
           ]
@@ -355,7 +440,7 @@
           "changes": [
             {
               "key": "近战致命伤害骰",
-              "mode": "升级",
+              "mode": "UPGRADE",
               "value": 3
             }
           ]
@@ -363,7 +448,7 @@
       ]
     },
     {
-      "name": "野蛮人:原初斗士",
+      "name": "原初斗士",
       "ENG_name": "Primal Champion",
       "source": "PHB",
       "className": "野蛮人",
@@ -375,12 +460,12 @@
           "changes": [
             {
               "key": "data.abilities.str.value",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 4"
             },
             {
               "key": "数据.能力.体质.值",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 4"
             }
           ]
@@ -388,7 +473,7 @@
       ]
     },
     {
-      "name": "吟游诗人:万事通",
+      "name": "万事通",
       "ENG_name": "Jack of All Trades",
       "source": "PHB",
       "className": "吟游诗人",
@@ -400,7 +485,7 @@
           "changes": [
             {
               "key": "万金油",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": true
             }
           ]
@@ -408,7 +493,7 @@
       ]
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "className": "吟游诗人",
@@ -423,7 +508,7 @@
       }
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "className": "吟游诗人",
@@ -469,7 +554,7 @@
       "isIgnored": true
     },
     {
-      "name": "德鲁伊:德鲁伊语",
+      "name": "德鲁伊语",
       "ENG_name": "Druidic",
       "source": "PHB",
       "className": "德鲁伊",
@@ -484,7 +569,7 @@
       }
     },
     {
-      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "战斗风格",
       "ENG_name": "Fighting Style",
       "source": "PHB",
       "className": "战士",
@@ -523,8 +608,10 @@
             "foundrySystem": {
               "equipped": true,
               "damage.parts": [
-                "@scale.武僧.dice + @mod",
-                "钝击"
+                [
+                  "@scale.僧侣.dice + @mod",
+                  "钝击"
+                ]
               ],
               "ability": "敏捷"
             }
@@ -556,27 +643,27 @@
           "changes": [
             {
               "key": "flags.dnd5e.observantFeat",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+(符号(@attributes.movement.walk) * @scale.monk.unarmored-movement)"
             },
             {
               "key": "数据.属性.移动.挖掘",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+(符号(@attributes.movement.burrow) * @scale.monk.unarmored-movement)"
             },
             {
               "key": "数据.属性.移动力.攀爬",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+(符号(@attributes.movement.climb) * @scale.monk.unarmored-movement)"
             },
             {
               "key": "数据.属性.移动.飞行",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+(符号(@attributes.movement.fly) * @scale.monk.unarmored-movement)"
             },
             {
               "key": "数据.属性.移动.游泳",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+(符号(@attributes.movement.swim) * @scale.monk.unarmored-movement)"
             }
           ]
@@ -596,7 +683,7 @@
           "changes": [
             {
               "key": "钻石之心",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": true
             }
           ]
@@ -604,7 +691,7 @@
       ]
     },
     {
-      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "战斗风格",
       "ENG_name": "Fighting Style",
       "source": "PHB",
       "className": "圣武士",
@@ -613,7 +700,7 @@
       "isIgnored": true
     },
     {
-      "name": "圣武士:神佑",
+      "name": "神佑",
       "ENG_name": "Divine Health",
       "source": "PHB",
       "className": "圣武士",
@@ -627,7 +714,7 @@
           "changes": [
             {
               "key": "数据.特性.混乱免疫.值",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "患病的"
             }
           ]
@@ -635,7 +722,7 @@
       ]
     },
     {
-      "name": "游侠:熟练探险家",
+      "name": "熟练探险家",
       "ENG_name": "Deft Explorer",
       "source": "TCE",
       "className": "游侠",
@@ -655,7 +742,7 @@
       }
     },
     {
-      "name": "游侠:宿敌",
+      "name": "宿敌",
       "ENG_name": "Favored Enemy",
       "source": "PHB",
       "className": "游侠",
@@ -670,7 +757,7 @@
       }
     },
     {
-      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "战斗风格",
       "ENG_name": "Fighting Style",
       "source": "PHB",
       "className": "游侠",
@@ -709,7 +796,7 @@
       }
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "className": "游荡者",
@@ -743,7 +830,7 @@
       }
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "className": "游荡者",
@@ -762,7 +849,7 @@
       }
     },
     {
-      "name": "游荡者:可靠才能",
+      "name": "可靠才能",
       "ENG_name": "Reliable Talent",
       "source": "PHB",
       "className": "游荡者",
@@ -774,7 +861,7 @@
           "changes": [
             {
               "key": "稳定天赋",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": true
             }
           ]
@@ -782,7 +869,7 @@
       ]
     },
     {
-      "name": "游荡者:听声辨位",
+      "name": "听声辨位",
       "ENG_name": "Blindsense",
       "source": "PHB",
       "className": "游荡者",
@@ -797,7 +884,7 @@
       }
     },
     {
-      "name": "游荡者:圆滑心智",
+      "name": "圆滑心智",
       "ENG_name": "Slippery Mind",
       "source": "PHB",
       "className": "游荡者",
@@ -812,7 +899,7 @@
       }
     },
     {
-      "name": "术士:魔力泉涌",
+      "name": "魔力泉涌",
       "ENG_name": "Font of Magic",
       "source": "PHB",
       "className": "术士",
@@ -839,7 +926,7 @@
       "img": "icons/magic/control/silhouette-hold-change-blue.webp"
     },
     {
-      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "超魔法",
       "ENG_name": "Metamagic",
       "source": "PHB",
       "className": "术士",
@@ -860,7 +947,7 @@
       "isIgnored": true
     },
     {
-      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "超魔法",
       "ENG_name": "Metamagic",
       "source": "PHB",
       "className": "术士",
@@ -869,7 +956,7 @@
       "isIgnored": true
     },
     {
-      "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "超魔法",
       "ENG_name": "Metamagic",
       "source": "PHB",
       "className": "术士",
@@ -878,7 +965,7 @@
       "isIgnored": true
     },
     {
-      "name": "邪术师:魔能祈唤",
+      "name": "魔能祈唤",
       "ENG_name": "Eldritch Invocations",
       "source": "PHB",
       "className": "邪术师",
@@ -892,13 +979,29 @@
       ]
     },
     {
-      "name": "邪术师:魔契恩泽",
+      "name": "魔契恩泽",
       "ENG_name": "Pact Boon",
       "source": "PHB",
       "className": "邪术师",
       "classSource": "PHB",
       "level": 3,
       "isIgnored": true
+    },
+    {
+      "name": "物品注法",
+      "ENG_name": "Infuse Item",
+      "source": "TCE",
+      "className": "奇械师",
+      "classSource": "TCE",
+      "level": 2,
+      "system": {
+        "target.value": "1",
+        "target.type": "塔萨的信徒",
+        "range.units": "touch",
+        "uses.value": 0,
+        "uses.max": "@scale.artificer.infused",
+        "uses.per": "充能"
+      }
     },
     {
       "name": "已知注法",
@@ -910,7 +1013,7 @@
       "isIgnored": true
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "专家协力者",
@@ -942,7 +1045,7 @@
       }
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "TCE",
       "className": "专家协力者",
@@ -957,7 +1060,7 @@
       }
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "TCE",
       "className": "专家协力者",
@@ -972,7 +1075,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "施法协力者",
@@ -983,14 +1086,14 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:洞悉",
-                "属性检定:调查",
-                "属性检定:医药",
-                "属性检定:表演",
-                "属性检定:游说",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "洞悉",
+                "调查",
+                "医药",
+                "表演",
+                "游说",
+                "宗教"
               ],
               "count": 2
             }
@@ -1016,7 +1119,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "武者协力者",
@@ -1027,13 +1130,13 @@
           {
             "choose": {
               "from": [
-                "属性检定:特技",
-                "属性检定:驯兽",
-                "属性检定:运动",
-                "属性检定:威吓",
-                "属性检定:自然",
-                "属性检定:察觉",
-                "属性检定:求生"
+                "特技",
+                "驯兽",
+                "运动",
+                "威吓",
+                "自然",
+                "察觉",
+                "求生"
               ],
               "count": 2
             }
@@ -1063,7 +1166,7 @@
   ],
   "subclassFeature": [
     {
-      "name": "鹰",
+      "name": "雕",
       "ENG_name": "Eagle",
       "source": "PHB",
       "className": "野蛮人",
@@ -1072,12 +1175,12 @@
       "subclassSource": "PHB",
       "level": 3,
       "system": {
-        "activation.type": "need-translate-45317860-2fb7-11ef-ae1d-d1200322b32e",
+        "activation.type": "加成",
         "activation.cost": 1
       }
     },
     {
-      "name": "野兽道途:狩猎之唤",
+      "name": "狩猎之唤",
       "ENG_name": "Call the Hunt",
       "source": "TCE",
       "className": "野蛮人",
@@ -1091,7 +1194,7 @@
       }
     },
     {
-      "name": "狂野魔法道途:魔法察觉",
+      "name": "魔法察觉",
       "ENG_name": "Magic Awareness",
       "source": "TCE",
       "className": "野蛮人",
@@ -1105,7 +1208,7 @@
       }
     },
     {
-      "name": "狂热者道途:神性之怒",
+      "name": "神性之怒",
       "ENG_name": "Divine Fury",
       "source": "XGE",
       "className": "野蛮人",
@@ -1119,22 +1222,26 @@
       },
       "chooseSystem": [
         {
-          "name": "necrotic damage",
+          "name": "黯蚀伤害",
           "ENG_name": "Necrotic Damage",
           "system": {
             "damage.parts": [
-              "1d6 + floor(@classes.野蛮人.等级 / 2)",
-              "死灵"
+              [
+                "1d6 + floor(@classes.野蛮人.等级 / 2)",
+                "死灵"
+              ]
             ]
           }
         },
         {
-          "name": "radiant damage",
+          "name": "光耀伤害",
           "ENG_name": "Radiant Damage",
           "system": {
             "damage.parts": [
-              "1d6 + floor(@classes.野蛮人.等级 / 2)",
-              "光辉"
+              [
+                "1d6 + floor(@classes.野蛮人.等级 / 2)",
+                "光辉"
+              ]
             ]
           }
         }
@@ -1142,7 +1249,7 @@
       "isChooseSystemRenderEntries": true
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "className": "吟游诗人",
@@ -1159,7 +1266,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "className": "吟游诗人",
@@ -1182,7 +1289,7 @@
       }
     },
     {
-      "name": "创造学院:造物表演",
+      "name": "造物表演",
       "ENG_name": "Performance of Creation",
       "source": "TCE",
       "className": "吟游诗人",
@@ -1192,13 +1299,13 @@
       "level": 3,
       "system": {
         "target.value": 1,
-        "target.type": "物体",
+        "target.type": "塔萨的信徒",
         "range.value": 10,
         "range.units": "ft"
       }
     },
     {
-      "name": "创造学院:活化表演",
+      "name": "活化表演",
       "ENG_name": "Animating Performance",
       "source": "TCE",
       "className": "吟游诗人",
@@ -1208,7 +1315,7 @@
       "level": 6,
       "system": {
         "target.value": 1,
-        "target.type": "物体",
+        "target.type": "塔萨的信徒",
         "range.value": 30,
         "range.units": "ft",
         "actionType": "召唤"
@@ -1262,7 +1369,7 @@
       }
     },
     {
-      "name": "精魂学院:彼岸故事",
+      "name": "彼岸故事",
       "ENG_name": "Tales from Beyond",
       "source": "VRGR",
       "className": "吟游诗人",
@@ -1278,7 +1385,7 @@
       }
     },
     {
-      "name": "迷惑学院:醉人表演",
+      "name": "醉人表演",
       "ENG_name": "Enthralling Performance",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1295,7 +1402,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1317,7 +1424,7 @@
       }
     },
     {
-      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "战斗风格",
       "ENG_name": "Fighting Style",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1328,7 +1435,7 @@
       "isIgnored": true
     },
     {
-      "name": "低语学院:心灵之刃",
+      "name": "心灵之刃",
       "ENG_name": "Psychic Blades",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1340,13 +1447,15 @@
         "activation.type": "special",
         "activation.condition": "当你用武器攻击击中一个生物时",
         "damage.parts": [
-          "@scale.耳语学院.心灵之刃",
-          "心灵"
+          [
+            "@scale.耳语学院.心灵之刃",
+            "心灵"
+          ]
         ]
       }
     },
     {
-      "name": "低语学院:惊骇之语",
+      "name": "骇人言词",
       "ENG_name": "Words of Terror",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1362,7 +1471,7 @@
       }
     },
     {
-      "name": "低语学院:低语光环",
+      "name": "低语斗篷",
       "ENG_name": "Mantle of Whispers",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1377,7 +1486,7 @@
       }
     },
     {
-      "name": "低语学院:阴暗学识",
+      "name": "阴暗学识",
       "ENG_name": "Shadow Lore",
       "source": "XGE",
       "className": "吟游诗人",
@@ -1404,13 +1513,15 @@
         "activation.type": "special",
         "activation.condition": "当牧师用近战攻击击中生物时",
         "damage.parts": [
-          "5 + (2 * @classes.牧师.等级)",
-          "死灵"
+          [
+            "5 + (2 * @classes.牧师.等级)",
+            "死灵"
+          ]
         ]
       }
     },
     {
-      "name": "锻造领域:神圣打击",
+      "name": "神圣打击",
       "ENG_name": "Divine Strike",
       "source": "DMG",
       "className": "牧师",
@@ -1420,8 +1531,10 @@
       "level": 8,
       "system": {
         "damage.parts": [
-          "@scale.死亡领域.神圣打击",
-          "死灵"
+          [
+            "@scale.死亡领域.神圣打击",
+            "死灵"
+          ]
         ]
       }
     },
@@ -1444,10 +1557,10 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:自然",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "自然",
+                "宗教"
               ],
               "count": 2
             }
@@ -1486,7 +1599,7 @@
       }
     },
     {
-      "name": "知识领域:透视过去",
+      "name": "透视过去",
       "ENG_name": "Visions of the Past",
       "source": "PHB",
       "className": "牧师",
@@ -1500,7 +1613,7 @@
       }
     },
     {
-      "name": "武士:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiency",
       "source": "PHB",
       "className": "牧师",
@@ -1517,7 +1630,7 @@
       }
     },
     {
-      "name": "生命领域:生命门徒",
+      "name": "生命门徒",
       "ENG_name": "Disciple of Life",
       "source": "PHB",
       "className": "牧师",
@@ -1533,7 +1646,7 @@
           "changes": [
             {
               "key": "数据.奖励.治疗.伤害",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ @item.level + 2"
             }
           ]
@@ -1554,14 +1667,16 @@
         "target.units": "ft",
         "target.type": "sphere",
         "damage.parts": [
-          "2d10 + @classes.牧师.等级",
-          "光辉"
+          [
+            "2d10 + @classes.牧师.等级",
+            "光辉"
+          ]
         ],
         "formula": ""
       }
     },
     {
-      "name": "光明领域:光冕",
+      "name": "光冕",
       "ENG_name": "Corona of Light",
       "source": "PHB",
       "className": "牧师",
@@ -1576,12 +1691,12 @@
       }
     },
     {
-      "name": "自然领域:自然侍僧",
+      "name": "自然侍僧",
       "ENG_name": "Acolyte of Nature",
       "source": "PHB",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:自然",
+      "subclassShortName": "自然",
       "subclassSource": "PHB",
       "level": 1,
       "entryData": {
@@ -1589,9 +1704,9 @@
           {
             "choose": {
               "from": [
-                "属性检定:驯兽",
-                "属性检定:自然",
-                "属性检定:求生"
+                "驯兽",
+                "自然",
+                "求生"
               ]
             }
           }
@@ -1599,12 +1714,12 @@
       }
     },
     {
-      "name": "武士:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiency",
       "source": "PHB",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:自然",
+      "subclassShortName": "自然",
       "subclassSource": "PHB",
       "level": 1,
       "entryData": {
@@ -1621,7 +1736,7 @@
       "source": "PHB",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:自然",
+      "subclassShortName": "自然",
       "subclassSource": "PHB",
       "level": 2,
       "system": {
@@ -1629,33 +1744,41 @@
         "target.units": "ft",
         "target.type": "sphere",
         "damage.parts": [
-          "2d10 + @classes.牧师.等级",
-          "光辉"
+          [
+            "2d10 + @classes.牧师.等级",
+            "光辉"
+          ]
         ]
       }
     },
     {
-      "name": "锻造领域:神圣打击",
+      "name": "神圣打击",
       "ENG_name": "Divine Strike",
       "source": "PHB",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:自然",
+      "subclassShortName": "自然",
       "subclassSource": "PHB",
       "level": 8,
       "system": {
         "damage.parts": [
-          "@scale.自然领域.神圣打击",
-          "寒冷",
-          "@scale.自然领域.神圣打击",
-          "火",
-          "@scale.自然领域.神圣打击",
-          "闪电"
+          [
+            "@scale.自然领域.神圣打击",
+            "寒冷"
+          ],
+          [
+            "@scale.自然领域.神圣打击",
+            "火"
+          ],
+          [
+            "@scale.自然领域.神圣打击",
+            "闪电"
+          ]
         ]
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "className": "牧师",
@@ -1693,7 +1816,7 @@
       }
     },
     {
-      "name": "锻造领域:神圣打击",
+      "name": "神圣打击",
       "ENG_name": "Divine Strike",
       "source": "PHB",
       "className": "牧师",
@@ -1703,13 +1826,15 @@
       "level": 8,
       "system": {
         "damage.parts": [
-          "@scale.秩序领域.神圣打击",
-          "毁灭诅咒"
+          [
+            "@scale.秩序领域.神圣打击",
+            "毁灭诅咒"
+          ]
         ]
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "className": "牧师",
@@ -1737,17 +1862,17 @@
       "className": "牧师",
       "classSource": "PHB",
       "subclassShortName": "力量（PSA）",
-      "subclassSource": "公共服务公告",
+      "subclassSource": "PSA",
       "level": 1,
       "entryData": {
         "skillProficiencies": [
           {
             "choose": {
               "from": [
-                "属性检定:驯兽",
-                "属性检定:运动",
-                "属性检定:自然",
-                "属性检定:求生"
+                "驯兽",
+                "运动",
+                "自然",
+                "求生"
               ]
             }
           }
@@ -1755,13 +1880,13 @@
       }
     },
     {
-      "name": "奥秘领域:奥术传承",
+      "name": "奥术传承",
       "ENG_name": "Arcane Initiate",
       "source": "SCAG",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:奥秘",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassShortName": "奥秘",
+      "subclassSource": "SCAG",
       "level": 1,
       "entryData": {
         "skillProficiencies": [
@@ -1777,8 +1902,8 @@
       "source": "SCAG",
       "className": "牧师",
       "classSource": "PHB",
-      "subclassShortName": "属性检定:奥秘",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassShortName": "奥秘",
+      "subclassSource": "SCAG",
       "level": 2,
       "system": {
         "target.value": 1,
@@ -1788,7 +1913,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "牧师",
@@ -1801,8 +1926,8 @@
           {
             "choose": {
               "from": [
-                "属性检定:威吓",
-                "属性检定:游说"
+                "威吓",
+                "游说"
               ]
             }
           }
@@ -1830,7 +1955,7 @@
       }
     },
     {
-      "name": "锻造领域:神圣打击",
+      "name": "神圣打击",
       "ENG_name": "Divine Strike",
       "source": "TCE",
       "className": "牧师",
@@ -1840,13 +1965,15 @@
       "level": 8,
       "system": {
         "damage.parts": [
-          "@scale.秩序领域.神圣打击",
-          "心灵"
+          [
+            "@scale.秩序领域.神圣打击",
+            "心灵"
+          ]
         ]
       }
     },
     {
-      "name": "和平领域:勇气联结",
+      "name": "勇气联结",
       "ENG_name": "Emboldening Bond",
       "source": "TCE",
       "className": "牧师",
@@ -1861,7 +1988,7 @@
       }
     },
     {
-      "name": "和平领域:和平执行",
+      "name": "和平执行",
       "ENG_name": "Implement of Peace",
       "source": "TCE",
       "className": "牧师",
@@ -1874,9 +2001,9 @@
           {
             "choose": {
               "from": [
-                "属性检定:洞悉",
-                "属性检定:表演",
-                "属性检定:游说"
+                "洞悉",
+                "表演",
+                "游说"
               ]
             }
           }
@@ -1884,7 +2011,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "牧师",
@@ -1906,7 +2033,7 @@
       }
     },
     {
-      "name": "暮光领域:黑夜明目",
+      "name": "黑夜明目",
       "ENG_name": "Eyes of Night",
       "source": "TCE",
       "className": "牧师",
@@ -1922,14 +2049,14 @@
       "actorTokenMod": {
         "dimSight": [
           {
-            "mode": "设置最大值",
+            "mode": "setMax",
             "value": 300
           }
         ]
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TDCSR",
       "className": "牧师",
@@ -1946,7 +2073,7 @@
       }
     },
     {
-      "name": "武士:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiency",
       "source": "XGE",
       "className": "牧师",
@@ -1968,7 +2095,7 @@
       }
     },
     {
-      "name": "锻造领域:神圣打击",
+      "name": "神圣打击",
       "ENG_name": "Divine Strike",
       "source": "XGE",
       "className": "牧师",
@@ -1978,13 +2105,15 @@
       "level": 8,
       "system": {
         "damage.parts": [
-          "@scale.锻造领域.神圣打击",
-          "火"
+          [
+            "@scale.锻造领域.神圣打击",
+            "火"
+          ]
         ]
       }
     },
     {
-      "name": "锻造领域:锻炉与烈焰的圣徒",
+      "name": "火与钢的圣徒",
       "ENG_name": "Saint of Forge and Fire",
       "source": "XGE",
       "className": "牧师",
@@ -1999,7 +2128,7 @@
       }
     },
     {
-      "name": "坟墓领域:引导神力：往墓之途",
+      "name": "引导神力：归墓之途",
       "ENG_name": "Channel Divinity: Path to the Grave",
       "source": "XGE",
       "className": "牧师",
@@ -2015,7 +2144,7 @@
       }
     },
     {
-      "name": "坟墓领域:死之门的哨卫",
+      "name": "死之门的哨卫",
       "ENG_name": "Sentinel at Death's Door",
       "source": "XGE",
       "className": "牧师",
@@ -2031,7 +2160,7 @@
       }
     },
     {
-      "name": "坟墓领域:引魂明灯",
+      "name": "守魂者",
       "ENG_name": "Keeper of Souls",
       "source": "XGE",
       "className": "牧师",
@@ -2047,7 +2176,7 @@
       }
     },
     {
-      "name": "大地结社:自然之护",
+      "name": "自然之护",
       "ENG_name": "Nature's Ward",
       "source": "PHB",
       "className": "德鲁伊",
@@ -2066,7 +2195,7 @@
       }
     },
     {
-      "name": "孢子结社:孢子环绕",
+      "name": "孢子环绕",
       "ENG_name": "Halo of Spores",
       "source": "TCE",
       "className": "德鲁伊",
@@ -2082,7 +2211,7 @@
       }
     },
     {
-      "name": "孢子结社:真菌感染",
+      "name": "真菌感染",
       "ENG_name": "Fungal Infestation",
       "source": "TCE",
       "className": "德鲁伊",
@@ -2095,7 +2224,7 @@
       }
     },
     {
-      "name": "孢子结社:扩散孢子",
+      "name": "扩散孢子",
       "ENG_name": "Spreading Spores",
       "source": "TCE",
       "className": "德鲁伊",
@@ -2114,7 +2243,7 @@
       }
     },
     {
-      "name": "孢子结社:真菌之躯",
+      "name": "真菌之躯",
       "ENG_name": "Fungal Body",
       "source": "TCE",
       "className": "德鲁伊",
@@ -2132,7 +2261,7 @@
       }
     },
     {
-      "name": "野火结社:召唤野火精魂",
+      "name": "召唤野火精魂",
       "ENG_name": "Summon Wildfire Spirit",
       "source": "TCE",
       "className": "德鲁伊",
@@ -2148,7 +2277,7 @@
       }
     },
     {
-      "name": "枯朽结社:阴影之种的呼唤",
+      "name": "阴影之种的呼唤",
       "ENG_name": "Call of the Shadowseeds",
       "source": "TDCSR",
       "className": "德鲁伊",
@@ -2161,7 +2290,7 @@
       }
     },
     {
-      "name": "枯朽结社:腐败化身",
+      "name": "腐败化身",
       "ENG_name": "Incarnation of Corruption",
       "source": "TDCSR",
       "className": "德鲁伊",
@@ -2176,7 +2305,7 @@
       }
     },
     {
-      "name": "夏之王庭的芬馥",
+      "name": "仲夏庭院的芬馥",
       "ENG_name": "Balm of the Summer Court",
       "source": "XGE",
       "className": "德鲁伊",
@@ -2198,7 +2327,7 @@
       }
     },
     {
-      "name": "月光阴影的炉心",
+      "name": "月光与阴影之家",
       "ENG_name": "Hearth of Moonlight and Shadow",
       "source": "XGE",
       "className": "德鲁伊",
@@ -2229,7 +2358,7 @@
       }
     },
     {
-      "name": "牧人结社:林地之语",
+      "name": "林地之语",
       "ENG_name": "Speech of the Woods",
       "source": "XGE",
       "className": "德鲁伊",
@@ -2246,7 +2375,7 @@
       }
     },
     {
-      "name": "牧人结社:精魂图腾",
+      "name": "精魂图腾",
       "ENG_name": "Spirit Totem",
       "source": "XGE",
       "className": "德鲁伊",
@@ -2262,7 +2391,7 @@
       }
     },
     {
-      "name": "回音骑士:释放化身",
+      "name": "释放化身",
       "ENG_name": "Unleash Incarnation",
       "source": "EGW",
       "className": "战士",
@@ -2277,7 +2406,7 @@
       }
     },
     {
-      "name": "战斗大师:卓越战技",
+      "name": "卓越战技",
       "ENG_name": "Combat Superiority",
       "source": "PHB",
       "className": "战士",
@@ -2421,7 +2550,7 @@
       "isIgnored": true
     },
     {
-      "name": "勇士:精通重击",
+      "name": "精通重击",
       "ENG_name": "Improved Critical",
       "source": "PHB",
       "className": "战士",
@@ -2435,7 +2564,7 @@
           "changes": [
             {
               "key": "flags.dnd5e.武器致命一击阈值",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": 19
             }
           ]
@@ -2443,7 +2572,7 @@
       ]
     },
     {
-      "name": "勇士:运动健将",
+      "name": "运动健将",
       "ENG_name": "Remarkable Athlete",
       "source": "PHB",
       "className": "战士",
@@ -2457,7 +2586,7 @@
           "changes": [
             {
               "key": "flags.dnd5e.卓越运动员",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": true
             }
           ]
@@ -2465,7 +2594,7 @@
       ]
     },
     {
-      "name": "勇士:额外战斗风格",
+      "name": "额外战斗风格",
       "ENG_name": "Additional Fighting Style",
       "source": "PHB",
       "className": "战士",
@@ -2476,7 +2605,7 @@
       "isIgnored": true
     },
     {
-      "name": "奥法骑士:秘法冲锋",
+      "name": "秘法冲锋",
       "ENG_name": "Arcane Charge",
       "source": "PHB",
       "className": "战士",
@@ -2492,13 +2621,13 @@
       }
     },
     {
-      "name": "紫龙骑士(旗将):重整姿态",
+      "name": "重整姿态",
       "ENG_name": "Rallying Cry",
       "source": "SCAG",
       "className": "战士",
       "classSource": "PHB",
       "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 3,
       "system": {
         "target.value": 3,
@@ -2508,24 +2637,24 @@
       }
     },
     {
-      "name": "紫龙骑士(旗将):皇家特使",
+      "name": "皇家特使",
       "ENG_name": "Royal Envoy",
       "source": "SCAG",
       "className": "战士",
       "classSource": "PHB",
       "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 7,
       "entryData": {
         "skillProficiencies": [
           {
             "choose": {
               "from": [
-                "属性检定:驯兽",
-                "属性检定:洞悉",
-                "属性检定:威吓",
-                "属性检定:表演",
-                "属性检定:游说"
+                "驯兽",
+                "洞悉",
+                "威吓",
+                "表演",
+                "游说"
               ]
             }
           }
@@ -2538,13 +2667,13 @@
       }
     },
     {
-      "name": "紫龙骑士(旗将):振奋之潮",
+      "name": "振奋之潮",
       "ENG_name": "Inspiring Surge",
       "source": "SCAG",
       "className": "战士",
       "classSource": "PHB",
       "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 10,
       "system": {
         "target.value": 1,
@@ -2554,7 +2683,7 @@
       }
     },
     {
-      "name": "灵能武士:灵能力量",
+      "name": "灵能力量",
       "ENG_name": "Psionic Power",
       "source": "TCE",
       "className": "战士",
@@ -2577,7 +2706,7 @@
       }
     },
     {
-      "name": "灵能武士:意念守护",
+      "name": "意念守护",
       "ENG_name": "Guarded Mind",
       "source": "TCE",
       "className": "战士",
@@ -2592,7 +2721,7 @@
       }
     },
     {
-      "name": "灵能武士:壁垒之力",
+      "name": "壁垒之力",
       "ENG_name": "Bulwark of Force",
       "source": "TCE",
       "className": "战士",
@@ -2607,7 +2736,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "TCE",
       "className": "战士",
@@ -2629,7 +2758,7 @@
       }
     },
     {
-      "name": "符文骑士:符文雕刻者",
+      "name": "符文雕刻者",
       "ENG_name": "Rune Carver",
       "source": "TCE",
       "className": "战士",
@@ -2638,7 +2767,7 @@
       "subclassSource": "TCE",
       "level": 3,
       "entries": [
-        "{@i 第3级符文骑士特性}",
+        "{@i 3级符文骑士特性}",
         "你可以使用魔法符文来增强你的装备。你从下面的符文描述中选择两种符文学习，并且每次你在这个职业中升级时，你都可以从这个特性中选择一个不同的符文来替换你已知的一个符文。当你达到这个职业的特定等级时，你将学习到额外的符文，如符文已知表格所示。",
         "每当你完成一次长时间的休息，你可以触摸与你知晓的符文数量相等的物品，并且在每个物品上刻上不同的符文。一个物品要符合资格，必须是武器、盔甲、盾牌、珠宝或你可以穿戴或手持的其他物品。你的符文会保留在物品上，直到你完成下一次长时间的休息，并且一个物品一次只能承载你的一个符文。",
         {
@@ -2653,14 +2782,22 @@
             "col-6 text-center"
           ],
           "rows": [
-            "第三",
-            "2",
-            "第七",
-            "3",
-            "10级",
-            "4",
-            "15级",
-            "5"
+            [
+              "第三",
+              "2"
+            ],
+            [
+              "第七",
+              "3"
+            ],
+            [
+              "10级",
+              "4"
+            ],
+            [
+              "15级",
+              "5"
+            ]
           ]
         },
         "如果一个符文有等级要求，你必须至少达到这个等级才能学习这个符文。如果一个符文需要进行豁免投掷，你的符文魔法豁免投掷难度等级等于8 + 你的熟练加值 + 你的体质调整值。"
@@ -2690,15 +2827,15 @@
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "霜冻符文|TCE"
+              "optionalfeature": "寒霜符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "石肤符文|TCE"
+              "optionalfeature": "岩石符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "山地符文|TCE"
+              "optionalfeature": "山丘符文|TCE"
             },
             {
               "type": "refOptionalfeature",
@@ -2709,7 +2846,7 @@
       ]
     },
     {
-      "name": "符文骑士:符文之盾",
+      "name": "符文之盾",
       "ENG_name": "Runic Shield",
       "source": "TCE",
       "className": "战士",
@@ -2748,15 +2885,15 @@
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "霜冻符文|TCE"
+              "optionalfeature": "寒霜符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "石肤符文|TCE"
+              "optionalfeature": "岩石符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "山地符文|TCE"
+              "optionalfeature": "山丘符文|TCE"
             },
             {
               "type": "refOptionalfeature",
@@ -2790,15 +2927,15 @@
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "霜冻符文|TCE"
+              "optionalfeature": "寒霜符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "石肤符文|TCE"
+              "optionalfeature": "岩石符文|TCE"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "山地符文|TCE"
+              "optionalfeature": "山丘符文|TCE"
             },
             {
               "type": "refOptionalfeature",
@@ -2809,7 +2946,7 @@
       ]
     },
     {
-      "name": "魔射手:魔箭学识",
+      "name": "魔箭学识",
       "ENG_name": "Arcane Archer Lore",
       "source": "XGE",
       "className": "战士",
@@ -2822,8 +2959,8 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:自然"
+                "奥秘",
+                "自然"
               ]
             }
           }
@@ -2831,7 +2968,7 @@
       }
     },
     {
-      "name": "魔射手:奥术射击",
+      "name": "奥术射击",
       "ENG_name": "Arcane Shot",
       "source": "XGE",
       "className": "战士",
@@ -2859,7 +2996,7 @@
         "如果一个选项需要进行豁免投掷，你的奥术射击豁免投掷DC的计算方式如下：",
         {
           "type": "abilityDc",
-          "name": "魔射手:奥术射击",
+          "name": "奥术射击",
           "ENG_name": "Arcane Shot",
           "attributes": [
             "int"
@@ -2912,7 +3049,7 @@
       "isIgnored": true
     },
     {
-      "name": "武士:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiency",
       "source": "XGE",
       "className": "战士",
@@ -2925,11 +3062,11 @@
           {
             "choose": {
               "from": [
-                "属性检定:驯兽",
-                "属性检定:历史",
-                "属性检定:洞悉",
-                "属性检定:表演",
-                "属性检定:游说"
+                "驯兽",
+                "历史",
+                "洞悉",
+                "表演",
+                "游说"
               ]
             }
           }
@@ -2937,7 +3074,7 @@
       }
     },
     {
-      "name": "武士:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiency",
       "source": "XGE",
       "className": "战士",
@@ -2950,10 +3087,10 @@
           {
             "choose": {
               "from": [
-                "属性检定:历史",
-                "属性检定:洞悉",
-                "属性检定:表演",
-                "属性检定:游说"
+                "历史",
+                "洞悉",
+                "表演",
+                "游说"
               ]
             }
           }
@@ -2961,7 +3098,7 @@
       }
     },
     {
-      "name": "武士:雅臣",
+      "name": "雅臣",
       "ENG_name": "Elegant Courtier",
       "source": "XGE",
       "className": "战士",
@@ -2986,7 +3123,7 @@
       }
     },
     {
-      "name": "神龙宗:龙之徒",
+      "name": "龙之徒",
       "ENG_name": "Draconic Disciple",
       "source": "FTD",
       "className": "武僧",
@@ -3052,7 +3189,7 @@
       "source": "PHB",
       "className": "武僧",
       "classSource": "PHB",
-      "subclassShortName": "阴影",
+      "subclassShortName": "幽影",
       "subclassSource": "PHB",
       "level": 6,
       "system": {
@@ -3068,7 +3205,7 @@
       "className": "武僧",
       "classSource": "PHB",
       "subclassShortName": "永亡宗",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 6,
       "system": {
         "target.value": 30,
@@ -3100,7 +3237,7 @@
       }
     },
     {
-      "name": "钴魂宗:神秘博学",
+      "name": "神秘博学",
       "ENG_name": "Mystical Erudition",
       "source": "TDCSR",
       "className": "武僧",
@@ -3118,11 +3255,11 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:调查",
-                "属性检定:自然",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "调查",
+                "自然",
+                "宗教"
               ],
               "count": 1
             }
@@ -3149,11 +3286,11 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:调查",
-                "属性检定:自然",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "调查",
+                "自然",
+                "宗教"
               ],
               "count": 1
             }
@@ -3180,11 +3317,11 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:调查",
-                "属性检定:自然",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "调查",
+                "自然",
+                "宗教"
               ],
               "count": 1
             }
@@ -3193,7 +3330,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "XGE",
       "className": "武僧",
@@ -3215,7 +3352,7 @@
       }
     },
     {
-      "name": "剑圣宗:剑圣之途",
+      "name": "剑圣之途",
       "ENG_name": "Path of the Kensei",
       "source": "XGE",
       "className": "武僧",
@@ -3237,7 +3374,7 @@
       }
     },
     {
-      "name": "日魂宗:耀阳箭",
+      "name": "耀阳箭",
       "ENG_name": "Radiant Sun Bolt",
       "source": "XGE",
       "className": "武僧",
@@ -3248,14 +3385,14 @@
       "subEntities": {
         "item": [
           {
-            "name": "日魂宗:耀阳箭",
+            "name": "耀阳箭",
             "ENG_name": "Radiant Sun Bolt",
             "source": "XGE",
             "page": 35,
             "type": "R",
-            "range": "30",
             "rarity": "无",
             "weaponCategory": "简单",
+            "range": "30",
             "entries": [
               "这种特殊攻击是一种远程法术攻击，射程为30英尺。你对它熟练，并且在其攻击和伤害骰上加上你的敏捷调整值。",
               "当你在你的回合上采取{@action 攻击}动作并将其作为一部分使用这种特殊攻击时，你可以花费1点气力来作为奖励动作进行这种特殊攻击两次。当你获得额外攻击特性时，这种特殊攻击可以用于你作为{@action 攻击}动作一部分进行的任何攻击。"
@@ -3263,8 +3400,10 @@
             "foundrySystem": {
               "equipped": true,
               "damage.parts": [
-                "@scale.武僧.dice + @mod",
-                "光辉"
+                [
+                  "@scale.僧侣.dice + @mod",
+                  "光辉"
+                ]
               ],
               "ability": "敏捷"
             }
@@ -3273,7 +3412,7 @@
       }
     },
     {
-      "name": "日魂宗:焰阳爆",
+      "name": "焰阳爆",
       "ENG_name": "Searing Sunburst",
       "source": "XGE",
       "className": "武僧",
@@ -3290,7 +3429,7 @@
       }
     },
     {
-      "name": "日魂宗:太阳盾",
+      "name": "太阳盾",
       "ENG_name": "Sun Shield",
       "source": "XGE",
       "className": "武僧",
@@ -3396,7 +3535,7 @@
       }
     },
     {
-      "name": "奉献之誓:至圣光轮",
+      "name": "至圣光轮",
       "ENG_name": "Holy Nimbus",
       "source": "PHB",
       "className": "圣武士",
@@ -3445,7 +3584,7 @@
       "className": "圣武士",
       "classSource": "PHB",
       "subclassShortName": "王冠",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 3,
       "system": {
         "target.value": 30,
@@ -3460,7 +3599,7 @@
       "className": "圣武士",
       "classSource": "PHB",
       "subclassShortName": "王冠",
-      "subclassSource": "剑海岸冒险者指南",
+      "subclassSource": "SCAG",
       "level": 3,
       "system": {
         "target.value": 30,
@@ -3484,7 +3623,7 @@
       }
     },
     {
-      "name": "荣耀之誓:辉煌防御",
+      "name": "辉煌防御",
       "ENG_name": "Glorious Defense",
       "source": "TCE",
       "className": "圣武士",
@@ -3498,7 +3637,7 @@
       }
     },
     {
-      "name": "守望之誓:警戒呵斥",
+      "name": "警戒呵斥",
       "ENG_name": "Vigilant Rebuke",
       "source": "TCE",
       "className": "圣武士",
@@ -3543,7 +3682,7 @@
       }
     },
     {
-      "name": "龙兽守卫:龙族赠礼",
+      "name": "龙族赠礼",
       "ENG_name": "Draconic Gift",
       "source": "FTD",
       "className": "游侠",
@@ -3560,7 +3699,7 @@
       }
     },
     {
-      "name": "龙兽守卫:龙兽伙伴",
+      "name": "龙兽伙伴",
       "ENG_name": "Drake Companion",
       "source": "FTD",
       "className": "游侠",
@@ -3573,7 +3712,7 @@
       }
     },
     {
-      "name": "驯兽师:原初伴侣",
+      "name": "原初伴侣",
       "ENG_name": "Primal Companion",
       "source": "TCE",
       "className": "游侠",
@@ -3586,7 +3725,7 @@
       }
     },
     {
-      "name": "驯兽师:游侠伴侣",
+      "name": "游侠伴侣",
       "ENG_name": "Ranger's Companion",
       "source": "PHB",
       "className": "游侠",
@@ -3612,9 +3751,9 @@
           {
             "choose": {
               "from": [
-                "属性检定:欺瞒",
-                "属性检定:表演",
-                "属性检定:游说"
+                "欺瞒",
+                "表演",
+                "游说"
               ]
             }
           }
@@ -3638,7 +3777,7 @@
       }
     },
     {
-      "name": "幽域追踪者:阴影视野",
+      "name": "阴影视野",
       "ENG_name": "Umbral Sight",
       "source": "XGE",
       "className": "游侠",
@@ -3649,14 +3788,14 @@
       "actorTokenMod": {
         "_": [
           {
-            "mode": "条件判断",
+            "mode": "conditionals",
             "conditionals": [
               {
                 "condition": "!PLUT_CONTEXT?.actor?.data?.token?.dimSight",
                 "mod": {
                   "dimSight": [
                     {
-                      "mode": "赛特",
+                      "mode": "set",
                       "value": 60
                     }
                   ]
@@ -3666,7 +3805,7 @@
                 "mod": {
                   "dimSight": [
                     {
-                      "mode": "标量加法",
+                      "mode": "scalarAdd",
                       "scalar": 30
                     }
                   ]
@@ -3678,7 +3817,7 @@
       }
     },
     {
-      "name": "幽域追踪者:钢铁意志",
+      "name": "钢铁意志",
       "ENG_name": "Iron Mind",
       "source": "XGE",
       "className": "游侠",
@@ -3703,7 +3842,7 @@
       }
     },
     {
-      "name": "怪物杀手:猎手感知",
+      "name": "猎手感知",
       "ENG_name": "Hunter's Sense",
       "source": "XGE",
       "className": "游侠",
@@ -3717,7 +3856,7 @@
       }
     },
     {
-      "name": "怪物杀手:狩猎开始",
+      "name": "狩猎开始",
       "ENG_name": "Slayer's Prey",
       "source": "XGE",
       "className": "游侠",
@@ -3731,7 +3870,7 @@
       }
     },
     {
-      "name": "怪物杀手:魔法使的克星",
+      "name": "魔法克星",
       "ENG_name": "Magic-User's Nemesis",
       "source": "XGE",
       "className": "游侠",
@@ -3745,7 +3884,7 @@
       }
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "className": "游荡者",
@@ -3763,7 +3902,7 @@
       }
     },
     {
-      "name": "鬼魅:墓穴惊嚎",
+      "name": "墓穴惊嚎",
       "ENG_name": "Wails from the Grave",
       "source": "TCE",
       "className": "游荡者",
@@ -3779,7 +3918,7 @@
       }
     },
     {
-      "name": "灵能武士:灵能力量",
+      "name": "灵能力量",
       "ENG_name": "Psionic Power",
       "source": "TCE",
       "className": "游荡者",
@@ -3802,7 +3941,7 @@
       }
     },
     {
-      "name": "策士:谋陷大师",
+      "name": "阴谋大师",
       "ENG_name": "Master of Intrigue",
       "source": "XGE",
       "className": "游荡者",
@@ -3826,7 +3965,7 @@
       }
     },
     {
-      "name": "策士:战术大师",
+      "name": "战术大师",
       "ENG_name": "Master of Tactics",
       "source": "XGE",
       "className": "游荡者",
@@ -3840,7 +3979,7 @@
       }
     },
     {
-      "name": "斥候:生存专家",
+      "name": "生存专家",
       "ENG_name": "Survivalist",
       "source": "XGE",
       "className": "游荡者",
@@ -3858,7 +3997,7 @@
       }
     },
     {
-      "name": "斥候:优异灵活",
+      "name": "优异灵活",
       "ENG_name": "Superior Mobility",
       "source": "XGE",
       "className": "游荡者",
@@ -3868,13 +4007,13 @@
       "level": 9,
       "effects": [
         {
-          "name": "斥候:优异灵活",
+          "name": "优异灵活",
           "ENG_name": "Superior Mobility",
           "transfer": true,
           "changes": [
             {
               "key": "flags.dnd5e.observantFeat",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 10"
             }
           ]
@@ -3882,7 +4021,7 @@
       ]
     },
     {
-      "name": "龙族血脉:龙族体魄",
+      "name": "龙族体魄",
       "ENG_name": "Draconic Resilience",
       "source": "PHB",
       "className": "术士",
@@ -3898,7 +4037,7 @@
           "changes": [
             {
               "key": "data.attributes.ac.calc",
-              "mode": "奥术视觉",
+              "mode": "OVERRIDE",
               "value": "龙族血脉"
             }
           ]
@@ -3909,8 +4048,8 @@
           "transfer": true,
           "changes": [
             {
-              "key": "系统属性.生命值.总奖励",
-              "mode": "添加",
+              "key": "system.attributes.hp.bonuses.overall",
+              "mode": "ADD",
               "value": "+ @classes.术士等级"
             }
           ]
@@ -3918,7 +4057,7 @@
       ]
     },
     {
-      "name": "龙族血脉:巨龙先祖",
+      "name": "巨龙先祖",
       "ENG_name": "Dragon Ancestor",
       "source": "PHB",
       "className": "术士",
@@ -3935,7 +4074,7 @@
       }
     },
     {
-      "name": "龙族血脉:龙翼",
+      "name": "龙翼",
       "ENG_name": "Dragon Wings",
       "source": "PHB",
       "className": "术士",
@@ -3951,7 +4090,7 @@
           "changes": [
             {
               "key": "数据.属性.移动.飞行",
-              "mode": "升级",
+              "mode": "UPGRADE",
               "value": "@attributes.movement.行走"
             }
           ]
@@ -3959,7 +4098,7 @@
       ]
     },
     {
-      "name": "龙族血脉:真龙姿态",
+      "name": "真龙姿态",
       "ENG_name": "Draconic Presence",
       "source": "PHB",
       "className": "术士",
@@ -3974,7 +4113,7 @@
       }
     },
     {
-      "name": "畸变心智:传心谈话",
+      "name": "传心谈话",
       "ENG_name": "Telepathic Speech",
       "source": "TCE",
       "className": "术士",
@@ -3990,7 +4129,7 @@
       }
     },
     {
-      "name": "畸变心智:扭曲爆裂",
+      "name": "扭曲爆裂",
       "ENG_name": "Warping Implosion",
       "source": "TCE",
       "className": "术士",
@@ -4006,7 +4145,7 @@
       }
     },
     {
-      "name": "时械之魂:归复平衡",
+      "name": "归复平衡",
       "ENG_name": "Restore Balance",
       "source": "TCE",
       "className": "术士",
@@ -4022,7 +4161,7 @@
       }
     },
     {
-      "name": "时械之魂:律令之壁",
+      "name": "律令之壁",
       "ENG_name": "Bastion of Law",
       "source": "TCE",
       "className": "术士",
@@ -4038,7 +4177,7 @@
       }
     },
     {
-      "name": "时械之魂:时械矩阵",
+      "name": "时械矩阵",
       "ENG_name": "Clockwork Cavalcade",
       "source": "TCE",
       "className": "术士",
@@ -4053,12 +4192,12 @@
       }
     },
     {
-      "name": "幽影魔法:凶兆猎犬",
+      "name": "凶兆猎犬",
       "ENG_name": "Hound of Ill Omen",
       "source": "XGE",
       "className": "术士",
       "classSource": "PHB",
-      "subclassShortName": "阴影",
+      "subclassShortName": "幽影",
       "subclassSource": "XGE",
       "level": 6,
       "system": {
@@ -4070,12 +4209,12 @@
       }
     },
     {
-      "name": "幽影魔法:幽影漫步",
+      "name": "幽影漫步",
       "ENG_name": "Shadow Walk",
       "source": "XGE",
       "className": "术士",
       "classSource": "PHB",
-      "subclassShortName": "阴影",
+      "subclassShortName": "幽影",
       "subclassSource": "XGE",
       "level": 14,
       "system": {
@@ -4086,12 +4225,12 @@
       }
     },
     {
-      "name": "风暴术法:风语者",
+      "name": "风语者",
       "ENG_name": "Wind Speaker",
       "source": "XGE",
       "className": "术士",
       "classSource": "PHB",
-      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassShortName": "狂怒风暴raging",
       "subclassSource": "XGE",
       "level": 1,
       "entryData": {
@@ -4103,12 +4242,12 @@
       }
     },
     {
-      "name": "风暴术法:风暴之心",
+      "name": "暴风之心",
       "ENG_name": "Heart of the Storm",
       "source": "XGE",
       "className": "术士",
       "classSource": "PHB",
-      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassShortName": "狂怒风暴raging",
       "subclassSource": "XGE",
       "level": 6,
       "system": {
@@ -4124,12 +4263,12 @@
       }
     },
     {
-      "name": "风暴术法:清风之灵",
+      "name": "清风之灵",
       "ENG_name": "Wind Soul",
       "source": "XGE",
       "className": "术士",
       "classSource": "PHB",
-      "subclassShortName": "风暴先驱道途:狂怒风暴raging",
+      "subclassShortName": "狂怒风暴raging",
       "subclassSource": "XGE",
       "level": 18,
       "entryData": {
@@ -4202,7 +4341,7 @@
       }
     },
     {
-      "name": "旧日支配者宗主:唤醒心灵",
+      "name": "唤醒心灵",
       "ENG_name": "Awakened Mind",
       "source": "PHB",
       "className": "邪术师",
@@ -4217,7 +4356,7 @@
       }
     },
     {
-      "name": "旧日支配者宗主:思维之盾",
+      "name": "思维之盾",
       "ENG_name": "Thought Shield",
       "source": "PHB",
       "className": "邪术师",
@@ -4232,7 +4371,7 @@
       }
     },
     {
-      "name": "深海意志宗主:海洋馈赠",
+      "name": "海洋馈赠",
       "ENG_name": "Gift of the Sea",
       "source": "TCE",
       "className": "邪术师",
@@ -4242,13 +4381,13 @@
       "level": 1,
       "effects": [
         {
-          "name": "深海意志宗主:海洋馈赠",
+          "name": "海洋馈赠",
           "ENG_name": "Gift of the Sea",
           "transfer": true,
           "changes": [
             {
               "key": "数据.属性.移动.游泳",
-              "mode": "升级",
+              "mode": "UPGRADE",
               "value": "40"
             }
           ]
@@ -4256,7 +4395,7 @@
       ]
     },
     {
-      "name": "深海意志宗主:深海触手",
+      "name": "深海触手",
       "ENG_name": "Tentacle of the Deeps",
       "source": "TCE",
       "className": "邪术师",
@@ -4272,7 +4411,7 @@
       }
     },
     {
-      "name": "深海意志宗主:海渊魂灵",
+      "name": "海渊魂灵",
       "ENG_name": "Oceanic Soul",
       "source": "TCE",
       "className": "邪术师",
@@ -4287,7 +4426,7 @@
       }
     },
     {
-      "name": "深海意志宗主:海渊传送",
+      "name": "海渊传送",
       "ENG_name": "Fathomless Plunge",
       "source": "TCE",
       "className": "邪术师",
@@ -4304,7 +4443,7 @@
       }
     },
     {
-      "name": "巨灵宗主:器皿庇护所",
+      "name": "器皿庇护所",
       "ENG_name": "Sanctuary Vessel",
       "source": "TCE",
       "className": "邪术师",
@@ -4320,7 +4459,7 @@
       }
     },
     {
-      "name": "死灵宗主:死疽躯壳",
+      "name": "死疽躯壳",
       "ENG_name": "Necrotic Husk",
       "source": "VRGR",
       "className": "邪术师",
@@ -4340,7 +4479,7 @@
       }
     },
     {
-      "name": "天界宗主:光耀之魂",
+      "name": "光耀之魂",
       "ENG_name": "Radiant Soul",
       "source": "XGE",
       "className": "邪术师",
@@ -4355,7 +4494,7 @@
       }
     },
     {
-      "name": "天界宗主:灼光复仇",
+      "name": "灼光复仇",
       "ENG_name": "Searing Vengeance",
       "source": "XGE",
       "className": "邪术师",
@@ -4370,7 +4509,7 @@
       }
     },
     {
-      "name": "咒剑宗主:巫咒战士",
+      "name": "巫咒战士",
       "ENG_name": "Hex Warrior",
       "source": "XGE",
       "className": "邪术师",
@@ -4393,7 +4532,7 @@
       }
     },
     {
-      "name": "咒剑宗主:咒缚幽灵",
+      "name": "咒缚幽灵",
       "ENG_name": "Accursed Specter",
       "source": "XGE",
       "className": "邪术师",
@@ -4434,7 +4573,7 @@
           "changes": [
             {
               "key": "data.attributes.init.total",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ @abilities.智力调整值"
             }
           ]
@@ -4442,7 +4581,7 @@
       ]
     },
     {
-      "name": "时间魔法:瞬时静止",
+      "name": "瞬时静止",
       "ENG_name": "Momentary Stasis",
       "source": "EGW",
       "className": "法师",
@@ -4456,7 +4595,7 @@
       }
     },
     {
-      "name": "时间魔法:收束未来",
+      "name": "收束未来",
       "ENG_name": "Convergent Future",
       "source": "EGW",
       "className": "法师",
@@ -4470,7 +4609,7 @@
       }
     },
     {
-      "name": "重力魔法:调节密度",
+      "name": "调节密度",
       "ENG_name": "Adjust Density",
       "source": "EGW",
       "className": "法师",
@@ -4486,7 +4625,7 @@
       }
     },
     {
-      "name": "重力魔法:狂暴牵引",
+      "name": "狂暴牵引",
       "ENG_name": "Violent Attraction",
       "source": "EGW",
       "className": "法师",
@@ -4502,7 +4641,7 @@
       }
     },
     {
-      "name": "重力魔法:事件视界",
+      "name": "事件视界",
       "ENG_name": "Event Horizon",
       "source": "EGW",
       "className": "法师",
@@ -4517,12 +4656,12 @@
       }
     },
     {
-      "name": "奥法防护",
+      "name": "奥术守御",
       "ENG_name": "Arcane Ward",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 2,
       "system": {
@@ -4533,12 +4672,12 @@
       }
     },
     {
-      "name": "防护学派:投射守御",
+      "name": "投射守御",
       "ENG_name": "Projected Ward",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 6,
       "system": {
@@ -4548,12 +4687,12 @@
       }
     },
     {
-      "name": "咒法学派:王车易位",
+      "name": "王车易位",
       "ENG_name": "Benign Transposition",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 6,
       "system": {
@@ -4564,12 +4703,12 @@
       }
     },
     {
-      "name": "惑控学派:催眠凝视",
+      "name": "催眠凝视",
       "ENG_name": "Hypnotic Gaze",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 2,
       "system": {
@@ -4580,12 +4719,12 @@
       }
     },
     {
-      "name": "惑控学派:直觉魅惑",
+      "name": "直觉魅惑",
       "ENG_name": "Instinctive Charm",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 6,
       "system": {
@@ -4596,12 +4735,12 @@
       }
     },
     {
-      "name": "死灵学派:不死适应",
+      "name": "不死适应",
       "ENG_name": "Inured to Undeath",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 10,
       "entryData": {
@@ -4611,12 +4750,12 @@
       }
     },
     {
-      "name": "死灵学派:命令亡灵",
+      "name": "命令亡灵",
       "ENG_name": "Command Undead",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 14,
       "system": {
@@ -4644,7 +4783,7 @@
         "weaponProficiencies": [
           {
             "choose": {
-              "fromFilter": "类型=近战武器|属性=!双手|稀有度=无"
+              "fromFilter": "type=近战武器|属性=!双手|稀有度=无"
             }
           }
         ],
@@ -4656,7 +4795,7 @@
       }
     },
     {
-      "name": "战争魔法:偏斜罩幕",
+      "name": "偏斜罩幕",
       "ENG_name": "Deflecting Shroud",
       "source": "XGE",
       "className": "法师",
@@ -4676,7 +4815,7 @@
       "ENG_name": "Tiger",
       "source": "SCAG",
       "className": "野蛮人",
-      "classSource": "剑海岸冒险者指南",
+      "classSource": "SCAG",
       "subclassShortName": "图腾勇士",
       "subclassSource": "PHB",
       "level": 6,
@@ -4685,10 +4824,10 @@
           {
             "choose": {
               "from": [
-                "属性检定:运动",
-                "属性检定:特技",
-                "属性检定:隐匿",
-                "属性检定:求生"
+                "运动",
+                "特技",
+                "隐匿",
+                "求生"
               ],
               "count": 2
             }
@@ -4697,7 +4836,7 @@
       }
     },
     {
-      "name": "本职工具",
+      "name": "工具熟练",
       "ENG_name": "Tool Proficiency",
       "source": "TCE",
       "className": "奇械师",
@@ -4762,8 +4901,10 @@
       "system": {
         "actionType": "治愈术",
         "damage.parts": [
-          "@classes.炼金术士等级",
-          "临时生命值"
+          [
+            "@classes.炼金术士等级",
+            "临时生命值"
+          ]
         ]
       }
     },
@@ -4787,9 +4928,9 @@
             "type": "R",
             "rarity": "无",
             "weaponCategory": "简单",
+            "range": "90/300",
             "dmg1": "1d6",
             "dmgType": "L",
-            "range": "90/300",
             "entries": [
               "这件武器是渗透者装甲模型的一部分。当你用该武器攻击时，你可以加上你的智力调整值，而不是力量或敏捷，到攻击和伤害的掷骰中。",
               "在你的每个回合中，当你用发射器击中一个生物时，你可以对该目标额外造成{@damage 1d6}点闪电伤害。"
@@ -4818,7 +4959,7 @@
           "changes": [
             {
               "key": "flags.dnd5e.observantFeat",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 5"
             }
           ],
@@ -4860,7 +5001,7 @@
       }
     },
     {
-      "name": "本职工具",
+      "name": "ì",
       "ENG_name": "Tools of the Trade",
       "source": "TCE",
       "className": "奇械师",
@@ -4895,16 +5036,20 @@
       "level": 3,
       "system": {
         "damage.parts": [
-          "2d8",
-          "火",
-          "2d8",
-          "力量"
+          [
+            "2d8",
+            "火"
+          ],
+          [
+            "2d8",
+            "力量"
+          ]
         ],
         "formula": "1d8 + @abilities.智力调整值"
       }
     },
     {
-      "name": "本职工具",
+      "name": "工具熟练",
       "ENG_name": "Tool Proficiency",
       "source": "TCE",
       "className": "奇械师",
@@ -4938,12 +5083,12 @@
           "changes": [
             {
               "key": "data.bonuses.msak.damage",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 1d8"
             },
             {
               "key": "data.bonuses.rsak.damage",
-              "mode": "添加",
+              "mode": "ADD",
               "value": "+ 1d8"
             }
           ]
@@ -4981,7 +5126,7 @@
       }
     },
     {
-      "name": "本职工具",
+      "name": "工具熟练",
       "ENG_name": "Tool Proficiency",
       "source": "TCE",
       "className": "奇械师",

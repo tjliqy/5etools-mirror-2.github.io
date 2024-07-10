@@ -1,48 +1,51 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "GotSF",
-				"BGG": "GotSF"
-			}
-		}
-	},
-	"monster": [
-		{
-			"name": "Acidic Mist Apparition",
-			"source": "GotSF",
-			"page": 6,
-			"_copy": {
-				"name": "Air Elemental",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "elemental",
-						"with": "apparition"
-					},
-					"action": {
-						"mode": "replaceArr",
-						"replace": "Slam",
-						"items": {
-							"name": "Slam",
-							"entries": [
-								"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) acid damage."
-							]
-						}
-					}
-				}
-			},
-			"immune": [
-				"acid",
-				"poison"
-			],
-			"hasToken": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM"
+      ]
+    },
+    "otherSources": {
+      "monster": {
+        "MM": "GotSF",
+        "BGG": "GotSF"
+      }
+    }
+  },
+  "monster": [
+    {
+      "name": "酸性雾气幻象",
+      "ENG_name": "Acidic Mist Apparition",
+      "source": "GotSF",
+      "page": 6,
+      "_copy": {
+        "name": "气元素",
+        "ENG_name": "Air Elemental",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "元素生物",
+            "with": "幻象"
+          },
+          "action": {
+            "mode": "replaceArr",
+            "replace": "猛击",
+            "items": {
+              "name": "猛击",
+              "ENG_name": "Slam",
+              "entries": [
+                "{@atk 近战武器} 命中：8，射程5英尺，单一目标。{@h}14（{@damage 2d8 + 5}）酸性伤害。"
+              ]
+            }
+          }
+        }
+      },
+      "immune": [
+        "酸性",
+        "毁灭诅咒"
+      ],
+      "hasToken": true
+    }
+  ]
 }

@@ -1,503 +1,517 @@
 {
-	"spell": [
-		{
-			"name": "Ambush Prey",
-			"source": "HWCS",
-			"page": 49,
-			"level": 2,
-			"school": "I",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"s": true,
-				"m": {
-					"text": "a broken twig"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You channel primal predatory energies to perfectly conceal your presence in order to surprise your target. You become {@condition invisible} for the spell's duration, granting advantage on all Dexterity ({@skill Stealth}) checks to remain hidden. The invisibility will last for the duration of the spell, however, moving 5 feet or more from your position when you cast the spell will end the effect.",
-				"As long as you remain invisible, the first attack you make against any target who is unaware of your presence deals an additional {@damage 1d6} points of damage. This attack ends the spell."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot above 2nd level, the damage of your first attack increases by {@scaledamage 1d6|2-9|1d6} for every slot level above 2nd."
-					]
-				}
-			],
-			"conditionInflict": [
-				"invisible"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Elevated Sight",
-			"source": "HWCS",
-			"page": 49,
-			"level": 1,
-			"school": "D",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You cast your eyes skyward, granting you sight from a higher vantage point. You project your vision to see through an invisible sensor which appears in a spot up to 120 feet above you. You can see through the sensor as if you were flying, granting a full 360 degree view from its location.",
-				"The sensor moves with you, retaining its height in relation to you. You can use a bonus action to adjust the sensor's height, but only to a maximum of 120 feet above you.",
-				"While looking through this sensor you are {@condition blinded|PHB|blind}, though you can switch between seeing through the sensor or through your own eyes at any time during your turn."
-			],
-			"conditionInflict": [
-				"blinded"
-			],
-			"miscTags": [
-				"SGT",
-				"UBA"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Feathered Reach",
-			"source": "HWCS",
-			"page": 50,
-			"level": 3,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"s": true,
-				"m": {
-					"text": "a small feather"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You transform your arms into powerful wings, and your fingers into long, graceful feathers. The effects of this spell last 1 minute, at which point the feathers gradually fall out, causing you to float gently to the ground as your arms return to their original form. This spell confers a number of benefits upon the caster:",
-				{
-					"type": "list",
-					"items": [
-						"As a bonus action, you can fly up to double your movement speed. You must land once you finish your movement, although you do not take fall damage while this spell is active, as your feathered arms bear you gently to the ground.",
-						"You can use your powerful feathered arms to propel yourself upward a distance equal to half your movement speed. You can do this once during your turn and may use it in conjunction with a regular jump.",
-						"When falling, you can use your reaction to stiffen your arms, and glide on the wind. You may fly up to your movement speed, in any direction, choosing where you land.",
-						"You gain advantage on all {@skill Athletics} checks used to make a long or high jump. You do not need to move 10 feet before you jump to gain distance, and you triple the distance you would jump normally."
-					]
-				},
-				"In order to benefit from this spell your hands must be free of shields and heavy weapons, and you cannot be encumbered."
-			],
-			"miscTags": [
-				"ADV",
-				"UBA"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Globe of Twilight",
-			"source": "HWCS",
-			"page": 50,
-			"level": 3,
-			"school": "C",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "sphere",
-				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a dab of pitch and a bag of glittering sand"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 10
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You shroud the area surrounding you in a sphere of night sky, dotted with miniature stars. The twilight conceals your allies, but clearly illuminates your enemies.",
-				"The area affected by this spell is lightly obscured by magical shadow, within which small constellations softly twinkle. Aside from these stars, only light produced by a spell of 3rd level or higher can properly illuminate any area inside the sphere. Nonmagical light does not function inside the sphere, and all other forms of magical radiance can only produce dim light in a 5-foot space.",
-				"When you cast this spell you may designate any number of creatures you can see to be concealed by the supernatural shadows while in the sphere. A concealed creature has advantage on Dexterity ({@skill Stealth}) checks when inside the sphere and may attempt to hide at any time. Because the area of the spell is lightly obscured, creatures within the spell's area have disadvantage on Wisdom ({@skill Perception}) checks made to see those outside of it.",
-				"All other creatures in the area are dazzled by the light of the miniature stars, causing them to have disadvantage on all perception checks inside the sphere. When such a creature enters the spell's area for the first time, or starts its turn there, it must make a Wisdom saving throw or be {@condition blinded} until the end of its turn."
-			],
-			"conditionInflict": [
-				"blinded"
-			],
-			"savingThrow": [
-				"wisdom"
-			],
-			"miscTags": [
-				"ADV",
-				"SGT"
-			],
-			"areaTags": [
-				"S"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Gust Barrier",
-			"source": "HWCS",
-			"page": 50,
-			"level": 0,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "round",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You spread your arms wide, allowing yourself to become enveloped by the air around you. Until the end of your next turn, any ranged attack against you is made with disadvantage.",
-				"Melee attackers who successfully hit you must make a Constitution saving throw against your spell save DC. On a failure, the attacker is flung away from you up to 10 feet and is knocked {@condition prone}."
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"savingThrow": [
-				"constitution"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Invoke the Amaranthine",
-			"source": "HWCS",
-			"page": 51,
-			"level": 3,
-			"school": "D",
-			"time": [
-				{
-					"number": 10,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a holy symbol of the Amaranthine"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 24
-					}
-				}
-			],
-			"entries": [
-				"You call upon the power of an Amaranthine to grant yourself insight into the Great Rhythm that moves all things. When you cast this spell, roll two {@dice d20}s, and record what you rolled. For each die, choose either attack roll, skill check, or saving throw. You can choose each option multiple times. For the next 24 hours, you may substitute any roll of an ally or enemy you can see within 60 feet with one of the recorded numbers that matches the type of roll you wish to replace (attack roll, skill check, or saving throw). The target still adds any relevant modifiers to this number, but otherwise treat the substituted number as the number they rolled.",
-				"To do this, you must spend a reaction to present your holy symbol and invoke the name of the Amaranthine whose energies you called upon. You can do this anytime after the skill check, saving throw or attack has been rolled, but before the outcome of the event has been determined. The spell ends after 24 hours have passed, or when both dice have been expended."
-			],
-			"miscTags": [
-				"SGT"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Shape Plants",
-			"source": "HWCS",
-			"page": 51,
-			"level": 4,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "instant",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You call upon gentle natural magics to alter the growth of plants. Any plant life you can see within range that fits within a 5-foot cube can take on whatever shape you desire. Additionally, if the plant is a bramble or capable of growing thorns, you may turn the affected area into difficult terrain, causing {@dice 2d4} points of piercing damage for every 5 feet moved through the area you shaped. You may also increase or decrease the number of flowers, vines, leaves, thorns, branches, or fruits produced by any plant you shape.",
-				"After one hour, the magic of your spell fades, and the plant resumes its normal shape. If you can use speak with plants (or a similar ability) to communicate with the plant, you may persuade it to retain its new form. Different plants have different feelings and attitudes, and if the form is too different from its natural shape it is likely to decline. If the plant accepts, at the GM's discretion, it will retain the form you have sculpted it into, in which case the effect becomes permanent."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot above 4th level, the size of the cube of plant life you can affect with the spell increases by an additional 5 feet for every slot level above 4th."
-					]
-				}
-			],
-			"damageInflict": [
-				"piercing"
-			],
-			"miscTags": [
-				"PRM",
-				"SGT"
-			],
-			"areaTags": [
-				"C"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Spiny Shield",
-			"source": "HWCS",
-			"page": 51,
-			"level": 1,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "reaction"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a small quill"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "round",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"An ethereal barrier of spikes, made of magical force, interposes itself between you and an attacker. Until your next turn, when you are hit by a melee attack, the barrier reduces the damage you are dealt by {@dice 2d4}, and deals the same amount of piercing damage to the attacker. The shield is ineffective against ranged attackers, but still provides a +2 bonus to AC (treat as half cover) against them for the duration."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot above 1st level, increase the spell's effect by an additional {@scaledice 2d4|1-9|1d4} for every slot level above 1st."
-					]
-				}
-			],
-			"damageInflict": [
-				"piercing"
-			],
-			"miscTags": [
-				"MAC"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Stellar Bodies",
-			"source": "HWCS",
-			"page": 52,
-			"level": 4,
-			"school": "E",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "special"
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"You create two small stars that orbit you. They twinkle pleasantly, shedding dim light in a 10-foot radius centered on you. The stars protect you. If a creature within 5 feet of you hits you with a melee attack they must make a Wisdom saving throw or take {@dice 1d8} points of radiant damage for each star orbiting you.",
-				"Once per round, on your turn, you may use your action to cause a star to streak towards an enemy, expending it as it explodes in a blinding flash. Make a ranged spell attack against an enemy within 120 feet, dealing {@damage 4d8} points of radiant damage on a hit. The target must then make a Constitution saving throw or be {@condition blinded} until the start of your next turn.",
-				"The spell ends when either its duration expires, you fall {@condition unconscious}, or you have expended all of your stars."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot above 4th level, you may create one additional star for every two slot levels above 4th. For each additional star orbiting you, the radius of dim light centered on you increases by 5 feet."
-					]
-				}
-			],
-			"damageInflict": [
-				"radiant"
-			],
-			"conditionInflict": [
-				"blinded"
-			],
-			"spellAttack": [
-				"R"
-			],
-			"savingThrow": [
-				"constitution",
-				"wisdom"
-			],
-			"hasFluffImages": true
-		},
-		{
-			"name": "Veil of Dusk",
-			"source": "HWCS",
-			"page": 52,
-			"level": 1,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a pinch of soot"
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 10
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You incant towards a creature, cloaking them in a shadowy veil of darkness and silence. The target gains a +1 bonus to their armor class and makes {@skill Stealth} checks with advantage for the duration of the spell."
-			],
-			"hasFluffImages": true
-		}
-	]
+  "spell": [
+    {
+      "name": "伏击猎物",
+      "ENG_name": "Ambush Prey",
+      "source": "HWCS",
+      "page": 49,
+      "level": 2,
+      "school": "I",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "s": true,
+        "m": {
+          "text": "一根折断的树枝"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "你引导原始的掠食能量，以完美地隐藏你的存在，以便出其不意地攻击你的目标。在法术的持续时间内，你变得{@condition 隐形}，这让你在所有敏捷（{@skill 隐匿}）检定上获得优势，以保持隐藏。隐形效果将持续整个法术的持续时间，然而，当你在施法时移动5英尺或更远的距离时，效果将结束。",
+        "只要你保持隐形，你对任何未察觉你存在的敌人发起的第一次攻击，将额外造成{@damage 1d6}点伤害。这次攻击会结束法术效果。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用高于2级的法术位施放这个法术时，你第一次攻击的伤害会随着每个高于2级的法术位增加{@scaledamage 1d6|2-9|1d6}。"
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "隐形"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "提升视力",
+      "ENG_name": "Elevated Sight",
+      "source": "HWCS",
+      "page": 49,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "你将目光投向天空，赋予自己从更高视角的视野。你投射你的视野，通过一个在你上方最多120英尺处出现的隐形传感器来观察。你可以像飞翔一样通过这个传感器看到周围，提供其位置的完整360度视野。",
+        "传感器随你移动，保持与你相对的高度。你可以使用奖励动作来调整传感器的高度，但最高只能调整到你上方120英尺。",
+        "通过这个传感器观察时，你处于{@condition 目盲|PHB|盲目}状态，尽管你可以在你的回合中随时切换通过传感器观察或用自己的眼睛看。"
+      ],
+      "conditionInflict": [
+        "目盲"
+      ],
+      "miscTags": [
+        "中士",
+        "通用银行自动转账"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "羽化",
+      "ENG_name": "Feathered Reach",
+      "source": "HWCS",
+      "page": 50,
+      "level": 3,
+      "school": "T",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "s": true,
+        "m": {
+          "text": "一根小羽毛"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "你将你的双臂变成了强大的翅膀，你的手指变成了长而优雅的羽毛。这个法术的效果持续1分钟，届时羽毛会逐渐脱落，当你的双臂恢复到原来的形状时，你将轻轻地飘浮到地面上。这个法术赋予施法者以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "作为奖励动作，你可以飞行，速度是你的移动速度的两倍。一旦完成移动，你必须着陆，尽管在这个法术生效期间你不会遭受坠落伤害，因为你的羽毛手臂会轻轻地将你带到地面。",
+            "你可以使用你强大的羽翼臂来向上推动自己，距离等于你移动速度的一半。你可以在你的回合中这样做一次，并且可以与常规跳跃一起使用。",
+            "当坠落时，你可以使用你的反应来僵硬你的手臂，并在风中滑翔。你可以以你的移动速度飞行，向任何方向飞行，选择你着陆的地方。",
+            "你在进行所有{@skill 运动}检定以进行长跳或高跳时获得优势。你不需要在跳跃前移动10英尺以获得距离，并且你通常跳跃的距离将增加两倍。"
+          ]
+        },
+        "为了从这个法术中受益，你的双手必须没有盾牌和重型武器，并且你不能负重。"
+      ],
+      "miscTags": [
+        "前进",
+        "通用银行自动转账"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "暮光法球",
+      "ENG_name": "Globe of Twilight",
+      "source": "HWCS",
+      "page": 50,
+      "level": 3,
+      "school": "C",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "sphere",
+        "distance": {
+          "type": "feet",
+          "amount": 15
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一点沥青和一袋闪亮的沙子"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "你将周围的区域笼罩在夜空的球体之中，点缀着微型的星星。暮光隐藏了你的盟友，但清晰地照亮了你的敌人。",
+        "这个法术影响的区域被魔法阴影轻微遮蔽，在其中小星座微弱地闪烁。除了这些星星外，只有3级或更高等级的法术产生的光才能适当照亮球体内的任何区域。非魔法光在球体内不起作用，所有其他形式的魔法辐射只能在5英尺空间内产生微弱的光。",
+        "当你施放这个法术时，你可以指定任何你能看到的生物被超自然阴影所隐藏，当它们在球体内时。隐藏的生物在球体内进行敏捷（{@skill 隐匿}）检定时具有优势，并且可以随时尝试隐藏。因为法术区域轻微地被遮蔽，位于法术区域内的生物在进行智慧（{@skill 察觉}）检定以观察区域外的生物时具有劣势。",
+        "所有在该区域内的其他生物都被微型星星的光辉所眩目，导致他们在球体内部的所有感知检定上具有劣势。当这样的生物第一次进入法术区域，或在其区域内开始其回合时，它必须进行一次智力豁免掷骰，否则直到其回合结束时都将处于{@condition 目盲}状态。"
+      ],
+      "conditionInflict": [
+        "目盲"
+      ],
+      "savingThrow": [
+        "感知"
+      ],
+      "miscTags": [
+        "前进",
+        "中士"
+      ],
+      "areaTags": [
+        "S"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "尘风屏障",
+      "ENG_name": "Gust Barrier",
+      "source": "HWCS",
+      "page": 50,
+      "level": 0,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "round",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "你张开双臂，让自己被周围空气所包围。直到你的下一个回合结束，任何对你的远程攻击都会处于不利状态。",
+        "近战攻击者如果成功击中你，必须进行一次体质豁免投掷，对抗你的法术豁免困难等级(DC)。如果失败，攻击者会被从你身边抛出最多10英尺远，并且进入{@condition 伏地}状态。"
+      ],
+      "conditionInflict": [
+        "伏地"
+      ],
+      "savingThrow": [
+        "体质"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "祈求不凋花",
+      "ENG_name": "Invoke the Amaranthine",
+      "source": "HWCS",
+      "page": 51,
+      "level": 3,
+      "school": "D",
+      "time": [
+        {
+          "number": 10,
+          "unit": "分钟"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "阿曼塔林的圣徽"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "entries": [
+        "你呼唤阿玛兰斯之力，赋予自己洞察万物运动的伟大节奏的智慧。当你施放这个法术时，掷两个{@dice d20}，并记录你掷出的数字。对于每个骰子，你可以选择攻击检定、技能检定或豁免检定。你可以选择多次相同的选项。在接下来的24小时内，你可以将60英尺内你能看到的任何盟友或敌人的检定结果替换为你记录的数字之一，以匹配你想要替换的检定类型（攻击检定、技能检定或豁免检定）。目标仍然需要将任何相关的修正值加到这个数字上，但除此之外，将替换的数字视为他们掷出的数字。",
+        "要这样做，你必须花费一次反应来展示你的圣徽并呼唤你召唤的阿玛兰丁能量之名。你可以在技能检定、豁免投掷或攻击掷骰之后，但在事件结果确定之前随时这样做。法术在24小时过去或两个骰子都被使用后结束。"
+      ],
+      "miscTags": [
+        "中士"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "植物塑形",
+      "ENG_name": "Shape Plants",
+      "source": "HWCS",
+      "page": 51,
+      "level": 4,
+      "school": "T",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "你召唤柔和的自然魔法来改变植物的生长。在你范围内可见的任何植物，只要能适应5英尺立方体的大小，都可以变成你想要的任何形状。此外，如果植物是荆棘或能够生长刺，你可以将受影响的区域变成困难地形，每穿过你塑造的区域5英尺，就会造成{@dice 2d4}点穿刺伤害。你还可以增加或减少任何你塑造的植物产生的花、藤蔓、叶子、刺、枝条或果实的数量。",
+        "一个小时后，你的法术魔法效果消失，植物恢复其正常形态。如果你可以使用与植物交谈（或类似能力）与植物沟通，你可能会说服它保持新形态。不同的植物有不同的感受和态度，如果形态与它的自然形态差异太大，它很可能会拒绝。如果植物接受了，在游戏主持人的判断下，它将保持你塑造的形态，这种情况下效果将成为永久性的。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用4级以上的法术位施放这个法术时，你可以用法术影响的植物生命体的立方体大小每超过4级增加5英尺。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "穿刺"
+      ],
+      "miscTags": [
+        "PRM",
+        "中士"
+      ],
+      "areaTags": [
+        "C"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "尖刺护盾",
+      "ENG_name": "Spiny Shield",
+      "source": "HWCS",
+      "page": 51,
+      "level": 1,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "反应"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一支小羽毛笔"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "round",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "一个由魔法力量构成的虚无尖刺屏障，在你和攻击者之间插入自身。直到你的下一个回合，当你被近战攻击击中时，屏障减少你受到的伤害{@dice 2d4}，并对攻击者造成同等数量的穿刺伤害。这个盾牌对远程攻击者无效，但在持续时间内，仍然为他们提供+2的AC加值（视为半掩体）。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用高于1级的法术位施放这个法术时，每超过1级的法术位都会使法术效果额外增加{@scaledice 2d4|1-9|1d4}。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "穿刺"
+      ],
+      "miscTags": [
+        "机枪"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "恒星之躯",
+      "ENG_name": "Stellar Bodies",
+      "source": "HWCS",
+      "page": 52,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "special"
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "你创造了两个围绕你旋转的小星星。它们愉快地闪烁着，在你周围10英尺半径内散发出微弱的光芒。这些星星保护着你。如果一个生物在你5英尺范围内用近战攻击击中你，它必须进行一次智力豁免投掷，否则每颗围绕你的星星都会对其造成{@dice 1d8}点辐射伤害。",
+        "每轮一次，在你的回合，你可以使用你的行动让一颗星星朝敌人飞去，在它爆炸成耀眼的闪光时消耗它。对120英尺内的敌人进行远程法术攻击，命中时造成{@damage 4d8}点光辉伤害。目标必须随后进行一次体质豁免掷骰，否则直到你的下个回合开始时都将处于{@condition 目盲}状态。",
+        "法术在以下任一情况下结束：持续时间到期、你进入{@condition 昏迷}状态，或者你已经耗尽了所有星辰。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用4级以上的法术位施放这个法术时，每超过4级的法术位两级，你可以多创造一颗额外的星星。对于每一颗额外围绕你的星星，以你为中心的昏暗光线半径增加5英尺。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "光辉"
+      ],
+      "conditionInflict": [
+        "目盲"
+      ],
+      "spellAttack": [
+        "R"
+      ],
+      "savingThrow": [
+        "体质",
+        "感知"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "黄昏之纱",
+      "ENG_name": "Veil of Dusk",
+      "source": "HWCS",
+      "page": 52,
+      "level": 1,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "加成"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一小撮煤烟"
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "你向一个生物念咒，将其笼罩在黑暗和寂静的阴影斗篷中。目标在法术持续时间内获得+1的护甲等级加值，并以优势进行{@skill 隐匿}检定。"
+      ],
+      "hasFluffImages": true
+    }
+  ]
 }

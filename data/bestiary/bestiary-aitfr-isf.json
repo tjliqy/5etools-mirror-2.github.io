@@ -1,313 +1,323 @@
 {
-	"monster": [
-		{
-			"name": "Exul",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AitFR-ISF",
-			"page": 12,
-			"size": [
-				"L"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 200,
-				"formula": "16d10 + 112"
-			},
-			"speed": {
-				"walk": 40,
-				"fly": 60
-			},
-			"str": 22,
-			"dex": 12,
-			"con": 24,
-			"int": 16,
-			"wis": 15,
-			"cha": 16,
-			"save": {
-				"int": "+7",
-				"cha": "+7"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 12,
-			"immune": [
-				"fire"
-			],
-			"languages": [
-				"Common",
-				"Ignan",
-				"Terran"
-			],
-			"cr": "11",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Exul's innate spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell detect magic}"
-					],
-					"daily": {
-						"3e": [
-							"{@spell comprehend languages}",
-							"{@spell tongues}"
-						],
-						"1e": [
-							"{@spell conjure elemental} (earth or fire elemental only)",
-							"{@spell invisibility}",
-							"{@spell major image}",
-							"{@spell plane shift}",
-							"{@spell wall of fire}"
-						]
-					}
-				}
-			],
-			"trait": [
-				{
-					"name": "Elemental Demise",
-					"entries": [
-						"If Exul dies, his body disintegrates in a flash of fire and puff of smoke, leaving behind only the equipment he was wearing or carrying."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Exul makes two handaxe attacks or uses his Hurl Flame twice."
-					]
-				},
-				{
-					"name": "Handaxe",
-					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}13 (2d6 + 6) slashing damage plus 3 (1d6) fire damage."
-					]
-				},
-				{
-					"name": "Hurl Flame",
-					"entries": [
-						"{@atk rs} {@hit 7} to hit, range 120 ft., one target. {@h}17 (5d6) fire damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"handaxe|phb"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"IG",
-				"T"
-			],
-			"damageTagsSpell": [
-				"F"
-			],
-			"spellcastingTags": [
-				"I"
-			],
-			"miscTags": [
-				"MLW",
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"invisible"
-			],
-			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Malivar",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AitFR-ISF",
-			"page": 12,
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human"
-				]
-			},
-			"alignment": [
-				"C",
-				"E"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 40,
-				"formula": "9d8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 9,
-			"dex": 14,
-			"con": 11,
-			"int": 17,
-			"wis": 12,
-			"cha": 17,
-			"save": {
-				"int": "+6",
-				"wis": "+4"
-			},
-			"skill": {
-				"arcana": "+6",
-				"history": "+6"
-			},
-			"passive": 11,
-			"languages": [
-				"Common",
-				"Draconic",
-				"Ignan",
-				"Infernal"
-			],
-			"cr": "6",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Malivar is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). He has the following wizard spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell acid splash}",
-								"{@spell mage hand}",
-								"{@spell poison spray}",
-								"{@spell prestidigitation}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell unseen servant}*"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell cloud of daggers}*",
-								"{@spell misty step}*",
-								"{@spell web}*"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell fireball}",
-								"{@spell thunder step|XGE}*"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell Evard's black tentacles}*",
-								"{@spell stoneskin}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell cone of cold}*",
-								"{@spell conjure elemental}*"
-							]
-						}
-					},
-					"footerEntries": [
-						"*Conjuration spell of 1st level or higher"
-					],
-					"ability": "int"
-				}
-			],
-			"trait": [
-				{
-					"name": "Benign Transportation (Recharges after Malivar Casts a Conjuration Spell of 1st Level or Higher)",
-					"entries": [
-						"As a bonus action, Malivar teleports up to 30 feet to an unoccupied space that he can see.",
-						"If he instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Dagger",
-					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage"
-					]
-				}
-			],
-			"attachedItems": [
-				"dagger|phb"
-			],
-			"languageTags": [
-				"C",
-				"DR",
-				"I",
-				"IG"
-			],
-			"damageTags": [
-				"P"
-			],
-			"damageTagsSpell": [
-				"A",
-				"B",
-				"C",
-				"F",
-				"I",
-				"O",
-				"S",
-				"T"
-			],
-			"spellcastingTags": [
-				"CW"
-			],
-			"miscTags": [
-				"MLW",
-				"MW",
-				"RW",
-				"THW"
-			],
-			"conditionInflictSpell": [
-				"restrained"
-			],
-			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		}
-	]
+  "monster": [
+    {
+      "name": "流放",
+      "ENG_name": "Exul",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AitFR-ISF",
+      "page": 12,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 17,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 200,
+        "formula": "16d10 + 112"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": 60
+      },
+      "str": 22,
+      "dex": 12,
+      "con": 24,
+      "int": 16,
+      "wis": 15,
+      "cha": 16,
+      "save": {
+        "int": "+7",
+        "cha": "+7"
+      },
+      "senses": [
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 12,
+      "immune": [
+        "火"
+      ],
+      "languages": [
+        "普通",
+        "伊格南",
+        "泰坦"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "天生施法",
+          "ENG_name": "Innate Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Exul的天赋施法能力是魅力（法术豁免{@dc 15}，法术攻击命中{@hit 7}）。他能天赋地施展以下法术，无需任何材料成分："
+          ],
+          "will": [
+            "{@spell 侦测魔法}"
+          ],
+          "daily": {
+            "3e": [
+              "{@spell 通晓语言}",
+              "{@spell 巧言}"
+            ],
+            "1e": [
+              "{@spell 召唤元素生物}（仅限土元素或火元素）",
+              "{@spell 隐形术}",
+              "{@spell 强效幻影}",
+              "{@spell 异界传送}",
+              "{@spell 火墙术}"
+            ]
+          }
+        }
+      ],
+      "trait": [
+        {
+          "name": "元素消亡",
+          "ENG_name": "Elemental Demise",
+          "entries": [
+            "如果Exul死亡，他的身体会在一道火焰和烟雾中解体，只留下他穿戴或携带的装备。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Exul 进行两次手斧攻击，或者使用他的投掷火焰两次。"
+          ]
+        },
+        {
+          "name": "手斧",
+          "ENG_name": "Handaxe",
+          "entries": [
+            "{@atk 近战武器} {@hit 10}hit，射程5英尺，单一目标。{@h}13（2d6 + 6）斩击h加上3（1d6）火焰h。"
+          ]
+        },
+        {
+          "name": "投掷火焰",
+          "ENG_name": "Hurl Flame",
+          "entries": [
+            "{@atk 远程攻击} {@hit 命中7} 命中，射程120英尺，一个目标。{@h}17 (5d6) 火焰伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "手斧|PHB"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "IG",
+        "T"
+      ],
+      "damageTagsSpell": [
+        "F"
+      ],
+      "spellcastingTags": [
+        "I"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW"
+      ],
+      "conditionInflictSpell": [
+        "隐形"
+      ],
+      "savingThrowForcedSpell": [
+        "魅力",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "马利瓦尔",
+      "ENG_name": "Malivar",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AitFR-ISF",
+      "page": 12,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "human"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 40,
+        "formula": "9d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 9,
+      "dex": 14,
+      "con": 11,
+      "int": 17,
+      "wis": 12,
+      "cha": 17,
+      "save": {
+        "int": "+6",
+        "wis": "+4"
+      },
+      "skill": {
+        "arcana": "+6",
+        "history": "+6"
+      },
+      "passive": 11,
+      "languages": [
+        "普通",
+        "龙族血脉",
+        "伊格南",
+        "地狱语"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Malivar 是一个9级施法者。他的施法能力是智力（法术豁免难度{@dc 14}，法术攻击命中骰{@hit 6}）。他准备了以下巫师法术："
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell 酸液溅爆}",
+                "{@spell 法师之手}",
+                "{@spell 毒气喷洒}",
+                "{@spell 魔法技俩}"
+              ]
+            },
+            "1": {
+              "slots": 4,
+              "spells": [
+                "{@spell 法师护甲}",
+                "{@spell 魔法飞弹}",
+                "{@spell 隐形仆役}*"
+              ]
+            },
+            "2": {
+              "slots": 3,
+              "spells": [
+                "{@spell 匕首之云}*",
+                "{@spell 迷踪步}*",
+                "{@spell 蛛网术}*"
+              ]
+            },
+            "3": {
+              "slots": 3,
+              "spells": [
+                "{@spell 火球术}",
+                "{@spell 雷霆步|XGE}*"
+              ]
+            },
+            "4": {
+              "slots": 3,
+              "spells": [
+                "{@spell 艾伐黑触手}*",
+                "{@spell 石肤术}"
+              ]
+            },
+            "5": {
+              "slots": 2,
+              "spells": [
+                "{@spell 寒冰锥}*",
+                "{@spell 召唤元素生物}*"
+              ]
+            }
+          },
+          "footerEntries": [
+            "*1级或更高等级的咒法系法术"
+          ],
+          "ability": "int"
+        }
+      ],
+      "trait": [
+        {
+          "name": "良性传送（当马利瓦尔施放1级或更高等级的咒法系法术时重新充能）",
+          "ENG_name": "Benign Transportation (Recharges after Malivar Casts a Conjuration Spell of 1st Level or Higher)",
+          "entries": [
+            "作为奖励动作，Malivar传送至他能看到的30英尺内未被占据的空间。",
+            "如果他选择一个范围内的空位，并且这个空位被一个愿意的小型或中型生物占据，他们将互换位置。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "匕首",
+          "ENG_name": "Dagger",
+          "entries": [
+            "{@atk 近战武器，远程武器} {@hit 5}hit，射程5英尺或20/60英尺，单一目标。{@h}4（{@damage 1d4 + 2}）穿刺h"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "匕首|PHB"
+      ],
+      "languageTags": [
+        "C",
+        "DR",
+        "I",
+        "IG"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "damageTagsSpell": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "I",
+        "O",
+        "S",
+        "T"
+      ],
+      "spellcastingTags": [
+        "CW"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW",
+        "RW",
+        "猛击"
+      ],
+      "conditionInflictSpell": [
+        "束缚"
+      ],
+      "savingThrowForcedSpell": [
+        "体质",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    }
+  ]
 }

@@ -1,737 +1,756 @@
 {
-	"spell": [
-		{
-			"name": "Conjure the Deep Haze",
-			"source": "DoDk",
-			"page": 226,
-			"level": 5,
-			"school": "C",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 10
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}.",
-				"You create a 20-foot-radius sphere of the Deep Haze on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.",
-				"When a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must succeed on a Constitution saving throw. On a failed saving throw, it suffers ({@dice 8d6}) necrotic damage and gains one {@adventure level of contamination|DoDk|12}. On a successful save, the creature takes half as much damage and does not gain any {@adventure contamination levels|DoDk|12}. Creatures are affected even if they hold their breath or don't need to breathe."
-			],
-			"savingThrow": [
-				"constitution"
-			],
-			"miscTags": [
-				"OBS"
-			]
-		},
-		{
-			"name": "Contaminated Power",
-			"source": "DoDk",
-			"page": 226,
-			"level": 8,
-			"school": "T",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium shard worth 500 gp, which the spell consumes",
-					"cost": 50000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. You draw unrestrained arcane magic from the delerium shard you hold in your hand. Until the spell ends, you gain the following benefits:",
-				{
-					"type": "list",
-					"items": [
-						"When you cast a spell that deals acid, fire, cold, lightning, or poison damage, you can change the damage type to force, necrotic, psychic, or radiant damage.",
-						"Once per turn when you deal damage with a spell, you can deal an extra {@damage 1d12} necrotic damage for each {@adventure contamination level|DoDk|12} you have gained to one target of that spell.",
-						"When you cast a spell that forces a creature to make a saving throw to resist its effects, you can choose to gain one {@adventure level of contamination|DoDk|12}. If you do, one target of the spell has disadvantage on its first saving throw made against that spell."
-					]
-				},
-				"This spell can't be dispelled by {@spell dispel magic}."
-			],
-			"damageInflict": [
-				"necrotic"
-			],
-			"hasFluff": true
-		},
-		{
-			"name": "Contamination Immunity",
-			"source": "DoDk",
-			"page": 226,
-			"level": 7,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "minute"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "An eldritch lily mixed into 250 gp worth of specially-prepared purified fluids, which the spell consumes",
-					"cost": 25000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 24
-					}
-				}
-			],
-			"entries": [
-				"Until the spell ends, one willing creature you touch is immune to necrotic damage and cannot gain {@adventure contamination levels|DoDk|12}. The affected creature may rest normally within the Haze.",
-				"This spell ends immediately if the creature casts a contaminated spell."
-			],
-			"hasFluff": true
-		},
-		{
-			"name": "Delerium Blast",
-			"source": "DoDk",
-			"page": 227,
-			"level": 4,
-			"school": "V",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 150
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}.",
-				"You ignite arcane energies stored inside a delerium fragment held in your hand, and hurl it towards a space you can see within range. It explodes in a 20-foot-radius sphere of erratic psychic energy that overwhelms the minds and senses of those within. Each creature in the sphere must succeed on an Intelligence saving throw. On a failed save, a creature takes ({@dice 10d6}) psychic damage and becomes {@condition incapacitated} until the end of their next turn. On a successful save, a target takes half as much damage and suffers none of the spell's other effects."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@dice 2d6} for each slot level above 4th."
-					]
-				}
-			],
-			"conditionInflict": [
-				"incapacitated"
-			],
-			"savingThrow": [
-				"intelligence"
-			],
-			"miscTags": [
-				"SGT"
-			]
-		},
-		{
-			"name": "Delerium Orb",
-			"source": "DoDk",
-			"page": 227,
-			"level": 1,
-			"school": "V",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. You draw chaotic magical power from the delerium fragment held in your hand, and blast a creature you can see within range with paradoxical power. Choose one ability score, then choose cold, fire, lightning, necrotic, psychic, or radiant damage. The target must succeed on a saving throw using the chosen ability score; it takes {@damage 6d6} damage of the chosen type on a failed saving throw, or half as much on a successful one."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 2d6} for each slot level above 1st."
-					]
-				}
-			],
-			"miscTags": [
-				"SGT"
-			]
-		},
-		{
-			"name": "Forced Evolution",
-			"source": "DoDk",
-			"page": 227,
-			"level": 4,
-			"school": "T",
-			"time": [
-				{
-					"number": 8,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "An alchemical cocktail made from rare components and delerium dust worth 250 gold, which the target consumes as part of the spell",
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"By means of this spell, you transform a mutation gained from {@adventure contamination|DoDk|12}. One of the target's existing mutations is removed and is replaced by a different one. This mutation may be chosen by the Game Master or determined randomly (see Appendix C of Dungeons of Drakkenheim)."
-			]
-		},
-		{
-			"name": "Neutralizing Field",
-			"source": "DoDk",
-			"page": 228,
-			"level": 5,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "sphere",
-				"distance": {
-					"type": "feet",
-					"amount": 10
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "A delerium crystal or holy relic worth 1,000 gp",
-					"cost": 100000
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You negate contaminated magical energies in a 10-foot radius sphere. Until the spell ends, the sphere moves with you, centred on you. Creatures in the sphere (including you) can't gain {@adventure contamination levels|DoDk|12} and have immunity to necrotic damage. Contaminated spells can't be cast by creatures in the area."
-			],
-			"hasFluff": true
-		},
-		{
-			"name": "Octarine Spray",
-			"source": "DoDk",
-			"page": 228,
-			"level": 7,
-			"school": "V",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "cone",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. Octarine rays of light flash from your hand. Each ray is a different colour and has a different power and purpose, see the table below. Each creature in a 60-foot cone must succeed on a Constitution saving throw. For each target, roll a {@dice d8} to determine which colour ray affects it.",
-				{
-					"type": "table",
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"colLabels": [
-						"d8",
-						"Octarine Spray Effect"
-					],
-					"rows": [
-						[
-							"1",
-							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
-						],
-						[
-							"2",
-							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
-						],
-						[
-							"3",
-							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
-						],
-						[
-							"4",
-							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
-						],
-						[
-							"5",
-							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
-						],
-						[
-							"6",
-							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
-						],
-						[
-							"7",
-							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
-						],
-						[
-							"8",
-							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
-						]
-					]
-				}
-			],
-			"damageInflict": [
-				"force",
-				"necrotic",
-				"psychic",
-				"radiant",
-				"thunder"
-			],
-			"savingThrow": [
-				"constitution",
-				"wisdom"
-			],
-			"miscTags": [
-				"RO"
-			]
-		},
-		{
-			"name": "Purge Contamination",
-			"source": "DoDk",
-			"page": 228,
-			"level": 3,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "100 gp of alchemical fluids or holy water, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You apply alchemical fluids or holy water to a contaminated humanoid creature while reciting an exacting magical chant that expels eldritch contaminants from the target's body. When you finish casting the spell, all {@adventure contamination levels|DoDk|12} and mutations are removed from the creature. It then gains one level of {@condition exhaustion} for each {@adventure contamination level|DoDk|12} removed with this spell."
-			],
-			"conditionInflict": [
-				"exhaustion"
-			]
-		},
-		{
-			"name": "Ray of Contamination",
-			"source": "DoDk",
-			"page": 229,
-			"level": 6,
-			"school": "N",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. An octarine ray springs from your pointing finger to a creature that you can see within range. The target must succeed on a Constitution saving throw. On a failed save, a creature takes {@damage 16d6} necrotic damage and gains {@dice 1d4} {@adventure levels of contamination|DoDk|12}. On a successful save, a target takes half as much damage and does not gain any {@adventure contamination levels|DoDk|12}."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, you can target one additional creature for each slot level above 6th. The creatures must be within 30 feet of each other when you target them."
-					]
-				}
-			],
-			"damageInflict": [
-				"necrotic"
-			],
-			"savingThrow": [
-				"constitution"
-			],
-			"miscTags": [
-				"SGT"
-			]
-		},
-		{
-			"name": "Ride the Rifts",
-			"source": "DoDk",
-			"page": 228,
-			"level": 3,
-			"school": "C",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "line",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. A stroke of eldritch lightning forming a line 60 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw. A creature takes {@damage 10d6} lightning damage on a failed save, or half as much damage on a successful one. You then teleport to an unoccupied space you can see within the line's area."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 2d6} for each slot level above 3rd."
-					]
-				}
-			],
-			"damageInflict": [
-				"lightning"
-			],
-			"savingThrow": [
-				"dexterity"
-			],
-			"miscTags": [
-				"SGT"
-			]
-		},
-		{
-			"name": "Sacrament of the Falling Fire",
-			"source": "DoDk",
-			"page": 229,
-			"level": 9,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 30
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp for each participating creature, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"This spell may only be cast in an area covered by the Deep Haze.",
-				"You perform a holy ceremony involving up to 12 faithful and willing humanoid creatures that ends when each participating creature drives a delerium shard into their chest. Those creatures become sanctified (see the Followers of the Falling Fire dossier in chapter 3 of Dungeons of Drakkenheim).",
-				"When you finish casting this spell, a hostile {@creature shadow} appears and attacks each participant, as a manifestation of that character's inner darkness. The GM may determine that a character who carries great anger, fear, or hate in their heart causes a {@creature wraith} to manifest instead."
-			]
-		},
-		{
-			"name": "Siphon Contamination",
-			"source": "DoDk",
-			"page": 229,
-			"level": 6,
-			"school": "T",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "500 gp worth of specially-prepared alchemical fluids and a delerium geode worth 5,000 gp, all of which are consumed by the spell",
-					"cost": 50000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"This demanding spell transfers {@adventure contamination|DoDk|12} from one creature to another. When you cast this spell, you must first touch either a willing humanoid creature with one or more {@adventure levels of contamination|DoDk|12}, or a former humanoid creature whose current form is the result of a monstrous transformation. You then touch a different willing humanoid creature.",
-				"If both creatures touched were willing humanoid creatures, you remove all {@adventure contamination levels|DoDk|12} and mutations from the first creature, then the second creature you touch gains a number of {@adventure contamination levels|DoDk|12} equal to the number of levels removed from the first creature.",
-				"If the first creature you touch is a former humanoid who suffered a monstrous {@adventure contamination|DoDk|12}, and the second creature is a willing humanoid creature with a character level or challenge rating equal to or higher than the challenge rating of the transformed creature, you restore the fully contaminated creature to its original form, then the humanoid creature immediately undergoes a monstrous transformation as if it had gained six {@adventure contamination levels|DoDk|12}.",
-				"The second creature touched cannot prevent or negate these {@adventure contamination levels|DoDk|12} or an ensuing transformation in any way, or else the spell fails with no effect."
-			],
-			"hasFluff": true
-		},
-		{
-			"name": "Warp Bolt",
-			"source": "DoDk",
-			"page": 229,
-			"level": 2,
-			"school": "V",
-			"subschools": [
-				"contaminated"
-			],
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 60
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "a delerium fragment worth 100 gp, which the spell consumes",
-					"cost": 10000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}. An arcing bolt of octarine lightning strikes a creature within range. If the target has one or more {@adventure contamination levels|DoDk|12}, it is hit automatically. Otherwise, make a ranged spell attack against that creature. On a hit, the target takes {@damage 6d6} necrotic damage and gains one {@adventure level of contamination|DoDk|12}.",
-				"You can create a new bolt of lightning as your action on any turn until the spell ends."
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target 1 additional creature for each spell level above 2nd."
-					]
-				}
-			],
-			"damageInflict": [
-				"necrotic"
-			],
-			"spellAttack": [
-				"R"
-			]
-		}
-	]
+  "spell": [
+    {
+      "name": "浓厚污霭咒唤术",
+      "ENG_name": "Conjure the Deep Haze",
+      "source": "DoDk",
+      "page": 226,
+      "level": 5,
+      "school": "C",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一个{@adventure 污染程度|死灵骑士|12}。",
+        "你在射程内的一点上创造一个20英尺半径的深雾球体。雾气可以绕过角落。它持续到持续时间结束，或者直到强风吹散雾气，结束法术。其区域被严重遮蔽。",
+        "当生物在回合中首次进入法术区域或在其回合开始时，该生物必须进行一次体质豁免检定。在豁免检定失败时，它会受到({@dice 8d6})点死灵伤害并获得一个{@adventure 污染程度|死灵骑士|12}。在成功的豁免检定时，生物受到的伤害减半，并且不会获得任何{@adventure 污染程度|死灵骑士|12}。即使生物屏住呼吸或不需要呼吸，也会受到影响。"
+      ],
+      "savingThrow": [
+        "体质"
+      ],
+      "miscTags": [
+        "观察"
+      ]
+    },
+    {
+      "name": "污染之力",
+      "ENG_name": "Contaminated Power",
+      "source": "DoDk",
+      "page": 226,
+      "level": 8,
+      "school": "T",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "加成"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值500金币的混乱碎片，法术会消耗它",
+          "cost": 50000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一个{@adventure 污染程度|死灵骑士|12}。你从手中持有的幻惑碎片中汲取不受限制的奥术魔法。直到法术结束，你获得以下好处：",
+        {
+          "type": "list",
+          "items": [
+            "当你施放一个造成酸性、火焰、寒冷、闪电或毒素伤害的法术时，你可以将伤害类型改为力量、死灵、精神或光辉伤害。",
+            "每当你用法术造成伤害时，每个回合一次，你可以为那个法术的一个目标额外造成{@damage 1d12}死灵伤害，这取决于你获得的{@adventure 污染等级|死灵骑士|12}数量。",
+            "当你施放一个法术，迫使一个生物进行豁免投掷以抵抗其效果时，你可以选择获得一个{@adventure 污染程度|死灵骑士|12}。如果你这么做，法术的一个目标在其第一次对抗该法术的豁免投掷上会有劣势。"
+          ]
+        },
+        "这个法术不能被{@spell 解除魔法}解除。"
+      ],
+      "damageInflict": [
+        "死灵"
+      ],
+      "hasFluff": true
+    },
+    {
+      "name": "污染免疫",
+      "ENG_name": "Contamination Immunity",
+      "source": "DoDk",
+      "page": 226,
+      "level": 7,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "分钟"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一朵奥术百合混入价值250金币的特别准备的净化液体中，法术会消耗它们",
+          "cost": 25000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "entries": [
+        "直到法术结束，你触摸的一个愿意的生物对死灵伤害免疫，并且不能获得{@adventure 污染等级|死灵骑士|12}。受影响的生物可以在迷雾中正常休息。",
+        "如果生物施放了污染法术，这个法术会立即结束。"
+      ],
+      "hasFluff": true
+    },
+    {
+      "name": "妄能爆破",
+      "ENG_name": "Delerium Blast",
+      "source": "DoDk",
+      "page": 227,
+      "level": 4,
+      "school": "V",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 150
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一个{@adventure 污染程度|死灵骑士|12}。",
+        "你点燃手中持有的幻觉碎片内储存的奥术能量，将其投向你视野范围内的空间。它在20英尺半径的球形区域内爆炸，释放出不稳定的精神能量，压倒了其中生物的心智和感官。球体内的每个生物都必须进行一次智力豁免掷骰。如果豁免失败，生物受到({@dice 10d6})的精神伤害，并在它们下一个回合结束前处于{@condition 无力}状态。如果豁免成功，目标受到一半的伤害，并且不受法术其他效果的影响。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用5级或更高等级的法术位施放这个法术时，每超过4级，伤害增加{@dice 2d6}。"
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "无力"
+      ],
+      "savingThrow": [
+        "智力"
+      ],
+      "miscTags": [
+        "中士"
+      ]
+    },
+    {
+      "name": "妄彩球",
+      "ENG_name": "Delerium Orb",
+      "source": "DoDk",
+      "page": 227,
+      "level": 1,
+      "school": "V",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一个{@adventure 污染程度|死灵骑士|12}。你从手中持有的混乱碎片中汲取混乱的魔法力量，并向范围内你能看到的一个生物发射悖论力量。选择一个能力值，然后选择冷、火、闪电、死灵、心灵或辐射伤害类型。目标必须使用所选的能力值进行豁免投掷；在豁免失败时受到{@damage 6d6}点所选类型的伤害，或在成功时受到一半的伤害。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用2级或更高级别的法术位施放这个法术时，每超过1级的法术位，伤害增加{@dice 2d6}。"
+          ]
+        }
+      ],
+      "miscTags": [
+        "中士"
+      ]
+    },
+    {
+      "name": "强制进化",
+      "ENG_name": "Forced Evolution",
+      "source": "DoDk",
+      "page": 227,
+      "level": 4,
+      "school": "T",
+      "time": [
+        {
+          "number": 8,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一种由稀有成分和谵妄尘制成的炼金鸡尾酒，价值250金币，目标作为施法的一部分消耗之。",
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "通过这个法术，你可以转变由{@adventure 污染|死灵骑士|12}获得的变异。目标的一个现有变异被移除，并被一个不同的变异所替代。这个变异可以由游戏主持人选择，或者随机确定（见《德拉肯海姆的地下城》附录C）。"
+      ]
+    },
+    {
+      "name": "中和场域",
+      "ENG_name": "Neutralizing Field",
+      "source": "DoDk",
+      "page": 228,
+      "level": 5,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "sphere",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值1,000金币的谵妄水晶或圣物",
+          "cost": 100000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "你在10英尺半径的球形区域内抵消了污染的魔法能量。直到法术结束，这个球形区域会随着你移动，以你为中心。在球形区域内的生物（包括你）不能获得{@adventure 污染等级|死灵骑士|12}，并且对死灵伤害有免疫。在该区域内的生物不能施放污染法术。"
+      ],
+      "hasFluff": true
+    },
+    {
+      "name": "第八虹光喷射",
+      "ENG_name": "Octarine Spray",
+      "source": "DoDk",
+      "page": 228,
+      "level": 7,
+      "school": "V",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "cone",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一层{@adventure 污染程度|死灵骑士|12}。八色光线从你的手中闪烁而出。每道光线颜色不同，具有不同的能量和目的，详见下表。每一个在60英尺锥形区域内的生物都必须进行一次体质豁免投掷。对于每个目标，掷一个{@dice d8}来决定哪种颜色的光线影响它。",
+        {
+          "type": "table",
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "colLabels": [
+            "d8",
+            "八度空间喷雾效果"
+          ],
+          "rows": [
+            [
+              "1",
+              "目标在豁免失败时受到{@damage 20d6}点心灵伤害，豁免成功则受到一半的伤害。"
+            ],
+            [
+              "2",
+              "目标在豁免失败时受到{@damage 20d6}点死灵伤害，或在成功时受到一半的伤害。"
+            ],
+            [
+              "3",
+              "目标在失败的豁免检定时受到{@damage 20d6}点力量伤害，或在成功的豁免检定时受到一半的伤害。"
+            ],
+            [
+              "4",
+              "目标在豁免失败时受到{@damage 20d6}的光辉伤害，或者在成功时受到一半的伤害。"
+            ],
+            [
+              "5",
+              "目标在豁免失败时受到{@damage 20d6}点雷击伤害，豁免成功则受到一半的伤害。"
+            ],
+            [
+              "6",
+              "在它的每个回合开始时，受影响的目标使用其所有移动力直接朝它能看到的最近的生物移动。然后，受影响的目标使用其行动对在其攻击范围内随机确定的一个生物进行近战攻击。如果其攻击范围内没有生物，受影响的目标在这个回合不进行任何动作。在它的每个回合结束时，受影响的目标可以进行一次智力豁免投掷。如果成功，这个效果对那个目标结束。"
+            ],
+            [
+              "7",
+              "在每个回合开始时，受影响的目标获得一层{@adventure 污染程度|死灵骑士|12}。在每个回合结束时，受影响的目标可以进行一次体质豁免投掷。如果成功，该效果对该目标结束，但获得的任何{@adventure 污染程度|死灵骑士|12}仍然保留。"
+            ],
+            [
+              "8",
+              "{@b 特殊。} 目标被额外的射线击中。再次掷骰两次。以这种方式，没有限制可以击中单个生物的额外射线的数量。"
+            ]
+          ]
+        }
+      ],
+      "damageInflict": [
+        "力量",
+        "死灵",
+        "心灵",
+        "光辉",
+        "雷鸣伤害"
+      ],
+      "savingThrow": [
+        "体质",
+        "感知"
+      ],
+      "miscTags": [
+        "RO"
+      ]
+    },
+    {
+      "name": "祛除污染",
+      "ENG_name": "Purge Contamination",
+      "source": "DoDk",
+      "page": 228,
+      "level": 3,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "100金币的炼金液体或圣水，法术会消耗它们",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "你在念诵一个精确的魔法咒语的同时，将炼金液体或圣水应用到一个被污染的类人生物身上，从而将邪恶的污染物从目标体内驱逐出去。当你完成施法时，所有污染等级和变异都被从生物身上移除。然后，对于通过这个法术移除的每一个污染等级，它获得一级{@condition exhaustion}。"
+      ],
+      "conditionInflict": [
+        "力竭"
+      ]
+    },
+    {
+      "name": "污染射线",
+      "ENG_name": "Ray of Contamination",
+      "source": "DoDk",
+      "page": 229,
+      "level": 6,
+      "school": "N",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一个{@adventure 污染程度|死灵骑士|12}。一道八色光线从你指向的手指射出，到达你视野范围内的一个生物。目标必须进行一次体质豁免掷骰。如果豁免失败，生物受到{@damage 16d6}的死灵伤害，并获得{@dice 1d4}个{@adventure 污染程度|死灵骑士|12}。如果豁免成功，目标受到一半的伤害，并且不会获得任何{@adventure 污染程度|死灵骑士|12}。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用7级或更高级别的法术位施放这个法术时，每超过6级法术位一个等级，你可以额外选择一个生物作为目标。当你选择它们作为目标时，这些生物必须彼此距离在30英尺以内。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "死灵"
+      ],
+      "savingThrow": [
+        "体质"
+      ],
+      "miscTags": [
+        "中士"
+      ]
+    },
+    {
+      "name": "驱隙电闪",
+      "ENG_name": "Ride the Rifts",
+      "source": "DoDk",
+      "page": 228,
+      "level": 3,
+      "school": "C",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "line",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一层{@adventure 污染程度|死灵骑士|12}。一道奥术闪电形成一条60英尺长、5英尺宽的线从你选择的方向爆发出来。线上的每个生物都必须进行一次敏捷豁免投掷。生物在失败的豁免投掷上受到{@damage 10d6}闪电伤害，在成功的豁免投掷上受到一半的伤害。然后你传送到你能看到的线区域内的一个未被占据的空间。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用4级或更高级别的法术位施放这个法术时，每超过3级的法术位，伤害增加{@dice 2d6}。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "闪电"
+      ],
+      "savingThrow": [
+        "敏捷"
+      ],
+      "miscTags": [
+        "中士"
+      ]
+    },
+    {
+      "name": "天火圣礼",
+      "ENG_name": "Sacrament of the Falling Fire",
+      "source": "DoDk",
+      "page": 229,
+      "level": 9,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "每个参与生物的一块价值100金币的谵妄碎片，法术会消耗这些碎片。",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "这个法术只能在深雾覆盖的区域内施放。",
+        "你进行一个神圣的仪式，涉及多达12个虔诚且愿意的类人生物，当每个参与的生物将一块谵妄碎片插入他们的胸膛时，仪式结束。这些生物变得神圣化（见《堕落之火的追随者》档案，位于《德克拉肯海姆的地牢》第三章）。",
+        "当你完成这个法术的施放，一个敌对的{@creature Shadow}会出现并攻击每个参与者，作为那个角色内心黑暗的体现。GM可以决定，如果一个角色心中怀有巨大的愤怒、恐惧或仇恨，那么一个{@creature 缚灵}将会出现。"
+      ]
+    },
+    {
+      "name": "污染转嫁",
+      "ENG_name": "Siphon Contamination",
+      "source": "DoDk",
+      "page": 229,
+      "level": 6,
+      "school": "T",
+      "time": [
+        {
+          "number": 1,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "价值500金币的特制炼金液体和价值5000金币的幻觉宝石，这些都会被法术消耗掉",
+          "cost": 50000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "这个要求严格的法术可以将来自一个生物的{@adventure 污染|死灵骑士|12}转移到另一个生物上。当你施放这个法术时，你必须首先触摸一个愿意的类人生物，这个生物具有一个或多个{@adventure 污染程度|死灵骑士|12}，或者是一个当前形态由于怪物变形而产生的前类人生物。然后你触摸一个不同的愿意的类人生物。",
+        "如果两个被触摸的生物都是愿意的类人生物，你将第一个生物的所有{@adventure 污染等级|死灵骑士|12}和变异移除，然后第二个你触摸的生物获得与从第一个生物移除的等级数相等的{@adventure 污染等级|死灵骑士|12}。",
+        "如果第一个你触摸的生物是曾经遭受了怪物化污染的类人生物，并且第二个生物是具有与被变形生物挑战等级相等或更高的等级或挑战等级的愿意的类人生物，你将完全被污染的生物恢复到其原始形态，然后类人生物立即经历怪物化变形，就像它获得了六个怪物化污染等级。",
+        "第二个被触碰的生物无法以任何方式阻止或否定这些{@adventure 污染等级|死灵骑士|12}或随后的转变，否则法术将无效，没有任何效果。"
+      ],
+      "hasFluff": true
+    },
+    {
+      "name": "扭曲矢",
+      "ENG_name": "Warp Bolt",
+      "source": "DoDk",
+      "page": 229,
+      "level": 2,
+      "school": "V",
+      "subschools": [
+        "污染的"
+      ],
+      "time": [
+        {
+          "number": 1,
+          "unit": "肉体雕塑者"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "一块价值100金币的谵妄碎片，该法术会消耗它",
+          "cost": 10000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "当你施放这个法术时，你获得一层{@adventure 污染程度|死灵骑士|12}。一道八色闪电弧线击中范围内的一个生物。如果目标有一个或多个{@adventure 污染程度|死灵骑士|12}，它将自动被击中。否则，对该生物进行远程法术攻击。命中时，目标受到{@damage 6d6}死灵伤害，并获得一层{@adventure 污染程度|死灵骑士|12}。",
+        "你可以在法术持续期间的任意回合使用动作创造一道新的闪电。"
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用3级或更高级别的法术位来施放这个法术时，每超过2级法术位一个等级，你可以额外选择一个生物作为目标。"
+          ]
+        }
+      ],
+      "damageInflict": [
+        "死灵"
+      ],
+      "spellAttack": [
+        "R"
+      ]
+    }
+  ]
 }

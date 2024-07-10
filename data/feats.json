@@ -23,7 +23,7 @@
               "rest": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=术士"
+                    "choose": "level=1|class=术士"
                   }
                 ]
               }
@@ -32,7 +32,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=术士"
+                "choose": "level=0|class=术士"
               }
             ]
           }
@@ -43,7 +43,7 @@
         {
           "type": "list",
           "items": [
-            "你学会了一个来自术士法术列表的{@filter 0级法术，由你选择|spells|level=0|class=Sorcerer}。此外，从术士法术列表中选择一个{@filter 1级法术|spells|level=1|class=Sorcerer}。你学会了那个法术，并且可以通过你的印记来施放它。一旦你通过印记施放了它，你必须完成一次短休或长休后，才能再次通过印记施放它。对于这些法术，体质是你的施法能力值。",
+            "你学会了一个来自术士法术列表的{@filter 从术士法术列表中选择的戏法|法术|level=0|职业=术士}。此外，从术士法术列表中选择一个{@filter 来自术士法术列表的1级法术|法术|level=1|职业=术士}。你学会了那个法术，并且可以通过你的印记来施放它。一旦你通过印记施放了它，你必须完成一次短休或长休后，才能再次通过印记施放它。对于这些法术，体质是你的施法能力值。",
             "当你通过你的龙纹施放1级法术时，你可以消耗一个生命骰并掷之。如果你掷出偶数，你获得等于掷出数字的生命值的临时生命值。如果你掷出奇数，30英尺范围内的一个随机生物（不包括你自己）会受到等于掷出数字的力量伤害。如果没有其他生物在范围内，你将受到该伤害。"
           ]
         },
@@ -60,22 +60,38 @@
             "col-10"
           ],
           "rows": [
-            "1",
-            "你的印记是持续的身体痛苦的来源。",
-            "2",
-            "你的龙纹在对你低语。其含义可能不清晰。",
-            "3",
-            "当你感到压力时，印记会发出可听见的嘶嘶声。",
-            "4",
-            "龙纹周围的皮肤被烧焦、鳞状或枯萎。",
-            "5",
-            "动物在你身边会感到不安。",
-            "6",
-            "每次使用你的龙纹时，你都会情绪波动。",
-            "7",
-            "每次使用印记时，你的外貌都会轻微改变。",
-            "8",
-            "使用你的龙纹后，你会做可怕的噩梦。"
+            [
+              "1",
+              "你的印记是持续的身体痛苦的来源。"
+            ],
+            [
+              "2",
+              "你的龙纹在对你低语。其含义可能不清晰。"
+            ],
+            [
+              "3",
+              "当你感到压力时，印记会发出可听见的嘶嘶声。"
+            ],
+            [
+              "4",
+              "龙纹周围的皮肤被烧焦、鳞状或枯萎。"
+            ],
+            [
+              "5",
+              "动物在你身边会感到不安。"
+            ],
+            [
+              "6",
+              "每次使用你的龙纹时，你都会情绪波动。"
+            ],
+            [
+              "7",
+              "每次使用印记时，你的外貌都会轻微改变。"
+            ],
+            [
+              "8",
+              "使用你的龙纹后，你会做可怕的噩梦。"
+            ]
           ]
         },
         {
@@ -114,7 +130,7 @@
         {
           "type": "list",
           "items": [
-            "当你试图冒充另一个人时，你在魅力（{@skill 欺骗}）和魅力（{@skill 表演}）检定时具有优势。",
+            "当你试图冒充另一个人时，你在魅力（{@skill 欺瞒}）和魅力（{@skill 表演}）检定时具有优势。",
             "你可以模仿另一个人的语言或其它生物发出的声音。你必须至少听过这个人说话或听过这个生物发出声音1分钟。通过成功的智力（洞察）检定，对抗你的感知（欺骗）检定，可以让听众判断出这个效果是伪造的。"
           ]
         }
@@ -129,7 +145,7 @@
         {
           "level": 4,
           "feat": [
-            "高等魔法的入门者|dsotdq|尼图阿里的高等魔法入门者"
+            "高等术法学徒|DSotDQ|高阶魔法学徒（努伊塔利）"
           ]
         }
       ],
@@ -147,7 +163,7 @@
               "daily": {
                 "1e": [
                   {
-                    "choose": "等级=2|学派=附魔；幻术"
+                    "choose": "level=2|school=E;N"
                   }
                 ]
               }
@@ -166,7 +182,7 @@
               "name": "雄心魔法",
               "ENG_name": "Ambitious Magic",
               "entries": [
-                "你学会了一个你选择的2级法术。这个{@filter 2级法术|spells|level=2|school=E;N}必须是来自附魔或死灵学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等魔法入门者|DSotDQ}特性时选择的那个。"
+                "你学会了一个你选择的2级法术。这个{@filter 2级法术|法术|level=2|school=E;N}必须是来自附魔或死灵学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等术法学徒|DSotDQ}特性时选择的那个。"
               ]
             },
             {
@@ -191,7 +207,7 @@
         {
           "level": 4,
           "feat": [
-            "高等魔法的入门者|dsotdq|露尼塔瑞的高等魔法入门者"
+            "高等术法学徒|DSotDQ|高等魔法入门者（露尼塔丽）"
           ]
         }
       ],
@@ -209,7 +225,7 @@
               "daily": {
                 "1e": [
                   {
-                    "choose": "等级=2|学派=I;T"
+                    "choose": "level=2|school=I;T"
                   }
                 ]
               }
@@ -228,7 +244,7 @@
               "name": "洞察魔法",
               "ENG_name": "Insightful Magic",
               "entries": [
-                "你学会了一个你选择的2级法术。这个{@filter 2级法术|spells|level=2|school=I;T}必须是来自幻术或变化学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等魔法入门者|DSotDQ}特性时选择的那个。"
+                "你学会了一个你选择的2级法术。这个{@filter 2级法术|法术|level=2|school=I;T}必须是来自幻术或变化学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等术法学徒|DSotDQ}特性时选择的那个。"
               ]
             },
             {
@@ -236,7 +252,7 @@
               "name": "魔法平衡",
               "ENG_name": "Magical Balance",
               "entries": [
-                "When you make an attack roll or an ability check and roll a 9 or lower on the {@dice d20}, you can balance fate and treat the roll as a 10. You can balance fate in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "当你进行攻击检定或能力检定时，如果骰出9或更低的点数在{@dice d20}上，你可以平衡命运，将该检定视为10。你可以以这种方式平衡命运的次数等于你的熟练加值，并且在你完成一次长休后恢复所有已用的次数。"
               ]
             }
           ]
@@ -253,7 +269,7 @@
         {
           "level": 4,
           "feat": [
-            "高等魔法的入门者|dsotdq|索拉里尼的高等魔法入门者"
+            "高等术法学徒|DSotDQ|高阶魔法的入门者（索拉里尼）"
           ]
         }
       ],
@@ -271,7 +287,7 @@
               "daily": {
                 "1e": [
                   {
-                    "choose": "等级=2|学派=A;D"
+                    "choose": "level=2|school=A;D"
                   }
                 ]
               }
@@ -290,7 +306,7 @@
               "name": "保护魔法",
               "ENG_name": "Protective Magic",
               "entries": [
-                "你学会了一个你选择的2级法术。这个{@filter 2级法术|spells|level=2|school=A;D}必须是来自防护或预言学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等魔法入门者|DSotDQ}特性时选择的那个。"
+                "你学会了一个你选择的2级法术。这个{@filter 2级法术|法术|level=2|school=A;D}必须是来自防护或预言学派的魔法。你可以不使用法术位施放这个特性的2级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的适当级别的法术位来施放这个法术。这个法术的施法能力值是你在获得{@feat 高等术法学徒|DSotDQ}特性时选择的那个。"
               ]
             },
             {
@@ -345,7 +361,7 @@
           "type": "list",
           "items": [
             "你不再需要至少移动10英尺来执行长跳和高跳。你可以选择跳跃使用你的力量或敏捷属性来确定高度或距离，并且在任何情况下你都会使你通常跳跃的距离翻倍。",
-            "在滑翔时，你可以采取{@action 冲刺}动作，额外飞行距离最多可达你的移动速度。",
+            "在滑翔时，你可以采取{@action 疾走}动作，额外飞行距离最多可达你的移动速度。",
             "在滑翔时，你可以自由改变方向，并且在完成下降前可以增加最多10英尺的高度。"
           ]
         }
@@ -360,7 +376,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|sato|秩序外层位面的后裔"
+            "外层位面后裔|SatO|外层位面后裔（守序外层位面）"
           ]
         }
       ],
@@ -408,7 +424,7 @@
           "type": "list",
           "items": [
             "你的先攻获得+5的加值。",
-            "当你清醒时，你不能被{@quickref 突袭|PHB|3|0|突袭}。",
+            "当你清醒时，你不能被{@quickref 突袭|PHB|3|0|被突袭}。",
             "其他生物因为不被你看见而对你进行攻击检定时不会获得优势。"
           ]
         }
@@ -432,7 +448,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=炼金术士"
+                    "choose": "level=1|class=奇械师"
                   }
                 ]
               }
@@ -441,7 +457,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=炼金术士"
+                "choose": "level=0|class=奇械师"
               }
             ]
           }
@@ -452,9 +468,9 @@
         {
           "type": "list",
           "items": [
-            "你从{@filter 炼金术士法术列表|spells|level=0;1|class=artificer}中选择学会了一个0级法术，并且从{@filter 该列表|spells|level=0;1|class=artificer}中选择学会了一个1级法术。智力是你的这些法术的施法能力。",
+            "你从{@filter 炼金术士法术列表|法术|level=0;1|职业=炼金术士}中选择学会了一个0级法术，并且从{@filter 那个列表|法术|level=0;1|职业=炼金术士}中选择学会了一个1级法术。智力是你的这些法术的施法能力。",
             "你可以不使用法术位来施放这个特性的1级法术，并且你必须完成一次长休后才能再次以这种方式施放它。你也可以使用你拥有的任何法术位来施放这个法术。",
-            "你选择一种类型的{@filter 工匠工具|items|type=artisan's tools}并获得对该类型工具的熟练度，你可以将这种类型的工具作为施法焦点，用于任何使用智力作为施法能力的法术。"
+            "你选择一种类型的{@filter 工匠工具|物品|type=工匠工具}并获得对该类型工具的熟练度，你可以将这种类型的工具作为施法焦点，用于任何使用智力作为施法能力的法术。"
           ]
         }
       ]
@@ -480,7 +496,7 @@
         {
           "type": "list",
           "items": [
-            "当你处于{@condition 倒地}状态时，站起来仅消耗你5英尺的移动力。",
+            "当你处于{@condition 伏地}状态时，站起来仅消耗你5英尺的移动力。",
             "攀爬不会额外消耗你的移动力。",
             "在跑步后，你只需步行5英尺就可以进行跑步长跳或跑步高跳，而不是10英尺。"
           ]
@@ -496,7 +512,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|sato|邪恶外层位面的后裔"
+            "外层位面后裔|SatO|外位面后裔（邪恶外位面）"
           ]
         }
       ],
@@ -526,7 +542,7 @@
               "name": "贪婪之握",
               "ENG_name": "Grasp of Avarice",
               "entries": [
-                "Once per turn, when you damage a creature you can see within 60 feet of yourself, you can also deal necrotic damage to it. The necrotic damage equals {@dice 1d6} + your proficiency bonus, and you regain a number of hit points equal to this necrotic damage dealt. You can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "每当你的回合，当你对60英尺内你能看到的生物造成伤害时，你还可以对其造成等同于{@dice 1d6}加上你的熟练加值的死灵伤害。你恢复等于此次死灵伤害的命中点数。你可以使用这种好处的次数等于你的熟练加值，当你完成一次长时间休息后，你恢复所有已使用的点数。"
               ]
             }
           ]
@@ -576,7 +592,7 @@
       ],
       "entries": [
         "你的民族拥有非凡的运气，你已经学会了在看到同伴动摇时，神秘地将运气借给他们。你不确定自己是如何做到的；你只是希望它发生，然后它就发生了。这无疑是幸运之神的青睐！",
-        "When an ally you can see within 30 feet of you rolls a 1 on the {@dice d20} for an attack roll, an ability check, or a saving throw, you can use your reaction to let the ally reroll the die. The ally must use the new roll.",
+        "当你可以看到的盟友在距离你30英尺内使用{@dice d20}进行攻击检定、能力检定或豁免检定时掷出了1，你可以使用你的反应让盟友重新掷骰。盟友必须使用新的掷骰结果。",
         "当你使用这个能力时，在下一回合结束之前，你不能使用你的幸运种族特性。"
       ]
     },
@@ -620,7 +636,7 @@
           "innate": {
             "known": {
               "_": [
-                "戏法#c"
+                "魔法技俩#c"
               ]
             }
           }
@@ -637,7 +653,7 @@
               "name": "纸牌技巧",
               "ENG_name": "Card Tricks",
               "entries": [
-                "你学会了{@spell 戏法}戏法，并可以使用它来创造幻觉，复制舞台魔术的效果。当你以这种方式使用{@spell 戏法}时，你可以将法术的言语和肢体动作隐藏为普通的对话和纸牌操作。"
+                "你学会了{@spell 魔法伎俩}戏法，并可以使用它来创造幻觉，复制舞台魔术的效果。当你以这种方式使用{@spell 魔法伎俩}时，你可以将法术的言语和肢体动作隐藏为普通的对话和纸牌操作。"
               ]
             },
             {
@@ -658,7 +674,7 @@
       "source": "PHB",
       "page": 165,
       "entries": [
-        "当你使用动作来进行{@action Dash}时，你可以使用一个奖励动作来进行一次近战武器攻击或对一个生物进行{@action shove}。",
+        "当你使用动作来进行{@action 疾走}时，你可以使用一个奖励动作来进行一次近战武器攻击或对一个生物进行{@action 推撞}。",
         "如果你在进行这个奖励动作之前立即直线移动至少10英尺，你要么获得攻击伤害骰的+5加值（如果你选择进行近战攻击并且命中），要么将目标推开最多10英尺远（如果你选择推挤并且成功）。"
       ]
     },
@@ -688,8 +704,8 @@
         {
           "type": "list",
           "items": [
-            "如果你之前没有，你获得了对{@item cook's utensils|phb}的熟练度。",
-            "As part of a short rest, you can cook special food, provided you have ingredients and {@item cook's utensils|phb} on hand. You can prepare enough of this food for a number of creatures equal to 4 + your proficiency bonus. At the end of the short rest, any creature who eats the food and spends one or more Hit Dice to regain hit points regains an extra {@dice 1d8} hit points.",
+            "如果你之前没有，你获得了对{@item 厨师工具|PHB}的熟练度。",
+            "作为短暂休息的一部分，你可以烹饪特殊食物，前提是你手头有食材和《玩家手册》中的{@item 厨师工具|PHB}。你可以为等于4 + 你的熟练加值数量的生物准备足够的食物。在短暂休息结束时，任何吃下这些食物并使用一个或多个生命骰来恢复生命点数的生物将额外恢复{@dice 1d8}生命点数。",
             "通过一个小时的工作或者当你完成一次长休息时，你可以烹饪出等于你的熟练加值数量的美味佳肴。这些特殊美食在制作完成后可以持续8小时。一个生物可以使用奖励动作来吃一个这些美食，以获得等于你的熟练加值的临时生命值。"
           ]
         }
@@ -704,7 +720,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|sato|外层位面的后裔（混乱的外层位面）"
+            "外层位面后裔|SatO|外域后裔（混乱外域）"
           ]
         }
       ],
@@ -747,14 +763,22 @@
                     "闪光"
                   ],
                   "rows": [
-                    "1",
-                    "{@b 战斗狂怒。} 你选择的一个你能看到的生物充满了鲁莽的愤怒。它在攻击检定上获得优势，在能力检定上处于劣势。",
-                    "2",
-                    "{@b 干扰场。} 能量波在你周围荡漾。每个在其回合开始时在你5英尺范围内的生物，或者在回合中首次进入该区域的生物，会受到{@damage 1d8}力量伤害。",
-                    "3",
-                    "{@b 解放。} 当你移动时，你可以使用部分或全部的步行速度来传送自己一次，连同你穿戴或携带的任何装备，传送到你能看到的未被占据的空间，距离等于你使用的速度。",
-                    "4",
-                    "{@b 哀嚎之风。} 风在你为中心的15英尺半径范围内旋转。你和那个区域内的其他生物在智慧豁免检定上处于劣势。"
+                    [
+                      "1",
+                      "{@b 战斗狂怒。} 你选择的一个你能看到的生物充满了鲁莽的愤怒。它在攻击检定上获得优势，在能力检定上处于劣势。"
+                    ],
+                    [
+                      "2",
+                      "{@b 干扰场。} 能量波在你周围荡漾。每个在其回合开始时在你5英尺范围内的生物，或者在回合中首次进入该区域的生物，会受到{@damage 1d8}力量伤害。"
+                    ],
+                    [
+                      "3",
+                      "{@b 无拘无束。} 当你移动时，你可以使用部分或全部的步行速度来传送自己一次，连同你穿戴或携带的任何装备，传送到你能看到的未被占据的空间，距离等于你使用的速度。"
+                    ],
+                    [
+                      "4",
+                      "{@b 哀嚎之风。} 风在你为中心的15英尺半径范围内旋转。你和那个区域内的其他生物在智慧豁免检定上处于劣势。"
+                    ]
                   ]
                 }
               ]
@@ -775,7 +799,7 @@
           "items": [
             "你忽略了你熟练掌握的弩的装填特性。",
             "处于敌对生物5英尺范围内不会对你的远程攻击检定造成劣势。",
-            "当你使用{@action 攻击}动作，并用单手武器攻击时，你可以使用额外行动来攻击你持有的{@item 手弩|phb}。"
+            "当你使用{@action 攻击}动作，并用单手武器攻击时，你可以使用额外行动来攻击你持有的{@item 手弩|PHB}。"
           ]
         }
       ]
@@ -786,17 +810,17 @@
       "source": "TDCSR",
       "page": 190,
       "entries": [
-        "你一生中所面临的挑战和斗争使你在给他人带来痛苦和折磨中找到了乐趣。你获得了等于你的熟练加值数量的残忍骰。你的残忍骰是{@dice d6|d6s}。你每个回合只能掷一个残忍骰，并且掷出时即视为消耗。",
+        "你一生中所面临的挑战和斗争使你在给他人带来痛苦和折磨中找到了乐趣。你获得了等于你的熟练加值数量的残忍骰。你的残忍骰是{@dice d6|六面骰}。你每个回合只能掷一个残忍骰，并且掷出时即视为消耗。",
         "你可以在以下任何情况下掷残酷骰，并得到相应的结果：",
         {
           "type": "list",
           "items": [
             "当你对一个生物造成伤害时，消耗一个残忍骰来对该生物造成等同于骰子点数的额外伤害。",
             "当你造成致命一击时，消耗一个残忍骰来获得等同于骰子点数的临时生命值。",
-            "当你进行魅力（{@skill 恐吓}）检定时，消耗一个残忍骰并将骰子点数加到你的检定上。"
+            "当你进行魅力（{@skill 威吓}）检定时，消耗一个残忍骰并将骰子点数加到你的检定上。"
           ]
         },
-        "当你完成一次{@quickref resting|PHB|2|0|长休息}时，你恢复所有已使用的残酷骰。"
+        "当你完成一次{@quickref 休息|PHB|2|0|长休}时，你恢复所有已使用的残酷骰。"
       ]
     },
     {
@@ -871,7 +895,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师",
+                "choose": "level=0|class=牧师",
                 "count": 1
               }
             ]
@@ -882,7 +906,7 @@
                 "1e": [
                   "卜筮",
                   {
-                    "choose": "等级=1|职业=术士"
+                    "choose": "level=1|class=契术师"
                   }
                 ]
               }
@@ -902,7 +926,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师",
+                "choose": "level=0|class=牧师",
                 "count": 1
               }
             ]
@@ -913,7 +937,7 @@
                 "1e": [
                   "卜筮",
                   {
-                    "choose": "等级=1|职业=牧师"
+                    "choose": "level=1|class=牧师"
                   }
                 ]
               }
@@ -921,7 +945,7 @@
           }
         },
         {
-          "name": "阵营:绝对中立",
+          "name": "绝对中立",
           "ENG_name": "Neutral",
           "ability": {
             "choose": [
@@ -933,7 +957,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师",
+                "choose": "level=0|class=牧师",
                 "count": 1
               }
             ]
@@ -944,7 +968,7 @@
                 "1e": [
                   "卜筮",
                   {
-                    "choose": "等级=1|职业=德鲁伊"
+                    "choose": "level=1|class=德鲁伊"
                   }
                 ]
               }
@@ -954,7 +978,7 @@
       ],
       "entries": [
         "一位神选择了你来携带他们力量的火花。",
-        "你可以选择学习一个来自{@filter 牧师法术列表|法术|等级=0|职业=牧师}的戏法，以及根据你的角色阵营在下表中的阵营法术表指定的一个1级法术。你还会学习{@spell 占卜}法术。",
+        "你可以选择学习一个来自{@filter 牧师法术列表|法术|level=0|职业=牧师}的戏法，以及根据你的角色阵营在下表中的阵营法术表指定的一个1级法术。你还会学习{@spell 卜筮}法术。",
         {
           "type": "table",
           "caption": "阵营法术",
@@ -967,15 +991,21 @@
             "col-10"
           ],
           "rows": [
-            "邪恶",
-            "选择一个{@filter 1级术士法术|法术|等级=1|职业=术士}",
-            "好的",
-            "选择一个{@filter 1级牧师法术|法术|等级=1|职业=牧师}",
-            "阵营:绝对中立",
-            "选择一个{@filter 1级德鲁伊法术|法术|等级=1|职业=德鲁伊}"
+            [
+              "邪恶",
+              "选择一个{@filter 1级术士法术|法术|level=1|职业=术士}"
+            ],
+            [
+              "好的",
+              "选择一个{@filter 1级牧师法术|法术|level=1|职业=牧师}"
+            ],
+            [
+              "绝对中立",
+              "选择一个{@filter 1级德鲁伊法术|法术|level=1|职业=德鲁伊}"
+            ]
           ]
         },
-        "你可以选择一个1级法术和{@spell 占卜}法术，无需消耗法术位即可施放，并且你必须完成一次长休息后才能再次以这种方式施放这些法术。你也可以使用你拥有的相应等级的法术位来施放这些法术。",
+        "你可以选择一个1级法术和{@spell 卜筮}法术，无需消耗法术位即可施放，并且你必须完成一次长休息后才能再次以这种方式施放这些法术。你也可以使用你拥有的相应等级的法术位来施放这些法术。",
         "对于这个特性的法术，你的施法能力是智力、智慧或魅力（在选择这个特性时选择）。",
         "此外，你可以使用圣徽作为施法焦点，用于施放任何使用你在选择这个特性时选择的施法能力的法术。"
       ]
@@ -1050,7 +1080,7 @@
           "type": "list",
           "items": [
             "你的鳞片变硬。当你没有穿戴盔甲时，你可以将你的AC计算为13 + 你的敏捷调整值。即使使用盾牌，你仍然可以获得这个好处。",
-            "You grow retractable claws from the tips of your fingers. Extending or retracting the claws requires no action. The claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to {@dice 1d4} + your Strength modifier, instead of the normal bludgeoning damage for an unarmed strike."
+            "你的指尖长出可伸缩的爪子。伸展或收回爪子不需要任何动作。这些爪子是天然武器，你可以用它们进行徒手攻击。如果你击中目标，你将造成等同于{@dice 1d4}加上你的力量调整值的斩击伤害，而不是徒手攻击的正常钝击伤害。"
           ]
         }
       ]
@@ -1090,7 +1120,7 @@
         }
       ],
       "entries": [
-        "你学习了更多典型的暗精灵魔法。你学会了{@spell 侦测魔法}法术，并且可以随意施放它，无需消耗法术位。你还学会了{@spell 悬浮}和{@spell 解除魔法}，这两个法术你都可以各施放一次，无需消耗法术位。当你完成一次长休息时，你将重新获得以这种方式施放这两个法术的能力。魅力是你的所有三个法术的施法能力。"
+        "你学习了更多典型的暗精灵魔法。你学会了{@spell 侦测魔法}法术，并且可以随意施放它，无需消耗法术位。你还学会了{@spell 浮空术}和{@spell 解除魔法}，这两个法术你都可以各施放一次，无需消耗法术位。当你完成一次长休息时，你将重新获得以这种方式施放这两个法术的能力。魅力是你的所有三个法术的施法能力。"
       ]
     },
     {
@@ -1120,10 +1150,10 @@
         {
           "type": "list",
           "items": [
-            "你在进行智慧（{@skill 感知}）和智力（{@skill 调查}）检定时，有优势，以检测秘密门的存在。",
+            "你在进行智慧（{@skill 察觉}）和智力（{@skill 调查}）检定时，有优势，以检测秘密门的存在。",
             "你在进行豁免投掷以避免或抵抗陷阱时具有优势。",
             "你对陷阱造成的伤害具有抗性。",
-            "快速行进不会对你的被动智慧（{@skill 感知}）分数施加正常的-5惩罚。"
+            "快速行进不会对你的被动智慧（{@skill 察觉}）分数施加正常的-5惩罚。"
           ]
         }
       ]
@@ -1173,7 +1203,7 @@
         {
           "type": "list",
           "items": [
-            "每当你在战斗中采取{@action 闪避}动作时，你可以花费一个生命骰来治疗自己。掷骰子，加上你的体质调整值，并恢复等于总数的生命值（最少为1）。"
+            "每当你在战斗中采取{@action 回避}动作时，你可以花费一个生命骰来治疗自己。掷骰子，加上你的体质调整值，并恢复等于总数的生命值（最少为1）。"
           ]
         }
       ]
@@ -1190,7 +1220,7 @@
       ],
       "optionalfeatureProgression": [
         {
-          "name": "邪术师:魔能祈唤",
+          "name": "魔能祈唤",
           "ENG_name": "Eldritch Invocations",
           "featureType": [
             "EI"
@@ -1273,7 +1303,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（火之击）"
+            "巨人打击|BGG|巨人之击（火焰之击）"
           ]
         }
       ],
@@ -1311,7 +1341,7 @@
               "name": "灼热点火",
               "ENG_name": "Searing Ignition",
               "entries": [
-                "When you take the {@action Attack} action on your turn, you can replace a single attack with a magical burst of flame. Each creature of your choice in a 15-foot-radius sphere centered on you must make a Dexterity saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, a creature takes fire damage equal to {@dice 1d8} + your proficiency bonus, and it has the blinded condition until the start of your next turn. On a successful save, the creature takes half as much damage only. You can use your Searing Ignition a number of times equal to your proficiency bonus (but no more than once per turn), and you regain all expended uses when you finish a long rest."
+                "当你在你的回合采取{@action 攻击}动作时，你可以用一次魔法火焰爆发替换一次攻击。在你为中心的15英尺半径范围内，你选择的每个生物必须进行一次敏捷豁免投掷（DC等于8 + 你的熟练加值 + 此特性增加的能力值修正）。未成功豁免的生物受到火焰伤害，等于{@dice 1d8} + 你的熟练加值，并且在你的下一个回合开始之前处于失明状态。成功豁免的生物只受到一半的伤害。你可以使用你的炽热点燃次数等于你的熟练加值（但每个回合不超过一次），并且在你完成一次长时间休息后恢复所有已使用的使用次数。"
               ]
             }
           ]
@@ -1405,8 +1435,8 @@
         {
           "type": "list",
           "items": [
-            "你学会说、读、写{@language 仙灵语}。",
-            "你学会了{@spell 雾气步}法术，并且可以不消耗法术位施放它一次。当你完成一次短休息或长休息后，你将重新获得以这种方式施放它的能力。智力是你的施法能力，用于这个法术。"
+            "你学会说、读、写{@language 森林}。",
+            "你学会了{@spell 迷踪步}法术，并且可以不消耗法术位施放它一次。当你完成一次短休息或长休息后，你将重新获得以这种方式施放它的能力。智力是你的施法能力，用于这个法术。"
           ]
         }
       ]
@@ -1437,7 +1467,7 @@
                 "1e": [
                   "迷踪步",
                   {
-                    "choose": "等级=1|学派=E;D"
+                    "choose": "level=1|school=E;D"
                   }
                 ]
               }
@@ -1450,7 +1480,7 @@
         {
           "type": "list",
           "items": [
-            "你学会了{@spell 雾气步}法术和你选择的一个{@filter 1级法术|法术|等级=1|学派=E;D}。这个{@filter 1级法术|法术|等级=1|学派=E;D}必须是占卜或附魔学派的魔法。你可以不消耗法术位施放这些法术。一旦你以这种方式施放了这些法术中的任何一个，直到你完成一次长休息之前，你不能再以这种方式施放那个法术。你也可以使用你拥有的相应等级的法术位来施放这些法术。这些法术的施法能力是这个特性增加的能力。"
+            "你学会了{@spell 迷踪步}法术和你选择的一个{@filter 1级法术|法术|level=1|school=E;D}。这个{@filter 1级法术|法术|level=1|school=E;D}必须是占卜或附魔学派的魔法。你可以不消耗法术位施放这些法术。一旦你以这种方式施放了这些法术中的任何一个，直到你完成一次长休息之前，你不能再以这种方式施放那个法术。你也可以使用你拥有的相应等级的法术位来施放这些法术。这些法术的施法能力是这个特性增加的能力。"
           ]
         }
       ]
@@ -1471,7 +1501,7 @@
       ],
       "optionalfeatureProgression": [
         {
-          "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+          "name": "战斗风格",
           "ENG_name": "Fighting Style",
           "featureType": [
             "FS:F"
@@ -1535,15 +1565,15 @@
       ],
       "entries": [
         "你已经发展出在突然需要的时刻立即回忆起一个未准备的法术的能力。",
-        "作为奖励动作，你从你的法术书中准备一个1级或更高级别的法术（如果你是{@class 巫师}）或者从你的职业法术列表中（如果你不是{@class 巫师}）。这个法术必须是你有法术位的等级，并且它取代了你之前准备的一个相同或更高等级的法术。",
-        "一旦你使用这个特性来回忆一个法术，直到你完成一次{@quickref 休息|PHB|2|0|短休息或长休息}之前，你不能再这样做。",
+        "作为奖励动作，你从你的法术书中准备一个1级或更高级别的法术（如果你是{@class 法师}）或者从你的职业法术列表中（如果你不是{@class 法师}）。这个法术必须是你有法术位的等级，并且它取代了你之前准备的一个相同或更高等级的法术。",
+        "一旦你使用这个特性来回忆一个法术，直到你完成一次{@quickref 休息|PHB|2|0|短休或长休}之前，你不能再这样做。",
         {
           "type": "inset",
           "name": "规则提示：准备法术",
           "ENG_name": "Rules Tip: Prepared Spells",
           "page": 190,
           "entries": [
-            "瞬间回忆特性要求你是一个准备法术的施法者。这包括像{@class 牧师||牧师}、{@class 德鲁伊||德鲁伊}和{@class 圣武士||圣武士}这样的职业，他们每天从他们的职业列表中准备法术，还有{@class 巫师||巫师}，他们从法术书中准备法术。像{@class 诗人||诗人}和{@class 术士||术士}这样天生就知道他们的法术而不是准备它们，不能从这个特性中受益。"
+            "瞬间回忆特性要求你是一个准备法术的施法者。这包括像{@class 牧师||牧师}、{@class 德鲁伊||德鲁伊}和{@class 圣武士||圣骑士}这样的职业，他们每天从他们的职业列表中准备法术，还有{@class 法师||巫师}，他们从法术书中准备法术。像{@class 吟游诗人||吟游诗人}和{@class 术士||术士}这样天生就知道他们的法术而不是准备它们，不能从这个特性中受益。"
           ]
         }
       ]
@@ -1557,7 +1587,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（霜冻之击）"
+            "巨人打击|BGG|巨人之击（霜冻之击）"
           ]
         }
       ],
@@ -1595,7 +1625,7 @@
               "name": "冰寒反击",
               "ENG_name": "Frigid Retaliation",
               "entries": [
-                "Immediately after a creature you can see within 30 feet of you hits you with an attack roll and deals damage, you can use your reaction to retaliate with a conjured blast of ice. The creature must make a Constitution saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, the creature takes cold damage equal to {@dice 1d8} + your proficiency bonus, and its speed is reduced to 0 until the end of its next turn. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "当一个你能看到的生物在你30英尺范围内用攻击骰对你造成伤害后，你可以使用你的反应以召唤出的冰霜冲击进行反击。该生物必须进行一次体质豁免（DC等于8 + 你的熟练加值 + 这个特性增加的能力值的调整值）。如果豁免失败，该生物受到等于{@dice 1d8} + 你的熟练加值的冰霜伤害，并在其下一回合结束前速度降至0。你可以使用这个反应的次数等于你的熟练加值，并且在你完成一次长休息后恢复所有已使用的使用次数。"
               ]
             }
           ]
@@ -1619,7 +1649,7 @@
               "name": "彩色注入",
               "ENG_name": "Chromatic Infusion",
               "entries": [
-                "作为一个奖励动作，你可以触摸一件{@filter 简单或军用武器|items|source=phb|category=basic|type=martial weapon;simple weapon}，并赋予它以下伤害类型之一：酸、冷、火、闪电或毒。在接下来的一分钟里，当武器命中时，它将额外造成{@damage 1d4}点所选类型的伤害。使用完这个奖励动作后，直到你完成一次长休息之前，你不能再使用它。"
+                "作为一个奖励动作，你可以触摸一件{@filter 简单或军用武器|物品|来源=phb|类别=基础|类型=武术武器；简单武器}，并赋予它以下伤害类型之一：酸、冷、火、闪电或毒。在接下来的一分钟里，当武器命中时，它将额外造成{@damage 1d4}点所选类型的伤害。使用完这个奖励动作后，直到你完成一次长休息之前，你不能再使用它。"
               ]
             },
             {
@@ -1705,7 +1735,7 @@
               "name": "龙族治疗",
               "ENG_name": "Draconic Healing",
               "entries": [
-                "你学会了{@spell 治疗伤口}法术。你可以不消耗法术位来施放这个法术。一旦你以这种方式施放了这个法术，你必须完成一次长休息后才能再次这样做。你也可以使用你拥有的法术位来施放这个法术。当你用这个特性施放这个法术时，法术的施法能力值是智力、智慧或魅力（在你获得这个特性时选择）。"
+                "你学会了{@spell 治疗伤势}法术。你可以不消耗法术位来施放这个法术。一旦你以这种方式施放了这个法术，你必须完成一次长休息后才能再次这样做。你也可以使用你拥有的法术位来施放这个法术。当你用这个特性施放这个法术时，法术的施法能力值是智力、智慧或魅力（在你获得这个特性时选择）。"
               ]
             },
             {
@@ -1771,7 +1801,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（云雾之击）"
+            "巨人打击|BGG|巨人之击（云雾之击）"
           ]
         }
       ],
@@ -1825,7 +1855,7 @@
         {
           "type": "list",
           "items": [
-            "你对火器（见《地下城主指南》中的“{@variantrule 火器|DMG}”）变得熟练。",
+            "你对火器（见《地下城主指南》中的“{@variantrule 枪械|DMG}”）变得熟练。",
             "你忽略了火器的装填属性。",
             "处于敌对生物5英尺范围内不会对你的远程攻击检定造成劣势。"
           ]
@@ -1842,8 +1872,8 @@
         {
           "type": "list",
           "items": [
-            "当你使用{@item 治疗者工具包|phb}来稳定一个濒死生物时，那个生物还会额外恢复1点生命值。",
-            "As an action, you can spend one use of a {@item healer's kit|phb} to tend to a creature and restore {@dice 1d6 + 4} hit points to it, plus additional hit points equal to the creature's maximum number of Hit Dice. The creature can't regain hit points from this feat again until it finishes a short or long rest."
+            "当你使用{@item 医疗包|PHB}来稳定一个濒死生物时，那个生物还会额外恢复1点生命值。",
+            "作为一个动作，你可以消耗一次{@item 医疗包|PHB}的使用来照顾一个生物，并恢复{@dice 1d6 + 4}生命点数给它，再加上等于该生物最大生命骰数量的额外生命点数。该生物在完成一次短休息或长休息之前不能再次通过这个特性恢复生命点数。"
           ]
         }
       ]
@@ -1927,7 +1957,7 @@
           "type": "list",
           "items": [
             "只要你没有超重，你可以在手持重型武器和穿戴重型盔甲的情况下滑翔。",
-            "你可以选择在被大型或更小的敌对生物占据的空间结束你的滑翔。如果你这样做，你可以与生物进行对抗力量检定。成功时，你用你撞击的力量将它们推开10英尺并使它们{@condition 倒地}。失败时，你将落在最近的未被占据的空间。"
+            "你可以选择在被大型或更小的敌对生物占据的空间结束你的滑翔。如果你这样做，你可以与生物进行对抗力量检定。成功时，你用你撞击的力量将它们推开10英尺并使它们{@condition 伏地}。失败时，你将落在最近的未被占据的空间。"
           ]
         }
       ]
@@ -2007,7 +2037,7 @@
             {
               "name": "高等术法会法师",
               "ENG_name": "Mage of High Sorcery",
-              "displayEntry": "{@background 高阶魔法师|DSotDQ}"
+              "displayEntry": "{@background 高等术法会法师|DSotDQ}"
             }
           ]
         }
@@ -2026,7 +2056,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师"
+                "choose": "level=0|class=法师"
               }
             ]
           },
@@ -2063,7 +2093,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师"
+                "choose": "level=0|class=法师"
               }
             ]
           },
@@ -2100,7 +2130,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师"
+                "choose": "level=0|class=法师"
               }
             ]
           },
@@ -2140,12 +2170,18 @@
             "col-11"
           ],
           "rows": [
-            "努塔瑞",
-            "从{@spell 不和谐低语}、{@spell 虚假生命}、{@spell 诅咒}和{@spell 疾病射线}中选择两项",
-            "努林塔瑞",
-            "从{@spell 色彩喷射}、{@spell 伪装自己}、{@spell 羽毛下落}和{@spell 长步者}中选择两项",
-            "索林那瑞",
-            "从{@spell 理解语言}、{@spell 侦测邪恶与善良}、{@spell 防护邪恶与善良}和{@spell 盾牌}中选择两项"
+            [
+              "努塔瑞",
+              "从{@spell 噪音暗语}、{@spell 摹造生命}、{@spell 脆弱诅咒}和{@spell 致病射线}中选择两项"
+            ],
+            [
+              "努林塔瑞",
+              "从{@spell 七彩喷射}、{@spell 易容术}、{@spell 羽落术}和{@spell 大步奔行}中选择两项"
+            ],
+            [
+              "索林那瑞",
+              "从{@spell 通晓语言}、{@spell 侦测善恶}、{@spell 防护善恶}和{@spell 护盾术}中选择两项"
+            ]
           ]
         },
         "你可以不消耗法术位来施放所选择的每个1级法术，并且你必须完成一次长休息后才能再次以这种方式施放它们。你也可以使用你拥有的任何法术位来施放这些法术。",
@@ -2203,7 +2239,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（石击）"
+            "巨人打击|BGG|巨人之击（石击）"
           ]
         }
       ],
@@ -2254,7 +2290,7 @@
         {
           "level": 4,
           "feat": [
-            "索兰尼亚的侍从|dsotdq"
+            "索拉尼亚侍从|DSotDQ"
           ]
         }
       ],
@@ -2281,7 +2317,7 @@
               "name": "指挥集结",
               "ENG_name": "Commanding Rally",
               "entries": [
-                "As a bonus action, you can command one ally within 30 feet of yourself to attack. If that ally can see or hear you, they can immediately make one weapon attack as a reaction. If the attack hits, the ally can roll a {@dice d8} and add the number rolled as a bonus to the attack's damage roll. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "作为一个奖励动作，你可以命令一个在你30英尺范围内的盟友进行攻击。如果那个盟友能看到或听到你，他们可以立即作为反应进行一次武器攻击。如果攻击命中，盟友可以掷一个{@dice d8}，并将掷出的数字作为攻击伤害骰的额外加值。你可以使用这个奖励动作的次数等于你的熟练加值，并且在你完成一次长休后恢复所有已用的次数。"
               ]
             }
           ]
@@ -2305,7 +2341,7 @@
         {
           "level": 4,
           "feat": [
-            "索兰尼亚的侍从|dsotdq"
+            "索拉尼亚侍从|DSotDQ"
           ]
         }
       ],
@@ -2332,7 +2368,7 @@
               "name": "鼓舞士气",
               "ENG_name": "Bolstering Rally",
               "entries": [
-                "As a bonus action, you can encourage one creature you can see within 30 feet of yourself (you can choose yourself). If the target can see or hear you, the target gains temporary hit points equal to {@dice 1d8} + your proficiency bonus + the ability modifier of the ability score increased by this feat. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "作为奖励动作，你可以鼓励你能看到的30英尺范围内的一个生物（你可以选择自己）。如果目标能看见或听见你，目标获得等于{@dice 1d8} + 你的熟练加值 + 此特性增加的能力值修正的临时生命值。你可以使用这个奖励动作的次数等于你的熟练加值，并且在你完成一次长时间休息后恢复所有已使用的使用次数。"
               ]
             }
           ]
@@ -2356,7 +2392,7 @@
         {
           "level": 4,
           "feat": [
-            "索兰尼亚的侍从|dsotdq"
+            "索拉尼亚侍从|DSotDQ"
           ]
         }
       ],
@@ -2383,7 +2419,7 @@
               "name": "士气打击",
               "ENG_name": "Demoralizing Strike",
               "entries": [
-                "每次回合，当你用武器攻击掷骰命中一个生物时，你可以尝试恐吓该目标。目标必须进行一次智力豁免投掷（难度等级等于8加上你的熟练加值加上这个专长提升的属性调整值）。如果豁免失败，目标直到你的下一个回合结束时都会对你感到{@condition frightened}。如果豁免成功，目标在下一个回合结束前进行的下一次攻击掷骰将会处于劣势。你可以使用这个好处的次数等于你的熟练加值，并且在你完成一次长时间的休息后恢复所有已用的次数。"
+                "每次回合，当你用武器攻击掷骰命中一个生物时，你可以尝试恐吓该目标。目标必须进行一次智力豁免投掷（难度等级等于8加上你的熟练加值加上这个专长提升的属性调整值）。如果豁免失败，目标直到你的下一个回合结束时都会对你感到{@condition 恐惧}。如果豁免成功，目标在下一个回合结束前进行的下一次攻击掷骰将会处于劣势。你可以使用这个好处的次数等于你的熟练加值，并且在你完成一次长时间的休息后恢复所有已用的次数。"
               ]
             }
           ]
@@ -2462,8 +2498,8 @@
       "page": 167,
       "entries": [
         "你拥有难以解释的好运，似乎总是在关键时刻发挥作用。",
-        "You have 3 luck points. Whenever you make an attack roll, an ability check, or a saving throw, you can spend one luck point to roll an additional {@dice d20}. You can choose to spend one of your luck points after you roll the die, but before the outcome is determined. You choose which of the {@dice d20}s is used for the attack roll, ability check, or saving throw.",
-        "You can also spend one luck point when an attack roll is made against you. Roll a {@dice d20}, and then choose whether the attack uses the attacker's roll or yours. If more than one creature spends a luck point to influence the outcome of a roll, the points cancel each other out; no additional dice are rolled.",
+        "你拥有3点幸运点。每当你进行攻击检定、能力检定或豁免检定时，你可以花费一个幸运点来额外掷一个{@dice d20}。你可以在掷骰后但在结果确定前选择花费你的一个幸运点。你选择哪个{@dice d20}用于攻击检定、能力检定或豁免检定。",
+        "当有攻击骰对你进行时，你也可以花费一个幸运点。掷一个{@dice d20}，然后选择攻击使用攻击者的骰还是你的。如果不止一个生物花费幸运点来影响一次骰的结果，这些点会相互抵消；不会额外掷骰。",
         "当你完成一次长休息后，你恢复了消耗的幸运点。"
       ]
     },
@@ -2478,7 +2514,7 @@
           "type": "list",
           "items": [
             "当一个生物在你5英尺范围内施放法术时，你可以使用你的反应来进行一次近战武器攻击。",
-            "当你对正在{@status concentration||集中}施法的生物造成伤害时，该生物在维持其{@status concentration}的豁免投掷上会有劣势。",
+            "当你对正在{@status 专注||集中精神}施法的生物造成伤害时，该生物在维持其{@status 专注}的豁免投掷上会有劣势。",
             "你对在你5英尺范围内的生物施放的法术的豁免投掷有优势。"
           ]
         }
@@ -2499,7 +2535,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人"
+                    "choose": "level=1|class=吟游诗人"
                   }
                 ]
               }
@@ -2508,7 +2544,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=吟游诗人",
+                "choose": "level=0|class=吟游诗人",
                 "count": 2
               }
             ]
@@ -2523,7 +2559,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=牧师"
+                    "choose": "level=1|class=牧师"
                   }
                 ]
               }
@@ -2532,7 +2568,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师",
+                "choose": "level=0|class=牧师",
                 "count": 2
               }
             ]
@@ -2547,7 +2583,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊"
+                    "choose": "level=1|class=德鲁伊"
                   }
                 ]
               }
@@ -2556,7 +2592,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=德鲁伊",
+                "choose": "level=0|class=德鲁伊",
                 "count": 2
               }
             ]
@@ -2571,7 +2607,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=术士"
+                    "choose": "level=1|class=术士"
                   }
                 ]
               }
@@ -2580,7 +2616,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=术士",
+                "choose": "level=0|class=术士",
                 "count": 2
               }
             ]
@@ -2595,7 +2631,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=术士"
+                    "choose": "level=1|class=邪术师"
                   }
                 ]
               }
@@ -2604,7 +2640,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师",
+                "choose": "level=0|class=邪术师",
                 "count": 2
               }
             ]
@@ -2619,7 +2655,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=巫师"
+                    "choose": "level=1|class=法师"
                   }
                 ]
               }
@@ -2628,7 +2664,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师",
+                "choose": "level=0|class=法师",
                 "count": 2
               }
             ]
@@ -2636,7 +2672,7 @@
         }
       ],
       "entries": [
-        "选择一个职业：{@filter 吟游诗人|法术|等级=0;1|职业=吟游诗人}, {@filter 牧师|法术|等级=0;1|职业=牧师}, {@filter 德鲁伊|法术|等级=0;1|职业=德鲁伊}, {@filter 术士|法术|等级=0;1|职业=术士}, {@filter 巫师|法术|等级=0;1|职业=巫师}，或者 {@filter 法师|法术|等级=0;1|职业=法师}。你从该职业的法术列表中选择两个你选择的戏法。",
+        "选择一个职业：{@filter 吟游诗人|法术|level=0;1|职业=吟游诗人}, {@filter 牧师|法术|level=0;1|职业=牧师}, {@filter 德鲁伊|法术|level=0;1|职业=德鲁伊}, {@filter 术士|法术|level=0;1|职业=术士}, {@filter 契术师|法术|level=0;1|职业=术士}，或者 {@filter 法师|法术|level=0;1|职业=巫师}。你从该职业的法术列表中选择两个你选择的戏法。",
         "此外，从同一个列表中选择一个1级法术来学习。使用这个特性，你可以一次性以最低等级施放这个法术，并且你必须完成一次长时间的休息后才能再次以这种方式施放它。",
         "这些法术的施法能力取决于你选择的职业：吟游诗人、术士或巫师的施法能力是魅力(Charisma)；牧师或德鲁伊的施法能力是智慧(Wisdom)；法师的施法能力是智力(Intelligence)。"
       ]
@@ -2663,8 +2699,8 @@
         {
           "type": "list",
           "items": [
-            "你学习了两种你选择的{@filter 招式|optionalfeatures|feature type=MV:B}，这些招式来自于战士职业中的{@class 战斗大师|phb|Battle Master|Battle Master|phb|2-0}子类。如果你使用的招式需要你的目标进行豁免投掷以抵抗招式的效果，则豁免投掷的DC等于8 + 你的熟练加值 + 你的力量或敏捷修正值（你选择）。",
-            "You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+            "你学习了两种你选择的{@filter 战技|可选特性|特性类型=MV:B}，这些招式来自于战士职业中的{@class 战士|PHB|战斗大师|战斗大师|PHB|2-0}子类。如果你使用的招式需要你的目标进行豁免投掷以抵抗招式的效果，则豁免投掷的DC等于8 + 你的熟练加值 + 你的力量或敏捷修正值（你选择）。",
+            "你获得一个优势骰，这是一个{@dice d6}（这个骰子会加入你从其他来源获得的任何优势骰）。这个骰子用于激发你的机动。使用优势骰时会被消耗。当你完成短休或长休后，你恢复你消耗的优势骰。"
           ]
         }
       ]
@@ -2688,7 +2724,7 @@
         {
           "type": "list",
           "items": [
-            "穿戴中型盔甲不会对你的敏捷（{@skill 潜行})检定造成劣势。",
+            "穿戴中型盔甲不会对你的敏捷（{@skill 隐匿})检定造成劣势。",
             "当你穿戴中型盔甲时，如果你的敏捷达到16或更高，你可以将3而不是2加到你的AC（护甲等级）上。"
           ]
         }
@@ -2706,7 +2742,7 @@
       ],
       "optionalfeatureProgression": [
         {
-          "name": "need-translate-bcd11f4a-2fb2-11ef-ae1d-d1200322b32e",
+          "name": "超魔法",
           "ENG_name": "Metamagic",
           "featureType": [
             "MM"
@@ -2721,7 +2757,7 @@
         {
           "type": "list",
           "items": [
-            "你学习了两种你选择的{@filter 魔法塑形|optionalfeatures|Feature Type=MM}选项，这些来自术士职业。当你施放法术时，你只能使用一个魔法塑形选项，除非该选项另有说明。每当你达到一个提供能力值提升特性的等级时，你可以用术士职业中的另一个魔法塑形选项替换这些选项中的一个。",
+            "你学习了两种你选择的{@filter 超魔法|可选特性|特性类型=MM}选项，这些来自术士职业。当你施放法术时，你只能使用一个魔法塑形选项，除非该选项另有说明。每当你达到一个提供能力值提升特性的等级时，你可以用术士职业中的另一个魔法塑形选项替换这些选项中的一个。",
             "你获得了2点奥术点数来用于魔法塑形（这些点数会加到你从其他来源获得的任何奥术点数上，但只能用于魔法塑形）。当你完成一次长时间的休息后，你会重新获得所有已使用的奥术点数。"
           ]
         }
@@ -2738,7 +2774,7 @@
           "type": "list",
           "items": [
             "你的速度增加10英尺。",
-            "当你使用{@action 冲刺}动作时，{@quickref 困难地形||3}在那一回合不会消耗你额外的移动力。",
+            "当你使用{@action 疾走}动作时，{@quickref 困难地型||3}在那一回合不会消耗你额外的移动力。",
             "当你对生物进行近战攻击时，无论是否命中，该生物在本回合剩余时间内都不会对你进行机会攻击。"
           ]
         }
@@ -2791,7 +2827,7 @@
       "source": "PHB",
       "page": 168,
       "entries": [
-        "当你骑乘时，你是一个危险的对手。当你骑乘并且没有被{@condition 失去能力}时，你获得以下好处：",
+        "当你骑乘时，你是一个危险的对手。当你骑乘并且没有被{@condition 无力}时，你获得以下好处：",
         {
           "type": "list",
           "items": [
@@ -2826,7 +2862,7 @@
           "type": "list",
           "items": [
             "你可以同时与多达四个魔法物品共鸣。",
-            "你可以在不消耗法术位或材料组件的情况下施放{@spell 鉴定}法术。你必须完成一次{@quickref 长休|PHB|2|0|long rest}后才能再次这样做。"
+            "你可以在不消耗法术位或材料组件的情况下施放{@spell 鉴定术}法术。你必须完成一次{@quickref 休息|PHB|2|0|长休}后才能再次这样做。"
           ]
         }
       ]
@@ -2853,7 +2889,7 @@
           "type": "list",
           "items": [
             "如果你能看到生物在说一种你理解的语言时的嘴巴，你可以通过读唇来理解它在说什么。",
-            "你的被动智慧（{@skill 感知}）和被动智力（{@skill 调查}）得分增加5点。"
+            "你的被动智慧（{@skill 察觉}）和被动智力（{@skill 调查}）得分增加5点。"
           ]
         }
       ]
@@ -2873,8 +2909,8 @@
         {
           "type": "list",
           "items": [
-            "当一个生物在战斗中对你的近战攻击检定失败时，你可以进行一次敏捷（{@skill 手法})检定，难度等级(DC)等于10加上目标的敏捷修正值。成功的话，你可能会从目标那里偷走任何一个没有被持有或穿戴的物品。",
-            "每当你在战斗之外成功使用你的{@skill 手法}技能来偷取一个物品，你可以立即将它完美地隐藏在你身上，或者将你拥有的另一个物品放在它的位置上。"
+            "当一个生物在战斗中对你的近战攻击检定失败时，你可以进行一次敏捷（{@skill 巧手})检定，难度等级(DC)等于10加上目标的敏捷修正值。成功的话，你可能会从目标那里偷走任何一个没有被持有或穿戴的物品。",
+            "每当你在战斗之外成功使用你的{@skill 巧手}技能来偷取一个物品，你可以立即将它完美地隐藏在你身上，或者将你拥有的另一个物品放在它的位置上。"
           ]
         }
       ]
@@ -2910,7 +2946,7 @@
         {
           "type": "list",
           "items": [
-            "当你使用{@filter 简单或军用武器|items|source=phb|category=basic|type=martial weapon;simple weapon}进行攻击并且命中时，你可以额外掷一次该武器的伤害骰，并将其作为额外伤害加到武器的伤害类型上。一旦你使用了这个能力，直到你完成一次短休或长休之前，你不能再次使用它。",
+            "当你使用{@filter 简单或军用武器|物品|来源=phb|类别=基础|类型=武术武器；简单武器}进行攻击并且命中时，你可以额外掷一次该武器的伤害骰，并将其作为额外伤害加到武器的伤害类型上。一旦你使用了这个能力，直到你完成一次短休或长休之前，你不能再次使用它。",
             "在使用你的不屈耐力特性之后，你可以立即使用你的反应来进行一次武器攻击。"
           ]
         }
@@ -2925,7 +2961,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|萨托|外层位面的后裔（边域）"
+            "外层位面后裔|SatO|外层位面之子（外域）"
           ]
         }
       ],
@@ -2955,7 +2991,7 @@
               "name": "十字路口使者",
               "ENG_name": "Crossroads Emissary",
               "entries": [
-                "你学会了{@spell 雾步}和{@spell 通晓语言}法术。你可以使用这个特性各施放一次这些法术，而不需要消耗法术位，并且你必须完成一次长时间的休息后才能再次以这种方式施放这些法术。当你使用这个特性施放{@spell 通晓语言}时，你不需要材料组件。你也可以使用你拥有的适当等级的法术位来施放这些法术。这些法术的施法能力是你获得外层位面后裔特性时选择的能力。"
+                "你学会了{@spell 迷踪步}和{@spell 巧言}法术。你可以使用这个特性各施放一次这些法术，而不需要消耗法术位，并且你必须完成一次长时间的休息后才能再次以这种方式施放这些法术。当你使用这个特性施放{@spell 巧言}时，你不需要材料组件。你也可以使用你拥有的适当等级的法术位来施放这些法术。这些法术的施法能力是你获得外层位面后裔特性时选择的能力。"
               ]
             }
           ]
@@ -2985,7 +3021,7 @@
       ]
     },
     {
-      "name": "穿刺虫",
+      "name": "穿刺者",
       "ENG_name": "Piercer",
       "source": "TCE",
       "page": 80,
@@ -3020,7 +3056,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|萨托"
+            "外层位面后裔|SatO"
           ]
         }
       ],
@@ -3043,7 +3079,7 @@
               "name": "传送门破解者",
               "ENG_name": "Portal Cracker",
               "entries": [
-                "你对传送门的经验让你可以在没有传送门钥匙的情况下打开它们。作为一个动作，你可以集中注意力在一个你知道的、距离你5英尺以内的传送门上，并进行一次DC 20智力（{@skill 奥术}）检定。如果检定失败，你会受到{@damage 3d8}精神伤害，并且在完成一次长时间休息之前不能再对那个传送门使用这个好处。如果检定成功，你可以强制打开或关闭传送门1小时。在这段时间内，传送门不会对其传送门钥匙做出反应，除非一个生物使用钥匙并成功进行一次DC 20智力（{@skill 奥术}）检定作为一个动作。"
+                "你对传送门的经验让你可以在没有传送门钥匙的情况下打开它们。作为一个动作，你可以集中注意力在一个你知道的、距离你5英尺以内的传送门上，并进行一次DC 20智力（{@skill 奥秘}）检定。如果检定失败，你会受到{@damage 3d8}精神伤害，并且在完成一次长时间休息之前不能再对那个传送门使用这个好处。如果检定成功，你可以强制打开或关闭传送门1小时。在这段时间内，传送门不会对其传送门钥匙做出反应，除非一个生物使用钥匙并成功进行一次DC 20智力（{@skill 奥秘}）检定作为一个动作。"
               ]
             },
             {
@@ -3076,7 +3112,7 @@
           "items": [
             "当你进行造成毒素伤害的伤害骰时，它无视对毒素伤害的抗性。",
             "你可以作为奖励动作，而不是动作，将毒药涂抹在武器或弹药上。",
-            "如果你还没有，你将获得对{@item 毒药工具包|phb}的熟练度。使用{@item 毒药工具包|phb}并消耗价值50金币的材料，经过一小时的工作，你可以制造出等于你的熟练加值数量的强大毒药剂量。一旦将毒药涂抹在武器或弹药上，毒药在1分钟内或直到你用武器或弹药命中时保持其效力。当生物被涂有毒药的武器或弹药造成伤害时，该生物必须成功进行一次DC 14的体质豁免投掷，否则将受到{@damage 2d8}毒素伤害并变成{@condition 中毒}，直到你的下一个回合结束。"
+            "如果你还没有，你将获得对{@item 制毒工具|PHB}的熟练度。使用{@item 制毒工具|PHB}并消耗价值50金币的材料，经过一小时的工作，你可以制造出等于你的熟练加值数量的强大毒药剂量。一旦将毒药涂抹在武器或弹药上，毒药在1分钟内或直到你用武器或弹药命中时保持其效力。当生物被涂有毒药的武器或弹药造成伤害时，该生物必须成功进行一次DC 14的体质豁免投掷，否则将受到{@damage 2d8}毒素伤害并变成{@condition 中毒}，直到你的下一个回合结束。"
           ]
         }
       ]
@@ -3091,8 +3127,8 @@
         {
           "type": "list",
           "items": [
-            "When you take the {@action Attack} action and attack with only a {@item glaive|phb}, {@item halberd|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, you can use a bonus action to make a melee attack with the opposite end of the weapon; this attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a {@dice d4}, and the attack deals bludgeoning damage.",
-            "当你手持{@item 长戟|phb}、{@item 戟|phb}、{@item 长枪|phb}、{@item 长棍|phb}或{@item 矛|phb}时，其他生物在你用该武器达到的范围进入时，会激起你的一次机会攻击。"
+            "当你采取{@action 攻击}动作，并且只使用{@item 长柄刀|PHB}、{@item 戟|PHB}、{@item 长棍|PHB}或{@item 矛|PHB}进行攻击时，你可以使用额外动作用武器的另一端进行近战攻击；这次攻击使用与主要攻击相同的能力调整值。这次攻击的武器伤害骰是{@dice d4}，攻击造成的是钝击伤害。",
+            "当你手持{@item 长柄刀|PHB}、{@item 戟|PHB}、{@item 长柄枪|PHB}、{@item 长棍|PHB}或{@item 矛|PHB}时，其他生物在你用该武器达到的范围进入时，会激起你的一次机会攻击。"
           ]
         }
       ]
@@ -3124,24 +3160,24 @@
         {
           "choose": {
             "from": [
-              "属性检定:运动",
-              "属性检定:特技",
-              "属性检定:巧手",
-              "属性检定:隐匿",
-              "属性检定:奥秘",
-              "属性检定:历史",
-              "属性检定:调查",
-              "属性检定:自然",
-              "属性检定:宗教",
-              "属性检定:驯兽",
-              "属性检定:洞悉",
-              "属性检定:医药",
-              "属性检定:察觉",
-              "属性检定:求生",
-              "属性检定:欺瞒",
-              "属性检定:威吓",
-              "属性检定:表演",
-              "属性检定:游说"
+              "运动",
+              "特技",
+              "巧手",
+              "隐匿",
+              "奥秘",
+              "历史",
+              "调查",
+              "自然",
+              "宗教",
+              "驯兽",
+              "洞悉",
+              "医药",
+              "察觉",
+              "求生",
+              "欺瞒",
+              "威吓",
+              "表演",
+              "游说"
             ]
           }
         }
@@ -3161,7 +3197,7 @@
         {
           "type": "list",
           "items": [
-            "你获得了一个你选择的{@table skills|phb|技能熟练度}，一个你选择的{@filter tool proficiency|items|type=tool;artisan's tools}工具熟练度，以及一种你选择的语言的流利度。",
+            "你获得了一个你选择的{@table 技能|PHB|技能熟练度}，一个你选择的{@filter 本职工具|物品|类型=工具；工匠工具}工具熟练度，以及一种你选择的语言的流利度。",
             "选择一个你精通的技能。你将获得该技能的专精，这意味着你使用该技能进行任何能力检定时，你的熟练加值将翻倍。你选择的技能必须是尚未从如专精等特性中获得熟练加值翻倍效果的技能。"
           ]
         }
@@ -3194,7 +3230,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|组成部分及其他=仪式",
+                    "choose": "level=1|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3207,7 +3243,7 @@
         "你掌握了即兴发明、改进和临时拼凑的艺术。你可以利用你的才能，在时间和足够的以太供应下，创造出类似于法术的即时、短期魔法效果。",
         "当你选择这个天赋时，你掌握了两种魔法效果，每一种都重现了一个带有仪式标签的1级法术的效果。这些法术可以来自任何职业列表，但智力是你的施法能力。",
         "如果你遇到了针对快速打造的设计图或者与另一位快速打造者一起学习，你可能能够将另一个法术添加到你已经掌握的效果中。法术的等级不能高于你的等级的一半（向上取整），并且必须有仪式标签。掌握法术的过程需要法术等级的2小时，并且每级需要50金币。这个成本代表了你在实验法术效果以掌握它时所使用的以太。",
-        "此外，你对{@item artisan's tools|PHB}（快速打造工具）有熟练度。使用这些工具，你可以花费1小时和价值10金币的材料来制作一个微小的发条装置（AC 5，1点生命值）。除非花费1小时进行修理以保持其功能，否则装置在24小时后将停止工作。你可以使用你的行动来拆解装置，此时你可以回收用来创建它的材料。一次最多可以有3个这样的装置处于激活状态。",
+        "此外，你对{@item 工匠工具|PHB}（快速打造工具）有熟练度。使用这些工具，你可以花费1小时和价值10金币的材料来制作一个微小的发条装置（AC 5，1点生命值）。除非花费1小时进行修理以保持其功能，否则装置在24小时后将停止工作。你可以使用你的行动来拆解装置，此时你可以回收用来创建它的材料。一次最多可以有3个这样的装置处于激活状态。",
         "当你创建一个装置时，选择以下选项之一：",
         {
           "type": "entries",
@@ -3347,7 +3383,7 @@
         {
           "level": 4,
           "feat": [
-            "外层位面的后裔|萨托|外层位面的后裔（善良外层位面）"
+            "外层位面后裔|SatO|外层位面之子（善良外层位面）"
           ]
         }
       ],
@@ -3377,7 +3413,7 @@
               "name": "舒缓痛苦",
               "ENG_name": "Soothe Pain",
               "entries": [
-                "When you or a creature within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 1d10} + your proficiency bonus. You can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "当你或你30英尺范围内的一个生物受到伤害时，你可以使用你的反应来减少该伤害{@dice 1d10} + 你的熟练加值。你可以使用这个好处的次数等于你的熟练加值，并且在你完成一次长时间休息后恢复所有已使用的使用次数。"
               ]
             }
           ]
@@ -3411,7 +3447,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人|组成部分及其他=仪式",
+                    "choose": "level=1|class=吟游诗人|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3428,7 +3464,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=牧师|组成部分及其他=仪式",
+                    "choose": "level=1|class=牧师|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3445,7 +3481,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊|组成部分及其他=仪式",
+                    "choose": "level=1|class=德鲁伊|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3462,7 +3498,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=术士|组成部分及其他=仪式",
+                    "choose": "level=1|class=术士|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3479,7 +3515,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=巫师|组成部分及其他=仪式",
+                    "choose": "level=1|class=邪术师|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3496,7 +3532,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=巫师|组成部分及其他=仪式",
+                    "choose": "level=1|class=法师|components & miscellaneous=仪式",
                     "count": 2
                   }
                 ]
@@ -3507,8 +3543,8 @@
       ],
       "entries": [
         "你已经学会了一些可以作为仪式施放的法术。这些法术写在仪式书中，施放它们时你必须手持该仪式书。",
-        "当你选择这个天赋时，你获得了一本仪式书，里面包含了两个你选择的1级法术。从以下职业中选择一个：{@filter bard|spells|level=1|class=bard|components & miscellaneous=ritual}（吟游诗人）、{@filter cleric|spells|level=1|class=cleric|components & miscellaneous=ritual}（牧师）、{@filter druid|spells|level=1|class=druid|components & miscellaneous=ritual}（德鲁伊）、{@filter sorcerer|spells|level=1|class=sorcerer|components & miscellaneous=ritual}（术士）、{@filter warlock|spells|level=1|class=warlock|components & miscellaneous=ritual}（巫师）或{@filter wizard|spells|level=1|class=wizard|components & miscellaneous=ritual}（巫师）。你必须从所选职业的法术列表中选择你的法术，并且你选择的法术必须具有仪式标签。你选择的职业也决定了这些法术的施法能力：吟游诗人、术士或巫师为魅力；牧师或德鲁伊为智慧；巫师为智力。",
-        "如果你遇到了书面形式的法术，比如魔法的{@item spell scroll}或者巫师的法术书，你可能能够将它添加到你的仪式书中。法术必须在你选择的职业的法术列表上，法术等级不能高于你的等级的一半（向上取整），并且它必须有仪式标签。将法术抄写到你的仪式书中的过程需要法术等级乘以2小时，并且需要法术等级乘以50金币的费用。这个费用代表了你在尝试掌握法术时消耗的材料组件，以及你记录它所需的精细墨水。"
+        "当你选择这个天赋时，你获得了一本仪式书，里面包含了两个你选择的1级法术。从以下职业中选择一个：{@filter 吟游诗人|法术|level=1|职业=吟游诗人|components & miscellaneous=仪式}（吟游诗人）、{@filter 牧师|法术|level=1|职业=牧师|components & miscellaneous=仪式}（牧师）、{@filter 德鲁伊|法术|level=1|职业=德鲁伊|components & miscellaneous=仪式}（德鲁伊）、{@filter 术士|法术|level=1|职业=术士|components & miscellaneous=仪式}（术士）、{@filter 契术师|法术|level=1|职业=术士|components & miscellaneous=仪式}（巫师）或{@filter 法师|法术|level=1|职业=巫师|components & miscellaneous=仪式}（巫师）。你必须从所选职业的法术列表中选择你的法术，并且你选择的法术必须具有仪式标签。你选择的职业也决定了这些法术的施法能力：吟游诗人、术士或巫师为魅力；牧师或德鲁伊为智慧；巫师为智力。",
+        "如果你遇到了书面形式的法术，比如魔法的{@item 法术卷轴}或者巫师的法术书，你可能能够将它添加到你的仪式书中。法术必须在你选择的职业的法术列表上，法术等级不能高于你的等级的一半（向上取整），并且它必须有仪式标签。将法术抄写到你的仪式书中的过程需要法术等级乘以2小时，并且需要法术等级乘以50金币的费用。这个费用代表了你在尝试掌握法术时消耗的材料组件，以及你记录它所需的精细墨水。"
       ],
       "hasFluffImages": true
     },
@@ -3524,7 +3560,7 @@
         {
           "background": [
             {
-              "name": "符文骑士:符文雕刻者",
+              "name": "符文雕刻者",
               "ENG_name": "Rune Carver",
               "displayEntry": "{@background 符文雕刻者|BGG}"
             }
@@ -3555,7 +3591,7 @@
               "name": "通晓语言",
               "ENG_name": "Comprehend Languages",
               "entries": [
-                "你学会了{@spell 理解语言}法术。你可以不消耗法术位来施放这个法术，并且你必须在完成一次长时间休息之后才能再次以这种方式施放它。你也可以使用你拥有的任何法术位来施放这个法术。"
+                "你学会了{@spell 通晓语言}法术。你可以不消耗法术位来施放这个法术，并且你必须在完成一次长时间休息之后才能再次以这种方式施放它。你也可以使用你拥有的任何法术位来施放这个法术。"
               ]
             },
             {
@@ -3577,32 +3613,58 @@
                     "法术"
                   ],
                   "rows": [
-                    "云",
-                    "{@spell 雾云术}",
-                    "死亡",
-                    "{@spell 施加伤害}",
-                    "龙",
-                    "{@spell 彩色法球}",
-                    "敌人",
-                    "{@spell 伪装自己}",
-                    "火",
-                    "{@spell 炽热之手}",
-                    "朋友",
-                    "{@spell 与动物交谈}",
-                    "霜冻",
-                    "{@spell 阿迦特之铠}",
-                    "丘陵",
-                    "{@spell 好莓术}",
-                    "旅程",
-                    "{@spell 长足者}",
-                    "国王",
-                    "{@spell 命令}",
-                    "高山",
-                    "{@spell 纠缠}",
-                    "石头",
-                    "{@spell 避难所}",
-                    "风暴先驱道途:狂怒风暴raging",
-                    "{@spell 雷鸣波}"
+                    [
+                      "云",
+                      "{@spell 云雾术}"
+                    ],
+                    [
+                      "死亡",
+                      "{@spell 造成伤势}"
+                    ],
+                    [
+                      "龙",
+                      "{@spell 幻色法球}"
+                    ],
+                    [
+                      "敌人",
+                      "{@spell 易容术}"
+                    ],
+                    [
+                      "火",
+                      "{@spell 燃烧之手}"
+                    ],
+                    [
+                      "朋友",
+                      "{@spell 动物交谈术}"
+                    ],
+                    [
+                      "霜冻",
+                      "{@spell 艾嘉西斯之铠}"
+                    ],
+                    [
+                      "丘陵",
+                      "{@spell 神莓术}"
+                    ],
+                    [
+                      "旅程",
+                      "{@spell 大步奔行}"
+                    ],
+                    [
+                      "国王",
+                      "{@spell 命令术}"
+                    ],
+                    [
+                      "高山",
+                      "{@spell 纠缠术}"
+                    ],
+                    [
+                      "石头",
+                      "{@spell 庇护术}"
+                    ],
+                    [
+                      "狂怒风暴raging",
+                      "{@spell 雷鸣波}"
+                    ]
                   ]
                 }
               ]
@@ -3658,7 +3720,7 @@
           },
           "known": {
             "_": [
-              "#c小幻象"
+              "次级幻象#c"
             ]
           }
         },
@@ -3674,7 +3736,7 @@
           },
           "known": {
             "_": [
-              "#c冰冷之触"
+              "寒颤之触#c"
             ]
           }
         },
@@ -3690,7 +3752,7 @@
           },
           "known": {
             "_": [
-              "#c圣洁之火"
+              "圣焰#c"
             ]
           }
         },
@@ -3706,7 +3768,7 @@
           },
           "known": {
             "_": [
-              "#c指引"
+              "神导术#c"
             ]
           }
         },
@@ -3722,7 +3784,7 @@
           },
           "known": {
             "_": [
-              "#c魔法手"
+              "法师之手#c"
             ]
           }
         }
@@ -3742,21 +3804,31 @@
             "戏法"
           ],
           "rows": [
-            "混乱外层位面",
-            "毁灭诅咒",
-            "{@spell 小幻象}",
-            "邪恶外层位面",
-            "死灵",
-            "{@spell 冰冷之触}",
-            "善良外层位面",
-            "光辉",
-            "{@spell 圣洁之火}",
-            "守序外层位面",
-            "力量",
-            "{@spell 指引}",
-            "外域",
-            "心灵",
-            "{@spell 魔法手}"
+            [
+              "混乱外层位面",
+              "毁灭诅咒",
+              "{@spell 次级幻象}"
+            ],
+            [
+              "邪恶外层位面",
+              "死灵",
+              "{@spell 寒颤之触}"
+            ],
+            [
+              "善良外层位面",
+              "光辉",
+              "{@spell 圣焰}"
+            ],
+            [
+              "守序外层位面",
+              "力量",
+              "{@spell 神导术}"
+            ],
+            [
+              "外域",
+              "心灵",
+              "{@spell 法师之手}"
+            ]
           ]
         }
       ]
@@ -3809,7 +3881,7 @@
           "type": "list",
           "items": [
             "当你用机会攻击命中一个生物时，该生物在回合剩余时间内的速度变为0。",
-            "即使生物在离开你的触及范围前采取了{@action Disengage}行动，它们仍然会从你那里引发机会攻击。",
+            "即使生物在离开你的触及范围前采取了{@action 撤离}行动，它们仍然会从你那里引发机会攻击。",
             "当一个生物在你5英尺范围内对除了你之外的目标进行攻击（并且该目标没有这个专长），你可以使用你的反应来进行一次近战武器攻击。"
           ]
         }
@@ -3841,9 +3913,9 @@
         }
       ],
       "entries": [
-        "你擅长制作{@creature servo|psk|伺服器}——作为个人助手的小型构造体。你可以将{@spell find familiar}法术作为仪式施放，创造出一个{@creature servo|psk}作为你的魔宠，而不是动物。{@creature servo|psk}的统计数据出现在本文档的“神器生物”部分。在其他方面，伺服器魔宠的功能与{@spell find familiar}法术中描述的相同。",
+        "你擅长制作{@creature 伺服|PSK|伺服装置}——作为个人助手的小型构造体。你可以将{@spell 寻获魔宠}法术作为仪式施放，创造出一个{@creature 伺服|PSK}作为你的魔宠，而不是动物。{@creature 伺服|PSK}的统计数据出现在本文档的“神器生物”部分。在其他方面，伺服器魔宠的功能与{@spell 寻获魔宠}法术中描述的相同。",
         "只要你和你的服务型魔宠在同一个存在层面上，你就可以通过心灵感应与它沟通，并借助它的感官来感知。你可以用自己的声音通过服务型魔宠说话。",
-        "此外，当你采取{@action Attack}行动时，你可以放弃自己的一次攻击，让你的伺服器魔宠进行一次它自己的攻击。"
+        "此外，当你采取{@action 攻击}行动时，你可以放弃自己的一次攻击，让你的伺服器魔宠进行一次它自己的攻击。"
       ],
       "hasFluffImages": true
     },
@@ -3873,7 +3945,7 @@
                 "1e": [
                   "隐形术",
                   {
-                    "choose": "等级=1|学派=幻术/隐形"
+                    "choose": "level=1|school=I;N"
                   }
                 ]
               }
@@ -3886,7 +3958,7 @@
         {
           "type": "list",
           "items": [
-            "你学会了{@spell invisibility}法术和你选择的一个{@filter 1st-level spell|spells|level=1|school=I;N}法术。这个{@filter 1st-level spell|spells|level=1|school=I;N}必须是幻术或死灵学派的法术。你可以不消耗法术位来施放这些法术。一旦你以这种方式施放了这些法术之一，直到你完成一次长时间的休息之前，你不能再以这种方式施放那个法术。你也可以使用你拥有的适当等级的法术位来施放这些法术。这些法术的施法能力是这个专长提升的能力。"
+            "你学会了{@spell 隐形术}法术和你选择的一个{@filter 1级法术|法术|level=1|school=I;N}法术。这个{@filter 1级法术|法术|level=1|school=I;N}必须是幻术或死灵学派的法术。你可以不消耗法术位来施放这些法术。一旦你以这种方式施放了这些法术之一，直到你完成一次长时间的休息之前，你不能再以这种方式施放那个法术。你也可以使用你拥有的适当等级的法术位来施放这些法术。这些法术的施法能力是这个专长提升的能力。"
           ]
         }
       ]
@@ -3914,12 +3986,12 @@
       "source": "PHB",
       "page": 170,
       "entries": [
-        "你使用盾牌不仅仅是为了防御，也是为了进攻。当你持有一个{@item shield|phb}时，你获得了以下好处：",
+        "你使用盾牌不仅仅是为了防御，也是为了进攻。当你持有一个{@item 护盾术|PHB}时，你获得了以下好处：",
         {
           "type": "list",
           "items": [
-            "如果你在你的回合采取了{@action Attack}行动，你可以使用奖励行动尝试用你的盾牌{@action shove}一个在你5英尺范围内的生物。",
-            "如果你没有被{@condition incapacitated}，你可以将你的盾牌的AC加值添加到你针对只针对你的法术或其他有害效果所进行的任何敏捷豁免投掷中。",
+            "如果你在你的回合采取了{@action 攻击}行动，你可以使用奖励行动尝试用你的盾牌{@action 推撞}一个在你5英尺范围内的生物。",
+            "如果你没有被{@condition 无力}，你可以将你的盾牌的AC加值添加到你针对只针对你的法术或其他有害效果所进行的任何敏捷豁免投掷中。",
             "如果你遭受到允许你进行敏捷豁免投掷以只承受一半伤害的效果，你可以使用你的反应在豁免投掷成功时不承受任何伤害，将你的盾牌置于你和效果来源之间。"
           ]
         }
@@ -3949,24 +4021,24 @@
         {
           "choose": {
             "from": [
-              "属性检定:运动",
-              "属性检定:特技",
-              "属性检定:巧手",
-              "属性检定:隐匿",
-              "属性检定:奥秘",
-              "属性检定:历史",
-              "属性检定:调查",
-              "属性检定:自然",
-              "属性检定:宗教",
-              "属性检定:驯兽",
-              "属性检定:洞悉",
-              "属性检定:医药",
-              "属性检定:察觉",
-              "属性检定:求生",
-              "属性检定:欺瞒",
-              "属性检定:威吓",
-              "属性检定:表演",
-              "属性检定:游说"
+              "运动",
+              "特技",
+              "巧手",
+              "隐匿",
+              "奥秘",
+              "历史",
+              "调查",
+              "自然",
+              "宗教",
+              "驯兽",
+              "洞悉",
+              "医药",
+              "察觉",
+              "求生",
+              "欺瞒",
+              "威吓",
+              "表演",
+              "游说"
             ]
           }
         }
@@ -3981,7 +4053,7 @@
         {
           "type": "list",
           "items": [
-            "你可以选择一项{@table skills|phb|技能}并获得其熟练度。",
+            "你可以选择一项{@table 技能|PHB|技能}并获得其熟练度。",
             "选择一个你精通的技能。你将获得该技能的专精，这意味着你使用该技能进行任何能力检定时，你的熟练加值将翻倍。你选择的技能必须是尚未从如专精等特性中获得熟练加值翻倍效果的技能。"
           ]
         }
@@ -4006,7 +4078,7 @@
         }
       ],
       "entries": [
-        "你可以选择三项任意的{@table skills|phb}技能或{@filter tools|items}工具（包括工匠工具、乐器、游戏套装、陆地载具、水上载具）并获得其熟练度。"
+        "你可以选择三项任意的{@table 技能|PHB}技能或{@filter 工具|物品|类型=工具；工匠工具；乐器；游戏套装；陆地载具；水上载具}工具（包括工匠工具、乐器、游戏套装、陆地载具、水上载具）并获得其熟练度。"
       ]
     },
     {
@@ -4030,7 +4102,7 @@
           "items": [
             "当你被轻微遮挡时，你可以尝试隐藏，以避开你隐藏的生物。",
             "当你对一个生物隐藏并用远程武器攻击未命中时，进行攻击不会暴露你的位置。",
-            "昏暗光线不会对你的智慧（{@skill Perception}）检定造成劣势，这些检定依赖于视力。"
+            "昏暗光线不会对你的智慧（{@skill 察觉}）检定造成劣势，这些检定依赖于视力。"
           ]
         }
       ]
@@ -4071,7 +4143,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（风暴之击）"
+            "巨人打击|BGG|巨人之击（风暴之击）"
           ]
         }
       ],
@@ -4145,7 +4217,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=吟游诗人|法术攻击=m;r;o",
+                "choose": "level=0|class=吟游诗人|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4158,7 +4230,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师|法术攻击=m;r;o",
+                "choose": "level=0|class=牧师|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4171,7 +4243,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=德鲁伊|法术攻击=m;r;o",
+                "choose": "level=0|class=德鲁伊|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4184,7 +4256,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=术士|法术攻击=m;r;o",
+                "choose": "level=0|class=术士|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4197,7 +4269,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师|法术攻击=m;r;o",
+                "choose": "level=0|class=邪术师|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4210,7 +4282,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=巫师|法术攻击=m;r;o",
+                "choose": "level=0|class=法师|spell attack=m;r;o",
                 "count": 1
               }
             ]
@@ -4224,7 +4296,7 @@
           "items": [
             "当你施放需要进行攻击检定的法术时，该法术的范围加倍。",
             "你的远程法术攻击忽略半个掩体和四分之三掩体。",
-            "你学会了一种需要进行攻击检定的戏法。从以下法术列表中选择戏法：{@filter bard|spells|level=0|class=bard|spell attack=m;r;o}（吟游诗人）、{@filter cleric|spells|level=0|class=cleric|spell attack=m;r;o}（牧师）、{@filter druid|spells|level=0|class=druid|spell attack=m;r;o}（德鲁伊）、{@filter sorcerer|spells|level=0|class=sorcerer|spell attack=m;r;o}（术士）、{@filter warlock|spells|level=0|class=warlock|spell attack=m;r;o}（巫师）或{@filter wizard|spells|level=0|class=wizard|spell attack=m;r;o}（巫师）。这个戏法的施法能力取决于你选择的法术列表：吟游诗人、术士或巫师为魅力；牧师或德鲁伊为智慧；巫师为智力。"
+            "你学会了一种需要进行攻击检定的戏法。从以下法术列表中选择戏法：{@filter 吟游诗人|法术|level=0|职业=吟游诗人|spell attack=m;r;o}（吟游诗人）、{@filter 牧师|法术|level=0|职业=牧师|spell attack=m;r;o}（牧师）、{@filter 德鲁伊|法术|level=0|职业=德鲁伊|spell attack=m;r;o}（德鲁伊）、{@filter 术士|法术|level=0|职业=术士|spell attack=m;r;o}（术士）、{@filter 契术师|法术|level=0|职业=术士|spell attack=m;r;o}（巫师）或{@filter 法师|法术|level=0|职业=巫师|spell attack=m;r;o}（巫师）。这个戏法的施法能力取决于你选择的法术列表：吟游诗人、术士或巫师为魅力；牧师或德鲁伊为智慧；巫师为智力。"
           ]
         }
       ]
@@ -4289,8 +4361,8 @@
         {
           "choose": {
             "from": [
-              "属性检定:特技",
-              "属性检定:运动"
+              "特技",
+              "运动"
             ]
           }
         }
@@ -4301,8 +4373,8 @@
           "type": "list",
           "items": [
             "你的步行速度增加5英尺。",
-            "你可以选择获得{@skill 杂技}或{@skill 运动}技能的熟练度。",
-            "当你尝试从被{@condition 抓住}的状态中逃脱时，在任何力量（{@skill 运动}）或敏捷（{@skill 杂技}）检定上你有优势。"
+            "你可以选择获得{@skill 特技}或{@skill 运动}技能的熟练度。",
+            "当你尝试从被{@skill 特技}的状态中逃脱时，在任何力量（{@skill 特技}）或敏捷（{@condition 被擒}）检定上你有优势。"
           ]
         }
       ]
@@ -4371,7 +4443,7 @@
               "name": "精确打击",
               "ENG_name": "Precise Strike",
               "entries": [
-                "Once per turn, when you make a weapon attack roll against a creature, you can cause the attack roll to have advantage. If the attack hits, you roll a {@dice d8} and add the number rolled as a bonus to the attack's damage roll. You can use this benefit a number of times equal to your proficiency bonus, but a use is expended only if the attack hits. You regain all expended uses when you finish a long rest."
+                "每回合一次，当你对生物进行武器攻击检定时，你可以让攻击检定获得优势。如果攻击命中，你掷一个{@dice d8}，并将掷出的数字作为额外加值加到攻击的伤害检定上。你可以使用这个好处的次数等于你的熟练加值，但只有在攻击命中时才会消耗一次使用。当你完成一次长休后，你恢复所有已消耗的使用次数。"
               ]
             }
           ]
@@ -4404,7 +4476,7 @@
             {
               "name": "巨人养子",
               "ENG_name": "Giant Foundling",
-              "displayEntry": "{@background 巨人孤儿|BGG}"
+              "displayEntry": "{@background 巨人养子|BGG}"
             }
           ]
         }
@@ -4481,8 +4553,8 @@
           },
           "known": {
             "_": [
-              "光#c",
-              "#c圣洁之火"
+              "光亮术#c",
+              "圣焰#c"
             ]
           },
           "innate": {
@@ -4490,7 +4562,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=牧师;巫师"
+                    "choose": "level=1|class=牧师;巫师"
                   }
                 ]
               }
@@ -4509,8 +4581,8 @@
           },
           "known": {
             "_": [
-              "光#c",
-              "奇迹术#c"
+              "光亮术#c",
+              "奇术#c"
             ]
           },
           "innate": {
@@ -4518,7 +4590,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=牧师;巫师"
+                    "choose": "level=1|class=牧师;巫师"
                   }
                 ]
               }
@@ -4537,8 +4609,8 @@
           },
           "known": {
             "_": [
-              "#c圣洁之火",
-              "奇迹术#c"
+              "圣焰#c",
+              "奇术#c"
             ]
           },
           "innate": {
@@ -4546,7 +4618,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=牧师;巫师"
+                    "choose": "level=1|class=牧师;巫师"
                   }
                 ]
               }
@@ -4565,8 +4637,8 @@
           },
           "known": {
             "_": [
-              "火球术#c",
-              "戏法#c"
+              "火焰箭#c",
+              "魔法技俩#c"
             ]
           },
           "innate": {
@@ -4574,7 +4646,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人;术士"
+                    "choose": "level=1|class=吟游诗人；巫师"
                   }
                 ]
               }
@@ -4593,8 +4665,8 @@
           },
           "known": {
             "_": [
-              "火球术#c",
-              "霜冻射线#c"
+              "火焰箭#c",
+              "冷冻射线#c"
             ]
           },
           "innate": {
@@ -4602,7 +4674,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人;术士"
+                    "choose": "level=1|class=吟游诗人；巫师"
                   }
                 ]
               }
@@ -4621,8 +4693,8 @@
           },
           "known": {
             "_": [
-              "戏法#c",
-              "霜冻射线#c"
+              "魔法技俩#c",
+              "冷冻射线#c"
             ]
           },
           "innate": {
@@ -4630,7 +4702,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人;术士"
+                    "choose": "level=1|class=吟游诗人；巫师"
                   }
                 ]
               }
@@ -4649,8 +4721,8 @@
           },
           "known": {
             "_": [
-              "德鲁伊术#c",
-              "#c指引"
+              "德鲁伊伎俩#c",
+              "神导术#c"
             ]
           },
           "innate": {
@@ -4658,7 +4730,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4677,8 +4749,8 @@
           },
           "known": {
             "_": [
-              "德鲁伊术#c",
-              "#c魔法手"
+              "德鲁伊伎俩#c",
+              "法师之手#c"
             ]
           },
           "innate": {
@@ -4686,7 +4758,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4705,8 +4777,8 @@
           },
           "known": {
             "_": [
-              "#c指引",
-              "#c魔法手"
+              "神导术#c",
+              "法师之手#c"
             ]
           },
           "innate": {
@@ -4714,7 +4786,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4733,8 +4805,8 @@
           },
           "known": {
             "_": [
-              "#c圣洁之火",
-              "奇迹术#c"
+              "圣焰#c",
+              "奇术#c"
             ]
           },
           "innate": {
@@ -4742,7 +4814,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人；牧师"
+                    "choose": "level=1|class=吟游诗人;牧师"
                   }
                 ]
               }
@@ -4761,8 +4833,8 @@
           },
           "known": {
             "_": [
-              "#c圣洁之火",
-              "恶毒嘲讽#c"
+              "圣焰#c",
+              "恶毒嘲笑#c"
             ]
           },
           "innate": {
@@ -4770,7 +4842,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人；牧师"
+                    "choose": "level=1|class=吟游诗人;牧师"
                   }
                 ]
               }
@@ -4789,8 +4861,8 @@
           },
           "known": {
             "_": [
-              "奇迹术#c",
-              "恶毒嘲讽#c"
+              "奇术#c",
+              "恶毒嘲笑#c"
             ]
           },
           "innate": {
@@ -4798,7 +4870,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=吟游诗人；牧师"
+                    "choose": "level=1|class=吟游诗人;牧师"
                   }
                 ]
               }
@@ -4817,8 +4889,8 @@
           },
           "known": {
             "_": [
-              "#c冰冷之触",
-              "德鲁伊术#c"
+              "寒颤之触#c",
+              "德鲁伊伎俩#c"
             ]
           },
           "innate": {
@@ -4826,7 +4898,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4845,8 +4917,8 @@
           },
           "known": {
             "_": [
-              "#c冰冷之触",
-              "怜悯将死之人#c"
+              "寒颤之触#c",
+              "拯救濒死#c"
             ]
           },
           "innate": {
@@ -4854,7 +4926,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4873,8 +4945,8 @@
           },
           "known": {
             "_": [
-              "德鲁伊术#c",
-              "怜悯将死之人#c"
+              "德鲁伊伎俩#c",
+              "拯救濒死#c"
             ]
           },
           "innate": {
@@ -4882,7 +4954,7 @@
               "daily": {
                 "1": [
                   {
-                    "choose": "等级=1|职业=德鲁伊;巫师"
+                    "choose": "level=1|class=德鲁伊;巫师"
                   }
                 ]
               }
@@ -4909,21 +4981,31 @@
             "col-5"
           ],
           "rows": [
-            "洛尔霍尔德",
-            "从{@spell light}、{@spell sacred flame}和{@spell thaumaturgy}中选择两个。",
-            "选择一个1级的{@filter cleric or wizard spell|spells|level=1|class=cleric;wizard}。",
-            "普瑞斯玛瑞",
-            "从{@spell fire bolt}、{@spell prestidigitation}和{@spell ray of frost}中选择两个。",
-            "选择一个1级的{@filter bard or sorcerer spell|spells|level=1|class=bard;sorcerer}。",
-            "奎德里克斯",
-            "从{@spell druidcraft}、{@spell guidance}和{@spell mage hand}中选择两个。",
-            "选择一个1级的{@filter 德鲁伊或巫师法术|spells|level=1|class=druid;wizard}。",
-            "银羽笔",
-            "从{@spell sacred flame}、{@spell thaumaturgy}和{@spell vicious mockery}中选择两项。",
-            "选择一个1级{@filter 吟游诗人或牧师法术|spells|level=1|class=bard;cleric}。",
-            "凋零之花",
-            "从{@spell chill touch}、{@spell druidcraft}和{@spell spare the dying}中选择两项。",
-            "选择一个1级的{@filter 德鲁伊或巫师法术|spells|level=1|class=druid;wizard}。"
+            [
+              "洛尔霍尔德",
+              "从{@spell 光亮术}、{@spell 圣焰}和{@spell 奇术}中选择两个。",
+              "选择一个1级的{@filter 牧师或巫师法术|法术|level=1|职业=牧师；巫师}。"
+            ],
+            [
+              "普瑞斯玛瑞",
+              "从{@spell 火焰箭}、{@spell 魔法技俩}和{@spell 冷冻射线}中选择两个。",
+              "选择一个1级的{@filter 诗人或术士法术|法术|level=1|职业=吟游诗人；术士}。"
+            ],
+            [
+              "奎德里克斯",
+              "从{@spell 德鲁伊伎俩}、{@spell 神导术}和{@spell 法师之手}中选择两个。",
+              "选择一个1级的{@filter 德鲁伊或巫师法术|法术|level=1|职业=德鲁伊;巫师}。"
+            ],
+            [
+              "银羽笔",
+              "从{@spell 圣焰}、{@spell 奇术}和{@spell 恶毒嘲笑}中选择两项。",
+              "选择一个1级{@filter 吟游诗人或牧师法术|法术|level=1|职业=吟游诗人；牧师}。"
+            ],
+            [
+              "凋零之花",
+              "从{@spell 寒颤之触}、{@spell 德鲁伊伎俩}和{@spell 拯救濒死}中选择两项。",
+              "选择一个1级的{@filter 德鲁伊或巫师法术|法术|level=1|职业=德鲁伊;巫师}。"
+            ]
           ]
         }
       ]
@@ -4937,7 +5019,7 @@
         {
           "level": 4,
           "feat": [
-            "斯特里克斯学院的新手|scc"
+            "斯特里克斯文学院的新生|SCC"
           ]
         }
       ],
@@ -4957,8 +5039,8 @@
         {
           "type": "list",
           "items": [
-            "你可以作为仪式施展{@spell find familiar}法术。你的熟悉可以采取与你为斯特里克斯学院新手特性选择的学院相关的吉祥物形态：一个{@creature spirit statue mascot|scc}（知识殿堂），一个{@creature art elemental mascot|scc}（彩虹学院），一个{@creature fractal mascot|scc}（量子学院），一个{@creature inkling mascot|scc}（银羽笔），或一个{@creature pest mascot|scc}（凋零之花）。",
-            "在你的回合进行{@action Attack}动作时，你可以放弃一次攻击，以允许你的吉祥物熟悉使用其反应进行一次攻击。",
+            "你可以作为仪式施展{@spell 寻获魔宠}法术。你的熟悉可以采取与你为斯特里克斯学院新手特性选择的学院相关的吉祥物形态：一个{@creature 灵像吉祥物|SCC}（知识殿堂），一个{@creature 艺术元素吉祥物|SCC}（彩虹学院），一个{@creature 分形吉祥物|SCC}（量子学院），一个{@creature 暗示吉祥物|SCC}（银羽笔），或一个{@creature 害虫吉祥物|SCC}（凋零之花）。",
+            "在你的回合进行{@action 攻击}动作时，你可以放弃一次攻击，以允许你的吉祥物熟悉使用其反应进行一次攻击。",
             "如果你的吉祥物熟悉在你60英尺范围内，你可以作为动作进行传送，与熟悉交换位置。如果你的目的地空间太小，无法容纳你，传送就会失败并且被浪费。一旦你以这种方式传送，直到你完成一次长休息之前，你不能再这样做，除非你消耗一个2级或更高等级的法术位来再次这样做。"
           ]
         }
@@ -5010,7 +5092,7 @@
         }
       ],
       "entries": [
-        "你继承了祖先的天赋施法能力。这种能力允许你随意对自己施展{@spell nondetection}，无需任何材料成分。你还可以使用这种能力各施展一次以下法术：{@spell blindness/deafness}、{@spell blur}和{@spell disguise self}。当你完成一次长休息后，你将重新获得施展这些法术的能力。",
+        "你继承了祖先的天赋施法能力。这种能力允许你随意对自己施展{@spell 回避侦测}，无需任何材料成分。你还可以使用这种能力各施展一次以下法术：{@spell 目盲/耳聋术}、{@spell 朦胧术}和{@spell 易容术}。当你完成一次长休息后，你将重新获得施展这些法术的能力。",
         "智力是你施放这些法术的能力属性，并且你以它们的最低等级来施放它们。"
       ]
     },
@@ -5064,7 +5146,7 @@
           "ability": "继承",
           "known": {
             "_": [
-              "#c魔法手"
+              "法师之手#c"
             ]
           }
         }
@@ -5074,7 +5156,7 @@
         {
           "type": "list",
           "items": [
-            "你学会了{@spell mage hand}戏法。你可以在没有言语或身体动作成分的情况下施放它，并且你可以使幽灵手{@condition invisible}。如果你已经知道这个法术，当你施放它时，它的范围增加30英尺。它的施法能力是这个特性增加的能力。",
+            "你学会了{@spell 法师之手}戏法。你可以在没有言语或身体动作成分的情况下施放它，并且你可以使幽灵手{@condition 隐形}。如果你已经知道这个法术，当你施放它时，它的范围增加30英尺。它的施法能力是这个特性增加的能力。",
             "作为奖励动作，你可以尝试用心灵遥控推挤一个你能看到的，在你30英尺范围内的生物。当你这样做时，目标必须进行一次力量豁免投掷（DC 8 + 你的熟练加值 + 这个特性增加的属性调整值），否则会被向你或远离你移动5英尺。一个生物可以自愿失败这次豁免。"
           ]
         }
@@ -5117,7 +5199,7 @@
           "type": "list",
           "items": [
             "你可以心灵感应地与任何你能看到的，在你60英尺范围内的生物进行交流。你的心灵感应话语是你知晓的语言，而且只有当这个生物也知晓那种语言时，它才能理解你。你的交流不会赋予生物以心灵感应的方式回应你的能力。",
-            "你可以施放{@spell detect thoughts}法术，不需要法术位或材料成分，并且你必须完成一次长休息后才能再次以这种方式施放它。你的施法能力属性是这个特性增加的能力。如果你有2级或更高等级的法术位，你可以使用它们来施放这个法术。"
+            "你可以施放{@spell 侦测思想}法术，不需要法术位或材料成分，并且你必须完成一次长休息后才能再次以这种方式施放它。你的施法能力属性是这个特性增加的能力。如果你有2级或更高等级的法术位，你可以使用它们来施放这个法术。"
           ]
         }
       ],
@@ -5188,7 +5270,7 @@
         {
           "level": 4,
           "feat": [
-            "巨人之击|BGG|巨人之击（山丘之击）"
+            "巨人打击|BGG|巨人之击（丘陵之击）"
           ]
         }
       ],
@@ -5212,7 +5294,7 @@
           "items": [
             {
               "type": "item",
-              "name": "紫龙骑士(旗将):意志壁垒",
+              "name": "意志壁垒",
               "ENG_name": "Bulwark",
               "entries": [
                 "当你受到一个效果，这个效果会使你移动至少5英尺或使你处于倒地状态时，你可以使用你的反应来稳定自己。你不会被移动，也不会处于倒地状态。"
@@ -5236,14 +5318,14 @@
       "source": "TDCSR",
       "page": 191,
       "entries": [
-        "你已经学会了{@variantrule hemocraft|TDCSR}的秘密，它以牺牲你自己的生命力量为代价，赋予你深奥的力量。作为一个奖励动作，你可以选择承受{@damage 1d6}死灵伤害以获得血液恩惠。你的血液恩惠持续1小时或直到被消耗。",
+        "你已经学会了{@variantrule 血术|TDCSR}的秘密，它以牺牲你自己的生命力量为代价，赋予你深奥的力量。作为一个奖励动作，你可以选择承受{@damage 1d6}死灵伤害以获得血液恩惠。你的血液恩惠持续1小时或直到被消耗。",
         "你可以消耗这个血液恩惠来获得以下好处之一：",
         {
           "type": "list",
           "items": [
-            "When you make an attack roll, you roll {@dice 1d6} and add it to the total.",
+            "当你进行攻击骰时，你掷一个{@dice 1d6}并将其加到总数上。",
             "当你用攻击或法术命中目标时，你额外造成{@damage 2d6}死灵伤害。",
-            "When you cause a creature to make a Strength, Dexterity, or Constitution {@quickref saving throws|PHB|2|1|saving throw}, roll a {@dice d4} and reduce their save by the amount rolled."
+            "当你导致一个生物进行力量、敏捷或体质的{@quickref 豁免检定|PHB|2|1|豁免检定}时，掷一个{@dice d4}并将他们的豁免值减少掷出的数值。"
           ]
         },
         "为了获得血液恩惠而承受的伤害无法以任何方式减少。"
@@ -5264,8 +5346,8 @@
         {
           "type": "list",
           "items": [
-            "当你受到伤害时，你在进行体质豁免投掷以维持法术的{@status concentration}时，你有优势。",
-            "即使你一只手或两只手都持有武器或{@item shield|phb}，你仍然可以进行法术的身体动作成分。",
+            "当你受到伤害时，你在进行体质豁免投掷以维持法术的{@status 专注}时，你有优势。",
+            "即使你一只手或两只手都持有武器或{@item 护盾术|PHB}，你仍然可以进行法术的身体动作成分。",
             "当一个敌对生物的移动引发你的反击机会时，你可以使用你的反应来对那个生物施放一个法术，而不是进行反击攻击。这个法术必须有一个动作的施法时间，并且只能以那个生物为目标。"
           ]
         }
@@ -5290,7 +5372,7 @@
       "weaponProficiencies": [
         {
           "choose": {
-            "fromFilter": "类型=武术武器；普通武器|杂项=普通",
+            "fromFilter": "type=武术武器；普通武器|miscellaneous=平凡的",
             "count": 4
           }
         }
@@ -5337,14 +5419,14 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=德鲁伊"
+                "choose": "level=0|class=德鲁伊"
               }
             ]
           }
         }
       ],
       "entries": [
-        "你学会了原始森林的魔法，这些森林受到你的族人的崇敬和保护。你可以选择学习一个德鲁伊戏法。你还会学习{@spell longstrider}和{@spell pass without trace}法术，每个法术你可以不消耗法术位施展一次。当你完成一次长休息后，你将重新获得以这种方式施展这两个法术的能力。对于这三个法术，智慧是你的施法能力属性。"
+        "你学会了原始森林的魔法，这些森林受到你的族人的崇敬和保护。你可以选择学习一个德鲁伊戏法。你还会学习{@spell 大步奔行}和{@spell 行踪无迹}法术，每个法术你可以不消耗法术位施展一次。当你完成一次长休息后，你将重新获得以这种方式施展这两个法术的能力。对于这三个法术，智慧是你的施法能力属性。"
       ]
     },
     {
@@ -5363,7 +5445,7 @@
         {
           "type": "list",
           "items": [
-            "你在{@skill Survival}或{@skill Nature}技能中的一个上获得熟练度。",
+            "你在{@skill 求生}或{@skill 自然}技能中的一个上获得熟练度。",
             "你忽略困难地形。",
             "在自然环境中，除了通过魔法手段，你不能迷路。"
           ]

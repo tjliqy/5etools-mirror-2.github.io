@@ -27,6 +27,7 @@ class _SpellSourceUtil {
 
 					// Ignored
 					case "name":
+					case "ENG_name":
 					case "ability":
 					case "resourceName": break;
 

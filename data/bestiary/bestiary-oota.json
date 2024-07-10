@@ -7,11 +7,11 @@
       ]
     },
     "internalCopies": [
-      "怪物"
+      "monster"
     ],
     "otherSources": {
       "monster": {
-        "MTF": "奥特亚"
+        "MTF": "OotA"
       }
     }
   },
@@ -61,7 +61,7 @@
         "source": "MM",
         "_templates": [
           {
-            "name": "矮人:山地矮人",
+            "name": "山地矮人",
             "ENG_name": "Mountain Dwarf",
             "source": "PHB"
           }
@@ -270,7 +270,7 @@
           },
           "languages": [
             {
-              "mode": "如果不存在则追加",
+              "mode": "appendIfNotExistsArr",
               "items": [
                 "矮人语",
                 "精灵语",
@@ -285,11 +285,11 @@
                 "name": "天生施法",
                 "ENG_name": "Innate Spellcasting",
                 "headerEntries": [
-                  "Blurg 天生能够每天施放一次 {@spell teleport} 法术，但预期的目的地必须在另一个 {@adventure society member|OotA|1|Society of Brilliance} 成员30英尺范围内。这种传送效果可能会被干扰（见 \"{@adventure Faerzress|OotA|1|Faerzress}\"），这就是为什么社会成员有时会出现在地下深处的偏远角落，与同伴分离。"
+                  "Blurg 天生能够每天施放一次 {@spell 传送术} 法术，但预期的目的地必须在另一个 {@adventure 社团成员|奥特亚|1|光辉协会} 成员30英尺范围内。这种传送效果可能会被干扰（见 \"{@adventure 费尔兹瑞斯|奥特亚|1|费尔兹瑞斯}\"），这就是为什么社会成员有时会出现在地下深处的偏远角落，与同伴分离。"
                 ],
                 "daily": {
                   "1e": [
-                    "{\"spell\": \"传送术\"}"
+                    "{@spell 传送术}"
                   ]
                 },
                 "hidden": [
@@ -389,7 +389,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true
     },
@@ -571,7 +571,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true
     },
@@ -722,7 +722,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，霍加在攻击检定时处于不利状态，以及在依赖视力的智慧（{@skill Perception}）检定上也处于不利状态。"
+            "在阳光中，霍加在攻击检定时处于不利状态，以及在依赖视力的智慧（{@skill 察觉}）检定上也处于不利状态。"
           ]
         },
         {
@@ -736,7 +736,7 @@
           "name": "勇敢",
           "ENG_name": "Brave",
           "entries": [
-            "霍加尔在对抗{@condition frightened}状态的豁免投掷中具有优势。"
+            "霍加尔在对抗{@condition 恐惧}状态的豁免投掷中具有优势。"
           ]
         }
       ],
@@ -752,7 +752,7 @@
           "name": "隐形（短休或长休后重新充能）",
           "ENG_name": "Invisibility (Recharges after a Short or Long Rest)",
           "entries": [
-            "霍加尔通过魔法变得{@condition 隐形}，直到他进行攻击、施放法术、使用他的放大能力，或直到他的{@status 专注}被打破，最长持续1小时（就像在{@status 专注||专注}一个法术）。霍加尔穿戴或携带的任何装备也会随着他一起变得{@condition 隐形}。"
+            "霍加尔通过魔法变得{@condition 隐形}，直到他进行攻击、施放法术、使用他的放大能力，或直到他的{@status 专注}被打破，最长持续1小时（就像在{@status 专注||集中精神}一个法术）。霍加尔穿戴或携带的任何装备也会随着他一起变得{@condition 隐形}。"
           ]
         },
         {
@@ -766,7 +766,7 @@
           "name": "+2 战锤",
           "ENG_name": "+2 Warhammer",
           "entries": [
-            "{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) bludgeoning damage, or 11 ({@damage 1d10 + 6}) bludgeoning damage if used with two hands. While Horgar is enlarged, the damage increases to 15 ({@dice 2d8 + 6}) or 17 ({@damage 2d10 + 6}) bludgeoning damage, respectively."
+            "{@atk 近战武器} 命中骰：8，攻击范围5英尺，单一目标。{@h}10（{@damage 1d8 + 6}）钝击伤害，或如果用双手使用则为11（{@damage 1d10 + 6}）钝击伤害。当霍加变大时，伤害分别增加到15（{@dice 2d8 + 6}）或17（{@damage 2d10 + 6}）钝击伤害。"
           ]
         },
         {
@@ -780,7 +780,7 @@
           "name": "领导力（短休或长休后重置）",
           "ENG_name": "Leadership (Recharges after a Short or Long Rest)",
           "entries": [
-            "For 1 minute, Horgar can utter a special command or warning whenever a nonhostile creature that he can see within 30 feet of Horgar makes an attack roll or a saving throw. The creature can add a {@dice d4} to its roll provided it can hear and understand Horgar. A creature can benefit from only one Leadership die at a time. This effect ends if Horgar is {@condition incapacitated}."
+            "持续1分钟，霍加可以在霍加可见范围内30英尺内，任何非敌对生物进行攻击判定或豁免判定时，发出一个特殊的命令或警告。如果该生物能够听到并理解霍加的话，它可以在其掷骰结果上加上一个{@dice d4}。一个生物一次只能从领导力骰中受益。如果霍加被{@condition 无力}，此效果结束。"
           ]
         }
       ],
@@ -794,8 +794,8 @@
         }
       ],
       "attachedItems": [
-        "+2 战锤|伤害",
-        "重型弩|PHB"
+        "+2 战锤|DMG",
+        "重弩|PHB"
       ],
       "traitTags": [
         "日光敏感"
@@ -832,7 +832,7 @@
       "source": "OotA",
       "page": 224,
       "reprintedAs": [
-        "德洛"
+        "迪洛矮人|MTF"
       ],
       "size": [
         "S"
@@ -851,7 +851,7 @@
         {
           "ac": 13,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -885,7 +885,7 @@
           "name": "疯狂",
           "ENG_name": "Insanity",
           "entries": [
-            "德罗在对抗被{@condition charmed}或{@condition frightened}的豁免骰上具有优势。"
+            "德罗在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免骰上具有优势。"
           ]
         },
         {
@@ -899,7 +899,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在日光下，德罗族在攻击检定时处于劣势，以及在依赖视力的感知（{@skill 感知}）技能检定上也处于劣势。"
+            "在日光下，德罗族在攻击检定时处于劣势，以及在依赖视力的感知（{@skill 察觉}）技能检定上也处于劣势。"
           ]
         }
       ],
@@ -920,8 +920,8 @@
         }
       ],
       "attachedItems": [
-        "钩矛短矛|奥塔",
-        "轻型连发弩|奥塔"
+        "钩矛|奥特亚",
+        "轻型连发弩|奥特亚"
       ],
       "traitTags": [
         "魔法抗性",
@@ -946,7 +946,7 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -958,7 +958,7 @@
       "source": "OotA",
       "page": 224,
       "reprintedAs": [
-        "德罗智者|MTF"
+        "迪洛矮人学者|MTF"
       ],
       "_copy": {
         "name": "迪洛矮人",
@@ -982,32 +982,32 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 酸液飞溅}",
-                "{@spell 魔法手}",
+                "{@spell 酸液溅爆}",
+                "{@spell 法师之手}",
                 "{@spell 传讯术}",
-                "{@spell 霜冻射线}"
+                "{@spell 冷冻射线}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
-                "{@spell 炽热之手}",
-                "{@spell 彩色法球}",
-                "{@spell 睡眠}"
+                "{@spell 燃烧之手}",
+                "{@spell 幻色法球}",
+                "{@spell 沉眠}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 隐形}",
-                "{@spell 蜘蛛攀爬}"
+                "{@spell 隐形术}",
+                "{@spell 蛛行术}"
               ]
             },
             "3": {
               "slots": 2,
               "spells": [
-                "{@spell 闪烁}",
-                "{@spell 闪电箭}"
+                "{@spell 闪现术}",
+                "{@spell 闪电束}"
               ]
             }
           },
@@ -1018,7 +1018,7 @@
         "CS"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1048,7 +1048,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -1089,13 +1089,13 @@
             "德罗基的天生施法能力是魅力（法术豁免{@dc 13}）。他能够天生施放以下法术，无需任何材料成分："
           ],
           "will": [
-            "{@spell 小幻象}"
+            "{@spell 次级幻象}"
           ],
           "daily": {
             "1e": [
               "{@spell 黑暗}",
-              "{@spell 恐惧}",
-              "{@spell 震碎}"
+              "{@spell 恐惧术}",
+              "{@spell 粉碎音波}"
             ]
           },
           "ability": "cha"
@@ -1120,7 +1120,7 @@
           "name": "偷袭 (1/回合)",
           "ENG_name": "Sneak Attack (1/Turn)",
           "entries": [
-            "Droki deals an extra 7 ({@dice 2d6}) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Droki that isn't {@condition incapacitated} and Droki doesn't have disadvantage on the attack roll."
+            "当Droki使用武器攻击命中目标，并且在攻击骰上有优势，或者目标在Droki的盟友5英尺范围内且该盟友没有{@condition 无力}状态，同时Droki在攻击骰上没有劣势时，Droki额外造成7点({@condition 无力})伤害。"
           ]
         },
         {
@@ -1134,7 +1134,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在日光下，德罗族在攻击检定时处于劣势，以及在依赖视力的感知（{@skill 感知}）技能检定上也处于劣势。"
+            "在日光下，德罗族在攻击检定时处于劣势，以及在依赖视力的感知（{@skill 察觉}）技能检定上也处于劣势。"
           ]
         }
       ],
@@ -1164,7 +1164,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "魔法抗性",
@@ -1200,11 +1200,11 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1321,7 +1321,7 @@
       "source": "OotA",
       "page": 195,
       "_copy": {
-        "name": "卫兵",
+        "name": "警卫",
         "ENG_name": "Guard",
         "source": "MM",
         "_templates": [
@@ -1410,7 +1410,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 链甲衫|phb}"
+            "{@item 链甲衫|PHB}"
           ]
         }
       ],
@@ -1448,7 +1448,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "senseTags": [
         "B"
@@ -1550,8 +1550,8 @@
         {
           "ac": 16,
           "from": [
-            "{@item 鳞甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 鳞甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -1589,13 +1589,13 @@
             "达克哈夫特的天生施法能力是智力（法术豁免{@dc 10}），它可以天生施放以下法术，无需任何材料："
           ],
           "will": [
-            "{@spell 友伴术}",
-            "{@spell 魔法手}"
+            "{@spell 交友术}",
+            "{@spell 法师之手}"
           ],
           "daily": {
             "1e": [
-              "{@spell 伪装自己}",
-              "{@spell 睡眠}"
+              "{@spell 易容术}",
+              "{@spell 沉眠}"
             ]
           },
           "ability": "int"
@@ -1606,14 +1606,14 @@
           "name": "灰矮人韧性",
           "ENG_name": "Duergar Resilience",
           "entries": [
-            "杜尔加在对抗毒素、法术和幻象的豁免投掷中具有优势，并且能够抵抗被{@condition charmed}或{@condition paralyzed}状态。"
+            "杜尔加在对抗毒素、法术和幻象的豁免投掷中具有优势，并且能够抵抗被{@condition 魅惑}或{@condition 麻痹}状态。"
           ]
         },
         {
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，灰矮人进行攻击检定时处于劣势，同样在依赖视力的感知（{@skill Perception}）检定上也处于劣势。"
+            "在阳光中，灰矮人进行攻击检定时处于劣势，同样在依赖视力的感知（{@skill 察觉}）检定上也处于劣势。"
           ]
         }
       ],
@@ -1643,13 +1643,13 @@
           "name": "隐形（短休或长休后重新充能）",
           "ENG_name": "Invisibility (Recharges after a Short or Long Rest)",
           "entries": [
-            "杜尔加在攻击、施法、使用其放大能力之前，或直到其{@status concentration}被打破之前，可以魔法变得{@condition invisible}，持续时间最长1小时（就好像在集中精神{@status concentration||施法}）。杜尔加穿戴或携带的任何装备也会随之变得{@condition invisible}。"
+            "杜尔加在攻击、施法、使用其放大能力之前，或直到其{@condition 隐形}被打破之前，可以魔法变得{@status 专注}，持续时间最长1小时（就好像在集中精神{@status 专注||集中精神}）。杜尔加穿戴或携带的任何装备也会随之变得{@status 专注}。"
           ]
         }
       ],
       "attachedItems": [
-        "标枪",
-        "战镐|phb"
+        "标枪|PHB",
+        "战镐|PHB"
       ],
       "traitTags": [
         "日光敏感"
@@ -1705,8 +1705,8 @@
         {
           "ac": 16,
           "from": [
-            "{@item 鳞甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 鳞甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -1744,12 +1744,12 @@
             "火焰守护者的天生施法能力是智慧（法术豁免{@dc 12}）。它能够天生施放以下法术，无需任何成分："
           ],
           "will": [
-            "{@spell 友伴术}",
+            "{@spell 交友术}",
             "{@spell 传讯术}"
           ],
           "daily": {
             "1e": [
-              "{@spell 命令}"
+              "{@spell 命令术}"
             ]
           },
           "ability": "wis"
@@ -1764,24 +1764,24 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 指引}",
+                "{@spell 神导术}",
                 "{@spell 修复术}",
-                "{@spell 圣洁之火}"
+                "{@spell 圣焰}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
-                "{@spell 厄运}",
-                "{@spell 施加伤害}",
-                "{@spell 信仰之盾}"
+                "{@spell 灾祸术}",
+                "{@spell 造成伤势}",
+                "{@spell 虔诚护盾}"
               ]
             },
             "2": {
               "slots": 2,
               "spells": [
-                "{@spell 增强能力}",
-                "{@spell 灵界武器}"
+                "{@spell 强化属性}",
+                "{@spell 灵体武器}"
               ]
             }
           },
@@ -1793,14 +1793,14 @@
           "name": "灰矮人韧性",
           "ENG_name": "Duergar Resilience",
           "entries": [
-            "杜尔加在对抗毒素、法术和幻象的豁免投掷中具有优势，并且能够抵抗被{@condition charmed}或{@condition paralyzed}状态。"
+            "杜尔加在对抗毒素、法术和幻象的豁免投掷中具有优势，并且能够抵抗被{@condition 魅惑}或{@condition 麻痹}状态。"
           ]
         },
         {
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，灰矮人进行攻击检定时处于劣势，同样在依赖视力的感知（{@skill Perception}）检定上也处于劣势。"
+            "在阳光中，灰矮人进行攻击检定时处于劣势，同样在依赖视力的感知（{@skill 察觉}）检定上也处于劣势。"
           ]
         }
       ],
@@ -1830,13 +1830,13 @@
           "name": "隐形（短休或长休后重新充能）",
           "ENG_name": "Invisibility (Recharges after a Short or Long Rest)",
           "entries": [
-            "杜尔加在攻击、施法、使用其放大能力之前，或直到其{@status concentration}被打破之前，可以魔法变得{@condition invisible}，持续时间最长1小时（就好像在集中精神{@status concentration||施法}）。杜尔加穿戴或携带的任何装备也会随之变得{@condition invisible}。"
+            "杜尔加在攻击、施法、使用其放大能力之前，或直到其{@condition 隐形}被打破之前，可以魔法变得{@status 专注}，持续时间最长1小时（就好像在集中精神{@status 专注||集中精神}）。杜尔加穿戴或携带的任何装备也会随之变得{@status 专注}。"
           ]
         }
       ],
       "attachedItems": [
-        "标枪",
-        "战镐|phb"
+        "标枪|PHB",
+        "战镐|PHB"
       ],
       "traitTags": [
         "日光敏感"
@@ -1874,9 +1874,9 @@
         "伏地"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "魅力",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -1897,8 +1897,8 @@
         {
           "ac": 16,
           "from": [
-            "{@item 鳞甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 鳞甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -1939,7 +1939,7 @@
         }
       ],
       "attachedItems": [
-        "战镐|phb"
+        "战镐|PHB"
       ],
       "senseTags": [
         "B"
@@ -1966,7 +1966,7 @@
         "source": "MM",
         "_templates": [
           {
-            "name": "矮人:山地矮人",
+            "name": "山地矮人",
             "ENG_name": "Mountain Dwarf",
             "source": "PHB"
           }
@@ -2013,7 +2013,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -2060,7 +2060,7 @@
           "name": "敏锐的听觉和视觉",
           "ENG_name": "Keen Hearing and Sight",
           "entries": [
-            "侦察兵在依赖听觉或视觉的感知（{@skill Perception}）检定上具有优势。"
+            "侦察兵在依赖听觉或视觉的感知（{@skill 察觉}）检定上具有优势。"
           ]
         }
       ],
@@ -2088,8 +2088,8 @@
         }
       ],
       "attachedItems": [
-        "重型弩|PHB",
-        "战镐|phb"
+        "重弩|PHB",
+        "战镐|PHB"
       ],
       "traitTags": [
         "敏锐感官"
@@ -2209,7 +2209,7 @@
               "name": "悲惨",
               "ENG_name": "Wretched",
               "entries": [
-                "由于遭受的身体和精神上的虐待，加什在智慧检定和智慧豁免投掷中处于劣势。一个{@spell lesser restoration}法术可以消除这些效果。"
+                "由于遭受的身体和精神上的虐待，加什在智慧检定和智慧豁免投掷中处于劣势。一个{@spell 次级复原术}法术可以消除这些效果。"
               ]
             }
           }
@@ -2343,7 +2343,7 @@
                 "name": "伪装",
                 "ENG_name": "Camouflage",
                 "entries": [
-                  "这只章鱼在敏捷（{@skill 潜行}）检定上有优势。"
+                  "这只章鱼在敏捷（{@skill 隐匿}）检定上有优势。"
                 ]
               }
             },
@@ -2412,7 +2412,7 @@
           },
           "languages": [
             {
-              "mode": "如果不存在则追加",
+              "mode": "appendIfNotExistsArr",
               "items": [
                 "矮人语",
                 "精灵语",
@@ -2427,11 +2427,11 @@
                 "name": "天生施法",
                 "ENG_name": "Innate Spellcasting",
                 "headerEntries": [
-                  "格拉齐拉克斯天生能够每天施展一次{@spell 传送}法术，但预期的目的地必须在另一个{@adventure 光辉学会成员|OotA|1|Society of Brilliance}的30英尺范围内。这种传送效果可能会被干扰（见“{@adventure 法兹雷斯|OotA|1|Faerzress}”），这也是学会成员有时会出现在地下黑暗角落，与同伴分离的原因。"
+                  "格拉齐拉克斯天生能够每天施展一次{@spell 传送术}法术，但预期的目的地必须在另一个{@adventure 社团成员|奥特亚|1|光辉协会}的30英尺范围内。这种传送效果可能会被干扰（见“{@adventure 费尔兹瑞斯|奥特亚|1|费尔兹瑞斯}”），这也是学会成员有时会出现在地下黑暗角落，与同伴分离的原因。"
                 ],
                 "daily": {
                   "1e": [
-                    "{\"spell\": \"传送术\"}"
+                    "{@spell 传送术}"
                   ]
                 },
                 "hidden": [
@@ -2476,8 +2476,8 @@
         {
           "ac": 18,
           "from": [
-            "{@item 锁子甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 链甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -2519,35 +2519,35 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 指引}",
-                "{@spell 光亮}",
-                "{@spell 圣洁之火}",
-                "{\"spell\": \"\\u5723\\u5947\"}"
+                "{@spell 神导术}",
+                "{@spell 光亮术}",
+                "{@spell 圣焰}",
+                "{@spell 奇术}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
-                "{@spell 治疗伤口}",
+                "{@spell 治疗伤势}",
                 "{@spell 神恩术}",
-                "{@spell 施加伤害}",
-                "{@spell 防护邪恶善良}",
-                "{@spell 信仰之盾}"
+                "{@spell 造成伤势}",
+                "{@spell 防护善恶}",
+                "{@spell 虔诚护盾}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 持续火焰}",
-                "{@spell 定身术}",
-                "{@spell 魔法武器}",
-                "{@spell 灵界武器}"
+                "{@spell 不灭明焰}",
+                "{@spell 人类定身术}",
+                "{@spell 魔化武器}",
+                "{@spell 灵体武器}"
               ]
             },
             "3": {
               "slots": 3,
               "spells": [
-                "{@spell 施加诅咒}",
+                "{@spell 降咒}",
                 "{@spell 解除魔法}",
                 "{@spell 灵体守卫}"
               ]
@@ -2573,7 +2573,7 @@
         }
       ],
       "attachedItems": [
-        "+1 链枷|伤害"
+        "+1 链枷|DMG"
       ],
       "actionTags": [
         "多重攻击"
@@ -2598,8 +2598,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true
     },
@@ -2633,14 +2633,14 @@
                 "spells": {
                   "0": {
                     "spells": [
-                      "{@spell 小幻象}",
-                      "{@spell 霜冻射线}"
+                      "{@spell 次级幻象}",
+                      "{@spell 冷冻射线}"
                     ]
                   },
                   "1": {
                     "slots": 4,
                     "spells": [
-                      "{防护法术}",
+                      "{@spell 护盾术}",
                       "{@spell 法师护甲}"
                     ]
                   }
@@ -2760,7 +2760,7 @@
       "source": "OotA",
       "page": 9,
       "_copy": {
-        "name": "卓尔·罗丝女祭司",
+        "name": "罗丝女祭司",
         "ENG_name": "Drow Priestess of Lolth",
         "source": "MM",
         "_mod": {
@@ -2776,7 +2776,7 @@
               "name": "特殊装备",
               "ENG_name": "Special Equipment",
               "entries": [
-                "伊尔瓦拉除了她的鞭子之外，还挥舞着一根{@item 触手法杖}。"
+                "伊尔瓦拉除了她的鞭子之外，还挥舞着一根{@item 触须权杖}。"
               ]
             }
           }
@@ -2791,7 +2791,7 @@
       "source": "OotA",
       "page": 100,
       "_copy": {
-        "name": "石化蜥蜴(巴西利斯克)",
+        "name": "石化蜥蜴",
         "ENG_name": "Basilisk",
         "source": "MM"
       },
@@ -2998,29 +2998,29 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 指引}",
-                "{\"spell\": \"\\u5723\\u5947\"}"
+                "{@spell 神导术}",
+                "{@spell 奇术}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
                 "{@spell 魅惑人类}",
-                "{@spell 创造或毁灭水}"
+                "{@spell 造水/枯水术}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 定身术}",
-                "{@spell 沉默}"
+                "{@spell 人类定身术}",
+                "{@spell 沉默术}"
               ]
             },
             "3": {
               "slots": 2,
               "spells": [
                 "{@spell 解除魔法}",
-                "{@spell 语言通晓}"
+                "{@spell 巧言}"
               ]
             }
           },
@@ -3063,7 +3063,7 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -3197,7 +3197,7 @@
         "source": "MM",
         "_templates": [
           {
-            "name": "精灵:高等精灵",
+            "name": "高等精灵",
             "ENG_name": "High Elf",
             "source": "PHB"
           }
@@ -3210,7 +3210,7 @@
             "flags": "i"
           },
           "languages": {
-            "mode": "如果不存在则追加",
+            "mode": "appendIfNotExistsArr",
             "items": "地下通用语"
           },
           "trait": {
@@ -3219,7 +3219,7 @@
               "name": "特殊装备",
               "ENG_name": "Special Equipment",
               "entries": [
-                "卡莱莎拥有一顶{@item 伪装帽}，她在卓尔族的陪伴下使用它，以显现为女性卓尔族。"
+                "卡莱莎拥有一顶{@item 易容帽}，她在卓尔族的陪伴下使用它，以显现为女性卓尔族。"
               ]
             }
           }
@@ -3237,7 +3237,7 @@
             "卡莱莎可以天生施放以下法术，无需任何材料成分："
           ],
           "will": [
-            "{@spell 舞动之光}"
+            "{@spell 舞光术}"
           ],
           "ability": "int"
         }
@@ -3298,7 +3298,7 @@
       "source": "OotA",
       "page": 179,
       "_copy": {
-        "name": "豺狼人·耶诺古毒牙",
+        "name": "耶诺古毒牙",
         "ENG_name": "Gnoll Fang of Yeenoghu",
         "source": "MM",
         "_mod": {
@@ -3335,8 +3335,8 @@
         {
           "ac": 16,
           "from": [
-            "{@item 链甲衫|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 链甲衫|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -3380,7 +3380,7 @@
         }
       ],
       "attachedItems": [
-        "长柄斧"
+        "戟|PHB"
       ],
       "senseTags": [
         "D"
@@ -3416,7 +3416,7 @@
         {
           "ac": 13,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -3450,7 +3450,7 @@
       "cr": "1",
       "trait": [
         {
-          "name": "巧妙动作",
+          "name": "灵巧动作",
           "ENG_name": "Cunning Action",
           "entries": [
             "间谍在每个回合可以使用奖励行动执行冲刺、脱离战斗或隐藏行动。"
@@ -3460,7 +3460,7 @@
           "name": "偷袭 (1/回合)",
           "ENG_name": "Sneak Attack (1/Turn)",
           "entries": [
-            "The spy deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't {@condition incapacitated} and the spy doesn't have disadvantage on the attack roll."
+            "当间谍在使用武器攻击命中目标并且攻击骰有优势，或者目标距离间谍的盟友5英尺以内且盟友没有{@condition 无力}状态，同时间谍的攻击骰没有劣势时，额外造成7点（{@condition 无力}）伤害。"
           ]
         }
       ],
@@ -3489,7 +3489,7 @@
       ],
       "attachedItems": [
         "手弩|PHB",
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "偷袭"
@@ -3583,7 +3583,7 @@
                       "ENG_name": "6. Telekinetic Ray",
                       "style": "斜体",
                       "entries": [
-                        "如果目标是一个生物，它必须在一次{@dc 16} 力量豁免投掷中成功，否则眼魔将其在任何方向上移动最多30英尺。它将被射线的心灵遥控紧握所{@condition 限制}，直到眼魔的下一回合开始或直到眼魔被{@condition 失去能力}。",
+                        "如果目标是一个生物，它必须在一次{@dc 16} 力量豁免投掷中成功，否则眼魔将其在任何方向上移动最多30英尺。它将被射线的心灵遥控紧握所{@condition 束缚}，直到眼魔的下一回合开始或直到眼魔被{@condition 无力}。",
                         "如果目标是一个重量不超过300磅且没有被穿戴或携带的物体，它会被移动最多30英尺的距离，朝任何方向。眼魔还可以通过这个射线对物体进行精细控制，例如操作一个简单的工具或打开门或容器。"
                       ]
                     }
@@ -3699,21 +3699,21 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 奥术冲击}",
-                "{@spell 友伴术}",
-                "{@spell 毒雾喷吐}"
+                "{@spell 魔能爆}",
+                "{@spell 交友术}",
+                "{@spell 毒气喷洒}"
               ]
             },
             "2": {
               "lower": 1,
               "slots": 2,
               "spells": [
-                "{@spell 阿迦特之铠}",
+                "{@spell 艾嘉西斯之铠}",
                 "{@spell 魅惑人类}",
-                "{@spell 诅咒}",
-                "{@spell 定身术}",
+                "{@spell 脆弱诅咒}",
+                "{@spell 人类定身术}",
                 "{@spell 衰弱射线}",
-                "{@spell 蜘蛛攀爬}"
+                "{@spell 蛛行术}"
               ]
             }
           },
@@ -3725,7 +3725,7 @@
           "name": "疯狂",
           "ENG_name": "Insanity",
           "entries": [
-            "纳拉克在对抗被{@condition charmed}或{@condition frightened}状态的豁免投掷中具有优势。"
+            "纳拉克在对抗被{@condition 魅惑}或{@condition 恐惧}状态的豁免投掷中具有优势。"
           ]
         },
         {
@@ -3739,7 +3739,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在日光下，Narrak在攻击检定上，以及依赖视力的智慧（{@skill 感知}）技能检定上都有劣势。"
+            "在日光下，Narrak在攻击检定上，以及依赖视力的智慧（{@skill 察觉}）技能检定上都有劣势。"
           ]
         }
       ],
@@ -3759,7 +3759,7 @@
           ]
         },
         {
-          "name": "魔能祈唤:融身入影",
+          "name": "融身入影",
           "ENG_name": "One with Shadows",
           "entries": [
             "当Narrak处于昏暗或黑暗中时，他可以变得{@condition 隐形}。除非他移动或采取行动或反应，否则他将一直保持这种状态。"
@@ -3767,7 +3767,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "魔法抗性",
@@ -3801,8 +3801,8 @@
         "麻痹"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "hasToken": true
     },
@@ -3929,7 +3929,7 @@
       "source": "OotA",
       "page": 204,
       "_copy": {
-        "name": "卓尔·罗丝女祭司",
+        "name": "罗丝女祭司",
         "ENG_name": "Drow Priestess of Lolth",
         "source": "MM",
         "_mod": {
@@ -3945,7 +3945,7 @@
               "name": "特殊装备",
               "ENG_name": "Special Equipment",
               "entries": [
-                "昆瑟尔挥舞着一根{@item 触手法杖}。"
+                "昆瑟尔挥舞着一根{@item 触须权杖}。"
               ]
             }
           },
@@ -3955,7 +3955,7 @@
               "name": "宝座激活",
               "ENG_name": "Throne Activation",
               "entries": [
-                "While seated on her throne, Quenthel can use an action on her turn to cast {@spell disintegrate} (save DC 19). A target that fails its saving throw takes {@dice 10d6 + 40} force damage. If this damage reduces the target to 0 hit points, it is disintegrated."
+                "当昆瑟尔坐在她的宝座上时，她可以在她的回合上用一个行动来施放{@spell 解离术}（豁免DC 19）。一个未能通过豁免掷骰的目标会受到{@dice 10d6 + 40}点力量伤害。如果这伤害使目标的生命值降至0，它将被解离。"
               ]
             }
           }
@@ -3996,13 +3996,13 @@
             "昆瑟尔的法术施法能力是魅力（法术豁免 DC 19）。她天生能够施放以下法术，无需任何材料成分："
           ],
           "will": [
-            "{@spell 舞动之光}"
+            "{@spell 舞光术}"
           ],
           "daily": {
             "1e": [
               "{@spell 黑暗}",
-              "{@spell 仙女之火}",
-              "{@spell 悬浮术}（仅限自身）"
+              "{@spell 妖火术}",
+              "{@spell 浮空术}（仅限自身）"
             ]
           },
           "ability": "cha"
@@ -4015,33 +4015,33 @@
             "昆瑟尔是一名20级施法者。她的施法能力是智慧（豁免{@dc 20}，法术攻击命中{@hit 12}）。这位卓尔精灵准备了以下牧师法术："
           ],
           "will": [
-            "任何等级达到9级的{@filter 牧师法术|法术|等级=0;1;2;3;4;5;6;7;8;9|职业=牧师}。"
+            "任何等级达到9级的{@filter 牧师法术高达9级|法术|level=0;1;2;3;4;5;6;7;8;9|职业=牧师}。"
           ],
           "spells": {
             "0": {
               "spells": [
-                "{@spell 指引}",
-                "{@spell 毒雾喷吐}",
-                "{@spell 抗力}",
-                "{@spell 临终救助}",
-                "{\"spell\": \"\\u5723\\u5947\"}"
+                "{@spell 神导术}",
+                "{@spell 毒气喷洒}",
+                "{@spell 提升抗力}",
+                "{@spell 拯救濒死}",
+                "{@spell 奇术}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
-                "{@spell 动物友谊}",
-                "{@spell 治疗伤口}",
-                "{@spell 侦测毒素和疾病}",
-                "{@spell 疾病射线}"
+                "{@spell 化兽为友}",
+                "{@spell 治疗伤势}",
+                "{@spell 侦测毒素或疾病}",
+                "{@spell 致病射线}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 次级复原}",
-                "{@spell 抵御毒素}",
-                "{@spell 蛛网}"
+                "{@spell 次级复原术}",
+                "{@spell 防护毒素}",
+                "{@spell 蛛网术}"
               ]
             },
             "3": {
@@ -4054,15 +4054,15 @@
             "4": {
               "slots": 3,
               "spells": [
-                "{@spell 占卜}",
-                "{@spell 自由行动}"
+                "{@spell 预言术}",
+                "{@spell 行动自如}"
               ]
             },
             "5": {
               "slots": 2,
               "spells": [
-                "{@spell 昆虫瘟疫}",
-                "{@spell 群体治愈伤口}"
+                "{@spell 疫病虫群}",
+                "{@spell 群体治疗伤势}"
               ]
             }
           },
@@ -4070,9 +4070,9 @@
         }
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true
     },
@@ -4294,7 +4294,7 @@
           },
           "languages": [
             {
-              "mode": "如果不存在则追加",
+              "mode": "appendIfNotExistsArr",
               "items": [
                 "矮人语",
                 "精灵语",
@@ -4309,11 +4309,11 @@
                 "name": "天生施法",
                 "ENG_name": "Innate Spellcasting",
                 "headerEntries": [
-                  "斯克里斯天生能够每天施放一次{@spell teleport}法术，但预期的目的地必须在另一个{@adventure society member|OotA|1|Society of Brilliance}成员30英尺范围内。这种传送效果可能会被干扰（见“{@adventure Faerzress|OotA|1|Faerzress}”），这就是为什么社会成员有时会出现在地下深处的偏远角落，与同伴分离。"
+                  "斯克里斯天生能够每天施放一次{@spell 传送术}法术，但预期的目的地必须在另一个{@adventure 社团成员|奥特亚|1|光辉协会}成员30英尺范围内。这种传送效果可能会被干扰（见“{@adventure 费尔兹瑞斯|奥特亚|1|费尔兹瑞斯}”），这就是为什么社会成员有时会出现在地下深处的偏远角落，与同伴分离。"
                 ],
                 "daily": {
                   "1e": [
-                    "{\"spell\": \"传送术\"}"
+                    "{@spell 传送术}"
                   ]
                 },
                 "hidden": [
@@ -4344,7 +4344,7 @@
         "source": "MM",
         "_templates": [
           {
-            "name": "精灵:高等精灵",
+            "name": "高等精灵",
             "ENG_name": "High Elf",
             "source": "PHB"
           }
@@ -4357,7 +4357,7 @@
             "flags": "i"
           },
           "languages": {
-            "mode": "如果不存在则追加",
+            "mode": "appendIfNotExistsArr",
             "items": "地下通用语"
           }
         }
@@ -4380,7 +4380,7 @@
       "source": "OotA",
       "page": 29,
       "_copy": {
-        "name": "寇涛鱼人大祭司",
+        "name": "寇涛大祭司",
         "ENG_name": "Kuo-toa Archpriest",
         "source": "MM",
         "_mod": {
@@ -4392,7 +4392,7 @@
           },
           "languages": [
             {
-              "mode": "如果不存在则追加",
+              "mode": "appendIfNotExistsArr",
               "items": [
                 "矮人语",
                 "精灵语",
@@ -4407,11 +4407,11 @@
                 "name": "天生施法",
                 "ENG_name": "Innate Spellcasting",
                 "headerEntries": [
-                  "斯卢皮杜普能够每天天生施放一次{@spell 传送}法术，但预期的目的地必须在另一个{@adventure 辉煌协会成员|OotA|1|辉煌协会}的30英尺范围内。这个传送效果可能会被干扰（见“{@adventure 法尔兹雷斯|OotA|1|法尔兹雷斯}”），这就是协会成员有时最终出现在地下黑暗角落，与同伴分离的原因。"
+                  "斯卢皮杜普能够每天天生施放一次{@spell 传送术}法术，但预期的目的地必须在另一个{@adventure 社团成员|奥特亚|1|光辉协会}的30英尺范围内。这个传送效果可能会被干扰（见“{@adventure 费尔兹瑞斯|奥特亚|1|费尔兹瑞斯}”），这就是协会成员有时最终出现在地下黑暗角落，与同伴分离的原因。"
                 ],
                 "daily": {
                   "1e": [
-                    "{\"spell\": \"传送术\"}"
+                    "{@spell 传送术}"
                   ]
                 },
                 "hidden": [
@@ -4478,7 +4478,7 @@
               "name": "双头",
               "ENG_name": "Two Heads",
               "entries": [
-                "由于它有两个头，蜘蛛王在智慧（{@skill Perception}）检定以及对抗被{@condition 致盲}、{@condition 魅惑}、{@condition 耳聋}、{@condition 恐惧}、{@condition 昏迷}和击昏{@condition 失去意识}的豁免投掷中具有优势。"
+                "由于它有两个头，蜘蛛王在智慧（{@skill 察觉}）检定以及对抗被{@condition 目盲}、{@condition 魅惑}、{@condition 耳聋}、{@condition 恐惧}、{@condition 震慑}和击昏{@condition 昏迷}的豁免投掷中具有优势。"
               ]
             }
           }
@@ -4568,7 +4568,7 @@
       "source": "OotA",
       "page": 97,
       "_copy": {
-        "name": "(兽化)鼠人",
+        "name": "鼠人",
         "ENG_name": "Wererat",
         "source": "MM",
         "_templates": [
@@ -4663,13 +4663,13 @@
             "布丁王的天生施法能力是智力（法术豁免{@dc 12}）。他能够天生施放以下法术，无需任何材料成分："
           ],
           "will": [
-            "{\"spell\": \"{@spell nondetection}\", \"description\": \"(仅限自身)\"}"
+            "{\"spell\": \"{@spell 回避侦测}\", \"description\": \"(仅限自身)\"}"
           ],
           "daily": {
             "1e": [
-              "{@spell 失明/耳聋}",
-              "{@spell 模糊}",
-              "{@spell 伪装自己}"
+              "{@spell 目盲/耳聋术}",
+              "{@spell 朦胧术}",
+              "{@spell 易容术}"
             ]
           },
           "ability": "int"
@@ -4684,47 +4684,47 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 酸液飞溅}",
-                "{@spell 光亮}",
-                "{@spell 魔法手}",
-                "{@spell 毒雾喷吐}",
-                "{@spell 戏法}"
+                "{@spell 酸液溅爆}",
+                "{@spell 光亮术}",
+                "{@spell 法师之手}",
+                "{@spell 毒气喷洒}",
+                "{@spell 魔法技俩}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
-                "{@spell 虚假生命}",
+                "{@spell 摹造生命}",
                 "{@spell 法师护甲}",
-                "{@spell 疾病射线}",
-                "{防护法术}"
+                "{@spell 致病射线}",
+                "{@spell 护盾术}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 疯狂之冠}",
-                "{@spell 雾隐步伐}"
+                "{@spell 疯狂冠冕}",
+                "{@spell 迷踪步}"
               ]
             },
             "3": {
               "slots": 3,
               "spells": [
-                "{@spell 气态形态}",
-                "{@spell 恶臭云雾}"
+                "{@spell 气化形体}",
+                "{@spell 臭云术}"
               ]
             },
             "4": {
               "slots": 3,
               "spells": [
-                "{\"spell\": \"blight\"}",
-                "{@spell 混乱}"
+                "{@spell 枯萎术}",
+                "{@spell 困惑术}"
               ]
             },
             "5": {
               "slots": 1,
               "spells": [
-                "{@spell 云雾杀}"
+                "{@spell 死云术}"
               ]
             }
           },
@@ -4736,7 +4736,7 @@
           "name": "岩地伪装",
           "ENG_name": "Stone Camouflage",
           "entries": [
-            "布丁王在岩石地形中进行敏捷（{@skill Stealth}）检定以隐藏时具有优势。"
+            "布丁王在岩石地形中进行敏捷（{@skill 隐匿}）检定以隐藏时具有优势。"
           ]
         },
         {
@@ -4766,7 +4766,7 @@
           "name": "变形",
           "ENG_name": "Change Shape",
           "entries": [
-            "布丁王能够魔法性地转变成一个{@filter 软泥怪|bestiary|type=ooze}，或者恢复其真实形态。如果他死亡，他将恢复真实形态。他穿戴或携带的任何装备都会被新形态吸收。在软泥怪形态下，布丁王保留了他的阵营、生命值、生命骰、以及智力、智慧和魅力得分，以及这个动作。他的其他统计数据和能力被新形态的所取代。"
+            "布丁王能够魔法性地转变成一个{@filter 软泥怪|怪物图鉴|类型=软泥怪}，或者恢复其真实形态。如果他死亡，他将恢复真实形态。他穿戴或携带的任何装备都会被新形态吸收。在软泥怪形态下，布丁王保留了他的阵营、生命值、生命骰、以及智力、智慧和魅力得分，以及这个动作。他的其他统计数据和能力被新形态的所取代。"
           ]
         },
         {
@@ -4778,13 +4778,13 @@
         }
       ],
       "attachedItems": [
-        "战镐|phb"
+        "战镐|PHB"
       ],
       "senseTags": [
         "D"
       ],
       "actionTags": [
-        "变形者"
+        "变形生物"
       ],
       "languageTags": [
         "AB",
@@ -4815,9 +4815,9 @@
         "中毒"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -4854,7 +4854,7 @@
       "source": "OotA",
       "page": 8,
       "_copy": {
-        "name": "(兽化)鼠人",
+        "name": "鼠人",
         "ENG_name": "Wererat",
         "source": "MM",
         "_templates": [
@@ -4952,7 +4952,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光照射下，洞穴蜥蜴在攻击骰上有劣势，以及在依赖视力的智慧（{@skill Perception}）检定上有劣势。"
+            "在阳光照射下，洞穴蜥蜴在攻击骰上有劣势，以及在依赖视力的智慧（{@skill 察觉}）检定上有劣势。"
           ]
         }
       ],
@@ -4979,7 +4979,7 @@
           ]
         },
         {
-          "name": "巨棍",
+          "name": "巨棒",
           "ENG_name": "Greatclub",
           "entries": [
             "{@atk 近战} 命中骰6，射程5英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 钝击伤害。"
@@ -4994,7 +4994,7 @@
         }
       ],
       "attachedItems": [
-        "巨棍"
+        "巨棍|PHB"
       ],
       "traitTags": [
         "日光敏感"
@@ -5022,8 +5022,8 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -5036,7 +5036,7 @@
       "source": "OotA",
       "page": 8,
       "_copy": {
-        "name": "(兽化)鼠人",
+        "name": "鼠人",
         "ENG_name": "Wererat",
         "source": "MM",
         "_templates": [
@@ -5141,7 +5141,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -5201,29 +5201,29 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 指引}",
-                "{\"spell\": \"\\u5723\\u5947\"}"
+                "{@spell 神导术}",
+                "{@spell 奇术}"
               ]
             },
             "1": {
               "slots": 4,
               "spells": [
                 "{@spell 魅惑人类}",
-                "{@spell 创造或毁灭水}"
+                "{@spell 造水/枯水术}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 定身术}",
-                "{@spell 沉默}"
+                "{@spell 人类定身术}",
+                "{@spell 沉默术}"
               ]
             },
             "3": {
               "slots": 2,
               "spells": [
                 "{@spell 解除魔法}",
-                "{@spell 语言通晓}"
+                "{@spell 巧言}"
               ]
             }
           },
@@ -5267,10 +5267,10 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -5283,7 +5283,7 @@
       "source": "OotA",
       "page": 151,
       "_copy": {
-        "name": "石化蜥蜴(巴西利斯克)",
+        "name": "石化蜥蜴",
         "ENG_name": "Basilisk",
         "source": "MM",
         "_mod": {
@@ -5312,7 +5312,7 @@
           ],
           "daily": {
             "1": [
-              "{\"spell\": \"Greater restoration\"}"
+              "{@spell 高等复原术}"
             ]
           }
         }
@@ -5344,7 +5344,7 @@
         {
           "ac": 17,
           "from": [
-            "{@item 锁子甲|phb}"
+            "{@item 板条甲|PHB}"
           ]
         }
       ],
@@ -5402,9 +5402,9 @@
         }
       ],
       "attachedItems": [
-        "重型弩|PHB",
-        "长剑",
-        "短剑"
+        "重弩|PHB",
+        "长剑|PHB",
+        "短剑|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -5456,7 +5456,7 @@
               "name": "特殊装备",
               "ENG_name": "Special Equipment",
               "entries": [
-                "维尔恩携带一把{@item 速度弯刀}，并可以在她的回合上用它进行一次攻击作为奖励行动。维尔恩还携带了四把涂有{@item 紫虫毒药}的匕首。匕首刀刃上的毒药只对一次命中有效，无论毒药是否生效。"
+                "维尔恩携带一把{@item 急速弯刀}，并可以在她的回合上用它进行一次攻击作为奖励行动。维尔恩还携带了四把涂有{@item 紫虫毒液}的匕首。匕首刀刃上的毒药只对一次命中有效，无论毒药是否生效。"
               ]
             }
           },
@@ -5573,7 +5573,7 @@
           },
           "languages": [
             {
-              "mode": "如果不存在则追加",
+              "mode": "appendIfNotExistsArr",
               "items": [
                 "矮人语",
                 "精灵语",
@@ -5588,11 +5588,11 @@
                 "name": "天生施法",
                 "ENG_name": "Innate Spellcasting",
                 "headerEntries": [
-                  "Y天生能够每天施放一次{@spell 传送}法术，但预定的目的地必须在另一个{@adventure 辉煌社会成员|OotA|1|Brilliance Society}的30英尺范围内。这个传送效果可能会被干扰（见“{@adventure 费尔兹雷斯|OotA|1|Faerzress}”），这就是社会成员有时最终出现在地下黑暗的遥远角落，与同伴分离的原因。"
+                  "Y天生能够每天施放一次{@spell 传送术}法术，但预定的目的地必须在另一个{@adventure 社团成员|奥特亚|1|光辉协会}的30英尺范围内。这个传送效果可能会被干扰（见“{@adventure 费尔兹瑞斯|奥特亚|1|费尔兹瑞斯}”），这就是社会成员有时最终出现在地下黑暗的遥远角落，与同伴分离的原因。"
                 ],
                 "daily": {
                   "1e": [
-                    "{\"spell\": \"传送术\"}"
+                    "{@spell 传送术}"
                   ]
                 },
                 "hidden": [
@@ -5682,7 +5682,7 @@
           "name": "腐蚀孢子（每日一次）",
           "ENG_name": "Caustic Spores (1/Day)",
           "entries": [
-            "Yestabrod releases spores in a 30-foot cone. Each creature in that area must succeed on a {@dc 12} Dexterity saving throw or take {@dice 1d6} acid damage at the start of each of Yestabrod's turns. A creature can repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+            "Yestabrod 在一个 30 英尺的锥形区域内释放孢子。该区域内的每个生物必须在敏捷豁免检定上成功通过一个 DC 12 的骰子判定，否则在 Yestabrod 的每个回合开始时会受到 1d6 的酸性伤害。生物可以在每个自己的回合结束时重复进行豁免检定，成功则结束此效果。"
           ]
         },
         {
@@ -5706,7 +5706,7 @@
           "name": "恶毒吸收",
           "ENG_name": "Foul Absorption",
           "entries": [
-            "Yestabrod absorbs putrescence from a corpse within 5 feet of it, regaining {@dice 1d8 + 2} hit points"
+            "Yestabrod 从其5英尺范围内的尸体吸收腐烂物质，恢复 {1d8 + 2} 点生命值"
           ]
         }
       ],
@@ -5730,8 +5730,8 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true
     },
@@ -5741,7 +5741,7 @@
       "source": "OotA",
       "page": 100,
       "_copy": {
-        "name": "石化蜥蜴(巴西利斯克)",
+        "name": "石化蜥蜴",
         "ENG_name": "Basilisk",
         "source": "MM"
       },
@@ -5771,7 +5771,7 @@
           "ENG_name": "Petrifying Gaze",
           "entries": [
             "如果一个生物在自己的回合开始时位于蛇发女妖15英尺范围内，并且两者能够相互看见，蛇发女妖可以强迫这个生物进行一次DC 12的体质豁免投掷，如果蛇发女妖没有被{@condition incapacitated}。如果豁免失败，生物将开始魔法性地变成石头，并且处于{@condition restrained}状态。它必须在下一个回合结束时重复进行豁免投掷。如果成功，效果结束。如果失败，生物将被{@condition petrified}，直到通过{@spell greater restoration}法术或其他魔法解除。",
-            "一个没有{@quickref 惊讶|PHB|3|0|surprised}的生物可以在它回合开始时避免视线以逃避豁免骰。如果它这样做了，直到下一个回合开始前它都看不到石化蜥蜴，那时它又可以避开视线。如果在此期间它看向石化蜥蜴，它必须立即进行豁免。",
+            "一个没有{@quickref 突袭|PHB|3|0|被突袭}的生物可以在它回合开始时避免视线以逃避豁免骰。如果它这样做了，直到下一个回合开始前它都看不到石化蜥蜴，那时它又可以避开视线。如果在此期间它看向石化蜥蜴，它必须立即进行豁免。",
             "如果蛇发女妖在明亮的光线下看到自己30英尺范围内的反射，它会误认为自己是对手，并用目光攻击自己。"
           ]
         }
@@ -5790,7 +5790,7 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true
     },
@@ -5892,7 +5892,7 @@
         {
           "ac": 11,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -5922,7 +5922,7 @@
           "name": "群体战术",
           "ENG_name": "Pack Tactics",
           "entries": [
-            "如果至少有一个暴徒的同伴在生物5英尺范围内，并且该同伴没有被{@condition incapacitated}，则暴徒在对生物的攻击骰上有优势。"
+            "如果至少有一个暴徒的同伴在生物5英尺范围内，并且该同伴没有被{@condition 无力}，则暴徒在对生物的攻击骰上有优势。"
           ]
         }
       ],
@@ -5950,8 +5950,8 @@
         }
       ],
       "attachedItems": [
-        "重型弩|PHB",
-        "钉头锤"
+        "重弩|PHB",
+        "硬头锤|PHB"
       ],
       "traitTags": [
         "群体战术"

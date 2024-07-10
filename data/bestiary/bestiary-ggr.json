@@ -29,7 +29,7 @@
         {
           "ac": 13,
           "from": [
-            "{\"item\": \"皮甲\", \"source\": \"phb\"}"
+            "{@item 兽皮甲|PHB}"
           ]
         }
       ],
@@ -116,7 +116,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -194,7 +194,7 @@
           "name": "坐骑",
           "ENG_name": "Mount",
           "entries": [
-            "If the archon isn't mounted, it can use a bonus action to magically teleport onto the creature serving as its mount, provided the archon and its mount are on the same plane of existence. When it teleports, the archon appears astride the mount along with any equipment it is wearing or carrying. While mounted and not {@condition 无力}, the archon can't be surprised, and both it and its mount gain advantage on Dexterity saving throws. If the archon is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well."
+            "如果天使没有骑乘，它可以使用一次奖励行动通过魔法传送到作为其坐骑的生物上，前提是天使和其坐骑处于同一存在平面上。当它传送时，天使连同它穿戴或携带的所有装备一起出现在坐骑上。在骑乘时且未处于{@condition 失去能力}状态，天使不会被{quickref 突袭|PHB|3|0|突袭}，并且它和其坐骑在敏捷豁免检定上获得优势。如果天使在骑乘其坐骑时降至0生命值，坐骑的生命值也会降至0。"
           ]
         }
       ],
@@ -210,14 +210,14 @@
           "name": "正义之锤",
           "ENG_name": "Hammer of Justice",
           "entries": [
-            "{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) bludgeoning damage plus 18 ({@damage 4d8}) force damage. If the target is a creature, it must succeed on a {@dc 18} Strength saving throw or be knocked {@condition 伏地}."
+            "{@atk 近战武器} 命中骰：10命中，射程5英尺，一个目标。{@h}12（{@damage 2d6 + 5}）钝击伤害加上18（{@damage 4d8}）力量伤害。如果目标是一个生物，它必须成功进行一次DC 18的力量豁免检定，否则会被击倒{@condition prone}。"
           ]
         },
         {
           "name": "平息之光",
           "ENG_name": "Pacifying Presence",
           "entries": [
-            "Each creature of the archon's choice that the archon can see within 120 feet of it must succeed on a {@dc 18} Wisdom saving throw, or else the target drops any weapons it is holding, ends its concentration on any spells or other effects, and becomes {@condition 魅惑} by the archon for 1 minute. The {@condition 魅惑} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the archon's Pacifying Presence for the next 24 hours."
+            "每个天使长可以选择的生物，如果它能看到天使长并且在120英尺范围内，必须成功进行一次{@dc 18}智慧豁免投掷，否则目标会掉落它持有的任何武器，结束其对任何法术或其他效果的{@status 专注}，并在1分钟内被天使长{@condition 魅惑}。被{@condition 魅惑}的生物可以在每个回合结束时重复豁免投掷，成功则自行结束效果。如果一个生物的豁免投掷成功或效果对它结束，该生物在接下来的24小时内对天使长的安抚存在免疫。"
           ]
         }
       ],
@@ -271,13 +271,13 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:魅力",
-        "属性检定:力量",
-        "属性检定:感知"
+        "魅力",
+        "力量",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:感知"
+        "魅力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -408,7 +408,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -530,14 +530,14 @@
           "name": "领导层",
           "ENG_name": "Leadership",
           "entries": [
-            "Aurelia utters a few inspiring words to one creature she can see within 30 feet of her. If the creature can hear her, it can add a {@dice d10} to one attack roll or saving throw it makes before the start of Aurelia's next turn."
+            "Aurelia 对她能看到的30英尺范围内的一个生物说出几句鼓舞人心的话。如果这个生物能听到她的声音，它可以在 Aurelia 下个回合开始前进行的一次攻击检定或豁免检定中加上一个{@dice d10}。"
           ]
         },
         {
           "name": "战领螺旋 {@recharge 5}",
           "ENG_name": "Warleader's Helix {@recharge 5}",
           "entries": [
-            "{@atk rs} {@hit 17} to hit, range 60 ft., one creature. {@h}54 ({@damage 12d8}) radiant damage, and Aurelia can choose another creature she can see within 10 feet of the target. The second creature regains 27 ({@dice 6d8}) hit points."
+            "{@atk rs} 命中骰17命中，射程60英尺，单一生物。{@h}54（{@damage 12d8}）辐射伤害，并且奥瑞莉亚可以选择她能看到的在目标10英尺内的另一个生物。第二个生物恢复27（{@dice 6d8}）生命值。"
           ]
         }
       ],
@@ -553,7 +553,7 @@
           "name": "坚定不移",
           "ENG_name": "Unyielding",
           "entries": [
-            "When Aurelia is subjected to an effect that would move her, knock her {@condition 伏地}, or both, she can use her reaction to be neither moved nor knocked {@condition 伏地}."
+            "当Aurelia遭受到会移动她、使她{@condition 伏地}或两者都有的效果时，她可以使用她的反应来既不被移动也不被击倒{@condition 伏地}。"
           ]
         }
       ],
@@ -576,12 +576,12 @@
           "name": "恐吓敌人（消耗3个行动）",
           "ENG_name": "Frighten Foes (Costs 3 Actions)",
           "entries": [
-            "Aurelia targets up to five creatures she can see within 30 feet of her. Each target must succeed on a {@dc 25} Wisdom saving throw or be {@condition 恐惧} of her until the end of her next turn. Any target within 5 feet of Aurelia has disadvantage on the saving throw."
+            "奥莉莉亚针对她能看到的30英尺内的最多五个生物。每个目标必须在一次{@dc 25} 智力豁免中成功，否则直到她下一个回合结束时对她感到{@condition 恐惧}。任何在奥莉莉亚5英尺内的目标在豁免投掷上具有劣势。"
           ]
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "traitTags": [
         "传奇抗性",
@@ -609,7 +609,7 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -632,7 +632,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -711,12 +711,12 @@
           "name": "战场灵感",
           "ENG_name": "Battlefield Inspiration",
           "entries": [
-            "The angel chooses up to three creatures it can see within 30 feet of it. Until the end of the angel's next turn, each target can add a {@dice d4} to its attack rolls and saving throws."
+            "天使选择它能看到的30英尺内的最多三个生物。直到天使下一回合结束时，每个目标可以在其攻击检定和豁免检定中加上一个{@dice d4}。"
           ]
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "traitTags": [
         "飞掠",
@@ -766,7 +766,7 @@
         {
           "ac": 17,
           "from": [
-            "{@item 锁子甲|phb}"
+            "{@item 板条甲|PHB}"
           ]
         }
       ],
@@ -884,7 +884,7 @@
           "name": "鼓舞人心的存在",
           "ENG_name": "Bolstering Presence",
           "entries": [
-            "The biomancer magically emanates life-giving energy within 30 feet of itself. Any ally of the biomancer that starts its turn there regains 5 ({@dice 1d10}) hit points."
+            "生物术士在自身周围30英尺范围内魔法地散发出赋予生命的能力。任何生物术士的盟友如果在该范围内开始其回合，则恢复5点（{@dice 1d10}）生命值。"
           ]
         },
         {
@@ -905,7 +905,7 @@
         }
       ],
       "attachedItems": [
-        "弯刀"
+        "弯刀|PHB"
       ],
       "traitTags": [
         "魔法抗性"
@@ -935,9 +935,9 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1064,7 +1064,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1151,7 +1151,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 无力}, or {@condition 束缚}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. If the target is humanoid, it must succeed on a {@dc 15} Charisma saving throw or be {@condition 魅惑} by the vampire for 1 minute. While {@condition 魅惑} in this way, the target is infatuated with the vampire. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
+            "{@atk 近战武器} 命中骰：7，射程5英尺，一个愿意的生物，或者被吸血鬼{@condition grappled}、{@condition incapacitated}或{@condition restrained}的生物。{@h}7 ({@damage 1d6 + 4})穿刺伤害加上7 ({@damage 2d6})死灵伤害。如果目标是类人生物，它必须在一次魅力豁免检定中成功，否则在1分钟内被吸血鬼{@condition charmed}。以这种方式被{@condition charmed}时，目标对吸血鬼产生了迷恋。目标的生命值上限减少等同于所受死灵伤害的数量，而吸血鬼恢复等同于该数量的生命值。这种减少持续到目标完成一次长时间的休息。如果目标的生命值上限减少到0，目标将死亡。"
           ]
         },
         {
@@ -1179,7 +1179,7 @@
         }
       ],
       "attachedItems": [
-        "细剑|PHB"
+        "刺剑|PHB"
       ],
       "senseTags": [
         "D"
@@ -1205,7 +1205,7 @@
         "魅惑"
       ],
       "savingThrowForced": [
-        "属性检定:魅力"
+        "魅力"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1233,7 +1233,7 @@
         12,
         {
           "ac": 15,
-          "condition": "with {@spell 法师护甲}",
+          "condition": "带有{@spell 法师护甲}",
           "braces": true
         }
       ],
@@ -1282,10 +1282,10 @@
           "will": [
             "{@spell 变造自身}",
             "{@spell 侦测魔法}",
-            "{@spell 魔能爆} (at 11th level)",
+            "{@spell 魔能爆}（11级时）",
             "{@spell 摹造生命}",
-            "{@spell 浮空术} (self only)",
-            "{@spell 法师护甲} (self only)"
+            "{@spell 浮空术}（仅限自身）",
+            "{@spell 法师护甲}（仅限自身）"
           ],
           "daily": {
             "1e": [
@@ -1296,7 +1296,7 @@
             "3e": [
               "{@spell 炼狱叱喝}",
               "{@spell 脆弱诅咒}",
-              "{@spell 灼热射线} (at 3rd level)"
+              "{@spell 灼热射线}（在3级时）"
             ]
           },
           "ability": "cha"
@@ -1307,11 +1307,11 @@
           "name": "血巫之舞",
           "ENG_name": "Blood Witch Dance",
           "entries": [
-            "女巫可以使用一个奖励动作来控制一个被她的{@spell 诅咒}法术诅咒的生物的移动，这个生物必须在她30英尺范围内并且她能看到。生物必须成功进行一次{@dc 15}魅力豁免检定，否则必须使用其反应来按照女巫选择的方向移动最多30英尺。"
+            "女巫可以使用一个奖励动作来控制一个被她的{@spell 脆弱诅咒}法术诅咒的生物的移动，这个生物必须在她30英尺范围内并且她能看到。生物必须成功进行一次{@dc 15}魅力豁免检定，否则必须使用其反应来按照女巫选择的方向移动最多30英尺。"
           ]
         },
         {
-          "name": "魔能祈唤:魔鬼视界",
+          "name": "魔鬼视界",
           "ENG_name": "Devil's Sight",
           "entries": [
             "魔法黑暗不会妨碍女巫的黑暗视觉。"
@@ -1342,11 +1342,11 @@
         }
       ],
       "attachedItems": [
-        "长剑",
-        "短剑"
+        "长剑|PHB",
+        "短剑|PHB"
       ],
       "traitTags": [
-        "魔能祈唤:魔鬼视界"
+        "魔鬼视界"
       ],
       "senseTags": [
         "SD"
@@ -1379,12 +1379,12 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:魅力"
+        "魅力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1443,7 +1443,7 @@
           "name": "链条",
           "ENG_name": "Chain",
           "entries": [
-            "{@atk mw} {@hit 9} to hit, reach 20 ft., one target. {@h}16 ({@damage 3d6 + 6}) bludgeoning damage. If the target is a creature, it is {@condition 被擒} (escape {@dc 17}). Until the grapple ends, the target is {@condition 束缚}, and the giant can't use this attack on anyone else."
+            "{@atk mw} {@hit 9}命中，射程20英尺，单一目标。{@h}16 ({@damage 3d6 + 6})钝击伤害。如果目标是一个生物，它将被{@condition grappled}（逃脱{@dc 17}）。直到擒抱结束，目标将被{@condition restrained}，巨人也不能用这个攻击对其他任何人使用。"
           ]
         },
         {
@@ -1579,7 +1579,7 @@
           "name": "巨锤",
           "ENG_name": "Maul",
           "entries": [
-            "{@atk mw} {@hit 13} to hit, reach 10 ft., one target. {@h}28 ({@damage 6d6 + 7}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 21} Strength saving throw or be knocked {@condition 伏地}."
+            "{@atk 近战武器} 命中骰：13命中，射程10英尺，一个目标。{@h}28（{@damage 6d6 + 7}）钝击伤害。如果目标是一个生物，它必须成功进行一次DC 21的力量豁免检定，否则会被击倒{@condition prone}。"
           ]
         },
         {
@@ -1600,7 +1600,7 @@
           "name": "骇人威仪",
           "ENG_name": "Frightful Presence",
           "entries": [
-            "Each creature of Borborygmos's choice that is within 60 feet of him and can see or hear him must succeed on a {@dc 17} Wisdom saving throw or become {@condition 恐惧} of him for 1 minute. The {@condition 恐惧} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Borborygmos's Frightful Presence for the next 24 hours."
+            "Borborygmos选择的每个生物，如果在他60英尺范围内并且能看到或听到他，都必须成功进行一次{@dc 17} 智力豁免，否则在1分钟内对他感到{@condition 恐惧}。感到{@condition 恐惧}的生物可以在每个回合结束时重复进行豁免，成功则结束自身的效果。如果生物的豁免成功或效果对其结束，该生物在接下来的24小时内对Borborygmos的恐怖存在免疫。"
           ]
         }
       ],
@@ -1616,19 +1616,19 @@
           "name": "咆哮（消耗2次行动）",
           "ENG_name": "Bellow (Costs 2 Actions)",
           "entries": [
-            "Borborygmos yells menacingly at one creature he can see within 60 feet of him. That creature must succeed on a {@dc 17} Wisdom saving throw or become {@condition 恐惧} of him for 1 minute. If the creature is already {@condition 恐惧}, it becomes {@condition 震慑} instead. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Borborygmos's Bellow for the next 24 hours."
+            "Borborygmos 向他60英尺内能看到的一个生物发出威胁性的吼叫。那个生物必须成功进行一次智慧豁免检定（DC 17），否则在1分钟内对他感到{@condition 恐惧}。如果生物已经处于{@condition 恐惧}状态，它将改为进入{@condition 昏迷}状态。生物可以在每个回合结束时重复进行豁免检定，成功则结束该效果。如果生物的豁免检定成功或效果对其结束，该生物在未来24小时内对Borborygmos的吼叫免疫。"
           ]
         },
         {
           "name": "保持距离（消耗3个行动）",
           "ENG_name": "Wide Berth (Costs 3 Actions)",
           "entries": [
-            "Borborygmos moves up to half his speed and can move through the space of any creature smaller than Huge. The first time Borborygmos enters a creature's space during this move, the creature must make a {@dc 21} Dexterity saving throw. If the saving throw succeeds, the creature is pushed 5 feet away from Borborygmos. If the saving throw fails, that creature is knocked {@condition 伏地}, and Borborygmos can make a stomp attack against it."
+            "Borborygmos可以移动至多一半速度，并且可以穿过任何小于巨型生物的空间。Borborygmos在这次移动中首次进入一个生物的空间时，该生物必须进行一次{@dc 21}敏捷豁免投掷。如果豁免成功，生物被从Borborygmos处推开5英尺。如果豁免失败，那个生物被击倒{@condition 伏地}，Borborygmos可以对其进行踩踏攻击。"
           ]
         }
       ],
       "attachedItems": [
-        "巨斧|phb"
+        "巨锤|PHB"
       ],
       "traitTags": [
         "传奇抗性",
@@ -1660,9 +1660,9 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:力量",
-        "属性检定:感知"
+        "敏捷",
+        "力量",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1772,7 +1772,7 @@
           "name": "拟声",
           "ENG_name": "Mimicry",
           "entries": [
-            "嘲笑者可以模仿它听到的任何声音，包括人声。听到这些声音的生物可以通过成功的{@dc 11} 智力（{@skill 洞察}）检定来判断它们是模仿的。"
+            "嘲笑者可以模仿它听到的任何声音，包括人声。听到这些声音的生物可以通过成功的{@dc 11} 智力（{@skill 洞悉}）检定来判断它们是模仿的。"
           ]
         }
       ],
@@ -1815,10 +1815,10 @@
         "射程"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2062,7 +2062,7 @@
           "name": "尾击",
           "ENG_name": "Tail",
           "entries": [
-            "{@atk mw} {@hit 11} to hit, reach 15 ft., one target. {@h}33 ({@damage 6d8 + 6}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition 伏地}."
+            "{@atk 近战武器} {@hit 11}hit，射程15英尺，一个目标。{@h}33 ({@damage 6d8 + 6}) 钝击伤害。如果目标是一个生物，它必须在一次{@dc 19} 力量豁免中成功，否则被击倒{@condition 倒地}。"
           ]
         }
       ],
@@ -2085,7 +2085,7 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2201,7 +2201,7 @@
           "name": "藤蔓法杖",
           "ENG_name": "Vine Staff",
           "entries": [
-            "{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 17} Dexterity saving throw or become {@condition 束缚} by twisting vines for 1 minute. A target {@condition 束缚} in this way can use an action to make a {@dc 17} Strength (Athletics) or Dexterity (Acrobatics) check, ending the effect on itself on a success."
+            "{@atk 近战武器} 命中骰：9，射程5英尺，单一目标。{@h}12 ({@damage 2d6 + 5}) 钝击伤害。如果目标是一个生物，它必须在一次敏捷豁免检定中成功，否则会被扭曲的藤蔓{@condition restrained} 1分钟。以这种方式被{@condition restrained}的目标可以使用动作来进行一次力量（{@skill Athletics}）或敏捷（{@skill Acrobatics}）的检定，{@dc 17}，成功则结束自身的效果。"
           ]
         },
         {
@@ -2222,12 +2222,12 @@
           "name": "压制魔法 {@recharge 5}",
           "ENG_name": "Suppress Magic {@recharge 5}",
           "entries": [
-            "The dryad targets one magic item it can see within 120 feet of it. If the magic item isn't an artifact, its magical properties are suppressed for 10 minutes, until the dryad is {@condition 无力} or dies, or until the dryad uses a bonus action to end the effect."
+            "树精目标是它能看到的120英尺范围内的一个魔法物品。如果这个魔法物品不是一个神器，它的魔法属性将在10分钟内被压制，直到树精{@condition 无力}或死亡，或者直到树精使用一个奖励行动来结束这个效果。"
           ]
         }
       ],
       "attachedItems": [
-        "长弓"
+        "长弓|PHB"
       ],
       "traitTags": [
         "魔法抗性"
@@ -2267,12 +2267,12 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:力量"
+        "体质",
+        "敏捷",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2300,7 +2300,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 链甲衫|phb}"
+            "{@item 链甲衫|PHB}"
           ]
         }
       ],
@@ -2399,8 +2399,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -2427,7 +2427,7 @@
         13,
         {
           "ac": 16,
-          "condition": "with {@spell 法师护甲}",
+          "condition": "带有{@spell 法师护甲}",
           "braces": true
         }
       ],
@@ -2468,7 +2468,7 @@
           "daily": {
             "3e": [
               "{@spell 变巨/缩小术}",
-              "{@spell 法师护甲} (self only)",
+              "{@spell 法师护甲}（仅限自身）",
               "{@spell 灼热射线}"
             ],
             "1e": [
@@ -2485,7 +2485,7 @@
           "name": "反冲覆盖层{@recharge 5}",
           "ENG_name": "Counterflux Overcast {@recharge 5}",
           "entries": [
-            "The blastseeker can create an additional effect immediately after casting a spell. Roll a {@dice d6} to determine the effect:",
+            "爆破者在施放法术后可以立即产生一个额外效果。掷一个{@dice d6}来确定效果：",
             {
               "type": "list",
               "style": "list-hang-notitle",
@@ -2494,7 +2494,7 @@
                   "type": "item",
                   "name": "1-3。",
                   "ENG_name": "1–3.",
-                  "entry": "爆破者在自身为中心创造一个半径15英尺的{@condition invisible}球体，持续到其下一回合结束。在球体内的生物在对抗法术和其他魔法效果的豁免投掷中具有不利。"
+                  "entry": "爆破者在自身为中心创造一个半径15英尺的{@condition 隐形}球体，持续到其下一回合结束。在球体内的生物在对抗法术和其他魔法效果的豁免投掷中具有不利。"
                 },
                 {
                   "type": "item",
@@ -2517,7 +2517,7 @@
         }
       ],
       "attachedItems": [
-        "细剑|PHB"
+        "刺剑|PHB"
       ],
       "languageTags": [
         "C",
@@ -2538,7 +2538,7 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2625,7 +2625,7 @@
             "天使的天生施法能力是魅力（法术豁免{@dc 19}，法术攻击命中{@hit 11}）。天使天生能够施展以下法术，无需任何材料组件："
           ],
           "will": [
-            "{@spell 命令术} (as a 2nd-level spell)",
+            "{@spell 命令术}（作为2级法术）",
             "{@spell 侦测善恶}"
           ],
           "daily": {
@@ -2633,8 +2633,8 @@
               "{@spell 唤醒死者}"
             ],
             "3e": [
-              "{@spell 魅惑人类} (as a 5th-level spell)",
-              "{@spell 黑暗术}",
+              "{@spell 魅惑人类}（作为5级法术）",
+              "{@spell 黑暗}",
               "{@spell 暗示术}"
             ]
           },
@@ -2646,7 +2646,7 @@
           "name": "剥削债务人",
           "ENG_name": "Exploitation of the Debtors",
           "entries": [
-            "As a bonus action, the angel targets a creature {@condition 魅惑} by it that it can see within 30 feet of it. The angel deals 11 ({@damage 2d10}) necrotic damage to the target, and the angel gains temporary hit points equal to the damage dealt."
+            "作为奖励动作，天使选择一个它能够看到的、被它{@condition 魅惑}的生物，该生物必须在它30英尺范围内。天使对目标造成11点（{@damage 2d10}）死灵伤害，并且天使获得等于造成的伤害值的临时生命值。"
           ]
         },
         {
@@ -2683,7 +2683,7 @@
           "name": "义务之链",
           "ENG_name": "Chains of Obligation",
           "entries": [
-            "The angel targets one creature {@condition 魅惑} by it that it can see within 90 feet of it. The target must succeed on a {@dc 19} Charisma saving throw or become {@condition 麻痹} for 1 minute or until it takes any damage."
+            "天使以它能看到的90英尺范围内被它{@condition charmed}的一个生物为目标。目标必须在一次魅力豁免检定中成功，否则在1分钟内或直到它受到任何伤害之前都会变得{@condition paralyzed}。"
           ]
         }
       ],
@@ -2719,10 +2719,10 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:魅力"
+        "魅力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2914,7 +2914,7 @@
           "name": "有害触摸",
           "ENG_name": "Noxious Touch",
           "entries": [
-            "{@atk ms} {@hit 9} to hit, reach 5 ft., one creature. {@h}14 ({@damage 4d6}) poison damage, and the target must succeed on a {@dc 17} Constitution saving throw or be {@condition 中毒} for 1 minute. The {@condition 中毒} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "{@atk 近战攻击} 命中骰：9 命中，射程 5 英尺，单一生物。{@h}14 点（4d6）毒素伤害，目标必须成功进行一次体质豁免检定（DC 17），否则在1分钟内处于{@condition 中毒}状态。处于{@condition 中毒}状态的目标可以在每个回合结束时重复进行豁免检定，成功则结束该效果。"
           ]
         }
       ],
@@ -2982,12 +2982,12 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3015,7 +3015,7 @@
         {
           "ac": 14,
           "from": [
-            "{\"item\": \"皮甲\", \"source\": \"phb\"}"
+            "{@item 兽皮甲|PHB}"
           ]
         }
       ],
@@ -3045,7 +3045,7 @@
       "passive": 18,
       "languages": [
         "普通",
-        "德鲁伊:德鲁伊语"
+        "德鲁伊语"
       ],
       "cr": "7",
       "spellcasting": [
@@ -3093,7 +3093,7 @@
               "slots": 3,
               "spells": [
                 "{@spell 支配野兽}",
-                "{@spell 行动自如术}",
+                "{@spell 行动自如}",
                 "{@spell 火墙术}"
               ]
             },
@@ -3168,9 +3168,9 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3239,14 +3239,14 @@
           "name": "敏锐的听觉和视觉",
           "ENG_name": "Keen Hearing and Sight",
           "entries": [
-            "费利达在依赖听觉或视觉的智力（{@skill Perception}）检定上具有优势。"
+            "费利达在依赖听觉或视觉的智力（{@skill 察觉}）检定上具有优势。"
           ]
         },
         {
           "name": "猛扑",
           "ENG_name": "Pounce",
           "entries": [
-            "If the felidar moves at least 20 feet straight toward a creature and hits it with a claw attack on the same turn, that target must succeed on a {@dc 15} Strength saving throw or be knocked {@condition 伏地}. If the target is {@condition 伏地}, the felidar can make one claw attack against it as a bonus action."
+            "如果费利达尔在同一个回合内至少直线移动20英尺向一个生物靠近，并用爪击攻击击中它，那么目标必须进行一次DC 15的力量豁免检定，否则会被击倒{@condition prone}。如果目标处于{@condition prone}状态，费利达尔可以作为奖励行动对其进行一次爪击攻击。"
           ]
         }
       ],
@@ -3309,7 +3309,7 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3349,7 +3349,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -3463,7 +3463,7 @@
         }
       ],
       "attachedItems": [
-        "巨剑|phb"
+        "巨剑|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -3487,9 +3487,9 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "魅力",
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3512,7 +3512,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -3576,11 +3576,11 @@
           "daily": {
             "3e": [
               "{@spell 强迫决斗}",
-              "{@spell 光导箭} (as a 5th-level spell)"
+              "{@spell 光导箭}（作为5级法术）"
             ],
             "1e": [
               "{@spell 昼明术}",
-              "{@spell 火球术} (as a 6th-level spell)"
+              "{@spell 火球术}（作为6级法术）"
             ]
           },
           "ability": "cha"
@@ -3626,7 +3626,7 @@
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "traitTags": [
         "飞掠",
@@ -3658,8 +3658,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3687,7 +3687,7 @@
         12,
         {
           "ac": 15,
-          "condition": "with {@spell 法师护甲}",
+          "condition": "带有{@spell 法师护甲}",
           "braces": true
         }
       ],
@@ -3727,7 +3727,7 @@
           ],
           "daily": {
             "3e": [
-              "{@spell 法师护甲} (self only)",
+              "{@spell 法师护甲}（仅限自身）",
               "{@spell 灼热射线}"
             ],
             "1e": [
@@ -3746,7 +3746,7 @@
           "name": "流变覆盖（5充能）",
           "ENG_name": "Fluxbending Overcast {@recharge 5}",
           "entries": [
-            "The blastseeker can create an additional effect immediately after casting a spell. Roll a {@dice d6} to determine the effect: 1-3. The blastseeker teleports, swapping places with a creature it can see within 30 feet of it. 4-6. The blastseeker and each creature within 10 feet of it must succeed on a {@dc 16} Constitution saving throw or take 11 ({@damage 2d10}) thunder damage."
+            "爆破者在施放法术后可以立即产生额外效果。掷一个骰子{@dice d6}来确定效果：1-3。爆破者传送，与它能看到的30英尺范围内的生物交换位置。4-6。爆破者和每个在其10英尺范围内的生物必须进行一次{@dc 16}体质豁免检定，否则将受到11点({@damage 2d10})雷鸣伤害。"
           ]
         }
       ],
@@ -3784,12 +3784,12 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "魅力",
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -3915,7 +3915,7 @@
         "射程"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3976,14 +3976,14 @@
           "name": "恐慌狂乱",
           "ENG_name": "Fear Frenzy",
           "entries": [
-            "The horror has advantage on attack rolls against {@condition 恐惧} creatures."
+            "恐怖生物在对处于{@condition 恐惧}状态的生物进行攻击检定时具有优势。"
           ]
         },
         {
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill Perception}）检定上具有不利。"
+            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill 察觉}）检定上具有不利。"
           ]
         }
       ],
@@ -3999,7 +3999,7 @@
           "name": "恐怖尖叫 {@recharge 5}",
           "ENG_name": "Frightening Screech {@recharge 5}",
           "entries": [
-            "The horror screeches. Each creature within 30 feet of it that can hear it must succeed on a {@dc 13} Wisdom saving throw or be {@condition 恐惧} of it for 1 minute. The {@condition 恐惧} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the horror's Frightening Screech for the next 24 hours."
+            "这个怪物发出尖叫。在它30英尺范围内的每个能听到它的生物必须在一次{@dc 13} 智力豁免中成功，否则在1分钟内对它{@condition 感到恐惧}。感到恐惧的生物可以在每个回合结束时重复豁免尝试，成功则结束该效果。如果一个生物的豁免成功或者效果对它结束，该生物在接下来的24小时内对怪物的恐怖尖叫免疫。"
           ]
         }
       ],
@@ -4020,7 +4020,7 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4048,8 +4048,8 @@
         {
           "ac": 20,
           "from": [
-            "{@item 全板甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 板甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -4119,7 +4119,7 @@
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "languageTags": [
         "C",
@@ -4138,7 +4138,7 @@
         "猛击"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -4225,10 +4225,10 @@
           ]
         },
         {
-          "name": "风暴术法:风暴之心",
+          "name": "暴风之心",
           "ENG_name": "Heart of the Storm",
           "entries": [
-            "当爆破者施放{@spell lightning bolt}或thunderwave时，所有在爆破者10英尺内的其他生物各自承受3点闪电伤害。"
+            "当爆破者施放{@spell 闪电束}或thunderwave时，所有在爆破者10英尺内的其他生物各自承受3点闪电伤害。"
           ]
         },
         {
@@ -4249,7 +4249,7 @@
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "languageTags": [
         "C",
@@ -4275,8 +4275,8 @@
         "猛击"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4379,8 +4379,8 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4477,7 +4477,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，幽光翼（gloamwing）在攻击投掷上，以及依赖视力的智力（{@skill Perception}）检定上具有不利。"
+            "在阳光中，幽光翼（gloamwing）在攻击投掷上，以及依赖视力的智力（{@skill 察觉}）检定上具有不利。"
           ]
         }
       ],
@@ -4550,7 +4550,7 @@
         {
           "ac": 14,
           "from": [
-            "{\"item\": \"皮甲\", \"source\": \"phb\"}"
+            "{@item 兽皮甲|PHB}"
           ]
         }
       ],
@@ -4642,7 +4642,7 @@
           "name": "精类血统",
           "ENG_name": "Fey Ancestry",
           "entries": [
-            "The shaman has advantage on saving throws against being {@condition 魅惑}, and magic can't put it to sleep."
+            "萨满在对抗{@condition 魅惑}（魅惑）状态的豁免检定中具有优势，魔法无法使其进入睡眠状态。"
           ]
         }
       ],
@@ -4667,7 +4667,7 @@
           "name": "吸取死亡",
           "ENG_name": "Feed on Death",
           "entries": [
-            "When a creature within 30 feet of the shaman drops to 0 hit points, the shaman gains 5 ({@dice 1d10}) temporary hit points."
+            "当萨满周围30英尺内的生物生命值降至0点时，萨满获得5点（{@dice 1d10}）临时生命值。"
           ]
         }
       ],
@@ -4706,11 +4706,11 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:力量"
+        "体质",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -4732,8 +4732,8 @@
         {
           "ac": 19,
           "from": [
-            "{\"item\": \"{@item 半板甲|phb}\"}",
-            "{@item 盾牌|phb}"
+            "{@item 半身板甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -4769,7 +4769,7 @@
           "name": "警惕",
           "ENG_name": "Vigilant",
           "entries": [
-            "巨人不能被{@quickref 突袭|PHB|3|0|突袭}。"
+            "巨人不能被{@quickref 突袭|PHB|3|0|被突袭}。"
           ]
         }
       ],
@@ -4791,7 +4791,7 @@
       ],
       "reaction": [
         {
-          "name": "战斗风格:守护",
+          "name": "守护",
           "ENG_name": "Protection",
           "entries": [
             "当巨人能看到的攻击者对距离巨人10英尺内的生物进行攻击检定时，巨人可以使这次攻击检定处于不利状态。"
@@ -4799,7 +4799,7 @@
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -4844,7 +4844,7 @@
         {
           "ac": 13,
           "from": [
-            "{\"item\": \"皮甲\", \"source\": \"phb\"}"
+            "{@item 兽皮甲|PHB}"
           ]
         }
       ],
@@ -5096,7 +5096,7 @@
         }
       ],
       "attachedItems": [
-        "标枪"
+        "标枪|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -5178,10 +5178,10 @@
       "cr": "1",
       "trait": [
         {
-          "name": "刺杀",
+          "name": "暗杀",
           "ENG_name": "Assassinate",
           "entries": [
-            "在其第一回合，混血毒物对尚未行动的任何生物进行攻击检定时具有优势。混血对{@quickref 惊讶|PHB|3|0|惊讶的}生物造成的任何命中都是致命一击。"
+            "在其第一回合，混血毒物对尚未行动的任何生物进行攻击检定时具有优势。混血对{@quickref 突袭|PHB|3|0|被突袭}生物造成的任何命中都是致命一击。"
           ]
         },
         {
@@ -5197,7 +5197,7 @@
           "name": "剧毒之触",
           "ENG_name": "Toxic Touch",
           "entries": [
-            "{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d6}) bludgeoning damage, and the target must succeed on a {@dc 12} Constitution saving throw or become {@condition 中毒} for 1 minute. At the end of each of the {@condition 中毒} target's turns, it must repeat the save, taking 3 ({@damage 1d6}) poison damage on a failed save, or ending the effect on itself on a successful one."
+            "{@atk 近战武器} 命中{@hit 6}，射程5英尺，一个目标。{@h}7点（{@damage 2d6}）钝击伤害，目标必须进行一次{@dc 12}体质豁免投掷，否则在1分钟内变为{@condition 中毒}。在每个{@condition 中毒}目标的回合结束时，它必须重复投掷，如果失败则受到3点（{@damage 1d6}）毒素伤害，如果成功则自行结束效果。"
           ]
         }
       ],
@@ -5219,7 +5219,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -5301,7 +5301,7 @@
           "name": "触须",
           "ENG_name": "Tentacles",
           "entries": [
-            "{@atk mw} {@hit 4} to hit, reach 15 ft., one creature. {@h}The target is {@condition 被擒} (escape {@dc 11}), and the hybrid pulls the target up to 15 feet straight toward it. Until this grapple ends, the target takes 5 ({@damage 1d10}) lightning damage at the start of each of its turns, and the hybrid shocker can't use its tentacles on another creature."
+            "{@atk 近战武器} 命中骰：4，射程15英尺，单一生物。{@h}目标被{@condition grappled}（逃脱{@dc 11}），混合体将目标直接拉向它最多15英尺。直到这种擒抱结束，目标在其每个回合开始时承受5({@damage 1d10})点闪电伤害，并且混合体不能对另一个生物使用其触手。"
           ]
         }
       ],
@@ -5383,7 +5383,7 @@
           "name": "变色皮肤",
           "ENG_name": "Chameleon Skin",
           "entries": [
-            "混血生物在进行敏捷（{@skill 潜行}）检定时具有优势。"
+            "混血生物在进行敏捷（{@skill 隐匿}）检定时具有优势。"
           ]
         },
         {
@@ -5411,7 +5411,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "蛛行术"
@@ -5619,7 +5619,7 @@
           "ENG_name": "Innate Spellcasting",
           "type": "spellcasting",
           "headerEntries": [
-            "Isperia's innate spellcasting ability is Wisdom (spell save {@dc 23}). Isperia can innately cast {@spell 禁锢术} twice per day, requiring no material components."
+            "Isperia的天赋施法能力是智慧（法术豁免{@dc 23}）。Isperia每天可以天生施放两次{@spell 禁锢术}，无需任何材料成分。"
           ],
           "daily": {
             "2": [
@@ -5676,7 +5676,7 @@
                 "{@spell 锐眼术}",
                 "{@spell 反制法术}",
                 "{@spell 解除魔法}",
-                "{@spell 巧舌术}"
+                "{@spell 巧言}"
               ]
             },
             "4": {
@@ -5717,10 +5717,10 @@
       ],
       "trait": [
         {
-          "name": "神秘莫测",
+          "name": "莫测者",
           "ENG_name": "Inscrutable",
           "entries": [
-            "伊斯佩莉亚对任何试图感知她情绪或读取她思想的效果免疫，同时她也可以拒绝任何占卜法术。试图通过智慧（{@skill 洞察}）检定来确定她的意图或真诚度将处于劣势。"
+            "伊斯佩莉亚对任何试图感知她情绪或读取她思想的效果免疫，同时她也可以拒绝任何占卜法术。试图通过智慧（{@skill 洞悉}）检定来确定她的意图或真诚度将处于劣势。"
           ]
         },
         {
@@ -5815,14 +5815,14 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:智力",
-        "属性检定:感知"
+        "智力",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:敏捷",
-        "属性检定:力量",
-        "属性检定:感知"
+        "魅力",
+        "敏捷",
+        "力量",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -5928,7 +5928,7 @@
               "spells": [
                 "{@spell 纠缠术}",
                 "{@spell 致病射线}",
-                "{@spell 睡眠术}"
+                "{@spell 沉眠}"
               ]
             },
             "2": {
@@ -6037,7 +6037,7 @@
           "name": "有害触摸",
           "ENG_name": "Noxious Touch",
           "entries": [
-            "{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}28 ({@damage 8d6}) poison damage, and the target must succeed on a {@dc 20} Constitution saving throw or be {@condition 中毒} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "{@atk 远程武器} {@hit 12}hit，射程5英尺，一个生物。{@h}28 ({@damage 8d6})毒素伤害，并且目标必须在一次{@dc 20}体质豁免中成功，否则被{@condition 中毒}持续1分钟。目标可以在每个回合结束时重复豁免尝试，成功则结束该效果。"
           ]
         },
         {
@@ -6115,13 +6115,13 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:力量"
+        "魅力",
+        "体质",
+        "敏捷",
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -6217,21 +6217,21 @@
           "name": "吸取死亡",
           "ENG_name": "Feed on Death",
           "entries": [
-            "When a creature within 30 feet of the kraul drops to 0 hit points, the kraul or another creature of its choice within 30 feet of it gains 5 ({@dice 1d10}) temporary hit points, provided the kraul isn't {@condition 无力}."
+            "当kraul 30英尺范围内的生物降至0点生命值时，kraul或它选择的30英尺范围内的另一个生物将获得5点（{@dice 1d10}）临时生命值，前提是kraul不是{@condition 无力}的。"
           ]
         },
         {
           "name": "群体意识",
           "ENG_name": "Hive Mind",
           "entries": [
-            "The kraul is immune to the {@condition 魅惑} and {@condition 恐惧} conditions while within 30 feet of at least one other kraul."
+            "当克劳尔在至少一个其他克劳尔30英尺范围内时，它对{@condition 魅惑}和{@condition 恐惧}状态免疫。"
           ]
         },
         {
           "name": "群体战术",
           "ENG_name": "Pack Tactics",
           "entries": [
-            "The kraul has advantage on an attack roll against a creature if at least one of the kraul's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
+            "如果至少有一个kraul的盟友在生物的5英尺范围内，并且盟友没有处于{@condition 无力}状态，则kraul对生物的攻击检定有优势。"
           ]
         },
         {
@@ -6292,7 +6292,7 @@
         "中毒"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -6352,14 +6352,14 @@
           "name": "群体意识",
           "ENG_name": "Hive Mind",
           "entries": [
-            "The kraul is immune to the {@condition 魅惑} and {@condition 恐惧} conditions while within 30 feet of at least one other kraul."
+            "当克劳尔在至少一个其他克劳尔30英尺范围内时，它对{@condition 魅惑}和{@condition 恐惧}状态免疫。"
           ]
         },
         {
           "name": "群体战术",
           "ENG_name": "Pack Tactics",
           "entries": [
-            "The kraul has advantage on an attack roll against a creature if at least one of the kraul's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
+            "如果至少有一个kraul的盟友在生物的5英尺范围内，并且盟友没有处于{@condition 无力}状态，则kraul对生物的攻击检定有优势。"
           ]
         },
         {
@@ -6390,7 +6390,7 @@
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "traitTags": [
         "群体战术",
@@ -6451,7 +6451,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -6564,8 +6564,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -6654,8 +6654,8 @@
           "will": [
             "{@spell 侦测思想}",
             "{@spell 思维编码|GGR}（见第2章）",
-            "{@spell 行动自如术}",
-            "{@spell 恶毒嘲笑} ({@dice 4d4} psychic damage)"
+            "{@spell 行动自如}",
+            "{@spell 恶毒嘲笑}（{@dice 4d4} 心灵伤害）"
           ],
           "daily": {
             "3e": [
@@ -6673,10 +6673,10 @@
       ],
       "trait": [
         {
-          "name": "游荡者:飘忽不定",
+          "name": "飘忽不定",
           "ENG_name": "Elusive",
           "entries": [
-            "No attack roll has advantage against Lazav unless he is {@condition 无力}."
+            "除非Lazav处于{@condition 无力}状态，否则没有攻击检定对他有优势。"
           ]
         },
         {
@@ -6694,10 +6694,10 @@
           ]
         },
         {
-          "name": "畸变心智:心灵防御",
+          "name": "心灵防御",
           "ENG_name": "Psychic Defenses",
           "entries": [
-            "Unless Lazav is {@condition 无力}, he is immune to magic that allows other creatures to read his thoughts, determine whether he is lying, know his alignment, or know his creature type. Creatures can telepathically communicate with Lazav only if he allows it."
+            "除非Lazav处于{@condition 无力}状态，否则他对允许其他生物读取他的思想、判断他是否在说谎、了解他的阵营或了解他的生物类型的魔法免疫。只有在Lazav允许的情况下，生物才能通过心灵感应与Lazav交流。"
           ]
         }
       ],
@@ -6736,12 +6736,12 @@
           "name": "变幻噩梦（消耗3个行动点）",
           "ENG_name": "Shifting Nightmare (Costs 3 Actions)",
           "entries": [
-            "Lazav rapidly takes the form of several nightmarish creatures, lashing out at all nearby. Each creature within 10 feet of Lazav must succeed on a {@dc 21} Dexterity saving throw or take 18 ({@dice 4d8}) damage of a type chosen by Lazav: acid, cold, fire, lightning, or necrotic."
+            "Lazav 迅速化身为几种噩梦般的生物，对所有附近的目标进行攻击。距离 Lazav 10 英尺内的所有生物必须进行一次敏捷豁免检定（DC 21），否则将受到 Lazav 选择的某种类型的伤害：酸性、寒冷、火焰、闪电或死灵，伤害值为 18（4d8）。"
           ]
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "传奇抗性"
@@ -6775,10 +6775,10 @@
         "无力"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -6806,7 +6806,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -6874,7 +6874,7 @@
             "主人的天生施法能力是魅力（法术豁免难度{@dc 17}）。主人天生可以施放以下法术，无需任何材料成分："
           ],
           "will": [
-            "{@spell 魅惑人类} (as a 3rd-level spell)",
+            "{@spell 魅惑人类}（作为一个3级法术）",
             "{@spell 疯狂冠冕}"
           ],
           "daily": {
@@ -6927,12 +6927,12 @@
           "name": "迷人存在（充能）",
           "ENG_name": "Captivating Presence {@recharge}",
           "entries": [
-            "Each creature within 120 feet of the master must succeed on a {@dc 17} Wisdom saving throw or be {@condition 魅惑} by the master for 1 hour. While {@condition 魅惑} in this way, a creature's speed is 0. If the {@condition 魅惑} creature takes damage, it can repeat the saving throw, ending the effect on itself on a success. A target that succeeds on the saving throw is immune to the Captivating Presence of all masters of cruelties for the next 24 hours."
+            "在主宰120英尺范围内的每个生物都必须成功进行一次{@dc 17} 智力豁免，否则将被主宰{@condition 魅惑} 1小时。在这种状态下被{@condition 魅惑}，生物的速度变为0。如果被{@condition 魅惑}的生物受到伤害，它可以重复进行豁免，成功则结束自身的效果。成功通过豁免的生物在接下来的24小时内对所有残酷主宰的迷人存在免疫。"
           ]
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "traitTags": [
         "魔法抗性"
@@ -6968,10 +6968,10 @@
         "魅惑"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -7049,7 +7049,7 @@
               "{@spell 魅惑人类}",
               "{@spell 人类定身术}",
               "{@spell 镜影术}",
-              "{@spell 睡眠术}"
+              "{@spell 沉眠}"
             ],
             "1e": [
               "{@spell 气化形体}",
@@ -7071,7 +7071,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在日光下，吸血鬼在攻击检定上处于不利状态，以及在依赖视力的智慧（{@skill 感知}）检定上也处于不利状态。"
+            "在日光下，吸血鬼在攻击检定上处于不利状态，以及在依赖视力的智慧（{@skill 察觉}）检定上也处于不利状态。"
           ]
         }
       ],
@@ -7087,7 +7087,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 6} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 无力}, or {@condition 束缚}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
+            "{@atk 近战武器} {@命中 6}命中，射程5英尺，一个愿意的生物，或者被吸血鬼抓住的生物，{@condition 无力}的生物，或者{@condition 受限}的生物。{@h}7 ({@damage 1d6 + 4})穿刺伤害加上7 ({@damage 2d6})死灵伤害。目标的生命值最大值减少等同于所受死灵伤害的数值，吸血鬼恢复等同于该数值的生命值。这种减少持续到目标完成一次长时间休息。如果目标的生命值最大值减少到0，目标将死亡。"
           ]
         },
         {
@@ -7137,10 +7137,10 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:智力"
+        "智力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -7168,7 +7168,7 @@
         12,
         {
           "ac": 15,
-          "condition": "with {@spell 法师护甲}",
+          "condition": "带有{@spell 法师护甲}",
           "braces": true
         }
       ],
@@ -7217,7 +7217,7 @@
               "{@spell 魅惑人类}",
               "{@spell 侦测思想}",
               "{@spell 法师护甲}",
-              "{@spell 睡眠术}",
+              "{@spell 沉眠}",
               "{@spell 暗示术}"
             ],
             "1e": [
@@ -7248,7 +7248,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "languageTags": [
         "C",
@@ -7268,7 +7268,7 @@
         "猛击"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -7350,7 +7350,7 @@
           "name": "坐骑",
           "ENG_name": "Mount",
           "entries": [
-            "If the specter isn't mounted, it can use a bonus action to magically teleport onto its gloamwing mount, provided the specter and the gloamwing are on the same plane of existence. When it teleports, the specter appears astride the gloamwing along with any equipment it is wearing or carrying. While mounted and not {@condition 无力}, the specter can't be surprised, and both it and its mount gain advantage on Dexterity saving throws."
+            "如果幽灵没有骑乘，它可以使用一次奖励行动通过魔法传送到其幽影坐骑上，前提是幽灵和幽影坐骑处于同一存在平面上。当它传送时，幽灵连同它穿戴或携带的所有装备一起出现在幽影坐骑上。在骑乘时且未处于{@condition 失去能力}状态，幽灵不会被{quickref 突袭|PHB|3|0|突袭}，并且它和其坐骑在敏捷豁免检定上获得优势。"
           ]
         }
       ],
@@ -7373,14 +7373,14 @@
           "name": "心灵扭曲{@recharge 5}",
           "ENG_name": "Mind Twist {@recharge 5}",
           "entries": [
-            "The specter magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 15} Wisdom saving throw or take 22 ({@damage 5d8}) psychic damage and be {@condition 震慑} for 1 minute. The {@condition 震慑} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "幽灵魔法地在60英尺锥形区域内发出心灵能量。该区域内的每个生物必须成功进行一次DC 15的智力豁免检定，否则将受到22（{@damage 5d8}）点心灵伤害，并在1分钟内处于{@condition stunned}状态。处于{@condition stunned}状态的生物可以在每个回合结束时重复进行豁免检定，若成功则结束该效果。"
           ]
         },
         {
           "name": "收割记忆（每日3次）",
           "ENG_name": "Reap Memory (3/Day)",
           "entries": [
-            "The specter touches one {@condition 无力} creature and chooses 1 hour from among the past 24. Unless the creature succeeds on a {@dc 15} Intelligence saving throw, the creature loses all memory of that hour. The creature regains the memory only if the specter dies within the next 24 hours."
+            "幽灵触碰一个{@condition 无力}的生物，并从过去24小时中选择1小时。除非生物在一次{@dc 15}智力豁免投掷中成功，否则生物将失去那一小时内的所有记忆。只有在接下来的24小时内幽灵死亡，生物才能恢复记忆。"
           ]
         }
       ],
@@ -7407,8 +7407,8 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:智力",
-        "属性检定:感知"
+        "智力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -7593,7 +7593,7 @@
           "name": "火焰心智的中心",
           "ENG_name": "Locus of the Firemind",
           "entries": [
-            "尼维-米兹特可以同时维持对两个不同法术的{@status concentration}。此外，他在保持法术的{@status concentration}的豁免投掷中具有优势。"
+            "尼维-米兹特可以同时维持对两个不同法术的{@status 专注}。此外，他在保持法术的{@status 专注}的豁免投掷中具有优势。"
           ]
         },
         {
@@ -7667,7 +7667,7 @@
           "name": "翼部攻击（消耗2个行动）",
           "ENG_name": "Wing Attack (Costs 2 Actions)",
           "entries": [
-            "Niv-Mizzet beats his wings. Each creature within 15 feet of him must succeed on a {@dc 25} Dexterity saving throw or take 14 ({@damage 2d4 + 9}) bludgeoning damage and be knocked {@condition 伏地}. Niv-Mizzet can then fly up to half his flying speed."
+            "尼维-米兹特拍打着他的翅膀。在他15英尺范围内的每个生物都必须成功进行一次敏捷豁免检定（{@dc 25}），否则将受到14 ({@damage 2d4 + 9}) 钝击伤害并被击倒{@condition 伏地}。然后尼维-米兹特可以飞行至其飞行速度的一半。"
           ]
         },
         {
@@ -7729,12 +7729,12 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -7756,7 +7756,7 @@
         {
           "ac": 14,
           "from": [
-            "{\"item\": \"{@item 半板甲|phb}\"}"
+            "{@item 半身板甲|PHB}"
           ]
         }
       ],
@@ -7951,12 +7951,12 @@
             "这个幽灵的天生施法能力是智力（法术豁免{@dc 16}，法术攻击命中{@hit 8}）。它天生能够施放以下法术，不需要任何成分："
           ],
           "will": [
-            "{@spell 寒颤之触} (at 5th level, and the ghost regains hit points equal to half the amount of damage the target takes)"
+            "{@spell 寒颤之触}（在5级时，并且幽灵恢复等同于目标受到的伤害值一半的生命值）"
           ],
           "daily": {
             "1e": [
               "{@spell 圣域术}",
-              "{@spell 灵体守卫} (at 4th level)"
+              "{@spell 灵体守卫}（4级法术）"
             ]
           },
           "ability": "wis"
@@ -7976,7 +7976,7 @@
                   "type": "item",
                   "name": "恩内斯库：弱化射线",
                   "ENG_name": "Enezesku: Enfeebling Ray",
-                  "entry": "Enezesku's Innate Spellcasting trait includes {@spell 衰弱射线}, which he can cast at will."
+                  "entry": "Enezesku的天生施法特性包括{@spell 衰弱射线}，他可以随意施放。"
                 },
                 {
                   "type": "item",
@@ -7994,7 +7994,7 @@
                   "type": "item",
                   "name": "Vuliev: 传送",
                   "ENG_name": "Vuliev: Teleportation",
-                  "entry": "Vuliev's Innate Spellcasting trait includes {@spell 迷踪步}, which he can cast at will."
+                  "entry": "Vuliev的天生施法特性包括{@spell 迷踪步}，他可以随意施放。"
                 },
                 {
                   "type": "item",
@@ -8017,7 +8017,7 @@
           "name": "虚体移动",
           "ENG_name": "Incorporeal Movement",
           "entries": [
-            "鬼魂可以像穿过{@quickref 困难地形||3}一样穿过其他生物和物体。如果它在物体内部结束回合，它将受到5点（{@damage 1d10}）力量伤害。"
+            "鬼魂可以像穿过{@quickref 困难地型||3}一样穿过其他生物和物体。如果它在物体内部结束回合，它将受到5点（{@damage 1d10}）力量伤害。"
           ]
         },
         {
@@ -8059,7 +8059,7 @@
           "name": "契约灵魂（消耗3次行动）",
           "ENG_name": "Indentured Spirits (Costs 3 Actions)",
           "entries": [
-            "The Obzedat ghosts conjure {@dice 1d6} {@creature indentured spirit|ggr|indentured spirits} (described in this chapter) within 60 feet of one of them."
+            "奥布泽达特鬼魂在其中一个周围60英尺内召唤{@dice 1d6}个{@creature 契约精怪|GGR|契约灵魂}（在本章中描述）。"
           ]
         }
       ],
@@ -8089,11 +8089,11 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -8116,7 +8116,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -8152,7 +8152,7 @@
           "name": "焦点",
           "ENG_name": "Focus",
           "entries": [
-            "As a bonus action, the giant can target a creature it can see within 30 feet of it and make that creature its focus. The target remains the giant's focus for 1 minute, or until either the target or the giant drops to 0 hit points. When the giant makes an attack roll against its focus, it adds a {@dice d4} to its attack roll. If the giant attacks a different target while it has a focus, it subtracts a {@dice d4} from its attack roll."
+            "作为奖励动作，巨人可以瞄准它能看到的30英尺内的一个生物，并将其作为其焦点。目标保持为巨人的焦点1分钟，或者直到目标或巨人的生命值降至0。当巨人对其焦点进行攻击检定时，它在其攻击检定中加上一个{@dice d4}。如果巨人在有焦点时攻击不同的目标，则其攻击检定中减去一个{@dice d4}。"
           ]
         }
       ],
@@ -8180,7 +8180,7 @@
         }
       ],
       "attachedItems": [
-        "双手巨斧|PHB"
+        "巨斧|PHB"
       ],
       "senseTags": [
         "D"
@@ -8228,7 +8228,7 @@
         11,
         {
           "ac": 14,
-          "condition": "with {@spell 法师护甲}",
+          "condition": "带有{@spell 法师护甲}",
           "braces": true
         }
       ],
@@ -8293,7 +8293,7 @@
           "name": "一瞥时光洪流{@recharge 5}",
           "ENG_name": "Glimpse the Temporal Flood {@recharge 5}",
           "entries": [
-            "The mage targets one creature within 120 feet of it that it can see. The target takes 18 ({@damage 4d8}) psychic damage, and it must succeed on a {@dc 14} Intelligence saving throw or be {@condition 震慑} until the end of its next turn."
+            "该法师选择一个在其120英尺范围内且能看到的生物作为目标。目标受到18点（4d8）心灵伤害，并且必须成功通过一次智力豁免检定（DC 14），否则直到其下一回合结束时处于{@condition 昏迷}状态。"
           ]
         }
       ],
@@ -8331,10 +8331,10 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:智力"
+        "智力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -8429,7 +8429,7 @@
           "ENG_name": "Innate Spellcasting",
           "type": "spellcasting",
           "headerEntries": [
-            "Rakdos's spellcasting ability is Charisma (spell save {@dc 25}). He can innately cast {@spell 炼狱叱喝} (at 5th level) at will, requiring no material components."
+            "Rakdos的施法能力是魅力（法术豁免{@dc 25}）。他能够天生地随意施展{@spell 炼狱叱喝}（5级法术），无需任何材料成分。"
           ],
           "will": [
             "{@spell 炼狱叱喝}"
@@ -8445,7 +8445,7 @@
           "name": "迷人气质",
           "ENG_name": "Captivating Presence",
           "entries": [
-            "Any creature that starts its turn within 30 feet of Rakdos must make a {@dc 25} Wisdom saving throw. On a failed save, the creature becomes {@condition 魅惑} by Rakdos for 1 minute or until the creature is farther than 30 feet away from him. On a successful save, the creature becomes immune to Rakdos's Captivating Presence for 24 hours."
+            "任何生物在其回合开始时如果处于拉克多斯30英尺范围内，必须进行一次DC 25的智力豁免检定。如果豁免失败，该生物将被拉克多斯魅惑1分钟，或者直到该生物距离他超过30英尺。如果豁免成功，该生物将对拉克多斯的迷人魅力免疫24小时。"
           ]
         },
         {
@@ -8505,7 +8505,7 @@
           "name": "虐待狂的狂欢",
           "ENG_name": "Sadistic Revelry",
           "entries": [
-            "Each creature within 60 feet of Rakdos that is his ally or is {@condition 魅惑} by him must use its reaction to move up to half its speed toward the creature closest to it that it can see, provided it isn't already within 5 feet of that creature. It then must make one melee attack against that creature if it is able to do so."
+            "在Rakdos 60英尺范围内的每个生物，如果是他的盟友或被他{@condition 魅惑}，必须使用其反应来向它能看到的最近的生物移动至多一半速度，前提是它还没有靠近到那个生物5英尺以内。如果能够做到，然后它必须对那个生物进行一次近战攻击。"
           ]
         },
         {
@@ -8519,7 +8519,7 @@
           "name": "痛苦之触（消耗3个行动点）",
           "ENG_name": "Touch of Pain (Costs 3 Actions)",
           "entries": [
-            "Rakdos makes a claw attack against one creature within 10 feet of him. The target must succeed on a {@dc 25} Constitution saving throw or be {@condition 中毒} for 1 minute. While {@condition 中毒} in this way, the creature can't maintain concentration on a spell or any other effect that requires concentration. The {@condition 中毒} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "Rakdos对距离他10英尺范围内的一个生物进行爪击攻击。目标必须在一次体质豁免检定中成功，否则在1分钟内被{@condition poisoned}。以这种方式被{@condition poisoned}的生物不能维持法术或其他需要{@status concentration}的效果的{@status concentration}。被{@condition poisoned}的生物可以在每个回合结束时重复豁免检定，成功则结束自身的效果。"
           ]
         }
       ],
@@ -8557,11 +8557,11 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -8589,7 +8589,7 @@
         {
           "ac": 12,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -8655,7 +8655,7 @@
       ],
       "action": [
         {
-          "name": "棍棒",
+          "name": "短棒",
           "ENG_name": "Club",
           "entries": [
             "{@atk 近战武器} {@hit 命中2} 命中，射程5英尺，一个目标。{@h}2 ({@damage 1d4}) 钝击伤害。"
@@ -8663,7 +8663,7 @@
         }
       ],
       "attachedItems": [
-        "棍棒|phb"
+        "棍棒|PHB"
       ],
       "languageTags": [
         "C",
@@ -8684,9 +8684,9 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:感知"
+        "魅力",
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -8766,7 +8766,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -8885,7 +8885,7 @@
         "射程"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9003,7 +9003,7 @@
         {
           "ac": 18,
           "from": [
-            "{@item 全板甲|phb}"
+            "{@item 板甲|PHB}"
           ]
         }
       ],
@@ -9101,7 +9101,7 @@
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "languageTags": [
         "C",
@@ -9123,8 +9123,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9199,7 +9199,7 @@
           "name": "废墟居住者",
           "ENG_name": "Ruin Dweller",
           "entries": [
-            "潜行者在废墟中进行敏捷（{@skill 隐匿}）检定时具有优势，并且在由瓦砾构成的{@quickref 困难地形||3}中，其速度不会减少。"
+            "潜行者在废墟中进行敏捷（{@skill 隐匿}）检定时具有优势，并且在由瓦砾构成的{@quickref 困难地型||3}中，其速度不会减少。"
           ]
         },
         {
@@ -9227,7 +9227,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "traitTags": [
         "伏击者",
@@ -9271,7 +9271,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -9319,7 +9319,7 @@
         }
       ],
       "attachedItems": [
-        "轻型战锤|phb"
+        "轻锤|PHB"
       ],
       "languageTags": [
         "C",
@@ -9337,7 +9337,7 @@
         "猛击"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9490,7 +9490,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill Perception}）检定上具有不利。"
+            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill 察觉}）检定上具有不利。"
           ]
         }
       ],
@@ -9513,7 +9513,7 @@
           "name": "爪抓",
           "ENG_name": "Claw",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage, and the target must succeed on a {@dc 16} Wisdom saving throw or be {@condition 恐惧} of the horror until the end of the target's next turn."
+            "{@atk 近战武器} {@hit 7}hit，射程5英尺，一个目标。{@h}13 ({@damage 3d6 + 3}) 斩击伤害，并且目标必须在一次{@dc 16} 智力豁免中成功，否则直到目标下一个回合结束时被{@condition 惊吓}。"
           ]
         },
         {
@@ -9547,8 +9547,8 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9745,10 +9745,10 @@
         "射程"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9816,7 +9816,7 @@
           "name": "日光敏感",
           "ENG_name": "Sunlight Sensitivity",
           "entries": [
-            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill Perception}）检定上具有不利。"
+            "在阳光中，这个怪物在攻击投掷和依赖视力的智力（{@skill 察觉}）检定上具有不利。"
           ]
         }
       ],
@@ -9846,7 +9846,7 @@
           "name": "令人疯狂的存在",
           "ENG_name": "Maddening Presence",
           "entries": [
-            "The horror targets one creature it can see within 30 feet of it. If the target can see or hear the horror, the target must make a {@dc 17} Wisdom saving throw. On a failed saving throw, the target becomes {@condition 麻痹} until the end of its next turn. If a creature's saving throw is successful, the creature is immune to the horror's Maddening Presence for the next 24 hours."
+            "恐怖生物选择其30英尺范围内可以看到的一个生物作为目标。如果目标可以看到或听到恐怖生物，目标必须进行一次{@dc 17} 智力豁免。豁免失败，目标将在其下个回合结束前处于{@condition 麻痹}状态。如果生物的豁免成功，该生物在接下来的24小时内对恐怖生物的令人疯狂的存在免疫。"
           ]
         }
       ],
@@ -9872,7 +9872,7 @@
         "麻痹"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -9894,7 +9894,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 胸甲|phb}"
+            "{@item 胸甲|PHB}"
           ]
         }
       ],
@@ -9926,7 +9926,7 @@
           "name": "敏锐视觉",
           "ENG_name": "Keen Sight",
           "entries": [
-            "大鹏在依赖视觉的智力（{@skill 感知}）检定上具有优势。"
+            "大鹏在依赖视觉的智力（{@skill 察觉}）检定上具有优势。"
           ]
         }
       ],
@@ -10033,7 +10033,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}22 ({@damage 3d10 + 6}) piercing damage. If the target is a Large or smaller creature, it must succeed on a {@dc 19} Dexterity saving throw or be swallowed by the skyswimmer. A swallowed creature is {@condition 目盲} and {@condition 束缚}, it has total cover against attacks and other effects outside the skyswimmer, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the skyswimmer's turns. If the skyswimmer takes 30 damage or more on a single turn from the swallowed creature, the skyswimmer must succeed on a {@dc 18} Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition 伏地} in a space within 10 feet of the skyswimmer. If the skyswimmer dies, a swallowed creature is no longer {@condition 束缚} by it and can escape from the corpse by using 15 feet of movement, exiting {@condition 伏地}."
+            "{@atk 近战武器} 命中骰：11 命中，射程 10 英尺，单一目标。{@h}22 ({@damage 3d10 + 6}) 穿刺伤害。如果目标是大型或更小的生物，它必须成功进行一次敏捷豁免检定（DC 19），否则会被天游者吞下。被吞下的生物处于{@condition 失明}和{@condition 限制}状态，它对外界的攻击和其他效果有完全防护，并且在天游者每个回合开始时受到 21 ({@damage 6d6}) 酸性伤害。如果天游者在单一回合内被吞下的生物造成 30 点或更多伤害，天游者必须在该回合结束时成功进行一次体质豁免检定（DC 18），否则必须吐出生物，生物会{@condition 倒地}在天游者 10 英尺内的空间。如果天游者死亡，被吞下的生物不再被它{@condition 限制}，可以使用 15 英尺的移动力从尸体中逃脱，退出{@condition 倒地}状态。"
           ]
         },
         {
@@ -10065,7 +10065,7 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -10097,8 +10097,8 @@
         {
           "ac": 18,
           "from": [
-            "{@item 锁子甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 链甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -10129,7 +10129,7 @@
           "name": "阵型战术",
           "ENG_name": "Formation Tactics",
           "entries": [
-            "The soldier has advantage on saving throws against being {@condition 魅惑}, {@condition 恐惧}, {@condition 被擒}, or {@condition 束缚} while it is within 5 feet of at least one ally."
+            "当士兵在至少一个盟友5英尺范围内时，它在豁免检定中对被{@condition 魅惑}、{@condition 恐惧}、{@condition 被擒}或{@condition 束缚}具有优势。"
           ]
         }
       ],
@@ -10150,7 +10150,7 @@
         }
       ],
       "attachedItems": [
-        "长剑"
+        "长剑|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -10241,9 +10241,9 @@
         "P"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:力量",
-        "属性检定:感知"
+        "魅力",
+        "力量",
+        "感知"
       ],
       "hasToken": true
     },
@@ -10326,7 +10326,7 @@
           "name": "多重攻击",
           "ENG_name": "Multiattack",
           "entries": [
-            "The giant makes two slam attacks. The first of those attacks that hits deals an extra 18 ({@dice 4d8}) damage if the giant has taken damage since its last turn."
+            "巨人进行两次猛击攻击。如果巨人自上回合以来受到伤害，则第一次命中的攻击额外造成18点（{@dice 4d8}）伤害。"
           ]
         },
         {
@@ -10340,7 +10340,7 @@
           "name": "投石",
           "ENG_name": "Rock",
           "entries": [
-            "{@atk rw} {@hit 10} to hit, range 60/240 ft., one target. {@h}28 ({@damage 4d10 + 6}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 18} Strength saving throw or be knocked {@condition 伏地}."
+            "{@atk 远程武器} {@hit 10} hit，射程 60/240 英尺，单一目标。{@h}28 ({@damage 4d10 + 6}) 钝击伤害。如果目标是一个生物，它必须在一次{@dc 18} 力量豁免中成功，否则会被击倒{@condition prone}。"
           ]
         }
       ],
@@ -10369,7 +10369,7 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:力量"
+        "力量"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -10397,7 +10397,7 @@
         {
           "ac": 13,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -10455,7 +10455,7 @@
       ],
       "trait": [
         {
-          "name": "巧妙动作",
+          "name": "灵巧动作",
           "ENG_name": "Cunning Action",
           "entries": [
             "在它的每个回合，思维间谍可以使用奖励行动来执行冲刺、脱战或隐蔽行动。"
@@ -10486,8 +10486,8 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb",
-        "细剑|PHB"
+        "匕首|PHB",
+        "刺剑|PHB"
       ],
       "senseTags": [
         "D"
@@ -10513,7 +10513,7 @@
         "猛击"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -10575,7 +10575,7 @@
       ],
       "languages": [
         "普通",
-        "德鲁伊:德鲁伊语",
+        "德鲁伊语",
         "精灵语",
         "森林"
       ],
@@ -10659,7 +10659,7 @@
           "name": "绞缠",
           "ENG_name": "Constrict",
           "entries": [
-            "{@atk mw} {@hit 11} to hit, reach 5 ft., one creature. {@h}15 ({@damage 3d6 + 5}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 19}). Until this grapple ends, the target is {@condition 束缚}. Trostani can grapple no more than three targets at a time."
+            "{@atk 近战武器} {@hit 11}hit，射程5英尺，一个生物。{@h}15 ({@damage 3d6 + 5})钝击伤害，并且目标被{@condition 抓住}（逃脱{@dc 19}）。直到这个抓住结束，目标被{@condition 限制}。Trostani一次最多可以抓住三个目标。"
           ]
         },
         {
@@ -10696,7 +10696,7 @@
           "name": "秩序之声",
           "ENG_name": "Voice of Order",
           "entries": [
-            "卓斯坦尼施放了{@spell 驱散魔法}。"
+            "卓斯坦尼施放了{@spell 解除魔法}。"
           ]
         },
         {
@@ -10753,11 +10753,11 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -10842,7 +10842,7 @@
           "name": "突袭攻击",
           "ENG_name": "Surprise Attack",
           "entries": [
-            "During the first round of combat, the medusa has advantage on attack rolls against any creature that is surprised, and it deals an extra 10 ({@dice 3d6}) damage each time it hits such a creature with an attack."
+            "在战斗的第一回合，美杜莎对任何{@quickref 突袭|PHB|3|0|被突袭}的生物进行攻击检定时具有优势，并且每次用攻击命中这样的生物时，它会造成额外的10点({@dice 3d6})伤害。"
           ]
         }
       ],
@@ -10865,7 +10865,7 @@
           "name": "石化凝视",
           "ENG_name": "Petrifying Gaze",
           "entries": [
-            "The medusa fixes its gaze on one creature within 60 feet of it that it can see and that can see its eyes. The target must make a {@dc 14} Constitution saving throw. If the saving throw fails by 5 or more, the creature is instantly {@condition 石化}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition 束缚}. The {@condition 束缚} creature must repeat the saving throw at the end of its next turn, becoming {@condition 石化} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by a {@spell 高等复原术} spell or similar magic."
+            "美杜莎将其目光锁定在它能看到且能看到其眼睛的60英尺范围内的一个生物上。目标必须进行一次{@dc 14}体质豁免投掷。如果豁免失败超过5点，生物将立即被{@condition 石化}。否则，失败的生物开始变成石头并被{@condition 束缚}。被{@condition 束缚}的生物必须在其下一回合结束时重复豁免投掷，在失败时变为{@condition 石化}，或在成功时结束效果。石化状态持续，直到生物通过一个{@spell 高等复原术}法术或类似的魔法被解除。"
           ]
         }
       ],
@@ -10896,7 +10896,7 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -11049,7 +11049,7 @@
           "name": "地面震动",
           "ENG_name": "Earth Tremors",
           "entries": [
-            "The wurm creates earth tremors as it moves overland or underground. Any creature that comes within 30 feet of the moving wurm for the first time on a turn must succeed on a {@dc 20} Dexterity saving throw or take 10 ({@damage 3d6}) bludgeoning damage and fall {@condition 伏地}. Any structure or object anchored to the ground that comes within 30 feet of the moving wurm for the first time on a turn takes 10 ({@damage 3d6}) force damage."
+            "当蠕虫在陆地或地下移动时，会制造地震。任何生物在回合中第一次进入移动的蠕虫30英尺范围内时，必须成功进行一次DC 20的敏捷豁免检定，否则将受到10（{@damage 3d6}）的钝击伤害并陷入{@condition prone}状态。任何固定在地面上的结构或物体，在回合中第一次进入移动的蠕虫30英尺范围内时，将受到10（{@damage 3d6}）的力量伤害。"
           ]
         },
         {
@@ -11065,7 +11065,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}24 ({@damage 5d6 + 7}) piercing damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 20} Dexterity saving throw or be swallowed by the wurm. A swallowed creature is {@condition 目盲} and {@condition 束缚}, has total cover against attacks and other effects outside the wurm, and takes 17 ({@damage 5d6}) acid damage at the start of each of the wurm's turns. If the wurm takes 30 damage or more on a single turn from a creature inside it, the wurm must succeed on a {@dc 21} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the wurm. If the wurm dies, a swallowed creature is no longer {@condition 束缚} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
+            "{@atk mw} {@hit 12}命中，射程10英尺，单一目标。{@h}24 ({@damage 5d6 + 7})穿刺伤害。如果目标是中等大小或更小的生物，它必须在敏捷豁免检定中成功（{@dc 20}），否则将被蠕虫吞噬。被吞噬的生物处于{@condition blinded}（失明）状态和{@condition restrained}（受限）状态，对蠕虫外部的攻击和其他效果具有完全防护，并且在蠕虫的每个回合开始时承受17 ({@damage 5d6})酸性伤害。如果蠕虫在单一回合内被其内部的生物造成30点或更多伤害，蠕虫必须在该回合结束时进行{@dc 21}体质豁免检定，否则将吐出所有被吞噬的生物，它们将处于{@condition prone}（倒地）状态，位于蠕虫10英尺范围内的空间内。如果蠕虫死亡，被吞噬的生物不再被它{@condition restrained}（受限），可以使用20英尺的移动力从尸体中逃脱，以{@condition prone}（倒地）状态离开。"
           ]
         }
       ],
@@ -11095,7 +11095,7 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -11179,7 +11179,7 @@
                 "{@spell 酸液溅爆}",
                 "{@spell 德鲁伊伎俩}",
                 "{@spell 冷冻射线}",
-                "{@spell 塑水术|XGE}"
+                "{@spell 塑水|XGE}"
               ]
             },
             "1": {
@@ -11274,14 +11274,14 @@
           "name": "首席发言人的三叉戟",
           "ENG_name": "Prime Speaker's Trident",
           "entries": [
-            "{@atk mw,rw} {@hit 10} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}12 ({@damage 2d6 + 5}) piercing damage, and the trident emits a thunderous boom. Each creature in a 15-foot cube originating from the prongs of the trident must make a {@dc 18} Constitution saving throw. On a failed save, the creature takes 9 ({@damage 2d8}) thunder damage and is pushed 10 feet away from Zegana. If the creature is underwater, the damage is increased to 13 ({@dice 3d8}). On a successful save, the creature takes half as much damage and isn't pushed."
+            "{@atk 近战武器，远程武器} {@hit 10} 命中，射程5英尺或射程20/60英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 穿刺伤害，并且三叉戟发出雷鸣般的巨响。从三叉戟的尖端开始，15英尺立方体内的每个生物必须进行一次{@dc 18}体质豁免检定。检定失败，生物受到9 ({@damage 2d8}) 雷鸣伤害，并被推向远离Zegana 10英尺。如果生物处于水下，伤害增加到13 ({@dice 3d8})。检定成功，生物受到一半的伤害，不会被推动。"
           ]
         },
         {
           "name": "洪水 {@recharge 4}",
           "ENG_name": "Deluge {@recharge 4}",
           "entries": [
-            "Zegana conjures a wave of water that crashes down on an area within 120 feet of her. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a {@dc 18} Dexterity saving throw. On a failed save, a creature takes 18 ({@damage 4d8}) bludgeoning damage and is knocked {@condition 伏地}. On a successful save, a creature takes half as much damage and isn't knocked {@condition 伏地}. The water spreads out across the ground, extinguishing unprotected flames it comes in contact with, and then vanishes."
+            "Zegana 召唤出一股水波，它在距离她120英尺内的区域崩溃。该区域最长可达30英尺，最宽可达10英尺，最高可达10英尺。该区域内的每个生物必须进行一次敏捷豁免检定（DC 18）。检定失败的生物会受到18点（4d8）钝击伤害并被击倒{@condition prone}。成功通过检定的生物受到的伤害减半，并且不会被击倒{@condition prone}。水波在地面上扩散开来，扑灭它接触到的未受保护的火焰，然后消失。"
           ]
         }
       ],
@@ -11304,7 +11304,7 @@
           "name": "变大（消耗2个行动）",
           "ENG_name": "Enlarge (Costs 2 Actions)",
           "entries": [
-            "Zegana 在自己身上施放了{@spell 变大/缩小}法术，使用了变大选项，且没有消耗法术位。"
+            "Zegana 在自己身上施放了{@spell 变巨/缩小术}法术，使用了变大选项，且没有消耗法术位。"
           ]
         },
         {
@@ -11360,14 +11360,14 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:力量",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "力量",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,

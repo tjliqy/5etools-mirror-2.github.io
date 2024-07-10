@@ -1,923 +1,974 @@
 {
-	"monster": [
-		{
-			"name": "Coral",
-			"isNamedCreature": true,
-			"source": "MisMV1",
-			"page": 4,
-			"size": [
-				"L"
-			],
-			"type": "fey",
-			"alignment": [
-				"C",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 135,
-				"formula": "18d10 + 36"
-			},
-			"speed": {
-				"walk": 10,
-				"fly": 60,
-				"swim": 60
-			},
-			"str": 20,
-			"dex": 13,
-			"con": 15,
-			"int": 14,
-			"wis": 18,
-			"cha": 19,
-			"save": {
-				"dex": "+5",
-				"con": "+6",
-				"wis": "+8",
-				"cha": "+8"
-			},
-			"skill": {
-				"arcana": "+6",
-				"insight": "+8",
-				"perception": "+8"
-			},
-			"senses": [
-				"blindsight 60 ft."
-			],
-			"passive": 18,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
-			],
-			"languages": [
-				"Common",
-				"Primordial",
-				"Sylvan"
-			],
-			"cr": "9",
-			"trait": [
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"Coral has advantage on saving throws against spells and other magical effects."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Coral makes two Hoof attacks and uses Tail Thump."
-					]
-				},
-				{
-					"name": "Hoof",
-					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Tail Thump",
-					"entries": [
-						"Coral slams her tail down, unleashing a burst of magical force toward one creature she can see within 60 feet of her. The target must make a {@dc 16} Dexterity saving throw. On a failed save, the target takes 22 ({@damage 4d10}) force damage and has the {@condition prone} condition. On a successful save, the target takes half as much damage only. If this damage reduces the target to 0 hit points, the target dies, and its body is reduced to fine dust."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Bubbles of Whimsy (2/Day)",
-					"entries": [
-						"Coral produces a stream of magical bubbles from her horn. These bubbles float toward a creature Coral can see within 60 feet of herself. Roll a {@dice d6} to determine the bubbles' effect:",
-						{
-							"type": "list",
-							"items": [
-								{
-									"name": "1-2: Bolstering Treat",
-									"type": "item",
-									"entries": [
-										"The bubbles transform into {@dice 1d4} cookies that appear in the target's space. The target gains 11 ({@dice 2d8 + 2}) temporary hit points if it immediately uses its reaction to eat one of the cookies. Any leftover cookies are delicious but confer no benefits."
-									]
-								},
-								{
-									"name": "3-4: Sparkle Burst",
-									"type": "item",
-									"entries": [
-										"The bubbles transform into glitter that swirls around the target before bursting outward. Each creature within 5 feet of the target must succeed on a {@dc 16} Constitution saving throw or have the {@condition blinded} condition until the start of Coral's next turn."
-									]
-								},
-								{
-									"name": "5-6: Stink Bomb Shield",
-									"type": "item",
-									"entries": [
-										"The bubbles transform into a foul-smelling cloud of gas that surrounds and shields the target. The target has half cover until the gas disappears at the start of Coral's next turn."
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Gift of Speech (1/Day)",
-					"entries": [
-						"Coral targets one Beast she can see within 10 feet of herself. The target gains the ability to understand and speak Common or Sylvan (Coral's choice) for 10 minutes."
-					]
-				}
-			],
-			"traitTags": [
-				"Magic Resistance"
-			],
-			"senseTags": [
-				"B"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"P",
-				"S"
-			],
-			"damageTags": [
-				"B",
-				"O"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"blinded",
-				"prone"
-			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Dandylion",
-			"source": "MisMV1",
-			"page": 6,
-			"size": [
-				"L"
-			],
-			"type": "fey",
-			"alignment": [
-				"C",
-				"N"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				14
-			],
-			"hp": {
-				"average": 90,
-				"formula": "12d10 + 24"
-			},
-			"speed": {
-				"walk": 50
-			},
-			"str": 22,
-			"dex": 19,
-			"con": 14,
-			"int": 16,
-			"wis": 17,
-			"cha": 18,
-			"save": {
-				"str": "+9",
-				"cha": "+7"
-			},
-			"skill": {
-				"nature": "+9",
-				"perception": "+6",
-				"survival": "+6"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 16,
-			"languages": [
-				"Common",
-				"Sylvan"
-			],
-			"cr": "6",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The dandylion casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
-					],
-					"will": [
-						"{@spell druidcraft}",
-						"{@spell guidance}",
-						"{@spell purify food and drink}"
-					],
-					"daily": {
-						"1": [
-							"{@spell speak with plants}"
-						],
-						"2e": [
-							"{@spell entangle}",
-							"{@spell goodberry}"
-						]
-					},
-					"ability": "cha",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The dandylion has advantage on saving throws against spells and other magical effects."
-					]
-				},
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The dandylion has advantage on an attack roll against a creature if at least one of the dandylion's allies is within 5 feet of the creature and the ally doesn't have the {@condition incapacitated} condition."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The dandylion makes one Bite attack and one Claws attack."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d6 + 6}) piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}20 ({@damage 4d6 + 6}) slashing damage. If the dandylion moved at least 20 feet straight toward the target immediately before the hit, the target must succeed on a {@dc 17} Strength saving throw or have the {@condition prone} condition. If the target has the {@condition prone} condition, the dandylion can make one Bite attack against it as a bonus action."
-					]
-				},
-				{
-					"name": "Rejuvenating Seedpods (2/Day)",
-					"entries": [
-						"The dandylion releases a burst of seedpods from its tail, filling a 10-foot-radius sphere centered on itself. Each creature of the dandylion's choice in the sphere can immediately end one of the following conditions on itself (creature's choice): {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}. In addition, all soil in the sphere's area is enriched, restoring withered vegetation in the area to full health and causing all crops in the area to produce twice the normal harvest for the next year."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Roar of Pride",
-					"entries": [
-						"When a creature within 60 feet of the dandylion hits it with an attack roll, the dandylion can unleash a furious roar. The creature that triggered this reaction must succeed on a {@dc 15} Wisdom saving throw or have the {@condition frightened} condition until the end of the dandylion's next turn."
-					]
-				}
-			],
-			"traitTags": [
-				"Magic Resistance",
-				"Pack Tactics"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"S"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"conditionInflictSpell": [
-				"restrained"
-			],
-			"savingThrowForced": [
-				"strength",
-				"wisdom"
-			],
-			"savingThrowForcedSpell": [
-				"strength"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Rain",
-			"isNamedCreature": true,
-			"source": "MisMV1",
-			"page": 8,
-			"size": [
-				"S"
-			],
-			"type": "celestial",
-			"alignment": [
-				"L",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 60,
-				"formula": "11d6 + 22"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 120
-			},
-			"str": 10,
-			"dex": 11,
-			"con": 14,
-			"int": 14,
-			"wis": 18,
-			"cha": 15,
-			"save": {
-				"dex": "+3",
-				"con": "+5",
-				"wis": "+7"
-			},
-			"skill": {
-				"acrobatics": "+3",
-				"insight": "+7",
-				"stealth": "+3"
-			},
-			"passive": 14,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"fire",
-				"poison",
-				"radiant"
-			],
-			"conditionImmune": [
-				"charmed",
-				"paralyzed",
-				"poisoned"
-			],
-			"languages": [
-				"Celestial",
-				"Common"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Fiery Wings",
-					"entries": [
-						"Rain's wings are made of flame, and they shed bright light out to 15 feet and dim light for an additional 15 feet. At the start of each of Rain's turns, each creature of Rain's choice within 5 feet of her takes 3 ({@damage 1d6}) fire damage. A creature that hits Rain with a melee attack takes 3 ({@damage 1d6}) fire damage."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"Rain has advantage on saving throws against spells and other magical effects."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Rain makes two Hoof attacks."
-					]
-				},
-				{
-					"name": "Hoof",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 2d4}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Haloed Horn Burst {@recharge 5}",
-					"entries": [
-						"Rain uses her haloed horn to produce one of the following magical effects:"
-					]
-				},
-				{
-					"name": "Glitterstorm",
-					"entries": [
-						"Rain emits a rainbow beam in a 30-foot line that is 5 feet wide. Each creature in that area must make a {@dc 15} Dexterity saving throw, taking 21 ({@damage 6d6}) radiant damage on a failed saving throw, or half as much damage on a successful one; creatures of evil alignment have disadvantage on this saving throw. If the damage from this effect reduces a creature to 0 hit points, the creature dies, and its body turns into glittery flowers."
-					]
-				},
-				{
-					"name": "Healing Rainbows",
-					"entries": [
-						"Rain releases a wave of rejuvenating multicolored light in a 30-foot cone. Each creature of Rain's choice in that area regains 18 ({@dice 4d8}) hit points."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Nimble Escape",
-					"entries": [
-						"Rain takes either the Disengage or the Hide action."
-					]
-				}
-			],
-			"traitTags": [
-				"Magic Resistance"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"CE"
-			],
-			"damageTags": [
-				"B",
-				"F",
-				"R"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Scrapper",
-			"source": "MisMV1",
-			"page": 10,
-			"size": [
-				"L"
-			],
-			"type": "construct",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 126,
-				"formula": "12d10 + 60"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 20,
-			"dex": 10,
-			"con": 20,
-			"int": 3,
-			"wis": 10,
-			"cha": 1,
-			"skill": {
-				"perception": "+6"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 16,
-			"resist": [
-				"lightning"
-			],
-			"immune": [
-				"poison",
-				"psychic"
-			],
-			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"petrified",
-				"poisoned"
-			],
-			"languages": [
-				"understands the languages of its creator but can't speak"
-			],
-			"cr": "8",
-			"trait": [
-				{
-					"name": "Electrified Chassis",
-					"entries": [
-						"A creature that hits the scrapper with a melee attack while within 5 feet of it takes 19 ({@damage 3d12}) lightning damage."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The scrapper makes two Spike Punch attacks. It can replace one of those with a Wires attack."
-					]
-				},
-				{
-					"name": "Spike Punch",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) bludgeoning damage plus 5 ({@damage 1d10}) piercing damage."
-					]
-				},
-				{
-					"name": "Wires",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 20 ft., one Large or smaller creature. {@h}The target has the {@condition grappled} condition (escape {@dc 16}) and must succeed on a {@dc 16} Strength saving throw or be pulled into an unoccupied space within 5 feet of the scrapper and take 19 ({@damage 3d12}) lightning damage. The scrapper can have only one creature {@condition grappled} in this way at a time."
-					]
-				},
-				{
-					"name": "Eye Beam {@recharge 5}",
-					"entries": [
-						"The scrapper shoots a magical beam from its extended eye at one creature it can see within 120 feet of itself. The target must make a {@dc 16} Dexterity saving throw, taking 44 ({@damage 8d10}) force damage on a failed save, or half as much damage on a successful one."
-					]
-				}
-			],
-			"senseTags": [
-				"SD"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"damageTags": [
-				"B",
-				"L",
-				"O",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
-			"savingThrowForced": [
-				"dexterity",
-				"strength"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Seth the Shapeshifting Dragon",
-			"isNamedCreature": true,
-			"source": "MisMV1",
-			"page": 12,
-			"size": [
-				"M"
-			],
-			"type": "dragon",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				17
-			],
-			"hp": {
-				"average": 153,
-				"formula": "18d8 + 72"
-			},
-			"speed": {
-				"walk": 50,
-				"swim": 50
-			},
-			"str": 16,
-			"dex": 25,
-			"con": 19,
-			"int": 13,
-			"wis": 15,
-			"cha": 14,
-			"save": {
-				"str": "+7",
-				"dex": "+11",
-				"con": "+8"
-			},
-			"skill": {
-				"perception": "+6",
-				"stealth": "+11"
-			},
-			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
-			],
-			"passive": 16,
-			"resist": [
-				"cold",
-				"fire"
-			],
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"grappled",
-				"poisoned",
-				"restrained"
-			],
-			"languages": [
-				"Aquan",
-				"Common",
-				"Draconic"
-			],
-			"cr": "10",
-			"trait": [
-				{
-					"name": "Amphibious",
-					"entries": [
-						"Seth can breathe air and water."
-					]
-				},
-				{
-					"name": "Invisible in Water",
-					"entries": [
-						"Seth has the {@condition invisible} condition while fully immersed in water."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Seth makes one Bite attack and two Claw attacks."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}10 ({@damage 1d6 + 7}) piercing damage plus 9 ({@damage 2d8}) cold damage."
-					]
-				},
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d6 + 7}) slashing damage."
-					]
-				},
-				{
-					"name": "Riptide Breath {@recharge 5}",
-					"entries": [
-						"Seth exhales a torrent of frigid water in a 30-foot cone. Each creature in that area must make a {@dc 16} Constitution saving throw. On a failed save, the creature takes 36 ({@damage 8d8}) cold damage and has the {@condition incapacitated} condition until the end of its next turn. On a successful save, the creature takes half as much damage only."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Change Shape",
-					"entries": [
-						"Seth magically transforms into a Small Humanoid or a Beast that is Tiny or Small, while retaining his game statistics (other than his size). This transformation ends if Seth is reduced to 0 hit points or uses another bonus action to end it."
-					]
-				},
-				{
-					"name": "Superspeed (2/Day)",
-					"entries": [
-						"Seth's speed is doubled for as long as he maintains {@status concentration} (as if {@status concentration||concentrating} on a spell). While his speed is increased in this way, all attack rolls against him are made with disadvantage, and he becomes partially incorporeal, allowing him to move through creatures and objects as if they were difficult terrain. Seth takes 5 ({@damage 1d10}) force damage if he ends his turn inside an object."
-					]
-				}
-			],
-			"traitTags": [
-				"Amphibious"
-			],
-			"senseTags": [
-				"B",
-				"SD"
-			],
-			"actionTags": [
-				"Breath Weapon",
-				"Multiattack",
-				"Shapechanger"
-			],
-			"languageTags": [
-				"AQ",
-				"C",
-				"DR"
-			],
-			"damageTags": [
-				"C",
-				"O",
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"incapacitated"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Sheldon the Blueberry Dragon",
-			"isNamedCreature": true,
-			"source": "MisMV1",
-			"page": 14,
-			"size": [
-				"L"
-			],
-			"type": "dragon",
-			"alignment": [
-				"N",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 16,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 142,
-				"formula": "15d10 + 60"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 60
-			},
-			"str": 19,
-			"dex": 13,
-			"con": 18,
-			"int": 17,
-			"wis": 14,
-			"cha": 16,
-			"save": {
-				"dex": "+4",
-				"con": "+7",
-				"int": "+6"
-			},
-			"skill": {
-				"acrobatics": "+7",
-				"athletics": "+7",
-				"performance": "+6"
-			},
-			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
-			],
-			"passive": 12,
-			"resist": [
-				"force",
-				"psychic"
-			],
-			"languages": [
-				"Common",
-				"Draconic",
-				"telepathy 120 ft."
-			],
-			"cr": "7",
-			"spellcasting": [
-				{
-					"name": "Spellcasting (Psionics)",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Sheldon casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 14}):"
-					],
-					"will": [
-						"{@spell light}",
-						"{@spell mage hand} (the hand is invisible)"
-					],
-					"daily": {
-						"1e": [
-							"{@spell dimension door}",
-							"{@spell telekinesis}"
-						]
-					},
-					"ability": "int",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Space Dweller",
-					"entries": [
-						"Sheldon can breathe normally in a vacuum."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Sheldon makes either two Bite attacks, two Blueberry Fling attacks, or one of each."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 4 ({@damage 1d8}) psychic damage."
-					]
-				},
-				{
-					"name": "Blueberry Fling",
-					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 30 ft., one creature. {@h}11 ({@damage 2d6 + 4}) blueberry damage."
-					]
-				},
-				{
-					"name": "Jetstream Breath {@recharge 5}",
-					"entries": [
-						"Sheldon exhales a line of magical wind that is 60 feet long and 5 feet wide. Each creature in that area must make a {@dc 15} Strength saving throw. On a failed save, the creature takes 21 ({@damage 6d6}) force damage, is pushed 15 feet away from Sheldon, and has the {@condition prone} condition. On a successful save, the creature takes half as much damage only."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Wind Dash (2/Day)",
-					"entries": [
-						"Sheldon summons a powerful gust of wind and flies up to his speed. This movement doesn't provoke opportunity attacks. At the end of this movement, each creature within 5 feet of Sheldon must succeed on a {@dc 15} Strength saving throw or have the {@condition prone} condition, as the wind bursts around Sheldon."
-					]
-				}
-			],
-			"senseTags": [
-				"B",
-				"SD"
-			],
-			"actionTags": [
-				"Breath Weapon",
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"DR",
-				"TP"
-			],
-			"damageTags": [
-				"O",
-				"P",
-				"Y"
-			],
-			"damageTagsSpell": [
-				"O"
-			],
-			"spellcastingTags": [
-				"P"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RW"
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"conditionInflictSpell": [
-				"restrained"
-			],
-			"savingThrowForced": [
-				"strength"
-			],
-			"savingThrowForcedSpell": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	]
+  "monster": [
+    {
+      "name": "珊瑚",
+      "ENG_name": "Coral",
+      "isNamedCreature": true,
+      "source": "MisMV1",
+      "page": 4,
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 17,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 135,
+        "formula": "18d10 + 36"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 60,
+        "swim": 60
+      },
+      "str": 20,
+      "dex": 13,
+      "con": 15,
+      "int": 14,
+      "wis": 18,
+      "cha": 19,
+      "save": {
+        "dex": "+5",
+        "con": "+6",
+        "wis": "+8",
+        "cha": "+8"
+      },
+      "skill": {
+        "arcana": "+6",
+        "insight": "+8",
+        "perception": "+8"
+      },
+      "senses": [
+        "盲视 60 英尺"
+      ],
+      "passive": 18,
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "中毒"
+      ],
+      "languages": [
+        "普通",
+        "原始语",
+        "森林"
+      ],
+      "cr": "9",
+      "trait": [
+        {
+          "name": "魔法抗性",
+          "ENG_name": "Magic Resistance",
+          "entries": [
+            "Coral在对抗法术和其他魔法效果的豁免投掷上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "珊瑚进行两次蹄击攻击，并使用尾巴重击。"
+          ]
+        },
+        {
+          "name": "蹄击",
+          "ENG_name": "Hoof",
+          "entries": [
+            "{@atk 近战武器} 命中骰：9，射程5英尺，一个目标。{@h}12（{@damage 2d6 + 5}）钝击伤害。"
+          ]
+        },
+        {
+          "name": "尾巴重击",
+          "ENG_name": "Tail Thump",
+          "entries": [
+            "Coral 猛击她的尾巴，向她60英尺内能看到的一个生物释放出一股魔法力量。目标必须进行一次{@dc 16}敏捷豁免。豁免失败，目标受到22（{@damage 4d10}）力量伤害，并进入{@condition 伏地}状态。豁免成功，目标只受到一半的伤害。如果这次伤害使目标的生命值降至0，目标死亡，其身体化为细尘。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "幻想泡泡（每日2次）",
+          "ENG_name": "Bubbles of Whimsy (2/Day)",
+          "entries": [
+            "珊瑚从她的角上产生出一串魔法泡泡。这些泡泡飘向珊瑚能看到的60英尺内的生物。掷一个{@dice d6}来确定泡泡的效果：",
+            {
+              "type": "list",
+              "items": [
+                {
+                  "name": "1-2: 鼓舞治疗",
+                  "ENG_name": "1-2: Bolstering Treat",
+                  "type": "item",
+                  "entries": [
+                    "泡沫变成了{@dice 1d4}个饼干，出现在目标的空间中。如果目标立即使用其反应来吃一个饼干，它将获得11（{@dice 2d8 + 2}）点临时生命值。任何剩余的饼干都很美味，但不会带来任何好处。"
+                  ]
+                },
+                {
+                  "name": "3-4: 闪光爆发",
+                  "ENG_name": "3-4: Sparkle Burst",
+                  "type": "item",
+                  "entries": [
+                    "泡泡变成了围绕目标旋转的闪光，然后向外爆开。每个在目标5英尺范围内的生物必须成功进行一次体质豁免投掷（{@dc 16}），否则直到Coral的下一回合开始都会处于{@condition 目盲}状态。"
+                  ]
+                },
+                {
+                  "name": "5-6: 臭气弹盾牌",
+                  "ENG_name": "5-6: Stink Bomb Shield",
+                  "type": "item",
+                  "entries": [
+                    "泡泡变成了一股恶臭的气体云，包围并保护目标。直到Coral下一回合开始时气体散去之前，目标拥有半个掩体的效果。"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "言语之赐（每日1次）",
+          "ENG_name": "Gift of Speech (1/Day)",
+          "entries": [
+            "珊瑚选择一个在她10英尺范围内她能看到的野兽。目标获得理解并使用通用语或森林语（珊瑚的选择）说话的能力，持续10分钟。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "魔法抗性"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "P",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "O"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "conditionInflict": [
+        "目盲",
+        "伏地"
+      ],
+      "savingThrowForced": [
+        "体质",
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "丹迪莲",
+      "ENG_name": "Dandylion",
+      "source": "MisMV1",
+      "page": 6,
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "alignmentPrefix": "通常",
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 90,
+        "formula": "12d10 + 24"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 22,
+      "dex": 19,
+      "con": 14,
+      "int": 16,
+      "wis": 17,
+      "cha": 18,
+      "save": {
+        "str": "+9",
+        "cha": "+7"
+      },
+      "skill": {
+        "nature": "+9",
+        "perception": "+6",
+        "survival": "+6"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 16,
+      "languages": [
+        "普通",
+        "森林"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "蒲公英施放以下法术之一，无需材料成分，并使用魅力作为施法能力（法术豁免{@dc 15}）："
+          ],
+          "will": [
+            "{@spell 德鲁伊伎俩}",
+            "{@spell 神导术}",
+            "{@spell 净化饮食}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell 植物交谈术}"
+            ],
+            "2e": [
+              "{@spell 纠缠术}",
+              "{@spell 神莓术}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "魔法抗性",
+          "ENG_name": "Magic Resistance",
+          "entries": [
+            "dandylion在对抗法术和其他魔法效果的豁免投掷上有优势。"
+          ]
+        },
+        {
+          "name": "群体战术",
+          "ENG_name": "Pack Tactics",
+          "entries": [
+            "如果至少有一名蒲公英的盟友在5英尺范围内且该盟友没有处于{@condition 无力}状态，蒲公英在对生物的攻击检定上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "蒲公英狮进行一次咬击和一次爪击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 9} 命中，触及范围 5 英尺，一个目标。{@h}13 ({@damage 2d6 + 6}) 穿刺伤害。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claws",
+          "entries": [
+            "{@atk 近战武器攻击} 命中骰：9，射程5英尺，一个目标。{@h}20（{@damage 4d6 + 6}）斩击伤害。如果蒲公英在命中之前至少直线移动了20英尺直接朝向目标，目标必须进行一次{@dc 17}力量豁免，否则会进入{@condition 倒地}状态。如果目标处于{@condition 倒地}状态，蒲公英可以作为额外行动对其进行一次咬击攻击。"
+          ]
+        },
+        {
+          "name": "再生种子荚（每日2次）",
+          "ENG_name": "Rejuvenating Seedpods (2/Day)",
+          "entries": [
+            "蒲公英狮从它的尾巴释放出一阵种子荚，形成一个以自己为中心的10英尺半径的球体。蒲公英狮可以选择球体内的每个生物立即结束以下条件之一（生物选择）：{@condition 目盲}、{@condition 耳聋}、{@condition 麻痹}或{@condition 中毒}。此外，球体内的所有土壤都得到了丰富，恢复了该区域内枯萎的植被到健康状态，并使得该区域内的所有作物在下一年产生双倍的正常收成。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "骄傲的咆哮",
+          "ENG_name": "Roar of Pride",
+          "entries": [
+            "当距离蒲公英60英尺内的生物对其进行攻击检定时，蒲公英可以发出一声愤怒的咆哮。触发此反应的生物必须成功进行一次DC 15的智力豁免检定，否则直到蒲公英下一回合结束时都会处于{@condition 惊恐}状态。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "魔法抗性",
+        "群体战术"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "S"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "conditionInflict": [
+        "伏地"
+      ],
+      "conditionInflictSpell": [
+        "束缚"
+      ],
+      "savingThrowForced": [
+        "力量",
+        "感知"
+      ],
+      "savingThrowForcedSpell": [
+        "力量"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "雨",
+      "ENG_name": "Rain",
+      "isNamedCreature": true,
+      "source": "MisMV1",
+      "page": 8,
+      "size": [
+        "S"
+      ],
+      "type": "celestial",
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 60,
+        "formula": "11d6 + 22"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 120
+      },
+      "str": 10,
+      "dex": 11,
+      "con": 14,
+      "int": 14,
+      "wis": 18,
+      "cha": 15,
+      "save": {
+        "dex": "+3",
+        "con": "+5",
+        "wis": "+7"
+      },
+      "skill": {
+        "acrobatics": "+3",
+        "insight": "+7",
+        "stealth": "+3"
+      },
+      "passive": 14,
+      "resist": [
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "火",
+        "毁灭诅咒",
+        "光辉"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "麻痹",
+        "中毒"
+      ],
+      "languages": [
+        "天界",
+        "普通"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "火焰之翼",
+          "ENG_name": "Fiery Wings",
+          "entries": [
+            "雷恩的翅膀由火焰构成，它们发出的明亮光线可以照亮15英尺范围内的区域，并且在额外的15英尺范围内提供昏暗光线。在雷恩的每个回合开始时，她选择的5英尺内的每一个生物会受到3点（1d6）火焰伤害。用近战攻击击中雷恩的生物会受到3点（1d6）火焰伤害。"
+          ]
+        },
+        {
+          "name": "魔法抗性",
+          "ENG_name": "Magic Resistance",
+          "entries": [
+            "雷恩在对抗法术和其他魔法效果的豁免投掷上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Rain 进行两次蹄击攻击。"
+          ]
+        },
+        {
+          "name": "蹄击",
+          "ENG_name": "Hoof",
+          "entries": [
+            "{@atk 近战武器攻击} 命中骰：3，射程5英尺，一个目标。{@h}5（{@damage 2d4}）钝击伤害。"
+          ]
+        },
+        {
+          "name": "光环号角爆发 {@recharge 5}",
+          "ENG_name": "Haloed Horn Burst {@recharge 5}",
+          "entries": [
+            "Rain 使用她的光环号角产生以下魔法效果之一："
+          ]
+        },
+        {
+          "name": "闪光风暴",
+          "ENG_name": "Glitterstorm",
+          "entries": [
+            "Rain发出一道30英尺长、5英尺宽的彩虹光束。该区域内的每个生物必须进行一次DC 15的敏捷豁免检定，失败则受到21（{@damage 6d6}）点辐射伤害，成功则伤害减半；邪恶阵营的生物在此豁免检定中处于劣势。如果此效果造成的伤害使生物降至0点生命值，该生物死亡，其尸体变成闪光的花朵。"
+          ]
+        },
+        {
+          "name": "治愈彩虹",
+          "ENG_name": "Healing Rainbows",
+          "entries": [
+            "雷恩释放出一股多色光波的复苏之光，形成一个30英尺的锥形区域。雷恩选择的那个区域内的每一个生物恢复18点生命值（4d8）。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "灵敏脱逃",
+          "ENG_name": "Nimble Escape",
+          "entries": [
+            "Rain 采取了“脱战”或“隐蔽”行动。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "魔法抗性"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "CE"
+      ],
+      "damageTags": [
+        "B",
+        "F",
+        "R"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "拾荒者",
+      "ENG_name": "Scrapper",
+      "source": "MisMV1",
+      "page": 10,
+      "size": [
+        "L"
+      ],
+      "type": "construct",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 18,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 126,
+        "formula": "12d10 + 60"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 20,
+      "dex": 10,
+      "con": 20,
+      "int": 3,
+      "wis": 10,
+      "cha": 1,
+      "skill": {
+        "perception": "+6"
+      },
+      "senses": [
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 16,
+      "resist": [
+        "闪电"
+      ],
+      "immune": [
+        "毁灭诅咒",
+        "心灵"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "力竭",
+        "恐惧",
+        "麻痹",
+        "石化",
+        "中毒"
+      ],
+      "languages": [
+        "能理解其创造者的语言但无法说话"
+      ],
+      "cr": "8",
+      "trait": [
+        {
+          "name": "电气化底盘",
+          "ENG_name": "Electrified Chassis",
+          "entries": [
+            "当一个生物在5英尺范围内用近战攻击击中拾荒者时，它会受到19（{@damage 3d12}）点闪电伤害。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "拾荒者进行两次尖刺拳击攻击。它可以将其中一次替换为电线攻击。"
+          ]
+        },
+        {
+          "name": "尖刺冲拳",
+          "ENG_name": "Spike Punch",
+          "entries": [
+            "{@atk 近战武器攻击} 命中骰：8，射程5英尺，一个目标。{@h}14（{@damage 2d8 + 5}）钝击伤害加上5（{@damage 1d10}）穿刺伤害。"
+          ]
+        },
+        {
+          "name": "电线",
+          "ENG_name": "Wires",
+          "entries": [
+            "{@atk 近战武器} {@hit 8} 命中，触及范围 20 英尺，一个大型或更小的生物。{@h}目标进入{@condition 被擒}状态（逃脱{@dc 16}），并且必须在一次力量豁免投掷中成功（{@dc 16}），否则会被拉入拾荒者周围5英尺内的未占用空间，并承受19 ({@damage 3d12}) 点闪电伤害。拾荒者一次只能以这种方式{@condition 被擒}一个生物。"
+          ]
+        },
+        {
+          "name": "眼射线 {@recharge 5}",
+          "ENG_name": "Eye Beam {@recharge 5}",
+          "entries": [
+            "拾荒者从其伸出的眼睛射出一道魔法光束，攻击它能看到的 120 英尺内的一个生物。目标必须进行一次 DC 16 的敏捷豁免检定，检定失败则受到 44 ({@damage 8d10}) 点力量伤害，检定成功则只受到一半的伤害。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "CS"
+      ],
+      "damageTags": [
+        "B",
+        "L",
+        "O",
+        "P"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "savingThrowForced": [
+        "敏捷",
+        "力量"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "变形龙塞斯",
+      "ENG_name": "Seth the Shapeshifting Dragon",
+      "isNamedCreature": true,
+      "source": "MisMV1",
+      "page": 12,
+      "size": [
+        "M"
+      ],
+      "type": "dragon",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 153,
+        "formula": "18d8 + 72"
+      },
+      "speed": {
+        "walk": 50,
+        "swim": 50
+      },
+      "str": 16,
+      "dex": 25,
+      "con": 19,
+      "int": 13,
+      "wis": 15,
+      "cha": 14,
+      "save": {
+        "str": "+7",
+        "dex": "+11",
+        "con": "+8"
+      },
+      "skill": {
+        "perception": "+6",
+        "stealth": "+11"
+      },
+      "senses": [
+        "盲视 30 英尺。",
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 16,
+      "resist": [
+        "寒冷",
+        "火"
+      ],
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "被擒",
+        "中毒",
+        "束缚"
+      ],
+      "languages": [
+        "水族",
+        "普通",
+        "龙族血脉"
+      ],
+      "cr": "10",
+      "trait": [
+        {
+          "name": "两栖",
+          "ENG_name": "Amphibious",
+          "entries": [
+            "塞斯能够呼吸空气和水。"
+          ]
+        },
+        {
+          "name": "水中隐形",
+          "ENG_name": "Invisible in Water",
+          "entries": [
+            "塞斯在完全浸入水中时具有{@condition 隐形}状态。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "塞斯进行一次咬击和两次爪击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中：11，射程10英尺，一个目标。{@h}10（{@damage 1d6 + 7}）穿刺伤害，外加9（{@damage 2d8}）冰霜伤害。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 近战武器} {@hit 11}命中，射程5英尺，单一目标。{@h}14（{@damage 2d6 + 7}）斩击伤害。"
+          ]
+        },
+        {
+          "name": "潮汐呼吸 {@recharge 5}",
+          "ENG_name": "Riptide Breath {@recharge 5}",
+          "entries": [
+            "Seth 呼出一股寒冷的水柱，形成一个 30 英尺的锥形区域。该区域内的每个生物都必须进行一次 DC 16 的体质豁免检定。检定失败，生物受到 36 ({@damage 8d8}) 点冰冷伤害，并在其下一回合结束前处于{@condition 无力}状态。检定成功，生物只受到一半的伤害。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "变形",
+          "ENG_name": "Change Shape",
+          "entries": [
+            "塞斯通过魔法变成一个小型人形生物或一个微小或小型的野兽，同时保留他的游戏统计数据（除了他的尺寸）。如果塞斯的生命值降到0点或使用另一个奖励动作来结束它，这种变形就会结束。"
+          ]
+        },
+        {
+          "name": "超速（每日2次）",
+          "ENG_name": "Superspeed (2/Day)",
+          "entries": [
+            "塞斯的速度在保持{@status 专注}状态期间翻倍（就像在{@status 专注||集中精神}时保持专注一样）。在他以这种方式增加速度时，所有对他的攻击投掷都会处于不利状态，并且他变得部分非物质化，允许他像穿过困难地形一样穿过生物和物体。如果塞斯在回合结束时位于物体内部，他会承受5 ({@damage 1d10}) 点力量伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "两栖"
+      ],
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "龙息武器",
+        "多重攻击",
+        "变形生物"
+      ],
+      "languageTags": [
+        "AQ",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "C",
+        "O",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "无力"
+      ],
+      "savingThrowForced": [
+        "体质"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "蓝莓龙谢尔顿",
+      "ENG_name": "Sheldon the Blueberry Dragon",
+      "isNamedCreature": true,
+      "source": "MisMV1",
+      "page": 14,
+      "size": [
+        "L"
+      ],
+      "type": "dragon",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 16,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 142,
+        "formula": "15d10 + 60"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "str": 19,
+      "dex": 13,
+      "con": 18,
+      "int": 17,
+      "wis": 14,
+      "cha": 16,
+      "save": {
+        "dex": "+4",
+        "con": "+7",
+        "int": "+6"
+      },
+      "skill": {
+        "acrobatics": "+7",
+        "athletics": "+7",
+        "performance": "+6"
+      },
+      "senses": [
+        "盲视 30 英尺。",
+        "黑暗视觉 120 英尺"
+      ],
+      "passive": 12,
+      "resist": [
+        "力量",
+        "心灵"
+      ],
+      "languages": [
+        "普通",
+        "龙族血脉",
+        "心灵感应 120 英尺"
+      ],
+      "cr": "7",
+      "spellcasting": [
+        {
+          "name": "法术施放（灵能）",
+          "ENG_name": "Spellcasting (Psionics)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Sheldon 施放以下任意一个法术，无需法术材料，使用智力作为施法能力（法术豁免{@dc 14}）："
+          ],
+          "will": [
+            "{@spell 光亮术}",
+            "{@spell 法师之手}（手是隐形的）"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell 次元门}",
+              "{@spell 心灵遥控}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "太空居民",
+          "ENG_name": "Space Dweller",
+          "entries": [
+            "谢尔顿可以在真空中正常呼吸。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Sheldon 可以进行两次咬击，两次蓝莓投掷攻击，或者各一次。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中判定：7，射程5英尺，单一目标。{@h}7（{@damage 1d6 + 4}）穿刺伤害，外加4点（{@damage 1d8}）心灵伤害。"
+          ]
+        },
+        {
+          "name": "蓝莓飞溅",
+          "ENG_name": "Blueberry Fling",
+          "entries": [
+            "{@atk 投掷武器} {@hit 7} hit，射程 30 英尺，单一生物。{@h}11 ({@damage 2d6 + 4}) 蓝莓伤害。"
+          ]
+        },
+        {
+          "name": "喷射气流呼吸 {@recharge 5}",
+          "ENG_name": "Jetstream Breath {@recharge 5}",
+          "entries": [
+            "谢尔顿呼出一道魔法风，这道风长60英尺，宽5英尺。在该区域内的每一个生物都必须进行一次DC 15的力量豁免检定。豁免失败的生物会受到21点（6d6）力量伤害，被推离谢尔顿15英尺，并处于{@condition prone}状态。豁免成功则只受到一半的伤害。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "疾风冲刺（每日2次）",
+          "ENG_name": "Wind Dash (2/Day)",
+          "entries": [
+            "谢尔顿召唤出一股强大的风，以他的速度飞升。这种移动不会引发机会攻击。在这种移动结束时，每个距离谢尔顿5英尺内的生物必须进行一次DC 15的力量豁免投掷，否则会因为围绕谢尔顿爆发的风而处于{@condition 倒地}状态。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "龙息武器",
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "DR",
+        "TP"
+      ],
+      "damageTags": [
+        "O",
+        "P",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "P"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "RW"
+      ],
+      "conditionInflict": [
+        "伏地"
+      ],
+      "conditionInflictSpell": [
+        "束缚"
+      ],
+      "savingThrowForced": [
+        "力量"
+      ],
+      "savingThrowForcedSpell": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
 }

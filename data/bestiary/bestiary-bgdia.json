@@ -8,16 +8,16 @@
       ]
     },
     "internalCopies": [
-      "怪物"
+      "monster"
     ],
     "otherSources": {
       "monster": {
-        "MM": "博格迪亚",
-        "ToA": "博格迪亚",
-        "MTF": "博格迪亚",
-        "VGM": "博格迪亚",
-        "RoT": "博格迪亚",
-        "DMG": "博格迪亚"
+        "MM": "BGDIA",
+        "ToA": "BGDIA",
+        "MTF": "BGDIA",
+        "VGM": "BGDIA",
+        "RoT": "BGDIA",
+        "DMG": "BGDIA"
       }
     }
   },
@@ -163,7 +163,7 @@
         {
           "ac": 17,
           "from": [
-            "{@item 皮甲|phb}",
+            "{@item 皮甲|PHB}",
             "魅力调整值"
           ]
         }
@@ -226,7 +226,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -277,7 +277,7 @@
               "mode": "replaceArr",
               "replace": "长剑",
               "items": {
-                "name": "连枷",
+                "name": "链枷",
                 "ENG_name": "Flail",
                 "entries": [
                   "{@atk 近战武器攻击} {@hit 命中骰 16}命中，射程 10 英尺，一个目标。{@h}17 ({@damage 2d8 + 8}) 穿刺伤害加上 36 ({@damage 8d8}) 火焰伤害。"
@@ -356,8 +356,8 @@
         {
           "ac": 23,
           "from": [
-            "{@item 黑曜石火石龙鳞甲|BGDIA}",
-            "{@item 盾牌|phb}"
+            "{@item 黑曜燧石龙板甲|博格迪亚}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -419,7 +419,7 @@
           "daily": {
             "3e": [
               "{@spell 活化死尸}",
-              "{@spell 烙印斩} (at 4th level)",
+              "{@spell 烙印斩}（4级时）",
               "{@spell 回生术}"
             ],
             "1e": [
@@ -432,24 +432,24 @@
       ],
       "trait": [
         {
-          "name": "破誓者:憎恨灵光",
+          "name": "憎恨灵光",
           "ENG_name": "Aura of Hate",
           "entries": [
-            "While Arkhan isn't {@condition 无力}, he and all fiends and undead within 30 feet of him deal 4 extra damage whenever they hit with a melee weapon attack (already factored into Arkhan's attacks). This extra damage is of the same type as the weapon's damage type."
+            "只要阿肯没有处于{@condition 无力}，他以及所有在他30英尺范围内的恶魔和亡灵在用近战武器攻击命中时，每次都会额外造成4点伤害（已经计入阿肯的攻击中）。这个额外伤害的类型与武器的伤害类型相同。"
           ]
         },
         {
           "name": "Vecna之手",
           "ENG_name": "Hand of Vecna",
           "entries": [
-            "The Hand of Vecna has 8 charges and regains {@dice 1d4 + 4} expended charges daily at dawn. Arkhan can cast the following spells from the hand by expending the specified number of charges (spell save {@dc 18}): {@spell 死亡一指} (5 charges), {@spell 睡眠术} (1 charge), {@spell 缓速术} (2 charges), and {@spell 传送术} (3 charges)."
+            "{@item Vecna之手}拥有8个充能次数，并且在黎明时分每天恢复{@dice 1d4 + 4}个已消耗的充能次数。Arkhan可以通过消耗指定的充能次数从手中施展以下法术（法术豁免{@dc 18}）：{@spell 死亡一指}（5个充能次数）、{@spell 沉眠}（1个充能次数）、{@spell 缓速术}（2个充能次数）和{@spell 传送术}（3个充能次数）。"
           ]
         },
         {
           "name": "特殊装备",
           "ENG_name": "Special Equipment",
           "entries": [
-            "Arkhan wields {@item Fane-Eater|bgdia} and wears a suit of {@item Obsidian Flint Dragon Plate|bgdia}. The armor gives Arkhan advantage on ability checks and saving throws made to avoid or end the {@condition 被擒} condition on him."
+            "Arkhan挥舞着{@item 神殿吞食者|博格迪亚}并穿戴一套{@item 黑曜燧石龙板甲|博格迪亚}。这套盔甲使Arkhan在进行能力检定和豁免投掷以避免或结束对他自身的{@condition 被擒}状态时具有优势。"
           ]
         }
       ],
@@ -477,8 +477,8 @@
         }
       ],
       "attachedItems": [
-        "食庙者|背景深度感知",
-        "标枪"
+        "神殿吞食者|博格迪亚",
+        "标枪|PHB"
       ],
       "senseTags": [
         "D"
@@ -513,7 +513,7 @@
         "魅惑"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -636,7 +636,7 @@
           "name": "恐惧灵气",
           "ENG_name": "Fear Aura",
           "entries": [
-            "Any creature hostile to Bel that starts its turn within 20 feet of him must make a {@dc 23} Wisdom saving throw, unless Bel is {@condition 无力}. Unless the save succeeds, the creature is {@condition 恐惧} until the start of its next turn. If a creature's saving throw is successful, the creature is immune to Bel's Fear Aura for the next 24 hours."
+            "任何对Bel怀有敌意的生物，如果在其回合开始时距离Bel 20英尺以内，必须进行一次{@dc 23}智力豁免检定，除非Bel处于{@condition 无力}。除非豁免成功，否则该生物直到其下一个回合开始前都会处于{@condition 恐惧}状态。如果生物的豁免检定成功，该生物在接下来的24小时内对Bel的恐惧光环免疫。"
           ]
         },
         {
@@ -680,7 +680,7 @@
           "name": "尾击",
           "ENG_name": "Tail",
           "entries": [
-            "{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}25 ({@damage 3d10 + 9}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 23} Constitution saving throw or be {@condition 震慑} until the end of its next turn."
+            "{@atk 近战武器} {@hit 16}命中，射程10英尺，一个目标。{@h}25（{@damage 3d10 + 9}）钝击伤害。如果目标是一个生物，它必须在一次{@dc 23}体质豁免投掷中成功，否则直到其下一回合结束时将处于{@condition stunned}状态。"
           ]
         }
       ],
@@ -696,7 +696,7 @@
           "name": "战术优势（消耗2个行动）",
           "ENG_name": "Tactical Edge (Costs 2 Actions)",
           "entries": [
-            "Roll a {@dice d6} for Bel. The number rolled on the die is subtracted from the next attack roll made against Bel or an ally of his choice within the next minute."
+            "为Bel掷一个{@dice d6}。骰子掷出的数字将从下一分钟内向Bel或他选择的盟友进行的下一次攻击掷骰中减去。"
           ]
         },
         {
@@ -708,7 +708,7 @@
         }
       ],
       "attachedItems": [
-        "巨剑|phb"
+        "巨剑|PHB"
       ],
       "traitTags": [
         "传奇抗性",
@@ -754,12 +754,12 @@
         "束缚"
       ],
       "savingThrowForced": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -813,7 +813,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 锁子甲|phb}"
+            "{@item 链甲|PHB}"
           ]
         }
       ],
@@ -867,7 +867,7 @@
                 "{@spell 灾祸术}",
                 "{@spell 祝福术}",
                 "{@spell 治疗伤势}",
-                "{@spell 光导箭} (see \"Actions\" below)"
+                "{@spell 光导箭}（详见下文的\"动作\"）"
               ]
             },
             "2": {
@@ -894,7 +894,7 @@
           "name": "恐怖光环",
           "ENG_name": "Aura of Terror",
           "entries": [
-            "When a hostile creature within 5 feet of the black gauntlet makes an attack roll or a saving throw, it has disadvantage on the roll. Creatures that are immune to the {@condition 恐惧} condition are immune to this trait."
+            "当一个敌对生物在黑色护手5英尺范围内进行攻击骰或豁免骰时，其骰点具有劣势。对{@condition 恐惧}状态免疫的生物对这一特性也免疫。"
           ]
         },
         {
@@ -924,12 +924,12 @@
           "name": "引导之光（1级法术；需要法术位）",
           "ENG_name": "Guiding Bolt (1st-Level Spell; Requires a Spell Slot)",
           "entries": [
-            "{@atk rs} {@hit 7} to hit, range 120 ft., one creature. {@h}14 ({@damage 4d6}) radiant damage, and the next attack roll made against the target before the end of the black gauntlet's next turn has advantage. If the black gauntlet casts this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d6} for each slot level above 1st."
+            "{@atk rs} 命中{@hit 7}，射程120英尺，单一生物。{@h}14（{@damage 4d6}）辐射伤害，并且在黑手套的下一个回合结束前，对目标进行的下一次攻击检定具有优势。如果黑手套使用2级以上的法术位施放此法术，每超过1级的法术位，伤害增加{@dice 1d6}。"
           ]
         }
       ],
       "attachedItems": [
-        "钉头锤"
+        "硬头锤|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -959,10 +959,10 @@
         "麻痹"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "魅力",
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1012,7 +1012,7 @@
           "name": "粘性",
           "ENG_name": "Adhesive",
           "entries": [
-            "The bone whelk can cause Medium or smaller objects to adhere to it. A Medium or smaller creature that touches the bone whelk is {@condition 被擒} by it (escape {@dc 10})."
+            "骨螺可以使中等大小或更小的物体粘附在其上。触碰骨螺的中等大小或更小的生物会被它{@condition 被擒}（逃脱{@dc 10}）。"
           ]
         },
         {
@@ -1081,7 +1081,7 @@
                 "name": "医疗师",
                 "ENG_name": "Healer",
                 "entries": [
-                  "Burney has the benefits of the {@feat healer} feat as well as proficiency with both the {@item healer's kit|phb} and the {@item 草药工具|phb}."
+                  "Burney 拥有{@feat 医疗师}专长的好处，并且精通{@item 医疗包|PHB}和{@item 草药工具|PHB}。"
                 ]
               },
               {
@@ -1093,9 +1093,9 @@
                     "type": "list",
                     "items": [
                       "除非Burney决定另行处理，否则一旦任何比神祇弱小的生物从她那里走了三步，他们就再也无法记得她或与她具体的互动。",
-                      "Burney is under the effect of a permanent {@spell 心灵屏障} spell, and cannot be detected by magical or mundane means unless she wishes it. In exchange for this blessing, Burney can take no direct action against the denizens of the Nine Hells, though she can certainly enlist the help of those who can.",
-                      "Burney always knows the location of the Wandering Emporium and can transport herself there as though by a {@spell 回返真言} spell. This explains why Burney simply seems to appear amid the fully deployed marketplace each morning it is active to provide service and tell stories.",
-                      "Once each day, when Burney so desires, she can instantly transport herself to the court of Bahamut via a powerful blessing akin to the {@spell 异界传送} spell."
+                      "Burney受到永久性{@spell 心灵屏障}法术的影响，除非她愿意，否则无法通过魔法或普通手段被探测到。作为这项祝福的交换，Burney不能直接对九层地狱的居民采取行动，尽管她当然可以寻求那些能够做到的人的帮助。",
+                      "Burney总是知道流浪交易市场的位置，并且可以通过类似于{@spell 回返真言}法术的方式传送自己到那里。这就解释了为什么Burney每天早晨在完全展开的市场中出现，提供服务和讲故事。",
+                      "每天一次，当Burney希望时，她可以通过一种类似于{@spell 异界传送}法术的强大祝福，瞬间传送自己到巴哈姆特的宫廷。"
                     ]
                   }
                 ]
@@ -1137,7 +1137,7 @@
         }
       ],
       "attachedItems": [
-        "镀银长矛|phb"
+        "镀银长矛|PHB"
       ],
       "miscTags": [
         "魔法学习(Magic Learning Wheel)",
@@ -1313,7 +1313,7 @@
           "name": "吐出盟友{@recharge}",
           "ENG_name": "Disgorge Allies {@recharge}",
           "entries": [
-            "Crokek'toeck opens its mouth and disgorges {@dice 1d4} {@creature barlgura||barlguras}, {@dice 3d6} {@creature gnoll||gnolls} led by 1 {@creature gnoll fang of Yeenoghu}, {@dice 6d6} {@creature dretch||dretches}, or {@dice 1d3} {@creature vrock||vrocks}. Each creature it disgorges appears in an unoccupied space within 30 feet of Crokek'toeck's mouth, or the next closest unoccupied space."
+            "克洛克托克张开它的嘴巴，吐出{@dice 1d4}个{@creature 巴古拉魔||巴尔古拉斯}，由1个{@creature 豺狼人||豺狼人}领导的{@creature 豺狼人||豺狼人}个{@creature 豺狼人·耶诺古毒牙}，{@dice 6d6}个{@creature 怯魔||劣魔}，或{@dice 1d3}个{@creature 弗洛魔||狂战魔}。每个它吐出的生物都出现在克洛克托克嘴巴30英尺范围内的未占据空间内，或者是下一个最近的未占据空间。"
           ]
         }
       ],
@@ -1393,7 +1393,7 @@
           "name": "杀戮光环",
           "ENG_name": "Aura of Murder",
           "entries": [
-            "As long as the death's head is not {@condition 无力}, hostile creatures within 5 feet of it gain vulnerability to piercing damage unless they have resistance or immunity to such damage."
+            "只要死亡头颅没有处于{@condition 无力}，在其5英尺范围内的敌对生物就会对穿刺伤害易感，除非它们对此类伤害具有抗性或免疫。"
           ]
         },
         {
@@ -1423,7 +1423,7 @@
           "name": "震慑凝视",
           "ENG_name": "Stunning Gaze",
           "entries": [
-            "The death's head targets one creature it can see within 30 feet of it. The target must succeed on a {@dc 14} Wisdom saving throw or be {@condition 震慑} until the end of its next turn."
+            "死亡之头瞄准它能看到的30英尺范围内的一个生物。目标必须在一次{@dc 14}智慧豁免投掷中成功，否则直到其下一回合结束时将处于{@condition 震慑}状态。"
           ]
         }
       ],
@@ -1437,7 +1437,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "traitTags": [
         "魔法抗性"
@@ -1464,7 +1464,7 @@
         "震慑"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -1475,7 +1475,7 @@
       "source": "BGDIA",
       "page": 108,
       "_copy": {
-        "name": "报丧女妖(班西)",
+        "name": "女妖",
         "ENG_name": "Banshee",
         "source": "MM",
         "_mod": {
@@ -1544,11 +1544,11 @@
           "name": "黑暗的奉献",
           "ENG_name": "Dark Devotion",
           "entries": [
-            "Thalamra has advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}."
+            "Thalamra在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投掷上具有优势。"
           ]
         },
         {
-          "name": "魔能祈唤:魔鬼视界",
+          "name": "魔鬼视界",
           "ENG_name": "Devil's Sight",
           "entries": [
             "Thalamra 在黑暗中，无论是魔法造成的还是非魔法的，都能正常视物，视距可达 120 英尺。"
@@ -1588,7 +1588,7 @@
         }
       ],
       "traitTags": [
-        "魔能祈唤:魔鬼视界"
+        "魔鬼视界"
       ],
       "senseTags": [
         "SD"
@@ -1609,7 +1609,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -1655,7 +1655,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "miscTags": [
         "魔法学习(Magic Learning Wheel)",
@@ -1775,7 +1775,7 @@
           "name": "狂暴",
           "ENG_name": "Berserk",
           "entries": [
-            "Whenever the golem starts its turn with 100 hit points or fewer, roll a {@dice d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points. If the golem's creator is within 60 feet of the berserk golem, the creator can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a {@dc 15} Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 100 hit points or fewer, the golem might go berserk again."
+            "每当魔像在其回合开始时拥有100点或更少的生命值时，投掷一个{@dice d6}。如果是6，魔像就会发狂。在发狂的每个回合，魔像会攻击它能看到的最近的生物。如果没有足够近的生物可以移动并攻击，魔像会攻击一个物体，优先选择比自己小的物体。一旦魔像发狂，它会持续发狂，直到被摧毁或恢复所有生命值。如果魔像的创造者在发狂魔像60英尺范围内，创造者可以尝试通过坚定而有说服力的说话来安抚它。魔像必须能够听到其创造者的声音，创造者必须采取行动进行{@dc 15}魅力（{@skill 游说}）检定。如果检定成功，魔像停止发狂。如果在100点或更少的生命值时仍然受到伤害，魔像可能会再次发狂。"
           ]
         },
         {
@@ -1869,8 +1869,8 @@
         {
           "ac": 18,
           "from": [
-            "{@item 锁子甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 链甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -1921,8 +1921,8 @@
         }
       ],
       "attachedItems": [
-        "长弓",
-        "钉头锤"
+        "长弓|PHB",
+        "硬头锤|PHB"
       ],
       "languageTags": [
         "C"
@@ -1946,7 +1946,7 @@
       "source": "BGDIA",
       "page": 30,
       "_copy": {
-        "name": "飞行剑",
+        "name": "凌空剑",
         "ENG_name": "Flying Sword",
         "source": "MM",
         "_mod": {
@@ -2104,7 +2104,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2229,7 +2229,7 @@
           "name": "螫刺",
           "ENG_name": "Sting",
           "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}8 ({@damage 1d8 + 4}) piercing damage plus 7 ({@damage 2d6}) fire damage, and the target must succeed on a {@dc 12} Constitution saving throw or be {@condition 中毒} for 1 minute. While {@condition 中毒} in this way, the target is also {@condition 麻痹}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "{@atk 近战武器} 命中骰：7，触及距离：5英尺，单一生物。{@h}8（{@damage 1d8 + 4}）穿刺伤害加上7（{@damage 2d6}）火焰伤害，目标必须进行一次{@dc 12}体质豁免检定，否则将被{@condition 中毒}1分钟。以这种方式{@condition 中毒}时，目标也会被{@condition 麻痹}。目标可以在每个回合结束时重复豁免检定，成功则结束该效果。"
           ]
         },
         {
@@ -2265,7 +2265,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2367,8 +2367,8 @@
               "{@spell 放逐术}",
               "{@spell 治愈术}",
               "{@spell 唤醒死者}",
-              "{@spell 形体变化} (into a golden-furred {@creature mammoth} with feathered wings and a flying speed of 120 ft.)",
-              "{@spell 传送术} (with no chance of error)"
+              "{@spell 形体变化} (变成一只金色皮毛的{@creature 猛犸象}，拥有羽毛翅膀，飞行速度为120英尺)",
+              "{@spell 传送术}（无误差可能）"
             ]
           },
           "ability": "wis"
@@ -2379,7 +2379,7 @@
           "name": "无敌光环",
           "ENG_name": "Aura of Invulnerability",
           "entries": [
-            "An {@condition 隐形} aura forms a 10-foot-radius sphere around the hollyphant for as long as it lives. Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells. The hollyphant can use an action to suppress this trait until its concentration ends (as if concentrating on a spell)."
+            "一个{@condition 隐形}光环在霍利凡特周围形成一个10英尺半径的球形区域，只要它活着就会持续存在。任何从屏障外施放的5级或更低级别的法术都不能影响屏障内的生物或物体，即使法术是使用更高级别的法术位施放的。这样的法术可以以屏障内的生物和物体为目标，但法术对它们没有效果。同样，屏障内的区域也被排除在这些法术影响的区域之外。霍利凡特可以使用一个动作来抑制这个特性，直到它的{@status 专注}结束（就好像在专注一个法术）"
           ]
         },
         {
@@ -2409,7 +2409,7 @@
           "name": "爆炸喇叭",
           "ENG_name": "Trumpet of Blasting",
           "entries": [
-            "Each creature in the cone must make a {@dc 14} Constitution saving throw. On a failed save, a creature takes 17 ({@damage 5d6}) thunder damage and is {@condition 耳聋} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition 耳聋}. Nonmagical objects in the cone that aren't being held or worn take 35 ({@damage 10d6}) thunder damage."
+            "锥形区域内的每个生物都必须进行一次DC 14的体质豁免投掷。豁免失败的生物会受到17点（{@damage 5d6}）雷鸣伤害，并在1分钟内处于{@condition 耳聋}状态。豁免成功的生物受到的伤害减半，并且不会{@condition 耳聋}。锥形区域内未被持有或穿戴的非魔法物品会受到35点（{@damage 10d6}）雷鸣伤害。"
           ]
         },
         {
@@ -2446,11 +2446,11 @@
         "无力"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:敏捷"
+        "魅力",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2478,7 +2478,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 锁子甲|phb}"
+            "{@item 链甲|PHB}"
           ]
         }
       ],
@@ -2543,7 +2543,7 @@
         }
       ],
       "attachedItems": [
-        "长矛"
+        "矛|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -2656,7 +2656,7 @@
           ],
           "will": [
             "{@spell 命令术}",
-            "{@spell 黑暗术}"
+            "{@spell 黑暗}"
           ],
           "daily": {
             "1e": [
@@ -2734,7 +2734,7 @@
         }
       ],
       "attachedItems": [
-        "马塔洛托克|背景深度感知"
+        "玛塔洛托克|博格迪亚"
       ],
       "traitTags": [
         "传奇抗性",
@@ -2768,9 +2768,9 @@
         "射程"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:感知"
+        "魅力",
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2929,7 +2929,7 @@
           ]
         },
         {
-          "name": "死亡领域:命定毁伤",
+          "name": "命定毁伤",
           "ENG_name": "Inescapable Destruction",
           "entries": [
             "克鲁尔的法术造成的死灵伤害无视对死灵伤害的抗性。"
@@ -2955,12 +2955,12 @@
           "name": "蜗壳防御",
           "ENG_name": "Shell Defense",
           "entries": [
-            "Krull withdraws into his shell. Until he emerges as a bonus action, he has a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in his shell, Krull is {@condition 伏地}, his speed is 0 and can't increase, he has disadvantage on Dexterity saving throws, he can't take reactions, and the only action he can take is to emerge from his shell."
+            "Krull 缩进他的壳中。在他以额外行动出现之前，他的 AC 获得 +4 加值，并且在力量和体质豁免投掷上具有优势。在壳中时，Krull 处于{@condition 伏地}状态，他的速度为 0 并且不能增加，他在敏捷豁免投掷上处于劣势，他不能进行反应，并且他唯一可以采取的动作是从壳中出现。"
           ]
         }
       ],
       "attachedItems": [
-        "+1 钉头锤|伤害"
+        "+1 钉头锤|DMG"
       ],
       "traitTags": [
         "屏息"
@@ -2997,10 +2997,10 @@
         "震慑"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "魅力",
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -3233,9 +3233,9 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "魅力",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -3300,7 +3300,7 @@
           "spells": {
             "0": {
               "spells": [
-                "{@spell 寒颤之触} (see \"Actions\" below)",
+                "{@spell 寒颤之触}（见下方\"行动\"）",
                 "{@spell 法师之手}",
                 "{@spell 传讯术}",
                 "{@spell 魔法技俩}"
@@ -3311,16 +3311,16 @@
               "spells": [
                 "{@spell 燃烧之手}",
                 "{@spell 侦测魔法}",
-                "{@spell 致病射线} (see \"Actions\" below)",
+                "{@spell 致病射线}（见下文\"动作\"）",
                 "{@spell 护盾术}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 黑暗术}",
+                "{@spell 黑暗}",
                 "{@spell 迷踪步}",
-                "{@spell 灼热射线} (see \"Actions\" below)"
+                "{@spell 灼热射线}（详见下文的\"动作\"）"
               ]
             },
             "3": {
@@ -3369,7 +3369,7 @@
           "name": "疾病射线（1级法术；需要法术位）",
           "ENG_name": "Ray of Sickness (1st-Level Spell; Requires a Spell Slot)",
           "entries": [
-            "{@atk rs} {@hit 6} to hit, range 60 ft., one creature. {@h}9 ({@damage 2d8}) poison damage, and the target must succeed on a {@dc 14} Constitution saving throw or be {@condition 中毒} until the end of the master of souls' next turn. If the master of souls casts this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
+            "{@atk 远程法术攻击} 命中骰：6，射程60英尺，单一生物。{@h}9点（{@damage 2d8}）毒素伤害，目标必须在一次{@dc 14}体质豁免骰上成功，否则直到灵魂主宰的下一个回合结束时被{@condition 中毒}。如果灵魂主宰使用2级以上的法术位施放这个法术，每超过1级的法术位，伤害增加{@dice 1d8}。"
           ]
         },
         {
@@ -3413,11 +3413,11 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷"
+        "体质",
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -3485,7 +3485,7 @@
           ]
         },
         {
-          "name": "巨棍",
+          "name": "巨棒",
           "ENG_name": "Greatclub",
           "entries": [
             "{@atk 近战武器攻击} 命中骰6，射程5英尺，一个目标。{@h}9（{@damage 2d4 + 4}）钝击伤害，如果莫特洛克自上回合以来受到任何伤害，则额外造成5（{@damage 2d4}）钝击伤害。"
@@ -3500,8 +3500,8 @@
         }
       ],
       "attachedItems": [
-        "巨棍",
-        "重型弩|PHB"
+        "巨棍|PHB",
+        "重弩|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -3623,7 +3623,7 @@
               "name": "啃咬",
               "ENG_name": "Bite",
               "entries": [
-                "{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}40 ({@damage 6d10 + 7}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. If the target is a creature, it is {@condition 被擒} (escape {@dc 17}). Until this grapple ends, the target is {@condition 束缚}, and the centipede can't bite another target."
+                "{@atk 近战武器} 命中骰：11，触及距离：10英尺，单一目标。{@h}40（{@damage 6d10 + 7}）穿刺伤害加上10（{@damage 3d6}）死灵伤害。如果目标是一个生物，它将被{@condition 抓住}（逃脱难度：17）。直到这次抓住结束，目标将被{@condition 限制}，并且蜈蚣不能再咬另一个目标。"
               ]
             }
           }
@@ -3700,7 +3700,7 @@
           "name": "杀戮光环",
           "ENG_name": "Aura of Murder",
           "entries": [
-            "As long as the night blade is not {@condition 无力}, hostile creatures within 5 feet of it gain vulnerability to piercing damage unless they have resistance or immunity to such damage."
+            "只要夜刃没有被{@condition 无力}，其周围5英尺内的敌对生物就会对穿刺伤害产生弱点，除非它们对此种伤害具有抗性或免疫。"
           ]
         }
       ],
@@ -3714,7 +3714,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "senseTags": [
         "D"
@@ -3757,7 +3757,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -3795,7 +3795,7 @@
       "cr": "5",
       "trait": [
         {
-          "name": "巧妙动作",
+          "name": "灵巧动作",
           "ENG_name": "Cunning Action",
           "entries": [
             "在战斗中，每次她的回合，九指可以使用奖励动作执行冲刺、脱离战斗或隐藏动作。"
@@ -3835,7 +3835,7 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -3907,7 +3907,7 @@
       "source": "BGDIA",
       "page": 87,
       "_copy": {
-        "name": "(兽化)野猪人",
+        "name": "野猪人",
         "ENG_name": "Wereboar",
         "source": "MM",
         "_mod": {
@@ -3997,7 +3997,7 @@
           "name": "杀戮光环",
           "ENG_name": "Aura of Murder",
           "entries": [
-            "As long as the reaper is not {@condition 无力}, hostile creatures within 5 feet of it gain vulnerability to piercing damage unless they have resistance or immunity to such damage."
+            "只要收割者没有处于{@condition 无力}状态，它周围5英尺范围内的敌对生物将对穿刺伤害易感，除非它们对此类伤害具有抗性或免疫。"
           ]
         }
       ],
@@ -4020,12 +4020,12 @@
           "name": "隐身术",
           "ENG_name": "Shroud Self",
           "entries": [
-            "The reaper magically turns {@condition 隐形} until the start of its next turn. This invisibility ends if the reaper makes an attack roll, makes a damage roll, or casts a spell."
+            "收割者通过魔法变得{@condition 隐形}，直到其下一回合开始。如果收割者进行攻击判定、伤害判定或施放法术，这种隐形状态就会结束。"
           ]
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "senseTags": [
         "D"
@@ -4055,7 +4055,7 @@
         "魅惑"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4084,7 +4084,7 @@
         {
           "ac": 15,
           "from": [
-            "{@item 皮甲|phb}"
+            "{@item 皮甲|PHB}"
           ]
         }
       ],
@@ -4121,7 +4121,7 @@
       "cr": "3",
       "trait": [
         {
-          "name": "巧妙动作",
+          "name": "灵巧动作",
           "ENG_name": "Cunning Action",
           "entries": [
             "在战斗中，每次她的回合，瑞尔萨可以使用奖励动作执行冲刺、脱离战斗或隐藏动作。"
@@ -4166,8 +4166,8 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb",
-        "短剑"
+        "匕首|PHB",
+        "短剑|PHB"
       ],
       "actionTags": [
         "多重攻击"
@@ -4195,7 +4195,7 @@
       "source": "BGDIA",
       "page": 23,
       "_copy": {
-        "name": "老鼠群",
+        "name": "鼠群",
         "ENG_name": "Swarm of Rats",
         "source": "MM"
       },
@@ -4274,14 +4274,14 @@
               "spells": [
                 "{@spell 侦测魔法}",
                 "{@spell 防护善恶}",
-                "{@spell 致病射线} (see \"Actions\" below)",
+                "{@spell 致病射线}（见下文\"动作\"）",
                 "{@spell 护盾术}"
               ]
             },
             "2": {
               "slots": 2,
               "spells": [
-                "{@spell 黑暗术}",
+                "{@spell 黑暗}",
                 "{@spell 迷踪步}"
               ]
             }
@@ -4308,7 +4308,7 @@
           "name": "疾病射线（1级法术；需要法术位）",
           "ENG_name": "Ray of Sickness (1st-Level Spell; Requires a Spell Slot)",
           "entries": [
-            "{@atk rs} {@hit 5} to hit, range 60 ft., one creature. {@h}9 ({@damage 2d8}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or be {@condition 中毒} until the end of the skull lasher's next turn. If the skull lasher casts this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
+            "{@atk rs} {@hit 5}命中，射程60英尺，一个生物。{@h}9 ({@damage 2d8}) 毒素伤害，目标必须进行一次{@dc 13}体质豁免检定，否则在颅骨鞭笞者的下一回合结束前被{@condition poisoned}。如果颅骨鞭笞者使用2级以上的法术位施放此法术，每超过1级的法术位，伤害增加{@dice 1d8}。"
           ]
         }
       ],
@@ -4342,10 +4342,10 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -4482,7 +4482,7 @@
         }
       ],
       "attachedItems": [
-        "+1短剑|伤害"
+        "+1 短剑|DMG"
       ],
       "traitTags": [
         "魔法抗性"
@@ -4509,7 +4509,7 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4542,7 +4542,7 @@
           },
           "_": [
             {
-              "mode": "添加技能",
+              "mode": "addSkills",
               "skills": {
                 "investigation": 2
               }
@@ -4644,7 +4644,7 @@
         }
       ],
       "attachedItems": [
-        "钉头锤"
+        "硬头锤|PHB"
       ],
       "languageTags": [
         "AB",
@@ -4722,7 +4722,7 @@
             "0": {
               "spells": [
                 "{@spell 神导术}",
-                "{@spell 圣焰} (see \"Actions\" below)",
+                "{@spell 圣焰}（详见下文的\"动作\"）",
                 "{@spell 奇术}"
               ]
             },
@@ -4743,7 +4743,7 @@
           "name": "黑暗的奉献",
           "ENG_name": "Dark Devotion",
           "entries": [
-            "Thurstwell has advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}."
+            "Thurstwell 在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免骰上具有优势。"
           ]
         }
       ],
@@ -4774,11 +4774,11 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -4852,7 +4852,7 @@
           "name": "狂暴（短休或长休后重置）",
           "ENG_name": "Rage (Recharges after a Short or Long Rest)",
           "entries": [
-            "As a bonus action, Torogar can enter a rage that lasts for 1 minute. The rage ends early if Torogar is knocked {@condition 昏迷} or if his turn ends and he hasn't attacked a hostile creature or taken damage since his last turn. While raging, Torogar gains the following benefits:",
+            "作为奖励动作，Torogar可以进入持续1分钟的狂暴状态。如果Torogar被击昏或他的回合结束时他没有攻击敌对生物或自上一个回合以来没有受到伤害，狂暴状态会提前结束。在狂暴状态下，Torogar获得以下好处：",
             "他在力量检定和力量豁免投掷上具有优势。",
             "当他用近战武器攻击命中目标时，会额外造成3点伤害。",
             "他对钝击、穿刺和斩击伤害具有抗性。"
@@ -4862,7 +4862,7 @@
           "name": "特殊装备",
           "ENG_name": "Special Equipment",
           "entries": [
-            "托罗加穿戴着{@item gauntlets of flaming fury|bgdia}和一条{@item belt of fire giant strength}。如果不佩戴腰带，他的力量值为21。他还携带着一枚{@item soul coin|bgdia}。"
+            "托罗加穿戴着{@item 燃烧怒火之护手|博格迪亚}和一条{@item 火巨人力量腰带}。如果不佩戴腰带，他的力量值为21。他还携带着一枚{@item 灵魂币|博格迪亚}。"
           ]
         }
       ],
@@ -4890,7 +4890,7 @@
         }
       ],
       "attachedItems": [
-        "弯刀"
+        "弯刀|PHB"
       ],
       "senseTags": [
         "D"
@@ -4933,7 +4933,7 @@
             "flags": "i"
           },
           "_": {
-            "mode": "替换法术",
+            "mode": "replaceSpells",
             "spells": {
               "7": [
                 {
@@ -5008,8 +5008,8 @@
         {
           "ac": 20,
           "from": [
-            "{@item 全板甲|phb}",
-            "{@item 盾牌|phb}"
+            "{@item 板甲|PHB}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -5073,7 +5073,7 @@
         }
       ],
       "attachedItems": [
-        "+1 长剑|伤害"
+        "+1 长剑|DMG"
       ],
       "actionTags": [
         "多重攻击"

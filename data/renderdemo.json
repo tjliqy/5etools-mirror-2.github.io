@@ -15,59 +15,59 @@
           "from": "遗失聊天记录档案"
         },
         "这是一个JSON格式的示例，以及它（通常）是如何被渲染的。你可以编辑这段文本，刷新后它将重置。",
-        "{@b 如果一个JSON属性被描述为'可选'，除非另有说明，否则可以省略该属性。}",
+        "{@b 如果一个JSON属性被描述为'可选的'，除非另有说明，否则该属性可以被省略。}",
         "这个系统的目标是模仿书籍的外观和感觉，同时保持一个方便且一致的数据结构，以便可以重复使用。",
         "通用格式是嵌套多个层级的'entries'类型对象，根据需要使用其他特定类型（下文详细描述）。",
         "字符串条目可以包含标签，并且当嵌套在大多数其他结构中时，这些标签是有效的。这些标签最终将与悬停查看功能一起工作。它们是不区分大小写的，除非另有说明。这些标签包括：",
         {
           "type": "list",
           "items": [
-            "样式标签；{@bold 使文本加粗}（替代 {@b 简写}), {@italic 使文本斜体化}（替代 {@i 简写}), {@underline 使文本下划线}（替代 {@u 简写}), {@underlineDouble 使文本双下划线}（替代 {@u2 简写}), {@strike 使文本删除线}, （替代 {@s 简写}), , {@strikeDouble 使文本双删除线}, （替代 {@s2 简写}), {@color 颜色|e40707}/{@color 颜色变量|--rgb-name} 标签, {@highlight 高亮} 标签, {@sup 超级脚本} 标签, {@sub 低级脚本} 标签, {@kbd 键盘} 标签, {@code 打印(&quot;hello world&quot;)} 标签, 杂项 {@style 样式|小写;小;首字母大写;dnd-字体} 标签, {@font 替代字体|Comic Sans MS} 标签",
-            "此外，使用{@note 注释标签}来添加勘误或Twitter上的“设计师脚注”，以及{@tip 提示标签|一条注释}。",
-            "Dice roller tags; {@dice 1d2-2+2d3+5} for regular dice rolls ({@dice 1d6;2d6} for multiple options; {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#} for input prompts), with extended {@dice 1d20+2|display text} and {@dice 1d20+2|display text|rolled by name}, and a special 'hit' version which assumes a d20 is to be rolled {@hit +7} (and rolls advantage on {@kbd SHIFT}+click, disadvantage on {@kbd ALT}+click). There's also {@damage 1d12+3} which will roll critical hits on {@kbd SHIFT}+click and half damage (rounding down) on {@kbd ALT}+click, and {@d20 -4} which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra {@scaledamage 2d6;3d6|2-9|1d6} for each level beyond 2nd; or, roll 2d6 when using 1 psi point, add an {@scaledice 2d6|1,3,5,7,9|1d6|psi|extra amount} for each additional psi point spent), for when a spell effect scales at higher levels. {@ability str 20}, {@savingThrow str 5}, and {@skillCheck animal_handling 5} are used as internal shorthand, but may be useful elsewhere.",
+            "样式标签；{@bold 需要加粗的文本}（替代 {@b 速记}), {@italic 需要斜体显示的文本}（替代 {@i 速记}), {@underline 一些需要被下划线标记的文本}（替代 {@u 速记}), {@underlineDouble 一些需要被下划线标记的文本}（替代 {@u2 速记}), {@strike 需要删除线的文本}, （替代 {@s 速记}), , {@strikeDouble 需要删除线的文本}, （替代 {@s2 速记}), {@color 颜色|e40707}/{@color 颜色变量|--RGB名称} 标签, {@highlight 高亮} 标签, {@sup 上标} 标签, {@sub 下标} 标签, {@kbd 键盘} 标签, {@code print(\"hello world\")} 标签, 杂项 {@style 风格|小型大写字母；小型；大写；D&D字体} 标签, {@font 替代字体|Comic Sans MS} 标签",
+            "此外，使用{@note 注释标签}来添加勘误或Twitter上的“设计师脚注”，以及{@tip 提示标签|一个注释}。",
+            "骰子滚动标签；使用{@dice 1d2-2+2d3+5}进行常规骰子滚动（{@dice 1d6;2d6}用于多个选项；{@dice 1d6 + #$prompt_number:min=1,title=请输入一个数字!,default=123$#}用于输入提示），具有扩展的{@dice 1d20+2|显示文本}和{@dice 1d20+2|显示文本|由名字掷骰}，以及一个特殊的'命中'版本，它假定要滚动一个d20 {@hit +7}（并且在{@kbd SHIFT键}+点击时滚动优势，在{@kbd ALT}+点击时滚动劣势）。还有{@damage 1d12+3}，它将在{@kbd SHIFT键}+点击时滚动致命一击，并且在{@kbd ALT}+点击时滚动半伤害（向下取整），以及{@d20 -4}，它也将滚动优势/劣势，尽管在适当的地方推荐使用@hit标签。法术可以有缩放骰子标签，（1级时的伤害为2d6或3d6，每超过2级就额外添加一个{@scaledamage 2d6;3d6|2-9|1d6}；或者，使用1点psi点时滚动2d6，每额外花费一个psi点就添加一个{@scaledice 2d6|1,3,5,7,9|1d6|PSI|额外金额}），用于当法术效果在更高级别时扩展。{@ability 力量 20}, {@savingThrow 力量 5}, 和{@skillCheck 动物处理 5}用作内部简写，但可能在其他地方也有用。",
             "自动骰子标签；如上所述，但在渲染时会自动掷骰子并显示结果：{@autodice 2d10+2}。",
-            "机会标签；类似于骰子滚动标签，但输出成功/失败。与骰子标签相似的语法：{@chance 50}；{@chance 50|显示文本}；{@chance 50|显示文本|由名字掷骰}；{@chance 50|显示文本|由名字掷骰|成功时文本}；{@chance 50|显示文本|由名字掷骰|成功时文本|失败时文本}。",
+            "机会标签；类似于骰子滚动标签，但输出成功/失败。与骰子标签相似的语法：{@chance 50}；{@chance 50|显示文本}；{@chance 50|显示文本|由名字掷骰}；{@chance 50|显示文本|由名字掷骰|成功时的文本}；{@chance 50|显示文本|由名字掷骰|成功时的文本|失败时文本}。",
             "召唤/伙伴特定标签：{@hitYourSpellAttack}（{@hitYourSpellAttack 带可选显示文本}), {@dcYourSpellSave}（{@dcYourSpellSave 带可选显示文本}）。",
             "充能标签；为能力充能输出成功/失败。在能力标题中使用{@recharge}表示'(Recharge 6)'，使用{@recharge 4}表示'(Recharge 4–6)'。",
             "硬币翻转标签；{@coinflip} 或 {@coinflip 显示文本|角色名|成功文本|失败文本}",
-            "技能和感知标签；{@skill Athletics}/{@skill Perception}（大小写敏感）和{@sense Truesight}/{@sense darkvision}（大小写不敏感）在悬停时提供提示信息。",
-            "脚注标签；允许在文本中嵌入脚注{@footnote 直接在文本中|这主要是为了自制内容的目的，因为官方文本（到目前为止）避免使用脚注}，带有{@footnote 可选参考信息|这是脚注。引用是自由文本。|脚注1，第20页}。",
-            "自酿标签；可以显示{@homebrew changes|modifications}，{@homebrew additions}或{@homebrew |removals}。",
+            "技能和感知标签；{@skill 运动}/{@skill 察觉}（大小写敏感）和{@sense 真实视觉}/{@sense 黑暗视觉}（大小写不敏感）在悬停时提供提示信息。",
+            "脚注标签；允许在文本中嵌入脚注{@footnote 直接在文本中|这主要是为了自创内容的需要，因为官方文本（到目前为止）避免使用脚注}，带有{@footnote 可选参考信息|这是脚注。参考文献是自由文本。|脚注 1，第 20 页}。",
+            "自酿标签；可以显示{@homebrew 变更|修改}，{@homebrew 增加项}或{@homebrew |移除}。",
             "内容标签：",
             {
               "type": "list",
               "items": [
-                "法术：{@spell acid splash} 默认假设为《玩家手册》(PHB)，{@spell tiny servant|xge} 可以通过管道符号添加来源，{@spell tiny servant|xge|并可选地通过另一个管道符号添加链接文本}。",
-                "物品：{@item alchemy jug} 默认假设为DMG来源，{@item longsword|phb} 可以通过管道添加来源，{@item longsword|phb|并且可选链接文本通过另一个管道添加}。",
-                "生物标签：{@creature goblin} 默认假设为怪物手册（MM），{@creature cow|vgm} 可以通过管道符添加来源，{@creature cow|vgm|还可以通过另一个管道符添加可选的链接文本}。",
-                "生物传奇组：{@legroup unicorn} 默认假设为MM，{@legroup balhannoth|MPMM} 可以通过管道添加来源，{@legroup balhannoth|MPMM|并且可选的链接文本可以通过另一个管道添加}。",
-                "背景：{@background Charlatan} 默认假设为PHB来源，{@background Anthropologist|toa} 可以通过管道添加来源，{@background Anthropologist|ToA|并且可选链接文本通过另一个管道添加}。",
-                "种族：{@race Human} 默认假设为玩家手册（PHB），{@race Aarakocra|eepc} 可以通过管道符添加来源，{@race Aarakocra|eepc|还可以通过另一个管道符添加可选的链接文本}。",
-                "咒语和其它可选特性：{@optfeature Agonizing Blast} 默认假设为《玩家手册》(PHB)，{@optfeature Aspect of the Moon|xge} 可以通过管道符号添加来源，{@optfeature Aspect of the Moon|xge|并可选地通过另一个管道符号添加链接文本}。",
-                "职业：{@class fighter} 默认假设为玩家手册（PHB），{@class artificer|tce} 可以通过管道符添加来源，{@class fighter|phb|还可以通过另一个管道符添加可选的链接文本}，{@class fighter|phb|通过另一个管道符添加子类|Eldritch Knight}，{@class fighter|phb|以及职业特性添加|Eldritch Knight|phb|2-0} 通过另一个管道符（第一个数字是等级索引（0-19），第二个数字是特性索引（0-n））。",
-                "职业特性：{@classFeature 狂暴|野蛮人||1}, {@classFeature 灌注物品|炼金术士|TCE|2}, {@classFeature 原始知识|野蛮人||3|TCE}, {@classFeature 狂暴|野蛮人||1||可选显示文本}。职业来源默认为PHB。职业特性来源默认与职业来源相同。",
-                "子类特性：{@subclassFeature 狂战士之道|野蛮人||狂战士||3}, {@subclassFeature 炼金术士|工匠|TCE|炼金术士|TCE|3}, {@subclassFeature 战斗狂战士之道|野蛮人||战斗狂战士|SCAG|3}, {@subclassFeature 神圣打击|牧师||生命||8|TCE}, {@subclassFeature 狂战士之道|野蛮人||狂战士||3||可选显示文本}。职业来源默认为《玩家手册》(PHB)。子类来源默认为《玩家手册》(PHB)。子类特性来源默认与子类来源相同。",
-                "状态：{@condition stunned} 默认假设为PHB来源，{@condition stunned|PHB} 可以通过管道添加来源（尽管这并不常用），{@condition stunned|PHB|并且可选链接文本通过另一个管道添加}。",
-                "疾病：{@disease cackle fever} 默认假设为DMG来源，{@disease cackle fever} 可以通过管道添加来源，{@disease cackle fever|DMG|并且可选链接文本通过另一个管道添加}。",
-                "其他奖励：{@reward Blessing of Health} 默认假设为地下城主手册（DMG），{@reward Blessing of Health} 可以通过管道符添加来源，{@reward Blessing of Health|DMG|还可以通过另一个管道符添加可选的链接文本}。",
-                "特长：{@feat Alert} 默认假设为玩家手册（PHB），{@feat Elven Accuracy|xge} 可以通过管道符添加来源，{@feat Elven Accuracy|xge|还可以通过另一个管道符添加可选的链接文本}。",
-                "灵能：{@psionic Mastery of Force} 默认假设为UATheMysticClass来源，{@psionic Mastery of Force|UATheMysticClass} 可以通过管道添加来源，{@psionic Mastery of Force|UATheMysticClass|并且可选链接文本通过另一个管道添加}。",
-                "物品：{@object 弩车} 默认假设为《地下城主指南》(DMG)，{@object 弩车} 可以通过管道符号添加来源，{@object 弩车|DMG|并可选地通过另一个管道符号添加链接文本}。",
-                "恩赐：{@boon 德摩戈贡的恶魔恩赐} 默认假设为MTF，{@boon 德摩戈贡的恶魔恩赐} 可以通过管道添加来源，{@boon 德摩戈贡的恶魔恩赐|MTF|并且可选的链接文本可以通过另一个管道添加}。",
-                "邪教：{@cult Cult of Asmodeus} 默认假设为《怪物图鉴：附魔》（MTF），{@cult Cult of Asmodeus} 可以通过管道符添加来源，{@cult Cult of Asmodeus|MTF|还可以通过另一个管道符添加可选的链接文本}。",
-                "陷阱：{@trap falling net} 默认假设为DMG来源，{@trap falling portcullis|xge} 可以通过管道添加来源，{@trap falling portcullis|xge|并且可选链接文本通过另一个管道添加}。",
-                "危险：{@hazard 棕色霉菌} 默认假设为DMG，{@hazard 赤褐色霉菌|vgm} 可以通过管道添加来源，{@hazard 赤褐色霉菌|vgm|并且可选的链接文本可以通过另一个管道添加}。",
-                "神祇：{@deity Gond} 默认假设为玩家手册（PHB）被遗忘的国度众神体系，{@deity Gruumsh|nonhuman} 可以通过管道符添加众神体系，{@deity Ioun|dawn war|dmg} 可以通过另一个管道符添加来源，{@deity Ioun|dawn war|dmg|还可以通过另一个管道符添加可选的链接文本}。",
-                "变体规则：{@variantrule Diagonals} 默认假设为DMG来源，{@variantrule Multiclassing|phb} 可以通过管道添加来源，{@variantrule Multiclassing|phb|并且可选链接文本通过另一个管道添加}。",
-                "载具：{@vehicle 加莱船} 默认假设为GoS，{@vehicle 加莱船|GoS} 可以通过管道添加来源，{@vehicle 加莱船|GoS|并且可选的链接文本可以通过另一个管道添加}。",
-                "载具升级：{@vehupgrade Guardian Figurehead} 默认假设为GoS来源，{@vehicle Gilded Death Armor|BGDIA} 可以通过管道添加来源，{@vehicle Guardian Figurehead|GoS|并且可选链接文本通过另一个管道添加}。",
-                "表格：{@table 25 gp Art Objects} 默认假设为地下城主手册（DMG），{@table Adventuring Gear|phb} 可以通过管道符添加来源，{@table Adventuring Gear|phb|还可以通过另一个管道符添加可选的链接文本}。",
-                "动作：{@action 攻击} 默认假设为《玩家手册》(PHB)，{@action 翻滚|DMG} 可以通过管道符号添加来源，{@action 翻滚|DMG|并可选地通过另一个管道符号添加链接文本}。",
-                "语言：{@language common} 默认假设为PHB来源，{@language Dambrathan|SCAG} 可以通过管道添加来源，{@language Dambrathan|SCAG|并且可选链接文本通过另一个管道添加}。",
-                "其他角色创建选项：{@charoption Anvilwrought} 默认假设为《铁砧铸造》（MOT），{@charoption Hollow One|EGW} 可以通过管道符添加来源，{@charoption Hollow One|EGW|还可以通过另一个管道符添加可选的链接文本}。",
-                "食谱：{@recipe 精灵面包}默认假设为英雄盛宴，{@recipe 巴洛维安蒜香面包|HFFotM}可以通过管道添加来源，{@recipe 巴洛维安蒜香面包|HFFotM|并且可选链接文本通过另一个管道添加}",
-                "牌组：{@deck Deck of Many Things} 默认假设为地下城主手册（DMG），{@deck Deck of Many Things|DMG} 可以通过管道符添加来源，{@deck Deck of Many Things|DMG|还可以通过另一个管道符添加可选的链接文本}。",
-                "卡牌：{@card 大维齐尔|万智牌|DMG} 默认假设为DMG，{@card 大维齐尔|万智牌|DMG} 可以通过管道添加来源，{@card 大维齐尔|万智牌|DMG|并且可选的链接文本可以通过另一个管道添加}。"
+                "法术：{@spell 酸液溅爆} 默认假设为《玩家手册》(PHB)，{@spell 微型仆役|XGE} 可以通过管道符号添加来源，{@spell 微型仆役|XGE|并且添加了另一个管道的可选链接文本}。",
+                "物品：{@item 炼金壶} 默认假设为DMG来源，{@item 长剑|PHB} 可以通过管道添加来源，{@item 长剑|PHB|并且添加了另一个管道的可选链接文本}。",
+                "生物标签：{@creature 地精} 默认假设为怪物手册（MM），{@creature 家牛|VGM} 可以通过管道符添加来源，{@creature 家牛|VGM|并且添加了另一个管道的可选链接文本}。",
+                "生物传奇组：{@legroup 独角兽} 默认假设为MM，{@legroup 潜猎兽|MPMM} 可以通过管道添加来源，{@legroup 潜猎兽|MPMM|并且添加了另一个管道的可选链接文本}。",
+                "背景：{@background 骗子} 默认假设为PHB来源，{@background 人类学家|ToA} 可以通过管道添加来源，{@background 人类学家|ToA|并且添加了另一个管道的可选链接文本}。",
+                "种族：{@race 人类} 默认假设为玩家手册（PHB），{@race 阿兰寇拉鹰人|EEPC} 可以通过管道符添加来源，{@race 阿兰寇拉鹰人|EEPC|并且添加了另一个管道的可选链接文本}。",
+                "咒语和其它可选特性：{@optfeature 苦痛魔爆} 默认假设为《玩家手册》(PHB)，{@optfeature 月之仪态|XGE} 可以通过管道符号添加来源，{@optfeature 月之仪态|XGE|并且添加了另一个管道的可选链接文本}。",
+                "职业：{@class 战士} 默认假设为玩家手册（PHB），{@class 1/3|TCE} 可以通过管道符添加来源，{@class 战士|PHB|使用另一个竖线添加的可选链接文本}，{@class 战士|PHB|新增子类|奥法骑士}，{@class 战士|PHB|以及新增的职业特性|奥法骑士|PHB|2-0} 通过另一个管道符（第一个数字是等级索引（0-19），第二个数字是特性索引（0-n））。",
+                "职业特性：{@classFeature 狂暴|野蛮人||1}, {@classFeature 物品注法|奇械师|TCE|2}, {@classFeature 原初学识|野蛮人||3|TCE}, {@classFeature 狂暴|野蛮人||1||可选显示文本}。职业来源默认为PHB。职业特性来源默认与职业来源相同。",
+                "子类特性：{@subclassFeature 狂战士道途|野蛮人||狂战士||3}, {@subclassFeature 炼金师|奇械师|TCE|炼金师|TCE|3}, {@subclassFeature 战狂道途|野蛮人||战狂|SCAG|3}, {@subclassFeature 受祝击|牧师||生命||8|TCE}, {@subclassFeature 狂战士道途|野蛮人||狂战士||3||可选显示文本}。职业来源默认为《玩家手册》(PHB)。子类来源默认为《玩家手册》(PHB)。子类特性来源默认与子类来源相同。",
+                "状态：{@condition 震慑} 默认假设为PHB来源，{@condition 震慑|PHB} 可以通过管道添加来源（尽管这并不常用），{@condition 震慑|PHB|并且添加了另一个管道的可选链接文本}。",
+                "疾病：{@disease 失心疯} 默认假设为DMG来源，{@disease 失心疯} 可以通过管道添加来源，{@disease 失心疯|DMG|并且添加了另一个管道的可选链接文本}。",
+                "其他奖励：{@reward 健康祝福} 默认假设为地下城主手册（DMG），{@reward 健康祝福} 可以通过管道符添加来源，{@reward 健康祝福|DMG|并且添加了另一个管道的可选链接文本}。",
+                "特长：{@feat 警觉} 默认假设为玩家手册（PHB），{@feat 精灵之准|XGE} 可以通过管道符添加来源，{@feat 精灵之准|XGE|并且添加了另一个管道的可选链接文本}。",
+                "灵能：{@psionic 力量掌控} 默认假设为UATheMysticClass来源，{@psionic 力量掌控|UATheMysticClass} 可以通过管道添加来源，{@psionic 力量掌控|UATheMysticClass|并且添加了另一个管道的可选链接文本}。",
+                "物品：{@object 弩炮} 默认假设为《地下城主指南》(DMG)，{@object 弩炮} 可以通过管道符号添加来源，{@object 弩炮|DMG|并且添加了另一个管道的可选链接文本}。",
+                "恩赐：{@boon 德摩戈贡的恶魔恩惠} 默认假设为MTF，{@boon 德摩戈贡的恶魔恩惠} 可以通过管道添加来源，{@boon 德摩戈贡的恶魔恩惠|MTF|并且添加了另一个管道的可选链接文本}。",
+                "邪教：{@cult 阿斯摩狄斯教派} 默认假设为《怪物图鉴：附魔》（MTF），{@cult 阿斯摩狄斯教派} 可以通过管道符添加来源，{@cult 阿斯摩狄斯教派|MTF|并且添加了另一个管道的可选链接文本}。",
+                "陷阱：{@trap 落网} 默认假设为DMG来源，{@trap 断龙闸|XGE} 可以通过管道添加来源，{@trap 断龙闸|XGE|并且添加了另一个管道的可选链接文本}。",
+                "危险：{@hazard 棕霉菌} 默认假设为DMG，{@hazard 赤褐霉菌|VGM} 可以通过管道添加来源，{@hazard 赤褐霉菌|VGM|并且添加了另一个管道的可选链接文本}。",
+                "神祇：{@deity 贡德} 默认假设为玩家手册（PHB）被遗忘的国度众神体系，{@deity 格乌什|非人类} 可以通过管道符添加众神体系，{@deity 艾恩|黎明战争|DMG} 可以通过另一个管道符添加来源，{@deity 艾恩|黎明战争|DMG|并且添加了另一个管道的可选链接文本}。",
+                "变体规则：{@variantrule 对角线} 默认假设为DMG来源，{@variantrule 兼职|PHB} 可以通过管道添加来源，{@variantrule 兼职|PHB|并且添加了另一个管道的可选链接文本}。",
+                "载具：{@vehicle 桨帆船} 默认假设为GoS，{@vehicle 桨帆船|守护者} 可以通过管道添加来源，{@vehicle 桨帆船|守护者|并且添加了另一个管道的可选链接文本}。",
+                "载具升级：{@vehupgrade 守护者船首像} 默认假设为GoS来源，{@vehicle 镀金死亡盔甲|博格迪亚} 可以通过管道添加来源，{@vehicle 守护者船首像|守护者|并且添加了另一个管道的可选链接文本}。",
+                "表格：{@table 25 gp 艺术品} 默认假设为地下城主手册（DMG），{@table 冒险装备|PHB} 可以通过管道符添加来源，{@table 冒险装备|PHB|并且添加了另一个管道的可选链接文本}。",
+                "动作：{@action 攻击} 默认假设为《玩家手册》(PHB)，{@action 翻滚|DMG} 可以通过管道符号添加来源，{@action 翻滚|DMG|并且添加了另一个管道的可选链接文本}。",
+                "语言：{@language 普通} 默认假设为PHB来源，{@language 丹布拉森|SCAG} 可以通过管道添加来源，{@language 丹布拉森|SCAG|并且添加了另一个管道的可选链接文本}。",
+                "其他角色创建选项：{@charoption 锻砧生物} 默认假设为《铁砧铸造》（MOT），{@charoption 空洞者|EGW} 可以通过管道符添加来源，{@charoption 空洞者|EGW|并且添加了另一个管道的可选链接文本}。",
+                "食谱：{@recipe 精灵面包}默认假设为英雄盛宴，{@recipe 巴洛维亚蒜香面包|英雄战歌}可以通过管道添加来源，{@recipe 巴洛维亚蒜香面包|英雄战歌|并且添加了另一个管道的可选链接文本}",
+                "牌组：{@deck 万象无常牌} 默认假设为地下城主手册（DMG），{@deck 万象无常牌|DMG} 可以通过管道符添加来源，{@deck 万象无常牌|DMG|并且添加了另一个管道的可选链接文本}。",
+                "卡牌：{@card 大臣|万象无常牌} 默认假设为DMG，{@card 大臣|万象无常牌} 可以通过管道添加来源，{@card 大臣|万象无常牌|DMG|并且添加了另一个管道的可选链接文本}。"
               ]
             },
             {
@@ -75,28 +75,28 @@
               "name": "过滤标签",
               "ENG_name": "Filter Tag",
               "entries": [
-                "数据中偶尔还会出现@filter标签。这个标签使用起来可能比较棘手，通常依赖于对每个页面内部结构的了解。因此，谨慎使用，如果你不确定某些事情，不要害怕访问我们的{@link Discord|https://discord.gg/5etools}并提出问题。注意，你可以在列表页面上使用{@kbd CTRL}+点击“获取过滤器链接”（磁铁）按钮来复制当前过滤器选择的@filter标签。",
+                "数据中偶尔还会出现@filter标签。这个标签使用起来可能比较棘手，通常依赖于对每个页面内部结构的了解。因此，谨慎使用，如果你不确定某些事情，不要害怕访问我们的{@link 不谐|https://discord.gg/5etools}并提出问题。注意，你可以在列表页面上使用{@kbd CTRL}+点击“获取过滤器链接”（磁铁）按钮来复制当前过滤器选择的@filter标签。",
                 "过滤标签@filter的语法如下：",
-                "(左花括号)@filter 显示文本|页面无文件扩展名|过滤器名称1=过滤器1值1;过滤器1值2;...过滤器1值n|...|过滤器名称m=过滤器m值1;过滤器m值2;...(右花括号)",
+                "（左大括号）@过滤器显示文本|不带文件扩展名的页面|filter_name_1=filter_1_value_1;filter_1_value_2;...filter_1_value_n|...|filter_name_m=filter_m_value_1;filter_m_value_2;...(右花括号)",
                 "这个标签的目的是打开指定页面，并使用特定的过滤选项进行预过滤。这里有一个主要的注意事项，使得对于有志于成为JSON翻译专家的人来说使用起来有些棘手——过滤值使用的是{@i 内部}版本，就像你在数据中找到的那样。例如，..|school=D|.. 会过滤出占卜学派的法术，因为'D'是数据中占卜学派的标识符。尝试使用例如 ..|school=Divination|.. 是不会起作用的。",
                 "这里的'filter_name_X'与下拉菜单中显示的过滤器的字面文本名称相匹配。",
                 "一些标签使用示例：",
-                "{@filter 拥有智力加成的种族|races|能力值（包括亚种）=智力 +任意}",
-                "{@filter 吟游诗人的戏法和一级法术|法术|等级=0;1|职业=吟游诗人}",
-                "{@filter 挑战等级为1或更低的野兽|怪物手册|挑战等级=[&0;&1]|类型=野兽}",
-                "{@filter 力量值达到18或更高的生物|bestiary|strength=[18;]}",
-                "{@filter 占卜和咒法法术|法术|学派=D;V}",
-                "{@filter 所有不常见的魔法物品|物品|来源=|类型=|稀有度=不常见|杂项=魔法}",
-                "{@filter 简单近战武器|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
-                "可以设置元选项；用于个别过滤器的内联方式，以及使用'fbmt'来过滤元选项{@filter 过滤器元选项示例|法术|等级=1;2=sor~sand~b1|fbmt=sor|fbmh=来源}",
-                "搜索可以设置；{@filter 查看恐龙|bestiary|search=dinosaur}",
-                "一个精确的起始实体；{@filter 筛选出野兽并显示猫|怪物图鉴|类型=野兽|hash=cat_mm}，其中 'hash' 是在查看实体时URL栏中'#'符号之后和任何逗号之前的部分。",
+                "{@filter 智力有加成的种族|种族|能力值（包括亚种）=智力 +任意}",
+                "{@filter 吟游诗人的戏法和一级法术|法术|level=0;1|职业=吟游诗人}",
+                "{@filter 挑战等级为1或更低的野兽|怪物图鉴|challenge rating=[&0;&1]|类型=野兽}",
+                "{@filter 力量值达到18或更高的生物|怪物图鉴|力量=[18;]}",
+                "{@filter 占卜和召唤法术|法术|school=D;V}",
+                "{@filter 所有稀有魔法物品|物品|source=|type=|稀有度=不常见|杂项=魔法}",
+                "{@filter 简单近战武器|物品|来源=phb|类别=基础|类型=简易武器；近战武器=u~u~沙}",
+                "可以设置元选项；用于个别过滤器的内联方式，以及使用'fbmt'来过滤元选项{@filter 过滤器元数据示例|法术|等级=1;2=sor~sand~b1|fbmt=巫师|fbmh=来源}",
+                "搜索可以设置；{@filter 查看恐龙|怪物图鉴|搜索=恐龙}",
+                "一个精确的起始实体；{@filter 筛选野兽并显示猫|怪物图鉴|类型=野兽|hash=猫_mm}，其中 'hash' 是在查看实体时URL栏中'#'符号之后和任何逗号之前的部分。",
                 {
                   "type": "entries",
                   "name": "注",
                   "ENG_name": "Note",
                   "entries": [
-                    "将过滤器设置为“无值”，即 ..|school=|.. 等同于“清除过滤器”，将其重置为全白。",
+                    "设置一个过滤器为“无值”，即..|school=|.. 等同于 '清除过滤器'，将其重置为全白。",
                     "支持此功能的页面是那些带有“磁铁”按钮的页面；这个按钮导出的链接将提供关于如何使用过滤标签的线索。"
                   ]
                 }
@@ -107,7 +107,7 @@
               "name": "区域标签和ID",
               "ENG_name": "Area Tags and IDs",
               "entries": [
-                "冒险和书籍内容支持“area”标签，其形式为 `@area [区域名称]|[条目ID]` 或 `@area [区域名称]|[条目ID]|[修饰符]`，其中[修饰符]是“x”用于e[x]act文本和“u”用于[u]ppercase的组合。“exact”修饰符移除添加到区域名称前的“area ”，而“uppercase”修饰符导致添加的文本变为“Area ”。",
+                "冒险和书籍内容支持“区域”标签，其格式为 `@area [区域名称]`|[条目ID]` 或 `@区域 [区域名称]|[条目ID]|[modifiers]` 其中 [modifiers] 是 'x' 表示 e[x]act text（精确文本）和 'u' 表示 [u]ppercase（大写字母）的组合。'exact' 修饰符移除添加到区域名称前面的 'area '，而 'uppercase' 修饰符导致添加的文本变为 'Area '。",
                 "多种条目块可以有“id”字段（因此可能用“area”标签链接到），值得注意的是“entries”类型，“section”类型，和“inset”类型。这些ID通常是三位数的十六进制数字（允许每个冒险/书籍总共有4096个ID），但任何在文档内唯一的字符串都可以。"
               ]
             },
@@ -120,9 +120,9 @@
                 {
                   "type": "list",
                   "items": [
-                    "冒险标签：链接到一个冒险 {@adventure 显示文本|CoS}；冒险中的一个章节 {@adventure 显示文本|CoS|2}；冒险章节中的一个标题 {@adventure 显示文本|CoS|2|Treasure}；或者是冒险章节中给定名称的第N个标题 {@adventure 显示文本|CoS|2|Treasure|1}",
+                    "冒险标签：链接到一个冒险 {@adventure 显示文本|CoS}；冒险中的一个章节 {@adventure 显示文本|CoS|2}；冒险章节中的一个标题 {@adventure 显示文本|CoS|2|宝藏}；或者是冒险章节中给定名称的第N个标题 {@adventure 显示文本|CoS|2|宝藏|1}",
                     "书籍标签：链接到一本书{@book 显示文本|PHB}；书中的一章{@book 显示文本|PHB|2}；书中一章的标题{@book 显示文本|PHB|2|年龄}；或者是书中一章给定名称的第N个头标题{@book 显示文本|PHB|2|年龄|0}（尽管这通常是不必要的，因为与冒险不同，书籍通常不会频繁重复它们的标题。）",
-                    "快速参考标签；{@code <name>|<source>|<chapterIndex>|<headerIndex>|<displayText>}：{@quickref 多职业系统}, {@quickref 多职业系统|PHB}, {@quickref 探险装备|PHB|1}, {@quickref 探险装备|PHB|1|0}, {@quickref 探险装备|PHB|1|0|显示文本}。"
+                    "快速参考标签；{@code <名称>|&lt;源&gt;|<章节索引>|&lt;headerIndex&gt;|<显示文本>}：{@quickref 兼职}, {@quickref 兼职|PHB}, {@quickref 冒险装备|PHB|1}, {@quickref 冒险装备|PHB|1|0}, {@quickref 冒险装备|PHB|1|0|显示文本}。"
                   ]
                 }
               ]
@@ -136,20 +136,20 @@
                 {
                   "type": "list",
                   "items": [
-                    "内部链接：{@5etools 这是你的人生|lifegen.html}",
-                    "内部“img”链接（即，{@link https://github.com/5etools-mirror-2/5etools-img}中的任何内容）：{@5etoolsImg 玩家手册封面|covers/PHB.webp}；{@5etoolsImg 人类圣武士表格|pdf/DoSI/Human-Paladin.pdf}",
-                    "外部链接：{@link https://discord.gg/5etools} 或者 {@link Discord|https://discord.gg/5etools}"
+                    "内部链接：{@5etools 这是你的生活|lifegen.html}",
+                    "内部“img”链接（即，{@link https://github.com/5etools-mirror-2/5etools-img}中的任何内容）：{@5etoolsImg 玩家手册封面|covers/PHB.webp}；{@5etoolsImg 人类圣武士角色卡|pdf/DoSI/Human-Paladin.pdf}",
+                    "外部链接：{@link https://discord.gg/5etools} 或者 {@link 不谐|https://discord.gg/5etools}"
                   ]
                 },
                 "特定页面/其他标签：",
                 {
                   "type": "list",
                   "items": [
-                    "怪物图鉴 '攻击' 标签：{@atk m}, {@atk r}, {@atk m,r}, {@atk mw}, {@atk rw}, {@atk ms}, {@atk rs}; （仅自制规则）{@atk a}, {@atk aw}。逗号分隔或'的攻击类型；一般形式是：'@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]'"
+                    "怪物图鉴 '攻击' 标签：{@atk m}, {@atk r}, {@atk 米，半径}, {@atk mw}, {@atk rw}, {@atk ms}, {@atk rs}; （仅自制规则）{@atk a}, {@atk aw}。逗号分隔或'的攻击类型；一般形式是：'@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]'"
                   ]
                 },
-                "自酿加载标签：{@loader 怪物之书|生物/Kobold Press; Tome of Beasts.json}。管道后面的URL假定为自酿仓库的根目录，除非它以“...://”前缀开头（即，任何链接都应该有效，但有自酿仓库链接的简写）。",
-                "预发布加载标签；如上：{@loader UA: When Armies Clash|collection/Unearthed Arcana - When Armies Clash.json|prerelease}。"
+                "自酿加载标签：{@loader 《兽典》|creature/Kobold Press; Tome of Beasts.json}。管道后面的URL假定为自酿仓库的根目录，除非它以“...://”前缀开头（即，任何链接都应该有效，但有自酿仓库链接的简写）。",
+                "预发布加载标签；如上：{@loader UA：当军队冲突|collection/Unearthed Arcana - When Armies Clash.json|预发布}。"
               ]
             }
           ]
@@ -264,21 +264,27 @@
             "col-1-5"
           ],
           "rows": [
-            "这是表格的一行",
-            "条目数量自然应与列数相匹配*",
-            "",
-            "“colStyles”列表实际上被用作CSS类",
-            "列宽可以按十二分之一指定，如 `col-[1至12]`（例如 col-12 是100%宽度，而 col-6 是50%宽度）",
-            "**",
-            {
-              "type": "list",
-              "items": [
-                "嵌套条目（通常）也是有效的。",
-                "尽管布局可能开始因为更复杂的嵌套而变得混乱。"
-              ]
-            },
-            "{@spell 祝福||法术，另一方面，是有意义的。}",
-            "",
+            [
+              "这是表格的一行",
+              "条目数量自然应与列数相匹配*",
+              ""
+            ],
+            [
+              "“colStyles”列表实际上被用作CSS类",
+              "列宽可以按十二分之一指定，如 `col-[1至12]`（例如 col-12 是100%宽度，而 col-6 是50%宽度）",
+              "**"
+            ],
+            [
+              {
+                "type": "list",
+                "items": [
+                  "嵌套条目（通常）也是有效的。",
+                  "尽管布局可能开始因为更复杂的嵌套而变得混乱。"
+                ]
+              },
+              "{@spell 祝福术||另一方面，法术是有意义的。}",
+              ""
+            ],
             {
               "type": "row",
               "style": "首行缩进",
@@ -317,9 +323,11 @@
             "col-4"
           ],
           "rows": [
-            "这个表格有多个标题行相互堆叠",
-            "洛雷姆·伊普苏姆",
-            "此列没有标签"
+            [
+              "这个表格有多个标题行相互堆叠",
+              "洛雷姆·伊普苏姆",
+              "此列没有标签"
+            ]
           ]
         },
         "可掷骰的表格可以这样制作（注意使用'pad'来格式化个位数的数字，例如'01'，用于有超过10行的表格）：",
@@ -328,50 +336,60 @@
           "caption": "可滚动表格标题",
           "colLabels": [
             "{@dice d6}",
-            "item"
+            "项目"
           ],
           "colStyles": [
             "col-1 text-center",
             "col-11"
           ],
           "rows": [
-            {
-              "type": "cell",
-              "roll": {
-                "exact": 1,
-                "pad": true
-              }
-            },
-            "第一项",
-            {
-              "type": "cell",
-              "roll": {
-                "exact": 2
-              }
-            },
-            "第二项",
-            {
-              "type": "cell",
-              "roll": {
-                "min": 3,
-                "max": 4
-              }
-            },
-            "四个项目中的三个",
-            {
-              "type": "cell",
-              "roll": {
-                "exact": 5
-              }
-            },
-            "项目V：物品回归",
-            {
-              "type": "cell",
-              "roll": {
-                "exact": 6
-              }
-            },
-            "幸运获奖者的物品"
+            [
+              {
+                "type": "cell",
+                "roll": {
+                  "exact": 1,
+                  "pad": true
+                }
+              },
+              "第一项"
+            ],
+            [
+              {
+                "type": "cell",
+                "roll": {
+                  "exact": 2
+                }
+              },
+              "第二项"
+            ],
+            [
+              {
+                "type": "cell",
+                "roll": {
+                  "min": 3,
+                  "max": 4
+                }
+              },
+              "四个项目中的三个"
+            ],
+            [
+              {
+                "type": "cell",
+                "roll": {
+                  "exact": 5
+                }
+              },
+              "项目V：物品回归"
+            ],
+            [
+              {
+                "type": "cell",
+                "roll": {
+                  "exact": 6
+                }
+              },
+              "幸运获奖者的物品"
+            ]
           ]
         },
         {
@@ -426,7 +444,7 @@
               "type": "item",
               "name": "悬挂列表的扩展",
               "ENG_name": "An extension of the hanging list",
-              "entry": "它具有加粗的内联标题 -- 注意，这每个条目只允许{@i 一个}条目（它是'entry'而不是'entries'）"
+              "entry": "它具有加粗的内联标题 -- 注意，这每个条目只允许{@i 一}条目（它是'entry'而不是'entries'）"
             },
             "可以与普通字符串混合"
           ]
@@ -453,8 +471,8 @@
               "ENG_name": "Multiple entry version",
               "entries": [
                 "这再次是专门为《XGE》中的复杂陷阱所必需的，它们可以有多行文本，通常足够长，可以在同一个列中换行到多行。例如：",
-                "Either portal can be neutralized with three successful DC 20 Intelligence ({@skill Arcana}) checks, but the process of analyzing a portal to disrupt it takes time. Faint runes in the ceiling and floor at both ends of the hallway are involved in the functioning of the portals. A creature must first use an action to examine a set of runes, then use a subsequent action to attempt to vandalize the runes. Each successful check reduces the sphere's damage by 11 ({@dice 2d10}), as the disrupted sphere loses speed moving through the failing portal.",
-                "或者，通过三次成功施放{@spell dispel magic}（难度等级19）来针对一组符文中的任何一个，可以禁用一组符文。",
+                "两个传送门都可以通过三次成功的DC 20智力（{@skill 奥秘}）检查来中和，但分析传送门以破坏它的过程需要时间。走廊两端的天花板和地板上的微弱符文与传送门的运作有关。生物必须首先使用动作来检查一组符文，然后使用随后的动作尝试破坏这些符文。每次成功的检查都会将球体的伤害减少11点（{@dice 2d10}），因为被干扰的球体在通过失败的传送门时失去了速度。",
+                "或者，通过三次成功施放{@spell 解除魔法}（难度等级19）来针对一组符文中的任何一个，可以禁用一组符文。",
                 "如果南边的传送门被摧毁，球体会撞到南墙并停止。它堵住了通往墓穴的门，但角色们可以逃脱。"
               ]
             }
@@ -559,7 +577,7 @@
           "type": "optfeature",
           "name": "可选特性名称",
           "ENG_name": "Optional Feature Name",
-          "prerequisite": "可选先决条件，可以包括标签 {@spell 奥术飞弹}",
+          "prerequisite": "可选先决条件，可以包括标签 {@spell 魔能爆}",
           "entries": [
             "可选特性文本。"
           ]
@@ -677,7 +695,7 @@
                     "name": "冲锋",
                     "ENG_name": "Charge",
                     "entries": [
-                      "If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 ({@dice 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked prone."
+                      "如果独角兽在同一回合至少直线移动20英尺朝目标前进，然后用角攻击命中目标，目标将额外受到9点（{@dice 2d8}）穿刺伤害。如果目标是一个生物，它必须在力量豁免投掷上成功，骰值为{@dc 15}，否则会被击倒。"
                     ]
                   },
                   {
@@ -707,11 +725,11 @@
                     "name": "蹄击",
                     "ENG_name": "Hooves",
                     "entries": [
-                      "{@atk 近战武器} {@hit 7}命中，射程5英尺，一个目标。命中：11 ({@damage 2d6 + 4}) 钝击伤害。"
+                      "{@atk mw} {@hit 7}命中，射程5英尺，一个目标。命中：11 ({@damage 2d6 + 4}) 钝击伤害。"
                     ]
                   },
                   {
-                    "name": "角击",
+                    "name": "角号",
                     "ENG_name": "Horn",
                     "entries": [
                       "{@atk 近战武器} 命中：7，射程5英尺，单一目标。命中效果：8（{@damage 1d8 + 4}）穿刺伤害。"
@@ -721,7 +739,7 @@
                     "name": "治愈之触 (3/日)",
                     "ENG_name": "Healing Touch (3/Day)",
                     "entries": [
-                      "The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."
+                      "独角兽用它的角触碰另一个生物。目标神奇地恢复了11点生命值（{@dice 2d8 + 2}）。此外，这种触碰还移除了目标身上所有的疾病，并中和了所有毒素。"
                     ]
                   },
                   {
@@ -756,7 +774,7 @@
                     "name": "自我治愈 (消耗 3动作)",
                     "ENG_name": "Heal Self (Costs 3 Actions)",
                     "entries": [
-                      "The unicorn magically regains 11 ({@dice 2d8 + 2}) hit points."
+                      "独角兽通过魔法恢复了11点（{@dice 2d8 + 2}）生命值。"
                     ]
                   }
                 ],
@@ -770,15 +788,15 @@
                       "独角兽天生的施法能力是魅力（法术豁免难度{@dc 14}）。独角兽天生可以施放以下法术，无需任何材料："
                     ],
                     "will": [
-                      "{@spell 侦测邪恶与善良}",
-                      "{@spell 德鲁伊法术}",
-                      "{@spell 隐秘通行}"
+                      "{@spell 侦测善恶}",
+                      "{@spell 德鲁伊伎俩}",
+                      "{@spell 行踪无迹}"
                     ],
                     "daily": {
                       "1e": [
-                        "{@spell 安抚情绪}",
-                        "{@spell 驱散善良与邪恶}",
-                        "{@spell 纠缠}"
+                        "{@spell 安定心神}",
+                        "{@spell 反制善恶}",
+                        "{@spell 纠缠术}"
                       ]
                     },
                     "ability": "cha"
@@ -836,7 +854,7 @@
                 ],
                 "source": "PHB",
                 "entries": [
-                  "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.",
+                  "一道明亮的光线从你指向的手指闪现到你选择的范围内的一个点，然后伴随着低沉的轰鸣声绽放成一团火焰爆炸。以那个点为中心的20英尺半径范围内的每个生物都必须进行敏捷豁免投掷。目标在失败的豁免投掷上受到{@dice 8d6}火焰伤害，在成功的豁免投掷上受到一半的伤害。",
                   "火焰会绕过角落传播。它点燃区域内未被穿戴或携带的易燃物品。"
                 ],
                 "entriesHigherLevel": [

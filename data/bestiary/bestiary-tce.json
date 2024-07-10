@@ -18,7 +18,7 @@
       "ENG_name": "Aberrant Spirit",
       "source": "TCE",
       "page": 109,
-      "summonedBySpell": "召唤异怪|TCE",
+      "summonedBySpell": "异怪召唤术|TCE",
       "summonedBySpellLevel": 4,
       "size": [
         "M"
@@ -125,7 +125,144 @@
       "miscTags": [
         "MW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "异常灵（贝赫尔金）",
+          "ENG_name": "Aberrant Spirit (Beholderkin)",
+          "source": "TCE",
+          "_mod": {
+            "action": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "爪击Claws（仅限史拉蟾）",
+                  "灵能猛击Psychic Slam（仅限星之子）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "眼波射线Eye Ray（仅限类眼魔）",
+                  "with": "眼波射线"
+                }
+              }
+            ]
+          },
+          "speed": {
+            "walk": 30,
+            "fly": {
+              "number": 30,
+              "condition": "悬停"
+            },
+            "canHover": true
+          },
+          "trait": null,
+          "traitTags": null,
+          "damageTags": [
+            "Y"
+          ],
+          "miscTags": null
+        },
+        {
+          "name": "异怪灵（斯拉德）",
+          "ENG_name": "Aberrant Spirit (Slaad)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "低语灵光（仅限星之子）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "再生（仅限史拉蟾）",
+                  "with": "再生"
+                }
+              }
+            ],
+            "action": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "眼波射线Eye Ray（仅限类眼魔）",
+                  "灵能猛击Psychic Slam（仅限星之子）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "爪击Claws（仅限史拉蟾）",
+                  "with": "爪抓"
+                }
+              }
+            ]
+          },
+          "speed": {
+            "walk": 30
+          },
+          "traitTags": [
+            "再生"
+          ],
+          "damageTags": [
+            "S"
+          ],
+          "miscTags": [
+            "MW"
+          ]
+        },
+        {
+          "name": "异变之魂（星种）",
+          "ENG_name": "Aberrant Spirit (Star Spawn)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "再生（仅限史拉蟾）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "低语灵光（仅限星之子）",
+                  "with": "暗语灵光"
+                }
+              }
+            ],
+            "action": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "眼波射线Eye Ray（仅限类眼魔）",
+                  "爪击Claws（仅限史拉蟾）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "灵能猛击Psychic Slam（仅限星之子）",
+                  "with": "心灵冲击"
+                }
+              }
+            ]
+          },
+          "speed": {
+            "walk": 30
+          },
+          "traitTags": [
+            "再生"
+          ],
+          "damageTags": [
+            "Y"
+          ],
+          "miscTags": null
+        }
+      ]
     },
     {
       "name": "成年红龙巫妖",
@@ -138,7 +275,7 @@
         "source": "MM",
         "_templates": [
           {
-            "name": "need-translate-a893c816-2fb4-11ef-ae1d-d1200322b32e",
+            "name": "龙巫妖",
             "ENG_name": "Dracolich",
             "source": "MM"
           }
@@ -216,7 +353,7 @@
         }
       ],
       "attachedItems": [
-        "巨斧|phb"
+        "巨锤|PHB"
       ],
       "traitTags": [
         "冲锋"
@@ -401,7 +538,7 @@
       "ENG_name": "Bestial Spirit",
       "source": "TCE",
       "page": 109,
-      "summonedBySpell": "召唤野兽|TCE",
+      "summonedBySpell": "野兽召唤术|TCE",
       "summonedBySpellLevel": 2,
       "size": [
         "S"
@@ -485,9 +622,6 @@
           ]
         }
       ],
-      "attachedItems": [
-        "巨斧|phb"
-      ],
       "traitTags": [
         "飞掠",
         "群体战术",
@@ -506,14 +640,115 @@
         "魔法学习(Magic Learning Wheel)",
         "MW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "野兽之魂（空气）",
+          "ENG_name": "Bestial Spirit (Air)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "水下呼吸（仅限水）",
+                  "集群战术（仅限陆与水）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "飞掠（仅限空）",
+                  "with": "飞掠"
+                }
+              }
+            ]
+          },
+          "hp": {
+            "special": "每提升一个法术等级，超过2级时，增加20 + 5"
+          },
+          "speed": {
+            "walk": 30,
+            "fly": 60
+          },
+          "traitTags": [
+            "飞掠"
+          ]
+        },
+        {
+          "name": "野性灵（陆地）",
+          "ENG_name": "Bestial Spirit (Land)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "水下呼吸（仅限水）",
+                  "飞掠（仅限空）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "集群战术（仅限陆与水）",
+                  "with": "群体战术"
+                }
+              }
+            ]
+          },
+          "hp": {
+            "special": "基础30点，每超过2级法术等级增加5点"
+          },
+          "speed": {
+            "walk": 30,
+            "climb": 30
+          },
+          "traitTags": [
+            "群体战术"
+          ]
+        },
+        {
+          "name": "野兽之魂（水）",
+          "ENG_name": "Bestial Spirit (Water)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "飞掠（仅限空）"
+                ]
+              },
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "集群战术（仅限陆与水）",
+                  "with": "群体战术"
+                }
+              }
+            ]
+          },
+          "hp": {
+            "special": "基础30点，每超过2级法术等级增加5点"
+          },
+          "speed": {
+            "walk": 30,
+            "swim": 30
+          },
+          "traitTags": [
+            "群体战术",
+            "水下呼吸"
+          ]
+        }
+      ]
     },
     {
       "name": "天界灵魄",
       "ENG_name": "Celestial Spirit",
       "source": "TCE",
       "page": 110,
-      "summonedBySpell": "召唤天界生物|TCE",
+      "summonedBySpell": "天界召唤术|TCE",
       "summonedBySpellLevel": 5,
       "size": [
         "L"
@@ -602,14 +837,73 @@
         "MW",
         "RW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "天界灵（复仇者）",
+          "ENG_name": "Celestial Spirit (Avenger)",
+          "source": "TCE",
+          "_mod": {
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "光耀之弓（仅限复仇圣灵）",
+                  "with": "光辉之弓"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "光耀之锤（仅限守护圣灵）"
+              }
+            ]
+          },
+          "ac": [
+            {
+              "special": "11加上法术等级（自然护甲）"
+            }
+          ],
+          "miscTags": [
+            "RW"
+          ]
+        },
+        {
+          "name": "天界之魂（守卫者）",
+          "ENG_name": "Celestial Spirit (Defender)",
+          "source": "TCE",
+          "_mod": {
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "光耀之锤（仅限守护圣灵）",
+                  "with": "光辉权杖"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "光耀之弓（仅限复仇圣灵）"
+              }
+            ]
+          },
+          "ac": [
+            {
+              "special": "13 加上法术等级（自然护甲）"
+            }
+          ],
+          "miscTags": [
+            "魔法学习(Magic Learning Wheel)",
+            "MW"
+          ]
+        }
+      ]
     },
     {
       "name": "构装体灵魄",
       "ENG_name": "Construct Spirit",
       "source": "TCE",
       "page": 111,
-      "summonedBySpell": "召唤构造体|tce",
+      "summonedBySpell": "构装召唤术|TCE",
       "summonedBySpellLevel": 4,
       "size": [
         "M"
@@ -708,7 +1002,74 @@
       "miscTags": [
         "MW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "构造灵（黏土）",
+          "ENG_name": "Construct Spirit (Clay)",
+          "source": "TCE",
+          "_mod": {
+            "reaction": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "狂怒乱击（仅限粘土）",
+                  "with": "狂暴猛击"
+                }
+              }
+            ]
+          },
+          "trait": null,
+          "damageTags": [
+            "B"
+          ]
+        },
+        {
+          "name": "构造体之魂（金属）",
+          "ENG_name": "Construct Spirit (Metal)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "灼热之躯（仅限金属）",
+                  "with": "灼热身躯"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "石迷昏眠（仅限石）"
+              }
+            ]
+          },
+          "reaction": null
+        },
+        {
+          "name": "构造体之灵（石）",
+          "ENG_name": "Construct Spirit (Stone)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "石迷昏眠（仅限石）",
+                  "with": "石肤昏睡"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "灼热之躯（仅限金属）"
+              }
+            ]
+          },
+          "reaction": null,
+          "damageTags": [
+            "B"
+          ]
+        }
+      ]
     },
     {
       "name": "舞空物品",
@@ -810,7 +1171,7 @@
       "ENG_name": "Elemental Spirit",
       "source": "TCE",
       "page": 111,
-      "summonedBySpell": "召唤元素生物|tce",
+      "summonedBySpell": "元素召唤术|TCE",
       "summonedBySpellLevel": 4,
       "size": [
         "M"
@@ -943,14 +1304,171 @@
       "miscTags": [
         "MW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "元素灵（风）",
+          "ENG_name": "Elemental Spirit (Air)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "不定形态（仅限于气、火和水）",
+                  "with": "不定形形态"
+                }
+              }
+            ],
+            "action": {
+              "mode": "replaceArr",
+              "replace": "猛击",
+              "items": {
+                "name": "猛击",
+                "ENG_name": "Slam",
+                "entries": [
+                  "{@atk 近战} 命中骰：{@hitYourSpellAttack}，射程5英尺，单一目标。{@h}{@damage 1d10 + 4 + summonSpellLevel} 钝击伤害。"
+                ]
+              }
+            }
+          },
+          "speed": {
+            "walk": 40,
+            "fly": {
+              "number": 40,
+              "condition": "悬停"
+            },
+            "canHover": true
+          },
+          "resist": [
+            "闪电",
+            "雷鸣伤害"
+          ],
+          "immune": [
+            "毁灭诅咒"
+          ],
+          "damageTags": [
+            "B"
+          ]
+        },
+        {
+          "name": "元素之灵（土）",
+          "ENG_name": "Elemental Spirit (Earth)",
+          "source": "TCE",
+          "_mod": {
+            "action": {
+              "mode": "replaceArr",
+              "replace": "猛击",
+              "items": {
+                "name": "猛击",
+                "ENG_name": "Slam",
+                "entries": [
+                  "{@atk 近战} 命中骰：{@hitYourSpellAttack}，射程5英尺，单一目标。{@h}{@damage 1d10 + 4 + summonSpellLevel} 钝击伤害。"
+                ]
+              }
+            }
+          },
+          "speed": {
+            "walk": 40,
+            "burrow": 40
+          },
+          "resist": [
+            "穿刺",
+            "斩击"
+          ],
+          "immune": [
+            "毁灭诅咒"
+          ],
+          "trait": null,
+          "damageTags": [
+            "B"
+          ]
+        },
+        {
+          "name": "元素灵（火）",
+          "ENG_name": "Elemental Spirit (Fire)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "不定形态（仅限于气、火和水）",
+                  "with": "不定形形态"
+                }
+              }
+            ],
+            "action": {
+              "mode": "replaceArr",
+              "replace": "猛击",
+              "items": {
+                "name": "猛击",
+                "ENG_name": "Slam",
+                "entries": [
+                  "{@atk 近战武器} 命中骰：{@hitYourSpellAttack}，射程5英尺，一个目标。{@h}{@damage 1d10 + 4 + 召唤法术等级} 火焰伤害。"
+                ]
+              }
+            }
+          },
+          "speed": {
+            "walk": 40
+          },
+          "immune": [
+            "毁灭诅咒",
+            "火"
+          ],
+          "damageTags": [
+            "F"
+          ]
+        },
+        {
+          "name": "元素精灵（水）",
+          "ENG_name": "Elemental Spirit (Water)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "不定形态（仅限于气、火和水）",
+                  "with": "不定形形态"
+                }
+              }
+            ],
+            "action": {
+              "mode": "replaceArr",
+              "replace": "猛击",
+              "items": {
+                "name": "猛击",
+                "ENG_name": "Slam",
+                "entries": [
+                  "{@atk 近战} 命中骰：{@hitYourSpellAttack}，射程5英尺，单一目标。{@h}{@damage 1d10 + 4 + summonSpellLevel} 钝击伤害。"
+                ]
+              }
+            }
+          },
+          "speed": {
+            "walk": 40,
+            "swim": 40
+          },
+          "resist": [
+            "酸性"
+          ],
+          "immune": [
+            "毁灭诅咒"
+          ],
+          "damageTags": [
+            "B"
+          ]
+        }
+      ]
     },
     {
       "name": "精类灵魄",
       "ENG_name": "Fey Spirit",
       "source": "TCE",
       "page": 112,
-      "summonedBySpell": "召唤仙女|TCE",
+      "summonedBySpell": "精类召唤术|TCE",
       "summonedBySpellLevel": 3,
       "size": [
         "S"
@@ -1037,7 +1555,7 @@
         }
       ],
       "attachedItems": [
-        "短剑"
+        "短剑|PHB"
       ],
       "senseTags": [
         "D"
@@ -1060,14 +1578,58 @@
       "conditionInflict": [
         "魅惑"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "仙女之魂（喷烟）",
+          "ENG_name": "Fey Spirit (Fuming)",
+          "source": "TCE",
+          "bonus": [
+            {
+              "name": "精类步",
+              "ENG_name": "Fey Step",
+              "entries": [
+                "仙女魔法般地传送至其视线范围内的未被占据的空间，距离最多30英尺。在本回合结束前，仙女的下一次攻击检定获得优势。"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "仙女灵（欢乐）",
+          "ENG_name": "Fey Spirit (Mirthful)",
+          "source": "TCE",
+          "bonus": [
+            {
+              "name": "精类步",
+              "ENG_name": "Fey Step",
+              "entries": [
+                "仙女可以魔法传送至其视线内30英尺范围内的未被占据的空间。仙女可以迫使其视线内10英尺范围内的一个生物进行一次对抗你法术豁免DC的智慧豁免。除非豁免成功，否则目标将被你和仙女魅惑1分钟，或直到目标受到任何伤害为止。"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "仙灵（调皮）",
+          "ENG_name": "Fey Spirit (Tricksy)",
+          "source": "TCE",
+          "bonus": [
+            {
+              "name": "精类步",
+              "ENG_name": "Fey Step",
+              "entries": [
+                "仙女魔法地传送至她能看见的30英尺内的未被占据的空间。仙女可以在她5英尺范围内的5英尺立方体内填充魔法黑暗，这将持续到她下一回合结束。"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "邪魔灵魄",
       "ENG_name": "Fiendish Spirit",
       "source": "TCE",
       "page": 112,
-      "summonedBySpell": "召唤恶魔|tce",
+      "summonedBySpell": "邪魔召唤术|TCE",
       "summonedBySpellLevel": 6,
       "size": [
         "L"
@@ -1174,7 +1736,7 @@
       ],
       "traitTags": [
         "死亡自爆",
-        "魔能祈唤:魔鬼视界",
+        "魔鬼视界",
         "魔法抗性"
       ],
       "senseTags": [
@@ -1196,7 +1758,153 @@
       "miscTags": [
         "MW"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "恶魔之魂",
+          "ENG_name": "Fiendish Spirit (Demon)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "焚身爆（仅限恶魔）",
+                  "with": "死亡焚爆"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "魔鬼视界（仅限魔鬼）"
+              }
+            ],
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "啃咬（仅限于恶魔）",
+                  "with": "啃咬"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "爪击（仅限于尤格罗斯魔）",
+                  "投掷烈焰（仅限于魔鬼）"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "50 + 15乘以超过6级的每个法术等级"
+          },
+          "speed": {
+            "walk": 40,
+            "climb": 40
+          },
+          "traitTags": [
+            "死亡自爆",
+            "魔法抗性"
+          ],
+          "damageTags": [
+            "F"
+          ]
+        },
+        {
+          "name": "恶魔之魂",
+          "ENG_name": "Fiendish Spirit (Devil)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "魔鬼视界（仅限魔鬼）",
+                  "with": "魔鬼视界"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "焚身爆（仅限恶魔）"
+              }
+            ],
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "投掷烈焰（仅限于魔鬼）",
+                  "with": "投掷火焰"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "啃咬（仅限于恶魔）",
+                  "爪击（仅限于尤格罗斯魔）"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "40 加上每超过6级法术等级15点"
+          },
+          "speed": {
+            "walk": 40,
+            "fly": 60
+          },
+          "traitTags": [
+            "魔鬼视界",
+            "魔法抗性"
+          ],
+          "damageTags": [
+            "N"
+          ]
+        },
+        {
+          "name": "恶魔灵（尤格罗斯）",
+          "ENG_name": "Fiendish Spirit (Yugoloth)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "removeArr",
+                "names": [
+                  "焚身爆（仅限恶魔）",
+                  "魔鬼视界（仅限魔鬼）"
+                ]
+              }
+            ],
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "爪击（仅限于尤格罗斯魔）",
+                  "with": "爪抓"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "啃咬（仅限于恶魔）",
+                  "投掷烈焰（仅限于魔鬼）"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "每提升一个法术等级，超过6级时，增加60 + 15"
+          },
+          "speed": {
+            "walk": 40
+          },
+          "traitTags": [
+            "魔法抗性"
+          ],
+          "damageTags": [
+            "F"
+          ]
+        }
+      ]
     },
     {
       "name": "人工生命仆从",
@@ -1209,7 +1917,7 @@
           "page": 62
         }
       ],
-      "summonedByClass": "炼金术士|tce",
+      "summonedByClass": "奇械师|TCE",
       "size": [
         "T"
       ],
@@ -1556,7 +2264,7 @@
         "伏地"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluffImages": true
@@ -1567,7 +2275,7 @@
       "source": "TCE",
       "page": 158,
       "_copy": {
-        "name": "阴影",
+        "name": "幽影",
         "ENG_name": "Shadow",
         "source": "MM",
         "_mod": {
@@ -1605,7 +2313,7 @@
       "ENG_name": "Shadow Spirit",
       "source": "TCE",
       "page": 114,
-      "summonedBySpell": "召唤影裔|TCE",
+      "summonedBySpell": "暗影衍体召唤术|TCE",
       "summonedBySpellLevel": 3,
       "size": [
         "M"
@@ -1711,7 +2419,68 @@
         "恐惧"
       ],
       "hasToken": true,
-      "hasFluffImages": true
+      "hasFluffImages": true,
+      "_versions": [
+        {
+          "name": "暗影灵（绝望）",
+          "ENG_name": "Shadow Spirit (Despair)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "哀伤之重（仅限绝望）",
+                  "with": "悲伤之重"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "惧怖狂怒（仅限暴怒）"
+              }
+            ]
+          },
+          "bonus": null
+        },
+        {
+          "name": "阴影之魂（恐惧）",
+          "ENG_name": "Shadow Spirit (Fear)",
+          "source": "TCE",
+          "_mod": {
+            "bonus": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "暗影潜藏（仅限恐惧）",
+                  "with": "暗影潜匿."
+                }
+              }
+            ]
+          },
+          "trait": null
+        },
+        {
+          "name": "暗影灵（狂怒）",
+          "ENG_name": "Shadow Spirit (Fury)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "惧怖狂怒（仅限暴怒）",
+                  "with": "恐怖狂乱"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "哀伤之重（仅限绝望）"
+              }
+            ]
+          },
+          "bonus": null
+        }
+      ]
     },
     {
       "name": "钢铁守卫",
@@ -1724,7 +2493,7 @@
           "page": 61
         }
       ],
-      "summonedByClass": "炼金术士|tce",
+      "summonedByClass": "奇械师|TCE",
       "size": [
         "M"
       ],
@@ -1795,7 +2564,7 @@
           "name": "修理（3次/天）",
           "ENG_name": "Repair (3/Day)",
           "entries": [
-            "安装于钢铁守卫内部的魔法机械能够为钢铁守卫本身或距离其5尺内的构装体或物品恢复{@dice 2d8 + PB}的生命值。"
+            "安装于钢铁守卫内部的魔法机械能够为钢铁守卫本身或距离其5尺内的构装体或物品恢复{@dice None}的生命值。"
           ]
         }
       ],
@@ -1825,7 +2594,7 @@
       "ENG_name": "Undead Spirit",
       "source": "TCE",
       "page": 114,
-      "summonedBySpell": "{@spell summon undead|TCE} 召唤不死生物（根据Tasha's Cauldron of Everything的更新）",
+      "summonedBySpell": "亡灵召唤术|TCE",
       "summonedBySpellLevel": 3,
       "size": [
         "M"
@@ -1944,14 +2713,155 @@
         "麻痹",
         "中毒"
       ],
-      "hasToken": true
+      "hasToken": true,
+      "_versions": [
+        {
+          "name": "不死之魂（幽灵形态）",
+          "ENG_name": "Undead Spirit (Ghostly)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "虚体移动（仅限于虚灵）",
+                  "with": "无形通道"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "腐灭灵光（仅限腐尸）"
+              }
+            ],
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "致死之触（仅限于虚灵）",
+                  "with": "死亡之触"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "暗澹箭（仅限于骷髅）",
+                  "腐烂爪击（仅限于腐尸）。"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "每高于3级的法术等级增加30 + 10"
+          },
+          "speed": {
+            "walk": 30,
+            "fly": {
+              "number": 40,
+              "condition": "悬停"
+            },
+            "canHover": true
+          },
+          "damageTags": [
+            "N"
+          ],
+          "conditionInflict": [
+            "恐惧"
+          ]
+        },
+        {
+          "name": "不死之魂（腐臭）",
+          "ENG_name": "Undead Spirit (Putrid)",
+          "source": "TCE",
+          "_mod": {
+            "trait": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "腐灭灵光（仅限腐尸）",
+                  "with": "腐化光环"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": "虚体移动（仅限于虚灵）"
+              }
+            ],
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "腐烂爪击（仅限于腐尸）。",
+                  "with": "腐烂之爪"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "致死之触（仅限于虚灵）",
+                  "暗澹箭（仅限于骷髅）"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "每高于3级的法术等级增加30 + 10"
+          },
+          "speed": {
+            "walk": 30
+          },
+          "traitTags": null,
+          "damageTags": [
+            "O",
+            "S"
+          ],
+          "conditionInflict": [
+            "麻痹",
+            "中毒"
+          ]
+        },
+        {
+          "name": "不死之魂（骷髅）",
+          "ENG_name": "Undead Spirit (Skeletal)",
+          "source": "TCE",
+          "_mod": {
+            "action": [
+              {
+                "mode": "renameArr",
+                "renames": {
+                  "rename": "暗澹箭（仅限于骷髅）",
+                  "with": "坟墓之箭"
+                }
+              },
+              {
+                "mode": "removeArr",
+                "names": [
+                  "致死之触（仅限于虚灵）",
+                  "腐烂爪击（仅限于腐尸）。"
+                ]
+              }
+            ]
+          },
+          "hp": {
+            "special": "每提升一个法术等级，超过3级时，增加20 + 10"
+          },
+          "speed": {
+            "walk": 30
+          },
+          "trait": null,
+          "traitTags": null,
+          "damageTags": [
+            "N"
+          ],
+          "conditionInflict": null
+        }
+      ]
     },
     {
       "name": "野火精魄",
       "ENG_name": "Wildfire Spirit",
       "source": "TCE",
       "page": 40,
-      "summonedByClass": "德鲁伊|玩家手册",
+      "summonedByClass": "德鲁伊|PHB",
       "size": [
         "S"
       ],
@@ -2014,7 +2924,7 @@
           "name": "烈焰传送",
           "ENG_name": "Fiery Teleportation",
           "entries": [
-            "精魂与每个在其5尺内你所选择的自愿生物传送至15尺内你可见的未被占据的空间。随后每个处于精魂离开空间5尺范围内的生物必须成功通过对抗你法术豁免DC的敏捷豁免，否则受到{@damage 1d6 + PB}火焰伤害。"
+            "精魂与每个在其5尺内你所选择的自愿生物传送至15尺内你可见的未被占据的空间。随后每个处于精魂离开空间5尺范围内的生物必须成功通过对抗你法术豁免DC的敏捷豁免，否则受到{@damage None}火焰伤害。"
           ]
         }
       ],

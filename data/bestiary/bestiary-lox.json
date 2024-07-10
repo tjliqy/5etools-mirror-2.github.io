@@ -1,477 +1,513 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"BAM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"BAM": "LoX",
-				"MM": "LoX"
-			}
-		}
-	},
-	"monster": [
-		{
-			"name": "Aarakocra Spelljammer",
-			"source": "LoX",
-			"page": 43,
-			"_copy": {
-				"name": "Mage",
-				"source": "MM",
-				"_templates": [
-					{
-						"name": "Aarakocra",
-						"source": "DMG"
-					}
-				],
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "\\bmage\\b",
-						"with": "aarakocra"
-					}
-				}
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Agony",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 34,
-			"_copy": {
-				"name": "Ghost",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the ghost",
-						"with": "Agony",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Astral Blight",
-			"source": "LoX",
-			"page": 10,
-			"size": [
-				"M"
-			],
-			"type": "plant",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 26,
-				"formula": "4d8 + 8"
-			},
-			"speed": {
-				"walk": 10
-			},
-			"str": 16,
-			"dex": 8,
-			"con": 14,
-			"int": 6,
-			"wis": 10,
-			"cha": 3,
-			"senses": [
-				"blindsight 60 ft. (blind beyond this radius)"
-			],
-			"passive": 10,
-			"resist": [
-				"cold",
-				"radiant"
-			],
-			"cr": "1",
-			"trait": [
-				{
-					"name": "Illumination",
-					"entries": [
-						"While it has at least 1 hit point, the astral blight sheds dim light in a 10-foot radius."
-					]
-				},
-				{
-					"name": "Unusual Nature",
-					"entries": [
-						"The blight doesn't require air or sleep."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The blight makes two Heat-Draining Vine attacks."
-					]
-				},
-				{
-					"name": "Heat-Draining Vine",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}6 ({@damage 1d6 + 3}) radiant damage, and if the target is a Large or smaller creature, it is {@condition grappled} (escape {@dc 13}). Until this grapple ends, the target takes 3 ({@damage 1d6}) cold damage at the start of each of its turns. The blight has two vines, each of which can grapple one creature."
-					]
-				}
-			],
-			"traitTags": [
-				"Illumination",
-				"Unusual Nature"
-			],
-			"senseTags": [
-				"B"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"C",
-				"R"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"grappled"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Big Momma",
-			"shortName": true,
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 29,
-			"_copy": {
-				"name": "Void Scavver",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the scavver",
-						"with": "Big Momma",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Commodore Krux",
-			"shortName": true,
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 22,
-			"_copy": {
-				"name": "Giff Shipmate",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the giff",
-						"with": "Krux",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Elaina Sartell",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 11,
-			"_copy": {
-				"name": "Bandit Captain",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the captain",
-						"with": "Elaina",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"G"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Fel Ardra",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 23,
-			"_copy": {
-				"name": "Cult Fanatic",
-				"source": "MM",
-				"_templates": [
-					{
-						"name": "Tiefling",
-						"source": "PHB"
-					}
-				],
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the fanatic",
-						"with": "Fel",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Flapjack",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 13,
-			"_copy": {
-				"name": "Flumph",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the flumph",
-						"with": "Flapjack",
-						"flags": "i"
-					}
-				}
-			},
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Flapjack casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 12}):"
-					],
-					"will": [
-						"{@spell mage hand}",
-						"{@spell minor illusion}"
-					],
-					"daily": {
-						"1e": [
-							"{@spell magic missile}",
-							"{@spell unseen servant}"
-						]
-					},
-					"ability": "int",
-					"displayAs": "action"
-				}
-			],
-			"damageTagsSpell": [
-				"O"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Grimzod Gargenhale",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 32,
-			"_copy": {
-				"name": "Vampirate Captain",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the captain",
-						"with": "Grimzod",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Hastain",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 25,
-			"_copy": {
-				"name": "Reigar",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the reigar",
-						"with": "Hastain",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"E"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Prince Xeleth",
-			"shortName": true,
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 48,
-			"_copy": {
-				"name": "Astral Elf Aristocrat",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the elf",
-						"with": "Xeleth",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"E"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Princess Xedalli",
-			"shortName": true,
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 60,
-			"_copy": {
-				"name": "Astral Elf Aristocrat",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the elf",
-						"with": "Xedalli",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"N"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Topolah",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 27,
-			"_copy": {
-				"name": "Mage",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the mage",
-						"with": "Topolah",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"C",
-				"G"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Vocath",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 42,
-			"_copy": {
-				"name": "Mercane",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the mercane",
-						"with": "Vocath",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Warwyck Blastimoff",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "LoX",
-			"page": 39,
-			"_copy": {
-				"name": "Giff Shipmate",
-				"source": "BAM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the giff",
-						"with": "Warwyck",
-						"flags": "i"
-					}
-				}
-			},
-			"alignment": [
-				"L",
-				"G"
-			],
-			"hasToken": true,
-			"hasFluffImages": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM",
+        "BAM"
+      ]
+    },
+    "otherSources": {
+      "monster": {
+        "BAM": "LoX",
+        "MM": "LoX"
+      }
+    }
+  },
+  "monster": [
+    {
+      "name": "aarakocra spelljammer",
+      "ENG_name": "Aarakocra Spelljammer",
+      "source": "LoX",
+      "page": 43,
+      "_copy": {
+        "name": "魔法师",
+        "ENG_name": "Mage",
+        "source": "MM",
+        "_templates": [
+          {
+            "name": "阿兰寇拉鹰人",
+            "ENG_name": "Aarakocra",
+            "source": "DMG"
+          }
+        ],
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "\b法师\b",
+            "with": "阿兰寇拉鹰人"
+          }
+        }
+      },
+      "hasToken": true
+    },
+    {
+      "name": "苦刑",
+      "ENG_name": "Agony",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 34,
+      "_copy": {
+        "name": "幽魂",
+        "ENG_name": "Ghost",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "幽灵",
+            "with": "苦刑",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true
+    },
+    {
+      "name": "星界枯萎",
+      "ENG_name": "Astral Blight",
+      "source": "LoX",
+      "page": 10,
+      "size": [
+        "M"
+      ],
+      "type": "plant",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 12,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 26,
+        "formula": "4d8 + 8"
+      },
+      "speed": {
+        "walk": 10
+      },
+      "str": 16,
+      "dex": 8,
+      "con": 14,
+      "int": 6,
+      "wis": 10,
+      "cha": 3,
+      "senses": [
+        "盲视60英尺（在此半径之外为盲）"
+      ],
+      "passive": 10,
+      "resist": [
+        "寒冷",
+        "光辉"
+      ],
+      "cr": "1",
+      "trait": [
+        {
+          "name": "照明",
+          "ENG_name": "Illumination",
+          "entries": [
+            "只要它至少有1点生命值，星界枯萎就会在10英尺半径内散发出微弱的光芒。"
+          ]
+        },
+        {
+          "name": "非凡本质",
+          "ENG_name": "Unusual Nature",
+          "entries": [
+            "枯萎病不需要空气或睡眠。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "疫病使出两次吸取热量的藤蔓攻击。"
+          ]
+        },
+        {
+          "name": "吸热藤蔓",
+          "ENG_name": "Heat-Draining Vine",
+          "entries": [
+            "{@atk 近战武器} {@hit 5} 命中，射程10英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 辐射伤害，如果目标是大型或更小的生物，则被{@condition 缠绕}（逃脱{@dc 13}）。直到这种缠绕结束，目标在其每个回合开始时受到3 ({@damage 1d6}) 冷伤害。枯萎有两根藤蔓，每根藤蔓可以缠绕一个生物。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "照明",
+        "非凡本质"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "C",
+        "R"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "被擒"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "大妈妈",
+      "ENG_name": "Big Momma",
+      "shortName": true,
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 29,
+      "_copy": {
+        "name": "虚空拾荒者",
+        "ENG_name": "Void Scavver",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "拾荒者",
+            "with": "大妈妈",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "海军准将克鲁克斯",
+      "ENG_name": "Commodore Krux",
+      "shortName": true,
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 22,
+      "_copy": {
+        "name": "诘弗河马人船员",
+        "ENG_name": "Giff Shipmate",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "地精族",
+            "with": "克鲁克斯",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "伊莲娜·萨特尔",
+      "ENG_name": "Elaina Sartell",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 11,
+      "_copy": {
+        "name": "强盗首领",
+        "ENG_name": "Bandit Captain",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "船长",
+            "with": "艾莲娜",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "费尔·阿德拉",
+      "ENG_name": "Fel Ardra",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 23,
+      "_copy": {
+        "name": "邪教狂信者",
+        "ENG_name": "Cult Fanatic",
+        "source": "MM",
+        "_templates": [
+          {
+            "name": "提夫林",
+            "ENG_name": "Tiefling",
+            "source": "PHB"
+          }
+        ],
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "狂热者",
+            "with": "费尔",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "煎饼",
+      "ENG_name": "Flapjack",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 13,
+      "_copy": {
+        "name": "呋噜",
+        "ENG_name": "Flumph",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "飘浮怪",
+            "with": "煎饼",
+            "flags": "i"
+          }
+        }
+      },
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Flapjack 施放以下法术之一，不需要材料成分，使用智力作为施法能力（法术豁免{@dc 12}）："
+          ],
+          "will": [
+            "{@spell 法师之手}",
+            "{@spell 次级幻象}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell 魔法飞弹}",
+              "{@spell 隐形仆役}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "damageTagsSpell": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "格里姆佐德·加根黑尔",
+      "ENG_name": "Grimzod Gargenhale",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 32,
+      "_copy": {
+        "name": "吸血骇盗船长",
+        "ENG_name": "Vampirate Captain",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "船长",
+            "with": "格瑞姆佐德",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "哈斯坦",
+      "ENG_name": "Hastain",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 25,
+      "_copy": {
+        "name": "雷加尔人",
+        "ENG_name": "Reigar",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "雷加尔",
+            "with": "哈斯坦",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "赛勒斯王子",
+      "ENG_name": "Prince Xeleth",
+      "shortName": true,
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 48,
+      "_copy": {
+        "name": "星界精灵贵族",
+        "ENG_name": "Astral Elf Aristocrat",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "精灵",
+            "with": "泽勒斯",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "公主Xedalli",
+      "ENG_name": "Princess Xedalli",
+      "shortName": true,
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 60,
+      "_copy": {
+        "name": "星界精灵贵族",
+        "ENG_name": "Astral Elf Aristocrat",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "精灵",
+            "with": "赛达利",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "托波拉",
+      "ENG_name": "Topolah",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 27,
+      "_copy": {
+        "name": "魔法师",
+        "ENG_name": "Mage",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "法师",
+            "with": "托波拉",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vocath",
+      "ENG_name": "Vocath",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 42,
+      "_copy": {
+        "name": "星海商族",
+        "ENG_name": "Mercane",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "默坎",
+            "with": "Vocath",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Warwyck Blastimoff",
+      "ENG_name": "Warwyck Blastimoff",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "LoX",
+      "page": 39,
+      "_copy": {
+        "name": "诘弗河马人船员",
+        "ENG_name": "Giff Shipmate",
+        "source": "BAM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "地精族",
+            "with": "沃瑞克",
+            "flags": "i"
+          }
+        }
+      },
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "hasToken": true,
+      "hasFluffImages": true
+    }
+  ]
 }

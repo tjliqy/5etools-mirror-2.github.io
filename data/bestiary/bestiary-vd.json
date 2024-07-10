@@ -1,256 +1,270 @@
 {
-	"monster": [
-		{
-			"name": "Vecna the Archlich",
-			"shortName": "Vecna",
-			"isNamedCreature": true,
-			"source": "VD",
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "undead",
-				"tags": [
-					"Wizard"
-				]
-			},
-			"alignment": [
-				"L",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"formula": "32d8 + 128",
-				"average": 272
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 14,
-			"dex": 16,
-			"con": 18,
-			"int": 22,
-			"wis": 24,
-			"cha": 16,
-			"save": {
-				"con": "+12",
-				"int": "+14",
-				"wis": "+15"
-			},
-			"skill": {
-				"arcana": "+22",
-				"history": "+14",
-				"insight": "+15",
-				"perception": "+15"
-			},
-			"senses": [
-				"truesight 120 ft."
-			],
-			"passive": 25,
-			"resist": [
-				"cold",
-				"lightning",
-				"necrotic"
-			],
-			"immune": [
-				{
-					"immune": [
-						"poison"
-					]
-				},
-				{
-					"immune": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"poisoned",
-				"stunned"
-			],
-			"languages": [
-				"Common",
-				"Draconic",
-				"Elvish",
-				"Infernal"
-			],
-			"cr": "26",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Vecna casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 22}):"
-					],
-					"will": [
-						"{@spell animate dead} (as an action)",
-						"{@spell detect magic}",
-						"{@spell dispel magic}",
-						"{@spell fly}",
-						"{@spell lightning bolt}",
-						"{@spell mage hand}",
-						"{@spell prestidigitation}"
-					],
-					"daily": {
-						"2e": [
-							"{@spell dimension door}",
-							"{@spell invisibility}",
-							"{@spell scrying} (as an action)"
-						],
-						"1e": [
-							"{@spell dominate monster}",
-							"{@spell globe of invulnerability}",
-							"{@spell plane shift} (self only)"
-						]
-					},
-					"ability": "int",
-					"displayAs": "action"
-				}
-			],
-			"trait": [
-				{
-					"name": "Legendary Resistance (5/Day)",
-					"entries": [
-						"If Vecna fails a saving throw, he can choose to succeed instead."
-					]
-				},
-				{
-					"name": "Special Equipment",
-					"entries": [
-						"Vecna carries a magic dagger named Afterthought. In the hands of anyone other than Vecna, Afterthought is a {@item +2 dagger}."
-					]
-				},
-				{
-					"name": "Undying",
-					"entries": [
-						"If Vecna is slain, his soul refuses to accept its fate and lives on as a disembodied spirit that fashions a new body for itself after {@dice 1d100} years. Vecna's soul can fashion a new body even if its old body was burned to ash or otherwise obliterated. When the new body is complete, Vecna regains all his hit points and becomes active again. Vecna's new body appears anywhere within 100 miles of where Vecna was slain."
-					]
-				},
-				{
-					"name": "Unusual Nature",
-					"entries": [
-						"Vecna doesn't require air, food, drink, or sleep."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Vecna uses Flight of the Damned (if available), Rotten Fate, or Spellcasting. He then makes two attacks with {@i Afterthought}."
-					]
-				},
-				{
-					"name": "Afterthought",
-					"entries": [
-						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d4 + 5}) piercing damage, plus 9 ({@damage 2d8}) necrotic damage. If the target is a creature, it is afflicted by entropic magic, taking 9 ({@damage 2d8}) necrotic damage at the start of each of its turns. Immediately after taking this damage on its turn, the target can make a {@dc 20} Constitution saving throw, ending the effect on itself on a success. Until it succeeds on this save, the afflicted target can't regain hit points."
-					]
-				},
-				{
-					"name": "Flight of the Damned {@recharge 5}",
-					"entries": [
-						"Vecna conjures a torrent of flying, spectral entities that fill a 120-foot cone and pass through all creatures in that area before dissipating. Each creature in that area must make a {@dc 22} Constitution saving throw. On a failed save, the creature takes 36 ({@damage 8d8}) necrotic damage and is {@condition frightened} of Vecna for 1 minute. On a successful save, the creature takes half as much damage and isn't {@condition frightened}. A {@condition frightened} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
-					]
-				},
-				{
-					"name": "Rotten Fate",
-					"entries": [
-						"Vecna causes necrotic magic to engulf one creature he can see within 120 feet of himself. The target must make a {@dc 22} Constitution saving throw, taking 96 ({@damage 8d8 + 60}) necrotic damage on a failed save, or half as much damage on a successful one. A Humanoid killed by this magic rises as a {@creature zombie} at the start of Vecna's next turn and acts immediately after Vecna in the initiative order. The {@creature zombie} is under Vecna's control."
-					]
-				}
-			],
-			"bonus": [
-				{
-					"name": "Vile Teleport",
-					"entries": [
-						"Vecna teleports, along with any equipment he is wearing or carrying, up to 30 feet to an unoccupied space he can see. He can cause each creature of his choice within 15 feet of his destination space to take 10 ({@damage 3d6}) psychic damage. If at least one creature takes this damage, Vecna regains 80 hit points."
-					]
-				}
-			],
-			"reactionHeader": [
-				"Vecna can take up to three reactions per round but only one per turn."
-			],
-			"reaction": [
-				{
-					"name": "Dread Counterspell",
-					"entries": [
-						"Vecna utters a dread word to interrupt a creature he can see that is casting a spell. If the spell is 4th level or lower, it fails and has no effect. If the spell is 5th level or higher, Vecna makes an Intelligence check ({@dc 10} + the spell's level). On a success, the spell fails and has no effect. Whatever the spell's level, the caster takes 10 ({@damage 3d6}) psychic damage if the spell fails."
-					]
-				},
-				{
-					"name": "Fell Rebuke",
-					"entries": [
-						"In response to being hit by an attack, Vecna utters a fell word, dealing 10 ({@damage 3d6}) necrotic damage to the attacker, and Vecna teleports, along with any equipment he is wearing or carrying, up to 30 feet to an unoccupied space he can see."
-					]
-				}
-			],
-			"altArt": [
-				{
-					"name": "Vecna the Archlich (Alt)",
-					"source": "VD"
-				}
-			],
-			"traitTags": [
-				"Legendary Resistances",
-				"Unusual Nature"
-			],
-			"senseTags": [
-				"U"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"DR",
-				"E",
-				"I"
-			],
-			"damageTags": [
-				"N",
-				"P",
-				"Y"
-			],
-			"damageTagsSpell": [
-				"L",
-				"O"
-			],
-			"spellcastingTags": [
-				"O"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"frightened"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity",
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		}
-	]
+  "monster": [
+    {
+      "name": "维克纳，大巫妖",
+      "ENG_name": "Vecna the Archlich",
+      "shortName": "维克纳",
+      "isNamedCreature": true,
+      "source": "VD",
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "undead",
+        "tags": [
+          "Wizard"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 18,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "formula": "32d8 + 128",
+        "average": 272
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 14,
+      "dex": 16,
+      "con": 18,
+      "int": 22,
+      "wis": 24,
+      "cha": 16,
+      "save": {
+        "con": "+12",
+        "int": "+14",
+        "wis": "+15"
+      },
+      "skill": {
+        "arcana": "+22",
+        "history": "+14",
+        "insight": "+15",
+        "perception": "+15"
+      },
+      "senses": [
+        "真实视域 120 英尺。"
+      ],
+      "passive": 25,
+      "resist": [
+        "寒冷",
+        "闪电",
+        "死灵"
+      ],
+      "immune": [
+        {
+          "immune": [
+            "毁灭诅咒"
+          ]
+        },
+        {
+          "immune": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "力竭",
+        "恐惧",
+        "麻痹",
+        "中毒",
+        "震慑"
+      ],
+      "languages": [
+        "普通",
+        "龙族血脉",
+        "精灵语",
+        "地狱语"
+      ],
+      "cr": "26",
+      "spellcasting": [
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Vecna 施放以下法术之一，不需要材料成分，使用智力作为施法能力（法术豁免{@dc 22}）："
+          ],
+          "will": [
+            "{@spell 活化死尸}（作为动作）",
+            "{@spell 侦测魔法}",
+            "{@spell 解除魔法}",
+            "{@spell 飞行术}",
+            "{@spell 闪电束}",
+            "{@spell 法师之手}",
+            "{@spell 魔法技俩}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell 次元门}",
+              "{@spell 隐形术}",
+              "{@spell 探知}（作为动作）"
+            ],
+            "1e": [
+              "{@spell 支配怪物}",
+              "{@spell 法术无效结界}",
+              "{@spell 异界传送}（仅限自身）"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "肉体雕塑者"
+        }
+      ],
+      "trait": [
+        {
+          "name": "传奇抗性（每日5次）",
+          "ENG_name": "Legendary Resistance (5/Day)",
+          "entries": [
+            "如果维克纳未能通过豁免检定，他可以选择成功。"
+          ]
+        },
+        {
+          "name": "特殊装备",
+          "ENG_name": "Special Equipment",
+          "entries": [
+            "Vecna携带一把名为'事后回想'的魔法匕首。在除Vecna之外的任何人手中，'事后回想'是一把{@item +2 匕首}。"
+          ]
+        },
+        {
+          "name": "​不朽者",
+          "ENG_name": "Undying",
+          "entries": [
+            "如果维克纳被击败，他的灵魂拒绝接受自己的命运，并以一个无实体的精神形态存活，经过{@dice 1d100}年后为自己塑造新的身体。即使维克纳的旧身体被烧成灰烬或以其他方式被彻底摧毁，他的灵魂也能塑造新的身体。当新的身体完成时，维克纳恢复所有生命值并再次活跃起来。维克纳的新身体出现在他被击败地点100英里内的任何地方。"
+          ]
+        },
+        {
+          "name": "非凡本质",
+          "ENG_name": "Unusual Nature",
+          "entries": [
+            "维克纳不需要空气、食物、饮水或睡眠。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "维克纳使用《被诅咒者的飞行》（如果可用）、《腐烂命运》或《施法》。然后他使用{@i 事后回想}进行两次攻击。"
+          ]
+        },
+        {
+          "name": "事后回想",
+          "ENG_name": "Afterthought",
+          "entries": [
+            "{@atk 近战武器} {@hit 13}命中，射程5英尺，一个目标。{@h}7 ({@damage 1d4 + 5})穿刺伤害，加上9 ({@damage 2d8})死灵伤害。如果目标是一个生物，它会被熵魔法影响，在它每个回合开始时受到9 ({@damage 2d8})死灵伤害。在它的回合上立即承受此伤害后，目标可以进行一次{@dc 20}体质豁免，成功则结束此效果。在成功此豁免之前，受影响的目标不能恢复生命值。"
+          ]
+        },
+        {
+          "name": "诅咒之飞行 {@recharge 5}",
+          "ENG_name": "Flight of the Damned {@recharge 5}",
+          "entries": [
+            "维克纳召唤出一股飞行的幽灵实体洪流，填满120英尺的锥形区域，穿过该区域内的所有生物后消散。该区域内的每个生物必须进行一次{@dc 22}体质豁免检定。检定失败的生物将受到36点（{@damage 8d8}）死灵伤害，并且在1分钟内对维克纳感到{@condition 恐惧}。检定成功的生物受到的伤害减半，并且不会{@condition 恐惧}。处于{@condition 恐惧}状态的生物可以在每个回合结束时重复进行豁免检定，成功则结束该效果。"
+          ]
+        },
+        {
+          "name": "腐烂命运",
+          "ENG_name": "Rotten Fate",
+          "entries": [
+            "Vecna 使得死灵魔法包围他120英尺内他能看到的一个生物。目标必须进行一次{@dc 22}体质豁免投掷，失败则受到96({@damage 8d8 + 60})点死灵伤害，成功则伤害减半。被这魔法杀死的类人生物在Vecna下一回合开始时会作为{@creature 僵尸}复活，并在行动顺序中紧接Vecna之后立即行动。该{@creature 僵尸}受Vecna的控制。"
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "邪恶传送",
+          "ENG_name": "Vile Teleport",
+          "entries": [
+            "维克纳连同他穿戴或携带的任何装备，可以传送至他能看到的30英尺内的未被占据的空间。他可以选择使他目的地15英尺内的每个生物受到10点（{@damage 3d6}）精神伤害。如果至少有一个生物受到此伤害，维克纳恢复80点生命值。"
+          ]
+        }
+      ],
+      "reactionHeader": [
+        "维克纳每轮可以进行多达三次反应，但每个回合只能进行一次。"
+      ],
+      "reaction": [
+        {
+          "name": "恐怖反制",
+          "ENG_name": "Dread Counterspell",
+          "entries": [
+            "维克纳对一个他能看到的正在施法的生物说出一个可怕的词来打断它。如果法术等级是4级或更低，法术失败且无效。如果法术等级是5级或更高，维克纳进行智力检定（{@dc 10} + 法术等级）。成功时，法术失败且无效。无论法术等级如何，如果法术失败，施法者会受到10点（{@damage 3d6}）精神伤害。"
+          ]
+        },
+        {
+          "name": "堕落斥责",
+          "ENG_name": "Fell Rebuke",
+          "entries": [
+            "当Vecna被攻击命中时，他发出一个邪恶的咒语，对攻击者造成10（{@damage 3d6}）点死灵伤害，并且Vecna连同他穿戴或携带的任何装备一起传送，至多30英尺到他能看到的未被占据的空间。"
+          ]
+        }
+      ],
+      "altArt": [
+        {
+          "name": "维克纳大巫妖（替代）",
+          "ENG_name": "Vecna the Archlich (Alt)",
+          "source": "VD"
+        }
+      ],
+      "traitTags": [
+        "传奇抗性",
+        "非凡本质"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "DR",
+        "E",
+        "I"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "L",
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "conditionInflict": [
+        "恐惧"
+      ],
+      "savingThrowForced": [
+        "体质"
+      ],
+      "savingThrowForcedSpell": [
+        "魅力",
+        "敏捷",
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
 }

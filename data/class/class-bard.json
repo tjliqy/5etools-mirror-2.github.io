@@ -62,23 +62,23 @@
       ],
       "additionalSpells": [
         {
-          "name": "need-translate-f60ae745-3206-11ef-ae1d-d1200322b32e",
+          "name": "魔法奥秘",
           "ENG_name": "Magical Secrets",
           "known": {
             "10": [
               {
-                "choose": "等级=0;1;2;3;4;5"
+                "choose": "level=0;1;2;3;4;5"
               },
               {
-                "choose": "等级=0;1;2;3;4;5"
+                "choose": "level=0;1;2;3;4;5"
               }
             ],
             "14": [
               {
-                "choose": "等级=0;1;2;3;4;5;6;7"
+                "choose": "level=0;1;2;3;4;5;6;7"
               },
               {
-                "choose": "等级=0;1;2;3;4;5;6;7"
+                "choose": "level=0;1;2;3;4;5;6;7"
               }
             ],
             "18": [
@@ -98,13 +98,13 @@
         ],
         "weapons": [
           "简单",
-          "{@item hand crossbow|phb|手弩}",
-          "{@item longsword|phb|长剑}",
-          "{@item rapier|phb|刺剑}",
-          "{@item shortsword|phb|短剑}"
+          "{@item 手弩|PHB|手弩}",
+          "{@item 长剑|PHB|长剑}",
+          "{@item 刺剑|PHB|细剑}",
+          "{@item 短剑|PHB|短剑}"
         ],
         "tools": [
-          "三种你所选择{@item 乐器|PHB}"
+          "三种你选择的{@item 乐器|PHB|乐器}"
         ],
         "toolProficiencies": [
           {
@@ -120,19 +120,19 @@
       "startingEquipment": {
         "additionalFromBackground": true,
         "default": [
-          "(a)一把{@item 刺剑|phb}, (b)一把{@item 长剑|phb}, 或 (c)任何一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}",
-          "(a)一套{@item 大使套装|phb} 或 (b)一套{@item 表演家套装|phb}",
-          "(a)一把{@item 鲁特琴|phb} 或 (b)任何一把其他{@filter 乐器|items|miscellaneous=mundane|type=instrument}",
-          "一件{@item 皮甲|phb}，以及一把{@item 匕首|phb}"
+          "(a) 一把{@item 刺剑|PHB}，(b) 一把{@item 长剑|PHB}，或 (c) 任何 {@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}",
+          "(a) 一个{@item 大使套组|PHB} 或者 (b) 一个{@item 艺人套组|PHB}",
+          "(a) 一把{@item 鲁特琴|PHB}或(b)任何其他{@filter 乐器|物品|杂项=平凡|类型=乐器}",
+          "{@item 皮甲|PHB}, 和一把 {@item 匕首|PHB}"
         ],
-        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
         "defaultData": [
           {
             "a": [
-              "细剑|PHB"
+              "刺剑|PHB"
             ],
             "b": [
-              "长剑"
+              "长剑|PHB"
             ],
             "c": [
               {
@@ -142,15 +142,15 @@
           },
           {
             "a": [
-              "外交官包|phb"
+              "大使套组|PHB"
             ],
             "b": [
-              "艺人包|phb"
+              "艺人套组|PHB"
             ]
           },
           {
             "a": [
-              "琵琶|PHB"
+              "鲁特琴|PHB"
             ],
             "b": [
               {
@@ -160,8 +160,8 @@
           },
           {
             "_": [
-              "皮甲|phb",
-              "匕首|phb"
+              "皮甲|PHB",
+              "匕首|PHB"
             ]
           }
         ]
@@ -178,31 +178,31 @@
             {
               "choose": {
                 "from": [
-                  "属性检定:运动",
-                  "属性检定:特技",
-                  "属性检定:巧手",
-                  "属性检定:隐匿",
-                  "属性检定:奥秘",
-                  "属性检定:历史",
-                  "属性检定:调查",
-                  "属性检定:自然",
-                  "属性检定:宗教",
-                  "属性检定:驯兽",
-                  "属性检定:洞悉",
-                  "属性检定:医药",
-                  "属性检定:察觉",
-                  "属性检定:求生",
-                  "属性检定:欺瞒",
-                  "属性检定:威吓",
-                  "属性检定:表演",
-                  "属性检定:游说"
+                  "运动",
+                  "特技",
+                  "巧手",
+                  "隐匿",
+                  "奥秘",
+                  "历史",
+                  "调查",
+                  "自然",
+                  "宗教",
+                  "驯兽",
+                  "洞悉",
+                  "医药",
+                  "察觉",
+                  "求生",
+                  "欺瞒",
+                  "威吓",
+                  "表演",
+                  "游说"
                 ],
                 "count": 1
               }
             }
           ],
           "tools": [
-            "三种你所选择{@item 乐器|PHB}"
+            "一件你自己选择的《玩家手册》中的{@item 乐器|PHB}"
           ],
           "toolProficiencies": [
             {
@@ -214,289 +214,369 @@
       "classTableGroups": [
         {
           "colLabels": [
-            "{@filter 已知戏法|spells|level=0|class=bard}",
-            "{@filter 已知法术|spells|class=bard}"
+            "{@filter 已知戏法|法术|level=0|职业=吟游诗人}",
+            "{@filter 已知法术|法术|职业=吟游诗人}"
           ],
           "rows": [
-            2,
-            4,
-            2,
-            5,
-            2,
-            6,
-            3,
-            7,
-            3,
-            8,
-            3,
-            9,
-            3,
-            10,
-            3,
-            11,
-            3,
-            12,
-            4,
-            14,
-            4,
-            15,
-            4,
-            15,
-            4,
-            16,
-            4,
-            18,
-            4,
-            19,
-            4,
-            19,
-            4,
-            20,
-            4,
-            22,
-            4,
-            22,
-            4,
-            22
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              3,
+              11
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              4,
+              14
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              4,
+              16
+            ],
+            [
+              4,
+              18
+            ],
+            [
+              4,
+              19
+            ],
+            [
+              4,
+              19
+            ],
+            [
+              4,
+              20
+            ],
+            [
+              4,
+              22
+            ],
+            [
+              4,
+              22
+            ],
+            [
+              4,
+              22
+            ]
           ]
         },
         {
-          "title": "法术位/每环",
+          "title": "每个法术等级的法术位",
           "colLabels": [
-            "{@filter 1环|spells|level=1|class=bard}",
-            "{@filter 2环|spells|level=2|class=bard}",
-            "{@filter 3环|spells|level=3|class=bard}",
-            "{@filter 4环|spells|level=4|class=bard}",
-            "{@filter 5环|spells|level=5|class=bard}",
-            "{@filter 6环|spells|level=6|class=bard}",
-            "{@filter 7环|spells|level=7|class=bard}",
-            "{@filter 8环|spells|level=8|class=bard}",
-            "{@filter 9环|spells|level=9|class=bard}"
+            "{@filter 第一|法术|level=1|职业=吟游诗人}",
+            "{@filter 第二|法术|level=2|职业=吟游诗人}",
+            "{@filter 第三|法术|level=3|职业=吟游诗人}",
+            "{@filter 第四|法术|level=4|职业=吟游诗人}",
+            "{@filter 第五|法术|level=5|职业=吟游诗人}",
+            "{@filter 第六|法术|level=6|职业=吟游诗人}",
+            "{@filter 第七|法术|level=7|职业=吟游诗人}",
+            "{@filter 第八|法术|level=8|职业=吟游诗人}",
+            "{@filter 第九|法术|level=9|职业=吟游诗人}"
           ],
           "rowsSpellProgression": [
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            1,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            1,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            2,
-            2,
-            1,
-            1
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
           ]
         }
       ],
       "classFeatures": [
-        "吟游灵感|吟游诗人||1",
+        "诗人激励|吟游诗人||1",
         "施法|吟游诗人||1",
         "万事通|吟游诗人||2",
         "安息之歌（d6）|吟游诗人||2",
-        "魔法灵感|吟游诗人||2|TCE",
+        "魔法激励|吟游诗人||2|TCE",
         {
           "classFeature": "吟游诗人学院|吟游诗人||3",
           "gainSubclassFeature": true
         },
-        "专长|吟游诗人||3",
+        "专精|吟游诗人||3",
         "属性值提升|吟游诗人||4",
-        "吟游诗人多样性|吟游诗人||4|TCE",
+        "替换诗歌|吟游诗人||4|TCE",
         "吟游诗人灵感（d8）|吟游诗人||5",
-        "灵感之源|吟游诗人||5",
-        "反制法术|吟游诗人||6",
+        "激励之源|吟游诗人||5",
+        "反迷惑|吟游诗人||6",
         {
-          "classFeature": "吟游诗人学院特性|吟游诗人||6",
+          "classFeature": "吟游学院能力|吟游诗人||6",
           "gainSubclassFeature": true
         },
         "属性值提升|吟游诗人||8",
-        "安息之歌（d8）|吟游诗人||9",
-        "吟游诗人灵感 (d10)|吟游诗人||10",
-        "专长|吟游诗人||10",
-        "魔法秘密|吟游诗人||10",
+        "纾压曲(d8)|吟游诗人||9",
+        "吟游激励(d10)|吟游诗人||10",
+        "专精|吟游诗人||10",
+        "魔法奥秘|吟游诗人||10",
         "属性值提升|吟游诗人||12",
-        "安息之曲（d10）|吟游诗人||13",
-        "魔法秘密|吟游诗人||14",
+        "纾压曲(d10)|吟游诗人||13",
+        "魔法奥秘|吟游诗人||14",
         {
-          "classFeature": "吟游诗人学院特性|吟游诗人||14",
+          "classFeature": "吟游学院能力|吟游诗人||14",
           "gainSubclassFeature": true
         },
-        "吟游灵感 (d12)|吟游诗人||15",
-        "能力值提升|吟游诗人||16",
-        "安息之曲（d12）|吟游诗人||17",
-        "魔法秘密|吟游诗人||18",
-        "能力值提升|吟游诗人||19",
-        "卓越灵感|吟游诗人||20"
+        "吟游激励(d12)|吟游诗人||15",
+        "属性值提升|吟游诗人||16",
+        "纾压曲(d12)|吟游诗人||17",
+        "魔法奥秘|吟游诗人||18",
+        "属性值提升|吟游诗人||19",
+        "先发激励|吟游诗人||20"
       ],
-      "subclassTitle": "吟游诗人:吟游诗人学院",
+      "subclassTitle": "吟游诗人学院",
       "hasFluff": true,
       "hasFluffImages": true
     }
@@ -513,24 +593,24 @@
       "srd": true,
       "additionalSpells": [
         {
-          "name": "逸闻学院:额外魔法奥秘",
+          "name": "额外魔法奥秘",
           "ENG_name": "Additional Magical Secrets",
           "known": {
             "6": [
               {
-                "choose": "等级=0;1;2;3"
+                "choose": "level=0;1;2;3"
               },
               {
-                "choose": "等级=0;1;2;3"
+                "choose": "level=0;1;2;3"
               }
             ]
           }
         }
       ],
       "subclassFeatures": [
-        "知识学院|吟游诗人||知识||3",
-        "额外魔法秘密|吟游诗人||知识||6",
-        "无双技艺|吟游诗人||知识||14"
+        "逸闻学院|吟游诗人||轶闻||3",
+        "额外魔法奥秘|吟游诗人||轶闻||6",
+        "超凡技艺|吟游诗人||轶闻||14"
       ]
     },
     {
@@ -543,8 +623,8 @@
       "page": 55,
       "subclassFeatures": [
         "勇气学院|吟游诗人||勇气||3",
-        "额外攻击|吟游诗人||英勇||6",
-        "战斗魔法|吟游诗人||英勇||14"
+        "额外攻击|吟游诗人||勇气||6",
+        "战斗魔法|吟游诗人||勇气||14"
       ]
     },
     {
@@ -565,9 +645,9 @@
         }
       ],
       "subclassFeatures": [
-        "魅力学院|吟游诗人||魅力|XGE|3",
-        "威严披风|吟游诗人||魅力||XGE|6",
-        "不屈威严|吟游诗人||魅力|XGE|14"
+        "迷惑学院|吟游诗人||迷惑|XGE|3",
+        "威严光环|吟游诗人||迷惑|XGE|6",
+        "绝对统御|吟游诗人||迷惑|XGE|14"
       ]
     },
     {
@@ -580,7 +660,7 @@
       "page": 15,
       "optionalfeatureProgression": [
         {
-          "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+          "name": "战斗风格",
           "ENG_name": "Fighting Style",
           "featureType": [
             "FS:B"
@@ -591,9 +671,9 @@
         }
       ],
       "subclassFeatures": [
-        "剑刃学院|吟游诗人||剑刃|XGE|3",
-        "额外攻击|吟游诗人||剑术|XGE|6",
-        "大师风采|吟游诗人||剑术||XGE|14"
+        "剑舞学院|吟游诗人||剑舞|XGE|3",
+        "额外攻击|吟游诗人||剑舞|XGE|6",
+        "剑舞大师|吟游诗人||剑舞|XGE|14"
       ],
       "hasFluffImages": true
     },
@@ -608,7 +688,7 @@
       "subclassFeatures": [
         "低语学院|吟游诗人||低语|XGE|3",
         "低语斗篷|吟游诗人||低语|XGE|6",
-        "暗影知识|吟游诗人||低语||XGE|14"
+        "阴暗学识|吟游诗人||低语|XGE|14"
       ],
       "hasFluffImages": true
     },
@@ -621,13 +701,13 @@
       "classSource": "PHB",
       "page": 36,
       "subclassFeatures": [
-        "道路学院|吟游诗人||道路|HWCS|3",
-        "最爱戏法|吟游诗人||道路|HWCS|6",
-        "改进戏法|吟游诗人||道路||HWCS|6",
-        "旅行者的诡计|吟游诗人||道路|HWCS|6",
-        "最爱戏法|吟游诗人||道路|低语学院|14",
-        "进阶戏法|吟游诗人||道路|HWCS|14",
-        "旅行者的诡计|吟游诗人||道路|HWCS|14"
+        "旅路学院|吟游诗人||道路|HWCS|3",
+        "招牌技艺|吟游诗人||道路|HWCS|6",
+        "精进技艺|吟游诗人||道路|HWCS|6",
+        "旅行者的技艺簿|吟游诗人||道路|HWCS|6",
+        "招牌技艺|吟游诗人||道路|HWCS|14",
+        "精进技艺|吟游诗人||道路|HWCS|14",
+        "旅行者的技艺簿|吟游诗人||道路|HWCS|14"
       ],
       "hasFluffImages": true
     },
@@ -640,9 +720,9 @@
       "classSource": "PHB",
       "page": 28,
       "subclassFeatures": [
-        "创造学院|吟游诗人||创造||TCE|3",
-        "活化表演|吟游诗人||创造|TCE|6",
-        "创意高潮|吟游诗人||创造|TCE|14"
+        "创造学院|吟游诗人||造物术|TCE|3",
+        "活化表演|吟游诗人||造物术|TCE|6",
+        "渐强创音|吟游诗人||造物术|TCE|14"
       ],
       "hasFluffImages": true
     },
@@ -662,9 +742,9 @@
       ],
       "subclassFeatures": [
         "雄辩学院|吟游诗人||雄辩|TCE|3",
-        "不竭灵感|吟游诗人||雄辩||TCE|6",
-        "通用语言|吟游诗人||雄辩|TCE|6",
-        "感染力灵感|吟游诗人||雄辩|TCE|14"
+        "不竭鼓舞|吟游诗人||雄辩|TCE|6",
+        "统一言说|吟游诗人||雄辩|TCE|6",
+        "传播鼓舞|吟游诗人||雄辩|TCE|14"
       ],
       "hasFluffImages": true
     },
@@ -680,15 +760,15 @@
         {
           "known": {
             "3": [
-              "#c指引"
+              "神导术#c"
             ]
           }
         }
       ],
       "subclassFeatures": [
-        "灵魄学院|吟游诗人||灵魄|VRGR|3",
-        "灵魂会话|吟游诗人||灵体||VRGR|6",
-        "神秘联系|吟游诗人||精灵|VRGR|14"
+        "灵魂学院|吟游诗人||灵魂|VRGR|3",
+        "精魂集会|吟游诗人||灵魂|VRGR|6",
+        "神秘连接|吟游诗人||灵魂|VRGR|14"
       ],
       "hasFluffImages": true
     },
@@ -703,16 +783,16 @@
       "subclassFeatures": [
         "悲剧学院|吟游诗人|PHB|悲剧|TDCSR|3",
         "傲慢的故事|吟游诗人|PHB|悲剧|TDCSR|6",
-        "即将到来的不幸|吟游诗人|PHB|悲剧|TDCSR|6",
-        "傲慢故事（14级）|吟游诗人|PHB|悲剧|TDCSR|14",
-        "悲情光环|吟游诗人|PHB|悲剧|TDCSR|14"
+        "临头厄运|吟游诗人|PHB|悲剧|TDCSR|6",
+        "傲慢的故事 (14级)|吟游诗人|PHB|悲剧|TDCSR|14",
+        "悲怆光轮|吟游诗人|PHB|悲剧|TDCSR|14"
       ],
       "hasFluffImages": true
     }
   ],
   "classFeature": [
     {
-      "name": "吟游诗人:诗人激励",
+      "name": "诗人激励",
       "ENG_name": "Bardic Inspiration",
       "source": "PHB",
       "page": 51,
@@ -721,10 +801,10 @@
       "classSource": "PHB",
       "level": 1,
       "entries": [
-        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a {@dice d6}.",
-        "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the {@dice d20} before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "你可以通过激动人心的话语或音乐激励他人。为此，在你的回合上使用一个奖励动作，选择一个60英尺内能听到你的生物（除了你自己）。那个生物获得一个吟游诗人灵感骰，一个{@dice d6}。",
+        "在接下来的10分钟内，生物可以掷骰并将其掷出的数字加到它进行的一项能力检定、攻击检定或豁免检定上。生物可以等到掷出{@dice d20}之后再决定是否使用吟游灵感骰，但必须在DM宣布该检定成功或失败之前决定。一旦掷出吟游灵感骰，它就失去了。一个生物一次只能拥有一个吟游灵感骰。",
         "你可以使用这个特性的次数等于你的魅力调整值（最少一次）。当你完成一次长休息后，你恢复所有已消耗的使用次数。",
-        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a {@dice d8} at 5th level, a {@dice d10} at 10th level, and a {@dice d12} at 15th level."
+        "当你达到这个职业的特定等级时，你的吟游诗人灵感骰会发生变化。在5级时变为{@dice d8}，在10级时变为{@dice d10}，在15级时变为{@dice d12}。"
       ]
     },
     {
@@ -737,7 +817,7 @@
       "classSource": "PHB",
       "level": 1,
       "entries": [
-        "你已经学会解开并重塑现实的结构，使之与你的愿望和音乐和谐一致。你的法术是你庞大曲目的一部分，你可以根据不同情况调整魔法。参见{@book 第10章|PHB|10}了解施法的一般规则，以及{@book 第11章|PHB|11}了解{@filter 吟游诗人法术列表|spells|class=bard}。",
+        "你已经学会解开并重塑现实的结构，使之与你的愿望和音乐和谐一致。你的法术是你庞大曲目的一部分，你可以根据不同情况调整魔法。参见{@book 第十章|PHB|10}了解施法的一般规则，以及{@book 第十一章|PHB|11}了解{@filter 吟游诗人法术列表|法术|职业=吟游诗人}。",
         {
           "type": "entries",
           "name": "戏法",
@@ -748,11 +828,11 @@
         },
         {
           "type": "entries",
-          "name": "术士:施法能力",
+          "name": "施法能力",
           "ENG_name": "Spell Slots",
           "entries": [
-            "吟游诗人表格显示了你拥有多少法术位来施放1级及更高级别的{@filter 吟游诗人法术|spells|class=bard}。要施放这些法术中的一个，你必须消耗一个法术位，其等级必须等于或高于该法术的等级。当你完成一次长休息后，你将恢复所有消耗的法术位。",
-            "例如，如果你知道1级法术{@spell cure wounds}并且有一个1级和一个2级法术位可用，你可以使用任一法术位施放{@spell cure wounds}。"
+            "吟游诗人表格显示了你拥有多少法术位来施放1级及更高级别的{@filter 吟游诗人法术|法术|职业=吟游诗人}。要施放这些法术中的一个，你必须消耗一个法术位，其等级必须等于或高于该法术的等级。当你完成一次长休息后，你将恢复所有消耗的法术位。",
+            "例如，如果你知道1级法术{@spell 治疗伤势}并且有一个1级和一个2级法术位可用，你可以使用任一法术位施放{@spell 治疗伤势}。"
           ]
         },
         {
@@ -799,7 +879,7 @@
         },
         {
           "type": "entries",
-          "name": "游侠:法器",
+          "name": "法器",
           "ENG_name": "Spellcasting Focus",
           "entries": [
             "你可以使用一个{@item 乐器|PHB}作为施放吟游诗人法术的法术焦点。"
@@ -808,7 +888,7 @@
       ]
     },
     {
-      "name": "吟游诗人:万事通",
+      "name": "万事通",
       "ENG_name": "Jack of All Trades",
       "source": "PHB",
       "page": 51,
@@ -821,7 +901,7 @@
       ]
     },
     {
-      "name": "吟游诗人:魔法激励",
+      "name": "魔法激励",
       "ENG_name": "Magical Inspiration",
       "source": "TCE",
       "page": 27,
@@ -844,12 +924,12 @@
       "classSource": "PHB",
       "level": 2,
       "entries": [
-        "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points by spending Hit Dice at the end of the short rest, each of those creatures regains an extra {@dice 1d6} hit points.",
-        "The extra hit points increase when you reach certain levels in this class: to {@dice 1d8} at 9th level, to {@dice 1d10} at 13th level, and to {@dice 1d12} at 17th level."
+        "从2级开始，你可以使用舒缓的音乐或演讲来帮助在短暂休息期间恢复你受伤的盟友。如果你或任何能够听到你表演的友好生物在短暂休息结束时通过消耗生命骰来恢复生命值，每个这样的生物将额外恢复{@dice 1d6}生命值。",
+        "当你达到这个职业的特定等级时，额外的生命值会增加：在9级时增加到{@dice 1d8}，在13级时增加到{@dice 1d10}，在17级时增加到{@dice 1d12}。"
       ]
     },
     {
-      "name": "吟游诗人:吟游诗人学院",
+      "name": "吟游诗人学院",
       "ENG_name": "Bard College",
       "source": "PHB",
       "page": 51,
@@ -862,7 +942,7 @@
       ]
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "page": 51,
@@ -886,11 +966,11 @@
       "level": 4,
       "entries": [
         "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
-      "name": "吟游诗人:替换诗歌",
+      "name": "替换诗歌",
       "ENG_name": "Bardic Versatility",
       "source": "TCE",
       "page": 27,
@@ -920,11 +1000,11 @@
       "classSource": "PHB",
       "level": 5,
       "entries": [
-        "At 5th level, your Bardic Inspiration die changes to a {@dice d8}."
+        "当你达到5级时，你的吟游者灵感骰变为一个{@dice d8}。"
       ]
     },
     {
-      "name": "吟游诗人:激励之源",
+      "name": "激励之源",
       "ENG_name": "Font of Inspiration",
       "source": "PHB",
       "page": 51,
@@ -950,7 +1030,7 @@
       ]
     },
     {
-      "name": "吟游诗人:反迷惑",
+      "name": "反迷惑",
       "ENG_name": "Countercharm",
       "source": "PHB",
       "page": 51,
@@ -959,7 +1039,7 @@
       "classSource": "PHB",
       "level": 6,
       "entries": [
-        "在6级时，你获得了使用音乐音符或力量之词来干扰影响心智的效果的能力。作为一个行动，你可以开始一场表演，该表演持续到你的下一个回合结束。在这段时间里，你和任何在你30英尺范围内的友方生物在对抗被{@condition frightened}（惊恐）或{@condition charmed}（魅惑）的豁免投掷上具有优势。一个生物必须能够听到你才能获得这个好处。如果你被{@condition incapacitated}（失去能力）或被沉默，或者你自愿提前结束表演（无需动作），表演就会提前结束。"
+        "在6级时，你获得了使用音乐音符或力量之词来干扰影响心智的效果的能力。作为一个行动，你可以开始一场表演，该表演持续到你的下一个回合结束。在这段时间里，你和任何在你30英尺范围内的友方生物在对抗被{@condition 恐惧}（惊恐）或{@condition 魅惑}（魅惑）的豁免投掷上具有优势。一个生物必须能够听到你才能获得这个好处。如果你被{@condition 无力}（失去能力）或被沉默，或者你自愿提前结束表演（无需动作），表演就会提前结束。"
       ]
     },
     {
@@ -973,7 +1053,7 @@
       "level": 8,
       "entries": [
         "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -986,7 +1066,7 @@
       "classSource": "PHB",
       "level": 9,
       "entries": [
-        "At 9th level, the extra hit points gained from Song of Rest increases to {@dice 1d8}."
+        "在9级时，从安息之歌获得的额外生命值增加到{@dice 1d8}。"
       ]
     },
     {
@@ -999,11 +1079,11 @@
       "classSource": "PHB",
       "level": 10,
       "entries": [
-        "At 10th level, your Bardic Inspiration die changes to a {@dice d10}."
+        "在10级时，你的吟游诗人灵感骰变为{@dice d10}。"
       ]
     },
     {
-      "name": "吟游诗人:专精",
+      "name": "专精",
       "ENG_name": "Expertise",
       "source": "PHB",
       "page": 51,
@@ -1016,7 +1096,7 @@
       ]
     },
     {
-      "name": "need-translate-bcd11be9-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "魔法奥秘",
       "ENG_name": "Magical Secrets",
       "source": "PHB",
       "page": 51,
@@ -1041,7 +1121,7 @@
       "level": 12,
       "entries": [
         "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -1054,7 +1134,7 @@
       "classSource": "PHB",
       "level": 13,
       "entries": [
-        "At 13th level, the extra hit points gained from Song of Rest increases to {@dice 1d10}."
+        "在13级时，由安息之歌获得的额外生命值增加到{@dice 1d10}。"
       ]
     },
     {
@@ -1071,7 +1151,7 @@
       ]
     },
     {
-      "name": "need-translate-bcd11be9-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "魔法奥秘",
       "ENG_name": "Magical Secrets",
       "source": "PHB",
       "page": 51,
@@ -1094,7 +1174,7 @@
       "classSource": "PHB",
       "level": 15,
       "entries": [
-        "At 15th level, your Bardic Inspiration die changes to a {@dice d12}."
+        "在15级时，你的吟游诗人灵感骰变为一个{@dice d12}。"
       ]
     },
     {
@@ -1108,7 +1188,7 @@
       "level": 16,
       "entries": [
         "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -1121,11 +1201,11 @@
       "classSource": "PHB",
       "level": 17,
       "entries": [
-        "At 17th level, the extra hit points gained from Song of Rest increases to {@dice 1d12}."
+        "在17级时，通过休息之歌获得的额外生命值增加到{@dice 1d12}。"
       ]
     },
     {
-      "name": "need-translate-bcd11be9-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "魔法奥秘",
       "ENG_name": "Magical Secrets",
       "source": "PHB",
       "page": 51,
@@ -1149,11 +1229,11 @@
       "level": 19,
       "entries": [
         "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
-      "name": "吟游诗人:先发激励",
+      "name": "先发激励",
       "ENG_name": "Superior Inspiration",
       "source": "PHB",
       "page": 51,
@@ -1181,16 +1261,16 @@
         "并非官方认可的学院，道路学院代表了吟游诗人在旅途中个人和多样化的技能、知识和技巧。作为天生的多面手，吟游诗人在战斗、魔法以及一般知识方面拥有多种才能，使他们特别适合学习各种不同的技能。通常在旅行中，吟游诗人会与一群杂七杂八的流浪冒险者共享篝火，他们可能会为了一首活泼的歌曲或一个讲得好的故事而传授宝贵的教训。与其他吟游诗人学院的学生相比，道路学院的吟游诗人需要一种特殊的感性。这个学院的吟游诗人能多有效地应用他们所学到的东西，取决于他们的理解和洞察力。道路学院有时是一个严酷的老师，但追随这条道路的吟游诗人往往会发现自己得到了一系列有用的技巧和策略。那些低估了来自道路学院的吟游诗人的人很快就会发现，这些“毕业生”充满了惊喜。",
         {
           "type": "entries",
-          "name": "剑舞学院:附赠熟练项",
+          "name": "附赠熟练项",
           "ENG_name": "Bonus Proficiencies",
           "entries": [
             "当你在3级时加入道路学院时，你获得了一些在旅途中积累的有用的熟练技能。从以下选项中选择三个（每个选项只能选择一次）：",
             {
               "type": "list",
               "items": [
-                "你获得了选择的{@filter 游戏套装|items|source=phb|miscellaneous=mundane|type=gaming set}的熟练度。",
-                "你选择一种{@filter 军用武器|items|source=phb|category=basic|type=martial weapon;melee weapon=u~u~sand}，获得对该武器的熟练度",
-                "你对{@item 草药工具包|phb|草药工具包}变得熟练",
+                "你获得了选择的{@filter 赌具|物品|来源=phb|杂项=平凡|类型=游戏套装}的熟练度。",
+                "你选择一种{@filter 军用武器|物品|来源=phb|类别=基础|类型=军用武器；近战武器=u~u~沙}，获得对该武器的熟练度",
+                "你对{@item 草药工具|PHB|草药工具包}变得熟练",
                 "你对{@item 盗贼工具|PHB}变得熟练",
                 "你获得了选择的一项技能的熟练度",
                 "你可以选择学习两种语言"
@@ -1200,15 +1280,15 @@
         },
         {
           "type": "entries",
-          "name": "旅路学院:流浪者的逸闻录",
+          "name": "流浪者的逸闻录",
           "ENG_name": "Wanderer's Lore",
           "entries": [
-            "在3级时，你可以分享你在旅行中遇到的任何有用的信息片段，帮助他人从新的角度看待问题。当一个生物获得了你赋予的吟游诗人灵感骰时，他们可以进行一次优势检定的{@skill 奥术}、{@skill 历史}、{@skill 自然}或{@skill 宗教}检定。生物可以选择是否将吟游诗人灵感骰加到这次掷骰上。"
+            "在3级时，你可以分享你在旅行中遇到的任何有用的信息片段，帮助他人从新的角度看待问题。当一个生物获得了你赋予的吟游诗人灵感骰时，他们可以进行一次优势检定的{@skill 奥秘}、{@skill 历史}、{@skill 自然}或{@skill 宗教}检定。生物可以选择是否将吟游诗人灵感骰加到这次掷骰上。"
           ]
         },
         {
           "type": "entries",
-          "name": "旅路学院:旅行者的技艺簿",
+          "name": "旅行者的技艺簿",
           "ENG_name": "Traveler's Tricks",
           "entries": [
             "在3级时，你已经从你在路上的生活中拥有了一些难忘的经历。你选择学习两个旅行者的小花招（见旅行者小花招选项）。",
@@ -1228,7 +1308,7 @@
               "entries": [
                 {
                   "type": "entries",
-                  "name": "旅者技艺:反射闪避教程",
+                  "name": "反射闪避教程",
                   "ENG_name": "Acrobatics Lessons",
                   "entries": [
                     "一个狡猾的盗贼曾经给你一些关于曲折移动的指点。当你或你的盟友进行敏捷豁免检定时，你可以消耗一次你的吟游诗人灵感，掷一个吟游诗人灵感骰并将结果加到豁免检定上。盟友必须在你60英尺范围内，并且能够看到你和听到你，才能从这个技巧中受益。",
@@ -1238,7 +1318,7 @@
                 },
                 {
                   "type": "entries",
-                  "name": "旅者技艺:武器运用教程",
+                  "name": "武器运用教程",
                   "ENG_name": "Armed Combat Lessons",
                   "entries": [
                     "一位经验丰富的战士教会了你如何使用简单的战斗姿势来更有效地使用你的武器。当你选择这个选项时，从以下{@b 战斗风格}中选择：",
@@ -1258,7 +1338,7 @@
                 },
                 {
                   "type": "entries",
-                  "name": "旅者技艺:伤口包扎术",
+                  "name": "伤口包扎术",
                   "ENG_name": "Bind the Wound",
                   "entries": [
                     "一位经验丰富的圣武士教授了你战斗急救的基础知识。当你或你的盟友在你5英尺范围内接受任何类型的治疗时，你可以使用你的反应来消耗一次你的吟游诗人灵感的使用次数，并提供额外的治疗，等于吟游诗人灵感骰子点数加上你的智慧调整值（最少为1）。你必须至少有一只手空闲才能迅速止血。",
@@ -1268,11 +1348,11 @@
                 },
                 {
                   "type": "entries",
-                  "name": "旅者技艺:拳击教程",
+                  "name": "拳击教程",
                   "ENG_name": "Boxing Lessons",
                   "entries": [
                     "一位明智的武僧乐于分享直拳和闪避的基本形式。当你采取{@action 攻击}动作时，你可以消耗一次你的吟游诗人灵感来快速对一个或多个你可以攻击的生物执行两次徒手打击。你可以使用敏捷代替力量来进行这些徒手打击的攻击和伤害掷骰。这些徒手打击使用的伤害骰与你的吟游诗人灵感骰相同。",
-                    "在6级时，你已经完全掌握了你的技巧中的“编织”部分。在这个回合中，你不会引发{@action 机会攻击|phb|机会攻击}。",
+                    "在6级时，你已经完全掌握了你的技巧中的“编织”部分。在这个回合中，你不会引发{@action 借机攻击|PHB|反击攻击}。",
                     "在14级时，你的练习得到了回报，赋予你使用稍微带有气劲的攻击的能力。当你用这些攻击之一命中目标时，你可以尝试进行一次震撼打击。目标必须成功进行一次体质豁免投掷，否则直到你的下一个回合结束时将处于昏迷状态。"
                   ]
                 },
@@ -1283,7 +1363,7 @@
                   "entries": [
                     "一位耐心的德鲁伊与你分享了森林魔法的秘密。你可以消耗一次吟游诗人灵感的使用次数作为动作，在你能看见的60英尺内未被占据的空间中召唤出一个森林守护灵。守护灵体型为大型，呈现出一个幽灵般的食肉动物形象。任何敌人进入或离开守护灵相邻的空间时，必须进行一次智慧豁免，失败则受到等于你的吟游诗人灵感骰子点数的魔法斩击伤害。只要你集中注意力，守护灵将一直存在，最长可达10分钟。",
                     "在6级时，你与守护灵的联系变得更加深厚。任何被你的守护灵造成伤害的生物，在本回合剩余时间内其速度减少至0。",
-                    "在14级时，任何大型或更小的生物，如果其速度被守护灵降至0，则在您保持专注的情况下将被限制行动，因为您的守护灵将其固定在原位。目标可以通过采取行动进行力量（{@skill Athletics}）检定，对抗您的旅行者诡计豁免DC，来挣脱束缚。"
+                    "在14级时，任何大型或更小的生物，如果其速度被守护灵降至0，则在您保持专注的情况下将被限制行动，因为您的守护灵将其固定在原位。目标可以通过采取行动进行力量（{@skill 运动}）检定，对抗您的旅行者诡计豁免DC，来挣脱束缚。"
                   ]
                 },
                 {
@@ -1291,7 +1371,7 @@
                   "name": "黑暗交易*",
                   "ENG_name": "Dark Bargain*",
                   "entries": [
-                    "你与一个憔悴的术士达成了一个阴暗的交易。当你选择这个选项时，从术士的类特性列表中选择一个{@filter 恶魔低语|optionalfeatures|type=EI}，你满足其先决条件。你可以消耗一次你的吟游诗人灵感来获得这个黑暗恶魔低语的好处，持续10分钟。这样做需要你掷你的吟游诗人灵感骰，并承受等于掷骰结果的死灵伤害。",
+                    "你与一个憔悴的术士达成了一个阴暗的交易。当你选择这个选项时，从术士的类特性列表中选择一个{@filter 奥术祈唤|可选特性|type=EI}，你满足其先决条件。你可以消耗一次你的吟游诗人灵感来获得这个黑暗恶魔低语的好处，持续10分钟。这样做需要你掷你的吟游诗人灵感骰，并承受等于掷骰结果的死灵伤害。",
                     "在6级时，你已经学会了如何加深你与曾经遇到的术士之间的契约。你可以选择承受双倍的死灵伤害，以使效果持续1小时。",
                     "在14级时，你与术士的契约解锁了令人恐惧的新力量。当你达到14级时，从术士的法术列表中选择一个7级或更低级别的单个法术。在这个效果下，你可以在不消耗任何法术位的情况下施展这个法术一次，尽管你必须以你最高法术位的等级来施展它。作为交换，这个法术对你造成额外的死灵伤害，等于施法等级的两倍。"
                   ]
@@ -1318,7 +1398,7 @@
                 },
                 {
                   "type": "entries",
-                  "name": "旅者技艺:鲁莽战术",
+                  "name": "鲁莽战术",
                   "ENG_name": "Reckless Tactics",
                   "entries": [
                     "你从一位坚韧的野蛮人那里学到了有时你必须不顾一切地冲入战斗。当你使用具有重武器、双手武器或多功能特性的近战武器进行攻击时，你可以消耗一次吟游诗人灵感的使用次数来获得攻击优势。将你的吟游诗人灵感骰子点数加上你的智慧调整值（最少为1）加到攻击的伤害骰上。这一轮内对你进行的攻击有优势。",
@@ -1343,7 +1423,7 @@
       ]
     },
     {
-      "name": "旅路学院:招牌技艺",
+      "name": "招牌技艺",
       "ENG_name": "Favorite Trick",
       "source": "HWCS",
       "page": 36,
@@ -1358,7 +1438,7 @@
       ]
     },
     {
-      "name": "旅路学院:精进技艺",
+      "name": "精进技艺",
       "ENG_name": "Improved Tricks",
       "source": "HWCS",
       "page": 36,
@@ -1373,7 +1453,7 @@
       ]
     },
     {
-      "name": "旅路学院:旅行者的技艺簿",
+      "name": "旅行者的技艺簿",
       "ENG_name": "Traveler's Tricks",
       "source": "HWCS",
       "page": 36,
@@ -1388,7 +1468,7 @@
       ]
     },
     {
-      "name": "旅路学院:招牌技艺",
+      "name": "招牌技艺",
       "ENG_name": "Favorite Trick",
       "source": "HWCS",
       "page": 36,
@@ -1403,7 +1483,7 @@
       ]
     },
     {
-      "name": "旅路学院:精进技艺",
+      "name": "精进技艺",
       "ENG_name": "Improved Tricks",
       "source": "HWCS",
       "page": 36,
@@ -1418,7 +1498,7 @@
       ]
     },
     {
-      "name": "旅路学院:旅行者的技艺簿",
+      "name": "旅行者的技艺簿",
       "ENG_name": "Traveler's Tricks",
       "source": "HWCS",
       "page": 36,
@@ -1449,16 +1529,16 @@
         "该学院的成员聚集在图书馆中，有时也聚集在真正的学院里，配备有教室和宿舍，彼此分享他们的知识。他们还会在节日或国家事务中会面，在那里他们可以揭露腐败，解开谎言，并取笑那些自视甚高的人物。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外熟练度|吟游诗人||知识||3"
+          "subclassFeature": "附赠熟练项|吟游诗人||轶闻||3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "刻薄言辞|吟游诗人||知识||3"
+          "subclassFeature": "语出惊人|吟游诗人||轶闻||3"
         }
       ]
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "page": 54,
@@ -1474,7 +1554,7 @@
       ]
     },
     {
-      "name": "逸闻学院:语出惊人",
+      "name": "语出惊人",
       "ENG_name": "Cutting Words",
       "source": "PHB",
       "page": 54,
@@ -1490,7 +1570,7 @@
       ]
     },
     {
-      "name": "逸闻学院:额外魔法奥秘",
+      "name": "额外魔法奥秘",
       "ENG_name": "Additional Magical Secrets",
       "source": "PHB",
       "page": 54,
@@ -1506,7 +1586,7 @@
       ]
     },
     {
-      "name": "逸闻学院:超凡技艺",
+      "name": "超凡技艺",
       "ENG_name": "Peerless Skill",
       "source": "PHB",
       "page": 54,
@@ -1535,16 +1615,16 @@
         "勇气学院的吟游诗人是勇敢的吟游诗人，他们的故事让过去伟大英雄的记忆得以延续，从而激励新一代的英雄。这些吟游诗人聚集在蜜酒大厅或巨大的篝火旁，歌唱着伟大人物的事迹，无论是过去还是现在。他们游历四方，亲眼见证重大事件，并确保这些事件的记忆不会从世界上消失。通过他们的歌声，他们激励他人达到与古代英雄同样的成就高度。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外熟练度|吟游诗人||勇气||3"
+          "subclassFeature": "附赠熟练项|吟游诗人||勇气||3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "战斗灵感|吟游诗人||勇气||3"
+          "subclassFeature": "战斗激励|吟游诗人||勇气||3"
         }
       ]
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "PHB",
       "page": 55,
@@ -1559,7 +1639,7 @@
       ]
     },
     {
-      "name": "勇气学院:战斗激励",
+      "name": "战斗激励",
       "ENG_name": "Combat Inspiration",
       "source": "PHB",
       "page": 55,
@@ -1589,7 +1669,7 @@
       ]
     },
     {
-      "name": "勇气学院:战斗魔法",
+      "name": "战斗魔法",
       "ENG_name": "Battle Magic",
       "source": "PHB",
       "page": 55,
@@ -1619,16 +1699,16 @@
         "矮人和侏儒经常鼓励他们的吟游诗人成为创世之歌的学生。在龙裔中，创世之歌受到崇敬，因为传说中巴哈姆特和提亚马特——最伟大的龙——是这首歌的最初歌唱者之一。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "潜能微粒|吟游诗人||创造||TCE|3"
+          "subclassFeature": "潜能微尘|吟游诗人||造物术|TCE|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "创造表演|吟游诗人||创造|TCE|3"
+          "subclassFeature": "造物表演|吟游诗人||造物术|TCE|3"
         }
       ]
     },
     {
-      "name": "创造学院:潜能微尘",
+      "name": "潜能微尘",
       "ENG_name": "Mote of Potential",
       "source": "TCE",
       "page": 27,
@@ -1639,7 +1719,7 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 三级创造学院特性}",
+        "{@i 3级创造学院特性}",
         "每当你给一个生物一个吟游灵感骰时，你可以从创造之歌中发出一个音符，以创造一个微小的潜能光点，它在那个生物周围5英尺内环绕。这个光点是无形的且无敌的，并且它会持续存在直到吟游灵感骰被用掉。这个光点看起来像一个音符、一颗星星、一朵花，或者你选择的另一个艺术或生命的象征。",
         "当生物使用吟游诗人灵感骰时，微粒根据骰子是否用于能力检定、攻击检定或豁免检定，提供额外效果，具体如下：",
         {
@@ -1669,7 +1749,7 @@
       ]
     },
     {
-      "name": "创造学院:造物表演",
+      "name": "造物表演",
       "ENG_name": "Performance of Creation",
       "source": "TCE",
       "page": 27,
@@ -1680,14 +1760,14 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 三级创造学院特性}",
+        "{@i 3级创造学院特性}",
         "作为行动，你可以引导创造之歌的魔法，在距离你10英尺范围内的未被占据空间中，创造出你选择的一个非魔法物品。物品必须出现在可以支撑它的表面上或液体中。物品的金币价值不能超过你吟游诗人等级的20倍，并且物品必须是中等大小或更小。物品柔和地闪烁着微光，当生物触摸它时，可以隐约听到音乐。创造的物品在你熟练加值相等的小时数后消失。关于你可以创造的物品示例，请参见《玩家手册》中的装备章节。",
         "一旦你使用这个特性创建了一个物品，在你完成一次长时间休息之前不能再次这么做，除非你消耗一个2级或更高等级的法术位来再次使用这个特性。你一次只能有一个由这个特性创建的物品；如果你使用这个动作并且已经拥有一个这个特性的物品，第一个物品会立即消失。",
         "当你达到6级（大型）和14级（巨型）时，你可以使用这个特性创造的物品大小增加了一个尺寸类别。"
       ]
     },
     {
-      "name": "创造学院:活化表演",
+      "name": "活化表演",
       "ENG_name": "Animating Performance",
       "source": "TCE",
       "page": 27,
@@ -1699,14 +1779,14 @@
       "header": 2,
       "entries": [
         "{@i 6级创造学院特性}",
-        "作为一个动作，你可以激活距离你30英尺内的一个大型或更小的非魔法物品，该物品没有被穿戴或携带。活化的物品使用{@creature 舞动物品|TCE}的统计数据块，它使用你的熟练加值（PB）。这个物品对你和你的同伴是友好的，并服从你的命令。它存活1小时，直到它的生命值降至0点，或者直到你死亡。",
-        "在战斗中，该物品共享你的先攻数值，但它在你的回合之后立即行动。它可以自行移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 闪避}动作，除非你在你的回合上使用额外动作命令它采取其他动作。那个动作可以是在其属性块中的一个，或者是其他某个动作。如果你被{@condition 失去能力}，该物品可以采取任何它选择的动作，而不仅仅是{@action 闪避}。",
+        "作为一个动作，你可以激活距离你30英尺内的一个大型或更小的非魔法物品，该物品没有被穿戴或携带。活化的物品使用{@creature 舞空物品|TCE}的统计数据块，它使用你的熟练加值（PB）。这个物品对你和你的同伴是友好的，并服从你的命令。它存活1小时，直到它的生命值降至0点，或者直到你死亡。",
+        "在战斗中，该物品共享你的先攻数值，但它在你的回合之后立即行动。它可以自行移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 回避}动作，除非你在你的回合上使用额外动作命令它采取其他动作。那个动作可以是在其属性块中的一个，或者是其他某个动作。如果你被{@condition 无力}，该物品可以采取任何它选择的动作，而不仅仅是{@action 回避}。",
         "当你使用你的吟游灵感特性时，你可以在用于吟游灵感的同一奖励动作中指挥物品。",
-        "一旦你使用这个特性使物品活化，直到你完成一次长休息之前，你不能再这么做，除非你消耗一个3级或更高级别的法术位来再次使用这个特性。你一次只能有一个由这个特性活化的物品；如果你使用这个动作，并且已经有来自这个特性的{@creature 跳舞物品|TCE}，那么第一个立即变得不再活化。"
+        "一旦你使用这个特性使物品活化，直到你完成一次长休息之前，你不能再这么做，除非你消耗一个3级或更高级别的法术位来再次使用这个特性。你一次只能有一个由这个特性活化的物品；如果你使用这个动作，并且已经有来自这个特性的{@creature 舞空物品|TCE}，那么第一个立即变得不再活化。"
       ]
     },
     {
-      "name": "创造学院:渐强创音",
+      "name": "渐强创音",
       "ENG_name": "Creative Crescendo",
       "source": "TCE",
       "page": 27,
@@ -1736,7 +1816,7 @@
         "雄辩学院的信徒精通演讲艺术。说服被视为一种高尚的艺术，一个理由充分、言辞得体的论点往往比事实更有说服力。这些吟游诗人运用逻辑和戏剧性的文字游戏，用逻辑论证赢得怀疑者和反对者的支持，并触动听众的情感，以情感诉求吸引观众。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "银舌|吟游诗人||雄辩|TCE|3"
+          "subclassFeature": "巧舌如簧|吟游诗人||雄辩|TCE|3"
         },
         {
           "type": "refSubclassFeature",
@@ -1756,8 +1836,8 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 3级雄辩学院特性}",
-        "You are a master at saying the right thing at the right time. When you make a Charisma ({@skill Persuasion}) or Charisma ({@skill Deception}) check, you can treat a {@dice d20} roll of 9 or lower as a 10."
+        "{@i 第三级雄辩学院特性}",
+        "你擅长在正确的时间说出正确的话。当你进行魅力（说服）或魅力（欺骗）检定时，你可以将9或更低的{@dice d20}掷骰结果视为10。"
       ]
     },
     {
@@ -1772,7 +1852,7 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 3级雄辩学院特性}",
+        "{@i 第三级雄辩学院特性}",
         "你可以编织带有魔法的话语，扰乱一个生物并使其怀疑自己。作为奖励行动，你可以消耗一次你的吟游诗人灵感，并选择一个你60英尺内可以看到的生物。掷出吟游诗人灵感骰。生物必须在下一个回合开始前从下一次豁免检定中减去掷出的数字。"
       ]
     },
@@ -1821,7 +1901,7 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "{\"i\"：\"14级雄辩学院特性\"}",
+        "{@i 14级雄辩学院特性}",
         "当你成功激励某人时，你的雄辩力量现在可以传播到另一个人身上。当一个生物在你60英尺范围内添加你的吟游灵感骰到它的能力检定、攻击骰或豁免骰，并且骰子成功时，你可以使用你的反应来鼓励一个不同的生物（除了你自己），这个生物可以听到你在60英尺范围内，给它一个吟游灵感骰而不消耗你的吟游灵感使用次数。",
         "你可以使用这个反应的次数等于你的魅力调整值（最少一次），当你完成一次长休息后，你将恢复所有已消耗的使用次数。"
       ]
@@ -1840,16 +1920,16 @@
         "并非所有宏伟的故事都以胜利告终。许多故事以死亡和绝望结束，而悲剧学院的吟游诗人知道，悲伤和哀痛与喜悦和快乐一样，同样具有强大的力量。这些吟游诗人专门研究悲剧故事讲述的力量，将文字和法术编织在一起，产生戏剧性和毁灭性的效果。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "苦难中的诗篇|吟游诗人|PHB|悲剧|TDCSR|3"
+          "subclassFeature": "惨中取意|吟游诗人|PHB|悲剧|TDCSR|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "悲哀命运|吟游诗人|PHB|悲剧|TDCSR|3"
+          "subclassFeature": "多舛命运|吟游诗人|PHB|悲剧|TDCSR|3"
         }
       ]
     },
     {
-      "name": "悲剧学院:惨中取意",
+      "name": "惨中取意",
       "ENG_name": "Poetry in Misery",
       "source": "TDCSR",
       "page": 167,
@@ -1860,11 +1940,11 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "When you join the College of Tragedy at 3rd level, you learn to harness the beauty in failure, finding inspiration in even the direst twists of fate. Whenever you or an ally within 30 feet of you rolls a 1 on the {@dice d20} for an attack roll, an ability check, or a {@quickref saving throws|PHB|2|1|saving throw}, you can use your reaction to soliloquize and regain one expended use of your Bardic Inspiration feature."
+        "当你在3级时加入悲剧学院，你学会在失败中发现美，即使在命运的最糟糕转折中也能找到灵感。每当你或你30英尺范围内的盟友在进行攻击检定、技能检定或{@quickref 豁免检定|PHB|2|1|豁免检定}时掷出1点在{@quickref 豁免检定|PHB|2|1|豁免检定}上，你可以使用你的反应来独白并恢复你消耗掉的一次诗人灵感特性的使用。"
       ]
     },
     {
-      "name": "悲剧学院:多舛命运",
+      "name": "多舛命运",
       "ENG_name": "Sorrowful Fate",
       "source": "TDCSR",
       "page": 167,
@@ -1875,13 +1955,13 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "从3级开始，你利用敌人的危险来灌输深深的悲伤和厄运感。当你或你能看到的盟友强迫一个生物进行{@quickref 豁免投掷|PHB|2|1|豁免投掷}时，你可以消耗一次你的吟游诗人灵感来将{@quickref 豁免投掷|PHB|2|1|豁免投掷}的类型改为魅力豁免。",
+        "从3级开始，你利用敌人的危险来灌输深深的悲伤和厄运感。当你或你能看到的盟友强迫一个生物进行{@quickref 豁免检定|PHB|2|1|豁免检定}时，你可以消耗一次你的吟游诗人灵感来将{@quickref 豁免检定|PHB|2|1|豁免检定}的类型改为魅力豁免。",
         "如果目标未能通过这次豁免，投掷一个吟游诗人灵感骰。目标受到等于骰子结果的心灵伤害，并在接下来的1分钟内充满遗憾。如果目标在此期间降至0生命值并且能够说话，他们会在屈服于伤势之前，被魔法强迫说出黑暗的诗意遗言。",
-        "一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@quickref 休息|PHB|2|0|短休息或长休息}。"
+        "一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@quickref 休息|PHB|2|0|短休或长休}。"
       ]
     },
     {
-      "name": "悲剧学院:临头厄运",
+      "name": "临头厄运",
       "ENG_name": "Impending Misfortune",
       "source": "TDCSR",
       "page": 167,
@@ -1892,8 +1972,8 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "同样在6级时，你的话语可以扭曲命运的力量，从未来的绝望中创造出胜利。当你进行攻击骰或{@quickref saving throws|PHB|2|1|豁免骰}时，你可以获得+10的奖励到骰子上，但下一次你进行的攻击骰或{@quickref saving throws|PHB|2|1|豁免骰}会受到−10的惩罚。如果不使用，这个惩罚会在你完成{@quickref resting|PHB|2|0|短暂或长时间休息}后消失。",
-        "在完成一次{@quickref 短暂休息|PHB|2|0|短暂或长休息}，或直到你的生命值降至0之前，你不能再次使用这个特性。"
+        "同样在6级时，你的话语可以扭曲命运的力量，从未来的绝望中创造出胜利。当你进行攻击骰或{@quickref 豁免检定|PHB|2|1|豁免检定}时，你可以获得+10的奖励到骰子上，但下一次你进行的攻击骰或{@quickref 豁免检定|PHB|2|1|豁免检定}会受到−10的惩罚。如果不使用，这个惩罚会在你完成{@quickref 休息|PHB|2|0|短休或长休}后消失。",
+        "在完成一次{@quickref 休息|PHB|2|0|短休或长休}，或直到你的生命值降至0之前，你不能再次使用这个特性。"
       ]
     },
     {
@@ -1912,7 +1992,7 @@
       ]
     },
     {
-      "name": "悲剧学院:悲怆光轮",
+      "name": "悲怆光轮",
       "ENG_name": "Nimbus of Pathos",
       "source": "TDCSR",
       "page": 167,
@@ -1928,12 +2008,12 @@
           "type": "list",
           "items": [
             "生物的AC获得+4的加值。",
-            "它在攻击检定上有{@quickref 优势和劣势|PHB|2|0|优势}，在{@quickref 豁免检定|PHB|2|1}上也有优势和劣势。",
+            "它在攻击检定上有{@quickref 优势与劣势|PHB|2|0|检定优势}，在{@quickref 豁免检定|PHB|2|1}上也有优势和劣势。",
             "当生物使用武器攻击或法术攻击命中目标时，该目标额外承受{@damage 1d10}点辐射伤害。",
             "任何针对该生物的武器攻击，在掷骰结果为18至20时，都会造成致命一击。"
           ]
         },
-        "当这个效果结束时，生物立即降至0生命值并且濒临死亡。一旦你使用了这个特性，直到你完成了一次{@quickref 长休息|PHB|2|0|long rest}后，你才能再次使用它。"
+        "当这个效果结束时，生物立即降至0生命值并且濒临死亡。一旦你使用了这个特性，直到你完成了一次{@quickref 休息|PHB|2|0|长休}后，你才能再次使用它。"
       ]
     },
     {
@@ -1965,11 +2045,11 @@
         "灵魄学院的吟游诗人寻求具有内在力量的故事——无论是传说、历史还是虚构——并将它们的主题赋予生命。这些吟游诗人使用神秘手段召唤强大力量的精神体现，再次改变世界。然而，这些灵魄是多变的，吟游诗人召唤出来的东西并不总是完全在他们的控制之下。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "引导低语|吟游诗人||灵体|VRGR|3"
+          "subclassFeature": "呢喃指引|吟游诗人||灵魂|VRGR|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "精神专注|吟游诗人||灵界|VRGR|3"
+          "subclassFeature": "精魂法器|吟游诗人||灵魂|VRGR|3"
         },
         {
           "type": "refSubclassFeature",
@@ -1978,7 +2058,7 @@
       ]
     },
     {
-      "name": "精魂学院:呢喃指引",
+      "name": "呢喃指引",
       "ENG_name": "Guiding Whispers",
       "source": "VRGR",
       "page": 28,
@@ -1989,12 +2069,12 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 3级灵界学院特性}",
-        "你可以向灵魂伸出援手，引导你和其他人。你学会了{@spell guidance}这个戏法，它不计入你所知的吟游诗人戏法数量。对你来说，当你施放它时，它的范围是60英尺。"
+        "{@i 3级灵魄学院特性}",
+        "你可以向灵魂伸出援手，引导你和其他人。你学会了{@spell 神导术}这个戏法，它不计入你所知的吟游诗人戏法数量。对你来说，当你施放它时，它的范围是60英尺。"
       ]
     },
     {
-      "name": "精魂学院:精魂法器",
+      "name": "精魂法器",
       "ENG_name": "Spiritual Focus",
       "source": "VRGR",
       "page": 28,
@@ -2005,13 +2085,13 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 3级灵界学院特性}",
-        "你使用工具来帮助你引导灵魂，无论是历史人物还是虚构的原型。你可以使用以下物品作为你的吟游诗人法术的施法焦点：蜡烛、水晶球、骷髅、灵应板或{@deck 塔罗牌组|CoS}。",
-        "Starting at 6th level, when you cast a bard spell that deals damage or restores hit points through the Spiritual Focus, roll a {@dice d6}, and you gain a bonus to one damage or healing roll of the spell equal to the number rolled."
+        "{@i 3级灵魄学院特性}",
+        "你使用工具来帮助你引导灵魂，无论是历史人物还是虚构的原型。你可以使用以下物品作为你的吟游诗人法术的施法焦点：蜡烛、水晶球、骷髅、灵应板或{@deck 塔罗卡牌组|诅咒之石}。",
+        "从6级开始，当你通过精神焦点施放一个造成伤害或恢复生命值的吟游诗人法术时，掷一个{@dice d6}，你获得的法术中的一个伤害或治疗骰的加值等于掷出的数字。"
       ]
     },
     {
-      "name": "精魂学院:彼岸故事",
+      "name": "彼岸故事",
       "ENG_name": "Tales from Beyond",
       "source": "VRGR",
       "page": 28,
@@ -2022,14 +2102,14 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "{@i 3级灵界学院特性}",
+        "{@i 3级灵魄学院特性}",
         "你向灵体伸出援手，它们通过你讲述自己的故事。当你持有你的灵性焦点时，你可以使用奖励行动来消耗一次你的吟游诗人灵感，并使用你的吟游诗人灵感骰在灵体故事表上掷骰，以确定灵体指引你讲述的故事。你将故事记在心中，直到你赋予故事的效果，或完成一次短暂或长时间的休息。",
         "你可以使用一个动作选择一个你能看到的30英尺范围内的生物（这可以是你自己）作为故事效果的目标。一旦你这样做了，在你再次投掷它之前，你不能再赋予故事的效果。",
         "你一次只能记住这些故事中的一个，并且在灵界故事表上掷骰会立即结束前一个故事的效果。",
         "如果故事需要进行豁免检定，则DC等于你的法术豁免DC。",
         {
           "type": "table",
-          "caption": "精魂学院:精魂故事:边栏",
+          "caption": "边栏",
           "colLabels": [
             "吟游灵感骰",
             "通过你讲述的故事"
@@ -2039,36 +2119,60 @@
             "col-10"
           ],
           "rows": [
-            "1",
-            "Tale of the Clever Animal. For the next 10 minutes, whenever the target makes an Intelligence, a Wisdom, or a Charisma check, the target can roll an extra die immediately after rolling the {@dice d20} and add the extra die's number to the check. The extra die is the same type as your Bardic Inspiration die.",
-            "2",
-            "著名决斗家的故事。你对目标进行一次近战法术攻击。命中时，目标承受等于你的吟游诗人灵感骰的两倍加上你的感知调整值的力量伤害。",
-            "3",
-            "挚爱之友的故事。目标及其选择的另一个在5英尺内可见的生物获得等于你的吟游诗人灵感骰点数加上你的魅力调整值的临时生命值。",
-            "4",
-            "逃跑的故事。目标可以立即使用其反应传送至最多30英尺到一个它能看到的未被占据的空间。当目标传送时，它可以选择它能看到的30英尺范围内的生物数量，最多为你的魅力调整值（最少为0），立即使用相同的反应。",
-            "5",
-            "复仇者的故事。在1分钟内，任何用近战攻击击中目标的生物都会受到等同于你的吟游诗人灵感骰点数的力量伤害。",
-            "6",
-            "旅行者的故事。目标获得等同于你的吟游灵感骰的点数加上你的吟游诗人等级的临时生命值。当目标拥有这些临时生命值时，其行走速度增加10英尺，并且其护甲等级获得+1的加值。",
-            "7",
-            "诡惑者的故事。目标必须进行一次智力豁免投掷，否则将受到等同于两次吟游诗人灵感骰点数的灵能伤害，并且目标将处于{@condition 无力}状态，直到其下一回合结束。",
-            "8",
-            "幽灵故事。目标在下一个回合结束前或直到它用攻击击中一个生物时变得{@condition invisible}。如果目标在这段时间内用攻击击中了一个生物，那么被击中的生物会受到等同于你的吟游诗人灵感骰掷出的点数的死灵伤害，并且在{@condition frightened}生物的下一个回合结束前对目标感到{@condition frightened}。",
-            "9",
-            "蛮力故事。目标选择的每个生物，如果它在30英尺内可见，必须进行一次力量豁免。未能通过豁免的生物会受到等同于你的吟游诗人灵感骰三次掷骰结果的雷鸣伤害，并被击倒{@condition prone}。成功通过豁免的生物受到一半的伤害，并且不会被击倒{@condition prone}。",
-            "10",
-            "龙的故事。目标从口中喷出30英尺锥形的火焰。那个区域内的每个生物都必须进行一次敏捷豁免投掷，在失败时受到等于你的吟游诗人灵感骰四次投掷结果的火焰伤害，或者在成功时受到一半的伤害。",
-            "11",
-            "天使的故事。目标恢复生命值，等于你的吟游诗人灵感骰的两次掷骰结果加上你的感知调整值，并且你结束以下列表中影响目标的一个状态：{@condition 盲目}、{@condition 失聪}、{@condition 麻痹}、{@condition 石化}或{@condition 中毒}。",
-            "12",
-            "心灵扭曲者的故事。你唤起了一个来自异界生物的难以理解的寓言。目标必须进行智力豁免骰，否则将受到等同于三次你的吟游灵感骰的点数的心灵伤害，并在其下一回合结束前处于{@condition 昏迷}状态。"
+            [
+              "1",
+              "机智动物的故事。在接下来的10分钟内，每当目标进行智力、智慧或魅力检定时，目标可以在投掷{@dice d20}后立即额外投掷一个骰子，并将额外骰子的数值加到检定上。额外骰子的类型与你的吟游诗人灵感骰相同。"
+            ],
+            [
+              "2",
+              "著名决斗家的故事。你对目标进行一次近战法术攻击。命中时，目标承受等于你的吟游诗人灵感骰的两倍加上你的感知调整值的力量伤害。"
+            ],
+            [
+              "3",
+              "挚爱之友的故事。目标及其选择的另一个在5英尺内可见的生物获得等于你的吟游诗人灵感骰点数加上你的魅力调整值的临时生命值。"
+            ],
+            [
+              "4",
+              "逃跑的故事。目标可以立即使用其反应传送至最多30英尺到一个它能看到的未被占据的空间。当目标传送时，它可以选择它能看到的30英尺范围内的生物数量，最多为你的魅力调整值（最少为0），立即使用相同的反应。"
+            ],
+            [
+              "5",
+              "复仇者的故事。在1分钟内，任何用近战攻击击中目标的生物都会受到等同于你的吟游诗人灵感骰点数的力量伤害。"
+            ],
+            [
+              "6",
+              "旅行者的故事。目标获得等同于你的吟游灵感骰的点数加上你的吟游诗人等级的临时生命值。当目标拥有这些临时生命值时，其行走速度增加10英尺，并且其护甲等级获得+1的加值。"
+            ],
+            [
+              "7",
+              "诡惑者的故事。目标必须进行一次智力豁免投掷，否则将受到等同于两次吟游诗人灵感骰点数的灵能伤害，并且目标将处于{@condition 无力}状态，直到其下一回合结束。"
+            ],
+            [
+              "8",
+              "幽灵故事。目标在下一个回合结束前或直到它用攻击击中一个生物时变得{@condition 隐形}。如果目标在这段时间内用攻击击中了一个生物，那么被击中的生物会受到等同于你的吟游诗人灵感骰掷出的点数的死灵伤害，并且在{@condition 恐惧}生物的下一个回合结束前对目标感到{@condition 恐惧}。"
+            ],
+            [
+              "9",
+              "蛮力故事。目标选择的每个生物，如果它在30英尺内可见，必须进行一次力量豁免。未能通过豁免的生物会受到等同于你的吟游诗人灵感骰三次掷骰结果的雷鸣伤害，并被击倒{@condition 伏地}。成功通过豁免的生物受到一半的伤害，并且不会被击倒{@condition 伏地}。"
+            ],
+            [
+              "10",
+              "龙的故事。目标从口中喷出30英尺锥形的火焰。那个区域内的每个生物都必须进行一次敏捷豁免投掷，在失败时受到等于你的吟游诗人灵感骰四次投掷结果的火焰伤害，或者在成功时受到一半的伤害。"
+            ],
+            [
+              "11",
+              "天使的故事。目标恢复生命值，等于你的吟游诗人灵感骰的两次掷骰结果加上你的感知调整值，并且你结束以下列表中影响目标的一个状态：{@condition 目盲}、{@condition 耳聋}、{@condition 麻痹}、{@condition 石化}或{@condition 中毒}。"
+            ],
+            [
+              "12",
+              "心灵扭曲者的故事。你唤起了一个来自异界生物的难以理解的寓言。目标必须进行智力豁免骰，否则将受到等同于三次你的吟游灵感骰的点数的心灵伤害，并在其下一回合结束前处于{@condition 震慑}状态。"
+            ]
           ]
         }
       ]
     },
     {
-      "name": "精魂学院:精魂集会",
+      "name": "精魂集会",
       "ENG_name": "Spirit Session",
       "source": "VRGR",
       "page": 28,
@@ -2079,14 +2183,14 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "{\"i\":\"6级灵体学院特性\"}",
-        "灵魂为你提供了超自然的洞察力。你可以使用你的精神焦点，在短休或长休期间进行一个持续一小时的仪式，引导灵魂（你可以和你的魅力加值数量相等的愿意的生物一起进行，包括你自己）。在仪式结束时，你临时学会了{@filter 你从任何职业中选择的一个法术|spells|school=d;n|level=0;1;2;3;4;5;6}。",
+        "{@i 6级灵学院特性}",
+        "灵魂为你提供了超自然的洞察力。你可以使用你的精神焦点，在短休或长休期间进行一个持续一小时的仪式，引导灵魂（你可以和你的魅力加值数量相等的愿意的生物一起进行，包括你自己）。在仪式结束时，你临时学会了{@filter 任意职业的一个法术|法术|school=d;n|level=0;1;2;3;4;5;6}。",
         "你选择的法术等级必须等于进行仪式的生物数量或更低，法术等级必须在你能够施放的范围内，并且必须属于占卜或死灵学派。所选择的法术对你来说算作吟游诗人法术，但不计入你所知的吟游诗人法术数量。",
         "一旦你完成仪式，直到开始一次长休息之前你不能再这么做，并且你知道所选择的法术直到开始一次长休息。"
       ]
     },
     {
-      "name": "精魂学院:神秘连接",
+      "name": "神秘连接",
       "ENG_name": "Mystical Connection",
       "source": "VRGR",
       "page": 28,
@@ -2101,10 +2205,10 @@
         "现在你有能力将来自彼岸的故事灵体推向特定的故事。每当你在灵体故事表上掷骰时，你可以掷两次骰子，并选择其中一个效果赋予。如果你在两个骰子上掷出了相同的数字，你可以忽略这个数字，并从表上选择任何效果。",
         {
           "type": "inset",
-          "name": "精魂学院:精魂故事:边栏",
+          "name": "边栏",
           "ENG_name": "Spirit Tales",
           "entries": [
-            "讲故事的人，就像灵界学院的吟游诗人一样，经常为受到更广泛主题或作品启发的故事发声。在决定你要讲述什么故事时，考虑它们之间的联系。它们是否都以特定群体的角色为特色，比如来自{@deck tarokka deck|CoS}的原型，星座中的人物，童年想象中的朋友，或者特定故事书中的角色？还是你的灵感更普遍，包括历史英雄、神话英雄或都市传说？利用你讲述的故事来定义你作为一个讲故事冒险家的专长。"
+            "讲故事的人，就像灵界学院的吟游诗人一样，经常为受到更广泛主题或作品启发的故事发声。在决定你要讲述什么故事时，考虑它们之间的联系。它们是否都以特定群体的角色为特色，比如来自{@deck 塔罗卡牌组|诅咒之石}的原型，星座中的人物，童年想象中的朋友，或者特定故事书中的角色？还是你的灵感更普遍，包括历史英雄、神话英雄或都市传说？利用你讲述的故事来定义你作为一个讲故事冒险家的专长。"
           ]
         }
       ]
@@ -2124,16 +2228,16 @@
         "这个学院的吟游诗人既令人敬畏又令人畏惧。他们的表演是传奇般的。这些吟游诗人非常雄辩，以至于他们的一次演讲或歌曲可以使俘虏者无伤害地释放吟游诗人，并且可以使愤怒的龙变得自满。使他们能够平息野兽的相同魔法也可以弯曲思想。这个学院的恶毒吟游诗人可以利用他们的魔法在社区中吸取养分数周，滥用他们的魔法使他们的主人变成奴隶。而这个学院的英雄吟游诗人则利用这种力量来振奋受压迫者的精神并破坏压迫者。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "灵感披风|吟游诗人||魅力|XGE|3"
+          "subclassFeature": "激励光环|吟游诗人||迷惑|XGE|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "迷人表演|吟游诗人||魅力|XGE|3"
+          "subclassFeature": "醉人表演|吟游诗人||迷惑|XGE|3"
         }
       ]
     },
     {
-      "name": "迷惑学院:醉人表演",
+      "name": "醉人表演",
       "ENG_name": "Enthralling Performance",
       "source": "XGE",
       "page": 14,
@@ -2145,13 +2249,13 @@
       "header": 1,
       "entries": [
         "从3级开始，你可以用迷人的仙女魔法为你的表演充能。",
-        "如果你表演至少1分钟，你可以尝试通过唱歌、朗诵诗歌或跳舞来激发观众的惊奇。表演结束时，选择在你60英尺范围内观看并聆听了整个表演的人形生物数量，最多为你的魅力调整值（最少一个）。每个目标必须通过一次对抗你法术豁免DC的智慧豁免投掷，否则被你{@condition charmed}（魅惑）。以这种方式被{@condition charmed}的目标会崇拜你，它会对任何和它交谈的人赞颂你，并且阻碍任何反对你的人，尽管它避免使用暴力，除非它本来就倾向于为你而战。这种效果在目标上持续1小时，如果它受到任何伤害，如果你攻击它，或者如果它目睹你攻击或伤害它的任何盟友，效果就会结束。",
+        "如果你表演至少1分钟，你可以尝试通过唱歌、朗诵诗歌或跳舞来激发观众的惊奇。表演结束时，选择在你60英尺范围内观看并聆听了整个表演的人形生物数量，最多为你的魅力调整值（最少一个）。每个目标必须通过一次对抗你法术豁免DC的智慧豁免投掷，否则被你{@condition 魅惑}（魅惑）。以这种方式被{@condition 魅惑}的目标会崇拜你，它会对任何和它交谈的人赞颂你，并且阻碍任何反对你的人，尽管它避免使用暴力，除非它本来就倾向于为你而战。这种效果在目标上持续1小时，如果它受到任何伤害，如果你攻击它，或者如果它目睹你攻击或伤害它的任何盟友，效果就会结束。",
         "如果目标成功通过其豁免检定，目标将没有迹象表明你试图迷惑它。",
         "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
       ]
     },
     {
-      "name": "迷惑学院:激励光环",
+      "name": "激励光环",
       "ENG_name": "Mantle of Inspiration",
       "source": "XGE",
       "page": 14,
@@ -2168,7 +2272,7 @@
       ]
     },
     {
-      "name": "迷惑学院:统御光环",
+      "name": "威严光环",
       "ENG_name": "Mantle of Majesty",
       "source": "XGE",
       "page": 14,
@@ -2179,13 +2283,13 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "在6级时，你获得了将自己隐藏在仙女魔法中的能力，使他人渴望为你服务。作为一个奖励动作，你施放{@spell 命令}，无需消耗法术位，并且你的外观变得超凡脱俗，持续1分钟或直到你的{@status 专注}结束（就好像你在{@status 专注||专注}于一个法术）。在这段时间内，你可以在每个回合作为一个奖励动作施放{@spell 命令}，无需消耗法术位。",
-        "任何被你{@condition 魅惑}的生物在对抗你使用此特性施放的{@spell 命令}法术时自动失败其豁免投掷。",
+        "在6级时，你获得了将自己隐藏在仙女魔法中的能力，使他人渴望为你服务。作为一个奖励动作，你施放{@spell 命令术}，无需消耗法术位，并且你的外观变得超凡脱俗，持续1分钟或直到你的{@status 专注}结束（就好像你在{@status 专注||集中精神}于一个法术）。在这段时间内，你可以在每个回合作为一个奖励动作施放{@spell 命令术}，无需消耗法术位。",
+        "任何被你{@condition 魅惑}的生物在对抗你使用此特性施放的{@spell 命令术}法术时自动失败其豁免投掷。",
         "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
       ]
     },
     {
-      "name": "迷惑学院:绝对统御",
+      "name": "绝对统御",
       "ENG_name": "Unbreakable Majesty",
       "source": "XGE",
       "page": 14,
@@ -2197,7 +2301,7 @@
       "header": 2,
       "entries": [
         "在14级时，你的外表永久性地获得了一种超凡脱俗的特质，使你看起来更加可爱和凶猛。",
-        "此外，作为一个额外动作，你可以在1分钟内或者直到你被{@condition incapacitated}（失去能力）之前，展现出一种魔法上的威严存在。在这段时间里，每当任何生物在它的回合上首次尝试攻击你时，攻击者必须通过一次对抗你法术豁免DC的魅力豁免投掷。如果豁免失败，它在这个回合不能攻击你，并且必须为其攻击选择一个新的目标，否则攻击将被浪费。如果豁免成功，它可以在这个回合攻击你，但在你的下一个回合中，它对你施放的任何法术的豁免投掷上会有劣势。",
+        "此外，作为一个额外动作，你可以在1分钟内或者直到你被{@condition 无力}（失去能力）之前，展现出一种魔法上的威严存在。在这段时间里，每当任何生物在它的回合上首次尝试攻击你时，攻击者必须通过一次对抗你法术豁免DC的魅力豁免投掷。如果豁免失败，它在这个回合不能攻击你，并且必须为其攻击选择一个新的目标，否则攻击将被浪费。如果豁免成功，它可以在这个回合攻击你，但在你的下一个回合中，它对你施放的任何法术的豁免投掷上会有劣势。",
         "一旦你展现出这种威严的存在，直到你完成短休息或长休息之前你不能再这么做。"
       ]
     },
@@ -2217,20 +2321,20 @@
         "放弃作为表演者生活的刀刃往往遇到了使他们无法维持秘密活动的问题。一个因偷窃或参与义警行动而被抓的刀刃对大多数剧团来说风险太大。凭借他们的武器技能和魔法，这些刀刃要么成为盗贼公会的执行者，要么独自作为冒险者出发。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外熟练度|吟游诗人||剑术|XGE|3"
+          "subclassFeature": "附赠熟练项|吟游诗人||剑舞|XGE|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "战斗风格|吟游诗人||剑术|XGE|3"
+          "subclassFeature": "战斗风格|吟游诗人||剑舞|XGE|3"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "剑刃华彩|吟游诗人||剑术|XGE|3"
+          "subclassFeature": "剑舞|吟游诗人||剑舞|XGE|3"
         }
       ]
     },
     {
-      "name": "剑舞学院:剑舞",
+      "name": "剑舞",
       "ENG_name": "Blade Flourish",
       "source": "XGE",
       "page": 15,
@@ -2248,22 +2352,22 @@
           "entries": [
             {
               "type": "refSubclassFeature",
-              "subclassFeature": "防御性华丽|吟游诗人|XGE|剑术|XGE|3"
+              "subclassFeature": "防御剑舞|吟游诗人|XGE|剑舞|XGE|3"
             },
             {
               "type": "refSubclassFeature",
-              "subclassFeature": "斩击华彩|吟游诗人|XGE|剑术|XGE|3"
+              "subclassFeature": "顺劈剑舞|吟游诗人|XGE|剑舞|XGE|3"
             },
             {
               "type": "refSubclassFeature",
-              "subclassFeature": "移动装饰|吟游诗人|XGE|剑术|XGE|3"
+              "subclassFeature": "灵活剑舞|吟游诗人|XGE|剑舞|XGE|3"
             }
           ]
         }
       ]
     },
     {
-      "name": "剑舞学院:附赠熟练项",
+      "name": "附赠熟练项",
       "ENG_name": "Bonus Proficiencies",
       "source": "XGE",
       "page": 15,
@@ -2274,12 +2378,12 @@
       "level": 3,
       "header": 1,
       "entries": [
-        "当你在3级时加入剑术学院，你对中型盔甲和{@item scimitar|phb}变得熟练。",
+        "当你在3级时加入剑术学院，你对中型盔甲和{@item 弯刀|PHB}变得熟练。",
         "如果你熟练使用简单或武术近战武器，你可以将其作为你的吟游诗人法术的施法焦点。"
       ]
     },
     {
-      "name": "need-translate-a496f6b5-2fb2-11ef-ae1d-d1200322b32e",
+      "name": "战斗风格",
       "ENG_name": "Fighting Style",
       "source": "XGE",
       "page": 15,
@@ -2297,11 +2401,11 @@
           "entries": [
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "战斗风格:对决"
+              "optionalfeature": "对决"
             },
             {
               "type": "refOptionalfeature",
-              "optionalfeature": "战斗风格:双武器战斗"
+              "optionalfeature": "双武器战斗"
             }
           ]
         }
@@ -2323,7 +2427,7 @@
       ]
     },
     {
-      "name": "剑舞学院:剑舞大师",
+      "name": "剑舞大师",
       "ENG_name": "Master's Flourish",
       "source": "XGE",
       "page": 15,
@@ -2334,7 +2438,7 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "Starting at 14th level, whenever you use a Blade Flourish option, you can roll a {@dice d6} and use it instead of expending a Bardic Inspiration die."
+        "从14级开始，每当你使用一次剑舞选项时，你可以掷一个{@dice d6}，而不是消耗一个吟游诗人灵感骰。"
       ]
     },
     {
@@ -2356,12 +2460,12 @@
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "恐怖之词|吟游诗人||低语|XGE|3"
+          "subclassFeature": "骇人言词|吟游诗人||低语|XGE|3"
         }
       ]
     },
     {
-      "name": "低语学院:心灵之刃",
+      "name": "心灵之刃",
       "ENG_name": "Psychic Blades",
       "source": "XGE",
       "page": 16,
@@ -2374,11 +2478,11 @@
       "entries": [
         "当你在3级时加入低语学院，你获得了使你的武器攻击对生物心智产生魔法毒性的能力。",
         "当你用武器攻击击中一个生物时，你可以消耗一次你的吟游诗人灵感对该目标额外造成{@damage 2d6}心灵伤害。你只能在你的回合上每轮做一次。",
-        "The psychic damage increases when you reach certain levels in this class, increasing to {@dice 3d6} at 5th level, {@dice 5d6} at 10th level, and {@dice 8d6} at 15th level."
+        "当你达到这个职业的特定等级时，心灵伤害会增加，5级时增加到{@dice 3d6}，10级时增加到{@dice 5d6}，15级时增加到{@dice 8d6}。"
       ]
     },
     {
-      "name": "低语学院:惊骇之语",
+      "name": "骇人言词",
       "ENG_name": "Words of Terror",
       "source": "XGE",
       "page": 16,
@@ -2396,7 +2500,7 @@
       ]
     },
     {
-      "name": "低语学院:低语光环",
+      "name": "低语斗篷",
       "ENG_name": "Mantle of Whispers",
       "source": "XGE",
       "page": 16,
@@ -2410,12 +2514,12 @@
         "在6级时，你获得了采纳一个类人生物的人格的能力。当一个类人生物在你30英尺范围内死亡时，你可以使用你的反应魔法地捕捉它的影子。你保留这个影子，直到你使用它或完成一次长时间休息。",
         "你可以将影子作为动作来使用。当你这样做时，它会消失，通过魔法转变成出现在你身上的伪装。你现在看起来像那个死去的人，但健康且活着。这个伪装持续1小时，或者直到你作为奖励动作结束它。",
         "当你伪装时，你可以获取该类人生物会随意与一个普通熟人分享的所有信息。这些信息包括其背景和个人生活的一般细节，但不包括秘密。这些信息足以让你借助其记忆冒充这个人。",
-        "另一个生物可以通过成功进行一次智慧（{@skill Insight}）检定，与你的魅力（{@skill Deception}）检定对抗，来看穿这个伪装。你在检定中获得+5的加值。",
+        "另一个生物可以通过成功进行一次智慧（{@skill 洞悉}）检定，与你的魅力（{@skill 欺瞒}）检定对抗，来看穿这个伪装。你在检定中获得+5的加值。",
         "一旦你使用这个特性捕捉到一个阴影，在你完成短暂或长时间的休息之前，你不能再用它捕捉另一个阴影。"
       ]
     },
     {
-      "name": "低语学院:阴暗学识",
+      "name": "阴暗学识",
       "ENG_name": "Shadow Lore",
       "source": "XGE",
       "page": 16,

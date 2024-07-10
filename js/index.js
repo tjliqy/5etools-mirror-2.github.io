@@ -14,6 +14,8 @@ class IndexPage {
 
 		$(`#version_number`).text(VERSION_NUMBER).attr("href", `https://github.com/5etools-mirror-2/5etools-mirror-2.github.io/releases/latest`);
 
+		$(`#wrp-donate`)
+		.html(`<a><img src="${Renderer.get().getMediaUrl("img", "alipay.jpg")}" alt="支付宝二维码" style="height: 250px;"></a>`)
 		$(`#wrp-patreon`)
 			.html(`<a href="https://www.patreon.com/bePatron?u=22018559" rel="noopener noreferrer"><img src="${Renderer.get().getMediaUrl("img", "patreon.webp")}" alt="Become a Patron" style="width: 217px; height: 51px"></a>`);
 

@@ -43,36 +43,56 @@
             "col-5-5"
           ],
           "rows": [
-            "1",
-            "腿和尾巴伸展，允许装置行走和游泳。",
-            "腿部和尾巴收回，使装置的速度降至0，并且无法从速度加成中受益。",
-            "2",
-            "前窗百叶窗打开。",
-            "前窗百叶窗关闭。",
-            "3",
-            "侧窗百叶窗打开（每侧两个）。",
-            "侧窗百叶窗关闭（每侧两个）。",
-            "4",
-            "两个爪子从装置的前侧面伸出。",
-            "爪子收回。",
-            "5",
-            "每个伸出的爪子进行以下近战武器攻击：命中{@hit 8}，射程5英尺，一个目标。伤害{@h} 7 ({@damage 2d6}) 钝击伤害。",
-            "每个伸出的爪子进行以下近战武器攻击：命中{@hit 8}，射程5英尺，一个目标。{@h}目标被{@condition 抓住}（逃脱{@dc 15}）。",
-            "6",
-            "装置向前行走或游动。",
-            "装置向后行走或游动。",
-            "7",
-            "装置向左转90度。",
-            "装置向右转90度。",
-            "8",
-            "类似眼睛的装置在30英尺半径内发出明亮的光，并在额外的30英尺内发出昏暗的光。",
-            "灯光熄灭。",
-            "9",
-            "装置能在液体中下沉最多20英尺。",
-            "装置在液体中上升最多20英尺。",
-            "10",
-            "后舱盖解锁并打开。",
-            "后舱门关闭并密封。"
+            [
+              "1",
+              "腿和尾巴伸展，允许装置行走和游泳。",
+              "腿部和尾巴收回，使装置的速度降至0，并且无法从速度加成中受益。"
+            ],
+            [
+              "2",
+              "前窗百叶窗打开。",
+              "前窗百叶窗关闭。"
+            ],
+            [
+              "3",
+              "侧窗百叶窗打开（每侧两个）。",
+              "侧窗百叶窗关闭（每侧两个）。"
+            ],
+            [
+              "4",
+              "两个爪子从装置的前侧面伸出。",
+              "爪子收回。"
+            ],
+            [
+              "5",
+              "每个伸出的爪子进行以下近战武器攻击：命中{@hit 8}，射程5英尺，一个目标。伤害{@h} 7 ({@damage 2d6}) 钝击伤害。",
+              "每个伸出的爪子进行以下近战武器攻击：命中{@hit 8}，射程5英尺，一个目标。{@h}目标被{@condition 抓住}（逃脱{@dc 15}）。"
+            ],
+            [
+              "6",
+              "装置向前行走或游动。",
+              "装置向后行走或游动。"
+            ],
+            [
+              "7",
+              "装置向左转90度。",
+              "装置向右转90度。"
+            ],
+            [
+              "8",
+              "类似眼睛的装置在30英尺半径内发出明亮的光，并在额外的30英尺内发出昏暗的光。",
+              "灯光熄灭。"
+            ],
+            [
+              "9",
+              "装置能在液体中下沉最多20英尺。",
+              "装置在液体中上升最多20英尺。"
+            ],
+            [
+              "10",
+              "后舱盖解锁并打开。",
+              "后舱门关闭并密封。"
+            ]
           ]
         }
       ],
@@ -202,7 +222,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "气",
+              "mode": "air",
               "entries": [
                 "80 英尺；逆风飞行时50 英尺；顺风飞行时100 英尺"
               ]
@@ -265,7 +285,7 @@
               "type": "item",
               "name": "鱼叉拖拉",
               "ENG_name": "Harpoon Haul",
-              "entry": "战斗气球可以将每个被它{@condition 抓住}的目标拉向战斗气球，最多30英尺。"
+              "entry": "战斗气球可以将每个被它{@condition 被擒}的目标拉向战斗气球，最多30英尺。"
             }
           ]
         }
@@ -330,7 +350,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -358,7 +378,7 @@
               "name": "炮弹",
               "ENG_name": "Cannon Ball",
               "entries": [
-                "{@atk rw} +6 to hit, range 600/2,400 ft., one target. {@h}88 ({@dice 16d10}) bludgeoning damage."
+                "{@atk 远程武器} +6命中，射程600/2400英尺，单一目标。{@h}88 ({@dice 16d10}) 钝击伤害。"
               ]
             }
           ]
@@ -423,7 +443,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -451,7 +471,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -507,7 +527,7 @@
           "name": "压碎轮",
           "ENG_name": "Crushing Wheels",
           "entries": [
-            "恶魔磨盘可以通过任何大型或更小型生物的空间。当它这样做时，生物必须成功进行一次DC 11的敏捷豁免检定，否则将受到22（{@damage 4d10}）的钝击伤害并被击倒{@condition prone}。如果生物已经处于{@condition prone}状态，则会额外受到22（{@damage 4d10}）的钝击伤害。这个特性每回合不能对特定生物使用超过一次。"
+            "恶魔磨盘可以通过任何大型或更小型生物的空间。当它这样做时，生物必须成功进行一次DC 11的敏捷豁免检定，否则将受到22（{@damage 4d10}）的钝击伤害并被击倒{@condition 伏地}。如果生物已经处于{@condition 伏地}状态，则会额外受到22（{@damage 4d10}）的钝击伤害。这个特性每回合不能对特定生物使用超过一次。"
           ]
         },
         {
@@ -521,7 +541,7 @@
           "name": "倒地劣势",
           "ENG_name": "Prone Deficiency",
           "entries": [
-            "如果恶魔研磨者翻滚并变得{@condition 倒地}，它无法自行恢复并且会保持{@condition 无力}状态，直到被翻转回正立状态。"
+            "如果恶魔研磨者翻滚并变得{@condition 伏地}，它无法自行恢复并且会保持{@condition 无力}状态，直到被翻转回正立状态。"
           ]
         }
       ],
@@ -612,14 +632,14 @@
           "name": "倒地劣势",
           "ENG_name": "Prone Deficiency",
           "entries": [
-            "如果恶魔骑行倒地{@condition 倒地}，它无法自行站起，并且在被拉直之前处于{@condition 无力}状态。"
+            "如果恶魔骑行倒地{@condition 伏地}，它无法自行站起，并且在被拉直之前处于{@condition 无力}状态。"
           ]
         },
         {
           "name": "特技",
           "ENG_name": "Stunt",
           "entries": [
-            "在其回合，恶魔骑行的驾驶员可以消耗10英尺的移动力来执行一次免费的特技动作，比如前轮离地或烧胎。在执行特技之前，恶魔骑行必须在直线上至少移动10英尺。如果驾驶员使用摩托车的敏捷进行DC 10的敏捷检定成功，特技就会成功。否则，驾驶员将无法执行特技，并且在其下一个回合开始之前不能尝试另一个特技。如果检定失败5点或更多，恶魔骑行和所有骑乘它的生物会立即变得{@condition 倒地}，因为摩托车失控并完全停止。"
+            "在其回合，恶魔骑行的驾驶员可以消耗10英尺的移动力来执行一次免费的特技动作，比如前轮离地或烧胎。在执行特技之前，恶魔骑行必须在直线上至少移动10英尺。如果驾驶员使用摩托车的敏捷进行DC 10的敏捷检定成功，特技就会成功。否则，驾驶员将无法执行特技，并且在其下一个回合开始之前不能尝试另一个特技。如果检定失败5点或更多，恶魔骑行和所有骑乘它的生物会立即变得{@condition 伏地}，因为摩托车失控并完全停止。"
           ]
         }
       ],
@@ -702,7 +722,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -730,7 +750,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -807,7 +827,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "30英尺（至少需要40名船员）"
               ]
@@ -822,7 +842,7 @@
           "hpNote": "每受到25点伤害，速度减少10英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "35英尺；逆风航行时15英尺；顺风航行时50英尺"
               ]
@@ -878,7 +898,7 @@
               "type": "item",
               "name": "火焰弩炮",
               "ENG_name": "Fire Ballistas",
-              "entry": "战船可以发射它的{@object ballista||ballistas}（DMG，第8章）。"
+              "entry": "战船可以发射它的{@object 弩炮||弩炮}（DMG，第8章）。"
             },
             {
               "type": "item",
@@ -1086,7 +1106,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "20 英尺"
               ]
@@ -1101,7 +1121,7 @@
           "hpNote": "每受到20点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "25英尺；逆风航行时15英尺；顺风航行时35英尺。"
               ]
@@ -1207,7 +1227,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -1229,7 +1249,7 @@
               "name": "抓取颚",
               "ENG_name": "Grappling Jaws",
               "entries": [
-                "{@atk mw} +6 to hit, reach 10 ft., one ship or Gargantuan creature. {@h}22 ({@dice 4d10}) piercing damage, and the speed of the lamprey ship and the target become 0 until the grapple ends. As an action, a creature can use the grappling jaws' controls to release the target. Otherwise, the effect ends when the target or the lamprey ship drops to 0 hit points."
+                "{@atk 近战武器} +6命中，触及范围10英尺，一艘船只或巨型生物。{@h}22点({{@dice 4d10}})穿刺伤害，并且电鳗船和目标的速度变为0，直到擒抱结束。作为一个动作，一个生物可以使用捕获钳的控制器来释放目标。否则，当目标或电鳗船的生命值降至0时效果结束。"
               ]
             }
           ]
@@ -1254,7 +1274,7 @@
         "海"
       ],
       "capCrew": 5,
-      "capCrewNote": "（加上{@creature 树精}）",
+      "capCrewNote": "（加上{@creature 树人}）",
       "capCargo": 10,
       "cost": 2500000,
       "pace": {
@@ -1296,7 +1316,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -1373,7 +1393,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "20英尺（至少需要20名船员）"
               ]
@@ -1388,7 +1408,7 @@
           "hpNote": "每受到25点伤害，速度减少10英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "45英尺；逆风航行时15英尺；顺风航行时60英尺。"
               ]
@@ -1487,7 +1507,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "魔法的",
+              "mode": "magical",
               "entries": [
                 "挖掘速度 30 英尺，飞行速度 30 英尺（悬停），游泳速度 30 英尺"
               ]
@@ -1615,7 +1635,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -1643,7 +1663,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -1664,7 +1684,7 @@
               "name": "纠缠触手",
               "ENG_name": "Grappling Tentacles",
               "entries": [
-                "{@atk mw} +8 to hit, reach 30 ft., one Huge or Gargantuan target. {@h}22 ({@dice 4d10}) bludgeoning damage, and the nautiloid's speed becomes 0 until its spelljammer uses an action to release the target. If the target is a creature, it is {@condition grappled} (escape DC 16). If the target is another ship, the target's speed becomes 0 until the nautiloid releases it, or until the target or the nautiloid drops to 0 hit points."
+                "{@atk 近战武器} +8命中，触及范围30英尺，一个大型或巨型目标。{@h}22（{@dice 4d10}）钝击伤害，并且鹦鹉螺号的速度变为0，直到其法术船员使用动作来释放目标。如果目标是一个生物，它将被{@condition 抓住}（逃脱DC 16）。如果目标是另一艘船，目标的速度变为0，直到鹦鹉螺号释放它，或者直到目标或鹦鹉螺号降至0生命值。"
               ]
             },
             {
@@ -1737,7 +1757,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -1765,7 +1785,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -1866,7 +1886,7 @@
           "hp": 25,
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "15 英尺",
                 "移动至其速度，可以有一次90度转弯。没有桨时，划艇的速度为0。"
@@ -1964,7 +1984,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "45英尺；逆风航行时15英尺；顺风航行时60英尺。"
               ]
@@ -2008,13 +2028,13 @@
               "type": "item",
               "name": "火焰弩炮",
               "ENG_name": "Fire Ballista",
-              "entry": "船只可以发射它的{@object ballista}（DMG，第8章）。"
+              "entry": "船只可以发射它的{@object 弩炮}（DMG，第8章）。"
             },
             {
               "type": "item",
               "name": "火焰投石机",
               "ENG_name": "Fire Mangonel",
-              "entry": "船只可以发射它的{@object mangonel}（DMG，第8章）。"
+              "entry": "船只可以发射它的{@object 弹射投石机}（DMG，第8章）。"
             },
             {
               "type": "item",
@@ -2074,7 +2094,7 @@
           "name": "压碎轮",
           "ENG_name": "Crushing Wheels",
           "entries": [
-            "清道夫可以穿过任何大型或更小型生物的空间。当它这样做时，该生物必须在敏捷豁免检定上成功（DC 12），否则将受到16点（{@damage 3d10}）钝击伤害并被击倒{@condition prone}。如果生物已经处于{@condition prone}状态，则会额外受到16点（{@damage 3d10}）钝击伤害。这个特性每回合不能对同一个生物使用超过一次。"
+            "清道夫可以穿过任何大型或更小型生物的空间。当它这样做时，该生物必须在敏捷豁免检定上成功（DC 12），否则将受到16点（{@damage 3d10}）钝击伤害并被击倒{@condition 伏地}。如果生物已经处于{@condition 伏地}状态，则会额外受到16点（{@damage 3d10}）钝击伤害。这个特性每回合不能对同一个生物使用超过一次。"
           ]
         },
         {
@@ -2088,7 +2108,7 @@
           "name": "倒地劣势",
           "ENG_name": "Prone Deficiency",
           "entries": [
-            "如果拾荒者翻倒并进入{@condition prone}状态，它无法自行站起来，并且会保持{@condition incapacitated}状态，直到被翻转至正面朝上。"
+            "如果拾荒者翻倒并进入{@condition 伏地}状态，它无法自行站起来，并且会保持{@condition 无力}状态，直到被翻转至正面朝上。"
           ]
         }
       ],
@@ -2177,7 +2197,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -2200,7 +2220,7 @@
               "name": "爪抓",
               "ENG_name": "Claw",
               "entries": [
-                "{@atk mw} +3 to hit, reach 20 ft., one target. {@h}11 ({@dice 2d10}) bludgeoning damage. If the target is a Huge or smaller creature, it is also {@condition grappled} (escape DC 13). Until this grapple ends, the creature takes 11 ({@dice 2d10}) bludgeoning damage at the start of each of its turns."
+                "{@atk 近战武器} +3命中，触及范围20英尺，一个目标。{@h}11 ({@dice 2d10})钝击伤害。如果目标是一个巨型或更小的生物，它也会被{@condition 缠绕}（逃脱DC 13）。直到这个缠绕结束，该生物在每个回合开始时受到11 ({@dice 2d10})钝击伤害。"
               ]
             }
           ]
@@ -2228,7 +2248,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -2295,7 +2315,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -2309,14 +2329,14 @@
             }
           ],
           "entries": [
-            "当飞船撞击另一个物体或巨型生物时，飞船的法术船员可以进行以下攻击（见本章前面的\"{@book 碰撞|AAG|2|Crashing}\"）。"
+            "当飞船撞击另一个物体或巨型生物时，飞船的法术船员可以进行以下攻击（见本章前面的\"{@book 崩溃|AAG|2|崩溃}\"）。"
           ],
           "action": [
             {
               "name": "穿刺撞角",
               "ENG_name": "Piercing Ram",
               "entries": [
-                "{@atk mw} +8 to hit, range 0 ft., one object or Gargantuan creature. {@h}88 ({@dice 16d10}) piercing damage. The shrike ship takes half as much damage and comes to a dead stop. Miss: The attack deals no damage, the target moves into the nearest unoccupied space that isn't in the shrike ship's path, and the shrike ship can continue moving if it has any movement left."
+                "{@atk 近战武器} +8命中，射程0英尺，一个物体或巨型生物。{@h}88 ({@dice 16d10}) 穿刺伤害。捕食鸟船只受到一半的伤害并完全停止。未命中：攻击不造成任何伤害，目标移动到最近的未被占据的空间，如果捕食鸟船还有剩余的移动力，它可以继续移动。"
               ]
             }
           ]
@@ -2383,7 +2403,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -2411,7 +2431,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -2596,7 +2616,7 @@
           "name": "飞行员",
           "ENG_name": "Pilot",
           "entries": [
-            "斯塔尔马斯特需要一个中等体型的人形生物来驾驶它。在斯塔尔马斯特内部时，驾驶员使用该载具的速度和行动选项，并且不能进行反应或使用额外行动，驾驶员有完全掩护。如果斯塔尔马斯特降至0生命值，驾驶员将被从载具中弹出，并在载具5英尺范围内的未被占据的空间内以{@condition prone}状态着陆。"
+            "斯塔尔马斯特需要一个中等体型的人形生物来驾驶它。在斯塔尔马斯特内部时，驾驶员使用该载具的速度和行动选项，并且不能进行反应或使用额外行动，驾驶员有完全掩护。如果斯塔尔马斯特降至0生命值，驾驶员将被从载具中弹出，并在载具5英尺范围内的未被占据的空间内以{@condition 伏地}状态着陆。"
           ]
         }
       ],
@@ -2682,7 +2702,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -2710,7 +2730,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -2791,14 +2811,14 @@
           "name": "压碎轮",
           "ENG_name": "Crushing Wheels",
           "entries": [
-            "折磨者可以通过任何中等大小或更小生物的空间移动。当它这样做时，该生物必须进行一次DC 13的敏捷豁免检定，否则将受到11（{@damage 2d10}）的钝击伤害并被击倒{@condition prone}。如果生物已经处于{@condition prone}状态，则额外受到11（{@damage 2d10}）的钝击伤害。这个特性每回合不能对特定生物使用超过一次。"
+            "折磨者可以通过任何中等大小或更小生物的空间移动。当它这样做时，该生物必须进行一次DC 13的敏捷豁免检定，否则将受到11（{@damage 2d10}）的钝击伤害并被击倒{@condition 伏地}。如果生物已经处于{@condition 伏地}状态，则额外受到11（{@damage 2d10}）的钝击伤害。这个特性每回合不能对特定生物使用超过一次。"
           ]
         },
         {
           "name": "倒地劣势",
           "ENG_name": "Prone Deficiency",
           "entries": [
-            "如果折磨者翻倒并且处于{@condition prone}状态，它无法自行站起来，并且在被翻正之前将处于{@condition incapacitated}状态。"
+            "如果折磨者翻倒并且处于{@condition 伏地}状态，它无法自行站起来，并且在被翻正之前将处于{@condition 无力}状态。"
           ]
         },
         {
@@ -2812,7 +2832,7 @@
           "name": "耙式镰刀",
           "ENG_name": "Raking Scythes",
           "entries": [
-            "当折磨者在回合内首次移动到一个不是处于{@condition prone}状态的生物或另一个载具5英尺范围内时，它可以用其突出的刀片划伤生物或载具，造成13（{@damage 2d10 + 2}）点斩击伤害。如果生物在DC 13的敏捷豁免检定中成功，则可以避开并免受伤害。如果载具的驾驶员在豁免检定中成功，则载具可以避开并免受伤害。"
+            "当折磨者在回合内首次移动到一个不是处于{@condition 伏地}状态的生物或另一个载具5英尺范围内时，它可以用其突出的刀片划伤生物或载具，造成13（{@damage 2d10 + 2}）点斩击伤害。如果生物在DC 13的敏捷豁免检定中成功，则可以避开并免受伤害。如果载具的驾驶员在豁免检定中成功，则载具可以避开并免受伤害。"
           ]
         }
       ],
@@ -2905,7 +2925,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -2933,7 +2953,7 @@
               "name": "弹射投石",
               "ENG_name": "Mangonel Stone",
               "entries": [
-                "{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+                "{@atk 投掷武器} +5命中，射程200/800英尺（不能击中距离它60英尺内的目标），单一目标。{@h}27（{@dice 5d10}）钝击伤害。"
               ]
             }
           ]
@@ -2957,7 +2977,7 @@
         "空间"
       ],
       "capCrew": 10,
-      "capCrewNote": "（{@creature 巨眼怪||巨眼怪}）",
+      "capCrewNote": "（{@creature 眼魔||眼魔}）",
       "capCargo": 20,
       "pace": {
         "fly": "4½"
@@ -2992,7 +3012,7 @@
               "name": "毁灭射线",
               "ENG_name": "Destructive Ray",
               "entries": [
-                "{@atk rs} +8 to hit, range 120/480 ft., one target. {@h}35 ({@dice 10d6}) force damage."
+                "{@atk 远程射击} +8命中，射程120/480英尺，一个目标。{@h}35 ({@dice 10d6}) 力量伤害。"
               ]
             }
           ]
@@ -3134,7 +3154,7 @@
           "hpNote": "每受到25点伤害，速度减少5英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "20英尺（至少需要20名船员）"
               ]
@@ -3149,7 +3169,7 @@
           "hpNote": "每受到25点伤害，速度减少10英尺",
           "speed": [
             {
-              "mode": "饮食:饮水",
+              "mode": "water",
               "entries": [
                 "35 英尺；顺风航行时15英尺；逆风航行时50英尺。"
               ]
@@ -3205,13 +3225,13 @@
               "type": "item",
               "name": "火焰弩炮",
               "ENG_name": "Fire Ballistas",
-              "entry": "战舰可以发射它的{@object ballista||ballistas}（DMG，第8章）。"
+              "entry": "战舰可以发射它的{@object 弩炮||弩炮}（DMG，第8章）。"
             },
             {
               "type": "item",
               "name": "火焰投石机",
               "ENG_name": "Fire Mangonels",
-              "entry": "战舰可以发射其{@object 投石机||投石机}（DMG, 第8章）。"
+              "entry": "战舰可以发射其{@object 弹射投石机||投石机}（DMG, 第8章）。"
             },
             {
               "type": "item",
@@ -3280,7 +3300,7 @@
               "name": "能量束",
               "ENG_name": "Bolt",
               "entries": [
-                "{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+                "{@atk 远程武器} +6命中，射程120/480英尺，一个目标。{@h}16点({{@dice 3d10}})穿刺伤害。"
               ]
             }
           ]
@@ -3333,7 +3353,7 @@
         "SHP:O"
       ],
       "entries": [
-        "古代神秘生物的骨骼装饰着这艘船。强大的符文在这些残骸上爬行，发出病态的绿色光芒。当一个类人生物在船上死亡时，那个生物必须进行一次 DC 12 的智力豁免检定。如果成功，它正常死亡。如果失败，它立即作为一个服从船长命令的{@creature zombie}复活。僵尸获得了对船只的工作知识，使其能够作为船员服务。在任何给定时间，可以通过这种方式激活等于船只生物容量数量的生物。"
+        "古代神秘生物的骨骼装饰着这艘船。强大的符文在这些残骸上爬行，发出病态的绿色光芒。当一个类人生物在船上死亡时，那个生物必须进行一次 DC 12 的智力豁免检定。如果成功，它正常死亡。如果失败，它立即作为一个服从船长命令的{@creature 僵尸}复活。僵尸获得了对船只的工作知识，使其能够作为船员服务。在任何给定时间，可以通过这种方式激活等于船只生物容量数量的生物。\u001a\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000vehicles.json"
       ]
     },
     {
@@ -3358,7 +3378,7 @@
       ],
       "entries": [
         "这些刻有符文的铁链中蕴藏着风暴的力量。在风暴神的祝福下行动的掠夺者和海盗有时会使用这种升级。",
-        "通过将链条悬挂在船体上，风暴的狂怒被击打在船周围的水面上。船周围210英尺内的水域对于除这艘船以外的所有事物都是{@quickref 困难地形||3}。"
+        "通过将链条悬挂在船体上，风暴的狂怒被击打在船周围的水面上。船周围210英尺内的水域对于除这艘船以外的所有事物都是{@quickref 困难地型||3}。"
       ]
     },
     {
@@ -3382,7 +3402,7 @@
         "SHP:W"
       ],
       "entries": [
-        "Enhanced by abjuration magic, this weapon's attacks burst with raucous noise capable of momentarily distracting and disorienting enemy crews. If this weapon hits a vehicle's hull, that vehicle's speed decreases by {@dice 2d10} feet until the start of the attacker's next turn."
+        "受到放逐魔法的强化，这种武器的攻击会发出震耳欲聋的噪音，能够暂时分散并迷惑敌方船员的注意力。如果这种武器击中了载具的船体，那么该载具的速度会减少{@dice 2d10}英尺，直到攻击者下一回合开始。"
       ]
     },
     {
@@ -3394,7 +3414,7 @@
         "生命值：H"
       ],
       "entries": [
-        "Crafted with materials harvested from the Shadowfell, this upgrade grants a ship an aura of dread. As an action, the ship can create a pulse of horrific energy. Every creature that is an enemy of the ship who is on board or within 210 feet of it must make DC 14 Wisdom saving throw. On a failed save, a creature is {@condition 恐惧} of the ship for 1 minute. On a successful save, the creature is immune to this ability for 24 hours. Once this ability is used, it can't be used again until {@dice 1d4} hours have passed."
+        "由从影域采集的材料精心打造，这项升级赋予了船只一种令人畏惧的气场。作为一项行动，船只可以产生一次恐怖能量的脉冲。每个船只的敌人，如果其在船上或在210英尺范围内，必须进行一次DC 14的智力豁免投掷。豁免失败的生物将对船只感到{@condition 恐惧}，持续1分钟。成功豁免的生物将对该能力免疫24小时。一旦使用了这项能力，直到{@dice 1d4}小时后才能再次使用。"
       ]
     },
     {
@@ -3431,26 +3451,46 @@
             "伤害类型"
           ],
           "rows": [
-            "黑色",
-            "酸性",
-            "蓝色",
-            "闪电",
-            "黄铜",
-            "火",
-            "青铜",
-            "闪电",
-            "铜",
-            "酸性",
-            "黄金",
-            "火",
-            "绿色",
-            "酸性",
-            "红色",
-            "火",
-            "银",
-            "寒冷",
-            "白色",
-            "寒冷"
+            [
+              "黑色",
+              "酸性"
+            ],
+            [
+              "蓝色",
+              "闪电"
+            ],
+            [
+              "黄铜",
+              "火"
+            ],
+            [
+              "青铜",
+              "闪电"
+            ],
+            [
+              "铜",
+              "酸性"
+            ],
+            [
+              "黄金",
+              "火"
+            ],
+            [
+              "绿色",
+              "酸性"
+            ],
+            [
+              "红色",
+              "火"
+            ],
+            [
+              "银",
+              "寒冷"
+            ],
+            [
+              "白色",
+              "寒冷"
+            ]
           ]
         }
       ]
@@ -3480,7 +3520,7 @@
       ]
     },
     {
-      "name": "魔能炮台:投火机",
+      "name": "投火机",
       "ENG_name": "Flamethrower",
       "source": "BGDIA",
       "page": 221,
@@ -3544,7 +3584,7 @@
         "SHP:F"
       ],
       "entries": [
-        "这个船首像描绘了一个装甲骑士。作为行动，船可以激活这个物品，使其活化为一个{@creature 铁魔像}。当船长使用船的一个行动时，魔像会在船的回合上行动。魔像保持活化状态1分钟。在那段时间结束时，它会传送回其作为船首像的位置。一旦船使用这个行动，它在接下来的24小时内不能再使用它。"
+        "这个船首像描绘了一个装甲骑士。作为行动，船可以激活这个物品，使其活化为一个{@creature 钢铁魔像}。当船长使用船的一个行动时，魔像会在船的回合上行动。魔像保持活化状态1分钟。在那段时间结束时，它会传送回其作为船首像的位置。一旦船使用这个行动，它在接下来的24小时内不能再使用它。"
       ]
     },
     {
@@ -3624,7 +3664,7 @@
         "SHP:M"
       ],
       "entries": [
-        "Woven from the energy of captured wraiths and bound with the spirit of a banshee, these sails groan mournfully when they catch the wind. As an action, while within 5 feet of the sails, the ship's captain can cause the sails to unleash a howl. Every creature hostile to the ship who is on board or within 300 feet of it must succeed on a DC 14 Wisdom saving throw, or the creature takes {@damage 4d6} psychic damage and is then {@condition 恐惧} for 1 minute. Once this ability has been used, it can't be used again until {@dice 2d6} hours have passed."
+        "这些帆布是由捕获的幽灵能量编织而成，并以女妖的灵魂绑定，当它们捕捉到风时会发出悲伤的呻吟。作为一项行动，当在帆布5英尺范围内时，船长可以使帆布释放出一声嚎叫。每个对船有敌意的生物，如果它在船上或距离船300英尺以内，必须成功进行一次DC 14的智力豁免投掷，否则该生物将受到{@damage 4d6}点心灵伤害，并在接下来的1分钟内处于{@condition 恐惧}状态。一旦使用了这个能力，直到{@dice 2d6}小时过去后才能再次使用。"
       ]
     },
     {
@@ -3649,7 +3689,7 @@
       ],
       "entries": [
         "这面旗帜是用来挂在船桅上的。它强大的魔法使它看起来像是一面旗帜或横幅，上面展示着对观看者友好的团体、船长或王国的标志。不同的观看者可能会看到不同的旗帜或纹章。",
-        "The banner's true power is its ability to aid a ship in making rapid escapes. As an action, the ship and all friendly creatures aboard it teleport up to 3 miles to a known destination of the captain's choice. Hostile creatures aboard the ship don't move with the ship and fall into the water it once occupied. Once this item is used to teleport, it can't teleport in this way again for {@dice 2d6} days."
+        "这面旗帜真正的力量在于它能够帮助船只迅速逃脱。作为一个动作，船只和所有船上的友好生物被传送到船长选择的已知目的地，最远可达3英里。敌对生物不会随船只移动，而是落入船只曾经占据的水中。一旦这个物品被用来传送，它在接下来的{@dice 2d6}天内就不能再以这种方式传送。"
       ]
     },
     {
@@ -3662,7 +3702,7 @@
       ],
       "entries": [
         "这个载具被刻有亵渎符号的钉子覆盖。发光的幽灵般的身影被钉在这些钉子上，痛苦地哀嚎和伸出手。",
-        "If a creature that isn't a devil dies within 30 feet of the infernal war machine, its soul (if it has one) is torn from its body and joins the wailing throng impaled on the spikes. As long as its soul remains trapped, a creature can't be raised from the dead by any means. A trapped soul is freed if the vehicle is destroyed, if the spike anchoring it is the target of a {@spell 移除诅咒} spell or similar magic, or if the spike is destroyed. Each spike is a Small object with AC 19, 15 hit points, and resistance to all damage except radiant damage."
+        "如果一个非恶魔生物在地狱战争机器30英尺范围内死亡，它的灵魂（如果有的话）会被从身体中撕裂出来，并加入到被钉在尖刺上的哀嚎的人群中。只要它的灵魂仍然被困住，任何手段都无法将其复活。如果车辆被摧毁，或者固定它灵魂的尖刺成为{@spell 移除诅咒}法术或类似魔法的目标，或者尖刺被摧毁，被困住的灵魂就会被释放。每个尖刺是一个小型物体，具有AC 19，15点生命值，并且对所有伤害都有抗性，除了辐射伤害。"
       ]
     },
     {
@@ -3692,7 +3732,7 @@
           "name": "冥河喷射器（需要1名船员并提供半覆盖掩护；3次使用次数）",
           "ENG_name": "Styx Sprayer (Requires 1 Crew and Grants Half Cover; 3 Uses)",
           "entries": [
-            "{@atk rs}: +5 to hit, range 30 ft., one creature. {@h}The creature is struck by water from the River Styx and targeted by a {@spell 弱智术} spell (save DC 20). An already feebleminded creature is immune to this effect, as is a creature adapted to the River Styx. If the target fails its saving throw and the spell's effect on it is not ended within 30 days, the effect becomes permanent, whereupon the creature loses all its memories and becomes a near-mindless shell of its former self. At that point, nothing short of divine intervention can undo the effect."
+            "{@atk rs}: 命中加5，射程30英尺，单一生物。{@h}该生物被冥河之水击中，并被施以{@spell 弱智术}（豁免DC 20）。已经弱智的生物对此效果免疫，同样适应冥河的生物也免疫。如果目标未能通过豁免骰，并且法术的效果在30天内未被解除，效果将变为永久性，此时生物将失去所有记忆，变成其前身的近乎无意识的空壳。在那时，除了神的干预外，没有什么可以解除这种效果。"
           ]
         }
       ]
@@ -3706,7 +3746,7 @@
         "SHP:O"
       ],
       "entries": [
-        "This 4-foot-tall bronze drum comes with a pair of iron mallets. A creature can activate the drums as an action, causing the hammers to float above the drum and strike it to produce a thundering rhythm. For the next minute, the ship gains one additional action, as long as it has at least one action. Once this item is used, it can't be activated again for {@dice 2d10} hours."
+        "这个4英尺高的青铜鼓配有一对铁槌。生物可以作为动作激活鼓，使槌子浮在鼓上方并敲击鼓面，产生雷鸣般的节奏。在接下来的一分钟内，只要船至少有一个动作，它就会获得一个额外的动作。一旦使用了这个物品，它就不能在{@dice 2d10}小时内再次激活。"
       ]
     },
     {
@@ -3730,7 +3770,7 @@
         "生命值：H"
       ],
       "entries": [
-        "A row of crystal orbs, each filled with viscous liquid and a beholder's eyeball, is mounted along this ship's hull. {@condition 隐形} creatures are visible while on the ship or within 120 feet of it."
+        "这艘船的船体上安装了一排水晶球，每个里面都充满了粘稠的液体和一个巨眼怪的眼球。{@condition 隐形}生物在船上或距离它120英尺以内时可见。"
       ]
     }
   ]

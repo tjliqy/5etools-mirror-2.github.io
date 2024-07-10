@@ -1,356 +1,373 @@
 {
-	"monster": [
-		{
-			"name": "Dirt-Under-Nails",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "RtG",
-			"page": 32,
-			"size": [
-				"M"
-			],
-			"type": "plant",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 78,
-				"formula": "12d8 + 24"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 14,
-			"con": 15,
-			"int": 12,
-			"wis": 12,
-			"cha": 18,
-			"save": {
-				"wis": "+4",
-				"cha": "+7"
-			},
-			"skill": {
-				"arcana": "+4",
-				"deception": "+7",
-				"persuasion": "+7",
-				"religion": "+4"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 11,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks that aren't silvered",
-					"cond": true
-				}
-			],
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"fire"
-			],
-			"conditionImmune": [
-				"poisoned"
-			],
-			"languages": [
-				"telepathy 60 ft."
-			],
-			"cr": "7",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save {@dc 15}), requiring no material components:"
-					],
-					"will": [
-						"{@spell alter self}",
-						"{@spell false life}",
-						"{@spell levitate} (self only)",
-						"{@spell mage armor} (self only)",
-						"{@spell silent image}"
-					],
-					"daily": {
-						"1e": [
-							"{@spell feeblemind}",
-							"{@spell finger of death}",
-							"{@spell plane shift}"
-						]
-					},
-					"ability": "cha"
-				},
-				{
-					"name": "Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"Dirt-Under-Nails is a 17th level spellcaster. His spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). He regains his expended spell slots when he finishes a short or long rest. He knows the following warlock spells:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell chill touch}",
-								"{@spell eldritch blast}",
-								"{@spell friends}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
-							]
-						},
-						"5": {
-							"lower": 1,
-							"slots": 4,
-							"spells": [
-								"{@spell armor of Agathys}",
-								"{@spell banishment}",
-								"{@spell burning hands}",
-								"{@spell cloudkill}",
-								"{@spell flame strike}",
-								"{@spell magic circle}",
-								"{@spell scorching ray}",
-								"{@spell scrying}",
-								"{@spell stinking cloud}",
-								"{@spell suggestion}"
-							]
-						}
-					},
-					"ability": "cha"
-				}
-			],
-			"trait": [
-				{
-					"name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
-					"entries": [
-						"When the warlock makes an ability check or saving throw, it can add a {@dice d10} to the roll. It can do this after the roll is made but before any of the roll's effects occur."
-					]
-				},
-				{
-					"name": "Regeneration",
-					"entries": [
-						"Dirt-Under-Nails regains 10 hit points at the start of his turn if he is in contact with the ground. If Dirt-Under-Nails takes fire damage, this trait doesn't function at the start of his next turn. Dirt-Under-Nails dies only if he starts his turn with 0 hit points and doesn't regenerate."
-					]
-				},
-				{
-					"name": "Shared Senses",
-					"entries": [
-						"Dirt-Under-Nails can see and hear what any plant within 120 ft can see and hear. In addition, Dirt-Under- Nails can communicate telepathically with any plant within this range."
-					]
-				},
-				{
-					"name": "Special Equipment (+2 Rod of the Pact Keeper)",
-					"entries": [
-						"While holding this {@item +2 Rod of the Pact Keeper||rod}, Dirt-Under-Nails gains a +2 bonus to spell attack rolls and to the saving throw DCs of his warlock spells (included in modifications, below). In addition, he can regain 1 warlock spell slot as an action while holding the rod. He can't use this property again until he finishes a long rest."
-					]
-				},
-				{
-					"name": "Tree Stride",
-					"entries": [
-						"Once on each of its turns, Dirt-Under-Nails can use 10 feet of his movement to step magically into one copse of mushrooms within 5 feet of him and emerge from a second copse of mushrooms within 60 feet of it, appearing in an unoccupied space within 5 feet of the second copse. Both copses of mushrooms must be Large or bigger. Dirt-Under-Nails doesn't need to be able to see the second copse to use this ability."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Mace",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage plus 10 ({@damage 3d6}) fire damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"mace|phb"
-			],
-			"traitTags": [
-				"Regeneration",
-				"Tree Stride"
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"TP"
-			],
-			"damageTags": [
-				"B",
-				"F"
-			],
-			"damageTagsSpell": [
-				"B",
-				"C",
-				"F",
-				"I",
-				"L",
-				"N",
-				"O",
-				"P",
-				"R",
-				"S",
-				"Y"
-			],
-			"spellcastingTags": [
-				"CL",
-				"I"
-			],
-			"miscTags": [
-				"MLW",
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"incapacitated"
-			],
-			"savingThrowForcedSpell": [
-				"charisma",
-				"constitution",
-				"dexterity",
-				"intelligence",
-				"wisdom"
-			],
-			"hasToken": true
-		},
-		{
-			"name": "Rotter",
-			"source": "RtG",
-			"page": 34,
-			"size": [
-				"M"
-			],
-			"type": "construct",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"natural armor",
-						"{@item shield|PHB}"
-					]
-				}
-			],
-			"hp": {
-				"average": 75,
-				"formula": "10d8 + 30"
-			},
-			"speed": {
-				"walk": 30,
-				"climb": 30
-			},
-			"str": 18,
-			"dex": 12,
-			"con": 16,
-			"int": 10,
-			"wis": 13,
-			"cha": 8,
-			"skill": {
-				"athletics": "+7",
-				"perception": "+4",
-				"stealth": "+4"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 14,
-			"resist": [
-				"bludgeoning",
-				"piercing"
-			],
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"fire"
-			],
-			"conditionImmune": [
-				"charmed",
-				"frightened",
-				"poisoned"
-			],
-			"languages": [
-				"telepathy 60 ft."
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Magic Club",
-					"entries": [
-						"In the rotter's hand, its club is magical and deals 7 ({@damage 3d4}) extra damage (included in its attacks)."
-					]
-				},
-				{
-					"name": "Plant Camouflage",
-					"entries": [
-						"The rotter has advantage on Dexterity ({@skill Stealth}) checks it makes in terrain with ample obscuring plant life."
-					]
-				},
-				{
-					"name": "Regeneration",
-					"entries": [
-						"The rotter regains 10 hit points at the start of its turn if it is in contact with the ground. If the rotter takes fire damage, this trait doesn't function at the start of the rotter's next turn. The rotter dies only if it starts its turn with 0 hit points and doesn't regenerate."
-					]
-				},
-				{
-					"name": "Shared Senses",
-					"entries": [
-						"The rotter can see and hear what any plant within 120 ft can see and hear. In addition, the rotter can communicate telepathically with any plant within this range."
-					]
-				},
-				{
-					"name": "Tree Stride",
-					"entries": [
-						"Once on each of its turns, the rotter can use 10 feet of its movement to step magically into one copse of mushrooms within 5 feet of it and emerge from a second copse of mushrooms within 60 feet of it, appearing in an unoccupied space within 5 feet of the second copse. Both copses of mushrooms must be Large or bigger. The rotter doesn't need to be able to see the second copse to use this ability."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The rotter makes two attacks with its club."
-					]
-				},
-				{
-					"name": "Club",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 4d4 + 4}) bludgeoning damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"club|phb"
-			],
-			"traitTags": [
-				"Regeneration",
-				"Tree Stride"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"TP"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"MLW",
-				"MW"
-			],
-			"hasToken": true
-		}
-	]
+  "monster": [
+    {
+      "name": "指甲里的泥垢",
+      "ENG_name": "Dirt-Under-Nails",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "RtG",
+      "page": 32,
+      "size": [
+        "M"
+      ],
+      "type": "plant",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 78,
+        "formula": "12d8 + 24"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 14,
+      "con": 15,
+      "int": 12,
+      "wis": 12,
+      "cha": 18,
+      "save": {
+        "wis": "+4",
+        "cha": "+7"
+      },
+      "skill": {
+        "arcana": "+4",
+        "deception": "+7",
+        "persuasion": "+7",
+        "religion": "+4"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 11,
+      "resist": [
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击且非银质的",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "vulnerable": [
+        "火"
+      ],
+      "conditionImmune": [
+        "中毒"
+      ],
+      "languages": [
+        "心灵感应 60 英尺"
+      ],
+      "cr": "7",
+      "spellcasting": [
+        {
+          "name": "天生施法",
+          "ENG_name": "Innate Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "术士的天生施法能力是魅力。他能天生施放以下法术（法术豁免{@dc 15}），无需任何材料成分："
+          ],
+          "will": [
+            "{@spell 变造自身}",
+            "{@spell 摹造生命}",
+            "{@spell 浮空术}（仅限自身）",
+            "{@spell 法师护甲}（仅限自身）",
+            "{@spell 无声幻影}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell 弱智术}",
+              "{@spell 死亡一指}",
+              "{@spell 异界传送}"
+            ]
+          },
+          "ability": "cha"
+        },
+        {
+          "name": "施法",
+          "ENG_name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "Dirt-Under-Nails 是一个17级的施法者。他的施法能力是魅力（法术豁免难度{@dc 17}，法术攻击命中{@hit 9}）。当他完成短暂或长时间的休息时，他恢复消耗的法术位。他知道以下术士法术："
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell 寒颤之触}",
+                "{@spell 魔能爆}",
+                "{@spell 交友术}",
+                "{@spell 法师之手}",
+                "{@spell 次级幻象}",
+                "{@spell 魔法技俩}",
+                "{@spell 电爪}"
+              ]
+            },
+            "5": {
+              "lower": 1,
+              "slots": 4,
+              "spells": [
+                "{@spell 艾嘉西斯之铠}",
+                "{@spell 放逐术}",
+                "{@spell 燃烧之手}",
+                "{@spell 死云术}",
+                "{@spell 焰击术}",
+                "{@spell 防护法阵}",
+                "{@spell 灼热射线}",
+                "{@spell 探知}",
+                "{@spell 臭云术}",
+                "{@spell 暗示术}"
+              ]
+            }
+          },
+          "ability": "cha"
+        }
+      ],
+      "trait": [
+        {
+          "name": "黑暗者强运 (短休或长休之后充能)",
+          "ENG_name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+          "entries": [
+            "当术士进行能力检定或豁免检定时，它可以在掷骰后但在任何掷骰效果发生之前，向掷骰结果加上一个{@dice d10}。"
+          ]
+        },
+        {
+          "name": "再生",
+          "ENG_name": "Regeneration",
+          "entries": [
+            "指甲下土在接触地面的情况下，在其回合开始时恢复10点生命值。如果指甲下土受到火焰伤害，这个特性在他的下一个回合开始时不会生效。指甲下土只有在其回合开始时生命值为0并且没有再生时才会死亡。"
+          ]
+        },
+        {
+          "name": "共享感知",
+          "ENG_name": "Shared Senses",
+          "entries": [
+            "Dirt-Under-Nails 能看见和听见任何在120英尺范围内的植物所看见和听见的东西。此外，Dirt-Under-Nails 可以在这个范围内与任何植物进行心灵感应交流。"
+          ]
+        },
+        {
+          "name": "特殊装备（+2 契约守护者的法杖）",
+          "ENG_name": "Special Equipment (+2 Rod of the Pact Keeper)",
+          "entries": [
+            "持有这根{@item +2 掌契者权杖||权杖}时，Dirt-Under-Nails在施法攻击检定以及他的术士法术的豁免难度等级上获得+2的加值（包含在下面的修正中）。此外，他可以在持有法杖时作为动作恢复一个术士法术位。直到完成一次长休息后，他才能再次使用这个特性。"
+          ]
+        },
+        {
+          "name": "树跃术",
+          "ENG_name": "Tree Stride",
+          "entries": [
+            "在每个回合中，泥指甲可以使用10英尺的移动力，通过魔法踏进距离他5英尺内的一丛蘑菇，并从距离它60英尺内的第二丛蘑菇中出现，出现在第二丛蘑菇5英尺内的未被占据的空间。两丛蘑菇都必须是大型或更大的。泥指甲使用这个能力时不需要看到第二丛蘑菇。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "硬头锤",
+          "ENG_name": "Mace",
+          "entries": [
+            "{@atk 近战武器攻击} 命中骰为3，射程5英尺，一个目标。{@h}3（{@damage 1d6}）钝击伤害加上10（{@damage 3d6}）火焰伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "硬头锤|PHB"
+      ],
+      "traitTags": [
+        "再生",
+        "树跃术"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "TP"
+      ],
+      "damageTags": [
+        "B",
+        "F"
+      ],
+      "damageTagsSpell": [
+        "B",
+        "C",
+        "F",
+        "I",
+        "L",
+        "N",
+        "O",
+        "P",
+        "R",
+        "S",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "CL",
+        "I"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW"
+      ],
+      "conditionInflictSpell": [
+        "无力"
+      ],
+      "savingThrowForcedSpell": [
+        "魅力",
+        "体质",
+        "敏捷",
+        "智力",
+        "感知"
+      ],
+      "hasToken": true
+    },
+    {
+      "name": "腐朽者",
+      "ENG_name": "Rotter",
+      "source": "RtG",
+      "page": 34,
+      "size": [
+        "M"
+      ],
+      "type": "construct",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 18,
+          "from": [
+            "天生护甲",
+            "{@item 护盾术|PHB}"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 75,
+        "formula": "10d8 + 30"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 16,
+      "int": 10,
+      "wis": 13,
+      "cha": 8,
+      "skill": {
+        "athletics": "+7",
+        "perception": "+4",
+        "stealth": "+4"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 14,
+      "resist": [
+        "钝击",
+        "穿刺"
+      ],
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "vulnerable": [
+        "火"
+      ],
+      "conditionImmune": [
+        "魅惑",
+        "恐惧",
+        "中毒"
+      ],
+      "languages": [
+        "心灵感应 60 英尺"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "魔法棍棒",
+          "ENG_name": "Magic Club",
+          "entries": [
+            "在腐化者手中，其棍棒具有魔法效果，攻击时额外造成7点伤害（已包含在其攻击中）。"
+          ]
+        },
+        {
+          "name": "植物伪装",
+          "ENG_name": "Plant Camouflage",
+          "entries": [
+            "在有足够遮蔽植物的地形中，腐朽者在进行敏捷（{@skill 隐匿}）检定时具有优势。"
+          ]
+        },
+        {
+          "name": "再生",
+          "ENG_name": "Regeneration",
+          "entries": [
+            "该腐尸在回合开始时，如果接触地面则恢复10点生命值。如果腐尸受到火焰伤害，则在腐尸下一个回合开始时，此特性不会生效。腐尸只有在回合开始时生命值为0且不进行再生时才会死亡。"
+          ]
+        },
+        {
+          "name": "共享感知",
+          "ENG_name": "Shared Senses",
+          "entries": [
+            "腐烂者能够看到和听到120英尺范围内任何植物所能看到的和听到的。此外，腐烂者可以在这个范围内与任何植物进行心灵感应交流。"
+          ]
+        },
+        {
+          "name": "树跃术",
+          "ENG_name": "Tree Stride",
+          "entries": [
+            "每当它的回合，腐尸可以使用其10英尺的移动能力，通过魔法步伐进入它5英尺范围内的一丛蘑菇，并从60英尺范围内的第二丛蘑菇中出现，出现在第二丛蘑菇5英尺范围内的未被占据的空间内。两丛蘑菇都必须是大型或更大。腐尸使用这个能力时不需要看到第二丛蘑菇。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "腐烂者用它的棍棒进行两次攻击。"
+          ]
+        },
+        {
+          "name": "短棒",
+          "ENG_name": "Club",
+          "entries": [
+            "{@atk 近战武器} 命中判定为7，射程5英尺，单一目标。{@h}造成14点（{@damage 4d4 + 4}）钝击伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "棍棒|PHB"
+      ],
+      "traitTags": [
+        "再生",
+        "树跃术"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "TP"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW"
+      ],
+      "hasToken": true
+    }
+  ]
 }

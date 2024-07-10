@@ -1,7 +1,7 @@
 {
   "_meta": {
     "internalCopies": [
-      "怪物描述"
+      "monsterFluff"
     ]
   },
   "monsterFluff": [
@@ -508,7 +508,7 @@
                       "name": "恶魔“魔鬼”",
                       "ENG_name": "Demonic \"Devils\"",
                       "entries": [
-                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature quasit||夸赛特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
+                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature 夸塞魔||奎西特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
                       ],
                       "type": "entries"
                     },
@@ -517,7 +517,7 @@
                       "ENG_name": "Diabolic Demons",
                       "type": "entries",
                       "entries": [
-                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature nalfeshnee}、{@creature shadow demon}或{@creature vrock}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
+                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature 判魂魔}、{@creature 影魔}或{@creature 弗洛魔}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
                       ]
                     }
                   ]
@@ -576,22 +576,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。",
-                        "2",
-                        "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。",
-                        "3",
-                        "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。",
-                        "4",
-                        "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。",
-                        "5",
-                        "Grabber. When the krasis hits a creature with its claws, the target is {@condition 被擒} (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature {@condition 被擒} in this way at a time.",
-                        "6",
-                        "Hypnotic Display (Recharge 5-6). As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 震慑} for 1 minute. The {@condition 震慑} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.",
-                        "7",
-                        "Venomous Sting. When the krasis hits a creature with its claws, the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 中毒} for 1 minute. If the krasis is a category 2 or 3, the creature is {@condition 麻痹} while {@condition 中毒} in this way. The {@condition 中毒} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-                        "8",
-                        "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        [
+                          "1",
+                          "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。"
+                        ],
+                        [
+                          "2",
+                          "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。"
+                        ],
+                        [
+                          "3",
+                          "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。"
+                        ],
+                        [
+                          "5",
+                          "抓握者。当克瑞斯用爪子击中一个生物时，目标会被克瑞斯身上的特化抓握附肢所{@condition 被擒}（类别1逃脱DC 13，类别2逃脱DC 15，类别3逃脱DC 19）。它一次只能以这种方式{@condition 被擒}一个生物。"
+                        ],
+                        [
+                          "6",
+                          "催眠展示 {@recharge 5}。作为动作，克拉西斯在自身周围创造出迷人的色彩和形状。每个在它15英尺范围内能看到它的生物必须进行一次智慧豁免投掷（1类为DC 12，2类为DC 14，3类为DC 18），否则将被{@condition 震慑} 1分钟。被{@condition 震慑}的生物可以在每个回合结束时重复豁免投掷，成功则结束此效果。成功通过这次豁免投掷的生物将对所有克拉西斯的催眠展示免疫24小时。"
+                        ],
+                        [
+                          "7",
+                          "毒液刺击。当克拉斯用爪子击中生物时，生物必须进行一次体质豁免检定（类别1为DC 12，类别2为DC 14，类别3为DC 18），否则会被{@condition 麻痹}1分钟。如果克拉斯是类别2或3，生物在以这种方式{@condition 麻痹}时也会{@condition 中毒}。被{@condition 麻痹}的生物可以在每个回合结束时重复豁免检定，成功则结束该效果。"
+                        ],
+                        [
+                          "8",
+                          "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        ]
                       ]
                     },
                     {
@@ -606,22 +622,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。",
-                        "2",
-                        "水生。克拉西斯获得等同于其行走速度的游泳速度。",
-                        "3",
-                        "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。",
-                        "4",
-                        "Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity ({@skill 隐匿}) checks made to hide.",
-                        "5",
-                        "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|突袭}。",
-                        "6",
-                        "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。",
-                        "7",
-                        "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。",
-                        "8",
-                        "Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition 伏地}."
+                        [
+                          "1",
+                          "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。"
+                        ],
+                        [
+                          "2",
+                          "水生。克拉西斯获得等同于其行走速度的游泳速度。"
+                        ],
+                        [
+                          "3",
+                          "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。"
+                        ],
+                        [
+                          "4",
+                          "神秘皮肤。克拉西斯能够改变颜色以匹配其周围环境。在进行敏捷（{@skill 隐匿})检定时，它具有优势。"
+                        ],
+                        [
+                          "5",
+                          "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|被突袭}。"
+                        ],
+                        [
+                          "6",
+                          "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。"
+                        ],
+                        [
+                          "7",
+                          "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。"
+                        ],
+                        [
+                          "8",
+                          "稳定腿部。克拉斯有几条类似螃蟹的腿。因此，在对抗可能导致它{@condition 伏地}的效果时，它在力量和敏捷豁免检定上具有优势。"
+                        ]
                       ]
                     }
                   ]
@@ -680,22 +712,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。",
-                        "2",
-                        "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。",
-                        "3",
-                        "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。",
-                        "4",
-                        "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。",
-                        "5",
-                        "Grabber. When the krasis hits a creature with its claws, the target is {@condition 被擒} (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature {@condition 被擒} in this way at a time.",
-                        "6",
-                        "Hypnotic Display (Recharge 5-6). As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 震慑} for 1 minute. The {@condition 震慑} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.",
-                        "7",
-                        "Venomous Sting. When the krasis hits a creature with its claws, the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 中毒} for 1 minute. If the krasis is a category 2 or 3, the creature is {@condition 麻痹} while {@condition 中毒} in this way. The {@condition 中毒} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-                        "8",
-                        "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        [
+                          "1",
+                          "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。"
+                        ],
+                        [
+                          "2",
+                          "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。"
+                        ],
+                        [
+                          "3",
+                          "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。"
+                        ],
+                        [
+                          "5",
+                          "抓握者。当克瑞斯用爪子击中一个生物时，目标会被克瑞斯身上的特化抓握附肢所{@condition 被擒}（类别1逃脱DC 13，类别2逃脱DC 15，类别3逃脱DC 19）。它一次只能以这种方式{@condition 被擒}一个生物。"
+                        ],
+                        [
+                          "6",
+                          "催眠展示 {@recharge 5}。作为动作，克拉西斯在自身周围创造出迷人的色彩和形状。每个在它15英尺范围内能看到它的生物必须进行一次智慧豁免投掷（1类为DC 12，2类为DC 14，3类为DC 18），否则将被{@condition 震慑} 1分钟。被{@condition 震慑}的生物可以在每个回合结束时重复豁免投掷，成功则结束此效果。成功通过这次豁免投掷的生物将对所有克拉西斯的催眠展示免疫24小时。"
+                        ],
+                        [
+                          "7",
+                          "毒液刺击。当克拉斯用爪子击中生物时，生物必须进行一次体质豁免检定（类别1为DC 12，类别2为DC 14，类别3为DC 18），否则会被{@condition 麻痹}1分钟。如果克拉斯是类别2或3，生物在以这种方式{@condition 麻痹}时也会{@condition 中毒}。被{@condition 麻痹}的生物可以在每个回合结束时重复豁免检定，成功则结束该效果。"
+                        ],
+                        [
+                          "8",
+                          "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        ]
                       ]
                     },
                     {
@@ -710,22 +758,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。",
-                        "2",
-                        "水生。克拉西斯获得等同于其行走速度的游泳速度。",
-                        "3",
-                        "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。",
-                        "4",
-                        "Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity ({@skill 隐匿}) checks made to hide.",
-                        "5",
-                        "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|突袭}。",
-                        "6",
-                        "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。",
-                        "7",
-                        "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。",
-                        "8",
-                        "Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition 伏地}."
+                        [
+                          "1",
+                          "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。"
+                        ],
+                        [
+                          "2",
+                          "水生。克拉西斯获得等同于其行走速度的游泳速度。"
+                        ],
+                        [
+                          "3",
+                          "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。"
+                        ],
+                        [
+                          "4",
+                          "神秘皮肤。克拉西斯能够改变颜色以匹配其周围环境。在进行敏捷（{@skill 隐匿})检定时，它具有优势。"
+                        ],
+                        [
+                          "5",
+                          "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|被突袭}。"
+                        ],
+                        [
+                          "6",
+                          "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。"
+                        ],
+                        [
+                          "7",
+                          "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。"
+                        ],
+                        [
+                          "8",
+                          "稳定腿部。克拉斯有几条类似螃蟹的腿。因此，在对抗可能导致它{@condition 伏地}的效果时，它在力量和敏捷豁免检定上具有优势。"
+                        ]
                       ]
                     }
                   ]
@@ -784,22 +848,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。",
-                        "2",
-                        "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。",
-                        "3",
-                        "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。",
-                        "4",
-                        "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。",
-                        "5",
-                        "Grabber. When the krasis hits a creature with its claws, the target is {@condition 被擒} (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature {@condition 被擒} in this way at a time.",
-                        "6",
-                        "Hypnotic Display (Recharge 5-6). As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 震慑} for 1 minute. The {@condition 震慑} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.",
-                        "7",
-                        "Venomous Sting. When the krasis hits a creature with its claws, the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition 中毒} for 1 minute. If the krasis is a category 2 or 3, the creature is {@condition 麻痹} while {@condition 中毒} in this way. The {@condition 中毒} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-                        "8",
-                        "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        [
+                          "1",
+                          "酸性皮肤。任何生物在5英尺内触碰克拉斯或用近战攻击击中它时，将受到2 ({@damage 1d4}) 点酸性伤害（类别1），4 ({@damage 1d8}) 点酸性伤害（类别2），或6 ({@damage 1d12}) 点酸性伤害（类别3）。"
+                        ],
+                        [
+                          "2",
+                          "装甲皮肤。克瑞斯因其壳或厚鳞片拥有更好的天然护甲，其护甲等级增加4。"
+                        ],
+                        [
+                          "3",
+                          "生物发光标记。克拉西斯的皮肤上有发光的图案，这些图案呈现防御符文的形状，使其在对抗法术和其他魔法效果的豁免骰上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "飞行。克拉斯有翅膀，并获得了与其步行速度相等的飞行速度。"
+                        ],
+                        [
+                          "5",
+                          "抓握者。当克瑞斯用爪子击中一个生物时，目标会被克瑞斯身上的特化抓握附肢所{@condition 被擒}（类别1逃脱DC 13，类别2逃脱DC 15，类别3逃脱DC 19）。它一次只能以这种方式{@condition 被擒}一个生物。"
+                        ],
+                        [
+                          "6",
+                          "催眠展示 {@recharge 5}。作为动作，克拉西斯在自身周围创造出迷人的色彩和形状。每个在它15英尺范围内能看到它的生物必须进行一次智慧豁免投掷（1类为DC 12，2类为DC 14，3类为DC 18），否则将被{@condition 震慑} 1分钟。被{@condition 震慑}的生物可以在每个回合结束时重复豁免投掷，成功则结束此效果。成功通过这次豁免投掷的生物将对所有克拉西斯的催眠展示免疫24小时。"
+                        ],
+                        [
+                          "7",
+                          "毒液刺击。当克拉斯用爪子击中生物时，生物必须进行一次体质豁免检定（类别1为DC 12，类别2为DC 14，类别3为DC 18），否则会被{@condition 麻痹}1分钟。如果克拉斯是类别2或3，生物在以这种方式{@condition 麻痹}时也会{@condition 中毒}。被{@condition 麻痹}的生物可以在每个回合结束时重复豁免检定，成功则结束该效果。"
+                        ],
+                        [
+                          "8",
+                          "再生。如果克拉斯至少有1点生命值，它在每个回合开始时恢复生命值（1类恢复2点，2类恢复5点，3类恢复10点）。"
+                        ]
                       ]
                     },
                     {
@@ -814,22 +894,38 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。",
-                        "2",
-                        "水生。克拉西斯获得等同于其行走速度的游泳速度。",
-                        "3",
-                        "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。",
-                        "4",
-                        "Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity ({@skill 隐匿}) checks made to hide.",
-                        "5",
-                        "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|突袭}。",
-                        "6",
-                        "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。",
-                        "7",
-                        "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。",
-                        "8",
-                        "Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition 伏地}."
+                        [
+                          "1",
+                          "无定形结构。克瑞斯可以穿过宽仅1英寸的空间而不被挤压。"
+                        ],
+                        [
+                          "2",
+                          "水生。克拉西斯获得等同于其行走速度的游泳速度。"
+                        ],
+                        [
+                          "3",
+                          "攀爬速度。克拉斯获得等同于其行走速度的攀爬速度。"
+                        ],
+                        [
+                          "4",
+                          "神秘皮肤。克拉西斯能够改变颜色以匹配其周围环境。在进行敏捷（{@skill 隐匿})检定时，它具有优势。"
+                        ],
+                        [
+                          "5",
+                          "高度警觉。由于具有类似鲶鱼的敏感触须、像变色龙的立体视觉、像蛇的舌头、像龙虾的眼睛柄或一系列眼睛，克瑞斯不会被{@quickref 突袭|PHB|3|0|被突袭}。"
+                        ],
+                        [
+                          "6",
+                          "墨云（短休或长休后重充）。克拉西斯在水下时，可以使用奖励动作排放一团墨云，然后移动至其速度。墨云静止不动，填充克拉西斯空间中的一个点为中心的20英尺半径球体。这个球体在墨水散去前1分钟都是严重遮蔽的。强流也会使墨云散开。"
+                        ],
+                        [
+                          "7",
+                          "跳跃能力。无论是否助跑，克拉斯的立定跳远距离是20英尺（1类），30英尺（2类），或40英尺（3类）。它的立定跳高是10英尺（1类），20英尺（2类），或30英尺（3类）。"
+                        ],
+                        [
+                          "8",
+                          "稳定腿部。克拉斯有几条类似螃蟹的腿。因此，在对抗可能导致它{@condition 伏地}的效果时，它在力量和敏捷豁免检定上具有优势。"
+                        ]
                       ]
                     }
                   ]
@@ -1316,12 +1412,18 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "短期",
-                        "2-3",
-                        "长期",
-                        "4+",
-                        "不确定的"
+                        [
+                          "1",
+                          "短期"
+                        ],
+                        [
+                          "2-3",
+                          "长期"
+                        ],
+                        [
+                          "4+",
+                          "不确定的"
+                        ]
                       ]
                     }
                   ]
@@ -1355,14 +1457,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。",
-                        "2",
-                        "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。",
-                        "3",
-                        "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell darkness}；每天1次：{@spell fear}（仅限阴影恐怖和爬行恐怖）、{@spell phantasmal killer}（仅限爬行恐怖）",
-                        "4",
-                        "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        [
+                          "1",
+                          "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。"
+                        ],
+                        [
+                          "2",
+                          "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。"
+                        ],
+                        [
+                          "3",
+                          "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell 黑暗}；每天1次：{@spell 恐惧术}（仅限阴影恐怖和爬行恐怖）、{@spell 魅影杀手}（仅限爬行恐怖）"
+                        ],
+                        [
+                          "4",
+                          "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        ]
                       ]
                     },
                     {
@@ -1377,14 +1487,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition 被擒} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.",
-                        "2",
-                        "Indomitable Mind. The horror is immune to the {@condition 魅惑} condition.",
-                        "3",
-                        "Keen Senses. The horror has advantage on Wisdom ({@skill 察觉}) checks that rely on sight, sound, or smell.",
-                        "4",
-                        "Mind Sight. Magical darkness doesn't impede the horror's {@sense 黑暗视觉}."
+                        [
+                          "1",
+                          "抓握触须。这个怪物有四根触须。每根触须都可以被攻击（AC 12, 10生命值）。摧毁一根触须不会对怪物造成伤害。作为一个奖励动作，怪物可以瞄准它10英尺内能看到的一个生物。目标必须进行一次敏捷豁免投掷，否则会被怪物{@condition 被擒}。豁免投掷的DC和逃脱缠绕的DC是相同的：飞行怪物为9，阴影怪物为13，爬行怪物为19。直到缠绕结束，怪物不能使用同一根触须缠绕另一个目标。"
+                        ],
+                        [
+                          "2",
+                          "不屈意志。该恐怖生物对{@condition 魅惑}状态免疫。"
+                        ],
+                        [
+                          "3",
+                          "敏锐感知。这个恐怖生物在依赖视觉、听觉或嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "心灵视域。魔法黑暗无法阻碍这个怪物的{@sense 黑暗视觉}。"
+                        ]
                       ]
                     }
                   ]
@@ -2075,7 +2193,7 @@
                       "ENG_name": "Demonic \"Devils.\"",
                       "type": "entries",
                       "entries": [
-                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature quasit||夸赛特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
+                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature 夸塞魔||奎西特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
                       ]
                     },
                     {
@@ -2083,7 +2201,7 @@
                       "ENG_name": "Diabolic Demons",
                       "type": "entries",
                       "entries": [
-                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature nalfeshnee}、{@creature shadow demon}或{@creature vrock}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
+                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature 判魂魔}、{@creature 影魔}或{@creature 弗洛魔}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
                       ]
                     }
                   ]
@@ -2213,7 +2331,7 @@
                       "ENG_name": "Gloamwing Mount",
                       "type": "entries",
                       "entries": [
-                        "If a gloamwing is killed, its specter becomes fixated on destroying those responsible. If the specter survives, it can create a new gloamwing over the course of a month, during which time the specter is {@condition 无力}.",
+                        "如果幽光（gloamwing）被杀死，它的幽灵会变得专注于摧毁那些负有责任的人。如果幽灵存活下来，它可以在一个月的时间内创造一个新的幽光，在此期间，幽灵处于{@condition 无力}。",
                         "格洛姆翼兽的头部几乎像老鼠，有着突出的牙齿，它的皮肤紧绷在头骨上，眼睛是空荡荡的眼窝。它的身体布满了骨质板，巨大的翅膀从它的肩膀延伸出来。"
                       ]
                     },
@@ -2729,12 +2847,18 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "短期",
-                        "2-3",
-                        "长期",
-                        "4+",
-                        "不确定的"
+                        [
+                          "1",
+                          "短期"
+                        ],
+                        [
+                          "2-3",
+                          "长期"
+                        ],
+                        [
+                          "4+",
+                          "不确定的"
+                        ]
                       ]
                     }
                   ]
@@ -2767,14 +2891,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。",
-                        "2",
-                        "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。",
-                        "3",
-                        "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell darkness}；每天1次：{@spell fear}（仅限阴影恐怖和爬行恐怖）、{@spell phantasmal killer}（仅限爬行恐怖）",
-                        "4",
-                        "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        [
+                          "1",
+                          "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。"
+                        ],
+                        [
+                          "2",
+                          "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。"
+                        ],
+                        [
+                          "3",
+                          "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell 黑暗}；每天1次：{@spell 恐惧术}（仅限阴影恐怖和爬行恐怖）、{@spell 魅影杀手}（仅限爬行恐怖）"
+                        ],
+                        [
+                          "4",
+                          "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        ]
                       ]
                     },
                     {
@@ -2789,14 +2921,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition 被擒} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.",
-                        "2",
-                        "Indomitable Mind. The horror is immune to the {@condition 魅惑} condition.",
-                        "3",
-                        "Keen Senses. The horror has advantage on Wisdom ({@skill 察觉}) checks that rely on sight, sound, or smell.",
-                        "4",
-                        "Mind Sight. Magical darkness doesn't impede the horror's {@sense 黑暗视觉}."
+                        [
+                          "1",
+                          "抓握触须。这个怪物有四根触须。每根触须都可以被攻击（AC 12, 10生命值）。摧毁一根触须不会对怪物造成伤害。作为一个奖励动作，怪物可以瞄准它10英尺内能看到的一个生物。目标必须进行一次敏捷豁免投掷，否则会被怪物{@condition 被擒}。豁免投掷的DC和逃脱缠绕的DC是相同的：飞行怪物为9，阴影怪物为13，爬行怪物为19。直到缠绕结束，怪物不能使用同一根触须缠绕另一个目标。"
+                        ],
+                        [
+                          "2",
+                          "不屈意志。该恐怖生物对{@condition 魅惑}状态免疫。"
+                        ],
+                        [
+                          "3",
+                          "敏锐感知。这个恐怖生物在依赖视觉、听觉或嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "心灵视域。魔法黑暗无法阻碍这个怪物的{@sense 黑暗视觉}。"
+                        ]
                       ]
                     }
                   ]
@@ -2846,7 +2986,7 @@
                       "name": "恶魔“魔鬼”",
                       "ENG_name": "Demonic \"Devils\"",
                       "entries": [
-                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature quasit||夸赛特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
+                        "在拉文尼卡被称为“恶魔”的生物是类似于{@creature 夸塞魔||奎西特}的小恶魔。虽然较大的恶魔体现诸如嗜血和折磨等邪恶品质，但这些较小的恶魔反映了拉克多斯及其邪教的俏皮和混乱的一面。他们的恶作剧引起的混乱和破坏与恶魔的小体型不成比例。"
                       ],
                       "type": "entries"
                     },
@@ -2855,7 +2995,7 @@
                       "ENG_name": "Diabolic Demons",
                       "type": "entries",
                       "entries": [
-                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature nalfeshnee}、{@creature shadow demon}或{@creature vrock}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
+                        "拉尼卡的许多恶魔是具有人类形态的怪物，长有翅膀。它们最好用《怪物手册》中的{@creature 判魂魔}、{@creature 影魔}或{@creature 弗洛魔}的统计数据来代表。与拉克多斯邪教有关的恶魔通常具有火焰攻击，使它们类似于带刺的恶魔或角恶魔，只是它们是恶魔。（它们是混乱邪恶的，它们说深渊语而不是恶魔语，并且它们没有恶魔视觉。）"
                       ]
                     }
                   ]
@@ -2911,12 +3051,18 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "短期",
-                        "2-3",
-                        "长期",
-                        "4+",
-                        "不确定的"
+                        [
+                          "1",
+                          "短期"
+                        ],
+                        [
+                          "2-3",
+                          "长期"
+                        ],
+                        [
+                          "4+",
+                          "不确定的"
+                        ]
                       ]
                     }
                   ]
@@ -2949,14 +3095,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。",
-                        "2",
-                        "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。",
-                        "3",
-                        "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell darkness}；每天1次：{@spell fear}（仅限阴影恐怖和爬行恐怖）、{@spell phantasmal killer}（仅限爬行恐怖）",
-                        "4",
-                        "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        [
+                          "1",
+                          "回避。如果恐怖生物受到允许它进行豁免投掷以只承受一半伤害的效果影响，如果豁免成功，则它不承受任何伤害；如果豁免失败，则只承受一半伤害。"
+                        ],
+                        [
+                          "2",
+                          "伤害抗性。这个恐怖生物对死灵和心灵伤害具有抗性。"
+                        ],
+                        [
+                          "3",
+                          "天赋施法。恐怖生物的天赋施法能力是魅力（飞行恐怖的豁免DC为13，阴影恐怖的DC为16，爬行恐怖的DC为17）。它能够天赋施放以下法术，无需任何材料成分：每天3次：{@spell 黑暗}；每天1次：{@spell 恐惧术}（仅限阴影恐怖和爬行恐怖）、{@spell 魅影杀手}（仅限爬行恐怖）"
+                        ],
+                        [
+                          "4",
+                          "心灵斥责。当恐怖之物从近战攻击中受到伤害时，它可以使用反应在5英尺半径内发出心灵能量。该区域内的每个生物将受到3 ({@damage 1d6}) 点心灵伤害（飞行恐怖之物），7 ({@damage 2d6}) 点心灵伤害（阴影恐怖之物），或10 ({@damage 3d6}) 点心灵伤害（爬行恐怖之物）。"
+                        ]
                       ]
                     },
                     {
@@ -2971,14 +3125,22 @@
                         "col-10"
                       ],
                       "rows": [
-                        "1",
-                        "Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition 被擒} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.",
-                        "2",
-                        "Indomitable Mind. The horror is immune to the {@condition 魅惑} condition.",
-                        "3",
-                        "Keen Senses. The horror has advantage on Wisdom ({@skill 察觉}) checks that rely on sight, sound, or smell.",
-                        "4",
-                        "Mind Sight. Magical darkness doesn't impede the horror's {@sense 黑暗视觉}."
+                        [
+                          "1",
+                          "抓握触须。这个怪物有四根触须。每根触须都可以被攻击（AC 12, 10生命值）。摧毁一根触须不会对怪物造成伤害。作为一个奖励动作，怪物可以瞄准它10英尺内能看到的一个生物。目标必须进行一次敏捷豁免投掷，否则会被怪物{@condition 被擒}。豁免投掷的DC和逃脱缠绕的DC是相同的：飞行怪物为9，阴影怪物为13，爬行怪物为19。直到缠绕结束，怪物不能使用同一根触须缠绕另一个目标。"
+                        ],
+                        [
+                          "2",
+                          "不屈意志。该恐怖生物对{@condition 魅惑}状态免疫。"
+                        ],
+                        [
+                          "3",
+                          "敏锐感知。这个恐怖生物在依赖视觉、听觉或嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+                        ],
+                        [
+                          "4",
+                          "心灵视域。魔法黑暗无法阻碍这个怪物的{@sense 黑暗视觉}。"
+                        ]
                       ]
                     }
                   ]

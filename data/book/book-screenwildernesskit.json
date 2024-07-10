@@ -27,7 +27,7 @@
                   "type": "item",
                   "name": "2. 步伐",
                   "ENG_name": "2. Pace",
-                  "entry": "玩家们选择队伍在周期内的行进速度：慢速、正常或快速。请参阅DM屏幕上的{@table Travel Pace|PHB}表格，了解每种速度的详细信息。"
+                  "entry": "玩家们选择队伍在周期内的行进速度：慢速、正常或快速。请参阅DM屏幕上的{@table 旅行步调|PHB}表格，了解每种速度的详细信息。"
                 },
                 {
                   "type": "item",
@@ -39,7 +39,7 @@
                   "type": "item",
                   "name": "4. 遭遇",
                   "ENG_name": "4. Encounter",
-                  "entry": "Roll a {@dice d10}. On a 1, the characters encounter something this cycle. The DM either decides what happens or rolls on the Wilderness Encounter table."
+                  "entry": "掷一个{@dice d10}骰子。如果是1，则角色在本周期遇到了某事。DM决定发生什么，或者在荒野遭遇表上掷骰。"
                 },
                 {
                   "type": "item",
@@ -69,14 +69,14 @@
               "type": "list",
               "items": [
                 "遮蔽区域的天气，例如大雨、雪或雾。",
-                "Traveling at night, even with light sources or {@sense 黑暗视觉}.",
+                "即使有光源或具有{@sense 黑暗视觉}，在夜间旅行。",
                 "密集森林",
                 "地下旅行",
                 "在海上旅行时，无法看到天空或任何熟悉的陆地。"
               ]
             },
-            "The DM lets the group know when they are in one or more of those circumstances, and then the characters choose one of their number who must make a Wisdom ({@skill 生存}) check against a DC appropriate to the terrain (see \"Wilderness navigation\" on the DM's screen). Other members of the group can take the {@action 协助} action on this check as normal, and traveling at a fast pace imposes disadvantage on the check.",
-            "If the check fails, the group spends {@dice 1d6} hours (short cycle) or {@dice 1d6} days (long cycle) traveling in a random direction. The DM may roll a die to determine which hex the group ends up in on a map, such as the ones provided in this kit."
+            "当团队处于一种或多种这些情况下时，DM会告知团队，然后角色们选择他们中的一位进行一次智力（{@skill 求生}）检定，对抗适合地形的难度等级（见DM屏幕上的“野外导航”）。团队的其他成员可以像平常一样采取{@action 协助}动作来协助这次检定，并且快速行进会给检定带来不利影响。",
+            "如果检定失败，小组将花费{@dice 1d6}小时（短周期）或{@dice 1d6}天（长周期）在随机方向上移动。DM可以掷骰子来确定小组在地图上的最终位置，比如本套件中提供的那些六边形。"
           ],
           "id": "002"
         },
@@ -98,16 +98,26 @@
                 "col-10"
               ],
               "rows": [
-                "1",
-                "一只孤独而强大的生物出现了！DM选择这个生物，选择一个挑战等级比队伍等级高1-3的生物。这个生物生活在该地区或正在通过，只有在队伍挑衅它时才会对队伍表现出敌意。",
-                "2-4",
-                "附近有敌对生物潜伏！DM选择生物，选出五个挑战等级等于团队等级的生物。这些生物可能是该地区的本土怪物或敌对的旅行者",
-                "5-6",
-                "A group of friendly travelers crosses the group's path. The travelers have {@dice 2d6} goods for sale that cost 1 gp or less on the Adventuring Gear table in the Player's Handbook",
-                "7",
-                "该团队发现了一个纪念碑。请在{@table 荒野之旅；纪念碑|ScreenWildernessKit|Monuments}表格上进行掷骰。",
-                "8",
-                "团队误入一个奇怪的地方。在《野外探险；奇异地点》表格上掷骰。"
+                [
+                  "1",
+                  "一只孤独而强大的生物出现了！DM选择这个生物，选择一个挑战等级比队伍等级高1-3的生物。这个生物生活在该地区或正在通过，只有在队伍挑衅它时才会对队伍表现出敌意。"
+                ],
+                [
+                  "2-4",
+                  "附近有敌对生物潜伏！DM选择生物，选出五个挑战等级等于团队等级的生物。这些生物可能是该地区的本土怪物或敌对的旅行者"
+                ],
+                [
+                  "5-6",
+                  "一群友好的旅行者与队伍的路径相交。这些旅行者有{@dice 2d6}件商品出售，每件商品的价格都在《玩家手册》中的冒险装备表上不超过1金币。"
+                ],
+                [
+                  "7",
+                  "该团队发现了一个纪念碑。请在{@table 荒野之旅；纪念碑|荒野生存包|遗迹}表格上进行掷骰。"
+                ],
+                [
+                  "8",
+                  "团队误入一个奇怪的地方。在《野外探险；奇异地点》表格上掷骰。"
+                ]
               ]
             }
           ],
@@ -125,36 +135,66 @@
             "col-10"
           ],
           "rows": [
-            "1",
-            "封闭的土丘墓或金字塔",
-            "2",
-            "被掠夺的土堆墓或金字塔",
-            "3",
-            "雕刻在山腰或悬崖上的脸",
-            "4",
-            "从山腰或悬崖上雕刻出来的巨人雕像",
-            "5-6",
-            "完好无损的方尖碑，上面刻有警告、历史传说、题词或宗教象征",
-            "7-8",
-            "被毁坏或倒塌的方尖碑",
-            "9-10",
-            "完整无损的人或神祇雕像",
-            "11-13",
-            "倒塌或毁坏的人或神像",
-            "14",
-            "巨大的石墙，完好无损，每隔一英里有塔楼防御工事",
-            "15",
-            "巨大的石墙遗址",
-            "16",
-            "巨大的石拱门",
-            "17",
-            "喷泉",
-            "18",
-            "完整的立石圈",
-            "19",
-            "被毁坏或倒塌的立石圈",
-            "20",
-            "刻有元素或仙女符号的石柱"
+            [
+              "1",
+              "封闭的土丘墓或金字塔"
+            ],
+            [
+              "2",
+              "被掠夺的土堆墓或金字塔"
+            ],
+            [
+              "3",
+              "雕刻在山腰或悬崖上的脸"
+            ],
+            [
+              "4",
+              "从山腰或悬崖上雕刻出来的巨人雕像"
+            ],
+            [
+              "5-6",
+              "完好无损的方尖碑，上面刻有警告、历史传说、题词或宗教象征"
+            ],
+            [
+              "7-8",
+              "被毁坏或倒塌的方尖碑"
+            ],
+            [
+              "9-10",
+              "完整无损的人或神祇雕像"
+            ],
+            [
+              "11-13",
+              "倒塌或毁坏的人或神像"
+            ],
+            [
+              "14",
+              "巨大的石墙，完好无损，每隔一英里有塔楼防御工事"
+            ],
+            [
+              "15",
+              "巨大的石墙遗址"
+            ],
+            [
+              "16",
+              "巨大的石拱门"
+            ],
+            [
+              "17",
+              "喷泉"
+            ],
+            [
+              "18",
+              "完整的立石圈"
+            ],
+            [
+              "19",
+              "被毁坏或倒塌的立石圈"
+            ],
+            [
+              "20",
+              "刻有元素或仙女符号的石柱"
+            ]
           ]
         },
         {
@@ -169,38 +209,70 @@
             "col-10"
           ],
           "rows": [
-            "1-2",
-            "死魔法区域（类似于反魔法领域）",
-            "3",
-            "野魔法区域（在区域内施放法术时，需在《玩家手册》的{@table Wild Magic Surge|PHB}表格上进行掷骰）",
-            "4",
-            "刻有会说话面孔的巨石",
-            "5",
-            "神秘地回答问题的水晶洞穴",
-            "6",
-            "包含被困灵魂的古老树木",
-            "7-8",
-            "战场，那里的残存雾气偶尔会呈现出人形",
-            "9-10",
-            "通往另一个存在的平面的传送门",
-            "11",
-            "许愿井",
-            "12",
-            "从地面突出的巨大水晶碎片",
-            "13",
-            "沉船，即使附近没有水",
-            "14-15",
-            "闹鬼的山丘或土丘",
-            "16",
-            "由骷髅船长引导的河上渡轮",
-            "17",
-            "Field of {@condition 石化} soldiers or other creatures",
-            "18",
-            "Forest of {@condition 石化} or {@creature awakened tree||awakened trees}",
-            "19",
-            "包含龙族墓地的峡谷",
-            "20",
-            "漂浮的土堆，上面有一座塔"
+            [
+              "1-2",
+              "死魔法区域（类似于反魔法领域）"
+            ],
+            [
+              "3",
+              "野魔法区域（在区域内施放法术时，需在《玩家手册》的{@table 狂野魔法浪涌|PHB}表格上进行掷骰）"
+            ],
+            [
+              "4",
+              "刻有会说话面孔的巨石"
+            ],
+            [
+              "5",
+              "神秘地回答问题的水晶洞穴"
+            ],
+            [
+              "6",
+              "包含被困灵魂的古老树木"
+            ],
+            [
+              "7-8",
+              "战场，那里的残存雾气偶尔会呈现出人形"
+            ],
+            [
+              "9-10",
+              "通往另一个存在的平面的传送门"
+            ],
+            [
+              "11",
+              "许愿井"
+            ],
+            [
+              "12",
+              "从地面突出的巨大水晶碎片"
+            ],
+            [
+              "13",
+              "沉船，即使附近没有水"
+            ],
+            [
+              "14-15",
+              "闹鬼的山丘或土丘"
+            ],
+            [
+              "16",
+              "由骷髅船长引导的河上渡轮"
+            ],
+            [
+              "17",
+              "一片被石化的士兵或其他生物的场地"
+            ],
+            [
+              "18",
+              "石化森林或觉醒树木"
+            ],
+            [
+              "19",
+              "包含龙族墓地的峡谷"
+            ],
+            [
+              "20",
+              "漂浮的土堆，上面有一座塔"
+            ]
           ]
         },
         {
@@ -247,30 +319,42 @@
                     "col-3"
                   ],
                   "rows": [
-                    "小型",
-                    "四分之一单位",
-                    "1 银币，2 铜币",
-                    "7银币，5铜币",
-                    "小型",
-                    "1单位",
-                    "5铜币",
-                    "3金币，5银币",
-                    "中等",
-                    "1单位",
-                    "5铜币",
-                    "3金币，5银币",
-                    "大型",
-                    "4个单位",
-                    "2金币",
-                    "14金币",
-                    "巨型",
-                    "16单位",
-                    "8 金币",
-                    "56 金币",
-                    "巨型",
-                    "64单位",
-                    "32金币",
-                    "224金币"
+                    [
+                      "小型",
+                      "四分之一单位",
+                      "1 银币，2 铜币",
+                      "7银币，5铜币"
+                    ],
+                    [
+                      "小型",
+                      "1单位",
+                      "5铜币",
+                      "3金币，5银币"
+                    ],
+                    [
+                      "中等",
+                      "1单位",
+                      "5铜币",
+                      "3金币，5银币"
+                    ],
+                    [
+                      "大型",
+                      "4个单位",
+                      "2金币",
+                      "14金币"
+                    ],
+                    [
+                      "巨型",
+                      "16单位",
+                      "8 金币",
+                      "56 金币"
+                    ],
+                    [
+                      "巨型",
+                      "64单位",
+                      "32金币",
+                      "224金币"
+                    ]
                   ]
                 }
               ],
@@ -282,7 +366,7 @@
               "ENG_name": "Tracking Supplies",
               "entries": [
                 "使用随附的补给追踪器记录您是在追踪短周期还是长周期的旅程，以及您携带了多少单位的食物和水。在每个周期的补给步骤中，为消耗的每个食物或水单位划掉一个框。",
-                "A character unable to eat or drink gains 1 level of {@condition 力竭} for each requirement they fail to meet. Exhaustion gained in this way can't be removed until the character is able to consume sufficient food and water."
+                "一个无法进食或饮水的角色，每未能满足一个需求就会获得1级{@condition exhaustion}。以这种方式获得的{@condition exhaustion}在角色能够摄入足够的食物和水之前不能被移除。"
               ],
               "id": "006"
             },
@@ -291,7 +375,7 @@
               "name": "觅食",
               "ENG_name": "Foraging",
               "entries": [
-                "Characters can hunt or gather food and water while the party travels at a normal or slow pace. A foraging character makes a Wisdom ({@skill 生存}) check against a DC determined by the terrain (see the Foraging table on the DM's screen). On a successful check, the character gathers units of food equal to {@dice 1d6} + their Wisdom modifier. Repeat the roll for drinkable water."
+                "角色可以在队伍以正常或慢速行进时狩猎或收集食物和水。搜寻食物的角色进行一次智力（{@skill 求生}）检定，难度等级由地形决定（见DM屏幕上的搜寻表格）。成功检定时，角色收集的食物单位等于{@dice 1d6}加上他们的智力调整值。重复掷骰以获取饮用水。"
               ],
               "id": "007"
             }
@@ -334,13 +418,13 @@
                   "type": "item",
                   "name": "3. 掷骰以解决复杂情况",
                   "ENG_name": "3. Roll for a complication",
-                  "entry": "When your turn starts, roll a {@dice d20} and consult the Wilderness Chase Complications table to see if an unexpected event complicates your turn."
+                  "entry": "当你的回合开始时，掷一个{@dice d20}骰子，并参照荒野追逐复杂性表，看看是否有意外事件使你的回合变得复杂。"
                 },
                 {
                   "type": "item",
                   "name": "4. 移动并采取行动",
                   "ENG_name": "4. Move And take an action",
-                  "entry": "You can take one action on your turn, and before or after that action, you can move upto a distance equal to your speed. See the \"Actions in Combat\" sheet for the actions you can take during a chase (see the \"Dashing\" section on the other side of this sheet if you take the {@action 疾走} Action). If you have a bonus action available, you also take it during your turn, but no more than once one each of your turns."
+                  "entry": "在你的回合，你可以进行一次行动，并且在那一次行动之前或之后，你可以移动至等于你速度的距离。查看“战斗中的行动”表格了解在追逐中你可以进行的行动（如果你采取了{@action 疾走}行动，请参阅此表格背面的“猛冲”部分）。如果你有可用的额外行动，你也会在你的回合中进行，但每回合不超过一次。"
                 },
                 {
                   "type": "item",
@@ -362,28 +446,50 @@
                 "col-10"
               ],
               "rows": [
-                1,
-                "Your path takes you through a rough patch of brush. Make a DC 10 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check (your choice) to get past the brush. On failed check, the brush counts as 5feet of difficult terrain.",
-                2,
-                "Uneven ground threatens to slow your progress. Make a DC 10 Dexterity ({@skill 体操}) check to navigate the area. On failed check, the ground counts as 10 feet of difficult terrain. {@dice d20}",
-                3,
-                "你穿过一群{@creature 昆虫群}（查看《怪物手册》以获取游戏统计数据）。昆虫群对你进行机会攻击（命中加值+3；命中时造成{@damage 4d4}穿刺伤害）。",
-                4,
-                "A stream, ravine, or rock bed blocks your path. Make a DC 10 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check (your choice) to cross the impediment. On a failed check, the impediment counts as 10 feet of difficult terrain.",
-                5,
-                "Make a DC 10 Constitution saving throw. Ona failed save, you are {@condition 目盲} by blowing sand,dirt, ash, snow,or pollen until the end of your turn. While {@condition 目盲} in this way, your speed is halved.",
-                6,
-                "A sudden drop catches you by surprise. Make a DC 10 Dexterity saving throw to navigate the impediment. On failed save, you fall {@dice 1d4 x 5} feet, taking {@damage 1d6} bludgeoning damage per 10 feet fallen as normal, and land {@condition 伏地}.",
-                7,
-                "You blunder into a snare. Make a DC 15 Dexterity saving throw. On failed save, you are caught in the snare and {@condition 束缚}. As an action, you or someone within 5 feet of you can make a DC 10 Strength check, freeing you on a success. The snare can also be destroyed; it has an AC of 10 and 5 hit points, and it is immune to poison and psychic damage. Complication",
-                8,
-                "你被一群受惊的动物踩踏。进行一次难度为10的敏捷豁免投掷。如果豁免失败，你将被撞倒并受到{@damage 1d4} 钝击伤害和{@damage 1d4} 穿刺伤害。",
-                9,
-                "你的路径带你靠近一片刀藤。进行一次DC 15的敏捷豁免检定，或者使用10英尺的移动（你选择）来避开刀藤。如果豁免失败，你将受到{@damage 1d10}的斩击伤害。",
-                10,
-                "One or more creatures in the area chase after you! The DM chooses these pursuers or rolls a {@dice d8} to determine them: (1) 2 {@creature brown bear||brown bears}, (2) {@dice 2d4} {@creature giant toad||giant toads}, (3) {@dice 1d4} {@creature poisonous snake||poisonous snakes}, (4) {@dice 2d4} {@creature wolf||wolves}, (5) 1 {@creature giant boar}, (6) 2 {@creature dire wolf||dire wolves}, (7) {@creature griffon}, or (8) {@dice 1d12} {@creature giant rat||giant rats} (see the {@book Monster Manual|MM} for the creatures' game statistics).",
-                "11-20",
-                "没有并发症。"
+                [
+                  1,
+                  "你的路径带你穿过一片粗糙的灌木丛。进行一次DC 10的力量（{@skill 运动}）或敏捷（{@skill 特技}）检定（你选择），以穿过灌木丛。如果检定失败，灌木丛视为5英尺的{@quickref 困难地型||3}。"
+                ],
+                [
+                  2,
+                  "不平坦的地面可能会阻碍你的前进。进行一次难度等级10的敏捷（{@skill 特技}）检定来穿越该区域。如果检定失败，该地面将被视为10英尺的{@quickref 困难地型||3}。"
+                ],
+                [
+                  3,
+                  "你穿过一群{@creature 昆虫群}（查看《怪物手册》以获取游戏统计数据）。昆虫群对你进行机会攻击（命中加值+3；命中时造成{@damage 4d4}穿刺伤害）。"
+                ],
+                [
+                  4,
+                  "一条小溪、沟壑或岩石河床挡住了你的去路。进行一次DC 10的力量（{@skill 运动}）或敏捷（{@skill 特技}）检定（你选择）来越过障碍。如果检定失败，这个障碍被视为10英尺的{@quickref 困难地型||3}。"
+                ],
+                [
+                  5,
+                  "进行一次难度等级为10的体质豁免检定。若豁免失败，你会因为吹起的沙子、泥土、灰烬、雪花或花粉而{@condition 目盲}，直到你的回合结束。在这种状态下{@condition 目盲}时，你的速度减半。"
+                ],
+                [
+                  6,
+                  "突然的下落让你措手不及。进行一次DC 10的敏捷豁免投掷，以绕过障碍。如果豁免失败，你将下降{@dice 1d4 × 5}英尺，每下降10英尺受到{@damage 1d6}的钝击伤害，如常，并处于{@condition 伏地}状态。"
+                ],
+                [
+                  7,
+                  "你不慎落入了一个陷阱。进行一次DC 15的敏捷豁免检定。豁免失败，你将被困在陷阱中并处于{@condition 束缚}状态。作为一个动作，你或你5英尺内的人可以进行一次DC 10的力量检定，成功则可以解脱。陷阱也可以被摧毁；它的AC为10，有5点生命值，并且对毒素和心灵伤害免疫。复杂情况"
+                ],
+                [
+                  8,
+                  "你被一群受惊的动物踩踏。进行一次难度为10的敏捷豁免投掷。如果豁免失败，你将被撞倒并受到{@damage 1d4} 钝击伤害和{@damage 1d4} 穿刺伤害。"
+                ],
+                [
+                  9,
+                  "你的路径带你靠近一片刀藤。进行一次DC 15的敏捷豁免检定，或者使用10英尺的移动（你选择）来避开刀藤。如果豁免失败，你将受到{@damage 1d10}的斩击伤害。"
+                ],
+                [
+                  10,
+                  "一个或多个生物在区域内追逐你！DM选择这些追击者，或者掷一个{@dice d8}来确定它们：(1) 2 只{@creature 棕熊||棕熊}，(2) 掷{@dice 2d4}只{@creature 巨蟾蜍||巨型蟾蜍}，(3) 掷{@dice 1d4}条{@creature 毒蛇||有毒蛇}，(4) 掷{@dice 2d4}只{@creature 狼||狼群}，(5) 1 只{@creature 巨野猪}，(6) 2 只{@creature 恐狼||恶狼}，(7) 1 只{@creature 狮鹫}，或者(8) 掷{@dice 1d12}只{@creature 巨鼠||巨型老鼠}（查看{@book 怪物图鉴|MM}以获取生物的游戏统计数据）。"
+                ],
+                [
+                  "11-20",
+                  "没有并发症。"
+                ]
               ]
             },
             {
@@ -391,14 +497,14 @@
               "name": "疾奔中",
               "ENG_name": "Dashing",
               "entries": [
-                "Over the course of a chase, you can take the {@action 疾走} action a limited number of times before you risk {@condition 力竭}. That number equals 3 + your Constitution modifier. Each additional {@action 疾走} action you take after that number during the chase requires you to succeed on a DC 10 Constitution check at the end of your turn or gain | level of {@condition 力竭}.",
-                "You drop out of the chase if your {@condition 力竭} reaches level 5, since your speed becomes0. By finishing a short or long rest, you can remove all the levels of {@condition 力竭} you gained by taking the {@action 疾走} action additional times during the chase."
+                "在追逐过程中，你可以有限次地使用{@action 疾走}动作，然后才会面临{@condition 力竭}的风险。这个次数等于3加上你的体质调整值。在追逐中，超过这个次数之后，每次额外使用{@action 疾走}动作，都需要在回合结束时通过一次DC 10的体质检查，否则获得1层{@condition 力竭}。",
+                "如果你的{@condition 力竭}达到5级，你就会退出追逐，因为你的速度变为0。通过完成短暂或长时间的休息，你可以移除你在追逐中因多次采取{@condition 力竭}行动而获得的所有{@condition 力竭}等级。"
               ],
               "id": "00a"
             },
             {
               "type": "entries",
-              "name": "战斗:反应",
+              "name": "反应",
               "ENG_name": "Reactions",
               "entries": [
                 "在追逐中，你可以像平常一样进行反应，但你不能对其他追逐参与者进行机会攻击，因为假设你们都在同一个方向上同时移动。然而，追逐参与者仍然可能成为不参与追逐的生物进行机会攻击的目标。例如，一个冒险者在追逐强盗时经过森林中的狼，可能会引起狼的机会攻击。"
@@ -410,11 +516,11 @@
         },
         {
           "type": "entries",
-          "name": "追逐:结束追逐",
+          "name": "结束追逐",
           "ENG_name": "Ending a Chase",
           "entries": [
             "当一方或另一方停止时，当猎物逃脱时，或者至少有一个追逐者在5英尺内接近猎物时，追逐结束。",
-            "If neither side gives up the chase, the quarry can make a Dexterity ({@skill 隐匿}) check at the end of each round, after every participant in the chase has taken a turn. An {@condition 无力} quarry can't make this check, nor can a quarry without anything to hide behind. The check's total is compared to the passive Wisdom ({@skill 察觉}) scores of the pursuers. If the quarry consists of multiple creatures, they all make the check. If the total of a quarry's check is greater than the highest passive score, that quarry escapes and is no longer in the chase.",
+            "如果双方都没有放弃追逐，猎物可以在每个回合结束时，也就是所有追逐者轮到行动之后，进行一次敏捷（{@skill 隐匿}）检定。处于{@condition 无力}状态的猎物无法进行此检定，没有掩护物的猎物也无法进行。将检定的总值与追逐者的被动感知（{@skill 察觉}）得分进行比较。如果猎物由多个生物组成，它们都要进行这个检定。如果猎物的检定总值高于最高被动得分，那个猎物就逃脱了，不再参与追逐。",
             "根据Escape Factors表格中显示的普遍情况，猎物在检查上获得优势或劣势。如果一个或多个因素同时给猎物带来优势和劣势，那么猎物通常既没有优势也没有劣势。",
             {
               "type": "table",
@@ -428,16 +534,26 @@
                 "col-4"
               ],
               "rows": [
-                "猎物有许多可以藏身的地方",
-                "检定优势",
-                "猎物处于非常拥挤或嘈杂的区域",
-                "检定优势",
-                "猎物藏身之处较少",
-                "劣势",
-                "猎物处于不拥挤或安静的区域",
-                "劣势",
-                "The lead pursue ris a ranger or has proficiency in {@skill 生存}",
-                "劣势"
+                [
+                  "猎物有许多可以藏身的地方",
+                  "检定优势"
+                ],
+                [
+                  "猎物处于非常拥挤或嘈杂的区域",
+                  "检定优势"
+                ],
+                [
+                  "猎物藏身之处较少",
+                  "劣势"
+                ],
+                [
+                  "猎物处于不拥挤或安静的区域",
+                  "劣势"
+                ],
+                [
+                  "主要追踪者是一名游侠或具有{@skill 求生}技能熟练度",
+                  "劣势"
+                ]
               ]
             },
             "逃脱并不一定意味着猎物已经超越了追逐者。例如，在山区，逃脱可能意味着猎物躲进了裂缝或空心的树干中。"

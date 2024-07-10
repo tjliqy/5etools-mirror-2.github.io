@@ -1,888 +1,941 @@
 {
-	"monster": [
-		{
-			"name": "Big Water Slurpent",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AWM",
-			"page": 29,
-			"size": [
-				"L"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"special": "58"
-			},
-			"speed": {
-				"walk": 0,
-				"swim": 60
-			},
-			"str": 17,
-			"dex": 16,
-			"con": 13,
-			"int": 11,
-			"wis": 10,
-			"cha": 10,
-			"passive": 0,
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Invisible in Water",
-					"entries": [
-						"The big water slurpent is {@condition invisible} while fully immersed in water."
-					]
-				},
-				{
-					"name": "Water Bound",
-					"entries": [
-						"The big water slurpent dies if it leaves the water to which it is bound or if that water is destroyed."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Constrict",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, one target. {@h}13 ({@damage 3d6+3}) bludgeoning damage. If the target is Medium or smaller, it is {@condition grappled} (escape {@dc 13}) and pulled 5 feet toward the big water slurpent. Until this grapple ends, the target is {@condition restrained}, the big water slurpent tries to drown it, and the big water slurpent can't constrict another target."
-					]
-				}
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflict": [
-				"grappled",
-				"invisible",
-				"restrained"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Birdsquirrel",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AWM",
-			"page": 30,
-			"size": [
-				"T"
-			],
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"special": "10"
-			},
-			"speed": {
-				"walk": 20,
-				"fly": 30,
-				"climb": 20
-			},
-			"str": 6,
-			"dex": 14,
-			"con": 13,
-			"int": 4,
-			"wis": 12,
-			"cha": 6,
-			"passive": 0,
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"Birdsquirrel has advantage on an attack roll against a creature if at least one of the Birdsquirrel's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Birdsquirrel makes two attacks: one with its bite and one with its claws."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6+2}) piercing damage."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4+2}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Pack Tactics"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Boontu Monkey",
-			"source": "AWM",
-			"page": 30,
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"special": "3"
-			},
-			"speed": {
-				"walk": 20,
-				"climb": 20
-			},
-			"str": 8,
-			"dex": 14,
-			"con": 11,
-			"int": 5,
-			"wis": 12,
-			"cha": 6,
-			"passive": 0,
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Pack Tactics",
-					"entries": [
-						"The Boontu monkey has advantage on an attack roll against a creature if at least one of the boontu monkey's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}1 ({@damage 1d4 ‒1}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Pack Tactics"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Crystal Cave Merfolk",
-			"source": "AWM",
-			"page": 31,
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"merfolk"
-				]
-			},
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				11
-			],
-			"hp": {
-				"special": "11"
-			},
-			"speed": {
-				"walk": 10,
-				"swim": 40
-			},
-			"str": 10,
-			"dex": 13,
-			"con": 12,
-			"int": 11,
-			"wis": 11,
-			"cha": 12,
-			"passive": 0,
-			"cr": "1/8",
-			"trait": [
-				{
-					"name": "Amphibious",
-					"entries": [
-						"The merfolk can breathe air and water."
-					]
-				},
-				{
-					"name": "Siren Song",
-					"entries": [
-						"Lovely singing voices charm every humanoid or giant within 300 feet. The targets must succeed on a {@dc 11} Wisdom saving throw or be {@condition charmed} until the song ends."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 2} to hit, one target. {@h}3 ({@damage 1d6}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Amphibious"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"savingThrowForced": [
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Dankwood Hag",
-			"source": "AWM",
-			"page": 31,
-			"size": [
-				"M"
-			],
-			"type": "fey",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				17
-			],
-			"hp": {
-				"special": "82"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 12,
-			"con": 16,
-			"int": 13,
-			"wis": 14,
-			"cha": 14,
-			"passive": 0,
-			"cr": "3",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"type": "spellcasting",
-					"will": [
-						"{@spell dancing lights}",
-						"{@spell minor illusion}",
-						"{@spell vicious mockery}"
-					],
-					"footerEntries": [
-						"The hag's spellcasting ability is Charisma",
-						"(spell save {@dc 12}). It can innately cast the following spells:"
-					]
-				}
-			],
-			"trait": [
-				{
-					"name": "Amphibious",
-					"entries": [
-						"The hag can breathe air and water."
-					]
-				},
-				{
-					"name": "Mimicry (Green Hag)",
-					"entries": [
-						"The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 14} Wisdom ({@skill Insight}) check."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Illusory Appearance",
-					"entries": [
-						"The hag covers herself with a magical illusion that allows her to look like another creature of her general size and shape. The illusion ends when the hag chooses, or if she dies. A {@dc 20} Intelligence ({@skill Investigation}) check will expose the hag's disguise."
-					]
-				},
-				{
-					"name": "Invisible Passage",
-					"entries": [
-						"The hag magically turns {@condition invisible} until she attacks or casts a spell, or until her {@status concentration} ends. While {@condition invisible}, she leaves no physical evidence of her passage, and can only be tracked by magic."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, one target. {@h}17 ({@damage 2d8 + 4}) slashing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Amphibious"
-			],
-			"damageTags": [
-				"S"
-			],
-			"damageTagsSpell": [
-				"Y"
-			],
-			"spellcastingTags": [
-				"I"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflict": [
-				"invisible"
-			],
-			"savingThrowForcedSpell": [
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Dum-Dum Goblin",
-			"source": "AWM",
-			"page": 32,
-			"size": [
-				"S"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"goblinoid"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				7
-			],
-			"hp": {
-				"special": "7"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 8,
-			"dex": 14,
-			"con": 10,
-			"int": 10,
-			"wis": 8,
-			"cha": 8,
-			"passive": 0,
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Nimble Escape",
-					"entries": [
-						"The goblin can take the {@action Disengage} or {@action Hide} action as a bonus action on each of its turns."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Catch me if you can!",
-					"entries": [
-						"Dum-Dum Goblins will opt to run and hide before fighting! A {@dc 15} Dexterity check must be made before they can be attacked."
-					]
-				},
-				{
-					"name": "Scimitar",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, one target. {@h}3 ({@damage 1d6 +2}) slashing damage."
-					]
-				},
-				{
-					"name": "Shortbow",
-					"entries": [
-						"{@atk rw} {@hit 4} to hit, one target. {@h}6 ({@damage 1d6 + 2}) piercing damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"scimitar|phb",
-				"shortbow|phb"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MLW",
-				"MW",
-				"RNG",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Dwarf",
-			"source": "AWM",
-			"page": 32,
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"Dwarf"
-				]
-			},
-			"alignment": [
-				"L",
-				"G"
-			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"special": "30"
-			},
-			"speed": {
-				"walk": 25
-			},
-			"str": 16,
-			"dex": 13,
-			"con": 14,
-			"int": 10,
-			"wis": 11,
-			"cha": 10,
-			"passive": 0,
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Dwarven Resilience",
-					"entries": [
-						"They have advantage on saving throws against poison, and they have resistance to poison damage."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Shortbow",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, one target. {@h}4 ({@damage 1d6 + 1}) slashing damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"shortbow|phb"
-			],
-			"damageTags": [
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RNG"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Great Kroom, Purple Worm",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AWM",
-			"page": 33,
-			"size": [
-				"G"
-			],
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"special": "247"
-			},
-			"speed": {
-				"walk": 50,
-				"burrow": 30
-			},
-			"str": 10,
-			"dex": 13,
-			"con": 12,
-			"int": 11,
-			"wis": 11,
-			"cha": 12,
-			"passive": 0,
-			"cr": "15",
-			"trait": [
-				{
-					"name": "Tunneler",
-					"entries": [
-						"The worm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The worm makes two attacks:"
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 14} to hit, one target. {@h}22 ({@damage 3d8}) piercing damage. Target must make a {@dc 19} Dexterity save, or be swallowed by the worm!"
-					]
-				},
-				{
-					"name": "Tail Stinger",
-					"entries": [
-						"{@atk mw} {@hit 14} to hit, one creature. {@h}19 ({@damage 3d6 + 9}) piercing damage Target must make a {@dc 19} Constitution save, or take 42",
-						"({@dice 12d6}) poison damage."
-					]
-				}
-			],
-			"environment": [
-				"desert",
-				"underdark"
-			],
-			"traitTags": [
-				"Tunneler"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Swallow"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Hangry Otyugh",
-			"source": "AWM",
-			"page": 33,
-			"size": [
-				"L"
-			],
-			"type": "aberration",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				14
-			],
-			"hp": {
-				"special": "114"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 16,
-			"dex": 11,
-			"con": 19,
-			"int": 6,
-			"wis": 13,
-			"cha": 6,
-			"passive": 0,
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Limited Telepathy",
-					"entries": [
-						"The otyugh can magically transmit simple messages and images to any creature within 120 feet of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The otyugh makes three attacks:"
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d8 + 3}) piercing damage. Target must make a {@dc 15} Constitution save, or take d",
-						"({@dice 1d10}) poison damage until cured."
-					]
-				},
-				{
-					"name": "Tentacle",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage ,Target must make a {@dc 19} Constitution save, or take 42",
-						"({@dice 12d6}) poison damage"
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"Target must make a {@dc 14} Constitution save, or be {@condition grappled}."
-					]
-				}
-			],
-			"environment": [
-				"underdark"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Tentacles"
-			],
-			"damageTags": [
-				"B",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Hill Giant, Blorbo",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AWM",
-			"page": 34,
-			"size": [
-				"H"
-			],
-			"type": "giant",
-			"alignment": [
-				"C",
-				"E"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"special": "105"
-			},
-			"speed": {
-				"walk": 40
-			},
-			"str": 21,
-			"dex": 8,
-			"con": 19,
-			"int": 5,
-			"wis": 9,
-			"cha": 6,
-			"passive": 0,
-			"cr": "4",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The giant makes two greatclub attacks."
-					]
-				},
-				{
-					"name": "Greatclub",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, one target. {@h}18 ({@damage 3d8 + 5}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Rock",
-					"entries": [
-						"{@atk rw} {@hit 8} to hit, one target. {@h}21 ({@damage 3d10 + 5}) bludgeoning damage."
-					]
-				}
-			],
-			"attachedItems": [
-				"greatclub|phb"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"MLW",
-				"MW",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Saleeth the Couatl",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AWM",
-			"page": 34,
-			"size": [
-				"M"
-			],
-			"type": "celestial",
-			"alignment": [
-				"L",
-				"G"
-			],
-			"ac": [
-				{
-					"ac": 19,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"special": "97"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 90
-			},
-			"str": 16,
-			"dex": 20,
-			"con": 17,
-			"int": 18,
-			"wis": 20,
-			"cha": 18,
-			"passive": 0,
-			"cr": "4",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"type": "spellcasting",
-					"headerEntries": [
-						"The couatl's spellcasting ability is Charisma (spell save {@dc 14}). It can innately cast the following spells, requiring only verbal components:"
-					],
-					"will": [
-						"{@spell detect evil and good}",
-						"{@spell detect magic}",
-						"{@spell detect thoughts}"
-					],
-					"daily": {
-						"3e": [
-							"{@spell bless}",
-							"{@spell create food and water}",
-							"{@spell cure wounds}",
-							"{@spell lesser restoration}",
-							"{@spell protection from poison}",
-							"{@spell sanctuary}",
-							"{@spell shield}"
-						],
-						"1e": [
-							"{@spell dream}",
-							"{@spell greater restoration}",
-							"{@spell scrying}"
-						]
-					},
-					"ability": "cha"
-				}
-			],
-			"trait": [
-				{
-					"name": "Magic Weapons",
-					"entries": [
-						"The couatl's weapon attacks are magical."
-					]
-				},
-				{
-					"name": "Shielded Mind",
-					"entries": [
-						"The couatl is immune to scrying and to any effect that would sense its emotions, read its thoughts, or detect its location."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one creature. {@h}8 ({@damage 1d6 + 5}) piercing damage, Target must make a {@dc 13} Constitution save, or fall {@condition unconscious}. Another creature can use an action to shake the target awake."
-					]
-				},
-				{
-					"name": "Constrict",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 10 ft., one Medium or smaller creature. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, Target is {@condition grappled} (escape {@dc 15}). The couatl can constrain only one target at a time."
-					]
-				},
-				{
-					"name": "Change Shape",
-					"entries": [
-						"The couatl magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the couatl's choice).",
-						"In a new form, the couatl retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and other actions are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks. If the new form has a bite attack, the couatl can use its bite in that form."
-					]
-				}
-			],
-			"traitTags": [
-				"Magic Weapons"
-			],
-			"actionTags": [
-				"Shapechanger"
-			],
-			"damageTags": [
-				"B",
-				"P"
-			],
-			"damageTagsSpell": [
-				"Y"
-			],
-			"spellcastingTags": [
-				"I"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"grappled"
-			],
-			"savingThrowForcedSpell": [
-				"wisdom"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		}
-	]
+  "monster": [
+    {
+      "name": "大水蛇",
+      "ENG_name": "Big Water Slurpent",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AWM",
+      "page": 29,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "special": "58"
+      },
+      "speed": {
+        "walk": 0,
+        "swim": 60
+      },
+      "str": 17,
+      "dex": 16,
+      "con": 13,
+      "int": 11,
+      "wis": 10,
+      "cha": 10,
+      "passive": 0,
+      "cr": "3",
+      "trait": [
+        {
+          "name": "水中隐形",
+          "ENG_name": "Invisible in Water",
+          "entries": [
+            "当完全浸没在水中时，大型水蛇是{@condition 隐形}。"
+          ]
+        },
+        {
+          "name": "水体联结",
+          "ENG_name": "Water Bound",
+          "entries": [
+            "如果大水蛇离开它所依附的水，或者那些水被破坏，它就会死亡。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "绞缠",
+          "ENG_name": "Constrict",
+          "entries": [
+            "{@atk 近战武器} {@hit 5}hit，一个目标。{@h}13 ({@damage 3d6+3}) 钝击伤害。如果目标是中等大小或更小，它将被{@condition 抓住}（逃脱{@dc 13}），并被拉向大水蛭5英尺。直到这次抓住结束，目标将被{@condition 限制}，大水蛭试图淹死它，并且大水蛭不能再限制另一个目标。"
+          ]
+        }
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "conditionInflict": [
+        "被擒",
+        "隐形",
+        "束缚"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "鸟松鼠",
+      "ENG_name": "Birdsquirrel",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AWM",
+      "page": 30,
+      "size": [
+        "T"
+      ],
+      "type": "beast",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "special": "10"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 30,
+        "climb": 20
+      },
+      "str": 6,
+      "dex": 14,
+      "con": 13,
+      "int": 4,
+      "wis": 12,
+      "cha": 6,
+      "passive": 0,
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "群体战术",
+          "ENG_name": "Pack Tactics",
+          "entries": [
+            "如果至少有一个鸟松鼠的盟友在目标生物5英尺范围内，并且该盟友不是{@condition 无力}，鸟松鼠在对目标生物的攻击检定上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "鸟松鼠进行两次攻击：一次用它的咬击，一次用它的爪击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中：4，触及范围5英尺，一个目标。{@h}5（{@damage 1d6+2}）穿刺伤害。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claws",
+          "entries": [
+            "{@atk 近战武器} 命中骰：4，触及范围：5英尺，目标：一个。{@h}4（{@damage 1d4+2}）斩击伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "群体战术"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "布恩图猴",
+      "ENG_name": "Boontu Monkey",
+      "source": "AWM",
+      "page": 30,
+      "size": [
+        "M"
+      ],
+      "type": "beast",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "special": "3"
+      },
+      "speed": {
+        "walk": 20,
+        "climb": 20
+      },
+      "str": 8,
+      "dex": 14,
+      "con": 11,
+      "int": 5,
+      "wis": 12,
+      "cha": 6,
+      "passive": 0,
+      "cr": "0",
+      "trait": [
+        {
+          "name": "群体战术",
+          "ENG_name": "Pack Tactics",
+          "entries": [
+            "如果至少有一个布恩图猴的盟友在目标生物5英尺范围内，并且该盟友不是{@condition 无力}，布恩图猴在对目标生物的攻击检定上具有优势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中骰：1，触及范围：5英尺，目标：一个。{@h}1（{@damage 1d4 -1}）穿刺伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "群体战术"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "水晶洞人鱼",
+      "ENG_name": "Crystal Cave Merfolk",
+      "source": "AWM",
+      "page": 31,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "merfolk"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "special": "11"
+      },
+      "speed": {
+        "walk": 10,
+        "swim": 40
+      },
+      "str": 10,
+      "dex": 13,
+      "con": 12,
+      "int": 11,
+      "wis": 11,
+      "cha": 12,
+      "passive": 0,
+      "cr": "1/8",
+      "trait": [
+        {
+          "name": "两栖",
+          "ENG_name": "Amphibious",
+          "entries": [
+            "人鱼可以在空气和水中呼吸。"
+          ]
+        },
+        {
+          "name": "塞壬之歌",
+          "ENG_name": "Siren Song",
+          "entries": [
+            "悦耳的歌声吸引300英尺内的所有类人生物或巨人。目标必须成功进行一次{@dc 11}智慧豁免，否则直到歌声结束都会受到{@condition 魅惑}状态影响。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 2}命中，一个目标。{@h}3 ({@damage 1d6})穿刺伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "两栖"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "savingThrowForced": [
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "阴暗森林女巫",
+      "ENG_name": "Dankwood Hag",
+      "source": "AWM",
+      "page": 31,
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "special": "82"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 16,
+      "int": 13,
+      "wis": 14,
+      "cha": 14,
+      "passive": 0,
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "天生施法",
+          "ENG_name": "Innate Spellcasting",
+          "type": "spellcasting",
+          "will": [
+            "{@spell 舞光术}",
+            "{@spell 次级幻象}",
+            "{@spell 恶毒嘲笑}"
+          ],
+          "footerEntries": [
+            "女巫的施法能力是魅力",
+            "（法术豁免{@dc 12}）。它天生能够施放以下法术："
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "两栖",
+          "ENG_name": "Amphibious",
+          "entries": [
+            "这个女巫可以呼吸空气和水。"
+          ]
+        },
+        {
+          "name": "拟态（绿巫婆）",
+          "ENG_name": "Mimicry (Green Hag)",
+          "entries": [
+            "女巫可以模仿动物的声音和类人生物的声音。听到这些声音的生物可以通过成功的{@dc 14} 智慧（{@skill 洞悉}）检定来辨别它们是模仿的。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "幻象外貌",
+          "ENG_name": "Illusory Appearance",
+          "entries": [
+            "女巫用魔法幻象覆盖自己，使她看起来像另一个体型和形状大致相同的生物。当女巫选择结束幻象，或她死亡时，幻象会消失。进行一次{@dc 20}智力（{@skill 调查}）检定可以揭穿女巫的伪装。"
+          ]
+        },
+        {
+          "name": "隐形通行",
+          "ENG_name": "Invisible Passage",
+          "entries": [
+            "女巫通过魔法变得{@condition 隐形}，直到她攻击或施放法术，或者直到她的{@status 专注}结束。当她{@condition 隐形}时，她不会留下任何物理证据，只能通过魔法来追踪。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claws",
+          "entries": [
+            "{@atk 近战武器} 命中骰：6，目标：一个。{@h}17（{@damage 2d8 + 4}）斩击伤害。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "两栖"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "damageTagsSpell": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "I"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "conditionInflict": [
+        "隐形"
+      ],
+      "savingThrowForcedSpell": [
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "嘟嘟小精灵",
+      "ENG_name": "Dum-Dum Goblin",
+      "source": "AWM",
+      "page": 32,
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        7
+      ],
+      "hp": {
+        "special": "7"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 14,
+      "con": 10,
+      "int": 10,
+      "wis": 8,
+      "cha": 8,
+      "passive": 0,
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "灵敏脱逃",
+          "ENG_name": "Nimble Escape",
+          "entries": [
+            "这个地精可以在每个回合作为奖励行动采取{@action 撤离}或{@action 躲藏}行动。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "如果你能抓到我，就来抓我吧！",
+          "ENG_name": "Catch me if you can!",
+          "entries": [
+            "嘟嘟小精灵会优先选择逃跑和躲藏，而不是战斗！在攻击它们之前，必须进行一次{@dc 15}敏捷检定。"
+          ]
+        },
+        {
+          "name": "弯刀",
+          "ENG_name": "Scimitar",
+          "entries": [
+            "{@atk 近战武器} 命中骰：4，目标：一个。{@h}3（{@damage 1d6 +2}）斩击伤害。"
+          ]
+        },
+        {
+          "name": "短弓",
+          "ENG_name": "Shortbow",
+          "entries": [
+            "{@atk 远程武器} 命中：4，一个目标。{@h}6（{@damage 1d6 + 2}）穿刺伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "弯刀|PHB",
+        "短弓|PHB"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW",
+        "射程",
+        "RW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "矮人",
+      "ENG_name": "Dwarf",
+      "source": "AWM",
+      "page": 32,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "Dwarf"
+        ]
+      },
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "ac": [
+        10
+      ],
+      "hp": {
+        "special": "30"
+      },
+      "speed": {
+        "walk": 25
+      },
+      "str": 16,
+      "dex": 13,
+      "con": 14,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "passive": 0,
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "矮人韧性",
+          "ENG_name": "Dwarven Resilience",
+          "entries": [
+            "他们在对抗中毒的豁免投掷上具有优势，并且对毒素伤害具有抗性。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "短弓",
+          "ENG_name": "Shortbow",
+          "entries": [
+            "{@atk 近战武器} {@hit 3}命中，一个目标。{@h}4 ({@damage 1d6 + 1}) 斩击伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "短弓|PHB"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "大克鲁姆，紫虫",
+      "ENG_name": "Great Kroom, Purple Worm",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AWM",
+      "page": 33,
+      "size": [
+        "G"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        {
+          "ac": 18,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "special": "247"
+      },
+      "speed": {
+        "walk": 50,
+        "burrow": 30
+      },
+      "str": 10,
+      "dex": 13,
+      "con": 12,
+      "int": 11,
+      "wis": 11,
+      "cha": 12,
+      "passive": 0,
+      "cr": "15",
+      "trait": [
+        {
+          "name": "掘道者",
+          "ENG_name": "Tunneler",
+          "entries": [
+            "这种蠕虫能在坚硬的岩石中以掘进速度的一半穿行，并在其身后留下一个直径10英尺的隧道。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "这只蠕虫进行两次攻击："
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战攻击} 命中骰：14，单一目标。{@h}22（{@damage 3d8}）穿刺伤害。目标必须进行一次{@dc 19}敏捷豁免，否则被蠕虫吞噬！"
+          ]
+        },
+        {
+          "name": "尾刺",
+          "ENG_name": "Tail Stinger",
+          "entries": [
+            "{@atk 近战武器} 命中骰：14，目标：一个生物。{@h}19（{@damage 3d6 + 9}）穿刺伤害。目标必须进行一次{@dc 19}体质豁免，否则受到42",
+            "（{@dice 12d6}）毒素伤害。"
+          ]
+        }
+      ],
+      "environment": [
+        "沙漠",
+        "幽暗地域"
+      ],
+      "traitTags": [
+        "掘道者"
+      ],
+      "actionTags": [
+        "多重攻击",
+        "吞咽"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "愤怒的奥图格",
+      "ENG_name": "Hangry Otyugh",
+      "source": "AWM",
+      "page": 33,
+      "size": [
+        "L"
+      ],
+      "type": "aberration",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "special": "114"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 11,
+      "con": 19,
+      "int": 6,
+      "wis": 13,
+      "cha": 6,
+      "passive": 0,
+      "cr": "5",
+      "trait": [
+        {
+          "name": "有限心灵感应",
+          "ENG_name": "Limited Telepathy",
+          "entries": [
+            "奥图格可以向它周围120英尺内任何能理解语言的生物，通过魔法传递简单的信息和图像。这种心灵感应的形式不允许接收生物通过心灵感应回应。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "奥图格进行三次攻击："
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 6}命中，射程5英尺，一个目标。{@h}12 ({@damage 2d8 + 3})穿刺伤害。目标必须进行一次{@dc 15}体质豁免，否则受到d",
+            "（{@dice 1d10}）中毒伤害，直至治疗。"
+          ]
+        },
+        {
+          "name": "触手",
+          "ENG_name": "Tentacle",
+          "entries": [
+            "{@atk 近战攻击} 命中骰：6，射程10英尺，单一目标。{@h}7（{@damage 1d8 + 3}）钝击伤害，目标必须进行一次{@dc 19}体质豁免，否则受到42点伤害。",
+            "({@dice 12d6}) 毒素伤害"
+          ]
+        },
+        {
+          "name": "猛击",
+          "ENG_name": "Slam",
+          "entries": [
+            "目标必须进行一次{@dc 14}体质豁免，否则会被{@condition 被擒}。"
+          ]
+        }
+      ],
+      "environment": [
+        "幽暗地域"
+      ],
+      "actionTags": [
+        "多重攻击",
+        "触须"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "山丘巨人，布洛波",
+      "ENG_name": "Hill Giant, Blorbo",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AWM",
+      "page": 34,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "special": "105"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 21,
+      "dex": 8,
+      "con": 19,
+      "int": 5,
+      "wis": 9,
+      "cha": 6,
+      "passive": 0,
+      "cr": "4",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "巨人进行两次巨棍攻击。"
+          ]
+        },
+        {
+          "name": "巨棒",
+          "ENG_name": "Greatclub",
+          "entries": [
+            "{@atk 近战武器} 命中骰：8，目标：一个。{@h}18（{@damage 3d8 + 5}）钝击伤害。"
+          ]
+        },
+        {
+          "name": "投石",
+          "ENG_name": "Rock",
+          "entries": [
+            "{@atk 远程武器} {@hit 8}命中，一个目标。{@h}21 ({@damage 3d10 + 5})钝击伤害。"
+          ]
+        }
+      ],
+      "attachedItems": [
+        "巨棍|PHB"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "魔法学习(Magic Learning Wheel)",
+        "MW",
+        "RW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "萨利思·寇托兽",
+      "ENG_name": "Saleeth the Couatl",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AWM",
+      "page": 34,
+      "size": [
+        "M"
+      ],
+      "type": "celestial",
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "ac": [
+        {
+          "ac": 19,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "special": "97"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 90
+      },
+      "str": 16,
+      "dex": 20,
+      "con": 17,
+      "int": 18,
+      "wis": 20,
+      "cha": 18,
+      "passive": 0,
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "天生施法",
+          "ENG_name": "Innate Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "考阿特尔的施法能力是魅力（法术豁免{@dc 14}）。它天生能够施展以下法术，只需要口头组成部分："
+          ],
+          "will": [
+            "{@spell 侦测善恶}",
+            "{@spell 侦测魔法}",
+            "{@spell 侦测思想}"
+          ],
+          "daily": {
+            "3e": [
+              "{@spell 祝福术}",
+              "{@spell 创造饮食}",
+              "{@spell 治疗伤势}",
+              "{@spell 次级复原术}",
+              "{@spell 防护毒素}",
+              "{@spell 圣域术}",
+              "{@spell 护盾术}"
+            ],
+            "1e": [
+              "{@spell 托梦术}",
+              "{@spell 高等复原术}",
+              "{@spell 探知}"
+            ]
+          },
+          "ability": "cha"
+        }
+      ],
+      "trait": [
+        {
+          "name": "魔法武器",
+          "ENG_name": "Magic Weapons",
+          "entries": [
+            "考阿特尔的武器攻击具有魔法效果。"
+          ]
+        },
+        {
+          "name": "心灵屏障",
+          "ENG_name": "Shielded Mind",
+          "entries": [
+            "寇托兽对窥视术以及任何能够感应其情感、读取其思想或探测其位置的效果免疫。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} {@hit 8}命中，射程5英尺，单一生物。{@h}8 ({@damage 1d6 + 5})穿刺伤害，目标必须进行一次{@dc 13}体质豁免，否则陷入{@condition 昏迷}状态。其他生物可以使用动作摇醒目标。"
+          ]
+        },
+        {
+          "name": "绞缠",
+          "ENG_name": "Constrict",
+          "entries": [
+            "{@atk 近战武器} {@hit 6}hit，射程10英尺，一个中等或更小的生物。{@h}10 ({@damage 2d6 + 3}) 钝击伤害，目标被{@condition 抓住}（逃脱{@dc 15}）。考阿特尔一次只能限制一个目标。"
+          ]
+        },
+        {
+          "name": "变形",
+          "ENG_name": "Change Shape",
+          "entries": [
+            "考阿特尔可以魔法地变化成一个挑战等级等于或低于它自己的类人或野兽形态，或者变回其真实形态。如果它死亡，它将恢复其真实形态。它穿戴或携带的任何装备都会被新形态吸收或携带（由考阿特尔选择）。",
+            "以新形态出现时，寇图保留了其游戏统计数据和说话能力，但其护甲等级(AC)、移动方式、力量(Strength)、敏捷(Dexterity)以及其他动作被新形态所替代，并且它获得了新形态所拥有的任何统计数据和能力（不包括职业特性、传奇动作和巢穴动作），而这些是它所缺乏的。如果新形态具有咬击攻击，寇图在该形态下可以使用其咬击。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "魔法武器"
+      ],
+      "actionTags": [
+        "变形生物"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "damageTagsSpell": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "I"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "被擒"
+      ],
+      "savingThrowForcedSpell": [
+        "感知"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    }
+  ]
 }

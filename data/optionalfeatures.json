@@ -1,7 +1,7 @@
 {
   "optionalfeature": [
     {
-      "name": "魔能祈唤:苦痛魔爆",
+      "name": "苦痛魔爆",
       "ENG_name": "Agonizing Blast",
       "source": "PHB",
       "page": 110,
@@ -12,16 +12,16 @@
       "prerequisite": [
         {
           "spell": [
-            "奥术冲击#c"
+            "魔能爆#c"
           ]
         }
       ],
       "entries": [
-        "当你施放{@spell 奥术飞弹}时，将其命中的伤害值加上你的{charisma}修正值。"
+        "当你施放{@spell 魔能爆}时，将其命中的伤害值加上你的{charisma}修正值。"
       ]
     },
     {
-      "name": "战技:伏击",
+      "name": "伏击",
       "ENG_name": "Ambush",
       "source": "TCE",
       "page": 42,
@@ -34,11 +34,11 @@
         "ENG_name": "Superiority Die"
       },
       "entries": [
-        "当你进行敏捷（{@skill 潜行})检定或先攻骰时，你可以消耗一个优势骰并将其加到骰点上，前提是你不是{@condition 无力}状态。"
+        "当你进行敏捷（{@skill 隐匿})检定或先攻骰时，你可以消耗一个优势骰并将其加到骰点上，前提是你不是{@condition 无力}状态。"
       ]
     },
     {
-      "name": "注法:奥能动力甲",
+      "name": "奥能动力甲",
       "ENG_name": "Arcane Propulsion Armor",
       "source": "TCE",
       "page": 20,
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "name": "战斗风格:箭术",
+      "name": "箭术",
       "ENG_name": "Archery",
       "source": "PHB",
       "page": 72,
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "name": "注法:魔法力量护甲",
+      "name": "魔法力量护甲",
       "ENG_name": "Armor of Magical Strength",
       "source": "TCE",
       "page": 20,
@@ -114,14 +114,14 @@
           "type": "list",
           "items": [
             "当穿戴者进行力量检定或力量豁免投掷时，可以消耗1点充能，将等同于其智力修正值的加值加到投掷上。",
-            "如果生物会被击倒{@condition prone}，它可以使用其反应来消耗1个充能以避免被击倒。"
+            "如果生物会被击倒{@condition 伏地}，它可以使用其反应来消耗1个充能以避免被击倒。"
           ]
         },
-        "The armor regains {@dice 1d6} expended charges daily at dawn."
+        "这件护甲在黎明时每天恢复{@dice 1d6}点消耗的充能。"
       ]
     },
     {
-      "name": "魔能祈唤:幽影护甲",
+      "name": "幽影护甲",
       "ENG_name": "Armor of Shadows",
       "source": "PHB",
       "page": 110,
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:星移步法",
+      "name": "星移步法",
       "ENG_name": "Ascendant Step",
       "source": "PHB",
       "page": 110,
@@ -172,11 +172,11 @@
         }
       ],
       "entries": [
-        "你可以随意对自己施放{@spell 飘浮}法术，无需消耗法术位或材料组件。"
+        "你可以随意对自己施放{@spell 浮空术}法术，无需消耗法术位或材料组件。"
       ]
     },
     {
-      "name": "魔能祈唤:月之仪态",
+      "name": "月之仪态",
       "ENG_name": "Aspect of the Moon",
       "source": "XGE",
       "page": 56,
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "name": "战技:换位诈术",
+      "name": "换位诈术",
       "ENG_name": "Bait and Switch",
       "source": "TCE",
       "page": 42,
@@ -206,12 +206,12 @@
         "ENG_name": "Superiority Die"
       },
       "entries": [
-        "在你的回合内，如果你与一个生物的距离在5英尺以内，你可以消耗一个优势骰并与之交换位置，前提是你至少移动了5英尺，并且该生物愿意且没有处于{@condition incapacitated}状态。这种移动不会引发机会攻击。",
+        "在你的回合内，如果你与一个生物的距离在5英尺以内，你可以消耗一个优势骰并与之交换位置，前提是你至少移动了5英尺，并且该生物愿意且没有处于{@condition 无力}状态。这种移动不会引发机会攻击。",
         "掷优势骰。直到你的下个回合开始前，你或另一个生物（由你选择）获得等同于掷出数字的AC加值。"
       ]
     },
     {
-      "name": "奥术射击:放逐矢",
+      "name": "放逐矢",
       "ENG_name": "Banishing Arrow",
       "source": "XGE",
       "page": 29,
@@ -219,16 +219,16 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
-        "你使用防护魔法尝试暂时将你的目标放逐到仙女界的一个无害位置。被箭击中的生物也必须成功进行一次魅力豁免检定，否则将被放逐。以这种方式被放逐时，目标的速度为0，并且处于{@condition incapacitated}状态。在其下一个回合结束时，目标重新出现在它离开的空间或如果那个空间被占据，则出现在最近的未被占据空间。",
+        "你使用防护魔法尝试暂时将你的目标放逐到仙女界的一个无害位置。被箭击中的生物也必须成功进行一次魅力豁免检定，否则将被放逐。以这种方式被放逐时，目标的速度为0，并且处于{@condition 无力}状态。在其下一个回合结束时，目标重新出现在它离开的空间或如果那个空间被占据，则出现在最近的未被占据空间。",
         "当你在这个职业达到18级后，箭矢击中目标时，目标还会受到{@damage 2d6}力量伤害。"
       ]
     },
     {
-      "name": "魔能祈唤:野兽之语",
+      "name": "野兽之语",
       "ENG_name": "Beast Speech",
       "source": "PHB",
       "page": 110,
@@ -246,11 +246,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 与动物对话}，无需消耗法术位。"
+        "你可以随意施放{@spell 动物交谈术}，无需消耗法术位。"
       ]
     },
     {
-      "name": "奥术射击:欺诈矢",
+      "name": "欺诈矢",
       "ENG_name": "Beguiling Arrow",
       "source": "XGE",
       "page": 29,
@@ -258,16 +258,16 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
-        "你的魅惑魔法使得这支箭暂时迷惑其目标。被箭击中的生物额外承受{@damage 2d6}心灵伤害，并选择一个目标30英尺范围内的你的盟友。目标必须进行一次智力豁免，否则它将被选定的盟友{@condition charmed}直到你的下个回合开始。如果选定的盟友攻击了{@condition charmed}目标，对它造成伤害，或迫使它进行豁免，这个效果会提前结束。",
+        "你的魅惑魔法使得这支箭暂时迷惑其目标。被箭击中的生物额外承受{@damage 2d6}心灵伤害，并选择一个目标30英尺范围内的你的盟友。目标必须进行一次智力豁免，否则它将被选定的盟友{@condition 魅惑}直到你的下个回合开始。如果选定的盟友攻击了{@condition 魅惑}目标，对它造成伤害，或迫使它进行豁免，这个效果会提前结束。",
         "当你在这个职业达到18级时，心灵伤害增加至{@damage 4d6}。"
       ]
     },
     {
-      "name": "魔能祈唤:诱导话术",
+      "name": "诱导话术",
       "ENG_name": "Beguiling Influence",
       "source": "PHB",
       "page": 110,
@@ -282,11 +282,11 @@
         }
       ],
       "entries": [
-        "你在{@skill 欺骗}和{@skill 说服}技能上获得熟练。"
+        "你在{@skill 欺瞒}和{@skill 游说}技能上获得熟练。"
       ]
     },
     {
-      "name": "魔能祈唤:惑人低语",
+      "name": "惑人低语",
       "ENG_name": "Bewitching Whispers",
       "source": "PHB",
       "page": 110,
@@ -319,7 +319,7 @@
         }
       ],
       "entries": [
-        "你可以使用术士法术位施放一次{@spell 强迫}。直到你完成一次长休息之前，你不能再这样做。"
+        "你可以使用术士法术位施放一次{@spell 强迫术}。直到你完成一次长休息之前，你不能再这样做。"
       ]
     },
     {
@@ -337,7 +337,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=牧师",
+                "choose": "level=0|class=牧师",
                 "count": 2
               }
             ]
@@ -345,7 +345,7 @@
         }
       ],
       "entries": [
-        "你从{@filter 牧师法术列表|spells|level=0|class=Cleric}中选择两个零级法术作为你的法术。它们对你而言视为圣武士法术，并且魅力是你的施法能力。每当你在这个职业获得等级时，你可以用牧师法术列表中的另一个零级法术替换这些法术中的一个。"
+        "你从{@filter 牧师法术列表|法术|level=0|职业=牧师}中选择两个零级法术作为你的法术。它们对你而言视为圣武士法术，并且魅力是你的施法能力。每当你在这个职业获得等级时，你可以用牧师法术列表中的另一个零级法术替换这些法术中的一个。"
       ]
     },
     {
@@ -365,11 +365,11 @@
         }
       ],
       "entries": [
-        "你的{@sense 盲视}范围是10英尺。在这个范围内，即使在完全遮蔽物后面，你也能有效地看到任何东西，即使你处于{@condition 失明}状态或在黑暗中。此外，你可以看到那个范围内的{@condition 隐形}生物，除非该生物成功地隐藏起来。"
+        "你的{@sense 盲视}范围是10英尺。在这个范围内，即使在完全遮蔽物后面，你也能有效地看到任何东西，即使你处于{@condition 目盲}状态或在黑暗中。此外，你可以看到那个范围内的{@condition 隐形}生物，除非该生物成功地隐藏起来。"
       ]
     },
     {
-      "name": "魔能祈唤:护符牵绊",
+      "name": "护符牵绊",
       "ENG_name": "Bond of the Talisman",
       "source": "TCE",
       "page": 70,
@@ -394,7 +394,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:远古奥秘之书",
+      "name": "远古奥秘之书",
       "ENG_name": "Book of Ancient Secrets",
       "source": "PHB",
       "page": 110,
@@ -414,7 +414,7 @@
             "_": {
               "ritual": [
                 {
-                  "choose": "成分 & 杂项=仪式|等级=1",
+                  "choose": "components & miscellaneous=仪式|level=1",
                   "count": 2
                 }
               ]
@@ -428,7 +428,7 @@
       ]
     },
     {
-      "name": "注法:折返之靴",
+      "name": "折返之靴",
       "ENG_name": "Boots of the Winding Path",
       "source": "TCE",
       "page": 21,
@@ -461,7 +461,7 @@
       ]
     },
     {
-      "name": "战技:警戒",
+      "name": "警戒",
       "ENG_name": "Brace",
       "source": "TCE",
       "page": 42,
@@ -478,7 +478,7 @@
       ]
     },
     {
-      "name": "法门:寒冬之息",
+      "name": "寒冬之息",
       "ENG_name": "Breath of Winter",
       "source": "PHB",
       "page": 81,
@@ -516,11 +516,11 @@
         }
       ],
       "entries": [
-        "你可以消耗6点气点施放{@spell 冰霜锥}。"
+        "你可以消耗6点气点施放{@spell 寒冰锥}。"
       ]
     },
     {
-      "name": "奥术射击:爆裂矢",
+      "name": "爆裂矢",
       "ENG_name": "Bursting Arrow",
       "source": "XGE",
       "page": 29,
@@ -528,7 +528,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -554,7 +554,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:卡瑟利之链",
+      "name": "卡瑟利之链",
       "ENG_name": "Chains of Carceri",
       "source": "PHB",
       "page": 110,
@@ -588,11 +588,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 定身法}，目标可以是天界生物、邪恶生物或元素生物，无需消耗法术位或材料组件。你必须完成一次长休息后，才能再次对同一生物使用此咒语。"
+        "你可以随意施放{@spell 怪物定身术}，目标可以是天界生物、邪恶生物或元素生物，无需消耗法术位或材料组件。你必须完成一次长休息后，才能再次对同一生物使用此咒语。"
       ]
     },
     {
-      "name": "法门:北风之握",
+      "name": "北风之握",
       "ENG_name": "Clench of the North Wind",
       "source": "PHB",
       "page": 81,
@@ -630,11 +630,11 @@
         }
       ],
       "entries": [
-        "你可以消耗3点气点施放{@spell 定身法}。"
+        "你可以消耗3点气点施放{@spell 人类定身术}。"
       ]
     },
     {
-      "name": "魔能祈唤:飞蝇斗篷",
+      "name": "飞蝇斗篷",
       "ENG_name": "Cloak of Flies",
       "source": "XGE",
       "page": 56,
@@ -653,13 +653,13 @@
         }
       ],
       "entries": [
-        "你可以作为奖励行动，让自己周围环绕着看起来像嗡嗡作响的苍蝇的魔法光环。光环从你向外延伸5英尺，在每个方向，但不会穿过完全覆盖。它持续到你被{@condition 失去能力}或你作为奖励行动解散它为止。",
-        "这个光环使你在魅力（{@skill 恐吓}）检定上获得优势，但在所有其他魅力检定上处于劣势。任何其他生物在其回合开始时处于光环范围内，将受到等同于你的魅力调整值的毒素伤害（最小伤害为0）。",
+        "你可以作为奖励行动，让自己周围环绕着看起来像嗡嗡作响的苍蝇的魔法光环。光环从你向外延伸5英尺，在每个方向，但不会穿过完全覆盖。它持续到你被{@condition 无力}或你作为奖励行动解散它为止。",
+        "这个光环使你在魅力（{@skill 威吓}）检定上获得优势，但在所有其他魅力检定上处于劣势。任何其他生物在其回合开始时处于光环范围内，将受到等同于你的魅力调整值的毒素伤害（最小伤害为0）。",
         "一旦你使用这个祈唤，直到你完成一次短休息或长休息之前，你不能再使用它。"
       ]
     },
     {
-      "name": "符文:云雾符文",
+      "name": "云雾符文",
       "ENG_name": "Cloud Rune",
       "source": "TCE",
       "page": 44,
@@ -667,12 +667,12 @@
         "RN"
       ],
       "entries": [
-        "这个符文模仿了一些云巨人使用的欺骗魔法。穿戴或携带刻有这个符文的物品时，你在敏捷（{@skill 手法})检定和魅力（{@skill 欺骗})检定上有优势。",
+        "这个符文模仿了一些云巨人使用的欺骗魔法。穿戴或携带刻有这个符文的物品时，你在敏捷（{@skill 巧手})检定和魅力（{@skill 欺瞒})检定上有优势。",
         "此外，当你或你能看到的30英尺内的生物被攻击骰击中时，你可以使用你的反应来激活符文，并选择你30英尺内的另一个生物，不能是攻击者。被选择的生物成为攻击的目标，使用相同的骰。这个魔法可以转移攻击的效果，无论攻击的范围如何。一旦你激活这个符文，直到你完成一次短休或长休之前，你不能再这样做。"
       ]
     },
     {
-      "name": "战技:指挥官奇袭",
+      "name": "指挥官奇袭",
       "ENG_name": "Commander's Strike",
       "source": "PHB",
       "page": 74,
@@ -688,7 +688,7 @@
       ]
     },
     {
-      "name": "战技:领导风范",
+      "name": "领导风范",
       "ENG_name": "Commanding Presence",
       "source": "TCE",
       "page": 42,
@@ -701,11 +701,11 @@
         "ENG_name": "Superiority Die"
       },
       "entries": [
-        "当你进行魅力（{@skill 恐吓}）、魅力（{@skill 表演}）或魅力（{@skill 说服}）检定时，你可以消耗一个优势骰并将优势骰加到能力检定上。"
+        "当你进行魅力（{@skill 威吓}）、魅力（{@skill 表演}）或魅力（{@skill 游说}）检定时，你可以消耗一个优势骰并将优势骰加到能力检定上。"
       ]
     },
     {
-      "name": "战斗风格:防御",
+      "name": "防御",
       "ENG_name": "Defense",
       "source": "PHB",
       "page": 72,
@@ -730,7 +730,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:魔鬼视界",
+      "name": "魔鬼视界",
       "ENG_name": "Devil's Sight",
       "source": "PHB",
       "page": 110,
@@ -743,7 +743,7 @@
       ]
     },
     {
-      "name": "战技:缴械攻击",
+      "name": "缴械攻击",
       "ENG_name": "Disarming Attack",
       "source": "PHB",
       "page": 74,
@@ -777,7 +777,7 @@
       ]
     },
     {
-      "name": "战技:扰乱打击",
+      "name": "扰乱打击",
       "ENG_name": "Distracting Strike",
       "source": "PHB",
       "page": 74,
@@ -793,7 +793,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:恐惧箴言",
+      "name": "恐惧箴言",
       "ENG_name": "Dreadful Word",
       "source": "PHB",
       "page": 110,
@@ -826,7 +826,7 @@
         }
       ],
       "entries": [
-        "你可以使用术士法术位施放一次{@spell 混乱}法术。直到你完成一次长休息之前，你不能再这样做。"
+        "你可以使用术士法术位施放一次{@spell 困惑术}法术。直到你完成一次长休息之前，你不能再这样做。"
       ]
     },
     {
@@ -844,7 +844,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0|职业=德鲁伊",
+                "choose": "level=0|class=德鲁伊",
                 "count": 2
               }
             ]
@@ -852,11 +852,11 @@
         }
       ],
       "entries": [
-        "你从{@filter 德鲁伊法术列表|spells|level=0|class=druid}中选择两个零级法术作为你的法术。它们对你而言视为游侠法术，并且智慧是你的施法能力。每当你在这个职业获得等级时，你可以用德鲁伊法术列表中的另一个零级法术替换这些法术中的一个。"
+        "你从{@filter 德鲁伊法术列表|法术|level=0|职业=德鲁伊}中选择两个零级法术作为你的法术。它们对你而言视为游侠法术，并且智慧是你的施法能力。每当你在这个职业获得等级时，你可以用德鲁伊法术列表中的另一个零级法术替换这些法术中的一个。"
       ]
     },
     {
-      "name": "战斗风格:对决",
+      "name": "对决",
       "ENG_name": "Dueling",
       "source": "PHB",
       "page": 72,
@@ -886,7 +886,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:魔能意志",
+      "name": "魔能意志",
       "ENG_name": "Eldritch Mind",
       "source": "TCE",
       "page": 71,
@@ -899,7 +899,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:魔能视界",
+      "name": "魔能视界",
       "ENG_name": "Eldritch Sight",
       "source": "PHB",
       "page": 110,
@@ -921,7 +921,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:魔能斩",
+      "name": "魔能斩",
       "ENG_name": "Eldritch Smite",
       "source": "XGE",
       "page": 56,
@@ -941,11 +941,11 @@
         }
       ],
       "entries": [
-        "每当你在一轮中用你的契约武器击中一个生物时，你可以消耗一个术士法术位来对目标造成额外的{@damage 1d8}力量伤害，每提高一个法术位等级，额外伤害再增加{@damage 1d8}，如果目标是巨型或更小，你还可以将其击倒为{@condition 倒地}状态。"
+        "每当你在一轮中用你的契约武器击中一个生物时，你可以消耗一个术士法术位来对目标造成额外的{@damage 1d8}力量伤害，每提高一个法术位等级，额外伤害再增加{@damage 1d8}，如果目标是巨型或更小，你还可以将其击倒为{@condition 伏地}状态。"
       ]
     },
     {
-      "name": "魔能祈唤:魔能长枪",
+      "name": "魔能长枪",
       "ENG_name": "Eldritch Spear",
       "source": "PHB",
       "page": 111,
@@ -956,12 +956,12 @@
       "prerequisite": [
         {
           "spell": [
-            "奥术冲击#c"
+            "魔能爆#c"
           ]
         }
       ],
       "entries": [
-        "当你施放{@spell 奥术飞弹}时，它的射程是300英尺。"
+        "当你施放{@spell 魔能爆}时，它的射程是300英尺。"
       ]
     },
     {
@@ -1004,7 +1004,7 @@
       ]
     },
     {
-      "name": "奥术射击:虚弱矢",
+      "name": "虚弱矢",
       "ENG_name": "Enfeebling Arrow",
       "source": "XGE",
       "page": 29,
@@ -1012,7 +1012,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -1021,7 +1021,7 @@
       ]
     },
     {
-      "name": "注法:增强奥术法器",
+      "name": "增强奥术法器",
       "ENG_name": "Enhanced Arcane Focus",
       "source": "TCE",
       "page": 21,
@@ -1047,7 +1047,7 @@
       ]
     },
     {
-      "name": "注法:增强防御",
+      "name": "增强防御",
       "ENG_name": "Enhanced Defense",
       "source": "TCE",
       "page": 21,
@@ -1073,7 +1073,7 @@
       ]
     },
     {
-      "name": "注法:增强武器",
+      "name": "增强武器",
       "ENG_name": "Enhanced Weapon",
       "source": "TCE",
       "page": 21,
@@ -1099,7 +1099,7 @@
       ]
     },
     {
-      "name": "法门:苍山庇佑",
+      "name": "苍山庇佑",
       "ENG_name": "Eternal Mountain Defense",
       "source": "PHB",
       "page": 81,
@@ -1141,7 +1141,7 @@
       ]
     },
     {
-      "name": "战技:灵巧步法",
+      "name": "灵巧步法",
       "ENG_name": "Evasive Footwork",
       "source": "PHB",
       "page": 74,
@@ -1175,7 +1175,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:符文守护者之眼",
+      "name": "符文守护者之眼",
       "ENG_name": "Eyes of the Rune Keeper",
       "source": "PHB",
       "page": 111,
@@ -1188,7 +1188,7 @@
       ]
     },
     {
-      "name": "法门:火蛇利牙",
+      "name": "火蛇利牙",
       "ENG_name": "Fangs of the Fire Snake",
       "source": "PHB",
       "page": 81,
@@ -1200,7 +1200,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:遥远音讯",
+      "name": "遥远音讯",
       "ENG_name": "Far Scribe",
       "source": "TCE",
       "page": 71,
@@ -1231,12 +1231,12 @@
       ],
       "entries": [
         "你的影之书中出现了一个新页面。在你的允许下，一个生物可以使用它的行动在其上写下它的名字，该页面可以包含的名字数量等于你的熟练加值。",
-        "你可以施放{@spell 发送}法术，目标是页面上有名字的生物，无需使用法术位，也无需使用材料组件。为此，你必须在页面上写下消息。目标会在他们的脑海中听到消息，如果目标回复，他们的回复会出现在页面上，而不是在你的脑海中。书写的内容在1分钟后消失。",
+        "你可以施放{@spell 短讯术}法术，目标是页面上有名字的生物，无需使用法术位，也无需使用材料组件。为此，你必须在页面上写下消息。目标会在他们的脑海中听到消息，如果目标回复，他们的回复会出现在页面上，而不是在你的脑海中。书写的内容在1分钟后消失。",
         "作为一项行动，你可以通过触摸页面来魔法擦除上面的名字。"
       ]
     },
     {
-      "name": "战技:诡诈攻击",
+      "name": "诡诈攻击",
       "ENG_name": "Feinting Attack",
       "source": "PHB",
       "page": 74,
@@ -1252,7 +1252,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:邪魔活力",
+      "name": "邪魔活力",
       "ENG_name": "Fiendish Vigor",
       "source": "PHB",
       "page": 111,
@@ -1270,11 +1270,11 @@
         }
       ],
       "entries": [
-        "你可以随意对自己施放{@spell 虚假生命}作为1级法术，无需消耗法术位或材料组件。"
+        "你可以随意对自己施放{@spell 摹造生命}作为1级法术，无需消耗法术位或材料组件。"
       ]
     },
     {
-      "name": "符文:火焰符文",
+      "name": "火焰符文",
       "ENG_name": "Fire Rune",
       "source": "TCE",
       "page": 44,
@@ -1287,7 +1287,7 @@
       ]
     },
     {
-      "name": "法门:四雷拳",
+      "name": "四雷拳",
       "ENG_name": "Fist of Four Thunders",
       "source": "PHB",
       "page": 81,
@@ -1314,7 +1314,7 @@
       ]
     },
     {
-      "name": "法门:凤凰烈焰",
+      "name": "凤凰烈焰",
       "ENG_name": "Flames of the Phoenix",
       "source": "PHB",
       "page": 81,
@@ -1356,7 +1356,7 @@
       ]
     },
     {
-      "name": "符文:寒霜符文",
+      "name": "寒霜符文",
       "ENG_name": "Frost Rune",
       "source": "TCE",
       "page": 45,
@@ -1364,12 +1364,12 @@
         "RN"
       ],
       "entries": [
-        "这个符文的魔法唤起了那些在冬季荒野中生存的人的力量，比如霜巨人。佩戴或携带刻有这个符文的物品时，你在进行智慧（{@skill 驯兽}）检定和魅力（{@skill 恐吓}）检定时获得优势。",
+        "这个符文的魔法唤起了那些在冬季荒野中生存的人的力量，比如霜巨人。佩戴或携带刻有这个符文的物品时，你在进行智慧（{@skill 驯兽}）检定和魅力（{@skill 威吓}）检定时获得优势。",
         "此外，你可以作为奖励行动召唤这个符文来增加你的稳固性。在接下来的10分钟内，你在所有使用力量或体质的能力检定和豁免投掷中获得+2的加值。一旦你召唤这个符文，直到你完成一次短休息或长休息之前，你不能再这样做。"
       ]
     },
     {
-      "name": "魔能祈唤:共视感官",
+      "name": "共视感官",
       "ENG_name": "Gaze of Two Minds",
       "source": "PHB",
       "page": 111,
@@ -1378,11 +1378,11 @@
         "EI"
       ],
       "entries": [
-        "你可以使用你的行动来触摸一个愿意的类人生物，并通过它的感官感知直到你的下个回合结束。只要这个生物和你在同一存在位面上，你可以在随后的回合中使用你的行动来维持这种连接，延长持续时间直到你的下个回合结束。在通过另一个生物的感官感知时，你受益于该生物拥有的任何特殊感官，并且对你的自身环境处于{@condition 失明}和{@condition 失聪}状态。"
+        "你可以使用你的行动来触摸一个愿意的类人生物，并通过它的感官感知直到你的下个回合结束。只要这个生物和你在同一存在位面上，你可以在随后的回合中使用你的行动来维持这种连接，延长持续时间直到你的下个回合结束。在通过另一个生物的感官感知时，你受益于该生物拥有的任何特殊感官，并且对你的自身环境处于{@condition 目盲}和{@condition 耳聋}状态。"
       ]
     },
     {
-      "name": "魔能祈唤:幽魂凝视",
+      "name": "幽魂凝视",
       "ENG_name": "Ghostly Gaze",
       "source": "XGE",
       "page": 56,
@@ -1401,12 +1401,12 @@
         }
       ],
       "entries": [
-        "作为一项行动，你获得了看穿固体物体的能力，范围可达30英尺。在这个范围内，如果你还没有{@sense 黑暗视觉}，你就会拥有它。这种特殊视觉持续1分钟，或者直到你的{@status 专注}结束（就好像你在{@status 专注||专注}于一个法术）。在那段时间里，你将物体感知为幽灵般的透明图像。",
+        "作为一项行动，你获得了看穿固体物体的能力，范围可达30英尺。在这个范围内，如果你还没有{@sense 黑暗视觉}，你就会拥有它。这种特殊视觉持续1分钟，或者直到你的{@status 专注}结束（就好像你在{@status 专注||集中精神}于一个法术）。在那段时间里，你将物体感知为幽灵般的透明图像。",
         "一旦你使用这个祈唤，直到你完成一次短休息或长休息之前，你不能再使用它。"
       ]
     },
     {
-      "name": "魔能祈唤:深海赠礼",
+      "name": "深海赠礼",
       "ENG_name": "Gift of the Depths",
       "source": "XGE",
       "page": 57,
@@ -1443,7 +1443,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:永生者赠礼",
+      "name": "永生者赠礼",
       "ENG_name": "Gift of the Ever-Living Ones",
       "source": "XGE",
       "page": 57,
@@ -1460,7 +1460,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:守护馈赠",
+      "name": "守护馈赠",
       "ENG_name": "Gift of the Protectors",
       "source": "TCE",
       "page": 71,
@@ -1487,7 +1487,7 @@
       ]
     },
     {
-      "name": "战技:挑衅攻击",
+      "name": "挑衅攻击",
       "ENG_name": "Goading Attack",
       "source": "PHB",
       "page": 74,
@@ -1503,7 +1503,7 @@
       ]
     },
     {
-      "name": "法门:狮吼功",
+      "name": "狮吼功",
       "ENG_name": "Gong of the Summit",
       "source": "PHB",
       "page": 81,
@@ -1541,11 +1541,11 @@
         }
       ],
       "entries": [
-        "你可以消耗3点气点施放{@spell 震碎}。"
+        "你可以消耗3点气点施放{@spell 粉碎音波}。"
       ]
     },
     {
-      "name": "战技:擒拿击",
+      "name": "擒拿击",
       "ENG_name": "Grappling Strike",
       "source": "TCE",
       "page": 42,
@@ -1562,7 +1562,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:哈达之攫",
+      "name": "哈达之攫",
       "ENG_name": "Grasp of Hadar",
       "source": "XGE",
       "page": 57,
@@ -1572,16 +1572,16 @@
       "prerequisite": [
         {
           "spell": [
-            "奥术冲击#c"
+            "魔能爆#c"
           ]
         }
       ],
       "entries": [
-        "每当在你的回合中，你用你的{@spell 奥术飞弹}击中一个生物时，你可以将那个生物沿着直线向你移动10英尺。"
+        "每当在你的回合中，你用你的{@spell 魔能爆}击中一个生物时，你可以将那个生物沿着直线向你移动10英尺。"
       ]
     },
     {
-      "name": "奥术射击:缠绕矢",
+      "name": "缠绕矢",
       "ENG_name": "Grasping Arrow",
       "source": "XGE",
       "page": 29,
@@ -1589,7 +1589,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -1598,7 +1598,7 @@
       ]
     },
     {
-      "name": "战斗风格:巨武器战斗",
+      "name": "巨武器战斗",
       "ENG_name": "Great Weapon Fighting",
       "source": "PHB",
       "page": 72,
@@ -1636,7 +1636,7 @@
       ]
     },
     {
-      "name": "注法:警觉之盔",
+      "name": "警觉之盔",
       "ENG_name": "Helm of Awareness",
       "source": "TCE",
       "page": 21,
@@ -1659,11 +1659,11 @@
         }
       ],
       "entries": [
-        "当生物佩戴这个头盔时，在先攻骰上获得优势。此外，只要穿戴者不是{@condition 无力}，穿戴者不会被{@quickref 突袭|PHB|3|0|突袭}。"
+        "当生物佩戴这个头盔时，在先攻骰上获得优势。此外，只要穿戴者不是{@quickref 突袭|PHB|3|0|被突袭}，穿戴者不会被{@condition 无力}。"
       ]
     },
     {
-      "name": "符文:山丘符文",
+      "name": "山丘符文",
       "ENG_name": "Hill Rune",
       "source": "TCE",
       "page": 45,
@@ -1713,16 +1713,16 @@
         }
       ],
       "entries": [
-        "你学习了一种复杂的魔法方法，可以创造一个特殊的{@creature Homunculus Servant|TCE|人造生命体}为你服务。你注入的物品作为这个生物的心脏，生物的身体会立即围绕它形成。",
+        "你学习了一种复杂的魔法方法，可以创造一个特殊的{@creature 人工生命仆从|TCE|荷蒙库鲁斯}为你服务。你注入的物品作为这个生物的心脏，生物的身体会立即围绕它形成。",
         "你决定人造生物的外观。一些炼金术士喜欢看起来像机械的鸟，而有些人则喜欢带翅膀的小瓶或小型可动的坩埚。",
         "这个魔像对你和你的同伴友好，并且它会服从你的命令。请参阅这个生物的游戏统计数据在魔像仆人统计块中，它在几个地方使用了你的熟练加值（PB）。",
-        "在战斗中，魔像共享你的先攻计数，但在你之后立即行动。它可以自行移动并使用其反应，但在其回合上唯一采取的动作是{@action 躲避}动作，除非你在你的回合上使用奖励行动命令它采取其他行动。那个行动可以是其统计块中的一个，也可以是其他一些行动。如果你被{@condition 失去能力}，魔像可以采取任何它选择的行动，而不仅仅是{@action 躲避}。",
-        "The homunculus regains {@dice 2d6} hit points if the {@spell mending} spell is cast on it. If you or the homunculus dies, it vanishes, leaving its heart in its space."
+        "在战斗中，魔像共享你的先攻计数，但在你之后立即行动。它可以自行移动并使用其反应，但在其回合上唯一采取的动作是{@action 回避}动作，除非你在你的回合上使用奖励行动命令它采取其他行动。那个行动可以是其统计块中的一个，也可以是其他一些行动。如果你被{@condition 无力}，魔像可以采取任何它选择的行动，而不仅仅是{@action 回避}。",
+        "如果对它施放{@spell 修复术}法术，魔像会恢复{@spell 修复术}点生命值。如果你或魔像死亡，它会消失，留下它的心脏在其空间中。"
       ],
       "hasFluffImages": true
     },
     {
-      "name": "魔能祈唤:进阶契约武器",
+      "name": "进阶契约武器",
       "ENG_name": "Improved Pact Weapon",
       "source": "XGE",
       "page": 57,
@@ -1737,7 +1737,7 @@
       "entries": [
         "你可以使用你通过剑刃契约特性召唤的任何武器作为你的巫师法术的施法焦点。",
         "此外，除非这把武器已经是带有加值的魔法武器，否则它的攻击和伤害骰将获得+1的加值。",
-        "最后，你召唤的武器可以是{@item 短弓|phb}、{@item 长弓|phb}、{@item 轻型弩|phb}或{@item 重型弩|phb}。"
+        "最后，你召唤的武器可以是{@item 短弓|PHB}、{@item 长弓|PHB}、{@item 轻弩|PHB}或{@item 重弩|PHB}。"
       ]
     },
     {
@@ -1751,11 +1751,11 @@
         "FS:P"
       ],
       "entries": [
-        "When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a {@item shield|phb} or a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} to use this reaction."
+        "当你可以看到的生物攻击距离你5英尺内的其他目标时，你可以使用你的反应来减少目标受到的伤害，减少量为{@dice 1d10}加上你的熟练加值（最少为0伤害）。你必须持有一面{@item 护盾术|PHB}或者一件{@filter 简单或军用武器|物品|来源=phb|类别=基础|类型=武术武器；简单武器}才能使用这个反应。"
       ]
     },
     {
-      "name": "魔能祈唤:链主赋能",
+      "name": "链主赋能",
       "ENG_name": "Investment of the Chain Master",
       "source": "TCE",
       "page": 71,
@@ -1769,7 +1769,7 @@
         }
       ],
       "entries": [
-        "当你施放{@spell 查找伙伴}时，你将你的奥术力量注入召唤的伙伴中，赋予生物以下好处：",
+        "当你施放{@spell 寻获魔宠}时，你将你的奥术力量注入召唤的伙伴中，赋予生物以下好处：",
         {
           "type": "list",
           "items": [
@@ -1783,7 +1783,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:怠惰之枪",
+      "name": "怠惰之枪",
       "ENG_name": "Lance of Lethargy",
       "source": "XGE",
       "page": 57,
@@ -1793,16 +1793,16 @@
       "prerequisite": [
         {
           "spell": [
-            "奥术冲击#c"
+            "魔能爆#c"
           ]
         }
       ],
       "entries": [
-        "每当在你的回合中，你用你的{@spell eldritch blast}击中生物时，你可以将那个生物的速度减少10英尺，直到你的下个回合结束。"
+        "每当在你的回合中，你用你的{@spell 魔能爆}击中生物时，你可以将那个生物的速度减少10英尺，直到你的下个回合结束。"
       ]
     },
     {
-      "name": "魔能祈唤:饮命者",
+      "name": "饮命者",
       "ENG_name": "Lifedrinker",
       "source": "PHB",
       "page": 111,
@@ -1827,7 +1827,7 @@
       ]
     },
     {
-      "name": "战技:突刺攻击",
+      "name": "突刺攻击",
       "ENG_name": "Lunging Attack",
       "source": "PHB",
       "page": 74,
@@ -1843,7 +1843,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:癫狂巫咒",
+      "name": "癫狂巫咒",
       "ENG_name": "Maddening Hex",
       "source": "XGE",
       "page": 57,
@@ -1860,16 +1860,16 @@
             }
           },
           "spell": [
-            "诅咒/咒语#x"
+            "六边形/诅咒#x"
           ]
         }
       ],
       "entries": [
-        "作为奖励行动，你在被你的{@spell 诅咒}法术或你的术士特性诅咒的目标周围引起心灵干扰，例如来自Hexblade's Curse或Sign of Ill Omen。当你这样做时，你对被诅咒的目标以及你能看到的每个选择的生物，在它周围5英尺内造成心灵伤害。心灵伤害等于你的魅力修正值（最少1点伤害）。使用这个祈唤时，你必须能看到被诅咒的目标，且它必须在你30英尺范围内。"
+        "作为奖励行动，你在被你的{@spell 脆弱诅咒}法术或你的术士特性诅咒的目标周围引起心灵干扰，例如来自Hexblade's Curse或Sign of Ill Omen。当你这样做时，你对被诅咒的目标以及你能看到的每个选择的生物，在它周围5英尺内造成心灵伤害。心灵伤害等于你的魅力修正值（最少1点伤害）。使用这个祈唤时，你必须能看到被诅咒的目标，且它必须在你30英尺范围内。"
       ]
     },
     {
-      "name": "战技:灵动攻击",
+      "name": "灵动攻击",
       "ENG_name": "Maneuvering Attack",
       "source": "PHB",
       "page": 74,
@@ -1885,7 +1885,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:千面之脸",
+      "name": "千面之脸",
       "ENG_name": "Mask of Many Faces",
       "source": "PHB",
       "page": 111,
@@ -1907,7 +1907,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:万形之主",
+      "name": "万形之主",
       "ENG_name": "Master of Myriad Forms",
       "source": "PHB",
       "page": 111,
@@ -1936,11 +1936,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 变身术}，无需消耗法术位。"
+        "你可以随意施放{@spell 变造自身}，无需消耗法术位。"
       ]
     },
     {
-      "name": "战技:恐吓攻击",
+      "name": "恐吓攻击",
       "ENG_name": "Menacing Attack",
       "source": "PHB",
       "page": 74,
@@ -1956,7 +1956,7 @@
       ]
     },
     {
-      "name": "注法:思维砥石",
+      "name": "思维砥石",
       "ENG_name": "Mind Sharpener",
       "source": "TCE",
       "page": 22,
@@ -1971,11 +1971,11 @@
         }
       ],
       "entries": [
-        "The infused item can send a jolt to the wearer to refocus their mind. The item has 4 charges. When the wearer fails a Constitution saving throw to maintain {@status concentration} on a spell, the wearer can use its reaction to expend 1 of the item's charges to succeed instead. The item regains {@dice 1d4} expended charges daily at dawn."
+        "注入的物品可以向佩戴者发送一次冲击，以重新集中他们的注意力。该物品有4次充能。当佩戴者在进行体质豁免检定以维持法术的{@status 专注}时失败，佩戴者可以使用其反应来消耗物品的1次充能，以代替失败。该物品每天黎明时恢复{@dice 1d4}次消耗的充能。"
       ]
     },
     {
-      "name": "魔能祈唤:混沌手下",
+      "name": "混沌手下",
       "ENG_name": "Minions of Chaos",
       "source": "PHB",
       "page": 111,
@@ -2012,7 +2012,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:心灵泥沼",
+      "name": "心灵泥沼",
       "ENG_name": "Mire the Mind",
       "source": "PHB",
       "page": 111,
@@ -2045,11 +2045,11 @@
         }
       ],
       "entries": [
-        "你可以使用术士法术位施放一次{@spell 缓慢}。直到你完成一次长休息之前，你不能再这样做。"
+        "你可以使用术士法术位施放一次{@spell 缓速术}。直到你完成一次长休息之前，你不能再这样做。"
       ]
     },
     {
-      "name": "法门:云雾势",
+      "name": "云雾势",
       "ENG_name": "Mist Stance",
       "source": "PHB",
       "page": 81,
@@ -2087,11 +2087,11 @@
         }
       ],
       "entries": [
-        "你可以消耗4点气点施放{@spell 气化形态}，以自己为目标。"
+        "你可以消耗4点气点施放{@spell 气化形体}，以自己为目标。"
       ]
     },
     {
-      "name": "魔能祈唤:迷雾幻影",
+      "name": "迷雾幻影",
       "ENG_name": "Misty Visions",
       "source": "PHB",
       "page": 111,
@@ -2109,11 +2109,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 无声影像}，无需消耗法术位或材料组件。"
+        "你可以随意施放{@spell 无声幻影}，无需消耗法术位或材料组件。"
       ]
     },
     {
-      "name": "魔能祈唤:融身入影",
+      "name": "融身入影",
       "ENG_name": "One with Shadows",
       "source": "PHB",
       "page": 111,
@@ -2137,7 +2137,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:超凡跳跃",
+      "name": "超凡跳跃",
       "ENG_name": "Otherworldly Leap",
       "source": "PHB",
       "page": 111,
@@ -2166,7 +2166,7 @@
         }
       ],
       "entries": [
-        "你可以随意对自己施放{@spell 跳跃}法术，无需消耗法术位或材料组件。"
+        "你可以随意对自己施放{@spell 跳跃术}法术，无需消耗法术位或材料组件。"
       ]
     },
     {
@@ -2206,8 +2206,8 @@
         }
       ],
       "entries": [
-        "你学会了{@spell 查找伙伴}法术，并可以作为仪式来施放。这个法术不计入你所知法术的数量。",
-        "当你施放这个法术时，你可以选择伙伴的正常形态之一，或者以下特殊形态之一：{@creature 小鬼}，{@creature 伪龙}，{@creature 夸赛特}，或者{@creature 小精灵}。",
+        "你学会了{@spell 寻获魔宠}法术，并可以作为仪式来施放。这个法术不计入你所知法术的数量。",
+        "当你施放这个法术时，你可以选择伙伴的正常形态之一，或者以下特殊形态之一：{@creature 小魔鬼}，{@creature 伪龙}，{@creature 夸塞魔}，或者{@creature 小妖精}。",
         "此外，当你采取{@action 攻击}行动时，你可以放弃自己的一次攻击，让你的伙伴使用它的反应来进行一次它自己的攻击。"
       ]
     },
@@ -2221,7 +2221,7 @@
         "PB"
       ],
       "entries": [
-        "Your patron gives you an amulet, a talisman that can aid the wearer when the need is great. When the wearer fails an ability check, they can add a {@dice d4} to the roll, potentially turning the roll into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.",
+        "你的守护者给了你一个护身符，这是一个可以在需要时帮助佩戴者的小饰品。当佩戴者在能力检定时失败时，他们可以向掷骰结果加上一个{@dice d4}，可能将掷骰转变为成功。这个好处可以使用的次数等于你的熟练加值，所有已用的次数在你完成长时间休息后恢复。",
         "如果你失去了护符，你可以进行1小时的仪式来从你的守护者那里获得替代品。这个仪式可以在短休或长休期间进行，并且它会摧毁之前的护身符。当你死亡时，护符会变成灰烬。"
       ]
     },
@@ -2240,7 +2240,7 @@
           "known": {
             "_": [
               {
-                "choose": "等级=0",
+                "choose": "level=0",
                 "count": 3
               }
             ]
@@ -2248,7 +2248,7 @@
         }
       ],
       "entries": [
-        "你的守护者给你一本叫做影之书的魔法书。当你获得这个特性时，从任何职业的法术列表中选择三个{@filter 零级法术|spells|level=0}。这些零级法术不需要来自同一个法术列表。只要这本书在你身上，你就可以随意施放这些零级法术。它们不计入你所知零级法术的数量。你用这个特性施放的任何零级法术对你来说都被视为术士零级法术。如果你失去了你的影之书，你可以进行1小时的仪式来从你的守护者那里获得替代品。这个仪式可以在短休或长休期间进行，并且它会摧毁之前的书籍。当你死亡时，这本书会变成灰烬。"
+        "你的守护者给你一本叫做影之书的魔法书。当你获得这个特性时，从任何职业的法术列表中选择三个{@filter 戏法|法术|level=0}。这些零级法术不需要来自同一个法术列表。只要这本书在你身上，你就可以随意施放这些零级法术。它们不计入你所知零级法术的数量。你用这个特性施放的任何零级法术对你来说都被视为术士零级法术。如果你失去了你的影之书，你可以进行1小时的仪式来从你的守护者那里获得替代品。这个仪式可以在短休或长休期间进行，并且它会摧毁之前的书籍。当你死亡时，这本书会变成灰烬。"
       ]
     },
     {
@@ -2268,7 +2268,7 @@
       ]
     },
     {
-      "name": "奥术射击:穿梭矢",
+      "name": "穿梭矢",
       "ENG_name": "Piercing Arrow",
       "source": "XGE",
       "page": 29,
@@ -2276,7 +2276,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -2285,7 +2285,7 @@
       ]
     },
     {
-      "name": "战技:精准攻击",
+      "name": "精准攻击",
       "ENG_name": "Precision Attack",
       "source": "PHB",
       "page": 74,
@@ -2301,7 +2301,7 @@
       ]
     },
     {
-      "name": "战斗风格:守护",
+      "name": "守护",
       "ENG_name": "Protection",
       "source": "PHB",
       "page": 72,
@@ -2321,7 +2321,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:护符庇佑",
+      "name": "护符庇佑",
       "ENG_name": "Protection of the Talisman",
       "source": "TCE",
       "page": 71,
@@ -2342,11 +2342,11 @@
         }
       ],
       "entries": [
-        "When the wearer of your talisman fails a saving throw, they can add a {@dice d4} to the roll, potentially turning the save into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest."
+        "当佩戴您的护身符的人在豁免检定失败时，他们可以向这个检定加上一个{@dice d4}，可能会将失败转变为成功。这个好处可以使用的次数等于您的熟练加值，并且所有已用的次数在你完成长时间休息后都会恢复。"
       ]
     },
     {
-      "name": "战技:推撞攻击",
+      "name": "推撞攻击",
       "ENG_name": "Pushing Attack",
       "source": "PHB",
       "page": 74,
@@ -2362,7 +2362,7 @@
       ]
     },
     {
-      "name": "战技:快手投掷",
+      "name": "快手投掷",
       "ENG_name": "Quick Toss",
       "source": "TCE",
       "page": 42,
@@ -2397,7 +2397,7 @@
       ]
     },
     {
-      "name": "注法:光耀武器",
+      "name": "光耀武器",
       "ENG_name": "Radiant Weapon",
       "source": "TCE",
       "page": 22,
@@ -2427,11 +2427,11 @@
       ],
       "entries": [
         "这把魔法武器在使用时攻击和伤害骰获得+1的加值。持有它时，使用者可以采取奖励行动使其在30英尺半径内散发明亮的光芒，并在额外的30英尺内散发昏暗的光芒。使用者可以作为奖励行动熄灭光芒。",
-        "The weapon has 4 charges. As a reaction immediately after being hit by an attack, the wielder can expend 1 charge and cause the attacker to be {@condition blinded} until the end of the attacker's next turn, unless the attacker succeeds on a Constitution saving throw against your spell save DC. The weapon regains {@dice 1d4} expended charges daily at dawn."
+        "这把武器拥有4次充能。当持有者被攻击命中后，可以立即作为反应消耗1次充能，使攻击者在攻击者下一回合结束前处于{@condition 目盲}状态，除非攻击者在对抗你的法术豁免DC的体质豁免投掷中成功。这把武器每天黎明时恢复{@dice 1d4}次消耗的充能。"
       ]
     },
     {
-      "name": "战技:重整旗鼓",
+      "name": "重整旗鼓",
       "ENG_name": "Rally",
       "source": "PHB",
       "page": 74,
@@ -2447,7 +2447,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:符令责斥",
+      "name": "符令责斥",
       "ENG_name": "Rebuke of the Talisman",
       "source": "TCE",
       "page": 71,
@@ -2465,7 +2465,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:残酷巫咒",
+      "name": "残酷巫咒",
       "ENG_name": "Relentless Hex",
       "source": "XGE",
       "page": 57,
@@ -2482,12 +2482,12 @@
             }
           },
           "spell": [
-            "诅咒/咒语#x"
+            "六边形/诅咒#x"
           ]
         }
       ],
       "entries": [
-        "你的诅咒在你和目标之间创造了一个临时的联系。作为奖励行动，你可以魔法传送至你能看到的、距离被你的{@spell 诅咒}法术或你的术士特性（例如Hexblade's Curse或Sign of Ill Omen）诅咒的目标5英尺内的未被占据的空间，传送距离最多30英尺。要通过这种方式传送，你必须能看到被诅咒的目标。"
+        "你的诅咒在你和目标之间创造了一个临时的联系。作为奖励行动，你可以魔法传送至你能看到的、距离被你的{@spell 脆弱诅咒}法术或你的术士特性（例如Hexblade's Curse或Sign of Ill Omen）诅咒的目标5英尺内的未被占据的空间，传送距离最多30英尺。要通过这种方式传送，你必须能看到被诅咒的目标。"
       ]
     },
     {
@@ -2517,7 +2517,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:斥力魔爆",
+      "name": "斥力魔爆",
       "ENG_name": "Repelling Blast",
       "source": "PHB",
       "page": 111,
@@ -2528,16 +2528,16 @@
       "prerequisite": [
         {
           "spell": [
-            "奥术冲击#c"
+            "魔能爆#c"
           ]
         }
       ],
       "entries": [
-        "当你用{@spell 奥术冲击}击中生物时，你可以将生物沿着直线推向远离你10英尺的距离。"
+        "当你用{@spell 魔能爆}击中生物时，你可以将生物沿着直线推向远离你10英尺的距离。"
       ]
     },
     {
-      "name": "注法:仿制魔法物品",
+      "name": "仿制魔法物品",
       "ENG_name": "Replicate Magic Item",
       "source": "TCE",
       "page": 22,
@@ -2551,7 +2551,7 @@
         "AI"
       ],
       "entries": [
-        "使用这种注入，你可以复制特定的魔法物品。你可以多次学习这种注入；每次这样做时，从下面的可复制物品表中选择一个你可以用它制造的魔法物品。表的标题告诉你必须达到职业等级才能从表中选择物品。或者，你可以选择游戏中的{@filter 常见魔法物品|items|type=!potion;!scroll|rarity=common}中的魔法物品，不包括药水或卷轴。",
+        "使用这种注入，你可以复制特定的魔法物品。你可以多次学习这种注入；每次这样做时，从下面的可复制物品表中选择一个你可以用它制造的魔法物品。表的标题告诉你必须达到职业等级才能从表中选择物品。或者，你可以选择游戏中的{@filter 常见魔法物品|物品|类型=!药水;!卷轴|稀有度=普通}中的魔法物品，不包括药水或卷轴。",
         "在表格中，物品的条目会告诉你该物品是否需要调谐。有关它的更多信息，包括制作它所需的物品类型，请参见《地下城主指南|DMG}中物品的描述。",
         {
           "type": "table",
@@ -2565,22 +2565,38 @@
             "col-2 text-center"
           ],
           "rows": [
-            "{@item 炼金术壶}",
-            "No",
-            "{@item 储物袋}",
-            "No",
-            "{@item 水下呼吸帽}",
-            "No",
-            "{@item 夜视镜}",
-            "No",
-            "{@item 攀爬绳}",
-            "No",
-            "{@item 传讯石}",
-            "No",
-            "{@item 魔法侦测魔杖}",
-            "No",
-            "{@item 秘密魔杖}",
-            "No"
+            [
+              "{@item 炼金壶}",
+              "No"
+            ],
+            [
+              "{@item 次元袋}",
+              "No"
+            ],
+            [
+              "{@item 水下呼吸帽}",
+              "No"
+            ],
+            [
+              "{@item 夜视镜}",
+              "No"
+            ],
+            [
+              "{@item 攀爬绳}",
+              "No"
+            ],
+            [
+              "{@item 传讯石}",
+              "No"
+            ],
+            [
+              "{@item 搜魔魔杖}",
+              "No"
+            ],
+            [
+              "{@item 探秘魔杖}",
+              "No"
+            ]
           ]
         },
         {
@@ -2595,22 +2611,38 @@
             "col-2 text-center"
           ],
           "rows": [
-            "{@item 精灵之靴}",
-            "No",
-            "{@item 精灵斗篷}",
-            "是",
-            "{@item 蝠鲼斗篷}",
-            "No",
-            "{@item 迷人之眼}",
-            "是",
-            "{@item 盗贼手套}",
-            "No",
-            "{@item 揭示之灯}",
-            "No",
-            "{@item 魅惑之笛}",
-            "No",
-            "{@item 水行戒指}",
-            "No"
+            [
+              "{@item 精灵之靴}",
+              "No"
+            ],
+            [
+              "{@item 精灵斗篷}",
+              "是"
+            ],
+            [
+              "{@item 蝠鲼斗篷}",
+              "No"
+            ],
+            [
+              "{@item 魅惑镜片}",
+              "是"
+            ],
+            [
+              "{@item 窃贼手套}",
+              "No"
+            ],
+            [
+              "{@item 显像提灯}",
+              "No"
+            ],
+            [
+              "{@item 颤栗乐笙}",
+              "No"
+            ],
+            [
+              "{@item 水行戒指}",
+              "No"
+            ]
           ]
         },
         {
@@ -2625,50 +2657,94 @@
             "col-2 text-center"
           ],
           "rows": [
-            "{@item 步履如飞和跳跃长靴}",
-            "是",
-            "{@item 冬季之地的靴子}",
-            "是",
-            "{@item 弓箭手护腕}",
-            "是",
-            "{@item 防护胸针}",
-            "是",
-            "{@item 保护披风}",
-            "是",
-            "{@item 鹰眼}",
-            "是",
-            "{@item 食人魔力量手套}",
-            "是",
-            "{@item 捕获飞弹手套}",
-            "是",
-            "{@item 游泳和攀爬手套}",
-            "是",
-            "{@item 伪装帽}",
-            "是",
-            "{@item 智慧头带}",
-            "是",
-            "{@item 心灵感应头盔}",
-            "是",
-            "{@item 思想徽章}",
-            "是",
-            "{@item 适应性项链}",
-            "是",
-            "{@item 伤口闭合护身符}",
-            "是",
-            "{@item 污水管笛}",
-            "是",
-            "{@item 伊洛娜的箭袋}",
-            "No",
-            "{@item 跳跃戒指}",
-            "是",
-            "{@item 心灵防护戒指}",
-            "是",
-            "{@item 蜘蛛攀爬鞋}",
-            "是",
-            "{@item 通风肺|ERLW}（详见{@book 第5章|ERLW|13}）",
-            "是",
-            "{@item 翼靴}",
-            "是"
+            [
+              "{@item 跳跑之靴}",
+              "是"
+            ],
+            [
+              "{@item 雪地之靴}",
+              "是"
+            ],
+            [
+              "{@item 射手护腕}",
+              "是"
+            ],
+            [
+              "{@item 护盾胸针}",
+              "是"
+            ],
+            [
+              "{@item 防护斗篷}",
+              "是"
+            ],
+            [
+              "{@item 鹰眼镜片}",
+              "是"
+            ],
+            [
+              "{@item 食人魔力量护手}",
+              "是"
+            ],
+            [
+              "{@item 辟矢夺箭手套}",
+              "是"
+            ],
+            [
+              "{@item 运动健将手套}",
+              "是"
+            ],
+            [
+              "{@item 易容帽}",
+              "是"
+            ],
+            [
+              "{@item 智力头带}",
+              "是"
+            ],
+            [
+              "{@item 心灵感应头盔}",
+              "是"
+            ],
+            [
+              "{@item 读心勋章}",
+              "是"
+            ],
+            [
+              "{@item 适应项链}",
+              "是"
+            ],
+            [
+              "{@item 愈合护符}",
+              "是"
+            ],
+            [
+              "{@item 唤鼠乐笙}",
+              "是"
+            ],
+            [
+              "{@item 艾罗娜的箭袋}",
+              "No"
+            ],
+            [
+              "{@item 跳跃戒指}",
+              "是"
+            ],
+            [
+              "{@item 心灵护盾戒指}",
+              "是"
+            ],
+            [
+              "{@item 蛛行便鞋}",
+              "是"
+            ],
+            [
+              "{@item 生风铁肺|ERLW}（详见{@book 第五章|ERLW|13}）",
+              "是"
+            ],
+            [
+              "{@item 飞翼之靴}",
+              "是"
+            ]
           ]
         },
         {
@@ -2683,38 +2759,64 @@
             "col-1 text-center"
           ],
           "rows": [
-            "{@item 健康护身符}",
-            "是",
-            "{@item 奥术推进臂|ERLW} （详见 {@book 第5章|ERLW|13}）",
-            "是",
-            "{@item 山岭巨人力量腰带}",
-            "是",
-            "{@item 悬浮长靴}",
-            "是",
-            "{@item 速度之靴}",
-            "是",
-            "{@item 防御护腕}",
-            "是",
-            "{@item 蝙蝠披风}",
-            "是",
-            "{@item 维度镣铐}",
-            "No",
-            "{@item 视宝石}",
-            "是",
-            "{@item 爆炸号角}",
-            "No",
-            "{@item 自由行动戒指}",
-            "是",
-            "{@item 保护戒指}",
-            "是",
-            "{@item 公羊戒指}",
-            "是"
+            [
+              "{@item 健康护符}",
+              "是"
+            ],
+            [
+              "{@item 喷流式奥能臂|ERLW} （详见 {@book 第五章|ERLW|13}）",
+              "是"
+            ],
+            [
+              "{@item 山丘巨人力量腰带}",
+              "是"
+            ],
+            [
+              "{@item 浮空之靴}",
+              "是"
+            ],
+            [
+              "{@item 速度之靴}",
+              "是"
+            ],
+            [
+              "{@item 防御护腕}",
+              "是"
+            ],
+            [
+              "{@item 蝙蝠斗篷}",
+              "是"
+            ],
+            [
+              "{@item 次元镣铐}",
+              "No"
+            ],
+            [
+              "{@item 真视宝石}",
+              "是"
+            ],
+            [
+              "{@item 音爆号角}",
+              "No"
+            ],
+            [
+              "{@item 自由行动戒指}",
+              "是"
+            ],
+            [
+              "{@item 防护戒指}",
+              "是"
+            ],
+            [
+              "{@item 公羊戒指}",
+              "是"
+            ]
           ]
         }
       ]
     },
     {
-      "name": "注法:斥力之盾",
+      "name": "斥力之盾",
       "ENG_name": "Repulsion Shield",
       "source": "TCE",
       "page": 23,
@@ -2744,11 +2846,11 @@
       ],
       "entries": [
         "生物在持有这个盾牌时获得+1的护甲等级加值。",
-        "The shield has 4 charges. While holding it, the wielder can use a reaction immediately after being hit by a melee attack to expend 1 of the shield's charges and push the attacker up to 15 feet away. The shield regains {@dice 1d4} expended charges daily at dawn."
+        "这个盾牌有4点充能。持有者在被近战攻击击中后，可以使用一个反应来消耗盾牌的1点充能，并将攻击者推开最多15英尺。盾牌在黎明时每天恢复{@dice 1d4}点消耗的充能。"
       ]
     },
     {
-      "name": "注法:抗力护甲",
+      "name": "抗力护甲",
       "ENG_name": "Resistant Armor",
       "source": "TCE",
       "page": 23,
@@ -2781,7 +2883,7 @@
       ]
     },
     {
-      "name": "注法:回力武器",
+      "name": "回力武器",
       "ENG_name": "Returning Weapon",
       "source": "TCE",
       "page": 23,
@@ -2806,7 +2908,7 @@
       ]
     },
     {
-      "name": "法门:攀云步",
+      "name": "攀云步",
       "ENG_name": "Ride the Wind",
       "source": "PHB",
       "page": 81,
@@ -2848,7 +2950,7 @@
       ]
     },
     {
-      "name": "战技:反击",
+      "name": "反击",
       "ENG_name": "Riposte",
       "source": "PHB",
       "page": 74,
@@ -2864,7 +2966,7 @@
       ]
     },
     {
-      "name": "法门:噬焰流",
+      "name": "噬焰流",
       "ENG_name": "River of Hungry Flame",
       "source": "PHB",
       "page": 81,
@@ -2906,7 +3008,7 @@
       ]
     },
     {
-      "name": "法门:风灵突进",
+      "name": "风灵突进",
       "ENG_name": "Rush of the Gale Spirits",
       "source": "PHB",
       "page": 81,
@@ -2929,11 +3031,11 @@
         }
       ],
       "entries": [
-        "你可以消耗2点气点数来施放{@spell 强风术}。"
+        "你可以消耗2点气点数来施放{@spell 造风术}。"
       ]
     },
     {
-      "name": "魔能祈唤:重塑血肉",
+      "name": "重塑血肉",
       "ENG_name": "Sculptor of Flesh",
       "source": "PHB",
       "page": 111,
@@ -2970,7 +3072,7 @@
       ]
     },
     {
-      "name": "奥术射击:追踪矢",
+      "name": "追踪矢",
       "ENG_name": "Seeking Arrow",
       "source": "XGE",
       "page": 30,
@@ -2978,7 +3080,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -3001,12 +3103,12 @@
         "amount": 2
       },
       "entries": [
-        "If you make an attack roll for a spell and miss, you can spend 2 sorcery points to reroll the {@dice d20}, and you must use the new roll.",
+        "如果您对法术进行攻击检定并且未命中，您可以花费2点奥术点数重新掷骰{@dice d20}，并且必须使用新的掷骰结果。",
         "即使你在施放法术时已经使用了不同的元魔法选项，你仍然可以使用{@spell 寻迹法术}。"
       ]
     },
     {
-      "name": "奥术射击:遮影矢",
+      "name": "遮影矢",
       "ENG_name": "Shadow Arrow",
       "source": "XGE",
       "page": 30,
@@ -3014,7 +3116,7 @@
         "AS"
       ],
       "consumes": {
-        "name": "魔射手:奥术射击",
+        "name": "奥术射击",
         "ENG_name": "Arcane Shot"
       },
       "entries": [
@@ -3023,7 +3125,7 @@
       ]
     },
     {
-      "name": "法门:身化长流",
+      "name": "身化长流",
       "ENG_name": "Shape the Flowing River",
       "source": "PHB",
       "page": 81,
@@ -3035,7 +3137,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:暗影寿衣",
+      "name": "暗影寿衣",
       "ENG_name": "Shroud of Shadow",
       "source": "XGE",
       "page": 57,
@@ -3067,7 +3169,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:凶兆符记",
+      "name": "凶兆符记",
       "ENG_name": "Sign of Ill Omen",
       "source": "PHB",
       "page": 111,
@@ -3104,7 +3206,7 @@
       ]
     },
     {
-      "name": "注法:法力恢复戒指",
+      "name": "法力恢复戒指",
       "ENG_name": "Spell-Refueling Ring",
       "source": "TCE",
       "page": 23,
@@ -3131,7 +3233,7 @@
       ]
     },
     {
-      "name": "符文:岩石符文",
+      "name": "岩石符文",
       "ENG_name": "Stone Rune",
       "source": "TCE",
       "page": 45,
@@ -3149,7 +3251,7 @@
       ]
     },
     {
-      "name": "符文:风暴符文",
+      "name": "风暴符文",
       "ENG_name": "Storm Rune",
       "source": "TCE",
       "page": 45,
@@ -3173,8 +3275,8 @@
         }
       ],
       "entries": [
-        "使用这个符文，你可以像风暴巨人先知一样窥视未来。穿戴或携带刻有这个符文的物品时，你在智力（{@skill Arcana}）检定上获得优势，并且只要你不是{@condition incapacitated}，你就不会{@quickref Surprise|PHB|3|0|被突袭}。",
-        "此外，你可以作为奖励动作激活符文，进入预言状态持续1分钟，或直到你被{@condition 失去能力}。在状态结束之前，当你或你能看到的60英尺范围内的另一个生物进行攻击检定、豁免检定或能力检定时，你可以使用你的反应使该检定获得优势或劣势。一旦你激活这个符文，直到你完成一次短休或长休之前，你不能再这样做。"
+        "使用这个符文，你可以像风暴巨人先知一样窥视未来。穿戴或携带刻有这个符文的物品时，你在智力（{@skill 奥秘}）检定上获得优势，并且只要你不是{@quickref 突袭|PHB|3|0|被突袭}，你就不会{@condition 无力}。",
+        "此外，你可以作为奖励动作激活符文，进入预言状态持续1分钟，或直到你被{@condition 无力}。在状态结束之前，当你或你能看到的60英尺范围内的另一个生物进行攻击检定、豁免检定或能力检定时，你可以使用你的反应使该检定获得优势或劣势。一旦你激活这个符文，直到你完成一次短休或长休之前，你不能再这样做。"
       ]
     },
     {
@@ -3216,12 +3318,12 @@
         }
       ],
       "entries": [
-        "你从{@class 战士|phb|战斗大师|Battle Master|phb|2-0}子类中可用的选项中选择一个{@filter 策略动作|optionalfeatures|feature type=MV:B}。如果你使用的策略动作需要目标进行豁免检定以抵抗该动作的效果，则豁免检定的DC等于8 + 你的熟练加值 + 你的力量或敏捷调整值（你选择）。",
-        "You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+        "你从{@filter 战技|可选特性|特性类型=MV:B}子类中可用的选项中选择一个{@class 战士|PHB|战斗大师|战斗大师|PHB|2-0}。如果你使用的策略动作需要目标进行豁免检定以抵抗该动作的效果，则豁免检定的DC等于8 + 你的熟练加值 + 你的力量或敏捷调整值（你选择）。",
+        "你获得一个优势骰，这是一个{@dice d6}（这个骰子会加入你从其他来源获得的任何优势骰）。这个骰子用于激发你的机动。使用优势骰时会被消耗。当你完成短休或长休后，你恢复你消耗的优势骰。"
       ]
     },
     {
-      "name": "战技:横扫攻击",
+      "name": "横扫攻击",
       "ENG_name": "Sweeping Attack",
       "source": "PHB",
       "page": 74,
@@ -3237,7 +3339,7 @@
       ]
     },
     {
-      "name": "法门:飞炎击",
+      "name": "飞炎击",
       "ENG_name": "Sweeping Cinder Strike",
       "source": "PHB",
       "page": 81,
@@ -3260,11 +3362,11 @@
         }
       ],
       "entries": [
-        "你可以消耗2点气点施放{@spell 炽热之手}。"
+        "你可以消耗2点气点施放{@spell 燃烧之手}。"
       ]
     },
     {
-      "name": "战技:战术预估",
+      "name": "战术预估",
       "ENG_name": "Tactical Assessment",
       "source": "TCE",
       "page": 42,
@@ -3277,11 +3379,11 @@
         "ENG_name": "Superiority Die"
       },
       "entries": [
-        "当你进行智力（{@skill 调查})、智力（{@skill 历史})或智慧（{@skill 洞察})检定时，你可以消耗一个优势骰并将优势骰加到能力检定上。"
+        "当你进行智力（{@skill 调查})、智力（{@skill 历史})或智慧（{@skill 洞悉})检定时，你可以消耗一个优势骰并将优势骰加到能力检定上。"
       ]
     },
     {
-      "name": "魔能祈唤:命运窃贼",
+      "name": "命运窃贼",
       "ENG_name": "Thief of Five Fates",
       "source": "PHB",
       "page": 111,
@@ -3303,11 +3405,11 @@
         }
       ],
       "entries": [
-        "你可以使用术士法术位施放一次{@spell 诅咒}。直到你完成一次长时间休息之前，你不能再这样做。"
+        "你可以使用术士法术位施放一次{@spell 灾祸术}。直到你完成一次长时间休息之前，你不能再这样做。"
       ]
     },
     {
-      "name": "魔能祈唤:饥渴魔刃",
+      "name": "饥渴魔刃",
       "ENG_name": "Thirsting Blade",
       "source": "PHB",
       "page": 111,
@@ -3347,7 +3449,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:莱维斯图斯之墓",
+      "name": "莱维斯图斯之墓",
       "ENG_name": "Tomb of Levistus",
       "source": "XGE",
       "page": 57,
@@ -3366,7 +3468,7 @@
         }
       ],
       "entries": [
-        "当你受到伤害时，可以作为反应将自己埋葬在冰中，冰将在你下一回合结束时融化。你获得的临时生命值等于你的术士等级乘以10，尽可能多地吸收触发伤害。在你受到伤害后立即，你获得对火焰伤害的易伤，你的速度降低到0，并且你被{@condition 失去能力}。这些效果，包括任何剩余的临时生命值，都在冰融化时结束。",
+        "当你受到伤害时，可以作为反应将自己埋葬在冰中，冰将在你下一回合结束时融化。你获得的临时生命值等于你的术士等级乘以10，尽可能多地吸收触发伤害。在你受到伤害后立即，你获得对火焰伤害的易伤，你的速度降低到0，并且你被{@condition 无力}。这些效果，包括任何剩余的临时生命值，都在冰融化时结束。",
         "一旦你使用这个祈唤，直到你完成一次短休息或长休息之前，你不能再使用它。"
       ]
     },
@@ -3388,7 +3490,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:诡术师的逃脱术",
+      "name": "诡术师的逃脱术",
       "ENG_name": "Trickster's Escape",
       "source": "XGE",
       "page": 57,
@@ -3420,11 +3522,11 @@
         }
       ],
       "entries": [
-        "你可以在不消耗法术位的情况下对自己施放一次{@spell 自由移动}。当你完成一次长时间休息后，你将重新获得这样做的能力。"
+        "你可以在不消耗法术位的情况下对自己施放一次{@spell 行动自如}。当你完成一次长时间休息后，你将重新获得这样做的能力。"
       ]
     },
     {
-      "name": "战技:摔绊攻击",
+      "name": "摔绊攻击",
       "ENG_name": "Trip Attack",
       "source": "PHB",
       "page": 74,
@@ -3436,7 +3538,7 @@
         "ENG_name": "Superiority Die"
       },
       "entries": [
-        "当你用武器攻击击中一个生物时，你可以消耗一个优势骰来尝试击倒目标。你将优势骰加到攻击的伤害掷骰上，如果目标是大型或更小，它必须进行一次力量豁免掷骰。如果豁免失败，你将目标击成{@condition 倒地}状态。"
+        "当你用武器攻击击中一个生物时，你可以消耗一个优势骰来尝试击倒目标。你将优势骰加到攻击的伤害掷骰上，如果目标是大型或更小，它必须进行一次力量豁免掷骰。如果豁免失败，你将目标击成{@condition 伏地}状态。"
       ]
     },
     {
@@ -3456,11 +3558,11 @@
       },
       "entries": [
         "当你施放一个只针对一个生物并且范围不是自身的法术时，你可以花费等于法术等级的奥术点数来用同一法术针对范围内的第二个生物（如果法术是戏法，则为1点奥术点数）。",
-        "要符合条件，法术在当前等级下必须不能针对超过一个生物。例如，{@spell 魔法飞弹}和{@spell 灼热射线}不符合条件，但{@spell 冰霜射线}和{@spell 彩色光球}则符合。"
+        "要符合条件，法术在当前等级下必须不能针对超过一个生物。例如，{@spell 魔法飞弹}和{@spell 灼热射线}不符合条件，但{@spell 冷冻射线}和{@spell 幻色法球}则符合。"
       ]
     },
     {
-      "name": "战斗风格:双武器战斗",
+      "name": "双武器战斗",
       "ENG_name": "Two-Weapon Fighting",
       "source": "PHB",
       "page": 72,
@@ -3494,8 +3596,8 @@
         "FS:F"
       ],
       "entries": [
-        "你的徒手攻击可以在命中时造成等同于{@damage 1d6} + 你的力量调整值的钝击伤害。如果你在进行攻击检定时没有持握任何武器或{@item 盾牌|phb}，这个{@damage d6}会变成{@damage d8}。",
-        "在每个你的回合开始时，你可以对一个被你{@condition grappled}的生物造成{@damage 1d4}点钝击伤害。"
+        "你的徒手攻击可以在命中时造成等同于{@damage 1d6} + 你的力量调整值的钝击伤害。如果你在进行攻击检定时没有持握任何武器或{@item 护盾术|PHB}，这个{@damage d6}会变成{@damage d8}。",
+        "在每个你的回合开始时，你可以对一个被你{@condition 被擒}的生物造成{@condition 被擒}点钝击伤害。"
       ]
     },
     {
@@ -3511,7 +3613,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:永恒奴役",
+      "name": "永恒奴役",
       "ENG_name": "Undying Servitude",
       "source": "TCE",
       "page": 71,
@@ -3548,7 +3650,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:穹宇尽视",
+      "name": "穹宇尽视",
       "ENG_name": "Visions of Distant Realms",
       "source": "PHB",
       "page": 111,
@@ -3577,11 +3679,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 奥术之眼}，无需消耗法术位。"
+        "你可以随意施放{@spell 秘法眼}，无需消耗法术位。"
       ]
     },
     {
-      "name": "魔能祈唤:缚主之音",
+      "name": "缚主之音",
       "ENG_name": "Voice of the Chain Master",
       "source": "PHB",
       "page": 111,
@@ -3599,7 +3701,7 @@
       ]
     },
     {
-      "name": "法门:清流鞭",
+      "name": "清流鞭",
       "ENG_name": "Water Whip",
       "source": "PHB",
       "page": 81,
@@ -3611,7 +3713,7 @@
       ]
     },
     {
-      "name": "法门:滚石流",
+      "name": "滚石流",
       "ENG_name": "Wave of Rolling Earth",
       "source": "PHB",
       "page": 81,
@@ -3653,7 +3755,7 @@
       ]
     },
     {
-      "name": "魔能祈唤:坟墓低语",
+      "name": "坟墓低语",
       "ENG_name": "Whispers of the Grave",
       "source": "PHB",
       "page": 111,
@@ -3682,11 +3784,11 @@
         }
       ],
       "entries": [
-        "你可以随意施放{@spell 与死者对话}，无需消耗法术位。"
+        "你可以随意施放{@spell 死者交谈术}，无需消耗法术位。"
       ]
     },
     {
-      "name": "魔能祈唤:巫术视界",
+      "name": "巫术视界",
       "ENG_name": "Witch Sight",
       "source": "PHB",
       "page": 111,

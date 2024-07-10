@@ -31,7 +31,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -68,14 +68,14 @@
           "name": "好帮手",
           "ENG_name": "Helpful",
           "entries": [
-            "The expert can take the Help action as a bonus action, and the creature who receives the help gains a {@dice 1d6} bonus to the {@dice d20} roll. If that roll is an attack roll, the creature can forgo adding the bonus to it, and then if the attack hits, the creature can add the bonus to the attack's damage roll against one target."
+            "专家可以将协助动作作为奖励动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
           ]
         },
         {
           "name": "反射闪避",
           "ENG_name": "Evasion",
           "entries": [
-            "When the expert is not {@condition 无力} and subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it failed."
+            "当专家未处于{@condition 无力}且受到允许其进行敏捷豁免以承受一半伤害的效果影响时，如果豁免成功，则不承受任何伤害；如果豁免失败，则只承受一半伤害。"
           ]
         },
         {
@@ -117,9 +117,9 @@
         }
       ],
       "attachedItems": [
-        "匕首|phb",
-        "短弓|玩家手册",
-        "短剑"
+        "匕首|PHB",
+        "短弓|PHB",
+        "短剑|PHB"
       ],
       "languageTags": [
         "C"
@@ -317,13 +317,13 @@
                 "{@spell 魅惑人类}",
                 "{@spell 侦测魔法}",
                 "{@spell 脚底抹油}",
-                "{@spell 睡眠术}"
+                "{@spell 沉眠}"
               ]
             },
             "2": {
               "slots": 3,
               "spells": [
-                "{@spell 黑暗术}",
+                "{@spell 黑暗}",
                 "{@spell 隐形术}",
                 "{@spell 暗示术}"
               ]
@@ -402,7 +402,7 @@
           "name": "骇人威仪",
           "ENG_name": "Frightful Presence",
           "entries": [
-            "Each creature of Lhammaruntosz's choice that is within 120 feet of her and aware of her must succeed on a {@dc 17} Wisdom saving throw or become {@condition 恐惧} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Lhammaruntosz's Frightful Presence for the next 24 hours."
+            "Lhammaruntosz选择的每个生物，如果距离她120英尺以内并且意识到她的存在，必须进行一次DC 17的智力豁免掷骰，否则会在1分钟内变为{@condition frightened}。生物可以在每个回合结束时重复进行豁免掷骰，成功则结束该效果。如果生物的豁免掷骰成功或该效果对其结束，生物在接下来的24小时内对Lhammaruntosz的恐怖存在免疫。"
           ]
         },
         {
@@ -440,7 +440,7 @@
           "name": "侦查",
           "ENG_name": "Detect",
           "entries": [
-            "Lhammaruntosz 进行一次智力（{@skill 感知}）检定。"
+            "Lhammaruntosz 进行一次智力（{@skill 察觉}）检定。"
           ]
         },
         {
@@ -454,7 +454,7 @@
           "name": "翼部攻击（消耗2个行动）",
           "ENG_name": "Wing Attack (Costs 2 Actions)",
           "entries": [
-            "Lhammaruntosz beats its wings. Each creature within 10 feet of Lhammaruntosz must succeed on a {@dc 20} Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition 伏地}. Lhammaruntosz can then fly up to half her flying speed."
+            "Lhammaruntosz 拍打着翅膀。在 Lhammaruntosz 10 英尺范围内的每个生物必须进行一次敏捷豁免（DC 20），否则将受到 14 ({@damage 2d6 + 7}) 点钝击伤害并被击倒{@condition prone}。之后 Lhammaruntosz 可以飞行至其飞行速度的一半。"
           ]
         }
       ],
@@ -476,7 +476,7 @@
         "龙息武器",
         "骇人威仪",
         "多重攻击",
-        "变形者"
+        "变形生物"
       ],
       "languageTags": [
         "C",
@@ -518,16 +518,16 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:力量",
-        "属性检定:感知"
+        "敏捷",
+        "力量",
+        "感知"
       ],
       "savingThrowForcedLegendary": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true
@@ -552,7 +552,7 @@
         {
           "ac": 13,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -640,7 +640,7 @@
       ],
       "trait": [
         {
-          "name": "塑能学派:强力戏法",
+          "name": "强力戏法",
           "ENG_name": "Potent Cantrip",
           "entries": [
             "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
@@ -679,8 +679,8 @@
         "无力"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:敏捷"
+        "魅力",
+        "敏捷"
       ],
       "hasToken": true
     },
@@ -704,7 +704,7 @@
         {
           "ac": 13,
           "from": [
-            "{@item 带钉皮甲|phb|带钉皮甲}"
+            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
           ]
         }
       ],
@@ -756,7 +756,7 @@
               "spells": [
                 "{@spell 燃烧之手}",
                 "{@spell 护盾术}",
-                "{@spell 睡眠术}"
+                "{@spell 沉眠}"
               ]
             },
             "2": {
@@ -792,7 +792,7 @@
       ],
       "trait": [
         {
-          "name": "塑能学派:强力戏法",
+          "name": "强力戏法",
           "ENG_name": "Potent Cantrip",
           "entries": [
             "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
@@ -833,9 +833,9 @@
         "昏迷"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "体质",
+        "敏捷",
+        "感知"
       ],
       "hasToken": true
     },
@@ -856,8 +856,8 @@
         {
           "ac": 20,
           "from": [
-            "{@item 板甲|phb|Plate}",
-            "{@item 盾牌|phb}"
+            "{@item 板甲|PHB|板甲}",
+            "{@item 护盾术|PHB}"
           ]
         }
       ],
@@ -896,10 +896,10 @@
           ]
         },
         {
-          "name": "勇士:精通重击",
+          "name": "精通重击",
           "ENG_name": "Improved Critical",
           "entries": [
-            "The warrior's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+            "战士的攻击骰在掷出19或20时会得到致命一击，使用的是{@dice d20}。"
           ]
         },
         {
@@ -942,7 +942,7 @@
           "name": "回气 (短休或长休之后充能)",
           "ENG_name": "Second Wind (Recharges after a Short or Long Rest)",
           "entries": [
-            "The warrior can use a bonus action on its turn to regain hit points equal to {@dice 1d10} + its level."
+            "战士可以在其回合使用奖励行动来恢复等于{@dice 1d10} + 其等级的生命值。"
           ]
         }
       ],
@@ -979,8 +979,8 @@
         }
       ],
       "attachedItems": [
-        "长弓",
-        "长剑"
+        "长弓|PHB",
+        "长剑|PHB"
       ],
       "languageTags": [
         "C"

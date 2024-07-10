@@ -73,14 +73,14 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d10 + 2}) piercing damage, and the target must succeed on a {@dc 11} Constitution saving throw or be {@condition 中毒} for 1 minute. While {@condition 中毒} this way, the target is {@condition 麻痹}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            "{@atk 近战武器} 命中：4，射程：5英尺，一个生物。{@h}7（{@damage 1d10 + 2}）穿刺伤害，目标必须进行一次{@dc 11}体质豁免检定，否则在1分钟内处于{@condition poisoned}状态。在这种状态下中毒时，目标处于{@condition paralyzed}状态。目标可以在每个回合结束时重复进行豁免检定，成功则结束该效果。"
           ]
         },
         {
           "name": "产卵器",
           "ENG_name": "Ovipositor",
           "entries": [
-            "{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}The target is infested with {@dice 1d3} assassin bug eggs, which immediately hatch into assassin bug maggots. At the start of each of the target's turns, the target takes {@dice 1d6} piercing damage per maggot infesting it. Applying fire to the bite wound before the end of the target's next turn deals 1 fire damage to the target and kills these assassin bug maggots. After this time, the maggots are too far under the skin to be burned.",
+            "{@atk 近战武器} {@hit 4} hit，射程 5 英尺，一个目标。{@h}目标被 {@dice 1d3} 刺客虫卵寄生，这些卵立即孵化成刺客虫蛆。在目标的每个回合开始时，每个寄生的蛆虫使目标受到 {@dice 1d6} 穿刺伤害。在目标下一个回合结束前，将火应用到咬伤处对目标造成 1 点火焰伤害并杀死这些刺客虫蛆。过了这个时间，蛆虫已经深入皮肤，无法被烧死。",
             "如果一个目标被刺客虫蛆寄生，并且在其回合结束时生命值降至0点，它将因为蛆虫钻入其心脏而死亡。任何治愈疾病的效应都能杀死寄生在目标上的所有刺客虫蛆。"
           ]
         }
@@ -110,7 +110,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -185,7 +185,7 @@
           "name": "光辉爆破",
           "ENG_name": "Radiant Blast",
           "entries": [
-            "Radiant energy erupts from the blindheim's eyes in a 15-foot cone. Each creature in that area must succeed on a {@dc 12} Constitution saving throw or take 7 ({@damage 2d6}) radiant damage and be {@condition 目盲} until the end of the blindheim's next turn. Creatures with the Sunlight Sensitivity trait have disadvantage on this saving throw."
+            "光辉能量从盲海姆的眼睛中以15英尺圆锥形爆发。该区域内的每个生物必须成功进行一次体质豁免检定（DC 12），否则将受到7点（{@damage 2d6}）光辉伤害，并在盲海姆的下回合结束前处于{@condition blinded}状态。具有日光敏感特性的生物在此豁免检定上处于劣势。"
           ]
         }
       ],
@@ -204,7 +204,7 @@
         "目盲"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -271,7 +271,7 @@
           "name": "爪抓",
           "ENG_name": "Claw",
           "entries": [
-            "{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4}) bludgeoning damage and the target is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the crab folk can automatically hit the target with its claw, and the crab folk can't make attacks with that claw against other targets. The crab folk has two claws, each of which can grapple only one target."
+            "{@atk 近战武器} 命中{@hit 6}，射程10英尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 钝击伤害，并且目标被{@condition 抓住}（逃脱{@dc 14}）。直到这次抓住结束，蟹人可以自动用其爪击中目标，并且蟹人不能使用该爪对其他目标进行攻击。蟹人有两个爪，每个爪只能抓住一个目标。"
           ]
         }
       ],
@@ -405,7 +405,7 @@
         "MW"
       ],
       "savingThrowForced": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -498,7 +498,7 @@
           ],
           "daily": {
             "1e": [
-              "{@spell 跨入乙太界}",
+              "{@spell 灵体化}",
               "{@spell 真知术}"
             ]
           },
@@ -542,7 +542,7 @@
                   "type": "item",
                   "name": "恐惧之眼",
                   "ENG_name": "Eye of Fear",
-                  "entry": "The target and up to four other creatures of the eye of fear and flame's choice within 10 feet of the target must each succeed on a {@dc 16} Wisdom saving throw or be {@condition 恐惧} for 1 minute. An affected creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                  "entry": "目标及恐惧之眼和烈焰之选的最多四个生物，必须在目标10英尺范围内，每个生物都必须进行一次{@dc 16}智力豁免检定，否则将被{@condition 恐惧}1分钟。受影响的生物可以在自己的每个回合结束时重复进行豁免检定，成功则结束该效果。"
                 },
                 {
                   "type": "item",
@@ -585,11 +585,11 @@
         "恐惧"
       ],
       "savingThrowForced": [
-        "属性检定:敏捷",
-        "属性检定:感知"
+        "敏捷",
+        "感知"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:感知"
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -612,7 +612,7 @@
         {
           "ac": 16,
           "from": [
-            "{@item 锁子甲|phb}"
+            "{@item 链甲|PHB}"
           ]
         }
       ],
@@ -672,14 +672,14 @@
           "name": "迷雾居民",
           "ENG_name": "Denizen of the Mist",
           "entries": [
-            "在其回合中，雾巨人忽略了由它或其他盟友雾巨人施放的{@spell 雾云}法术的效果。"
+            "在其回合中，雾巨人忽略了由它或其他盟友雾巨人施放的{@spell 云雾术}法术的效果。"
           ]
         },
         {
           "name": "敏锐嗅觉",
           "ENG_name": "Keen Smell",
           "entries": [
-            "这个巨人在依赖嗅觉的感知（{@skill 感知}）检定上具有优势。"
+            "这个巨人在依赖嗅觉的感知（{@skill 察觉}）检定上具有优势。"
           ]
         }
       ],
@@ -688,7 +688,7 @@
           "name": "多重攻击",
           "ENG_name": "Multiattack",
           "entries": [
-            "巨人进行两次巨剑攻击并施放{@spell 雾云术}。"
+            "巨人进行两次巨剑攻击并施放{@spell 云雾术}。"
           ]
         },
         {
@@ -714,7 +714,7 @@
         }
       ],
       "attachedItems": [
-        "巨剑|phb"
+        "巨剑|PHB"
       ],
       "traitTags": [
         "敏锐感官"
@@ -740,7 +740,7 @@
         "RW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:敏捷"
+        "敏捷"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -892,8 +892,8 @@
         "MW"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:体质",
-        "属性检定:感知"
+        "体质",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -949,7 +949,7 @@
           "name": "阴影潜伏者",
           "ENG_name": "Lurkers in Shadow",
           "entries": [
-            "Jermlaine are {@condition 隐形} to darkvision."
+            "杰尔梅因对暗视是{@condition 隐形}的。"
           ]
         },
         {
@@ -970,13 +970,13 @@
           "name": "蜂拥而至",
           "ENG_name": "Swarming Rush",
           "entries": [
-            "A jermlaine adds {@dice 1d4} to its weapon damage rolls while within 5 feet of another, conscious jermlaine."
+            "当在另一个有意识的杰尔曼林的5英尺范围内时，杰尔曼林会在其武器伤害骰上增加{@dice 1d4}。"
           ]
         }
       ],
       "action": [
         {
-          "name": "棍棒",
+          "name": "短棒",
           "ENG_name": "Club",
           "entries": [
             "{@atk 近战武器} 命中 -1，射程5英尺，单一目标。{@h}1（{@damage 1d4 - 3}）钝击伤害。"
@@ -991,8 +991,8 @@
         }
       ],
       "attachedItems": [
-        "棍棒|phb",
-        "飞镖"
+        "棍棒|PHB",
+        "飞镖|PHB"
       ],
       "traitTags": [
         "魔法抗性"
@@ -1077,7 +1077,7 @@
           "name": "啃咬",
           "ENG_name": "Bite",
           "entries": [
-            "{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage, and if the target is wearing metal armor or carrying a metal shield, the khargra attaches to that armor or shield. While attached, the khargra doesn't attack. Instead, at the start of each of the khargra's turns, roll a {@dice d20}. On a 10 or higher, the armor or shield takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed.",
+            "{@atk 近战武器} {@hit 3} 命中，射程5英尺，单一目标。{@h}3 ({@damage 1d4 + 1}) 穿刺伤害，如果目标穿戴着金属盔甲或携带金属盾牌，卡格拉会附着在该盔甲或盾牌上。附着期间，卡格拉不会攻击。相反，在每个卡格拉回合开始时，掷一个 {@dice d20}。如果掷出10或更高，该盔甲或盾牌提供的AC将永久性地累积减少-1。如果盔甲的AC降至10或盾牌的加值降至+0，则被摧毁。",
             "卡格拉可以消耗5英尺的移动来分离自身。一个生物，包括目标生物，可以使用它的行动来分离卡格拉。"
           ]
         },
@@ -1265,12 +1265,12 @@
           "name": "热血沸腾诅咒 {@recharge}",
           "ENG_name": "Blood Boiling Hex {@recharge}",
           "entries": [
-            "The mite places a hex on a creature it can see within 60 feet of it for 1 minute. If the mite is hidden, using this ability does not reveal its location. While the creature is affected by this hex, whenever it makes an attack roll, an ability check, or a saving throw, it must roll a {@dice d6} and subtract the number rolled from the {@dice d20} roll. On any turn in which it suffers the effect of the hex, the target can attack an ally as a reaction, ignoring the effect of the hex when it does so. It can then ignore the effect of the hex until the end of its turn."
+            "这种螨虫可以在60英尺内看到生物的地方施加一个诅咒，持续1分钟。如果螨虫隐藏起来，使用这种能力不会暴露它的位置。当生物受到这个诅咒的影响时，每当它进行攻击检定、能力检定或豁免检定时，它必须掷一个{@dice d6}，并将掷出的数字从{@dice d20}掷骰结果中减去。在任何回合中，如果它遭受诅咒的影响，目标可以作为反应攻击一个盟友，忽略诅咒的效果。然后它可以忽略诅咒的效果，直到它的回合结束。"
           ]
         }
       ],
       "attachedItems": [
-        "匕首|phb"
+        "匕首|PHB"
       ],
       "senseTags": [
         "D"
@@ -1365,14 +1365,14 @@
           "name": "针雨",
           "ENG_name": "Needle Volley",
           "entries": [
-            "The needle lord makes up to {@dice 1d6} needle attacks, but it cannot attack the same target more than twice during its turn."
+            "针刺领主最多可以进行{@dice 1d6}次针刺攻击，但在其回合内不能对同一个目标进行超过两次攻击。"
           ]
         },
         {
           "name": "抓挠藤蔓",
           "ENG_name": "Raking Vine",
           "entries": [
-            "{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the target takes 11 piercing damage at the start of each of its turns. The needle lord has two raking vines, each of which can grapple only one target."
+            "{@atk 近战武器} {@hit 6} hit，射程10英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 穿刺伤害，并且目标被{@condition 抓住}（逃脱{@dc 14}）。直到这个抓住结束，目标在其每个回合开始时受到11点穿刺伤害。藤蔓领主有两根抓挠藤蔓，每根只能抓住一个目标。"
           ]
         },
         {
@@ -1458,7 +1458,7 @@
           "name": "近战射击",
           "ENG_name": "Close Quarters Shooting",
           "entries": [
-            "The needle spawn does not suffer disadvantage on ranged attacks while within 5 feet of a hostile creature that can see it and isn't {@condition 无力}, if the target of the attack is also within 5 feet of the needle spawn."
+            "针刺生物在距离敌对生物5英尺内时，如果攻击目标也位于针刺生物5英尺内，且该生物可以看见针刺生物并且不是{@condition 无力}状态，针刺生物不会在远程攻击上遭受劣势。"
           ]
         }
       ],
@@ -1467,7 +1467,7 @@
           "name": "针雨",
           "ENG_name": "Needle Volley",
           "entries": [
-            "The needle spawn makes up to {@dice 1d6} needle attacks, but it cannot attack the same target more than twice during its turn."
+            "针刺虫在一回合内最多可以进行{@dice 1d6}次针刺攻击，但在其回合内不能对同一目标进行超过两次攻击。"
           ]
         },
         {
@@ -1587,7 +1587,7 @@
         }
       ],
       "attachedItems": [
-        "钉头锤"
+        "硬头锤|PHB"
       ],
       "senseTags": [
         "D"
@@ -1704,7 +1704,7 @@
         }
       ],
       "attachedItems": [
-        "双手巨斧|PHB"
+        "巨斧|PHB"
       ],
       "senseTags": [
         "D"
@@ -1784,7 +1784,7 @@
           "ENG_name": "Ceaseless Screaming",
           "entries": [
             "除了尖叫恶魔之外的任何生物，如果在听到尖叫的恶魔时，在其30英尺范围内开始自己的回合，必须进行一次{@dc 10}",
-            "Wisdom saving throw. On a failure the creature is {@condition 无力} until the start of its next turn. On a success, the creature suffers no effect."
+            "智力豁免检定。失败则生物将{@condition 无力}直到其下回合开始。成功则生物不受任何影响。"
           ]
         },
         {
@@ -1882,7 +1882,7 @@
           "name": "毒刺",
           "ENG_name": "Poison Stinger",
           "entries": [
-            "The xill injects poison into one creature it hit with its claws this turn. The chosen creature must make a {@dc 11} Constitution saving throw, with disadvantage if the xill hit it more than once this turn, taking 14 ({@damage 4d6}) poison damage on a failed save, or half as much on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition 中毒} for 1 hour, even after regaining hit points, and is {@condition 麻痹} while {@condition 中毒} this way."
+            "麋鹿在这个回合用爪子击中一个生物时，会向其注入毒素。被选定的生物必须进行一次体质豁免检定，如果麋鹿在这个回合内多次击中它，则处于劣势，失败时受到14（{@damage 4d6}）点毒素伤害，成功则减半。如果毒素伤害使目标生命值降至0，则目标稳定但处于{@condition poisoned}状态1小时，即使恢复生命值，并且在这样中毒的状态下也会{@condition paralyzed}。"
           ]
         }
       ],
@@ -1923,7 +1923,7 @@
         "中毒"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "hasToken": true,
       "hasFluff": true,
@@ -2031,8 +2031,8 @@
           "daily": {
             "3e": [
               "{@spell 死亡之环}",
-              "{@spell 精力枯竭|XGE}*",
-              "{@spell 徽记术} (discord only)"
+              "{@spell 汲能术|XGE}*",
+              "{@spell 徽记术}（仅限discord）"
             ],
             "2e": [
               "{@spell 死亡一指}",
@@ -2042,7 +2042,7 @@
             "1e": [
               "{@spell 律令死亡}",
               "{@spell 律令震慑}",
-              "{@spell 徽记术} (death only)",
+              "{@spell 徽记术}",
               "{@spell 怪影杀手}"
             ]
           },
@@ -2094,14 +2094,14 @@
           "name": "混乱之触",
           "ENG_name": "Entropic Touch",
           "entries": [
-            "{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}16 ({@damage 2d8 + 7}) necrotic damage, and the target must succeed on a {@dc 22} Constitution saving throw or gain one level of {@condition 力竭}."
+            "使用近战武器攻击，命中骰14，射程5英尺，单一目标。造成16点（2d8 + 7）死灵伤害，并且目标必须进行一次22难度的体质豁免检定，否则获得一个{@condition exhaustion}状态等级。"
           ]
         },
         {
           "name": "召唤斯拉迪（每日一次）",
           "ENG_name": "Summon Slaadi (1/Day)",
           "entries": [
-            "Ygorl summons {@dice 1d4 + 1} {@creature death slaad||death slaadi}. A summoned slaad appears in an unoccupied space within 60 feet of Ygorl, acts as an ally of Ygorl, and can't summon other slaadi. It remains for 1 minute, until it or Ygorl dies, or until Ygorl dismisses it as an action."
+            "伊戈尔召唤{@dice 1d4 + 1} {@creature 史拉亡蟾||死亡蜥蜴人}。召唤出的蜥蜴出现在伊戈尔60英尺内的未被占据的空间，作为伊戈尔的盟友行动，并且不能召唤其他蜥蜴族。它会持续存在1分钟，直到它或伊戈尔死亡，或者直到伊戈尔采取行动将其解散。"
           ]
         },
         {
@@ -2182,14 +2182,14 @@
         "昏迷"
       ],
       "savingThrowForced": [
-        "属性检定:体质"
+        "体质"
       ],
       "savingThrowForcedSpell": [
-        "属性检定:魅力",
-        "属性检定:体质",
-        "属性检定:敏捷",
-        "属性检定:智力",
-        "属性检定:感知"
+        "魅力",
+        "体质",
+        "敏捷",
+        "智力",
+        "感知"
       ],
       "hasToken": true,
       "hasFluff": true,

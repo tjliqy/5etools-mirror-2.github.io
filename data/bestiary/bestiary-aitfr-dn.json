@@ -1,505 +1,534 @@
 {
-	"monster": [
-		{
-			"name": "Giant Zombie Constrictor Snake",
-			"source": "AitFR-DN",
-			"page": 11,
-			"size": [
-				"H"
-			],
-			"type": "undead",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 187,
-				"formula": "22d12 + 44"
-			},
-			"speed": {
-				"walk": 30,
-				"climb": 20,
-				"swim": 30
-			},
-			"str": 19,
-			"dex": 16,
-			"con": 14,
-			"int": 1,
-			"wis": 15,
-			"cha": 4,
-			"skill": {
-				"perception": "+5",
-				"stealth": "+6"
-			},
-			"senses": [
-				"blindsight 15 ft.",
-				"darkvision 60 ft."
-			],
-			"passive": 15,
-			"vulnerable": [
-				"poison"
-			],
-			"cr": "8",
-			"trait": [
-				{
-					"name": "Sunlight Vulnerability",
-					"entries": [
-						"While in sunlight, the snake has disadvantage on attack rolls and on Wisdom ({@skill Perception}) checks that rely on sight. When the snake begins its turn in sunlight, it immediately suffers 10 radiant damage."
-					]
-				},
-				{
-					"name": "Undead Fortitude",
-					"entries": [
-						"If damage reduces the snake to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the snake drops to 1 hit point instead."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The snake makes two attacks: one with its bite and one with a constrict attack."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}17 ({@damage 3d8 + 4}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 17 ({@damage 5d6}) poison damage on a failed save, or half as much damage on a successful one."
-					]
-				},
-				{
-					"name": "Constrict",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}17 ({@damage 3d8 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 16}). Until this grapple ends, the creature is {@condition restrained} and the snake cannot constrict another target."
-					]
-				}
-			],
-			"traitTags": [
-				"Undead Fortitude"
-			],
-			"senseTags": [
-				"B",
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"B",
-				"I",
-				"P",
-				"R"
-			],
-			"miscTags": [
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"grappled",
-				"restrained"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Hamish Hewland",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AitFR-DN",
-			"page": 11,
-			"size": [
-				"H"
-			],
-			"type": "giant",
-			"alignment": [
-				"N",
-				"G"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 85,
-				"formula": "10d12 + 20"
-			},
-			"speed": {
-				"walk": 40
-			},
-			"str": 23,
-			"dex": 11,
-			"con": 15,
-			"int": 10,
-			"wis": 14,
-			"cha": 10,
-			"save": {
-				"str": "+9",
-				"wis": "+5"
-			},
-			"skill": {
-				"athletics": "+9",
-				"history": "+3",
-				"insight": "+5",
-				"perception": "+5"
-			},
-			"passive": 15,
-			"languages": [
-				"Common",
-				"Dwarvish",
-				"Giant"
-			],
-			"cr": "5",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Hamish makes two attacks with his axe or throws two rocks."
-					]
-				},
-				{
-					"name": "Axe",
-					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d10 + 6}) slashing damage."
-					]
-				},
-				{
-					"name": "Rock",
-					"entries": [
-						"{@atk rw} {@hit 9} to hit, range 60/240 ft., one target. {@h}17 ({@damage 2d10 + 6}) bludgeoning damage."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Parry",
-					"entries": [
-						"Hamish adds 2 to his AC against one melee attack that would hit him. To do so, he must see the attacker and be wielding a melee weapon or a shield."
-					]
-				}
-			],
-			"actionTags": [
-				"Multiattack",
-				"Parry"
-			],
-			"languageTags": [
-				"C",
-				"D",
-				"GI"
-			],
-			"damageTags": [
-				"B",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Kyrilla, Accursed Gorgon",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "AitFR-DN",
-			"page": 12,
-			"size": [
-				"L"
-			],
-			"type": "monstrosity",
-			"alignment": [
-				"L",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 15,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 127,
-				"formula": "15d10 + 45"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 11,
-			"dex": 16,
-			"con": 16,
-			"int": 14,
-			"wis": 14,
-			"cha": 15,
-			"save": {
-				"wis": "+6",
-				"cha": "+6"
-			},
-			"skill": {
-				"deception": "+6",
-				"insight": "+6",
-				"perception": "+6",
-				"stealth": "+7"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 16,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"charmed"
-			],
-			"languages": [
-				"Common",
-				"Draconic",
-				"Primordial"
-			],
-			"cr": "10",
-			"trait": [
-				{
-					"name": "Feed on Pain (2/Day)",
-					"entries": [
-						"The first time she hits with a weapon attack on her turn, Kyrilla can deal an extra 16 ({@damage 3d10}) poison damage to the target and regains a number of hit points equal to half the damage dealt."
-					]
-				},
-				{
-					"name": "Legendary Resistance (2/Day)",
-					"entries": [
-						"If she fails a saving throw, Kyrilla can choose to succeed instead."
-					]
-				},
-				{
-					"name": "Petrifying Gaze",
-					"entries": [
-						"When a creature that can see Kyrilla's eyes starts its turn within 30 feet of her, Kyrilla can force it to make a {@dc 14} Constitution saving throw if Kyrilla isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the {@spell greater restoration} spell or other magic.",
-						"Unless {@quickref Surprise|PHB|3|0|surprised}, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Kyrilla until the start of its next turn, when it can avert its eyes again. If the creature looks at Kyrilla in the meantime, it must immediately make the save.",
-						"Kyrilla's accursed gaze does not affect undead or constructs. If Kyrilla sees herself reflected on a polished surface within 30 feet of her and in an area of bright light, she is, due to her curse, affected by her own gaze."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"entries": [
-						"While in sunlight, Kyrilla has disadvantage on attack rolls and on Wisdom ({@skill Perception}) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Kyrilla makes one attack to constrict and two attacks with her claws, or she makes three attacks with her longbow."
-					]
-				},
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage."
-					]
-				},
-				{
-					"name": "Constrict",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 10 ft., one target. {@h}10 ({@damage 3d6}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 13}) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and Kyrilla can't constrict another target."
-					]
-				},
-				{
-					"name": "Longbow",
-					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 150/600 ft., one target. {@h}16 ({@damage 3d8 + 3}) piercing damage."
-					]
-				},
-				{
-					"name": "Summon Swarm of Poisonous Snakes {@recharge 5}",
-					"entries": [
-						"Kyrilla conjures a swarm of poisonous snakes into an empty space within 10 feet of her. The swarm is under Kyrilla's control and acts on her turn, immediately after her in the initiative order.",
-						"It remains in existence for up to 1 hour. She can summon no more than three swarms per day. Kyrilla can banish any or all of her summoned swarms with a bonus action."
-					]
-				}
-			],
-			"legendary": [
-				{
-					"name": "Claw",
-					"entries": [
-						"Kyrilla or a swarm of poisonous snakes makes a weapon attack."
-					]
-				},
-				{
-					"name": "Detect",
-					"entries": [
-						"Kyrilla makes a Wisdom ({@skill Perception}) check."
-					]
-				},
-				{
-					"name": "Slither",
-					"entries": [
-						"Kyrilla moves up to her speed without provoking opportunity attacks."
-					]
-				}
-			],
-			"legendaryGroup": {
-				"name": "Kyrilla, Accursed Gorgon",
-				"source": "AitFR-DN"
-			},
-			"attachedItems": [
-				"longbow|phb"
-			],
-			"traitTags": [
-				"Legendary Resistances",
-				"Sunlight Sensitivity"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"DR",
-				"P"
-			],
-			"damageTags": [
-				"B",
-				"I",
-				"P",
-				"S"
-			],
-			"damageTagsLegendary": [
-				"R",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RCH",
-				"RNG",
-				"RW"
-			],
-			"conditionInflict": [
-				"grappled",
-				"petrified",
-				"restrained"
-			],
-			"conditionInflictLegendary": [
-				"poisoned"
-			],
-			"savingThrowForced": [
-				"constitution"
-			],
-			"savingThrowForcedLegendary": [
-				"constitution"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		},
-		{
-			"name": "Skeletal Horror",
-			"source": "AitFR-DN",
-			"page": 13,
-			"size": [
-				"L"
-			],
-			"type": "undead",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 150,
-				"formula": "20d10 + 40"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 16,
-			"dex": 14,
-			"con": 15,
-			"int": 6,
-			"wis": 10,
-			"cha": 5,
-			"skill": {
-				"perception": "+3"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 16,
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"bludgeoning"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"poisoned"
-			],
-			"cr": "6",
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The horror makes two attacks with its claws."
-					]
-				},
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d10 + 3}) slashing damage."
-					]
-				},
-				{
-					"name": "Wave of Bones {@recharge 5}",
-					"entries": [
-						"The horror crashes into foes like a wave before quickly reforming. Each creature within 10 feet of the horror must make a {@dc 15} Dexterity saving throw, taking 18 ({@damage 4d8}) bludgeoning damage on a failed save, or half as much damage on a successful one. A creature that fails this saving throw is also knocked {@condition prone}."
-					]
-				}
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"B",
-				"S"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"savingThrowForced": [
-				"dexterity"
-			],
-			"hasToken": true,
-			"hasFluff": true
-		}
-	]
+  "monster": [
+    {
+      "name": "巨人僵尸蟒蛇",
+      "ENG_name": "Giant Zombie Constrictor Snake",
+      "source": "AitFR-DN",
+      "page": 11,
+      "size": [
+        "H"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 187,
+        "formula": "22d12 + 44"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 20,
+        "swim": 30
+      },
+      "str": 19,
+      "dex": 16,
+      "con": 14,
+      "int": 1,
+      "wis": 15,
+      "cha": 4,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+6"
+      },
+      "senses": [
+        "盲视 15 英尺。",
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 15,
+      "vulnerable": [
+        "毁灭诅咒"
+      ],
+      "cr": "8",
+      "trait": [
+        {
+          "name": "阳光易伤",
+          "ENG_name": "Sunlight Vulnerability",
+          "entries": [
+            "在阳光下时，蛇在攻击检定以及依赖视觉的智力（{@skill 察觉}）检定上具有劣势。当蛇在阳光中开始其回合时，它立即遭受10点辐射伤害。"
+          ]
+        },
+        {
+          "name": "不死韧性",
+          "ENG_name": "Undead Fortitude",
+          "entries": [
+            "如果伤害使蛇的生命值降至0点，除非伤害是辐射伤害或来自致命一击，否则它必须进行一次体质豁免投掷，难度等级为5加上所受伤害。成功的话，蛇的生命值会降至1点而不是死亡。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "蛇进行两次攻击：一次用咬，一次用缠绕攻击。"
+          ]
+        },
+        {
+          "name": "啃咬",
+          "ENG_name": "Bite",
+          "entries": [
+            "{@atk 近战武器} 命中判定：7，射程10英尺，单一目标。{@h}17 ({@damage 3d8 + 4})穿刺伤害，目标必须进行一次{@dc 15}体质豁免，失败则受到17 ({@damage 5d6})毒性伤害，成功则伤害减半。"
+          ]
+        },
+        {
+          "name": "绞缠",
+          "ENG_name": "Constrict",
+          "entries": [
+            "{@atk 近战} {@hit 7} hit，射程 5 英尺，一个目标。{@h}17 ({@damage 3d8 + 4}) 钝击伤害，目标被 {@condition 抓住}（逃脱 {@dc 16}）。直到这次抓住结束，生物被 {@condition 限制} 并且蛇不能再抓住另一个目标。"
+          ]
+        }
+      ],
+      "traitTags": [
+        "不死韧性"
+      ],
+      "senseTags": [
+        "B",
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "B",
+        "I",
+        "P",
+        "R"
+      ],
+      "miscTags": [
+        "MW",
+        "射程"
+      ],
+      "conditionInflict": [
+        "被擒",
+        "束缚"
+      ],
+      "savingThrowForced": [
+        "体质"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "哈米什·休兰德",
+      "ENG_name": "Hamish Hewland",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AitFR-DN",
+      "page": 11,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 85,
+        "formula": "10d12 + 20"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 23,
+      "dex": 11,
+      "con": 15,
+      "int": 10,
+      "wis": 14,
+      "cha": 10,
+      "save": {
+        "str": "+9",
+        "wis": "+5"
+      },
+      "skill": {
+        "athletics": "+9",
+        "history": "+3",
+        "insight": "+5",
+        "perception": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "普通",
+        "矮人语",
+        "巨人"
+      ],
+      "cr": "5",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Hamish 用他的斧头进行两次攻击或投掷两块石头。"
+          ]
+        },
+        {
+          "name": "斧头",
+          "ENG_name": "Axe",
+          "entries": [
+            "{@atk 近战武器} {@hit 9} 命中，射程5英尺，一个目标。{@h}17 ({@damage 2d10 + 6}) 斩击伤害。"
+          ]
+        },
+        {
+          "name": "投石",
+          "ENG_name": "Rock",
+          "entries": [
+            "{@atk 远程武器} 命中骰：9，射程60/240英尺，单一目标。{@h}造成17点（2d10 + 6）钝击伤害。"
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "格挡",
+          "ENG_name": "Parry",
+          "entries": [
+            "Hamish 在对抗一次命中他的近战攻击时，他的AC增加2点。为此，他必须能看到攻击者，并且必须持有近战武器或盾牌。"
+          ]
+        }
+      ],
+      "actionTags": [
+        "多重攻击",
+        "格挡"
+      ],
+      "languageTags": [
+        "C",
+        "D",
+        "GI"
+      ],
+      "damageTags": [
+        "B",
+        "S"
+      ],
+      "miscTags": [
+        "MW",
+        "RW"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "基里拉，被诅咒的美杜莎",
+      "ENG_name": "Kyrilla, Accursed Gorgon",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "AitFR-DN",
+      "page": 12,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 15,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "15d10 + 45"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 16,
+      "con": 16,
+      "int": 14,
+      "wis": 14,
+      "cha": 15,
+      "save": {
+        "wis": "+6",
+        "cha": "+6"
+      },
+      "skill": {
+        "deception": "+6",
+        "insight": "+6",
+        "perception": "+6",
+        "stealth": "+7"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 16,
+      "resist": [
+        {
+          "resist": [
+            "钝击",
+            "穿刺",
+            "斩击"
+          ],
+          "note": "来自非魔法攻击",
+          "cond": true
+        }
+      ],
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "conditionImmune": [
+        "魅惑"
+      ],
+      "languages": [
+        "普通",
+        "龙族血脉",
+        "原始语"
+      ],
+      "cr": "10",
+      "trait": [
+        {
+          "name": "以痛为食（每日2次）",
+          "ENG_name": "Feed on Pain (2/Day)",
+          "entries": [
+            "在她回合内，Kyrilla 第一次用武器攻击命中目标时，可以对目标额外造成 16 点（{@damage 3d10}）毒素伤害，并恢复等于造成的伤害一半的生命值。"
+          ]
+        },
+        {
+          "name": "传奇抗性（每日2次）",
+          "ENG_name": "Legendary Resistance (2/Day)",
+          "entries": [
+            "如果她未能通过豁免投掷，Kyrilla可以选择成功。"
+          ]
+        },
+        {
+          "name": "石化凝视",
+          "ENG_name": "Petrifying Gaze",
+          "entries": [
+            "当一个能够看到Kyrilla眼睛的生物在其30英尺范围内开始其回合时，如果Kyrilla没有被{@condition 无力}并且能看到这个生物，Kyrilla可以强迫它进行一次{@condition 无力}体质豁免检定。如果豁免检定失败5点或更多，该生物立即被{@condition 石化}。否则，失败的生物开始变成石头并被{@condition 束缚}。被{@condition 束缚}的生物必须在其下一个回合结束时重复进行豁免检定，失败则变成{@condition 石化}，成功则结束效果。石化状态将持续，直到生物通过{@spell 高等复原术}法术或其他魔法被释放。",
+            "除非处于{@quickref 突袭|PHB|3|0|被突袭}状态，生物可以在其回合开始时闭眼以避免进行豁免投掷。如果生物这样做了，它直到下一个回合开始前都无法看到Kyrilla，届时它又可以再次闭眼。如果生物在此期间看向Kyrilla，它必须立即进行豁免投掷。",
+            "Kyrilla的诅咒凝视不会影响不死生物或构造物。如果Kyrilla在明亮的光照下，看到自己反射在30英尺范围内的光滑表面上，由于她的诅咒，她会受到自己凝视的影响。"
+          ]
+        },
+        {
+          "name": "日光敏感",
+          "ENG_name": "Sunlight Sensitivity",
+          "entries": [
+            "在日光下，Kyrilla 在攻击检定和依赖视力的智力（{@skill 察觉}）检定上具有劣势。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "Kyrilla 进行一次挤压攻击和两次爪击，或者她使用长弓进行三次攻击。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 近战武器} 命中：7，射程：5英尺，一个目标。{@h}13（{@damage 3d6 + 3}）斩击伤害。"
+          ]
+        },
+        {
+          "name": "绞缠",
+          "ENG_name": "Constrict",
+          "entries": [
+            "{@atk 近战武器} 命中判定为4，射程10英尺，单一目标。{@h}10 ({@damage 3d6}) 钝击伤害，如果目标是大型或更小的生物，则会被{@condition 缠绕}（逃脱DC 13）。直到这种缠绕结束，目标将被{@condition 限制}，并且Kyrilla不能再缠绕另一个目标。"
+          ]
+        },
+        {
+          "name": "长弓",
+          "ENG_name": "Longbow",
+          "entries": [
+            "{@atk 远程攻击} 命中骰为7，射程150/600英尺，单一目标。{@h}16点（{@damage 3d8 + 3}）穿刺伤害。"
+          ]
+        },
+        {
+          "name": "召唤一群有毒蛇群 {@recharge 5}",
+          "ENG_name": "Summon Swarm of Poisonous Snakes {@recharge 5}",
+          "entries": [
+            "Kyrilla 在她10英尺范围内的空地上召唤出一群毒蛇。这群蛇群受Kyrilla控制，并在她回合后立即按照她的主动性顺序行动。",
+            "它存在的时间最长可达1小时。Kyrilla每天最多可以召唤三个蜂群。她可以用一个额外动作解散任何一个或所有召唤的蜂群。"
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "Kyrilla 或一群有毒的蛇进行武器攻击。"
+          ]
+        },
+        {
+          "name": "侦查",
+          "ENG_name": "Detect",
+          "entries": [
+            "Kyrilla 进行一次感知（{@skill 察觉}）检定。"
+          ]
+        },
+        {
+          "name": "滑行",
+          "ENG_name": "Slither",
+          "entries": [
+            "Kyrilla 以她的速度移动而不引发机会攻击。"
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "基里拉，被诅咒的美杜莎",
+        "ENG_name": "Kyrilla, Accursed Gorgon",
+        "source": "AitFR-DN"
+      },
+      "attachedItems": [
+        "长弓|PHB"
+      ],
+      "traitTags": [
+        "传奇抗性",
+        "日光敏感"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "languageTags": [
+        "C",
+        "DR",
+        "P"
+      ],
+      "damageTags": [
+        "B",
+        "I",
+        "P",
+        "S"
+      ],
+      "damageTagsLegendary": [
+        "R",
+        "S"
+      ],
+      "miscTags": [
+        "MW",
+        "射程",
+        "射程",
+        "RW"
+      ],
+      "conditionInflict": [
+        "被擒",
+        "石化",
+        "束缚"
+      ],
+      "conditionInflictLegendary": [
+        "中毒"
+      ],
+      "savingThrowForced": [
+        "体质"
+      ],
+      "savingThrowForcedLegendary": [
+        "体质"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    },
+    {
+      "name": "骷髅恐怖",
+      "ENG_name": "Skeletal Horror",
+      "source": "AitFR-DN",
+      "page": 13,
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 150,
+        "formula": "20d10 + 40"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 14,
+      "con": 15,
+      "int": 6,
+      "wis": 10,
+      "cha": 5,
+      "skill": {
+        "perception": "+3"
+      },
+      "senses": [
+        "黑暗视觉 60 英尺。"
+      ],
+      "passive": 16,
+      "immune": [
+        "毁灭诅咒"
+      ],
+      "vulnerable": [
+        "钝击"
+      ],
+      "conditionImmune": [
+        "力竭",
+        "中毒"
+      ],
+      "cr": "6",
+      "action": [
+        {
+          "name": "多重攻击",
+          "ENG_name": "Multiattack",
+          "entries": [
+            "恐怖生物用它的爪子进行两次攻击。"
+          ]
+        },
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 近战} {@hit 6} hit，射程 5 英尺，一个目标。{@h}19 ({@damage 3d10 + 3}) 斩击伤害。"
+          ]
+        },
+        {
+          "name": "骨之波涛 {@recharge 5}",
+          "ENG_name": "Wave of Bones {@recharge 5}",
+          "entries": [
+            "这个恐怖之物像波浪一样撞击敌人，然后迅速重新形成。距离这个恐怖之物10英尺内的所有生物必须进行一次敏捷豁免检定（DC 15），豁免失败将受到18点（4d8）钝击伤害，豁免成功则只受到一半的伤害。未能通过这次豁免检定的生物也将进入{@condition prone}状态。"
+          ]
+        }
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "多重攻击"
+      ],
+      "damageTags": [
+        "B",
+        "S"
+      ],
+      "miscTags": [
+        "范围伤害",
+        "MW"
+      ],
+      "savingThrowForced": [
+        "敏捷"
+      ],
+      "hasToken": true,
+      "hasFluff": true
+    }
+  ]
 }

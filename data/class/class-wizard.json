@@ -65,22 +65,22 @@
       "spellsKnownProgressionFixedAllowLowerLevel": true,
       "startingProficiencies": {
         "weapons": [
-          "{@item dagger|phb|匕首}",
-          "{@item dart|phb|飞镖}",
-          "{@item sling|phb|投石索}",
-          "{@item quarterstaff|phb|长棍}",
-          "{@item light crossbow|phb|轻弩}"
+          "{@item 匕首|PHB|匕首}",
+          "{@item 飞镖|PHB|飞镖}",
+          "{@item 投石索|PHB|投石索}",
+          "{@item 长棍|PHB|长棍}",
+          "{@item 轻弩|PHB|轻型十字弓}"
         ],
         "skills": [
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:洞悉",
-                "属性检定:调查",
-                "属性检定:医药",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "洞悉",
+                "调查",
+                "医药",
+                "宗教"
               ],
               "count": 2
             }
@@ -90,24 +90,24 @@
       "startingEquipment": {
         "additionalFromBackground": true,
         "default": [
-          "(a)一把{@item 长棍|phb} 或 (b)一把{@item 匕首|phb}",
-          "(a)一个{@item 材料包|phb} 或 (b)一个{@item 奥术法器|phb}",
-          "(a)一套{@item 学者套装|phb} 或 (b)一套{@item 探索者套装|phb}",
-          "一本{@item 法术书|phb}"
+          "(a) 一根{@item 长棍|PHB}或者 (b) 一把{@item 匕首|PHB}",
+          "(a) 一个 {@item 材料包|PHB} 或者 (b) 一个 {@item 奥术法器|PHB}",
+          "(a) 一个学者包或 (b) 一个探险家包",
+          "一个 {@item 法术书|PHB}"
         ],
-        "goldAlternative": "{@dice 4d4×10|4d4 × 10|起始金钱}",
+        "goldAlternative": "{@dice 4d4 × 10|4d4 × 10|起始金币}",
         "defaultData": [
           {
             "a": [
               "长棍|PHB"
             ],
             "b": [
-              "匕首|phb"
+              "匕首|PHB"
             ]
           },
           {
             "a": [
-              "组件袋|phb"
+              "材料包|PHB"
             ],
             "b": [
               {
@@ -117,15 +117,15 @@
           },
           {
             "a": [
-              "学者包|phb"
+              "学者套组|PHB"
             ],
             "b": [
-              "探险家背包|phb"
+              "探索套组|PHB"
             ]
           },
           {
             "_": [
-              "法术书|玩家手册"
+              "法术书|PHB"
             ]
           }
         ]
@@ -138,257 +138,337 @@
       "classTableGroups": [
         {
           "colLabels": [
-            "{@filter 已知戏法|spells|level=0|class=Wizard}"
+            "{@filter 已知戏法|法术|level=0|职业=巫师}"
           ],
           "rows": [
-            3,
-            3,
-            3,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5
+            [
+              3
+            ],
+            [
+              3
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              4
+            ],
+            [
+              4
+            ],
+            [
+              4
+            ],
+            [
+              4
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ],
+            [
+              5
+            ]
           ]
         },
         {
-          "title": "法术位/每环",
+          "title": "每个法术等级的法术位",
           "colLabels": [
-            "{@filter 1环|spells|level=1|class=Wizard}",
-            "{@filter 2环|spells|level=2|class=Wizard}",
-            "{@filter 3环|spells|level=3|class=Wizard}",
-            "{@filter 4环|spells|level=4|class=Wizard}",
-            "{@filter 5环|spells|level=5|class=Wizard}",
-            "{@filter 6环|spells|level=6|class=Wizard}",
-            "{@filter 7环|spells|level=7|class=Wizard}",
-            "{@filter 8环|spells|level=8|class=Wizard}",
-            "{@filter 9环|spells|level=9|class=Wizard}"
+            "{@filter 第一|法术|level=1|职业=巫师}",
+            "{@filter 第二|法术|level=2|职业=巫师}",
+            "{@filter 第三|法术|level=3|职业=巫师}",
+            "{@filter 第四|法术|level=4|职业=巫师}",
+            "{@filter 第五|法术|level=5|职业=巫师}",
+            "{@filter 第六|法术|level=6|职业=巫师}",
+            "{@filter 第七|法术|level=7|职业=巫师}",
+            "{@filter 第八|法术|level=8|职业=巫师}",
+            "{@filter 第九|法术|level=9|职业=巫师}"
           ],
           "rowsSpellProgression": [
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            1,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            0,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            0,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            0,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            0,
-            4,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            1,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            2,
-            1,
-            1,
-            1,
-            4,
-            3,
-            3,
-            3,
-            3,
-            2,
-            2,
-            1,
-            1
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
           ]
         }
       ],
       "classFeatures": [
-        "奥术恢复|巫师||1",
-        "施法|巫师||1",
+        "奥术回想|法师||1",
+        "施法|法师||1",
         {
-          "classFeature": "奥术传统|巫师||2",
+          "classFeature": "奥术传承|法师||2",
           "gainSubclassFeature": true
         },
-        "咒法公式|巫师||3|TCE",
-        "能力值提升|巫师||4",
+        "戏法公式|法师||3|TCE",
+        "属性值提升|法师||4",
         {
-          "classFeature": "奥术传统特性|巫师||6",
+          "classFeature": "奥法学派能力|法师||6",
           "gainSubclassFeature": true
         },
-        "能力值提升|巫师||8",
+        "属性值提升|法师||8",
         {
-          "classFeature": "奥术传统特性|巫师||10",
+          "classFeature": "奥法学派能力|法师||10",
           "gainSubclassFeature": true
         },
-        "能力值提升|巫师||12",
+        "属性值提升|法师||12",
         {
-          "classFeature": "奥术传统特性|巫师||14",
+          "classFeature": "奥法学派能力|法师||14",
           "gainSubclassFeature": true
         },
-        "属性值提升|巫师||16",
-        "法术精通|巫师||18",
-        "能力值提升|巫师||19",
-        "招牌法术|巫师||20"
+        "属性值提升|法师||16",
+        "法术精通|法师||18",
+        "属性值提升|法师||19",
+        "招牌法术|法师||20"
       ],
-      "subclassTitle": "法师:奥术传承",
+      "subclassTitle": "奥术传承",
       "hasFluff": true,
       "hasFluffImages": true
     }
@@ -397,31 +477,31 @@
     {
       "name": "防护学派",
       "ENG_name": "School of Abjuration",
-      "shortName": "魔法学派:防护",
+      "shortName": "防护",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
       "page": 115,
       "subclassFeatures": [
-        "防护学派|巫师||防护||2",
-        "投射屏障|巫师||防护||6",
-        "改进的防护学派|巫师||防护学派||10",
-        "法术抗力|巫师||防护系||14"
+        "防护学派|法师||防护||2",
+        "投射守御|法师||防护||6",
+        "精通防护|法师||防护||10",
+        "法术抗性|法师||防护||14"
       ]
     },
     {
       "name": "咒法学派",
       "ENG_name": "School of Conjuration",
-      "shortName": "魔法学派:咒法",
+      "shortName": "咒法",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
       "page": 116,
       "subclassFeatures": [
-        "召唤学派|巫师||召唤||2",
-        "良性置换|巫师||咒法||6",
-        "专注召唤|巫师||召唤||10",
-        "持久召唤|巫师||咒法||14"
+        "咒法学派|法师||咒法||2",
+        "王车易位|法师||咒法||6",
+        "咒法专注|法师||咒法||10",
+        "强韧召唤|法师||咒法||14"
       ]
     },
     {
@@ -433,31 +513,31 @@
       "classSource": "PHB",
       "page": 116,
       "subclassFeatures": [
-        "占卜学派|巫师||占卜||2",
-        "专家占卜|巫师||占卜||6",
-        "第三只眼|巫师||占卜||10",
-        "高等预兆|巫师||占卜||14"
+        "预言学派|法师||预言术||2",
+        "预言专家|法师||预言术||6",
+        "天眼通|法师||预言术||10",
+        "高等预兆|法师||预言术||14"
       ]
     },
     {
       "name": "惑控学派",
       "ENG_name": "School of Enchantment",
-      "shortName": "魔法学派:惑控",
+      "shortName": "惑控",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
       "page": 117,
       "subclassFeatures": [
-        "魅惑学派|巫师||魅惑||2",
-        "本能魅力|巫师||附魔||6",
-        "分拆附魔|巫师||附魔||10",
-        "改变记忆|巫师||附魔||14"
+        "惑控学派|法师||惑控||2",
+        "直觉魅惑|法师||惑控||6",
+        "分裂惑控|法师||惑控||10",
+        "编演记忆|法师||惑控||14"
       ]
     },
     {
       "name": "塑能学派",
       "ENG_name": "School of Evocation",
-      "shortName": "魔法学派:塑能",
+      "shortName": "塑能",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
@@ -465,16 +545,16 @@
       "srd": true,
       "basicRules": true,
       "subclassFeatures": [
-        "咒法学派|巫师||咒法||2",
-        "强力戏法|巫师||咒法||6",
-        "强化咒法|巫师||咒法||10",
-        "超频施法|巫师||咒法||14"
+        "塑能学派|法师||塑能||2",
+        "强力戏法|法师||塑能||6",
+        "强效塑能|法师||塑能||10",
+        "超限导能|法师||塑能||14"
       ]
     },
     {
       "name": "幻术学派",
       "ENG_name": "School of Illusion",
-      "shortName": "魔法学派:幻术",
+      "shortName": "幻术",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
@@ -483,46 +563,46 @@
         {
           "known": {
             "1": [
-              "#c小幻象"
+              "次级幻象#c"
             ]
           }
         }
       ],
       "subclassFeatures": [
-        "幻术学派|巫师||幻术||2",
-        "可塑幻象|巫师||幻象||6",
-        "幻象自我|巫师||幻象||10",
-        "幻象现实|巫师||幻象||14"
+        "幻术学派|法师||幻术||2",
+        "易变幻象|法师||幻术||6",
+        "幻影化形|法师||幻术||10",
+        "亦真亦幻|法师||幻术||14"
       ]
     },
     {
       "name": "死灵学派",
       "ENG_name": "School of Necromancy",
-      "shortName": "魔法学派:死灵",
+      "shortName": "死灵",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
       "page": 118,
       "subclassFeatures": [
-        "死灵学派|巫师||死灵||2",
-        "亡灵奴仆|巫师||死灵||6",
-        "适应不死|巫师||死灵||10",
-        "指挥亡灵|巫师||死灵||14"
+        "死灵学派|法师||死灵||2",
+        "不死奴仆|法师||死灵||6",
+        "不死适应|法师||死灵||10",
+        "命令亡灵|法师||死灵||14"
       ]
     },
     {
       "name": "变化学派",
       "ENG_name": "School of Transmutation",
-      "shortName": "魔法学派:变化",
+      "shortName": "变化",
       "source": "PHB",
       "className": "法师",
       "classSource": "PHB",
       "page": 119,
       "subclassFeatures": [
-        "变化学派|巫师||变化||2",
-        "变形者之石|巫师||变化||6",
-        "变形者|巫师||变化||10",
-        "变形大师|巫师||变形||14"
+        "变化学派|法师||变化||2",
+        "变化师之石|法师||变化||6",
+        "变形生物|法师||变化||10",
+        "变化宗师|法师||变化||14"
       ]
     },
     {
@@ -534,10 +614,10 @@
       "classSource": "PHB",
       "page": 59,
       "subclassFeatures": [
-        "战争魔法|巫师||战争|XGE|2",
-        "力量涌动|巫师||战争|XGE|6",
-        "持久魔法|巫师||战争|XGE|10",
-        "偏转斗篷|巫师||战争|XGE|14"
+        "战争魔法|法师||战争|XGE|2",
+        "魔力潮涌|法师||战争|XGE|6",
+        "耐久魔法|法师||战争|XGE|10",
+        "偏斜罩幕|法师||战争|XGE|14"
       ],
       "hasFluffImages": true
     },
@@ -554,17 +634,17 @@
           "expanded": {
             "1": [
               {
-                "all": "来源=EGW"
+                "all": "source=EGW"
               }
             ]
           }
         }
       ],
       "subclassFeatures": [
-        "时序魔法|巫师||时序|EGW|2",
-        "瞬间静止|巫师||时间魔法|EGW|6",
-        "奥术停滞|巫师||时间魔法|EGW|10",
-        "汇聚未来|巫师||时序魔法|EGW|14"
+        "时间魔法|法师||时间|EGW|2",
+        "瞬时静止|法师||时间|EGW|6",
+        "奥法暂滞|法师||时间|EGW|10",
+        "收束未来|法师||时间|EGW|14"
       ],
       "hasFluffImages": true
     },
@@ -581,17 +661,17 @@
           "expanded": {
             "1": [
               {
-                "all": "来源=EGW"
+                "all": "source=EGW"
               }
             ]
           }
         }
       ],
       "subclassFeatures": [
-        "重力魔法|巫师||重力|EGW|2",
-        "重力井|巫师||重力魔法学||EGW|6",
-        "暴力吸引|巫师||重力魔法|EGW|10",
-        "事件视界|巫师||重力术|EGW|14"
+        "重力魔法|法师||重力|EGW|2",
+        "重力井|法师||重力|EGW|6",
+        "狂暴牵引|法师||重力|EGW|10",
+        "事件视界|法师||重力|EGW|14"
       ],
       "hasFluffImages": true
     },
@@ -610,10 +690,10 @@
         }
       ],
       "subclassFeatures": [
-        "剑歌|巫师||剑歌|TCE|2",
-        "额外攻击|巫师||剑歌|TCE|6",
-        "防御之歌|巫师||剑歌|TCE|10",
-        "胜利之歌|巫师||剑歌|TCE|14"
+        "剑咏者|法师||剑咏者|TCE|2",
+        "额外攻击|法师||剑咏者|TCE|6",
+        "守御之歌|法师||剑咏者|TCE|10",
+        "胜利之歌|法师||剑咏者|TCE|14"
       ],
       "hasFluffImages": true
     },
@@ -626,10 +706,10 @@
       "classSource": "PHB",
       "page": 77,
       "subclassFeatures": [
-        "文书秩序|巫师||文书|TCE|2",
-        "显现心智|巫师||抄写者|TCE|6",
-        "大师抄写员|巫师||抄写员|TCE|10",
-        "与言同在|巫师||抄写者|TCE|14"
+        "书士会|法师||书士|TCE|2",
+        "思维具现|法师||书士|TCE|6",
+        "大书士|法师||书士|TCE|10",
+        "一字同心|法师||书士|TCE|14"
       ],
       "hasFluffImages": true
     },
@@ -642,18 +722,18 @@
       "classSource": "PHB",
       "page": 178,
       "subclassFeatures": [
-        "血魔法|巫师|PHB|血魔法|TDCSR|2",
-        "相互痛苦之纽带|巫师|PHB|血魔法|TDCSR|6",
-        "出血符文|巫师|PHB|血魔法|TDCSR|10",
-        "相互痛苦的纽带 (14级)|巫师|PHB|血魔法|TDCSR|14",
-        "血浓于水|巫师|PHB|血魔法|TDCSR|14"
+        "血魔法|法师|PHB|血魔法|TDCSR|2",
+        "共苦之缚|法师|PHB|血魔法|TDCSR|6",
+        "操血刻印|法师|PHB|血魔法|TDCSR|10",
+        "相互痛苦的纽带（14级）|法师|PHB|血魔法|TDCSR|14",
+        "血浓于水|法师|PHB|血魔法|TDCSR|14"
       ],
       "hasFluffImages": true
     }
   ],
   "classFeature": [
     {
-      "name": "法师:奥术回想",
+      "name": "奥术回想",
       "ENG_name": "Arcane Recovery",
       "source": "PHB",
       "page": 112,
@@ -692,7 +772,7 @@
           "name": "法术书",
           "ENG_name": "Spellbook",
           "entries": [
-            "在1级时，你拥有一本包含六个你选择的1级{@filter 巫师法术|spells|class=wizard}的法术书。你的法术书是你已知的巫师法术的仓库，除了你的戏法，它们是固定在你脑海中的。"
+            "在1级时，你拥有一本包含六个你选择的1级{@filter 巫师法术|法术|职业=巫师}的法术书。你的法术书是你已知的巫师法术的仓库，除了你的戏法，它们是固定在你脑海中的。"
           ]
         },
         {
@@ -702,7 +782,7 @@
           "entries": [
             "巫师表显示了你拥有多少个法术位来施放1级及以上级别的巫师法术。要施放这些法术中的一个，你必须消耗一个法术位，其等级等于或高于该法术的等级。当你完成一次长时间的休息时，你将恢复所有消耗掉的法术位。",
             "你准备出你可以施放的巫师法术列表。为此，请从你的法术书中选择等于你的智力调整值加上巫师等级（最少一个法术）数量的巫师法术。所选法术必须是你有法术位的等级。",
-            "例如，如果你是一个3级巫师，你有四个1级和两个2级法术位。智力为16时，你的准备法术列表可以包括六个1级或2级法术，任意组合，从你的法术书中选择。如果你准备了1级法术{@spell magic missile}，你可以使用1级或2级法术位来施放它。施放法术不会从你的准备法术列表中移除它。",
+            "例如，如果你是一个3级巫师，你有四个1级和两个2级法术位。智力为16时，你的准备法术列表可以包括六个1级或2级法术，任意组合，从你的法术书中选择。如果你准备了1级法术{@spell 魔法飞弹}，你可以使用1级或2级法术位来施放它。施放法术不会从你的准备法术列表中移除它。",
             "当你完成一次长时间的休息后，你可以更改你的准备法术列表。准备新的巫师法术列表需要花费时间研究你的法术书，并记忆你必须做出的咒语和手势来施放法术：至少每个法术等级1分钟，用于你的列表中的每个法术。"
           ]
         },
@@ -740,10 +820,10 @@
         },
         {
           "type": "entries",
-          "name": "游侠:法器",
+          "name": "法器",
           "ENG_name": "Spellcasting Focus",
           "entries": [
-            "你可以使用一个{@item 奥术焦点|phb}作为你巫师法术的施法焦点。"
+            "你可以使用一个{@item 奥术法器|PHB}作为你巫师法术的施法焦点。"
           ]
         },
         {
@@ -818,7 +898,7 @@
       ]
     },
     {
-      "name": "法师:奥术传承",
+      "name": "奥术传承",
       "ENG_name": "Arcane Tradition",
       "source": "PHB",
       "page": 112,
@@ -832,7 +912,7 @@
       ]
     },
     {
-      "name": "法师:戏法公式",
+      "name": "戏法公式",
       "ENG_name": "Cantrip Formulas",
       "source": "TCE",
       "page": 75,
@@ -857,7 +937,7 @@
       "level": 4,
       "entries": [
         "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -886,7 +966,7 @@
       "level": 8,
       "entries": [
         "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -915,7 +995,7 @@
       "level": 12,
       "entries": [
         "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
@@ -944,11 +1024,11 @@
       "level": 16,
       "entries": [
         "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
-      "name": "法师:法术精通",
+      "name": "法术精通",
       "ENG_name": "Spell Mastery",
       "source": "PHB",
       "page": 112,
@@ -974,11 +1054,11 @@
       "level": 19,
       "entries": [
         "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 特长|feats.html}。"
+        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
       ]
     },
     {
-      "name": "法师:招牌法术",
+      "name": "招牌法术",
       "ENG_name": "Signature Spells",
       "source": "PHB",
       "page": 112,
@@ -1008,11 +1088,11 @@
         "专注于时间操纵，那些遵循时间魔法传统的人学会了按照自己的喜好改变现实的节奏。利用预期动力能量的增强，这些法师能够像熟练的音乐家演奏乐器一样巧妙地弯曲时间流，瞬间给予自己和盟友优势。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "时间转移|巫师||时间魔法|EGW|2"
+          "subclassFeature": "时间变幻|法师||时间|EGW|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "时间感知|巫师||时间魔法|EGW|2"
+          "subclassFeature": "现世感知|法师||时间|EGW|2"
         }
       ]
     },
@@ -1028,7 +1108,7 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "{\"i 2级时间魔法特性\"}",
+        "{@i 2级时序魔法特性}",
         "你可以在生物周围神奇地施加对时间流动的有限控制。作为反应，在30英尺内你或你能看到的生物进行攻击检定、能力检定或豁免检定后，你可以迫使该生物重新掷骰。在看到检定成功或失败后，你可以做出这个决定。目标必须使用第二次掷骰的结果。",
         "你可以使用这个能力两次，当你完成一次长时间的休息后，你恢复所有已消耗的使用次数。"
       ]
@@ -1045,12 +1125,12 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "{\"i 2级时间魔法特性\"}",
+        "{@i 2级时序魔法特性}",
         "你可以将你的智力调整值加到你的先攻骰上。"
       ]
     },
     {
-      "name": "时间魔法:瞬时静止",
+      "name": "瞬时静止",
       "ENG_name": "Momentary Stasis",
       "source": "EGW",
       "page": 184,
@@ -1061,13 +1141,13 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "{\"i 6th-level Chronurgy Magic feature\"}",
-        "作为一个动作，你可以用魔法强迫一个60英尺内你能看到的大型或更小的生物进行一次对抗你法术豁免难度等级（DC）的体质豁免投掷。除非豁免成功，否则生物会被魔法能量场包围，直到你的下一个回合结束或生物受到任何伤害。以这种方式被包围时，生物处于{@condition incapacitated}状态，速度为0。",
+        "{@i 6级时序术魔法特性}",
+        "作为一个动作，你可以用魔法强迫一个60英尺内你能看到的大型或更小的生物进行一次对抗你法术豁免难度等级（DC）的体质豁免投掷。除非豁免成功，否则生物会被魔法能量场包围，直到你的下一个回合结束或生物受到任何伤害。以这种方式被包围时，生物处于{@condition 无力}状态，速度为0。",
         "你可以使用这个特性的次数等于你的智力调整值（最少一次）。当你完成一次长时间的休息后，你恢复所有已消耗的使用次数。"
       ]
     },
     {
-      "name": "时间魔法:奥法暂滞",
+      "name": "奥法暂滞",
       "ENG_name": "Arcane Abeyance",
       "source": "EGW",
       "page": 184,
@@ -1078,14 +1158,14 @@
       "level": 10,
       "header": 2,
       "entries": [
-        "{\"i 10th-level Chronurgy Magic feature\"}",
+        "{@i 10级时序魔法特性}",
         "当你使用4级或更低级别的法术位施放法术时，你可以将法术的魔法凝聚成一个光点。法术在施放的那一刻被时间冻结，并被保存在一个灰色珠子里持续1小时。这个珠子是一个微小物体，具有15的护甲等级和1点生命值，并且对毒素和心灵伤害免疫。当持续时间结束，或者如果珠子被摧毁，它会在一道闪光中消失，法术也随之失效。",
         "持有宝珠的生物可以使用它的行动来释放里面的法术，随后宝珠消失。法术使用你的法术攻击加值和豁免难度等级，并且法术在所有其他目的上将释放它的生物视为施法者。",
         "一旦你使用这个特性创建了一颗珠子，直到你完成一次短休或长休之前都不能再次这么做。"
       ]
     },
     {
-      "name": "时间魔法:收束未来",
+      "name": "收束未来",
       "ENG_name": "Convergent Future",
       "source": "EGW",
       "page": 184,
@@ -1096,9 +1176,9 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "{@i 14级时序魔法特性}",
+        "{@i 14级时间术魔法特性}",
         "你可以窥视可能的未来，并神奇地将其中一个拉入你周围的事件中，确保特定的结果。当你或你能看到的60英尺内的生物进行攻击骰、能力检定或豁免骰时，你可以使用你的反应来忽略骰出的点数，并决定掷出的数字是成功所需的最小数字，还是比那个数字少一（由你选择）。",
-        "当你使用这个特性时，你获得一个{@condition exhaustion}等级。只有通过完成一次长休，你才能移除以这种方式获得的{@condition exhaustion}等级。"
+        "当你使用这个特性时，你获得一个{@condition 力竭}等级。只有通过完成一次长休，你才能移除以这种方式获得的{@condition 力竭}等级。"
       ]
     },
     {
@@ -1115,12 +1195,12 @@
         "理解并掌握吸引物质体聚集或驱使它们分离的力量，引力魔法学派的学生学会进一步弯曲并操纵重力的暴力能量，以利于自己，同时对敌人造成可怕的损害。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "调整密度|巫师||重力术|EGW|2"
+          "subclassFeature": "调节密度|法师||重力|EGW|2"
         }
       ]
     },
     {
-      "name": "重力魔法:调节密度",
+      "name": "调节密度",
       "ENG_name": "Adjust Density",
       "source": "EGW",
       "page": 185,
@@ -1131,14 +1211,14 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "{@i 2级引力魔法特性}",
-        "作为动作，你可以神奇地改变一个你能看到的30英尺内的对象或生物的重量。该对象或生物必须是大型或更小。目标的重量在1分钟或直到你的{@status concentration}结束之前减半或加倍（就好像你在{@status concentration||集中}施法）。",
+        "{@i 二级重力术魔法特性}",
+        "作为动作，你可以神奇地改变一个你能看到的30英尺内的对象或生物的重量。该对象或生物必须是大型或更小。目标的重量在1分钟或直到你的{@status 专注}结束之前减半或加倍（就好像你在{@status 专注||集中精神}施法）。",
         "当这个效果使生物的重量减半时，生物的速度增加10英尺，它可以跳到正常距离的两倍远，并且在力量检定和力量豁免投掷上具有劣势。当这个效果使生物的重量加倍时，生物的速度减少10英尺，并且在力量检定和力量豁免投掷上具有优势。",
         "当你达到这个职业的10级时，你可以以一个巨大或更小的物体或生物为目标。"
       ]
     },
     {
-      "name": "重力魔法:重力井",
+      "name": "重力井",
       "ENG_name": "Gravity Well",
       "source": "EGW",
       "page": 185,
@@ -1149,12 +1229,12 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "{@i 6级引力魔法特性}",
+        "{@i 6级重力术魔法特性}",
         "你学会了如何操纵生物周围的重力：每当你对一个生物施放法术时，如果目标愿意移动，法术击中它进行攻击，或者它未能通过对抗法术的豁免投掷，你可以将目标移动到你选择的未被占据的空间5英尺。"
       ]
     },
     {
-      "name": "重力魔法:狂暴牵引",
+      "name": "狂暴牵引",
       "ENG_name": "Violent Attraction",
       "source": "EGW",
       "page": 185,
@@ -1165,14 +1245,14 @@
       "level": 10,
       "header": 2,
       "entries": [
-        "{\"i 10级重力魔法特性\"}",
+        "{@i 10级重力术魔法特性}",
         "当你能看到的60英尺范围内的另一个生物使用武器攻击命中时，你可以使用你的反应来增加攻击的速度，导致攻击目标受到额外的{@damage 1d10}点该武器类型的伤害。",
-        "Alternatively, if a creature within 60 feet of you takes damage from a fall, you can use your reaction to increase the fall's damage by {@dice 2d10}.",
+        "或者，如果60英尺范围内的一个生物因坠落而受到伤害，你可以使用你的反应来使坠落伤害增加{@dice 2d10}。",
         "你可以使用这个特性的次数等于你的智力调整值（最少一次）。当你完成一次长时间的休息后，你恢复所有已消耗的使用次数。"
       ]
     },
     {
-      "name": "重力魔法:事件视界",
+      "name": "事件视界",
       "ENG_name": "Event Horizon",
       "source": "EGW",
       "page": 185,
@@ -1183,8 +1263,8 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "{\"i 14th-level Graviturgy Magic feature\"}",
-        "作为动作，你可以神奇地发出一个强大的重力能量场，这个能量场在1分钟或直到你的{@status concentration}结束之前拉扯其他生物（就好像你在{@status concentration||集中}施法）。在此持续时间内，每当一个对你有敌意的生物在其回合开始时处于你30英尺内，它必须进行一次力量豁免检定，对抗你的法术豁免DC。如果豁免失败，它受到{@damage 2d10}力量伤害，并且其速度在下一个回合开始前减至0。如果豁免成功，它受到的伤害减半，并且它在这个回合内每移动一英尺需要额外花费2英尺的移动力。",
+        "{@i 14级重力术魔法特性}",
+        "作为动作，你可以神奇地发出一个强大的重力能量场，这个能量场在1分钟或直到你的{@status 专注}结束之前拉扯其他生物（就好像你在{@status 专注||集中精神}施法）。在此持续时间内，每当一个对你有敌意的生物在其回合开始时处于你30英尺内，它必须进行一次力量豁免检定，对抗你的法术豁免DC。如果豁免失败，它受到{@damage 2d10}力量伤害，并且其速度在下一个回合开始前减至0。如果豁免成功，它受到的伤害减半，并且它在这个回合内每移动一英尺需要额外花费2英尺的移动力。",
         "一旦你使用这个特性，直到你完成一次长时间的休息，或者直到你消耗一个3级或更高级别的法术位之前，你不能再这样做。"
       ]
     },
@@ -1195,7 +1275,7 @@
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
@@ -1203,22 +1283,22 @@
         "被称为防护师，当需要驱逐恶灵、保护重要地点免受魔法窥探，以及关闭通往其他存在的位面的传送门时，这个学派的成员会被寻求帮助。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "防护法术专家|巫师||防护||2"
+          "subclassFeature": "防护学者|法师||防护||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "奥术屏障|巫师||防护系||2"
+          "subclassFeature": "奥术守御|法师||防护||2"
         }
       ]
     },
     {
-      "name": "防护学派:防护学者",
+      "name": "防护学者",
       "ENG_name": "Abjuration Savant",
       "source": "PHB",
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1227,30 +1307,30 @@
       ]
     },
     {
-      "name": "奥法防护",
+      "name": "奥术守御",
       "ENG_name": "Arcane Ward",
       "source": "PHB",
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
       "entries": [
-        "从2级开始，你可以围绕自己编织魔法以获得保护。当你施放一个{@filter 1级或更高等级的防护法术|spells|school=A|level=!0}时，你可以同时使用法术魔法的一部分来为自己创建一个魔法护罩，该护罩持续到你完成一次长休。护罩的生命值最大值等于你的巫师等级的两倍加上你的智力调整值。每当你受到伤害时，护罩代替你承受伤害。如果这使得护罩的生命值降至0，你将承受剩余的伤害。",
-        "当防护结界的生命值为0时，它无法吸收伤害，但其魔法仍然存在。每当你施放一个1级或更高级别的{@filter 防护法术|法术|学派=A|等级=!0}时，防护结界恢复的生命值等于法术等级的两倍。",
+        "从2级开始，你可以围绕自己编织魔法以获得保护。当你施放一个{@filter 1级或更高等级的防护法术|法术|school=A|level=!0}时，你可以同时使用法术魔法的一部分来为自己创建一个魔法护罩，该护罩持续到你完成一次长休。护罩的生命值最大值等于你的巫师等级的两倍加上你的智力调整值。每当你受到伤害时，护罩代替你承受伤害。如果这使得护罩的生命值降至0，你将承受剩余的伤害。",
+        "当防护结界的生命值为0时，它无法吸收伤害，但其魔法仍然存在。每当你施放一个1级或更高级别的{@filter 1级或更高等级的防护法术|法术|school=A|level=!0}时，防护结界恢复的生命值等于法术等级的两倍。",
         "一旦你创建了守护，直到你完成一次长休之前，你不能再创建它。"
       ]
     },
     {
-      "name": "防护学派:投射守御",
+      "name": "投射守御",
       "ENG_name": "Projected Ward",
       "source": "PHB",
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -1259,28 +1339,28 @@
       ]
     },
     {
-      "name": "防护学派:精通防护",
+      "name": "精通防护",
       "ENG_name": "Improved Abjuration",
       "source": "PHB",
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
       "entries": [
-        "从10级开始，当你施放需要进行能力检定作为施法一部分的防护法术（如{@spell counterspell}和{@spell dispel magic}），你会将你的熟练加值加到那个能力检定上。"
+        "从10级开始，当你施放需要进行能力检定作为施法一部分的防护法术（如{@spell 反制法术}和{@spell 解除魔法}），你会将你的熟练加值加到那个能力检定上。"
       ]
     },
     {
-      "name": "防护学派:法术抗性",
+      "name": "法术抗性",
       "ENG_name": "Spell Resistance",
       "source": "PHB",
       "page": 115,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:防护",
+      "subclassShortName": "防护",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
@@ -1296,29 +1376,29 @@
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
         "作为一名召唤者，你偏爱那些能够从无中生有地制造物体和生物的法术。你可以召唤出滚滚的致命雾气，或者从其他地方召唤生物来代表你战斗。随着你的掌握程度提高，你学会了传送法术，能够在瞬间将自己传送到遥远的距离，甚至是传送到存在的其他位面。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "咒法专家|巫师||咒法||2"
+          "subclassFeature": "咒法学者|法师||咒法||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "小幻化术|巫师||幻化||2"
+          "subclassFeature": "次级咒术|法师||咒法||2"
         }
       ]
     },
     {
-      "name": "咒法学派:咒法学者",
+      "name": "咒法学者",
       "ENG_name": "Conjuration Savant",
       "source": "PHB",
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1327,13 +1407,13 @@
       ]
     },
     {
-      "name": "咒法学派:次级咒术",
+      "name": "次级咒术",
       "ENG_name": "Minor Conjuration",
       "source": "PHB",
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1343,13 +1423,13 @@
       ]
     },
     {
-      "name": "咒法学派:王车易位",
+      "name": "王车易位",
       "ENG_name": "Benign Transposition",
       "source": "PHB",
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -1359,28 +1439,28 @@
       ]
     },
     {
-      "name": "咒法学派:咒法专注",
+      "name": "咒法专注",
       "ENG_name": "Focused Conjuration",
       "source": "PHB",
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
       "entries": [
-        "从10级开始，当你正在{@status 专注||专注}于一个召唤法术时，你的{@status 专注}不会因为受到伤害而被打破。"
+        "从10级开始，当你正在{@status 专注||集中精神}于一个召唤法术时，你的{@status 专注}不会因为受到伤害而被打破。"
       ]
     },
     {
-      "name": "咒法学派:强韧召唤",
+      "name": "强韧召唤",
       "ENG_name": "Durable Summons",
       "source": "PHB",
       "page": 116,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:咒法",
+      "subclassShortName": "咒法",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
@@ -1402,16 +1482,16 @@
         "无论是王室还是平民，都寻求占卜师的建议，因为所有人都希望更清楚地理解过去、现在和未来。作为一名占卜师，你努力揭开空间、时间和意识的面纱，以便清晰地看到事物。你致力于掌握辨别、远程观察、超自然知识和预知的法术。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "占卜专家|巫师||占卜||2"
+          "subclassFeature": "预言学者|法师||预言术||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "预示|巫师||占卜||2"
+          "subclassFeature": "预兆|法师||预言术||2"
         }
       ]
     },
     {
-      "name": "预言学派:预言学者",
+      "name": "预言学者",
       "ENG_name": "Divination Savant",
       "source": "PHB",
       "page": 116,
@@ -1426,7 +1506,7 @@
       ]
     },
     {
-      "name": "预言学派:预兆",
+      "name": "预兆",
       "ENG_name": "Portent",
       "source": "PHB",
       "page": 116,
@@ -1437,12 +1517,12 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two {@dice d20}s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.",
+        "当你选择这个学派时，从2级开始，未来的一瞥开始影响你的意识。当你完成一次长时间的休息后，掷两个{@dice d20}并记录掷出的数字。你可以用这些预示的骰子替代你或你能看到的生物进行的任何攻击骰、豁免骰或能力检定。你必须在掷骰之前选择这样做，并且每回合只能以这种方式替换一次骰子。",
         "每个预言掷骰只能使用一次。当你完成一次长时间休息时，你将失去任何未使用的预言掷骰。"
       ]
     },
     {
-      "name": "预言学派:预言专家",
+      "name": "预言专家",
       "ENG_name": "Expert Divination",
       "source": "PHB",
       "page": 116,
@@ -1453,11 +1533,11 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "从6级开始，施放占卜法术对你来说变得非常容易，它只消耗你施法努力的一小部分。当你使用法术位施放一个2级或更高级别的{@filter divination spell|spells|school=D}时，你恢复一个已消耗的法术位。你恢复的法术位必须低于你施放的法术级别，且不能高于5级。"
+        "从6级开始，施放占卜法术对你来说变得非常容易，它只消耗你施法努力的一小部分。当你使用法术位施放一个2级或更高级别的{@filter 2级或更高级别的占卜法术|法术|school=占卜}时，你恢复一个已消耗的法术位。你恢复的法术位必须低于你施放的法术级别，且不能高于5级。"
       ]
     },
     {
-      "name": "预言学派:天眼通",
+      "name": "天眼通",
       "ENG_name": "The Third Eye",
       "source": "PHB",
       "page": 116,
@@ -1468,7 +1548,7 @@
       "level": 10,
       "header": 2,
       "entries": [
-        "从10级开始，你可以使用你的行动来增强你的感知能力。当你这样做时，选择以下好处之一，持续到你被{@condition incapacitated}或者你进行短休或长休。完成休息之前，你不能再次使用这个特性。",
+        "从10级开始，你可以使用你的行动来增强你的感知能力。当你这样做时，选择以下好处之一，持续到你被{@condition 无力}或者你进行短休或长休。完成休息之前，你不能再次使用这个特性。",
         {
           "type": "options",
           "entries": [
@@ -1509,7 +1589,7 @@
       ]
     },
     {
-      "name": "预言学派:高等预兆",
+      "name": "高等预兆",
       "ENG_name": "Greater Portent",
       "source": "PHB",
       "page": 116,
@@ -1520,7 +1600,7 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three {@dice d20}s for your Portent feature, rather than two."
+        "从14级开始，你梦中的幻象变得更加强烈，为你描绘出更准确的未来图景。在使用预示特性时，你掷三个{@dice d20}骰子，而不是两个。"
       ]
     },
     {
@@ -1530,29 +1610,29 @@
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
         "作为附魔学派的成员，你已经磨练了你用魔法迷惑和迷惑其他人和怪物的能力。一些附魔师是和平制造者，他们用魔法迷惑暴力者放下武器，并用魅力让残忍者表现出仁慈。另一些则是暴君，他们用魔法强制不愿意的人为他们服务。大多数附魔师介于两者之间。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "附魔专家|巫师||附魔||2"
+          "subclassFeature": "惑控学者|法师||惑控||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "催眠凝视|巫师||魅惑||2"
+          "subclassFeature": "催眠凝视|法师||惑控||2"
         }
       ]
     },
     {
-      "name": "惑控学派:惑控学者",
+      "name": "惑控学者",
       "ENG_name": "Enchantment Savant",
       "source": "PHB",
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1561,30 +1641,30 @@
       ]
     },
     {
-      "name": "惑控学派:催眠凝视",
+      "name": "催眠凝视",
       "ENG_name": "Hypnotic Gaze",
       "source": "PHB",
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
       "entries": [
-        "当你选择这个学派时，从2级开始，你的柔和话语和迷人的凝视可以神奇地吸引另一个生物。作为一个动作，选择一个你可以看到的，距离你5英尺内的生物。如果目标能看到或听到你，它必须成功进行一次对抗你巫师法术豁免难度等级（DC）的智慧豁免投掷，否则会被你{@condition charmed}直到你的下一个回合结束。被{@condition charmed}的生物的速度降至0，并且生物处于{@condition incapacitated}状态，并且明显显得迷茫。",
+        "当你选择这个学派时，从2级开始，你的柔和话语和迷人的凝视可以神奇地吸引另一个生物。作为一个动作，选择一个你可以看到的，距离你5英尺内的生物。如果目标能看到或听到你，它必须成功进行一次对抗你巫师法术豁免难度等级（DC）的智慧豁免投掷，否则会被你{@condition 魅惑}直到你的下一个回合结束。被{@condition 魅惑}的生物的速度降至0，并且生物处于{@condition 无力}状态，并且明显显得迷茫。",
         "在随后的回合中，你可以使用你的行动来维持这个效果，将其持续时间延长到你的下一个回合结束。然而，如果你与生物的距离超过5英尺，如果生物既看不见你也听不见你，或者生物受到伤害，效果就会结束。",
         "一旦效果结束，或者如果生物在对这个效果的初始豁免检定中成功，直到你完成一次长休之前，你不能再对那个生物使用这个特性。"
       ]
     },
     {
-      "name": "惑控学派:直觉魅惑",
+      "name": "直觉魅惑",
       "ENG_name": "Instinctive Charm",
       "source": "PHB",
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -1594,13 +1674,13 @@
       ]
     },
     {
-      "name": "惑控学派:分裂惑控",
+      "name": "分裂惑控",
       "ENG_name": "Split Enchantment",
       "source": "PHB",
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
@@ -1609,18 +1689,18 @@
       ]
     },
     {
-      "name": "惑控学派:编演记忆",
+      "name": "编演记忆",
       "ENG_name": "Alter Memories",
       "source": "PHB",
       "page": 117,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:惑控",
+      "subclassShortName": "惑控",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
       "entries": [
-        "在14级时，你获得了使生物不知道你对它施加的魔法影响的能力。当你施放附魔法术来魅惑一个或多个生物时，你可以改变一个生物的理解，使其保持对被{@condition charmed}状态的无意识。",
+        "在14级时，你获得了使生物不知道你对它施加的魔法影响的能力。当你施放附魔法术来魅惑一个或多个生物时，你可以改变一个生物的理解，使其保持对被{@condition 魅惑}状态的无意识。",
         "此外，在法术失效之前，你可以使用你的行动尝试让选定的生物忘记它被{@condition 魅惑}的一段时间。生物必须在你的巫师法术豁免DC上进行智力豁免检定成功，否则将失去等于1加上你的 Charisma 调整值（最少为1）的小时数的记忆。你可以让生物忘记较少的时间，而且时间量不能超过你的附魔法术的持续时间。"
       ]
     },
@@ -1633,23 +1713,23 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
         "你专注于创造强大元素效果的魔法，如刺骨的寒冷、灼热的火焰、滚滚的雷声、噼啪作响的闪电和燃烧的酸液。一些咒法师在军队中找到工作，作为远程轰炸敌人军队的炮兵。其他人则利用他们壮观的力量来保护弱者，而有些人则作为强盗、冒险家或有抱负的暴君寻求自己的利益。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "咒法专家|巫师||咒法||2"
+          "subclassFeature": "塑能学者|法师||塑能||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "塑形法术|巫师||咒法||2"
+          "subclassFeature": "法术塑形|法师||塑能||2"
         }
       ]
     },
     {
-      "name": "塑能学派:塑能学者",
+      "name": "塑能学者",
       "ENG_name": "Evocation Savant",
       "source": "PHB",
       "page": 117,
@@ -1657,7 +1737,7 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1666,7 +1746,7 @@
       ]
     },
     {
-      "name": "形塑法术",
+      "name": "法术塑形",
       "ENG_name": "Sculpt Spells",
       "source": "PHB",
       "page": 117,
@@ -1674,7 +1754,7 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1683,7 +1763,7 @@
       ]
     },
     {
-      "name": "塑能学派:强力戏法",
+      "name": "强力戏法",
       "ENG_name": "Potent Cantrip",
       "source": "PHB",
       "page": 117,
@@ -1691,7 +1771,7 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -1700,7 +1780,7 @@
       ]
     },
     {
-      "name": "塑能学派:强效塑能",
+      "name": "强效塑能",
       "ENG_name": "Empowered Evocation",
       "source": "PHB",
       "page": 117,
@@ -1708,7 +1788,7 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
@@ -1717,7 +1797,7 @@
       ]
     },
     {
-      "name": "塑能学派:超限导能",
+      "name": "超限导能",
       "ENG_name": "Overchannel",
       "source": "PHB",
       "page": 117,
@@ -1725,13 +1805,13 @@
       "basicRules": true,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:塑能",
+      "subclassShortName": "塑能",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
       "entries": [
         "从14级开始，你可以增加你简单法术的威力。当你施放一个1级至5级的巫师法术，如果该法术造成伤害，你可以用该法术造成最大伤害。",
-        "The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take {@damage 2d12} necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by {@dice 1d12}. This damage ignores resistance and immunity."
+        "第一次这样做时，你不会受到任何不良影响。如果你在完成一次长时间的休息之前再次使用这个特性，你在施放法术后立即受到每级法术{@damage 2d12}点死灵伤害。每次你在完成一次长时间的休息之前再次使用这个特性，每级法术的死灵伤害就会增加{@dice 1d12}点。这种伤害无视抗性和免疫。"
       ]
     },
     {
@@ -1741,29 +1821,29 @@
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
         "你专注于研究那些令人眼花缭乱、迷惑心智，甚至欺骗最聪明的人的心灵魔法。你的魔法是微妙的，但是你敏锐心灵创造的幻象使不可能的事情看起来像是真的。一些幻术师——包括许多侏儒巫师——是善良的恶作剧者，他们使用他们的法术来娱乐。其他人则是更加阴险的欺骗大师，利用他们的幻象来恐吓和愚弄他人，以谋取个人利益。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "幻术专家|巫师||幻术||2"
+          "subclassFeature": "幻术学者|法师||幻术||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "改进型次级幻象|巫师||幻象||2"
+          "subclassFeature": "精通次级幻术|法师||幻术||2"
         }
       ]
     },
     {
-      "name": "幻术学派:幻术学者",
+      "name": "幻术学者",
       "ENG_name": "Illusion Savant",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1772,29 +1852,29 @@
       ]
     },
     {
-      "name": "幻术学派:精通次级幻术",
+      "name": "精通次级幻术",
       "ENG_name": "Improved Minor Illusion",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
       "entries": [
-        "当你在2级选择这个学派时，你学会了{@spell minor illusion}戏法。如果你已经知道这个戏法，你可以选择学会另一个不同的巫师戏法。这个戏法不计入你所知戏法的数量。",
+        "当你在2级选择这个学派时，你学会了{@spell 次级幻象}戏法。如果你已经知道这个戏法，你可以选择学会另一个不同的巫师戏法。这个戏法不计入你所知戏法的数量。",
         "当你施放{@spell 次级幻象}时，你可以在施放这个法术的单次施法中同时创造声音和图像。"
       ]
     },
     {
-      "name": "幻术学派:易变幻象",
+      "name": "易变幻象",
       "ENG_name": "Malleable Illusions",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -1803,13 +1883,13 @@
       ]
     },
     {
-      "name": "幻术学派:幻影化形",
+      "name": "幻影化形",
       "ENG_name": "Illusory Self",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
@@ -1819,18 +1899,18 @@
       ]
     },
     {
-      "name": "幻术学派:亦真亦幻",
+      "name": "亦真亦幻",
       "ENG_name": "Illusory Reality",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:幻术",
+      "subclassShortName": "幻术",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
       "entries": [
-        "到了14级，你已经学会了将影魔法编织进你的幻象中，赋予它们半真实性的秘密。当你施放一个1级或更高等级的幻象法术时，你可以选择幻象中的一个无生命、非魔法的物品，并使这个物品变成真实的。你可以在法术持续期间的你的回合上，作为奖励行动这样做。该物品将保持真实状态1分钟。例如，你可以创造一个横跨裂谷的桥梁幻象，然后使其真实存在足够长时间让你的盟友通过。",
+        "到了14级，你已经学会了将影魔法编织进你的幻象中，赋予它们半真实性的秘密。当你施放一个1级或更高等级的幻象法术时，你可以选择幻象中的一个无生命、非魔法的物品，并使这个物品变成真实的。你可以在法术持续期间的你的回合上，作为奖励行动这样做。该物品将保持真实状态1分钟。例如，你可以创造一个横跨裂谷的桥梁幻象，然后使其真实存在足够长时间让你的盟友通过。\u001a\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000class/class-wizard.json",
         "该物体不能造成伤害或以其他方式直接伤害任何人。"
       ]
     },
@@ -1841,7 +1921,7 @@
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
@@ -1849,37 +1929,37 @@
         "大多数人由于与死亡的紧密联系而将死灵法师视为威胁，甚至邪恶。并非所有死灵法师都是邪恶的，但他们操纵的力量被许多社会视为禁忌。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "死灵学专家|巫师||死灵||2"
+          "subclassFeature": "死灵学者|法师||死灵||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "死亡收割|巫师||死灵||2"
+          "subclassFeature": "惧怖收割|法师||死灵||2"
         }
       ]
     },
     {
-      "name": "残怖收割",
+      "name": "惧怖收割",
       "ENG_name": "Grim Harvest",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
       "entries": [
-        "在2级时，你获得了从你用法术杀死的生物中收割生命能量的能力。每当你用1级或更高级别的法术杀死一个或多个生物时，你可以在一次回合中恢复等于法术等级两倍的生命值，如果法术属于{@filter 死灵学派|法术|学派=N}，则恢复其等级的三倍生命值。你不会因为杀死构装生物或亡灵而获得这个好处。"
+        "在2级时，你获得了从你用法术杀死的生物中收割生命能量的能力。每当你用1级或更高级别的法术杀死一个或多个生物时，你可以在一次回合中恢复等于法术等级两倍的生命值，如果法术属于{@filter 死灵学派|法术|school=N}，则恢复其等级的三倍生命值。你不会因为杀死构装生物或亡灵而获得这个好处。"
       ]
     },
     {
-      "name": "死灵学派:死灵学者",
+      "name": "死灵学者",
       "ENG_name": "Necromancy Savant",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -1888,18 +1968,18 @@
       ]
     },
     {
-      "name": "死灵学派:不死奴仆",
+      "name": "不死奴仆",
       "ENG_name": "Undead Thralls",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
       "entries": [
-        "当你达到6级时，如果法术书中还没有，你可以添加{@spell 死灵召唤}法术。当你施放{@spell 死灵召唤}时，你可以额外选择一个尸体或一堆骨头作为目标，相应地创造出另一个僵尸或骷髅。",
+        "当你达到6级时，如果法术书中还没有，你可以添加{@spell 活化死尸}法术。当你施放{@spell 活化死尸}时，你可以额外选择一个尸体或一堆骨头作为目标，相应地创造出另一个僵尸或骷髅。",
         "每当你使用死灵法术创造不死生物时，它会有额外的好处：",
         {
           "type": "list",
@@ -1911,13 +1991,13 @@
       ]
     },
     {
-      "name": "死灵学派:不死适应",
+      "name": "不死适应",
       "ENG_name": "Inured to Undeath",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
@@ -1926,13 +2006,13 @@
       ]
     },
     {
-      "name": "死灵学派:命令亡灵",
+      "name": "命令亡灵",
       "ENG_name": "Command Undead",
       "source": "PHB",
       "page": 118,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:死灵",
+      "subclassShortName": "死灵",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
@@ -1948,7 +2028,7 @@
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 2,
       "entries": [
@@ -1956,37 +2036,37 @@
         "一些变形者是修补匠和恶作剧者，他们为了乐趣和偶尔的利润将人变成蟾蜍，将铜变成银。另一些则以致命的严肃态度追求他们的魔法研究，寻求神的力量来创造和毁灭世界。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "变化专家|巫师||变化||2"
+          "subclassFeature": "变化学者|法师||变化||2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "次级炼金术|巫师||变化||2"
+          "subclassFeature": "次级炼金|法师||变化||2"
         }
       ]
     },
     {
-      "name": "变化学派:次级炼金",
+      "name": "次级炼金",
       "ENG_name": "Minor Alchemy",
       "source": "PHB",
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
       "entries": [
-        "从2级开始，当你选择这个学派时，你可以暂时改变一个非魔法物体的物理属性，将其从一种物质变成另一种物质。你对一个完全由木材、石头（但不是宝石）、铁、铜或银组成的物体执行一个特殊的炼金术程序，将其转化为这些材料中的另一种。每进行10分钟的程序，你可以转化多达1立方英尺的材料。在1小时后，或者直到你失去你的{@status 专注}（就好像你在{@status 专注||专注}于一个法术）之前，材料会恢复到其原始物质。"
+        "从2级开始，当你选择这个学派时，你可以暂时改变一个非魔法物体的物理属性，将其从一种物质变成另一种物质。你对一个完全由木材、石头（但不是宝石）、铁、铜或银组成的物体执行一个特殊的炼金术程序，将其转化为这些材料中的另一种。每进行10分钟的程序，你可以转化多达1立方英尺的材料。在1小时后，或者直到你失去你的{@status 专注}（就好像你在{@status 专注||集中精神}于一个法术）之前，材料会恢复到其原始物质。"
       ]
     },
     {
-      "name": "变化学派:变化学者",
+      "name": "变化学者",
       "ENG_name": "Transmutation Savant",
       "source": "PHB",
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 2,
       "header": 1,
@@ -2001,7 +2081,7 @@
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 6,
       "header": 2,
@@ -2021,29 +2101,29 @@
       ]
     },
     {
-      "name": "变形者",
+      "name": "变形生物",
       "ENG_name": "Shapechanger",
       "source": "PHB",
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 10,
       "header": 2,
       "entries": [
-        "在10级时，如果法术书中还没有，你将{@spell polymorph}法术添加到你的法术书中。你可以不消耗法术位来施放{@spell polymorph}。当你这样做时，你只能以自己为目标，并且将自己转变为一个{@filter 挑战等级为1或更低的野兽|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}。",
+        "在10级时，如果法术书中还没有，你将{@spell 变形术}法术添加到你的法术书中。你可以不消耗法术位来施放{@spell 变形术}。当你这样做时，你只能以自己为目标，并且将自己转变为一个{@filter 挑战等级为1或更低的野兽|怪物图鉴|challenge rating=[&0;&1]|类型=野兽|miscellaneous=!swarm}。",
         "一旦你以这种方式施放了{@spell 变形术}，在你完成一次短休或长休之前不能再这样做，尽管你仍然可以使用可用的法术位正常施放它。"
       ]
     },
     {
-      "name": "变化学派:变化宗师",
+      "name": "变化宗师",
       "ENG_name": "Master Transmuter",
       "source": "PHB",
       "page": 119,
       "className": "法师",
       "classSource": "PHB",
-      "subclassShortName": "魔法学派:变化",
+      "subclassShortName": "变化",
       "subclassSource": "PHB",
       "level": 14,
       "header": 2,
@@ -2073,7 +2153,7 @@
               "name": "起死回生",
               "ENG_name": "Restore Life",
               "entries": [
-                "你使用炼金术士之石触摸一个生物，并施放{@spell raise dead}法术，无需消耗法术位或需要将法术记录在你的法术书中。"
+                "你使用炼金术士之石触摸一个生物，并施放{@spell 唤醒死者}法术，无需消耗法术位或需要将法术记录在你的法术书中。"
               ]
             },
             {
@@ -2081,7 +2161,7 @@
               "name": "返老还童",
               "ENG_name": "Restore Youth",
               "entries": [
-                "You touch the transmuter's stone to a willing creature, and that creature's apparent age is reduced by {@dice 3d10} years, to a minimum of 13 years. This effect doesn't extend the creature's lifespan."
+                "你触摸变形者的石头到一个愿意的生物上，那个生物的外表年龄减少了{@dice 3d10}年，最少减少到13岁。这个效果不会延长生物的寿命。"
               ]
             }
           ]
@@ -2109,15 +2189,15 @@
         "在战斗中，剑歌使使用一系列复杂而优雅的动作来抵御伤害，并允许剑歌使将魔法引导进毁灭性的攻击和狡猾的防御中。许多目睹过剑歌使工作的人都记得这场展示是他们生活中更美丽的体验之一，伴随着歌唱之刃的辉煌舞蹈。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "战争与歌训练（剑歌）|巫师||剑歌|TCE|2"
+          "subclassFeature": "战歌训练 (剑咏)|法师||剑咏者|TCE|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "剑歌|巫师||剑歌术|TCE|2"
+          "subclassFeature": "剑歌|法师||剑咏者|TCE|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "剑歌者风格|巫师||剑歌||TCE|2"
+          "subclassFeature": "剑咏者风格|法师||剑咏者|TCE|2"
         }
       ]
     },
@@ -2169,7 +2249,7 @@
       ]
     },
     {
-      "name": "剑咏者:剑歌",
+      "name": "剑歌",
       "ENG_name": "Bladesong",
       "source": "TCE",
       "page": 76,
@@ -2187,14 +2267,14 @@
       "header": 1,
       "entries": [
         "从2级开始，你可以召唤一种名为剑歌的秘密精灵魔法，前提是你没有穿戴中型或重型护甲或使用盾牌。它赋予你超自然的速度、敏捷和专注。",
-        "你可以使用一个奖励动作来开始剑歌，它持续1分钟。如果你被{@condition 失去能力}，如果你穿戴中甲或重甲或盾牌，或者如果你用双手进行武器攻击，剑歌会提前结束。你也可以在任何时候选择解散剑歌（无需动作）。",
+        "你可以使用一个奖励动作来开始剑歌，它持续1分钟。如果你被{@condition 无力}，如果你穿戴中甲或重甲或盾牌，或者如果你用双手进行武器攻击，剑歌会提前结束。你也可以在任何时候选择解散剑歌（无需动作）。",
         "当你的剑歌处于激活状态时，你获得以下好处：",
         {
           "type": "list",
           "items": [
             "你的AC获得等同于你的智力调整值的加值（最少为+1）。",
             "你的步行速度增加10英尺。",
-            "你在敏捷（{@skill 杂技})检定上有优势。",
+            "你在敏捷（{@skill 特技})检定上有优势。",
             "你在进行任何体质豁免检定以维持法术的{@status 专注}时，获得一个加值。该加值等于你的智力调整值（最少为+1）。"
           ]
         },
@@ -2245,7 +2325,7 @@
       ]
     },
     {
-      "name": "剑咏者:守御之歌",
+      "name": "守御之歌",
       "ENG_name": "Song of Defense",
       "source": "TCE",
       "page": 76,
@@ -2266,7 +2346,7 @@
       ]
     },
     {
-      "name": "剑咏者:胜利之歌",
+      "name": "胜利之歌",
       "ENG_name": "Song of Victory",
       "source": "TCE",
       "page": 76,
@@ -2301,16 +2381,16 @@
         "在巫师中，文书秩序是最书卷气的。它在不同的世界中以多种形式存在，但其主要使命在任何地方都是一样的：记录魔法发现，以便巫术可以繁荣发展。尽管所有巫师都重视法术书，但文书秩序中的巫师会魔法唤醒他们的书，将其变成一个值得信赖的伙伴。所有的巫师都研究书籍，但巫师文书会与他们的书交谈！",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "巫师之羽|巫师||抄写者|TCE|2"
+          "subclassFeature": "法师笔|法师||书士|TCE|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "觉醒法术书|巫师||抄写员|TCE|2"
+          "subclassFeature": "觉醒魔典|法师||书士|TCE|2"
         }
       ]
     },
     {
-      "name": "书士会:觉醒魔典",
+      "name": "觉醒魔典",
       "ENG_name": "Awakened Spellbook",
       "source": "TCE",
       "page": 77,
@@ -2321,7 +2401,7 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "{@i 二级抄写者公会特性}",
+        "{@i 2级文书之序特性}",
         "使用你巫师秩序传承下来的特制墨水和古老咒语，你在你的法术书中唤醒了一个奥术意识。",
         "当你持有这本书时，它赋予你以下好处：",
         {
@@ -2336,7 +2416,7 @@
       ]
     },
     {
-      "name": "书士会:法师笔",
+      "name": "法师笔",
       "ENG_name": "Wizardly Quill",
       "source": "TCE",
       "page": 77,
@@ -2347,7 +2427,7 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "{@i 二级抄写者公会特性}",
+        "{@i 2级文书之序特性}",
         "作为一个奖励动作，你可以神奇地在你的空闲手中创造出一支微小的羽毛笔。这支魔法羽毛笔具有以下属性：",
         {
           "type": "list",
@@ -2361,7 +2441,7 @@
       ]
     },
     {
-      "name": "书士会:思维具现",
+      "name": "思维具现",
       "ENG_name": "Manifest Mind",
       "source": "TCE",
       "page": 78,
@@ -2372,17 +2452,17 @@
       "level": 6,
       "header": 2,
       "entries": [
-        "{@i 6级抄写者秩序特性}",
+        "{@i 六级书卷秩序特性}",
         "你可以召唤出你的觉醒法术书的意识。当法术书在你身上时，你可以作为奖励行动使意识显现为一个微小的幽灵对象，悬浮在你选择的60英尺内的未被占据的空间中。这个幽灵意识是无形的，不占据空间，并且在10英尺半径内发出微弱的光。它看起来像是一个幽灵书籍、一连串的文字，或者过去的学者（由你选择）。",
         "当显现时，幽灵心智可以听见和看见，并且它具有{@sense 黑暗视觉}，范围为60英尺。这个心智可以通过心灵感应与你分享它所看到和听到的内容（无需动作）。",
         "每当你在自己回合施放巫师法术时，你可以使用幽灵之灵的空间而不是你自己的空间来施放它，使用它的感觉。你可以每天这样做的次数等于你的熟练加值，并且在你完成长休时恢复所有已使用的使用次数。",
         "作为奖励行动，你可以使这个灵光心灵飘浮到你或它能看到的30英尺内的未被占据的空间。它可以穿过生物，但不能穿过物体。",
-        "如果幽灵之灵距离你超过300英尺，如果有人对它施放{@spell dispel magic}法术，如果觉醒法术书被摧毁，如果你死亡，或者如果你作为一个奖励动作解散幽灵之灵，它就会停止显现。",
+        "如果幽灵之灵距离你超过300英尺，如果有人对它施放{@spell 解除魔法}法术，如果觉醒法术书被摧毁，如果你死亡，或者如果你作为一个奖励动作解散幽灵之灵，它就会停止显现。",
         "一旦你召唤了意识，直到你完成一次长休之前都不能再次这么做，除非你消耗任意等级的法术位来再次召唤它。"
       ]
     },
     {
-      "name": "书士会:大书士",
+      "name": "大书士",
       "ENG_name": "Master Scrivener",
       "source": "TCE",
       "page": 78,
@@ -2393,14 +2473,14 @@
       "level": 10,
       "header": 2,
       "entries": [
-        "{@i 10级抄写者公会特性}",
+        "{@i 十级书卷秩序特性}",
         "每当你完成一次长休，你可以通过触摸你的巫师羽毛笔到一张空白纸张或羊皮纸上，并使得你的觉醒法术书中的一个法术被复制到卷轴上，来创造一个魔法卷轴。制作卷轴时，法术书必须在你5英尺范围内。",
         "选定的法术必须是1级或2级，并且施法时间为1个动作。一旦进入卷轴，法术的力量得到增强，比正常等级高一级。你可以通过阅读卷轴作为一个动作来施放法术。卷轴对其他人来说是难以理解的，当你施放法术或完成下一次长休时，法术会从卷轴上消失。",
         "你也擅长制作法术卷轴，这在《地下城主指南》的宝藏章节中有描述。如果你使用你的巫师羽毛笔，制作这样一个卷轴所需的金钱和时间都会减半。"
       ]
     },
     {
-      "name": "书士会:一字同心",
+      "name": "一字同心",
       "ENG_name": "One with the Word",
       "source": "TCE",
       "page": 78,
@@ -2411,10 +2491,10 @@
       "level": 14,
       "header": 2,
       "entries": [
-        "{\"i 14th-level Order of Scribes feature\"}",
-        "你与觉醒法术书的联系变得如此深刻，以至于你的灵魂已经与它交织在一起。当法术书在你身上时，你在所有智力（{@skill 奥术}）检定上都有优势，因为法术书帮助你记忆魔法知识。",
-        "Moreover, if you take damage while your spellbook's mind is manifested, you can prevent all of that damage to you by using your reaction to dismiss the spectral mind, using its magic to save yourself. Then roll {@dice 3d6}. The spellbook temporarily loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination. If there aren't enough spells in the book to cover this cost, you drop to 0 hit points.",
-        "Until you finish {@dice 1d6} long rests, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. After you finish the required number of rests, the spells reappear in the spellbook.",
+        "{@i 14级文书秩序特性}",
+        "你与觉醒法术书的联系变得如此深刻，以至于你的灵魂已经与它交织在一起。当法术书在你身上时，你在所有智力（{@skill 奥秘}）检定上都有优势，因为法术书帮助你记忆魔法知识。",
+        "此外，如果你在法术书的心灵显化时受到伤害，你可以使用反应来解散这个灵体心灵，利用它的魔法来拯救自己，从而防止所有对你的伤害。然后掷骰{@dice 3d6}。法术书暂时失去你选择的法术，这些法术的合计法术等级等于或高于这个掷骰结果。例如，如果掷骰总和为9，法术书会消失至少合计等级为9的法术，这可能意味着一个9级法术，三个3级法术，或其它某种组合。如果法术书中没有足够的法术来覆盖这个成本，你的生命值将降至0。",
+        "直到你完成{@dice 1d6}次长时间的休息，你无法施放丢失的法术，即使你在卷轴上或在另一本法术书中找到它们。在你完成所需的休息次数后，这些法术会重新出现在法术书中。",
         "一旦你使用了这个反应，在你完成一次长时间的休息之前不能再这样做。"
       ]
     },
@@ -2430,20 +2510,20 @@
       "level": 2,
       "header": 1,
       "entries": [
-        "在许多社会和魔法实践者中，血魔法——也被称为{@variantrule 血灵术|TDCSR}——被视为禁忌。这是一种罕见的艺术，它利用生物生命力的潜能来增强和放大施法者自身的能力，同时从内部操纵和削弱敌人的身体。一些寻求增强他们奥术追求的更为阴森的法师转向{@variantrule 血灵术|TDCSR}作为一种增强他们法术的手段，献出自己生命的血液以达到令人恐惧的魔法威力的新高度。",
-        "{@variantrule 血之工艺|TDCSR}以及其他形式的血魔法曾经是神秘的{@book 酒红教团|TDCSR|2|Claret Orders}的专属领域。然而，近年来，这些秘密已经开始从教团成员中传播开来，落入了不那么审慎的法师手中。在塔尔多瑞，血魔法有着不好的名声，尽管它的力量可以用于远不止邪恶之事。",
+        "在许多社会和魔法实践者中，血魔法——也被称为{@variantrule 血术|TDCSR}——被视为禁忌。这是一种罕见的艺术，它利用生物生命力的潜能来增强和放大施法者自身的能力，同时从内部操纵和削弱敌人的身体。一些寻求增强他们奥术追求的更为阴森的法师转向{@variantrule 血术|TDCSR}作为一种增强他们法术的手段，献出自己生命的血液以达到令人恐惧的魔法威力的新高度。",
+        "{@variantrule 血术|TDCSR}以及其他形式的血魔法曾经是神秘的{@book 红衣教团|TDCSR|2|红衣教团}的专属领域。然而，近年来，这些秘密已经开始从教团成员中传播开来，落入了不那么审慎的法师手中。在塔尔多瑞，血魔法有着不好的名声，尽管它的力量可以用于远不止邪恶之事。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "血能引导|巫师|PHB|血魔法|TDCSR|2"
+          "subclassFeature": "鲜血传导|法师|PHB|血魔法|TDCSR|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "血红爆发|巫师|PHB|血魔法|TDCSR|2"
+          "subclassFeature": "绯红爆发|法师|PHB|血魔法|TDCSR|2"
         }
       ]
     },
     {
-      "name": "血魔法:鲜血传导",
+      "name": "鲜血传导",
       "ENG_name": "Blood Channeling",
       "source": "TDCSR",
       "page": 178,
@@ -2454,12 +2534,12 @@
       "level": 2,
       "header": 2,
       "entries": [
-        "当你在2级时选择这个奥术传统，你能够使用自己耗尽的生命精华来引导你的魔法能力。每当你当前的生命值低于你的生命值最大值时，你可以使用自己的身体作为一个{@item arcane focus|PHB}。",
+        "当你在2级时选择这个奥术传统，你能够使用自己耗尽的生命精华来引导你的魔法能力。每当你当前的生命值低于你的生命值最大值时，你可以使用自己的身体作为一个{@item 奥术法器|PHB}。",
         "此外，当你施放需要昂贵材料成分的巫师法术时，你可以通过承受每50金币成分价值{@damage 1d10}点死灵伤害来放弃该成分（最少{@damage 1d10}）。这种伤害无法以任何方式减少。如果这种伤害将你的生命值降至0点，法术失败，但法术位不会被消耗。"
       ]
     },
     {
-      "name": "血魔法:绯红爆发",
+      "name": "绯红爆发",
       "ENG_name": "Sanguine Burst",
       "source": "TDCSR",
       "page": 179,
@@ -2474,7 +2554,7 @@
       ]
     },
     {
-      "name": "血魔法:共苦之缚",
+      "name": "共苦之缚",
       "ENG_name": "Bond of Mutual Suffering",
       "source": "TDCSR",
       "page": 179,
@@ -2486,11 +2566,11 @@
       "header": 2,
       "entries": [
         "在6级时，当一个你能看到的生物用攻击命中你时，你可以使用你的反应将你的生命力绑定到攻击者身上，并迫使他们分担你的痛苦。攻击者受到的伤害等于你受到的伤害。",
-        "这个特性不能用于对抗构装生物或亡灵。你只能使用这个特性一次。你必须完成一次{@quickref 短暂休息|PHB|2|0|short or long rest}后才能再次使用它。"
+        "这个特性不能用于对抗构装生物或亡灵。你只能使用这个特性一次。你必须完成一次{@quickref 休息|PHB|2|0|短休或长休}后才能再次使用它。"
       ]
     },
     {
-      "name": "血魔法:操血刻印",
+      "name": "操血刻印",
       "ENG_name": "Glyph of Hemorrhaging",
       "source": "TDCSR",
       "page": 179,
@@ -2501,8 +2581,8 @@
       "level": 10,
       "header": 2,
       "entries": [
-        "从10级开始，当你用法术伤害一个生物时，你可以选择诅咒该生物1分钟。在以这种方式被诅咒时，每当生物被攻击命中，它会额外受到{@damage 1d6}点死灵伤害。在生物的每个回合结束时，它可以进行一次体质{@quickref 豁免投掷|PHB|2|1|豁免骰}，对抗你的法术豁免DC，成功则结束诅咒。",
-        "这个特性不能用于对抗亡灵或构造生物。一旦你使用了这个特性，直到你完成一次{@quickref 休息|PHB|2|0|短暂或长时间休息}之前，你不能再使用它。"
+        "从10级开始，当你用法术伤害一个生物时，你可以选择诅咒该生物1分钟。在以这种方式被诅咒时，每当生物被攻击命中，它会额外受到{@damage 1d6}点死灵伤害。在生物的每个回合结束时，它可以进行一次体质{@quickref 豁免检定|PHB|2|1|豁免检定}，对抗你的法术豁免DC，成功则结束诅咒。",
+        "这个特性不能用于对抗亡灵或构造生物。一旦你使用了这个特性，直到你完成一次{@quickref 休息|PHB|2|0|短休或长休}之前，你不能再使用它。"
       ]
     },
     {
@@ -2521,7 +2601,7 @@
       ]
     },
     {
-      "name": "血魔法:血浓于水",
+      "name": "血浓于水",
       "ENG_name": "Thicker than Water",
       "source": "TDCSR",
       "page": 179,
@@ -2552,16 +2632,16 @@
         "在大战中，战争法师经常与咒法师、防护法师和其他类型的巫师合作。特别是咒法师，有时会取笑战争法师在攻击和防御之间分散注意力。战争法师的典型回应是：\"如果我在施放之前就死了，那么能够投掷强大的{@spell 火球术}又有什么用？\"",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "奥术偏折|巫师||战争|XGE|2"
+          "subclassFeature": "奥术偏斜|法师||战争|XGE|2"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "战术智慧|巫师||战争|XGE|2"
+          "subclassFeature": "战术之智|法师||战争|XGE|2"
         }
       ]
     },
     {
-      "name": "战争魔法:奥术偏斜",
+      "name": "奥术偏斜",
       "ENG_name": "Arcane Deflection",
       "source": "XGE",
       "page": 59,
@@ -2577,7 +2657,7 @@
       ]
     },
     {
-      "name": "战争魔法:战术之智",
+      "name": "战术之智",
       "ENG_name": "Tactical Wit",
       "source": "XGE",
       "page": 59,
@@ -2592,7 +2672,7 @@
       ]
     },
     {
-      "name": "战争魔法:魔力潮涌",
+      "name": "魔力潮涌",
       "ENG_name": "Power Surge",
       "source": "XGE",
       "page": 59,
@@ -2604,12 +2684,12 @@
       "header": 2,
       "entries": [
         "从6级开始，你可以在自身内部储存魔法能量，以期后来增强你的伤害法术。在储存状态下，这种能量被称为力量涌动。",
-        "你可以储存的能量涌动的最大数量等于你的智力调整值（最少一个）。每当你完成一次长时间的休息，你的能量涌动数量重置为一个。每当你成功使用{@spell 魔法解除}或{@spell 反制法术}结束一个法术时，你获得一次能量涌动，因为你从你破坏的法术中窃取了魔法。如果你在短暂休息结束时没有能量涌动，你获得一次能量涌动。",
+        "你可以储存的能量涌动的最大数量等于你的智力调整值（最少一个）。每当你完成一次长时间的休息，你的能量涌动数量重置为一个。每当你成功使用{@spell 解除魔法}或{@spell 反制法术}结束一个法术时，你获得一次能量涌动，因为你从你破坏的法术中窃取了魔法。如果你在短暂休息结束时没有能量涌动，你获得一次能量涌动。",
         "每当你用巫师法术对生物或物体造成伤害时，你可以花费一次力量涌动对该目标造成额外的力量伤害。额外伤害等于你的巫师等级的一半。"
       ]
     },
     {
-      "name": "战争魔法:耐久魔法",
+      "name": "耐久魔法",
       "ENG_name": "Durable Magic",
       "source": "XGE",
       "page": 59,
@@ -2624,7 +2704,7 @@
       ]
     },
     {
-      "name": "战争魔法:偏斜罩幕",
+      "name": "偏斜罩幕",
       "ENG_name": "Deflecting Shroud",
       "source": "XGE",
       "page": 59,

@@ -1,131 +1,136 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		}
-	},
-	"monster": [
-		{
-			"name": "Mr. Honeycutt",
-			"isNpc": true,
-			"isNamedCreature": true,
-			"source": "NRH-TCMC",
-			"page": 10,
-			"otherSources": [
-				{
-					"source": "NRH-AVitW",
-					"page": 9
-				},
-				{
-					"source": "NRH-ASS",
-					"page": 9
-				},
-				{
-					"source": "NRH-CoI",
-					"page": 10
-				},
-				{
-					"source": "NRH-TLT",
-					"page": 9
-				},
-				{
-					"source": "NRH-AWoL",
-					"page": 7
-				},
-				{
-					"source": "NRH-AT",
-					"page": 12
-				}
-			],
-			"_copy": {
-				"name": "Wererat",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the wererat",
-						"with": "Mr. Honeycutt",
-						"flags": "i"
-					}
-				}
-			},
-			"hasToken": true
-		},
-		{
-			"name": "Slurmy",
-			"isNamedCreature": true,
-			"source": "NRH-TCMC",
-			"page": 10,
-			"size": [
-				"S"
-			],
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"goblinoid"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 11,
-				"formula": "2d8 + 2"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 8,
-			"dex": 14,
-			"con": 12,
-			"int": 8,
-			"wis": 14,
-			"cha": 8,
-			"skill": {
-				"perception": "+4"
-			},
-			"passive": 12,
-			"languages": [
-				"Common"
-			],
-			"cr": "1/8",
-			"trait": [
-				{
-					"name": "Nimble Escape",
-					"entries": [
-						"Slurmy can take the Disengage or Hide action as a bonus action on each of their turns."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claw",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
-					]
-				}
-			],
-			"languageTags": [
-				"C"
-			],
-			"damageTags": [
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasToken": true
-		}
-	]
+  "_meta": {
+    "dependencies": {
+      "monster": [
+        "MM"
+      ]
+    }
+  },
+  "monster": [
+    {
+      "name": "霍尼卡特先生",
+      "ENG_name": "Mr. Honeycutt",
+      "isNpc": true,
+      "isNamedCreature": true,
+      "source": "NRH-TCMC",
+      "page": 10,
+      "otherSources": [
+        {
+          "source": "NRH-AVitW",
+          "page": 9
+        },
+        {
+          "source": "NRH-ASS",
+          "page": 9
+        },
+        {
+          "source": "NRH-CoI",
+          "page": 10
+        },
+        {
+          "source": "NRH-TLT",
+          "page": 9
+        },
+        {
+          "source": "NRH-AWoL",
+          "page": 7
+        },
+        {
+          "source": "NRH-AT",
+          "page": 12
+        }
+      ],
+      "_copy": {
+        "name": "鼠人",
+        "ENG_name": "Wererat",
+        "source": "MM",
+        "_mod": {
+          "*": {
+            "mode": "replaceTxt",
+            "replace": "狼鼠人",
+            "with": "霍尼卡特先生",
+            "flags": "i"
+          }
+        }
+      },
+      "hasToken": true
+    },
+    {
+      "name": "黏滑的",
+      "ENG_name": "Slurmy",
+      "isNamedCreature": true,
+      "source": "NRH-TCMC",
+      "page": 10,
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        {
+          "ac": 14,
+          "from": [
+            "天生护甲"
+          ]
+        }
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 14,
+      "con": 12,
+      "int": 8,
+      "wis": 14,
+      "cha": 8,
+      "skill": {
+        "perception": "+4"
+      },
+      "passive": 12,
+      "languages": [
+        "普通"
+      ],
+      "cr": "1/8",
+      "trait": [
+        {
+          "name": "灵敏脱逃",
+          "ENG_name": "Nimble Escape",
+          "entries": [
+            "Slurmy 可以在每个回合使用额外行动执行脱离战斗或隐藏动作。"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "爪抓",
+          "ENG_name": "Claw",
+          "entries": [
+            "{@atk 近战武器} 命中：4，射程：5英尺，一个目标。{@h}5 ({@damage 1d6 + 2}) 斩击伤害。"
+          ]
+        }
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MW"
+      ],
+      "hasToken": true
+    }
+  ]
 }

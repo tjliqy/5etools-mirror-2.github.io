@@ -1,83 +1,87 @@
 {
-	"spell": [
-		{
-			"name": "Linked Glyphs",
-			"source": "AitFR-AVT",
-			"page": 9,
-			"otherSources": [
-				{
-					"source": "AitFR-FCD",
-					"page": 11
-				}
-			],
-			"level": 3,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "hour"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "touch"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": {
-					"text": "incense and powdered diamond worth at least 300 gp, which the spell consumes",
-					"cost": 30000,
-					"consume": true
-				}
-			},
-			"duration": [
-				{
-					"type": "permanent",
-					"ends": [
-						"dispel",
-						"trigger"
-					]
-				}
-			],
-			"entries": [
-				"When you cast this spell, you inscribe a detection glyph that later activates a magical effect at the site of a separate, linked glyph. You inscribe the detection glyph either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the detection glyph is broken, and the spell ends without being triggered.",
-				"Both glyphs are nearly invisible, and finding either requires a successful Intelligence ({@skill Investigation}) check against your spell save DC.",
-				"You decide what triggers the detection glyph when you cast this spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.",
-				"You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.",
-				"When you inscribe the detection glyph, choose an alarm glyph or spell glyph to link to it.",
-				{
-					"type": "entries",
-					"name": "Alarm Glyph",
-					"entries": [
-						"You create and magically link two glyphs: a detection glyph and an effect glyph. Each of these two glyphs must stay within 100 miles of the other or the spell effect ends. When the detection glyph is triggered, the effect glyph reacts like an alarm spell, creating a mental ping in your mind if you are within 1 mile of the effect glyph. This ping awakens you if you are sleeping."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spell Glyph",
-					"entries": [
-						"You create and magically link two glyphs: a detection glyph and an effect glyph. These two glyphs must be within 100 feet of each other. You can store a prepared spell of 4th level or lower in the effect glyph by casting it as part of creating the glyphs. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the detection glyph is triggered, the spell stored in the effect glyph is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on the effect glyph. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the effect glyph. If the spell requires {@status concentration}, it lasts until the end of its full duration."
-					]
-				}
-			],
-			"entriesHigherLevel": [
-				{
-					"type": "entries",
-					"name": "At Higher Levels",
-					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher to create a spell glyph, you can store any spell of up to the same level as the slot you use."
-					]
-				}
-			],
-			"conditionInflict": [
-				"invisible"
-			],
-			"miscTags": [
-				"PRM"
-			]
-		}
-	]
+  "spell": [
+    {
+      "name": "连锁符文",
+      "ENG_name": "Linked Glyphs",
+      "source": "AitFR-AVT",
+      "page": 9,
+      "otherSources": [
+        {
+          "source": "AitFR-FCD",
+          "page": 11
+        }
+      ],
+      "level": 3,
+      "school": "A",
+      "time": [
+        {
+          "number": 1,
+          "unit": "小时"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "价值至少300金币的香和钻石粉，法术会消耗它们",
+          "cost": 30000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "permanent",
+          "ends": [
+            "驱散",
+            "触发器"
+          ]
+        }
+      ],
+      "entries": [
+        "当你施展这个法术时，你刻下一个侦测符文，该符文稍后会在一个单独的、连接的符文处激活魔法效果。你可以在表面（例如桌面或地板、墙壁的一部分）或可以关闭的物体内部（例如书籍、卷轴或宝箱）刻下侦测符文以隐藏符文。符文可以覆盖的面积不超过直径10英尺。如果表面或物体被移动超过10英尺，远离你施展这个法术的地方，侦测符文就会被破坏，法术在被触发之前就会结束。",
+        "这两个符文几乎看不见，发现任何一个都需要成功进行智力（{@skill 调查}）检定，对抗你的法术豁免DC。",
+        "你决定何时通过施放这个法术来触发侦测符文。对于刻在表面上的符文，最常见的触发条件包括触摸或站在符文上，移除覆盖符文的另一个物体，接近符文一定距离，或者操作刻有符文的物体。对于刻在物体内的符文，最常见的触发条件包括打开那个物体，接近物体一定距离，或者看到或阅读符文。一旦符文被触发，这个法术就会结束。",
+        "您可以进一步细化触发条件，使法术仅在特定情况下或根据物理特征（例如身高或体重）、生物种类（例如，警戒可以设置为影响异怪或黑暗精灵）或阵营激活。您还可以为不触发符文的生物设置条件，例如那些说出特定口令的人。",
+        "当你铭刻侦测符文时，选择一个警报符文或法术符文与其链接。",
+        {
+          "type": "entries",
+          "name": "警醒符文",
+          "ENG_name": "Alarm Glyph",
+          "entries": [
+            "你创建并魔法链接两个符文：一个探测符文和一个效果符文。这两个符文必须相互保持在100英里以内，否则法术效果会结束。当探测符文被触发时，效果符文会像警报法术一样反应，在效果符文1英里范围内时，会在你脑海中产生一个精神提示。如果你在睡觉，这个提示会唤醒你。"
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "法术铭文",
+          "ENG_name": "Spell Glyph",
+          "entries": [
+            "你创建并用魔法连接两个符文：一个侦测符文和一个效果符文。这两个符文必须彼此相距100英尺以内。你可以在创建符文的过程中，将一个4级或更低级别的已准备法术储存在效果符文中。这个法术必须针对一个生物或者一个区域。以这种方式储存的法术在施放时没有立即效果。当侦测符文被触发时，储存在效果符文中的法术就会被施放。如果法术有目标，则目标是触发符文的生物。如果法术影响一个区域，则该区域以效果符文为中心。如果法术召唤敌对生物或创建有害物体或陷阱，它们会尽可能地出现在效果符文附近。如果法术需要{@status 专注}，则持续到其完整持续时间的结束。"
+          ]
+        }
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "升环施法效应",
+          "ENG_name": "At Higher Levels",
+          "entries": [
+            "当你使用5级或更高级别的法术位来施展这个法术以创建法术符文时，你可以储存任何最高至你所使用的法术位级别的法术。"
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "隐形"
+      ],
+      "miscTags": [
+        "PRM"
+      ]
+    }
+  ]
 }

@@ -24,13 +24,13 @@
           {
             "choose": {
               "from": [
-                "属性检定:奥秘",
-                "属性检定:历史",
-                "属性检定:洞悉",
-                "属性检定:医药",
-                "属性检定:自然",
-                "属性检定:察觉",
-                "属性检定:宗教"
+                "奥秘",
+                "历史",
+                "洞悉",
+                "医药",
+                "自然",
+                "察觉",
+                "宗教"
               ],
               "count": 2
             }
@@ -40,33 +40,33 @@
       "startingEquipment": {
         "additionalFromBackground": true,
         "default": [
-          "(a) 一支{@item 长矛|phb}或者 (b) 一把{@item 钉头锤|phb}",
-          "(a) {@item 皮甲|phb} 或者 (b) {@item 钉甲皮甲|phb}",
-          "(a) 一把{@item 轻型弩|phb}和{@item 弩箭(20)|phb|20支箭}或 (b) 任何{@filter 简单武器|items|source=phb|category=basic|type=simple weapon}",
+          "(a) 一支{@item 矛|PHB}或者 (b) 一把{@item 硬头锤|PHB}",
+          "(a) {@item 皮甲|PHB} 或者 (b) {@item 镶钉皮甲|PHB}",
+          "(a) 一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}或 (b) 任何{@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}",
           "(a) 一个学者包或 (b) 一个探险家包"
         ],
-        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
         "defaultData": [
           {
             "a": [
-              "长矛"
+              "矛|PHB"
             ],
             "b": [
-              "钉头锤"
+              "硬头锤|PHB"
             ]
           },
           {
             "a": [
-              "皮甲|phb"
+              "皮甲|PHB"
             ],
             "b": [
-              "硬皮甲|PHB"
+              "镶钉皮甲|PHB"
             ]
           },
           {
             "a": [
-              "轻型十字弓|phb",
-              "弩箭（20）|phb"
+              "轻弩|PHB",
+              "弩矢(20)|PHB"
             ],
             "b": [
               {
@@ -76,10 +76,10 @@
           },
           {
             "a": [
-              "学者包|phb"
+              "学者套组|PHB"
             ],
             "b": [
-              "探险家背包|phb"
+              "探索套组|PHB"
             ]
           }
         ]
@@ -87,131 +87,171 @@
       "classTableGroups": [
         {
           "colLabels": [
-            "{@filter 已知才能|psionics|type=T}",
-            "{@filter 已知纪律|psionics|type=D}",
+            "{@filter 已知天赋|心灵能力|type=T}",
+            "{@filter 已知学派|心灵能力|type=D}",
             "灵能点",
             "心灵限制"
           ],
           "rows": [
-            1,
-            1,
-            4,
-            2,
-            1,
-            1,
-            6,
-            2,
-            2,
-            2,
-            14,
-            3,
-            2,
-            2,
-            17,
-            3,
-            2,
-            3,
-            27,
-            5,
-            2,
-            3,
-            32,
-            5,
-            2,
-            4,
-            38,
-            6,
-            2,
-            4,
-            44,
-            6,
-            2,
-            5,
-            57,
-            7,
-            3,
-            5,
-            64,
-            7,
-            3,
-            5,
-            64,
-            7,
-            3,
-            6,
-            64,
-            7,
-            3,
-            6,
-            64,
-            7,
-            3,
-            6,
-            64,
-            7,
-            3,
-            7,
-            64,
-            7,
-            3,
-            7,
-            64,
-            7,
-            4,
-            7,
-            64,
-            7,
-            4,
-            8,
-            71,
-            7,
-            4,
-            8,
-            71,
-            7,
-            4,
-            8,
-            71,
-            7
+            [
+              1,
+              1,
+              4,
+              2
+            ],
+            [
+              1,
+              1,
+              6,
+              2
+            ],
+            [
+              2,
+              2,
+              14,
+              3
+            ],
+            [
+              2,
+              2,
+              17,
+              3
+            ],
+            [
+              2,
+              3,
+              27,
+              5
+            ],
+            [
+              2,
+              3,
+              32,
+              5
+            ],
+            [
+              2,
+              4,
+              38,
+              6
+            ],
+            [
+              2,
+              4,
+              44,
+              6
+            ],
+            [
+              2,
+              5,
+              57,
+              7
+            ],
+            [
+              3,
+              5,
+              64,
+              7
+            ],
+            [
+              3,
+              5,
+              64,
+              7
+            ],
+            [
+              3,
+              6,
+              64,
+              7
+            ],
+            [
+              3,
+              6,
+              64,
+              7
+            ],
+            [
+              3,
+              6,
+              64,
+              7
+            ],
+            [
+              3,
+              7,
+              64,
+              7
+            ],
+            [
+              3,
+              7,
+              64,
+              7
+            ],
+            [
+              4,
+              7,
+              64,
+              7
+            ],
+            [
+              4,
+              8,
+              71,
+              7
+            ],
+            [
+              4,
+              8,
+              71,
+              7
+            ],
+            [
+              4,
+              8,
+              71,
+              7
+            ]
           ]
         }
       ],
       "classFeatures": [
-        "灵能|神秘术士|UA神秘术士职业|1",
+        "心灵能力|神秘师|UATheMysticClass|1",
         "心灵学派与才能|神秘师|UATheMysticClass|1",
-        "使用纪律|神秘术士|UA神秘术士职业|1",
+        "使用纪律|神秘师|UATheMysticClass|1",
         {
-          "classFeature": "神秘秩序|神秘主义者|UATheMysticClass|1",
+          "classFeature": "神秘秩序|神秘师|UATheMysticClass|1",
           "gainSubclassFeature": true
         },
         "神秘恢复|神秘师|UATheMysticClass|2",
-        "心灵感应|神秘术士|UA神秘术士职业|2",
+        "心灵感应|神秘师|UATheMysticClass|2",
         {
-          "classFeature": "神秘秩序特性|神秘术士|UA神秘术士职业|3",
+          "classFeature": "神秘秩序特性|神秘师|UATheMysticClass|3",
           "gainSubclassFeature": true
         },
         "属性值提升|神秘师|UATheMysticClass|4",
-        "心智之力|神秘术士|UA神秘术士职业|4",
+        "心灵之力|神秘师|UATheMysticClass|4",
         {
-          "classFeature": "神秘秩序特性|神秘主义者|UATheMysticClass|6",
+          "classFeature": "神秘秩序特性|神秘师|UATheMysticClass|6",
           "gainSubclassFeature": true
         },
         "属性值提升|神秘师|UATheMysticClass|8",
-        "灵能强化 (1d8)|神秘术士|UA神秘术士职业|8",
+        "灵能强化 (1d8)|神秘师|UATheMysticClass|8",
         "消耗性力量|神秘师|UATheMysticClass|10",
-        "灵能精通 (每日1次)|神秘术士|UA神秘术士职业|11",
-        "能力值提升|神秘主义者|UATheMysticClass|12",
+        "心灵掌握（每日1次）|神秘师|UATheMysticClass|11",
+        "属性值提升|神秘师|UATheMysticClass|12",
         "心灵掌握（每日2次）|神秘师|UATheMysticClass|13",
         {
-          "classFeature": "神秘秩序特性|神秘术士|UA神秘术士职业|14",
+          "classFeature": "神秘秩序特性|神秘师|UATheMysticClass|14",
           "gainSubclassFeature": true
         },
-        "灵能强化 (2d8)|神秘术士|UA神秘术士职业|14",
+        "灵能强化 (2d8)|神秘师|UATheMysticClass|14",
         "心灵掌握（每日3次）|神秘师|UATheMysticClass|15",
-        "能力值提升|神秘主义者|UATheMysticClass|16",
-        "灵能精通 (每日4次)|神秘术士|UA神秘术士职业|17",
+        "属性值提升|神秘师|UATheMysticClass|16",
+        "灵能精通 (每日4次)|神秘师|UATheMysticClass|17",
         "属性值提升|神秘师|UATheMysticClass|19",
-        "灵能之体|神秘术士|UA神秘术士职业|20"
+        "灵能之体|神秘师|UATheMysticClass|20"
       ],
       "subclassTitle": "神秘秩序",
       "hasFluff": true
@@ -224,13 +264,13 @@
       "shortName": "化身",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 5,
       "subclassFeatures": [
-        "化身秩序|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|1",
+        "化身秩序|神秘师|UATheMysticClass|化身|UATheMysticClass|1",
         "战斗化身|神秘师|UATheMysticClass|化身|UATheMysticClass|3",
-        "治愈化身|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|6",
-        "速度化身|神秘主义者|未授权的神秘主义者职业类|化身|未授权的神秘主义者职业类|14"
+        "治愈化身|神秘师|UATheMysticClass|化身|UATheMysticClass|6",
+        "速度化身|神秘师|UATheMysticClass|化身|UATheMysticClass|14"
       ]
     },
     {
@@ -239,13 +279,13 @@
       "shortName": "觉醒",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 6,
       "subclassFeatures": [
-        "觉醒秩序|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|1",
-        "心灵探查|神秘师|UATheMysticClass|觉醒|UATheMysticClass|3",
-        "灵能激流|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|6",
-        "幻影形态|神秘师|UATheMysticClass|觉醒|UATheMysticClass|14"
+        "觉醒秩序|神秘师|UATheMysticClass|觉醒|UATheMysticClass|1",
+        "灵能调查|神秘师|UATheMysticClass|觉醒|UATheMysticClass|3",
+        "灵能力波动|神秘师|UATheMysticClass|觉醒|UATheMysticClass|6",
+        "幽灵形态|神秘师|UATheMysticClass|觉醒|UATheMysticClass|14"
       ]
     },
     {
@@ -254,13 +294,13 @@
       "shortName": "不朽",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 6,
       "subclassFeatures": [
-        "不朽秩序|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|1",
-        "心灵韧性|神秘师|UATheMysticClass|不朽|UATheMysticClass|3",
-        "健康激流|神秘主义者|未授权的神秘主义者职业类|不朽|未授权的神秘主义者职业类|6",
-        "不朽意志|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|14"
+        "不朽秩序|神秘师|UATheMysticClass|不朽|UATheMysticClass|1",
+        "灵能力韧性|神秘师|UATheMysticClass|不朽|UATheMysticClass|3",
+        "健康激流|神秘师|UATheMysticClass|不朽|UATheMysticClass|6",
+        "不朽意志|神秘师|UATheMysticClass|不朽|UATheMysticClass|14"
       ]
     },
     {
@@ -269,13 +309,13 @@
       "shortName": "游牧民",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 7,
       "subclassFeatures": [
-        "游牧秩序|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1",
-        "千步记忆|神秘师|UATheMysticClass|游牧|UATheMysticClass|3",
-        "高级传送|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|6",
-        "轻松旅程|神秘主义者|未授权的神秘主义者职业类|游牧民|未授权的神秘主义者职业类|14"
+        "游牧秩序|神秘师|UATheMysticClass|游牧民|UATheMysticClass|1",
+        "千步记忆|神秘师|UATheMysticClass|游牧民|UATheMysticClass|3",
+        "卓越传送|神秘师|UATheMysticClass|游牧民|UATheMysticClass|6",
+        "轻松之旅|神秘师|UATheMysticClass|游牧民|UATheMysticClass|14"
       ]
     },
     {
@@ -284,13 +324,13 @@
       "shortName": "灵魂之刃",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 7,
       "subclassFeatures": [
-        "灵魂刀秩序|神秘师|UATheMysticClass|灵魂刀|UATheMysticClass|1",
-        "磨砺刀锋|神秘术士|UA神秘术士职业|灵魂之刃|UA神秘术士职业|3",
-        "消耗性刀刃|神秘师|UATheMysticClass|灵魂刀|UATheMysticClass|6",
-        "幻影刀|神秘术士|UA神秘术士职业|灵魂之刃|UA神秘术士职业|14"
+        "灵魂刀秩序|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|1",
+        "磨砺刀锋|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|3",
+        "消耗刀|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|6",
+        "幻影刀|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|14"
       ]
     },
     {
@@ -299,13 +339,13 @@
       "shortName": "巫师",
       "source": "UATheMysticClass",
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "page": 8,
       "subclassFeatures": [
-        "武者秩序|神秘术士|UA神秘术士职业|武者|UA神秘术士职业|1",
-        "元素协调|神秘师|UATheMysticClass|巫者|UATheMysticClass|3",
-        "奥术涉猎者|神秘师|UATheMysticClass|巫者|UATheMysticClass|6",
-        "元素掌控|神秘术士|UA神秘术士职业|武者|UA神秘术士职业|14"
+        "吴进秩序|神秘师|UATheMysticClass|巫师|UATheMysticClass|1",
+        "元素调律|神秘师|UATheMysticClass|巫师|UATheMysticClass|3",
+        "奥术涉猎者|神秘师|UATheMysticClass|巫师|UATheMysticClass|6",
+        "元素掌控|神秘师|UATheMysticClass|巫师|UATheMysticClass|14"
       ]
     }
   ],
@@ -316,7 +356,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "在1级时，你从可用的神秘秩序列表中选择一个神秘秩序。每个秩序都专门研究一种特定的灵能力方法。",
@@ -329,10 +369,10 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 1,
       "entries": [
-        "{@filter 灵能天赋|灵能|类型=T} 和 {@filter 纪律|灵能|类型=D} 是神秘术士技艺的核心。它们是用于将意志锻造成有形魔法效果的精神练习和灵能公式。",
+        "{@filter 灵能天赋|心灵能力|type=T} 和 {@filter 学派|心灵能力|type=D} 是神秘术士技艺的核心。它们是用于将意志锻造成有形魔法效果的精神练习和灵能公式。",
         "灵能力纪律是由不同的秩序发现的，并且往往反映了其创造者的专业。然而，一个神秘主义者可以学习任何纪律，不论其所属的秩序。"
       ]
     },
@@ -342,7 +382,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "作为心灵能力的学习者，你可以掌握并使用心灵才能和学派，其规则出现在本文档末尾。心灵能力是一种特殊形式的魔法使用，与施法不同。",
@@ -351,7 +391,7 @@
           "name": "灵能天赋",
           "ENG_name": "Psionic Talents",
           "entries": [
-            "一个{@filter 灵能力天赋|psionics|type=T}是你掌握的小型灵能力效果。在1级时，你选择一个你了解的灵能力天赋。在更高等级时，你可以选择额外的天赋。神秘主义者表格中的天赋已知列显示了你在每个等级时知道的天赋总数；当这个数字增加时，选择一个新的天赋。"
+            "一个{@filter 灵能天赋|心灵能力|type=T}是你掌握的小型灵能力效果。在1级时，你选择一个你了解的灵能力天赋。在更高等级时，你可以选择额外的天赋。神秘主义者表格中的天赋已知列显示了你在每个等级时知道的天赋总数；当这个数字增加时，选择一个新的天赋。"
           ]
         },
         {
@@ -386,7 +426,7 @@
           "name": "心灵专注",
           "ENG_name": "Psychic Focus",
           "entries": [
-            "你可以将灵能能量集中于你的灵能纪律之一，以从中获得持续的好处。作为一个奖励动作，你可以选择你的一个灵能纪律，并获得其心灵专注的好处，这在该纪律的描述中详细说明。这个好处持续到你被{@condition incapacitated}或者直到你使用另一个奖励动作选择不同的专注好处。",
+            "你可以将灵能能量集中于你的灵能纪律之一，以从中获得持续的好处。作为一个奖励动作，你可以选择你的一个灵能纪律，并获得其心灵专注的好处，这在该纪律的描述中详细说明。这个好处持续到你被{@condition 无力}或者直到你使用另一个奖励动作选择不同的专注好处。",
             "你一次只能拥有一个心灵焦点的益处，并且使用一个纪律的心灵焦点不会限制你使用其他纪律的能力。"
           ]
         },
@@ -422,7 +462,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "每个灵能力纪律都有几种使用方式，都包含在其描述中。该纪律指定了所需的行动类型和灵能点数。它还详细说明了是否需要集中精神维持其效果，它影响多少目标，需要哪些豁免投掷等等。",
@@ -512,7 +552,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 2,
       "entries": [
         "从2级开始，你可以从你用来驱动心灵学派的心灵能量中汲取活力。",
@@ -525,7 +565,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 2,
       "entries": [
         "在2级时，你的心灵觉醒了通过心灵感应进行交流的能力。你可以用这种方式心灵感应地与任何你能在120英尺内看到的生物交谈。你不需要与生物共享语言，它就能理解你的心灵感应信息，但生物必须至少能理解一种语言，或者它本身必须是心灵感应的。"
@@ -537,7 +577,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 3,
       "entries": [
         "在3级时，你从你的神秘秩序中获得另一个特性。"
@@ -549,7 +589,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 4,
       "entries": [
         "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
@@ -561,7 +601,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 4,
       "entries": [
         "即使是最简单的灵能技术也需要深刻理解灵能能量如何增强心智和身体。这种理解让你能够改变你的防御，以更好地应对威胁。",
@@ -574,7 +614,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 6,
       "entries": [
         "在6级时，你从你的神秘秩序中获得另一个特性。"
@@ -586,7 +626,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 8,
       "entries": [
         "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
@@ -598,11 +638,11 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 8,
       "entries": [
-        "At 8th level, you gain the ability to infuse your weapon attacks with psychic energy. Once on each of your turns when you hit a creature with a weapon, you can deal an extra {@damage 1d8} psychic damage to that target. When you reach 14th level, this extra damage increases to {@dice 2d8}.",
-        "此外，你在进行任何灵能天赋的{@filter psionic talent|psionics|type=T}伤害骰时，都会加上你的智力调整值。"
+        "在8级时，你获得了将心灵能量注入武器攻击的能力。在你的每个回合，当你用武器击中一个生物时，你可以对该目标额外造成{@damage 1d8}心灵伤害。当你达到14级时，这个额外伤害增加到{@dice 2d8}。",
+        "此外，你在进行任何灵能天赋的{@filter 灵能天赋|心灵能力|type=T}伤害骰时，都会加上你的智力调整值。"
       ]
     },
     {
@@ -611,7 +651,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 10,
       "entries": [
         "在10级时，你获得了以牺牲你的身体耐久性来换取灵能力力的能力。当你激活一个灵能力纪律时，你可以用你的生命值支付它的灵能点成本，而不是使用任何灵能点。你当前的生命值和生命值最大值都减少了你花费的生命值数量。这种减少无法以任何方式减轻，并且对你生命值最大值的减少持续到你完成一次长时间休息。",
@@ -624,11 +664,11 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 11,
       "entries": [
-        "从11级开始，你对灵能能量的掌握允许你将思维推向超出正常极限。作为一个动作，你获得9个特殊的灵能点，你只能将这些点数用于需要动作或奖励动作来使用的纪律。你可以将所有9点用于一个纪律，或者将它们分散到多个纪律上。你不能将你的普通灵能点数用于这些纪律；你只能使用从这个特性获得的特殊点数。当你完成一次长时间的休息时，你将失去所有未花费的这些特殊点数。",
-        "如果你激活的学派中有多个需要{@status concentration}，你可以专注于它们所有。激活它们中的一个会结束你之前已经{@status concentration||专注}的任何效果，如果你开始{@status concentration||专注}于一个不使用这些特殊点的效果，那么那些你正在{@status concentration||专注}的学派就会结束。",
+        "从11级开始，你对灵能能量的掌握允许你将思维推向超出正常极限。作为一个动作，你获得9个特殊的灵能点，你只能将这些点数用于需要动作或奖励动作来使用的纪律。你可以将所有9点用于一个纪律，或者将它们分散到多个纪律上。你不能将你的普通灵能点数用于这些纪律；你只能使用从这个特性获得的特殊点数。当你完成一次长时间的休息时，你将失去所有未花费的这些特殊点数。\u001a\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000class/class-mystic.json",
+        "如果你激活的学派中有多个需要{@status 专注}，你可以专注于它们所有。激活它们中的一个会结束你之前已经{@status 专注||集中精神}的任何效果，如果你开始{@status 专注||集中精神}于一个不使用这些特殊点的效果，那么那些你正在{@status 专注||集中精神}的学派就会结束。",
         "在15级时，你从这个特性获得的灵能点池增加到11点。",
         "你有一次使用这个特性的机会，并且你可以通过长时间的休息来恢复任何已消耗的使用次数。你在13级、15级和17级时，会额外获得一次使用这个特性的机会。"
       ]
@@ -639,7 +679,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 12,
       "entries": [
         "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
@@ -651,7 +691,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 13,
       "entries": [
         "在13级时，你可以每天使用灵能精通两次。"
@@ -663,7 +703,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 14,
       "entries": [
         "在14级时，你从你的神秘秩序中获得另一个特性。"
@@ -675,10 +715,10 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 14,
       "entries": [
-        "At 14th level, your Potent Psionics damage increased to {@dice 2d8}."
+        "在14级时，你的强效灵能伤害增加到{@dice 2d8}。"
       ]
     },
     {
@@ -687,7 +727,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 15,
       "entries": [
         "在15级时，你每天可以使用你的灵能力掌控三次。"
@@ -699,7 +739,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 16,
       "entries": [
         "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
@@ -711,7 +751,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 17,
       "entries": [
         "在17级时，你可以每天使用心灵掌握四次。"
@@ -723,7 +763,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 19,
       "entries": [
         "当你达到4级时，以及在8级、12级、16级和19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。"
@@ -735,7 +775,7 @@
       "source": "UATheMysticClass",
       "page": 1,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "level": 20,
       "entries": [
         "在20级时，你对灵能力的掌握使你的意识超越了身体。你的身体形态被灵能力量注入。你获得了以下好处：",
@@ -745,7 +785,7 @@
             "你对钝击、刺穿和斩击伤害获得抗性。",
             "你不再老化。",
             "你对疾病、毒素伤害以及中毒状态免疫。",
-            "If you die, roll a {@dice d20}. On a 10 or higher, you discorporate with 0 hit points, instead of dying, and you fall {@condition unconscious}. You and your gear disappear. You appear at a spot of your choice {@dice 1d3} days later on the plane of existence where you died, having gained the benefits of one long rest."
+            "如果你死亡，投掷一个{@dice d20}。如果结果为10或更高，你将以0生命值的形式解体，而不是死亡，并且你将进入{@condition 昏迷}状态。你和你的装备都会消失。在死亡所在存在的平面上，你将在{@dice 1d3}天后选择的地点出现，并获得一次长休息的好处。"
           ]
         }
       ]
@@ -758,9 +798,9 @@
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "化身秩序的神秘术士深入情感的世界，他们如此精通自己的内心生活，以至于能够像艺术家塑造泥土一样轻松地操纵和放大他人的情感。这些被称为化身的神秘术士从暴君到激励人心的领袖各不相同，他们的追随者对他们爱戴有加。",
@@ -771,7 +811,7 @@
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "护甲训练|神秘术士|UA神秘术士职业|化身|UA神秘术士职业|1"
+          "subclassFeature": "护甲训练|神秘师|UATheMysticClass|化身|UATheMysticClass|1"
         }
       ]
     },
@@ -781,9 +821,9 @@
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
@@ -796,28 +836,28 @@
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 化身纪律|psionics|type=D|order=Avatar}中选择。"
+        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 化身学派|心灵能力|type=D|秩序=化身}中选择。"
       ]
     },
     {
-      "name": "战争领域:战斗化身",
+      "name": "战斗化身",
       "ENG_name": "Avatar of Battle",
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
-        "Starting at 3rd level, you project an inspiring aura. While you aren't {@condition 无力}, each ally within 30 feet of you who can see you gains a +2 bonus to initiative rolls."
+        "从3级开始，你散发出鼓舞人心的光环。只要你不是{@condition 无力}，每个在你30英尺范围内且能看见你的盟友在主动性检定上获得+2的加值。"
       ]
     },
     {
@@ -826,13 +866,13 @@
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
-        "Beginning at 6th level, you project an aura of resilience. While you aren't {@condition 无力}, each ally within 30 feet of you who can see you regains additional hit points equal to your Intelligence modifier (minimum of 0) whenever they regain hit points from a psionic discipline."
+        "从6级开始，你散发出坚韧的光环。当你没有处于{@condition 无力}状态时，每个在你30英尺范围内并且能看到你的盟友，每当他们从灵能学派恢复生命值时，会额外恢复等同于你的智力调整值的生命值（最少为0）。"
       ]
     },
     {
@@ -841,13 +881,13 @@
       "source": "UATheMysticClass",
       "page": 5,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "化身",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
-        "Starting at 14th level, you project an aura of speed. While you aren't {@condition 无力}, any ally within 30 feet of you who can see you can take the {@action 疾走} action as a bonus action."
+        "从14级开始，你散发出速度的光环。只要你不是{@condition 无力}状态，任何在你30英尺范围内并且能看到你的盟友可以使用奖励行动执行{@action 疾走}动作。"
       ]
     },
     {
@@ -856,20 +896,20 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "致力于觉醒秩序的神秘主义者寻求解锁心灵的全部潜能。通过超越物质，觉醒者希望达到一种专注于纯粹智慧和精神能量的存在状态。",
         "觉醒者擅长弯曲心灵并释放毁灭性的灵能攻击，他们可以通过灵能能量阅读世界的秘密。选择冒险的觉醒神秘术士擅长解开谜团，解决难题，并通过将怪物变成不情愿的棋子来击败它们。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|觉醒|未授权的神秘主义者职业类|1"
+          "subclassFeature": "额外学派|神秘师|UATheMysticClass|觉醒|UATheMysticClass|1"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "觉醒天赋|神秘术士|UA神秘术士职业|觉醒|UA神秘术士职业|1"
+          "subclassFeature": "觉醒天赋|神秘师|UATheMysticClass|觉醒|UATheMysticClass|1"
         }
       ]
     },
@@ -879,13 +919,13 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "At 1st level, you gain proficiency with two of the following skills of your choice: {@skill 驯兽}, {@skill 欺瞒}, {@skill 洞悉}, {@skill 威吓}, {@skill 调查}, {@skill 察觉}, and {@skill 说服}."
+        "在1级时，你可以选择两项以下技能获得熟练度：{@skill 驯兽}, {@skill 欺瞒}, {@skill 洞悉}, {@skill 威吓}, {@skill 调查}, {@skill 察觉}, 和 {@skill 游说}。"
       ]
     },
     {
@@ -894,13 +934,13 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 觉醒纪律|psionics|type=D|order=Awakened}中选择。"
+        "在1级时，你学习两个额外的灵能力纪律，由你自己选择。它们必须从{@filter 觉醒学派|心灵能力|type=D|等级=觉醒}中选择。"
       ]
     },
     {
@@ -909,9 +949,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
@@ -927,9 +967,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
@@ -943,9 +983,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "觉醒",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
@@ -959,20 +999,20 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "不朽秩序使用灵能能量来增强和改变身体形态。这个秩序的追随者被称为不朽者。他们利用灵能能量来改变他们的身体，使其更能抵抗攻击，并将自身变成活生生的武器。",
         "他们对身体形态的掌握赋予了他们不朽者的名号，因为众所周知，不朽者极难被杀死。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|不朽|未授权的神秘主义者职业类|1"
+          "subclassFeature": "额外学派|神秘师|UATheMysticClass|不朽|UATheMysticClass|1"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "不朽耐久性|神秘术士|UA神秘术士职业|不朽|UA神秘术士职业|1"
+          "subclassFeature": "不朽耐久性|神秘师|UATheMysticClass|不朽|UATheMysticClass|1"
         }
       ]
     },
@@ -982,13 +1022,13 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "在1级时，你可以选择学习两个额外的灵能纪律。它们必须从{@filter 不朽纪律|psionics|type=D|order=Immortal}中选择。"
+        "在1级时，你可以选择学习两个额外的灵能纪律。它们必须从{@filter 不朽学派|心灵能力|type=D|等级=不朽}中选择。"
       ]
     },
     {
@@ -997,9 +1037,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
@@ -1013,9 +1053,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
@@ -1028,9 +1068,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
@@ -1044,9 +1084,9 @@
       "source": "UATheMysticClass",
       "page": 6,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "不朽",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
@@ -1059,20 +1099,20 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "游牧民秩序的神秘主义者保持着一种奇异而稀有的心态。他们致力于积累尽可能多的知识，因为他们致力于解开多元宇宙的奥秘并寻找万物的潜在结构。与此同时，他们感知到一个他们称之为智域的奇异、活生生的知识网络。",
         "正如他们的名字所示，游牧民喜欢旅行、探索和发现。他们渴望积累尽可能多的知识，对秘密和隐藏的知识的追求可能成为他们的痴迷。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "奖励纪律|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1"
+          "subclassFeature": "额外学派|神秘师|UATheMysticClass|游牧民|UATheMysticClass|1"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "广博知识|神秘术士|UA神秘术士职业|游牧者|UA神秘术士职业|1"
+          "subclassFeature": "广博的知识|神秘师|UATheMysticClass|游牧民|UATheMysticClass|1"
         }
       ]
     },
@@ -1082,13 +1122,13 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 游牧者学科|psionics|type=D|order=Nomad}中选择。"
+        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 游牧民族纪律|心灵能力|type=D|order=游牧民}中选择。"
       ]
     },
     {
@@ -1097,9 +1137,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
@@ -1112,9 +1152,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
@@ -1127,9 +1167,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
@@ -1142,9 +1182,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "游牧民",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
@@ -1157,20 +1197,20 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "灵魂之刃秩序放弃了其他神秘主义者所获得的知识广度，专注于一种特定的灵能力技巧。这些神秘主义者学会显现一把由纯粹精神能量构成的致命武器，可以用来砍穿敌人。",
         "灵魂刀刃在这条道路上的方法各不相同。有些人追求它是为了达到武术的完美。其他人则是无情的刺客，他们寻求成为完美的杀手。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "武术训练|神秘主义者|UATheMysticClass|灵魂之刃|UATheMysticClass|1"
+          "subclassFeature": "军事训练|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|1"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "灵魂刀|神秘者|UA神秘者职业|灵魂刀|UA神秘者职业|1"
+          "subclassFeature": "灵魂之刃|神秘师|UATheMysticClass|灵魂之刃|UATheMysticClass|1"
         }
       ]
     },
@@ -1180,9 +1220,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
@@ -1195,15 +1235,15 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
         "从1级开始，你获得了显现心灵能量刀刃的能力。作为奖励动作，你创造了从你双拳射出的能量刀刃。在显现这些刀刃时，你不能手持任何物品。你可以作为奖励动作将它们解散。",
         "对你而言，灵魂之刃是一种具有轻巧和灵巧属性的武术近战武器。命中时造成{@damage 1d8}心灵伤害。",
-        "As a bonus action, you can prepare to use the blades to parry; you gain a +2 bonus to AC until the start of your next turn or until you are {@condition 无力}."
+        "作为奖励动作，你可以准备使用刀片进行招架；直到你的下个回合开始或直到你处于{@condition 无力}状态，你的AC获得+2的加值。"
       ]
     },
     {
@@ -1212,9 +1252,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
@@ -1230,12 +1270,18 @@
             "col-6 text-center"
           ],
           "rows": [
-            "2",
-            "+1",
-            "5",
-            "+2",
-            "7",
-            "+4"
+            [
+              "2",
+              "+1"
+            ],
+            [
+              "5",
+              "+2"
+            ],
+            [
+              "7",
+              "+4"
+            ]
           ]
         }
       ]
@@ -1246,9 +1292,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
@@ -1261,9 +1307,9 @@
       "source": "UATheMysticClass",
       "page": 7,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "灵魂之刃",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
@@ -1276,20 +1322,20 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "entries": [
         "武者秩序拥有一些最虔诚的神秘主义者。这些神秘主义者寻求将自己与世界隔绝，否认物质世界的限制，并用他们为自己创造的现实来取代它。被称为武者们的这些神秘主义者将他们的意识投射到世界中，掌握其基本原理，并重建它。",
         "实际上，武者擅长控制自然世界的力量。他们可以用意念投掷物体，控制四种元素，并改变现实以适应他们的愿望。",
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "额外纪律|神秘主义者|未授权的神秘主义者职业类|巫剑士|未授权的神秘主义者职业类|1"
+          "subclassFeature": "额外学派|神秘师|UATheMysticClass|巫师|UATheMysticClass|1"
         },
         {
           "type": "refSubclassFeature",
-          "subclassFeature": "隐士研究|神秘者|UA神秘者职业|巫师|UA神秘者职业|1"
+          "subclassFeature": "隐士研究|神秘师|UATheMysticClass|巫师|UATheMysticClass|1"
         }
       ]
     },
@@ -1299,13 +1345,13 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 武者学科|psionics|type=D|order=Wu Jen}中选择。"
+        "在1级时，你可以选择学习两种额外的灵能学科。它们必须从{@filter 巫师学派|心灵能力|type=D|order=五行师}中选择。"
       ]
     },
     {
@@ -1314,13 +1360,13 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 1,
       "header": 1,
       "entries": [
-        "At 1st level, you gain proficiency with two of the following skills of your choice: {@skill 驯兽}, {@skill 奥秘}, {@skill 历史}, {@skill 洞悉}, {@skill 医疗}, {@skill 自然}, {@skill 察觉}, {@skill 宗教}, or {@skill 生存}."
+        "在1级时，你可以选择以下两项技能中的两项获得熟练度：{@skill 驯兽}, {@skill 奥秘}, {@skill 历史}, {@skill 洞悉}, {@skill 医药}, {@skill 自然}, {@skill 察觉}, {@skill 宗教}, 或者 {@skill 求生}。"
       ]
     },
     {
@@ -1329,9 +1375,9 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 3,
       "header": 2,
       "entries": [
@@ -1344,13 +1390,13 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 6,
       "header": 2,
       "entries": [
-        "在6级时，你可以选择学习三个你选择的巫师法术，并且总是准备好它们。这些法术必须是{@filter 1级至3级|spells|level=1;2;3|class=wizard}的。",
+        "在6级时，你可以选择学习三个你选择的巫师法术，并且总是准备好它们。这些法术必须是{@filter 1级至3级|法术|level=1;2;3|职业=巫师}的。",
         "作为奖励动作，你可以花费灵能点来创建法术位，你可以用这些法术位来施放这些法术，以及你能够施放的其他法术。每个法术位的灵能点成本详见下表。",
         {
           "type": "table",
@@ -1363,20 +1409,30 @@
             "col-6 text-center"
           ],
           "rows": [
-            "第一",
-            "2",
-            "第二",
-            "3",
-            "第三",
-            "5",
-            "第四",
-            "6",
-            "第五",
-            "7"
+            [
+              "第一",
+              "2"
+            ],
+            [
+              "第二",
+              "3"
+            ],
+            [
+              "第三",
+              "5"
+            ],
+            [
+              "第四",
+              "6"
+            ],
+            [
+              "第五",
+              "7"
+            ]
           ]
         },
         "法术位在你使用它或完成一次长时间的休息之前一直保留。在花费灵能点创建法术位时，你必须遵守你的灵能极限。",
-        "每当你在本职业中获得一个等级时，你可以用一个不同的{@filter 1级至3级的巫师法术|spells|level=1;2;3|class=wizard}替换你选择的巫师法术之一。"
+        "每当你在本职业中获得一个等级时，你可以用一个不同的{@filter 一至三级巫师法术|法术|level=1;2;3|职业=巫师}替换你选择的巫师法术之一。"
       ]
     },
     {
@@ -1385,9 +1441,9 @@
       "source": "UATheMysticClass",
       "page": 8,
       "className": "神秘师",
-      "classSource": "未授权的神秘主义者职业类",
+      "classSource": "UATheMysticClass",
       "subclassShortName": "巫师",
-      "subclassSource": "未授权的神秘主义者职业类",
+      "subclassSource": "UATheMysticClass",
       "level": 14,
       "header": 2,
       "entries": [
