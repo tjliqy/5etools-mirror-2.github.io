@@ -823,7 +823,7 @@ window.addEventListener("load", () => MakeCards.pInit());
 
 MakeCards.utils = class {
 	static async pLoadReducedData () {
-		const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/makecards.json`);
+		const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/makecards.json`);
 		data.reducedItemProperty.forEach(p => MakeCards.utils._addItemProperty(p));
 		data.reducedItemType.forEach(t => {
 			if (t.abbreviation === "SHP") {

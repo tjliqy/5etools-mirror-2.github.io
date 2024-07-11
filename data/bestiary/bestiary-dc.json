@@ -1,802 +1,802 @@
 {
-  "_meta": {
-    "otherSources": {
-      "monster": {
-        "SKT": "DC",
-        "MM": "DC",
-        "MTF": "DC",
-        "VGM": "DC",
-        "TftYP": "DC",
-        "GoS": "DC",
-        "DIP": "DC",
-        "RoT": "DC"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "黑死",
-      "ENG_name": "Ebondeath",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "DC",
-      "size": [
-        "M"
-      ],
-      "type": "undead",
-      "alignment": [
-        "A"
-      ],
-      "ac": [
-        15
-      ],
-      "hp": {
-        "average": 225,
-        "formula": "10d8"
-      },
-      "speed": {
-        "walk": 0,
-        "fly": 40
-      },
-      "str": 7,
-      "dex": 13,
-      "con": 10,
-      "int": 10,
-      "wis": 12,
-      "cha": 17,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 11,
-      "resist": [
-        "酸性",
-        "火",
-        "闪电",
-        "雷鸣伤害",
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "寒冷",
-        "死灵",
-        "毁灭诅咒"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧",
-        "被擒",
-        "麻痹",
-        "石化",
-        "中毒",
-        "伏地",
-        "束缚"
-      ],
-      "languages": [
-        "它生前所知的任何语言"
-      ],
-      "cr": "4",
-      "trait": [
-        {
-          "name": "乙太视界",
-          "ENG_name": "Ethereal Sight",
-          "entries": [
-            "Ebondeath在物质位面时能看到60英尺内的以太位面，反之亦然。"
-          ]
-        },
-        {
-          "name": "虚体移动",
-          "ENG_name": "Incorporeal Movement",
-          "entries": [
-            "Ebondeath 可以像通过{@quickref 困难地型||3}一样通过其他生物和物体。如果它在物体内部结束回合，则会受到5点({@damage 1d10})力量伤害。"
-          ]
-        },
-        {
-          "name": "传奇抗性 (3/日)",
-          "ENG_name": "Legendary Resistance (3/Day)",
-          "entries": [
-            "如果龙未能通过豁免检定，它可以选择成功。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "凋零之触",
-          "ENG_name": "Withering Touch",
-          "entries": [
-            "{@atk 近战武器} {@hit 5} hit，射程5英尺，单一目标。{@h}17 ({@damage 4d6 + 3}) 死灵伤害。"
-          ]
-        },
-        {
-          "name": "以太化",
-          "ENG_name": "Etherealness",
-          "entries": [
-            "Ebondeath从物质界进入以太界，或反之。当它在边界以太中时，在物质界可见，反之亦然，但它不能影响或被另一界上的任何事物影响。"
-          ]
-        },
-        {
-          "name": "骇人面容",
-          "ENG_name": "Horrifying Visage",
-          "entries": [
-            "在Ebondeath周围60英尺内，能够看到它的所有非亡灵生物必须进行一次{@dc 13}智力豁免检定，否则将持续1分钟处于{@condition frightened}状态。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition frightened}状态的目标可以在每个回合结束时重复进行豁免检定，成功则结束该状态。如果目标的豁免检定成功或效果结束，它将对Ebondeath的恐怖面容免疫，持续时间为接下来的24小时。老化效果可以通过{@spell greater restoration}法术逆转，但必须在效果发生后的24小时内进行。"
-          ]
-        },
-        {
-          "name": "附身{@recharge}",
-          "ENG_name": "Possession {@recharge}",
-          "entries": [
-            "在Ebondeath视线范围内5英尺内的一个人形生物必须成功进行一次{@dc 20}魅力豁免检定，否则将被Ebondeath附体；Ebondeath随后消失，目标进入{@condition 无力}状态并失去对身体的控制。Ebondeath现在控制了身体，但并未剥夺目标的意识。Ebondeath不能成为任何攻击、法术或其他效果的目标，除非是驱散亡灵的效果，并且它保留了自己的阵营、智力、智慧、魅力以及对{@condition 魅惑}和{@condition 恐惧}状态的免疫。除此之外，它使用被附体目标的属性，包括获得目标的知识、职业特性和熟练度。",
-            "附身持续到身体降至0点生命值，Ebondeath可以通过额外动作结束它，或者通过像{@spell 反制善恶}法术这样的效果被驱逐或被迫离开。当附身结束时，Ebondeath在身体5英尺范围内的未被占据的空间重新出现。目标在成功通过豁免检定或附身结束后24小时内对Ebondeath附身免疫。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "虚体移动",
-        "传奇抗性"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "LF"
-      ],
-      "damageTags": [
-        "N",
-        "O"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "conditionInflict": [
-        "恐惧",
-        "无力"
-      ],
-      "savingThrowForced": [
-        "魅力",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "专家",
-      "ENG_name": "Expert",
-      "source": "DC",
-      "level": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "expert",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 66,
-        "formula": "12d8 + 12"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 20,
-      "con": 12,
-      "int": 14,
-      "wis": 10,
-      "cha": 14,
-      "save": {
-        "dex": "+9"
-      },
-      "skill": {
-        "acrobatics": "+13",
-        "performance": "+6",
-        "persuasion": "+6",
-        "sleight of hand": "+9",
-        "stealth": "+13"
-      },
-      "passive": 10,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "好帮手",
-          "ENG_name": "Helpful",
-          "entries": [
-            "专家可以将协助动作作为奖励动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
-          ]
-        },
-        {
-          "name": "反射闪避",
-          "ENG_name": "Evasion",
-          "entries": [
-            "当专家未处于{@condition 无力}且受到允许其进行敏捷豁免以承受一半伤害的效果影响时，如果豁免成功，则不承受任何伤害；如果豁免失败，则只承受一半伤害。"
-          ]
-        },
-        {
-          "name": "可靠才能",
-          "ENG_name": "Reliable Talent",
-          "entries": [
-            "每当专家进行包括其全部熟练加值的能力检定时，可以将9或更低的{@dice d20}骰子视为10。"
-          ]
-        },
-        {
-          "name": "工具",
-          "ENG_name": "Tools",
-          "entries": [
-            "该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "额外攻击",
-          "ENG_name": "Extra Attack",
-          "entries": [
-            "专家在其回合采取攻击行动时，可以进行两次攻击，而不是一次。"
-          ]
-        },
-        {
-          "name": "短剑",
-          "ENG_name": "Shortsword",
-          "entries": [
-            "{@atk 近战武器} {@hit 9} hit，射程5英尺，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战，投掷} {@hit 9}命中，射程5英尺或20/60英尺，一个目标。{@h}7 ({@damage 1d4 + 5})穿刺伤害。"
-          ]
-        },
-        {
-          "name": "短弓",
-          "ENG_name": "Shortbow",
-          "entries": [
-            "{@atk 远程武器} {@hit 9} hit，射程80/320英尺，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB",
-        "短弓|PHB",
-        "短剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "施法者（治疗者）",
-      "ENG_name": "Spellcaster (Healer)",
-      "source": "DC",
-      "level": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "spellcaster",
-        "tags": [
-          "healer"
-        ],
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 54,
-        "formula": "12d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 15,
-      "wis": 18,
-      "cha": 13,
-      "save": {
-        "wis": "+8"
-      },
-      "skill": {
-        "arcana": "+6",
-        "investigation": "+6",
-        "religion": "+6"
-      },
-      "passive": 14,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法（治疗者）",
-          "ENG_name": "Spellcasting (Healer)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的施法能力是智慧（法术豁免{@dc 16}，{@hit 8}命中法术攻击）。施法者准备了以下牧师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 神导术}",
-                "{@spell 光亮术}",
-                "{@spell 提升抗力}",
-                "{@spell 圣焰}",
-                "{@spell 拯救濒死}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 祝福术}",
-                "{@spell 治疗伤势}",
-                "{@spell 虔诚护盾}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 援助术}",
-                "{@spell 次级复原术}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 防护能量}",
-                "{@spell 回生术}"
-              ]
-            },
-            "4": {
-              "slots": 3,
-              "spells": [
-                "{@spell 放逐术}",
-                "{@spell 防死护咒}"
-              ]
-            },
-            "5": {
-              "slots": 2,
-              "spells": [
-                "{@spell 高等复原术}",
-                "{@spell 群体治疗伤势}"
-              ]
-            },
-            "6": {
-              "slots": 1,
-              "spells": [
-                "{@spell 治愈术}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "trait": [
-        {
-          "name": "增强法术",
-          "ENG_name": "Empowered Spells",
-          "entries": [
-            "每当施法者使用法术位施展召唤学派的法术时，如果该法术有伤害骰或治疗骰，施法者可以将法术施放能力调整值加到法术的伤害骰或治疗骰上。"
-          ]
-        },
-        {
-          "name": "强力戏法",
-          "ENG_name": "Potent Cantrip",
-          "entries": [
-            "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "R"
-      ],
-      "spellcastingTags": [
-        "CC"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "conditionInflictSpell": [
-        "无力"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力",
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "施法者（法师）",
-      "ENG_name": "Spellcaster (Mage)",
-      "source": "DC",
-      "level": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "spellcaster",
-        "tags": [
-          "mage"
-        ],
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 54,
-        "formula": "12d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 18,
-      "wis": 14,
-      "cha": 14,
-      "save": {
-        "wis": "+6"
-      },
-      "skill": {
-        "arcana": "+8",
-        "investigation": "+8",
-        "religion": "+8"
-      },
-      "passive": 12,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法（法师）",
-          "ENG_name": "Spellcasting (Mage)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的施法能力是智力（法术豁免{@dc 16}，法术攻击命中{@hit 8}）。施法者准备了以下巫师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 火焰箭}",
-                "{@spell 光亮术}",
-                "{@spell 法师之手}",
-                "{@spell 次级幻象}",
-                "{@spell 电爪}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 燃烧之手}",
-                "{@spell 护盾术}",
-                "{@spell 沉眠}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 炽焰法球}",
-                "{@spell 隐形术}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 火球术}",
-                "{@spell 飞行术}"
-              ]
-            },
-            "4": {
-              "slots": 3,
-              "spells": [
-                "{@spell 变形术}",
-                "{@spell 火墙术}"
-              ]
-            },
-            "5": {
-              "slots": 2,
-              "spells": [
-                "{@spell 寒冰锥}",
-                "{@spell 怪物定身术}"
-              ]
-            },
-            "6": {
-              "slots": 1,
-              "spells": [
-                "{@spell 连环闪电}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "增强法术",
-          "ENG_name": "Empowered Spells",
-          "entries": [
-            "每当施法者使用法术位施展召唤学派的法术时，如果该法术有伤害骰或治疗骰，施法者可以将法术施放能力调整值加到法术的伤害骰或治疗骰上。"
-          ]
-        },
-        {
-          "name": "强力戏法",
-          "ENG_name": "Potent Cantrip",
-          "entries": [
-            "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "C",
-        "F",
-        "L"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "conditionInflictSpell": [
-        "隐形",
-        "麻痹",
-        "昏迷"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "敏捷",
-        "感知"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "战士",
-      "ENG_name": "Warrior",
-      "source": "DC",
-      "level": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "warrior",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 21,
-          "from": [
-            "{@item 板甲|PHB|板甲}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 78,
-        "formula": "12d8 + 24"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 18,
-      "dex": 14,
-      "con": 14,
-      "int": 10,
-      "wis": 12,
-      "cha": 10,
-      "save": {
-        "con": "+6"
-      },
-      "skill": {
-        "athletics": "+8",
-        "perception": "+5",
-        "survival": "+5"
-      },
-      "passive": 15,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "备战",
-          "ENG_name": "Battle Readiness",
-          "entries": [
-            "战士在先攻骰上有优势。"
-          ]
-        },
-        {
-          "name": "精通重击",
-          "ENG_name": "Improved Critical",
-          "entries": [
-            "战士的攻击骰在掷出19或20时会得到致命一击，使用的是{@dice d20}。"
-          ]
-        },
-        {
-          "name": "精通防御",
-          "ENG_name": "Improved Defense",
-          "entries": [
-            "战士的AC增加了1。"
-          ]
-        },
-        {
-          "name": "不屈（1/天）",
-          "ENG_name": "Indomitable (1/Day)",
-          "entries": [
-            "战士可以重新掷一个他失败的豁免骰，但必须使用新的掷骰结果。"
-          ]
-        },
-        {
-          "name": "战斗职能",
-          "ENG_name": "Martial Role",
-          "entries": [
-            "该战士具有以下特质之一，由你选择：",
-            {
-              "type": "list",
-              "style": "list-hang-notitle",
-              "items": [
-                {
-                  "type": "item",
-                  "name": "攻击者",
-                  "ENG_name": "Attacker",
-                  "entries": [
-                    "战士获得攻击检定的+2加值。"
-                  ]
-                },
-                {
-                  "type": "item",
-                  "name": "防御者",
-                  "ENG_name": "Defender",
-                  "entries": [
-                    "战士获得了以下保护反应。"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "回气 (短休或长休之后充能)",
-          "ENG_name": "Second Wind (Recharges after a Short or Long Rest)",
-          "entries": [
-            "战士可以在其回合使用奖励行动来恢复等于{@dice 1d10} + 其等级的生命值。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "额外攻击",
-          "ENG_name": "Extra Attack",
-          "entries": [
-            "每当战士在自己的回合采取攻击行动时，它可以攻击三次，而不是一次。"
-          ]
-        },
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战武器} {@hit 8}hit，触及范围5英尺，单一目标。{@h}8 ({@damage 1d8 + 4}) 斩击伤害，或者如果使用双手则为9 ({@damage 1d10 + 4}) 斩击伤害。"
-          ]
-        },
-        {
-          "name": "长弓",
-          "ENG_name": "Longbow",
-          "entries": [
-            "{@atk 远程攻击} 命中骰{@hit 6}，射程150/600英尺，一目标。{@h}6（{@damage 1d8 + 2}）穿刺伤害。"
-          ]
-        }
-      ],
-      "reaction": [
-        {
-          "name": "防护（仅限守卫者）",
-          "ENG_name": "Protection (Defender Only)",
-          "entries": [
-            "当战士能看到的生物攻击距离战士5英尺以内且目标不是战士时，战士可以使用其反应来使攻击掷骰处于劣势。战士必须持有盾牌。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长弓|PHB",
-        "长剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW"
-      ],
-      "hasToken": true
-    }
-  ]
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"SKT": "DC",
+				"MM": "DC",
+				"MTF": "DC",
+				"VGM": "DC",
+				"TftYP": "DC",
+				"GoS": "DC",
+				"DIP": "DC",
+				"RoT": "DC"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "黑死",
+			"ENG_name": "Ebondeath",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DC",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 225,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 11,
+			"resist": [
+				"酸性",
+				"火",
+				"闪电",
+				"雷鸣伤害",
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击",
+					"cond": true
+				}
+			],
+			"immune": [
+				"寒冷",
+				"死灵",
+				"毁灭诅咒"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧",
+				"被擒",
+				"麻痹",
+				"石化",
+				"中毒",
+				"伏地",
+				"束缚"
+			],
+			"languages": [
+				"它生前所知的任何语言"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "乙太视界",
+					"ENG_name": "Ethereal Sight",
+					"entries": [
+						"Ebondeath在物质位面时能看到60英尺内的以太位面，反之亦然。"
+					]
+				},
+				{
+					"name": "虚体移动",
+					"ENG_name": "Incorporeal Movement",
+					"entries": [
+						"Ebondeath 可以像通过{@quickref 困难地型||3}一样通过其他生物和物体。如果它在物体内部结束回合，则会受到5点({@damage 1d10})力量伤害。"
+					]
+				},
+				{
+					"name": "传奇抗性 (3/日)",
+					"ENG_name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果龙未能通过豁免检定，它可以选择成功。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "凋零之触",
+					"ENG_name": "Withering Touch",
+					"entries": [
+						"{@atk 近战武器} {@hit 5} hit，射程5英尺，单一目标。{@h}17 ({@damage 4d6 + 3}) 死灵伤害。"
+					]
+				},
+				{
+					"name": "以太化",
+					"ENG_name": "Etherealness",
+					"entries": [
+						"Ebondeath从物质界进入以太界，或反之。当它在边界以太中时，在物质界可见，反之亦然，但它不能影响或被另一界上的任何事物影响。"
+					]
+				},
+				{
+					"name": "骇人面容",
+					"ENG_name": "Horrifying Visage",
+					"entries": [
+						"在Ebondeath周围60英尺内，能够看到它的所有非亡灵生物必须进行一次{@dc 13}智力豁免检定，否则将持续1分钟处于{@condition frightened}状态。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition frightened}状态的目标可以在每个回合结束时重复进行豁免检定，成功则结束该状态。如果目标的豁免检定成功或效果结束，它将对Ebondeath的恐怖面容免疫，持续时间为接下来的24小时。老化效果可以通过{@spell greater restoration}法术逆转，但必须在效果发生后的24小时内进行。"
+					]
+				},
+				{
+					"name": "附身{@recharge}",
+					"ENG_name": "Possession {@recharge}",
+					"entries": [
+						"在Ebondeath视线范围内5英尺内的一个人形生物必须成功进行一次{@dc 20}魅力豁免检定，否则将被Ebondeath附体；Ebondeath随后消失，目标进入{@condition 无力}状态并失去对身体的控制。Ebondeath现在控制了身体，但并未剥夺目标的意识。Ebondeath不能成为任何攻击、法术或其他效果的目标，除非是驱散亡灵的效果，并且它保留了自己的阵营、智力、智慧、魅力以及对{@condition 魅惑}和{@condition 恐惧}状态的免疫。除此之外，它使用被附体目标的属性，包括获得目标的知识、职业特性和熟练度。",
+						"附身持续到身体降至0点生命值，Ebondeath可以通过额外动作结束它，或者通过像{@spell 反制善恶}法术这样的效果被驱逐或被迫离开。当附身结束时，Ebondeath在身体5英尺范围内的未被占据的空间重新出现。目标在成功通过豁免检定或附身结束后24小时内对Ebondeath附身免疫。"
+					]
+				}
+			],
+			"traitTags": [
+				"虚体移动",
+				"传奇抗性"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"恐惧",
+				"无力"
+			],
+			"savingThrowForced": [
+				"魅力",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "专家",
+			"ENG_name": "Expert",
+			"source": "DC",
+			"level": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "expert",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"dex": "+9"
+			},
+			"skill": {
+				"acrobatics": "+13",
+				"performance": "+6",
+				"persuasion": "+6",
+				"sleight of hand": "+9",
+				"stealth": "+13"
+			},
+			"passive": 10,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "好帮手",
+					"ENG_name": "Helpful",
+					"entries": [
+						"专家可以将协助动作作为奖励动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
+					]
+				},
+				{
+					"name": "反射闪避",
+					"ENG_name": "Evasion",
+					"entries": [
+						"当专家未处于{@condition 无力}且受到允许其进行敏捷豁免以承受一半伤害的效果影响时，如果豁免成功，则不承受任何伤害；如果豁免失败，则只承受一半伤害。"
+					]
+				},
+				{
+					"name": "可靠才能",
+					"ENG_name": "Reliable Talent",
+					"entries": [
+						"每当专家进行包括其全部熟练加值的能力检定时，可以将9或更低的{@dice d20}骰子视为10。"
+					]
+				},
+				{
+					"name": "工具",
+					"ENG_name": "Tools",
+					"entries": [
+						"该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "额外攻击",
+					"ENG_name": "Extra Attack",
+					"entries": [
+						"专家在其回合采取攻击行动时，可以进行两次攻击，而不是一次。"
+					]
+				},
+				{
+					"name": "短剑",
+					"ENG_name": "Shortsword",
+					"entries": [
+						"{@atk 近战武器} {@hit 9} hit，射程5英尺，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战，投掷} {@hit 9}命中，射程5英尺或20/60英尺，一个目标。{@h}7 ({@damage 1d4 + 5})穿刺伤害。"
+					]
+				},
+				{
+					"name": "短弓",
+					"ENG_name": "Shortbow",
+					"entries": [
+						"{@atk 远程武器} {@hit 9} hit，射程80/320英尺，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB",
+				"短弓|PHB",
+				"短剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "施法者（治疗者）",
+			"ENG_name": "Spellcaster (Healer)",
+			"source": "DC",
+			"level": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"healer"
+				],
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 54,
+				"formula": "12d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 15,
+			"wis": 18,
+			"cha": 13,
+			"save": {
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"investigation": "+6",
+				"religion": "+6"
+			},
+			"passive": 14,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"spellcasting": [
+				{
+					"name": "施法（治疗者）",
+					"ENG_name": "Spellcasting (Healer)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的施法能力是智慧（法术豁免{@dc 16}，{@hit 8}命中法术攻击）。施法者准备了以下牧师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 神导术}",
+								"{@spell 光亮术}",
+								"{@spell 提升抗力}",
+								"{@spell 圣焰}",
+								"{@spell 拯救濒死}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 祝福术}",
+								"{@spell 治疗伤势}",
+								"{@spell 虔诚护盾}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 援助术}",
+								"{@spell 次级复原术}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 防护能量}",
+								"{@spell 回生术}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell 放逐术}",
+								"{@spell 防死护咒}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell 高等复原术}",
+								"{@spell 群体治疗伤势}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell 治愈术}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "增强法术",
+					"ENG_name": "Empowered Spells",
+					"entries": [
+						"每当施法者使用法术位施展召唤学派的法术时，如果该法术有伤害骰或治疗骰，施法者可以将法术施放能力调整值加到法术的伤害骰或治疗骰上。"
+					]
+				},
+				{
+					"name": "强力戏法",
+					"ENG_name": "Potent Cantrip",
+					"entries": [
+						"施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"无力"
+			],
+			"savingThrowForcedSpell": [
+				"魅力",
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "施法者（法师）",
+			"ENG_name": "Spellcaster (Mage)",
+			"source": "DC",
+			"level": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"mage"
+				],
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 54,
+				"formula": "12d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 18,
+			"wis": 14,
+			"cha": 14,
+			"save": {
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+8",
+				"investigation": "+8",
+				"religion": "+8"
+			},
+			"passive": 12,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"spellcasting": [
+				{
+					"name": "施法（法师）",
+					"ENG_name": "Spellcasting (Mage)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的施法能力是智力（法术豁免{@dc 16}，法术攻击命中{@hit 8}）。施法者准备了以下巫师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 火焰箭}",
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 次级幻象}",
+								"{@spell 电爪}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 燃烧之手}",
+								"{@spell 护盾术}",
+								"{@spell 沉眠}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 炽焰法球}",
+								"{@spell 隐形术}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 火球术}",
+								"{@spell 飞行术}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell 变形术}",
+								"{@spell 火墙术}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell 寒冰锥}",
+								"{@spell 怪物定身术}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell 连环闪电}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "增强法术",
+					"ENG_name": "Empowered Spells",
+					"entries": [
+						"每当施法者使用法术位施展召唤学派的法术时，如果该法术有伤害骰或治疗骰，施法者可以将法术施放能力调整值加到法术的伤害骰或治疗骰上。"
+					]
+				},
+				{
+					"name": "强力戏法",
+					"ENG_name": "Potent Cantrip",
+					"entries": [
+						"施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"隐形",
+				"麻痹",
+				"昏迷"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷",
+				"感知"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "战士",
+			"ENG_name": "Warrior",
+			"source": "DC",
+			"level": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "warrior",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"{@item 板甲|PHB|板甲}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+8",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "备战",
+					"ENG_name": "Battle Readiness",
+					"entries": [
+						"战士在先攻骰上有优势。"
+					]
+				},
+				{
+					"name": "精通重击",
+					"ENG_name": "Improved Critical",
+					"entries": [
+						"战士的攻击骰在掷出19或20时会得到致命一击，使用的是{@dice d20}。"
+					]
+				},
+				{
+					"name": "精通防御",
+					"ENG_name": "Improved Defense",
+					"entries": [
+						"战士的AC增加了1。"
+					]
+				},
+				{
+					"name": "不屈（1/天）",
+					"ENG_name": "Indomitable (1/Day)",
+					"entries": [
+						"战士可以重新掷一个他失败的豁免骰，但必须使用新的掷骰结果。"
+					]
+				},
+				{
+					"name": "战斗职能",
+					"ENG_name": "Martial Role",
+					"entries": [
+						"该战士具有以下特质之一，由你选择：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "攻击者",
+									"ENG_name": "Attacker",
+									"entries": [
+										"战士获得攻击检定的+2加值。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "防御者",
+									"ENG_name": "Defender",
+									"entries": [
+										"战士获得了以下保护反应。"
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "回气 (短休或长休之后充能)",
+					"ENG_name": "Second Wind (Recharges after a Short or Long Rest)",
+					"entries": [
+						"战士可以在其回合使用奖励行动来恢复等于{@dice 1d10} + 其等级的生命值。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "额外攻击",
+					"ENG_name": "Extra Attack",
+					"entries": [
+						"每当战士在自己的回合采取攻击行动时，它可以攻击三次，而不是一次。"
+					]
+				},
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战武器} {@hit 8}hit，触及范围5英尺，单一目标。{@h}8 ({@damage 1d8 + 4}) 斩击伤害，或者如果使用双手则为9 ({@damage 1d10 + 4}) 斩击伤害。"
+					]
+				},
+				{
+					"name": "长弓",
+					"ENG_name": "Longbow",
+					"entries": [
+						"{@atk 远程攻击} 命中骰{@hit 6}，射程150/600英尺，一目标。{@h}6（{@damage 1d8 + 2}）穿刺伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "防护（仅限守卫者）",
+					"ENG_name": "Protection (Defender Only)",
+					"entries": [
+						"当战士能看到的生物攻击距离战士5英尺以内且目标不是战士时，战士可以使用其反应来使攻击掷骰处于劣势。战士必须持有盾牌。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长弓|PHB",
+				"长剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW"
+			],
+			"hasToken": true
+		}
+	]
 }

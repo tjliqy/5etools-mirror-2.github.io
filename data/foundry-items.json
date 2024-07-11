@@ -1,236 +1,236 @@
 {
-  "item": [
-    {
-      "name": "屏障刺青（大）",
-      "ENG_name": "Barrier Tattoo (Large)",
-      "source": "TCE",
-      "system": {
-        "armor.type": "重型",
-        "armor.dex": 0,
-        "armor.value": 18
-      }
-    },
-    {
-      "name": "屏障刺青（中）",
-      "ENG_name": "Barrier Tattoo (Medium)",
-      "source": "TCE",
-      "system": {
-        "armor.type": "中等",
-        "armor.dex": 2,
-        "armor.value": 15
-      }
-    },
-    {
-      "name": "屏障刺青（小）",
-      "ENG_name": "Barrier Tattoo (Small)",
-      "source": "TCE",
-      "system": {
-        "armor.type": "光亮术",
-        "armor.value": 12
-      }
-    },
-    {
-      "name": "射手护腕",
-      "ENG_name": "Bracers of Archery",
-      "source": "DMG",
-      "effects": [
-        {
-          "name": "射手护腕",
-          "ENG_name": "Bracers of Archery",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "system.bonuses.rwak.damage",
-              "mode": "ADD",
-              "value": "+ 2"
-            },
-            {
-              "key": "system.traits.weaponProf.value",
-              "mode": "ADD",
-              "value": "短弓"
-            },
-            {
-              "key": "system.traits.weaponProf.value",
-              "mode": "ADD",
-              "value": "长弓"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "屠夫围裙",
-      "ENG_name": "Butcher's Bib",
-      "source": "EGW",
-      "effects": [
-        {
-          "name": "屠夫围裙",
-          "ENG_name": "Butcher's Bib",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "flags.dnd5e.武器致命一击阈值",
-              "mode": "OVERRIDE",
-              "value": 19
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "炸药",
-      "ENG_name": "Dynamite",
-      "source": "TDCSR",
-      "img": "icons/weapons/thrown/bomb-timer.webp"
-    },
-    {
-      "name": "窃贼手套",
-      "ENG_name": "Gloves of Thievery",
-      "source": "DMG",
-      "effects": [
-        {
-          "name": "快手",
-          "ENG_name": "Fast Hands",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "data.skills.slt.bonuses.check",
-              "mode": "ADD",
-              "value": "+ 5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "胶水炸弹",
-      "ENG_name": "Gluebomb",
-      "source": "TDCSR",
-      "img": "icons/weapons/thrown/bomb-metal-brown.webp"
-    },
-    {
-      "name": "侏儒园手雷",
-      "ENG_name": "Gnomengarde Grenade",
-      "source": "DC",
-      "type": "consumable"
-    },
-    {
-      "name": "哈兹瑞恩",
-      "ENG_name": "Hazirawn",
-      "source": "HotDQ",
-      "system": {
-        "magicalBonus": "+1",
-        "attack.bonus": "+1",
-        "damage.parts": [
-          [
-            "2d6+1",
-            "斩击"
-          ],
-          [
-            "1d6",
-            "死灵"
-          ]
-        ]
-      }
-    },
-    {
-      "name": "超大长弓",
-      "ENG_name": "Oversized Longbow",
-      "source": "WDH",
-      "system": {
-        "damage.parts": [
-          "2d6 + @abilities.str.mod",
-          "穿刺"
-        ]
-      }
-    },
-    {
-      "name": "平原牛",
-      "ENG_name": "Plainscow",
-      "source": "TDCSR",
-      "img": "icons/creatures/mammals/livestock-cow-green.webp"
-    },
-    {
-      "name": "大法师法袍",
-      "ENG_name": "Robe of the Archmagi",
-      "source": "DMG",
-      "effects": [
-        {
-          "name": "护甲等级",
-          "ENG_name": "Armor Class",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "data.attributes.ac.calc",
-              "mode": "OVERRIDE",
-              "value": "自定义"
-            },
-            {
-              "key": "数据属性.护甲等级.公式",
-              "mode": "OVERRIDE",
-              "value": "15 + @abilities.dex.mod"
-            }
-          ]
-        }
-      ],
-      "_merge": {
-        "effects": true
-      }
-    },
-    {
-      "name": "警戒之盾",
-      "ENG_name": "Sentinel Shield",
-      "source": "DMG",
-      "effects": [
-        {
-          "name": "哨兵之眼",
-          "ENG_name": "Sentinel's Eye",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "flags.dnd5e.initiativeAdv",
-              "mode": "OVERRIDE",
-              "value": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "臭气弹",
-      "ENG_name": "Stink Bomb",
-      "source": "TDCSR",
-      "img": "icons/weapons/thrown/bomb-purple.webp"
-    },
-    {
-      "name": "纠缠手榴弹",
-      "ENG_name": "Tangler Grenade",
-      "source": "WDMM",
-      "type": "consumable"
-    }
-  ],
-  "magicvariant": [
-    {
-      "name": "狂战斧",
-      "ENG_name": "Berserker Axe",
-      "source": "DMG",
-      "effects": [
-        {
-          "name": "生命值增加",
-          "ENG_name": "HP Increase",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "system.attributes.hp.bonuses.overall",
-              "mode": "ADD",
-              "value": "+ @details.level"
-            }
-          ]
-        }
-      ],
-      "_merge": {
-        "effects": true
-      }
-    }
-  ]
+	"item": [
+		{
+			"name": "屏障刺青（大）",
+			"ENG_name": "Barrier Tattoo (Large)",
+			"source": "TCE",
+			"system": {
+				"armor.type": "重型",
+				"armor.dex": 0,
+				"armor.value": 18
+			}
+		},
+		{
+			"name": "屏障刺青（中）",
+			"ENG_name": "Barrier Tattoo (Medium)",
+			"source": "TCE",
+			"system": {
+				"armor.type": "中等",
+				"armor.dex": 2,
+				"armor.value": 15
+			}
+		},
+		{
+			"name": "屏障刺青（小）",
+			"ENG_name": "Barrier Tattoo (Small)",
+			"source": "TCE",
+			"system": {
+				"armor.type": "光亮术",
+				"armor.value": 12
+			}
+		},
+		{
+			"name": "射手护腕",
+			"ENG_name": "Bracers of Archery",
+			"source": "DMG",
+			"effects": [
+				{
+					"name": "射手护腕",
+					"ENG_name": "Bracers of Archery",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "system.bonuses.rwak.damage",
+							"mode": "ADD",
+							"value": "+ 2"
+						},
+						{
+							"key": "system.traits.weaponProf.value",
+							"mode": "ADD",
+							"value": "短弓"
+						},
+						{
+							"key": "system.traits.weaponProf.value",
+							"mode": "ADD",
+							"value": "长弓"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "屠夫围裙",
+			"ENG_name": "Butcher's Bib",
+			"source": "EGW",
+			"effects": [
+				{
+					"name": "屠夫围裙",
+					"ENG_name": "Butcher's Bib",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "flags.dnd5e.武器致命一击阈值",
+							"mode": "OVERRIDE",
+							"value": 19
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "炸药",
+			"ENG_name": "Dynamite",
+			"source": "TDCSR",
+			"img": "icons/weapons/thrown/bomb-timer.webp"
+		},
+		{
+			"name": "窃贼手套",
+			"ENG_name": "Gloves of Thievery",
+			"source": "DMG",
+			"effects": [
+				{
+					"name": "快手",
+					"ENG_name": "Fast Hands",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "data.skills.slt.bonuses.check",
+							"mode": "ADD",
+							"value": "+ 5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "胶水炸弹",
+			"ENG_name": "Gluebomb",
+			"source": "TDCSR",
+			"img": "icons/weapons/thrown/bomb-metal-brown.webp"
+		},
+		{
+			"name": "侏儒园手雷",
+			"ENG_name": "Gnomengarde Grenade",
+			"source": "DC",
+			"type": "consumable"
+		},
+		{
+			"name": "哈兹瑞恩",
+			"ENG_name": "Hazirawn",
+			"source": "HotDQ",
+			"system": {
+				"magicalBonus": "+1",
+				"attack.bonus": "+1",
+				"damage.parts": [
+					[
+						"2d6+1",
+						"斩击"
+					],
+					[
+						"1d6",
+						"死灵"
+					]
+				]
+			}
+		},
+		{
+			"name": "超大长弓",
+			"ENG_name": "Oversized Longbow",
+			"source": "WDH",
+			"system": {
+				"damage.parts": [
+					"2d6 + @abilities.str.mod",
+					"穿刺"
+				]
+			}
+		},
+		{
+			"name": "平原牛",
+			"ENG_name": "Plainscow",
+			"source": "TDCSR",
+			"img": "icons/creatures/mammals/livestock-cow-green.webp"
+		},
+		{
+			"name": "大法师法袍",
+			"ENG_name": "Robe of the Archmagi",
+			"source": "DMG",
+			"effects": [
+				{
+					"name": "护甲等级",
+					"ENG_name": "Armor Class",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "自定义"
+						},
+						{
+							"key": "数据属性.护甲等级.公式",
+							"mode": "OVERRIDE",
+							"value": "15 + @abilities.dex.mod"
+						}
+					]
+				}
+			],
+			"_merge": {
+				"effects": true
+			}
+		},
+		{
+			"name": "警戒之盾",
+			"ENG_name": "Sentinel Shield",
+			"source": "DMG",
+			"effects": [
+				{
+					"name": "哨兵之眼",
+					"ENG_name": "Sentinel's Eye",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "flags.dnd5e.initiativeAdv",
+							"mode": "OVERRIDE",
+							"value": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "臭气弹",
+			"ENG_name": "Stink Bomb",
+			"source": "TDCSR",
+			"img": "icons/weapons/thrown/bomb-purple.webp"
+		},
+		{
+			"name": "纠缠手榴弹",
+			"ENG_name": "Tangler Grenade",
+			"source": "WDMM",
+			"type": "consumable"
+		}
+	],
+	"magicvariant": [
+		{
+			"name": "狂战斧",
+			"ENG_name": "Berserker Axe",
+			"source": "DMG",
+			"effects": [
+				{
+					"name": "生命值增加",
+					"ENG_name": "HP Increase",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "system.attributes.hp.bonuses.overall",
+							"mode": "ADD",
+							"value": "+ @details.level"
+						}
+					]
+				}
+			],
+			"_merge": {
+				"effects": true
+			}
+		}
+	]
 }

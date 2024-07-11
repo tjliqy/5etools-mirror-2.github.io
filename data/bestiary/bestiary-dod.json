@@ -1,208 +1,208 @@
 {
-  "monster": [
-    {
-      "name": "编织者",
-      "ENG_name": "Yarnspinner",
-      "isNamedCreature": true,
-      "source": "DoD",
-      "page": 22,
-      "size": [
-        "H"
-      ],
-      "type": {
-        "type": "fey",
-        "tags": [
-          "archfey"
-        ]
-      },
-      "alignment": [
-        "L",
-        "G"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 138,
-        "formula": "12d12 + 60"
-      },
-      "speed": {
-        "walk": 40,
-        "climb": 40
-      },
-      "str": 24,
-      "dex": 16,
-      "con": 21,
-      "int": 18,
-      "wis": 21,
-      "cha": 19,
-      "save": {
-        "con": "+9",
-        "wis": "+9",
-        "cha": "+8"
-      },
-      "skill": {
-        "perception": "+13",
-        "stealth": "+7"
-      },
-      "senses": [
-        "真实视域 120 英尺。"
-      ],
-      "passive": 23,
-      "conditionImmune": [
-        "魅惑",
-        "恐惧"
-      ],
-      "languages": [
-        "普通",
-        "德鲁伊语",
-        "森林"
-      ],
-      "cr": "10",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "编织者施放以下法术之一，无需材料成分，并使用智慧作为施法能力（法术豁免{@dc 17}）："
-          ],
-          "will": [
-            "{@spell 妖火术}",
-            "{@spell 动物交谈术}"
-          ],
-          "daily": {
-            "2e": [
-              "{@spell 化兽为友}",
-              "{@spell 创造饮食}",
-              "{@spell 回生术}"
-            ],
-            "1e": [
-              "{@spell 启蒙术}（作为动作）",
-              "{@spell 行踪无迹}"
-            ]
-          },
-          "ability": "wis",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "trait": [
-        {
-          "name": "仙女重生",
-          "ENG_name": "Fey Rebirth",
-          "entries": [
-            "如果 Yarnspinner 在其愉悦领域中死亡，他将在该领域内的一个安全地点在 {@dice 1d4} 天后复活，并且恢复所有生命值。"
-          ]
-        },
-        {
-          "name": "传奇抗性 (3/日)",
-          "ENG_name": "Legendary Resistance (3/Day)",
-          "entries": [
-            "如果纱线编织者失败豁免投掷，他可以选择成功。"
-          ]
-        },
-        {
-          "name": "蛛行术",
-          "ENG_name": "Spider Climb",
-          "entries": [
-            "编织者可以攀登困难的表面，包括在天花板上倒挂，无需进行能力检定。"
-          ]
-        },
-        {
-          "name": "蛛网行者",
-          "ENG_name": "Web Walker",
-          "entries": [
-            "Yarnspinner 忽略由蛛网引起的移动限制。"
-          ]
-        },
-        {
-          "name": "织网者（每日3次）",
-          "ENG_name": "Web Weaver (3/Day)",
-          "entries": [
-            "编织者可以在1分钟内用蛛网编织出以下结构之一：",
-            {
-              "type": "list",
-              "items": [
-                "一堵由最多三个10英尺见方的区域组成的3英寸厚的不透明蛛网墙，每个区域都必须至少由两面其他墙壁或表面固定。每个区域的护甲等级为12；有20点生命值；对火焰伤害易感；并对钝击、毒素和精神伤害免疫。",
-                "一个足够小，可以放入10英尺立方体的小木屋。这个小木屋配有一个可关闭的门和一个舒适的网状床，适合微型、小型或中型生物。",
-                "一条由不超过二十五个字符组成的消息，固定在不同点上，悬挂在空中。"
-              ]
-            }
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Yarnspinner 进行两次咬击，并使用一次法术施放或蛛网。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器} 命中值11，射程10英尺，单一目标。{@h}17点（{@damage 3d6 + 7}）穿刺伤害，加上11点（{@damage 2d10}）毒素伤害。"
-          ]
-        },
-        {
-          "name": "蛛网术",
-          "ENG_name": "Web",
-          "entries": [
-            "Yarnspinner 向自己120英尺范围内可以看到的一个生物喷射蛛网。目标必须进行一次DC 17的力量豁免投掷，否则会被{@condition restrained}束缚1小时。目标可以在每个回合结束时重复这个豁免投掷，成功则结束此效果。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "传奇抗性",
-        "蛛行术",
-        "蛛网行者"
-      ],
-      "senseTags": [
-        "U"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DU",
-        "S"
-      ],
-      "damageTags": [
-        "I",
-        "P"
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "miscTags": [
-        "范围伤害",
-        "MW",
-        "射程"
-      ],
-      "conditionInflict": [
-        "束缚"
-      ],
-      "conditionInflictSpell": [
-        "魅惑"
-      ],
-      "savingThrowForced": [
-        "力量"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ]
+	"monster": [
+		{
+			"name": "编织者",
+			"ENG_name": "Yarnspinner",
+			"isNamedCreature": true,
+			"source": "DoD",
+			"page": 22,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"archfey"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 24,
+			"dex": 16,
+			"con": 21,
+			"int": 18,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+8"
+			},
+			"skill": {
+				"perception": "+13",
+				"stealth": "+7"
+			},
+			"senses": [
+				"真实视域 120 英尺。"
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"魅惑",
+				"恐惧"
+			],
+			"languages": [
+				"普通",
+				"德鲁伊语",
+				"森林"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"编织者施放以下法术之一，无需材料成分，并使用智慧作为施法能力（法术豁免{@dc 17}）："
+					],
+					"will": [
+						"{@spell 妖火术}",
+						"{@spell 动物交谈术}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell 化兽为友}",
+							"{@spell 创造饮食}",
+							"{@spell 回生术}"
+						],
+						"1e": [
+							"{@spell 启蒙术}（作为动作）",
+							"{@spell 行踪无迹}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "动作"
+				}
+			],
+			"trait": [
+				{
+					"name": "仙女重生",
+					"ENG_name": "Fey Rebirth",
+					"entries": [
+						"如果 Yarnspinner 在其愉悦领域中死亡，他将在该领域内的一个安全地点在 {@dice 1d4} 天后复活，并且恢复所有生命值。"
+					]
+				},
+				{
+					"name": "传奇抗性 (3/日)",
+					"ENG_name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果纱线编织者失败豁免投掷，他可以选择成功。"
+					]
+				},
+				{
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
+					"entries": [
+						"编织者可以攀登困难的表面，包括在天花板上倒挂，无需进行能力检定。"
+					]
+				},
+				{
+					"name": "蛛网行者",
+					"ENG_name": "Web Walker",
+					"entries": [
+						"Yarnspinner 忽略由蛛网引起的移动限制。"
+					]
+				},
+				{
+					"name": "织网者（每日3次）",
+					"ENG_name": "Web Weaver (3/Day)",
+					"entries": [
+						"编织者可以在1分钟内用蛛网编织出以下结构之一：",
+						{
+							"type": "list",
+							"items": [
+								"一堵由最多三个10英尺见方的区域组成的3英寸厚的不透明蛛网墙，每个区域都必须至少由两面其他墙壁或表面固定。每个区域的护甲等级为12；有20点生命值；对火焰伤害易感；并对钝击、毒素和精神伤害免疫。",
+								"一个足够小，可以放入10英尺立方体的小木屋。这个小木屋配有一个可关闭的门和一个舒适的网状床，适合微型、小型或中型生物。",
+								"一条由不超过二十五个字符组成的消息，固定在不同点上，悬挂在空中。"
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Yarnspinner 进行两次咬击，并使用一次法术施放或蛛网。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器} 命中值11，射程10英尺，单一目标。{@h}17点（{@damage 3d6 + 7}）穿刺伤害，加上11点（{@damage 2d10}）毒素伤害。"
+					]
+				},
+				{
+					"name": "蛛网术",
+					"ENG_name": "Web",
+					"entries": [
+						"Yarnspinner 向自己120英尺范围内可以看到的一个生物喷射蛛网。目标必须进行一次DC 17的力量豁免投掷，否则会被{@condition restrained}束缚1小时。目标可以在每个回合结束时重复这个豁免投掷，成功则结束此效果。"
+					]
+				}
+			],
+			"traitTags": [
+				"传奇抗性",
+				"蛛行术",
+				"蛛网行者"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"S"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"范围伤害",
+				"MW",
+				"射程"
+			],
+			"conditionInflict": [
+				"束缚"
+			],
+			"conditionInflictSpell": [
+				"魅惑"
+			],
+			"savingThrowForced": [
+				"力量"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
 }

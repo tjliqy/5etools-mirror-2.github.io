@@ -1,1643 +1,1249 @@
 {
-  "spell": [
-    {
-      "name": "灾厄之刃",
-      "ENG_name": "Blade of Disaster",
-      "source": "TCE",
-      "page": 106,
-      "otherSources": [
-        {
-          "source": "IDRotF",
-          "page": 318
-        }
-      ],
-      "level": 9,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你在法术范围内你能看见的一个未被占据的创造出一把形态如同剑一般的，长约3尺的位面裂缝。该剑刃持续存在，直至法术结束。当你施展此法术时，你可以用该剑刃进行至多两次近战法术攻击，每次攻击的目标为位于剑刃5尺内的一个生物、未被携带的物件或建筑。若命中，则目标受到{@damage 4d12}力场伤害。该攻击在{@dice d20}投出18或更高时造成重击，并在重击时造成额外{@damage 8d12}力场伤害（共计{@damage 12d12}力场伤害）",
-        "你可以在自己回合内以一个附赠动作让该武器移动至多30尺到一个你可以看见的未被占据的空间，随后再用其进行两次近战法术攻击。",
-        "该剑刃可以无害地通过任何屏障，包括一道{@spell 力场墙}。"
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "spellAttack": [
-        "M"
-      ],
-      "miscTags": [
-        "中士",
-        "通用银行自动转账"
-      ],
-      "areaTags": [
-        "MT"
-      ]
-    },
-    {
-      "name": "轰雷剑",
-      "ENG_name": "Booming Blade",
-      "source": "TCE",
-      "page": 106,
-      "otherSources": [
-        {
-          "source": "SCAG",
-          "page": 142
-        }
-      ],
-      "level": 0,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "radius",
-        "distance": {
-          "type": "feet",
-          "amount": 5
-        }
-      },
-      "components": {
-        "s": true,
-        "m": {
-          "text": "一把价值至少1sp的近战武器",
-          "cost": 10
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "round",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "作为用来施展此法术动作的一部分，你必须使用一把武器对法术射程内的一名生物进行一次近战攻击，否则法术失败。若命中，目标受到该攻击的正常影响，且目标将被包覆在一团爆发性的能量之中，持续直到你的下个回合开始。如果目标在这之前自愿进行了一次移动，他将立即受到{@damage 1d8}雷鸣伤害，并结束法术效果。",
-        "此法术的伤害将随着你的等级越高而增加。在5级的时候，近战攻击将对目标造成额外的{@dice 1d8}雷鸣伤害，且目标移动时所受到的伤害将提升至{@dice 2d8}。这两个伤害骰都将在11级和17级时各增加{@dice 1d8}。"
-      ],
-      "scalingLevelDice": [
-        {
-          "label": "移动时受到的雷击伤害",
-          "scaling": {
-            "1": "1d8",
-            "5": "2d8",
-            "11": "3d8",
-            "17": "4d8"
-          }
-        },
-        {
-          "label": "命中时造成雷鸣伤害",
-          "scaling": {
-            "5": "1d8",
-            "11": "2d8",
-            "17": "3d8"
-          }
-        }
-      ],
-      "damageInflict": [
-        "雷鸣伤害"
-      ],
-      "miscTags": [
-        "AAD",
-        "SCL"
-      ],
-      "areaTags": [
-        "ST"
-      ]
-    },
-    {
-      "name": "蓝纱一梦",
-      "ENG_name": "Dream of the Blue Veil",
-      "source": "TCE",
-      "page": 106,
-      "level": 7,
-      "school": "C",
-      "time": [
-        {
-          "number": 10,
-          "unit": "分钟"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 20
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "来自目标世界的一个魔法物品或一个自愿生物"
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 6
-          }
-        }
-      ],
-      "entries": [
-        "你与最多8个自愿生物在法术持续时间内进入{@condition 无力}，并梦见物质位面中的另一处世界，比如奥斯、托瑞尔、克莱恩或艾伯伦。如果这道法术达到了完整的持续时间，梦境会在你们所有人相遇，并拉开一面神秘的蓝色幕帘时停止。这道法术随后结束，并将你们物质和精神上传送到梦境所在的世界。",
-        "要施展这道法术，你必须拥有一件源自目标世界的魔法物品，且你也必须知道这个世界的存在，即便你不知道那个世界的具体名字。你在另一个世界的目的地是该魔法物品创造地点周围 1 里内的安全地点。此外，如果其中一个受术目标出生在另一个世界，你也可以施展这道法术，但目的地变为该生物出生地1里内的安全地点。",
-        "如果有一个生物受到任何伤害，则此法术在该生物上提前结束，该生物不会被传送。如果你受到任何伤害，则你和其他所有生物上的此法术会提前结束，你们都不会被传送。"
-      ],
-      "conditionInflict": [
-        "昏迷"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Bard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      },
-      "hasFluff": true,
-      "miscTags": [
-        "PS",
-        "TP"
-      ]
-    },
-    {
-      "name": "翠炎剑",
-      "ENG_name": "Green-Flame Blade",
-      "source": "TCE",
-      "page": 107,
-      "otherSources": [
-        {
-          "source": "SCAG",
-          "page": 143
-        }
-      ],
-      "level": 0,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "radius",
-        "distance": {
-          "type": "feet",
-          "amount": 5
-        }
-      },
-      "components": {
-        "s": true,
-        "m": {
-          "text": "一把价值至少1sp的近战武器",
-          "cost": 10
-        }
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "作为用来施展此法术动作的一部分，你必须使用一把武器对法术射程内的一名生物进行一次近战攻击，否则法术失败。若命中，目标受到该攻击的正常影响，且翠绿色的火焰将从目标身上跳到另一个你所选择的，位于5尺内你所能看见的生物。第二个生物将受到等同你施法属性调整值的火焰伤害。",
-        "此法术的伤害将随着你的等级越高而增加。在5级的时候，近战攻击将对目标造成额外的{@dice 1d8}火焰伤害，且对第二个生物造成的伤害将提升至{@dice 1d8} + 你的施法属性调整值。这两个伤害骰都将在11级和17级时各增加{@dice 1d8}。"
-      ],
-      "scalingLevelDice": [
-        {
-          "label": "对次要生物的火焰伤害",
-          "scaling": {
-            "1": "{{施法修正值}}",
-            "5": "1d8 + {{施法修正值}}",
-            "11": "2d8 + {{施法修正值}}",
-            "17": "3d8 + {{施法修正值}}"
-          }
-        },
-        {
-          "label": "命中时火焰伤害",
-          "scaling": {
-            "5": "1d8",
-            "11": "2d8",
-            "17": "3d8"
-          }
-        }
-      ],
-      "damageInflict": [
-        "火"
-      ],
-      "miscTags": [
-        "AAD",
-        "SCL",
-        "中士"
-      ],
-      "areaTags": [
-        "ST",
-        "MT"
-      ]
-    },
-    {
-      "name": "智能壁垒",
-      "ENG_name": "Intellect Fortress",
-      "source": "TCE",
-      "page": 107,
-      "level": 3,
-      "school": "A",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 30
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "在法术持续时间内，你或一个施法距离内的可见生物获得对心灵伤害的抗力，同时在智力、感知和魅力豁免检定上具有优势。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用四环或更高法术位施展该法术时，你使用的法术位每比三环高1环，就可以多选择一个生物作为目标。而各目标之间距离不能超过30尺。"
-          ]
-        }
-      ],
-      "damageResist": [
-        "心灵"
-      ],
-      "miscTags": [
-        "前进",
-        "中士"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "闪电牵引",
-      "ENG_name": "Lightning Lure",
-      "source": "TCE",
-      "page": 107,
-      "otherSources": [
-        {
-          "source": "SCAG",
-          "page": 143
-        }
-      ],
-      "level": 0,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "radius",
-        "distance": {
-          "type": "feet",
-          "amount": 15
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你创造出一道鞭状的闪电能量，击向射程内你所能看见的一个生物。目标必须成功通过一次力量豁免，否则将被以直线向你拉近最多10尺，如果目标被拉近以后位于你周遭5尺内，那么他将受到{@damage 1d8}闪电伤害。",
-        "此法术的伤害将在你的等级升至5级时增加至{@dice 2d8}，11级时{@dice 3d8}，17级时{@dice 4d8}。"
-      ],
-      "scalingLevelDice": {
-        "label": "lightning damage",
-        "scaling": {
-          "1": "1d8",
-          "5": "2d8",
-          "11": "3d8",
-          "17": "4d8"
-        }
-      },
-      "damageInflict": [
-        "闪电"
-      ],
-      "savingThrow": [
-        "力量"
-      ],
-      "miscTags": [
-        "FMV",
-        "SCL",
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Artificer",
-            "source": "TCE"
-          },
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "心灵之楔",
-      "ENG_name": "Mind Sliver",
-      "source": "TCE",
-      "page": 108,
-      "level": 0,
-      "school": "E",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "round",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你将由灵能塑成的迷惘尖刺注入施法距离内一个你可见的生物的心灵。目标必须成功通过一次智力豁免，否则受到{@damage 1d6}心灵伤害并在你的下回合结束前其下一次豁免检定中减去{@dice 1d4}。",
-        "此法术的伤害将在你的等级升至5级时增加至{@dice 2d6}，11级时{@dice 3d6}，17级时{@dice 4d6}。"
-      ],
-      "scalingLevelDice": {
-        "label": "psychic damage",
-        "scaling": {
-          "1": "1d6",
-          "5": "2d6",
-          "11": "3d6",
-          "17": "4d6"
-        }
-      },
-      "damageInflict": [
-        "心灵"
-      ],
-      "savingThrow": [
-        "智力"
-      ],
-      "miscTags": [
-        "SCL",
-        "中士"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ],
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Sorcerer",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Aberrant Mind",
-              "source": "TCE"
-            }
-          }
-        ]
-      },
-      "hasFluffImages": true,
-      "areaTags": [
-        "ST"
-      ]
-    },
-    {
-      "name": "魂灵环绕",
-      "ENG_name": "Spirit Shroud",
-      "source": "TCE",
-      "page": 108,
-      "level": 3,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你召来亡者的魂灵，而它们在法术持续时间内环绕于你的身边。这些魂灵无形且不可伤害。",
-        "直到法术终止前，你所有命中你10尺内生物的攻击造成{@damage 1d8}额外伤害。伤害类型为光耀、黯蚀或冷冻（由你在施展法术的时候选择）。任何受到此伤害的生物无法恢复生命值直到你的下个回合开始。",
-        "此外，任何你10尺内可见生物回合开始时，你可以使其速度降低10尺直到你的下个回合开始。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用四环或更高法术位施展该法术时，你使用的法术位每比三环高2环，其伤害就增加{@scaledamage 1d8|3,5,7,9|1d8}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "光辉",
-        "死灵",
-        "寒冷"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Cleric",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Paladin",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "异怪召唤术",
-      "ENG_name": "Summon Aberration",
-      "source": "TCE",
-      "page": 109,
-      "level": 4,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "装有一条腌制触手和一颗眼球的白金瓶，价值至少 400gp",
-          "cost": 40000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个异怪灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 异怪灵魄|TCE}的数据。当你施展法术时，从类眼魔，史拉蟾或星之子中选择一个。此生物的外形与你所选一致，其资料表中的部分特性也受此影响。当其生命值降到0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用五环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Sorcerer",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Aberrant Mind",
-              "source": "TCE"
-            }
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "野兽召唤术",
-      "ENG_name": "Summon Beast",
-      "source": "TCE",
-      "page": 109,
-      "level": 2,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "装有一根羽毛、一簇毛皮和一条鱼尾的一颗镀金橡果，价值至少 200gp",
-          "cost": 20000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个野兽灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 野兽灵魄|TCE}的数据。当你施展法术时，从空、地或水中选择一个环境。此生物的外形属于你所选环境的一种动物，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用三环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Druid",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Ranger",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "天界召唤术",
-      "ENG_name": "Summon Celestial",
-      "source": "TCE",
-      "page": 110,
-      "level": 5,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一个的金制圣物匣，价值至少 500gp",
-          "cost": 50000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个天界生物灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 天界灵魄|TCE}的数据。当你施展法术时，从复仇圣灵或守护圣灵中选择一个。此生物资料表中的攻击方式由你的选择决定。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用六环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Cleric",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Paladin",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      },
-      "hasFluffImages": true
-    },
-    {
-      "name": "构装体召唤术",
-      "ENG_name": "Summon Construct",
-      "source": "TCE",
-      "page": 111,
-      "level": 4,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一块华丽的石头和一个金属密码箱，价值至少 400gp",
-          "cost": 40000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个构装生物灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 构装体灵魄|TCE} 的数据。当你施展法术时，从粘土，金属或石中选择一个材质。此生物的外形为一个你选定材质地魔像或魔冢，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。 "
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用六环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Artificer",
-            "source": "TCE"
-          }
-        ],
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Sorcerer",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Clockwork Soul",
-              "source": "TCE"
-            }
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "元素召唤术",
-      "ENG_name": "Summon Elemental",
-      "source": "TCE",
-      "page": 111,
-      "level": 4,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一个至少价值 400gp 的，装有空气、一块鹅卵石、灰烬与水的水晶瓶",
-          "cost": 40000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个元素灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 元素灵魄|TCE}的数据。当你施展法术时，从气，土，火或水中选择一个元素。此生物的外形如同一个周身缠绕着你所选元素的模糊二足人影，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用五环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Warlock",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Fathomless",
-              "source": "TCE"
-            }
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Druid",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Ranger",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "精类召唤术",
-      "ENG_name": "Summon Fey",
-      "source": "TCE",
-      "page": 112,
-      "level": 3,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一朵镀金花，价值至少 300gp",
-          "cost": 30000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个精类灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 精类灵魄|TCE}的数据。当你施展法术时，从诡诈，愤怒或欢欣中选择一种情绪。此生物的外形为一个受你所选情绪所影响的精类生物，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用四环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Druid",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Ranger",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "邪魔召唤术",
-      "ENG_name": "Summon Fiend",
-      "source": "TCE",
-      "page": 112,
-      "level": 6,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "装有类人生物血液的红宝石瓶，价值至少 600gp",
-          "cost": 60000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个邪魔灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 邪魔灵魄|TCE}的数据。当你施展法术时，从恶魔，魔鬼或尤格罗斯魔中选择一种。此生物外形如同你所选择类型的邪魔，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用七环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "暗影衍体召唤术",
-      "ENG_name": "Summon Shadowspawn",
-      "source": "TCE",
-      "page": 113,
-      "level": 3,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "包有眼泪的宝石，价值至少 300gp",
-          "cost": 30000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个暗影灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 幽影灵魄|TCE}的数据。当你施展法术时，当你施展法术时，从暴怒，绝望或恐惧中选择一种情感。此生物的外形为一个受你所选情感所影响的畸形二足生物，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用四环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      },
-      "hasFluffImages": true
-    },
-    {
-      "name": "亡灵召唤术",
-      "ENG_name": "Summon Undead",
-      "source": "TCE",
-      "page": 114,
-      "level": 3,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一个镀金头骨，价值至少 300gp",
-          "cost": 30000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你唤来一个不死生物灵魄。其在施法距离内你可见的一个未占据位置化为实体。这一实体使用下面的{@creature 不死灵魄|TCE}的数据。当你施展法术时，当你施展法术时，从虚灵，腐尸或骷髅中为此生物选择一个外形。此生物的外形为你所选形态的不死生物，其资料表中的部分特性也受此影响。当其生命值降至0或法术结束时，生物消失。",
-        "该生物在法术持续时间内对你和你的同伴们友好。在战斗中，该生物使用你的先攻，但在你回合结束后立即行动。它遵从于你的口头指令（无需任何动作）。如果你不发令，它将执行{@action 闪避}动作并远离危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用四环或更高法术位施展该法术时，该生物数据中使用更高的法术环数。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "剑刃爆发",
-      "ENG_name": "Sword Burst",
-      "source": "TCE",
-      "page": 115,
-      "otherSources": [
-        {
-          "source": "SCAG",
-          "page": 143
-        }
-      ],
-      "level": 0,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "radius",
-        "distance": {
-          "type": "feet",
-          "amount": 5
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你瞬间制造出一圈幽灵似的利刃清扫你的周围。法术范围内除你以外的每一个生物都必须成功通过一次敏捷豁免，否则将受到{@damage 1d6}的力场伤害。",
-        "此法术的伤害将在你的等级升至5级时增加至{@dice 2d8}，11级时{@dice 3d8}，17级时{@dice 4d8}。"
-      ],
-      "scalingLevelDice": {
-        "label": "force damage",
-        "scaling": {
-          "1": "1d6",
-          "5": "2d6",
-          "11": "3d6",
-          "17": "4d6"
-        }
-      },
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "敏捷"
-      ],
-      "miscTags": [
-        "SCL"
-      ],
-      "areaTags": [
-        "S"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Artificer",
-            "source": "TCE"
-          },
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "SCAG"
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "塔莎酸蚀酿",
-      "ENG_name": "Tasha's Caustic Brew",
-      "source": "TCE",
-      "page": 115,
-      "level": 1,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "line",
-        "distance": {
-          "type": "feet",
-          "amount": 30
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一点腐烂的食物"
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "一股30尺长，5尺宽的线状强酸从你的位置向你指定的任意方向喷射而出。在线状区域内的每个生物必须进行一次敏捷豁免，豁免失败者将在法术持续时间内被强酸覆盖，或直到自己或其他生物用一个动作从其身上刮下或洗下。被强酸覆盖的生物在每个自己回合开始时受到{@damage 2d4}强酸伤害。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用二环或更高法术位施展该法术时，你使用的法术位每比一环高1环，法术的伤害就增加{@dice 2d4}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "酸性"
-      ],
-      "savingThrow": [
-        "敏捷"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Artificer",
-            "source": "TCE"
-          }
-        ],
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      }
-    },
-    {
-      "name": "塔莎心灵鞭",
-      "ENG_name": "Tasha's Mind Whip",
-      "source": "TCE",
-      "page": 115,
-      "level": 2,
-      "school": "E",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "round",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你对施法距离内一个你可见的生物进行心灵猛击。目标必须进行一次智力豁免。若豁免失败，目标会受到{@damage 3d6}心灵伤害，并且直到其下一回合结束前不能做出反应。此外，它在自己的下一回合中，只能选择在移动、动作或附赠动作中采取一种。若豁免成功，目标只受到一半伤害，并且不会受到该法术的其他效应。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用三环或更高的法术位施展该法术时，你使用的法术位每比二环高1环就可以额外指定一个生物。被你选为目标的生物互相之间的距离不能超过30尺。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "心灵"
-      ],
-      "savingThrow": [
-        "智力"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      },
-      "hasFluffImages": true
-    },
-    {
-      "name": "塔莎超凡形态",
-      "ENG_name": "Tasha's Otherworldly Guise",
-      "source": "TCE",
-      "page": 116,
-      "level": 6,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一件的镶嵌有外层位面标记的物件，价值至少 500gp",
-          "cost": 50000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你念动一段咒语，吸收下层位面或上层位面的魔力（由你选择）并变化自身。你获得以下增益直到法术结束：",
-        {
-          "type": "list",
-          "items": [
-            "你免疫火焰和毒素伤害（下层位面）或光耀和黯蚀伤害（上层位面）。",
-            "你免疫{@condition 中毒}状态（下层位面）或{@condition 魅惑}状态（上层位面）。",
-            "你背后出现灵体翅膀，赋予你40尺飞行速度。",
-            "你的AC获得+2加值。",
-            "你进行的所有武器攻击都带有魔法，且当你进行一次武器攻击时，你可以用你的施法关键属性代替力量值进行攻击检定和伤害掷骰。",
-            "当你在自己的回合进行{@action 攻击}动作时，你可以攻击两次而非一次。如果已经有类似的能力给予你额外的攻击次数，例如额外攻击，你无视这项增益。"
-          ]
-        }
-      ],
-      "conditionInflict": [
-        "charmed",
-        "poisoned"
-      ],
-      "miscTags": [
-        "机枪"
-      ],
-      "classes": {
-        "fromClassListVariant": [
-          {
-            "name": "Sorcerer",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Warlock",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          },
-          {
-            "name": "Wizard",
-            "source": "PHB",
-            "definedInSource": "TCE"
-          }
-        ]
-      },
-      "damageImmune": [
-        "火",
-        "毁灭诅咒",
-        "光辉",
-        "死灵"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "中毒"
-      ]
-    }
-  ]
+	"spell": [
+		{
+			"name": "灾厄之刃",
+			"ENG_name": "Blade of Disaster",
+			"source": "TCE",
+			"page": 106,
+			"otherSources": [
+				{
+					"source": "IDRotF",
+					"page": 318
+				}
+			],
+			"level": 9,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你在射程内你能看到的未被占据的空间中创造了一个长约3英尺的刀形位面裂缝。这个刀刃持续存在直到法术持续时间结束。当你施放这个法术时，你可以使用这个刀刃进行最多两次近战法术攻击，每次攻击可以针对刀刃5英尺范围内的一个生物、松散物体或结构。命中时，目标承受{@damage 4d12}力量伤害。如果{@dice d20}的点数是18或更高，则这次攻击会打出致命一击。在致命一击时，刀刃额外造成{@damage 8d12}力量伤害（总共为{@damage 12d12}力量伤害）。",
+				"在你的回合上，你可以作为奖励行动将刀剑移动至多30英尺到你能看到的未被占据的空间，然后再次用它进行最多两次近战法术攻击。",
+				"这把刀刃可以无害地穿过任何障碍物，包括一个{@spell 力墙术}。"
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"中士",
+				"通用银行自动转账"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "轰雷剑",
+			"ENG_name": "Booming Blade",
+			"source": "TCE",
+			"page": 106,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 142
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "一把价值至少1sp的近战武器",
+					"cost": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你挥舞施法所用的武器，并用它对距离你5英尺以内的一个生物进行近战攻击。命中时，目标遭受武器攻击的正常效果，然后被包裹在轰鸣的能量中，直到你的下一回合开始。如果目标在那时自愿移动5英尺或更远，目标将承受{@damage 1d8}雷鸣伤害，法术结束。",
+				"当你达到特定等级时，这个法术的伤害会增加。在5级时，近战攻击在命中目标时会额外造成{@damage 1d8}点雷鸣伤害，并且目标移动时受到的伤害增加到{@damage 2d8}。在11级时，这两个伤害骰增加到1d8（{@damage 2d8}和{@damage 3d8}），并在17级时再次增加（{@damage 3d8}和{@damage 4d8}）。"
+			],
+			"scalingLevelDice": [
+				{
+					"label": "移动时受到的雷击伤害",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "命中时造成雷鸣伤害",
+					"scaling": {
+						"5": "1d8",
+						"11": "2d8",
+						"17": "3d8"
+					}
+				}
+			],
+			"damageInflict": [
+				"雷鸣伤害"
+			],
+			"miscTags": [
+				"AAD",
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "蓝纱一梦",
+			"ENG_name": "Dream of the Blue Veil",
+			"source": "TCE",
+			"page": 106,
+			"level": 7,
+			"school": "C",
+			"time": [
+				{
+					"number": 10,
+					"unit": "分钟"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "来自目标世界的一个魔法物品或一个自愿生物"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 6
+					}
+				}
+			],
+			"entries": [
+				"你和范围内多达八个愿意的生物在法术持续时间内陷入{@condition 昏迷}状态，并在物质位面上体验到另一个世界的幻象，例如欧尔特、托瑞尔、克莱恩或艾伯伦。如果法术达到其完整持续时间，幻象将以你们每个人遇到并拉回一神秘蓝色帷幕作为结束。随后法术结束，你的精神和身体将被传送到幻象中的世界。",
+				"施放这个法术，你必须拥有一个起源于你想要到达的世界的魔法物品，并且你必须知道这个世界的存在，即使你不知道这个世界的名字。你在另一个世界的目标是一个安全的位置，距离魔法物品被创造的地方1英里以内。或者，如果受影响的生物之一出生在另一个世界，你可以施放这个法术，这将使你的目标成为距离那个生物出生的地方1英里以内的安全位置。",
+				"如果某个生物受到任何伤害，该生物上的法术会提前结束，且该生物不会被传送。如果你受到任何伤害，对你和其他所有生物的法术都会结束，且你们都不会被传送。"
+			],
+			"conditionInflict": [
+				"昏迷"
+			],
+			"miscTags": [
+				"PS",
+				"TP"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "翠炎剑",
+			"ENG_name": "Green-Flame Blade",
+			"source": "TCE",
+			"page": 107,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 143
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "一把价值至少1sp的近战武器",
+					"cost": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你挥舞施放法术所用的武器，并对距离你5英尺范围内的一个生物进行近战攻击。如果命中，目标将承受武器攻击的正常效果，并且你可以使绿色火焰从目标跳到你能看到的另一个距离它5英尺范围内的生物上。第二个生物受到的火焰伤害等于你的法术施法能力调整值。",
+				"当你达到特定等级时，这个法术的伤害会增加。在5级时，近战攻击在命中目标时会额外造成{@damage 1d8}点火焰伤害，对第二个生物的火焰伤害增加到{@damage 1d8} + 你的法术施法能力调整值。在11级时，两次伤害骰增加到{@damage 2d8}（{@damage 2d8} + 你的法术施法能力调整值），在17级时增加到{@damage 3d8}（{@damage 3d8} + 你的法术施法能力调整值）。"
+			],
+			"scalingLevelDice": [
+				{
+					"label": "对次要生物的火焰伤害",
+					"scaling": {
+						"1": "{{施法修正值}}",
+						"5": "1d8 + {{施法修正值}}",
+						"11": "2d8 + {{施法修正值}}",
+						"17": "3d8 + {{施法修正值}}"
+					}
+				},
+				{
+					"label": "命中时火焰伤害",
+					"scaling": {
+						"5": "1d8",
+						"11": "2d8",
+						"17": "3d8"
+					}
+				}
+			],
+			"damageInflict": [
+				"火"
+			],
+			"miscTags": [
+				"AAD",
+				"SCL",
+				"中士"
+			],
+			"areaTags": [
+				"MT",
+				"ST"
+			]
+		},
+		{
+			"name": "智能壁垒",
+			"ENG_name": "Intellect Fortress",
+			"source": "TCE",
+			"page": 107,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"在法术持续期间，你或你能看到范围内的一个愿意的生物将对心灵伤害具有抗性，并且在智力、智慧和魅力豁免检定上具有优势。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，每超过3级的法术位可以额外选择一个目标。这些生物在被你选择时必须彼此相距不超过30英尺。"
+					]
+				}
+			],
+			"damageResist": [
+				"心灵"
+			],
+			"miscTags": [
+				"前进",
+				"中士"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "闪电牵引",
+			"ENG_name": "Lightning Lure",
+			"source": "TCE",
+			"page": 107,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 143
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你创造了一道闪电能量的鞭子，打击你能看到的15英尺范围内的一个生物。目标必须进行一次力量豁免检定，否则会被直线拉向你最多10英尺，并在你5英尺范围内时受到{@damage 1d8}点闪电伤害。",
+				"当你达到5级时，这个法术的伤害增加{@dice 1d8}（{@damage 2d8}），达到11级时增加到{@damage 3d8}，达到17级时增加到{@damage 4d8}。"
+			],
+			"scalingLevelDice": {
+				"label": "lightning damage",
+				"scaling": {
+					"1": "1d8",
+					"5": "2d8",
+					"11": "3d8",
+					"17": "4d8"
+				}
+			},
+			"damageInflict": [
+				"闪电"
+			],
+			"savingThrow": [
+				"力量"
+			],
+			"miscTags": [
+				"FMV",
+				"SCL",
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "心灵之楔",
+			"ENG_name": "Mind Sliver",
+			"source": "TCE",
+			"page": 108,
+			"level": 0,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你将一股令人迷失方向的心灵能量刺入你视野范围内一个生物的心智中。目标必须进行一次智力豁免检定，否则将受到{@damage 1d6}点心灵伤害，并在其下一次在你下一个回合结束前的豁免检定中减去{@dice 1d4}。",
+				"当你达到特定等级时，这个法术的伤害会增加：5级时增加{@dice 2d6}，11级时增加{@dice 3d6}，17级时增加{@dice 4d6}。"
+			],
+			"scalingLevelDice": {
+				"label": "psychic damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"心灵"
+			],
+			"savingThrow": [
+				"智力"
+			],
+			"miscTags": [
+				"SCL",
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "魂灵环绕",
+			"ENG_name": "Spirit Shroud",
+			"source": "TCE",
+			"page": 108,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了死者的灵魂，它们在法术持续时间内围绕你飞舞。这些灵魂无形且无敌。",
+				"直到法术结束，你进行的任何攻击在击中距离你10英尺内的生物时，都会额外造成{@damage 1d8}点伤害。这种伤害可以是光辉、死灵或寒冷伤害（施法时由你选择）。任何受到这种伤害的生物直到你的下一个回合开始前都不能恢复生命值。",
+				"此外，任何你选择的、在你10英尺范围内开始其回合的生物，其移动速度会减少10英尺，直到你的下一个回合开始。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，每超过3级两个法术位等级，伤害增加{@scaledamage 1d8|3, 5, 7, 9|1d8}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"光辉",
+				"死灵",
+				"寒冷"
+			],
+			"miscTags": [
+				"中士"
+			]
+		},
+		{
+			"name": "异怪召唤术",
+			"ENG_name": "Summon Aberration",
+			"source": "TCE",
+			"page": 109,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "装有一条腌制触手和一颗眼球的白金瓶，价值至少 400gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个异常之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 异怪灵魄|TCE}的统计块。施放法术时，选择眼魔族、斯拉德或星种。这个生物类似于那种类型的异常生物，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用5级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "野兽召唤术",
+			"ENG_name": "Summon Beast",
+			"source": "TCE",
+			"page": 109,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "装有一根羽毛、一簇毛皮和一条鱼尾的一颗镀金橡果，价值至少 200gp",
+					"cost": 20000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个野兽之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 野兽灵魄|TCE}的统计块。施放法术时，选择一个环境：空气、陆地或水。这个生物类似于你选择的原生于所选环境中的动物，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "天界召唤术",
+			"ENG_name": "Summon Celestial",
+			"source": "TCE",
+			"page": 110,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个的金制圣物匣，价值至少 500gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个天界之魂。它在你视野范围内的未被占据的空间中以天使形态显现。这个实体形态使用{@creature 天界灵魄|TCE}的统计块。施放法术时，选择复仇者或守护者。你的选择决定了生物在其统计块中的攻击方式。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用6级或更高级别的法术位施放这个法术时，在法术位等级出现在法术块中的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "构装召唤术",
+			"ENG_name": "Summon Construct",
+			"source": "TCE",
+			"page": 111,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一块华丽的石头和一个金属密码箱，价值至少 400gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个构造物之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 构装体灵魄|TCE}的统计块。施放法术时，选择一种材料：粘土、金属或石头。这个生物类似于由所选材料制成的魔像或魔方（由你选择），这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "元素召唤术",
+			"ENG_name": "Summon Elemental",
+			"source": "TCE",
+			"page": 111,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个至少价值 400gp 的，装有空气、一块鹅卵石、灰烬与水的水晶瓶",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个元素之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 元素灵魄|TCE}的统计块。施放法术时，选择一个元素：空气、土、火或水。这个生物类似于被所选元素环绕的两足形态，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用5级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "精类召唤术",
+			"ENG_name": "Summon Fey",
+			"source": "TCE",
+			"page": 112,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一朵镀金花，价值至少 300gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤出一个仙女精灵。它在你视线范围内的未被占据的空间中显现出来。这个实体形态使用{@creature 精类灵魄|TCE}的统计数据块。施法时，选择一种情绪：愤怒、欢乐或淘气。这个生物看起来像你选择的仙女生物，由选定的情绪决定，这决定了它统计数据块中的一个特性。当它的生命值降至0点或法术结束时，生物就会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "邪魔召唤术",
+			"ENG_name": "Summon Fiend",
+			"source": "TCE",
+			"page": 112,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "装有类人生物血液的红宝石瓶，价值至少 600gp",
+					"cost": 60000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个恶魔之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 邪魔灵魄|TCE}的统计块。施放法术时，选择恶魔、魔鬼或尤格洛斯。这个生物类似于所选类型的恶魔，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用7级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "暗影衍体召唤术",
+			"ENG_name": "Summon Shadowspawn",
+			"source": "TCE",
+			"page": 113,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "包有眼泪的宝石，价值至少 300gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤出一个阴影之灵。它在你范围内可以看到的未被占据的空间中显现。这个实体形态使用{@creature 幽影灵魄|TCE}的统计块。施放法术时，选择一种情绪：愤怒、绝望或恐惧。生物看起来像是一个畸形的两足动物，被选定的情绪所标记，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "亡灵召唤术",
+			"ENG_name": "Summon Undead",
+			"source": "TCE",
+			"page": 114,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个镀金头骨，价值至少 300gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤了一个亡灵之魂。它在你视野范围内的未被占据的空间中显现。这个实体形态使用{@creature 不死灵魄|TCE}的统计块。施放法术时，选择生物的形态：幽魂、腐臭或骷髅。这个灵魂类似于具有所选形态的亡灵生物，这决定了其统计块中的某些特征。当生物的生命值降至0点或法术结束时，生物会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，在统计块中出现法术等级的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		},
+		{
+			"name": "剑刃爆发",
+			"ENG_name": "Sword Burst",
+			"source": "TCE",
+			"page": 115,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 143
+				}
+			],
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你创造出一个瞬间的幽灵刀刃圈，围绕你旋转。所有距离你5英尺以内的其他生物必须成功进行一次敏捷豁免，否则将受到{@damage 1d6}点力量伤害。",
+				"当你达到5级时，这个法术的伤害增加{@dice 1d6}（{@damage 2d6}），达到11级时增加到{@damage 3d6}，达到17级时增加到{@damage 4d6}。"
+			],
+			"scalingLevelDice": {
+				"label": "force damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"敏捷"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "塔莎酸蚀酿",
+			"ENG_name": "Tasha's Caustic Brew",
+			"source": "TCE",
+			"page": 115,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一点腐烂的食物"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"一道酸性流从你身上沿着你选择的方向发出，形成30英尺长、5英尺宽的直线。直线中的每个生物都必须进行一次敏捷豁免检定，否则在法术持续时间内或直到一个生物使用其动作刮掉或洗掉自己身上或另一个生物身上的酸液前，都会被酸液覆盖。被酸液覆盖的生物在每个自己的回合开始时会受到{@damage 2d4}点酸性伤害。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用2级或更高等级的法术位来施放这个法术时，每超过1级的法术位，伤害会增加{@scaledamage 2d4|1-9|2d4}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"酸性"
+			],
+			"savingThrow": [
+				"敏捷"
+			]
+		},
+		{
+			"name": "塔莎心灵鞭",
+			"ENG_name": "Tasha's Mind Whip",
+			"source": "TCE",
+			"page": 115,
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你心灵上向范围内你能看到的一个生物发起攻击。目标必须进行一次智力豁免。豁免失败，目标受到{@damage 3d6}点心灵伤害，并且在其下一回合结束前不能进行反应。此外，在它的下一回合，它必须选择是否进行移动、动作或额外动作；它只能选择三者之一。豁免成功，目标受到的伤害减半，并且不会遭受法术的其他效果。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高等级的法术位来施放这个法术时，每超过2级的法术位可以额外选择一个目标。这些生物在被你选择时必须彼此相距不超过30英尺。"
+					]
+				}
+			],
+			"damageInflict": [
+				"心灵"
+			],
+			"savingThrow": [
+				"智力"
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "塔莎超凡形态",
+			"ENG_name": "Tasha's Otherworldly Guise",
+			"source": "TCE",
+			"page": 116,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一件的镶嵌有外层位面标记的物件，价值至少 500gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"念诵咒语时，你借助下层界或上层界（由你选择）的魔力来转变自己。直到法术结束，你将获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"你对火焰和毒素伤害免疫（下层位面）或对光辉和死灵伤害免疫（上层位面）。",
+						"你免疫于{@condition 中毒}状态（下层界）或{@condition 魅惑}状态（上层界）。",
+						"你的背上出现了幽灵般的翅膀，赋予你40英尺的飞行速度。",
+						"你的AC（护甲等级）有+2的加值。",
+						"你所有的武器攻击都是魔法的，当你进行武器攻击时，你可以使用你的施法能力调整值，而不是力量或敏捷，来决定攻击和伤害的骰子。",
+						"当您在您的回合采取{@action 攻击}动作时，您可以进行两次攻击，而不是一次。如果您已经拥有像额外攻击这样的特性，允许您在采取攻击动作时进行超过一次的攻击，则忽略此优势。"
+					]
+				}
+			],
+			"damageImmune": [
+				"火",
+				"毁灭诅咒",
+				"光辉",
+				"死灵"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"中毒"
+			],
+			"miscTags": [
+				"机枪"
+			]
+		}
+	]
 }

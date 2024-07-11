@@ -1,2292 +1,2292 @@
 {
-  "class": [
-    {
-      "name": "奇械师",
-      "ENG_name": "Artificer",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "hd": {
-        "number": 1,
-        "faces": 8
-      },
-      "proficiency": [
-        "体质",
-        "int"
-      ],
-      "spellcastingAbility": "int",
-      "casterProgression": "1/3",
-      "preparedSpells": "<$level$> / 2 + <$int_mod$>",
-      "cantripProgression": [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        3,
-        3,
-        3,
-        3,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "optionalfeatureProgression": [
-        {
-          "name": "注入",
-          "ENG_name": "Infusions",
-          "featureType": [
-            "AI"
-          ],
-          "progression": [
-            0,
-            4,
-            4,
-            4,
-            4,
-            6,
-            6,
-            6,
-            6,
-            8,
-            8,
-            8,
-            8,
-            10,
-            10,
-            10,
-            10,
-            12,
-            12,
-            12
-          ]
-        }
-      ],
-      "startingProficiencies": {
-        "armor": [
-          "光亮术",
-          "中等",
-          "{@item 护盾术|PHB|盾牌}"
-        ],
-        "weapons": [
-          "简单",
-          {
-            "proficiency": "枪械",
-            "optional": true
-          }
-        ],
-        "tools": [
-          "{@item 盗贼工具|PHB}",
-          "{@item 修理工具|PHB}",
-          "你选择的一种工匠工具{@item 工匠工具|PHB}"
-        ],
-        "toolProficiencies": [
-          {
-            "thieves' tools": true,
-            "tinker's tools": true,
-            "anyArtisansTool": 1
-          }
-        ],
-        "skills": [
-          {
-            "choose": {
-              "from": [
-                "奥秘",
-                "历史",
-                "调查",
-                "医药",
-                "自然",
-                "察觉",
-                "巧手"
-              ],
-              "count": 2
-            }
-          }
-        ]
-      },
-      "startingEquipment": {
-        "additionalFromBackground": true,
-        "default": [
-          "你选择的任意两种{@filter 简单武器|物品|来源=phb|类别=基础|类型=简单武器}",
-          "一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}",
-          "(a) {@item 镶钉皮甲|PHB} 或 (b) {@item 鳞甲|PHB}",
-          "{@item 盗贼工具|PHB} 和一个 {@item 地城套组|PHB}"
-        ],
-        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
-        "defaultData": [
-          {
-            "_": [
-              {
-                "equipmentType": "简易武器",
-                "quantity": 2
-              }
-            ]
-          },
-          {
-            "_": [
-              "轻弩|PHB",
-              "弩矢(20)|PHB"
-            ]
-          },
-          {
-            "a": [
-              "镶钉皮甲|PHB"
-            ],
-            "b": [
-              "鳞甲|PHB"
-            ]
-          },
-          {
-            "_": [
-              "盗贼工具|PHB",
-              "地城套组|PHB"
-            ]
-          }
-        ]
-      },
-      "multiclassing": {
-        "requirements": {
-          "int": 13
-        },
-        "proficienciesGained": {
-          "armor": [
-            "光亮术",
-            "中等",
-            "{@item 护盾术|PHB|盾牌}"
-          ],
-          "tools": [
-            "{@item 盗贼工具|PHB}",
-            "{@item 修理工具|PHB}"
-          ],
-          "toolProficiencies": [
-            {
-              "thieves' tools": true,
-              "tinker's tools": true
-            }
-          ]
-        }
-      },
-      "classTableGroups": [
-        {
-          "colLabels": [
-            "{@filter 已知注法|可选特性|特性类型=ai|来源=TCE}",
-            "注入物品",
-            "{@filter 已知戏法|法术|level=0|职业=炼金术士}"
-          ],
-          "rows": [
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              4,
-              2,
-              2
-            ],
-            [
-              4,
-              2,
-              2
-            ],
-            [
-              4,
-              2,
-              2
-            ],
-            [
-              4,
-              2,
-              2
-            ],
-            [
-              6,
-              3,
-              2
-            ],
-            [
-              6,
-              3,
-              2
-            ],
-            [
-              6,
-              3,
-              2
-            ],
-            [
-              6,
-              3,
-              2
-            ],
-            [
-              8,
-              4,
-              3
-            ],
-            [
-              8,
-              4,
-              3
-            ],
-            [
-              8,
-              4,
-              3
-            ],
-            [
-              8,
-              4,
-              3
-            ],
-            [
-              10,
-              5,
-              4
-            ],
-            [
-              10,
-              5,
-              4
-            ],
-            [
-              10,
-              5,
-              4
-            ],
-            [
-              10,
-              5,
-              4
-            ],
-            [
-              12,
-              6,
-              4
-            ],
-            [
-              12,
-              6,
-              4
-            ],
-            [
-              12,
-              6,
-              4
-            ]
-          ]
-        },
-        {
-          "title": "每个法术等级的法术位",
-          "colLabels": [
-            "{@filter 第一|法术|level=1|职业=炼金术士}",
-            "{@filter 第二|法术|level=2|职业=炼金术士}",
-            "{@filter 第三|法术|level=3|职业=炼金术士}",
-            "{@filter 第四|法术|level=4|职业=炼金术士}",
-            "{@filter 第五|法术|level=5|职业=炼金术士}"
-          ],
-          "rowsSpellProgression": [
-            [
-              2,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              1,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              1,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              1
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              1
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              2
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              2
-            ]
-          ]
-        }
-      ],
-      "classFeatures": [
-        "可选规则：火器熟练|奇械师|TCE|1",
-        "魔法工艺|奇械师|TCE|1",
-        "施法|奇械师|TCE|1",
-        "物品注法|奇械师|TCE|2",
-        {
-          "classFeature": "奇械师专业|奇械师|TCE|3",
-          "gainSubclassFeature": true
-        },
-        "称手工具|奇械师|TCE|3",
-        "属性值提升|奇械师|TCE|4",
-        {
-          "classFeature": "奇械师专业能力|奇械师|TCE|5",
-          "gainSubclassFeature": true
-        },
-        "工具专精|奇械师|TCE|6",
-        "灵光一闪|奇械师|TCE|7",
-        "属性值提升|奇械师|TCE|8",
-        {
-          "classFeature": "奇械师专业能力|奇械师|TCE|9",
-          "gainSubclassFeature": true
-        },
-        "魔法物品熟稔|奇械师|TCE|10",
-        "储法物品|奇械师|TCE|11",
-        "属性值提升|奇械师|TCE|12",
-        "魔法物品专家|奇械师|TCE|14",
-        {
-          "classFeature": "奇械师专业能力|奇械师|TCE|15",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|奇械师|TCE|16",
-        "魔法物品大师|奇械师|TCE|18",
-        "属性值提升|奇械师|TCE|19",
-        "奇械之魂|奇械师|TCE|20"
-      ],
-      "subclassTitle": "奇械师专业",
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ],
-  "subclass": [
-    {
-      "name": "炼金师",
-      "ENG_name": "Alchemist",
-      "shortName": "炼金师",
-      "source": "TCE",
-      "className": "奇械师",
-      "classSource": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "治愈真言",
-              "致病射线"
-            ],
-            "5": [
-              "炽焰法球",
-              "马友夫强酸箭"
-            ],
-            "9": [
-              "气化形体",
-              "群体治愈真言"
-            ],
-            "13": [
-              "枯萎术",
-              "防死护咒"
-            ],
-            "17": [
-              "死云术",
-              "唤醒死者"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "炼金师|奇械师|TCE|炼金师|TCE|3",
-        "炼金术掌握|奇械师|TCE|炼金师|TCE|5",
-        "复原药剂|奇械师|TCE|炼金师|TCE|9",
-        "化学专家|奇械师|TCE|炼金师|TCE|15"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "装甲师",
-      "ENG_name": "Armorer",
-      "shortName": "装甲师",
-      "source": "TCE",
-      "className": "奇械师",
-      "classSource": "TCE",
-      "page": 15,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "魔法飞弹",
-              "雷鸣波"
-            ],
-            "5": [
-              "镜影术",
-              "粉碎音波"
-            ],
-            "9": [
-              "催眠图纹",
-              "闪电束"
-            ],
-            "13": [
-              "火焰护盾",
-              "高等隐形术"
-            ],
-            "17": [
-              "穿墙术",
-              "力墙术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "装甲师|奇械师|TCE|装甲师|TCE|3",
-        "额外攻击|奇械师|TCE|装甲师|TCE|5",
-        "装甲改造|奇械师|TCE|装甲师|TCE|9",
-        "完美装甲|奇械师|TCE|装甲师|TCE|15"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "魔炮师",
-      "ENG_name": "Artillerist",
-      "shortName": "魔炮师",
-      "source": "TCE",
-      "className": "奇械师",
-      "classSource": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "护盾术",
-              "雷鸣波"
-            ],
-            "5": [
-              "灼热射线",
-              "粉碎音波"
-            ],
-            "9": [
-              "火球术",
-              "风墙术"
-            ],
-            "13": [
-              "冰风暴",
-              "火墙术"
-            ],
-            "17": [
-              "寒冰锥",
-              "力墙术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "魔炮师|奇械师|TCE|魔炮师|TCE|3",
-        "奥法火器|奇械师|TCE|魔炮师|TCE|5",
-        "高爆炮台|奇械师|TCE|魔炮师|TCE|9",
-        "坚固要塞|奇械师|TCE|魔炮师|TCE|15"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "战地匠师",
-      "ENG_name": "Battle Smith",
-      "shortName": "战地匠师",
-      "source": "TCE",
-      "className": "奇械师",
-      "classSource": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "英雄气概",
-              "护盾术"
-            ],
-            "5": [
-              "烙印斩",
-              "守护联结"
-            ],
-            "9": [
-              "活力灵光",
-              "召唤箭幕"
-            ],
-            "13": [
-              "净化灵光",
-              "火焰护盾"
-            ],
-            "17": [
-              "放逐斩",
-              "群体治疗伤势"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "战地匠师|奇械师|TCE|战地匠师|TCE|3",
-        "额外攻击|奇械师|TCE|战地匠师|TCE|5",
-        "奥能震荡|奇械师|TCE|战地匠师|TCE|9",
-        "改良守卫|奇械师|TCE|战地匠师|TCE|15"
-      ],
-      "hasFluffImages": true
-    }
-  ],
-  "classFeature": [
-    {
-      "name": "魔法工艺",
-      "ENG_name": "Magical Tinkering",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 1,
-      "entries": [
-        "{@i 1级工匠特性}",
-        "你学会了如何将一丝魔法注入到普通物品中。要使用这个能力，你必须手持{@item 盗贼工具|PHB}或{@item 工匠工具|PHB}。然后，你可以作为动作触摸一个小的非魔法物品，并赋予它以下你选择的魔法属性之一：",
-        {
-          "type": "list",
-          "items": [
-            "该物体在5英尺半径内发出明亮的光芒，并在额外的5英尺内发出微弱的光。",
-            "每当被生物触碰，该物体会发出录制的信息，距离最远可达10英尺。你在赋予物体这个属性时说出信息，录制的长度不能超过6秒。",
-            "该物体持续发出你选择的气味或非语言声音（风声、波涛声、鸟鸣声等）。所选现象在10英尺范围内可感知。",
-            "静态视觉效果出现在物体的一个表面上。这个效果可以是一幅画，多达25个单词的文本，线条和形状，或者这些元素的混合，随你喜欢。"
-          ]
-        },
-        "所选属性永久持续。作为一项动作，你可以触摸物体并提前结束该属性。",
-        "你可以赋予多个物体魔法，每次使用此特性时触摸一个物体，尽管单个物体一次只能承受一个属性。你一次可以用此特性影响的物体的最大数量等于你的智力调整值（最少一个物体）。如果你试图超过你的最大数量，最旧的属性会立即结束，然后新属性生效。"
-      ]
-    },
-    {
-      "name": "可选规则：火器熟练",
-      "ENG_name": "Optional Rule: Firearm Proficiency",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 1,
-      "entries": [
-        "在D&D多元宇宙的各个角落中，制造和操作火药武器的秘密已经被发现。如果你的地下城主使用了《地下城主指南》第9章关于火器的规则，并且你的炼金术士已经接触过这类武器的操作，你的炼金术士对它们是熟练的。"
-      ]
-    },
-    {
-      "name": "施法",
-      "ENG_name": "Spellcasting",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 1,
-      "entries": [
-        "{@i 1级工匠特性}",
-        "你已经研究了魔法的运作以及如何施放法术，通过物体来引导魔法。对于观察者来说，你看起来并不是以传统的方式施放法术；你似乎能够从平凡的物品和奇异的发明中创造出奇迹。",
-        {
-          "type": "entries",
-          "name": "必备工具",
-          "ENG_name": "Tools Required",
-          "entries": [
-            "你通过你的工具产生炼金术士的法术效果。当你使用这个施法特性施放任何法术时（意味着施放时法术具有'M'成分），你必须持有施法焦点——具体来说，是盗贼工具或某种工匠工具。你必须精通该工具才能以这种方式使用它。请参阅《玩家手册》第5章“装备”，了解这些工具的描述。",
-            "在你2级获得注入物品特性后，你也可以使用任何带有你注入的任何物品作为施法焦点。",
-            {
-              "type": "inset",
-              "name": "技艺的魔法",
-              "ENG_name": "The Magic of Artifice",
-              "entries": [
-                "作为炼金术士，你在施放法术时使用工具。在描述你的施法时，想一想你是如何使用一个工具来执行法术效果的。如果你使用炼金术工具施放{@spell cure wounds}，你可能正在迅速制作一种药膏。如果你使用修补匠工具施放它，你可能有一个小型机械蜘蛛来包扎伤口。当你施放{@spell poison spray}时，你可以抛洒有害化学物质，或者使用一根喷射毒液的魔杖。法术的效果与其他任何职业的施法者相同，但你施法的方式是特殊的。",
-                "当你准备法术时，也适用相同的原则。作为炼金术士，你不是通过研究魔法书或祈祷来准备法术。相反，你使用你的工具并创造你将用来产生效果的专用物品。如果你用{@spell 治疗伤势}替换{@spell 灼热金属}，你可能正在改变你用来治疗的装置——也许修改一个工具，使其传递热量而不是治疗能量。",
-                "这些细节不会以任何方式限制你，也不会提供超出法术效果的任何好处。你不必解释你是如何使用工具来施放法术的。但是，创造性地描述你的施法是一个有趣的方式，可以让你与其他施法者区分开来。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "戏法",
-          "ENG_name": "Cantrips (0-Level Spells)",
-          "entries": [
-            "在1级时，你可以选择两个来自{@filter 炼金术士法术列表|法术|level=0|职业=炼金术士}的戏法。在更高等级时，如炼金术士表格中的已知戏法列所示，你可以选择学习更多的炼金术士戏法。",
-            "当你在此职业中升级时，你可以将你所知的一个炼金术士戏法替换为炼金术士法术列表中的另一个戏法。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "法术的准备和施展",
-          "ENG_name": "Preparing and Casting Spells",
-          "entries": [
-            "炼金术士表格显示了你拥有多少法术位来施放你的炼金术士法术。要施放一个1级或更高等级的炼金术士法术，你必须消耗一个该法术等级或更高等级的法术位。当你完成一次长时间休息时，你将恢复所有消耗的法术位。",
-            "你准备可供施放的炼金术士法术列表，从{@filter 炼金术士法术列表|法术|职业=炼金术士}中选择。当你这样做时，选择的炼金术士法术数量等于你的智力调整值加上炼金术士等级的一半，向下取整（最少一个法术）。法术必须是你拥有法术位的等级。",
-            "例如，如果你是一个5级的炼金术士，你有四个1级和两个2级法术位。智力为14，你准备的法术列表可以包括四个1级或2级的法术，任意组合。如果你准备了1级的法术{@spell 治疗伤势}，你可以使用1级或2级法术位来施放它。施放法术不会将其从你准备的法术列表中移除。",
-            "当你完成一次长时间休息时，你可以更改你准备的法术列表。准备新的炼金术士法术列表需要花费时间来调整你的施法焦点：每个法术位等级的法术至少需要1分钟。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "施法关键属性",
-          "ENG_name": "Spellcasting Ability",
-          "entries": [
-            "智力是你的炼金术士法术的施法能力；你对魔法背后的理论的理解使你能够以更高的技巧使用这些法术。每当炼金术士法术提及你的施法能力时，你都会使用你的智力。此外，当你为施放的炼金术士法术设定豁免骰的难度等级（DC）以及进行法术攻击检定时，你也会使用你的智力调整值。",
-            {
-              "type": "abilityDc",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "int"
-              ]
-            },
-            {
-              "type": "abilityAttackMod",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "int"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "仪式施法",
-          "ENG_name": "Ritual Casting",
-          "entries": [
-            "如果法术具有仪式标签并且你已经准备好了这个法术，你可以将炼金术士法术作为仪式来施放。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "物品注法",
-      "ENG_name": "Infuse Item",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 2,
-      "entries": [
-        "{@i 2级术士特性}",
-        "你获得了将某些魔法注入到普通物品中的能力，使这些物品变成魔法物品。",
-        {
-          "type": "refClassFeature",
-          "classFeature": "已知注法|奇械师|TCE|2"
-        },
-        {
-          "type": "inset",
-          "name": "奇械师注法",
-          "ENG_name": "Artificer Infusions",
-          "entries": [
-            "炼金术士发明了众多的魔法注入，这些非凡的过程能够迅速创造出魔法物品。对许多人来说，炼金术士就像是奇迹工作者，他们能在几小时内完成其他人需要几周才能完成的事情。",
-            "下面每个注入的描述都详细说明了哪些类型的项目可以接受它，以及由此产生的魔法物品是否需要调谐。",
-            "一些注入指定了最低炼金术士等级。在你至少达到那个等级之前，你无法学习这样的注入。",
-            "除非注入的描述另有说明，否则你不能多次学习同一个注入。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "为物品进行注法",
-          "ENG_name": "Infusing an Item",
-          "entries": [
-            "每当你完成一次长时间的休息，你可以触摸一个非魔法物品，并将其注入你的术士注入之一，将其变成魔法物品。注入仅适用于某些特定种类的物品，具体由注入的描述指定。如果物品需要调谐，你可以在注入物品的瞬间调谐自己。如果你决定稍后调谐物品，你必须使用调谐的正常过程（见《地下城主指南》第7章的'{@book 调谐|DMG|7|调谐}'）",
-            "你的注入在物品中永久存在，但当你死亡时，注入会在等同于你的智力调整值（最少1天）的天数后消失。如果你为了另一个注入而放弃对当前注入的了解，注入也会消失。",
-            "在一次长时间休息结束时，你可以注入多个非魔法物品；你可以注入物品的最大数量显示在炼金术士表格中的注入物品列。你必须触摸每一个物品，并且你的每一个注入在同一时间只能存在于一个物品中。此外，任何一个物品在同一时间不能承载你的多个注入。如果你试图超过你的注入最大数量，最旧的注入会立即结束，然后新的注入生效。",
-            "如果注入效果在包含其他物品的物品上结束，比如一个{@item 次元袋}（容量袋），其内容物将无害地出现在其空间内及其周围。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "已知注法",
-      "ENG_name": "Infusions Known",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 2,
-      "header": 1,
-      "entries": [
-        "当你获得这个特性时，从职业描述末尾的“{@filter 奇械师注法|可选特性|特性类型=ai|来源=TCE}”部分中选择四种炼金术士注入来学习。当你达到这个职业的特定等级时，你将根据炼金术士表格中的注入已知列所示，学习额外的你选择的注入。",
-        "每当你在本职业中提升一个等级时，你可以用一个新的工匠注入替换你已学会的一个注入。"
-      ]
-    },
-    {
-      "name": "奇械师专业",
-      "ENG_name": "Artificer Specialist",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 3,
-      "entries": [
-        "{@i 3级炼金术士特性}",
-        "选择你的专家类型，每种类型都在本职业描述的末尾详细说明。你的选择将在5级、9级和15级时赋予你特性。"
-      ]
-    },
-    {
-      "name": "称手工具",
-      "ENG_name": "The Right Tool for the Job",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 3,
-      "entries": [
-        "{@i 3级炼金术士特性}",
-        "你学会了如何制作你需要的确切工具：手中持有盗贼工具或工匠工具，你可以在距离你5英尺内未被占据的空间中神奇地创造出一套工匠工具。这个创造需要1小时的不间断工作，可以与短暂休息或长时间休息同时进行。尽管是魔法的产物，但这些工具是非魔法的，并且当你再次使用这个特性时它们会消失。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 4,
-      "entries": [
-        "{@i 4级炼金术士特性}",
-        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "奇械师专业能力",
-      "ENG_name": "Artificer Specialist Feature",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 5,
-      "entries": [
-        "{@i 5级炼金术士特性}",
-        "你获得了由你的炼金术士专家选择赋予的特性。"
-      ]
-    },
-    {
-      "name": "工具专精",
-      "ENG_name": "Tool Expertise",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 6,
-      "entries": [
-        "{@i 6级术士特性}",
-        "你现在进行任何使用工具熟练度的能力检定时，熟练加值翻倍。"
-      ]
-    },
-    {
-      "name": "灵光一闪",
-      "ENG_name": "Flash of Genius",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 7,
-      "entries": [
-        "{@i 7级术士特性}",
-        "你已经获得了在压力下想出解决方案的能力。当你或你能看到的30英尺内的另一个生物进行能力检定或豁免检定时，你可以使用你的反应将你的智力调整值加到骰上。",
-        "你可以使用这个特性的次数等于你的智力调整值（最少一次）。当你完成一次长时间休息时，你将恢复所有已使用的点数。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 8,
-      "entries": [
-        "{@i 8级工匠特性}",
-        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "奇械师专业能力",
-      "ENG_name": "Artificer Specialist Feature",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 9,
-      "entries": [
-        "{@i 9级术士特性}",
-        "你获得了由你的炼金术士专家选择赋予的特性。"
-      ]
-    },
-    {
-      "name": "魔法物品熟稔",
-      "ENG_name": "Magic Item Adept",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 10,
-      "entries": [
-        "{@i 10级炼金术士特性}",
-        "你已经对如何使用和制造魔法物品有了深刻的理解：",
-        {
-          "type": "list",
-          "items": [
-            "你可以同时与多达四个魔法物品共鸣。",
-            "如果你制造一个普通或不常见的魔法物品，它所需的时间是正常时间的四分之一，而且成本只有通常黄金的一半。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "储法物品",
-      "ENG_name": "Spell-Storing Item",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 11,
-      "entries": [
-        "{@i 11级术士特性}",
-        "现在你可以将一个法术储存在物品中。每当你完成一次长时间休息时，你可以触摸一件{@filter 简单或军用武器|物品|来源=phb|类别=基础|类型=武术武器；简单武器}或者一个你可以用作施法焦点的物品，并将一个法术储存在其中，选择一个来自{@filter 炼金术士法术列表|法术|职业=炼金术士|施法时间=动作|level=1;2}的1级或2级法术，该法术需要1个动作来施放（你不必已经准备好它）。",
-        "持有该物品的生物可以采取一个动作，使用你的施法能力调整值来产生法术的效果。如果法术需要{@status 专注}，生物必须专注。法术会保留在物品中，直到它被使用次数等于你的智力调整值的两倍（最少两次）或者直到你再次使用这个特性来在物品中储存一个法术。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 12,
-      "entries": [
-        "{@i 12级炼金术士特性}",
-        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "魔法物品专家",
-      "ENG_name": "Magic Item Savant",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 14,
-      "entries": [
-        "{@i 14级术士特性}",
-        "你对魔法物品的熟练度加深了：",
-        {
-          "type": "list",
-          "items": [
-            "你可以同时调谐多达五个魔法物品。",
-            "在调谐或使用魔法物品时，你忽略了所有的职业、种族、法术和等级要求。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "奇械师专业能力",
-      "ENG_name": "Artificer Specialist Feature",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 15,
-      "entries": [
-        "{@i 15级炼金术士特性}",
-        "你获得了由你的炼金术士专家选择赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 16,
-      "entries": [
-        "{@i 16级术士特性}",
-        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "魔法物品大师",
-      "ENG_name": "Magic Item Master",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 18,
-      "entries": [
-        "{@i 18级炼金术士特性}",
-        "你现在可以同时与多达六件魔法物品共鸣。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 19,
-      "entries": [
-        "{@i 19级工匠特性}",
-        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "奇械之魂",
-      "ENG_name": "Soul of Artifice",
-      "source": "TCE",
-      "page": 9,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 54
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "level": 20,
-      "entries": [
-        "{@i 20级炼金术士特性}",
-        "你已经与你的魔法物品发展出了一种神秘的联系，你可以利用这种联系来获得保护：",
-        {
-          "type": "list",
-          "items": [
-            "你每调谐一个魔法物品，所有豁免检定就获得+1的加值。",
-            "如果你被降至0点生命值但没有立即死亡，你可以使用你的反应结束你的一个炼金术士注入，使你的生命值降至1点而不是0。"
-          ]
-        }
-      ]
-    }
-  ],
-  "subclassFeature": [
-    {
-      "name": "炼金师",
-      "ENG_name": "Alchemist",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "炼金术士是擅长结合试剂以产生神秘效果的专家。炼金术士使用他们的创造来赋予生命，以及剥夺它。炼金术是最早的术士传统之一，其多功能性在战争与和平时期一直受到重视。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "工具熟练|奇械师|TCE|炼金师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "炼金师法术|奇械师|TCE|炼金师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "实验性灵药|奇械师|TCE|炼金师|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "炼金师法术",
-      "ENG_name": "Alchemist Spells",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，当你达到这个职业的特定等级时，你总是准备了一些特定的法术，如炼金术士法术表格所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术的数量。",
-        {
-          "type": "table",
-          "caption": "炼金师法术",
-          "colLabels": [
-            "炼金术士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 治愈真言}, {@spell 致病射线}"
-            ],
-            [
-              "第五",
-              "{@spell 炽焰法球}, {@spell 马友夫强酸箭}"
-            ],
-            [
-              "第九",
-              "{@spell 气化形体}, {@spell 群体治愈真言}"
-            ],
-            [
-              "13级",
-              "{@spell 枯萎术}, {@spell 防死护咒}"
-            ],
-            [
-              "17级",
-              "{@spell 死云术}, {@spell 唤醒死者}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "实验性灵药",
-      "ENG_name": "Experimental Elixir",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，每当你完成一次长时间的休息，你可以在触摸的空瓶中神奇地制造出一个{@i 实验性灵药}。在实验性药剂表上掷骰子以确定药剂的效果，当有人喝下药剂时触发效果。作为一个动作，生物可以喝下药剂或给{@condition 无力}的生物服用。",
-        "创建一个{@i 实验性灵药}需要你随身携带{@item 炼金工具|PHB}，并且你通过这个特性创造的任何药剂将持续有效直到被喝掉或直到你下一次长时间休息结束。",
-        "当你达到这个职业的特定等级时，你可以在完成长时间休息后制作更多的药剂：6级时两个，15级时三个。每个药剂的效果需要单独掷骰。每个药剂都需要自己的烧瓶。",
-        "你可以为每一个额外的{@i 实验性药剂}消耗一个1级或更高等级的法术位。当你这样做时，你采取动作在你所触摸的空瓶中创造药剂，并且你从实验性药剂表格中选择药剂的效果。",
-        {
-          "type": "table",
-          "caption": "实验性灵药",
-          "colLabels": [
-            "d6",
-            "影响"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "1",
-              "{@b 治疗}。饮用者恢复生命值，数值等于{@dice 2d4}加上你的智力调整值。"
-            ],
-            [
-              "2",
-              "{@b 迅捷}。饮用者在1小时内步行速度增加10英尺。"
-            ],
-            [
-              "3",
-              "{@b 韧性}。饮用者在接下来的10分钟内获得AC+1的加成。"
-            ],
-            [
-              "4",
-              "{@b 勇敢}。饮酒者可以掷一个{@dice d4}，并将掷出的数字加到他们接下来一分钟内进行的每一次攻击检定和豁免检定上。"
-            ],
-            [
-              "5",
-              "{@b 飞行}。饮用者在接下来的10分钟内获得10英尺的飞行速度。"
-            ],
-            [
-              "6",
-              "{@b 变形}。饮用者的身体会像被施放了{@spell 变造自身}法术一样发生转变。饮用者决定由法术引起的转变，这些效果持续10分钟。"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "工具熟练",
-      "ENG_name": "Tool Proficiency",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个专长时，你获得对{@item 炼金工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得其他一种类型的{@item 工匠工具|PHB}的熟练度。"
-      ]
-    },
-    {
-      "name": "炼金术掌握",
-      "ENG_name": "Alchemical Savant",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 5,
-      "header": 2,
-      "entries": [
-        "在5级时，你对魔法化学药品的掌握达到了高超的水平，这增强了你通过它们创造的治疗和伤害。每当你使用你的{@item 炼金工具|PHB}作为施法焦点来施放法术时，你可以为法术的一个掷骰获得加成。这个掷骰必须是恢复生命值的掷骰，或者是造成酸蚀、火焰、死灵或毒素伤害的伤害掷骰，加成值等于你的智力调整值（最少为+1）。"
-      ]
-    },
-    {
-      "name": "复原药剂",
-      "ENG_name": "Restorative Reagents",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 9,
-      "header": 2,
-      "entries": [
-        "从9级开始，你可以将恢复性试剂融入你的一些作品中：",
-        {
-          "type": "list",
-          "items": [
-            "每当一个生物饮用了你创造的{@i 实验性灵药}，该生物将获得等同于{@dice 2d6}加上你的智力调整值（最少1点临时生命值）的临时生命值。",
-            "你可以在不消耗法术位且未准备法术的情况下施放{@spell 次级复原术}，前提是你使用{@item 炼金工具|PHB}作为施法焦点。你可以这样做的次数等于你的智力调整值（最少一次），并且在你完成一次长时间休息后，你恢复所有已消耗的使用次数。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "化学专家",
-      "ENG_name": "Chemical Mastery",
-      "source": "TCE",
-      "page": 14,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 58
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "炼金师",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "到了15级，你已经接触了如此多的化学物质，以至于它们对你几乎没有风险，你可以利用它们迅速结束某些疾病：",
-        {
-          "type": "list",
-          "items": [
-            "你对酸蚀伤害和毒素伤害获得抗性，并且你对{@condition 中毒}状态免疫。",
-            "你可以在不消耗法术位、不准备法术、不使用材料组件的情况下施放{@spell 高等复原术}和{@spell 治愈术}，前提是你使用{@item 炼金工具|PHB}作为施法焦点。一旦你使用这个特性施放了任一法术，直到你完成一次长时间休息之前，你不能再使用它来施放那个法术。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "装甲师",
-      "ENG_name": "Armorer",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "一位专门作为装甲师的炼金术士将盔甲修改得几乎像第二层皮肤一样运作。这种盔甲被增强，以磨练炼金术士的魔法，释放强大的攻击，并产生强大的防御。炼金术士与这种盔甲结合，即使在实验和提炼其魔法能力时，也与之融为一体。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "ì|奇械师|TCE|装甲师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "装甲师法术|奇械师|TCE|装甲师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "奥能装甲|奇械师|TCE|装甲师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "装甲型号|奇械师|TCE|装甲师|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "抑制场[未校对]",
-      "ENG_name": "Dampening Field",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "type": "item",
-      "entries": [
-        "你在敏捷（{@skill 隐匿})检定上有优势。如果盔甲通常对此类检定施加劣势，那么优势和劣势将相互抵消，如同常规。"
-      ]
-    },
-    {
-      "name": "防御场[未校对]",
-      "ENG_name": "Defensive Field",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "type": "item",
-      "entries": [
-        "作为一个奖励动作，你可以获得等于你在本职业中的等级的临时生命值，替换你已经拥有的任何临时生命值。如果你脱下护甲，你会失去这些临时生命值。你可以使用这个奖励动作的次数等于你的熟练加值，并且在你完成长时间休息后，你将重新获得所有已用尽的使用次数。"
-      ]
-    },
-    {
-      "name": "闪电发射器[未校对]",
-      "ENG_name": "Lightning Launcher",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "type": "item",
-      "entries": [
-        "在你的一只装甲拳头上或胸部（你选择）会出现一个宝石状的节点。它被计为一种简单的远程武器，标准射程为90英尺，长射程为300英尺，并且在命中时造成{@damage 1d6}闪电伤害。每当你的回合内你用它击中一个生物时，你可以对该目标造成额外的{@damage 1d6}闪电伤害。"
-      ]
-    },
-    {
-      "name": "动力步伐[未校对]",
-      "ENG_name": "Powered Steps",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "type": "item",
-      "entries": [
-        "你的步行速度增加了5英尺。"
-      ]
-    },
-    {
-      "name": "雷霆护手[未校对]",
-      "ENG_name": "Thunder Gauntlets",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "type": "item",
-      "entries": [
-        "当你没有在其中持有任何东西时，护甲的每个手套都被视为简单近战武器，并且在命中时造成{@damage 1d8}雷鸣伤害。被手套击中的生物在攻击卷上对除了你之外的目标有劣势，直到你的下个回合开始，因为当生物攻击其他人时，护甲会神奇地发出干扰脉冲。"
-      ]
-    },
-    {
-      "name": "奥能装甲",
-      "ENG_name": "Arcane Armor",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级铠甲匠特性}",
-        "你的冶金追求使你将盔甲变成了魔法的传导体。作为一个动作，你可以将你穿着的一套盔甲变成奥术盔甲，前提是你手中有{@item 铁匠工具|PHB}。",
-        "穿戴这件护甲时，你获得以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "如果盔甲通常有力量需求，那么奥术盔甲对你来说没有这个需求。",
-            "你可以将奥术护甲作为你的炼金术士法术的施法焦点。",
-            "盔甲附着在你身上，无法违背你的意愿被移除。它还会扩展以覆盖你的整个身体，尽管你可以作为奖励动作收回或展开头盔。盔甲会替代任何缺失的肢体，其功能与它替代的肢体完全相同。",
-            "你可以作为动作穿上或脱下盔甲。直到你穿上另一套盔甲或你死亡，这件盔甲将继续是奥术盔甲。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "装甲型号",
-      "ENG_name": "Armor Model",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级铠甲匠特性}",
-        "你可以自定义你的奥术护甲。当你这样做时，选择以下护甲模型之一：守卫者或潜行者。你选择的模型在你穿戴时会给你特殊的好处。",
-        "每种型号都包括一种特殊武器。当你用该武器攻击时，你可以将智力调整值加到攻击和伤害骰上，而不是力量或敏捷。",
-        "你可以在完成短休或长休时更换盔甲的模型，前提是你手中有{@item 铁匠工具|PHB}。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "守护者",
-              "ENG_name": "Guardian",
-              "entries": [
-                "你设计你的盔甲以位于冲突的最前线。它具有以下特点：",
-                {
-                  "type": "list",
-                  "style": "list-hang-notitle",
-                  "items": [
-                    {
-                      "type": "refSubclassFeature",
-                      "subclassFeature": "雷霆护手[未校对]|奇械师|TCE|装甲师|TCE|3"
-                    },
-                    {
-                      "type": "refSubclassFeature",
-                      "subclassFeature": "防御场[未校对]|奇械师|TCE|装甲师|TCE|3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "渗透者",
-              "ENG_name": "Infiltrator",
-              "entries": [
-                "你为微妙的任务定制了你的护甲。它具有以下特点：",
-                {
-                  "type": "list",
-                  "style": "list-hang-notitle",
-                  "items": [
-                    {
-                      "type": "refSubclassFeature",
-                      "subclassFeature": "闪电发射器[未校对]|奇械师|TCE|装甲师|TCE|3"
-                    },
-                    {
-                      "type": "refSubclassFeature",
-                      "subclassFeature": "动力步伐[未校对]|奇械师|TCE|装甲师|TCE|3"
-                    },
-                    {
-                      "type": "refSubclassFeature",
-                      "subclassFeature": "抑制场[未校对]|奇械师|TCE|装甲师|TCE|3"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "装甲师法术",
-      "ENG_name": "Armorer Spells",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级铠甲匠特性}",
-        "在达到这个职业的特定等级后，你总是准备了某些法术，如装甲师法术表所示。这些法术对你来说算作工匠法术，但它们不计入你准备的工匠法术的数量。",
-        {
-          "type": "table",
-          "caption": "装甲师法术",
-          "colLabels": [
-            "炼金术士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 魔法飞弹}, {@spell 雷鸣波}"
-            ],
-            [
-              "第五",
-              "{@spell 镜影术}, {@spell 粉碎音波}"
-            ],
-            [
-              "第九",
-              "{催眠图样}, {闪电箭}"
-            ],
-            [
-              "13级",
-              "{@spell 火焰护盾}, {@spell 高等隐形术}"
-            ],
-            [
-              "17级",
-              "{@spell 穿墙术}, {@spell 力墙术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "ì",
-      "ENG_name": "Tools of the Trade",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级铠甲匠特性}",
-        "你获得了穿戴重型盔甲的熟练度。你还获得了使用{@item 铁匠工具|PHB}的熟练度。如果你已经拥有这种工具熟练度，你可以选择获得另一种类型的{@item 工匠工具|PHB}的熟练度。"
-      ]
-    },
-    {
-      "name": "额外攻击",
-      "ENG_name": "Extra Attack",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 5,
-      "header": 2,
-      "entries": [
-        "{@i 5级盔甲匠特性}",
-        "每当你在你的回合上采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
-      ]
-    },
-    {
-      "name": "装甲改造",
-      "ENG_name": "Armor Modifications",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 9,
-      "header": 2,
-      "entries": [
-        "{@i 9级盔甲匠特性}",
-        "你学习如何使用你的工匠注入来特别修改你的奥术护甲。现在，为了你的注入物品特性的目的，那件护甲被视为独立的项目：护甲（胸甲）、靴子、头盔以及护甲的特殊武器。这些项目中的每一个都可以承载你的一个注入，如果你使用护甲模型特性改变你的护甲模型，注入会转移过去。此外，你一次性可以注入的项目最大数量增加了2，但这些额外的项目必须是你奥术护甲的一部分。"
-      ]
-    },
-    {
-      "name": "完美装甲",
-      "ENG_name": "Perfected Armor",
-      "source": "TCE",
-      "page": 15,
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "装甲师",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级铠甲匠特性}",
-        "你的奥术护甲根据其型号获得额外的效益，如下所示。",
-        {
-          "type": "entries",
-          "name": "守护者",
-          "ENG_name": "Guardian",
-          "entries": [
-            "当你看到一个体型为大型或更小的生物在其回合结束时处于你30英尺范围内，你可以使用你的反应来施放魔法，迫使它进行力量豁免检定，对抗你的法术豁免DC。如果豁免失败，你可以将生物拉至最多25英尺直接到一个未被占据的空间。如果你将目标拉到距离你5英尺以内的空间，你可以在这个反应中对其进行近战武器攻击。",
-            "你可以使用这个反应的次数等于你的熟练加值，当你完成一次长时间休息后，你将重新获得所有已使用的它。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "渗透者",
-          "ENG_name": "Infiltrator",
-          "entries": [
-            "任何生物如果从你的雷电发射器受到闪电伤害，直到你的下一个回合开始前都会闪烁着魔法光芒。闪烁的生物在5英尺半径内散发出微弱的光，并且它对您的攻击检定有劣势，因为如果它攻击你，光芒会让它受到冲击。此外，下一次对它的攻击检定有优势，如果那次攻击命中，目标将额外受到{@damage 1d6}点闪电伤害。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "魔炮师",
-      "ENG_name": "Artillerist",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "一个炮术师专门使用魔法在战场上投掷能量、投射物和爆炸。这种破坏性的力量在上一次战争中被所有军队所重视。现在战争已经结束，一些这个专精的成员已经寻求通过使用他们的力量来对抗Khorvaire中冲突的重新出现，来建立一个更和平的世界。",
-        "侏儒炼金术士维，作为坎尼思家族战争锻造项目中不太可能但关键的成员，特别强调要纠正事情：‘是时候我们修复事物，而不是把它们都炸到地狱去。’",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "工具熟练|奇械师|TCE|魔炮师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "魔炮师法术|奇械师|TCE|魔炮师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "魔能炮台|奇械师|TCE|魔炮师|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "魔炮师法术",
-      "ENG_name": "Artillerist Spells",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，当你达到这个职业的特定等级时，你总是准备好了某些法术，如炮手法术表所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术数量。",
-        {
-          "type": "table",
-          "caption": "魔炮师法术",
-          "colLabels": [
-            "炼金术士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 护盾术}, {@spell 雷鸣波}"
-            ],
-            [
-              "第五",
-              "{@spell 灼热射线}, {@spell 粉碎音波}"
-            ],
-            [
-              "第九",
-              "{@spell 火球术}, {@spell 风墙术}"
-            ],
-            [
-              "13级",
-              "{@spell 冰风暴}, {@spell 火墙术}"
-            ],
-            [
-              "17级",
-              "{@spell 寒冰锥}, {@spell 力墙术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "魔能炮台",
-      "ENG_name": "Eldritch Cannon",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "在3级时，你学会了如何创造一个魔法炮。使用{@item 木雕工具|PHB}或{@item 铁匠工具|PHB}，你可以采取行动，在距离你5英尺内的平坦表面上的未占空间中，神奇地创造一个小型或超小型的奥术炮。一个小型奥术炮占据其空间，而超小型的可以用一只手拿着。",
-        "一旦你创建了一门大炮，在你完成一次长时间的休息或者消耗一个1级或更高级别的法术位之前，你不能再创建大炮。同时，你一次只能拥有一门大炮，并且当你的大炮在场时，你不能创建新的大炮。",
-        "大炮是一件魔法物品。无论大小，大炮的护甲等级为18，生命值等于你的工匠等级的五倍。它对毒素伤害和精神伤害免疫，并且对所有条件免疫。如果它被迫进行能力检定或豁免投掷，将其所有能力值视为10（+0）。如果对它施放{@spell 修复术}法术，它恢复{@dice 2d6}生命值。如果它的生命值降至0或1小时后，它将消失。你可以作为动作提前解散它。",
-        "当你创建大炮时，你决定它的外观以及它是否有腿。你还决定它的类型，从奥术大炮表中选择选项。在你的每个回合中，如果你在大炮60英尺范围内，你可以采取一个奖励行动来激活大炮。作为同一奖励行动的一部分，如果大炮有腿，你可以指示大炮走到或爬上最多15英尺到达一个未被占据的空间。",
-        {
-          "type": "table",
-          "caption": "奥术炮",
-          "colLabels": [
-            "火炮",
-            "激活"
-          ],
-          "colStyles": [
-            "col-2",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "{@object 奥术加农炮，火焰喷射器|TCE|投火机}",
-              "大炮在你指定的相邻15英尺锥形区域内喷吐火焰。该区域内的每个生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 2d8}火焰伤害，成功则伤害减半。火焰会点燃区域内任何未穿戴或携带的易燃物品。"
-            ],
-            [
-              "{@object 奥术加农炮，力量弩炮|TCE|力场弩炮}",
-              "进行一次远程法术攻击，攻击起源于加农炮，目标是距离它120英尺内的生物或物体。命中时，目标承受{@damage 2d8}力量伤害，如果目标是生物，则会被推向远离加农炮最多5英尺。"
-            ],
-            [
-              "{@object 奥术大炮，守护者|TCE|防御者}",
-              "大炮发出一股正能量，赋予自身以及你选择的10英尺范围内的每个生物等同于{@damage 1d8}加上你的智力调整值（最少+1）的临时生命值。"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "工具熟练",
-      "ENG_name": "Tool Proficiency",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个专长，你获得{@item 木雕工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item 工匠工具|PHB}的熟练度。"
-      ]
-    },
-    {
-      "name": "奥法火器",
-      "ENG_name": "Arcane Firearm",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 5,
-      "header": 2,
-      "entries": [
-        "在5级时，你学会了如何将魔杖、法杖或法棒转变为奥术火器，作为你毁灭性法术的导体。当你完成一次长时间的休息后，你可以使用{@item 木雕工具|PHB}在魔杖、法杖或法棒上雕刻特殊的符文，从而将其转变为你的奥术火器。如果你后来在不同的物品上雕刻这些符文，它们会从物品上消失。否则，这些符文会无限期地持续存在。",
-        "你可以将你的奥术枪械作为施法焦点来施展你的工匠法术。当你通过枪械施放工匠法术时，掷一个{@damage d8}，你获得的加成等于掷出的数字，加到法术的一次伤害骰上。"
-      ]
-    },
-    {
-      "name": "高爆炮台",
-      "ENG_name": "Explosive Cannon",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 9,
-      "header": 2,
-      "entries": [
-        "从9级开始，你所创造的每一个奥术炮都更具破坏性：",
-        {
-          "type": "list",
-          "items": [
-            "大炮的伤害骰增加{@damage 1d8}。",
-            "作为动作，如果你在炮台60英尺范围内，你可以命令其引爆。引爆会摧毁炮台，并迫使每个在炮台20英尺范围内的生物进行一次敏捷豁免检定，对抗你的法术豁免DC，失败则受到{@damage 3d8}点力量伤害，成功则伤害减半。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "坚固要塞",
-      "ENG_name": "Fortified Position",
-      "source": "TCE",
-      "page": 17,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 59
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "魔炮师",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你成为使用奥术大炮形成坚固阵地的大师：",
-        {
-          "type": "list",
-          "items": [
-            "当你使用奥术炮创造的炮台在你10英尺范围内时，你和你的盟友获得半个掩体，这是由于炮台发出的闪烁的魔法保护场的结果。",
-            "你现在可以同时拥有两门大炮。你可以用同一个动作（但不能是同一个法术位）创建两门，并且可以用同一个额外动作激活它们。你可以决定这两门大炮是否彼此相同或不同。当你拥有两门大炮时，你不能创建第三门大炮。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "战地匠师",
-      "ENG_name": "Battle Smith",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "军队需要保护，如果防御失败，还需要有人来重建。战斗工匠既是保护者又是医者，他们擅长保护他人，修复物资和人员。为了帮助他们的工作，战斗工匠通常由一个钢铁守卫陪伴，这是他们自己创造的保护同伴。许多士兵讲述了他们几乎死去，然后被战斗工匠和钢铁守卫救回的故事。",
-        "战斗铁匠在坎尼思家族关于战斗构造体和原始战争锻造体的工作中发挥了关键作用，在最后一场战争之后，这些工匠引领了帮助那些在战争中受伤的人的努力。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "工具熟练|奇械师|TCE|战地匠师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战地匠师法术|奇械师|TCE|战地匠师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战斗准备|奇械师|TCE|战地匠师|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "钢铁守卫|奇械师|TCE|战地匠师|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "战斗准备",
-      "ENG_name": "Battle Ready",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你达到3级时，你的战斗训练和你对魔法的实验在两个方面都取得了回报：",
-        {
-          "type": "list",
-          "items": [
-            "你获得了武术武器的熟练度。",
-            "当你使用魔法武器攻击时，你可以使用你的智力调整值，而不是力量或敏捷调整值，来进行攻击和伤害的掷骰。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "战地匠师法术",
-      "ENG_name": "Battle Smith Spells",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，当你达到这个职业的特定等级时，你总是准备了某些法术，如战斗铁匠法术表所示。这些法术对你来说算作工匠法术，但它们不计入你准备的工匠法术数量。",
-        {
-          "type": "table",
-          "caption": "战地匠师法术",
-          "colLabels": [
-            "炼金术士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 英雄气概}, {@spell 护盾术}"
-            ],
-            [
-              "第五",
-              "{@spell 烙印斩}, {@spell 守护联结}"
-            ],
-            [
-              "第九",
-              "{@spell 活力灵光}, {@spell 召唤箭幕}"
-            ],
-            [
-              "13级",
-              "{@spell 净化灵光}, {@spell 火焰护盾}"
-            ],
-            [
-              "17级",
-              "{@spell 放逐斩}, {@spell 群体治疗伤势}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "钢铁守卫",
-      "ENG_name": "Steel Defender",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "到了3级，你的巧手制造了一个忠实的伙伴，一个{@creature 钢铁守卫|TCE}。它对你和你的同伴友好，并且服从你的命令。查看这个生物的游戏统计数据在钢制守卫者的统计块中，它在几个地方使用了你的熟练加值（PB）。你决定这个生物的外观以及它有两条腿还是四条腿；你的选择对它的游戏统计数据没有影响。",
-        "在战斗中，防御者共享你的先攻值，但在你之后立即行动。它可以自行移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 回避}动作，除非你在你的回合上采取奖励行动命令它采取其他动作。那个动作可以是它能力值块中的一个，或者是其他一些动作。如果你被{@condition 无力}，防御者可以采取任何它选择的动作，而不仅仅是{@action 回避}。",
-        "如果对它施放{@spell 修复术}法术，它将恢复{@dice 2d6}点生命值。如果它在最后一小时内死亡，你可以使用你的{@item 铁匠工具|PHB}作为动作来复活它，前提是你距离它5英尺以内，并且消耗一个1级或更高等级的法术位。钢铁守卫在1分钟后恢复所有生命值并复活。",
-        "在完成一次长时间的休息后，如果你随身携带了你的{@item 铁匠工具|PHB}，你可以创建一个新的钢铁守卫。如果你已经通过这个特性拥有了一个钢铁守卫，那么第一个守卫会立即消失。如果你死亡，守卫也会消失。"
-      ]
-    },
-    {
-      "name": "工具熟练",
-      "ENG_name": "Tool Proficiency",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个专长，你获得对{@item 铁匠工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item 工匠工具|PHB}的熟练度。"
-      ]
-    },
-    {
-      "name": "额外攻击",
-      "ENG_name": "Extra Attack",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 5,
-      "header": 2,
-      "entries": [
-        "从5级开始，每当你在回合中采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
-      ]
-    },
-    {
-      "name": "奥能震荡",
-      "ENG_name": "Arcane Jolt",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 9,
-      "header": 2,
-      "entries": [
-        "在9级时，你学会了新的将奥术能量引导出来以造成伤害或治疗的方法。当你用魔法武器攻击命中目标，或者你的钢铁守卫攻击命中目标时，你可以通过这次攻击引导魔法能量来创造以下效果之一：",
-        {
-          "type": "list",
-          "items": [
-            "目标额外承受{@damage 2d6}力量伤害。",
-            "选择一个在目标30英尺范围内你能看到的生物或物体。治愈能量流入所选的接受者，为其恢复{@dice 2d6}点生命值。"
-          ]
-        },
-        "你可以使用这种能量的次数等于你的智力调整值（最少一次），但你在一个回合中不能使用超过一次。当你完成长时间的休息后，你会恢复所有已使用的点数。"
-      ]
-    },
-    {
-      "name": "改良守卫",
-      "ENG_name": "Improved Defender",
-      "source": "TCE",
-      "page": 18,
-      "otherSources": [
-        {
-          "source": "ERLW",
-          "page": 60
-        }
-      ],
-      "className": "奇械师",
-      "classSource": "TCE",
-      "subclassShortName": "战地匠师",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，你的奥术冲击和钢铁防御者变得更加强大：",
-        {
-          "type": "list",
-          "items": [
-            "你的奥术冲击造成的额外伤害以及治疗量都增加到{@damage 4d6}。",
-            "你的钢铁守卫获得+2的护甲等级加值。",
-            "每当你的钢制守卫者使用其偏转攻击时，攻击者会受到等于{@damage 1d4} + 你的智力调整值的力量伤害。"
-          ]
-        }
-      ]
-    }
-  ]
+	"class": [
+		{
+			"name": "奇械师",
+			"ENG_name": "Artificer",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"体质",
+				"int"
+			],
+			"spellcastingAbility": "int",
+			"casterProgression": "1/3",
+			"preparedSpells": "<$level$> / 2 + <$int_mod$>",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "注入",
+					"ENG_name": "Infusions",
+					"featureType": [
+						"AI"
+					],
+					"progression": [
+						0,
+						4,
+						4,
+						4,
+						4,
+						6,
+						6,
+						6,
+						6,
+						8,
+						8,
+						8,
+						8,
+						10,
+						10,
+						10,
+						10,
+						12,
+						12,
+						12
+					]
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"光亮术",
+					"中等",
+					"{@item 护盾术|PHB|盾牌}"
+				],
+				"weapons": [
+					"简单",
+					{
+						"proficiency": "枪械",
+						"optional": true
+					}
+				],
+				"tools": [
+					"{@item 盗贼工具|PHB}",
+					"{@item 修理工具|PHB}",
+					"你选择的一种工匠工具{@item 工匠工具|PHB}"
+				],
+				"toolProficiencies": [
+					{
+						"thieves' tools": true,
+						"tinker's tools": true,
+						"anyArtisansTool": 1
+					}
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"奥秘",
+								"历史",
+								"调查",
+								"医药",
+								"自然",
+								"察觉",
+								"巧手"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"你选择的任意两种{@filter 简单武器|物品|来源=phb|类别=基础|类型=简单武器}",
+					"一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}",
+					"(a) {@item 镶钉皮甲|PHB} 或 (b) {@item 鳞甲|PHB}",
+					"{@item 盗贼工具|PHB} 和一个 {@item 地城套组|PHB}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
+				"defaultData": [
+					{
+						"_": [
+							{
+								"equipmentType": "简易武器",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"_": [
+							"轻弩|PHB",
+							"弩矢(20)|PHB"
+						]
+					},
+					{
+						"a": [
+							"镶钉皮甲|PHB"
+						],
+						"b": [
+							"鳞甲|PHB"
+						]
+					},
+					{
+						"_": [
+							"盗贼工具|PHB",
+							"地城套组|PHB"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"光亮术",
+						"中等",
+						"{@item 护盾术|PHB|盾牌}"
+					],
+					"tools": [
+						"{@item 盗贼工具|PHB}",
+						"{@item 修理工具|PHB}"
+					],
+					"toolProficiencies": [
+						{
+							"thieves' tools": true,
+							"tinker's tools": true
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter 已知注法|可选特性|特性类型=ai|来源=TCE}",
+						"注入物品",
+						"{@filter 已知戏法|法术|level=0|职业=炼金术士}"
+					],
+					"rows": [
+						[
+							0,
+							0,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							6,
+							3,
+							2
+						],
+						[
+							6,
+							3,
+							2
+						],
+						[
+							6,
+							3,
+							2
+						],
+						[
+							6,
+							3,
+							2
+						],
+						[
+							8,
+							4,
+							3
+						],
+						[
+							8,
+							4,
+							3
+						],
+						[
+							8,
+							4,
+							3
+						],
+						[
+							8,
+							4,
+							3
+						],
+						[
+							10,
+							5,
+							4
+						],
+						[
+							10,
+							5,
+							4
+						],
+						[
+							10,
+							5,
+							4
+						],
+						[
+							10,
+							5,
+							4
+						],
+						[
+							12,
+							6,
+							4
+						],
+						[
+							12,
+							6,
+							4
+						],
+						[
+							12,
+							6,
+							4
+						]
+					]
+				},
+				{
+					"title": "每个法术等级的法术位",
+					"colLabels": [
+						"{@filter 第一|法术|level=1|职业=炼金术士}",
+						"{@filter 第二|法术|level=2|职业=炼金术士}",
+						"{@filter 第三|法术|level=3|职业=炼金术士}",
+						"{@filter 第四|法术|level=4|职业=炼金术士}",
+						"{@filter 第五|法术|level=5|职业=炼金术士}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"可选规则：火器熟练|奇械师|TCE|1",
+				"魔法工艺|奇械师|TCE|1",
+				"施法|奇械师|TCE|1",
+				"物品注法|奇械师|TCE|2",
+				{
+					"classFeature": "奇械师专业|奇械师|TCE|3",
+					"gainSubclassFeature": true
+				},
+				"称手工具|奇械师|TCE|3",
+				"属性值提升|奇械师|TCE|4",
+				{
+					"classFeature": "奇械师专业能力|奇械师|TCE|5",
+					"gainSubclassFeature": true
+				},
+				"工具专精|奇械师|TCE|6",
+				"灵光一闪|奇械师|TCE|7",
+				"属性值提升|奇械师|TCE|8",
+				{
+					"classFeature": "奇械师专业能力|奇械师|TCE|9",
+					"gainSubclassFeature": true
+				},
+				"魔法物品熟稔|奇械师|TCE|10",
+				"储法物品|奇械师|TCE|11",
+				"属性值提升|奇械师|TCE|12",
+				"魔法物品专家|奇械师|TCE|14",
+				{
+					"classFeature": "奇械师专业能力|奇械师|TCE|15",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|奇械师|TCE|16",
+				"魔法物品大师|奇械师|TCE|18",
+				"属性值提升|奇械师|TCE|19",
+				"奇械之魂|奇械师|TCE|20"
+			],
+			"subclassTitle": "奇械师专业",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "炼金师",
+			"ENG_name": "Alchemist",
+			"shortName": "炼金师",
+			"source": "TCE",
+			"className": "奇械师",
+			"classSource": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"治愈真言",
+							"致病射线"
+						],
+						"5": [
+							"炽焰法球",
+							"马友夫强酸箭"
+						],
+						"9": [
+							"气化形体",
+							"群体治愈真言"
+						],
+						"13": [
+							"枯萎术",
+							"防死护咒"
+						],
+						"17": [
+							"死云术",
+							"唤醒死者"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"炼金师|奇械师|TCE|炼金师|TCE|3",
+				"炼金术掌握|奇械师|TCE|炼金师|TCE|5",
+				"复原药剂|奇械师|TCE|炼金师|TCE|9",
+				"化学专家|奇械师|TCE|炼金师|TCE|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "装甲师",
+			"ENG_name": "Armorer",
+			"shortName": "装甲师",
+			"source": "TCE",
+			"className": "奇械师",
+			"classSource": "TCE",
+			"page": 15,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"魔法飞弹",
+							"雷鸣波"
+						],
+						"5": [
+							"镜影术",
+							"粉碎音波"
+						],
+						"9": [
+							"催眠图纹",
+							"闪电束"
+						],
+						"13": [
+							"火焰护盾",
+							"高等隐形术"
+						],
+						"17": [
+							"穿墙术",
+							"力墙术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"装甲师|奇械师|TCE|装甲师|TCE|3",
+				"额外攻击|奇械师|TCE|装甲师|TCE|5",
+				"装甲改造|奇械师|TCE|装甲师|TCE|9",
+				"完美装甲|奇械师|TCE|装甲师|TCE|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "魔炮师",
+			"ENG_name": "Artillerist",
+			"shortName": "魔炮师",
+			"source": "TCE",
+			"className": "奇械师",
+			"classSource": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"护盾术",
+							"雷鸣波"
+						],
+						"5": [
+							"灼热射线",
+							"粉碎音波"
+						],
+						"9": [
+							"火球术",
+							"风墙术"
+						],
+						"13": [
+							"冰风暴",
+							"火墙术"
+						],
+						"17": [
+							"寒冰锥",
+							"力墙术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"魔炮师|奇械师|TCE|魔炮师|TCE|3",
+				"奥法火器|奇械师|TCE|魔炮师|TCE|5",
+				"高爆炮台|奇械师|TCE|魔炮师|TCE|9",
+				"坚固要塞|奇械师|TCE|魔炮师|TCE|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "战地匠师",
+			"ENG_name": "Battle Smith",
+			"shortName": "战地匠师",
+			"source": "TCE",
+			"className": "奇械师",
+			"classSource": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"英雄气概",
+							"护盾术"
+						],
+						"5": [
+							"烙印斩",
+							"守护联结"
+						],
+						"9": [
+							"活力灵光",
+							"召唤箭幕"
+						],
+						"13": [
+							"净化灵光",
+							"火焰护盾"
+						],
+						"17": [
+							"放逐斩",
+							"群体治疗伤势"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"战地匠师|奇械师|TCE|战地匠师|TCE|3",
+				"额外攻击|奇械师|TCE|战地匠师|TCE|5",
+				"奥能震荡|奇械师|TCE|战地匠师|TCE|9",
+				"改良守卫|奇械师|TCE|战地匠师|TCE|15"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "魔法工艺",
+			"ENG_name": "Magical Tinkering",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 1,
+			"entries": [
+				"{@i 1级工匠特性}",
+				"你学会了如何将一丝魔法注入到普通物品中。要使用这个能力，你必须手持{@item 盗贼工具|PHB}或{@item 工匠工具|PHB}。然后，你可以作为动作触摸一个小的非魔法物品，并赋予它以下你选择的魔法属性之一：",
+				{
+					"type": "list",
+					"items": [
+						"该物体在5英尺半径内发出明亮的光芒，并在额外的5英尺内发出微弱的光。",
+						"每当被生物触碰，该物体会发出录制的信息，距离最远可达10英尺。你在赋予物体这个属性时说出信息，录制的长度不能超过6秒。",
+						"该物体持续发出你选择的气味或非语言声音（风声、波涛声、鸟鸣声等）。所选现象在10英尺范围内可感知。",
+						"静态视觉效果出现在物体的一个表面上。这个效果可以是一幅画，多达25个单词的文本，线条和形状，或者这些元素的混合，随你喜欢。"
+					]
+				},
+				"所选属性永久持续。作为一项动作，你可以触摸物体并提前结束该属性。",
+				"你可以赋予多个物体魔法，每次使用此特性时触摸一个物体，尽管单个物体一次只能承受一个属性。你一次可以用此特性影响的物体的最大数量等于你的智力调整值（最少一个物体）。如果你试图超过你的最大数量，最旧的属性会立即结束，然后新属性生效。"
+			]
+		},
+		{
+			"name": "可选规则：火器熟练",
+			"ENG_name": "Optional Rule: Firearm Proficiency",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 1,
+			"entries": [
+				"在D&D多元宇宙的各个角落中，制造和操作火药武器的秘密已经被发现。如果你的地下城主使用了《地下城主指南》第9章关于火器的规则，并且你的炼金术士已经接触过这类武器的操作，你的炼金术士对它们是熟练的。"
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 1,
+			"entries": [
+				"{@i 1级工匠特性}",
+				"你已经研究了魔法的运作以及如何施放法术，通过物体来引导魔法。对于观察者来说，你看起来并不是以传统的方式施放法术；你似乎能够从平凡的物品和奇异的发明中创造出奇迹。",
+				{
+					"type": "entries",
+					"name": "必备工具",
+					"ENG_name": "Tools Required",
+					"entries": [
+						"你通过你的工具产生炼金术士的法术效果。当你使用这个施法特性施放任何法术时（意味着施放时法术具有'M'成分），你必须持有施法焦点\u2014\u2014具体来说，是盗贼工具或某种工匠工具。你必须精通该工具才能以这种方式使用它。请参阅《玩家手册》第5章\"装备\"，了解这些工具的描述。",
+						"在你2级获得注入物品特性后，你也可以使用任何带有你注入的任何物品作为施法焦点。",
+						{
+							"type": "inset",
+							"name": "技艺的魔法",
+							"ENG_name": "The Magic of Artifice",
+							"entries": [
+								"作为炼金术士，你在施放法术时使用工具。在描述你的施法时，想一想你是如何使用一个工具来执行法术效果的。如果你使用炼金术工具施放{@spell cure wounds}，你可能正在迅速制作一种药膏。如果你使用修补匠工具施放它，你可能有一个小型机械蜘蛛来包扎伤口。当你施放{@spell poison spray}时，你可以抛洒有害化学物质，或者使用一根喷射毒液的魔杖。法术的效果与其他任何职业的施法者相同，但你施法的方式是特殊的。",
+								"当你准备法术时，也适用相同的原则。作为炼金术士，你不是通过研究魔法书或祈祷来准备法术。相反，你使用你的工具并创造你将用来产生效果的专用物品。如果你用{@spell 治疗伤势}替换{@spell 灼热金属}，你可能正在改变你用来治疗的装置\u2014\u2014也许修改一个工具，使其传递热量而不是治疗能量。",
+								"这些细节不会以任何方式限制你，也不会提供超出法术效果的任何好处。你不必解释你是如何使用工具来施放法术的。但是，创造性地描述你的施法是一个有趣的方式，可以让你与其他施法者区分开来。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "戏法",
+					"ENG_name": "Cantrips (0-Level Spells)",
+					"entries": [
+						"在1级时，你可以选择两个来自{@filter 炼金术士法术列表|法术|level=0|职业=炼金术士}的戏法。在更高等级时，如炼金术士表格中的已知戏法列所示，你可以选择学习更多的炼金术士戏法。",
+						"当你在此职业中升级时，你可以将你所知的一个炼金术士戏法替换为炼金术士法术列表中的另一个戏法。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法术的准备和施展",
+					"ENG_name": "Preparing and Casting Spells",
+					"entries": [
+						"炼金术士表格显示了你拥有多少法术位来施放你的炼金术士法术。要施放一个1级或更高等级的炼金术士法术，你必须消耗一个该法术等级或更高等级的法术位。当你完成一次长时间休息时，你将恢复所有消耗的法术位。",
+						"你准备可供施放的炼金术士法术列表，从{@filter 炼金术士法术列表|法术|职业=炼金术士}中选择。当你这样做时，选择的炼金术士法术数量等于你的智力调整值加上炼金术士等级的一半，向下取整（最少一个法术）。法术必须是你拥有法术位的等级。",
+						"例如，如果你是一个5级的炼金术士，你有四个1级和两个2级法术位。智力为14，你准备的法术列表可以包括四个1级或2级的法术，任意组合。如果你准备了1级的法术{@spell 治疗伤势}，你可以使用1级或2级法术位来施放它。施放法术不会将其从你准备的法术列表中移除。",
+						"当你完成一次长时间休息时，你可以更改你准备的法术列表。准备新的炼金术士法术列表需要花费时间来调整你的施法焦点：每个法术位等级的法术至少需要1分钟。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法关键属性",
+					"ENG_name": "Spellcasting Ability",
+					"entries": [
+						"智力是你的炼金术士法术的施法能力；你对魔法背后的理论的理解使你能够以更高的技巧使用这些法术。每当炼金术士法术提及你的施法能力时，你都会使用你的智力。此外，当你为施放的炼金术士法术设定豁免骰的难度等级（DC）以及进行法术攻击检定时，你也会使用你的智力调整值。",
+						{
+							"type": "abilityDc",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"int"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"int"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "仪式施法",
+					"ENG_name": "Ritual Casting",
+					"entries": [
+						"如果法术具有仪式标签并且你已经准备好了这个法术，你可以将炼金术士法术作为仪式来施放。"
+					]
+				}
+			]
+		},
+		{
+			"name": "物品注法",
+			"ENG_name": "Infuse Item",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 2,
+			"entries": [
+				"{@i 2级术士特性}",
+				"你获得了将某些魔法注入到普通物品中的能力，使这些物品变成魔法物品。",
+				{
+					"type": "refClassFeature",
+					"classFeature": "已知注法|奇械师|TCE|2"
+				},
+				{
+					"type": "inset",
+					"name": "奇械师注法",
+					"ENG_name": "Artificer Infusions",
+					"entries": [
+						"炼金术士发明了众多的魔法注入，这些非凡的过程能够迅速创造出魔法物品。对许多人来说，炼金术士就像是奇迹工作者，他们能在几小时内完成其他人需要几周才能完成的事情。",
+						"下面每个注入的描述都详细说明了哪些类型的项目可以接受它，以及由此产生的魔法物品是否需要调谐。",
+						"一些注入指定了最低炼金术士等级。在你至少达到那个等级之前，你无法学习这样的注入。",
+						"除非注入的描述另有说明，否则你不能多次学习同一个注入。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "为物品进行注法",
+					"ENG_name": "Infusing an Item",
+					"entries": [
+						"每当你完成一次长时间的休息，你可以触摸一个非魔法物品，并将其注入你的术士注入之一，将其变成魔法物品。注入仅适用于某些特定种类的物品，具体由注入的描述指定。如果物品需要调谐，你可以在注入物品的瞬间调谐自己。如果你决定稍后调谐物品，你必须使用调谐的正常过程（见《地下城主指南》第7章的'{@book 调谐|DMG|7|调谐}'）",
+						"你的注入在物品中永久存在，但当你死亡时，注入会在等同于你的智力调整值（最少1天）的天数后消失。如果你为了另一个注入而放弃对当前注入的了解，注入也会消失。",
+						"在一次长时间休息结束时，你可以注入多个非魔法物品；你可以注入物品的最大数量显示在炼金术士表格中的注入物品列。你必须触摸每一个物品，并且你的每一个注入在同一时间只能存在于一个物品中。此外，任何一个物品在同一时间不能承载你的多个注入。如果你试图超过你的注入最大数量，最旧的注入会立即结束，然后新的注入生效。",
+						"如果注入效果在包含其他物品的物品上结束，比如一个{@item 次元袋}（容量袋），其内容物将无害地出现在其空间内及其周围。"
+					]
+				}
+			]
+		},
+		{
+			"name": "已知注法",
+			"ENG_name": "Infusions Known",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"当你获得这个特性时，从职业描述末尾的\"{@filter 奇械师注法|可选特性|特性类型=ai|来源=TCE}\"部分中选择四种炼金术士注入来学习。当你达到这个职业的特定等级时，你将根据炼金术士表格中的注入已知列所示，学习额外的你选择的注入。",
+				"每当你在本职业中提升一个等级时，你可以用一个新的工匠注入替换你已学会的一个注入。"
+			]
+		},
+		{
+			"name": "奇械师专业",
+			"ENG_name": "Artificer Specialist",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 3,
+			"entries": [
+				"{@i 3级炼金术士特性}",
+				"选择你的专家类型，每种类型都在本职业描述的末尾详细说明。你的选择将在5级、9级和15级时赋予你特性。"
+			]
+		},
+		{
+			"name": "称手工具",
+			"ENG_name": "The Right Tool for the Job",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 3,
+			"entries": [
+				"{@i 3级炼金术士特性}",
+				"你学会了如何制作你需要的确切工具：手中持有盗贼工具或工匠工具，你可以在距离你5英尺内未被占据的空间中神奇地创造出一套工匠工具。这个创造需要1小时的不间断工作，可以与短暂休息或长时间休息同时进行。尽管是魔法的产物，但这些工具是非魔法的，并且当你再次使用这个特性时它们会消失。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 4,
+			"entries": [
+				"{@i 4级炼金术士特性}",
+				"当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "奇械师专业能力",
+			"ENG_name": "Artificer Specialist Feature",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 5,
+			"entries": [
+				"{@i 5级炼金术士特性}",
+				"你获得了由你的炼金术士专家选择赋予的特性。"
+			]
+		},
+		{
+			"name": "工具专精",
+			"ENG_name": "Tool Expertise",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 6,
+			"entries": [
+				"{@i 6级术士特性}",
+				"你现在进行任何使用工具熟练度的能力检定时，熟练加值翻倍。"
+			]
+		},
+		{
+			"name": "灵光一闪",
+			"ENG_name": "Flash of Genius",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 7,
+			"entries": [
+				"{@i 7级术士特性}",
+				"你已经获得了在压力下想出解决方案的能力。当你或你能看到的30英尺内的另一个生物进行能力检定或豁免检定时，你可以使用你的反应将你的智力调整值加到骰上。",
+				"你可以使用这个特性的次数等于你的智力调整值（最少一次）。当你完成一次长时间休息时，你将恢复所有已使用的点数。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 8,
+			"entries": [
+				"{@i 8级工匠特性}",
+				"当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "奇械师专业能力",
+			"ENG_name": "Artificer Specialist Feature",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 9,
+			"entries": [
+				"{@i 9级术士特性}",
+				"你获得了由你的炼金术士专家选择赋予的特性。"
+			]
+		},
+		{
+			"name": "魔法物品熟稔",
+			"ENG_name": "Magic Item Adept",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 10,
+			"entries": [
+				"{@i 10级炼金术士特性}",
+				"你已经对如何使用和制造魔法物品有了深刻的理解：",
+				{
+					"type": "list",
+					"items": [
+						"你可以同时与多达四个魔法物品共鸣。",
+						"如果你制造一个普通或不常见的魔法物品，它所需的时间是正常时间的四分之一，而且成本只有通常黄金的一半。"
+					]
+				}
+			]
+		},
+		{
+			"name": "储法物品",
+			"ENG_name": "Spell-Storing Item",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 11,
+			"entries": [
+				"{@i 11级术士特性}",
+				"现在你可以将一个法术储存在物品中。每当你完成一次长时间休息时，你可以触摸一件{@filter 简单或军用武器|物品|来源=phb|类别=基础|类型=武术武器；简单武器}或者一个你可以用作施法焦点的物品，并将一个法术储存在其中，选择一个来自{@filter 炼金术士法术列表|法术|职业=炼金术士|施法时间=动作|level=1;2}的1级或2级法术，该法术需要1个动作来施放（你不必已经准备好它）。",
+				"持有该物品的生物可以采取一个动作，使用你的施法能力调整值来产生法术的效果。如果法术需要{@status 专注}，生物必须专注。法术会保留在物品中，直到它被使用次数等于你的智力调整值的两倍（最少两次）或者直到你再次使用这个特性来在物品中储存一个法术。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 12,
+			"entries": [
+				"{@i 12级炼金术士特性}",
+				"当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "魔法物品专家",
+			"ENG_name": "Magic Item Savant",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 14,
+			"entries": [
+				"{@i 14级术士特性}",
+				"你对魔法物品的熟练度加深了：",
+				{
+					"type": "list",
+					"items": [
+						"你可以同时调谐多达五个魔法物品。",
+						"在调谐或使用魔法物品时，你忽略了所有的职业、种族、法术和等级要求。"
+					]
+				}
+			]
+		},
+		{
+			"name": "奇械师专业能力",
+			"ENG_name": "Artificer Specialist Feature",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 15,
+			"entries": [
+				"{@i 15级炼金术士特性}",
+				"你获得了由你的炼金术士专家选择赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 16,
+			"entries": [
+				"{@i 16级术士特性}",
+				"当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "魔法物品大师",
+			"ENG_name": "Magic Item Master",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 18,
+			"entries": [
+				"{@i 18级炼金术士特性}",
+				"你现在可以同时与多达六件魔法物品共鸣。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 19,
+			"entries": [
+				"{@i 19级工匠特性}",
+				"当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "奇械之魂",
+			"ENG_name": "Soul of Artifice",
+			"source": "TCE",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 54
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"level": 20,
+			"entries": [
+				"{@i 20级炼金术士特性}",
+				"你已经与你的魔法物品发展出了一种神秘的联系，你可以利用这种联系来获得保护：",
+				{
+					"type": "list",
+					"items": [
+						"你每调谐一个魔法物品，所有豁免检定就获得+1的加值。",
+						"如果你被降至0点生命值但没有立即死亡，你可以使用你的反应结束你的一个炼金术士注入，使你的生命值降至1点而不是0。"
+					]
+				}
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "炼金师",
+			"ENG_name": "Alchemist",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"炼金术士是擅长结合试剂以产生神秘效果的专家。炼金术士使用他们的创造来赋予生命，以及剥夺它。炼金术是最早的术士传统之一，其多功能性在战争与和平时期一直受到重视。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "工具熟练|奇械师|TCE|炼金师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "炼金师法术|奇械师|TCE|炼金师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "实验性灵药|奇械师|TCE|炼金师|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "炼金师法术",
+			"ENG_name": "Alchemist Spells",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，当你达到这个职业的特定等级时，你总是准备了一些特定的法术，如炼金术士法术表格所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术的数量。",
+				{
+					"type": "table",
+					"caption": "炼金师法术",
+					"colLabels": [
+						"炼金术士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 治愈真言}, {@spell 致病射线}"
+						],
+						[
+							"第五",
+							"{@spell 炽焰法球}, {@spell 马友夫强酸箭}"
+						],
+						[
+							"第九",
+							"{@spell 气化形体}, {@spell 群体治愈真言}"
+						],
+						[
+							"13级",
+							"{@spell 枯萎术}, {@spell 防死护咒}"
+						],
+						[
+							"17级",
+							"{@spell 死云术}, {@spell 唤醒死者}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "实验性灵药",
+			"ENG_name": "Experimental Elixir",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，每当你完成一次长时间的休息，你可以在触摸的空瓶中神奇地制造出一个{@i 实验性灵药}。在实验性药剂表上掷骰子以确定药剂的效果，当有人喝下药剂时触发效果。作为一个动作，生物可以喝下药剂或给{@condition 无力}的生物服用。",
+				"创建一个{@i 实验性灵药}需要你随身携带{@item 炼金工具|PHB}，并且你通过这个特性创造的任何药剂将持续有效直到被喝掉或直到你下一次长时间休息结束。",
+				"当你达到这个职业的特定等级时，你可以在完成长时间休息后制作更多的药剂：6级时两个，15级时三个。每个药剂的效果需要单独掷骰。每个药剂都需要自己的烧瓶。",
+				"你可以为每一个额外的{@i 实验性药剂}消耗一个1级或更高等级的法术位。当你这样做时，你采取动作在你所触摸的空瓶中创造药剂，并且你从实验性药剂表格中选择药剂的效果。",
+				{
+					"type": "table",
+					"caption": "实验性灵药",
+					"colLabels": [
+						"d6",
+						"影响"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@b 治疗}。饮用者恢复生命值，数值等于{@dice 2d4}加上你的智力调整值。"
+						],
+						[
+							"2",
+							"{@b 迅捷}。饮用者在1小时内步行速度增加10英尺。"
+						],
+						[
+							"3",
+							"{@b 韧性}。饮用者在接下来的10分钟内获得AC+1的加成。"
+						],
+						[
+							"4",
+							"{@b 勇敢}。饮酒者可以掷一个{@dice d4}，并将掷出的数字加到他们接下来一分钟内进行的每一次攻击检定和豁免检定上。"
+						],
+						[
+							"5",
+							"{@b 飞行}。饮用者在接下来的10分钟内获得10英尺的飞行速度。"
+						],
+						[
+							"6",
+							"{@b 变形}。饮用者的身体会像被施放了{@spell 变造自身}法术一样发生转变。饮用者决定由法术引起的转变，这些效果持续10分钟。"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "工具熟练",
+			"ENG_name": "Tool Proficiency",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个专长时，你获得对{@item 炼金工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得其他一种类型的{@item 工匠工具|PHB}的熟练度。"
+			]
+		},
+		{
+			"name": "炼金术掌握",
+			"ENG_name": "Alchemical Savant",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				"在5级时，你对魔法化学药品的掌握达到了高超的水平，这增强了你通过它们创造的治疗和伤害。每当你使用你的{@item 炼金工具|PHB}作为施法焦点来施放法术时，你可以为法术的一个掷骰获得加成。这个掷骰必须是恢复生命值的掷骰，或者是造成酸蚀、火焰、死灵或毒素伤害的伤害掷骰，加成值等于你的智力调整值（最少为+1）。"
+			]
+		},
+		{
+			"name": "复原药剂",
+			"ENG_name": "Restorative Reagents",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"从9级开始，你可以将恢复性试剂融入你的一些作品中：",
+				{
+					"type": "list",
+					"items": [
+						"每当一个生物饮用了你创造的{@i 实验性灵药}，该生物将获得等同于{@dice 2d6}加上你的智力调整值（最少1点临时生命值）的临时生命值。",
+						"你可以在不消耗法术位且未准备法术的情况下施放{@spell 次级复原术}，前提是你使用{@item 炼金工具|PHB}作为施法焦点。你可以这样做的次数等于你的智力调整值（最少一次），并且在你完成一次长时间休息后，你恢复所有已消耗的使用次数。"
+					]
+				}
+			]
+		},
+		{
+			"name": "化学专家",
+			"ENG_name": "Chemical Mastery",
+			"source": "TCE",
+			"page": 14,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 58
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "炼金师",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"到了15级，你已经接触了如此多的化学物质，以至于它们对你几乎没有风险，你可以利用它们迅速结束某些疾病：",
+				{
+					"type": "list",
+					"items": [
+						"你对酸蚀伤害和毒素伤害获得抗性，并且你对{@condition 中毒}状态免疫。",
+						"你可以在不消耗法术位、不准备法术、不使用材料组件的情况下施放{@spell 高等复原术}和{@spell 治愈术}，前提是你使用{@item 炼金工具|PHB}作为施法焦点。一旦你使用这个特性施放了任一法术，直到你完成一次长时间休息之前，你不能再使用它来施放那个法术。"
+					]
+				}
+			]
+		},
+		{
+			"name": "装甲师",
+			"ENG_name": "Armorer",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"一位专门作为装甲师的炼金术士将盔甲修改得几乎像第二层皮肤一样运作。这种盔甲被增强，以磨练炼金术士的魔法，释放强大的攻击，并产生强大的防御。炼金术士与这种盔甲结合，即使在实验和提炼其魔法能力时，也与之融为一体。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "ì|奇械师|TCE|装甲师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "装甲师法术|奇械师|TCE|装甲师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奥能装甲|奇械师|TCE|装甲师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "装甲型号|奇械师|TCE|装甲师|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "抑制场[未校对]",
+			"ENG_name": "Dampening Field",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"type": "item",
+			"entries": [
+				"你在敏捷（{@skill 隐匿})检定上有优势。如果盔甲通常对此类检定施加劣势，那么优势和劣势将相互抵消，如同常规。"
+			]
+		},
+		{
+			"name": "防御场[未校对]",
+			"ENG_name": "Defensive Field",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"type": "item",
+			"entries": [
+				"作为一个奖励动作，你可以获得等于你在本职业中的等级的临时生命值，替换你已经拥有的任何临时生命值。如果你脱下护甲，你会失去这些临时生命值。你可以使用这个奖励动作的次数等于你的熟练加值，并且在你完成长时间休息后，你将重新获得所有已用尽的使用次数。"
+			]
+		},
+		{
+			"name": "闪电发射器[未校对]",
+			"ENG_name": "Lightning Launcher",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"type": "item",
+			"entries": [
+				"在你的一只装甲拳头上或胸部（你选择）会出现一个宝石状的节点。它被计为一种简单的远程武器，标准射程为90英尺，长射程为300英尺，并且在命中时造成{@damage 1d6}闪电伤害。每当你的回合内你用它击中一个生物时，你可以对该目标造成额外的{@damage 1d6}闪电伤害。"
+			]
+		},
+		{
+			"name": "动力步伐[未校对]",
+			"ENG_name": "Powered Steps",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"type": "item",
+			"entries": [
+				"你的步行速度增加了5英尺。"
+			]
+		},
+		{
+			"name": "雷霆护手[未校对]",
+			"ENG_name": "Thunder Gauntlets",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"type": "item",
+			"entries": [
+				"当你没有在其中持有任何东西时，护甲的每个手套都被视为简单近战武器，并且在命中时造成{@damage 1d8}雷鸣伤害。被手套击中的生物在攻击卷上对除了你之外的目标有劣势，直到你的下个回合开始，因为当生物攻击其他人时，护甲会神奇地发出干扰脉冲。"
+			]
+		},
+		{
+			"name": "奥能装甲",
+			"ENG_name": "Arcane Armor",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级铠甲匠特性}",
+				"你的冶金追求使你将盔甲变成了魔法的传导体。作为一个动作，你可以将你穿着的一套盔甲变成奥术盔甲，前提是你手中有{@item 铁匠工具|PHB}。",
+				"穿戴这件护甲时，你获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"如果盔甲通常有力量需求，那么奥术盔甲对你来说没有这个需求。",
+						"你可以将奥术护甲作为你的炼金术士法术的施法焦点。",
+						"盔甲附着在你身上，无法违背你的意愿被移除。它还会扩展以覆盖你的整个身体，尽管你可以作为奖励动作收回或展开头盔。盔甲会替代任何缺失的肢体，其功能与它替代的肢体完全相同。",
+						"你可以作为动作穿上或脱下盔甲。直到你穿上另一套盔甲或你死亡，这件盔甲将继续是奥术盔甲。"
+					]
+				}
+			]
+		},
+		{
+			"name": "装甲型号",
+			"ENG_name": "Armor Model",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级铠甲匠特性}",
+				"你可以自定义你的奥术护甲。当你这样做时，选择以下护甲模型之一：守卫者或潜行者。你选择的模型在你穿戴时会给你特殊的好处。",
+				"每种型号都包括一种特殊武器。当你用该武器攻击时，你可以将智力调整值加到攻击和伤害骰上，而不是力量或敏捷。",
+				"你可以在完成短休或长休时更换盔甲的模型，前提是你手中有{@item 铁匠工具|PHB}。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "守护者",
+							"ENG_name": "Guardian",
+							"entries": [
+								"你设计你的盔甲以位于冲突的最前线。它具有以下特点：",
+								{
+									"type": "list",
+									"style": "list-hang-notitle",
+									"items": [
+										{
+											"type": "refSubclassFeature",
+											"subclassFeature": "雷霆护手[未校对]|奇械师|TCE|装甲师|TCE|3"
+										},
+										{
+											"type": "refSubclassFeature",
+											"subclassFeature": "防御场[未校对]|奇械师|TCE|装甲师|TCE|3"
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "渗透者",
+							"ENG_name": "Infiltrator",
+							"entries": [
+								"你为微妙的任务定制了你的护甲。它具有以下特点：",
+								{
+									"type": "list",
+									"style": "list-hang-notitle",
+									"items": [
+										{
+											"type": "refSubclassFeature",
+											"subclassFeature": "闪电发射器[未校对]|奇械师|TCE|装甲师|TCE|3"
+										},
+										{
+											"type": "refSubclassFeature",
+											"subclassFeature": "动力步伐[未校对]|奇械师|TCE|装甲师|TCE|3"
+										},
+										{
+											"type": "refSubclassFeature",
+											"subclassFeature": "抑制场[未校对]|奇械师|TCE|装甲师|TCE|3"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "装甲师法术",
+			"ENG_name": "Armorer Spells",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级铠甲匠特性}",
+				"在达到这个职业的特定等级后，你总是准备了某些法术，如装甲师法术表所示。这些法术对你来说算作工匠法术，但它们不计入你准备的工匠法术的数量。",
+				{
+					"type": "table",
+					"caption": "装甲师法术",
+					"colLabels": [
+						"炼金术士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 魔法飞弹}, {@spell 雷鸣波}"
+						],
+						[
+							"第五",
+							"{@spell 镜影术}, {@spell 粉碎音波}"
+						],
+						[
+							"第九",
+							"{催眠图样}, {闪电箭}"
+						],
+						[
+							"13级",
+							"{@spell 火焰护盾}, {@spell 高等隐形术}"
+						],
+						[
+							"17级",
+							"{@spell 穿墙术}, {@spell 力墙术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "ì",
+			"ENG_name": "Tools of the Trade",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级铠甲匠特性}",
+				"你获得了穿戴重型盔甲的熟练度。你还获得了使用{@item 铁匠工具|PHB}的熟练度。如果你已经拥有这种工具熟练度，你可以选择获得另一种类型的{@item 工匠工具|PHB}的熟练度。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				"{@i 5级盔甲匠特性}",
+				"每当你在你的回合上采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+			]
+		},
+		{
+			"name": "装甲改造",
+			"ENG_name": "Armor Modifications",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"{@i 9级盔甲匠特性}",
+				"你学习如何使用你的工匠注入来特别修改你的奥术护甲。现在，为了你的注入物品特性的目的，那件护甲被视为独立的项目：护甲（胸甲）、靴子、头盔以及护甲的特殊武器。这些项目中的每一个都可以承载你的一个注入，如果你使用护甲模型特性改变你的护甲模型，注入会转移过去。此外，你一次性可以注入的项目最大数量增加了2，但这些额外的项目必须是你奥术护甲的一部分。"
+			]
+		},
+		{
+			"name": "完美装甲",
+			"ENG_name": "Perfected Armor",
+			"source": "TCE",
+			"page": 15,
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "装甲师",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级铠甲匠特性}",
+				"你的奥术护甲根据其型号获得额外的效益，如下所示。",
+				{
+					"type": "entries",
+					"name": "守护者",
+					"ENG_name": "Guardian",
+					"entries": [
+						"当你看到一个体型为大型或更小的生物在其回合结束时处于你30英尺范围内，你可以使用你的反应来施放魔法，迫使它进行力量豁免检定，对抗你的法术豁免DC。如果豁免失败，你可以将生物拉至最多25英尺直接到一个未被占据的空间。如果你将目标拉到距离你5英尺以内的空间，你可以在这个反应中对其进行近战武器攻击。",
+						"你可以使用这个反应的次数等于你的熟练加值，当你完成一次长时间休息后，你将重新获得所有已使用的它。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "渗透者",
+					"ENG_name": "Infiltrator",
+					"entries": [
+						"任何生物如果从你的雷电发射器受到闪电伤害，直到你的下一个回合开始前都会闪烁着魔法光芒。闪烁的生物在5英尺半径内散发出微弱的光，并且它对您的攻击检定有劣势，因为如果它攻击你，光芒会让它受到冲击。此外，下一次对它的攻击检定有优势，如果那次攻击命中，目标将额外受到{@damage 1d6}点闪电伤害。"
+					]
+				}
+			]
+		},
+		{
+			"name": "魔炮师",
+			"ENG_name": "Artillerist",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"一个炮术师专门使用魔法在战场上投掷能量、投射物和爆炸。这种破坏性的力量在上一次战争中被所有军队所重视。现在战争已经结束，一些这个专精的成员已经寻求通过使用他们的力量来对抗Khorvaire中冲突的重新出现，来建立一个更和平的世界。",
+				"侏儒炼金术士维，作为坎尼思家族战争锻造项目中不太可能但关键的成员，特别强调要纠正事情：'是时候我们修复事物，而不是把它们都炸到地狱去。'",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "工具熟练|奇械师|TCE|魔炮师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "魔炮师法术|奇械师|TCE|魔炮师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "魔能炮台|奇械师|TCE|魔炮师|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "魔炮师法术",
+			"ENG_name": "Artillerist Spells",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，当你达到这个职业的特定等级时，你总是准备好了某些法术，如炮手法术表所示。这些法术对你来说算作炼金术士法术，但它们不计入你准备的炼金术士法术数量。",
+				{
+					"type": "table",
+					"caption": "魔炮师法术",
+					"colLabels": [
+						"炼金术士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 护盾术}, {@spell 雷鸣波}"
+						],
+						[
+							"第五",
+							"{@spell 灼热射线}, {@spell 粉碎音波}"
+						],
+						[
+							"第九",
+							"{@spell 火球术}, {@spell 风墙术}"
+						],
+						[
+							"13级",
+							"{@spell 冰风暴}, {@spell 火墙术}"
+						],
+						[
+							"17级",
+							"{@spell 寒冰锥}, {@spell 力墙术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "魔能炮台",
+			"ENG_name": "Eldritch Cannon",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"在3级时，你学会了如何创造一个魔法炮。使用{@item 木雕工具|PHB}或{@item 铁匠工具|PHB}，你可以采取行动，在距离你5英尺内的平坦表面上的未占空间中，神奇地创造一个小型或超小型的奥术炮。一个小型奥术炮占据其空间，而超小型的可以用一只手拿着。",
+				"一旦你创建了一门大炮，在你完成一次长时间的休息或者消耗一个1级或更高级别的法术位之前，你不能再创建大炮。同时，你一次只能拥有一门大炮，并且当你的大炮在场时，你不能创建新的大炮。",
+				"大炮是一件魔法物品。无论大小，大炮的护甲等级为18，生命值等于你的工匠等级的五倍。它对毒素伤害和精神伤害免疫，并且对所有条件免疫。如果它被迫进行能力检定或豁免投掷，将其所有能力值视为10（+0）。如果对它施放{@spell 修复术}法术，它恢复{@dice 2d6}生命值。如果它的生命值降至0或1小时后，它将消失。你可以作为动作提前解散它。",
+				"当你创建大炮时，你决定它的外观以及它是否有腿。你还决定它的类型，从奥术大炮表中选择选项。在你的每个回合中，如果你在大炮60英尺范围内，你可以采取一个奖励行动来激活大炮。作为同一奖励行动的一部分，如果大炮有腿，你可以指示大炮走到或爬上最多15英尺到达一个未被占据的空间。",
+				{
+					"type": "table",
+					"caption": "奥术炮",
+					"colLabels": [
+						"火炮",
+						"激活"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"{@object 奥术加农炮，火焰喷射器|TCE|投火机}",
+							"大炮在你指定的相邻15英尺锥形区域内喷吐火焰。该区域内的每个生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 2d8}火焰伤害，成功则伤害减半。火焰会点燃区域内任何未穿戴或携带的易燃物品。"
+						],
+						[
+							"{@object 奥术加农炮，力量弩炮|TCE|力场弩炮}",
+							"进行一次远程法术攻击，攻击起源于加农炮，目标是距离它120英尺内的生物或物体。命中时，目标承受{@damage 2d8}力量伤害，如果目标是生物，则会被推向远离加农炮最多5英尺。"
+						],
+						[
+							"{@object 奥术大炮，守护者|TCE|防御者}",
+							"大炮发出一股正能量，赋予自身以及你选择的10英尺范围内的每个生物等同于{@damage 1d8}加上你的智力调整值（最少+1）的临时生命值。"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "工具熟练",
+			"ENG_name": "Tool Proficiency",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个专长，你获得{@item 木雕工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item 工匠工具|PHB}的熟练度。"
+			]
+		},
+		{
+			"name": "奥法火器",
+			"ENG_name": "Arcane Firearm",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				"在5级时，你学会了如何将魔杖、法杖或法棒转变为奥术火器，作为你毁灭性法术的导体。当你完成一次长时间的休息后，你可以使用{@item 木雕工具|PHB}在魔杖、法杖或法棒上雕刻特殊的符文，从而将其转变为你的奥术火器。如果你后来在不同的物品上雕刻这些符文，它们会从物品上消失。否则，这些符文会无限期地持续存在。",
+				"你可以将你的奥术枪械作为施法焦点来施展你的工匠法术。当你通过枪械施放工匠法术时，掷一个{@damage d8}，你获得的加成等于掷出的数字，加到法术的一次伤害骰上。"
+			]
+		},
+		{
+			"name": "高爆炮台",
+			"ENG_name": "Explosive Cannon",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"从9级开始，你所创造的每一个奥术炮都更具破坏性：",
+				{
+					"type": "list",
+					"items": [
+						"大炮的伤害骰增加{@damage 1d8}。",
+						"作为动作，如果你在炮台60英尺范围内，你可以命令其引爆。引爆会摧毁炮台，并迫使每个在炮台20英尺范围内的生物进行一次敏捷豁免检定，对抗你的法术豁免DC，失败则受到{@damage 3d8}点力量伤害，成功则伤害减半。"
+					]
+				}
+			]
+		},
+		{
+			"name": "坚固要塞",
+			"ENG_name": "Fortified Position",
+			"source": "TCE",
+			"page": 17,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 59
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "魔炮师",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你成为使用奥术大炮形成坚固阵地的大师：",
+				{
+					"type": "list",
+					"items": [
+						"当你使用奥术炮创造的炮台在你10英尺范围内时，你和你的盟友获得半个掩体，这是由于炮台发出的闪烁的魔法保护场的结果。",
+						"你现在可以同时拥有两门大炮。你可以用同一个动作（但不能是同一个法术位）创建两门，并且可以用同一个额外动作激活它们。你可以决定这两门大炮是否彼此相同或不同。当你拥有两门大炮时，你不能创建第三门大炮。"
+					]
+				}
+			]
+		},
+		{
+			"name": "战地匠师",
+			"ENG_name": "Battle Smith",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"军队需要保护，如果防御失败，还需要有人来重建。战斗工匠既是保护者又是医者，他们擅长保护他人，修复物资和人员。为了帮助他们的工作，战斗工匠通常由一个钢铁守卫陪伴，这是他们自己创造的保护同伴。许多士兵讲述了他们几乎死去，然后被战斗工匠和钢铁守卫救回的故事。",
+				"战斗铁匠在坎尼思家族关于战斗构造体和原始战争锻造体的工作中发挥了关键作用，在最后一场战争之后，这些工匠引领了帮助那些在战争中受伤的人的努力。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "工具熟练|奇械师|TCE|战地匠师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战地匠师法术|奇械师|TCE|战地匠师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战斗准备|奇械师|TCE|战地匠师|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "钢铁守卫|奇械师|TCE|战地匠师|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "战斗准备",
+			"ENG_name": "Battle Ready",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你达到3级时，你的战斗训练和你对魔法的实验在两个方面都取得了回报：",
+				{
+					"type": "list",
+					"items": [
+						"你获得了武术武器的熟练度。",
+						"当你使用魔法武器攻击时，你可以使用你的智力调整值，而不是力量或敏捷调整值，来进行攻击和伤害的掷骰。"
+					]
+				}
+			]
+		},
+		{
+			"name": "战地匠师法术",
+			"ENG_name": "Battle Smith Spells",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，当你达到这个职业的特定等级时，你总是准备了某些法术，如战斗铁匠法术表所示。这些法术对你来说算作工匠法术，但它们不计入你准备的工匠法术数量。",
+				{
+					"type": "table",
+					"caption": "战地匠师法术",
+					"colLabels": [
+						"炼金术士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 英雄气概}, {@spell 护盾术}"
+						],
+						[
+							"第五",
+							"{@spell 烙印斩}, {@spell 守护联结}"
+						],
+						[
+							"第九",
+							"{@spell 活力灵光}, {@spell 召唤箭幕}"
+						],
+						[
+							"13级",
+							"{@spell 净化灵光}, {@spell 火焰护盾}"
+						],
+						[
+							"17级",
+							"{@spell 放逐斩}, {@spell 群体治疗伤势}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "钢铁守卫",
+			"ENG_name": "Steel Defender",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"到了3级，你的巧手制造了一个忠实的伙伴，一个{@creature 钢铁守卫|TCE}。它对你和你的同伴友好，并且服从你的命令。查看这个生物的游戏统计数据在钢制守卫者的统计块中，它在几个地方使用了你的熟练加值（PB）。你决定这个生物的外观以及它有两条腿还是四条腿；你的选择对它的游戏统计数据没有影响。",
+				"在战斗中，防御者共享你的先攻值，但在你之后立即行动。它可以自行移动并使用其反应，但它在自己的回合上唯一采取的动作是{@action 回避}动作，除非你在你的回合上采取奖励行动命令它采取其他动作。那个动作可以是它能力值块中的一个，或者是其他一些动作。如果你被{@condition 无力}，防御者可以采取任何它选择的动作，而不仅仅是{@action 回避}。",
+				"如果对它施放{@spell 修复术}法术，它将恢复{@dice 2d6}点生命值。如果它在最后一小时内死亡，你可以使用你的{@item 铁匠工具|PHB}作为动作来复活它，前提是你距离它5英尺以内，并且消耗一个1级或更高等级的法术位。钢铁守卫在1分钟后恢复所有生命值并复活。",
+				"在完成一次长时间的休息后，如果你随身携带了你的{@item 铁匠工具|PHB}，你可以创建一个新的钢铁守卫。如果你已经通过这个特性拥有了一个钢铁守卫，那么第一个守卫会立即消失。如果你死亡，守卫也会消失。"
+			]
+		},
+		{
+			"name": "工具熟练",
+			"ENG_name": "Tool Proficiency",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个专长，你获得对{@item 铁匠工具|PHB}的熟练度。如果你已经拥有这项熟练度，你可以选择获得另一种{@item 工匠工具|PHB}的熟练度。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				"从5级开始，每当你在回合中采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+			]
+		},
+		{
+			"name": "奥能震荡",
+			"ENG_name": "Arcane Jolt",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"在9级时，你学会了新的将奥术能量引导出来以造成伤害或治疗的方法。当你用魔法武器攻击命中目标，或者你的钢铁守卫攻击命中目标时，你可以通过这次攻击引导魔法能量来创造以下效果之一：",
+				{
+					"type": "list",
+					"items": [
+						"目标额外承受{@damage 2d6}力量伤害。",
+						"选择一个在目标30英尺范围内你能看到的生物或物体。治愈能量流入所选的接受者，为其恢复{@dice 2d6}点生命值。"
+					]
+				},
+				"你可以使用这种能量的次数等于你的智力调整值（最少一次），但你在一个回合中不能使用超过一次。当你完成长时间的休息后，你会恢复所有已使用的点数。"
+			]
+		},
+		{
+			"name": "改良守卫",
+			"ENG_name": "Improved Defender",
+			"source": "TCE",
+			"page": 18,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 60
+				}
+			],
+			"className": "奇械师",
+			"classSource": "TCE",
+			"subclassShortName": "战地匠师",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，你的奥术冲击和钢铁防御者变得更加强大：",
+				{
+					"type": "list",
+					"items": [
+						"你的奥术冲击造成的额外伤害以及治疗量都增加到{@damage 4d6}。",
+						"你的钢铁守卫获得+2的护甲等级加值。",
+						"每当你的钢制守卫者使用其偏转攻击时，攻击者会受到等于{@damage 1d4} + 你的智力调整值的力量伤害。"
+					]
+				}
+			]
+		}
+	]
 }

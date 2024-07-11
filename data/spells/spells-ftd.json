@@ -1,463 +1,463 @@
 {
-  "spell": [
-    {
-      "name": "阿莎德隆奔行",
-      "ENG_name": "Ashardalon's Stride",
-      "source": "FTD",
-      "page": 19,
-      "level": 3,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "龙的烈焰从你的脚下喷涌而出，赋予你爆炸性的速度。在此持续时间内，你的速度增加20英尺，移动不会引起借机攻击。",
-        "当您移动到距离生物或未穿戴或携带的物体5英尺范围内时，它会因您的热浪轨迹受到{@damage 1d6}火焰伤害。一个生物或物体在一回合内只能受到这种伤害一次。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用4级或更高等级的法术位施放这个法术时，你的移动速度每超过3级法术位增加5英尺。对于超过3级的每个法术位等级，这个法术还会额外造成{@scaledamage 1d6|3-9|1d6}点火焰伤害。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "火"
-      ],
-      "miscTags": [
-        "目标文件"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "龙类变形",
-      "ENG_name": "Draconic Transformation",
-      "source": "FTD",
-      "page": 19,
-      "level": 7,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一尊至少价值500金币的龙雕像",
-          "cost": 50000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "随着一声怒吼，你借助龙族的魔法力量来转变自己，获得龙族特征。直到法术结束，你将获得以下好处：",
-        {
-          "type": "list",
-          "style": "list-hang-notitle",
-          "items": [
-            {
-              "type": "item",
-              "name": "盲视",
-              "ENG_name": "Blindsight",
-              "entries": [
-                "你拥有30英尺范围内的{@sense 盲视}。在这个范围内，你可以有效地看到任何不是完全遮蔽的东西，即使你处于{@condition 目盲}状态或在黑暗中。此外，你可以看到一只{@condition 隐形}的生物，除非该生物成功地从你的视线中隐藏。"
-              ]
-            },
-            {
-              "type": "item",
-              "name": "龙息武器",
-              "ENG_name": "Breath Weapon",
-              "entries": [
-                "当你施放这个法术时，以及在持续时间内的随后回合中作为奖励行动，你可以呼出闪烁的能量，形成一个60英尺的锥形区域。该区域内的每个生物都必须进行一次敏捷豁免投掷，若失败则受到{@damage 6d8}点力量伤害，若成功则伤害减半。"
-              ]
-            },
-            {
-              "type": "item",
-              "name": "翅膀",
-              "ENG_name": "Wings",
-              "entries": [
-                "无形的翅膀从你的背部长出，赋予你60英尺的飞行速度。"
-              ]
-            }
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "敏捷"
-      ],
-      "miscTags": [
-        "中士",
-        "通用银行自动转账"
-      ]
-    },
-    {
-      "name": "费资本铂金盾",
-      "ENG_name": "Fizban's Platinum Shield",
-      "source": "FTD",
-      "page": 20,
-      "level": 6,
-      "school": "A",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一片镀铂金的龙鳞，价值至少500金币",
-          "cost": 50000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你在范围内选择一个生物（可以选择你自己）周围创造出一片银色光芒的领域。这个领域向外散发出5英尺的微弱光线。当生物被这个领域包围时，它将获得以下好处：",
-        {
-          "type": "list",
-          "style": "list-hang-notitle",
-          "items": [
-            {
-              "type": "item",
-              "name": "掩护",
-              "ENG_name": "Cover",
-              "entries": [
-                "该生物有一半掩护。"
-              ]
-            },
-            {
-              "type": "item",
-              "name": "伤害抗性",
-              "ENG_name": "Damage Resistance",
-              "entries": [
-                "这个生物对酸性、寒冷、火焰、闪电和毒素伤害具有抗性。"
-              ]
-            },
-            {
-              "type": "item",
-              "name": "反射闪避",
-              "ENG_name": "Evasion",
-              "entries": [
-                "如果生物遭受到允许它进行敏捷豁免以只承受一半伤害的效果，如果生物在豁免中成功，则不承受任何伤害；如果失败，则只承受一半伤害。"
-              ]
-            }
-          ]
-        },
-        "作为随后回合的奖励动作，你可以将领域移动到距离领域60英尺内的另一个生物那里。"
-      ],
-      "miscTags": [
-        "通用银行自动转账"
-      ]
-    },
-    {
-      "name": "纳撒尔恶作剧",
-      "ENG_name": "Nathair's Mischief",
-      "source": "FTD",
-      "page": 20,
-      "level": 2,
-      "school": "I",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "s": true,
-        "m": "一块苹果派的脆皮"
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你用仙女和龙族魔法填充了一个你能看到的20英尺立方体范围内的空间。根据'恶作剧涌动'表格掷骰子以确定产生的魔法效果，并在你的每个回合开始时再次掷骰子，直到法术结束。你可以在掷骰前将立方体移动最多10英尺。",
-        {
-          "type": "table",
-          "caption": "顽皮涌动",
-          "colLabels": [
-            "d4",
-            "影响"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "1",
-              "苹果派的香味弥漫在空气中，立方体内的每个生物都必须进行一次智力豁免检定，否则直到你下个回合开始前都会对你产生{@condition 魅惑}状态。"
-            ],
-            [
-              "2",
-              "周围出现了许多花束，立方体中的每个生物都必须成功进行一次敏捷豁免检定，否则在花束向他们的脸部喷水的情况下，直到你的下个回合开始时将处于{@condition 目盲}状态。"
-            ],
-            [
-              "3",
-              "立方体中的每个生物都必须进行一次智力豁免检定，否则将在你的下个回合开始前一直咯咯笑。咯咯笑的生物处于{@condition 无力}状态，并使用其所有移动力向随机方向移动。"
-            ],
-            [
-              "4",
-              "糖蜜滴悬浮在立方体中，直到你的下个回合开始前，使其成为{@quickref 困难地型||3}。"
-            ]
-          ]
-        }
-      ],
-      "savingThrow": [
-        "敏捷",
-        "感知"
-      ],
-      "miscTags": [
-        "RO",
-        "中士"
-      ]
-    },
-    {
-      "name": "劳洛希姆心灵长枪",
-      "ENG_name": "Raulothim's Psychic Lance",
-      "source": "FTD",
-      "page": 21,
-      "level": 4,
-      "school": "E",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 120
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你从额头释放出一道闪烁的心灵力量之矛，射向范围内你能看到的生物。或者，你可以说出一个生物的名字。如果被命名的目标在范围内，即使看不见也将成为法术的目标。如果被命名的目标不在范围内，矛会消散，不会产生效果。",
-        "目标必须进行一次智力豁免检定。豁免失败时，目标受到{@damage 7d6}点心灵伤害，并且直到你的下个回合开始时处于{@condition 无力}状态。豁免成功时，生物受到一半的伤害，并且不会处于{@condition 无力}状态。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用5级或更高等级的法术位施放这个法术时，伤害会根据4级以上的法术位等级，每升一级增加{@scaledamage 7d6|4-9|1d6}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "心灵"
-      ],
-      "conditionInflict": [
-        "无力"
-      ],
-      "savingThrow": [
-        "智力"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ]
-    },
-    {
-      "name": "雾凇霜缚",
-      "ENG_name": "Rime's Binding Ice",
-      "source": "FTD",
-      "page": 21,
-      "level": 2,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "cone",
-        "distance": {
-          "type": "feet",
-          "amount": 30
-        }
-      },
-      "components": {
-        "s": true,
-        "m": "一瓶融化的水"
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "一股冰冷能量从你身上以30英尺锥形区域辐射出去。该区域内的每个生物都必须进行一次体质豁免投掷。如果失败，生物将受到{@damage 3d8}点冰冷伤害，并在1分钟内被冰形成阻碍，或者直到它或它接触范围内的另一个生物使用动作来打破冰。被冰阻碍的生物其速度降低至0。如果成功，生物受到的伤害减半，并且不会被冰阻碍。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用3级或更高级别的法术位施放此法术时，每超过2级法术位的等级，冰冷伤害增加{@scaledamage 3d8|2-9|1d8}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "寒冷"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "areaTags": [
-        "N"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "龙类灵魄召唤术",
-      "ENG_name": "Summon Draconic Spirit",
-      "source": "FTD",
-      "page": 21,
-      "level": 5,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一个上面刻有龙图案的物品，价值至少500金币",
-          "cost": 50000
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你召唤出一只{@creature 龙族之魂|FTD}。它在你视野范围内的一个未被占据的空间中显现。这个实体形态使用龙族精灵的统计数据块。当你施放这个法术时，选择一个龙族：彩龙、宝石龙或金属龙。这个生物看起来像所选族的龙，这决定了它统计数据块中的某些特征。当生物的生命值降至0点或法术结束时，它就会消失。",
-        "这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用6级或更高级别的法术位施放这个法术时，在法术位等级出现在法术块中的地方使用更高级别的法术位。"
-          ]
-        }
-      ],
-      "savingThrow": [
-        "敏捷"
-      ],
-      "miscTags": [
-        "中士",
-        "SMN"
-      ]
-    }
-  ]
+	"spell": [
+		{
+			"name": "阿莎德隆奔行",
+			"ENG_name": "Ashardalon's Stride",
+			"source": "FTD",
+			"page": 19,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"龙的烈焰从你的脚下喷涌而出，赋予你爆炸性的速度。在此持续时间内，你的速度增加20英尺，移动不会引起借机攻击。",
+				"当您移动到距离生物或未穿戴或携带的物体5英尺范围内时，它会因您的热浪轨迹受到{@damage 1d6}火焰伤害。一个生物或物体在一回合内只能受到这种伤害一次。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高等级的法术位施放这个法术时，你的移动速度每超过3级法术位增加5英尺。对于超过3级的每个法术位等级，这个法术还会额外造成{@scaledamage 1d6|3-9|1d6}点火焰伤害。"
+					]
+				}
+			],
+			"damageInflict": [
+				"火"
+			],
+			"miscTags": [
+				"目标文件"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "龙类变形",
+			"ENG_name": "Draconic Transformation",
+			"source": "FTD",
+			"page": 19,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一尊至少价值500金币的龙雕像",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"随着一声怒吼，你借助龙族的魔法力量来转变自己，获得龙族特征。直到法术结束，你将获得以下好处：",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "盲视",
+							"ENG_name": "Blindsight",
+							"entries": [
+								"你拥有30英尺范围内的{@sense 盲视}。在这个范围内，你可以有效地看到任何不是完全遮蔽的东西，即使你处于{@condition 目盲}状态或在黑暗中。此外，你可以看到一只{@condition 隐形}的生物，除非该生物成功地从你的视线中隐藏。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "龙息武器",
+							"ENG_name": "Breath Weapon",
+							"entries": [
+								"当你施放这个法术时，以及在持续时间内的随后回合中作为奖励行动，你可以呼出闪烁的能量，形成一个60英尺的锥形区域。该区域内的每个生物都必须进行一次敏捷豁免投掷，若失败则受到{@damage 6d8}点力量伤害，若成功则伤害减半。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "翅膀",
+							"ENG_name": "Wings",
+							"entries": [
+								"无形的翅膀从你的背部长出，赋予你60英尺的飞行速度。"
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"敏捷"
+			],
+			"miscTags": [
+				"中士",
+				"通用银行自动转账"
+			]
+		},
+		{
+			"name": "费资本铂金盾",
+			"ENG_name": "Fizban's Platinum Shield",
+			"source": "FTD",
+			"page": 20,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一片镀铂金的龙鳞，价值至少500金币",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你在范围内选择一个生物（可以选择你自己）周围创造出一片银色光芒的领域。这个领域向外散发出5英尺的微弱光线。当生物被这个领域包围时，它将获得以下好处：",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "掩护",
+							"ENG_name": "Cover",
+							"entries": [
+								"该生物有一半掩护。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "伤害抗性",
+							"ENG_name": "Damage Resistance",
+							"entries": [
+								"这个生物对酸性、寒冷、火焰、闪电和毒素伤害具有抗性。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "反射闪避",
+							"ENG_name": "Evasion",
+							"entries": [
+								"如果生物遭受到允许它进行敏捷豁免以只承受一半伤害的效果，如果生物在豁免中成功，则不承受任何伤害；如果失败，则只承受一半伤害。"
+							]
+						}
+					]
+				},
+				"作为随后回合的奖励动作，你可以将领域移动到距离领域60英尺内的另一个生物那里。"
+			],
+			"miscTags": [
+				"通用银行自动转账"
+			]
+		},
+		{
+			"name": "纳撒尔恶作剧",
+			"ENG_name": "Nathair's Mischief",
+			"source": "FTD",
+			"page": 20,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "一块苹果派的脆皮"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你用仙女和龙族魔法填充了一个你能看到的20英尺立方体范围内的空间。根据'恶作剧涌动'表格掷骰子以确定产生的魔法效果，并在你的每个回合开始时再次掷骰子，直到法术结束。你可以在掷骰前将立方体移动最多10英尺。",
+				{
+					"type": "table",
+					"caption": "顽皮涌动",
+					"colLabels": [
+						"d4",
+						"影响"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"苹果派的香味弥漫在空气中，立方体内的每个生物都必须进行一次智力豁免检定，否则直到你下个回合开始前都会对你产生{@condition 魅惑}状态。"
+						],
+						[
+							"2",
+							"周围出现了许多花束，立方体中的每个生物都必须成功进行一次敏捷豁免检定，否则在花束向他们的脸部喷水的情况下，直到你的下个回合开始时将处于{@condition 目盲}状态。"
+						],
+						[
+							"3",
+							"立方体中的每个生物都必须进行一次智力豁免检定，否则将在你的下个回合开始前一直咯咯笑。咯咯笑的生物处于{@condition 无力}状态，并使用其所有移动力向随机方向移动。"
+						],
+						[
+							"4",
+							"糖蜜滴悬浮在立方体中，直到你的下个回合开始前，使其成为{@quickref 困难地型||3}。"
+						]
+					]
+				}
+			],
+			"savingThrow": [
+				"敏捷",
+				"感知"
+			],
+			"miscTags": [
+				"RO",
+				"中士"
+			]
+		},
+		{
+			"name": "劳洛希姆心灵长枪",
+			"ENG_name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"page": 21,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你从额头释放出一道闪烁的心灵力量之矛，射向范围内你能看到的生物。或者，你可以说出一个生物的名字。如果被命名的目标在范围内，即使看不见也将成为法术的目标。如果被命名的目标不在范围内，矛会消散，不会产生效果。",
+				"目标必须进行一次智力豁免检定。豁免失败时，目标受到{@damage 7d6}点心灵伤害，并且直到你的下个回合开始时处于{@condition 无力}状态。豁免成功时，生物受到一半的伤害，并且不会处于{@condition 无力}状态。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用5级或更高等级的法术位施放这个法术时，伤害会根据4级以上的法术位等级，每升一级增加{@scaledamage 7d6|4-9|1d6}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"心灵"
+			],
+			"conditionInflict": [
+				"无力"
+			],
+			"savingThrow": [
+				"智力"
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "雾凇霜缚",
+			"ENG_name": "Rime's Binding Ice",
+			"source": "FTD",
+			"page": 21,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "一瓶融化的水"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"一股冰冷能量从你身上以30英尺锥形区域辐射出去。该区域内的每个生物都必须进行一次体质豁免投掷。如果失败，生物将受到{@damage 3d8}点冰冷伤害，并在1分钟内被冰形成阻碍，或者直到它或它接触范围内的另一个生物使用动作来打破冰。被冰阻碍的生物其速度降低至0。如果成功，生物受到的伤害减半，并且不会被冰阻碍。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高级别的法术位施放此法术时，每超过2级法术位的等级，冰冷伤害增加{@scaledamage 3d8|2-9|1d8}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"寒冷"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"areaTags": [
+				"N"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "龙类灵魄召唤术",
+			"ENG_name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"page": 21,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个上面刻有龙图案的物品，价值至少500金币",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤出一只{@creature 龙族之魂|FTD}。它在你视野范围内的一个未被占据的空间中显现。这个实体形态使用龙族精灵的统计数据块。当你施放这个法术时，选择一个龙族：彩龙、宝石龙或金属龙。这个生物看起来像所选族的龙，这决定了它统计数据块中的某些特征。当生物的生命值降至0点或法术结束时，它就会消失。",
+				"这个生物是您和您的同伴的盟友。在战斗中，生物共享您的先攻数值，但它会在您之后立即行动。它遵从您的口头命令（您无需进行任何动作）。如果您没有发出任何命令，它会采取{@action 回避}动作，并使用其移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用6级或更高级别的法术位施放这个法术时，在法术位等级出现在法术块中的地方使用更高级别的法术位。"
+					]
+				}
+			],
+			"savingThrow": [
+				"敏捷"
+			],
+			"miscTags": [
+				"中士",
+				"SMN"
+			]
+		}
+	]
 }

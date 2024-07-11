@@ -1,3162 +1,3162 @@
 {
-  "class": [
-    {
-      "name": "战士",
-      "ENG_name": "Fighter",
-      "source": "PHB",
-      "page": 70,
-      "srd": true,
-      "basicRules": true,
-      "hd": {
-        "number": 1,
-        "faces": 10
-      },
-      "proficiency": [
-        "力量",
-        "体质"
-      ],
-      "optionalfeatureProgression": [
-        {
-          "name": "战斗风格",
-          "ENG_name": "Fighting Style",
-          "featureType": [
-            "FS:F"
-          ],
-          "progression": {
-            "1": 1
-          }
-        }
-      ],
-      "startingProficiencies": {
-        "armor": [
-          "光亮术",
-          "中等",
-          "重型",
-          "{@item 护盾术|PHB|盾牌}"
-        ],
-        "weapons": [
-          "简单",
-          "武术"
-        ],
-        "skills": [
-          {
-            "choose": {
-              "from": [
-                "特技",
-                "驯兽",
-                "运动",
-                "历史",
-                "洞悉",
-                "威吓",
-                "察觉",
-                "求生"
-              ],
-              "count": 2
-            }
-          }
-        ]
-      },
-      "startingEquipment": {
-        "additionalFromBackground": true,
-        "default": [
-          "(a) 锁子甲或 (b) 皮甲，长弓和20支箭",
-          "(a) 一把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}和一面{@item 护盾术|PHB}，或 (b) 两把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}",
-          "(a) 一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}或者 (b) 两把{@item 手斧|PHB|手斧}",
-          "(a) 一个{@item 地城套组|PHB}或(b) 一个{@item 探索套组|PHB}"
-        ],
-        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
-        "defaultData": [
-          {
-            "a": [
-              "链甲|PHB"
-            ],
-            "b": [
-              "皮甲|PHB",
-              "长弓|PHB",
-              "箭(20)|PHB"
-            ]
-          },
-          {
-            "a": [
-              {
-                "equipmentType": "武器（武术）"
-              },
-              "护盾术|PHB"
-            ],
-            "b": [
-              {
-                "equipmentType": "武器（武术）",
-                "quantity": 2
-              }
-            ]
-          },
-          {
-            "a": [
-              "轻弩|PHB",
-              "弩矢(20)|PHB"
-            ],
-            "b": [
-              {
-                "item": "手斧|PHB",
-                "quantity": 2
-              }
-            ]
-          },
-          {
-            "a": [
-              "地城套组|PHB"
-            ],
-            "b": [
-              "探索套组|PHB"
-            ]
-          }
-        ]
-      },
-      "multiclassing": {
-        "requirements": {
-          "or": [
-            {
-              "str": 13,
-              "dex": 13
-            }
-          ]
-        },
-        "proficienciesGained": {
-          "armor": [
-            "光亮术",
-            "中等",
-            "{@item 护盾术|PHB|盾牌}"
-          ],
-          "weapons": [
-            "简单",
-            "武术"
-          ]
-        }
-      },
-      "classFeatures": [
-        "战斗风格|战士||1",
-        "回气|战士||1",
-        "动作如潮|战士||2",
-        {
-          "classFeature": "武术范型|战士||3",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|战士||4",
-        "替换武术|战士||4|TCE",
-        "额外攻击|战士||5",
-        "属性值提升|战士||6",
-        {
-          "classFeature": "武术范型能力|战士||7",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|战士||8",
-        "不屈|战士||9",
-        {
-          "classFeature": "武术范型能力|战士||10",
-          "gainSubclassFeature": true
-        },
-        "额外攻击(2)|战士||11",
-        "属性值提升|战士||12",
-        "不屈(2次)|战士||13",
-        "属性值提升|战士||14",
-        {
-          "classFeature": "武术范型能力|战士||15",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|战士||16",
-        "动作如潮(2次)|战士||17",
-        "不屈(3次)|战士||17",
-        {
-          "classFeature": "武术范型能力|战士||18",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|战士||19",
-        "额外攻击(3)|战士||20"
-      ],
-      "subclassTitle": "武术范型",
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ],
-  "subclass": [
-    {
-      "name": "战斗大师",
-      "ENG_name": "Battle Master",
-      "shortName": "战斗大师",
-      "source": "PHB",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 73,
-      "optionalfeatureProgression": [
-        {
-          "name": "战技",
-          "ENG_name": "Maneuvers",
-          "featureType": [
-            "MV:B"
-          ],
-          "progression": {
-            "3": 3,
-            "7": 5,
-            "10": 7,
-            "15": 9
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "战斗大师|战士||战斗大师||3",
-        "额外战技|战士||战斗大师||7",
-        "额外卓越骰|战士||战斗大师||7",
-        "知己知彼|战士||战斗大师||7",
-        "额外战技|战士||战斗大师||10",
-        "精通战斗卓越(d10)|战士||战斗大师||10",
-        "额外战技|战士||战斗大师||15",
-        "额外卓越骰|战士||战斗大师||15",
-        "坚韧|战士||战斗大师||15",
-        "精通战斗卓越(d12)|战士||战斗大师||18"
-      ]
-    },
-    {
-      "name": "勇士",
-      "ENG_name": "Champion",
-      "shortName": "勇士",
-      "source": "PHB",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "optionalfeatureProgression": [
-        {
-          "name": "战斗风格",
-          "ENG_name": "Fighting Style",
-          "featureType": [
-            "FS:F"
-          ],
-          "progression": {
-            "10": 1
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "勇士|战士||勇士||3",
-        "运动健将|战士||勇士||7",
-        "额外战斗风格|战士||勇士||10",
-        "高效重击|战士||勇士||15",
-        "生还者|战士||勇士||18"
-      ]
-    },
-    {
-      "name": "奥法骑士",
-      "ENG_name": "Eldritch Knight",
-      "shortName": "奥法骑士",
-      "source": "PHB",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 74,
-      "spellcastingAbility": "int",
-      "casterProgression": "1/3",
-      "cantripProgression": [
-        0,
-        0,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3
-      ],
-      "spellsKnownProgression": [
-        0,
-        0,
-        3,
-        4,
-        4,
-        4,
-        5,
-        6,
-        6,
-        7,
-        8,
-        8,
-        9,
-        10,
-        10,
-        11,
-        11,
-        11,
-        12,
-        13
-      ],
-      "additionalSpells": [
-        {
-          "expanded": {
-            "3": [
-              {
-                "all": "level=0|class=法师"
-              },
-              {
-                "all": "level=1|class=法师"
-              }
-            ],
-            "7": [
-              {
-                "all": "level=2|class=法师"
-              }
-            ],
-            "13": [
-              {
-                "all": "level=3|class=法师"
-              }
-            ],
-            "19": [
-              {
-                "all": "level=4|class=法师"
-              }
-            ]
-          }
-        }
-      ],
-      "subclassTableGroups": [
-        {
-          "subclasses": [
-            {
-              "name": "奥法骑士",
-              "ENG_name": "Eldritch Knight",
-              "source": "PHB"
-            }
-          ],
-          "colLabels": [
-            "{@filter 已知戏法|法术|level=0|子职业=战士：奥术骑士}",
-            "{@filter 已知法术|法术|子职业=战士：奥术骑士}"
-          ],
-          "rows": [
-            [
-              0,
-              0
-            ],
-            [
-              0,
-              0
-            ],
-            [
-              2,
-              3
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              2,
-              5
-            ],
-            [
-              2,
-              6
-            ],
-            [
-              2,
-              6
-            ],
-            [
-              3,
-              7
-            ],
-            [
-              3,
-              8
-            ],
-            [
-              3,
-              8
-            ],
-            [
-              3,
-              9
-            ],
-            [
-              3,
-              10
-            ],
-            [
-              3,
-              10
-            ],
-            [
-              3,
-              11
-            ],
-            [
-              3,
-              11
-            ],
-            [
-              3,
-              11
-            ],
-            [
-              3,
-              12
-            ],
-            [
-              3,
-              13
-            ]
-          ]
-        },
-        {
-          "title": "每个法术等级的法术位",
-          "subclasses": [
-            {
-              "name": "奥法骑士",
-              "ENG_name": "Eldritch Knight",
-              "source": "PHB"
-            }
-          ],
-          "colLabels": [
-            "{@filter 第一|法术|level=1|子职业=战士：奥术骑士}",
-            "{@filter 第二|法术|level=2|子职业=战士：奥术骑士}",
-            "{@filter 第三|法术|level=3|子职业=战士：奥术骑士}",
-            "{@filter 第四|法术|level=4|子职业=战士：奥术骑士}"
-          ],
-          "rowsSpellProgression": [
-            [
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              1
-            ],
-            [
-              4,
-              3,
-              3,
-              1
-            ]
-          ]
-        }
-      ],
-      "subclassFeatures": [
-        "奥法骑士|战士||奥法骑士||3",
-        "战争魔法|战士||奥法骑士||7",
-        "秘法打击|战士||奥法骑士||10",
-        "秘法冲锋|战士||奥法骑士||15",
-        "精通战争魔法|战士||奥法骑士||18"
-      ]
-    },
-    {
-      "name": "紫龙骑士(旗将)",
-      "ENG_name": "Purple Dragon Knight (Banneret)",
-      "shortName": "紫龙骑士(旗将)",
-      "source": "SCAG",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 128,
-      "subclassFeatures": [
-        "紫龙骑士(旗将)|战士||紫龙骑士(旗将)|SCAG|3",
-        "皇家特使|战士||紫龙骑士(旗将)|SCAG|7",
-        "振奋之潮|战士||紫龙骑士(旗将)|SCAG|10",
-        "意志壁垒|战士||紫龙骑士(旗将)|SCAG|15",
-        "振奋之潮|战士||紫龙骑士(旗将)|SCAG|18"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "魔射手",
-      "ENG_name": "Arcane Archer",
-      "shortName": "魔射手",
-      "source": "XGE",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 28,
-      "additionalSpells": [
-        {
-          "known": {
-            "3": [
-              "魔法技俩#c"
-            ]
-          }
-        },
-        {
-          "known": {
-            "3": [
-              "德鲁伊伎俩#c"
-            ]
-          }
-        }
-      ],
-      "optionalfeatureProgression": [
-        {
-          "name": "奥术射击",
-          "ENG_name": "Arcane Shots",
-          "featureType": [
-            "AS"
-          ],
-          "progression": {
-            "3": 2,
-            "7": 3,
-            "10": 4,
-            "15": 5,
-            "18": 6
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "魔射手|战士||魔射手|XGE|3",
-        "注魔箭矢|战士||魔射手|XGE|7",
-        "曲线射击|战士||魔射手|XGE|7",
-        "额外秘法射击选项|战士||魔射手|XGE|7",
-        "额外秘法射击选项|战士||魔射手|XGE|10",
-        "常备射击|战士||魔射手|XGE|15",
-        "额外秘法射击选项|战士||魔射手|XGE|15",
-        "额外秘法射击选项|战士||魔射手|XGE|18"
-      ]
-    },
-    {
-      "name": "骑兵",
-      "ENG_name": "Cavalier",
-      "shortName": "骑兵",
-      "source": "XGE",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 30,
-      "subclassFeatures": [
-        "骑兵|战士||骑兵|XGE|3",
-        "守护战技|战士||骑兵|XGE|7",
-        "坚守战线|战士||骑兵|XGE|10",
-        "冲锋陷阵|战士||骑兵|XGE|15",
-        "警戒守卫|战士||骑兵|XGE|18"
-      ]
-    },
-    {
-      "name": "武士",
-      "ENG_name": "Samurai",
-      "shortName": "武士",
-      "source": "XGE",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 31,
-      "subclassFeatures": [
-        "武士|战士||武士|XGE|3",
-        "雅臣|战士||武士|XGE|7",
-        "不懈|战士||武士|XGE|10",
-        "燕返|战士||武士|XGE|15",
-        "回光返照|战士||武士|XGE|18"
-      ]
-    },
-    {
-      "name": "法外狂徒",
-      "ENG_name": "Scofflaw",
-      "shortName": "法外狂徒",
-      "source": "HWCS",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 41,
-      "subclassFeatures": [
-        "法外狂徒|战士||法外狂徒|HWCS|3",
-        "误导|战士||法外狂徒|HWCS|7",
-        "涤瑕蹈隙|战士||法外狂徒|HWCS|10",
-        "臭名远扬|战士||法外狂徒|HWCS|15",
-        "一刀不够，两刀来凑|战士||法外狂徒|HWCS|18"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "回音骑士",
-      "ENG_name": "Echo Knight",
-      "shortName": "回音骑士",
-      "source": "EGW",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 183,
-      "subclassFeatures": [
-        "回音骑士|战士||回音骑士|EGW|3",
-        "回音化身|战士||回音骑士|EGW|7",
-        "阴影殉道者|战士||回音骑士|EGW|10",
-        "回收潜能|战士||回音骑士|EGW|15",
-        "一人成军|战士||回音骑士|EGW|18"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "灵能武士",
-      "ENG_name": "Psi Warrior",
-      "shortName": "灵能武士",
-      "source": "TCE",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 42,
-      "additionalSpells": [
-        {
-          "innate": {
-            "18": {
-              "daily": {
-                "1": [
-                  "心灵遥控"
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "灵能武士|战士||灵能武士|TCE|3",
-        "念力熟练|战士||灵能武士|TCE|7",
-        "意念守护|战士||灵能武士|TCE|10",
-        "壁垒之力|战士||灵能武士|TCE|15",
-        "念力宗师|战士||灵能武士|TCE|18"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "符文骑士",
-      "ENG_name": "Rune Knight",
-      "shortName": "符文骑士",
-      "source": "TCE",
-      "className": "战士",
-      "classSource": "PHB",
-      "page": 44,
-      "optionalfeatureProgression": [
-        {
-          "name": "符文",
-          "ENG_name": "Runes",
-          "featureType": [
-            "RN"
-          ],
-          "progression": {
-            "3": 2,
-            "7": 3,
-            "10": 4,
-            "15": 5
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "符文骑士|战士||符文骑士|TCE|3",
-        "符文之盾|战士||符文骑士|TCE|7",
-        "额外符文已知|战士||符文骑士|TCE|7",
-        "奇伟身躯|战士||符文骑士|TCE|10",
-        "额外符文已知|战士||符文骑士|TCE|10",
-        "符文大师|战士||符文骑士|TCE|15",
-        "额外符文已知|战士||符文骑士|TCE|15",
-        "符文主宰|战士||符文骑士|TCE|18"
-      ],
-      "hasFluffImages": true
-    }
-  ],
-  "classFeature": [
-    {
-      "name": "战斗风格",
-      "ENG_name": "Fighting Style",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你选择了一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能选择相同的战斗风格选项超过一次，即使你再次获得选择机会。",
-        {
-          "type": "options",
-          "count": 1,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "箭术"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "防御"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "对决"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "巨武器战斗"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "守护"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "双武器战斗"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "盲斗|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "拦截|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "卓越技巧|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "投掷武器战斗|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "徒手战斗|TCE"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "回气",
-      "ENG_name": "Second Wind",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你有一个有限的耐力源泉，可以用来保护自己免受伤害。在你的回合，你可以使用一个奖励动作来恢复等于{@dice 1d10}加上你的战士等级的生命值。",
-        "一旦你使用了这个特性，你必须完成一次短休或长休后才能再次使用它。"
-      ]
-    },
-    {
-      "name": "动作如潮",
-      "ENG_name": "Action Surge",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 2,
-      "entries": [
-        "从第二级开始，你可以暂时超越自己的正常极限。在你的回合，你可以采取一个额外的行动。",
-        "一旦你使用了这个特性，你必须在下一次短休或长休之前才能再次使用它。从17级开始，你可以在休息前使用两次，但在同一回合中只能使用一次。"
-      ]
-    },
-    {
-      "name": "武术范型",
-      "ENG_name": "Martial Archetype",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 3,
-      "entries": [
-        "在第3级时，你从可用列表中选择一个你努力模仿的原型，它将影响你的战斗风格和技巧。你选择的原型将在第3级以及之后的第7级、第10级、第15级和第18级时赋予你特定的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 4,
-      "entries": [
-        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "替换武术",
-      "ENG_name": "Martial Versatility",
-      "source": "TCE",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 4,
-      "isClassFeatureVariant": true,
-      "entries": [
-        "{@i 4级战士 {@variantrule 可选职业特性|tce|可选特性}}",
-        "每当你在这个职业中达到一个提供属性值提升特性的等级时，你可以做以下之一，正如你转移你的战斗实践的焦点：",
-        {
-          "type": "list",
-          "items": [
-            "将你已知的一个{@filter 战斗风格|可选特性|特性类型=FS:F}替换为战士可用的其他战斗风格。",
-            "如果你知道任何来自{@filter|phb|战斗大师|战斗大师|phb|2-0}职业原型的{@class|可选特性|特性类型=MV:B}，你可以用一个不同的技巧替换你所知道的一个技巧。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "额外攻击",
-      "ENG_name": "Extra Attack",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 5,
-      "entries": [
-        "从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。",
-        "当你达到这个职业的11级时，攻击次数增加到三次，当你达到这个职业的20级时，攻击次数增加到四次。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 6,
-      "entries": [
-        "当你达到第6级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用此特性将任何能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "武术范型能力",
-      "ENG_name": "Martial Archetype feature",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 7,
-      "entries": [
-        "在7级时，你获得了由你的战斗风格赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 8,
-      "entries": [
-        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "不屈",
-      "ENG_name": "Indomitable",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 9,
-      "entries": [
-        "从9级开始，你可以重掷一个失败的豁免投掷。如果你这样做，你必须使用新的投掷结果，并且在完成一次长休之前不能再使用这个特性。",
-        "从13级开始，你可以在长休之间使用这个特性两次；从17级开始，你可以在长休之间使用三次。"
-      ]
-    },
-    {
-      "name": "武术范型能力",
-      "ENG_name": "Martial Archetype feature",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 10,
-      "entries": [
-        "在第10级时，你获得了由你的战斗原型赋予的特性。"
-      ]
-    },
-    {
-      "name": "额外攻击(2)",
-      "ENG_name": "Extra Attack (2)",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 11,
-      "entries": [
-        "在11级时，每当你在自己回合采取{@action 攻击}行动时，你可以攻击三次。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 12,
-      "entries": [
-        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "不屈(2次)",
-      "ENG_name": "Indomitable (two uses)",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 13,
-      "entries": [
-        "在13级时，你可以在长时间休息之间使用不屈两次。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 14,
-      "entries": [
-        "当你达到14级时，你可以选择一项能力值提升2点，或者选择两项能力值各提升1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "武术范型能力",
-      "ENG_name": "Martial Archetype feature",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 15,
-      "entries": [
-        "在第15级时，你获得了由你的战斗原型赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 16,
-      "entries": [
-        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "动作如潮(2次)",
-      "ENG_name": "Action Surge (two uses)",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 17,
-      "entries": [
-        "在17级时，你可以在休息前使用行动激增特性两次，但在同一回合中只能使用一次。"
-      ]
-    },
-    {
-      "name": "不屈(3次)",
-      "ENG_name": "Indomitable (three uses)",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 17,
-      "entries": [
-        "在17级时，你可以在长时间休息之间使用不屈三次。"
-      ]
-    },
-    {
-      "name": "武术范型能力",
-      "ENG_name": "Martial Archetype feature",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 18,
-      "entries": [
-        "在第18级时，你获得了由你的战斗原型赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 19,
-      "entries": [
-        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "额外攻击(3)",
-      "ENG_name": "Extra Attack (3)",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "level": 20,
-      "entries": [
-        "在20级时，每当你在自己回合采取{@action 攻击}动作时，你可以攻击四次。"
-      ]
-    }
-  ],
-  "subclassFeature": [
-    {
-      "name": "回音骑士",
-      "ENG_name": "Echo Knight",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 3,
-      "entries": [
-        "克林王朝的神秘而令人畏惧的前线战士，回声骑士精通使用潜能召唤未实现时间线的逐渐消逝的阴影来帮助他们在战斗中。被他们自己力量的回声所包围，他们像一群循环的阴影和打击一样冲入战斗。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "显现回音|战士||回音骑士|EGW|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "释放化身|战士||回音骑士|EGW|3"
-        }
-      ]
-    },
-    {
-      "name": "显现回音",
-      "ENG_name": "Manifest Echo",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级回声骑士特性}",
-        "你可以使用一个奖励动作，在你能看见的15英尺范围内的未被占据的空间中，魔法性地显现出一个自己的回声。这个回声是一个你魔法性的、半透明的、灰色的影像，它将持续存在，直到被摧毁，直到你使用奖励动作解散它，直到你显现另一个回声，或者直到你被{@condition 无力}。",
-        "你的回声具有AC 14 + 你的熟练加值，1点生命值，并且对所有状态免疫。如果它必须进行豁免投掷，它使用你的豁免投掷加值进行投掷。它的大小与你相同，并且它占据自己的空间。在你的回合上，你可以用心灵命令回声向任何方向移动最多30英尺（无需动作）。如果你的回声在你的回合结束时距离你超过30英尺，它将被摧毁。",
-        "你可以以以下方式使用回声：",
-        {
-          "type": "list",
-          "items": [
-            "作为一个奖励动作，你可以传送，以你的移动力15英尺的代价，魔法般地与你的回声交换位置，不论你们之间的距离。",
-            "当你在你的回合采取{@action 攻击}动作时，你用该动作进行的任何攻击都可以从你的空间或回声的空间发起。你需要为每次攻击做出这个选择。",
-            "当你的回声5英尺范围内可以看到的生物至少移动5英尺远离它时，你可以使用你的反应来做一次机会攻击，就好像你在回声的空间中一样。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "释放化身",
-      "ENG_name": "Unleash Incarnation",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级回声骑士特性}",
-        "你可以增强你的回声的愤怒。每当你采取{@action 攻击}动作时，你可以从回声的位置额外进行一次近战攻击。",
-        "你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "回音化身",
-      "ENG_name": "Echo Avatar",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 七级回声骑士特性}",
-        "你可以暂时将你的意识转移到你的回声上。作为一个动作，你可以通过回声的眼睛看东西，通过它的耳朵听声音。在这段时间里，你处于{@condition 耳聋}和{@condition 目盲}状态。你可以持续这种效果最多10分钟，并且可以随时结束它（不需要动作）。当你的回声以这种方式被使用时，它可以离你最多1000英尺远而不会被摧毁。"
-      ]
-    },
-    {
-      "name": "阴影殉道者",
-      "ENG_name": "Shadow Martyr",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 10级回声骑士特性}",
-        "你可以使你的回声在针对你能看到的另一生物的攻击前投掷自己。在进行攻击掷骰之前，你可以使用你的反应将回声传送到目标生物5英尺范围内的未被占据的空间。触发反应的攻击掷骰改为对你的回声进行。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "回收潜能",
-      "ENG_name": "Reclaim Potential",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级回声骑士特性}",
-        "你学会了吸收你回声的短暂魔法。当你的回声因受到伤害而被摧毁时，你可以获得等同于{@dice 2d6}加上你的体质调整值的临时生命值，前提是你还没有临时生命值。",
-        "你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "一人成军",
-      "ENG_name": "Legion of One",
-      "source": "EGW",
-      "page": 183,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "回音骑士",
-      "subclassSource": "EGW",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "{@i 十八级回声骑士特性}",
-        "你可以使用奖励动作通过你的显化回声特性来创造两个回声，这些回声可以共存。如果你试图创造第三个回声，前两个回声将被摧毁。你可以从一个回声的位置做到的事情也可以从另一个回声的位置做到。",
-        "此外，当你进行先攻检定且你的释放化身特性没有剩余使用次数时，你恢复该特性的一个使用次数。"
-      ]
-    },
-    {
-      "name": "法外狂徒",
-      "ENG_name": "Scofflaw",
-      "source": "HWCS",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "法外狂徒",
-      "subclassSource": "HWCS",
-      "level": 3,
-      "entries": [
-        "蔑视者是一个打击狠毒、战斗狡猾的战士，他们对荣誉和传统的理想不屑一顾，只做他们认为必须做的事情来生存。规则就是用来打破的，蔑视者将这种逻辑延伸到他们的战斗风格中。利用他们所能使用的每一个诡计来对抗敌人，蔑视者使敌人屈服，或者用一记卑鄙的攻击压倒他们的防御。",
-        "无赖最终依赖他们臭名昭著的名声来做很多工作，获得了用一个威胁就能让敌人颤抖的能力。无赖是一群多样化的人，从优雅而致命的恶棍到粗暴的暴徒都有。将他们联系在一起的是他们的信念，那就是没有所谓的坏胜利。",
-        {
-          "type": "entries",
-          "name": "附赠熟练项",
-          "ENG_name": "Bonus Proficiency",
-          "entries": [
-            "当你在3级时选择这个战斗风格时，你可以选择以下技能中的一个获得熟练：{@skill 欺瞒}、{@skill 洞悉}、{@skill 威吓}、{@skill 巧手}或{@skill 隐匿}。或者，你也可以学习{@class 游荡者|PHB|盗贼黑话||PHB|盗贼黑话 1}。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "危言耸听",
-          "ENG_name": "Intimidating Banter",
-          "entries": [
-            "在3级时，你擅长将侮辱和讽刺融入你的战斗风格。只要你处于战斗中，你可以选择使用力量或敏捷来进行魅力能力值检查。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "残暴斗殴",
-          "ENG_name": "Brutal Brawler",
-          "entries": [
-            "在3级时，你在酒馆边的打斗磨练了你用任何手边的东西造成伤害的能力。你对即兴武器有熟练度，并且将你处理的任何即兴武器视为具有灵巧特性。",
-            "此外，每当你使用简易武器命中目标时，你可以花费一个奖励动作将其砸向你的对手。这样做会破坏武器，但会对目标造成武器的每个伤害骰可能的最大伤害值。此能力不会影响到攻击的伤害骰中额外增加的伤害骰。",
-            "在10级时，你手中的临时武器变得更加致命。当你使用奖励动作将临时武器砸向你的对手时，向武器的基础伤害骰中额外添加{@damage 2d6}。",
-            "在18级时，你使用临时武器进行攻击时具有优势。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "误导",
-      "ENG_name": "Misdirection",
-      "source": "HWCS",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "法外狂徒",
-      "subclassSource": "HWCS",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "在7级时，你擅长使用言语和手势来嘲讽或欺骗你的对手，将他们缺乏镇定转化为你的有利条件。这使你能够激怒你的敌人以一种可能让他们攻击自己盟友的方式挥动武器，或者让他们暴露出反击的机会。作为一个奖励动作，你可以误导你5英尺内的对手。目标必须进行一次智力豁免，对抗的DC等于8 + 你的熟练加值 + 你的力量或敏捷调整值。如果失败，他们必须使用反应来攻击你选择的5英尺内的生物。如果他们周围5英尺内没有其他生物，他们会浪费反应攻击你曾经所在位置的空气。",
-        "为了以这种方式误导生物，它们必须能够看到、听到或以其他方式理解你。"
-      ]
-    },
-    {
-      "name": "涤瑕蹈隙",
-      "ENG_name": "Blindside",
-      "source": "HWCS",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "法外狂徒",
-      "subclassSource": "HWCS",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你真正擅长利用你在战斗中创造的空当，用迅速而致命的精准打击击中毫无防备的对手。你可以将这种技巧用于任何尚未在战斗中行动的生物，或者在这一回合中你已经成功误导的生物。你还可以将这种技巧应用于你利用优势进行的任何攻击检定。命中时，你利用目标防御中的空当，额外造成{@damage 5d6}点伤害。一旦你使用了这个能力，直到你进行短休息或长休息之前，你不能再使用它。",
-        "在第15级时，你的侧袭造成的伤害增加到{@damage 7d6}。",
-        "在18级时，你通过侧翼攻击造成的伤害增加至{@damage 9d6}。如果在战斗开始时你的这个能力没有使用次数，在你的回合上，你恢复一次使用次数。"
-      ]
-    },
-    {
-      "name": "臭名远扬",
-      "ENG_name": "Infamy",
-      "source": "HWCS",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "法外狂徒",
-      "subclassSource": "HWCS",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，你的名声先于你，使得任何愚蠢到敢于反对你的人都能轻易地感到恐惧。作为你的{@action 攻击}动作的一部分，你可以对30英尺内的单个目标发出致命威胁，使他们在失败的智慧豁免下对你感到{@condition 恐惧}持续1分钟。受影响的目标可以在每个回合结束时重复这个豁免，成功则结束效果。这个豁免的DC是8 + 你的熟练加值 + 你的力量或敏捷调整值。一个目睹或听说过你无情行为的生物在进行这个豁免时处于劣势。",
-        "为了使用这个特性，生物必须能够看见、听见或以其他方式理解你。"
-      ]
-    },
-    {
-      "name": "一刀不够，两刀来凑",
-      "ENG_name": "Two For Flinching",
-      "source": "HWCS",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "法外狂徒",
-      "subclassSource": "HWCS",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "在18级时，你已经完善了利用对手弱点的艺术。每当你在一个回合内对一个你已经成功误导的对手进行攻击动作，或者对手受到了{@book 状态|PHB|11}的影响，你可以对那个对手进行一次额外的攻击。你每轮只能使用这个特性一次。"
-      ]
-    },
-    {
-      "name": "战斗大师",
-      "ENG_name": "Battle Master",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "那些模仿战斗大师典型形象的人会运用世代相传的武术技巧。对于战斗大师来说，战斗是一个学术领域，有时包括战斗之外的学科，如武器制造和书法。并非每个战士都能吸收反映在战斗大师原型中的历史、理论和艺术课程，但那些做到的人是技能和知识都非常全面的战士。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战争学徒|战士||战斗大师||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "卓越战技|战士||战斗大师||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战技|战士||战斗大师||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战技选项|战士||战斗大师||3|TCE"
-        }
-      ]
-    },
-    {
-      "name": "卓越战技",
-      "ENG_name": "Combat Superiority",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个子职业，你学会了由称为优越骰的特殊骰子驱动的战术。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "战技",
-              "ENG_name": "Maneuvers",
-              "entries": [
-                "你可以选择学习三种策略，这些策略列在下面的“策略”中。许多策略以某种方式增强攻击。每次攻击你只能使用一种策略。",
-                "在7级、10级和15级时，你可以选择学习两个额外的机动。每次学习新的机动时，你也可以用不同的机动替换你已知的一个机动。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "卓越骰",
-              "ENG_name": "Superiority Dice",
-              "entries": [
-                "你拥有四个优势骰，它们是{@dice d8}。使用优势骰时会消耗它。当你完成短休或长休时，你将重新获得所有消耗的优势骰。",
-                "你在第7级时获得另一个优势骰，第15级时再获得一个。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "豁免检定",
-              "ENG_name": "Saving Throws",
-              "entries": [
-                "你的一些策略需要你的目标进行豁免投掷以抵抗策略的效果。豁免投掷的DC（难度等级）计算方法如下：",
-                {
-                  "type": "abilityDc",
-                  "name": "战技",
-                  "ENG_name": "Maneuver",
-                  "attributes": [
-                    "力量",
-                    "敏捷"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "战技选项",
-      "ENG_name": "Maneuver Options",
-      "source": "TCE",
-      "page": 41,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 3,
-      "isClassFeatureVariant": true,
-      "header": 1,
-      "entries": [
-        "{@i 第三级战士 {@variantrule 可选职业特性|tce|可选特性}}",
-        "如果你可以使用机动，以下机动被添加到你可以使用的选项列表中。机动对战场主宰可用，但也对具有特殊特性的角色可用，比如具有{@optfeature 卓越技巧|TCE}战斗风格或{@feat 战技专家}特性。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "options",
-              "entries": [
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "伏击|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "换位诈术|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "警戒|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "领导风范|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "擒拿击|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "快手投掷|TCE"
-                },
-                {
-                  "type": "refOptionalfeature",
-                  "optionalfeature": "战术预估|TCE"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "战技",
-      "ENG_name": "Maneuvers",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "这些战术按字母顺序排列。",
-        {
-          "type": "options",
-          "count": 3,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "指挥官奇袭"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "缴械攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "扰乱打击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "灵巧步法"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "诡诈攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "挑衅攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "突刺攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "灵动攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "恐吓攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "格挡"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "精准攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "推撞攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "重整旗鼓"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "反击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "横扫攻击"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "摔绊攻击"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "战争学徒",
-      "ENG_name": "Student of War",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "在3级时，你可以选择获得一种{@filter 工匠工具|物品|来源=phb|杂项=平凡|type=工匠工具}的熟练度。"
-      ]
-    },
-    {
-      "name": "额外战技",
-      "ENG_name": "Additional Maneuvers",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "在7级时，你可以选择学习两个额外的战术。"
-      ]
-    },
-    {
-      "name": "额外卓越骰",
-      "ENG_name": "Additional Superiority Die",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "你在7级时获得另一个优越骰。"
-      ]
-    },
-    {
-      "name": "知己知彼",
-      "ENG_name": "Know Your Enemy",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "如果你在战斗之外至少花费1分钟观察或与另一个生物互动，你可以了解与你自己相比它的某些能力信息。地下城主会告诉你这个生物在以下两个你选择的特征方面是你的对手、优越还是劣势：",
-        {
-          "type": "list",
-          "items": [
-            "力量值",
-            "敏捷得分",
-            "体质得分",
-            "护甲等级",
-            "当前生命值",
-            "总职业等级（如果有）",
-            "战士职业等级（如果有的话）"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "额外战技",
-      "ENG_name": "Additional Maneuvers",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你可以选择学习两个额外的机动。"
-      ]
-    },
-    {
-      "name": "精通战斗卓越(d10)",
-      "ENG_name": "Improved Combat Superiority (d10)",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你的优越骰变为{@dice d10}。"
-      ]
-    },
-    {
-      "name": "额外战技",
-      "ENG_name": "Additional Maneuvers",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，你可以选择学习两个额外的战术。"
-      ]
-    },
-    {
-      "name": "额外卓越骰",
-      "ENG_name": "Additional Superiority Die",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，你获得了另一个优势骰。"
-      ]
-    },
-    {
-      "name": "坚韧",
-      "ENG_name": "Relentless",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，当你投掷先攻并且没有剩余的优越骰时，你恢复1个优越骰。"
-      ]
-    },
-    {
-      "name": "精通战斗卓越(d12)",
-      "ENG_name": "Improved Combat Superiority (d12)",
-      "source": "PHB",
-      "page": 73,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "战斗大师",
-      "subclassSource": "PHB",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "在18级时，你的优越骰变为{@dice d12}。"
-      ]
-    },
-    {
-      "name": "勇士",
-      "ENG_name": "Champion",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "典型的冠军专注于发展原始的身体力量，将其磨练至致命的完美。那些以这个原型为榜样的人将严格的训练与身体卓越结合起来，以造成毁灭性的打击。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "精通重击|战士||勇士||3"
-        }
-      ]
-    },
-    {
-      "name": "精通重击",
-      "ENG_name": "Improved Critical",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从你第3级选择这个原型开始，你的武器攻击在掷出19或20时会打出致命一击。"
-      ]
-    },
-    {
-      "name": "运动健将",
-      "ENG_name": "Remarkable Athlete",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，你可以将你的熟练加值的一半（向上取整）加到任何力量、敏捷或体质检查上，如果该检查原本不使用你的熟练加值。",
-        "此外，当你进行助跑的立定跳远时，你能够覆盖的距离会增加，增加的英尺数等于你的力量调整值。"
-      ]
-    },
-    {
-      "name": "额外战斗风格",
-      "ENG_name": "Additional Fighting Style",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你可以选择第二个战斗风格职业特性选项。"
-      ]
-    },
-    {
-      "name": "高效重击",
-      "ENG_name": "Superior Critical",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你的武器攻击在掷出18-20时会打出致命一击。"
-      ]
-    },
-    {
-      "name": "生还者",
-      "ENG_name": "Survivor",
-      "source": "PHB",
-      "page": 72,
-      "srd": true,
-      "basicRules": true,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "勇士",
-      "subclassSource": "PHB",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "在18级时，你达到了战斗中坚韧的巅峰。在你的每个回合开始时，如果你的生命值不超过最大值的一半，你恢复生命值等于5加上你的体质调整值（如果生命值为0，则不获得此好处）。"
-      ]
-    },
-    {
-      "name": "奥法骑士",
-      "ENG_name": "Eldritch Knight",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "典型的奥术骑士将所有战士共有的战斗精通与对魔法的细致研究结合起来。奥术骑士使用与巫师相似的魔法技术。他们专注于研究八大魔法学派中的两个——防护学派和咒法学派。防护法术为奥术骑士在战斗中提供额外的保护，而咒法法术则能够一次性对多个敌人造成伤害，扩大了战士在战斗中的打击范围。这些骑士学习的法术数量相对较少，他们将法术记在脑海中，而不是保存在法术书中。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "施法|战士||奥法骑士||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "武器联结|战士||奥法骑士||3"
-        }
-      ]
-    },
-    {
-      "name": "施法",
-      "ENG_name": "Spellcasting",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你达到3级时，你通过施法能力增强了你的战斗能力。请查看{@book 第十章|PHB|10}了解施法的一般规则，以及{@book 第十一章|PHB|11}了解{@filter 巫师法术列表|法术|职业=巫师}。",
-        {
-          "type": "entries",
-          "name": "戏法",
-          "ENG_name": "Cantrips",
-          "entries": [
-            "你从{@filter 巫师法术列表|法术|职业=巫师}中选择两个你想要学习的戏法。在10级时，你可以选择额外的一个巫师戏法。"
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "施法能力",
-              "ENG_name": "Spell Slots",
-              "entries": [
-                "奥术骑士施法表格显示了你拥有多少个法术位来施放你的{@filter|法术|职业=巫师}，这些法术为1级及以上。要施放这些法术中的一个，你必须消耗一个法术位，其等级必须等于或高于该法术。当你完成一次长休息时，你恢复所有消耗的法术位。",
-                "例如，如果你知道1级法术{@spell 护盾术}，并且有一个1级和一个2级法术位可用，你可以使用任一法术位来施放{@spell 护盾术}。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "已知的1级及以上法术",
-              "ENG_name": "Spells Known of 1st-Level and Higher",
-              "entries": [
-                "你可以选择知道三个1级巫师法术，其中两个必须是从巫师法术列表中的防护学派和咒法学派法术中选择。",
-                "奥术骑士施法表中的已知法术列显示了你何时学习更多的1级或更高级别的巫师法术。这些法术必须是你选择的防护学派或咒法学派的法术，并且必须是你有法术位的等级。例如，当你在这个职业达到第7级时，你可以学习一个新的1级或2级法术。",
-                "你在8级、14级和20级学到的法术可以来自任何魔法学派。",
-                "每当你在本职业中提升一个等级时，你可以用巫师法术列表中你选择的另一个法术替换你所知的一个巫师法术。新法术的等级必须为你拥有法术位的等级，并且它必须是防护系或咒法系法术，除非你是在替换你在3级、8级、14级或20级时从任何魔法学派获得的法术。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "施法关键属性",
-              "ENG_name": "Spellcasting Ability",
-              "entries": [
-                "智力是你的巫师法术的施法能力，因为你是通过学习和记忆来学习你的法术的。每当法术提到你的施法能力时，你都会使用你的智力。此外，当你为施放的巫师法术设定豁免投掷的DC（难度等级）以及进行攻击掷骰时，也会使用你的智力调整值。",
-                {
-                  "type": "abilityDc",
-                  "name": "法术",
-                  "ENG_name": "Spell",
-                  "attributes": [
-                    "int"
-                  ]
-                },
-                {
-                  "type": "abilityAttackMod",
-                  "name": "法术",
-                  "ENG_name": "Spell",
-                  "attributes": [
-                    "int"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "武器联结",
-      "ENG_name": "Weapon Bond",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "在3级时，你学习到一种仪式，可以在你和一件武器之间创造一个魔法联系。你需要在1小时内完成这个仪式，可以在短暂休息期间进行。仪式过程中，武器必须在你的触及范围内，仪式结束时你触摸武器，建立联系。",
-        "一旦你与武器建立了联系，除非处于{@condition 无力}状态，否则你不会被解除武装。如果它存在于同一存在位面，你可以在回合上以奖励动作召唤该武器，使其瞬间传送到你的手中。",
-        "你可以拥有最多两件绑定武器，但每次只能通过你的奖励动作召唤其中一件。如果你尝试与第三件武器绑定，必须与另外两件中的一件解除绑定。"
-      ]
-    },
-    {
-      "name": "战争魔法",
-      "ENG_name": "War Magic",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，当你使用动作来施放一个戏法时，你可以作为奖励动作进行一次武器攻击。"
-      ]
-    },
-    {
-      "name": "秘法打击",
-      "ENG_name": "Eldritch Strike",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你学会了如何使你的武器攻击削弱生物对你法术的抵抗力。当你用武器攻击命中生物时，该生物在你下一个回合结束前对你施放的下一个法术的豁免投掷具有劣势。"
-      ]
-    },
-    {
-      "name": "秘法冲锋",
-      "ENG_name": "Arcane Charge",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在第15级时，你获得了在使用行动激增时传送至你能看到的未被占据空间的能力，传送距离最多可达30英尺。你可以在额外行动之前或之后进行传送。"
-      ]
-    },
-    {
-      "name": "精通战争魔法",
-      "ENG_name": "Improved War Magic",
-      "source": "PHB",
-      "page": 74,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "奥法骑士",
-      "subclassSource": "PHB",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "从18级开始，当你使用动作来施放一个法术时，你可以作为奖励动作进行一次武器攻击。"
-      ]
-    },
-    {
-      "name": "紫龙骑士(旗将)",
-      "ENG_name": "Purple Dragon Knight (Banneret)",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "entries": [
-        "紫龙骑士是来自科米尔王国的战士。他们誓言保护王冠，将对抗邪恶的战斗扩展到王国边境之外。他们被赋予了作为游侠骑士的责任，依靠他们的判断力、勇气和忠诚来引导他们击败作恶者。",
-        "紫龙骑士通过在战斗中做出勇敢的行为来激励他人的伟大。一个骑士在村庄中的存在足以让一些兽人和强盗去寻找更容易的猎物。一个孤独的骑士是一个熟练的战士，但是一个领导着一群盟友的骑士可以将即使是装备最差的民兵转变为一支凶猛的战斗团队。",
-        "骑士更愿意通过行动而非言语来领导。当骑士带头发起攻击时，骑士的行为可以在盟友中唤醒他们从未意识到的勇气和信念储备。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "限制：骑士爵位|战士||紫龙骑士(旗将)|SCAG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "重整姿态|战士||紫龙骑士(旗将)|SCAG|3"
-        }
-      ]
-    },
-    {
-      "name": "重整姿态",
-      "ENG_name": "Rallying Cry",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个原型，你学会了如何激励你的盟友在受伤后继续战斗。",
-        "当你使用你的“再度行动”特性时，你可以选择与你结盟且在你60英尺范围内的最多三个生物。每个生物恢复等于你的战士等级的生命值，前提是该生物能够看到你或听到你。"
-      ]
-    },
-    {
-      "name": "限制：骑士爵位",
-      "ENG_name": "Restriction: Knighthood",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "紫龙骑士与科米尔的特定骑士团有关联。",
-        "如果你在其他战役设置中使用此原型，或者用来塑造除了紫龙骑士之外的战争领主，旌旗手可以作为这个原型的通用名称。"
-      ]
-    },
-    {
-      "name": "皇家特使",
-      "ENG_name": "Royal Envoy",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "紫龙骑士作为科米尔王冠的使者。地位高的骑士应该以优雅的方式行事。",
-        "在7级时，你获得了{@skill 游说}技能的熟练度。如果你已经熟练掌握它，你可以选择以下技能之一获得熟练度：{@skill 驯兽}、{@skill 洞悉}、{@skill 威吓}或{@skill 表演}。",
-        "你的熟练加值在使用{@skill}进行的能力检定时翻倍。无论从这个特性获得的技能熟练度如何，你都会获得这个好处。"
-      ]
-    },
-    {
-      "name": "振奋之潮",
-      "ENG_name": "Inspiring Surge",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，当你使用你的行动激增特性时，你可以选择一个在你60英尺范围内并与你结盟的生物。如果这个生物能够看到你或听到你，它可以利用其反应进行一次近战或远程武器攻击。",
-        "从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
-      ]
-    },
-    {
-      "name": "意志壁垒",
-      "ENG_name": "Bulwark",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从第15级开始，你可以将你的不屈特性的好处扩展到一个盟友身上。当你决定使用不屈来重新掷一个智力、感知或魅力豁免骰，并且你不处于{@condition 无力}状态时，你可以选择一个在你60英尺范围内也未能通过相同效果豁免的盟友。如果那个生物能看见或听见你，它可以重新掷它的豁免骰，并且必须使用新的掷骰结果。"
-      ]
-    },
-    {
-      "name": "振奋之潮",
-      "ENG_name": "Inspiring Surge",
-      "source": "SCAG",
-      "page": 128,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "紫龙骑士(旗将)",
-      "subclassSource": "SCAG",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
-      ]
-    },
-    {
-      "name": "灵能武士",
-      "ENG_name": "Psi Warrior",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "觉醒内在的心灵力量，灵能战士是一位用心灵能量灌注的武器打击、心灵感应的鞭笞和精神力量屏障来增强其身体力量的战士。许多吉斯扬基人训练成为这样的战士，一些最有纪律的高等精灵也是如此。在艾伯伦世界中，许多年轻的卡拉斯塔人梦想成为灵能战士。",
-        "作为一个灵能战士，你可能通过独自修炼磨练了你的灵能能力，或在大师的指导下解锁了它，或在一个致力于将心灵力量作为武器和盾牌使用的学院中精炼了它。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "灵能力量|战士||灵能武士|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "灵能力量",
-      "ENG_name": "Psionic Power",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级灵能战士特性}",
-        "你内心蕴藏着一股灵能能量的源泉。这股能量由你的灵能能量骰表示，每个骰子都是一个{@dice d6}。你拥有的这些骰子数量等于你的熟练加值的两倍，它们为你拥有的各种灵能力量提供动力，这些力量在下文有详细说明。",
-        "你的一些能力会消耗它们使用的灵能能量骰，如能力描述中指定的那样，如果你的所有骰子都已消耗，你就不能使用需要使用骰子的能力。当你完成一次长休息时，你恢复所有消耗的灵能能量骰。此外，作为一个奖励动作，你可以恢复一个已消耗的灵能能量骰，但直到你完成一次短休息或长休息之前，你不能再这样做。",
-        "当你达到这个职业的特定等级时，你的精神能量骰的大小会增加：在5级时（{@dice d8}），11级时（{@dice d10}），以及17级时（{@dice d12}）。",
-        "以下能力使用你的灵能能量骰。",
-        {
-          "type": "options",
-          "style": "list-hang-notitle",
-          "entries": [
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "庇护力场|战士|TCE|灵能武士|TCE|3"
-            },
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "灵能击打|战士|TCE|灵能武士|TCE|3"
-            },
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "念力控物|战士|TCE|灵能武士|TCE|3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "念力熟练",
-      "ENG_name": "Telekinetic Adept",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 七级灵能战士特性}",
-        "你已经掌握了使用你的念力能力的新的途径，具体如下。",
-        {
-          "type": "options",
-          "style": "list-hang-notitle",
-          "entries": [
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "灵能跳跃|战士|TCE|灵能武士|TCE|7"
-            },
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "心灵推力|战士|TCE|灵能武士|TCE|7"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "意念守护",
-      "ENG_name": "Guarded Mind",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 十级灵能战士特性}",
-        "流经你的心灵能量增强了你的思维。你对心灵伤害具有抗性。此外，如果你在你的回合开始时处于{@condition 魅惑}或{@condition 恐惧}状态，你可以消耗一个心灵能量骰并结束所有使你受到这些状态影响的效果。"
-      ]
-    },
-    {
-      "name": "壁垒之力",
-      "ENG_name": "Bulwark of Force",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级灵能战士特性}",
-        "你可以用念力保护你自己和其他人。作为一个奖励动作，你可以选择你能看到的30英尺范围内的生物，数量最多等于你的智力调整值（最少为一个生物）。每个选定的生物在1分钟或直到你{@condition 无力}期间受到半个掩体的保护。",
-        "一旦你采取了这个奖励动作，在你完成一次长休之前，你不能再这样做，除非你消耗一个心灵能量骰来再次采取它。"
-      ]
-    },
-    {
-      "name": "念力宗师",
-      "ENG_name": "Telekinetic Master",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "{@i 18级灵能战士特性}",
-        "你用心灵移动生物和物体的能力是罕见的。你可以施放{@spell 心灵遥控}法术，无需任何材料，并且你的施法能力是智力。在你集中精神施放该法术的每个回合中，包括施放它的回合，你可以作为一个奖励动作进行一次武器攻击。",
-        "一旦你使用这个特性施放了法术，你就不能再次这样做，直到你完成一次长时间的休息，除非你消耗一个灵能能量骰再次施放它。"
-      ]
-    },
-    {
-      "name": "符文骑士",
-      "ENG_name": "Rune Knight",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "符文骑士利用符文的超自然力量增强他们的战斗技巧，这是一种起源于巨人的古老实践。在任何巨人家族中都可以找到符文雕刻者，你可能直接或间接地从这样一位神秘的工匠那里学到了你的方法。无论你是在山丘或洞穴中发现了巨人的作品，从智者那里了解到符文，还是亲自遇到了巨人，你研究了巨人的技艺，并学会了如何应用魔法符文来增强你的装备。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "附赠熟练项|战士||符文骑士|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "符文雕刻者|战士||符文骑士|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "巨人之力|战士||符文骑士|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "附赠熟练项",
-      "ENG_name": "Bonus Proficiencies",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级符文骑士特性}",
-        "你获得了对{@item 铁匠工具|PHB}的熟练使用，并且你学会了说、读、写{@language 巨人}。"
-      ]
-    },
-    {
-      "name": "巨人之力",
-      "ENG_name": "Giant's Might",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级符文骑士特性}",
-        "你学会了如何使自己充满巨人的力量。作为一个奖励动作，你神奇地获得了以下好处，持续时间为1分钟：",
-        {
-          "type": "list",
-          "items": [
-            "如果你比大型（Large）小，你将变成大型，你穿戴的任何物品也会随之变大。如果你所在的空间不允许你变成大型，你的尺寸将不会改变。",
-            "你在力量检定和力量豁免检定中具有优势。",
-            "在你的每个回合中，你可以使用武器或徒手攻击对目标造成额外的{@damage 1d6}伤害，如果命中的话。"
-          ]
-        },
-        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长休时，你恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "符文雕刻者",
-      "ENG_name": "Rune Carver",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级符文骑士特性}",
-        "你可以使用魔法符文来增强你的装备。你从下面的符文描述中选择两种符文学习，并且每次你在这个职业中升级时，你都可以从这个特性中选择一个不同的符文来替换你已知的一个符文。当你达到这个职业的特定等级时，你将学习到额外的符文，如符文已知表格所示。",
-        "每当你完成一次长时间的休息，你可以触摸与你知晓的符文数量相等的物品，并且在每个物品上刻上不同的符文。一个物品要符合资格，必须是武器、盔甲、盾牌、珠宝或你可以穿戴或手持的其他物品。你的符文会保留在物品上，直到你完成下一次长时间的休息，并且一个物品一次只能承载你的一个符文。",
-        {
-          "type": "table",
-          "caption": "已知符文",
-          "colLabels": [
-            "战士等级",
-            "符文数量"
-          ],
-          "colStyles": [
-            "col-6 text-center",
-            "col-6 text-center"
-          ],
-          "rows": [
-            [
-              "第三",
-              "2"
-            ],
-            [
-              "第七",
-              "3"
-            ],
-            [
-              "10级",
-              "4"
-            ],
-            [
-              "15级",
-              "5"
-            ]
-          ]
-        },
-        "当你学习符文时，以下符文可供你选择。如果一个符文有等级要求，你必须至少达到本职业的该等级才能学习该符文。如果一个符文需要进行豁免投掷，你的符文魔法豁免DC等于8 + 你的熟练加值 + 你的体质修正值。",
-        {
-          "type": "options",
-          "count": 2,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "云雾符文|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "火焰符文|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "寒霜符文|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "岩石符文|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "山丘符文|TCE",
-              "name": "山地符文（7级或更高）",
-              "ENG_name": "Hill Rune (7th Level or Higher)"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "风暴符文|TCE",
-              "name": "风暴符文（7级或更高）",
-              "ENG_name": "Storm Rune (7th Level or Higher)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "额外符文已知",
-      "ENG_name": "Additional Rune Known",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 7级符文骑士特性}",
-        "你学会了一个额外的符文。"
-      ]
-    },
-    {
-      "name": "符文之盾",
-      "ENG_name": "Runic Shield",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 7级符文骑士特性}",
-        "你学会了如何召唤你的符文魔法来保护你的盟友。当你能看到的60英尺内另一个生物被攻击骰命中时，你可以使用你的反应迫使攻击者重新掷{@dice d20}并使用新的掷骰结果。",
-        "你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
-      ]
-    },
-    {
-      "name": "额外符文已知",
-      "ENG_name": "Additional Rune Known",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 十级符文骑士特性}",
-        "你学会了一个额外的符文。"
-      ]
-    },
-    {
-      "name": "奇伟身躯",
-      "ENG_name": "Great Stature",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 十级符文骑士特性}",
-        "你的符文魔法永久性地改变了你。当你获得这个特性时，掷骰{@dice 3d4}。你的身高增长的英寸数等于掷骰的点数。",
-        "此外，你通过巨人之力特性造成的额外伤害增加到{@dice 1d8}。"
-      ]
-    },
-    {
-      "name": "额外符文已知",
-      "ENG_name": "Additional Rune Known",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级符文骑士特性}",
-        "你学会了一个额外的符文。"
-      ]
-    },
-    {
-      "name": "符文大师",
-      "ENG_name": "Master of Runes",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级符文骑士特性}",
-        "你可以从你的符文雕刻师特性中知道的每个符文召唤两次，而不是一次，并且在你完成短休息或长休息后恢复所有已消耗的使用次数。"
-      ]
-    },
-    {
-      "name": "符文主宰",
-      "ENG_name": "Runic Juggernaut",
-      "source": "TCE",
-      "page": 44,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "符文骑士",
-      "subclassSource": "TCE",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "{@i 18级符文骑士特性}",
-        "你学会了如何增强你的符文驱动的变身。因此，使用巨人之力特性时造成的额外伤害增加到{@dice 1d10}。此外，当你使用该特性时，你的体型可以增大到巨型，并且当你处于那个体型时，你的触及范围增加5英尺。"
-      ]
-    },
-    {
-      "name": "魔射手",
-      "ENG_name": "Arcane Archer",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 3,
-      "entries": [
-        "奥术射手学习一种独特的精灵射箭方法，将魔法融入攻击中以产生超自然效果。奥术射手是精灵中最精英的战士之一。他们守望着精灵领域的边缘，敏锐地留意入侵者，并使用注入魔法的箭矢在怪物和入侵者到达精灵定居点之前将其击败。几个世纪以来，这些精灵射手的方法已被其他种族的成员学习，他们也能够平衡奥术天赋与射箭技艺。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "魔箭学识|战士||魔射手|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "奥术射击|战士||魔射手|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "奥术射击选项|战士||魔射手|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "魔箭学识",
-      "ENG_name": "Arcane Archer Lore",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "在3级时，你学习了魔法理论或自然界的一些秘密——这是精灵武术传统的典型实践者。你选择获得{@skill 奥秘}或{@skill 自然}技能的熟练度，并且你选择学习{@spell 魔法技俩}或{@spell 德鲁伊伎俩}这个戏法。"
-      ]
-    },
-    {
-      "name": "奥术射击",
-      "ENG_name": "Arcane Shot",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "在3级时，你学会了在一些射击中释放特殊的魔法效果。当你获得这个特性时，你可以选择学习两种奥术射击选项（见下文的“奥术射击选项”）。",
-        "在你的回合中，当你作为{@action 攻击}动作的一部分，从短弓或长弓射出一支箭时，你可以将你的一个奥术射击选项应用于该箭。当箭击中生物时，你决定使用该选项，除非该选项不涉及攻击检定。你拥有这个能力的两次使用次数，当你完成短休息或长休息时，你恢复所有已消耗的使用次数。",
-        "当你达到这个职业的特定等级时：7级、10级、15级和18级，你将获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
-      ]
-    },
-    {
-      "name": "奥术射击选项",
-      "ENG_name": "Arcane Shot Options",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "奥术射击特性允许你在特定等级选择选项。这些选项按照字母顺序在此列出。它们都是魔法效果，每一个都与魔法学派之一相关联。",
-        "如果一个选项需要进行豁免投掷，你的奥术射击豁免投掷DC的计算方式如下：",
-        {
-          "type": "abilityDc",
-          "name": "奥术射击",
-          "ENG_name": "Arcane Shot",
-          "attributes": [
-            "int"
-          ]
-        },
-        {
-          "type": "options",
-          "count": 2,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "放逐矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "欺诈矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "爆裂矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "虚弱矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "缠绕矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "穿梭矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "追踪矢|XGE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "遮影矢|XGE"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "额外秘法射击选项",
-      "ENG_name": "Additional Arcane Shot Option",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "当你达到7级时，你将获得一个额外的奥术射击选项。"
-      ]
-    },
-    {
-      "name": "曲线射击",
-      "ENG_name": "Curving Shot",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "在7级时，你学会了如何将偏离目标的箭矢导向一个新的目标。当你使用魔法箭进行攻击检定并未命中时，你可以使用一个奖励动作重新对原始目标60英尺范围内的不同目标进行攻击检定。"
-      ]
-    },
-    {
-      "name": "注魔箭矢",
-      "ENG_name": "Magic Arrow",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "在7级时，你获得了将箭矢注入魔法的能力。每当你从短弓或长弓射出一支非魔法箭矢时，你可以使其成为魔法箭矢，以便克服对非魔法攻击和伤害的抗性和免疫。箭矢在击中或未命中目标后立即失去魔法效果。"
-      ]
-    },
-    {
-      "name": "额外秘法射击选项",
-      "ENG_name": "Additional Arcane Shot Option",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "当你达到10级时，你将获得一个额外的奥术射击选项。"
-      ]
-    },
-    {
-      "name": "额外秘法射击选项",
-      "ENG_name": "Additional Arcane Shot Option",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "当你达到15级时，你将获得一个额外的奥术射击选项。"
-      ]
-    },
-    {
-      "name": "常备射击",
-      "ENG_name": "Ever-Ready Shot",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你的魔法箭术在战斗开始时随时可用。如果你进行先攻检定并且没有剩余的奥术射击使用次数，你恢复一次奥术射击的使用。"
-      ]
-    },
-    {
-      "name": "额外秘法射击选项",
-      "ENG_name": "Additional Arcane Shot Option",
-      "source": "XGE",
-      "page": 28,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "魔射手",
-      "subclassSource": "XGE",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "当你达到18级时，你可以选择获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
-      ]
-    },
-    {
-      "name": "骑兵",
-      "ENG_name": "Cavalier",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 3,
-      "entries": [
-        "典型的骑士擅长骑战。骑士通常出生在贵族家庭，在宫廷中长大，无论是领导骑兵冲锋还是在国宴上进行机智对话，骑士都能游刃有余。骑士们还学会了如何保护他们负责的人免受伤害，经常作为上级和弱者的保护者。出于纠正错误或赢得声望的驱动，许多这样的战士离开了舒适的生活，开始了辉煌的冒险。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "附赠熟练项|战士||骑兵|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "生而为骑|战士||骑兵|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "坚定之印|战士||骑兵|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "附赠熟练项",
-      "ENG_name": "Bonus Proficiency",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个子类，你可以选择以下技能之一获得熟练度：动物驯养、历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
-      ]
-    },
-    {
-      "name": "生而为骑",
-      "ENG_name": "Born to the Saddle",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，你作为骑手的高超技艺变得显而易见。你在进行豁免投掷以避免从坐骑上摔下来时获得优势。如果你从坐骑上摔下来，并且下降不超过10英尺，你可以双脚着地，只要你不是{@condition 无力}。",
-        "最后，骑乘或下马只需要消耗你5英尺的移动距离，而不是你的速度的一半。"
-      ]
-    },
-    {
-      "name": "坚定之印",
-      "ENG_name": "Unwavering Mark",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，你可以威胁你的敌人，破坏他们的攻击并惩罚他们伤害他人。当你用近战武器攻击击中一个生物时，你可以标记这个生物，直到你的下一个回合结束。如果你被{@condition 无力}或者你死亡，或者有人标记了这个生物，这个效果会提前结束。",
-        "当被你标记的生物在你5英尺范围内时，它在进行任何不以你为目标的攻击检定时都会处于不利状态。",
-        "此外，如果被你标记的生物对除了你以外的任何人造成伤害，你可以在下一个回合上使用奖励动作对被标记的生物进行一次特殊的近战武器攻击。你在攻击骰上拥有优势，如果命中，攻击的武器对目标造成额外伤害，伤害值等于你战士等级的一半。",
-        "不论你标记了多少生物，你可以进行这种特殊攻击的次数等于你的力量调整值（最少一次），当你完成一次长时间的休息后，你会恢复所有已使用的攻击次数。"
-      ]
-    },
-    {
-      "name": "守护战技",
-      "ENG_name": "Warding Maneuver",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "当你达到7级时，你学会抵挡针对你、你的坐骑或其他附近生物的攻击。如果你或你能看到的5英尺范围内的生物被攻击命中，如果你手持近战武器或盾牌，你可以作为反应掷一个{@dice 1d8}。掷骰子，并将掷出的数字加到目标对该攻击的AC上。如果攻击仍然命中，目标对该攻击的伤害有抗性。",
-        "你可以使用这个特性的次数等于你的体质调整值（最少一次），当你完成一次长时间休息后，你会恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "坚守战线",
-      "ENG_name": "Hold the Line",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "在10级时，你成为了锁定敌人的大师。当生物在你的触及范围内移动5英尺或更多时，会激起你的反应攻击，如果你用反应攻击击中生物，目标的速度在当前回合结束前将被减少至0。"
-      ]
-    },
-    {
-      "name": "冲锋陷阵",
-      "ENG_name": "Ferocious Charger",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，无论你是否骑马，你都可以追击你的敌人。如果你在直线移动至少10英尺后立即攻击一个生物，并且攻击命中，该目标必须进行一次力量豁免检定（难度等级（DC）为8 + 你的熟练加值 + 你的力量调整值），否则会被击倒{@condition 伏地}。每个回合中，你只能使用这个特性一次。"
-      ]
-    },
-    {
-      "name": "警戒守卫",
-      "ENG_name": "Vigilant Defender",
-      "source": "XGE",
-      "page": 30,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "骑兵",
-      "subclassSource": "XGE",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "从18级开始，你对危险的反应格外警觉。在战斗中，你获得了一个特殊的反应，你可以在每个生物的回合上使用一次，除了你自己的回合。你只能使用这个特殊反应来进行机会攻击，并且不能在同一回合中使用你的正常反应。"
-      ]
-    },
-    {
-      "name": "武士",
-      "ENG_name": "Samurai",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 3,
-      "entries": [
-        "武士是一位依靠不可动摇的战斗精神来战胜敌人的战士。武士的决心几乎是不可摧毁的，武士面前的敌人有两个选择：屈服或战斗至死。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "附赠熟练项|战士||武士|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战意|战士||武士|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "附赠熟练项",
-      "ENG_name": "Bonus Proficiency",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个子类时，你可以选择以下技能之一获得熟练度：历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
-      ]
-    },
-    {
-      "name": "战意",
-      "ENG_name": "Fighting Spirit",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "从3级开始，你在战斗中的强烈意志可以保护你并帮助你准确击中目标。在你的回合作为奖励动作，你可以使自己在当前回合结束前的所有武器攻击检定上获得优势。当你这样做时，你还获得5点临时生命值。当你在这个职业达到特定等级时，临时生命值的数量会增加，10级时增加到10点，15级时增加到15点。",
-        "你可以使用这个特性三次，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
-      ]
-    },
-    {
-      "name": "雅臣",
-      "ENG_name": "Elegant Courtier",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，你的自律和对细节的关注使你在社交场合中表现出色。每当你进行魅力（说服）检定时，你会获得等同于你智慧调整值的检定加值。",
-        "你的自我控制能力还使你在智慧豁免检定中获得熟练度。如果你已经拥有这项熟练度，你可以选择在智力或魅力豁免检定中获得熟练度（由你选择）。"
-      ]
-    },
-    {
-      "name": "不懈",
-      "ENG_name": "Tireless Spirit",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，当你进行先攻检定时，如果你的战斗精神使用次数已耗尽，你将恢复一次使用机会。"
-      ]
-    },
-    {
-      "name": "燕返",
-      "ENG_name": "Rapid Strike",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你学会以牺牲准确性换取快速打击。如果你在你的回合采取攻击行动，并且对其中一个目标的攻击检定具有优势，你可以放弃这次优势，以同一行动对那个目标进行额外的武器攻击。每回合你只能这样做一次。"
-      ]
-    },
-    {
-      "name": "回光返照",
-      "ENG_name": "Strength before Death",
-      "source": "XGE",
-      "page": 31,
-      "className": "战士",
-      "classSource": "PHB",
-      "subclassShortName": "武士",
-      "subclassSource": "XGE",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "从18级开始，你的战斗精神可以延缓死亡的降临。如果你受到的伤害使你的生命值降至0但并未直接致命，你可以使用你的反应来延迟昏迷，并立即进行额外的回合，打断当前的回合。在你额外的回合中，如果你的生命值仍然为0，受到的伤害会像平常一样导致死亡豁免失败，并且三次死亡豁免失败仍然可能致命。当额外的回合结束时，如果你的生命值仍然为0，你会昏迷。",
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "庇护力场",
-      "ENG_name": "Protective Field",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "TCE",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "consumes": {
-        "name": "灵能能量骰",
-        "ENG_name": "Psionic Energy Die"
-      },
-      "entries": [
-        "当你或你能看到的30英尺范围内的另一个生物受到伤害时，你可以使用你的反应消耗一个灵能能量骰，掷这个骰子，并减少受到的伤害，减少的数值等于掷骰结果加上你的智力调整值（最小减少值为1），因为你创造了一个瞬间的念力护盾。"
-      ]
-    },
-    {
-      "name": "灵能击打",
-      "ENG_name": "Psionic Strike",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "TCE",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "consumes": {
-        "name": "灵能能量骰",
-        "ENG_name": "Psionic Energy Die"
-      },
-      "entries": [
-        "你可以用灵能力量推动你的武器。在你的每个回合中，当你用武器攻击并成功命中30英尺内的目标并对其造成伤害后，你可以消耗一个灵能能量骰，掷出这个骰子，并对目标造成等于掷骰结果加上你的智力调整值的力场伤害。"
-      ]
-    },
-    {
-      "name": "念力控物",
-      "ENG_name": "Telekinetic Movement",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "TCE",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "你可以用你的意念移动一个物体或生物。作为一个动作，你选择一个松散的物体，它必须是大型或更小，或者是一个愿意的生物，除了你自己。如果你能看到目标，并且它在你30英尺范围内，你可以将它移动到30英尺内你能看到的未被占据的空间。或者，如果它是一个微小的物体，你可以将它移动到你的手中或从你的手中移动出去。无论是哪种方式，你可以水平移动目标，垂直移动，或者两者兼有。一旦你采取了这个动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取这个动作。"
-      ]
-    },
-    {
-      "name": "灵能跳跃",
-      "ENG_name": "Psi-Powered Leap",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "TCE",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 7,
-      "entries": [
-        "作为一个奖励动作，你可以用你的意念推动你的身体。直到当前回合结束，你获得等于你步行速度两倍的飞行速度。一旦你采取这个奖励动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取它。"
-      ]
-    },
-    {
-      "name": "心灵推力",
-      "ENG_name": "Telekinetic Thrust",
-      "source": "TCE",
-      "page": 42,
-      "className": "战士",
-      "classSource": "TCE",
-      "subclassShortName": "灵能武士",
-      "subclassSource": "TCE",
-      "level": 7,
-      "entries": [
-        "当你用你的灵能打击对目标造成伤害时，你可以迫使目标进行一次力量豁免检定，难度等级（DC）等于8加上你的熟练加值加上你的智力调整值。如果豁免失败，你可以使目标进入{@condition 伏地}状态，或者将其沿着任何方向水平移动最多10英尺。"
-      ]
-    }
-  ]
+	"class": [
+		{
+			"name": "战士",
+			"ENG_name": "Fighter",
+			"source": "PHB",
+			"page": 70,
+			"srd": true,
+			"basicRules": true,
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"力量",
+				"体质"
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"featureType": [
+						"FS:F"
+					],
+					"progression": {
+						"1": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"光亮术",
+					"中等",
+					"重型",
+					"{@item 护盾术|PHB|盾牌}"
+				],
+				"weapons": [
+					"简单",
+					"武术"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"特技",
+								"驯兽",
+								"运动",
+								"历史",
+								"洞悉",
+								"威吓",
+								"察觉",
+								"求生"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) 锁子甲或 (b) 皮甲，长弓和20支箭",
+					"(a) 一把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}和一面{@item 护盾术|PHB}，或 (b) 两把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}",
+					"(a) 一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}或者 (b) 两把{@item 手斧|PHB|手斧}",
+					"(a) 一个{@item 地城套组|PHB}或(b) 一个{@item 探索套组|PHB}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
+				"defaultData": [
+					{
+						"a": [
+							"链甲|PHB"
+						],
+						"b": [
+							"皮甲|PHB",
+							"长弓|PHB",
+							"箭(20)|PHB"
+						]
+					},
+					{
+						"a": [
+							{
+								"equipmentType": "武器（武术）"
+							},
+							"护盾术|PHB"
+						],
+						"b": [
+							{
+								"equipmentType": "武器（武术）",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							"轻弩|PHB",
+							"弩矢(20)|PHB"
+						],
+						"b": [
+							{
+								"item": "手斧|PHB",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							"地城套组|PHB"
+						],
+						"b": [
+							"探索套组|PHB"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"or": [
+						{
+							"str": 13,
+							"dex": 13
+						}
+					]
+				},
+				"proficienciesGained": {
+					"armor": [
+						"光亮术",
+						"中等",
+						"{@item 护盾术|PHB|盾牌}"
+					],
+					"weapons": [
+						"简单",
+						"武术"
+					]
+				}
+			},
+			"classFeatures": [
+				"战斗风格|战士||1",
+				"回气|战士||1",
+				"动作如潮|战士||2",
+				{
+					"classFeature": "武术范型|战士||3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士||4",
+				"替换武术|战士||4|TCE",
+				"额外攻击|战士||5",
+				"属性值提升|战士||6",
+				{
+					"classFeature": "武术范型能力|战士||7",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士||8",
+				"不屈|战士||9",
+				{
+					"classFeature": "武术范型能力|战士||10",
+					"gainSubclassFeature": true
+				},
+				"额外攻击(2)|战士||11",
+				"属性值提升|战士||12",
+				"不屈(2次)|战士||13",
+				"属性值提升|战士||14",
+				{
+					"classFeature": "武术范型能力|战士||15",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士||16",
+				"动作如潮(2次)|战士||17",
+				"不屈(3次)|战士||17",
+				{
+					"classFeature": "武术范型能力|战士||18",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士||19",
+				"额外攻击(3)|战士||20"
+			],
+			"subclassTitle": "武术范型",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "战斗大师",
+			"ENG_name": "Battle Master",
+			"shortName": "战斗大师",
+			"source": "PHB",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 73,
+			"optionalfeatureProgression": [
+				{
+					"name": "战技",
+					"ENG_name": "Maneuvers",
+					"featureType": [
+						"MV:B"
+					],
+					"progression": {
+						"3": 3,
+						"7": 5,
+						"10": 7,
+						"15": 9
+					}
+				}
+			],
+			"subclassFeatures": [
+				"战斗大师|战士||战斗大师||3",
+				"额外战技|战士||战斗大师||7",
+				"额外卓越骰|战士||战斗大师||7",
+				"知己知彼|战士||战斗大师||7",
+				"额外战技|战士||战斗大师||10",
+				"精通战斗卓越(d10)|战士||战斗大师||10",
+				"额外战技|战士||战斗大师||15",
+				"额外卓越骰|战士||战斗大师||15",
+				"坚韧|战士||战斗大师||15",
+				"精通战斗卓越(d12)|战士||战斗大师||18"
+			]
+		},
+		{
+			"name": "勇士",
+			"ENG_name": "Champion",
+			"shortName": "勇士",
+			"source": "PHB",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"optionalfeatureProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"featureType": [
+						"FS:F"
+					],
+					"progression": {
+						"10": 1
+					}
+				}
+			],
+			"subclassFeatures": [
+				"勇士|战士||勇士||3",
+				"运动健将|战士||勇士||7",
+				"额外战斗风格|战士||勇士||10",
+				"高效重击|战士||勇士||15",
+				"生还者|战士||勇士||18"
+			]
+		},
+		{
+			"name": "奥法骑士",
+			"ENG_name": "Eldritch Knight",
+			"shortName": "奥法骑士",
+			"source": "PHB",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 74,
+			"spellcastingAbility": "int",
+			"casterProgression": "1/3",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"spellsKnownProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=法师"
+							},
+							{
+								"all": "level=1|class=法师"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=法师"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=法师"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=法师"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "奥法骑士",
+							"ENG_name": "Eldritch Knight",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 已知戏法|法术|level=0|子职业=战士：奥术骑士}",
+						"{@filter 已知法术|法术|子职业=战士：奥术骑士}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							2,
+							3
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							5
+						],
+						[
+							2,
+							6
+						],
+						[
+							2,
+							6
+						],
+						[
+							3,
+							7
+						],
+						[
+							3,
+							8
+						],
+						[
+							3,
+							8
+						],
+						[
+							3,
+							9
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							12
+						],
+						[
+							3,
+							13
+						]
+					]
+				},
+				{
+					"title": "每个法术等级的法术位",
+					"subclasses": [
+						{
+							"name": "奥法骑士",
+							"ENG_name": "Eldritch Knight",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 第一|法术|level=1|子职业=战士：奥术骑士}",
+						"{@filter 第二|法术|level=2|子职业=战士：奥术骑士}",
+						"{@filter 第三|法术|level=3|子职业=战士：奥术骑士}",
+						"{@filter 第四|法术|level=4|子职业=战士：奥术骑士}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"奥法骑士|战士||奥法骑士||3",
+				"战争魔法|战士||奥法骑士||7",
+				"秘法打击|战士||奥法骑士||10",
+				"秘法冲锋|战士||奥法骑士||15",
+				"精通战争魔法|战士||奥法骑士||18"
+			]
+		},
+		{
+			"name": "紫龙骑士(旗将)",
+			"ENG_name": "Purple Dragon Knight (Banneret)",
+			"shortName": "紫龙骑士(旗将)",
+			"source": "SCAG",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 128,
+			"subclassFeatures": [
+				"紫龙骑士(旗将)|战士||紫龙骑士(旗将)|SCAG|3",
+				"皇家特使|战士||紫龙骑士(旗将)|SCAG|7",
+				"振奋之潮|战士||紫龙骑士(旗将)|SCAG|10",
+				"意志壁垒|战士||紫龙骑士(旗将)|SCAG|15",
+				"振奋之潮|战士||紫龙骑士(旗将)|SCAG|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "魔射手",
+			"ENG_name": "Arcane Archer",
+			"shortName": "魔射手",
+			"source": "XGE",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 28,
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"魔法技俩#c"
+						]
+					}
+				},
+				{
+					"known": {
+						"3": [
+							"德鲁伊伎俩#c"
+						]
+					}
+				}
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "奥术射击",
+					"ENG_name": "Arcane Shots",
+					"featureType": [
+						"AS"
+					],
+					"progression": {
+						"3": 2,
+						"7": 3,
+						"10": 4,
+						"15": 5,
+						"18": 6
+					}
+				}
+			],
+			"subclassFeatures": [
+				"魔射手|战士||魔射手|XGE|3",
+				"注魔箭矢|战士||魔射手|XGE|7",
+				"曲线射击|战士||魔射手|XGE|7",
+				"额外秘法射击选项|战士||魔射手|XGE|7",
+				"额外秘法射击选项|战士||魔射手|XGE|10",
+				"常备射击|战士||魔射手|XGE|15",
+				"额外秘法射击选项|战士||魔射手|XGE|15",
+				"额外秘法射击选项|战士||魔射手|XGE|18"
+			]
+		},
+		{
+			"name": "骑兵",
+			"ENG_name": "Cavalier",
+			"shortName": "骑兵",
+			"source": "XGE",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 30,
+			"subclassFeatures": [
+				"骑兵|战士||骑兵|XGE|3",
+				"守护战技|战士||骑兵|XGE|7",
+				"坚守战线|战士||骑兵|XGE|10",
+				"冲锋陷阵|战士||骑兵|XGE|15",
+				"警戒守卫|战士||骑兵|XGE|18"
+			]
+		},
+		{
+			"name": "武士",
+			"ENG_name": "Samurai",
+			"shortName": "武士",
+			"source": "XGE",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 31,
+			"subclassFeatures": [
+				"武士|战士||武士|XGE|3",
+				"雅臣|战士||武士|XGE|7",
+				"不懈|战士||武士|XGE|10",
+				"燕返|战士||武士|XGE|15",
+				"回光返照|战士||武士|XGE|18"
+			]
+		},
+		{
+			"name": "法外狂徒",
+			"ENG_name": "Scofflaw",
+			"shortName": "法外狂徒",
+			"source": "HWCS",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 41,
+			"subclassFeatures": [
+				"法外狂徒|战士||法外狂徒|HWCS|3",
+				"误导|战士||法外狂徒|HWCS|7",
+				"涤瑕蹈隙|战士||法外狂徒|HWCS|10",
+				"臭名远扬|战士||法外狂徒|HWCS|15",
+				"一刀不够，两刀来凑|战士||法外狂徒|HWCS|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "回音骑士",
+			"ENG_name": "Echo Knight",
+			"shortName": "回音骑士",
+			"source": "EGW",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 183,
+			"subclassFeatures": [
+				"回音骑士|战士||回音骑士|EGW|3",
+				"回音化身|战士||回音骑士|EGW|7",
+				"阴影殉道者|战士||回音骑士|EGW|10",
+				"回收潜能|战士||回音骑士|EGW|15",
+				"一人成军|战士||回音骑士|EGW|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "灵能武士",
+			"ENG_name": "Psi Warrior",
+			"shortName": "灵能武士",
+			"source": "TCE",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 42,
+			"additionalSpells": [
+				{
+					"innate": {
+						"18": {
+							"daily": {
+								"1": [
+									"心灵遥控"
+								]
+							}
+						}
+					}
+				}
+			],
+			"subclassFeatures": [
+				"灵能武士|战士||灵能武士|TCE|3",
+				"念力熟练|战士||灵能武士|TCE|7",
+				"意念守护|战士||灵能武士|TCE|10",
+				"壁垒之力|战士||灵能武士|TCE|15",
+				"念力宗师|战士||灵能武士|TCE|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "符文骑士",
+			"ENG_name": "Rune Knight",
+			"shortName": "符文骑士",
+			"source": "TCE",
+			"className": "战士",
+			"classSource": "PHB",
+			"page": 44,
+			"optionalfeatureProgression": [
+				{
+					"name": "符文",
+					"ENG_name": "Runes",
+					"featureType": [
+						"RN"
+					],
+					"progression": {
+						"3": 2,
+						"7": 3,
+						"10": 4,
+						"15": 5
+					}
+				}
+			],
+			"subclassFeatures": [
+				"符文骑士|战士||符文骑士|TCE|3",
+				"符文之盾|战士||符文骑士|TCE|7",
+				"额外符文已知|战士||符文骑士|TCE|7",
+				"奇伟身躯|战士||符文骑士|TCE|10",
+				"额外符文已知|战士||符文骑士|TCE|10",
+				"符文大师|战士||符文骑士|TCE|15",
+				"额外符文已知|战士||符文骑士|TCE|15",
+				"符文主宰|战士||符文骑士|TCE|18"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "战斗风格",
+			"ENG_name": "Fighting Style",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你选择了一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能选择相同的战斗风格选项超过一次，即使你再次获得选择机会。",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "箭术"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "防御"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "对决"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "巨武器战斗"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "守护"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "双武器战斗"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "盲斗|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "拦截|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "卓越技巧|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "投掷武器战斗|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "徒手战斗|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "回气",
+			"ENG_name": "Second Wind",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你有一个有限的耐力源泉，可以用来保护自己免受伤害。在你的回合，你可以使用一个奖励动作来恢复等于{@dice 1d10}加上你的战士等级的生命值。",
+				"一旦你使用了这个特性，你必须完成一次短休或长休后才能再次使用它。"
+			]
+		},
+		{
+			"name": "动作如潮",
+			"ENG_name": "Action Surge",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"从第二级开始，你可以暂时超越自己的正常极限。在你的回合，你可以采取一个额外的行动。",
+				"一旦你使用了这个特性，你必须在下一次短休或长休之前才能再次使用它。从17级开始，你可以在休息前使用两次，但在同一回合中只能使用一次。"
+			]
+		},
+		{
+			"name": "武术范型",
+			"ENG_name": "Martial Archetype",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"在第3级时，你从可用列表中选择一个你努力模仿的原型，它将影响你的战斗风格和技巧。你选择的原型将在第3级以及之后的第7级、第10级、第15级和第18级时赋予你特定的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "替换武术",
+			"ENG_name": "Martial Versatility",
+			"source": "TCE",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4级战士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"每当你在这个职业中达到一个提供属性值提升特性的等级时，你可以做以下之一，正如你转移你的战斗实践的焦点：",
+				{
+					"type": "list",
+					"items": [
+						"将你已知的一个{@filter 战斗风格|可选特性|特性类型=FS:F}替换为战士可用的其他战斗风格。",
+						"如果你知道任何来自{@filter|phb|战斗大师|战斗大师|phb|2-0}职业原型的{@class|可选特性|特性类型=MV:B}，你可以用一个不同的技巧替换你所知道的一个技巧。"
+					]
+				}
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。",
+				"当你达到这个职业的11级时，攻击次数增加到三次，当你达到这个职业的20级时，攻击次数增加到四次。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"当你达到第6级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。与通常情况一样，你不能使用此特性将任何能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "武术范型能力",
+			"ENG_name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 7,
+			"entries": [
+				"在7级时，你获得了由你的战斗风格赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "不屈",
+			"ENG_name": "Indomitable",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 9,
+			"entries": [
+				"从9级开始，你可以重掷一个失败的豁免投掷。如果你这样做，你必须使用新的投掷结果，并且在完成一次长休之前不能再使用这个特性。",
+				"从13级开始，你可以在长休之间使用这个特性两次；从17级开始，你可以在长休之间使用三次。"
+			]
+		},
+		{
+			"name": "武术范型能力",
+			"ENG_name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在第10级时，你获得了由你的战斗原型赋予的特性。"
+			]
+		},
+		{
+			"name": "额外攻击(2)",
+			"ENG_name": "Extra Attack (2)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"在11级时，每当你在自己回合采取{@action 攻击}行动时，你可以攻击三次。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "不屈(2次)",
+			"ENG_name": "Indomitable (two uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"在13级时，你可以在长时间休息之间使用不屈两次。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"当你达到14级时，你可以选择一项能力值提升2点，或者选择两项能力值各提升1点。与通常情况一样，你不能使用这个特性将任何能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "武术范型能力",
+			"ENG_name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"在第15级时，你获得了由你的战斗原型赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "动作如潮(2次)",
+			"ENG_name": "Action Surge (two uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"在17级时，你可以在休息前使用行动激增特性两次，但在同一回合中只能使用一次。"
+			]
+		},
+		{
+			"name": "不屈(3次)",
+			"ENG_name": "Indomitable (three uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"在17级时，你可以在长时间休息之间使用不屈三次。"
+			]
+		},
+		{
+			"name": "武术范型能力",
+			"ENG_name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"在第18级时，你获得了由你的战斗原型赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "额外攻击(3)",
+			"ENG_name": "Extra Attack (3)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"在20级时，每当你在自己回合采取{@action 攻击}动作时，你可以攻击四次。"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "回音骑士",
+			"ENG_name": "Echo Knight",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 3,
+			"entries": [
+				"克林王朝的神秘而令人畏惧的前线战士，回声骑士精通使用潜能召唤未实现时间线的逐渐消逝的阴影来帮助他们在战斗中。被他们自己力量的回声所包围，他们像一群循环的阴影和打击一样冲入战斗。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "显现回音|战士||回音骑士|EGW|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "释放化身|战士||回音骑士|EGW|3"
+				}
+			]
+		},
+		{
+			"name": "显现回音",
+			"ENG_name": "Manifest Echo",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级回声骑士特性}",
+				"你可以使用一个奖励动作，在你能看见的15英尺范围内的未被占据的空间中，魔法性地显现出一个自己的回声。这个回声是一个你魔法性的、半透明的、灰色的影像，它将持续存在，直到被摧毁，直到你使用奖励动作解散它，直到你显现另一个回声，或者直到你被{@condition 无力}。",
+				"你的回声具有AC 14 + 你的熟练加值，1点生命值，并且对所有状态免疫。如果它必须进行豁免投掷，它使用你的豁免投掷加值进行投掷。它的大小与你相同，并且它占据自己的空间。在你的回合上，你可以用心灵命令回声向任何方向移动最多30英尺（无需动作）。如果你的回声在你的回合结束时距离你超过30英尺，它将被摧毁。",
+				"你可以以以下方式使用回声：",
+				{
+					"type": "list",
+					"items": [
+						"作为一个奖励动作，你可以传送，以你的移动力15英尺的代价，魔法般地与你的回声交换位置，不论你们之间的距离。",
+						"当你在你的回合采取{@action 攻击}动作时，你用该动作进行的任何攻击都可以从你的空间或回声的空间发起。你需要为每次攻击做出这个选择。",
+						"当你的回声5英尺范围内可以看到的生物至少移动5英尺远离它时，你可以使用你的反应来做一次机会攻击，就好像你在回声的空间中一样。"
+					]
+				}
+			]
+		},
+		{
+			"name": "释放化身",
+			"ENG_name": "Unleash Incarnation",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级回声骑士特性}",
+				"你可以增强你的回声的愤怒。每当你采取{@action 攻击}动作时，你可以从回声的位置额外进行一次近战攻击。",
+				"你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "回音化身",
+			"ENG_name": "Echo Avatar",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 七级回声骑士特性}",
+				"你可以暂时将你的意识转移到你的回声上。作为一个动作，你可以通过回声的眼睛看东西，通过它的耳朵听声音。在这段时间里，你处于{@condition 耳聋}和{@condition 目盲}状态。你可以持续这种效果最多10分钟，并且可以随时结束它（不需要动作）。当你的回声以这种方式被使用时，它可以离你最多1000英尺远而不会被摧毁。"
+			]
+		},
+		{
+			"name": "阴影殉道者",
+			"ENG_name": "Shadow Martyr",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级回声骑士特性}",
+				"你可以使你的回声在针对你能看到的另一生物的攻击前投掷自己。在进行攻击掷骰之前，你可以使用你的反应将回声传送到目标生物5英尺范围内的未被占据的空间。触发反应的攻击掷骰改为对你的回声进行。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "回收潜能",
+			"ENG_name": "Reclaim Potential",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级回声骑士特性}",
+				"你学会了吸收你回声的短暂魔法。当你的回声因受到伤害而被摧毁时，你可以获得等同于{@dice 2d6}加上你的体质调整值的临时生命值，前提是你还没有临时生命值。",
+				"你可以使用这个特性的次数等于你的体质调整值（最少一次）。当你完成一次长休时，你恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "一人成军",
+			"ENG_name": "Legion of One",
+			"source": "EGW",
+			"page": 183,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "回音骑士",
+			"subclassSource": "EGW",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 十八级回声骑士特性}",
+				"你可以使用奖励动作通过你的显化回声特性来创造两个回声，这些回声可以共存。如果你试图创造第三个回声，前两个回声将被摧毁。你可以从一个回声的位置做到的事情也可以从另一个回声的位置做到。",
+				"此外，当你进行先攻检定且你的释放化身特性没有剩余使用次数时，你恢复该特性的一个使用次数。"
+			]
+		},
+		{
+			"name": "法外狂徒",
+			"ENG_name": "Scofflaw",
+			"source": "HWCS",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "法外狂徒",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"entries": [
+				"蔑视者是一个打击狠毒、战斗狡猾的战士，他们对荣誉和传统的理想不屑一顾，只做他们认为必须做的事情来生存。规则就是用来打破的，蔑视者将这种逻辑延伸到他们的战斗风格中。利用他们所能使用的每一个诡计来对抗敌人，蔑视者使敌人屈服，或者用一记卑鄙的攻击压倒他们的防御。",
+				"无赖最终依赖他们臭名昭著的名声来做很多工作，获得了用一个威胁就能让敌人颤抖的能力。无赖是一群多样化的人，从优雅而致命的恶棍到粗暴的暴徒都有。将他们联系在一起的是他们的信念，那就是没有所谓的坏胜利。",
+				{
+					"type": "entries",
+					"name": "附赠熟练项",
+					"ENG_name": "Bonus Proficiency",
+					"entries": [
+						"当你在3级时选择这个战斗风格时，你可以选择以下技能中的一个获得熟练：{@skill 欺瞒}、{@skill 洞悉}、{@skill 威吓}、{@skill 巧手}或{@skill 隐匿}。或者，你也可以学习{@class 游荡者|PHB|盗贼黑话||PHB|盗贼黑话 1}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "危言耸听",
+					"ENG_name": "Intimidating Banter",
+					"entries": [
+						"在3级时，你擅长将侮辱和讽刺融入你的战斗风格。只要你处于战斗中，你可以选择使用力量或敏捷来进行魅力能力值检查。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "残暴斗殴",
+					"ENG_name": "Brutal Brawler",
+					"entries": [
+						"在3级时，你在酒馆边的打斗磨练了你用任何手边的东西造成伤害的能力。你对即兴武器有熟练度，并且将你处理的任何即兴武器视为具有灵巧特性。",
+						"此外，每当你使用简易武器命中目标时，你可以花费一个奖励动作将其砸向你的对手。这样做会破坏武器，但会对目标造成武器的每个伤害骰可能的最大伤害值。此能力不会影响到攻击的伤害骰中额外增加的伤害骰。",
+						"在10级时，你手中的临时武器变得更加致命。当你使用奖励动作将临时武器砸向你的对手时，向武器的基础伤害骰中额外添加{@damage 2d6}。",
+						"在18级时，你使用临时武器进行攻击时具有优势。"
+					]
+				}
+			]
+		},
+		{
+			"name": "误导",
+			"ENG_name": "Misdirection",
+			"source": "HWCS",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "法外狂徒",
+			"subclassSource": "HWCS",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"在7级时，你擅长使用言语和手势来嘲讽或欺骗你的对手，将他们缺乏镇定转化为你的有利条件。这使你能够激怒你的敌人以一种可能让他们攻击自己盟友的方式挥动武器，或者让他们暴露出反击的机会。作为一个奖励动作，你可以误导你5英尺内的对手。目标必须进行一次智力豁免，对抗的DC等于8 + 你的熟练加值 + 你的力量或敏捷调整值。如果失败，他们必须使用反应来攻击你选择的5英尺内的生物。如果他们周围5英尺内没有其他生物，他们会浪费反应攻击你曾经所在位置的空气。",
+				"为了以这种方式误导生物，它们必须能够看到、听到或以其他方式理解你。"
+			]
+		},
+		{
+			"name": "涤瑕蹈隙",
+			"ENG_name": "Blindside",
+			"source": "HWCS",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "法外狂徒",
+			"subclassSource": "HWCS",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你真正擅长利用你在战斗中创造的空当，用迅速而致命的精准打击击中毫无防备的对手。你可以将这种技巧用于任何尚未在战斗中行动的生物，或者在这一回合中你已经成功误导的生物。你还可以将这种技巧应用于你利用优势进行的任何攻击检定。命中时，你利用目标防御中的空当，额外造成{@damage 5d6}点伤害。一旦你使用了这个能力，直到你进行短休息或长休息之前，你不能再使用它。",
+				"在第15级时，你的侧袭造成的伤害增加到{@damage 7d6}。",
+				"在18级时，你通过侧翼攻击造成的伤害增加至{@damage 9d6}。如果在战斗开始时你的这个能力没有使用次数，在你的回合上，你恢复一次使用次数。"
+			]
+		},
+		{
+			"name": "臭名远扬",
+			"ENG_name": "Infamy",
+			"source": "HWCS",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "法外狂徒",
+			"subclassSource": "HWCS",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，你的名声先于你，使得任何愚蠢到敢于反对你的人都能轻易地感到恐惧。作为你的{@action 攻击}动作的一部分，你可以对30英尺内的单个目标发出致命威胁，使他们在失败的智慧豁免下对你感到{@condition 恐惧}持续1分钟。受影响的目标可以在每个回合结束时重复这个豁免，成功则结束效果。这个豁免的DC是8 + 你的熟练加值 + 你的力量或敏捷调整值。一个目睹或听说过你无情行为的生物在进行这个豁免时处于劣势。",
+				"为了使用这个特性，生物必须能够看见、听见或以其他方式理解你。"
+			]
+		},
+		{
+			"name": "一刀不够，两刀来凑",
+			"ENG_name": "Two For Flinching",
+			"source": "HWCS",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "法外狂徒",
+			"subclassSource": "HWCS",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"在18级时，你已经完善了利用对手弱点的艺术。每当你在一个回合内对一个你已经成功误导的对手进行攻击动作，或者对手受到了{@book 状态|PHB|11}的影响，你可以对那个对手进行一次额外的攻击。你每轮只能使用这个特性一次。"
+			]
+		},
+		{
+			"name": "战斗大师",
+			"ENG_name": "Battle Master",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"那些模仿战斗大师典型形象的人会运用世代相传的武术技巧。对于战斗大师来说，战斗是一个学术领域，有时包括战斗之外的学科，如武器制造和书法。并非每个战士都能吸收反映在战斗大师原型中的历史、理论和艺术课程，但那些做到的人是技能和知识都非常全面的战士。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战争学徒|战士||战斗大师||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "卓越战技|战士||战斗大师||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战技|战士||战斗大师||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战技选项|战士||战斗大师||3|TCE"
+				}
+			]
+		},
+		{
+			"name": "卓越战技",
+			"ENG_name": "Combat Superiority",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个子职业，你学会了由称为优越骰的特殊骰子驱动的战术。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "战技",
+							"ENG_name": "Maneuvers",
+							"entries": [
+								"你可以选择学习三种策略，这些策略列在下面的\"策略\"中。许多策略以某种方式增强攻击。每次攻击你只能使用一种策略。",
+								"在7级、10级和15级时，你可以选择学习两个额外的机动。每次学习新的机动时，你也可以用不同的机动替换你已知的一个机动。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "卓越骰",
+							"ENG_name": "Superiority Dice",
+							"entries": [
+								"你拥有四个优势骰，它们是{@dice d8}。使用优势骰时会消耗它。当你完成短休或长休时，你将重新获得所有消耗的优势骰。",
+								"你在第7级时获得另一个优势骰，第15级时再获得一个。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "豁免检定",
+							"ENG_name": "Saving Throws",
+							"entries": [
+								"你的一些策略需要你的目标进行豁免投掷以抵抗策略的效果。豁免投掷的DC（难度等级）计算方法如下：",
+								{
+									"type": "abilityDc",
+									"name": "战技",
+									"ENG_name": "Maneuver",
+									"attributes": [
+										"力量",
+										"敏捷"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "战技选项",
+			"ENG_name": "Maneuver Options",
+			"source": "TCE",
+			"page": 41,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"header": 1,
+			"entries": [
+				"{@i 第三级战士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"如果你可以使用机动，以下机动被添加到你可以使用的选项列表中。机动对战场主宰可用，但也对具有特殊特性的角色可用，比如具有{@optfeature 卓越技巧|TCE}战斗风格或{@feat 战技专家}特性。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "options",
+							"entries": [
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "伏击|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "换位诈术|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "警戒|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "领导风范|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "擒拿击|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "快手投掷|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "战术预估|TCE"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "战技",
+			"ENG_name": "Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"这些战术按字母顺序排列。",
+				{
+					"type": "options",
+					"count": 3,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "指挥官奇袭"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "缴械攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "扰乱打击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "灵巧步法"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "诡诈攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "挑衅攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "突刺攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "灵动攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "恐吓攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "格挡"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "精准攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "推撞攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "重整旗鼓"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "反击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "横扫攻击"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "摔绊攻击"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "战争学徒",
+			"ENG_name": "Student of War",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"在3级时，你可以选择获得一种{@filter 工匠工具|物品|来源=phb|杂项=平凡|type=工匠工具}的熟练度。"
+			]
+		},
+		{
+			"name": "额外战技",
+			"ENG_name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"在7级时，你可以选择学习两个额外的战术。"
+			]
+		},
+		{
+			"name": "额外卓越骰",
+			"ENG_name": "Additional Superiority Die",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"你在7级时获得另一个优越骰。"
+			]
+		},
+		{
+			"name": "知己知彼",
+			"ENG_name": "Know Your Enemy",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"如果你在战斗之外至少花费1分钟观察或与另一个生物互动，你可以了解与你自己相比它的某些能力信息。地下城主会告诉你这个生物在以下两个你选择的特征方面是你的对手、优越还是劣势：",
+				{
+					"type": "list",
+					"items": [
+						"力量值",
+						"敏捷得分",
+						"体质得分",
+						"护甲等级",
+						"当前生命值",
+						"总职业等级（如果有）",
+						"战士职业等级（如果有的话）"
+					]
+				}
+			]
+		},
+		{
+			"name": "额外战技",
+			"ENG_name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你可以选择学习两个额外的机动。"
+			]
+		},
+		{
+			"name": "精通战斗卓越(d10)",
+			"ENG_name": "Improved Combat Superiority (d10)",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你的优越骰变为{@dice d10}。"
+			]
+		},
+		{
+			"name": "额外战技",
+			"ENG_name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，你可以选择学习两个额外的战术。"
+			]
+		},
+		{
+			"name": "额外卓越骰",
+			"ENG_name": "Additional Superiority Die",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，你获得了另一个优势骰。"
+			]
+		},
+		{
+			"name": "坚韧",
+			"ENG_name": "Relentless",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，当你投掷先攻并且没有剩余的优越骰时，你恢复1个优越骰。"
+			]
+		},
+		{
+			"name": "精通战斗卓越(d12)",
+			"ENG_name": "Improved Combat Superiority (d12)",
+			"source": "PHB",
+			"page": 73,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"在18级时，你的优越骰变为{@dice d12}。"
+			]
+		},
+		{
+			"name": "勇士",
+			"ENG_name": "Champion",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"典型的冠军专注于发展原始的身体力量，将其磨练至致命的完美。那些以这个原型为榜样的人将严格的训练与身体卓越结合起来，以造成毁灭性的打击。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "精通重击|战士||勇士||3"
+				}
+			]
+		},
+		{
+			"name": "精通重击",
+			"ENG_name": "Improved Critical",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从你第3级选择这个原型开始，你的武器攻击在掷出19或20时会打出致命一击。"
+			]
+		},
+		{
+			"name": "运动健将",
+			"ENG_name": "Remarkable Athlete",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，你可以将你的熟练加值的一半（向上取整）加到任何力量、敏捷或体质检查上，如果该检查原本不使用你的熟练加值。",
+				"此外，当你进行助跑的立定跳远时，你能够覆盖的距离会增加，增加的英尺数等于你的力量调整值。"
+			]
+		},
+		{
+			"name": "额外战斗风格",
+			"ENG_name": "Additional Fighting Style",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你可以选择第二个战斗风格职业特性选项。"
+			]
+		},
+		{
+			"name": "高效重击",
+			"ENG_name": "Superior Critical",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你的武器攻击在掷出18-20时会打出致命一击。"
+			]
+		},
+		{
+			"name": "生还者",
+			"ENG_name": "Survivor",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"在18级时，你达到了战斗中坚韧的巅峰。在你的每个回合开始时，如果你的生命值不超过最大值的一半，你恢复生命值等于5加上你的体质调整值（如果生命值为0，则不获得此好处）。"
+			]
+		},
+		{
+			"name": "奥法骑士",
+			"ENG_name": "Eldritch Knight",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"典型的奥术骑士将所有战士共有的战斗精通与对魔法的细致研究结合起来。奥术骑士使用与巫师相似的魔法技术。他们专注于研究八大魔法学派中的两个\u2014\u2014防护学派和咒法学派。防护法术为奥术骑士在战斗中提供额外的保护，而咒法法术则能够一次性对多个敌人造成伤害，扩大了战士在战斗中的打击范围。这些骑士学习的法术数量相对较少，他们将法术记在脑海中，而不是保存在法术书中。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "施法|战士||奥法骑士||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "武器联结|战士||奥法骑士||3"
+				}
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你达到3级时，你通过施法能力增强了你的战斗能力。请查看{@book 第十章|PHB|10}了解施法的一般规则，以及{@book 第十一章|PHB|11}了解{@filter 巫师法术列表|法术|职业=巫师}。",
+				{
+					"type": "entries",
+					"name": "戏法",
+					"ENG_name": "Cantrips",
+					"entries": [
+						"你从{@filter 巫师法术列表|法术|职业=巫师}中选择两个你想要学习的戏法。在10级时，你可以选择额外的一个巫师戏法。"
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "施法能力",
+							"ENG_name": "Spell Slots",
+							"entries": [
+								"奥术骑士施法表格显示了你拥有多少个法术位来施放你的{@filter|法术|职业=巫师}，这些法术为1级及以上。要施放这些法术中的一个，你必须消耗一个法术位，其等级必须等于或高于该法术。当你完成一次长休息时，你恢复所有消耗的法术位。",
+								"例如，如果你知道1级法术{@spell 护盾术}，并且有一个1级和一个2级法术位可用，你可以使用任一法术位来施放{@spell 护盾术}。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "已知的1级及以上法术",
+							"ENG_name": "Spells Known of 1st-Level and Higher",
+							"entries": [
+								"你可以选择知道三个1级巫师法术，其中两个必须是从巫师法术列表中的防护学派和咒法学派法术中选择。",
+								"奥术骑士施法表中的已知法术列显示了你何时学习更多的1级或更高级别的巫师法术。这些法术必须是你选择的防护学派或咒法学派的法术，并且必须是你有法术位的等级。例如，当你在这个职业达到第7级时，你可以学习一个新的1级或2级法术。",
+								"你在8级、14级和20级学到的法术可以来自任何魔法学派。",
+								"每当你在本职业中提升一个等级时，你可以用巫师法术列表中你选择的另一个法术替换你所知的一个巫师法术。新法术的等级必须为你拥有法术位的等级，并且它必须是防护系或咒法系法术，除非你是在替换你在3级、8级、14级或20级时从任何魔法学派获得的法术。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "施法关键属性",
+							"ENG_name": "Spellcasting Ability",
+							"entries": [
+								"智力是你的巫师法术的施法能力，因为你是通过学习和记忆来学习你的法术的。每当法术提到你的施法能力时，你都会使用你的智力。此外，当你为施放的巫师法术设定豁免投掷的DC（难度等级）以及进行攻击掷骰时，也会使用你的智力调整值。",
+								{
+									"type": "abilityDc",
+									"name": "法术",
+									"ENG_name": "Spell",
+									"attributes": [
+										"int"
+									]
+								},
+								{
+									"type": "abilityAttackMod",
+									"name": "法术",
+									"ENG_name": "Spell",
+									"attributes": [
+										"int"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "武器联结",
+			"ENG_name": "Weapon Bond",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"在3级时，你学习到一种仪式，可以在你和一件武器之间创造一个魔法联系。你需要在1小时内完成这个仪式，可以在短暂休息期间进行。仪式过程中，武器必须在你的触及范围内，仪式结束时你触摸武器，建立联系。",
+				"一旦你与武器建立了联系，除非处于{@condition 无力}状态，否则你不会被解除武装。如果它存在于同一存在位面，你可以在回合上以奖励动作召唤该武器，使其瞬间传送到你的手中。",
+				"你可以拥有最多两件绑定武器，但每次只能通过你的奖励动作召唤其中一件。如果你尝试与第三件武器绑定，必须与另外两件中的一件解除绑定。"
+			]
+		},
+		{
+			"name": "战争魔法",
+			"ENG_name": "War Magic",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，当你使用动作来施放一个戏法时，你可以作为奖励动作进行一次武器攻击。"
+			]
+		},
+		{
+			"name": "秘法打击",
+			"ENG_name": "Eldritch Strike",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你学会了如何使你的武器攻击削弱生物对你法术的抵抗力。当你用武器攻击命中生物时，该生物在你下一个回合结束前对你施放的下一个法术的豁免投掷具有劣势。"
+			]
+		},
+		{
+			"name": "秘法冲锋",
+			"ENG_name": "Arcane Charge",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在第15级时，你获得了在使用行动激增时传送至你能看到的未被占据空间的能力，传送距离最多可达30英尺。你可以在额外行动之前或之后进行传送。"
+			]
+		},
+		{
+			"name": "精通战争魔法",
+			"ENG_name": "Improved War Magic",
+			"source": "PHB",
+			"page": 74,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"从18级开始，当你使用动作来施放一个法术时，你可以作为奖励动作进行一次武器攻击。"
+			]
+		},
+		{
+			"name": "紫龙骑士(旗将)",
+			"ENG_name": "Purple Dragon Knight (Banneret)",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"entries": [
+				"紫龙骑士是来自科米尔王国的战士。他们誓言保护王冠，将对抗邪恶的战斗扩展到王国边境之外。他们被赋予了作为游侠骑士的责任，依靠他们的判断力、勇气和忠诚来引导他们击败作恶者。",
+				"紫龙骑士通过在战斗中做出勇敢的行为来激励他人的伟大。一个骑士在村庄中的存在足以让一些兽人和强盗去寻找更容易的猎物。一个孤独的骑士是一个熟练的战士，但是一个领导着一群盟友的骑士可以将即使是装备最差的民兵转变为一支凶猛的战斗团队。",
+				"骑士更愿意通过行动而非言语来领导。当骑士带头发起攻击时，骑士的行为可以在盟友中唤醒他们从未意识到的勇气和信念储备。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "限制：骑士爵位|战士||紫龙骑士(旗将)|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "重整姿态|战士||紫龙骑士(旗将)|SCAG|3"
+				}
+			]
+		},
+		{
+			"name": "重整姿态",
+			"ENG_name": "Rallying Cry",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个原型，你学会了如何激励你的盟友在受伤后继续战斗。",
+				"当你使用你的\"再度行动\"特性时，你可以选择与你结盟且在你60英尺范围内的最多三个生物。每个生物恢复等于你的战士等级的生命值，前提是该生物能够看到你或听到你。"
+			]
+		},
+		{
+			"name": "限制：骑士爵位",
+			"ENG_name": "Restriction: Knighthood",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"紫龙骑士与科米尔的特定骑士团有关联。",
+				"如果你在其他战役设置中使用此原型，或者用来塑造除了紫龙骑士之外的战争领主，旌旗手可以作为这个原型的通用名称。"
+			]
+		},
+		{
+			"name": "皇家特使",
+			"ENG_name": "Royal Envoy",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"紫龙骑士作为科米尔王冠的使者。地位高的骑士应该以优雅的方式行事。",
+				"在7级时，你获得了{@skill 游说}技能的熟练度。如果你已经熟练掌握它，你可以选择以下技能之一获得熟练度：{@skill 驯兽}、{@skill 洞悉}、{@skill 威吓}或{@skill 表演}。",
+				"你的熟练加值在使用{@skill}进行的能力检定时翻倍。无论从这个特性获得的技能熟练度如何，你都会获得这个好处。"
+			]
+		},
+		{
+			"name": "振奋之潮",
+			"ENG_name": "Inspiring Surge",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，当你使用你的行动激增特性时，你可以选择一个在你60英尺范围内并与你结盟的生物。如果这个生物能够看到你或听到你，它可以利用其反应进行一次近战或远程武器攻击。",
+				"从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
+			]
+		},
+		{
+			"name": "意志壁垒",
+			"ENG_name": "Bulwark",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从第15级开始，你可以将你的不屈特性的好处扩展到一个盟友身上。当你决定使用不屈来重新掷一个智力、感知或魅力豁免骰，并且你不处于{@condition 无力}状态时，你可以选择一个在你60英尺范围内也未能通过相同效果豁免的盟友。如果那个生物能看见或听见你，它可以重新掷它的豁免骰，并且必须使用新的掷骰结果。"
+			]
+		},
+		{
+			"name": "振奋之潮",
+			"ENG_name": "Inspiring Surge",
+			"source": "SCAG",
+			"page": 128,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "紫龙骑士(旗将)",
+			"subclassSource": "SCAG",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"从18级开始，你可以选择在你60英尺范围内的两个盟友，而不是一个。"
+			]
+		},
+		{
+			"name": "灵能武士",
+			"ENG_name": "Psi Warrior",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"觉醒内在的心灵力量，灵能战士是一位用心灵能量灌注的武器打击、心灵感应的鞭笞和精神力量屏障来增强其身体力量的战士。许多吉斯扬基人训练成为这样的战士，一些最有纪律的高等精灵也是如此。在艾伯伦世界中，许多年轻的卡拉斯塔人梦想成为灵能战士。",
+				"作为一个灵能战士，你可能通过独自修炼磨练了你的灵能能力，或在大师的指导下解锁了它，或在一个致力于将心灵力量作为武器和盾牌使用的学院中精炼了它。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "灵能力量|战士||灵能武士|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "灵能力量",
+			"ENG_name": "Psionic Power",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级灵能战士特性}",
+				"你内心蕴藏着一股灵能能量的源泉。这股能量由你的灵能能量骰表示，每个骰子都是一个{@dice d6}。你拥有的这些骰子数量等于你的熟练加值的两倍，它们为你拥有的各种灵能力量提供动力，这些力量在下文有详细说明。",
+				"你的一些能力会消耗它们使用的灵能能量骰，如能力描述中指定的那样，如果你的所有骰子都已消耗，你就不能使用需要使用骰子的能力。当你完成一次长休息时，你恢复所有消耗的灵能能量骰。此外，作为一个奖励动作，你可以恢复一个已消耗的灵能能量骰，但直到你完成一次短休息或长休息之前，你不能再这样做。",
+				"当你达到这个职业的特定等级时，你的精神能量骰的大小会增加：在5级时（{@dice d8}），11级时（{@dice d10}），以及17级时（{@dice d12}）。",
+				"以下能力使用你的灵能能量骰。",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "庇护力场|战士|TCE|灵能武士|TCE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "灵能击打|战士|TCE|灵能武士|TCE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "念力控物|战士|TCE|灵能武士|TCE|3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "念力熟练",
+			"ENG_name": "Telekinetic Adept",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 七级灵能战士特性}",
+				"你已经掌握了使用你的念力能力的新的途径，具体如下。",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "灵能跳跃|战士|TCE|灵能武士|TCE|7"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "心灵推力|战士|TCE|灵能武士|TCE|7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "意念守护",
+			"ENG_name": "Guarded Mind",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 十级灵能战士特性}",
+				"流经你的心灵能量增强了你的思维。你对心灵伤害具有抗性。此外，如果你在你的回合开始时处于{@condition 魅惑}或{@condition 恐惧}状态，你可以消耗一个心灵能量骰并结束所有使你受到这些状态影响的效果。"
+			]
+		},
+		{
+			"name": "壁垒之力",
+			"ENG_name": "Bulwark of Force",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级灵能战士特性}",
+				"你可以用念力保护你自己和其他人。作为一个奖励动作，你可以选择你能看到的30英尺范围内的生物，数量最多等于你的智力调整值（最少为一个生物）。每个选定的生物在1分钟或直到你{@condition 无力}期间受到半个掩体的保护。",
+				"一旦你采取了这个奖励动作，在你完成一次长休之前，你不能再这样做，除非你消耗一个心灵能量骰来再次采取它。"
+			]
+		},
+		{
+			"name": "念力宗师",
+			"ENG_name": "Telekinetic Master",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18级灵能战士特性}",
+				"你用心灵移动生物和物体的能力是罕见的。你可以施放{@spell 心灵遥控}法术，无需任何材料，并且你的施法能力是智力。在你集中精神施放该法术的每个回合中，包括施放它的回合，你可以作为一个奖励动作进行一次武器攻击。",
+				"一旦你使用这个特性施放了法术，你就不能再次这样做，直到你完成一次长时间的休息，除非你消耗一个灵能能量骰再次施放它。"
+			]
+		},
+		{
+			"name": "符文骑士",
+			"ENG_name": "Rune Knight",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"符文骑士利用符文的超自然力量增强他们的战斗技巧，这是一种起源于巨人的古老实践。在任何巨人家族中都可以找到符文雕刻者，你可能直接或间接地从这样一位神秘的工匠那里学到了你的方法。无论你是在山丘或洞穴中发现了巨人的作品，从智者那里了解到符文，还是亲自遇到了巨人，你研究了巨人的技艺，并学会了如何应用魔法符文来增强你的装备。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "附赠熟练项|战士||符文骑士|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "符文雕刻者|战士||符文骑士|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "巨人之力|战士||符文骑士|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "附赠熟练项",
+			"ENG_name": "Bonus Proficiencies",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级符文骑士特性}",
+				"你获得了对{@item 铁匠工具|PHB}的熟练使用，并且你学会了说、读、写{@language 巨人}。"
+			]
+		},
+		{
+			"name": "巨人之力",
+			"ENG_name": "Giant's Might",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级符文骑士特性}",
+				"你学会了如何使自己充满巨人的力量。作为一个奖励动作，你神奇地获得了以下好处，持续时间为1分钟：",
+				{
+					"type": "list",
+					"items": [
+						"如果你比大型（Large）小，你将变成大型，你穿戴的任何物品也会随之变大。如果你所在的空间不允许你变成大型，你的尺寸将不会改变。",
+						"你在力量检定和力量豁免检定中具有优势。",
+						"在你的每个回合中，你可以使用武器或徒手攻击对目标造成额外的{@damage 1d6}伤害，如果命中的话。"
+					]
+				},
+				"你可以使用这个特性的次数等于你的熟练加值，当你完成一次长休时，你恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "符文雕刻者",
+			"ENG_name": "Rune Carver",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级符文骑士特性}",
+				"你可以使用魔法符文来增强你的装备。你从下面的符文描述中选择两种符文学习，并且每次你在这个职业中升级时，你都可以从这个特性中选择一个不同的符文来替换你已知的一个符文。当你达到这个职业的特定等级时，你将学习到额外的符文，如符文已知表格所示。",
+				"每当你完成一次长时间的休息，你可以触摸与你知晓的符文数量相等的物品，并且在每个物品上刻上不同的符文。一个物品要符合资格，必须是武器、盔甲、盾牌、珠宝或你可以穿戴或手持的其他物品。你的符文会保留在物品上，直到你完成下一次长时间的休息，并且一个物品一次只能承载你的一个符文。",
+				{
+					"type": "table",
+					"caption": "已知符文",
+					"colLabels": [
+						"战士等级",
+						"符文数量"
+					],
+					"colStyles": [
+						"col-6 text-center",
+						"col-6 text-center"
+					],
+					"rows": [
+						[
+							"第三",
+							"2"
+						],
+						[
+							"第七",
+							"3"
+						],
+						[
+							"10级",
+							"4"
+						],
+						[
+							"15级",
+							"5"
+						]
+					]
+				},
+				"当你学习符文时，以下符文可供你选择。如果一个符文有等级要求，你必须至少达到本职业的该等级才能学习该符文。如果一个符文需要进行豁免投掷，你的符文魔法豁免DC等于8 + 你的熟练加值 + 你的体质修正值。",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "云雾符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "火焰符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "寒霜符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "岩石符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "山丘符文|TCE",
+							"name": "山地符文（7级或更高）",
+							"ENG_name": "Hill Rune (7th Level or Higher)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "风暴符文|TCE",
+							"name": "风暴符文（7级或更高）",
+							"ENG_name": "Storm Rune (7th Level or Higher)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7级符文骑士特性}",
+				"你学会了一个额外的符文。"
+			]
+		},
+		{
+			"name": "符文之盾",
+			"ENG_name": "Runic Shield",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7级符文骑士特性}",
+				"你学会了如何召唤你的符文魔法来保护你的盟友。当你能看到的60英尺内另一个生物被攻击骰命中时，你可以使用你的反应迫使攻击者重新掷{@dice d20}并使用新的掷骰结果。",
+				"你可以使用这个特性的次数等于你的熟练加值，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+			]
+		},
+		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 十级符文骑士特性}",
+				"你学会了一个额外的符文。"
+			]
+		},
+		{
+			"name": "奇伟身躯",
+			"ENG_name": "Great Stature",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 十级符文骑士特性}",
+				"你的符文魔法永久性地改变了你。当你获得这个特性时，掷骰{@dice 3d4}。你的身高增长的英寸数等于掷骰的点数。",
+				"此外，你通过巨人之力特性造成的额外伤害增加到{@dice 1d8}。"
+			]
+		},
+		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级符文骑士特性}",
+				"你学会了一个额外的符文。"
+			]
+		},
+		{
+			"name": "符文大师",
+			"ENG_name": "Master of Runes",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级符文骑士特性}",
+				"你可以从你的符文雕刻师特性中知道的每个符文召唤两次，而不是一次，并且在你完成短休息或长休息后恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "符文主宰",
+			"ENG_name": "Runic Juggernaut",
+			"source": "TCE",
+			"page": 44,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "符文骑士",
+			"subclassSource": "TCE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18级符文骑士特性}",
+				"你学会了如何增强你的符文驱动的变身。因此，使用巨人之力特性时造成的额外伤害增加到{@dice 1d10}。此外，当你使用该特性时，你的体型可以增大到巨型，并且当你处于那个体型时，你的触及范围增加5英尺。"
+			]
+		},
+		{
+			"name": "魔射手",
+			"ENG_name": "Arcane Archer",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"奥术射手学习一种独特的精灵射箭方法，将魔法融入攻击中以产生超自然效果。奥术射手是精灵中最精英的战士之一。他们守望着精灵领域的边缘，敏锐地留意入侵者，并使用注入魔法的箭矢在怪物和入侵者到达精灵定居点之前将其击败。几个世纪以来，这些精灵射手的方法已被其他种族的成员学习，他们也能够平衡奥术天赋与射箭技艺。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "魔箭学识|战士||魔射手|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奥术射击|战士||魔射手|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奥术射击选项|战士||魔射手|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "魔箭学识",
+			"ENG_name": "Arcane Archer Lore",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"在3级时，你学习了魔法理论或自然界的一些秘密\u2014\u2014这是精灵武术传统的典型实践者。你选择获得{@skill 奥秘}或{@skill 自然}技能的熟练度，并且你选择学习{@spell 魔法技俩}或{@spell 德鲁伊伎俩}这个戏法。"
+			]
+		},
+		{
+			"name": "奥术射击",
+			"ENG_name": "Arcane Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"在3级时，你学会了在一些射击中释放特殊的魔法效果。当你获得这个特性时，你可以选择学习两种奥术射击选项（见下文的\"奥术射击选项\"）。",
+				"在你的回合中，当你作为{@action 攻击}动作的一部分，从短弓或长弓射出一支箭时，你可以将你的一个奥术射击选项应用于该箭。当箭击中生物时，你决定使用该选项，除非该选项不涉及攻击检定。你拥有这个能力的两次使用次数，当你完成短休息或长休息时，你恢复所有已消耗的使用次数。",
+				"当你达到这个职业的特定等级时：7级、10级、15级和18级，你将获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
+			]
+		},
+		{
+			"name": "奥术射击选项",
+			"ENG_name": "Arcane Shot Options",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"奥术射击特性允许你在特定等级选择选项。这些选项按照字母顺序在此列出。它们都是魔法效果，每一个都与魔法学派之一相关联。",
+				"如果一个选项需要进行豁免投掷，你的奥术射击豁免投掷DC的计算方式如下：",
+				{
+					"type": "abilityDc",
+					"name": "奥术射击",
+					"ENG_name": "Arcane Shot",
+					"attributes": [
+						"int"
+					]
+				},
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "放逐矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "欺诈矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "爆裂矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "虚弱矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "缠绕矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "穿梭矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "追踪矢|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "遮影矢|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "额外秘法射击选项",
+			"ENG_name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"当你达到7级时，你将获得一个额外的奥术射击选项。"
+			]
+		},
+		{
+			"name": "曲线射击",
+			"ENG_name": "Curving Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"在7级时，你学会了如何将偏离目标的箭矢导向一个新的目标。当你使用魔法箭进行攻击检定并未命中时，你可以使用一个奖励动作重新对原始目标60英尺范围内的不同目标进行攻击检定。"
+			]
+		},
+		{
+			"name": "注魔箭矢",
+			"ENG_name": "Magic Arrow",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"在7级时，你获得了将箭矢注入魔法的能力。每当你从短弓或长弓射出一支非魔法箭矢时，你可以使其成为魔法箭矢，以便克服对非魔法攻击和伤害的抗性和免疫。箭矢在击中或未命中目标后立即失去魔法效果。"
+			]
+		},
+		{
+			"name": "额外秘法射击选项",
+			"ENG_name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"当你达到10级时，你将获得一个额外的奥术射击选项。"
+			]
+		},
+		{
+			"name": "额外秘法射击选项",
+			"ENG_name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"当你达到15级时，你将获得一个额外的奥术射击选项。"
+			]
+		},
+		{
+			"name": "常备射击",
+			"ENG_name": "Ever-Ready Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你的魔法箭术在战斗开始时随时可用。如果你进行先攻检定并且没有剩余的奥术射击使用次数，你恢复一次奥术射击的使用。"
+			]
+		},
+		{
+			"name": "额外秘法射击选项",
+			"ENG_name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "魔射手",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"当你达到18级时，你可以选择获得一个额外的奥术射击选项。当你成为18级战士时，每个选项也会得到提升。"
+			]
+		},
+		{
+			"name": "骑兵",
+			"ENG_name": "Cavalier",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"典型的骑士擅长骑战。骑士通常出生在贵族家庭，在宫廷中长大，无论是领导骑兵冲锋还是在国宴上进行机智对话，骑士都能游刃有余。骑士们还学会了如何保护他们负责的人免受伤害，经常作为上级和弱者的保护者。出于纠正错误或赢得声望的驱动，许多这样的战士离开了舒适的生活，开始了辉煌的冒险。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "附赠熟练项|战士||骑兵|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "生而为骑|战士||骑兵|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "坚定之印|战士||骑兵|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "附赠熟练项",
+			"ENG_name": "Bonus Proficiency",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个子类，你可以选择以下技能之一获得熟练度：动物驯养、历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
+			]
+		},
+		{
+			"name": "生而为骑",
+			"ENG_name": "Born to the Saddle",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，你作为骑手的高超技艺变得显而易见。你在进行豁免投掷以避免从坐骑上摔下来时获得优势。如果你从坐骑上摔下来，并且下降不超过10英尺，你可以双脚着地，只要你不是{@condition 无力}。",
+				"最后，骑乘或下马只需要消耗你5英尺的移动距离，而不是你的速度的一半。"
+			]
+		},
+		{
+			"name": "坚定之印",
+			"ENG_name": "Unwavering Mark",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，你可以威胁你的敌人，破坏他们的攻击并惩罚他们伤害他人。当你用近战武器攻击击中一个生物时，你可以标记这个生物，直到你的下一个回合结束。如果你被{@condition 无力}或者你死亡，或者有人标记了这个生物，这个效果会提前结束。",
+				"当被你标记的生物在你5英尺范围内时，它在进行任何不以你为目标的攻击检定时都会处于不利状态。",
+				"此外，如果被你标记的生物对除了你以外的任何人造成伤害，你可以在下一个回合上使用奖励动作对被标记的生物进行一次特殊的近战武器攻击。你在攻击骰上拥有优势，如果命中，攻击的武器对目标造成额外伤害，伤害值等于你战士等级的一半。",
+				"不论你标记了多少生物，你可以进行这种特殊攻击的次数等于你的力量调整值（最少一次），当你完成一次长时间的休息后，你会恢复所有已使用的攻击次数。"
+			]
+		},
+		{
+			"name": "守护战技",
+			"ENG_name": "Warding Maneuver",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"当你达到7级时，你学会抵挡针对你、你的坐骑或其他附近生物的攻击。如果你或你能看到的5英尺范围内的生物被攻击命中，如果你手持近战武器或盾牌，你可以作为反应掷一个{@dice 1d8}。掷骰子，并将掷出的数字加到目标对该攻击的AC上。如果攻击仍然命中，目标对该攻击的伤害有抗性。",
+				"你可以使用这个特性的次数等于你的体质调整值（最少一次），当你完成一次长时间休息后，你会恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "坚守战线",
+			"ENG_name": "Hold the Line",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"在10级时，你成为了锁定敌人的大师。当生物在你的触及范围内移动5英尺或更多时，会激起你的反应攻击，如果你用反应攻击击中生物，目标的速度在当前回合结束前将被减少至0。"
+			]
+		},
+		{
+			"name": "冲锋陷阵",
+			"ENG_name": "Ferocious Charger",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，无论你是否骑马，你都可以追击你的敌人。如果你在直线移动至少10英尺后立即攻击一个生物，并且攻击命中，该目标必须进行一次力量豁免检定（难度等级（DC）为8 + 你的熟练加值 + 你的力量调整值），否则会被击倒{@condition 伏地}。每个回合中，你只能使用这个特性一次。"
+			]
+		},
+		{
+			"name": "警戒守卫",
+			"ENG_name": "Vigilant Defender",
+			"source": "XGE",
+			"page": 30,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "骑兵",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"从18级开始，你对危险的反应格外警觉。在战斗中，你获得了一个特殊的反应，你可以在每个生物的回合上使用一次，除了你自己的回合。你只能使用这个特殊反应来进行机会攻击，并且不能在同一回合中使用你的正常反应。"
+			]
+		},
+		{
+			"name": "武士",
+			"ENG_name": "Samurai",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"武士是一位依靠不可动摇的战斗精神来战胜敌人的战士。武士的决心几乎是不可摧毁的，武士面前的敌人有两个选择：屈服或战斗至死。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "附赠熟练项|战士||武士|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战意|战士||武士|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "附赠熟练项",
+			"ENG_name": "Bonus Proficiency",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个子类时，你可以选择以下技能之一获得熟练度：历史、洞察、表演或说服。或者，你可以选择学习一种语言。"
+			]
+		},
+		{
+			"name": "战意",
+			"ENG_name": "Fighting Spirit",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"从3级开始，你在战斗中的强烈意志可以保护你并帮助你准确击中目标。在你的回合作为奖励动作，你可以使自己在当前回合结束前的所有武器攻击检定上获得优势。当你这样做时，你还获得5点临时生命值。当你在这个职业达到特定等级时，临时生命值的数量会增加，10级时增加到10点，15级时增加到15点。",
+				"你可以使用这个特性三次，当你完成一次长时间的休息后，你会恢复所有已使用的点数。"
+			]
+		},
+		{
+			"name": "雅臣",
+			"ENG_name": "Elegant Courtier",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，你的自律和对细节的关注使你在社交场合中表现出色。每当你进行魅力（说服）检定时，你会获得等同于你智慧调整值的检定加值。",
+				"你的自我控制能力还使你在智慧豁免检定中获得熟练度。如果你已经拥有这项熟练度，你可以选择在智力或魅力豁免检定中获得熟练度（由你选择）。"
+			]
+		},
+		{
+			"name": "不懈",
+			"ENG_name": "Tireless Spirit",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，当你进行先攻检定时，如果你的战斗精神使用次数已耗尽，你将恢复一次使用机会。"
+			]
+		},
+		{
+			"name": "燕返",
+			"ENG_name": "Rapid Strike",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你学会以牺牲准确性换取快速打击。如果你在你的回合采取攻击行动，并且对其中一个目标的攻击检定具有优势，你可以放弃这次优势，以同一行动对那个目标进行额外的武器攻击。每回合你只能这样做一次。"
+			]
+		},
+		{
+			"name": "回光返照",
+			"ENG_name": "Strength before Death",
+			"source": "XGE",
+			"page": 31,
+			"className": "战士",
+			"classSource": "PHB",
+			"subclassShortName": "武士",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"从18级开始，你的战斗精神可以延缓死亡的降临。如果你受到的伤害使你的生命值降至0但并未直接致命，你可以使用你的反应来延迟昏迷，并立即进行额外的回合，打断当前的回合。在你额外的回合中，如果你的生命值仍然为0，受到的伤害会像平常一样导致死亡豁免失败，并且三次死亡豁免失败仍然可能致命。当额外的回合结束时，如果你的生命值仍然为0，你会昏迷。",
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "庇护力场",
+			"ENG_name": "Protective Field",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "TCE",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"consumes": {
+				"name": "灵能能量骰",
+				"ENG_name": "Psionic Energy Die"
+			},
+			"entries": [
+				"当你或你能看到的30英尺范围内的另一个生物受到伤害时，你可以使用你的反应消耗一个灵能能量骰，掷这个骰子，并减少受到的伤害，减少的数值等于掷骰结果加上你的智力调整值（最小减少值为1），因为你创造了一个瞬间的念力护盾。"
+			]
+		},
+		{
+			"name": "灵能击打",
+			"ENG_name": "Psionic Strike",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "TCE",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"consumes": {
+				"name": "灵能能量骰",
+				"ENG_name": "Psionic Energy Die"
+			},
+			"entries": [
+				"你可以用灵能力量推动你的武器。在你的每个回合中，当你用武器攻击并成功命中30英尺内的目标并对其造成伤害后，你可以消耗一个灵能能量骰，掷出这个骰子，并对目标造成等于掷骰结果加上你的智力调整值的力场伤害。"
+			]
+		},
+		{
+			"name": "念力控物",
+			"ENG_name": "Telekinetic Movement",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "TCE",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"你可以用你的意念移动一个物体或生物。作为一个动作，你选择一个松散的物体，它必须是大型或更小，或者是一个愿意的生物，除了你自己。如果你能看到目标，并且它在你30英尺范围内，你可以将它移动到30英尺内你能看到的未被占据的空间。或者，如果它是一个微小的物体，你可以将它移动到你的手中或从你的手中移动出去。无论是哪种方式，你可以水平移动目标，垂直移动，或者两者兼有。一旦你采取了这个动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取这个动作。"
+			]
+		},
+		{
+			"name": "灵能跳跃",
+			"ENG_name": "Psi-Powered Leap",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "TCE",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 7,
+			"entries": [
+				"作为一个奖励动作，你可以用你的意念推动你的身体。直到当前回合结束，你获得等于你步行速度两倍的飞行速度。一旦你采取这个奖励动作，直到你完成一次短休或长休之前，你都不能再次这样做，除非你消耗一个灵能能量骰来再次采取它。"
+			]
+		},
+		{
+			"name": "心灵推力",
+			"ENG_name": "Telekinetic Thrust",
+			"source": "TCE",
+			"page": 42,
+			"className": "战士",
+			"classSource": "TCE",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "TCE",
+			"level": 7,
+			"entries": [
+				"当你用你的灵能打击对目标造成伤害时，你可以迫使目标进行一次力量豁免检定，难度等级（DC）等于8加上你的熟练加值加上你的智力调整值。如果豁免失败，你可以使目标进入{@condition 伏地}状态，或者将其沿着任何方向水平移动最多10英尺。"
+			]
+		}
+	]
 }

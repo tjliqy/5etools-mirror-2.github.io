@@ -1,1057 +1,863 @@
 {
-  "spell": [
-    {
-      "name": "黑暗星辰",
-      "ENG_name": "Dark Star",
-      "source": "EGW",
-      "page": 186,
-      "level": 8,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 150
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一小块碎玛瑙与一滴施法者的血液，在施法时被消耗。",
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "该法术在施法距离内以你选择的一点为圆心创造一个球形范围。该圆形半径至多为40尺。区域内充斥着魔法黑暗与毁灭性的重力能量。",
-        "法术持续时间内，球形区域内视为困难地形。一个拥有黑暗视觉的生物没法看透这片魔法黑暗，非魔法的光源无法点亮这片区域。该区域内没法发出声音，声音也没办法穿过该区域。任何完全处于该区域内的生物或物件免疫雷鸣伤害，并且生物完全处于该区域内时处于{@condition 耳聋}状态。在该法术的影响范围内没有办法施展需要语言成分的法术。",
-        "任何在自己回合中第一次进入该区域的生物或在该区域内开始其回合的生物需要进行一次体质豁免。若豁免失败，该生物受到{@damage 8d10}力场伤害，成功则只受到一半伤害。当一个生物的HP被这个法术降低到0时，该生物被解离。被解离的生物与其身上穿着的，携带着的一切，除了魔法物品外，都会化为一缕灰色的烟尘。"
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "conditionInflict": [
-        "耳聋"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "areaTags": [
-        "S"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      },
-      "hasFluffImages": true,
-      "miscTags": [
-        "直接傅里叶变换",
-        "目标文件"
-      ]
-    },
-    {
-      "name": "命运宠儿",
-      "ENG_name": "Fortune's Favor",
-      "source": "EGW",
-      "page": 186,
-      "level": 2,
-      "school": "D",
-      "time": [
-        {
-          "number": 1,
-          "unit": "分钟"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "言语，姿势，材料(一颗至少价值 100gp 的白色珍珠，在施法时被消耗)",
-          "cost": 10000,
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你给予你自己或施法距离内你可见的一个自愿生物以潜藏的幸运。在法术结束之前，当被选中的生物进行一次攻击检定，属性检定或者豁免检定时，其能够使这个法术结束并扔一颗额外的{@dice d20}骰，并决定使用哪一颗{@dice d20}。或者，当这个生物成为一个攻击检定的目标时，其能够使这个法术结束并扔一颗额外的{@dice d20}骰，并决定使用哪一颗骰，并决定使用哪一颗{@dice d20}：攻击者所掷骰的或通过该法术所掷骰。",
-        "若原{@dice d20}骰有优势或劣势，那么通过该法术掷出的{@dice d20}在原{@dice d20}的优势或劣势生效后生效。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用三环或更高法术位施展该法术时，每比二环高一环的法术位可以令你指定一个额外的生物。"
-          ]
-        }
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          },
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "灵敏之赐",
-      "ENG_name": "Gift of Alacrity",
-      "source": "EGW",
-      "page": 186,
-      "level": 1,
-      "school": "D",
-      "time": [
-        {
-          "number": 1,
-          "unit": "分钟"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "touch"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 8
-          }
-        }
-      ],
-      "entries": [
-        "你触碰一个自愿生物，在法术持续时间内，其先攻掷骰中可以加入一个额外的{@dice 1d8}。"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "重力分裂",
-      "ENG_name": "Gravity Fissure",
-      "source": "EGW",
-      "page": 187,
-      "level": 6,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "line",
-        "distance": {
-          "type": "feet",
-          "amount": 100
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一把铁料"
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你以自身为原点咒现出一条长100尺，宽5尺的重力能量。所有在线上的生物需要进行一个体质豁免，若失败，则受到{@damage 8d8}力场伤害，若豁免成功则受到一半伤害。",
-        "所有距离这条线10尺或以内但不在线当中的生物需要通过一个体质豁免，若失败则受到{@damage 8d8}力场伤害并且会被拉向线的区域中。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用七环或更高环位的法术位施展该法术时，每比六环高出一环的法术位能使该法术的伤害增加{@scaledamage 8d8|6-9|1d8} 。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "areaTags": [
-        "L"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "引力裂沟",
-      "ENG_name": "Gravity Sinkhole",
-      "source": "EGW",
-      "page": 187,
-      "level": 4,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 120
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一块黑色的大理石"
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "一道半径20尺球形范围的破坏性能量在施法距离内你能看见的一点为源点形成，并开始拖拽范围内的生物。所有在范围内的生物必须进行一次体质豁免检定。若豁免失败，该生物受到{@damage 5d10}力场伤害并且会被直直拉向能量的中心，并在离中心尽可能近的未被占据的空间停止（哪怕这会让其飞到天上）。若豁免成功，则其受到一半伤害并且不会被拉走。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用五环或者更高环位的法术位施展该法术时， 每比四环高出一环的法术位可以使该法术的伤害增加{@scaledamage 5d10|4-9|1d10} 。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "S"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "不动物件",
-      "ENG_name": "Immovable Object",
-      "source": "EGW",
-      "page": 187,
-      "level": 2,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "touch"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "至少价值 25gp 的金尘，在施法时消耗。",
-          "cost": 2500,
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你触摸一个至多不超过10磅的物件，使其魔法般地固定住。你与你施法时指定的生物能够如常移动它。你也可以设置一串密码，当密码在该物件5尺内被念出时，使这个法术暂时被压制1分钟。",
-        "若该物件被固定在空中，那么它可以至多承载4000磅的重量。更重的负载会使其坠落。另外，一个生物能以其动作进行一个对抗你的法术豁免DC的力量检定。若其成功，则该物件能被其移动10尺。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "若你使用四环或五环法术位施展该法术，使该物件移动的检定DC增加5，并且它能够承载8000磅重的负载并持续24小时。如果你用六环或者更高环的法术位施展该法术，那么使该物件移动的检定DC增加10，并且它能够承载20000磅重的负载并一直持续到法术被解除。"
-          ]
-        }
-      ],
-      "abilityCheck": [
-        "力量"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      },
-      "miscTags": [
-        "目标文件",
-        "PRM"
-      ]
-    },
-    {
-      "name": "扩大重力",
-      "ENG_name": "Magnify Gravity",
-      "source": "EGW",
-      "page": 188,
-      "level": 1,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "round",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "施法距离内你可见的一点的10尺半径球形范围内的重力暂时性地增加了。在你施法时，所有处于该范围内的生物必须通过一个体质豁免。若豁免失败，该生物受到{@damage 2d8}力场伤害且其移动速度在其下个回合结束前减半。若豁免成功，该生物受到一半的伤害且在移动速度上没有减值。",
-        "直到你的下个回合开始，任何想要把该范围内未被着装或携带的物品移动或捡起都需要进行一次对抗你的法术豁免DC的成功的力量检定，若成功才可行。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "每当你使用二环或更高的法术位施展该法术时，每比一环多一的法术位能使该法术的伤害增加{@scaledamage 2d8|1-9|1d8}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "目标文件",
-        "中士"
-      ],
-      "areaTags": [
-        "S"
-      ]
-    },
-    {
-      "name": "脉冲波动",
-      "ENG_name": "Pulse Wave",
-      "source": "EGW",
-      "page": 188,
-      "level": 3,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "cone",
-        "distance": {
-          "type": "feet",
-          "amount": 30
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你创造出一股强烈的冲压，将其释放向30尺锥形范围，并决定该冲压会推开还是拉近范围内的物品与生物。在锥形范围内的每个生物必须要通过一个体质豁免，若豁免失败则会受到{@damage 6d6}力场伤害，豁免成功则受到一半伤害。豁免失败的生物会向你被拉进15尺，或从你处被推开15尺，取决于你施展法术时的选择。",
-        "另外，完全处于锥形范围内的物件也会被向你被拉进或者被推开15尺。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用四环或更高环的法术位施展该法术时，每比三环高出一环的法术位就能使法术的伤害增加{@scaledamage 6d6|3-9|1d6}，并使推拉的距离增加5尺。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "FMV",
-        "目标文件"
-      ],
-      "areaTags": [
-        "N"
-      ]
-    },
-    {
-      "name": "饕餮虚空",
-      "ENG_name": "Ravenous Void",
-      "source": "EGW",
-      "page": 188,
-      "level": 9,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 1000
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一只铁制的小九芒星"
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你以施法距离内你可见的一点为源点创造一个半径20尺的毁灭性球形力场。在法术持续时间内，球形力场与其100尺范围内的空间视为困难地形，且完全处于力场内的未被着装与携带的非魔法物件会被摧毁。",
-        "当力场出现时或者在你的每回合开始时，力场的100尺范围内未被着装的物件将被直直拉向力场的中心，并在距离力场中心最近的未被占据的空间停止。",
-        "当一个生物在力场的100尺范围内开始其回合时，其必须进行一个力量豁免，若失败则将被直直拉向力场的中心，并在距离力场中心最近的未被占据的空间停止。一个在当前回合内第一次进入力场的生物或在力场内开始其回合的生物会受到{@damage 5d10}力场伤害并且被{@condition 束缚}，直到其离开力场范围。 若力场位于空中，那么被{@condition 束缚}的生物将会在力场中悬浮。一个生物能以其动作进行一个对抗你的法术豁免DC的力量检定，若成功则能解除其自己或者另一个在其触及范围内的力场内的生物的{@condition 束缚}状态。若一个生物的HP被该法术降低至0，其与其身上携带的所有非魔法物件都会被湮灭。"
-      ],
-      "damageInflict": [
-        "力量"
-      ],
-      "conditionInflict": [
-        "束缚"
-      ],
-      "savingThrow": [
-        "力量"
-      ],
-      "abilityCheck": [
-        "力量"
-      ],
-      "miscTags": [
-        "目标文件",
-        "中士"
-      ],
-      "areaTags": [
-        "S"
-      ]
-    },
-    {
-      "name": "崩坏现实",
-      "ENG_name": "Reality Break",
-      "source": "EGW",
-      "page": 189,
-      "level": 8,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一个水晶棱镜"
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你将现实与时间线之间的壁垒粉碎，使一个生物陷入混沌与疯狂。目标必须通过一个感知豁免，否则将无法执行任何反应直到法术结束。被影响的生物必须在其回合开始时掷一个{@dice d10}，其结果决定目标身上发生了什么。参照下方表格\"崩坏现实效果：",
-        "在其回合结束时，受影响的生物能重复其感知豁免，若成功，则法术结束。",
-        {
-          "type": "table",
-          "caption": "崩坏现实效果",
-          "colLabels": [
-            "d10",
-            "效果"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "1-2",
-              "{@b 遥远国度之瞥。}目标受到{@damage 6d12}心灵伤害并且陷入{@condition 震慑}到本轮结束。"
-            ],
-            [
-              "3-5",
-              "{@b 崩碎裂缝。}目标必须通过一个敏捷豁免，若失败则受到{@damage 8d12}力场伤害，若豁免成功则受到一半伤害。"
-            ],
-            [
-              "6-8",
-              "{@b 虫洞。}该目标与其身上所着装、携带的一切东西被传送到其30尺内你能看到的未被占据的空间。目标受到{@damage 10d12}力场伤害并倒地。"
-            ],
-            [
-              "9-10",
-              "{@b 暗虚之冻。}目标受到{@damage 10d12}冷冻伤害并且{@condition 目盲}到本回合结束。"
-            ]
-          ]
-        }
-      ],
-      "damageInflict": [
-        "心灵",
-        "力量",
-        "寒冷"
-      ],
-      "conditionInflict": [
-        "震慑",
-        "伏地",
-        "目盲"
-      ],
-      "savingThrow": [
-        "感知",
-        "敏捷"
-      ],
-      "miscTags": [
-        "RO",
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "削弱芒刺",
-      "ENG_name": "Sapping Sting",
-      "source": "EGW",
-      "page": 189,
-      "level": 0,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 30
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你削弱施法距离内一个你看得见的生物的生命活力。目标必须通过一个体质豁免，否则就会受到{@damage 1d4}黯蚀伤害并且{@condition 伏地}。",
-        "该法术的伤害会在你到达5级时变为（{@dice 2d4}）、11级（{@dice 3d4}）、17级（{@dice 4d4}）。"
-      ],
-      "scalingLevelDice": {
-        "label": "necrotic damage",
-        "scaling": {
-          "1": "1d4",
-          "5": "2d4",
-          "11": "3d4",
-          "17": "4d4"
-        }
-      },
-      "damageInflict": [
-        "死灵"
-      ],
-      "conditionInflict": [
-        "伏地"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "SCL",
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          },
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "时流刹转",
-      "ENG_name": "Temporal Shunt",
-      "source": "EGW",
-      "page": 189,
-      "level": 5,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "反应",
-          "condition": "当你看到一个生物进行一次攻击掷骰或开始施展一个法术时使用"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 120
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "round",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你以触发法术的生物为目标, 其必须通过一个成功的感知豁免，否则就会消失，被驱逐到时间流的另一个时间点上并导致攻击失手或法术浪费。在目标生物的下个回合开始时，目标重新出现在其刚刚的位置或最近一处未被占据的空间。目标不记得你施展了这个法术或自己被这个法术影响。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用六环或更高环位的法术位施展该法术时，每比五环高出一环的法术位可以使你多指定一个目标。 所有的目标都需要在互相的30尺内。"
-          ]
-        }
-      ],
-      "savingThrow": [
-        "感知"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "系结本源",
-      "ENG_name": "Tether Essence",
-      "source": "EGW",
-      "page": 189,
-      "level": 7,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一卷至少价值 250gp 的铂金丝线，在施法时被消耗。",
-          "cost": 25000,
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "两个施法距离内的你能看见的生物必须进行一次体质豁免，若两者在30尺内，则两者的豁免检定具有劣势。每个生物都能自愿放弃豁免。若两者中有一个豁免成功了，那么法术没有效果。若两者豁免均失败，那么彼此便会在法术持续时间内魔法般地被连接在一起，无论两人间距多少。 若其中一人受到伤害 ，另外一人也会受到等额的伤害。若其中一人恢复了生命值，另外一人也会恢复等额的生命值。如果被系结的双方中任意一方的HP减少到了0，那么该法术结束。该法术在任意一方身上结束时，另外一方的法术也结束。"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "MT"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          },
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "时光蹂躏",
-      "ENG_name": "Time Ravage",
-      "source": "EGW",
-      "page": 189,
-      "level": 9,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一个装满了钻石粉尘的沙漏，其价值至少为 5000 gp, 会在施法时消耗",
-          "cost": 500000,
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你选定一个施法距离内的目标，使其身体形态受到飞速衰老的破坏。目标必须进行一个体质豁免并在豁免失败时受到{@damage 10d12}黯蚀伤害, 或在豁免成功时只受到一半的伤害。若其豁免失败，目标还会快速老化至离老死只有三十天的时间点。在这个年龄段, 目标在攻击掷骰上, 属性检定上与豁免检定上承受劣势，其步行速度也减少一半.。只有祈愿术，或以九环法术位施展的{@spell 高等复原术}才能使这些效果消除并使其恢复原先的年龄。"
-      ],
-      "damageInflict": [
-        "死灵"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "魔袋术",
-      "ENG_name": "Wristpocket",
-      "source": "EGW",
-      "page": 190,
-      "level": 2,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "meta": {
-        "ritual": true
-      },
-      "entries": [
-        "你轻弹手腕, 让你手中的一件物品消失。这件只有你能持握的，重量不超过五磅物件会被传送到一个异次元空间，它会在法术持续时间内一直停留在那里。",
-        "到法术结束为止, 你可以用你的动作将物件召唤到你空余的手中, 你也可以用一个动作将该物件返还至异次元空间处。到法术结束时仍然存在在异次元空间的物品会出现在你所在的位置中，处于你的脚下。"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromSubclass": [
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Chronurgy",
-              "source": "EGW"
-            }
-          },
-          {
-            "class": {
-              "name": "Wizard",
-              "source": "PHB"
-            },
-            "subclass": {
-              "name": "Graviturgy",
-              "source": "EGW"
-            }
-          }
-        ]
-      }
-    }
-  ]
+	"spell": [
+		{
+			"name": "暗黑星辰",
+			"ENG_name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一小块碎玛瑙与一滴施法者的血液，在施法时被消耗。",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"这个法术在你选择的范围内的点为中心创造出一个球体。这个球体的半径可以达到40英尺。这个球体内的区域充满了魔法黑暗和压碎性的引力力量。",
+				"在持续时间内，法术的区域是{@quickref 困难地型||3}。具有黑暗视觉的生物无法看穿魔法黑暗，非魔法光源也无法照亮它。在该区域内或通过该区域无法产生声音。任何完全在球体内的生物或物体对雷鸣伤害免疫，生物在完全在球体内时处于{@condition 耳聋}状态。在那里施放包含口头成分的法术是不可能的。",
+				"任何生物在回合中首次进入法术区域或在其回合开始时位于该区域，都必须进行一次体质豁免检定。生物在豁免失败时会受到{@damage 8d10}点力量伤害，或在豁免成功时受到一半的伤害。由这股伤害降至0生命值的生物将被解离。被解离的生物及其穿戴和携带的所有物品（魔法物品除外）都将化为一堆细灰。"
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"conditionInflict": [
+				"耳聋"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"直接傅里叶变换",
+				"目标文件"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "命运宠儿",
+			"ENG_name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "分钟"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "言语，姿势，材料(一颗至少价值 100gp 的白色珍珠，在施法时被消耗)",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你將潛在的運氣賦予自己或一個你能看到的願意的生物範圍內。在這個法術結束之前，當選定的生物進行攻擊擲骰、能力檢定或豁免擲骰時，它可以放棄這個法術來擲一個額外的{@dice d20}，並選擇使用哪個{@dice d20}。或者，當對選定的生物進行攻擊擲骰時，它可以放棄這個法術來擲一個{@dice d20}，並選擇使用哪個{@dice d20}，是自己擲的還是攻擊者擲的。",
+				"如果原始的{@dice d20}掷骰有优势或劣势，生物在应用优势或劣势到原始掷骰后，再掷一次额外的{@dice d20}。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高级别的法术位施放这个法术时，每超过2级的法术位等级，你可以额外选择一个生物作为目标。"
+					]
+				}
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "灵敏之赐",
+			"ENG_name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "分钟"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"你触摸一个愿意的生物。在持续时间内，目标可以在其先攻骰上加上{@dice 1d8}。"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "重力分裂",
+			"ENG_name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一把铁料"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你在从你起始的一条100英尺长、5英尺宽的线上显现出一道引力能量的裂缝。在该线上的每个生物都必须进行一次体质豁免掷骰，失败时受到{@damage 8d8}力量伤害，成功则只受到一半的伤害。",
+				"每個在線條10英尺範圍內但不在線條上的生物必須成功進行一次體質豁免投擲，否則將受到{@damage 8d8}點力量傷害，並被拉向線條，直到生物進入其範圍內。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用7级或更高级别的法术位施放这个法术时，伤害每超过6级就增加{@scaledamage 8d8|6-9|1d8}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "引力裂沟",
+			"ENG_name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一块黑色的大理石"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"一个20英尺半径的压碎力量场在你能看到的范围内的点形成，并拉扯那里的生物。力场内的每个生物都必须进行一次体质豁免检定。如果豁免失败，生物将受到{@damage 5d10}点力量伤害，并被直线拉向力场中心，尽可能地靠近中心的未被占据的空间结束（即使那个空间在空中）。如果豁免成功，生物受到的伤害减半，并且不会被拉走。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用5级或更高级别的法术位施放这个法术时，伤害会根据法术位等级每超过4级增加{@scaledamage 5d10|4-9|1d10}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "不动物件",
+			"ENG_name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "至少价值 25gp 的金尘，在施法时消耗。",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你触摸一个重量不超过10磅的物体，并使其通过魔法固定在原地。你和你在施放这个法术时指定的生物可以正常移动这个物体。你也可以设置一个口令，当在物体5英尺范围内说出这个口令时，这个法术将在1分钟内被压制。",
+				"如果物体在空中固定，它可以承载高达4000磅的重量。超过这个重量会导致物体坠落。否则，一个生物可以使用它的行动来进行一次力量检定，对抗你的法术豁免DC。成功的话，生物可以移动物体最多10英尺。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"如果你使用4级或5级法术位施放这个法术，移动物体的难度等级增加5点，它可以携带高达8000磅的重量，并且持续时间增加到24小时。如果你使用6级或更高级别的法术位施放这个法术，移动物体的难度等级增加10点，它可以携带高达20000磅的重量，并且效果是永久性的，直到被驱散。"
+					]
+				}
+			],
+			"abilityCheck": [
+				"力量"
+			],
+			"miscTags": [
+				"目标文件",
+				"PRM"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "扩大重力",
+			"ENG_name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"在你可见范围内的一个点为中心，10英尺半径的球体内，重力瞬间增强。在施法回合内，球体内的每个生物都必须进行一次体质豁免投掷。失败则生物受到{@damage 2d8}力量伤害，其速度在下一个回合结束前减半。成功则生物受到的伤害减半，速度不受影响。",
+				"直到你的下一个回合开始，任何在力场内且没有被穿戴或携带的物品都需要进行一次对抗你法术豁免DC的力量检定，才能捡起或移动。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用2级以上的法术位施放这个法术时，每超过1级法术位，伤害增加{@scaledamage 2d8|1-9|1d8}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"目标文件",
+				"中士"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "脉冲波动",
+			"ENG_name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你创造了强烈的压力，在其30英尺的锥形区域内释放，你决定压力是拉动还是推动生物和物体。该锥形区域内的每个生物都必须进行一次体质豁免检定。生物在失败的豁免检定上会受到{@damage 6d6}点力量伤害，成功的检定则受到一半的伤害。并且，每个失败的生物会被向你拉15英尺或从你推15英尺，这取决于你为法术做出的选择。",
+				"此外，完全位于锥形区域内的未固定物体也将被拉或推15英尺。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用4级或更高级别的法术位施放这个法术时，伤害增加{@scaledamage 6d6|3-9|1d6}，并且拉动或推动的距离每超过3级法术位一级就增加5英尺。"
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"FMV",
+				"目标文件"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "饕餮虚空",
+			"ENG_name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一只铁制的小九芒星"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你在一个你能看到的范围内的点为中心，创造一个半径20英尺的破坏性重力力场。在法术持续期间，力场及其100英尺范围内的任何空间均为{@quickref 困难地型||3}，如果完全在力场内的非魔法物品没有被穿戴或携带，则会被摧毁。",
+				"当球体出现时，并且在法术结束前的每一回合开始时，球体100英尺范围内未固定的物品会被拉向球体中心，尽可能地结束在中心附近未被占据的空间。",
+				"当一个生物在其回合开始时处于球体100英尺范围内，它必须成功进行一次力量豁免投掷，否则会被直接拉向球体的中心，并尽可能地停在未被占据的空间。如果一个生物在回合中首次进入球体或在其回合开始时位于球体中，则会受到{@damage 5d10}点力量伤害，并被{@condition 束缚}直到它不再处于球体中。如果球体在空中，被{@condition 束缚}的生物将在球体内悬浮。一个生物可以使用它的行动来进行一次力量检定，对抗你的法术豁免DC值，以此结束自身或它能够触及的球体内的另一个生物的{@condition 束缚}状态。如果一个生物因这个法术被减少到0生命值，则会被彻底消灭，它所穿戴或携带的任何非魔法物品也会被一同消灭。"
+			],
+			"damageInflict": [
+				"力量"
+			],
+			"conditionInflict": [
+				"束缚"
+			],
+			"savingThrow": [
+				"力量"
+			],
+			"abilityCheck": [
+				"力量"
+			],
+			"miscTags": [
+				"目标文件",
+				"中士"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "崩坏现实",
+			"ENG_name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一个水晶棱镜"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你粉碎了现实与时间线的界限，将一个生物推入混乱与疯狂之中。目标必须成功通过一次智力豁免检定，否则直到法术结束时不能进行反应。受影响的目标还必须在每个回合开始时投掷一个{@dice d10}；掷出的数字决定了目标会发生什么，如现实崩溃效果表所示。",
+				"在每个回合结束时，受影响的目标可以重复进行一次智力豁免投掷，成功则结束该法术对自己的作用。",
+				{
+					"type": "table",
+					"caption": "现实断裂效果",
+					"colLabels": [
+						"d10",
+						"影响"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b 远域幻视。} 目标受到{@damage 6d12}点精神伤害，并在回合结束前处于{@condition 震慑}状态。"
+						],
+						[
+							"3-5",
+							"{@b 撕裂裂缝。} 目标必须进行一次敏捷豁免投掷，失败时受到{@damage 8d12}点力量伤害，成功则只受到一半的伤害。"
+						],
+						[
+							"6-8",
+							"{@b 虫洞。} 目标及其穿戴和携带的所有物品被传送至你能看到的30英尺内的一个未被占据的空间。目标还受到{@damage 10d12}力量伤害并被击倒{@condition 伏地}。"
+						],
+						[
+							"9-10",
+							"{@b 黑暗虚空的寒意。} 目标受到{@damage 10d12}点寒冷伤害，并在回合结束前处于{@condition 目盲}状态。"
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"心灵",
+				"力量",
+				"寒冷"
+			],
+			"conditionInflict": [
+				"震慑",
+				"伏地",
+				"目盲"
+			],
+			"savingThrow": [
+				"感知",
+				"敏捷"
+			],
+			"miscTags": [
+				"RO",
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "削弱芒刺",
+			"ENG_name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你吸取射程内一个你可以看到的生物的生命力。目标必须进行一次体质豁免检定，否则将受到{@damage 1d4}点死灵伤害并进入{@condition 伏地}状态。",
+				"当你达到5级时，这个法术的伤害增加{@damage 1d4}（5级时{@damage 2d4}，11级时{@damage 3d4}，17级时{@damage 4d4}）。"
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"死灵"
+			],
+			"conditionInflict": [
+				"伏地"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"SCL",
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "时流刹转",
+			"ENG_name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "反应",
+					"condition": "当一个你能看到的生物进行攻击检定或开始施法时"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你将目标锁定在触发此效果的生物上，该生物必须进行一次智力豁免检定，否则将消失，被抛到另一个时间点，导致攻击落空或法术浪费。在其下一个回合开始时，目标会重新出现在原来的位置或最近的未被占据的空间。目标不会记得你施放了这个法术或受到了它的影响。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用6级或更高级别的法术位施放这个法术时，每超过5级的法术位，你可以额外选择一个目标。所有目标必须彼此距离在30英尺以内。"
+					]
+				}
+			],
+			"savingThrow": [
+				"感知"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "系结本源",
+			"ENG_name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一卷至少价值 250gp 的铂金丝线，在施法时被消耗。",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你可以看到的范围内的两个生物必须进行一次体质豁免掷骰，如果它们彼此距离在30英尺以内，则处于劣势。任何一个生物都可以自愿失败豁免。如果任一生物的豁免成功，则法术无效。如果两个生物的豁免都失败，它们在持续时间内被魔法连接，无论它们之间的距离如何。当其中一个生物受到伤害时，另一个生物也会受到相同的伤害。如果其中一个生物的血量得到恢复，另一个生物也会恢复相同数量的血量。如果任何一个被绑定的生物的血量降到0，这个法术在两个生物上都会结束。如果这个法术在一个生物上结束，它在另一个生物上也会结束。"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "时光蹂躏",
+			"ENG_name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个装满了钻石粉尘的沙漏，其价值至少为 5000 gp, 会在施法时消耗",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你选择一个在你范围内可以看到的生物，使其身体形态经历快速老化的破坏。目标必须进行一次体质豁免投掷，若失败则受到{@damage 10d12}点死灵伤害，若成功则只受到一半的伤害。如果豁免失败，目标还会老化到只剩下30天生命的地步。在这个老化状态下，目标在攻击投掷、能力检定和豁免投掷上都有劣势，并且其行走速度减半。只有通过施放{@spell 祈愿术}法术或使用9级法术位施放的{@spell 高等复原术}法术才能结束这些效果，并将目标恢复到之前的年龄。"
+			],
+			"damageInflict": [
+				"死灵"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "魔袋术",
+			"ENG_name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"你轻弹手腕，使得手中一个物体消失。这个物体只能由你持有，重量不得超过5磅，会被传送到一个异次元空间，在持续时间内它将留在那里。",
+				"直到法术结束，你可以使用你的行动将物品召唤到你的空闲手中，并且你可以使用你的行动将物品返回到异次元空间。当法术结束时，仍在口袋空间中的物品将出现在你的空间中，在你的脚下。"
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
 }

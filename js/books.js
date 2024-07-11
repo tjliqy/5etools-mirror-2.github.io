@@ -3,7 +3,7 @@
 class BooksList extends AdventuresBooksList {
 	constructor () {
 		super({
-			contentsUrl: `${DataUtil.data_dir()}/books.json`,
+			contentsUrl: `data/books.json`,
 			fnSort: AdventuresBooksList._sortAdventuresBooks.bind(AdventuresBooksList),
 			sortByInitial: "group",
 			sortDirInitial: "asc",

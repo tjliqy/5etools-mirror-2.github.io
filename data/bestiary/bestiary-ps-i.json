@@ -1,1800 +1,1800 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM",
-        "CoS"
-      ]
-    }
-  },
-  "monster": [
-    {
-      "name": "阿瓦辛",
-      "ENG_name": "Avacyn",
-      "isNamedCreature": true,
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "炽天神侍",
-        "ENG_name": "Solar",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "炽天神侍",
-            "with": "阿瓦辛",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "月银长矛",
-              "ENG_name": "Moonsilver Spear",
-              "entries": [
-                "月银之翼的天使挥舞着由赫尔沃特碎片制成的长矛。被这把武器伤害所失去的生命值只能通过短暂或长时间的休息来恢复，而不是通过再生、魔法或其他任何方式。每当天使在一轮中使用这个武器攻击并击中生物时，它可以对目标造成创伤。在每个受伤生物的回合开始时，它将根据天使造成创伤的次数，每次受到{@damage 1d4}的死灵伤害，然后可以进行一次{@dc 15}体质豁免检定，成功则结束所有此类创伤的效果。或者，受伤的生物或其5英尺范围内的生物可以使用动作进行一次{@dc 15}智慧（{@skill 医药}）技能检定，成功则结束它身上的此类创伤效果。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "布鲁娜",
-      "ENG_name": "Bruna",
-      "alias": [
-        "雪白之光"
-      ],
-      "isNamedCreature": true,
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "异界神侍",
-        "ENG_name": "Planetar",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "异域神侍",
-            "with": "布鲁娜",
-            "flags": "i"
-          },
-          "_": {
-            "mode": "addSpells",
-            "will": [
-              "{@spell 防护善恶}"
-            ],
-            "daily": {
-              "1e": [
-                "{@spell 反制善恶}"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "恐怖娃娃",
-      "ENG_name": "Creepy Doll",
-      "source": "PSI",
-      "page": 25,
-      "size": [
-        "T"
-      ],
-      "type": "construct",
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        12
-      ],
-      "hp": {
-        "average": 21,
-        "formula": "6d4 + 6"
-      },
-      "speed": {
-        "walk": 40
-      },
-      "str": 6,
-      "dex": 14,
-      "con": 13,
-      "int": 12,
-      "wis": 11,
-      "cha": 10,
-      "skill": {
-        "stealth": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "resist": [
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "毁灭诅咒"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧",
-        "麻痹"
-      ],
-      "languages": [
-        "能说并理解其创造者所知的语言"
-      ],
-      "cr": "2",
-      "trait": [
-        {
-          "name": "拟形",
-          "ENG_name": "False Appearance",
-          "entries": [
-            "当恐怖娃娃静止不动时，它与普通的无生命娃娃无法区分。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "这个诡异的娃娃用它的剪刀进行一次攻击，并使用心灵冲击。"
-          ]
-        },
-        {
-          "name": "剪刀",
-          "ENG_name": "Scissors",
-          "entries": [
-            "{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
-          ]
-        },
-        {
-          "name": "心灵冲击",
-          "ENG_name": "Psychic Assault",
-          "entries": [
-            "这个诡异的娃娃锁定了一个它能看到的，距离它10英尺以内的有大脑的生物。目标必须在智力豁免骰上成功，否则承受11点（2d10）心灵伤害。如果失败，还要掷骰3d6。如果总和等于或超过目标的智力值，那么智力值将降至0。目标将处于{@condition 昏迷}状态，直到它至少恢复一点智力，例如通过施放{@spell 更高恢复}法术或类似的魔法。"
-          ]
-        },
-        {
-          "name": "身体交换",
-          "ENG_name": "Body Exchange",
-          "entries": [
-            "这个诡异的娃娃与5英尺内的一个{@condition 无力}人形生物开始了一场智力比拼。如果它赢了这场比赛，诡异娃娃的灵魂就会占据目标的身体，而目标的灵魂则被安置在诡异娃娃的身体里。诡异娃娃完全控制了目标的身体。它保留了自己的阵营、智力、智慧、魅力，以及对被{@condition 魅惑}和{@condition 恐惧}的免疫。它在使用被附身目标的统计数据时，并没有获得目标的知识、职业特性或熟练度。目标在占据诡异娃娃的身体时保留了自己的阵营、智力、智慧和魅力。",
-            "身体交换持续到娃娃的灵魂被魔法驱逐为止。（{@spell 反制善恶}法术可以实现这一点，尽管娃娃并不是该法术通常结束附身状态的那种生物。）娃娃和目标必须相互距离5英尺以内，才能使这种效果生效。目标在赢得智力比拼或交换结束后的24小时内对这种娃娃的身体交换免疫。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "拟形"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "damageTags": [
-        "S",
-        "Y"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "conditionInflict": [
-        "震慑"
-      ],
-      "savingThrowForced": [
-        "智力"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "灰口恶魔领主",
-      "ENG_name": "Demonlord of Ashmouth",
-      "source": "PSI",
-      "page": 37,
-      "_copy": {
-        "name": "角魔",
-        "ENG_name": "Horned Devil",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "恶魔",
-            "with": "恶魔"
-          },
-          "action": [
-            {
-              "mode": "replaceArr",
-              "replace": "多重攻击",
-              "items": {
-                "name": "多重攻击",
-                "ENG_name": "Multiattack",
-                "entries": [
-                  "恶魔进行三次近战攻击：两次使用其战斧，一次使用其尾巴。它可以用投掷火焰代替任何一次近战攻击。"
-                ]
-              }
-            },
-            {
-              "mode": "replaceArr",
-              "replace": "叉刺",
-              "items": {
-                "name": "战斧",
-                "ENG_name": "Battleaxe",
-                "entries": [
-                  "{@atk 近战武器} 命中骰：10，射程10英尺，一个目标。{@h}造成15 ({@damage 2d8 + 6}) 点斩击伤害，如果用双手使用则造成17 ({@damage 2d10 + 6}) 点斩击伤害。"
-                ]
-              }
-            }
-          ]
-        }
-      },
-      "damageTags": [
-        "F",
-        "P",
-        "S"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "飞行雪花天使",
-      "ENG_name": "Flight Alabaster Angel",
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "天神使徒",
-        "ENG_name": "Deva",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "梵天神侍",
-            "with": "天使"
-          },
-          "_": {
-            "mode": "addSpells",
-            "will": [
-              "{@spell 防护善恶}"
-            ],
-            "daily": {
-              "1e": [
-                "{@spell 反制善恶}"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "飞行金夜天使",
-      "ENG_name": "Flight Goldnight Angel",
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "天神使徒",
-        "ENG_name": "Deva",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "梵天神侍",
-            "with": "天使"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "金夜威胁",
-              "ENG_name": "Goldnight Menace",
-              "entries": [
-                "作为一项行动，飞行黄金夜天使可以使敌人心生恐惧。天使选择的每个生物，如果它在120英尺范围内并且知道它的存在，必须进行一次智力豁免检定，否则在1分钟内变得{@condition 恐惧}。这个豁免检定的DC与天使的天赋施法特性相同。生物可以在每个回合结束时重复这个豁免检定，成功则结束此效果。如果生物的豁免检定成功或效果对它结束，那么生物在接下来的24小时内对那个天使的黄金夜威胁免疫。"
-              ]
-            }
-          }
-        }
-      },
-      "cr": "11",
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "月银之翼天使",
-      "ENG_name": "Flight of Moonsilver Angel",
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "天神使徒",
-        "ENG_name": "Deva",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "梵天神侍",
-            "with": "天使"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "月银长矛",
-              "ENG_name": "Moonsilver Spear",
-              "entries": [
-                "月银之翼的天使挥舞着由赫尔沃特碎片制成的长矛。被这把武器伤害所失去的生命值只能通过短暂或长时间的休息来恢复，而不是通过再生、魔法或其他任何方式。每当天使在一轮中使用这个武器攻击并击中生物时，它可以对目标造成创伤。在每个受伤生物的回合开始时，它将根据天使造成创伤的次数，每次受到{@damage 1d4}的死灵伤害，然后可以进行一次{@dc 15}体质豁免检定，成功则结束所有此类创伤的效果。或者，受伤的生物或其5英尺范围内的生物可以使用动作进行一次{@dc 15}智慧（{@skill 医药}）技能检定，成功则结束它身上的此类创伤效果。"
-              ]
-            }
-          }
-        }
-      },
-      "damageTags": [
-        "B",
-        "N",
-        "R"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "幽灵",
-      "ENG_name": "Geist",
-      "source": "PSI",
-      "page": 19,
-      "size": [
-        "M"
-      ],
-      "type": "undead",
-      "alignment": [
-        "A"
-      ],
-      "ac": [
-        11
-      ],
-      "hp": {
-        "average": 45,
-        "formula": "10d8"
-      },
-      "speed": {
-        "walk": 0,
-        "fly": 40
-      },
-      "str": 7,
-      "dex": 13,
-      "con": 10,
-      "int": 10,
-      "wis": 12,
-      "cha": 17,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 11,
-      "resist": [
-        "酸性",
-        "火",
-        "闪电",
-        "雷鸣伤害",
-        "钝击"
-      ],
-      "immune": [
-        "寒冷",
-        "死灵",
-        "毁灭诅咒"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧",
-        "被擒"
-      ],
-      "languages": [
-        "它生前所知的任何语言"
-      ],
-      "cr": "4",
-      "trait": [
-        {
-          "name": "乙太视界",
-          "ENG_name": "Ethereal Sight",
-          "entries": [
-            "当幽灵在物质界时，它可以看穿60英尺进入以太界，反之亦然。"
-          ]
-        },
-        {
-          "name": "虚体移动",
-          "ENG_name": "Incorporeal Movement",
-          "entries": [
-            "鬼魂可以像穿越困难地形一样穿越其他生物和物体，难度等级为3。如果它在物体内部结束回合，则会受到5点（{@dice 1d10}）力量伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "凋零之触",
-          "ENG_name": "Withering Touch",
-          "entries": [
-            "{@atk 近战武器} 命中骰：5，射程5英尺，一个目标。{@h}造成17 ({@damage 4d6 + 3}) 点死灵伤害。"
-          ]
-        },
-        {
-          "name": "以太化",
-          "ENG_name": "Etherealness",
-          "entries": [
-            "幽灵从物质位面进入以太位面，或者反之。当它处于边界以太状态时，在物质位面上是可见的，反之亦然，然而它不能影响或被另一个位面上的任何事物影响。"
-          ]
-        },
-        {
-          "name": "附身{@recharge}",
-          "ENG_name": "Possession {@recharge}",
-          "entries": [
-            "鬼灵可以看到的5英尺范围内的一个生物必须进行一次魅力豁免投掷（DC 13），否则将被鬼灵附身；鬼灵随即消失，目标进入{@condition 失去能力}状态并失去对自己身体的控制。鬼灵现在控制了身体，但并未剥夺目标的意识。鬼灵不能成为任何攻击、法术或其他效果的目标，除非是驱散不死生物的效果，并且它保留了自己的阵营、智力、智慧、魅力以及对{@condition 魅惑}和{@condition 恐惧}的免疫能力。除此之外，鬼灵使用被附身目标的属性，但不获得目标的知识、职业特性或熟练度。附身持续到身体的生命值降至0点，鬼灵作为奖励动作结束它，或者鬼灵被驱散或被类似{@spell 驱散善良与邪恶}法术的效果强制驱逐。当附身结束时，鬼灵在身体5英尺范围内的未被占据空间重新出现。目标在成功豁免投掷或附身结束后的24小时内对这种鬼灵的附身免疫。鬼灵也可以选择附身一个生物的尸体，有效地使用自己的生命力来活化尸体作为僵尸。活化的尸体使用僵尸的属性，并在鬼灵结束附身后返回死亡状态。"
-          ]
-        }
-      ],
-      "variant": [
-        {
-          "type": "variant",
-          "name": "幽灵能力",
-          "ENG_name": "Geist Powers",
-          "entries": [
-            "鬼魂的种类和它们生前的人类一样多样化。除了所有鬼魂都具备的特性和行动之外，个别鬼魂可能还具有以下特殊特征。",
-            {
-              "name": "无形美德",
-              "ENG_name": "Intangible Virtue",
-              "type": "entries",
-              "entries": [
-                "一个生物如果被一个白色对齐的幽灵附身，将获得对{@condition 魅惑}和{@condition 恐惧}状态的免疫，以及对来自非魔法攻击的钝击、穿刺和斩击伤害的抗性。当生物被附身时，幽灵可以允许它控制自己的身体，但幽灵可以随时重新获得控制权（无需动作）。"
-              ]
-            },
-            {
-              "name": "骇人面容",
-              "ENG_name": "Horrifying Visage",
-              "type": "entries",
-              "entries": [
-                "黑对齐的幽灵可以使自己变得非常可怕，即使它们在附身于活人时也是如此。每个在幽灵60英尺范围内并且能看到它的非亡灵生物必须进行一次DC 13的智慧豁免投掷，否则将被{@condition 惊恐}状态影响1分钟。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition 惊恐}状态的目标可以在每个回合结束时重复豁免投掷，成功则结束自身的{@condition 惊恐}状态。如果目标的豁免成功或效果对其结束，则目标在接下的24小时内对这只幽灵的可怕面容免疫。老化效果可以通过施放{@spell 高等复原术}法术来逆转，但必须在老化发生后的24小时内进行。"
-              ]
-            }
-          ]
-        }
-      ],
-      "traitTags": [
-        "虚体移动"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "LF"
-      ],
-      "damageTags": [
-        "N"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "conditionInflict": [
-        "无力"
-      ],
-      "savingThrowForced": [
-        "魅力",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true,
-      "_versions": [
-        {
-          "name": "鬼魂：恐怖面容",
-          "ENG_name": "Geist: Horrifying Visage",
-          "source": "PSI",
-          "_mod": {
-            "action": {
-              "mode": "appendArr",
-              "items": {
-                "name": "骇人面容",
-                "ENG_name": "Horrifying Visage",
-                "entries": [
-                  "黑对齐的幽灵可以使自己变得非常可怕，即使它们在附身于活人时也是如此。每个在幽灵60英尺范围内并且能看到它的非亡灵生物必须进行一次DC 13的智慧豁免投掷，否则将被{@condition 惊恐}状态影响1分钟。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition 惊恐}状态的目标可以在每个回合结束时重复豁免投掷，成功则结束自身的{@condition 惊恐}状态。如果目标的豁免成功或效果对其结束，则目标在接下的24小时内对这只幽灵的可怕面容免疫。老化效果可以通过施放{@spell 高等复原术}法术来逆转，但必须在老化发生后的24小时内进行。"
-                ]
-              }
-            }
-          },
-          "variant": null,
-          "conditionInflict": [
-            "恐惧",
-            "无力"
-          ]
-        },
-        {
-          "name": "幽灵：无形美德",
-          "ENG_name": "Geist: Intangible Virtue",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "无形美德",
-                "ENG_name": "Intangible Virtue",
-                "entries": [
-                  "一个生物如果被一个白色对齐的幽灵附身，将获得对{@condition 魅惑}和{@condition 恐惧}状态的免疫，以及对来自非魔法攻击的钝击、穿刺和斩击伤害的抗性。当生物被附身时，幽灵可以允许它控制自己的身体，但幽灵可以随时重新获得控制权（无需动作）。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        }
-      ]
-    },
-    {
-      "name": "吉塞拉",
-      "ENG_name": "Gisela",
-      "alias": [
-        "金夜之刃",
-        "教堂之刃"
-      ],
-      "isNamedCreature": true,
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "异界神侍",
-        "ENG_name": "Planetar",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "异界神侍",
-            "with": "吉塞拉",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "金夜威胁",
-              "ENG_name": "Goldnight Menace",
-              "entries": [
-                "作为一项行动，飞行黄金夜天使可以使敌人心生恐惧。天使选择的每个生物，如果它在120英尺范围内并且知道它的存在，必须进行一次智力豁免检定，否则在1分钟内变得{@condition 恐惧}。这个豁免检定的DC与天使的天赋施法特性相同。生物可以在每个回合结束时重复这个豁免检定，成功则结束此效果。如果生物的豁免检定成功或效果对它结束，那么生物在接下来的24小时内对那个天使的黄金夜威胁免疫。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "苍鹭之群天使",
-      "ENG_name": "Host of Herons Angel",
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "天神使徒",
-        "ENG_name": "Deva",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "梵天神侍",
-            "with": "天使"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "苍鹭保护",
-              "ENG_name": "Heron Protection",
-              "entries": [
-                "每当苍鹭之群天使或其10英尺范围内的友方生物进行豁免检定时，该生物获得等于天使魅力调整值的加值。天使必须保持意识清醒才能获得或授予此加值。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "羽毛守护者",
-      "ENG_name": "Keeper of the Feather",
-      "group": null,
-      "source": "PSI",
-      "page": 40,
-      "_copy": {
-        "name": "鸦人",
-        "ENG_name": "Wereraven",
-        "source": "VRGR",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "鸦人",
-            "with": "守护者"
-          },
-          "action": [
-            {
-              "mode": "replaceArr",
-              "replace": "喙（仅限乌鸦形态或混合形态）",
-              "items": {
-                "name": "喙（仅限乌鸦形态或混合形态）",
-                "ENG_name": "Beak (Raven or Hybrid Form Only)",
-                "entries": [
-                  "{@atk 近战武器} 命中骰：4，射程5英尺，单一目标。{@h}在乌鸦形态下造成1点穿刺伤害，或在混合形态下造成4（{@damage 1d4 + 2}）点穿刺伤害。"
-                ]
-              }
-            }
-          ]
-        }
-      },
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "守护者是一个4级施法者。它的施法能力是智慧（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。它准备了以下德鲁伊法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 德鲁伊伎俩}",
-                "{@spell 燃火术}",
-                "{@spell 橡棍术}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 纠缠术}",
-                "{@spell 大步奔行}",
-                "{@spell 动物交谈术}",
-                "{@spell 雷鸣波}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 动物信使}",
-                "{@spell 树肤术}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "damageTagsSpell": [
-        "F",
-        "T"
-      ],
-      "spellcastingTags": [
-        "CD"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "力量"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "死灵炼金术士",
-      "ENG_name": "Necro-Alchemist",
-      "alias": [
-        "鬼魂法师"
-      ],
-      "source": "PSI",
-      "page": 20,
-      "_copy": {
-        "name": "魔法师",
-        "ENG_name": "Mage",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "魔法师",
-            "with": "死灵炼金术士",
-            "flags": "i"
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "西格达",
-      "ENG_name": "Sigarda",
-      "isNamedCreature": true,
-      "source": "PSI",
-      "page": 26,
-      "_copy": {
-        "name": "异界神侍",
-        "ENG_name": "Planetar",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "异界神侍",
-            "with": "西格达",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": {
-              "name": "苍鹭保护",
-              "ENG_name": "Heron Protection",
-              "entries": [
-                "每当苍鹭之群天使或其10英尺范围内的友方生物进行豁免检定时，该生物获得等于天使魅力调整值的加值。天使必须保持意识清醒才能获得或授予此加值。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "斯卡布",
-      "ENG_name": "Skaab",
-      "source": "PSI",
-      "page": 20,
-      "_copy": {
-        "name": "肉身魔像",
-        "ENG_name": "Flesh Golem",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "魔像",
-            "with": "斯卡布",
-            "flags": "i"
-          }
-        }
-      },
-      "variant": [
-        {
-          "type": "variant",
-          "name": "斯卡布",
-          "ENG_name": "Skaabs",
-          "entries": [
-            "最基本的斯卡布仅仅是《怪物手册》中描述的{@creature 血肉魔像|MM|肉身魔像}。但每个斯卡布制造者的愿望是创造出一个真正独特的杰作，这可能促使缝合者制造具有以下特殊特征之一的魔像。",
-            {
-              "type": "entries",
-              "name": "装甲板",
-              "ENG_name": "Armor Plating",
-              "page": 20,
-              "entries": [
-                "将骷髅的护甲等级提高到14，并将它的挑战等级提高到6（2,300经验值）。"
-              ]
-            },
-            {
-              "name": "六臂",
-              "ENG_name": "Six Arms",
-              "type": "entries",
-              "entries": [
-                "斯卡布的多重攻击动作允许它进行三次猛击攻击。将其挑战等级提高到6（2300经验值）。"
-              ]
-            },
-            {
-              "name": "三个头",
-              "ENG_name": "Three Heads",
-              "type": "entries",
-              "entries": [
-                "骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。（它的挑战等级不变。）"
-              ]
-            },
-            {
-              "name": "尸偶巨人",
-              "ENG_name": "Skaab Goliath",
-              "type": "entries",
-              "entries": [
-                "这个斯卡布有三个头，六只手臂和装甲板。将其挑战等级提高到7（2900 XP）。"
-              ]
-            },
-            {
-              "name": "翼斯卡布",
-              "ENG_name": "Winged Skaab",
-              "type": "entries",
-              "entries": [
-                "斯卡布的飞行速度为30英尺。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "_versions": [
-        {
-          "name": "斯卡布：装甲板",
-          "ENG_name": "Skaab: Armor Plating",
-          "source": "PSI",
-          "ac": [
-            {
-              "ac": 14,
-              "from": [
-                "装甲板"
-              ]
-            }
-          ],
-          "cr": "6",
-          "variant": null
-        },
-        {
-          "name": "斯卡布：巨人",
-          "ENG_name": "Skaab: Goliath",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "三个头",
-                "ENG_name": "Three Heads",
-                "entries": [
-                  "骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。"
-                ]
-              }
-            },
-            "action": {
-              "mode": "replaceArr",
-              "replace": "多重攻击",
-              "items": {
-                "name": "多重攻击",
-                "ENG_name": "Multiattack",
-                "entries": [
-                  "斯卡布进行三次猛击攻击。"
-                ]
-              }
-            }
-          },
-          "ac": [
-            {
-              "ac": 14,
-              "from": [
-                "装甲板"
-              ]
-            }
-          ],
-          "cr": "7",
-          "variant": null
-        },
-        {
-          "name": "骷髅：六臂",
-          "ENG_name": "Skaab: Six Arms",
-          "source": "PSI",
-          "_mod": {
-            "action": {
-              "mode": "replaceArr",
-              "replace": "多重攻击",
-              "items": {
-                "name": "多重攻击",
-                "ENG_name": "Multiattack",
-                "entries": [
-                  "斯卡布进行三次猛击攻击。"
-                ]
-              }
-            }
-          },
-          "cr": "6",
-          "variant": null
-        },
-        {
-          "name": "斯卡布：三个头",
-          "ENG_name": "Skaab: Three Heads",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "三个头",
-                "ENG_name": "Three Heads",
-                "entries": [
-                  "骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        },
-        {
-          "name": "翼斯卡布",
-          "ENG_name": "Skaab: Winged",
-          "source": "PSI",
-          "speed": {
-            "walk": 30,
-            "fly": 30
-          },
-          "variant": null
-        }
-      ]
-    },
-    {
-      "name": "斯特凡·毛勒",
-      "ENG_name": "Strefan Maurer",
-      "isNamedCreature": true,
-      "source": "PSI",
-      "page": 33,
-      "_copy": {
-        "name": "施特拉德·冯·扎洛维奇",
-        "ENG_name": "Strahd von Zarovich",
-        "source": "CoS",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "斯特拉德",
-            "with": "斯特凡",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "replaceArr",
-            "replace": "吸血鬼弱点",
-            "items": {
-              "type": "entries",
-              "name": "吸血鬼的弱点",
-              "ENG_name": "Vampire Vulnerabilities",
-              "source": "PSI",
-              "page": 16,
-              "entries": [
-                "用活木制成的武器对吸血鬼特别有效，尽管任何武器都能伤害或杀死它们。吸血鬼不能越过反射着月亮的流水，被阿瓦辛（{@item 圣水(扁瓶装)|PHB|圣水}）祝福过的水像酸一样烧灼吸血鬼的肉体。吸血鬼在银器中的倒影（包括银背玻璃镜）看起来像吸血鬼没有吸血鬼状态时的样子——既不是它的真实面貌也不是它的幻象，而是一个普通的人类，带着所有的缺陷。因此，吸血鬼会竭尽全力避免镜子，任何形式的银器对它们来说都是令人不安的。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "吸血鬼新生儿",
-      "ENG_name": "Vampire Neonate",
-      "source": "PSI",
-      "page": 17,
-      "size": [
-        "M"
-      ],
-      "type": "undead",
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 82,
-        "formula": "11d8 + 33"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 16,
-      "con": 16,
-      "int": 11,
-      "wis": 10,
-      "cha": 12,
-      "save": {
-        "dex": "+6",
-        "wis": "+3"
-      },
-      "skill": {
-        "perception": "+3",
-        "stealth": "+6"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 13,
-      "resist": [
-        "死灵",
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击且不是用活木武器进行的攻击",
-          "cond": true
-        }
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "5",
-      "trait": [
-        {
-          "name": "再生",
-          "ENG_name": "Regeneration",
-          "entries": [
-            "如果吸血鬼至少有1点生命值，它在自己的回合开始时恢复10点生命值。如果吸血鬼受到圣光伤害或圣水伤害，这个特性在吸血鬼下一个回合开始时不会生效。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "吸血鬼进行两次攻击，其中只有一次可以是咬击。"
-          ]
-        },
-        {
-          "name": "爪抓",
-          "ENG_name": "Claws",
-          "entries": [
-            "{@atk 近战武器} 命中骰：6，射程5英尺，单一生物。{@h}造成8（{@damage 2d4 + 3}）点斩击伤害。吸血鬼可以选择不造成伤害，而是对目标进行摔跤（逃脱DC 13）。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器攻击} {@hit 6}命中，射程5英尺，一个愿意的生物，或者被吸血鬼{@condition 抓住}、{@condition 无力}或{@condition 束缚}的生物。{@h}6（{@damage 1d6 + 3}）穿刺伤害加上7（{@damage 2d6}）死灵伤害。目标的生命值上限减少，减少量等于所受死灵伤害，吸血鬼恢复等于该量的生命值。这种减少持续到目标完成一次长休息。如果这个效果将目标的生命值上限减少到0，目标将死亡。"
-          ]
-        },
-        {
-          "name": "吸血鬼的魅惑",
-          "ENG_name": "Vampiric Glamer",
-          "entries": [
-            "吸血鬼使用影响心智的魔法模糊其形态，使其他人将其感知为相同大小和形状的美丽人类。如果吸血鬼采取奖励动作结束这个幻象，或者吸血鬼死亡，幻象就会结束。能够看到吸血鬼的生物可以采取行动进行视觉检查，通过成功的20点智慧（{@skill 感知}）检定，结束自身的心理效果并看到吸血鬼的真实形态。"
-          ]
-        },
-        {
-          "name": "沉默光环",
-          "ENG_name": "Aura of Silence",
-          "entries": [
-            "吸血鬼将自己笼罩在2英尺半径的沉默斗篷中。在这个半径内，效果与{@spell 沉默术}法术相同。"
-          ]
-        }
-      ],
-      "variant": [
-        {
-          "type": "variant",
-          "name": "长老吸血鬼",
-          "ENG_name": "Elder Vampires",
-          "entries": [
-            "基本吸血鬼统计数据代表一个“新生儿”——一个新诞生的吸血鬼。年长的吸血鬼可以学习许多不同类型的强大魔法，并且可能拥有以下任何特征和能力。",
-            {
-              "type": "entries",
-              "name": "变形生物",
-              "ENG_name": "Shapechanger",
-              "entries": [
-                "这个吸血鬼具有《怪物手册》中{@creature 吸血鬼}的变形者特性，以及变形者标签。一些吸血鬼可以变成蝙蝠形态，一些可以变成雾气形态，还有一些可以选择任一形态。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "魅惑",
-              "ENG_name": "Charm",
-              "entries": [
-                "吸血鬼拥有《怪物手册》中{@creature 吸血鬼}的魅惑动作。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "飞行",
-              "ENG_name": "Flight",
-              "entries": [
-                "吸血鬼拥有30英尺的飞行速度。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "吞噬者",
-              "ENG_name": "Gorger",
-              "entries": [
-                "吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "施法",
-              "ENG_name": "Spellcasting",
-              "entries": [
-                "吸血鬼具有巫师或牧师的施法能力。"
-              ]
-            }
-          ]
-        }
-      ],
-      "traitTags": [
-        "再生"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "N",
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "高防护等级(High Protection Rating)",
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true,
-      "_versions": [
-        {
-          "name": "远古吸血鬼：所有能力",
-          "ENG_name": "Elder Vampire: All Abilities",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": [
-                {
-                  "name": "变形生物",
-                  "ENG_name": "Shapechanger",
-                  "entries": [
-                    "如果吸血鬼不在阳光直射下或处于流动水中，它可以使用其行动来变化为一只小型蝙蝠或中型雾云，或者恢复其真实形态。",
-                    "当吸血鬼处于蝙蝠形态时，它不能说话，其行走速度为5英尺，并且它有30英尺的飞行速度。除了它的大小和速度之外，它的其他统计数据没有变化。它所穿戴的任何物品会随着它一起变形，但它所携带的任何物品则不会。如果它死亡，它将恢复其真实形态。",
-                    "当处于雾形态时，吸血鬼不能采取任何行动，说话或操纵物体。它是无重量的，具有20英尺的飞行速度，可以悬停，并可以进入敌对生物的空间并停留在那里。此外，如果空气可以通过一个空间，雾也可以在不挤压的情况下通过，并且它不能通过水。它在力量、敏捷和体质豁免投掷上具有优势，并且对所有非魔法伤害免疫，除了它从阳光下受到的伤害。"
-                  ]
-                },
-                {
-                  "name": "吞噬者",
-                  "ENG_name": "Gorger",
-                  "entries": [
-                    "吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
-                  ]
-                }
-              ]
-            },
-            "action": {
-              "mode": "appendArr",
-              "items": {
-                "name": "魅惑",
-                "ENG_name": "Charm",
-                "entries": [
-                  "吸血鬼针对它能看到的30英尺范围内的一个类人生物。如果目标能看到吸血鬼，目标必须通过一次17点智慧豁免投掷来对抗这种魔法，否则会被吸血鬼{@condition 魅惑}。被{@condition 魅惑}的目标将吸血鬼视为一个值得信赖的朋友，应予以听从和保护。尽管目标不受吸血鬼的控制，但它会尽可能以最有利的方式接受吸血鬼的请求或行动，并且是吸血鬼咬击攻击的自愿目标。",
-                  "每当吸血鬼或吸血鬼的同伴对目标造成任何伤害时，目标可以重复进行豁免检定，成功则结束自身的效果。否则，效果持续24小时，或直到吸血鬼被摧毁，与目标处于不同的存在层面，或采取奖励动作结束效果。"
-                ]
-              }
-            }
-          },
-          "type": {
-            "type": "undead",
-            "tags": [
-              "shapechanger"
-            ]
-          },
-          "speed": {
-            "walk": 30,
-            "fly": 30
-          },
-          "spellcasting": [
-            {
-              "name": "牧师施法",
-              "ENG_name": "Cleric Spellcasting",
-              "headerEntries": [
-                "{@note 已使用{@creature Priest|MM}作为示例牧师。}",
-                "吸血鬼是一个5级施法者。它的施法能力是智慧（法术豁免DC 13，法术攻击命中5）。吸血鬼准备了以下牧师法术："
-              ],
-              "spells": {
-                "0": {
-                  "spells": [
-                    "{@spell 光亮术}",
-                    "{@spell 圣焰}",
-                    "{@spell 奇术}"
-                  ]
-                },
-                "1": {
-                  "slots": 4,
-                  "spells": [
-                    "{@spell 治疗伤势}",
-                    "{@spell 光导箭}",
-                    "{@spell 圣域术}"
-                  ]
-                },
-                "2": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 次级复原术}",
-                    "{@spell 灵体武器}"
-                  ]
-                },
-                "3": {
-                  "slots": 2,
-                  "spells": [
-                    "{@spell 解除魔法}",
-                    "{@spell 灵体守卫}"
-                  ]
-                }
-              },
-              "ability": "wis"
-            },
-            {
-              "name": "巫师施法",
-              "ENG_name": "Wizard Spellcasting",
-              "headerEntries": [
-                "{@note 《{@creature 法师|MM}》已被用作示例巫师。}",
-                "吸血鬼是一个9级施法者。它的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。吸血鬼准备了以下巫师法术："
-              ],
-              "spells": {
-                "0": {
-                  "spells": [
-                    "{@spell 火焰箭}",
-                    "{@spell 光亮术}",
-                    "{@spell 法师之手}",
-                    "{@spell 魔法技俩}"
-                  ]
-                },
-                "1": {
-                  "slots": 4,
-                  "spells": [
-                    "{@spell 侦测魔法}",
-                    "{@spell 法师护甲}",
-                    "{@spell 魔法飞弹}",
-                    "{@spell 护盾术}"
-                  ]
-                },
-                "2": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 迷踪步}",
-                    "{@spell 暗示术}"
-                  ]
-                },
-                "3": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 反制法术}",
-                    "{@spell 火球术}",
-                    "{@spell 飞行术}"
-                  ]
-                },
-                "4": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 高等隐形术}",
-                    "{@spell 冰风暴}"
-                  ]
-                },
-                "5": {
-                  "slots": 1,
-                  "spells": [
-                    "{@spell 寒冰锥}"
-                  ]
-                }
-              },
-              "ability": "int"
-            }
-          ],
-          "variant": null
-        },
-        {
-          "name": "远古吸血鬼：魅惑",
-          "ENG_name": "Elder Vampire: Charm",
-          "source": "PSI",
-          "_mod": {
-            "action": {
-              "mode": "appendArr",
-              "items": {
-                "name": "魅惑",
-                "ENG_name": "Charm",
-                "entries": [
-                  "吸血鬼针对它能看到的30英尺范围内的一个类人生物。如果目标能看到吸血鬼，目标必须通过一次17点智慧豁免投掷来对抗这种魔法，否则会被吸血鬼{@condition 魅惑}。被{@condition 魅惑}的目标将吸血鬼视为一个值得信赖的朋友，应予以听从和保护。尽管目标不受吸血鬼的控制，但它会尽可能以最有利的方式接受吸血鬼的请求或行动，并且是吸血鬼咬击攻击的自愿目标。",
-                  "每当吸血鬼或吸血鬼的同伴对目标造成任何伤害时，目标可以重复进行豁免检定，成功则结束自身的效果。否则，效果持续24小时，或直到吸血鬼被摧毁，与目标处于不同的存在层面，或采取奖励动作结束效果。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        },
-        {
-          "name": "长老吸血鬼：飞行",
-          "ENG_name": "Elder Vampire: Flight",
-          "source": "PSI",
-          "speed": {
-            "walk": 30,
-            "fly": 30
-          },
-          "variant": null
-        },
-        {
-          "name": "长老吸血鬼：吞噬者",
-          "ENG_name": "Elder Vampire: Gorger",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "吞噬者",
-                "ENG_name": "Gorger",
-                "entries": [
-                  "吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        },
-        {
-          "name": "长老吸血鬼：变形者",
-          "ENG_name": "Elder Vampire: Shapechanger",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "变形生物",
-                "ENG_name": "Shapechanger",
-                "entries": [
-                  "如果吸血鬼不在阳光直射下或处于流动水中，它可以使用其行动来变化为一只小型蝙蝠或中型雾云，或者恢复其真实形态。",
-                  "当吸血鬼处于蝙蝠形态时，它不能说话，其行走速度为5英尺，并且它有30英尺的飞行速度。除了它的大小和速度之外，它的其他统计数据没有变化。它所穿戴的任何物品会随着它一起变形，但它所携带的任何物品则不会。如果它死亡，它将恢复其真实形态。",
-                  "当处于雾形态时，吸血鬼不能采取任何行动，说话或操纵物体。它是无重量的，具有20英尺的飞行速度，可以悬停，并可以进入敌对生物的空间并停留在那里。此外，如果空气可以通过一个空间，雾也可以在不挤压的情况下通过，并且它不能通过水。它在力量、敏捷和体质豁免投掷上具有优势，并且对所有非魔法伤害免疫，除了它从阳光下受到的伤害。"
-                ]
-              }
-            }
-          },
-          "type": {
-            "type": "undead",
-            "tags": [
-              "shapechanger"
-            ]
-          },
-          "variant": null
-        },
-        {
-          "name": "长老吸血鬼：牧师施法",
-          "ENG_name": "Elder Vampire: Spellcasting—Cleric",
-          "source": "PSI",
-          "spellcasting": [
-            {
-              "name": "施法",
-              "ENG_name": "Spellcasting",
-              "headerEntries": [
-                "{@note 已使用{@creature Priest|MM}作为示例牧师。}",
-                "吸血鬼是一个5级施法者。它的施法能力是智慧（法术豁免DC 13，法术攻击命中5）。吸血鬼准备了以下牧师法术："
-              ],
-              "spells": {
-                "0": {
-                  "spells": [
-                    "{@spell 光亮术}",
-                    "{@spell 圣焰}",
-                    "{@spell 奇术}"
-                  ]
-                },
-                "1": {
-                  "slots": 4,
-                  "spells": [
-                    "{@spell 治疗伤势}",
-                    "{@spell 光导箭}",
-                    "{@spell 圣域术}"
-                  ]
-                },
-                "2": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 次级复原术}",
-                    "{@spell 灵体武器}"
-                  ]
-                },
-                "3": {
-                  "slots": 2,
-                  "spells": [
-                    "{@spell 解除魔法}",
-                    "{@spell 灵体守卫}"
-                  ]
-                }
-              },
-              "ability": "wis"
-            }
-          ],
-          "variant": null
-        },
-        {
-          "name": "远古吸血鬼：施法—巫师",
-          "ENG_name": "Elder Vampire: Spellcasting—Wizard",
-          "source": "PSI",
-          "spellcasting": [
-            {
-              "name": "施法",
-              "ENG_name": "Spellcasting",
-              "headerEntries": [
-                "{@note 《{@creature 法师|MM}》已被用作示例巫师。}",
-                "吸血鬼是一个9级施法者。它的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。吸血鬼准备了以下巫师法术："
-              ],
-              "spells": {
-                "0": {
-                  "spells": [
-                    "{@spell 火焰箭}",
-                    "{@spell 光亮术}",
-                    "{@spell 法师之手}",
-                    "{@spell 魔法技俩}"
-                  ]
-                },
-                "1": {
-                  "slots": 4,
-                  "spells": [
-                    "{@spell 侦测魔法}",
-                    "{@spell 法师护甲}",
-                    "{@spell 魔法飞弹}",
-                    "{@spell 护盾术}"
-                  ]
-                },
-                "2": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 迷踪步}",
-                    "{@spell 暗示术}"
-                  ]
-                },
-                "3": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 反制法术}",
-                    "{@spell 火球术}",
-                    "{@spell 飞行术}"
-                  ]
-                },
-                "4": {
-                  "slots": 3,
-                  "spells": [
-                    "{@spell 高等隐形术}",
-                    "{@spell 冰风暴}"
-                  ]
-                },
-                "5": {
-                  "slots": 1,
-                  "spells": [
-                    "{@spell 寒冰锥}"
-                  ]
-                }
-              },
-              "ability": "int"
-            }
-          ],
-          "variant": null
-        }
-      ]
-    },
-    {
-      "name": "狼人（克拉伦部落）",
-      "ENG_name": "Werewolf (Krallenhorde)",
-      "source": "PSI",
-      "page": 15,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human",
-          "shapechanger"
-        ]
-      },
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 11,
-          "condition": "在类人形态下"
-        },
-        {
-          "ac": 12,
-          "from": [
-            "天生护甲"
-          ],
-          "condition": "在犬科动物形态中"
-        }
-      ],
-      "hp": {
-        "average": 58,
-        "formula": "9d8 + 18"
-      },
-      "speed": {
-        "walk": {
-          "number": 30,
-          "condition": "(在犬形态下40英尺)"
-        }
-      },
-      "str": 15,
-      "dex": 13,
-      "con": 14,
-      "int": 10,
-      "wis": 11,
-      "cha": 10,
-      "skill": {
-        "perception": "+4",
-        "stealth": "+3"
-      },
-      "passive": 14,
-      "immune": [
-        {
-          "immune": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击且未使用银制武器",
-          "cond": true
-        }
-      ],
-      "languages": [
-        "通用（在犬形态下不能说话）"
-      ],
-      "cr": "3",
-      "trait": [
-        {
-          "name": "变形生物",
-          "ENG_name": "Shapechanger",
-          "entries": [
-            "狼人在月相的控制下，或者由于创伤或强烈情绪的影响，可以变化为狼人形态，或者恢复其真正的人类形态。这种变化除了它的护甲等级（AC）之外，每种形态下的其他统计数据都是相同的。它穿戴或携带的任何装备都不会被转变。如果它死亡，它会恢复其真正的人类形态。"
-          ]
-        },
-        {
-          "name": "敏锐听觉和嗅觉",
-          "ENG_name": "Keen Hearing and Smell",
-          "entries": [
-            "狼人在依靠听觉或嗅觉的智力（{@skill 察觉}）检定上具有优势。"
-          ]
-        },
-        {
-          "name": "嚎叫族群：维尔丁",
-          "ENG_name": "Howlpack: Vildin",
-          "entries": [
-            "维尔丁狂暴（仅限犬形态）。当狼人在它的回合用近战攻击将一个生物的生命值降至0点时，它可以采取一个奖励动作，移动至多其速度的一半，并进行咬击攻击。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击（仅限犬形态）",
-          "ENG_name": "Multiattack (Canid Form Only)",
-          "entries": [
-            "狼人进行两次攻击：一次用其咬击，一次用其爪击或矛击。"
-          ]
-        },
-        {
-          "name": "咬击（仅限犬形态）",
-          "ENG_name": "Bite (Canid Form Only)",
-          "entries": [
-            "{@atk 近战武器} 命中：4，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 点穿刺伤害。"
-          ]
-        },
-        {
-          "name": "爪子（仅限犬科动物形态）",
-          "ENG_name": "Claws (Canid Form Only)",
-          "entries": [
-            "{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
-          ]
-        },
-        {
-          "name": "长矛（仅限人形态）",
-          "ENG_name": "Spear (Human Form Only)",
-          "entries": [
-            "{@atk 近战，远程} {@hit 4} 命中，触及范围5英尺或射程20/60英尺，一个目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害，或者如果用双手进行近战攻击则为6 ({@damage 1d8 + 2}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "variant": [
-        {
-          "type": "variant",
-          "name": "嚎叫族特征",
-          "ENG_name": "Howlpack Traits",
-          "entries": [
-            "基本的狼人统计数据代表克拉伦霍德的成员，这是因尼斯特拉德最大的嚎叫群体。其他群体的狼人可能具有以下等额外能力。",
-            {
-              "name": "维尔丁狂暴（仅限犬形态）",
-              "ENG_name": "Vildin Rampage (Canid Form Only)",
-              "type": "entries",
-              "entries": [
-                "当狼人在它的回合用近战攻击将一个生物减少到0生命值时，它可以用额外动作移动至多其速度的一半，并进行一次咬击。"
-              ]
-            },
-            {
-              "name": "蒙德罗宁狂怒",
-              "ENG_name": "Mondronen Wounded Fury",
-              "type": "entries",
-              "entries": [
-                "当狼人的生命值或更少于10点时，它在攻击检定上拥有优势。此外，它用近战攻击命中任何目标时，会额外造成7（{@damage 2d6}）点伤害。"
-              ]
-            },
-            {
-              "name": "利拉格血狂",
-              "ENG_name": "Leeraug Blood Frenzy",
-              "type": "entries",
-              "entries": [
-                "狼人在对任何生命值不满的生物进行近战攻击骰时具有优势。"
-              ]
-            }
-          ]
-        }
-      ],
-      "attachedItems": [
-        "矛|PHB"
-      ],
-      "traitTags": [
-        "敏锐感官",
-        "变形生物"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "CS"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true,
-      "_versions": [
-        {
-          "name": "狼人（利拉格）",
-          "ENG_name": "Werewolf (Leeraug)",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "利拉格血狂",
-                "ENG_name": "Leeraug Blood Frenzy",
-                "entries": [
-                  "狼人在对任何生命值不满的生物进行近战攻击骰时具有优势。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        },
-        {
-          "name": "狼人（蒙德罗宁）",
-          "ENG_name": "Werewolf (Mondronen)",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "蒙德罗宁狂怒",
-                "ENG_name": "Mondronen Wounded Fury",
-                "entries": [
-                  "当狼人的生命值或更少于10点时，它在攻击检定上拥有优势。此外，它用近战攻击命中任何目标时，会额外造成7（{@damage 2d6}）点伤害。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        },
-        {
-          "name": "狼人（维尔丁）",
-          "ENG_name": "Werewolf (Vildin)",
-          "source": "PSI",
-          "_mod": {
-            "trait": {
-              "mode": "appendArr",
-              "items": {
-                "name": "维尔丁狂暴（仅限犬形态）",
-                "ENG_name": "Vildin Rampage (Canid Form Only)",
-                "entries": [
-                  "当狼人在它的回合用近战攻击将一个生物减少到0生命值时，它可以用额外动作移动至多其速度的一半，并进行一次咬击。"
-                ]
-              }
-            }
-          },
-          "variant": null
-        }
-      ]
-    },
-    {
-      "name": "僵尸猫",
-      "ENG_name": "Zombie Cat",
-      "source": "PSI",
-      "page": 17,
-      "_copy": {
-        "name": "猫",
-        "ENG_name": "Cat",
-        "source": "MM"
-      },
-      "type": "undead",
-      "trait": [
-        {
-          "name": "不死韧性",
-          "ENG_name": "Undead Fortitude",
-          "entries": [
-            "如果伤害使猫的生命值降至0点，除非伤害是辐射伤害或来自致命一击，否则它必须进行一次体质豁免投掷，难度等级（DC）为5加上所受伤害。如果成功，猫的生命值降至1点而不是0。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "不死韧性"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "僵尸鼠",
-      "ENG_name": "Zombie Rat",
-      "source": "PSI",
-      "page": 17,
-      "_copy": {
-        "name": "老鼠",
-        "ENG_name": "Rat",
-        "source": "MM"
-      },
-      "type": "undead",
-      "trait": [
-        {
-          "name": "不死韧性",
-          "ENG_name": "Undead Fortitude",
-          "entries": [
-            "如果伤害使老鼠的生命值降至0点，除非伤害是圣光伤害或来自致命一击，否则它必须进行一次体质豁免检定，难度等级为5加上所受伤害。如果成功，老鼠的生命值降至1点。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "不死韧性"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "僵尸蛇",
-      "ENG_name": "Zombie Snake",
-      "source": "PSI",
-      "page": 17,
-      "_copy": {
-        "name": "毒蛇",
-        "ENG_name": "Poisonous Snake",
-        "source": "MM"
-      },
-      "type": "undead",
-      "trait": [
-        {
-          "name": "不死韧性",
-          "ENG_name": "Undead Fortitude",
-          "entries": [
-            "如果伤害使蛇的生命值降至0点，除非伤害是辐射伤害或来自致命一击，否则它必须进行一次体质豁免投掷，难度等级为5加上所受伤害。成功的话，蛇的生命值会降至1点而不是死亡。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "不死韧性"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "阿瓦辛",
+			"ENG_name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "炽天神侍",
+				"ENG_name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "炽天神侍",
+						"with": "阿瓦辛",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "月银长矛",
+							"ENG_name": "Moonsilver Spear",
+							"entries": [
+								"月银之翼的天使挥舞着由赫尔沃特碎片制成的长矛。被这把武器伤害所失去的生命值只能通过短暂或长时间的休息来恢复，而不是通过再生、魔法或其他任何方式。每当天使在一轮中使用这个武器攻击并击中生物时，它可以对目标造成创伤。在每个受伤生物的回合开始时，它将根据天使造成创伤的次数，每次受到{@damage 1d4}的死灵伤害，然后可以进行一次{@dc 15}体质豁免检定，成功则结束所有此类创伤的效果。或者，受伤的生物或其5英尺范围内的生物可以使用动作进行一次{@dc 15}智慧（{@skill 医药}）技能检定，成功则结束它身上的此类创伤效果。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "布鲁娜",
+			"ENG_name": "Bruna",
+			"alias": [
+				"雪白之光"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "异界神侍",
+				"ENG_name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "异域神侍",
+						"with": "布鲁娜",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell 防护善恶}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell 反制善恶}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "恐怖娃娃",
+			"ENG_name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击",
+					"cond": true
+				}
+			],
+			"immune": [
+				"毁灭诅咒"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧",
+				"麻痹"
+			],
+			"languages": [
+				"能说并理解其创造者所知的语言"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "拟形",
+					"ENG_name": "False Appearance",
+					"entries": [
+						"当恐怖娃娃静止不动时，它与普通的无生命娃娃无法区分。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"这个诡异的娃娃用它的剪刀进行一次攻击，并使用心灵冲击。"
+					]
+				},
+				{
+					"name": "剪刀",
+					"ENG_name": "Scissors",
+					"entries": [
+						"{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
+					]
+				},
+				{
+					"name": "心灵冲击",
+					"ENG_name": "Psychic Assault",
+					"entries": [
+						"这个诡异的娃娃锁定了一个它能看到的，距离它10英尺以内的有大脑的生物。目标必须在智力豁免骰上成功，否则承受11点（2d10）心灵伤害。如果失败，还要掷骰3d6。如果总和等于或超过目标的智力值，那么智力值将降至0。目标将处于{@condition 昏迷}状态，直到它至少恢复一点智力，例如通过施放{@spell 更高恢复}法术或类似的魔法。"
+					]
+				},
+				{
+					"name": "身体交换",
+					"ENG_name": "Body Exchange",
+					"entries": [
+						"这个诡异的娃娃与5英尺内的一个{@condition 无力}人形生物开始了一场智力比拼。如果它赢了这场比赛，诡异娃娃的灵魂就会占据目标的身体，而目标的灵魂则被安置在诡异娃娃的身体里。诡异娃娃完全控制了目标的身体。它保留了自己的阵营、智力、智慧、魅力，以及对被{@condition 魅惑}和{@condition 恐惧}的免疫。它在使用被附身目标的统计数据时，并没有获得目标的知识、职业特性或熟练度。目标在占据诡异娃娃的身体时保留了自己的阵营、智力、智慧和魅力。",
+						"身体交换持续到娃娃的灵魂被魔法驱逐为止。（{@spell 反制善恶}法术可以实现这一点，尽管娃娃并不是该法术通常结束附身状态的那种生物。）娃娃和目标必须相互距离5英尺以内，才能使这种效果生效。目标在赢得智力比拼或交换结束后的24小时内对这种娃娃的身体交换免疫。"
+					]
+				}
+			],
+			"traitTags": [
+				"拟形"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"震慑"
+			],
+			"savingThrowForced": [
+				"智力"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "灰口恶魔领主",
+			"ENG_name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "角魔",
+				"ENG_name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "恶魔",
+						"with": "恶魔"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "多重攻击",
+							"items": {
+								"name": "多重攻击",
+								"ENG_name": "Multiattack",
+								"entries": [
+									"恶魔进行三次近战攻击：两次使用其战斧，一次使用其尾巴。它可以用投掷火焰代替任何一次近战攻击。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "叉刺",
+							"items": {
+								"name": "战斧",
+								"ENG_name": "Battleaxe",
+								"entries": [
+									"{@atk 近战武器} 命中骰：10，射程10英尺，一个目标。{@h}造成15 ({@damage 2d8 + 6}) 点斩击伤害，如果用双手使用则造成17 ({@damage 2d10 + 6}) 点斩击伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "飞行雪花天使",
+			"ENG_name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "天神使徒",
+				"ENG_name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "梵天神侍",
+						"with": "天使"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell 防护善恶}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell 反制善恶}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "飞行金夜天使",
+			"ENG_name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "天神使徒",
+				"ENG_name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "梵天神侍",
+						"with": "天使"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "金夜威胁",
+							"ENG_name": "Goldnight Menace",
+							"entries": [
+								"作为一项行动，飞行黄金夜天使可以使敌人心生恐惧。天使选择的每个生物，如果它在120英尺范围内并且知道它的存在，必须进行一次智力豁免检定，否则在1分钟内变得{@condition 恐惧}。这个豁免检定的DC与天使的天赋施法特性相同。生物可以在每个回合结束时重复这个豁免检定，成功则结束此效果。如果生物的豁免检定成功或效果对它结束，那么生物在接下来的24小时内对那个天使的黄金夜威胁免疫。"
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "月银之翼天使",
+			"ENG_name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "天神使徒",
+				"ENG_name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "梵天神侍",
+						"with": "天使"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "月银长矛",
+							"ENG_name": "Moonsilver Spear",
+							"entries": [
+								"月银之翼的天使挥舞着由赫尔沃特碎片制成的长矛。被这把武器伤害所失去的生命值只能通过短暂或长时间的休息来恢复，而不是通过再生、魔法或其他任何方式。每当天使在一轮中使用这个武器攻击并击中生物时，它可以对目标造成创伤。在每个受伤生物的回合开始时，它将根据天使造成创伤的次数，每次受到{@damage 1d4}的死灵伤害，然后可以进行一次{@dc 15}体质豁免检定，成功则结束所有此类创伤的效果。或者，受伤的生物或其5英尺范围内的生物可以使用动作进行一次{@dc 15}智慧（{@skill 医药}）技能检定，成功则结束它身上的此类创伤效果。"
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "幽灵",
+			"ENG_name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 11,
+			"resist": [
+				"酸性",
+				"火",
+				"闪电",
+				"雷鸣伤害",
+				"钝击"
+			],
+			"immune": [
+				"寒冷",
+				"死灵",
+				"毁灭诅咒"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧",
+				"被擒"
+			],
+			"languages": [
+				"它生前所知的任何语言"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "乙太视界",
+					"ENG_name": "Ethereal Sight",
+					"entries": [
+						"当幽灵在物质界时，它可以看穿60英尺进入以太界，反之亦然。"
+					]
+				},
+				{
+					"name": "虚体移动",
+					"ENG_name": "Incorporeal Movement",
+					"entries": [
+						"鬼魂可以像穿越困难地形一样穿越其他生物和物体，难度等级为3。如果它在物体内部结束回合，则会受到5点（{@dice 1d10}）力量伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "凋零之触",
+					"ENG_name": "Withering Touch",
+					"entries": [
+						"{@atk 近战武器} 命中骰：5，射程5英尺，一个目标。{@h}造成17 ({@damage 4d6 + 3}) 点死灵伤害。"
+					]
+				},
+				{
+					"name": "以太化",
+					"ENG_name": "Etherealness",
+					"entries": [
+						"幽灵从物质位面进入以太位面，或者反之。当它处于边界以太状态时，在物质位面上是可见的，反之亦然，然而它不能影响或被另一个位面上的任何事物影响。"
+					]
+				},
+				{
+					"name": "附身{@recharge}",
+					"ENG_name": "Possession {@recharge}",
+					"entries": [
+						"鬼灵可以看到的5英尺范围内的一个生物必须进行一次魅力豁免投掷（DC 13），否则将被鬼灵附身；鬼灵随即消失，目标进入{@condition 失去能力}状态并失去对自己身体的控制。鬼灵现在控制了身体，但并未剥夺目标的意识。鬼灵不能成为任何攻击、法术或其他效果的目标，除非是驱散不死生物的效果，并且它保留了自己的阵营、智力、智慧、魅力以及对{@condition 魅惑}和{@condition 恐惧}的免疫能力。除此之外，鬼灵使用被附身目标的属性，但不获得目标的知识、职业特性或熟练度。附身持续到身体的生命值降至0点，鬼灵作为奖励动作结束它，或者鬼灵被驱散或被类似{@spell 驱散善良与邪恶}法术的效果强制驱逐。当附身结束时，鬼灵在身体5英尺范围内的未被占据空间重新出现。目标在成功豁免投掷或附身结束后的24小时内对这种鬼灵的附身免疫。鬼灵也可以选择附身一个生物的尸体，有效地使用自己的生命力来活化尸体作为僵尸。活化的尸体使用僵尸的属性，并在鬼灵结束附身后返回死亡状态。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "幽灵能力",
+					"ENG_name": "Geist Powers",
+					"entries": [
+						"鬼魂的种类和它们生前的人类一样多样化。除了所有鬼魂都具备的特性和行动之外，个别鬼魂可能还具有以下特殊特征。",
+						{
+							"name": "无形美德",
+							"ENG_name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"一个生物如果被一个白色对齐的幽灵附身，将获得对{@condition 魅惑}和{@condition 恐惧}状态的免疫，以及对来自非魔法攻击的钝击、穿刺和斩击伤害的抗性。当生物被附身时，幽灵可以允许它控制自己的身体，但幽灵可以随时重新获得控制权（无需动作）。"
+							]
+						},
+						{
+							"name": "骇人面容",
+							"ENG_name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"黑对齐的幽灵可以使自己变得非常可怕，即使它们在附身于活人时也是如此。每个在幽灵60英尺范围内并且能看到它的非亡灵生物必须进行一次DC 13的智慧豁免投掷，否则将被{@condition 惊恐}状态影响1分钟。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition 惊恐}状态的目标可以在每个回合结束时重复豁免投掷，成功则结束自身的{@condition 惊恐}状态。如果目标的豁免成功或效果对其结束，则目标在接下的24小时内对这只幽灵的可怕面容免疫。老化效果可以通过施放{@spell 高等复原术}法术来逆转，但必须在老化发生后的24小时内进行。"
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"虚体移动"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"无力"
+			],
+			"savingThrowForced": [
+				"魅力",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "鬼魂：恐怖面容",
+					"ENG_name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "骇人面容",
+								"ENG_name": "Horrifying Visage",
+								"entries": [
+									"黑对齐的幽灵可以使自己变得非常可怕，即使它们在附身于活人时也是如此。每个在幽灵60英尺范围内并且能看到它的非亡灵生物必须进行一次DC 13的智慧豁免投掷，否则将被{@condition 惊恐}状态影响1分钟。如果豁免失败超过5点，目标还将老化{@dice 1d4 × 10}年。处于{@condition 惊恐}状态的目标可以在每个回合结束时重复豁免投掷，成功则结束自身的{@condition 惊恐}状态。如果目标的豁免成功或效果对其结束，则目标在接下的24小时内对这只幽灵的可怕面容免疫。老化效果可以通过施放{@spell 高等复原术}法术来逆转，但必须在老化发生后的24小时内进行。"
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"恐惧",
+						"无力"
+					]
+				},
+				{
+					"name": "幽灵：无形美德",
+					"ENG_name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "无形美德",
+								"ENG_name": "Intangible Virtue",
+								"entries": [
+									"一个生物如果被一个白色对齐的幽灵附身，将获得对{@condition 魅惑}和{@condition 恐惧}状态的免疫，以及对来自非魔法攻击的钝击、穿刺和斩击伤害的抗性。当生物被附身时，幽灵可以允许它控制自己的身体，但幽灵可以随时重新获得控制权（无需动作）。"
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "吉塞拉",
+			"ENG_name": "Gisela",
+			"alias": [
+				"金夜之刃",
+				"教堂之刃"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "异界神侍",
+				"ENG_name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "异界神侍",
+						"with": "吉塞拉",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "金夜威胁",
+							"ENG_name": "Goldnight Menace",
+							"entries": [
+								"作为一项行动，飞行黄金夜天使可以使敌人心生恐惧。天使选择的每个生物，如果它在120英尺范围内并且知道它的存在，必须进行一次智力豁免检定，否则在1分钟内变得{@condition 恐惧}。这个豁免检定的DC与天使的天赋施法特性相同。生物可以在每个回合结束时重复这个豁免检定，成功则结束此效果。如果生物的豁免检定成功或效果对它结束，那么生物在接下来的24小时内对那个天使的黄金夜威胁免疫。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "苍鹭之群天使",
+			"ENG_name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "天神使徒",
+				"ENG_name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "梵天神侍",
+						"with": "天使"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "苍鹭保护",
+							"ENG_name": "Heron Protection",
+							"entries": [
+								"每当苍鹭之群天使或其10英尺范围内的友方生物进行豁免检定时，该生物获得等于天使魅力调整值的加值。天使必须保持意识清醒才能获得或授予此加值。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "羽毛守护者",
+			"ENG_name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "鸦人",
+				"ENG_name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "鸦人",
+						"with": "守护者"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "喙（仅限乌鸦形态或混合形态）",
+							"items": {
+								"name": "喙（仅限乌鸦形态或混合形态）",
+								"ENG_name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk 近战武器} 命中骰：4，射程5英尺，单一目标。{@h}在乌鸦形态下造成1点穿刺伤害，或在混合形态下造成4（{@damage 1d4 + 2}）点穿刺伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"守护者是一个4级施法者。它的施法能力是智慧（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。它准备了以下德鲁伊法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 德鲁伊伎俩}",
+								"{@spell 燃火术}",
+								"{@spell 橡棍术}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 纠缠术}",
+								"{@spell 大步奔行}",
+								"{@spell 动物交谈术}",
+								"{@spell 雷鸣波}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 动物信使}",
+								"{@spell 树肤术}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"力量"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "死灵炼金术士",
+			"ENG_name": "Necro-Alchemist",
+			"alias": [
+				"鬼魂法师"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "魔法师",
+				"ENG_name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "魔法师",
+						"with": "死灵炼金术士",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "西格达",
+			"ENG_name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "异界神侍",
+				"ENG_name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "异界神侍",
+						"with": "西格达",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "苍鹭保护",
+							"ENG_name": "Heron Protection",
+							"entries": [
+								"每当苍鹭之群天使或其10英尺范围内的友方生物进行豁免检定时，该生物获得等于天使魅力调整值的加值。天使必须保持意识清醒才能获得或授予此加值。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "斯卡布",
+			"ENG_name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "肉身魔像",
+				"ENG_name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "魔像",
+						"with": "斯卡布",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "斯卡布",
+					"ENG_name": "Skaabs",
+					"entries": [
+						"最基本的斯卡布仅仅是《怪物手册》中描述的{@creature 血肉魔像|MM|肉身魔像}。但每个斯卡布制造者的愿望是创造出一个真正独特的杰作，这可能促使缝合者制造具有以下特殊特征之一的魔像。",
+						{
+							"type": "entries",
+							"name": "装甲板",
+							"ENG_name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"将骷髅的护甲等级提高到14，并将它的挑战等级提高到6（2,300经验值）。"
+							]
+						},
+						{
+							"name": "六臂",
+							"ENG_name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"斯卡布的多重攻击动作允许它进行三次猛击攻击。将其挑战等级提高到6（2300经验值）。"
+							]
+						},
+						{
+							"name": "三个头",
+							"ENG_name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。（它的挑战等级不变。）"
+							]
+						},
+						{
+							"name": "尸偶巨人",
+							"ENG_name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"这个斯卡布有三个头，六只手臂和装甲板。将其挑战等级提高到7（2900 XP）。"
+							]
+						},
+						{
+							"name": "翼斯卡布",
+							"ENG_name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"斯卡布的飞行速度为30英尺。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "斯卡布：装甲板",
+					"ENG_name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"装甲板"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "斯卡布：巨人",
+					"ENG_name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "三个头",
+								"ENG_name": "Three Heads",
+								"entries": [
+									"骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "多重攻击",
+							"items": {
+								"name": "多重攻击",
+								"ENG_name": "Multiattack",
+								"entries": [
+									"斯卡布进行三次猛击攻击。"
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"装甲板"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "骷髅：六臂",
+					"ENG_name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "多重攻击",
+							"items": {
+								"name": "多重攻击",
+								"ENG_name": "Multiattack",
+								"entries": [
+									"斯卡布进行三次猛击攻击。"
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "斯卡布：三个头",
+					"ENG_name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "三个头",
+								"ENG_name": "Three Heads",
+								"entries": [
+									"骷髅在进行智力（{@skill 察觉}）检定时具有优势，并且在对抗{@condition 目盲}（失明）、{@condition 耳聋}（失聪）、{@condition 震慑}（昏迷）和被击昏{@condition 昏迷}（失去意识）的豁免投掷中也具有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "翼斯卡布",
+					"ENG_name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "斯特凡·毛勒",
+			"ENG_name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "施特拉德·冯·扎洛维奇",
+				"ENG_name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "斯特拉德",
+						"with": "斯特凡",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "吸血鬼弱点",
+						"items": {
+							"type": "entries",
+							"name": "吸血鬼的弱点",
+							"ENG_name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"用活木制成的武器对吸血鬼特别有效，尽管任何武器都能伤害或杀死它们。吸血鬼不能越过反射着月亮的流水，被阿瓦辛（{@item 圣水(扁瓶装)|PHB|圣水}）祝福过的水像酸一样烧灼吸血鬼的肉体。吸血鬼在银器中的倒影（包括银背玻璃镜）看起来像吸血鬼没有吸血鬼状态时的样子\u2014\u2014既不是它的真实面貌也不是它的幻象，而是一个普通的人类，带着所有的缺陷。因此，吸血鬼会竭尽全力避免镜子，任何形式的银器对它们来说都是令人不安的。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "吸血鬼新生儿",
+			"ENG_name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 13,
+			"resist": [
+				"死灵",
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击且不是用活木武器进行的攻击",
+					"cond": true
+				}
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "再生",
+					"ENG_name": "Regeneration",
+					"entries": [
+						"如果吸血鬼至少有1点生命值，它在自己的回合开始时恢复10点生命值。如果吸血鬼受到圣光伤害或圣水伤害，这个特性在吸血鬼下一个回合开始时不会生效。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"吸血鬼进行两次攻击，其中只有一次可以是咬击。"
+					]
+				},
+				{
+					"name": "爪抓",
+					"ENG_name": "Claws",
+					"entries": [
+						"{@atk 近战武器} 命中骰：6，射程5英尺，单一生物。{@h}造成8（{@damage 2d4 + 3}）点斩击伤害。吸血鬼可以选择不造成伤害，而是对目标进行摔跤（逃脱DC 13）。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器攻击} {@hit 6}命中，射程5英尺，一个愿意的生物，或者被吸血鬼{@condition 抓住}、{@condition 无力}或{@condition 束缚}的生物。{@h}6（{@damage 1d6 + 3}）穿刺伤害加上7（{@damage 2d6}）死灵伤害。目标的生命值上限减少，减少量等于所受死灵伤害，吸血鬼恢复等于该量的生命值。这种减少持续到目标完成一次长休息。如果这个效果将目标的生命值上限减少到0，目标将死亡。"
+					]
+				},
+				{
+					"name": "吸血鬼的魅惑",
+					"ENG_name": "Vampiric Glamer",
+					"entries": [
+						"吸血鬼使用影响心智的魔法模糊其形态，使其他人将其感知为相同大小和形状的美丽人类。如果吸血鬼采取奖励动作结束这个幻象，或者吸血鬼死亡，幻象就会结束。能够看到吸血鬼的生物可以采取行动进行视觉检查，通过成功的20点智慧（{@skill 感知}）检定，结束自身的心理效果并看到吸血鬼的真实形态。"
+					]
+				},
+				{
+					"name": "沉默光环",
+					"ENG_name": "Aura of Silence",
+					"entries": [
+						"吸血鬼将自己笼罩在2英尺半径的沉默斗篷中。在这个半径内，效果与{@spell 沉默术}法术相同。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "长老吸血鬼",
+					"ENG_name": "Elder Vampires",
+					"entries": [
+						"基本吸血鬼统计数据代表一个\"新生儿\"\u2014\u2014一个新诞生的吸血鬼。年长的吸血鬼可以学习许多不同类型的强大魔法，并且可能拥有以下任何特征和能力。",
+						{
+							"type": "entries",
+							"name": "变形生物",
+							"ENG_name": "Shapechanger",
+							"entries": [
+								"这个吸血鬼具有《怪物手册》中{@creature 吸血鬼}的变形者特性，以及变形者标签。一些吸血鬼可以变成蝙蝠形态，一些可以变成雾气形态，还有一些可以选择任一形态。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "魅惑",
+							"ENG_name": "Charm",
+							"entries": [
+								"吸血鬼拥有《怪物手册》中{@creature 吸血鬼}的魅惑动作。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "飞行",
+							"ENG_name": "Flight",
+							"entries": [
+								"吸血鬼拥有30英尺的飞行速度。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "吞噬者",
+							"ENG_name": "Gorger",
+							"entries": [
+								"吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法",
+							"ENG_name": "Spellcasting",
+							"entries": [
+								"吸血鬼具有巫师或牧师的施法能力。"
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"再生"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"高防护等级(High Protection Rating)",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "远古吸血鬼：所有能力",
+					"ENG_name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "变形生物",
+									"ENG_name": "Shapechanger",
+									"entries": [
+										"如果吸血鬼不在阳光直射下或处于流动水中，它可以使用其行动来变化为一只小型蝙蝠或中型雾云，或者恢复其真实形态。",
+										"当吸血鬼处于蝙蝠形态时，它不能说话，其行走速度为5英尺，并且它有30英尺的飞行速度。除了它的大小和速度之外，它的其他统计数据没有变化。它所穿戴的任何物品会随着它一起变形，但它所携带的任何物品则不会。如果它死亡，它将恢复其真实形态。",
+										"当处于雾形态时，吸血鬼不能采取任何行动，说话或操纵物体。它是无重量的，具有20英尺的飞行速度，可以悬停，并可以进入敌对生物的空间并停留在那里。此外，如果空气可以通过一个空间，雾也可以在不挤压的情况下通过，并且它不能通过水。它在力量、敏捷和体质豁免投掷上具有优势，并且对所有非魔法伤害免疫，除了它从阳光下受到的伤害。"
+									]
+								},
+								{
+									"name": "吞噬者",
+									"ENG_name": "Gorger",
+									"entries": [
+										"吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "魅惑",
+								"ENG_name": "Charm",
+								"entries": [
+									"吸血鬼针对它能看到的30英尺范围内的一个类人生物。如果目标能看到吸血鬼，目标必须通过一次17点智慧豁免投掷来对抗这种魔法，否则会被吸血鬼{@condition 魅惑}。被{@condition 魅惑}的目标将吸血鬼视为一个值得信赖的朋友，应予以听从和保护。尽管目标不受吸血鬼的控制，但它会尽可能以最有利的方式接受吸血鬼的请求或行动，并且是吸血鬼咬击攻击的自愿目标。",
+									"每当吸血鬼或吸血鬼的同伴对目标造成任何伤害时，目标可以重复进行豁免检定，成功则结束自身的效果。否则，效果持续24小时，或直到吸血鬼被摧毁，与目标处于不同的存在层面，或采取奖励动作结束效果。"
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "牧师施法",
+							"ENG_name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note 已使用{@creature Priest|MM}作为示例牧师。}",
+								"吸血鬼是一个5级施法者。它的施法能力是智慧（法术豁免DC 13，法术攻击命中5）。吸血鬼准备了以下牧师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell 光亮术}",
+										"{@spell 圣焰}",
+										"{@spell 奇术}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell 治疗伤势}",
+										"{@spell 光导箭}",
+										"{@spell 圣域术}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell 次级复原术}",
+										"{@spell 灵体武器}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell 解除魔法}",
+										"{@spell 灵体守卫}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "巫师施法",
+							"ENG_name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note 《{@creature 法师|MM}》已被用作示例巫师。}",
+								"吸血鬼是一个9级施法者。它的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。吸血鬼准备了以下巫师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell 火焰箭}",
+										"{@spell 光亮术}",
+										"{@spell 法师之手}",
+										"{@spell 魔法技俩}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell 侦测魔法}",
+										"{@spell 法师护甲}",
+										"{@spell 魔法飞弹}",
+										"{@spell 护盾术}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell 迷踪步}",
+										"{@spell 暗示术}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell 反制法术}",
+										"{@spell 火球术}",
+										"{@spell 飞行术}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell 高等隐形术}",
+										"{@spell 冰风暴}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell 寒冰锥}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "远古吸血鬼：魅惑",
+					"ENG_name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "魅惑",
+								"ENG_name": "Charm",
+								"entries": [
+									"吸血鬼针对它能看到的30英尺范围内的一个类人生物。如果目标能看到吸血鬼，目标必须通过一次17点智慧豁免投掷来对抗这种魔法，否则会被吸血鬼{@condition 魅惑}。被{@condition 魅惑}的目标将吸血鬼视为一个值得信赖的朋友，应予以听从和保护。尽管目标不受吸血鬼的控制，但它会尽可能以最有利的方式接受吸血鬼的请求或行动，并且是吸血鬼咬击攻击的自愿目标。",
+									"每当吸血鬼或吸血鬼的同伴对目标造成任何伤害时，目标可以重复进行豁免检定，成功则结束自身的效果。否则，效果持续24小时，或直到吸血鬼被摧毁，与目标处于不同的存在层面，或采取奖励动作结束效果。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "长老吸血鬼：飞行",
+					"ENG_name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "长老吸血鬼：吞噬者",
+					"ENG_name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "吞噬者",
+								"ENG_name": "Gorger",
+								"entries": [
+									"吸血鬼在近战攻击骰上有优势，但对它的攻击骰也有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "长老吸血鬼：变形者",
+					"ENG_name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "变形生物",
+								"ENG_name": "Shapechanger",
+								"entries": [
+									"如果吸血鬼不在阳光直射下或处于流动水中，它可以使用其行动来变化为一只小型蝙蝠或中型雾云，或者恢复其真实形态。",
+									"当吸血鬼处于蝙蝠形态时，它不能说话，其行走速度为5英尺，并且它有30英尺的飞行速度。除了它的大小和速度之外，它的其他统计数据没有变化。它所穿戴的任何物品会随着它一起变形，但它所携带的任何物品则不会。如果它死亡，它将恢复其真实形态。",
+									"当处于雾形态时，吸血鬼不能采取任何行动，说话或操纵物体。它是无重量的，具有20英尺的飞行速度，可以悬停，并可以进入敌对生物的空间并停留在那里。此外，如果空气可以通过一个空间，雾也可以在不挤压的情况下通过，并且它不能通过水。它在力量、敏捷和体质豁免投掷上具有优势，并且对所有非魔法伤害免疫，除了它从阳光下受到的伤害。"
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "长老吸血鬼：牧师施法",
+					"ENG_name": "Elder Vampire: Spellcasting\u2014Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "施法",
+							"ENG_name": "Spellcasting",
+							"headerEntries": [
+								"{@note 已使用{@creature Priest|MM}作为示例牧师。}",
+								"吸血鬼是一个5级施法者。它的施法能力是智慧（法术豁免DC 13，法术攻击命中5）。吸血鬼准备了以下牧师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell 光亮术}",
+										"{@spell 圣焰}",
+										"{@spell 奇术}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell 治疗伤势}",
+										"{@spell 光导箭}",
+										"{@spell 圣域术}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell 次级复原术}",
+										"{@spell 灵体武器}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell 解除魔法}",
+										"{@spell 灵体守卫}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "远古吸血鬼：施法\u2014巫师",
+					"ENG_name": "Elder Vampire: Spellcasting\u2014Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "施法",
+							"ENG_name": "Spellcasting",
+							"headerEntries": [
+								"{@note 《{@creature 法师|MM}》已被用作示例巫师。}",
+								"吸血鬼是一个9级施法者。它的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。吸血鬼准备了以下巫师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell 火焰箭}",
+										"{@spell 光亮术}",
+										"{@spell 法师之手}",
+										"{@spell 魔法技俩}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell 侦测魔法}",
+										"{@spell 法师护甲}",
+										"{@spell 魔法飞弹}",
+										"{@spell 护盾术}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell 迷踪步}",
+										"{@spell 暗示术}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell 反制法术}",
+										"{@spell 火球术}",
+										"{@spell 飞行术}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell 高等隐形术}",
+										"{@spell 冰风暴}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell 寒冰锥}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "狼人（克拉伦部落）",
+			"ENG_name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "在类人形态下"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"天生护甲"
+					],
+					"condition": "在犬科动物形态中"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(在犬形态下40英尺)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击且未使用银制武器",
+					"cond": true
+				}
+			],
+			"languages": [
+				"通用（在犬形态下不能说话）"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "变形生物",
+					"ENG_name": "Shapechanger",
+					"entries": [
+						"狼人在月相的控制下，或者由于创伤或强烈情绪的影响，可以变化为狼人形态，或者恢复其真正的人类形态。这种变化除了它的护甲等级（AC）之外，每种形态下的其他统计数据都是相同的。它穿戴或携带的任何装备都不会被转变。如果它死亡，它会恢复其真正的人类形态。"
+					]
+				},
+				{
+					"name": "敏锐听觉和嗅觉",
+					"ENG_name": "Keen Hearing and Smell",
+					"entries": [
+						"狼人在依靠听觉或嗅觉的智力（{@skill 察觉}）检定上具有优势。"
+					]
+				},
+				{
+					"name": "嚎叫族群：维尔丁",
+					"ENG_name": "Howlpack: Vildin",
+					"entries": [
+						"维尔丁狂暴（仅限犬形态）。当狼人在它的回合用近战攻击将一个生物的生命值降至0点时，它可以采取一个奖励动作，移动至多其速度的一半，并进行咬击攻击。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击（仅限犬形态）",
+					"ENG_name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"狼人进行两次攻击：一次用其咬击，一次用其爪击或矛击。"
+					]
+				},
+				{
+					"name": "咬击（仅限犬形态）",
+					"ENG_name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk 近战武器} 命中：4，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 点穿刺伤害。"
+					]
+				},
+				{
+					"name": "爪子（仅限犬科动物形态）",
+					"ENG_name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
+					]
+				},
+				{
+					"name": "长矛（仅限人形态）",
+					"ENG_name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk 近战，远程} {@hit 4} 命中，触及范围5英尺或射程20/60英尺，一个目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害，或者如果用双手进行近战攻击则为6 ({@damage 1d8 + 2}) 穿刺伤害。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "嚎叫族特征",
+					"ENG_name": "Howlpack Traits",
+					"entries": [
+						"基本的狼人统计数据代表克拉伦霍德的成员，这是因尼斯特拉德最大的嚎叫群体。其他群体的狼人可能具有以下等额外能力。",
+						{
+							"name": "维尔丁狂暴（仅限犬形态）",
+							"ENG_name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"当狼人在它的回合用近战攻击将一个生物减少到0生命值时，它可以用额外动作移动至多其速度的一半，并进行一次咬击。"
+							]
+						},
+						{
+							"name": "蒙德罗宁狂怒",
+							"ENG_name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"当狼人的生命值或更少于10点时，它在攻击检定上拥有优势。此外，它用近战攻击命中任何目标时，会额外造成7（{@damage 2d6}）点伤害。"
+							]
+						},
+						{
+							"name": "利拉格血狂",
+							"ENG_name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"狼人在对任何生命值不满的生物进行近战攻击骰时具有优势。"
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"矛|PHB"
+			],
+			"traitTags": [
+				"敏锐感官",
+				"变形生物"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "狼人（利拉格）",
+					"ENG_name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "利拉格血狂",
+								"ENG_name": "Leeraug Blood Frenzy",
+								"entries": [
+									"狼人在对任何生命值不满的生物进行近战攻击骰时具有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "狼人（蒙德罗宁）",
+					"ENG_name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "蒙德罗宁狂怒",
+								"ENG_name": "Mondronen Wounded Fury",
+								"entries": [
+									"当狼人的生命值或更少于10点时，它在攻击检定上拥有优势。此外，它用近战攻击命中任何目标时，会额外造成7（{@damage 2d6}）点伤害。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "狼人（维尔丁）",
+					"ENG_name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "维尔丁狂暴（仅限犬形态）",
+								"ENG_name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"当狼人在它的回合用近战攻击将一个生物减少到0生命值时，它可以用额外动作移动至多其速度的一半，并进行一次咬击。"
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "僵尸猫",
+			"ENG_name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "猫",
+				"ENG_name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "不死韧性",
+					"ENG_name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使猫的生命值降至0点，除非伤害是辐射伤害或来自致命一击，否则它必须进行一次体质豁免投掷，难度等级（DC）为5加上所受伤害。如果成功，猫的生命值降至1点而不是0。"
+					]
+				}
+			],
+			"traitTags": [
+				"不死韧性"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "僵尸鼠",
+			"ENG_name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "老鼠",
+				"ENG_name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "不死韧性",
+					"ENG_name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使老鼠的生命值降至0点，除非伤害是圣光伤害或来自致命一击，否则它必须进行一次体质豁免检定，难度等级为5加上所受伤害。如果成功，老鼠的生命值降至1点。"
+					]
+				}
+			],
+			"traitTags": [
+				"不死韧性"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "僵尸蛇",
+			"ENG_name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "毒蛇",
+				"ENG_name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "不死韧性",
+					"ENG_name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使蛇的生命值降至0点，除非伤害是辐射伤害或来自致命一击，否则它必须进行一次体质豁免投掷，难度等级为5加上所受伤害。成功的话，蛇的生命值会降至1点而不是死亡。"
+					]
+				}
+			],
+			"traitTags": [
+				"不死韧性"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
 }

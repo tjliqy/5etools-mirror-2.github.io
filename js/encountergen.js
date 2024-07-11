@@ -3,7 +3,7 @@
 class EncountersPage extends TableListPage {
 	constructor () {
 		super({
-			dataSource: "./${DataUtil.data_dir()}/encounters.json",
+			dataSource: "./data/encounters.json",
 
 			dataProps: ["encounter"],
 		});

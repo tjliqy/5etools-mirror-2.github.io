@@ -44,7 +44,7 @@ class BlocklistUtil {
 		this._addData(out, MiscUtil.copy(await DataUtil.class.loadRawJSON()));
 		this._addData(out, MiscUtil.copy(await DataUtil.race.loadJSON({isAddBaseRaces: true})));
 
-		const jsons = await Promise.all(this._BASIC_FILES.map(url => DataUtil.loadJSON(`${Renderer.get().baseUrl}${DataUtil.data_dir()}/${url}`)));
+		const jsons = await Promise.all(this._BASIC_FILES.map(url => DataUtil.loadJSON(`${Renderer.get().baseUrl}data/${url}`)));
 		for (let json of jsons) {
 			if (json.magicvariant) {
 				json = MiscUtil.copy(json);

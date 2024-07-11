@@ -1,236 +1,236 @@
 {
-  "spell": [
-    {
-      "name": "借鉴才学",
-      "ENG_name": "Borrowed Knowledge",
-      "source": "SCC",
-      "page": 37,
-      "level": 2,
-      "school": "D",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一本至少价值25金币的书",
-          "cost": 2500
-        }
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "hour",
-            "amount": 1
-          }
-        }
-      ],
-      "entries": [
-        "你借助过去灵魂的知识。选择一个你不擅长的技能。在法术持续期间，你在所选技能上变得熟练。如果你再次施展这个法术，法术会提前结束。"
-      ]
-    },
-    {
-      "name": "动力短行",
-      "ENG_name": "Kinetic Jaunt",
-      "source": "SCC",
-      "page": 37,
-      "level": 2,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "加成"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "self"
-        }
-      },
-      "components": {
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "timed",
-          "duration": {
-            "type": "minute",
-            "amount": 1
-          },
-          "concentration": true
-        }
-      ],
-      "entries": [
-        "你以舞蹈般的步态施展魔法，赋予自己以下持续时间的效果。",
-        {
-          "type": "list",
-          "items": [
-            "你的步行速度增加10英尺。",
-            "你不会引发借机攻击。",
-            "你可以穿过另一个生物的空间，这不算作{@quickref 困难地型||3}。如果你在你的回合结束时位于另一个生物的空间，你将被推到你最后占据的未被占据的空间，并且你会受到{@damage 1d8}点力量伤害。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "力量"
-      ]
-    },
-    {
-      "name": "银光锐语",
-      "ENG_name": "Silvery Barbs",
-      "source": "SCC",
-      "page": 38,
-      "level": 1,
-      "school": "E",
-      "time": [
-        {
-          "number": 1,
-          "unit": "反应",
-          "condition": "当你看到60英尺范围内的生物成功进行攻击检定、能力检定或豁免检定时，你可以采取这个动作。"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你用魔法干扰触发生物，将其瞬间的不确定感转化为对另一生物的鼓励。触发生物必须重新掷{@dice d20}，并使用较低的点数。",
-        "然后，你可以选择一个你能看到的范围内的不同生物（可以选择自己）。选定的生物在接下来的1分钟内进行的下一次攻击检定、能力检定或豁免检定时具有优势。一个生物一次只能被这个法术增强一次。"
-      ],
-      "miscTags": [
-        "前进",
-        "中士"
-      ],
-      "areaTags": [
-        "ST"
-      ]
-    },
-    {
-      "name": "涡旋翘曲",
-      "ENG_name": "Vortex Warp",
-      "source": "SCC",
-      "page": 38,
-      "level": 2,
-      "school": "C",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 90
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你可以通过魔法在视野范围内的另一个生物周围扭曲空间。目标必须进行一次体质豁免检定（目标可以选择失败），否则目标会被传送到你能看到的范围内的任意一个未被占据的空间，这个空间必须是能够支撑目标而无需目标挤压的表面或液体。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用3级或更高等级的法术位施展这个法术时，法术的范围每超出2级就增加30英尺。"
-          ]
-        }
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "中士",
-        "TP"
-      ]
-    },
-    {
-      "name": "靡叶生华",
-      "ENG_name": "Wither and Bloom",
-      "source": "SCC",
-      "page": 38,
-      "level": 2,
-      "school": "N",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "feet",
-          "amount": 60
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": "一根枯萎的藤蔓扭曲成一个环"
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "你在射程范围内的一个点为中心，10英尺半径的球体上召唤出死亡与生命。你选择的那个区域内的每个生物必须进行一次体质豁免投掷，失败则受到{@damage 2d6}的死灵伤害，成功则伤害减半。那个区域内的非魔法植物将会枯萎。",
-        "此外，你可以选择那个区域内的一个生物，它可以使用并掷出一个未使用的生命骰，并恢复等于掷骰结果加上你的法术施法能力调整值的生命值。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "当你使用3级或更高级别的法术位施放此法术时，每超过2级，伤害增加{@scaledamage 2d6|2-9|1d6}，并且可以花费并添加到治疗骰上的命中骰数每超过2级增加一个。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "死灵"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "miscTags": [
-        "HL"
-      ]
-    }
-  ]
+	"spell": [
+		{
+			"name": "借鉴才学",
+			"ENG_name": "Borrowed Knowledge",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一本至少价值25金币的书",
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你借助过去灵魂的知识。选择一个你不擅长的技能。在法术持续期间，你在所选技能上变得熟练。如果你再次施展这个法术，法术会提前结束。"
+			]
+		},
+		{
+			"name": "动力短行",
+			"ENG_name": "Kinetic Jaunt",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "额外动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你以舞蹈般的步态施展魔法，赋予自己以下持续时间的效果。",
+				{
+					"type": "list",
+					"items": [
+						"你的步行速度增加10英尺。",
+						"你不会引发借机攻击。",
+						"你可以穿过另一个生物的空间，这不算作{@quickref 困难地型||3}。如果你在你的回合结束时位于另一个生物的空间，你将被推到你最后占据的未被占据的空间，并且你会受到{@damage 1d8}点力量伤害。"
+					]
+				}
+			],
+			"damageInflict": [
+				"力量"
+			]
+		},
+		{
+			"name": "银光锐语",
+			"ENG_name": "Silvery Barbs",
+			"source": "SCC",
+			"page": 38,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "反应",
+					"condition": "当你看到60英尺范围内的生物成功进行攻击检定、能力检定或豁免检定时，你可以采取这个动作。"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你用魔法干扰触发生物，将其瞬间的不确定感转化为对另一生物的鼓励。触发生物必须重新掷{@dice d20}，并使用较低的点数。",
+				"然后，你可以选择一个你能看到的范围内的不同生物（可以选择自己）。选定的生物在接下来的1分钟内进行的下一次攻击检定、能力检定或豁免检定时具有优势。一个生物一次只能被这个法术增强一次。"
+			],
+			"miscTags": [
+				"前进",
+				"中士"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "涡旋翘曲",
+			"ENG_name": "Vortex Warp",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你可以通过魔法在视野范围内的另一个生物周围扭曲空间。目标必须进行一次体质豁免检定（目标可以选择失败），否则目标会被传送到你能看到的范围内的任意一个未被占据的空间，这个空间必须是能够支撑目标而无需目标挤压的表面或液体。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高等级的法术位施展这个法术时，法术的范围每超出2级就增加30英尺。"
+					]
+				}
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"中士",
+				"TP"
+			]
+		},
+		{
+			"name": "靡叶生华",
+			"ENG_name": "Wither and Bloom",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "一根枯萎的藤蔓扭曲成一个环"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你在射程范围内的一个点为中心，10英尺半径的球体上召唤出死亡与生命。你选择的那个区域内的每个生物必须进行一次体质豁免投掷，失败则受到{@damage 2d6}的死灵伤害，成功则伤害减半。那个区域内的非魔法植物将会枯萎。",
+				"此外，你可以选择那个区域内的一个生物，它可以使用并掷出一个未使用的生命骰，并恢复等于掷骰结果加上你的法术施法能力调整值的生命值。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高级别的法术位施放此法术时，每超过2级，伤害增加{@scaledamage 2d6|2-9|1d6}，并且可以花费并添加到治疗骰上的命中骰数每超过2级增加一个。"
+					]
+				}
+			],
+			"damageInflict": [
+				"死灵"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"miscTags": [
+				"HL"
+			]
+		}
+	]
 }

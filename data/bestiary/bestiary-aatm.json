@@ -1,533 +1,533 @@
 {
-  "_meta": {
-    "otherSources": {
-      "monster": {
-        "MPP": "AATM",
-        "MM": "AATM",
-        "MPMM": "AATM",
-        "VRGR": "AATM"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "活化棺材",
-      "ENG_name": "Animated Coffin",
-      "source": "AATM",
-      "size": [
-        "L"
-      ],
-      "type": "construct",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 60,
-        "formula": "8d10 + 16"
-      },
-      "speed": {
-        "walk": 30,
-        "climb": 30
-      },
-      "str": 16,
-      "dex": 12,
-      "con": 15,
-      "int": 3,
-      "wis": 11,
-      "cha": 3,
-      "senses": [
-        "盲视 60 英尺（不能看到这个半径之外）"
-      ],
-      "passive": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "能理解其创造者的语言但无法说话"
-      ],
-      "cr": "3",
-      "trait": [
-        {
-          "name": "拟形",
-          "ENG_name": "False Appearance",
-          "entries": [
-            "如果动画棺材在战斗开始时静止不动，它在其主动权骰上有优势。此外，如果一个生物没有观察到棺材移动或行动，该生物必须在智力（{@skill 调查}）检定上成功通过一个{@skill 调查}的骰子，才能辨别出棺材是活动的。"
-          ]
-        },
-        {
-          "name": "蛛行术",
-          "ENG_name": "Spider Climb",
-          "entries": [
-            "活化棺材能够攀爬困难的表面，包括在天花板上倒挂，无需进行能力检定。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "活化棺材进行两次猛击攻击。"
-          ]
-        },
-        {
-          "name": "猛击",
-          "ENG_name": "Slam",
-          "entries": [
-            "{@atk 近战武器} {@hit 5} 命中，射程5英尺，单一目标。{@h}12 ({@damage 2d8 + 3}) 钝击伤害。"
-          ]
-        },
-        {
-          "name": "陷阱",
-          "ENG_name": "Entrap",
-          "entries": [
-            "{@atk 近战武器} {@hit 命中5} 命中，射程5英尺，一个大型或更小的生物。{@h}目标获得{@condition 被擒}状态（逃脱{@dc 13}）。直到这个擒抱结束，如果目标不是不死生物，目标获得{@condition 受限}状态，并在其每个回合开始时受到14点（{@damage 4d6}）穿刺伤害。这个活化棺材一次只能擒抱一个生物。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "拟形",
-        "蛛行术"
-      ],
-      "senseTags": [
-        "B"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "CS"
-      ],
-      "damageTags": [
-        "B",
-        "P"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "首领斯卡尔",
-      "ENG_name": "Factol Skall",
-      "source": "AATM",
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "undead",
-        "tags": [
-          "wizard"
-        ]
-      },
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 210,
-        "formula": "28d8 + 84"
-      },
-      "speed": {
-        "walk": 30,
-        "fly": {
-          "number": 30,
-          "condition": "悬停"
-        },
-        "canHover": true
-      },
-      "str": 11,
-      "dex": 16,
-      "con": 16,
-      "int": 20,
-      "wis": 14,
-      "cha": 16,
-      "save": {
-        "con": "+9",
-        "int": "+11",
-        "wis": "+8"
-      },
-      "skill": {
-        "arcana": "+17",
-        "history": "+11",
-        "medicine": "+8",
-        "perception": "+8"
-      },
-      "senses": [
-        "真实视域 120 英尺。"
-      ],
-      "passive": 18,
-      "resist": [
-        "寒冷",
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "死灵",
-        "毁灭诅咒"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "中毒",
-        "震慑"
-      ],
-      "languages": [
-        "所有"
-      ],
-      "cr": "17",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Skall施放以下其中一个法术，不需要材料组件，使用智力作为施法能力（法术豁免{@dc 19}）："
-          ],
-          "will": [
-            "{@spell 侦测魔法}",
-            "{@spell 法师之手}",
-            "{@spell 魔法技俩}"
-          ],
-          "daily": {
-            "2e": [
-              "{@spell 活化死尸}（作为动作）",
-              "{@spell 解除魔法}",
-              "{@spell 死者交谈术}"
-            ],
-            "1e": [
-              "{@spell 死亡一指}",
-              "{@spell 异界传送}（仅限自身）",
-              "{@spell 投射幻影}"
-            ]
-          },
-          "ability": "int",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "trait": [
-        {
-          "name": "死亡光环",
-          "ENG_name": "Aura of Death",
-          "entries": [
-            "在斯卡尔30英尺范围内的生物在死亡豁免骰上具有劣势。"
-          ]
-        },
-        {
-          "name": "宇宙湮灭",
-          "ENG_name": "Cosmic Annihilation",
-          "entries": [
-            "被Skall杀死的生物只能通过真正的复活或{@spell 祈愿术}法术来恢复生命。"
-          ]
-        },
-        {
-          "name": "传奇抗性（每日4次）",
-          "ENG_name": "Legendary Resistance (4/Day)",
-          "entries": [
-            "如果斯卡尔未能通过豁免投掷，他可以选择成功。"
-          ]
-        },
-        {
-          "name": "复生",
-          "ENG_name": "Rejuvenation",
-          "entries": [
-            "如果斯卡尔死亡，他将化为尘土。如果他的灵魂天体仪没有被摧毁，斯卡尔将在太平间内于{@dice 1d10}天后重新形成。他出现在天体仪5英尺范围内。"
-          ]
-        },
-        {
-          "name": "驱散抗性",
-          "ENG_name": "Turn Resistance",
-          "entries": [
-            "Skall在对抗任何使亡灵转身的效果的豁免投掷上有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Skall 进行一次枯萎之触攻击或使用施法。他还两次使用死亡丧钟。"
-          ]
-        },
-        {
-          "name": "凋零之触",
-          "ENG_name": "Withering Touch",
-          "entries": [
-            "{@atk 近战武器攻击} 命中骰：11，射程5英尺，单一目标。{@h}32（{@damage 6d8 + 5}）冰冷伤害加上31（{@damage 7d8}）死灵伤害，如果目标是一个生物，则直到Skall下一回合开始前，它不能恢复生命值。"
-          ]
-        },
-        {
-          "name": "死亡丧钟",
-          "ENG_name": "Death Knell",
-          "entries": [
-            "斯卡尔指向他能看到的120英尺内的生物，用死亡的幻象和铁钟的哀鸣声充满目标的心智。目标必须进行一次DC 19的智力豁免检定，否则将受到14({@damage 4d6})点心灵伤害，并在斯卡尔下一回合开始前处于{@condition frightened}状态。"
-          ]
-        },
-        {
-          "name": "死亡雾气（每日一次）",
-          "ENG_name": "Fog of Death (1/Day)",
-          "entries": [
-            "Skall在自身为中心的30英尺半径范围内释放出一片杀意浓雾。这片雾气可以绕过角落，并且其覆盖区域严重遮蔽视线。雾气持续到Skall下一个回合开始，且不会被风吹散。它不会随他移动。",
-            "每个生物在回合中第一次进入雾中或在其回合开始时必须进行一次DC 19的体质豁免投掷，失败则受到28 ({@damage 8d6})的死灵伤害和28 ({@damage 8d6})的毒素伤害，成功则伤害减半。一个中等大小或更小的人形生物如果因此伤害而死亡，将变成斯卡尔控制下的僵尸。僵尸在斯卡尔的回合之后立即行动。如果没有其他指令，僵尸会尝试杀死它遇到的任何非不死生物。"
-          ]
-        }
-      ],
-      "reactionHeader": [
-        "Skall每轮可以进行最多三次反应，但每回合只能进行一次。"
-      ],
-      "reaction": [
-        {
-          "name": "恶意反制",
-          "ENG_name": "Baleful Counterspell",
-          "entries": [
-            "Skall 咬牙打断一个在他60英尺范围内施法的生物。如果法术是4级或更低，它失败且无效果。如果法术是5级或更高，Skall 进行一次智力检定（{@dc 10} + 法术等级）。在成功的检定下，法术失败且无效果。无论法术等级如何，如果法术失败，施法者受到10点（{@damage 3d6}）死灵伤害。"
-          ]
-        },
-        {
-          "name": "濒死体验",
-          "ENG_name": "Near-Death Experience",
-          "entries": [
-            "作为被攻击命中的回应，斯卡尔连同他穿戴或携带的任何装备，传送到他能看到的30英尺内一个无人的空间。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "传奇抗性",
-        "复生",
-        "驱散抗性"
-      ],
-      "senseTags": [
-        "U"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "XX"
-      ],
-      "damageTags": [
-        "C",
-        "I",
-        "N",
-        "Y"
-      ],
-      "damageTagsSpell": [
-        "N"
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "miscTags": [
-        "范围伤害"
-      ],
-      "conditionInflict": [
-        "恐惧"
-      ],
-      "conditionInflictSpell": [
-        "目盲",
-        "耳聋"
-      ],
-      "savingThrowForced": [
-        "体质",
-        "感知"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力",
-        "体质"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "尘埃使者的驱魔人",
-      "ENG_name": "Heralds of Dust Exorcist",
-      "source": "AATM",
-      "size": [
-        "S",
-        "M"
-      ],
-      "type": "humanoid",
-      "alignment": [
-        "A"
-      ],
-      "ac": [
-        13,
-        {
-          "ac": 16,
-          "condition": "带有{@spell 法师护甲}",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 112,
-        "formula": "15d8 + 45"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 8,
-      "dex": 16,
-      "con": 16,
-      "int": 17,
-      "wis": 14,
-      "cha": 11,
-      "save": {
-        "int": "+6",
-        "wis": "+5",
-        "cha": "+3"
-      },
-      "skill": {
-        "arcana": "+6",
-        "perception": "+5",
-        "religion": "+6"
-      },
-      "senses": [
-        "真实视觉 60 英尺。"
-      ],
-      "passive": 15,
-      "resist": [
-        "死灵"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "恐惧"
-      ],
-      "languages": [
-        "通用语加上另外三种语言"
-      ],
-      "cr": "6",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "驱魔人施放以下任一法术，无需材料组件，使用智力作为施法能力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）："
-          ],
-          "will": [
-            "{@spell 侦测善恶}",
-            "{@spell 法师护甲}（仅限自身）",
-            "{@spell 法师之手}"
-          ],
-          "daily": {
-            "2e": [
-              "{@spell 防护善恶}",
-              "{@spell 移除诅咒}",
-              "{@spell 死者交谈术}"
-            ],
-            "1e": [
-              "{@spell 放逐术}",
-              "{@spell 反制善恶}"
-            ]
-          },
-          "ability": "int",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "trait": [
-        {
-          "name": "不腐之器",
-          "ENG_name": "Incorruptible Vessel",
-          "entries": [
-            "驱魔人不能被天界生物、恶魔或亡灵附身。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "驱魔师进行两次墓碑爆发攻击。"
-          ]
-        },
-        {
-          "name": "墓地爆发",
-          "ENG_name": "Grave Burst",
-          "entries": [
-            "{@atk 近战, 远程} {@hit 6} 命中，射程5英尺或距离120英尺，单一目标。{@h}19 ({@damage 3d10 + 3}) 死灵或圣光伤害（驱魔师自选）。"
-          ]
-        },
-        {
-          "name": "承认实体 {@recharge 5}",
-          "ENG_name": "Admit Entity {@recharge 5}",
-          "entries": [
-            "驱魔者为它能看到的60英尺内的生物揭开死亡的面纱，使目标暴露于邪恶实体面前。目标必须进行一次魅力豁免骰（DC 14）。豁免失败时，目标受到36点（8d8）精神伤害，并在1分钟内处于{@condition 无力}状态，在此期间，它以非自己的声音呕吐并语无伦次地喃喃自语。豁免成功时，目标受到的伤害减半。处于{@condition 无力}状态的目标可以在每个回合结束时重复进行豁免骰，成功则结束此效果。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "U"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "N",
-        "R",
-        "Y"
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "conditionInflict": [
-        "无力"
-      ],
-      "conditionInflictSpell": [
-        "无力"
-      ],
-      "savingThrowForced": [
-        "魅力"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "活化棺材",
+			"ENG_name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"盲视 60 英尺（不能看到这个半径之外）"
+			],
+			"passive": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"能理解其创造者的语言但无法说话"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "拟形",
+					"ENG_name": "False Appearance",
+					"entries": [
+						"如果动画棺材在战斗开始时静止不动，它在其主动权骰上有优势。此外，如果一个生物没有观察到棺材移动或行动，该生物必须在智力（{@skill 调查}）检定上成功通过一个{@skill 调查}的骰子，才能辨别出棺材是活动的。"
+					]
+				},
+				{
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
+					"entries": [
+						"活化棺材能够攀爬困难的表面，包括在天花板上倒挂，无需进行能力检定。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"活化棺材进行两次猛击攻击。"
+					]
+				},
+				{
+					"name": "猛击",
+					"ENG_name": "Slam",
+					"entries": [
+						"{@atk 近战武器} {@hit 5} 命中，射程5英尺，单一目标。{@h}12 ({@damage 2d8 + 3}) 钝击伤害。"
+					]
+				},
+				{
+					"name": "陷阱",
+					"ENG_name": "Entrap",
+					"entries": [
+						"{@atk 近战武器} {@hit 命中5} 命中，射程5英尺，一个大型或更小的生物。{@h}目标获得{@condition 被擒}状态（逃脱{@dc 13}）。直到这个擒抱结束，如果目标不是不死生物，目标获得{@condition 受限}状态，并在其每个回合开始时受到14点（{@damage 4d6}）穿刺伤害。这个活化棺材一次只能擒抱一个生物。"
+					]
+				}
+			],
+			"traitTags": [
+				"拟形",
+				"蛛行术"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "首领斯卡尔",
+			"ENG_name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "悬停"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"真实视域 120 英尺。"
+			],
+			"passive": 18,
+			"resist": [
+				"寒冷",
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击",
+					"cond": true
+				}
+			],
+			"immune": [
+				"死灵",
+				"毁灭诅咒"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"中毒",
+				"震慑"
+			],
+			"languages": [
+				"所有"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Skall施放以下其中一个法术，不需要材料组件，使用智力作为施法能力（法术豁免{@dc 19}）："
+					],
+					"will": [
+						"{@spell 侦测魔法}",
+						"{@spell 法师之手}",
+						"{@spell 魔法技俩}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell 活化死尸}（作为动作）",
+							"{@spell 解除魔法}",
+							"{@spell 死者交谈术}"
+						],
+						"1e": [
+							"{@spell 死亡一指}",
+							"{@spell 异界传送}（仅限自身）",
+							"{@spell 投射幻影}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "动作"
+				}
+			],
+			"trait": [
+				{
+					"name": "死亡光环",
+					"ENG_name": "Aura of Death",
+					"entries": [
+						"在斯卡尔30英尺范围内的生物在死亡豁免骰上具有劣势。"
+					]
+				},
+				{
+					"name": "宇宙湮灭",
+					"ENG_name": "Cosmic Annihilation",
+					"entries": [
+						"被Skall杀死的生物只能通过真正的复活或{@spell 祈愿术}法术来恢复生命。"
+					]
+				},
+				{
+					"name": "传奇抗性（每日4次）",
+					"ENG_name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"如果斯卡尔未能通过豁免投掷，他可以选择成功。"
+					]
+				},
+				{
+					"name": "复生",
+					"ENG_name": "Rejuvenation",
+					"entries": [
+						"如果斯卡尔死亡，他将化为尘土。如果他的灵魂天体仪没有被摧毁，斯卡尔将在太平间内于{@dice 1d10}天后重新形成。他出现在天体仪5英尺范围内。"
+					]
+				},
+				{
+					"name": "驱散抗性",
+					"ENG_name": "Turn Resistance",
+					"entries": [
+						"Skall在对抗任何使亡灵转身的效果的豁免投掷上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Skall 进行一次枯萎之触攻击或使用施法。他还两次使用死亡丧钟。"
+					]
+				},
+				{
+					"name": "凋零之触",
+					"ENG_name": "Withering Touch",
+					"entries": [
+						"{@atk 近战武器攻击} 命中骰：11，射程5英尺，单一目标。{@h}32（{@damage 6d8 + 5}）冰冷伤害加上31（{@damage 7d8}）死灵伤害，如果目标是一个生物，则直到Skall下一回合开始前，它不能恢复生命值。"
+					]
+				},
+				{
+					"name": "死亡丧钟",
+					"ENG_name": "Death Knell",
+					"entries": [
+						"斯卡尔指向他能看到的120英尺内的生物，用死亡的幻象和铁钟的哀鸣声充满目标的心智。目标必须进行一次DC 19的智力豁免检定，否则将受到14({@damage 4d6})点心灵伤害，并在斯卡尔下一回合开始前处于{@condition frightened}状态。"
+					]
+				},
+				{
+					"name": "死亡雾气（每日一次）",
+					"ENG_name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall在自身为中心的30英尺半径范围内释放出一片杀意浓雾。这片雾气可以绕过角落，并且其覆盖区域严重遮蔽视线。雾气持续到Skall下一个回合开始，且不会被风吹散。它不会随他移动。",
+						"每个生物在回合中第一次进入雾中或在其回合开始时必须进行一次DC 19的体质豁免投掷，失败则受到28 ({@damage 8d6})的死灵伤害和28 ({@damage 8d6})的毒素伤害，成功则伤害减半。一个中等大小或更小的人形生物如果因此伤害而死亡，将变成斯卡尔控制下的僵尸。僵尸在斯卡尔的回合之后立即行动。如果没有其他指令，僵尸会尝试杀死它遇到的任何非不死生物。"
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall每轮可以进行最多三次反应，但每回合只能进行一次。"
+			],
+			"reaction": [
+				{
+					"name": "恶意反制",
+					"ENG_name": "Baleful Counterspell",
+					"entries": [
+						"Skall 咬牙打断一个在他60英尺范围内施法的生物。如果法术是4级或更低，它失败且无效果。如果法术是5级或更高，Skall 进行一次智力检定（{@dc 10} + 法术等级）。在成功的检定下，法术失败且无效果。无论法术等级如何，如果法术失败，施法者受到10点（{@damage 3d6}）死灵伤害。"
+					]
+				},
+				{
+					"name": "濒死体验",
+					"ENG_name": "Near-Death Experience",
+					"entries": [
+						"作为被攻击命中的回应，斯卡尔连同他穿戴或携带的任何装备，传送到他能看到的30英尺内一个无人的空间。"
+					]
+				}
+			],
+			"traitTags": [
+				"传奇抗性",
+				"复生",
+				"驱散抗性"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"范围伤害"
+			],
+			"conditionInflict": [
+				"恐惧"
+			],
+			"conditionInflictSpell": [
+				"目盲",
+				"耳聋"
+			],
+			"savingThrowForced": [
+				"体质",
+				"感知"
+			],
+			"savingThrowForcedSpell": [
+				"魅力",
+				"体质"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "尘埃使者的驱魔人",
+			"ENG_name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "带有{@spell 法师护甲}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"真实视觉 60 英尺。"
+			],
+			"passive": 15,
+			"resist": [
+				"死灵"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"恐惧"
+			],
+			"languages": [
+				"通用语加上另外三种语言"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"驱魔人施放以下任一法术，无需材料组件，使用智力作为施法能力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）："
+					],
+					"will": [
+						"{@spell 侦测善恶}",
+						"{@spell 法师护甲}（仅限自身）",
+						"{@spell 法师之手}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell 防护善恶}",
+							"{@spell 移除诅咒}",
+							"{@spell 死者交谈术}"
+						],
+						"1e": [
+							"{@spell 放逐术}",
+							"{@spell 反制善恶}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "动作"
+				}
+			],
+			"trait": [
+				{
+					"name": "不腐之器",
+					"ENG_name": "Incorruptible Vessel",
+					"entries": [
+						"驱魔人不能被天界生物、恶魔或亡灵附身。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"驱魔师进行两次墓碑爆发攻击。"
+					]
+				},
+				{
+					"name": "墓地爆发",
+					"ENG_name": "Grave Burst",
+					"entries": [
+						"{@atk 近战, 远程} {@hit 6} 命中，射程5英尺或距离120英尺，单一目标。{@h}19 ({@damage 3d10 + 3}) 死灵或圣光伤害（驱魔师自选）。"
+					]
+				},
+				{
+					"name": "承认实体 {@recharge 5}",
+					"ENG_name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"驱魔者为它能看到的60英尺内的生物揭开死亡的面纱，使目标暴露于邪恶实体面前。目标必须进行一次魅力豁免骰（DC 14）。豁免失败时，目标受到36点（8d8）精神伤害，并在1分钟内处于{@condition 无力}状态，在此期间，它以非自己的声音呕吐并语无伦次地喃喃自语。豁免成功时，目标受到的伤害减半。处于{@condition 无力}状态的目标可以在每个回合结束时重复进行豁免骰，成功则结束此效果。"
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"无力"
+			],
+			"conditionInflictSpell": [
+				"无力"
+			],
+			"savingThrowForced": [
+				"魅力"
+			],
+			"savingThrowForcedSpell": [
+				"魅力"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
 }

@@ -1,1862 +1,1862 @@
 {
-  "optionalfeature": [
-    {
-      "name": "苦痛魔爆",
-      "ENG_name": "Agonizing Blast",
-      "source": "PHB",
-      "effects": [
-        {
-          "name": "五命盗贼",
-          "ENG_name": "Bonus Damage",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "data.bonuses.rsak.damage",
-              "mode": "ADD",
-              "value": "+(@srd5e.name.奥术冲击 * @abilities.魅力.mod)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "奥能动力甲",
-      "ENG_name": "Arcane Propulsion Armor",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "special"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "奥能动力甲",
-          "ENG_name": "Arcane Propulsion Armor",
-          "changes": [
-            {
-              "key": "system.attributes.movement.walk",
-              "mode": "ADD",
-              "value": "5"
-            }
-          ],
-          "enchantmentRiderParent": "XY7pERdPxxb8bjlq"
-        },
-        {
-          "name": "奥术推进",
-          "ENG_name": "Arcane Propulsion",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": "奥术推进"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "XY7pERdPxxb8bjlq"
-        }
-      ],
-      "subEntities": {
-        "item": [
-          {
-            "name": "奥术推进护手",
-            "ENG_name": "Arcane Propulsion Gauntlets",
-            "source": "TCE",
-            "page": 20,
-            "type": "M",
-            "rarity": "无",
-            "weaponCategory": "简单",
-            "property": [
-              "T"
-            ],
-            "range": "20/60",
-            "dmg1": "1d8",
-            "dmgType": "O",
-            "entries": [
-              "这些护手是您奥术推进装甲的一部分。每个护手都是一把魔法近战武器，只有在手中没有持有其他物品时才能使用。穿戴者对护手有熟练度。当投掷时，护手会脱离并飞向攻击目标，然后立即返回穿戴者并重新连接。"
-            ],
-            "foundrySystem": {
-              "equipped": true,
-              "proficient": 1,
-              "properties.mgc": true
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "魔法力量护甲",
-      "ENG_name": "Armor of Magical Strength",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "special"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "魔法力量护甲",
-          "ENG_name": "Armor of Magical Strength",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "OVERRIDE",
-              "value": "魔法力量的{}"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "反应"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.uses.per",
-              "mode": "OVERRIDE",
-              "value": "充能"
-            },
-            {
-              "key": "system.uses.max",
-              "mode": "OVERRIDE",
-              "value": "6"
-            },
-            {
-              "key": "system.activation.condition",
-              "mode": "OVERRIDE",
-              "value": "当穿戴者进行力量检定或豁免投掷，或者会被击倒时"
-            },
-            {
-              "key": "system.uses.recovery",
-              "mode": "OVERRIDE",
-              "value": "1d6"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "OVERRIDE",
-              "value": "<p><strong>物品：一套盔甲（需要调谐）</strong></p> <p>这套盔甲有6次充能。穿戴者可以以以下方式消耗盔甲的充能：</p> <ul> <li> <p>当穿戴者进行力量检定或力量豁免投掷时，它可以消耗1次充能，以增加等于其智力修正值的额外加值（当前为，[[/r @abilities.int.mod]]）</p> </li> <li> <p>如果生物会被击倒，它可以使用其反应来消耗1次充能以避免被击倒。</p> </li> </ul> <p>盔甲在黎明时每天恢复1d6次消耗的充能。</p> <p><strong>铸造笔记</strong></p> <p>此特性被配置为反应。对于使用力量检定/豁免投掷，只需将充能减少1即可。</p> "
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "幽影护甲",
-      "ENG_name": "Armor of Shadows",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "星移步法",
-      "ENG_name": "Ascendant Step",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "野兽之语",
-      "ENG_name": "Beast Speech",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "惑人低语",
-      "ENG_name": "Bewitching Whispers",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "远古奥秘之书",
-      "ENG_name": "Book of Ancient Secrets",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "折返之靴",
-      "ENG_name": "Boots of the Winding Path",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "折返之靴",
-          "ENG_name": "Boots of the Winding Path",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "OVERRIDE",
-              "value": "折返之靴"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这些靴子时，生物可以在当前回合内，作为奖励动作，传送至最多15英尺远的空位，该生物必须在当前回合的某个时刻曾经占据过那个空间。</p>"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "加成"
-            },
-            {
-              "key": "system.range.value",
-              "mode": "OVERRIDE",
-              "value": "15"
-            },
-            {
-              "key": "system.range.units",
-              "mode": "OVERRIDE",
-              "value": "ft"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "卡瑟利之链",
-      "ENG_name": "Chains of Carceri",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "云雾符文",
-      "ENG_name": "Cloud Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "reaction"
-        },
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      }
-    },
-    {
-      "name": "魔鬼视界",
-      "ENG_name": "Devil's Sight",
-      "source": "PHB",
-      "effects": [
-        {
-          "name": "增强视觉",
-          "ENG_name": "Enhanced Vision",
-          "transfer": true,
-          "changes": [
-            {
-              "key": "data.attributes.senses.darkvision",
-              "mode": "OVERRIDE",
-              "value": "120"
-            },
-            {
-              "key": "data.attributes.senses.special",
-              "mode": "ADD",
-              "value": "魔鬼视界"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "恐惧箴言",
-      "ENG_name": "Dreadful Word",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "魔能意志",
-      "ENG_name": "Eldritch Mind",
-      "source": "TCE",
-      "effects": [
-        {
-          "transfer": true,
-          "changes": [
-            {
-              "key": "system.attributes.concentration.roll.mode",
-              "mode": "OVERRIDE",
-              "value": "1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "魔能视界",
-      "ENG_name": "Eldritch Sight",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "增强奥术法器",
-      "ENG_name": "Enhanced Arcane Focus",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "weapon"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "增强奥术法器",
-          "ENG_name": "Enhanced Arcane Focus",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", Enhanced Arcane Focus"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>持有这个物品时，生物在法术攻击检定中获得+1的加成。此外，生物在进行法术攻击时忽略半掩体的影响。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "OVERRIDE",
-              "value": "毫克"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "syx3ZXUoQwVJUZxP"
-        },
-        {
-          "name": "增强奥术焦点 +2",
-          "ENG_name": "Enhanced Arcane Focus +2",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", Enhanced Arcane Focus"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>持有这个物品时，生物在法术攻击检定中获得+1的加成。此外，生物在进行法术攻击时忽略半掩体的影响。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "OVERRIDE",
-              "value": "毫克"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "I4qB050rdgSsoIEd"
-        },
-        {
-          "name": "增强奥术法器",
-          "ENG_name": "Enhanced Arcane Focus",
-          "changes": [
-            {
-              "key": "system.bonuses.msak.attack",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.bonuses.msak.damage",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.bonuses.rsak.attack",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.bonuses.rsak.damage",
-              "mode": "ADD",
-              "value": "1"
-            }
-          ],
-          "enchantmentRiderParent": "syx3ZXUoQwVJUZxP"
-        },
-        {
-          "name": "增强奥术焦点 +2",
-          "ENG_name": "Enhanced Arcane Focus +2",
-          "changes": [
-            {
-              "key": "system.bonuses.msak.attack",
-              "mode": "ADD",
-              "value": "2"
-            },
-            {
-              "key": "system.bonuses.msak.damage",
-              "mode": "ADD",
-              "value": "2"
-            },
-            {
-              "key": "system.bonuses.rsak.attack",
-              "mode": "ADD",
-              "value": "2"
-            },
-            {
-              "key": "system.bonuses.rsak.damage",
-              "mode": "ADD",
-              "value": "2"
-            }
-          ],
-          "enchantmentRiderParent": "I4qB050rdgSsoIEd"
-        }
-      ]
-    },
-    {
-      "name": "增强防御",
-      "ENG_name": "Enhanced Defense",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "增强防御",
-          "ENG_name": "Enhanced Defense",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 增强防御"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>生物穿戴（盔甲）或持有（盾牌）注入的物品时，获得+1的护甲等级加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.armor.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            }
-          ],
-          "type": "enchantment"
-        },
-        {
-          "name": "增强防御 +2",
-          "ENG_name": "Enhanced Defense +2",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 增强防御"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>生物穿戴（盔甲）或持有（盾牌）注入的物品时，获得+1的护甲等级加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.armor.magicalBonus",
-              "mode": "ADD",
-              "value": "2"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "增强武器",
-      "ENG_name": "Enhanced Weapon",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "weapon"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "增强武器",
-          "ENG_name": "Enhanced Weapon",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 强化武器"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这把魔法武器在使用时攻击和伤害骰投掷获得+1的加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>Active Effect自动处理加成的增加。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            }
-          ],
-          "type": "enchantment"
-        },
-        {
-          "name": "强化武器 +2",
-          "ENG_name": "Enhanced Weapon +2",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 强化武器"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这把魔法武器在使用时攻击和伤害骰投掷获得+1的加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>Active Effect自动处理加成的增加。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.magicalBonus",
-              "mode": "ADD",
-              "value": "2"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "邪魔活力",
-      "ENG_name": "Fiendish Vigor",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "火焰符文",
-      "ENG_name": "Fire Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "警觉特技",
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      },
-      "effects": [
-        {
-          "name": "束缚",
-          "ENG_name": "Restrained",
-          "duration": {
-            "seconds": 60
-          },
-          "statuses": [
-            "束缚"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "寒霜符文",
-      "ENG_name": "Frost Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "bonus"
-        },
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      },
-      "effects": [
-        {
-          "name": "坚固",
-          "ENG_name": "Sturdy",
-          "duration": {
-            "rounds": 1,
-            "seconds": 600
-          },
-          "changes": [
-            {
-              "key": "system.abilities.con.bonuses.save",
-              "mode": "ADD",
-              "value": "+2"
-            },
-            {
-              "key": "system.abilities.con.bonuses.check",
-              "mode": "ADD",
-              "value": "+2"
-            },
-            {
-              "key": "system.abilities.str.bonuses.save",
-              "mode": "ADD",
-              "value": "+2"
-            },
-            {
-              "key": "system.abilities.str.bonuses.check",
-              "mode": "ADD",
-              "value": "+2"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "警觉之盔",
-      "ENG_name": "Helm of Awareness",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "警觉之盔",
-          "ENG_name": "Helm of Awareness",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": "，感知的"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这个头盔时，生物在先攻骰上有优势。此外，除非穿戴者处于&ref[失去能力]{失去能力}状态，否则不能被&ref[突袭]{突袭}。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment"
-        },
-        {
-          "name": "警觉之盔",
-          "ENG_name": "Helm of Awareness",
-          "changes": [
-            {
-              "key": "system.traits.ci.value",
-              "mode": "ADD",
-              "value": "被突袭"
-            },
-            {
-              "key": "flags.dnd5e.initiativeAdv",
-              "mode": "OVERRIDE",
-              "value": "true"
-            }
-          ],
-          "transfer": true
-        }
-      ]
-    },
-    {
-      "name": "山丘符文",
-      "ENG_name": "Hill Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "bonus"
-        },
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      },
-      "effects": [
-        {
-          "name": "韧性",
-          "ENG_name": "Resilience",
-          "duration": {
-            "rounds": 1,
-            "seconds": 60
-          },
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "穿刺"
-            },
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "钝击"
-            },
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "斩击"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "人工生命仆从",
-      "ENG_name": "Homunculus Servant",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "action"
-        },
-        "actionType": "召唤",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        }
-      }
-    },
-    {
-      "name": "千面之脸",
-      "ENG_name": "Mask of Many Faces",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "万形之主",
-      "ENG_name": "Master of Myriad Forms",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "思维砥石",
-      "ENG_name": "Mind Sharpener",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "思维砥石",
-          "ENG_name": "Mind Sharpener",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "OVERRIDE",
-              "value": "{0}的心灵锐化"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这个注入的物品可以给穿戴者一个冲击，以重新集中他们的注意力。该物品有4次充能。当穿戴者在维持法术集中的体质豁免投掷失败时，穿戴者可以使用其反应来消耗物品的1次充能，以代替失败。该物品在黎明时每天恢复1d4次消耗的充能。</p>"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "反应"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.activation.condition",
-              "mode": "OVERRIDE",
-              "value": "当穿戴者未能通过专注检定时"
-            },
-            {
-              "key": "system.uses.per",
-              "mode": "OVERRIDE",
-              "value": "充能"
-            },
-            {
-              "key": "system.uses.max",
-              "mode": "OVERRIDE",
-              "value": "4"
-            },
-            {
-              "key": "system.uses.recovery",
-              "mode": "OVERRIDE",
-              "value": "1d4"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "混沌手下",
-      "ENG_name": "Minions of Chaos",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "心灵泥沼",
-      "ENG_name": "Mire the Mind",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "迷雾幻影",
-      "ENG_name": "Misty Visions",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "超凡跳跃",
-      "ENG_name": "Otherworldly Leap",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "刃之魔契",
-      "ENG_name": "Pact of the Blade",
-      "source": "PHB",
-      "system": {
-        "activation.type": "肉体雕塑者",
-        "activation.cost": 1
-      }
-    },
-    {
-      "name": "光耀武器",
-      "ENG_name": "Radiant Weapon",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "weapon"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "光耀武器",
-          "ENG_name": "Radiant Weapon",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 辐射"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这把魔法武器在使用时，攻击和伤害骰投掷获得+1的加成。持有它时，使用者可以采取一个奖励动作使其在30英尺半径内散发明亮的光芒，并在额外的30英尺内散发微光。使用者可以以一个奖励动作熄灭光芒。</p> <p>该武器有4次充能。在被攻击击中后，使用者可以立即以反应消耗1次充能，并使攻击者在攻击者的下一个回合结束前目盲，除非攻击者在对抗你的法术豁免DC的体质豁免投掷中成功。该武器每天黎明时恢复1d4次消耗的充能。</p> <p><strong>铸造厂备注</strong></p> <p>这种注入增加了攻击和伤害骰的加成以及充能，但它们不会自动消耗，也不会在每次使用时提示你。这是为了使用武器的普通能力。聊天卡包括一个选项，如果需要，可以消耗充能。</p> <p>这种注入还授予了[[/item Radiant Weapon Reaction]]物品，用于处理其充能和豁免投掷。当注入被移除时，反应物品也将被移除。</p>"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "反应"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.activation.condition",
-              "mode": "OVERRIDE",
-              "value": "被攻击击中后"
-            },
-            {
-              "key": "system.uses.per",
-              "mode": "OVERRIDE",
-              "value": "充能"
-            },
-            {
-              "key": "system.uses.max",
-              "mode": "OVERRIDE",
-              "value": "4"
-            },
-            {
-              "key": "system.uses.recovery",
-              "mode": "OVERRIDE",
-              "value": "1d4"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "连射武器",
-      "ENG_name": "Repeating Shot",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "weapon"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "连射武器",
-          "ENG_name": "Repeating Shot",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 连发射击"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这把魔法武器在使用进行远程攻击时，攻击和伤害骰投掷获得+1的加成，并且如果它具有装填属性，则忽略该属性。</p> <p>如果武器没有弹药，它会自行产生，当使用者用它进行远程攻击时自动创造一件魔法弹药。由武器创造的弹药在击中或错过目标的瞬间消失。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "-LOD"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "仿制魔法物品",
-      "ENG_name": "Replicate Magic Item",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        }
-      },
-      "effects": [
-        {
-          "name": "复制魔法物品",
-          "ENG_name": "Replicated Magic Item",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 复制"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "斥力之盾",
-      "ENG_name": "Repulsion Shield",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "斥力之盾",
-          "ENG_name": "Repulsion Shield",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 排斥护盾"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>生物在使用这个盾牌时获得+1的护甲等级加成。</p> <p>这个盾牌有4次充能。持有它时，使用者可以在被近战攻击击中后立即使用反应消耗1次盾牌的充能，并将攻击者推开最多15英尺。每天黎明时，盾牌恢复1d4次消耗的充能。</p> <p><strong>铸造厂备注</strong></p> <p>这个注入包括护甲等级的加成。</p>"
-            },
-            {
-              "key": "system.armor.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "反应"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.uses.per",
-              "mode": "OVERRIDE",
-              "value": "充能"
-            },
-            {
-              "key": "system.uses.max",
-              "mode": "OVERRIDE",
-              "value": "4"
-            },
-            {
-              "key": "system.activation.condition",
-              "mode": "ADD",
-              "value": "在被近战攻击击中后立即"
-            },
-            {
-              "key": "system.uses.recovery",
-              "mode": "OVERRIDE",
-              "value": "1d4"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "抗力护甲",
-      "ENG_name": "Resistant Armor",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "强酸抗性",
-          "ENG_name": "Acid Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 抗酸性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对酸性伤害具有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "ufnjdkye4AwCNw3y"
-        },
-        {
-          "name": "寒冷抗性",
-          "ENG_name": "Cold Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 抗寒"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对寒冷伤害具有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "IwMxrYsS7HFjX4Oi"
-        },
-        {
-          "name": "火焰抗性",
-          "ENG_name": "Fire Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 火焰抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对火焰伤害有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "BaA8aaeV86SWrjFp"
-        },
-        {
-          "name": "力量抗性",
-          "ENG_name": "Force Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 力量抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对力量伤害有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "hCI4vspbQZLRR92W"
-        },
-        {
-          "name": "闪电抗性",
-          "ENG_name": "Lightning Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 抗电"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对闪电伤害具有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "6a8ZKAYbgRClp31A"
-        },
-        {
-          "name": "黯蚀抗性",
-          "ENG_name": "Necrotic Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 死灵抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对死灵伤害有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "sUfuFKyLRr8SHrW1"
-        },
-        {
-          "name": "毒素抗性",
-          "ENG_name": "Poison Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 毒素抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对毒素伤害有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "urJlfLzdn7EMQVeI"
-        },
-        {
-          "name": "心灵抗性",
-          "ENG_name": "Psychic Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 心灵抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对心灵伤害具有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "PMg1xUSzmdfkehmk"
-        },
-        {
-          "name": "光辉抗性",
-          "ENG_name": "Radiant Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 辐射抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对光辉伤害具有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "d91sC1CVni1UqvD9"
-        },
-        {
-          "name": "雷霆抗性",
-          "ENG_name": "Thunder Resistance",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 雷霆抗性"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这件盔甲时，生物对雷鸣伤害有抗性。</p>"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment",
-          "foundryId": "53ofZQaLsaqm16Wv"
-        },
-        {
-          "name": "强酸抗性",
-          "ENG_name": "Acid Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "酸性"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "ufnjdkye4AwCNw3y"
-        },
-        {
-          "name": "寒冷抗性",
-          "ENG_name": "Cold Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "寒冷"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "IwMxrYsS7HFjX4Oi"
-        },
-        {
-          "name": "火焰抗性",
-          "ENG_name": "Fire Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "火"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "BaA8aaeV86SWrjFp"
-        },
-        {
-          "name": "力量抗性",
-          "ENG_name": "Force Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "力量"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "hCI4vspbQZLRR92W"
-        },
-        {
-          "name": "闪电抗性",
-          "ENG_name": "Lightning Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "闪电"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "6a8ZKAYbgRClp31A"
-        },
-        {
-          "name": "黯蚀抗性",
-          "ENG_name": "Necrotic Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "死灵"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "sUfuFKyLRr8SHrW1"
-        },
-        {
-          "name": "毒素抗性",
-          "ENG_name": "Poison Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "毁灭诅咒"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "urJlfLzdn7EMQVeI"
-        },
-        {
-          "name": "心灵抗性",
-          "ENG_name": "Psychic Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "心灵"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "PMg1xUSzmdfkehmk"
-        },
-        {
-          "name": "光辉抗性",
-          "ENG_name": "Radiant Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "光辉"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "d91sC1CVni1UqvD9"
-        },
-        {
-          "name": "雷霆抗性",
-          "ENG_name": "Thunder Resistance",
-          "changes": [
-            {
-              "key": "system.traits.dr.value",
-              "mode": "ADD",
-              "value": "雷鸣伤害"
-            }
-          ],
-          "transfer": true,
-          "enchantmentRiderParent": "53ofZQaLsaqm16Wv"
-        }
-      ]
-    },
-    {
-      "name": "回力武器",
-      "ENG_name": "Returning Weapon",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "weapon"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "回力武器",
-          "ENG_name": "Returning Weapon",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 回返"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>这把魔法武器在使用时，攻击和伤害骰投掷会获得+1的加值，并且在用于远程攻击后会立即返回使用者手中。</p>"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "毫克"
-            },
-            {
-              "key": "system.magicalBonus",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.properties",
-              "mode": "ADD",
-              "value": "退休"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "重塑血肉",
-      "ENG_name": "Sculptor of Flesh",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "凶兆符记",
-      "ENG_name": "Sign of Ill Omen",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "法力恢复戒指",
-      "ENG_name": "Spell-Refueling Ring",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "none"
-        },
-        "actionType": "附魔",
-        "type": {
-          "value": "enchantment",
-          "subtype": "artificerInfusion"
-        },
-        "enchantment": {
-          "restrictions": {
-            "type": "equipment"
-          }
-        }
-      },
-      "effects": [
-        {
-          "name": "法力恢复戒指",
-          "ENG_name": "Spell-Refueling Ring",
-          "changes": [
-            {
-              "key": "姓名",
-              "mode": "ADD",
-              "value": ", 法术充能"
-            },
-            {
-              "key": "system.description.value",
-              "mode": "ADD",
-              "value": "<p>穿戴这枚戒指时，生物可以作为动作恢复一个已消耗的法术位。恢复的法术位可以是3级或更低。一旦使用，戒指直到下一个黎明前不能再使用。</p>"
-            },
-            {
-              "key": "system.activation.type",
-              "mode": "OVERRIDE",
-              "value": "肉体雕塑者"
-            },
-            {
-              "key": "system.activation.cost",
-              "mode": "OVERRIDE",
-              "value": "1"
-            },
-            {
-              "key": "system.uses.per",
-              "mode": "OVERRIDE",
-              "value": "拂晓之光"
-            },
-            {
-              "key": "system.uses.max",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.uses.recovery",
-              "mode": "ADD",
-              "value": "1"
-            },
-            {
-              "key": "system.attunement",
-              "mode": "OVERRIDE",
-              "value": "必需的"
-            }
-          ],
-          "type": "enchantment"
-        }
-      ]
-    },
-    {
-      "name": "岩石符文",
-      "ENG_name": "Stone Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "reaction"
-        },
-        "actionType": "豁免",
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      },
-      "effects": [
-        {
-          "name": "审慎",
-          "ENG_name": "Judiciousness",
-          "changes": [
-            {
-              "key": "system.attributes.senses.darkvision",
-              "mode": "UPGRADE",
-              "value": "120"
-            }
-          ],
-          "transfer": true
-        },
-        {
-          "name": "判定",
-          "ENG_name": "Judged",
-          "duration": {
-            "seconds": 60
-          },
-          "statuses": [
-            "魅惑",
-            "无力"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "风暴符文",
-      "ENG_name": "Storm Rune",
-      "source": "TCE",
-      "system": {
-        "activation": {
-          "type": "bonus"
-        },
-        "type": {
-          "value": "enchantment",
-          "subtype": "rune"
-        }
-      }
-    },
-    {
-      "name": "命运窃贼",
-      "ENG_name": "Thief of Five Fates",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "穹宇尽视",
-      "ENG_name": "Visions of Distant Realms",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    },
-    {
-      "name": "坟墓低语",
-      "ENG_name": "Whispers of the Grave",
-      "source": "PHB",
-      "system": {
-        "activation.type": null,
-        "activation.cost": null
-      }
-    }
-  ]
+	"optionalfeature": [
+		{
+			"name": "苦痛魔爆",
+			"ENG_name": "Agonizing Blast",
+			"source": "PHB",
+			"effects": [
+				{
+					"name": "五命盗贼",
+					"ENG_name": "Bonus Damage",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "data.bonuses.rsak.damage",
+							"mode": "ADD",
+							"value": "+(@srd5e.name.奥术冲击 * @abilities.魅力.mod)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "奥能动力甲",
+			"ENG_name": "Arcane Propulsion Armor",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "special"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "奥能动力甲",
+					"ENG_name": "Arcane Propulsion Armor",
+					"changes": [
+						{
+							"key": "system.attributes.movement.walk",
+							"mode": "ADD",
+							"value": "5"
+						}
+					],
+					"enchantmentRiderParent": "XY7pERdPxxb8bjlq"
+				},
+				{
+					"name": "奥术推进",
+					"ENG_name": "Arcane Propulsion",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": "奥术推进"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "XY7pERdPxxb8bjlq"
+				}
+			],
+			"subEntities": {
+				"item": [
+					{
+						"name": "奥术推进护手",
+						"ENG_name": "Arcane Propulsion Gauntlets",
+						"source": "TCE",
+						"page": 20,
+						"type": "M",
+						"rarity": "无",
+						"weaponCategory": "简单",
+						"property": [
+							"T"
+						],
+						"range": "20/60",
+						"dmg1": "1d8",
+						"dmgType": "O",
+						"entries": [
+							"这些护手是您奥术推进装甲的一部分。每个护手都是一把魔法近战武器，只有在手中没有持有其他物品时才能使用。穿戴者对护手有熟练度。当投掷时，护手会脱离并飞向攻击目标，然后立即返回穿戴者并重新连接。"
+						],
+						"foundrySystem": {
+							"equipped": true,
+							"proficient": 1,
+							"properties.mgc": true
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "魔法力量护甲",
+			"ENG_name": "Armor of Magical Strength",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "special"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "魔法力量护甲",
+					"ENG_name": "Armor of Magical Strength",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "OVERRIDE",
+							"value": "魔法力量的{}"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "反应"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.uses.per",
+							"mode": "OVERRIDE",
+							"value": "充能"
+						},
+						{
+							"key": "system.uses.max",
+							"mode": "OVERRIDE",
+							"value": "6"
+						},
+						{
+							"key": "system.activation.condition",
+							"mode": "OVERRIDE",
+							"value": "当穿戴者进行力量检定或豁免投掷，或者会被击倒时"
+						},
+						{
+							"key": "system.uses.recovery",
+							"mode": "OVERRIDE",
+							"value": "1d6"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "OVERRIDE",
+							"value": "<p><strong>物品：一套盔甲（需要调谐）</strong></p> <p>这套盔甲有6次充能。穿戴者可以以以下方式消耗盔甲的充能：</p> <ul> <li> <p>当穿戴者进行力量检定或力量豁免投掷时，它可以消耗1次充能，以增加等于其智力修正值的额外加值（当前为，[[/r @abilities.int.mod]]）</p> </li> <li> <p>如果生物会被击倒，它可以使用其反应来消耗1次充能以避免被击倒。</p> </li> </ul> <p>盔甲在黎明时每天恢复1d6次消耗的充能。</p> <p><strong>铸造笔记</strong></p> <p>此特性被配置为反应。对于使用力量检定/豁免投掷，只需将充能减少1即可。</p> "
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "幽影护甲",
+			"ENG_name": "Armor of Shadows",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "星移步法",
+			"ENG_name": "Ascendant Step",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "野兽之语",
+			"ENG_name": "Beast Speech",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "惑人低语",
+			"ENG_name": "Bewitching Whispers",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "远古奥秘之书",
+			"ENG_name": "Book of Ancient Secrets",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "折返之靴",
+			"ENG_name": "Boots of the Winding Path",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "折返之靴",
+					"ENG_name": "Boots of the Winding Path",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "OVERRIDE",
+							"value": "折返之靴"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这些靴子时，生物可以在当前回合内，作为奖励动作，传送至最多15英尺远的空位，该生物必须在当前回合的某个时刻曾经占据过那个空间。</p>"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "额外动作"
+						},
+						{
+							"key": "system.range.value",
+							"mode": "OVERRIDE",
+							"value": "15"
+						},
+						{
+							"key": "system.range.units",
+							"mode": "OVERRIDE",
+							"value": "ft"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "卡瑟利之链",
+			"ENG_name": "Chains of Carceri",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "云雾符文",
+			"ENG_name": "Cloud Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "reaction"
+				},
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			}
+		},
+		{
+			"name": "魔鬼视界",
+			"ENG_name": "Devil's Sight",
+			"source": "PHB",
+			"effects": [
+				{
+					"name": "增强视觉",
+					"ENG_name": "Enhanced Vision",
+					"transfer": true,
+					"changes": [
+						{
+							"key": "data.attributes.senses.darkvision",
+							"mode": "OVERRIDE",
+							"value": "120"
+						},
+						{
+							"key": "data.attributes.senses.special",
+							"mode": "ADD",
+							"value": "魔鬼视界"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "恐惧箴言",
+			"ENG_name": "Dreadful Word",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "魔能意志",
+			"ENG_name": "Eldritch Mind",
+			"source": "TCE",
+			"effects": [
+				{
+					"transfer": true,
+					"changes": [
+						{
+							"key": "system.attributes.concentration.roll.mode",
+							"mode": "OVERRIDE",
+							"value": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "魔能视界",
+			"ENG_name": "Eldritch Sight",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "增强奥术法器",
+			"ENG_name": "Enhanced Arcane Focus",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "weapon"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "增强奥术法器",
+					"ENG_name": "Enhanced Arcane Focus",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", Enhanced Arcane Focus"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>持有这个物品时，生物在法术攻击检定中获得+1的加成。此外，生物在进行法术攻击时忽略半掩体的影响。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "OVERRIDE",
+							"value": "毫克"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "syx3ZXUoQwVJUZxP"
+				},
+				{
+					"name": "增强奥术焦点 +2",
+					"ENG_name": "Enhanced Arcane Focus +2",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", Enhanced Arcane Focus"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>持有这个物品时，生物在法术攻击检定中获得+1的加成。此外，生物在进行法术攻击时忽略半掩体的影响。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "OVERRIDE",
+							"value": "毫克"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "I4qB050rdgSsoIEd"
+				},
+				{
+					"name": "增强奥术法器",
+					"ENG_name": "Enhanced Arcane Focus",
+					"changes": [
+						{
+							"key": "system.bonuses.msak.attack",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.bonuses.msak.damage",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.bonuses.rsak.attack",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.bonuses.rsak.damage",
+							"mode": "ADD",
+							"value": "1"
+						}
+					],
+					"enchantmentRiderParent": "syx3ZXUoQwVJUZxP"
+				},
+				{
+					"name": "增强奥术焦点 +2",
+					"ENG_name": "Enhanced Arcane Focus +2",
+					"changes": [
+						{
+							"key": "system.bonuses.msak.attack",
+							"mode": "ADD",
+							"value": "2"
+						},
+						{
+							"key": "system.bonuses.msak.damage",
+							"mode": "ADD",
+							"value": "2"
+						},
+						{
+							"key": "system.bonuses.rsak.attack",
+							"mode": "ADD",
+							"value": "2"
+						},
+						{
+							"key": "system.bonuses.rsak.damage",
+							"mode": "ADD",
+							"value": "2"
+						}
+					],
+					"enchantmentRiderParent": "I4qB050rdgSsoIEd"
+				}
+			]
+		},
+		{
+			"name": "增强防御",
+			"ENG_name": "Enhanced Defense",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "增强防御",
+					"ENG_name": "Enhanced Defense",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 增强防御"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>生物穿戴（盔甲）或持有（盾牌）注入的物品时，获得+1的护甲等级加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.armor.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						}
+					],
+					"type": "enchantment"
+				},
+				{
+					"name": "增强防御 +2",
+					"ENG_name": "Enhanced Defense +2",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 增强防御"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>生物穿戴（盔甲）或持有（盾牌）注入的物品时，获得+1的护甲等级加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>注入在10级时会自动增加，但它不会自动更新已经附魔的物品。重新附魔物品以获得更高的加成。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.armor.magicalBonus",
+							"mode": "ADD",
+							"value": "2"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "增强武器",
+			"ENG_name": "Enhanced Weapon",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "weapon"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "增强武器",
+					"ENG_name": "Enhanced Weapon",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 强化武器"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这把魔法武器在使用时攻击和伤害骰投掷获得+1的加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>Active Effect自动处理加成的增加。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						}
+					],
+					"type": "enchantment"
+				},
+				{
+					"name": "强化武器 +2",
+					"ENG_name": "Enhanced Weapon +2",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 强化武器"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这把魔法武器在使用时攻击和伤害骰投掷获得+1的加成。</p> <p>当你在这个职业达到10级时，这个加成会增加到+2。</p> <p><strong>铸造厂备注</strong></p> <p>Active Effect自动处理加成的增加。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.magicalBonus",
+							"mode": "ADD",
+							"value": "2"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "邪魔活力",
+			"ENG_name": "Fiendish Vigor",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "火焰符文",
+			"ENG_name": "Fire Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "警觉特技",
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			},
+			"effects": [
+				{
+					"name": "束缚",
+					"ENG_name": "Restrained",
+					"duration": {
+						"seconds": 60
+					},
+					"statuses": [
+						"束缚"
+					]
+				}
+			]
+		},
+		{
+			"name": "寒霜符文",
+			"ENG_name": "Frost Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "bonus"
+				},
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			},
+			"effects": [
+				{
+					"name": "坚固",
+					"ENG_name": "Sturdy",
+					"duration": {
+						"rounds": 1,
+						"seconds": 600
+					},
+					"changes": [
+						{
+							"key": "system.abilities.con.bonuses.save",
+							"mode": "ADD",
+							"value": "+2"
+						},
+						{
+							"key": "system.abilities.con.bonuses.check",
+							"mode": "ADD",
+							"value": "+2"
+						},
+						{
+							"key": "system.abilities.str.bonuses.save",
+							"mode": "ADD",
+							"value": "+2"
+						},
+						{
+							"key": "system.abilities.str.bonuses.check",
+							"mode": "ADD",
+							"value": "+2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "警觉之盔",
+			"ENG_name": "Helm of Awareness",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "警觉之盔",
+					"ENG_name": "Helm of Awareness",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": "，感知的"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这个头盔时，生物在先攻骰上有优势。此外，除非穿戴者处于&ref[失去能力]{失去能力}状态，否则不能被&ref[突袭]{突袭}。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment"
+				},
+				{
+					"name": "警觉之盔",
+					"ENG_name": "Helm of Awareness",
+					"changes": [
+						{
+							"key": "system.traits.ci.value",
+							"mode": "ADD",
+							"value": "被突袭"
+						},
+						{
+							"key": "flags.dnd5e.initiativeAdv",
+							"mode": "OVERRIDE",
+							"value": "true"
+						}
+					],
+					"transfer": true
+				}
+			]
+		},
+		{
+			"name": "山丘符文",
+			"ENG_name": "Hill Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "bonus"
+				},
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			},
+			"effects": [
+				{
+					"name": "韧性",
+					"ENG_name": "Resilience",
+					"duration": {
+						"rounds": 1,
+						"seconds": 60
+					},
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "穿刺"
+						},
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "钝击"
+						},
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "斩击"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "人工生命仆从",
+			"ENG_name": "Homunculus Servant",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "action"
+				},
+				"actionType": "召唤",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				}
+			}
+		},
+		{
+			"name": "千面之脸",
+			"ENG_name": "Mask of Many Faces",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "万形之主",
+			"ENG_name": "Master of Myriad Forms",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "思维砥石",
+			"ENG_name": "Mind Sharpener",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "思维砥石",
+					"ENG_name": "Mind Sharpener",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "OVERRIDE",
+							"value": "{0}的心灵锐化"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这个注入的物品可以给穿戴者一个冲击，以重新集中他们的注意力。该物品有4次充能。当穿戴者在维持法术集中的体质豁免投掷失败时，穿戴者可以使用其反应来消耗物品的1次充能，以代替失败。该物品在黎明时每天恢复1d4次消耗的充能。</p>"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "反应"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.activation.condition",
+							"mode": "OVERRIDE",
+							"value": "当穿戴者未能通过专注检定时"
+						},
+						{
+							"key": "system.uses.per",
+							"mode": "OVERRIDE",
+							"value": "充能"
+						},
+						{
+							"key": "system.uses.max",
+							"mode": "OVERRIDE",
+							"value": "4"
+						},
+						{
+							"key": "system.uses.recovery",
+							"mode": "OVERRIDE",
+							"value": "1d4"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "混沌手下",
+			"ENG_name": "Minions of Chaos",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "心灵泥沼",
+			"ENG_name": "Mire the Mind",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "迷雾幻影",
+			"ENG_name": "Misty Visions",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "超凡跳跃",
+			"ENG_name": "Otherworldly Leap",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "刃之魔契",
+			"ENG_name": "Pact of the Blade",
+			"source": "PHB",
+			"system": {
+				"activation.type": "动作",
+				"activation.cost": 1
+			}
+		},
+		{
+			"name": "光耀武器",
+			"ENG_name": "Radiant Weapon",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "weapon"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "光耀武器",
+					"ENG_name": "Radiant Weapon",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 辐射"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这把魔法武器在使用时，攻击和伤害骰投掷获得+1的加成。持有它时，使用者可以采取一个奖励动作使其在30英尺半径内散发明亮的光芒，并在额外的30英尺内散发微光。使用者可以以一个奖励动作熄灭光芒。</p> <p>该武器有4次充能。在被攻击击中后，使用者可以立即以反应消耗1次充能，并使攻击者在攻击者的下一个回合结束前目盲，除非攻击者在对抗你的法术豁免DC的体质豁免投掷中成功。该武器每天黎明时恢复1d4次消耗的充能。</p> <p><strong>铸造厂备注</strong></p> <p>这种注入增加了攻击和伤害骰的加成以及充能，但它们不会自动消耗，也不会在每次使用时提示你。这是为了使用武器的普通能力。聊天卡包括一个选项，如果需要，可以消耗充能。</p> <p>这种注入还授予了[[/item Radiant Weapon Reaction]]物品，用于处理其充能和豁免投掷。当注入被移除时，反应物品也将被移除。</p>"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "反应"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.activation.condition",
+							"mode": "OVERRIDE",
+							"value": "被攻击击中后"
+						},
+						{
+							"key": "system.uses.per",
+							"mode": "OVERRIDE",
+							"value": "充能"
+						},
+						{
+							"key": "system.uses.max",
+							"mode": "OVERRIDE",
+							"value": "4"
+						},
+						{
+							"key": "system.uses.recovery",
+							"mode": "OVERRIDE",
+							"value": "1d4"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "连射武器",
+			"ENG_name": "Repeating Shot",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "weapon"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "连射武器",
+					"ENG_name": "Repeating Shot",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 连发射击"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这把魔法武器在使用进行远程攻击时，攻击和伤害骰投掷获得+1的加成，并且如果它具有装填属性，则忽略该属性。</p> <p>如果武器没有弹药，它会自行产生，当使用者用它进行远程攻击时自动创造一件魔法弹药。由武器创造的弹药在击中或错过目标的瞬间消失。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "-LOD"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "仿制魔法物品",
+			"ENG_name": "Replicate Magic Item",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				}
+			},
+			"effects": [
+				{
+					"name": "复制魔法物品",
+					"ENG_name": "Replicated Magic Item",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 复制"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "斥力之盾",
+			"ENG_name": "Repulsion Shield",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "斥力之盾",
+					"ENG_name": "Repulsion Shield",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 排斥护盾"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>生物在使用这个盾牌时获得+1的护甲等级加成。</p> <p>这个盾牌有4次充能。持有它时，使用者可以在被近战攻击击中后立即使用反应消耗1次盾牌的充能，并将攻击者推开最多15英尺。每天黎明时，盾牌恢复1d4次消耗的充能。</p> <p><strong>铸造厂备注</strong></p> <p>这个注入包括护甲等级的加成。</p>"
+						},
+						{
+							"key": "system.armor.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "反应"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.uses.per",
+							"mode": "OVERRIDE",
+							"value": "充能"
+						},
+						{
+							"key": "system.uses.max",
+							"mode": "OVERRIDE",
+							"value": "4"
+						},
+						{
+							"key": "system.activation.condition",
+							"mode": "ADD",
+							"value": "在被近战攻击击中后立即"
+						},
+						{
+							"key": "system.uses.recovery",
+							"mode": "OVERRIDE",
+							"value": "1d4"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "抗力护甲",
+			"ENG_name": "Resistant Armor",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "强酸抗性",
+					"ENG_name": "Acid Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 抗酸性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对酸性伤害具有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "ufnjdkye4AwCNw3y"
+				},
+				{
+					"name": "寒冷抗性",
+					"ENG_name": "Cold Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 抗寒"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对寒冷伤害具有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "IwMxrYsS7HFjX4Oi"
+				},
+				{
+					"name": "火焰抗性",
+					"ENG_name": "Fire Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 火焰抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对火焰伤害有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "BaA8aaeV86SWrjFp"
+				},
+				{
+					"name": "力量抗性",
+					"ENG_name": "Force Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 力量抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对力量伤害有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "hCI4vspbQZLRR92W"
+				},
+				{
+					"name": "闪电抗性",
+					"ENG_name": "Lightning Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 抗电"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对闪电伤害具有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "6a8ZKAYbgRClp31A"
+				},
+				{
+					"name": "黯蚀抗性",
+					"ENG_name": "Necrotic Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 死灵抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对死灵伤害有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "sUfuFKyLRr8SHrW1"
+				},
+				{
+					"name": "毒素抗性",
+					"ENG_name": "Poison Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 毒素抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对毒素伤害有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "urJlfLzdn7EMQVeI"
+				},
+				{
+					"name": "心灵抗性",
+					"ENG_name": "Psychic Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 心灵抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对心灵伤害具有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "PMg1xUSzmdfkehmk"
+				},
+				{
+					"name": "光辉抗性",
+					"ENG_name": "Radiant Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 辐射抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对光辉伤害具有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "d91sC1CVni1UqvD9"
+				},
+				{
+					"name": "雷霆抗性",
+					"ENG_name": "Thunder Resistance",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 雷霆抗性"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这件盔甲时，生物对雷鸣伤害有抗性。</p>"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment",
+					"foundryId": "53ofZQaLsaqm16Wv"
+				},
+				{
+					"name": "强酸抗性",
+					"ENG_name": "Acid Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "酸性"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "ufnjdkye4AwCNw3y"
+				},
+				{
+					"name": "寒冷抗性",
+					"ENG_name": "Cold Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "寒冷"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "IwMxrYsS7HFjX4Oi"
+				},
+				{
+					"name": "火焰抗性",
+					"ENG_name": "Fire Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "火"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "BaA8aaeV86SWrjFp"
+				},
+				{
+					"name": "力量抗性",
+					"ENG_name": "Force Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "力量"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "hCI4vspbQZLRR92W"
+				},
+				{
+					"name": "闪电抗性",
+					"ENG_name": "Lightning Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "闪电"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "6a8ZKAYbgRClp31A"
+				},
+				{
+					"name": "黯蚀抗性",
+					"ENG_name": "Necrotic Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "死灵"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "sUfuFKyLRr8SHrW1"
+				},
+				{
+					"name": "毒素抗性",
+					"ENG_name": "Poison Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "毁灭诅咒"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "urJlfLzdn7EMQVeI"
+				},
+				{
+					"name": "心灵抗性",
+					"ENG_name": "Psychic Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "心灵"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "PMg1xUSzmdfkehmk"
+				},
+				{
+					"name": "光辉抗性",
+					"ENG_name": "Radiant Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "光辉"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "d91sC1CVni1UqvD9"
+				},
+				{
+					"name": "雷霆抗性",
+					"ENG_name": "Thunder Resistance",
+					"changes": [
+						{
+							"key": "system.traits.dr.value",
+							"mode": "ADD",
+							"value": "雷鸣伤害"
+						}
+					],
+					"transfer": true,
+					"enchantmentRiderParent": "53ofZQaLsaqm16Wv"
+				}
+			]
+		},
+		{
+			"name": "回力武器",
+			"ENG_name": "Returning Weapon",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "weapon"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "回力武器",
+					"ENG_name": "Returning Weapon",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 回返"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>这把魔法武器在使用时，攻击和伤害骰投掷会获得+1的加值，并且在用于远程攻击后会立即返回使用者手中。</p>"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "毫克"
+						},
+						{
+							"key": "system.magicalBonus",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.properties",
+							"mode": "ADD",
+							"value": "退休"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "重塑血肉",
+			"ENG_name": "Sculptor of Flesh",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "凶兆符记",
+			"ENG_name": "Sign of Ill Omen",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "法力恢复戒指",
+			"ENG_name": "Spell-Refueling Ring",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "none"
+				},
+				"actionType": "附魔",
+				"type": {
+					"value": "enchantment",
+					"subtype": "artificerInfusion"
+				},
+				"enchantment": {
+					"restrictions": {
+						"type": "equipment"
+					}
+				}
+			},
+			"effects": [
+				{
+					"name": "法力恢复戒指",
+					"ENG_name": "Spell-Refueling Ring",
+					"changes": [
+						{
+							"key": "姓名",
+							"mode": "ADD",
+							"value": ", 法术充能"
+						},
+						{
+							"key": "system.description.value",
+							"mode": "ADD",
+							"value": "<p>穿戴这枚戒指时，生物可以作为动作恢复一个已消耗的法术位。恢复的法术位可以是3级或更低。一旦使用，戒指直到下一个黎明前不能再使用。</p>"
+						},
+						{
+							"key": "system.activation.type",
+							"mode": "OVERRIDE",
+							"value": "动作"
+						},
+						{
+							"key": "system.activation.cost",
+							"mode": "OVERRIDE",
+							"value": "1"
+						},
+						{
+							"key": "system.uses.per",
+							"mode": "OVERRIDE",
+							"value": "拂晓之光"
+						},
+						{
+							"key": "system.uses.max",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.uses.recovery",
+							"mode": "ADD",
+							"value": "1"
+						},
+						{
+							"key": "system.attunement",
+							"mode": "OVERRIDE",
+							"value": "必需的"
+						}
+					],
+					"type": "enchantment"
+				}
+			]
+		},
+		{
+			"name": "岩石符文",
+			"ENG_name": "Stone Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "reaction"
+				},
+				"actionType": "豁免",
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			},
+			"effects": [
+				{
+					"name": "审慎",
+					"ENG_name": "Judiciousness",
+					"changes": [
+						{
+							"key": "system.attributes.senses.darkvision",
+							"mode": "UPGRADE",
+							"value": "120"
+						}
+					],
+					"transfer": true
+				},
+				{
+					"name": "判定",
+					"ENG_name": "Judged",
+					"duration": {
+						"seconds": 60
+					},
+					"statuses": [
+						"魅惑",
+						"无力"
+					]
+				}
+			]
+		},
+		{
+			"name": "风暴符文",
+			"ENG_name": "Storm Rune",
+			"source": "TCE",
+			"system": {
+				"activation": {
+					"type": "bonus"
+				},
+				"type": {
+					"value": "enchantment",
+					"subtype": "rune"
+				}
+			}
+		},
+		{
+			"name": "命运窃贼",
+			"ENG_name": "Thief of Five Fates",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "穹宇尽视",
+			"ENG_name": "Visions of Distant Realms",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		},
+		{
+			"name": "坟墓低语",
+			"ENG_name": "Whispers of the Grave",
+			"source": "PHB",
+			"system": {
+				"activation.type": null,
+				"activation.cost": null
+			}
+		}
+	]
 }

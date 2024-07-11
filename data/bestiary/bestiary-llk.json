@@ -1,1044 +1,1044 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM",
-        "VGM"
-      ]
-    }
-  },
-  "monster": [
-    {
-      "name": "缸中之脑",
-      "ENG_name": "Brain in a Jar",
-      "source": "LLK",
-      "page": 38,
-      "otherSources": [
-        {
-          "source": "IMR"
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": "undead",
-      "alignment": [
-        "A"
-      ],
-      "ac": [
-        {
-          "ac": 11,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 58,
-        "formula": "9d8 + 18"
-      },
-      "speed": {
-        "walk": 0
-      },
-      "str": 1,
-      "dex": 1,
-      "con": 15,
-      "int": 19,
-      "wis": 10,
-      "cha": 15,
-      "save": {
-        "int": "+7",
-        "cha": "+5"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "immune": [
-        "死灵",
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧"
-      ],
-      "cr": "6",
-      "spellcasting": [
-        {
-          "name": "天生施法（灵能）",
-          "ENG_name": "Innate Spellcasting (Psionics)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "罐中大脑的天生施法能力是智力（法术豁免{@dc 15}）。它能够天生施放以下法术，无需任何材料："
-          ],
-          "will": [
-            "{@spell 侦测思想}",
-            "{@spell 法师之手}",
-            "{@spell 诚实之域}"
-          ],
-          "daily": {
-            "3e": [
-              "{@spell 魅惑人类}",
-              "{@spell 命令术}",
-              "{@spell 人类定身术}"
-            ],
-            "1e": [
-              "{@spell 强迫术}",
-              "{@spell 怪物定身术}",
-              "{@spell 沉眠}（3级施法）",
-              "{@spell 塔莎狂笑术}"
-            ]
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "侦测知性",
-          "ENG_name": "Detect Sentience",
-          "entries": [
-            "罐中的大脑能够感知到300英尺范围内任何智力为3或更高的生物的存在和位置，无论是否有障碍物阻挡，除非该生物受到{@spell 心灵屏障}法术的保护。"
-          ]
-        },
-        {
-          "name": "魔法抗性",
-          "ENG_name": "Magic Resistance",
-          "entries": [
-            "罐中大脑在对抗法术和其他魔法效果的豁免投掷上具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "心灵震爆 {@recharge 5}",
-          "ENG_name": "Mind Blast {@recharge 5}",
-          "entries": [
-            "罐中的大脑通过魔法发出心灵能量，形成一个60英尺的锥形区域。该区域内的每个生物必须进行一次智力豁免（DC 15），若失败则受到13（2d8 + 4）点心灵伤害，并在1分钟内处于{@condition 昏迷}状态。生物可以在每个回合结束时重新进行豁免投掷，若成功则结束该效果。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "魔法抗性"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "damageTags": [
-        "Y"
-      ],
-      "spellcastingTags": [
-        "I",
-        "P"
-      ],
-      "miscTags": [
-        "范围伤害"
-      ],
-      "conditionInflict": [
-        "震慑"
-      ],
-      "conditionInflictSpell": [
-        "魅惑",
-        "无力",
-        "麻痹",
-        "伏地",
-        "昏迷"
-      ],
-      "savingThrowForced": [
-        "智力"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力",
-        "感知"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "发条海怪",
-      "ENG_name": "Clockwork Kraken",
-      "source": "LLK",
-      "page": 38,
-      "size": [
-        "L"
-      ],
-      "type": "construct",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 142,
-        "formula": "15d10 + 60"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 20,
-      "dex": 12,
-      "con": 18,
-      "int": 3,
-      "wis": 11,
-      "cha": 1,
-      "senses": [
-        "黑暗视觉 120 英尺"
-      ],
-      "passive": 10,
-      "resist": [
-        "火",
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "能理解其创造者的语言但无法说话"
-      ],
-      "cr": "10",
-      "trait": [
-        {
-          "name": "魔法抗性",
-          "ENG_name": "Magic Resistance",
-          "entries": [
-            "发条海怪在对抗法术和其他魔法效果的豁免投掷上有优势。"
-          ]
-        },
-        {
-          "name": "独立触手",
-          "ENG_name": "Independent Tentacles",
-          "entries": [
-            "发条章鱼有八个触手，每个触手被视为中型生物，独立于构装体的回合移动，并且具有40英尺的飞行速度。发条章鱼的感觉通过其触手以及其主体运作。每个触手可以独立被攻击，对触手造成的伤害会加到发条章鱼的生命值总数上。如果触手受到的伤害超过20点，则触手会被摧毁。",
-            "将构造体减少到三个或更少的触手会相应地减少其攻击次数。发条海怪在长时间休息结束时可以重新生长任何被摧毁的触手。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "发条章鱼进行了四次触手猛击攻击。"
-          ]
-        },
-        {
-          "name": "触手猛击",
-          "ENG_name": "Tentacle Slam",
-          "entries": [
-            "{@atk 近战武器} 命中骰：9，射程5英尺，一个目标。{@h}12（{@damage 2d6 + 5}）钝击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "魔法抗性"
-      ],
-      "senseTags": [
-        "SD"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "CS"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "吸血鬼克特米尔",
-      "ENG_name": "Ctenmiir the Vampire",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 4,
-      "_copy": {
-        "name": "吸血鬼",
-        "ENG_name": "Vampire",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "吸血鬼",
-            "with": "克特米尔",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "棺材囚禁",
-              "ENG_name": "Coffin Imprisonment",
-              "entries": [
-                "克特米尔被囚禁在一个安装在活化魔像腿上的魔法铁棺材里。克特米尔的棺材速度为30英尺，攀爬速度为10英尺，它不仅保护吸血鬼免受阳光的伤害，同时也阻止了他逃离奴役。"
-              ]
-            }
-          }
-        }
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "speed": {
-        "walk": 30,
-        "climb": 10
-      },
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "东风",
-      "ENG_name": "East Wind",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 14,
-      "_copy": {
-        "name": "武术高手",
-        "ENG_name": "Martial Arts Adept",
-        "source": "VGM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "行家",
-            "with": "东风",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "特殊装备",
-              "ENG_name": "Special Equipment",
-              "entries": [
-                "东风装备了一件是{@item 变形之刃|LLK}的长剑。"
-              ]
-            }
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": {
-              "name": "变形之刃",
-              "ENG_name": "Polymorph Blade",
-              "entries": [
-                "{@atk 近战，远程} 命中骰5，射程5英尺，单一生物。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。如果东风在攻击骰上掷出20，则目标必须进行一次{@dc 15} 智力豁免，否则将遭受一个{@spell 变形术}的法术效果。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true
-    },
-    {
-      "name": "苦难之躯僧侣的长老寺院",
-      "ENG_name": "Elder Monastery of the Distressed Body Monk",
-      "source": "LLK",
-      "page": 12,
-      "_copy": {
-        "name": "邪教狂信者",
-        "ENG_name": "Cult Fanatic",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "狂热者",
-            "with": "武僧"
-          },
-          "action": {
-            "mode": "replaceArr",
-            "replace": "匕首",
-            "items": {
-              "name": "强力长矛",
-              "ENG_name": "Force Pike",
-              "entries": [
-                "{@atk 近战，远程} {@hit 命中4} 命中，触及5英尺或射程40/100英尺，单一生物。{@h}7 ({@damage 1d10 + 2}) 力量伤害。对任何穿着抛光金属盔甲或盾牌的目标进行攻击时处于不利状态，并且在烟雾或雾中射击时射程减半。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true
-    },
-    {
-      "name": "加勒特·莱维图森",
-      "ENG_name": "Garret Levistusson",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 41,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid"
-      },
-      "alignment": [
-        "C",
-        "N"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 44,
-        "formula": "8d8 + 8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 11,
-      "dex": 14,
-      "con": 12,
-      "int": 11,
-      "wis": 12,
-      "cha": 17,
-      "skill": {
-        "deception": "+7",
-        "investigation": "+4",
-        "performance": "+5",
-        "persuasion": "+5"
-      },
-      "passive": 11,
-      "languages": [
-        "深渊",
-        "普通",
-        "地狱语",
-        "盗贼黑话"
-      ],
-      "cr": "2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "加勒特是一名2级施法者。他的施法能力是魅力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。他准备了以下吟游诗人法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 剑刃防护}",
-                "{@spell 恶毒嘲笑}"
-              ]
-            },
-            "1": {
-              "slots": 3,
-              "spells": [
-                "{@spell 魅惑人类}",
-                "{@spell 侦测魔法}",
-                "{@spell 易容术}",
-                "{@spell 鉴定术}",
-                "{@spell 塔莎狂笑术}"
-              ]
-            }
-          },
-          "ability": "cha"
-        }
-      ],
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "加勒特佩戴着一个{@item 温暖戒指}（包含在他的统计数据中），并挥舞着一把{@item 赌徒之刃长剑|LLK}。"
-          ]
-        },
-        {
-          "name": "诗人灵感（每日3次）",
-          "ENG_name": "Bardic Inspiration (3/Day)",
-          "entries": [
-            "作为奖励行动，加勒特可以给一个选定的生物（除了他自己）一个{@dice d6}灵感骰。选定的生物必须在加勒特60英尺范围内，并且能听到他的声音。在接下来的10分钟内，该生物可以掷这个骰子，并将掷出的数字加到它进行的一个能力检定、攻击检定或豁免检定上。生物可以在掷骰结果出来但DM宣布是否成功之前使用灵感骰。一旦灵感骰被掷出，它就会消失。一个生物一次只能拥有一个灵感骰。"
-          ]
-        },
-        {
-          "name": "灵巧动作",
-          "ENG_name": "Cunning Action",
-          "entries": [
-            "在每个回合，加勒特可以使用奖励行动来执行冲刺、脱离战斗或隐藏行动。"
-          ]
-        },
-        {
-          "name": "偷袭 (1/回合)",
-          "ENG_name": "Sneak Attack (1/Turn)",
-          "entries": [
-            "当加勒特使用武器攻击命中目标，并且在攻击骰上有优势，或者目标在加勒特的盟友5英尺范围内且该盟友没有{@condition 无力}状态，同时加勒特在攻击骰上没有劣势时，加勒特额外造成7点({@condition 无力})伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "短剑",
-          "ENG_name": "Shortsword",
-          "entries": [
-            "{@atk 近战攻击} 命中骰：4，触及范围5英尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "短剑|PHB"
-      ],
-      "traitTags": [
-        "偷袭"
-      ],
-      "languageTags": [
-        "AB",
-        "C",
-        "I",
-        "TC"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "damageTagsSpell": [
-        "Y"
-      ],
-      "spellcastingTags": [
-        "CB"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "conditionInflict": [
-        "无力"
-      ],
-      "conditionInflictSpell": [
-        "魅惑",
-        "无力",
-        "伏地"
-      ],
-      "savingThrowForcedSpell": [
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "齿轮箱",
-      "ENG_name": "Gearbox",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 5,
-      "_copy": {
-        "name": "单元冢",
-        "ENG_name": "Monodrone",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "单声体",
-            "with": "齿轮箱",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "独特编程",
-              "ENG_name": "Unique Programming",
-              "entries": [
-                "Gearbox的独特编程允许魔方体充当一个{@item 方向法球|XGE}和一个{@item 时间法球|XGE}，随意施放{@spell 光亮术}戏法，并且赋予其他角色在使用盗贼工具进行敏捷检定时以及在进行能力检定以识别或操作机械或实验室设备时获得优势。"
-              ]
-            }
-          }
-        }
-      },
-      "alignment": [
-        "L",
-        "N"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Gearbox 可以随意施放 {@spell 光亮术} 这个戏法。"
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 光亮术}"
-              ]
-            }
-          },
-          "hidden": [
-            "法术"
-          ]
-        }
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "格洛因·纳瑟-纳瑟",
-      "ENG_name": "Gloine Nathair-Nathair",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 23,
-      "_copy": {
-        "name": "美杜莎",
-        "ENG_name": "Medusa",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "美杜莎",
-            "with": "光辉",
-            "flags": "i"
-          }
-        }
-      },
-      "type": "undead",
-      "immune": [
-        "毁灭诅咒",
-        "死灵"
-      ],
-      "conditionImmune": [
-        "力竭",
-        "中毒"
-      ],
-      "trait": [
-        {
-          "name": "石化凝视",
-          "ENG_name": "Petrifying Gaze",
-          "entries": [
-            "当一个能够看到美杜莎眼睛的生物在其30英尺范围内开始其回合时，如果美杜莎没有被{@condition 无力}并且能看到该生物，美杜莎可以强迫它进行一次{@condition 无力}体质豁免。如果豁免失败超过5点，该生物将立即被{@condition 石化}。否则，未能通过豁免的生物开始变成玻璃，并被{@condition 束缚}。被{@condition 束缚}的生物必须在其下一个回合结束时重复进行豁免，如果失败则变成{@condition 石化}，如果成功则结束效果。石化状态将持续，直到生物通过{@spell 高等复原术}法术或其他魔法被解除。",
-            "除非处于{@quickref 突袭|PHB|3|0|被突袭}状态，否则生物可以在其回合开始时闭上眼睛以避免进行豁免投掷。如果生物这样做了，直到它的下个回合开始前它都看不到美杜莎，届时它又可以再次闭上眼睛。如果生物在此期间看向美杜莎，它必须立即进行豁免投掷。",
-            "如果美杜莎在明亮的光线下，看到自己反射在30英尺内的光滑表面上，由于它的诅咒，美杜莎会被自己的目光所影响。"
-          ]
-        }
-      ],
-      "conditionInflict": [
-        "石化",
-        "束缚"
-      ],
-      "savingThrowForced": [
-        "体质"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "玛丽·格雷马尔金",
-      "ENG_name": "Mary Greymalkin",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 41,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid"
-      },
-      "alignment": [
-        "N"
-      ],
-      "ac": [
-        {
-          "ac": 12,
-          "from": [
-            "{@item 防御护腕}",
-            "{@item 防护戒指}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 45,
-        "formula": "7d8 + 14"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 14,
-      "wis": 14,
-      "cha": 15,
-      "save": {
-        "wis": "+4",
-        "cha": "+4"
-      },
-      "skill": {
-        "arcana": "+4",
-        "medicine": "+4",
-        "nature": "+4",
-        "religion": "+4"
-      },
-      "passive": 12,
-      "languages": [
-        "深渊",
-        "天界",
-        "普通",
-        "精灵语",
-        "地狱语",
-        "森林"
-      ],
-      "cr": "2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "玛丽是一名5级施法者。她的施法能力是魅力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。当她完成短休或长休时，她恢复消耗的法术位。她知道以下术士法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 寒颤之触}",
-                "{@spell 魔能爆}",
-                "{@spell 法师之手}"
-              ]
-            },
-            "3": {
-              "lower": 1,
-              "slots": 3,
-              "spells": [
-                "{@spell 黑暗}",
-                "{@spell 脆弱诅咒}",
-                "{@spell 催眠图纹}",
-                "{@spell 迷踪步}",
-                "{@spell 魅影之力}",
-                "{@spell 隐形仆役}"
-              ]
-            }
-          },
-          "ability": "cha"
-        }
-      ],
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "玛丽佩戴着{@item 防御护腕}和一个{@item 防护戒指}，并且携带着一套{@item 千象无常牌|LLK}"
-          ]
-        },
-        {
-          "name": "仙女之姿（短休后重充能）",
-          "ENG_name": "Fey Presence (Recharges after a Short Rest)",
-          "entries": [
-            "玛丽可以使她周围10英尺内的每个生物进行一次智力豁免（DC 12），若失败则在她下一个回合结束前被她{@condition 魅惑}或{@condition 恐惧}（由玛丽选择）。"
-          ]
-        },
-        {
-          "name": "精类血统",
-          "ENG_name": "Fey Ancestry",
-          "entries": [
-            "玛丽在对抗被{@condition 魅惑}的豁免投掷上有优势，魔法不能让她入睡。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "使用近战武器攻击，命中值2，攻击范围5英尺，单一目标。造成3点（1d6）钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "traitTags": [
-        "精类血统"
-      ],
-      "languageTags": [
-        "AB",
-        "C",
-        "CE",
-        "E",
-        "I",
-        "S"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "N",
-        "O",
-        "Y"
-      ],
-      "spellcastingTags": [
-        "CL"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "conditionInflict": [
-        "魅惑",
-        "恐惧"
-      ],
-      "conditionInflictSpell": [
-        "魅惑",
-        "无力"
-      ],
-      "savingThrowForced": [
-        "感知"
-      ],
-      "savingThrowForcedSpell": [
-        "智力",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "苦身寺宗师",
-      "ENG_name": "Monastery of the Distressed Body Grand Master",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 14,
-      "_copy": {
-        "name": "骨魔",
-        "ENG_name": "Bone Devil",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "恶魔",
-            "with": "宗师"
-          },
-          "trait": {
-            "mode": "prependArr",
-            "items": [
-              {
-                "name": "断首爪",
-                "ENG_name": "Vorpal Claws",
-                "entries": [
-                  "一把曾经与恶魔对抗而破碎的{@item 魔剑碎片}，替代了它的爪子。通过智力（{@skill 奥术}）或智慧（{@skill 洞察}）检定（DC 12），可以识别出它们。当恶魔用爪子攻击掷出20时，目标将被斩首。（你可以选择，攻击可以额外造成{@damage 6d8}斩击伤害。）如果目标对斩击伤害免疫、拥有传奇行动、没有或不需要头部，或者你决定目标太大，以至于不能被恶魔的爪子斩首，则对这种效果免疫。如果移除，碎片将失去它们的魔法力量。"
-                ]
-              },
-              {
-                "name": "传送手镯",
-                "ENG_name": "Teleportation Bracelets",
-                "entries": [
-                  "局部传送场手镯环绕在恶魔的臂部和尾巴上。这些设备允许大师在其自己的回合并使用其行动进行远程爪击和蛰击攻击。"
-                ]
-              }
-            ]
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "苦行僧的寺院",
-      "ENG_name": "Monastery of the Distressed Body Monk",
-      "source": "LLK",
-      "page": 12,
-      "_copy": {
-        "name": "邪教徒",
-        "ENG_name": "Cultist",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "邪教徒",
-            "with": "武僧"
-          },
-          "action": {
-            "mode": "replaceArr",
-            "replace": "弯刀",
-            "items": {
-              "name": "带钩长柄武器",
-              "ENG_name": "Hooked Polearm",
-              "entries": [
-                "{@atk 近战武器} 命中骰3，射程5英尺，单一目标。{@h}4 ({@damage 1d6 + 1}) 穿刺伤害。如果目标是中等大小或更小的生物，它将被{@condition grappled}（逃脱{@dc 10}）。直到这次擒抱结束，武僧不能使用其长兵器攻击另一个目标。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true
-    },
-    {
-      "name": "软泥族",
-      "ENG_name": "Ooze-Folk",
-      "source": "LLK",
-      "page": 46,
-      "size": [
-        "M"
-      ],
-      "type": "ooze",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 10,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 19,
-        "formula": "2d8 + 10"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 14,
-      "dex": 3,
-      "con": 20,
-      "int": 1,
-      "wis": 6,
-      "cha": 1,
-      "senses": [
-        "盲视 60 英尺"
-      ],
-      "passive": 8,
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "伏地"
-      ],
-      "cr": "1/2",
-      "trait": [
-        {
-          "name": "透明",
-          "ENG_name": "Transparent",
-          "entries": [
-            "即使软泥族在视线范围内，也需要进行一次{@dc 12} 智力（{@skill 感知}）检定才能发现没有移动或攻击的软泥族。如果一个生物试图进入软泥族的空间，而没有意识到软泥族的存在，它会被软泥族{quickref 惊吓|PHB|3|0|惊吓}。"
-          ]
-        },
-        {
-          "name": "脆弱骨骼",
-          "ENG_name": "Fragile Bones",
-          "entries": [
-            "对于它所受的每5点伤害，软泥族的行走速度减少5英尺。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "软泥怪进行一次玻璃长剑攻击和一次伪足攻击。"
-          ]
-        },
-        {
-          "name": "玻璃长剑",
-          "ENG_name": "Glass Longsword",
-          "entries": [
-            "{@atk 近战} {@hit 命中4} 命中，触及5英尺，单一生物。{@h}6 ({@damage 1d8 + 2}) 斩击伤害。如果使用玻璃长剑进行攻击时掷出1，则剑会破碎，不能再使用。"
-          ]
-        },
-        {
-          "name": "伪足",
-          "ENG_name": "Pseudopod",
-          "entries": [
-            "{@atk 近战武器} 命中骰4，射程5英尺，单一生物。{@h}5 ({@damage 1d6 + 2}) 酸性伤害。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "B"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "damageTags": [
-        "A",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "西风",
-      "ENG_name": "West Wind",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LLK",
-      "page": 14,
-      "_copy": {
-        "name": "武术高手",
-        "ENG_name": "Martial Arts Adept",
-        "source": "VGM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "行家",
-            "with": "西风",
-            "flags": "i"
-          },
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "特殊装备",
-              "ENG_name": "Special Equipment",
-              "entries": [
-                "西风装备着一把长剑，这是一把{@item 美杜莎之刃|LLK}。"
-              ]
-            }
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": {
-              "name": "美杜莎之刃",
-              "ENG_name": "Blade of the Medusa",
-              "entries": [
-                "{@atk 近战，远程} 命中骰5，射程5英尺，单一生物。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。如果西风在攻击骰上掷出20，则目标必须进行一次{@dc 15} 体质豁免，否则将遭受{@spell 血肉之躯}法术的效果。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "缸中之脑",
+			"ENG_name": "Brain in a Jar",
+			"source": "LLK",
+			"page": 38,
+			"otherSources": [
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 1,
+			"dex": 1,
+			"con": 15,
+			"int": 19,
+			"wis": 10,
+			"cha": 15,
+			"save": {
+				"int": "+7",
+				"cha": "+5"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"immune": [
+				"死灵",
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "天生施法（灵能）",
+					"ENG_name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"罐中大脑的天生施法能力是智力（法术豁免{@dc 15}）。它能够天生施放以下法术，无需任何材料："
+					],
+					"will": [
+						"{@spell 侦测思想}",
+						"{@spell 法师之手}",
+						"{@spell 诚实之域}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell 魅惑人类}",
+							"{@spell 命令术}",
+							"{@spell 人类定身术}"
+						],
+						"1e": [
+							"{@spell 强迫术}",
+							"{@spell 怪物定身术}",
+							"{@spell 沉眠}（3级施法）",
+							"{@spell 塔莎狂笑术}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "侦测知性",
+					"ENG_name": "Detect Sentience",
+					"entries": [
+						"罐中的大脑能够感知到300英尺范围内任何智力为3或更高的生物的存在和位置，无论是否有障碍物阻挡，除非该生物受到{@spell 心灵屏障}法术的保护。"
+					]
+				},
+				{
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
+					"entries": [
+						"罐中大脑在对抗法术和其他魔法效果的豁免投掷上具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "心灵震爆 {@recharge 5}",
+					"ENG_name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"罐中的大脑通过魔法发出心灵能量，形成一个60英尺的锥形区域。该区域内的每个生物必须进行一次智力豁免（DC 15），若失败则受到13（2d8 + 4）点心灵伤害，并在1分钟内处于{@condition 昏迷}状态。生物可以在每个回合结束时重新进行豁免投掷，若成功则结束该效果。"
+					]
+				}
+			],
+			"traitTags": [
+				"魔法抗性"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"范围伤害"
+			],
+			"conditionInflict": [
+				"震慑"
+			],
+			"conditionInflictSpell": [
+				"魅惑",
+				"无力",
+				"麻痹",
+				"伏地",
+				"昏迷"
+			],
+			"savingThrowForced": [
+				"智力"
+			],
+			"savingThrowForcedSpell": [
+				"魅力",
+				"感知"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "发条海怪",
+			"ENG_name": "Clockwork Kraken",
+			"source": "LLK",
+			"page": 38,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 18,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"senses": [
+				"黑暗视觉 120 英尺"
+			],
+			"passive": 10,
+			"resist": [
+				"火",
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击",
+					"cond": true
+				}
+			],
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"能理解其创造者的语言但无法说话"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
+					"entries": [
+						"发条海怪在对抗法术和其他魔法效果的豁免投掷上有优势。"
+					]
+				},
+				{
+					"name": "独立触手",
+					"ENG_name": "Independent Tentacles",
+					"entries": [
+						"发条章鱼有八个触手，每个触手被视为中型生物，独立于构装体的回合移动，并且具有40英尺的飞行速度。发条章鱼的感觉通过其触手以及其主体运作。每个触手可以独立被攻击，对触手造成的伤害会加到发条章鱼的生命值总数上。如果触手受到的伤害超过20点，则触手会被摧毁。",
+						"将构造体减少到三个或更少的触手会相应地减少其攻击次数。发条海怪在长时间休息结束时可以重新生长任何被摧毁的触手。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"发条章鱼进行了四次触手猛击攻击。"
+					]
+				},
+				{
+					"name": "触手猛击",
+					"ENG_name": "Tentacle Slam",
+					"entries": [
+						"{@atk 近战武器} 命中骰：9，射程5英尺，一个目标。{@h}12（{@damage 2d6 + 5}）钝击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"魔法抗性"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "吸血鬼克特米尔",
+			"ENG_name": "Ctenmiir the Vampire",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 4,
+			"_copy": {
+				"name": "吸血鬼",
+				"ENG_name": "Vampire",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "吸血鬼",
+						"with": "克特米尔",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "棺材囚禁",
+							"ENG_name": "Coffin Imprisonment",
+							"entries": [
+								"克特米尔被囚禁在一个安装在活化魔像腿上的魔法铁棺材里。克特米尔的棺材速度为30英尺，攀爬速度为10英尺，它不仅保护吸血鬼免受阳光的伤害，同时也阻止了他逃离奴役。"
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "东风",
+			"ENG_name": "East Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "武术高手",
+				"ENG_name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "行家",
+						"with": "东风",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "特殊装备",
+							"ENG_name": "Special Equipment",
+							"entries": [
+								"东风装备了一件是{@item 变形之刃|LLK}的长剑。"
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "变形之刃",
+							"ENG_name": "Polymorph Blade",
+							"entries": [
+								"{@atk 近战，远程} 命中骰5，射程5英尺，单一生物。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。如果东风在攻击骰上掷出20，则目标必须进行一次{@dc 15} 智力豁免，否则将遭受一个{@spell 变形术}的法术效果。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "苦难之躯僧侣的长老寺院",
+			"ENG_name": "Elder Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "邪教狂信者",
+				"ENG_name": "Cult Fanatic",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "狂热者",
+						"with": "武僧"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "匕首",
+						"items": {
+							"name": "强力长矛",
+							"ENG_name": "Force Pike",
+							"entries": [
+								"{@atk 近战，远程} {@hit 命中4} 命中，触及5英尺或射程40/100英尺，单一生物。{@h}7 ({@damage 1d10 + 2}) 力量伤害。对任何穿着抛光金属盔甲或盾牌的目标进行攻击时处于不利状态，并且在烟雾或雾中射击时射程减半。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "加勒特·莱维图森",
+			"ENG_name": "Garret Levistusson",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 41,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid"
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 12,
+			"cha": 17,
+			"skill": {
+				"deception": "+7",
+				"investigation": "+4",
+				"performance": "+5",
+				"persuasion": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"深渊",
+				"普通",
+				"地狱语",
+				"盗贼黑话"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"加勒特是一名2级施法者。他的施法能力是魅力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。他准备了以下吟游诗人法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 剑刃防护}",
+								"{@spell 恶毒嘲笑}"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell 魅惑人类}",
+								"{@spell 侦测魔法}",
+								"{@spell 易容术}",
+								"{@spell 鉴定术}",
+								"{@spell 塔莎狂笑术}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"加勒特佩戴着一个{@item 温暖戒指}（包含在他的统计数据中），并挥舞着一把{@item 赌徒之刃长剑|LLK}。"
+					]
+				},
+				{
+					"name": "诗人灵感（每日3次）",
+					"ENG_name": "Bardic Inspiration (3/Day)",
+					"entries": [
+						"作为奖励行动，加勒特可以给一个选定的生物（除了他自己）一个{@dice d6}灵感骰。选定的生物必须在加勒特60英尺范围内，并且能听到他的声音。在接下来的10分钟内，该生物可以掷这个骰子，并将掷出的数字加到它进行的一个能力检定、攻击检定或豁免检定上。生物可以在掷骰结果出来但DM宣布是否成功之前使用灵感骰。一旦灵感骰被掷出，它就会消失。一个生物一次只能拥有一个灵感骰。"
+					]
+				},
+				{
+					"name": "灵巧动作",
+					"ENG_name": "Cunning Action",
+					"entries": [
+						"在每个回合，加勒特可以使用奖励行动来执行冲刺、脱离战斗或隐藏行动。"
+					]
+				},
+				{
+					"name": "偷袭 (1/回合)",
+					"ENG_name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"当加勒特使用武器攻击命中目标，并且在攻击骰上有优势，或者目标在加勒特的盟友5英尺范围内且该盟友没有{@condition 无力}状态，同时加勒特在攻击骰上没有劣势时，加勒特额外造成7点({@condition 无力})伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "短剑",
+					"ENG_name": "Shortsword",
+					"entries": [
+						"{@atk 近战攻击} 命中骰：4，触及范围5英尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"短剑|PHB"
+			],
+			"traitTags": [
+				"偷袭"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"TC"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"conditionInflict": [
+				"无力"
+			],
+			"conditionInflictSpell": [
+				"魅惑",
+				"无力",
+				"伏地"
+			],
+			"savingThrowForcedSpell": [
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "齿轮箱",
+			"ENG_name": "Gearbox",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 5,
+			"_copy": {
+				"name": "单元冢",
+				"ENG_name": "Monodrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "单声体",
+						"with": "齿轮箱",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "独特编程",
+							"ENG_name": "Unique Programming",
+							"entries": [
+								"Gearbox的独特编程允许魔方体充当一个{@item 方向法球|XGE}和一个{@item 时间法球|XGE}，随意施放{@spell 光亮术}戏法，并且赋予其他角色在使用盗贼工具进行敏捷检定时以及在进行能力检定以识别或操作机械或实验室设备时获得优势。"
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Gearbox 可以随意施放 {@spell 光亮术} 这个戏法。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 光亮术}"
+							]
+						}
+					},
+					"hidden": [
+						"法术"
+					]
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "格洛因·纳瑟-纳瑟",
+			"ENG_name": "Gloine Nathair-Nathair",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 23,
+			"_copy": {
+				"name": "美杜莎",
+				"ENG_name": "Medusa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "美杜莎",
+						"with": "光辉",
+						"flags": "i"
+					}
+				}
+			},
+			"type": "undead",
+			"immune": [
+				"毁灭诅咒",
+				"死灵"
+			],
+			"conditionImmune": [
+				"力竭",
+				"中毒"
+			],
+			"trait": [
+				{
+					"name": "石化凝视",
+					"ENG_name": "Petrifying Gaze",
+					"entries": [
+						"当一个能够看到美杜莎眼睛的生物在其30英尺范围内开始其回合时，如果美杜莎没有被{@condition 无力}并且能看到该生物，美杜莎可以强迫它进行一次{@condition 无力}体质豁免。如果豁免失败超过5点，该生物将立即被{@condition 石化}。否则，未能通过豁免的生物开始变成玻璃，并被{@condition 束缚}。被{@condition 束缚}的生物必须在其下一个回合结束时重复进行豁免，如果失败则变成{@condition 石化}，如果成功则结束效果。石化状态将持续，直到生物通过{@spell 高等复原术}法术或其他魔法被解除。",
+						"除非处于{@quickref 突袭|PHB|3|0|被突袭}状态，否则生物可以在其回合开始时闭上眼睛以避免进行豁免投掷。如果生物这样做了，直到它的下个回合开始前它都看不到美杜莎，届时它又可以再次闭上眼睛。如果生物在此期间看向美杜莎，它必须立即进行豁免投掷。",
+						"如果美杜莎在明亮的光线下，看到自己反射在30英尺内的光滑表面上，由于它的诅咒，美杜莎会被自己的目光所影响。"
+					]
+				}
+			],
+			"conditionInflict": [
+				"石化",
+				"束缚"
+			],
+			"savingThrowForced": [
+				"体质"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "玛丽·格雷马尔金",
+			"ENG_name": "Mary Greymalkin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 41,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid"
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item 防御护腕}",
+						"{@item 防护戒指}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 14,
+			"wis": 14,
+			"cha": 15,
+			"save": {
+				"wis": "+4",
+				"cha": "+4"
+			},
+			"skill": {
+				"arcana": "+4",
+				"medicine": "+4",
+				"nature": "+4",
+				"religion": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"深渊",
+				"天界",
+				"普通",
+				"精灵语",
+				"地狱语",
+				"森林"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"玛丽是一名5级施法者。她的施法能力是魅力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。当她完成短休或长休时，她恢复消耗的法术位。她知道以下术士法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 寒颤之触}",
+								"{@spell 魔能爆}",
+								"{@spell 法师之手}"
+							]
+						},
+						"3": {
+							"lower": 1,
+							"slots": 3,
+							"spells": [
+								"{@spell 黑暗}",
+								"{@spell 脆弱诅咒}",
+								"{@spell 催眠图纹}",
+								"{@spell 迷踪步}",
+								"{@spell 魅影之力}",
+								"{@spell 隐形仆役}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"玛丽佩戴着{@item 防御护腕}和一个{@item 防护戒指}，并且携带着一套{@item 千象无常牌|LLK}"
+					]
+				},
+				{
+					"name": "仙女之姿（短休后重充能）",
+					"ENG_name": "Fey Presence (Recharges after a Short Rest)",
+					"entries": [
+						"玛丽可以使她周围10英尺内的每个生物进行一次智力豁免（DC 12），若失败则在她下一个回合结束前被她{@condition 魅惑}或{@condition 恐惧}（由玛丽选择）。"
+					]
+				},
+				{
+					"name": "精类血统",
+					"ENG_name": "Fey Ancestry",
+					"entries": [
+						"玛丽在对抗被{@condition 魅惑}的豁免投掷上有优势，魔法不能让她入睡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"使用近战武器攻击，命中值2，攻击范围5英尺，单一目标。造成3点（1d6）钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"traitTags": [
+				"精类血统"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"E",
+				"I",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"conditionInflict": [
+				"魅惑",
+				"恐惧"
+			],
+			"conditionInflictSpell": [
+				"魅惑",
+				"无力"
+			],
+			"savingThrowForced": [
+				"感知"
+			],
+			"savingThrowForcedSpell": [
+				"智力",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "苦身寺宗师",
+			"ENG_name": "Monastery of the Distressed Body Grand Master",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "骨魔",
+				"ENG_name": "Bone Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "恶魔",
+						"with": "宗师"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "断首爪",
+								"ENG_name": "Vorpal Claws",
+								"entries": [
+									"一把曾经与恶魔对抗而破碎的{@item 魔剑碎片}，替代了它的爪子。通过智力（{@skill 奥术}）或智慧（{@skill 洞察}）检定（DC 12），可以识别出它们。当恶魔用爪子攻击掷出20时，目标将被斩首。（你可以选择，攻击可以额外造成{@damage 6d8}斩击伤害。）如果目标对斩击伤害免疫、拥有传奇行动、没有或不需要头部，或者你决定目标太大，以至于不能被恶魔的爪子斩首，则对这种效果免疫。如果移除，碎片将失去它们的魔法力量。"
+								]
+							},
+							{
+								"name": "传送手镯",
+								"ENG_name": "Teleportation Bracelets",
+								"entries": [
+									"局部传送场手镯环绕在恶魔的臂部和尾巴上。这些设备允许大师在其自己的回合并使用其行动进行远程爪击和蛰击攻击。"
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "苦行僧的寺院",
+			"ENG_name": "Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "邪教徒",
+				"ENG_name": "Cultist",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "邪教徒",
+						"with": "武僧"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "弯刀",
+						"items": {
+							"name": "带钩长柄武器",
+							"ENG_name": "Hooked Polearm",
+							"entries": [
+								"{@atk 近战武器} 命中骰3，射程5英尺，单一目标。{@h}4 ({@damage 1d6 + 1}) 穿刺伤害。如果目标是中等大小或更小的生物，它将被{@condition grappled}（逃脱{@dc 10}）。直到这次擒抱结束，武僧不能使用其长兵器攻击另一个目标。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "软泥族",
+			"ENG_name": "Ooze-Folk",
+			"source": "LLK",
+			"page": 46,
+			"size": [
+				"M"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "2d8 + 10"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 3,
+			"con": 20,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"盲视 60 英尺"
+			],
+			"passive": 8,
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"伏地"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "透明",
+					"ENG_name": "Transparent",
+					"entries": [
+						"即使软泥族在视线范围内，也需要进行一次{@dc 12} 智力（{@skill 感知}）检定才能发现没有移动或攻击的软泥族。如果一个生物试图进入软泥族的空间，而没有意识到软泥族的存在，它会被软泥族{quickref 惊吓|PHB|3|0|惊吓}。"
+					]
+				},
+				{
+					"name": "脆弱骨骼",
+					"ENG_name": "Fragile Bones",
+					"entries": [
+						"对于它所受的每5点伤害，软泥族的行走速度减少5英尺。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"软泥怪进行一次玻璃长剑攻击和一次伪足攻击。"
+					]
+				},
+				{
+					"name": "玻璃长剑",
+					"ENG_name": "Glass Longsword",
+					"entries": [
+						"{@atk 近战} {@hit 命中4} 命中，触及5英尺，单一生物。{@h}6 ({@damage 1d8 + 2}) 斩击伤害。如果使用玻璃长剑进行攻击时掷出1，则剑会破碎，不能再使用。"
+					]
+				},
+				{
+					"name": "伪足",
+					"ENG_name": "Pseudopod",
+					"entries": [
+						"{@atk 近战武器} 命中骰4，射程5英尺，单一生物。{@h}5 ({@damage 1d6 + 2}) 酸性伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "西风",
+			"ENG_name": "West Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "武术高手",
+				"ENG_name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "行家",
+						"with": "西风",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "特殊装备",
+							"ENG_name": "Special Equipment",
+							"entries": [
+								"西风装备着一把长剑，这是一把{@item 美杜莎之刃|LLK}。"
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "美杜莎之刃",
+							"ENG_name": "Blade of the Medusa",
+							"entries": [
+								"{@atk 近战，远程} 命中骰5，射程5英尺，单一生物。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。如果西风在攻击骰上掷出20，则目标必须进行一次{@dc 15} 体质豁免，否则将遭受{@spell 血肉之躯}法术的效果。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		}
+	]
 }

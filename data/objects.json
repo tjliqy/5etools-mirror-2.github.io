@@ -1,874 +1,874 @@
 {
-  "object": [
-    {
-      "name": "弩炮",
-      "ENG_name": "Ballista",
-      "source": "DMG",
-      "page": 255,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 50,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "弩炮是一种巨大的弩，发射重型弩箭。在发射之前，它必须被装填和瞄准。装填武器需要一个动作，瞄准需要一个动作，发射也需要一个动作。"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "能量束",
-          "ENG_name": "Bolt",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "RW",
-              "attackEntries": [
-                "命中骰+6，射程120/480英尺，一个目标。"
-              ],
-              "hitEntries": [
-                "16点（{@damage 3d10}）穿刺伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "锅炉铁龙",
-      "ENG_name": "Boilerdrak",
-      "source": "DSotDQ",
-      "page": 189,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 100,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "这个马车大小的装置设计得看起来大致像一条龙。在使用之前，必须点燃并瞄准锅炉龙。点燃武器需要1个动作，瞄准需要1个动作，发射它也需要1个动作。当你使用动作发射它时，掷一个{@dice d20}。如果你掷出2或更高，使用火焰动作。如果你掷出1，使用爆炸动作。"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "火焰",
-          "ENG_name": "Flames",
-          "entries": [
-            "锅炉龙在60英尺的锥形区域内喷吐火焰。该区域内的每个生物都必须进行一次敏捷豁免检定（DC 15），失败则受到27点（5d10）火焰伤害，成功则伤害减半。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "爆炸",
-          "ENG_name": "Explosion",
-          "entries": [
-            "锅炉龙在30英尺半径的球形区域内爆炸并被摧毁。该区域内的每个生物必须进行一次敏捷豁免检定（DC 15），若失败则受到27点（5d10）火焰伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "火炮",
-      "ENG_name": "Cannon",
-      "source": "DMG",
-      "page": 255,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 19,
-      "hp": 75,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "加农炮使用火药将铸铁的重球以破坏性的速度抛射到空中。在一个没有火药的战役中，加农炮可能是由聪明的侏儒或巫师工程师制造的奥术装置。",
-        "一门大炮通常被安装在一个带有轮子的木制框架上。在发射之前，大炮必须被装填和瞄准。装填武器需要一个动作，瞄准需要一个动作，发射也需要一个动作。"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "炮弹",
-          "ENG_name": "Cannon Ball",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "RW",
-              "attackEntries": [
-                "命中检定加值+6，射程600/2,400英尺，一个目标。"
-              ],
-              "hitEntries": [
-                "44点（{@damage 8d10}）钝击伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "船长 A-Hole",
-      "ENG_name": "Captain A-Hole",
-      "isNpc": true,
-      "source": "RMBRE",
-      "page": 21,
-      "size": [
-        "L"
-      ],
-      "objectType": "U",
-      "ac": 17,
-      "hp": 50,
-      "speed": 0,
-      "str": 14,
-      "dex": 10,
-      "int": 3,
-      "wis": 3,
-      "cha": 1,
-      "senses": [
-        "盲视 30 英尺（在这个半径之外视为盲人）"
-      ],
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "火炮",
-          "ENG_name": "Cannon",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "RW",
-              "attackEntries": [
-                "命中检定加值+5，射程30英尺，一个目标。"
-              ],
-              "hitEntries": [
-                "3点（{@damage 1d6}）钝击伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "奥术加农炮，火焰喷射器",
-      "ENG_name": "Eldritch Cannon, Flamethrower",
-      "source": "TCE",
-      "page": 17,
-      "size": [
-        "T",
-        "S"
-      ],
-      "objectType": "U",
-      "ac": 18,
-      "hp": {
-        "special": "等于你的术士等级的五倍"
-      },
-      "str": 10,
-      "dex": 10,
-      "con": 10,
-      "int": 10,
-      "wis": 10,
-      "cha": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "被擒",
-        "无力",
-        "隐形",
-        "麻痹",
-        "石化",
-        "中毒",
-        "伏地",
-        "束缚",
-        "震慑",
-        "昏迷"
-      ],
-      "entries": [
-        "{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "投火机",
-          "ENG_name": "Flamethrower",
-          "entries": [
-            "大炮在你指定的相邻15英尺锥形区域内喷吐火焰。该区域内的每个生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 2d8}火焰伤害，成功则伤害减半。火焰会点燃区域内任何未穿戴或携带的易燃物品。"
-          ]
-        }
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "奥术加农炮，力量弩炮",
-      "ENG_name": "Eldritch Cannon, Force Ballista",
-      "source": "TCE",
-      "page": 17,
-      "size": [
-        "T",
-        "S"
-      ],
-      "objectType": "U",
-      "ac": 18,
-      "hp": {
-        "special": "等于你的术士等级的五倍"
-      },
-      "str": 10,
-      "dex": 10,
-      "con": 10,
-      "int": 10,
-      "wis": 10,
-      "cha": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "被擒",
-        "无力",
-        "隐形",
-        "麻痹",
-        "石化",
-        "中毒",
-        "伏地",
-        "束缚",
-        "震慑",
-        "昏迷"
-      ],
-      "entries": [
-        "{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "力场弩炮",
-          "ENG_name": "Force Ballista",
-          "entries": [
-            "进行一次远程法术攻击，攻击起源于加农炮，目标是距离它120英尺内的生物或物体。命中时，目标承受{@damage 2d8}力量伤害，如果目标是生物，则会被推向远离加农炮最多5英尺。"
-          ]
-        }
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "奥术大炮，守护者",
-      "ENG_name": "Eldritch Cannon, Protector",
-      "source": "TCE",
-      "page": 17,
-      "size": [
-        "T",
-        "S"
-      ],
-      "objectType": "U",
-      "ac": 18,
-      "hp": {
-        "special": "等于你的术士等级的五倍"
-      },
-      "str": 10,
-      "dex": 10,
-      "con": 10,
-      "int": 10,
-      "wis": 10,
-      "cha": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "被擒",
-        "无力",
-        "隐形",
-        "麻痹",
-        "石化",
-        "中毒",
-        "伏地",
-        "束缚",
-        "震慑",
-        "昏迷"
-      ],
-      "entries": [
-        "{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "防御者",
-          "ENG_name": "Protector",
-          "entries": [
-            "大炮发出一股正能量，赋予自身以及你选择的10英尺范围内的每个生物等同于{@damage 1d8}加上你的智力调整值（最少+1）的临时生命值。"
-          ]
-        }
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "通用对象",
-      "ENG_name": "Generic Object",
-      "source": "DMG",
-      "page": 246,
-      "srd": true,
-      "size": [
-        "V"
-      ],
-      "objectType": "通用",
-      "ac": {
-        "special": "不同（见下文）"
-      },
-      "hp": {
-        "special": "不同（见下文）"
-      },
-      "immune": [
-        {
-          "special": "不同（见下文）"
-        }
-      ],
-      "entries": [
-        "当角色需要锯断绳索、打碎窗户或破坏吸血鬼的棺材时，唯一的硬性规则是：只要有足够的时间和正确的工具，角色可以摧毁任何可摧毁的物体。在确定角色破坏物体的成功时使用常识。一个战士能用剑切开一节石墙吗？不，剑很可能在墙被切开之前就断了。",
-        "就这些规则的目的而言，一个物体是一个离散的、无生命的物品，比如窗户、门、剑、书、桌子、椅子或石头，而不是由许多其他物体组成的建筑物或车辆。",
-        {
-          "type": "entries",
-          "name": "物件的数据",
-          "ENG_name": "Statistics for Objects",
-          "entries": [
-            "当时间是一个因素时，你可以给可摧毁的对象分配护甲等级和生命值。你还可以给它特定的伤害类型免疫、抗性和弱点。",
-            {
-              "type": "entries",
-              "name": "护甲等级",
-              "ENG_name": "Armor Class",
-              "entries": [
-                "一个物体的护甲等级是衡量在击中它时造成损害的难度（因为物体没有躲避的机会）。物体护甲等级表提供了各种物质建议的AC值。",
-                {
-                  "type": "table",
-                  "caption": "物体护甲等级",
-                  "colLabels": [
-                    "物质",
-                    "AC"
-                  ],
-                  "colStyles": [
-                    "col-6",
-                    "col-6"
-                  ],
-                  "rows": [
-                    [
-                      "布料、纸张、绳索",
-                      "11"
-                    ],
-                    [
-                      "水晶，玻璃，冰",
-                      "13"
-                    ],
-                    [
-                      "木材，骨头",
-                      "15"
-                    ],
-                    [
-                      "石头",
-                      "17"
-                    ],
-                    [
-                      "铁，钢",
-                      "19"
-                    ],
-                    [
-                      "秘银",
-                      "21"
-                    ],
-                    [
-                      "精金",
-                      "23"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "生命值",
-              "ENG_name": "Hit Points",
-              "entries": [
-                "物体的生命值衡量它在失去结构完整性之前能承受多少伤害。坚韧的物体比脆弱的物体有更多的生命值。大型物体通常也比小型物体有更多的生命值，除非破坏物体的一小部分与破坏整个物体同样有效。物体生命值表格为大型或更小的脆弱和坚韧物体提供了建议的生命值。",
-                {
-                  "type": "table",
-                  "caption": "物体生命值",
-                  "colLabels": [
-                    "体型",
-                    "易碎",
-                    "强健身心"
-                  ],
-                  "colStyles": [
-                    "col-6",
-                    "col-6"
-                  ],
-                  "rows": [
-                    [
-                      "微小（瓶子，锁）",
-                      "2（1d4）",
-                      "5（2d4）"
-                    ],
-                    [
-                      "小型（箱子，琵琶）",
-                      "3（1d6）",
-                      "10（3d6）"
-                    ],
-                    [
-                      "中型（桶，吊灯）",
-                      "4（1d8）",
-                      "18 （4d8）"
-                    ],
-                    [
-                      "大型（马车，10英尺乘10英尺的窗户）",
-                      "5 （1d10）",
-                      "27（5d10）"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "巨型与超巨型物件",
-              "ENG_name": "Huge and Gargantuan Objects",
-              "entries": [
-                "普通武器对于许多大型和巨型物体几乎没有用处，例如巨大的雕像、高耸的石柱或巨大的岩石。话虽如此，一支火把可以烧毁一张大型挂毯，而地震术可以将一个巨人变成废墟。您可以跟踪大型或巨型物体的生命值，或者您可以选择决定物体能够抵抗多长时间的武器或力量。如果您要跟踪物体的生命值，请将其分成大型或更小的部分，并分别跟踪每个部分的生命值。摧毁其中一部分可能会破坏整个物体。例如，一个巨人的巨型雕像可能在它的一条大型腿的生命值降至0时倒塌。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "物件与伤害类型",
-              "ENG_name": "Objects and Damage Types",
-              "entries": [
-                "物体对毒素和心灵伤害免疫。您可能决定某些伤害类型对特定物体或物质比其他类型更有效。例如，钝击伤害适合砸碎东西，但不适合切断绳索或皮革。纸张或布质物体可能对火焰和闪电伤害易感。镐头可以凿掉石头，但无法有效砍倒树木。如常，使用您最好的判断。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "伤害阈值",
-              "ENG_name": "Damage Threshold",
-              "entries": [
-                "大型物体，如城堡墙壁，通常具有额外的韧性，由伤害阈值表示。具有伤害阈值的物体对所有伤害免疫，除非它在一次攻击或效果中受到的伤害等于或大于其伤害阈值，否则它将正常受到伤害。任何未能达到或超过物体伤害阈值的伤害都被认为是表面的，不会减少物体的生命值。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "侏儒特快投递器",
-      "ENG_name": "Gnomeflinger",
-      "source": "DSotDQ",
-      "page": 189,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 100,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "地精投掷器是一种设计用来抛射生物而非弹丸的弹射器，它以高弧线将生物抛射出去。地精投掷器是与《深海的纳里克拉什》中的{@item 防止跌落背包|DSotDQ}（参见{@area 探险装备|498|x}部分）一同设计的，目的是加快运输速度。该装置可以容纳一个中等大小或更小的生物。在它被使用之前，地精投掷器必须被装填和瞄准。装填地精投掷器需要一个动作，瞄准需要一个动作，发射也需要一个动作。",
-        "在采取行动瞄准地精投石机时，您将投掷人员行动的最大水平距离设置为60英尺、150英尺或300英尺。"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "投掷人员",
-          "ENG_name": "Fling Personnel",
-          "entries": [
-            "侏儒投石机将一个中等大小或更小的生物以至少60英尺的水平距离弹射出去，最大水平距离取决于投石机瞄准时选择的选项，可以是60英尺、150英尺或300英尺。在这一轨迹中，生物总是达到60英尺的垂直高度。",
-            "在这段轨迹中，如果生物与另一个生物或物体发生碰撞，则每远离侏儒投手10英尺，它将承受3 ({@dice 1d6}) 点钝击伤害。"
-          ]
-        }
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "古尔蒂亚斯树",
-      "ENG_name": "Gulthias Tree",
-      "source": "TftYP",
-      "page": 31,
-      "size": [
-        "G"
-      ],
-      "objectType": "U",
-      "ac": 10,
-      "hp": 35,
-      "immune": [
-        "死灵",
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "resist": [
-        "穿刺"
-      ],
-      "vulnerable": [
-        "火"
-      ],
-      "entries": [
-        {
-          "type": "entries",
-          "name": "水果",
-          "ENG_name": "Fruit",
-          "entries": [
-            "两颗魔法果实（咒法学派）每年在树上成熟。每颗果实看起来像苹果，但它像囊肿一样慢慢从树上突出。",
-            "在夏至前一周内，生长着一种红宝石红色的果实。除了构装生物之外，任何吃掉四分之一或更多果实的人将恢复70点生命值。此外，任何影响食用者的{@condition 目盲||盲目}、{@condition 耳聋||耳聋}和疾病都将结束。",
-            "冬至前一周，生长着一种病态的白色果实。吃下四分之一或更多果实的人将受到70点坏死伤害。每个果实含有{@dice 1d4}粒种子，如果种植，一年后会长出无叶的灌木，它们会作为树枝枯萎病而活化。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "树精奴隶",
-          "ENG_name": "Tree Thralls",
-          "entries": [
-            "如果一个类人生物被束缚在古尔蒂亚斯树的树干上，接下来的24小时内，受害者将完全被吸入树中。一旦受害者完全被吸收进树中，它就成为了树的奴仆，并在1小时内被排出。古尔蒂亚斯树在任何时候只能有四个奴仆。受害者的皮肤变得粗糙、灰暗且像树皮。一个奴仆完全堕落，变成中立邪恶。这样的生物只存在于为古尔蒂亚斯树及其养护者（如贝拉克）服务。它拥有所有以前的能力和以下特征：",
-            {
-              "type": "entries",
-              "name": "树肤术",
-              "ENG_name": "Barkskin",
-              "entries": [
-                "奴仆的护甲等级不能低于16。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "树精奴仆",
-              "ENG_name": "Tree Thrall",
-              "entries": [
-                "如果古尔蒂亚斯树死亡，那么24小时后，其奴仆也会死亡。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "冰霜巨魔之心",
-      "ENG_name": "Ice Troll Heart",
-      "source": "IDRotF",
-      "page": 294,
-      "size": [
-        "T"
-      ],
-      "objectType": "U",
-      "ac": 13,
-      "hp": 4,
-      "immune": [
-        "酸性",
-        "钝击",
-        "寒冷",
-        "力量",
-        "闪电",
-        "死灵",
-        "穿刺",
-        "毁灭诅咒",
-        "心灵",
-        "光辉",
-        "斩击",
-        "雷鸣伤害"
-      ],
-      "entries": [
-        {
-          "type": "entries",
-          "name": "心脏效果",
-          "ENG_name": "Heart Effects",
-          "entries": [
-            "冰霜巨魔的心脏即使在巨魔被摧毁后仍然保持寒冷。只要巨魔无法再生，它的心脏就可以安全地从其残骸中取出、处理并保存。一旦取出，冰霜巨魔的心脏就变成了一个无害的微小物体。在接下来的24小时内，心脏具有以下魔法属性：",
-            {
-              "type": "list",
-              "items": [
-                "吃了心脏的生物在接下来的24小时内获得再生能力，在其每个回合开始时恢复5点生命值。如果生物受到酸性或火焰伤害，这个特性在它下一个回合开始时不会生效。只有当生物在其回合开始时生命值为0并且没有再生时，生物才会死亡。",
-                "如果埋在地下一英尺或更深的土中，心脏会融化并召唤出一场类似通过{@spell 操控天气}法术创造的暴风雪。心脏融化并形成暴风雪需要10分钟。暴风雪持续8小时。",
-                "女巫或类似生物可以进行一种仪式，将心脏变成一个魔法护身符，其作用类似于棕色霉菌（见《地下城主指南|DMG》中的\"{@hazard Brown Mold}\"）。这种效果将持续到心脏被摧毁为止。",
-                "一个精通炼金术工具的生物可以从心脏中挤出足够的残留液体，与其他炼金成分混合，制作一瓶{@item 冷冻抗性药水||抗寒药水}。制作这种药水需要1小时。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "弹射投石机",
-      "ENG_name": "Mangonel",
-      "source": "DMG",
-      "page": 255,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 100,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "投石机是一种抛射重物的弹射器，它以高弧线抛出弹射物。这种载荷可以击中掩体后面的目标。在投石机发射之前，必须进行装填和瞄准。装填武器需要两个动作，瞄准需要两个动作，发射需要一个动作。",
-        "投石机通常投掷重石，尽管它也可以投掷其他种类的投射物，具有不同的效果。"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "弹射投石",
-          "ENG_name": "Mangonel Stone",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "RW",
-              "attackEntries": [
-                "命中{@hit +5}，射程200/800英尺（不能击中距离它60英尺内的目标），一个目标。"
-              ],
-              "hitEntries": [
-                "27点（{@damage 5d10}）钝击伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "攻城槌",
-      "ENG_name": "Ram",
-      "source": "DMG",
-      "page": 255,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 100,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "攻城槌由一个可移动的廊道组成，廊道上悬挂着一根沉重的原木，通过链条悬挂在两个屋顶横梁上。",
-        "原木上装有铁皮，用来撞击门和障碍物。",
-        "至少需要四只中型生物来操作一个攻城槌。由于画廊的屋顶，这些操作者可以完全避免来自上方的攻击。"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "攻城槌",
-          "ENG_name": "Ram",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "MW",
-              "attackEntries": [
-                "{@hit +8}，射程 5 英尺，一个物体。"
-              ],
-              "hitEntries": [
-                "16点（{@damage 3d10}）钝击伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "攻城塔",
-      "ENG_name": "Siege Tower",
-      "source": "DMG",
-      "page": 256,
-      "size": [
-        "G"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 200,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "攻城塔是一种移动式木结构，具有梁架和墙内的板条。大型木轮或滚筒允许塔被士兵或负重兽推拉。中型或更小的生物可以使用攻城塔到达高达40英尺的墙顶。塔内的生物对塔外的攻击有完全掩护。"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "精神疱疹",
-      "ENG_name": "Spirit Blister",
-      "source": "JttRC",
-      "page": 142,
-      "size": [
-        "M"
-      ],
-      "objectType": "SW",
-      "ac": 17,
-      "hp": 30,
-      "immune": [
-        "酸性",
-        "死灵",
-        "心灵"
-      ],
-      "vulnerable": [
-        "火",
-        "光辉"
-      ],
-      "entries": [
-        "如果被摧毁，水泡伴随着远处叹息的合唱破裂。片刻之后，{@adventure 一个幽灵般的人物出现|JttRC|10|和平的记忆}。"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "吊挂大锅",
-      "ENG_name": "Suspended Cauldron",
-      "source": "DMG",
-      "page": 255,
-      "size": [
-        "L"
-      ],
-      "objectType": "SW",
-      "ac": 19,
-      "hp": 20,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "大釜是一个悬挂的铁锅，可以轻松倾倒，倒出其内容物。一旦倒空，大釜必须重新装满——并且其内容物通常需要重新加热——才能再次使用。装满一个大釜需要三个动作，倾倒它需要一个动作。",
-        "坩埚可以填充其他液体，如酸液或{@hazard 绿软泥}，具有不同的效果。"
-      ],
-      "actionEntries": [
-        {
-          "type": "entries",
-          "name": "沸腾的油",
-          "ENG_name": "Boiling Oil",
-          "entries": [
-            "坩埚在它正下方的10英尺平方区域内倾泻滚烫的油。区域内的任何生物必须进行一次DC 15的敏捷豁免检定，失败时受到10（{@damage 3d6}）火焰伤害，成功则只受到一半的伤害。"
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "头部",
-      "ENG_name": "The Head",
-      "isNpc": true,
-      "source": "RMBRE",
-      "page": 25,
-      "size": [
-        "L"
-      ],
-      "objectType": "U",
-      "ac": 17,
-      "hp": 50,
-      "speed": 0,
-      "str": 14,
-      "dex": 3,
-      "int": 3,
-      "wis": 3,
-      "cha": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ]
-    },
-    {
-      "name": "配重投石机",
-      "ENG_name": "Trebuchet",
-      "source": "DMG",
-      "page": 256,
-      "size": [
-        "H"
-      ],
-      "objectType": "SW",
-      "ac": 15,
-      "hp": 150,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "投石机是一种强大的弹射器，能够将其载荷抛射成高弧线，因此可以击中掩体后面的目标。",
-        "在投石机发射之前，必须先装填并瞄准。装填武器需要两个动作，瞄准需要两个动作，发射它需要一个动作。",
-        "投石机通常抛射重石。然而，它也可以发射其他种类的投射物，例如油桶或污水，这些有不同的效果。"
-      ],
-      "actionEntries": [
-        {
-          "type": "actions",
-          "name": "配重投石",
-          "ENG_name": "Trebuchet Stone",
-          "entries": [
-            {
-              "type": "attack",
-              "attackType": "RW",
-              "attackEntries": [
-                "命中{@hit +5}，射程300/1,200 英尺（不能击中距离它60英尺内的目标），一个目标。"
-              ],
-              "hitEntries": [
-                "44点（{@damage 8d10}）钝击伤害。"
-              ]
-            }
-          ]
-        }
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "未生之轿",
-      "ENG_name": "Unborn Palanquin",
-      "source": "BMT",
-      "page": 173,
-      "size": [
-        "G"
-      ],
-      "objectType": "U",
-      "ac": 20,
-      "hp": 250,
-      "speed": {
-        "walk": 50,
-        "burrow": 30
-      },
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "entries": [
-        "未生轿是一个由数百个不知疲倦的{creature mezzoloth||mezzoloths}组成的尖叫齿轮的蠕虫状利维坦。它是一个独特的交通工具，既是{creature Malaxxix|BMT}的主要交通工具，也是恶魔的巢穴。"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    }
-  ]
+	"object": [
+		{
+			"name": "弩炮",
+			"ENG_name": "Ballista",
+			"source": "DMG",
+			"page": 255,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 50,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"弩炮是一种巨大的弩，发射重型弩箭。在发射之前，它必须被装填和瞄准。装填武器需要一个动作，瞄准需要一个动作，发射也需要一个动作。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "能量束",
+					"ENG_name": "Bolt",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中骰+6，射程120/480英尺，一个目标。"
+							],
+							"hitEntries": [
+								"16点（{@damage 3d10}）穿刺伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "锅炉铁龙",
+			"ENG_name": "Boilerdrak",
+			"source": "DSotDQ",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"这个马车大小的装置设计得看起来大致像一条龙。在使用之前，必须点燃并瞄准锅炉龙。点燃武器需要1个动作，瞄准需要1个动作，发射它也需要1个动作。当你使用动作发射它时，掷一个{@dice d20}。如果你掷出2或更高，使用火焰动作。如果你掷出1，使用爆炸动作。"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "火焰",
+					"ENG_name": "Flames",
+					"entries": [
+						"锅炉龙在60英尺的锥形区域内喷吐火焰。该区域内的每个生物都必须进行一次敏捷豁免检定（DC 15），失败则受到27点（5d10）火焰伤害，成功则伤害减半。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "爆炸",
+					"ENG_name": "Explosion",
+					"entries": [
+						"锅炉龙在30英尺半径的球形区域内爆炸并被摧毁。该区域内的每个生物必须进行一次敏捷豁免检定（DC 15），若失败则受到27点（5d10）火焰伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "火炮",
+			"ENG_name": "Cannon",
+			"source": "DMG",
+			"page": 255,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 19,
+			"hp": 75,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"加农炮使用火药将铸铁的重球以破坏性的速度抛射到空中。在一个没有火药的战役中，加农炮可能是由聪明的侏儒或巫师工程师制造的奥术装置。",
+				"一门大炮通常被安装在一个带有轮子的木制框架上。在发射之前，大炮必须被装填和瞄准。装填武器需要一个动作，瞄准需要一个动作，发射也需要一个动作。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "炮弹",
+					"ENG_name": "Cannon Ball",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中检定加值+6，射程600/2,400英尺，一个目标。"
+							],
+							"hitEntries": [
+								"44点（{@damage 8d10}）钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "船长 A-Hole",
+			"ENG_name": "Captain A-Hole",
+			"isNpc": true,
+			"source": "RMBRE",
+			"page": 21,
+			"size": [
+				"L"
+			],
+			"objectType": "U",
+			"ac": 17,
+			"hp": 50,
+			"speed": 0,
+			"str": 14,
+			"dex": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"盲视 30 英尺（在这个半径之外视为盲人）"
+			],
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "火炮",
+					"ENG_name": "Cannon",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中检定加值+5，射程30英尺，一个目标。"
+							],
+							"hitEntries": [
+								"3点（{@damage 1d6}）钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "奥术加农炮，火焰喷射器",
+			"ENG_name": "Eldritch Cannon, Flamethrower",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "U",
+			"ac": 18,
+			"hp": {
+				"special": "等于你的术士等级的五倍"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"被擒",
+				"无力",
+				"隐形",
+				"麻痹",
+				"石化",
+				"中毒",
+				"伏地",
+				"束缚",
+				"震慑",
+				"昏迷"
+			],
+			"entries": [
+				"{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "投火机",
+					"ENG_name": "Flamethrower",
+					"entries": [
+						"大炮在你指定的相邻15英尺锥形区域内喷吐火焰。该区域内的每个生物必须进行一次敏捷豁免投掷，对抗你的法术豁免DC，失败则受到{@damage 2d8}火焰伤害，成功则伤害减半。火焰会点燃区域内任何未穿戴或携带的易燃物品。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "奥术加农炮，力量弩炮",
+			"ENG_name": "Eldritch Cannon, Force Ballista",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "U",
+			"ac": 18,
+			"hp": {
+				"special": "等于你的术士等级的五倍"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"被擒",
+				"无力",
+				"隐形",
+				"麻痹",
+				"石化",
+				"中毒",
+				"伏地",
+				"束缚",
+				"震慑",
+				"昏迷"
+			],
+			"entries": [
+				"{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "力场弩炮",
+					"ENG_name": "Force Ballista",
+					"entries": [
+						"进行一次远程法术攻击，攻击起源于加农炮，目标是距离它120英尺内的生物或物体。命中时，目标承受{@damage 2d8}力量伤害，如果目标是生物，则会被推向远离加农炮最多5英尺。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "奥术大炮，守护者",
+			"ENG_name": "Eldritch Cannon, Protector",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "U",
+			"ac": 18,
+			"hp": {
+				"special": "等于你的术士等级的五倍"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"被擒",
+				"无力",
+				"隐形",
+				"麻痹",
+				"石化",
+				"中毒",
+				"伏地",
+				"束缚",
+				"震慑",
+				"昏迷"
+			],
+			"entries": [
+				"{@note 由术士的炮手子类特性{@subclassFeature 魔法弩炮|Artificer|TCE|炮手|TCE|3}创建。}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "防御者",
+					"ENG_name": "Protector",
+					"entries": [
+						"大炮发出一股正能量，赋予自身以及你选择的10英尺范围内的每个生物等同于{@damage 1d8}加上你的智力调整值（最少+1）的临时生命值。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "通用对象",
+			"ENG_name": "Generic Object",
+			"source": "DMG",
+			"page": 246,
+			"srd": true,
+			"size": [
+				"V"
+			],
+			"objectType": "通用",
+			"ac": {
+				"special": "不同（见下文）"
+			},
+			"hp": {
+				"special": "不同（见下文）"
+			},
+			"immune": [
+				{
+					"special": "不同（见下文）"
+				}
+			],
+			"entries": [
+				"当角色需要锯断绳索、打碎窗户或破坏吸血鬼的棺材时，唯一的硬性规则是：只要有足够的时间和正确的工具，角色可以摧毁任何可摧毁的物体。在确定角色破坏物体的成功时使用常识。一个战士能用剑切开一节石墙吗？不，剑很可能在墙被切开之前就断了。",
+				"就这些规则的目的而言，一个物体是一个离散的、无生命的物品，比如窗户、门、剑、书、桌子、椅子或石头，而不是由许多其他物体组成的建筑物或车辆。",
+				{
+					"type": "entries",
+					"name": "物件的数据",
+					"ENG_name": "Statistics for Objects",
+					"entries": [
+						"当时间是一个因素时，你可以给可摧毁的对象分配护甲等级和生命值。你还可以给它特定的伤害类型免疫、抗性和弱点。",
+						{
+							"type": "entries",
+							"name": "护甲等级",
+							"ENG_name": "Armor Class",
+							"entries": [
+								"一个物体的护甲等级是衡量在击中它时造成损害的难度（因为物体没有躲避的机会）。物体护甲等级表提供了各种物质建议的AC值。",
+								{
+									"type": "table",
+									"caption": "物体护甲等级",
+									"colLabels": [
+										"物质",
+										"AC"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"布料、纸张、绳索",
+											"11"
+										],
+										[
+											"水晶，玻璃，冰",
+											"13"
+										],
+										[
+											"木材，骨头",
+											"15"
+										],
+										[
+											"石头",
+											"17"
+										],
+										[
+											"铁，钢",
+											"19"
+										],
+										[
+											"秘银",
+											"21"
+										],
+										[
+											"精金",
+											"23"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "生命值",
+							"ENG_name": "Hit Points",
+							"entries": [
+								"物体的生命值衡量它在失去结构完整性之前能承受多少伤害。坚韧的物体比脆弱的物体有更多的生命值。大型物体通常也比小型物体有更多的生命值，除非破坏物体的一小部分与破坏整个物体同样有效。物体生命值表格为大型或更小的脆弱和坚韧物体提供了建议的生命值。",
+								{
+									"type": "table",
+									"caption": "物体生命值",
+									"colLabels": [
+										"体型",
+										"易碎",
+										"强健身心"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"微小（瓶子，锁）",
+											"2（1d4）",
+											"5（2d4）"
+										],
+										[
+											"小型（箱子，琵琶）",
+											"3（1d6）",
+											"10（3d6）"
+										],
+										[
+											"中型（桶，吊灯）",
+											"4（1d8）",
+											"18 （4d8）"
+										],
+										[
+											"大型（马车，10英尺乘10英尺的窗户）",
+											"5 （1d10）",
+											"27（5d10）"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "巨型与超巨型物件",
+							"ENG_name": "Huge and Gargantuan Objects",
+							"entries": [
+								"普通武器对于许多大型和巨型物体几乎没有用处，例如巨大的雕像、高耸的石柱或巨大的岩石。话虽如此，一支火把可以烧毁一张大型挂毯，而地震术可以将一个巨人变成废墟。您可以跟踪大型或巨型物体的生命值，或者您可以选择决定物体能够抵抗多长时间的武器或力量。如果您要跟踪物体的生命值，请将其分成大型或更小的部分，并分别跟踪每个部分的生命值。摧毁其中一部分可能会破坏整个物体。例如，一个巨人的巨型雕像可能在它的一条大型腿的生命值降至0时倒塌。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "物件与伤害类型",
+							"ENG_name": "Objects and Damage Types",
+							"entries": [
+								"物体对毒素和心灵伤害免疫。您可能决定某些伤害类型对特定物体或物质比其他类型更有效。例如，钝击伤害适合砸碎东西，但不适合切断绳索或皮革。纸张或布质物体可能对火焰和闪电伤害易感。镐头可以凿掉石头，但无法有效砍倒树木。如常，使用您最好的判断。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "伤害阈值",
+							"ENG_name": "Damage Threshold",
+							"entries": [
+								"大型物体，如城堡墙壁，通常具有额外的韧性，由伤害阈值表示。具有伤害阈值的物体对所有伤害免疫，除非它在一次攻击或效果中受到的伤害等于或大于其伤害阈值，否则它将正常受到伤害。任何未能达到或超过物体伤害阈值的伤害都被认为是表面的，不会减少物体的生命值。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "侏儒特快投递器",
+			"ENG_name": "Gnomeflinger",
+			"source": "DSotDQ",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"地精投掷器是一种设计用来抛射生物而非弹丸的弹射器，它以高弧线将生物抛射出去。地精投掷器是与《深海的纳里克拉什》中的{@item 防止跌落背包|DSotDQ}（参见{@area 探险装备|498|x}部分）一同设计的，目的是加快运输速度。该装置可以容纳一个中等大小或更小的生物。在它被使用之前，地精投掷器必须被装填和瞄准。装填地精投掷器需要一个动作，瞄准需要一个动作，发射也需要一个动作。",
+				"在采取行动瞄准地精投石机时，您将投掷人员行动的最大水平距离设置为60英尺、150英尺或300英尺。"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "投掷人员",
+					"ENG_name": "Fling Personnel",
+					"entries": [
+						"侏儒投石机将一个中等大小或更小的生物以至少60英尺的水平距离弹射出去，最大水平距离取决于投石机瞄准时选择的选项，可以是60英尺、150英尺或300英尺。在这一轨迹中，生物总是达到60英尺的垂直高度。",
+						"在这段轨迹中，如果生物与另一个生物或物体发生碰撞，则每远离侏儒投手10英尺，它将承受3 ({@dice 1d6}) 点钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "古尔蒂亚斯树",
+			"ENG_name": "Gulthias Tree",
+			"source": "TftYP",
+			"page": 31,
+			"size": [
+				"G"
+			],
+			"objectType": "U",
+			"ac": 10,
+			"hp": 35,
+			"immune": [
+				"死灵",
+				"毁灭诅咒",
+				"心灵"
+			],
+			"resist": [
+				"穿刺"
+			],
+			"vulnerable": [
+				"火"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "水果",
+					"ENG_name": "Fruit",
+					"entries": [
+						"两颗魔法果实（咒法学派）每年在树上成熟。每颗果实看起来像苹果，但它像囊肿一样慢慢从树上突出。",
+						"在夏至前一周内，生长着一种红宝石红色的果实。除了构装生物之外，任何吃掉四分之一或更多果实的人将恢复70点生命值。此外，任何影响食用者的{@condition 目盲||盲目}、{@condition 耳聋||耳聋}和疾病都将结束。",
+						"冬至前一周，生长着一种病态的白色果实。吃下四分之一或更多果实的人将受到70点坏死伤害。每个果实含有{@dice 1d4}粒种子，如果种植，一年后会长出无叶的灌木，它们会作为树枝枯萎病而活化。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "树精奴隶",
+					"ENG_name": "Tree Thralls",
+					"entries": [
+						"如果一个类人生物被束缚在古尔蒂亚斯树的树干上，接下来的24小时内，受害者将完全被吸入树中。一旦受害者完全被吸收进树中，它就成为了树的奴仆，并在1小时内被排出。古尔蒂亚斯树在任何时候只能有四个奴仆。受害者的皮肤变得粗糙、灰暗且像树皮。一个奴仆完全堕落，变成中立邪恶。这样的生物只存在于为古尔蒂亚斯树及其养护者（如贝拉克）服务。它拥有所有以前的能力和以下特征：",
+						{
+							"type": "entries",
+							"name": "树肤术",
+							"ENG_name": "Barkskin",
+							"entries": [
+								"奴仆的护甲等级不能低于16。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "树精奴仆",
+							"ENG_name": "Tree Thrall",
+							"entries": [
+								"如果古尔蒂亚斯树死亡，那么24小时后，其奴仆也会死亡。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "冰霜巨魔之心",
+			"ENG_name": "Ice Troll Heart",
+			"source": "IDRotF",
+			"page": 294,
+			"size": [
+				"T"
+			],
+			"objectType": "U",
+			"ac": 13,
+			"hp": 4,
+			"immune": [
+				"酸性",
+				"钝击",
+				"寒冷",
+				"力量",
+				"闪电",
+				"死灵",
+				"穿刺",
+				"毁灭诅咒",
+				"心灵",
+				"光辉",
+				"斩击",
+				"雷鸣伤害"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "心脏效果",
+					"ENG_name": "Heart Effects",
+					"entries": [
+						"冰霜巨魔的心脏即使在巨魔被摧毁后仍然保持寒冷。只要巨魔无法再生，它的心脏就可以安全地从其残骸中取出、处理并保存。一旦取出，冰霜巨魔的心脏就变成了一个无害的微小物体。在接下来的24小时内，心脏具有以下魔法属性：",
+						{
+							"type": "list",
+							"items": [
+								"吃了心脏的生物在接下来的24小时内获得再生能力，在其每个回合开始时恢复5点生命值。如果生物受到酸性或火焰伤害，这个特性在它下一个回合开始时不会生效。只有当生物在其回合开始时生命值为0并且没有再生时，生物才会死亡。",
+								"如果埋在地下一英尺或更深的土中，心脏会融化并召唤出一场类似通过{@spell 操控天气}法术创造的暴风雪。心脏融化并形成暴风雪需要10分钟。暴风雪持续8小时。",
+								"女巫或类似生物可以进行一种仪式，将心脏变成一个魔法护身符，其作用类似于棕色霉菌（见《地下城主指南|DMG》中的\"{@hazard Brown Mold}\"）。这种效果将持续到心脏被摧毁为止。",
+								"一个精通炼金术工具的生物可以从心脏中挤出足够的残留液体，与其他炼金成分混合，制作一瓶{@item 冷冻抗性药水||抗寒药水}。制作这种药水需要1小时。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "弹射投石机",
+			"ENG_name": "Mangonel",
+			"source": "DMG",
+			"page": 255,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"投石机是一种抛射重物的弹射器，它以高弧线抛出弹射物。这种载荷可以击中掩体后面的目标。在投石机发射之前，必须进行装填和瞄准。装填武器需要两个动作，瞄准需要两个动作，发射需要一个动作。",
+				"投石机通常投掷重石，尽管它也可以投掷其他种类的投射物，具有不同的效果。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "弹射投石",
+					"ENG_name": "Mangonel Stone",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中{@hit +5}，射程200/800英尺（不能击中距离它60英尺内的目标），一个目标。"
+							],
+							"hitEntries": [
+								"27点（{@damage 5d10}）钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "攻城槌",
+			"ENG_name": "Ram",
+			"source": "DMG",
+			"page": 255,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"攻城槌由一个可移动的廊道组成，廊道上悬挂着一根沉重的原木，通过链条悬挂在两个屋顶横梁上。",
+				"原木上装有铁皮，用来撞击门和障碍物。",
+				"至少需要四只中型生物来操作一个攻城槌。由于画廊的屋顶，这些操作者可以完全避免来自上方的攻击。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "攻城槌",
+					"ENG_name": "Ram",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "MW",
+							"attackEntries": [
+								"{@hit +8}，射程 5 英尺，一个物体。"
+							],
+							"hitEntries": [
+								"16点（{@damage 3d10}）钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "攻城塔",
+			"ENG_name": "Siege Tower",
+			"source": "DMG",
+			"page": 256,
+			"size": [
+				"G"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 200,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"攻城塔是一种移动式木结构，具有梁架和墙内的板条。大型木轮或滚筒允许塔被士兵或负重兽推拉。中型或更小的生物可以使用攻城塔到达高达40英尺的墙顶。塔内的生物对塔外的攻击有完全掩护。"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "精神疱疹",
+			"ENG_name": "Spirit Blister",
+			"source": "JttRC",
+			"page": 142,
+			"size": [
+				"M"
+			],
+			"objectType": "SW",
+			"ac": 17,
+			"hp": 30,
+			"immune": [
+				"酸性",
+				"死灵",
+				"心灵"
+			],
+			"vulnerable": [
+				"火",
+				"光辉"
+			],
+			"entries": [
+				"如果被摧毁，水泡伴随着远处叹息的合唱破裂。片刻之后，{@adventure 一个幽灵般的人物出现|JttRC|10|和平的记忆}。"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "吊挂大锅",
+			"ENG_name": "Suspended Cauldron",
+			"source": "DMG",
+			"page": 255,
+			"size": [
+				"L"
+			],
+			"objectType": "SW",
+			"ac": 19,
+			"hp": 20,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"大釜是一个悬挂的铁锅，可以轻松倾倒，倒出其内容物。一旦倒空，大釜必须重新装满\u2014\u2014并且其内容物通常需要重新加热\u2014\u2014才能再次使用。装满一个大釜需要三个动作，倾倒它需要一个动作。",
+				"坩埚可以填充其他液体，如酸液或{@hazard 绿软泥}，具有不同的效果。"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "沸腾的油",
+					"ENG_name": "Boiling Oil",
+					"entries": [
+						"坩埚在它正下方的10英尺平方区域内倾泻滚烫的油。区域内的任何生物必须进行一次DC 15的敏捷豁免检定，失败时受到10（{@damage 3d6}）火焰伤害，成功则只受到一半的伤害。"
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "头部",
+			"ENG_name": "The Head",
+			"isNpc": true,
+			"source": "RMBRE",
+			"page": 25,
+			"size": [
+				"L"
+			],
+			"objectType": "U",
+			"ac": 17,
+			"hp": 50,
+			"speed": 0,
+			"str": 14,
+			"dex": 3,
+			"int": 3,
+			"wis": 3,
+			"cha": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			]
+		},
+		{
+			"name": "配重投石机",
+			"ENG_name": "Trebuchet",
+			"source": "DMG",
+			"page": 256,
+			"size": [
+				"H"
+			],
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 150,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"投石机是一种强大的弹射器，能够将其载荷抛射成高弧线，因此可以击中掩体后面的目标。",
+				"在投石机发射之前，必须先装填并瞄准。装填武器需要两个动作，瞄准需要两个动作，发射它需要一个动作。",
+				"投石机通常抛射重石。然而，它也可以发射其他种类的投射物，例如油桶或污水，这些有不同的效果。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "配重投石",
+					"ENG_name": "Trebuchet Stone",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中{@hit +5}，射程300/1,200 英尺（不能击中距离它60英尺内的目标），一个目标。"
+							],
+							"hitEntries": [
+								"44点（{@damage 8d10}）钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "未生之轿",
+			"ENG_name": "Unborn Palanquin",
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"G"
+			],
+			"objectType": "U",
+			"ac": 20,
+			"hp": 250,
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"entries": [
+				"未生轿是一个由数百个不知疲倦的{creature mezzoloth||mezzoloths}组成的尖叫齿轮的蠕虫状利维坦。它是一个独特的交通工具，既是{creature Malaxxix|BMT}的主要交通工具，也是恶魔的巢穴。"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
 }

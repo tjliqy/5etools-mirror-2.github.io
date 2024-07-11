@@ -1,379 +1,379 @@
 {
-  "_meta": {
-    "otherSources": {
-      "monster": {
-        "MM": "HtfT"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "狄摩高根",
-      "ENG_name": "Demogorgon",
-      "source": "HftT",
-      "page": 36,
-      "size": [
-        "M"
-      ],
-      "type": "monstrosity",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 60,
-        "formula": "8d8 + 24"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 12,
-      "con": 16,
-      "int": 3,
-      "wis": 12,
-      "cha": 5,
-      "skill": {
-        "perception": "+3",
-        "stealth": "+5"
-      },
-      "senses": [
-        "盲视 60 英尺"
-      ],
-      "passive": 13,
-      "cr": "4",
-      "trait": [
-        {
-          "name": "敏锐嗅觉",
-          "ENG_name": "Keen Smell",
-          "entries": [
-            "德莫戈贡在依靠嗅觉的感知({@skill 察觉})检定上具有优势。"
-          ]
-        },
-        {
-          "name": "鲜血狂热",
-          "ENG_name": "Blood Frenzy",
-          "entries": [
-            "如果任何生物没有全部生命值，那么Demogorgon在对其进行近战攻击检定时具有优势。"
-          ]
-        },
-        {
-          "name": "再生",
-          "ENG_name": "Regeneration",
-          "entries": [
-            "德摩戈根在其回合开始时恢复10点生命值。如果德摩戈根受到酸性或火焰伤害，此特性在德摩戈根下一个回合开始时不会生效。德摩戈根只有在其回合开始时生命值为0且没有再生时才会死亡。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "德莫戈隆进行三次攻击：一次用咬击，两次用爪击。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战攻击} 命中骰5，射程5英尺，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "爪抓",
-          "ENG_name": "Claw",
-          "entries": [
-            "{@atk 近战武器} {@hit 5} hit，射程5英尺，单一目标。{@h}12 ({@damage 2d8 + 3}) 斩击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "敏锐感官",
-        "再生"
-      ],
-      "senseTags": [
-        "B"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "邪恶法师",
-      "ENG_name": "Evil Mage",
-      "source": "HftT",
-      "page": 42,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        12
-      ],
-      "hp": {
-        "formula": "5d8",
-        "average": 22
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 9,
-      "dex": 14,
-      "con": 11,
-      "int": 17,
-      "wis": 12,
-      "cha": 11,
-      "save": {
-        "int": "+5",
-        "wis": "+3"
-      },
-      "skill": {
-        "arcana": "+5",
-        "history": "+5"
-      },
-      "passive": 11,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "矮人语",
-        "精灵语"
-      ],
-      "cr": "1",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "该法师是4级施法者，使用智力作为其施法能力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。法师知道以下来自巫师法术列表的法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 光亮术}",
-                "{@spell 法师之手}",
-                "{@spell 电爪}"
-              ]
-            },
-            "1": {
-              "spells": [
-                "{@spell 魅惑人类}",
-                "{@spell 魔法飞弹}"
-              ],
-              "slots": 4
-            },
-            "2": {
-              "spells": [
-                "{@spell 人类定身术}",
-                "{@spell 迷踪步}"
-              ],
-              "slots": 3
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} {@hit 1} 命中，射程5英尺，一个目标。{@h}3 ({@damage 1d8 -1}) 钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "D",
-        "DR",
-        "E"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "L",
-        "O"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "塞萨尔多头蛇",
-      "ENG_name": "Thessalhydra",
-      "source": "HftT",
-      "page": 41,
-      "otherSources": [
-        {
-          "source": "IMR"
-        }
-      ],
-      "size": [
-        "H"
-      ],
-      "type": "monstrosity",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 69,
-        "formula": "6d12 + 30"
-      },
-      "speed": {
-        "walk": 30,
-        "swim": 30
-      },
-      "str": 19,
-      "dex": 12,
-      "con": 20,
-      "int": 5,
-      "wis": 10,
-      "cha": 7,
-      "skill": {
-        "perception": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 14,
-      "immune": [
-        "酸性"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "恐惧",
-        "震慑"
-      ],
-      "cr": "4",
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "The thessalhydra makes one maw attack and one Flurry of Bites."
-          ]
-        },
-        {
-          "name": "疾风连咬",
-          "ENG_name": "Flurry of Bites",
-          "entries": [
-            "{@atk 近战武器} 命中骰：7，射程10英尺，单一目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害加上10 ({@damage 4d4}) 毒素伤害。"
-          ]
-        },
-        {
-          "name": "巨口",
-          "ENG_name": "Maw",
-          "entries": [
-            "{@atk 近战武器} 命中骰：7，攻击范围5英尺，一个目标。{@h}9（{@damage 1d10 + 4}）穿刺伤害加上5（{@damage 1d10}）酸性伤害。"
-          ]
-        },
-        {
-          "name": "尾部钳子",
-          "ENG_name": "Tail Pincer",
-          "entries": [
-            "{@atk 近战武器} 命中{@hit 7}，射程10英尺，单一目标。{@h}10 ({@damage 1d12 + 4}) 斩击伤害，目标被{@condition 抓住}。作为动作，目标可以通过成功进行{@dc 14} 力量({@skill 运动})或敏捷({@skill 杂技})检定（它选择）来逃脱抓住。直到这个抓住结束，蛇发女妖不能使用它的尾部钳子。"
-          ]
-        },
-        {
-          "name": "酸性唾液 {@recharge 5}",
-          "ENG_name": "Acid Saliva {@recharge 5}",
-          "entries": [
-            "塞萨利多头蛇向它能看到的30英尺范围内的一点吐出一团酸液。距离那点10英尺范围内的每个生物都必须进行一次{@dc 15}敏捷豁免检定，失败则受到18（{@damage 4d8}）酸性伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "legendaryActions": 2,
-      "legendary": [
-        {
-          "name": "侦查",
-          "ENG_name": "Detect",
-          "entries": [
-            "赛萨海德拉进行一次优势感知（{@skill 察觉}）检定。"
-          ]
-        },
-        {
-          "name": "尾巴扫击",
-          "ENG_name": "Tail Swipe",
-          "entries": [
-            "赛萨尔九头蛇进行尾部夹击攻击。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "damageTags": [
-        "A",
-        "I",
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "MW",
-        "射程"
-      ],
-      "conditionInflict": [
-        "被擒"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MM": "HtfT"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "狄摩高根",
+			"ENG_name": "Demogorgon",
+			"source": "HftT",
+			"page": 36,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 3,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"盲视 60 英尺"
+			],
+			"passive": 13,
+			"cr": "4",
+			"trait": [
+				{
+					"name": "敏锐嗅觉",
+					"ENG_name": "Keen Smell",
+					"entries": [
+						"德莫戈贡在依靠嗅觉的感知({@skill 察觉})检定上具有优势。"
+					]
+				},
+				{
+					"name": "鲜血狂热",
+					"ENG_name": "Blood Frenzy",
+					"entries": [
+						"如果任何生物没有全部生命值，那么Demogorgon在对其进行近战攻击检定时具有优势。"
+					]
+				},
+				{
+					"name": "再生",
+					"ENG_name": "Regeneration",
+					"entries": [
+						"德摩戈根在其回合开始时恢复10点生命值。如果德摩戈根受到酸性或火焰伤害，此特性在德摩戈根下一个回合开始时不会生效。德摩戈根只有在其回合开始时生命值为0且没有再生时才会死亡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"德莫戈隆进行三次攻击：一次用咬击，两次用爪击。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战攻击} 命中骰5，射程5英尺，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "爪抓",
+					"ENG_name": "Claw",
+					"entries": [
+						"{@atk 近战武器} {@hit 5} hit，射程5英尺，单一目标。{@h}12 ({@damage 2d8 + 3}) 斩击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"敏锐感官",
+				"再生"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "邪恶法师",
+			"ENG_name": "Evil Mage",
+			"source": "HftT",
+			"page": 42,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "5d8",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+5",
+				"history": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"矮人语",
+				"精灵语"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"该法师是4级施法者，使用智力作为其施法能力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。法师知道以下来自巫师法术列表的法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 电爪}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell 魅惑人类}",
+								"{@spell 魔法飞弹}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell 人类定身术}",
+								"{@spell 迷踪步}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} {@hit 1} 命中，射程5英尺，一个目标。{@h}3 ({@damage 1d8 -1}) 钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"E"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "塞萨尔多头蛇",
+			"ENG_name": "Thessalhydra",
+			"source": "HftT",
+			"page": 41,
+			"otherSources": [
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 69,
+				"formula": "6d12 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 12,
+			"con": 20,
+			"int": 5,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 14,
+			"immune": [
+				"酸性"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"恐惧",
+				"震慑"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"The thessalhydra makes one maw attack and one Flurry of Bites."
+					]
+				},
+				{
+					"name": "疾风连咬",
+					"ENG_name": "Flurry of Bites",
+					"entries": [
+						"{@atk 近战武器} 命中骰：7，射程10英尺，单一目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害加上10 ({@damage 4d4}) 毒素伤害。"
+					]
+				},
+				{
+					"name": "巨口",
+					"ENG_name": "Maw",
+					"entries": [
+						"{@atk 近战武器} 命中骰：7，攻击范围5英尺，一个目标。{@h}9（{@damage 1d10 + 4}）穿刺伤害加上5（{@damage 1d10}）酸性伤害。"
+					]
+				},
+				{
+					"name": "尾部钳子",
+					"ENG_name": "Tail Pincer",
+					"entries": [
+						"{@atk 近战武器} 命中{@hit 7}，射程10英尺，单一目标。{@h}10 ({@damage 1d12 + 4}) 斩击伤害，目标被{@condition 抓住}。作为动作，目标可以通过成功进行{@dc 14} 力量({@skill 运动})或敏捷({@skill 杂技})检定（它选择）来逃脱抓住。直到这个抓住结束，蛇发女妖不能使用它的尾部钳子。"
+					]
+				},
+				{
+					"name": "酸性唾液 {@recharge 5}",
+					"ENG_name": "Acid Saliva {@recharge 5}",
+					"entries": [
+						"塞萨利多头蛇向它能看到的30英尺范围内的一点吐出一团酸液。距离那点10英尺范围内的每个生物都必须进行一次{@dc 15}敏捷豁免检定，失败则受到18（{@damage 4d8}）酸性伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "侦查",
+					"ENG_name": "Detect",
+					"entries": [
+						"赛萨海德拉进行一次优势感知（{@skill 察觉}）检定。"
+					]
+				},
+				{
+					"name": "尾巴扫击",
+					"ENG_name": "Tail Swipe",
+					"entries": [
+						"赛萨尔九头蛇进行尾部夹击攻击。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"damageTags": [
+				"A",
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"射程"
+			],
+			"conditionInflict": [
+				"被擒"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
 }

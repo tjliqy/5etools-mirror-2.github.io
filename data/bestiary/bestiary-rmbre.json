@@ -1,578 +1,578 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM"
-      ]
-    },
-    "otherSources": {
-      "monster": {
-        "MM": "RMBRE",
-        "LMoP": "RMBRE"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "比利海狸",
-      "ENG_name": "Billy Beaver",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 27,
-      "size": [
-        "L"
-      ],
-      "type": "construct",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 34,
-        "formula": "7d10 + 21"
-      },
-      "speed": {
-        "walk": 40
-      },
-      "str": 20,
-      "dex": 12,
-      "con": 17,
-      "int": 3,
-      "wis": 12,
-      "cha": 7,
-      "skill": {
-        "perception": "+3"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 13,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "3",
-      "trait": [
-        {
-          "name": "敏锐的视觉和嗅觉",
-          "ENG_name": "Keen Sight and Smell",
-          "entries": [
-            "Billy Beaver 在依赖视觉或嗅觉的感知（{@skill 察觉}）检定上具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "喙啄",
-          "ENG_name": "Beak",
-          "entries": [
-            "{@atk 近战武器} {@hit 7} hit，射程 5 英尺，一只生物。{@h}10 ({@damage 1d10 + 5}) 穿刺h。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "敏锐感官"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "破坏者熊",
-      "ENG_name": "Buster the Bear",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 27,
-      "size": [
-        "M"
-      ],
-      "type": "construct",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "{@item 兽皮甲|PHB}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 27,
-        "formula": "5d8 + 5"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 15,
-      "dex": 14,
-      "con": 13,
-      "int": 8,
-      "wis": 11,
-      "cha": 9,
-      "skill": {
-        "stealth": "+6",
-        "survival": "+2"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "1",
-      "trait": [
-        {
-          "name": "突袭攻击",
-          "ENG_name": "Surprise Attack",
-          "entries": [
-            "如果熊巴斯特在战斗的第一轮出其不意地攻击并击中一个生物，目标将从这次攻击中额外受到7点（{@dice 2d6}）伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "狂砸班卓琴",
-          "ENG_name": "Bashin' Banjo",
-          "entries": [
-            "{@atk 近战武器} {@hit 4} hit，射程 5 英尺，单一目标。{@h}6 ({@damage 1d8 + 2}) 钝击h。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "大型拟态怪",
-      "ENG_name": "Large Mimic",
-      "source": "RMBRE",
-      "page": 24,
-      "_copy": {
-        "name": "拟身怪",
-        "ENG_name": "Mimic",
-        "source": "MM",
-        "_mod": {
-          "action": {
-            "mode": "prependArr",
-            "items": {
-              "name": "多重攻击",
-              "ENG_name": "Multiattack",
-              "entries": [
-                "变形兽进行三次攻击：两次使用其伪足，一次使用其咬击。"
-              ]
-            }
-          }
-        }
-      },
-      "size": [
-        "L"
-      ],
-      "hp": {
-        "formula": "9d8 + 18",
-        "average": 75
-      },
-      "speed": {
-        "walk": 0
-      },
-      "cr": "3",
-      "actionTags": [
-        "多重攻击"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "莱拉蜥蜴",
-      "ENG_name": "Layla the Lizard",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 28,
-      "size": [
-        "M"
-      ],
-      "type": "construct",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        12
-      ],
-      "hp": {
-        "average": 22,
-        "formula": "5d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 13,
-      "dex": 15,
-      "con": 10,
-      "int": 7,
-      "wis": 10,
-      "cha": 6,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "1",
-      "action": [
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器} {@hit 2} hit，射程5英尺，单一生物。{@h}9 ({@damage 2d6 + 2}) 穿刺h。"
-          ]
-        },
-        {
-          "name": "爪抓",
-          "ENG_name": "Claws",
-          "entries": [
-            "{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "狼人病",
-      "ENG_name": "Lycanthropickle",
-      "group": [
-        "狼人"
-      ],
-      "source": "RMBRE",
-      "page": 11,
-      "_copy": {
-        "name": "枯枝怪",
-        "ENG_name": "Twig Blight",
-        "source": "MM"
-      },
-      "trait": [
-        {
-          "name": "拟形",
-          "ENG_name": "False Appearance",
-          "entries": [
-            "当狼人泡菜保持静止时，它与普通泡菜无法区分。"
-          ]
-        }
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "米斯克斯",
-      "ENG_name": "Meeseeks",
-      "source": "RMBRE",
-      "page": 16,
-      "_copy": {
-        "name": "平民",
-        "ENG_name": "Commoner",
-        "source": "MM"
-      },
-      "hp": {
-        "special": "—（免疫伤害）"
-      },
-      "hasToken": true
-    },
-    {
-      "name": "猪猪扭屁股",
-      "ENG_name": "Piggy Wiggle Butt",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 28,
-      "size": [
-        "M"
-      ],
-      "type": "construct",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 兽皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 15,
-        "formula": "2d8 + 6"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 12,
-      "con": 16,
-      "int": 7,
-      "wis": 11,
-      "cha": 10,
-      "skill": {
-        "intimidation": "+2"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "1/2",
-      "trait": [
-        {
-          "name": "侵略性",
-          "ENG_name": "Aggressive",
-          "entries": [
-            "作为一个奖励行动，Piggy Wiggle Butt可以向它能看到的敌对生物移动最多等同于其速度的距离。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "陶罐",
-          "ENG_name": "Clay Jug",
-          "entries": [
-            "{@atk 近战武器} 命中骰：5，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）钝击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "侵略性"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "托马斯·T·蟾蜍",
-      "ENG_name": "Thomas T. Toad",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 28,
-      "size": [
-        "L"
-      ],
-      "type": "construct",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 11,
-          "from": [
-            "{@item 兽皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 59,
-        "formula": "7d10 + 21"
-      },
-      "speed": {
-        "walk": 40
-      },
-      "str": 19,
-      "dex": 8,
-      "con": 16,
-      "int": 5,
-      "wis": 7,
-      "cha": 7,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 8,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "目盲",
-        "魅惑",
-        "耳聋",
-        "力竭",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "普通"
-      ],
-      "cr": "2",
-      "action": [
-        {
-          "name": "网状手",
-          "ENG_name": "Webby Hands",
-          "entries": [
-            "{@atk 近战} 命中骰6，射程5英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 钝击伤害。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true
-    },
-    {
-      "name": "汤米·双臀",
-      "ENG_name": "Tommy Two-Butts",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "RMBRE",
-      "page": 18,
-      "_copy": {
-        "name": "熊地精",
-        "ENG_name": "Bugbear",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "地精强盗",
-            "with": "汤米",
-            "flags": "i"
-          }
-        }
-      },
-      "int": 21,
-      "hasToken": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "RMBRE",
+				"LMoP": "RMBRE"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "比利海狸",
+			"ENG_name": "Billy Beaver",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 27,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 34,
+				"formula": "7d10 + 21"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 17,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 13,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "敏锐的视觉和嗅觉",
+					"ENG_name": "Keen Sight and Smell",
+					"entries": [
+						"Billy Beaver 在依赖视觉或嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "喙啄",
+					"ENG_name": "Beak",
+					"entries": [
+						"{@atk 近战武器} {@hit 7} hit，射程 5 英尺，一只生物。{@h}10 ({@damage 1d10 + 5}) 穿刺h。"
+					]
+				}
+			],
+			"traitTags": [
+				"敏锐感官"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "破坏者熊",
+			"ENG_name": "Buster the Bear",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 27,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item 兽皮甲|PHB}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 8,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"stealth": "+6",
+				"survival": "+2"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "突袭攻击",
+					"ENG_name": "Surprise Attack",
+					"entries": [
+						"如果熊巴斯特在战斗的第一轮出其不意地攻击并击中一个生物，目标将从这次攻击中额外受到7点（{@dice 2d6}）伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "狂砸班卓琴",
+					"ENG_name": "Bashin' Banjo",
+					"entries": [
+						"{@atk 近战武器} {@hit 4} hit，射程 5 英尺，单一目标。{@h}6 ({@damage 1d8 + 2}) 钝击h。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "大型拟态怪",
+			"ENG_name": "Large Mimic",
+			"source": "RMBRE",
+			"page": 24,
+			"_copy": {
+				"name": "拟身怪",
+				"ENG_name": "Mimic",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "prependArr",
+						"items": {
+							"name": "多重攻击",
+							"ENG_name": "Multiattack",
+							"entries": [
+								"变形兽进行三次攻击：两次使用其伪足，一次使用其咬击。"
+							]
+						}
+					}
+				}
+			},
+			"size": [
+				"L"
+			],
+			"hp": {
+				"formula": "9d8 + 18",
+				"average": 75
+			},
+			"speed": {
+				"walk": 0
+			},
+			"cr": "3",
+			"actionTags": [
+				"多重攻击"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "莱拉蜥蜴",
+			"ENG_name": "Layla the Lizard",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 28,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 10,
+			"int": 7,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器} {@hit 2} hit，射程5英尺，单一生物。{@h}9 ({@damage 2d6 + 2}) 穿刺h。"
+					]
+				},
+				{
+					"name": "爪抓",
+					"ENG_name": "Claws",
+					"entries": [
+						"{@atk 近战武器} 命中骰：4，攻击范围：5英尺，单一目标。{@h}7（{@damage 2d4 + 2}）斩击伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "狼人病",
+			"ENG_name": "Lycanthropickle",
+			"group": [
+				"Lycanthropes"
+			],
+			"source": "RMBRE",
+			"page": 11,
+			"_copy": {
+				"name": "枯枝怪",
+				"ENG_name": "Twig Blight",
+				"source": "MM"
+			},
+			"trait": [
+				{
+					"name": "拟形",
+					"ENG_name": "False Appearance",
+					"entries": [
+						"当狼人泡菜保持静止时，它与普通泡菜无法区分。"
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "米斯克斯",
+			"ENG_name": "Meeseeks",
+			"source": "RMBRE",
+			"page": 16,
+			"_copy": {
+				"name": "平民",
+				"ENG_name": "Commoner",
+				"source": "MM"
+			},
+			"hp": {
+				"special": "\u2014（免疫伤害）"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "猪猪扭屁股",
+			"ENG_name": "Piggy Wiggle Butt",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 28,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 兽皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 15,
+				"formula": "2d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 7,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"intimidation": "+2"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "侵略性",
+					"ENG_name": "Aggressive",
+					"entries": [
+						"作为一个奖励行动，Piggy Wiggle Butt可以向它能看到的敌对生物移动最多等同于其速度的距离。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "陶罐",
+					"ENG_name": "Clay Jug",
+					"entries": [
+						"{@atk 近战武器} 命中骰：5，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）钝击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"侵略性"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "托马斯·T·蟾蜍",
+			"ENG_name": "Thomas T. Toad",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 28,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item 兽皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d10 + 21"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 8,
+			"con": 16,
+			"int": 5,
+			"wis": 7,
+			"cha": 7,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 8,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"目盲",
+				"魅惑",
+				"耳聋",
+				"力竭",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"普通"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "网状手",
+					"ENG_name": "Webby Hands",
+					"entries": [
+						"{@atk 近战} 命中骰6，射程5英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 钝击伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "汤米·双臀",
+			"ENG_name": "Tommy Two-Butts",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RMBRE",
+			"page": 18,
+			"_copy": {
+				"name": "熊地精",
+				"ENG_name": "Bugbear",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "地精强盗",
+						"with": "汤米",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 21,
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
 }

@@ -148,7 +148,7 @@ class LootGenUi extends BaseComponent {
 		await this._modalFilterSpells.pPopulateHiddenWrapper();
 		await this._modalFilterItems.pPopulateHiddenWrapper();
 
-		this._data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/loot.json`);
+		this._data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/loot.json`);
 
 		await this._pInit_pBindFilterHooks();
 	}

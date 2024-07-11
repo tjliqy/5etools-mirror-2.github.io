@@ -1,650 +1,650 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM"
-      ]
-    },
-    "otherSources": {
-      "monster": {
-        "MM": "DIP",
-        "MTF": "DIP",
-        "VGM": "DIP"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "塔洛斯的隐士",
-      "ENG_name": "Anchorite of Talos",
-      "source": "DIP",
-      "page": 51,
-      "otherSources": [
-        {
-          "source": "DC"
-        },
-        {
-          "source": "SDW"
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "half-orc",
-          "shapechanger"
-        ]
-      },
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 兽皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 58,
-        "formula": "9d8 + 18"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 13,
-      "con": 14,
-      "int": 9,
-      "wis": 15,
-      "cha": 12,
-      "skill": {
-        "nature": "+1",
-        "stealth": "+3",
-        "survival": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 12,
-      "languages": [
-        "普通",
-        "兽人"
-      ],
-      "cr": "3",
-      "spellcasting": [
-        {
-          "name": "天生施法",
-          "ENG_name": "Innate Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "隐士的天生施法能力是智慧（法术豁免{@dc 12}）。它天生能够施放以下法术，无需任何材料成分："
-          ],
-          "daily": {
-            "3": [
-              "{@spell 雷鸣波} ({@dice 2d8} 伤害)"
-            ],
-            "1e": [
-              "{@spell 卜筮}",
-              "{@spell 祝福术}",
-              "{@spell 闪电束} ({@dice 8d6} 伤害)",
-              "{@spell 回生术}"
-            ]
-          },
-          "ability": "wis"
-        }
-      ],
-      "trait": [
-        {
-          "name": "变形生物",
-          "ENG_name": "Shapechanger",
-          "entries": [
-            "隐士可以使用它的行动来变化成一只野猪或变回它的真身，其真身是人形生物。在每种形态下，它的统计数据都是相同的。它穿戴或携带的任何装备都不会被变形。如果它死亡，它将恢复其真身。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "爪形手套（仅限人形态）",
-          "ENG_name": "Clawed Gauntlet (Humanoid Form Only)",
-          "entries": [
-            "{@atk 近战武器} {@hit 5} hit，射程5英尺，一个目标。{@h}5 ({@damage 1d4 + 3}) 斩击h。"
-          ]
-        },
-        {
-          "name": "獠牙（仅限野猪形态）",
-          "ENG_name": "Tusk (Boar Form Only)",
-          "entries": [
-            "使用近战武器攻击，命中骰为5，攻击范围5英尺，一个目标。造成6点（1d6 + 3）斩击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "变形生物"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C",
-        "O"
-      ],
-      "damageTags": [
-        "S"
-      ],
-      "damageTagsSpell": [
-        "L",
-        "T"
-      ],
-      "spellcastingTags": [
-        "I"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "Don-Jon Raskin",
-      "ENG_name": "Don-Jon Raskin",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "DIP",
-      "page": 56,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "N"
-      ],
-      "ac": [
-        10
-      ],
-      "hp": {
-        "average": 44,
-        "formula": "8d8 + 8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 11,
-      "dex": 10,
-      "con": 13,
-      "int": 12,
-      "wis": 10,
-      "cha": 14,
-      "save": {
-        "dex": "+2",
-        "con": "+3"
-      },
-      "skill": {
-        "deception": "+4",
-        "persuasion": "+4"
-      },
-      "passive": 10,
-      "languages": [
-        "普通",
-        "矮人语"
-      ],
-      "cr": "1/2",
-      "trait": [
-        {
-          "name": "勇敢",
-          "ENG_name": "Brave",
-          "entries": [
-            "Don-Jon 在对抗被{@condition 恐惧}的豁免骰上具有优势。"
-          ]
-        },
-        {
-          "name": "尚未死去（长休息后重置）",
-          "ENG_name": "Not Dead Yet (Recharges after a Long Rest)",
-          "entries": [
-            "如果伤害使Don-Jon的生命值降至0点，他将改为降至1点生命值，并在他的下一回合结束前获得攻击骰的优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Don-Jon 进行三次近战攻击。"
-          ]
-        },
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战，远程} {@hit 2} 命中，触及范围5英尺或射程20/60英尺，一个目标。{@h}2 ({@damage 1d4}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "投石索",
-          "ENG_name": "Sling",
-          "entries": [
-            "{@atk 投掷武器} 命中骰：2，射程 30/120 英尺，一个目标。{@h}2 ([@damage 1d4]) 钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB",
-        "投石索|PHB"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "D"
-      ],
-      "damageTags": [
-        "B",
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "猎鹰·猎人",
-      "ENG_name": "Falcon the Hunter",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "DIP",
-      "page": 56,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "N",
-        "G"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 112,
-        "formula": "15d8 + 45"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 14,
-      "dex": 15,
-      "con": 16,
-      "int": 11,
-      "wis": 16,
-      "cha": 15,
-      "save": {
-        "dex": "+4",
-        "wis": "+5"
-      },
-      "skill": {
-        "athletics": "+4",
-        "perception": "+7",
-        "survival": "+5"
-      },
-      "passive": 17,
-      "languages": [
-        "普通"
-      ],
-      "cr": "4",
-      "trait": [
-        {
-          "name": "弓箭手",
-          "ENG_name": "Archer",
-          "entries": [
-            "当Falcon用长弓或短弓命中目标时，会额外造成一骰的伤害（包含在他的长弓攻击中）。"
-          ]
-        },
-        {
-          "name": "神射手",
-          "ENG_name": "Sharpshooter",
-          "entries": [
-            "猎鹰的远程武器攻击无视半掩体和四分之三掩体。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Falcon 进行三次近战攻击或两次远程攻击。"
-          ]
-        },
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战} {@hit 4}命中，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 斩击伤害，或者如果用双手使用则为7 ({@damage 1d10 + 2}) 斩击伤害。"
-          ]
-        },
-        {
-          "name": "长弓",
-          "ENG_name": "Longbow",
-          "entries": [
-            "{@atk 远程武器} 命中骰：{@hit 4} 命中，射程 150/600 英尺，单一目标。{@h}11 ({@damage 2d8 + 2}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长弓|PHB",
-        "长剑|PHB"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "格索克雷霆野猪",
-      "ENG_name": "Gorthok the Thunder Boar",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "DIP",
-      "page": 58,
-      "size": [
-        "H"
-      ],
-      "type": "monstrosity",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 73,
-        "formula": "7d12 + 28"
-      },
-      "speed": {
-        "walk": 50
-      },
-      "str": 20,
-      "dex": 11,
-      "con": 19,
-      "int": 6,
-      "wis": 10,
-      "cha": 14,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "resist": [
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "闪电",
-        "雷鸣伤害"
-      ],
-      "cr": "6",
-      "trait": [
-        {
-          "name": "无情（短休或长休后重置）",
-          "ENG_name": "Relentless (Recharges after a Short or Long Rest)",
-          "entries": [
-            "如果Gorthok受到的伤害或少于27点，本应将其生命值降至0点，它的生命值将改为降至1点。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Gorthok 进行两次近战攻击：一次使用它的闪电獠牙，一次使用它的雷鸣蹄。"
-          ]
-        },
-        {
-          "name": "闪电獠牙",
-          "ENG_name": "Lightning Tusks",
-          "entries": [
-            "{@atk 近战} {@hit 8}命中，射程10英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 斩击伤害加上7 ({@damage 2d6}) 闪电伤害。"
-          ]
-        },
-        {
-          "name": "雷鸣蹄",
-          "ENG_name": "Thunder Hooves",
-          "entries": [
-            "{@atk 近战} {@hit 8} 命中，触及范围10英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 钝击伤害加上7 ({@damage 2d6}) 雷击伤害。"
-          ]
-        },
-        {
-          "name": "闪电束 {@recharge}",
-          "ENG_name": "Lightning Bolt {@recharge}",
-          "entries": [
-            "Gorthok 向它120英尺内能看到的一个生物射出一道闪电。目标必须进行一次敏捷豁免（DC 15），失败则受到18（{@damage 4d8}）点闪电伤害，成功则受到一半的伤害。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "damageTags": [
-        "B",
-        "L",
-        "S",
-        "T"
-      ],
-      "miscTags": [
-        "MW",
-        "射程"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "岩石地侏儒隐士",
-      "ENG_name": "Rock Gnome Recluse",
-      "source": "DIP",
-      "page": 62,
-      "size": [
-        "S"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "gnome"
-        ]
-      },
-      "alignment": [
-        "C",
-        "N"
-      ],
-      "ac": [
-        10,
-        {
-          "ac": 13,
-          "condition": "带有{@spell 法师护甲}",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 7,
-        "formula": "2d6"
-      },
-      "speed": {
-        "walk": 25
-      },
-      "str": 6,
-      "dex": 11,
-      "con": 10,
-      "int": 15,
-      "wis": 10,
-      "cha": 13,
-      "skill": {
-        "arcana": "+4",
-        "history": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "languages": [
-        "普通",
-        "侏儒语"
-      ],
-      "cr": "1/4",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "侏儒是2级施法者。其施法能力是智力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。它准备了以下巫师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 法师之手}",
-                "{@spell 魔法技俩}",
-                "{@spell 冷冻射线}（见下文\"动作\"部分）"
-              ]
-            },
-            "1": {
-              "slots": 3,
-              "spells": [
-                "{@spell 侦测魔法}",
-                "{@spell 法师护甲}",
-                "{@spell 魔法飞弹}（详见下方\"动作\"）",
-                "{@spell 护盾术}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "侏儒狡黠",
-          "ENG_name": "Gnome Cunning",
-          "entries": [
-            "地精在对抗魔法的智力、智慧和魅力豁免检定中具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "魔法飞弹（消耗一个1级法术位）",
-          "ENG_name": "Magic Missile (Expends a 1st-Level Spell Slot)",
-          "entries": [
-            "地精创造了三个魔法飞镖。每个飞镖击中地精选择的120英尺内的一个生物，并造成3（{@damage 1d4 + 1}）点力量伤害。"
-          ]
-        },
-        {
-          "name": "冷冻射线",
-          "ENG_name": "Ray of Frost",
-          "entries": [
-            "{@atk 远程法术攻击} {@hit 4}命中，射程60英尺，一个生物。{@h}4 ({@damage 1d8}) 冰冷伤害，并且目标的速度在侏儒下一个回合开始前减少10英尺。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C",
-        "G"
-      ],
-      "damageTags": [
-        "C",
-        "O"
-      ],
-      "damageTagsSpell": [
-        "C",
-        "O"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "骷髅骑乘马",
-      "ENG_name": "Skeletal Riding Horse",
-      "source": "DIP",
-      "page": 21,
-      "_copy": {
-        "name": "乘用马",
-        "ENG_name": "Riding Horse",
-        "source": "MM"
-      },
-      "type": "undead",
-      "hasToken": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "DIP",
+				"MTF": "DIP",
+				"VGM": "DIP"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "塔洛斯的隐士",
+			"ENG_name": "Anchorite of Talos",
+			"source": "DIP",
+			"page": 51,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "SDW"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-orc",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 兽皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 9,
+			"wis": 15,
+			"cha": 12,
+			"skill": {
+				"nature": "+1",
+				"stealth": "+3",
+				"survival": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 12,
+			"languages": [
+				"普通",
+				"兽人"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "天生施法",
+					"ENG_name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"隐士的天生施法能力是智慧（法术豁免{@dc 12}）。它天生能够施放以下法术，无需任何材料成分："
+					],
+					"daily": {
+						"3": [
+							"{@spell 雷鸣波} ({@dice 2d8} 伤害)"
+						],
+						"1e": [
+							"{@spell 卜筮}",
+							"{@spell 祝福术}",
+							"{@spell 闪电束} ({@dice 8d6} 伤害)",
+							"{@spell 回生术}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "变形生物",
+					"ENG_name": "Shapechanger",
+					"entries": [
+						"隐士可以使用它的行动来变化成一只野猪或变回它的真身，其真身是人形生物。在每种形态下，它的统计数据都是相同的。它穿戴或携带的任何装备都不会被变形。如果它死亡，它将恢复其真身。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "爪形手套（仅限人形态）",
+					"ENG_name": "Clawed Gauntlet (Humanoid Form Only)",
+					"entries": [
+						"{@atk 近战武器} {@hit 5} hit，射程5英尺，一个目标。{@h}5 ({@damage 1d4 + 3}) 斩击h。"
+					]
+				},
+				{
+					"name": "獠牙（仅限野猪形态）",
+					"ENG_name": "Tusk (Boar Form Only)",
+					"entries": [
+						"使用近战武器攻击，命中骰为5，攻击范围5英尺，一个目标。造成6点（1d6 + 3）斩击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"变形生物"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Don-Jon Raskin",
+			"ENG_name": "Don-Jon Raskin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 56,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 10,
+			"con": 13,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"dex": "+2",
+				"con": "+3"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"普通",
+				"矮人语"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "勇敢",
+					"ENG_name": "Brave",
+					"entries": [
+						"Don-Jon 在对抗被{@condition 恐惧}的豁免骰上具有优势。"
+					]
+				},
+				{
+					"name": "尚未死去（长休息后重置）",
+					"ENG_name": "Not Dead Yet (Recharges after a Long Rest)",
+					"entries": [
+						"如果伤害使Don-Jon的生命值降至0点，他将改为降至1点生命值，并在他的下一回合结束前获得攻击骰的优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Don-Jon 进行三次近战攻击。"
+					]
+				},
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战，远程} {@hit 2} 命中，触及范围5英尺或射程20/60英尺，一个目标。{@h}2 ({@damage 1d4}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "投石索",
+					"ENG_name": "Sling",
+					"entries": [
+						"{@atk 投掷武器} 命中骰：2，射程 30/120 英尺，一个目标。{@h}2 ([@damage 1d4]) 钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB",
+				"投石索|PHB"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "猎鹰·猎人",
+			"ENG_name": "Falcon the Hunter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 56,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 16,
+			"int": 11,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+4",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+7",
+				"survival": "+5"
+			},
+			"passive": 17,
+			"languages": [
+				"普通"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "弓箭手",
+					"ENG_name": "Archer",
+					"entries": [
+						"当Falcon用长弓或短弓命中目标时，会额外造成一骰的伤害（包含在他的长弓攻击中）。"
+					]
+				},
+				{
+					"name": "神射手",
+					"ENG_name": "Sharpshooter",
+					"entries": [
+						"猎鹰的远程武器攻击无视半掩体和四分之三掩体。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Falcon 进行三次近战攻击或两次远程攻击。"
+					]
+				},
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战} {@hit 4}命中，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 斩击伤害，或者如果用双手使用则为7 ({@damage 1d10 + 2}) 斩击伤害。"
+					]
+				},
+				{
+					"name": "长弓",
+					"ENG_name": "Longbow",
+					"entries": [
+						"{@atk 远程武器} 命中骰：{@hit 4} 命中，射程 150/600 英尺，单一目标。{@h}11 ({@damage 2d8 + 2}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长弓|PHB",
+				"长剑|PHB"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "格索克雷霆野猪",
+			"ENG_name": "Gorthok the Thunder Boar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 58,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 73,
+				"formula": "7d12 + 28"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 20,
+			"dex": 11,
+			"con": 19,
+			"int": 6,
+			"wis": 10,
+			"cha": 14,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击",
+					"cond": true
+				}
+			],
+			"immune": [
+				"闪电",
+				"雷鸣伤害"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "无情（短休或长休后重置）",
+					"ENG_name": "Relentless (Recharges after a Short or Long Rest)",
+					"entries": [
+						"如果Gorthok受到的伤害或少于27点，本应将其生命值降至0点，它的生命值将改为降至1点。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Gorthok 进行两次近战攻击：一次使用它的闪电獠牙，一次使用它的雷鸣蹄。"
+					]
+				},
+				{
+					"name": "闪电獠牙",
+					"ENG_name": "Lightning Tusks",
+					"entries": [
+						"{@atk 近战} {@hit 8}命中，射程10英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 斩击伤害加上7 ({@damage 2d6}) 闪电伤害。"
+					]
+				},
+				{
+					"name": "雷鸣蹄",
+					"ENG_name": "Thunder Hooves",
+					"entries": [
+						"{@atk 近战} {@hit 8} 命中，触及范围10英尺，一个目标。{@h}12 ({@damage 2d6 + 5}) 钝击伤害加上7 ({@damage 2d6}) 雷击伤害。"
+					]
+				},
+				{
+					"name": "闪电束 {@recharge}",
+					"ENG_name": "Lightning Bolt {@recharge}",
+					"entries": [
+						"Gorthok 向它120英尺内能看到的一个生物射出一道闪电。目标必须进行一次敏捷豁免（DC 15），失败则受到18（{@damage 4d8}）点闪电伤害，成功则受到一半的伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"MW",
+				"射程"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "岩石地侏儒隐士",
+			"ENG_name": "Rock Gnome Recluse",
+			"source": "DIP",
+			"page": 62,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 13,
+					"condition": "带有{@spell 法师护甲}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 6,
+			"dex": 11,
+			"con": 10,
+			"int": 15,
+			"wis": 10,
+			"cha": 13,
+			"skill": {
+				"arcana": "+4",
+				"history": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"languages": [
+				"普通",
+				"侏儒语"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"侏儒是2级施法者。其施法能力是智力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。它准备了以下巫师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}（见下文\"动作\"部分）"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell 侦测魔法}",
+								"{@spell 法师护甲}",
+								"{@spell 魔法飞弹}（详见下方\"动作\"）",
+								"{@spell 护盾术}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "侏儒狡黠",
+					"ENG_name": "Gnome Cunning",
+					"entries": [
+						"地精在对抗魔法的智力、智慧和魅力豁免检定中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "魔法飞弹（消耗一个1级法术位）",
+					"ENG_name": "Magic Missile (Expends a 1st-Level Spell Slot)",
+					"entries": [
+						"地精创造了三个魔法飞镖。每个飞镖击中地精选择的120英尺内的一个生物，并造成3（{@damage 1d4 + 1}）点力量伤害。"
+					]
+				},
+				{
+					"name": "冷冻射线",
+					"ENG_name": "Ray of Frost",
+					"entries": [
+						"{@atk 远程法术攻击} {@hit 4}命中，射程60英尺，一个生物。{@h}4 ({@damage 1d8}) 冰冷伤害，并且目标的速度在侏儒下一个回合开始前减少10英尺。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"C",
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "骷髅骑乘马",
+			"ENG_name": "Skeletal Riding Horse",
+			"source": "DIP",
+			"page": 21,
+			"_copy": {
+				"name": "乘用马",
+				"ENG_name": "Riding Horse",
+				"source": "MM"
+			},
+			"type": "undead",
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
 }

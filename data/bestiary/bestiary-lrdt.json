@@ -1,261 +1,261 @@
 {
-  "monster": [
-    {
-      "name": "Alax Jadescales",
-      "ENG_name": "Alax Jadescales",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LRDT",
-      "page": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "dragonborn"
-        ]
-      },
-      "alignment": [
-        "N",
-        "G"
-      ],
-      "ac": [
-        10
-      ],
-      "hp": {
-        "average": 58,
-        "formula": "9d8 + 18"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 11,
-      "dex": 10,
-      "con": 14,
-      "int": 11,
-      "wis": 16,
-      "cha": 15,
-      "skill": {
-        "animal handling": "+5",
-        "survival": "+5"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 13,
-      "resist": [
-        "毁灭诅咒"
-      ],
-      "languages": [
-        "普通",
-        "龙族血脉"
-      ],
-      "cr": "2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Alax 施放以下任意一个法术，使用智慧作为施法能力（法术豁免{@dc 13}）："
-          ],
-          "will": [
-            "{@spell 德鲁伊伎俩}",
-            "{@spell 提升抗性}"
-          ],
-          "daily": {
-            "1e": [
-              "{@spell 疗伤术}",
-              "{@spell 妖火}",
-              "{@spell 净化食粮}"
-            ]
-          },
-          "ability": "wis",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Alax 进行两次火焰打击攻击。"
-          ]
-        },
-        {
-          "name": "火焰打击",
-          "ENG_name": "Fire Strike",
-          "entries": [
-            "{@atk 近战法术攻击,远程法术攻击} {@hit 5} hit，射程5英尺或60英尺范围，一个目标。{@h}10 ({@damage 2d6 + 3}) 火焰h。"
-          ]
-        },
-        {
-          "name": "呼吸武器（短休息或长休息后重新充能）",
-          "ENG_name": "Breath Weapon (Recharges after a Short or Long Rest)",
-          "entries": [
-            "Alax 呼出一道15英尺长的火焰锥。该区域内的每个生物都必须进行一次敏捷豁免检定，DC为12，如果检定失败，则受到14点（4d6）火焰伤害，如果检定成功，则只受到一半的伤害。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "龙息武器",
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR"
-      ],
-      "damageTags": [
-        "F"
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "miscTags": [
-        "范围伤害"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "埃文·灵魂坠落",
-      "ENG_name": "Ervan Soulfallen",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "LRDT",
-      "page": 11,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        12,
-        {
-          "ac": 15,
-          "condition": "带有{@spell 法师护甲}",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 84,
-        "formula": "13d8 + 26"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 15,
-      "con": 14,
-      "int": 11,
-      "wis": 8,
-      "cha": 17,
-      "skill": {
-        "arcana": "3",
-        "deception": "+6"
-      },
-      "passive": 9,
-      "languages": [
-        "普通",
-        "龙族血脉"
-      ],
-      "cr": "5",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Ervan 使用魅力作为施法能力，施展以下法术之一（法术豁免难度{@dc 14}）："
-          ],
-          "will": [
-            "{@spell 光亮术}",
-            "{@spell 法师之手}"
-          ],
-          "daily": {
-            "2": [
-              "{@spell 任意门}"
-            ],
-            "1e": [
-              "{@spell 易容术}",
-              "{@spell 浮空术}",
-              "{@spell 法师护甲}"
-            ]
-          },
-          "ability": "cha",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Ervan 使用他的法杖进行三次奥术冲击攻击。"
-          ]
-        },
-        {
-          "name": "奥术爆炸",
-          "ENG_name": "Arcane Blast",
-          "entries": [
-            "{@atk 近战武器，远程武器} {@hit 6}hit，射程5英尺或射程120英尺，一个目标。{@h}13（{@damage 3d6 + 3}）力量h。"
-          ]
-        },
-        {
-          "name": "酸雨（短暂休息或长时间休息后重充）",
-          "ENG_name": "Acid Rain (Recharges after a Short or Long Rest)",
-          "entries": [
-            "酸液落在以Ervan能看到的120英尺内某点为中心的10英尺半径，20英尺高的圆柱体内。该区域内的每个生物必须进行一次敏捷豁免骰（DC 14），失败则受到22点（4d10）酸液伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR"
-      ],
-      "damageTags": [
-        "A",
-        "O"
-      ],
-      "damageTagsSpell": [
-        "O"
-      ],
-      "spellcastingTags": [
-        "O"
-      ],
-      "miscTags": [
-        "范围伤害"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    }
-  ]
+	"monster": [
+		{
+			"name": "Alax Jadescales",
+			"ENG_name": "Alax Jadescales",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LRDT",
+			"page": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dragonborn"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"animal handling": "+5",
+				"survival": "+5"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 13,
+			"resist": [
+				"毁灭诅咒"
+			],
+			"languages": [
+				"普通",
+				"龙族血脉"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Alax 施放以下任意一个法术，使用智慧作为施法能力（法术豁免{@dc 13}）："
+					],
+					"will": [
+						"{@spell 德鲁伊伎俩}",
+						"{@spell 提升抗性}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell 疗伤术}",
+							"{@spell 妖火}",
+							"{@spell 净化食粮}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "动作"
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Alax 进行两次火焰打击攻击。"
+					]
+				},
+				{
+					"name": "火焰打击",
+					"ENG_name": "Fire Strike",
+					"entries": [
+						"{@atk 近战法术攻击,远程法术攻击} {@hit 5} hit，射程5英尺或60英尺范围，一个目标。{@h}10 ({@damage 2d6 + 3}) 火焰h。"
+					]
+				},
+				{
+					"name": "呼吸武器（短休息或长休息后重新充能）",
+					"ENG_name": "Breath Weapon (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Alax 呼出一道15英尺长的火焰锥。该区域内的每个生物都必须进行一次敏捷豁免检定，DC为12，如果检定失败，则受到14点（4d6）火焰伤害，如果检定成功，则只受到一半的伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"龙息武器",
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"范围伤害"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "埃文·灵魂坠落",
+			"ENG_name": "Ervan Soulfallen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LRDT",
+			"page": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "带有{@spell 法师护甲}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 14,
+			"int": 11,
+			"wis": 8,
+			"cha": 17,
+			"skill": {
+				"arcana": "3",
+				"deception": "+6"
+			},
+			"passive": 9,
+			"languages": [
+				"普通",
+				"龙族血脉"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ervan 使用魅力作为施法能力，施展以下法术之一（法术豁免难度{@dc 14}）："
+					],
+					"will": [
+						"{@spell 光亮术}",
+						"{@spell 法师之手}"
+					],
+					"daily": {
+						"2": [
+							"{@spell 任意门}"
+						],
+						"1e": [
+							"{@spell 易容术}",
+							"{@spell 浮空术}",
+							"{@spell 法师护甲}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "动作"
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Ervan 使用他的法杖进行三次奥术冲击攻击。"
+					]
+				},
+				{
+					"name": "奥术爆炸",
+					"ENG_name": "Arcane Blast",
+					"entries": [
+						"{@atk 近战武器，远程武器} {@hit 6}hit，射程5英尺或射程120英尺，一个目标。{@h}13（{@damage 3d6 + 3}）力量h。"
+					]
+				},
+				{
+					"name": "酸雨（短暂休息或长时间休息后重充）",
+					"ENG_name": "Acid Rain (Recharges after a Short or Long Rest)",
+					"entries": [
+						"酸液落在以Ervan能看到的120英尺内某点为中心的10英尺半径，20英尺高的圆柱体内。该区域内的每个生物必须进行一次敏捷豁免骰（DC 14），失败则受到22点（4d10）酸液伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"范围伤害"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
 }

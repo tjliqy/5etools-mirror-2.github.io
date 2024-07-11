@@ -1,115 +1,99 @@
 {
-  "spell": [
-    {
-      "name": "创造魔卫",
-      "ENG_name": "Create Magen",
-      "source": "IDRotF",
-      "page": 318,
-      "level": 7,
-      "school": "T",
-      "time": [
-        {
-          "number": 1,
-          "unit": "小时"
-        }
-      ],
-      "range": {
-        "type": "point",
-        "distance": {
-          "type": "touch"
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true,
-        "m": {
-          "text": "一小瓶价值 500gp 的水银和一个真人大小的人偶，作为法术的耗材；以及一支复杂的水晶权杖，价值至少 1500gp，法术不会消耗该材料",
-          "cost": 50000,
-          "consume": true
-        }
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "施展该法术时，你将一小瓶水银放置在一个填充着灰烬和尘土的真人大小的人偶的胸口里。然后你缝合好人偶，将你的血滴在上面。在施法结束时，你用一支水晶权杖在人偶上轻轻一点，将它转化为一个穿着人偶所穿着的衣服的{@filter 魔卫|怪物图鉴|search=magen|来源=IDRotF}。魔卫的类型由你在施法时选择，查阅{@adventure 附录C|IDRotF|21}以找到不同类型的魔卫以及它们的数据。",
-        "当魔卫出现时，你的最大生命值减少一定值，其数值等同于该魔卫的挑战等级（至少减少1点）。只有一道{@spell 祈愿术}才能撤销此减值",
-        "任何你用该法术创造的魔卫会毫无异议地执行你的命令。"
-      ],
-      "areaTags": [
-        "ST"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Wizard",
-            "source": "PHB"
-          }
-        ]
-      }
-    },
-    {
-      "name": "冷冻一指",
-      "ENG_name": "Frost Fingers",
-      "source": "IDRotF",
-      "page": 318,
-      "level": 1,
-      "school": "V",
-      "time": [
-        {
-          "number": 1,
-          "unit": "肉体雕塑者"
-        }
-      ],
-      "range": {
-        "type": "cone",
-        "distance": {
-          "type": "feet",
-          "amount": 15
-        }
-      },
-      "components": {
-        "v": true,
-        "s": true
-      },
-      "duration": [
-        {
-          "type": "instant"
-        }
-      ],
-      "entries": [
-        "彻骨之寒从你的指尖爆发而出，覆盖15尺锥形的范围。每个处于该区域内的生物都必须进行一次体质豁免，豁免失败者将受到{@damage 2d8}冷冻伤害，豁免成功则伤害减半。",
-        "此等寒冷将冻结法术范围内任何未被着装或携带的非魔法液体。"
-      ],
-      "entriesHigherLevel": [
-        {
-          "type": "entries",
-          "name": "升环施法效应",
-          "ENG_name": "At Higher Levels",
-          "entries": [
-            "使用2环或更高法术位施展该法术时，你使用的法术位每比1环高一环，法术伤害就增加{@dice 1d8}。"
-          ]
-        }
-      ],
-      "damageInflict": [
-        "寒冷"
-      ],
-      "savingThrow": [
-        "体质"
-      ],
-      "areaTags": [
-        "N"
-      ],
-      "classes": {
-        "fromClassList": [
-          {
-            "name": "Wizard",
-            "source": "PHB"
-          }
-        ]
-      }
-    }
-  ]
+	"spell": [
+		{
+			"name": "创造魔卫",
+			"ENG_name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "小时"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一小瓶价值 500gp 的水银和一个真人大小的人偶，作为法术的耗材；以及一支复杂的水晶权杖，价值至少 1500gp，法术不会消耗该材料",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"施法时，你将一瓶水银放在一个填满灰烬或尘土的真人大小的玩偶的胸膛里。然后你缝合玩偶，并滴上你的血。施法结束时，你用水晶棒轻敲玩偶，将其变成一个穿着玩偶所穿衣物的{@filter 马根|怪物图鉴|搜索=魔法|来源=IDRotF}。魔根的类型由你在施法过程中选择。请参阅{@adventure 附录C|IDRotF|21}了解不同类型的魔根及其统计数据。",
+				"当魔神出现时，你的生命值上限会减少等同于魔神挑战等级的数值（最少减少1）。只有通过施放{@spell 祈愿术}法术才能解除对你生命值上限的这一减少。",
+				"你用这个法术创造的任何魔像都会毫无疑问地服从你的命令。"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "冰冷一指",
+			"ENG_name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你的指尖射出冰冷的寒气，形成一个15英尺的锥形区域。该区域内的每个生物都必须进行一次体质豁免投掷，失败则受到{@damage 2d8}点寒冷伤害，成功则伤害减半。",
+				"该区域中未穿戴或携带的非魔法液体会被冻住。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "升环施法效应",
+					"ENG_name": "At Higher Levels",
+					"entries": [
+						"当你使用2级以上的法术位施放这个法术时，伤害每超过1级法术位增加{@dice 1d8}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"寒冷"
+			],
+			"savingThrow": [
+				"体质"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
 }

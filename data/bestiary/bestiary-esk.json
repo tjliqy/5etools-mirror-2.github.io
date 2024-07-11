@@ -1,387 +1,387 @@
 {
-  "monster": [
-    {
-      "name": "专家",
-      "ENG_name": "Expert",
-      "source": "ESK",
-      "page": 63,
-      "level": 1,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "expert",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 11,
-        "formula": "2d8 + 2"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 15,
-      "con": 12,
-      "int": 13,
-      "wis": 10,
-      "cha": 14,
-      "save": {
-        "dex": "+4"
-      },
-      "skill": {
-        "acrobatics": "+4",
-        "performance": "+4",
-        "persuasion": "+4",
-        "sleight of hand": "+4",
-        "stealth": "+4"
-      },
-      "passive": 10,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "好帮手",
-          "ENG_name": "Helpful",
-          "entries": [
-            "专家可以将援助行动作为奖励行动。"
-          ]
-        },
-        {
-          "name": "工具",
-          "ENG_name": "Tools",
-          "entries": [
-            "该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "短剑",
-          "ENG_name": "Shortsword",
-          "entries": [
-            "{@atk 近战攻击} 命中骰：4，触及范围5英尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战武器, 远程武器} {@hit 4}命中，射程5英尺或20/60英尺，一个目标。{@h}4 ({@damage 1d4 + 2}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "短弓",
-          "ENG_name": "Shortbow",
-          "entries": [
-            "{@atk 远程武器攻击} 命中需要{@hit 4}，射程80/320英尺，一个目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB",
-        "短弓|PHB",
-        "短剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "施法者",
-      "ENG_name": "Spellcaster",
-      "source": "ESK",
-      "page": 63,
-      "level": 1,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "spellcaster",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 12,
-          "from": [
-            "{@item 皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 9,
-        "formula": "2d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 15,
-      "wis": 14,
-      "cha": 13,
-      "save": {
-        "wis": "+4"
-      },
-      "skill": {
-        "arcana": "+4",
-        "investigation": "+4",
-        "religion": "+4"
-      },
-      "passive": 12,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法（治疗者）",
-          "ENG_name": "Spellcasting (Healer)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的法术施放能力是智慧（法术豁免难度{@dc 12}，法术攻击命中时需投掷{@hit 4}）。施法者准备了以下牧师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 神导术}",
-                "{@spell 圣焰}"
-              ]
-            },
-            "1": {
-              "slots": 2,
-              "spells": [
-                "{@spell 治疗伤势}"
-              ]
-            }
-          },
-          "ability": "wis"
-        },
-        {
-          "name": "施法（法师）",
-          "ENG_name": "Spellcasting (Mage)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的施法能力是智力（法术豁免难度{@dc 12}，法术攻击命中{@hit 4}）。施法者准备了以下巫师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 火焰箭}",
-                "{@spell 光亮术}"
-              ]
-            },
-            "1": {
-              "slots": 2,
-              "spells": [
-                "{@spell 沉眠}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "魔法角色",
-          "ENG_name": "Magical Role",
-          "entries": [
-            "为施法者选择一个角色：治疗师或法师。您的选择将决定下面使用哪种施法特性。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战} {@hit 命中2} 命中，射程5英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击伤害，或4 ({@damage 1d8}) 钝击伤害，如果用双手使用。"
-          ]
-        }
-      ],
-      "altArt": [
-        {
-          "name": "施法者（治疗者）",
-          "ENG_name": "Spellcaster (Healer)",
-          "source": "ESK"
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "F",
-        "R"
-      ],
-      "spellcastingTags": [
-        "CC",
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "战士",
-      "ENG_name": "Warrior",
-      "source": "ESK",
-      "page": 63,
-      "level": 1,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "warrior",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "{@item 链甲衫|PHB}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 13,
-        "formula": "2d8 + 4"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 15,
-      "dex": 13,
-      "con": 14,
-      "int": 10,
-      "wis": 12,
-      "cha": 10,
-      "save": {
-        "con": "+4"
-      },
-      "skill": {
-        "athletics": "+4",
-        "perception": "+3",
-        "survival": "+3"
-      },
-      "passive": 13,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "战斗职能",
-          "ENG_name": "Martial Role",
-          "entries": [
-            "该战士具有以下特质之一，由你选择：",
-            {
-              "type": "list",
-              "style": "list-hang-notitle",
-              "items": [
-                {
-                  "type": "item",
-                  "name": "攻击者",
-                  "ENG_name": "Attacker",
-                  "entry": "战士获得攻击检定的+2加值。"
-                },
-                {
-                  "type": "item",
-                  "name": "防御者",
-                  "ENG_name": "Defender",
-                  "entry": "战士获得了以下保护反应。"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战} {@hit 4}命中，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 斩击伤害，或者如果用双手使用则为7 ({@damage 1d10 + 2}) 斩击伤害。"
-          ]
-        },
-        {
-          "name": "长弓",
-          "ENG_name": "Longbow",
-          "entries": [
-            "{@atk 远程武器攻击} 命中骰：3，射程150/600 英尺，一个目标。{@h}5（{@damage 1d8 + 1}）穿刺伤害。"
-          ]
-        }
-      ],
-      "reaction": [
-        {
-          "name": "防护（仅限守卫者）",
-          "ENG_name": "Protection (Defender Only)",
-          "entries": [
-            "战士对5英尺内的目标不是战士的生物的攻击检定施加劣势。战士必须能看到攻击者。"
-          ]
-        }
-      ],
-      "altArt": [
-        {
-          "name": "战士（守卫者）",
-          "ENG_name": "Warrior (Defender)",
-          "source": "ESK"
-        }
-      ],
-      "attachedItems": [
-        "长弓|PHB",
-        "长剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW"
-      ],
-      "hasToken": true
-    }
-  ]
+	"monster": [
+		{
+			"name": "专家",
+			"ENG_name": "Expert",
+			"source": "ESK",
+			"page": 63,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "expert",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 12,
+			"int": 13,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"dex": "+4"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"performance": "+4",
+				"persuasion": "+4",
+				"sleight of hand": "+4",
+				"stealth": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "好帮手",
+					"ENG_name": "Helpful",
+					"entries": [
+						"专家可以将援助行动作为奖励行动。"
+					]
+				},
+				{
+					"name": "工具",
+					"ENG_name": "Tools",
+					"entries": [
+						"该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "短剑",
+					"ENG_name": "Shortsword",
+					"entries": [
+						"{@atk 近战攻击} 命中骰：4，触及范围5英尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战武器, 远程武器} {@hit 4}命中，射程5英尺或20/60英尺，一个目标。{@h}4 ({@damage 1d4 + 2}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "短弓",
+					"ENG_name": "Shortbow",
+					"entries": [
+						"{@atk 远程武器攻击} 命中需要{@hit 4}，射程80/320英尺，一个目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB",
+				"短弓|PHB",
+				"短剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "施法者",
+			"ENG_name": "Spellcaster",
+			"source": "ESK",
+			"page": 63,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item 皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 15,
+			"wis": 14,
+			"cha": 13,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+4",
+				"investigation": "+4",
+				"religion": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"spellcasting": [
+				{
+					"name": "施法（治疗者）",
+					"ENG_name": "Spellcasting (Healer)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的法术施放能力是智慧（法术豁免难度{@dc 12}，法术攻击命中时需投掷{@hit 4}）。施法者准备了以下牧师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 神导术}",
+								"{@spell 圣焰}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell 治疗伤势}"
+							]
+						}
+					},
+					"ability": "wis"
+				},
+				{
+					"name": "施法（法师）",
+					"ENG_name": "Spellcasting (Mage)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的施法能力是智力（法术豁免难度{@dc 12}，法术攻击命中{@hit 4}）。施法者准备了以下巫师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 火焰箭}",
+								"{@spell 光亮术}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell 沉眠}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "魔法角色",
+					"ENG_name": "Magical Role",
+					"entries": [
+						"为施法者选择一个角色：治疗师或法师。您的选择将决定下面使用哪种施法特性。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战} {@hit 命中2} 命中，射程5英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击伤害，或4 ({@damage 1d8}) 钝击伤害，如果用双手使用。"
+					]
+				}
+			],
+			"altArt": [
+				{
+					"name": "施法者（治疗者）",
+					"ENG_name": "Spellcaster (Healer)",
+					"source": "ESK"
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC",
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "战士",
+			"ENG_name": "Warrior",
+			"source": "ESK",
+			"page": 63,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "warrior",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item 链甲衫|PHB}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"con": "+4"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+3",
+				"survival": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "战斗职能",
+					"ENG_name": "Martial Role",
+					"entries": [
+						"该战士具有以下特质之一，由你选择：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "攻击者",
+									"ENG_name": "Attacker",
+									"entry": "战士获得攻击检定的+2加值。"
+								},
+								{
+									"type": "item",
+									"name": "防御者",
+									"ENG_name": "Defender",
+									"entry": "战士获得了以下保护反应。"
+								}
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战} {@hit 4}命中，射程5英尺，一个目标。{@h}6 ({@damage 1d8 + 2}) 斩击伤害，或者如果用双手使用则为7 ({@damage 1d10 + 2}) 斩击伤害。"
+					]
+				},
+				{
+					"name": "长弓",
+					"ENG_name": "Longbow",
+					"entries": [
+						"{@atk 远程武器攻击} 命中骰：3，射程150/600 英尺，一个目标。{@h}5（{@damage 1d8 + 1}）穿刺伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "防护（仅限守卫者）",
+					"ENG_name": "Protection (Defender Only)",
+					"entries": [
+						"战士对5英尺内的目标不是战士的生物的攻击检定施加劣势。战士必须能看到攻击者。"
+					]
+				}
+			],
+			"altArt": [
+				{
+					"name": "战士（守卫者）",
+					"ENG_name": "Warrior (Defender)",
+					"source": "ESK"
+				}
+			],
+			"attachedItems": [
+				"长弓|PHB",
+				"长剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW"
+			],
+			"hasToken": true
+		}
+	]
 }

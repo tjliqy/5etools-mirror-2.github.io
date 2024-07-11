@@ -1,2627 +1,2627 @@
 {
-  "class": [
-    {
-      "name": "邪术师",
-      "ENG_name": "Warlock",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "hd": {
-        "number": 1,
-        "faces": 8
-      },
-      "proficiency": [
-        "wis",
-        "cha"
-      ],
-      "spellcastingAbility": "cha",
-      "casterProgression": "pact",
-      "cantripProgression": [
-        2,
-        2,
-        2,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "spellsKnownProgression": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        10,
-        11,
-        11,
-        12,
-        12,
-        13,
-        13,
-        14,
-        14,
-        15,
-        15
-      ],
-      "spellsKnownProgressionFixedByLevel": {
-        "11": {
-          "6": 1
-        },
-        "13": {
-          "7": 1
-        },
-        "15": {
-          "8": 1
-        },
-        "17": {
-          "9": 1
-        }
-      },
-      "optionalfeatureProgression": [
-        {
-          "name": "魔能祈唤",
-          "ENG_name": "Eldritch Invocations",
-          "featureType": [
-            "EI"
-          ],
-          "progression": [
-            0,
-            2,
-            2,
-            2,
-            3,
-            3,
-            4,
-            4,
-            5,
-            5,
-            5,
-            6,
-            6,
-            6,
-            7,
-            7,
-            7,
-            8,
-            8,
-            8
-          ]
-        },
-        {
-          "name": "魔契恩泽",
-          "ENG_name": "Pact Boon",
-          "featureType": [
-            "PB"
-          ],
-          "progression": {
-            "3": 1
-          }
-        }
-      ],
-      "startingProficiencies": {
-        "armor": [
-          "光亮术"
-        ],
-        "weapons": [
-          "简单"
-        ],
-        "skills": [
-          {
-            "choose": {
-              "from": [
-                "奥秘",
-                "欺瞒",
-                "历史",
-                "威吓",
-                "调查",
-                "自然",
-                "宗教"
-              ],
-              "count": 2
-            }
-          }
-        ]
-      },
-      "startingEquipment": {
-        "additionalFromBackground": true,
-        "default": [
-          "(a) 一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}或 (b) 任何{@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}",
-          "(a) 一个 {@item 材料包|PHB} 或者 (b) 一个 {@item 奥术法器|PHB}",
-          "(a) 一个学者包{@item 学者套组|PHB}或(b) 一个探险者包{@item 地城套组|PHB}",
-          "{@item 皮甲|PHB}，任意 {@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}，以及两把 {@item 匕首|PHB|匕首}"
-        ],
-        "goldAlternative": "{@dice 4d4 × 10|4d4 × 10|起始金币}",
-        "defaultData": [
-          {
-            "a": [
-              "轻弩|PHB",
-              "弩矢(20)|PHB"
-            ],
-            "b": [
-              {
-                "equipmentType": "简易武器"
-              }
-            ]
-          },
-          {
-            "a": [
-              "材料包|PHB"
-            ],
-            "b": [
-              {
-                "equipmentType": "专注施法（奥术）"
-              }
-            ]
-          },
-          {
-            "a": [
-              "学者套组|PHB"
-            ],
-            "b": [
-              "地城套组|PHB"
-            ]
-          },
-          {
-            "_": [
-              "皮甲|PHB",
-              {
-                "equipmentType": "简易武器"
-              },
-              {
-                "item": "匕首|PHB",
-                "quantity": 2
-              }
-            ]
-          }
-        ]
-      },
-      "multiclassing": {
-        "requirements": {
-          "cha": 13
-        },
-        "proficienciesGained": {
-          "armor": [
-            "光亮术"
-          ],
-          "weapons": [
-            "简单"
-          ]
-        }
-      },
-      "classTableGroups": [
-        {
-          "colLabels": [
-            "{@filter 已知戏法|法术|level=0|职业=术士}",
-            "{@filter 已知法术|法术|职业=术士}",
-            "施法能力",
-            "插槽等级",
-            "{@filter 已知的呼唤|可选特性|特性类型=EI}"
-          ],
-          "rows": [
-            [
-              2,
-              2,
-              1,
-              "{@filter 第一|法术|level=1|职业=术士}",
-              0
-            ],
-            [
-              2,
-              3,
-              2,
-              "{@filter 第一|法术|level=1|职业=术士}",
-              2
-            ],
-            [
-              2,
-              4,
-              2,
-              "{@filter 第二|法术|level=2|职业=术士}",
-              2
-            ],
-            [
-              3,
-              5,
-              2,
-              "{@filter 第二|法术|level=2|职业=术士}",
-              2
-            ],
-            [
-              3,
-              6,
-              2,
-              "{@filter 第三|法术|level=3|职业=术士}",
-              3
-            ],
-            [
-              3,
-              7,
-              2,
-              "{@filter 第三|法术|level=3|职业=术士}",
-              3
-            ],
-            [
-              3,
-              8,
-              2,
-              "{@filter 第四|法术|level=4|职业=术士}",
-              4
-            ],
-            [
-              3,
-              9,
-              2,
-              "{@filter 第四|法术|level=4|职业=术士}",
-              4
-            ],
-            [
-              3,
-              10,
-              2,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              5
-            ],
-            [
-              4,
-              10,
-              2,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              5
-            ],
-            [
-              4,
-              11,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              5
-            ],
-            [
-              4,
-              11,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              6
-            ],
-            [
-              4,
-              12,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              6
-            ],
-            [
-              4,
-              12,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              6
-            ],
-            [
-              4,
-              13,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              7
-            ],
-            [
-              4,
-              13,
-              3,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              7
-            ],
-            [
-              4,
-              14,
-              4,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              7
-            ],
-            [
-              4,
-              14,
-              4,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              8
-            ],
-            [
-              4,
-              15,
-              4,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              8
-            ],
-            [
-              4,
-              15,
-              4,
-              "{@filter 第五|法术|level=5|职业=术士}",
-              8
-            ]
-          ]
-        }
-      ],
-      "classFeatures": [
-        "契约魔法|邪术师||1",
-        {
-          "classFeature": "异界宗主|邪术师||1",
-          "gainSubclassFeature": true
-        },
-        "魔能祈唤|邪术师||2",
-        "魔契恩泽|邪术师||3",
-        "属性值提升|邪术师||4",
-        "替换魔能|邪术师||4|TCE",
-        {
-          "classFeature": "异界宗主能力|邪术师||6",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|邪术师||8",
-        {
-          "classFeature": "异界宗主能力|邪术师||10",
-          "gainSubclassFeature": true
-        },
-        "玄奥秘法(6环)|邪术师||11",
-        "属性值提升|邪术师||12",
-        "玄奥秘法(7环)|邪术师||13",
-        {
-          "classFeature": "异界宗主能力|邪术师||14",
-          "gainSubclassFeature": true
-        },
-        "玄奥秘法(8环)|邪术师||15",
-        "属性值提升|邪术师||16",
-        "玄奥秘法(9环)|邪术师||17",
-        "属性值提升|邪术师||19",
-        "魔能掌控|邪术师||20"
-      ],
-      "subclassTitle": "异界宗主",
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ],
-  "subclass": [
-    {
-      "name": "至高妖精宗主",
-      "ENG_name": "The Archfey",
-      "shortName": "至高妖精",
-      "source": "PHB",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 108,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "妖火术",
-              "沉眠"
-            ],
-            "s2": [
-              "安定心神",
-              "魅影之力"
-            ],
-            "s3": [
-              "闪现术",
-              "植物滋长"
-            ],
-            "s4": [
-              "支配野兽",
-              "高等隐形术"
-            ],
-            "s5": [
-              "支配人类",
-              "伪装术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "至高妖精宗主|邪术师||至高妖精||1",
-        "雾遁|邪术师||至高妖精||6",
-        "斗转星移|邪术师||至高妖精||10",
-        "幻影黑幕|邪术师||至高妖精||14"
-      ]
-    },
-    {
-      "name": "邪魔宗主",
-      "ENG_name": "The Fiend",
-      "shortName": "邪魔",
-      "source": "PHB",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 109,
-      "srd": true,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "燃烧之手",
-              "命令术"
-            ],
-            "s2": [
-              "目盲/耳聋术",
-              "灼热射线"
-            ],
-            "s3": [
-              "火球术",
-              "臭云术"
-            ],
-            "s4": [
-              "火焰护盾",
-              "火墙术"
-            ],
-            "s5": [
-              "焰击术",
-              "圣居"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "邪魔宗主|邪术师||邪魔||1",
-        "黑暗强运|邪术师||邪魔||6",
-        "邪魔体魄|邪术师||邪魔||10",
-        "直坠噩梦|邪术师||邪魔||14"
-      ]
-    },
-    {
-      "name": "旧日支配者宗主",
-      "ENG_name": "The Great Old One",
-      "shortName": "旧日支配者",
-      "source": "PHB",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 109,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "噪音暗语",
-              "塔莎狂笑术"
-            ],
-            "s2": [
-              "侦测思想",
-              "魅影之力"
-            ],
-            "s3": [
-              "锐眼术",
-              "短讯术"
-            ],
-            "s4": [
-              "支配野兽",
-              "艾伐黑触手"
-            ],
-            "s5": [
-              "支配人类",
-              "心灵遥控"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "旧日支配者宗主|邪术师||旧日支配者||1",
-        "熵光结界|邪术师||旧日支配者||6",
-        "思维之盾|邪术师||旧日支配者||10",
-        "创造奴仆|邪术师||旧日支配者||14"
-      ]
-    },
-    {
-      "name": "不朽者宗主",
-      "ENG_name": "The Undying",
-      "shortName": "​不朽者",
-      "source": "SCAG",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 139,
-      "additionalSpells": [
-        {
-          "known": {
-            "1": [
-              "拯救濒死#c"
-            ]
-          },
-          "expanded": {
-            "s1": [
-              "摹造生命",
-              "致病射线"
-            ],
-            "s2": [
-              "目盲/耳聋术",
-              "沉默术"
-            ],
-            "s3": [
-              "假死术",
-              "死者交谈术"
-            ],
-            "s4": [
-              "生命灵光",
-              "防死护咒"
-            ],
-            "s5": [
-              "疫病术",
-              "通晓传奇"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "不朽者宗主|邪术师||​不朽者|SCAG|1",
-        "反抗死亡|邪术师||​不朽者|SCAG|6",
-        "不朽之理|邪术师||​不朽者|SCAG|10",
-        "永恒生命|邪术师||​不朽者|SCAG|14"
-      ]
-    },
-    {
-      "name": "天界宗主",
-      "ENG_name": "The Celestial",
-      "shortName": "天界",
-      "source": "XGE",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 54,
-      "additionalSpells": [
-        {
-          "known": {
-            "1": [
-              "圣焰#c",
-              "光亮术#c"
-            ]
-          },
-          "expanded": {
-            "s1": [
-              "治疗伤势",
-              "光导箭"
-            ],
-            "s2": [
-              "炽焰法球",
-              "次级复原术"
-            ],
-            "s3": [
-              "昼明术",
-              "回生术"
-            ],
-            "s4": [
-              "虔诚守卫",
-              "火墙术"
-            ],
-            "s5": [
-              "焰击术",
-              "高等复原术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "天界宗主|邪术师||天界|XGE|1",
-        "光耀之魂|邪术师||天界|XGE|6",
-        "天界韧性|邪术师||天界|XGE|10",
-        "灼光复仇|邪术师||天界|XGE|14"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "咒剑宗主",
-      "ENG_name": "The Hexblade",
-      "shortName": "咒剑",
-      "source": "XGE",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 55,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "护盾术",
-              "激愤斩"
-            ],
-            "s2": [
-              "朦胧术",
-              "烙印斩"
-            ],
-            "s3": [
-              "闪现术",
-              "元素武器"
-            ],
-            "s4": [
-              "魅影杀手",
-              "惊震斩"
-            ],
-            "s5": [
-              "放逐斩",
-              "寒冰锥"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "咒剑宗主|邪术师||咒剑|XGE|1",
-        "咒缚幽灵|邪术师||咒剑|XGE|6",
-        "巫咒护甲|邪术师||咒剑|XGE|10",
-        "巫咒大师|邪术师||咒剑|XGE|14"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "深海意志宗主",
-      "ENG_name": "The Fathomless",
-      "shortName": "深海意志",
-      "source": "TCE",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 72,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "造水/枯水术",
-              "雷鸣波"
-            ],
-            "s2": [
-              "造风术",
-              "沉默术"
-            ],
-            "s3": [
-              "闪电束",
-              "雪雨暴"
-            ],
-            "s4": [
-              "操控水体",
-              "元素召唤术|TCE"
-            ],
-            "s5": [
-              "毕格比之掌",
-              "寒冰锥"
-            ]
-          },
-          "known": {
-            "10": {
-              "daily": {
-                "1": [
-                  "艾伐黑触手"
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "深海意志宗主|邪术师||深海意志|TCE|1",
-        "海渊魂灵|邪术师||深海意志|TCE|6",
-        "守卫缠绕|邪术师||深海意志|TCE|6",
-        "擒握触手|邪术师||深海意志|TCE|10",
-        "海渊传送|邪术师||深海意志|TCE|14"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "巨灵宗主",
-      "ENG_name": "The Genie",
-      "shortName": "巨灵",
-      "source": "TCE",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 73,
-      "additionalSpells": [
-        {
-          "name": "土巨灵",
-          "ENG_name": "Dao",
-          "expanded": {
-            "9": [
-              "祈愿术"
-            ],
-            "s1": [
-              "侦测善恶",
-              "圣域术"
-            ],
-            "s2": [
-              "魅影之力",
-              "荆棘丛生"
-            ],
-            "s3": [
-              "创造饮食",
-              "融身入石"
-            ],
-            "s4": [
-              "魅影杀手",
-              "塑石术"
-            ],
-            "s5": [
-              "造物术",
-              "石墙术"
-            ]
-          }
-        },
-        {
-          "name": "气巨灵",
-          "ENG_name": "Djinni",
-          "expanded": {
-            "9": [
-              "祈愿术"
-            ],
-            "s1": [
-              "侦测善恶",
-              "雷鸣波"
-            ],
-            "s2": [
-              "魅影之力",
-              "造风术"
-            ],
-            "s3": [
-              "创造饮食",
-              "风墙术"
-            ],
-            "s4": [
-              "魅影杀手",
-              "高等隐形术"
-            ],
-            "s5": [
-              "造物术",
-              "伪装术"
-            ]
-          }
-        },
-        {
-          "name": "火巨灵",
-          "ENG_name": "Efreeti",
-          "expanded": {
-            "9": [
-              "祈愿术"
-            ],
-            "s1": [
-              "侦测善恶",
-              "燃烧之手"
-            ],
-            "s2": [
-              "魅影之力",
-              "灼热射线"
-            ],
-            "s3": [
-              "创造饮食",
-              "火球术"
-            ],
-            "s4": [
-              "魅影杀手",
-              "火焰护盾"
-            ],
-            "s5": [
-              "造物术",
-              "焰击术"
-            ]
-          }
-        },
-        {
-          "name": "水巨灵",
-          "ENG_name": "Marid",
-          "expanded": {
-            "9": [
-              "祈愿术"
-            ],
-            "s1": [
-              "侦测善恶",
-              "云雾术"
-            ],
-            "s2": [
-              "魅影之力",
-              "朦胧术"
-            ],
-            "s3": [
-              "创造饮食",
-              "雪雨暴"
-            ],
-            "s4": [
-              "魅影杀手",
-              "操控水体"
-            ],
-            "s5": [
-              "造物术",
-              "寒冰锥"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "巨灵宗主|邪术师||巨灵|TCE|1",
-        "元素赐福|邪术师||巨灵|TCE|6",
-        "器皿庇护所|邪术师||巨灵|TCE|10",
-        "有限祈愿术|邪术师||巨灵|TCE|14"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "死灵宗主",
-      "ENG_name": "The Undead",
-      "shortName": "死灵",
-      "source": "VRGR",
-      "className": "邪术师",
-      "classSource": "PHB",
-      "page": 30,
-      "additionalSpells": [
-        {
-          "expanded": {
-            "s1": [
-              "灾祸术",
-              "摹造生命"
-            ],
-            "s2": [
-              "目盲/耳聋术",
-              "魅影之力"
-            ],
-            "s3": [
-              "魅影驹",
-              "死者交谈术"
-            ],
-            "s4": [
-              "防死护咒",
-              "高等隐形术"
-            ],
-            "s5": [
-              "反活物护罩",
-              "死云术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "死灵宗主|邪术师||死灵|VRGR|1",
-        "坟冢之触|邪术师||死灵|VRGR|6",
-        "死疽躯壳|邪术师||死灵|VRGR|10",
-        "灵魂投射|邪术师||死灵|VRGR|14"
-      ],
-      "hasFluffImages": true
-    }
-  ],
-  "classFeature": [
-    {
-      "name": "异界宗主",
-      "ENG_name": "Otherworldly Patron",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "在1级时，你与一个来自其他世界的生物达成了协议，该生物从可用的守护者列表中选择。你的选择在1级时赋予你特性，并且在6级、10级和14级时再次赋予你特性。"
-      ]
-    },
-    {
-      "name": "契约魔法",
-      "ENG_name": "Pact Magic",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你的奥术研究以及你的守护者赋予你的魔法使你能够施展法术。请查看《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 术士法术列表|法术|职业=术士}。",
-        {
-          "type": "entries",
-          "name": "戏法",
-          "ENG_name": "Cantrips",
-          "entries": [
-            "你可以选择两个来自术士法术列表的戏法。随着等级的提升，如术士表格中的戏法已知列所示，你可以选择学习更多的术士戏法。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "施法能力",
-          "ENG_name": "Spell Slots",
-          "entries": [
-            "术士表格显示了你拥有多少个法术位来施放你的1至5级的{@filter 巫师法术|法术|职业=术士}。表格还显示了这些法术位的等级；你的所有法术位都是同一等级。要施放你的1级或更高等级的术士法术，你必须消耗一个法术位。当你完成短休或长休时，你恢复所有消耗的法术位。",
-            "例如，当你达到5级时，你有两个3级法术位。要施放1级法术{@spell 巫术箭}，你必须使用其中一个法术位，并且将其作为3级法术来施放。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "1级及更高等级已知法术",
-          "ENG_name": "Spells Known of 1st Level and Higher",
-          "entries": [
-            "在1级时，你可以从术士法术列表中选择两个1级的法术。",
-            "术士表格中的已知法术列显示了你何时可以学习更多你选择的1级及以上级别的术士法术。你选择的法术等级不能高于表格中对应你等级的法术位等级列所示的等级。例如，当你达到6级时，你将学习一个新的术士法术，它可以是1级、2级或3级。",
-            "此外，当你在此职业中升级时，你可以选择一个你所知道的术士法术，并用术士法术列表中的另一个法术替换它，这个新法术也必须是你有法术位的等级。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "施法关键属性",
-          "ENG_name": "Spellcasting Ability",
-          "entries": [
-            "魅力是你的术士法术的施法能力，所以当法术提到你的施法能力时，你将使用你的魅力。此外，当设定你施放的术士法术的豁免难度等级（DC）时，以及在使用该法术进行攻击检定时，你将使用你的魅力调整值。",
-            {
-              "type": "abilityDc",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "cha"
-              ]
-            },
-            {
-              "type": "abilityAttackMod",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "cha"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "法器",
-          "ENG_name": "Spellcasting Focus",
-          "entries": [
-            "你可以使用一个{@item 奥术法器|PHB}作为你的术士法术的施法焦点。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "魔能祈唤",
-      "ENG_name": "Eldritch Invocations",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 2,
-      "entries": [
-        "在你的神秘知识研究中，你发掘了奥术咒语，这些是被禁止的知识片段，它们赋予了你持久的魔法能力。",
-        "在2级时，你可以选择两个奥术咒语。可用选项的列表可以在{@filter 可选特性|可选特性|特性类型=EI}页面找到。当你获得特定的术士等级时，你将根据术士表格中的咒语已知列获得额外的咒语选择。",
-        "此外，当你在这个职业中升级时，你可以选择一个你已知的咒语并用那个等级你能学到的另一个咒语替换它。",
-        "如果奥术祈唤有先决条件，你必须满足这些条件才能学习它。你可以在满足其先决条件的同时学习这个祈唤。等级先决条件指的是你在本职业中的等级。"
-      ]
-    },
-    {
-      "name": "魔契恩泽",
-      "ENG_name": "Pact Boon",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 3,
-      "entries": [
-        "在3级时，你的异界恩人因为你的忠诚服务而赐予你一份礼物。你可以选择以下特性之一。",
-        {
-          "type": "options",
-          "count": 1,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "链之魔契"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "刃之魔契"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "书之魔契"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "符之魔契|TCE"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 4,
-      "entries": [
-        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "替换魔能",
-      "ENG_name": "Eldritch Versatility",
-      "source": "TCE",
-      "page": 70,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 4,
-      "isClassFeatureVariant": true,
-      "entries": [
-        "{@i 4级术士 {@variantrule 可选职业特性|tce|可选特性}}",
-        "每当你在这个职业中达到一个提供能力值提升特性的等级时，你可以选择以下之一，代表你在神秘学研究中的焦点变化：",
-        {
-          "type": "list",
-          "items": [
-            "用来自{@filter 术士法术列表|法术|level=0|职业=术士}中的另一个戏法替换你从这个职业的契约魔法特性中学到的一个戏法。",
-            "将你为契约恩惠特性选择的选项替换为该特性的其他选项之一。",
-            "如果您达到12级或更高，可以用相同等级的另一个术士法术替换您神秘奥术特性中的一个法术。"
-          ]
-        },
-        "如果这个变化使你不符合任何奥术祈唤的条件，你现在还必须替换它们，选择你符合条件的祈唤。"
-      ]
-    },
-    {
-      "name": "异界宗主能力",
-      "ENG_name": "Otherworldly Patron feature",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 6,
-      "entries": [
-        "在6级时，你获得了由你的异界守护者赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 8,
-      "entries": [
-        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "异界宗主能力",
-      "ENG_name": "Otherworldly Patron feature",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 10,
-      "entries": [
-        "在10级时，你获得了由你的异界恩主赋予的特性。"
-      ]
-    },
-    {
-      "name": "玄奥秘法(6环)",
-      "ENG_name": "Mystic Arcanum (6th level)",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 11,
-      "entries": [
-        "在11级时，你的守护者赋予你一个名为奥术秘法的魔法秘密。从术士法术列表中选择一个{@filter 6级术士法术列表中的法术|法术|level=6|职业=术士}作为这个奥术秘法。",
-        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。",
-        "在更高等级时，你获得更多你选择的术士法术，可以以这种方式施放：在13级时一个7级法术，15级时一个8级法术，以及17级时一个9级法术。当你完成一次长休时，你恢复所有神秘奥术的使用次数。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 12,
-      "entries": [
-        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "玄奥秘法(7环)",
-      "ENG_name": "Mystic Arcanum (7th level)",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 13,
-      "entries": [
-        "在13级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个{@filter 来自术士法术列表的7级法术|法术|level=7|职业=术士}作为这个奥术。",
-        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
-      ]
-    },
-    {
-      "name": "异界宗主能力",
-      "ENG_name": "Otherworldly Patron feature",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 14,
-      "entries": [
-        "在14级时，您获得了由您的异界赞助者赋予的特性。"
-      ]
-    },
-    {
-      "name": "玄奥秘法(8环)",
-      "ENG_name": "Mystic Arcanum (8th level)",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 15,
-      "entries": [
-        "在15级时，你的恩人赐予你一个名为秘术的魔法秘密。从术士法术列表中选择一个{@filter 8级术士法术列表中的法术|法术|level=8|职业=术士}作为这个秘术。",
-        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 16,
-      "entries": [
-        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "玄奥秘法(9环)",
-      "ENG_name": "Mystic Arcanum (9th level)",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 17,
-      "entries": [
-        "在17级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个9级法术作为这个奥术。",
-        "你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 19,
-      "entries": [
-        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "魔能掌控",
-      "ENG_name": "Eldritch Master",
-      "source": "PHB",
-      "page": 105,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "level": 20,
-      "entries": [
-        "在20级时，你可以在祈求你的守护者时，利用你内在的神秘力量来恢复已消耗的法术位。你可以花费1分钟祈求你的守护者帮助，以恢复你从契约魔法特性中消耗的所有法术位。一旦你通过这个特性恢复了法术位，你必须完成一次长时间休息才能再次这样做。"
-      ]
-    }
-  ],
-  "subclassFeature": [
-    {
-      "name": "至高妖精宗主",
-      "ENG_name": "The Archfey",
-      "source": "PHB",
-      "page": 108,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "至高妖精",
-      "subclassSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你的守护者是仙女之王或女士，是传说中的生物，拥有在凡人种族诞生之前就被遗忘的秘密。这个存在的动机通常是难以理解的，有时是异想天开的，可能涉及追求更大的魔法力量或解决古老的仇恨。这类生物包括霜之王子；暮光宫廷的统治者，黑暗与空气的女王；夏季宫廷的泰坦尼亚；她的配偶奥伯伦，绿之主；愚者王子海萨姆；以及古老的女巫。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "仙女让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "仙灵扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 妖火术}, {@spell 沉眠}"
-                ],
-                [
-                  "第二",
-                  "{@spell 安定心神}, {@spell 魅影之力}"
-                ],
-                [
-                  "第三",
-                  "{@spell 闪现术}, {@spell 植物滋长}"
-                ],
-                [
-                  "第四",
-                  "{@spell 支配野兽}, {@spell 高等隐形术}"
-                ],
-                [
-                  "第五",
-                  "{@spell 支配人类}, {@spell 伪装术}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "妖精仪态|邪术师||至高妖精||1"
-        }
-      ]
-    },
-    {
-      "name": "妖精仪态",
-      "ENG_name": "Fey Presence",
-      "source": "PHB",
-      "page": 108,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "至高妖精",
-      "subclassSource": "PHB",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "从1级开始，你的守护者赋予你投射仙女迷人而可怕的存在感的能力。作为一个动作，你可以使源自你的10英尺立方体内的每个生物进行一次对抗你的术士法术豁免DC的智慧豁免。未能通过豁免的生物将被你选择的{@condition 魅惑}（魅惑）或{@condition 恐惧}（恐惧）状态影响，直到你的下一回合结束。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "雾遁",
-      "ENG_name": "Misty Escape",
-      "source": "PHB",
-      "page": 108,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "至高妖精",
-      "subclassSource": "PHB",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "从6级开始，你可以在受到伤害时化作一团雾气消失。当你受到伤害时，你可以使用你的反应来变得{@condition 隐形}，并传送至你能看到的60英尺内的未被占据的空间。你保持{@condition 隐形}状态，直到你的下一回合开始，或者直到你攻击或施放法术。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "斗转星移",
-      "ENG_name": "Beguiling Defenses",
-      "source": "PHB",
-      "page": 108,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "至高妖精",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，你的恩主教你如何将敌人影响心智的魔法反击回去。你对被{@condition 魅惑}免疫，当另一个生物试图魅惑你时，你可以使用你的反应尝试将魅惑反击回那个生物。该生物必须对你的术士法术豁免DC进行一次智力豁免，否则将被你{@condition 魅惑}1分钟，或者直到该生物受到任何伤害。"
-      ]
-    },
-    {
-      "name": "幻影黑幕",
-      "ENG_name": "Dark Delirium",
-      "source": "PHB",
-      "page": 108,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "至高妖精",
-      "subclassSource": "PHB",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "从14级开始，你可以将一个生物投入虚幻领域。作为一个动作，选择一个你能在60英尺内看到的生物。它必须进行一次对抗你术士法术豁免难度等级（DC）的智慧豁免。豁免失败时，它将被你魅惑或恐惧（你选择）1分钟，或者直到你的专注被打破（就好像你在专注施法）。如果生物受到任何伤害，这个效果会提前结束。",
-        "在这个幻象结束之前，生物认为它迷失在一个你选择的雾气蒙蒙的领域中。生物只能看到和听到它自己、你和这个幻象。",
-        "你必须完成一次短休息或长休息后才能再次使用这个特性。"
-      ]
-    },
-    {
-      "name": "邪魔宗主",
-      "ENG_name": "The Fiend",
-      "source": "PHB",
-      "page": 109,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "邪魔",
-      "subclassSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你与来自存在低层平面的恶魔签订了契约，这些生物的目标是邪恶的，即使你努力反对这些目标。这些生物渴望腐蚀或毁灭一切事物，最终包括你自己。足够强大的恶魔可以签订契约，包括诸如Demogorgon、Orcus、Fraz'Urb-luu和Baphomet等恶魔领主；Asmodeus、Dispater、Mephistopheles和Belial等大恶魔；特别强大的深渊恶魔和巴洛魔；以及ultroloths和其他yugoloths的领主。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "恶魔让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "恶魔扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 燃烧之手}, {@spell 命令术}"
-                ],
-                [
-                  "第二",
-                  "{@spell 目盲/耳聋术}, {@spell 灼热射线}"
-                ],
-                [
-                  "第三",
-                  "{@spell 火球术}, {@spell 臭云术}"
-                ],
-                [
-                  "第四",
-                  "{@spell 火焰护盾}, {@spell 火墙术}"
-                ],
-                [
-                  "第五",
-                  "{@spell 焰击术}, {@spell 圣居}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "黑暗赐福|邪术师||邪魔||1"
-        }
-      ]
-    },
-    {
-      "name": "黑暗赐福",
-      "ENG_name": "Dark One's Blessing",
-      "source": "PHB",
-      "page": 109,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "邪魔",
-      "subclassSource": "PHB",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "从1级开始，当你将一个敌对生物的生命值降至0时，你获得等同于你的感知调整值加上你的术士等级（最少为1）的临时生命值。"
-      ]
-    },
-    {
-      "name": "黑暗强运",
-      "ENG_name": "Dark One's Own Luck",
-      "source": "PHB",
-      "page": 109,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "邪魔",
-      "subclassSource": "PHB",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "从6级开始，你可以召唤你的守护者来改变命运，使之对你有利。当你进行能力检定或豁免骰时，你可以使用这个特性将一个{@dice d10}加到你的骰点上。你可以在看到初始骰点之后，但在骰点的任何效果发生之前这样做。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "邪魔体魄",
-      "ENG_name": "Fiendish Resilience",
-      "source": "PHB",
-      "page": 109,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "邪魔",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，你可以在完成短休息或长休息时选择一种伤害类型。你将对该伤害类型获得抗性，直到你通过此特性选择不同的类型。魔法武器或银质武器造成的伤害无视此抗性。"
-      ]
-    },
-    {
-      "name": "直坠噩梦",
-      "ENG_name": "Hurl Through Hell",
-      "source": "PHB",
-      "page": 109,
-      "srd": true,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "邪魔",
-      "subclassSource": "PHB",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "从14级开始，当你用攻击击中一个生物时，你可以使用这个特性立即将目标传送到低层平面。生物消失并在噩梦般的景象中穿梭。",
-        "在你的下一轮结束时，目标返回到它之前占据的空间，或者是最近的未被占据的空间。如果目标不是恶魔，它将因其可怕的经历而受到{@damage 10d10}精神伤害。",
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "旧日支配者宗主",
-      "ENG_name": "The Great Old One",
-      "source": "PHB",
-      "page": 109,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "旧日支配者",
-      "subclassSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你的守护者是一个神秘实体，其本质与现实的本质完全不同。它可能来自遥远的领域，即现实之外的空间，或者可能是传说中的古老神灵之一。其动机对凡人来说是难以理解的，其知识如此庞大和古老，以至于即使是最大的图书馆也相形见绌，无法比拟它所掌握的庞大秘密。伟大的古老者可能对你的存在一无所知或完全漠不关心，但你学到的秘密允许你从它那里汲取魔法。这类实体包括被称为潜伏者的Ghaunadar；被束缚的神Tharizdun；夜蛇Dendar；返回者Zargon；伟大的克苏鲁；以及其他深不可测的存在。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "古老存在让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "古老存在扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 噪音暗语}, {@spell 塔莎狂笑术}"
-                ],
-                [
-                  "第二",
-                  "{@spell 侦测思想}, {@spell 魅影之力}"
-                ],
-                [
-                  "第三",
-                  "{@spell 锐眼术}, {@spell 短讯术}"
-                ],
-                [
-                  "第四",
-                  "{@spell 支配野兽}, {@spell 艾伐黑触手}"
-                ],
-                [
-                  "第五",
-                  "{@spell 支配人类}, {@spell 心灵遥控}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "唤醒心灵|邪术师||旧日支配者||1"
-        }
-      ]
-    },
-    {
-      "name": "唤醒心灵",
-      "ENG_name": "Awakened Mind",
-      "source": "PHB",
-      "page": 109,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "旧日支配者",
-      "subclassSource": "PHB",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "从1级开始，你异乎寻常的知识赋予了你触摸其他生物心智的能力。你可以心灵感应地与任何你能在30英尺内看到生物交流。生物不需要与你共享语言就能理解你的心灵感应话语，但生物必须至少能理解一种语言。"
-      ]
-    },
-    {
-      "name": "熵光结界",
-      "ENG_name": "Entropic Ward",
-      "source": "PHB",
-      "page": 109,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "旧日支配者",
-      "subclassSource": "PHB",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "在6级时，你学会了用魔法保护自己免受攻击，并将敌人的失败攻击转变为自己的好运。当一个生物对你进行攻击检定时，你可以使用你的反应来使该检定不利。如果攻击未命中你，在你下一个回合结束前，你对生物的下一次攻击检定将具有优势。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "思维之盾",
-      "ENG_name": "Thought Shield",
-      "source": "PHB",
-      "page": 109,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "旧日支配者",
-      "subclassSource": "PHB",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，你的思想不能被心灵感应或其他方式读取，除非你允许。你还对精神伤害有抗性，并且每当一个生物对你造成精神伤害时，那个生物也会受到与你相同的伤害。"
-      ]
-    },
-    {
-      "name": "创造奴仆",
-      "ENG_name": "Create Thrall",
-      "source": "PHB",
-      "page": 109,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "旧日支配者",
-      "subclassSource": "PHB",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "在14级时，你获得了用你守护者的异域魔法感染人形生物心智的能力。你可以使用你的行动来触摸一个{@condition 无力}的人形生物。那个生物随后被你{@condition 魅惑}，直到有{@spell 移除诅咒}法术施加在它身上，{@condition 魅惑}状态被移除，或者你再次使用这个特性。",
-        "只要你和被魅惑的生物处于同一存在平面上，你就可以通过心灵感应与该生物沟通。"
-      ]
-    },
-    {
-      "name": "不朽者宗主",
-      "ENG_name": "The Undying",
-      "source": "SCAG",
-      "page": 139,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "​不朽者",
-      "subclassSource": "SCAG",
-      "level": 1,
-      "entries": [
-        "死亡对你的恩主没有任何影响，他已经解开了永生的秘密，尽管这样的奖赏——像所有力量一样——是有代价的。曾是凡人的不死之身已经看到凡人的一生如同季节般流逝，如同无尽日日夜夜的闪烁。它拥有分享岁月的秘密，生命和死亡的秘密。这类生物包括Vecna，手与眼之主；可怕的Iuz；巫妖女王Vol；Aerenal的不死法庭；githyanki的巫妖女王Vlaakith；以及不死巫师Fistandantalus。",
-        "在领域中，不朽的恩人包括传说中的术士之墓的主人拉洛奇（Larloch the Shadow King），以及昂瑟尔（Unther）的神王吉尔吉姆（Gilgeam）。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "不死族让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "不死扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 摹造生命}, {@spell 致病射线}"
-                ],
-                [
-                  "第二",
-                  "{@spell 目盲/耳聋术}, {@spell 沉默术}"
-                ],
-                [
-                  "第三",
-                  "{@spell 假死术}, {@spell 死者交谈术}"
-                ],
-                [
-                  "第四",
-                  "{@spell 生命灵光}, {@spell 防死护咒}"
-                ],
-                [
-                  "第五",
-                  "{@spell 疫病术}, {@spell 通晓传奇}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "历经死亡|邪术师||​不朽者|SCAG|1"
-        }
-      ]
-    },
-    {
-      "name": "历经死亡",
-      "ENG_name": "Among the Dead",
-      "source": "SCAG",
-      "page": 139,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "​不朽者",
-      "subclassSource": "SCAG",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "从1级开始，你学会了{@spell 拯救濒死}戏法，这对你来说算作术士戏法。此外，你对任何疾病的豁免投掷具有优势。",
-        "此外，亡灵很难伤害你。如果一个亡灵直接用攻击或有害法术以你为目标，那个生物必须进行一次对抗你法术豁免难度等级（DC）的智慧豁免（当亡灵将你包含在区域效果中时，如{@spell 火球术}的爆炸，亡灵不需要进行豁免）。豁免失败时，生物必须选择一个新的目标或放弃以你为目标，可能会浪费这次攻击或法术。豁免成功时，生物在接下来的24小时内对这种效果免疫。如果你用攻击或有害法术以亡灵为目标，亡灵也将在接下来的24小时内对这种效果免疫。"
-      ]
-    },
-    {
-      "name": "反抗死亡",
-      "ENG_name": "Defy Death",
-      "source": "SCAG",
-      "page": 139,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "​不朽者",
-      "subclassSource": "SCAG",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "从6级开始，当你欺骗死亡或帮助他人欺骗死亡时，你可以给自己注入活力。当你成功进行死亡豁免投掷或使用{@spell 拯救濒死}法术稳定一个生物时，你可以恢复等于{@spell 拯救濒死}加上你的体质调整值（最少为1点生命值）的生命值。",
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "不朽之理",
-      "ENG_name": "Undying Nature",
-      "source": "SCAG",
-      "page": 139,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "​不朽者",
-      "subclassSource": "SCAG",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，你可以无限期地屏住呼吸，你也不需要食物、水或睡眠，尽管你仍然需要休息来减少{@condition 力竭}，并且仍然从完成短暂休息和长时间休息中获益。",
-        "此外，你的衰老速度会减慢。每过10年，你的身体只老化1年，并且你对魔法造成的老化免疫。"
-      ]
-    },
-    {
-      "name": "永恒生命",
-      "ENG_name": "Indestructible Life",
-      "source": "SCAG",
-      "page": 139,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "​不朽者",
-      "subclassSource": "SCAG",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "当你达到14级时，你掌握了不死族的一些真正秘密。在你的回合，你可以使用一个奖励动作来恢复等同于{@dice 1d8}加上你的术士等级的生命值。此外，如果你在使用这个特性时将你身体的断肢放回原位，该部分将会重新连接。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "深海意志宗主",
-      "ENG_name": "The Fathomless",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 1,
-      "entries": [
-        "你已经与深渊签订了契约。海洋的实体、水元素位面或另一个异界海洋现在允许你借助其海洋力量。它是否只是在利用你来了解陆地领域，还是它希望你打开宇宙的洪水之门并淹没世界？",
-        "或许你出生在一个崇拜深不可测及其后代的世代相传的邪教中。或者你可能遭遇船难，在溺水边缘时你的恩主的掌握给了你一次生命的机会。无论你与恩主签订契约的原因是什么，大海及其未知的深处都在呼唤你。",
-        "可能赋予术士力量的深海实体包括巨型乌贼、古老的水元素、由库托亚族幻想成真的神性幻觉、半人马半神以及海巫婆的女巫会。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "{@i 1级深不见底特性}",
-            "深渊之主允许你在学会术士法术时从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "深不可测扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 造水/枯水术}, {@spell 雷鸣波}"
-                ],
-                [
-                  "第二",
-                  "{@spell 造风术}, {@spell 沉默术}"
-                ],
-                [
-                  "第三",
-                  "{@spell 闪电束}, {@spell 雪雨暴}"
-                ],
-                [
-                  "第四",
-                  "{@spell 操控水体}, {@spell 元素召唤术|TCE}（仅限水元素）"
-                ],
-                [
-                  "第五",
-                  "{@spell 毕格比之掌}（呈现为触手形态）, {@spell 寒冰锥}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "深海触手|邪术师||深海意志|TCE|1"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "海洋馈赠|邪术师||深海意志|TCE|1"
-        }
-      ]
-    },
-    {
-      "name": "海洋馈赠",
-      "ENG_name": "Gift of the Sea",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "{@i 1级深不见底特性}",
-        "你的游泳速度增加到40英尺，并且你可以在水下呼吸。"
-      ]
-    },
-    {
-      "name": "深海触手",
-      "ENG_name": "Tentacle of the Deeps",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "{@i 1级深不见底特性}",
-        "你可以神奇地召唤一个幽灵触手来攻击你的敌人。作为一个奖励动作，你可以在你60英尺内能看到的某点创造一个10英尺长的触手。这个触手持续1分钟，或者直到你使用这个特性来创造另一个触手。",
-        "当你创造触手时，你可以对距离它10英尺内的生物进行近战法术攻击。命中时，目标受到{@damage 1d8}点寒冷伤害，并且其速度在下一轮你回合开始前减少10英尺。当你在这个职业达到10级时，伤害增加到{@dice 2d8}。",
-        "在你的回合上，作为奖励行动，你可以使触手移动最多30英尺，并重新进行攻击。",
-        "你可以召唤触手的次数等于你的熟练加值，当你完成一次长休息时，你将重新获得所有已消耗的使用次数。"
-      ]
-    },
-    {
-      "name": "守卫缠绕",
-      "ENG_name": "Guardian Coil",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "{@i 6级深渊特性}",
-        "你的深海触手可以保护你和其他人，将自身置于他们与伤害之间。当你或你能看到的生物在触手10英尺范围内受到伤害时，你可以使用你的反应来选择其中一个生物，并将对该生物的伤害减少{@dice 1d8}。当你在这个职业中达到10级时，触手减少的伤害增加到{@dice 2d8}。"
-      ]
-    },
-    {
-      "name": "海渊魂灵",
-      "ENG_name": "Oceanic Soul",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "{@i 6级深渊特性}",
-        "你现在在深海中更加如鱼得水。你对寒冷伤害获得抗性。此外，当你完全浸没在水中时，任何也完全浸没在水中的生物都能理解你的语言，你也能听懂他们的语言。"
-      ]
-    },
-    {
-      "name": "擒握触手",
-      "ENG_name": "Grasping Tentacles",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 10级深不可测特性}",
-        "你学会了法术{@spell 艾伐黑触手}。它对你来说是术士法术，但不计入你所知法术的数量。你还可以不使用法术位就施放它一次，并且在完成长时间休息后再次获得这样做的能力。",
-        "每当你施展这个法术时，你的守护者的魔法会增强你，赋予你等于你的术士等级数的临时生命值。此外，伤害不能打破你对这个法术的{@status 专注}。"
-      ]
-    },
-    {
-      "name": "海渊传送",
-      "ENG_name": "Fathomless Plunge",
-      "source": "TCE",
-      "page": 72,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "深海意志",
-      "subclassSource": "TCE",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "{@i 14级深渊特性}",
-        "你可以用魔法打开通往水域的临时通道。作为一个动作，你可以将自己和在你30英尺内你能看到的最多五名其他愿意的生物传送走。在一阵触手的旋转中，你们都消失了，然后在你曾见过的水域（池塘大小或更大）或其30英尺范围内重新出现，每个人出现在彼此30英尺内的未被占据的空间中。",
-        "一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "巨灵宗主",
-      "ENG_name": "The Genie",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 1,
-      "entries": [
-        "你与一种极为罕见的灯神——贵族灯神——缔结了契约。这些实体统治着元素位面上广阔的领地，并对低级灯神和元素生物有着巨大的影响力。贵族灯神的动机多种多样，但大多数都傲慢自大，他们拥有与低级神祇相媲美的力量。他们喜欢颠覆凡人的规则，因为凡人经常将灯神束缚为仆役，并且他们愿意进入扩大自己影响力的契约。",
-        "你选择你的恩主的种类或使用神灵种类表随机决定。",
-        {
-          "type": "table",
-          "caption": "精灵种类",
-          "colLabels": [
-            "d4",
-            "善良",
-            "元素"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-5",
-            "col-5"
-          ],
-          "rows": [
-            [
-              1,
-              "{@creature 土巨灵}",
-              "土"
-            ],
-            [
-              2,
-              "{@creature 气巨灵}",
-              "气"
-            ],
-            [
-              3,
-              "{@creature 火巨灵}",
-              "火"
-            ],
-            [
-              4,
-              "{@creature 水巨灵}",
-              "饮水"
-            ]
-          ]
-        },
-        {
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "type": "entries",
-          "entries": [
-            "{@i 1级精灵特性}",
-            "精灵让你在学会术士法术时可以从扩展的法术列表中选择。精灵扩展法术表显示了对你来说被添加到术士法术列表中的精灵法术，以及与你守护者种类相关联的法术：道（dao）、精灵（djinni）、伊弗里特（efreeti）或马里德（marid）。",
-            {
-              "type": "table",
-              "caption": "贵族灯神扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "灯神法术",
-                "道术",
-                "精灵法术",
-                "伊夫利特法术",
-                "马里德法术"
-              ],
-              "colStyles": [
-                "col-1 text-center",
-                "col-2-2",
-                "col-2-2",
-                "col-2-2",
-                "col-2-2",
-                "col-2-2"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 侦测善恶}",
-                  "{@spell 圣域术}",
-                  "{@spell 雷鸣波}",
-                  "{@spell 燃烧之手}",
-                  "{@spell 云雾术}"
-                ],
-                [
-                  "第二",
-                  "{@spell 魅影之力}",
-                  "{@spell 荆棘丛生}",
-                  "{@spell 造风术}",
-                  "{@spell 灼热射线}",
-                  "{@spell 朦胧术}"
-                ],
-                [
-                  "第三",
-                  "{@spell 创造饮食}",
-                  "{@spell 融身入石}",
-                  "{@spell 风墙术}",
-                  "{@spell 火球术}",
-                  "{@spell 雪雨暴}"
-                ],
-                [
-                  "第四",
-                  "{@spell 魅影杀手}",
-                  "{@spell 塑石术}",
-                  "{@spell 高等隐形术}",
-                  "{@spell 火焰护盾}",
-                  "{@spell 操控水体}"
-                ],
-                [
-                  "第五",
-                  "{@spell 造物术}",
-                  "{@spell 石墙术}",
-                  "{@spell 伪装术}",
-                  "{@spell 焰击术}",
-                  "{@spell 寒冰锥}"
-                ],
-                [
-                  "第九",
-                  "{@spell 祈愿术}",
-                  "—",
-                  "—",
-                  "—",
-                  "—"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "巨灵器皿|邪术师||巨灵|TCE|1"
-        }
-      ]
-    },
-    {
-      "name": "巨灵器皿",
-      "ENG_name": "Genie's Vessel",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "{@i 1级精灵特性}",
-        "你的恩主赠予你一个魔法容器，它赋予你一定程度的神灵之力。这个容器是一个微小的物体，你可以将其作为施放术士法术的法术焦点。你可以决定这个物体是什么，或者通过在神灵之器表上掷骰来随机决定它是什么。",
-        {
-          "type": "table",
-          "caption": "巨灵器皿",
-          "colLabels": [
-            "d6",
-            "容器"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "1",
-              "油灯"
-            ],
-            [
-              "2",
-              "骨灰盒"
-            ],
-            [
-              "3",
-              "带有隔间的戒指"
-            ],
-            [
-              "4",
-              "塞住的瓶子"
-            ],
-            [
-              "5",
-              "空心小雕像"
-            ],
-            [
-              "6",
-              "华丽的灯笼"
-            ]
-          ]
-        },
-        "当你触摸这个容器时，你可以用以下方式使用它：",
-        {
-          "type": "options",
-          "style": "list-hang-notitle",
-          "entries": [
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "瓶中小憩|邪术师|TCE|巨灵|TCE|1"
-            },
-            {
-              "type": "refSubclassFeature",
-              "subclassFeature": "巨灵之怒|邪术师|TCE|巨灵|TCE|1"
-            }
-          ]
-        },
-        "容器的AC等于你的法术豁免难度等级（DC）。其生命值等于你的术士等级加上你的熟练加值，并且对毒素和精神伤害免疫。",
-        "如果容器被摧毁或者你失去了它，你可以进行1小时的仪式来从你的恩人那里获得一个替代品。这个仪式可以在短休息或长休息期间进行，如果之前的容器仍然存在，它将被摧毁。当你死亡时，容器会在元素力量的闪光中消失。"
-      ]
-    },
-    {
-      "name": "元素赐福",
-      "ENG_name": "Elemental Gift",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "{@i 6级灵怪特性}",
-        "你开始拥有你恩人种类的特征。你现在对由你恩人种类决定的一种伤害类型具有抗性：钝击（刀）、雷击（灯神）、火焰（伊夫利特）或寒冷（马里德）。",
-        "此外，作为奖励行动，你可以给自己一个持续10分钟的飞行速度30英尺，在此期间你可以悬停。你可以使用这个奖励行动的次数等于你的熟练加值，并且在完成长时间休息后恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "器皿庇护所",
-      "ENG_name": "Sanctuary Vessel",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 10级精灵特性}",
-        "当您通过瓶中慰藉特性进入您的神灯容器时，您现在可以选择多达五个您能看到的、愿意的生物，并且这些选定的生物会随您一起被拉入容器中。",
-        "作为一个奖励动作，你可以从容器中驱逐任意数量的生物，如果你离开、死亡或容器被摧毁，所有人都会被驱逐出去。",
-        "此外，任何（包括你）在容器内停留至少10分钟的人将获得完成短暂休息的好处，任何人还可以将你的熟练加值加到他们在容器内进行短暂休息时恢复的生命值中，如果他们花费任何生命骰来作为短暂休息的一部分。"
-      ]
-    },
-    {
-      "name": "有限祈愿术",
-      "ENG_name": "Limited Wish",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "{@i 14级灵族特性}",
-        "你恳求你的恩主赐予你一个小愿望。作为一个动作，你可以向你的神灵之器表达你的愿望，请求实现一个{@filter 等级为6级或以下，施法时间为1个动作的法术|法术|施法时间=动作|level=0;1;2;3;4;5;6}的效果。法术可以来自任何职业的法术列表，你不需要满足该法术的要求，包括昂贵的成分；该法术简单地作为这个动作的一部分而生效。",
-        "一旦你使用了这个特性，直到你完成{@dice 1d4}次长时间的休息之后，你才能再次使用它。"
-      ]
-    },
-    {
-      "name": "死灵宗主",
-      "ENG_name": "The Undead",
-      "source": "VRGR",
-      "page": 30,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "死灵",
-      "subclassSource": "VRGR",
-      "level": 1,
-      "entries": [
-        "你与一个不朽的存在缔结了契约，这个生物违背了生死循环，放弃了它的凡人躯壳，以便永恒地追求其深不可测的野心。对于这样的存在来说，时间和道德是短暂的事物，是那些对生命沙漏中沙粒仍然匆匆流逝的人的关切。这些古老的亡灵曾经也是凡人，他们亲身经历了野心之路和通往死亡之门的路线。他们渴望分享这种亵渎的知识以及其他秘密，与那些在生者中实现他们意志的人。",
-        "这类生物包括半巫妖阿瑟拉克（Acererak）、吸血鬼暴君卡斯（Kas the Bloody-Handed）、吉斯洋基巫妖女王弗拉基斯（Vlaakith）、龙巫妖德拉戈萨（Dragotha）、不死法老安赫特波（Ankhtepot）以及难以捉摸的黑暗领主阿扎林·雷克斯（Azalin Rex）。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "{@i 1级亡灵特性}",
-            "亡灵让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "亡灵扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 灾祸术}, {@spell 摹造生命}"
-                ],
-                [
-                  "第二",
-                  "{@spell 目盲/耳聋术}, {@spell 魅影之力}"
-                ],
-                [
-                  "第三",
-                  "{@spell 魅影驹}, {@spell 死者交谈术}"
-                ],
-                [
-                  "第四",
-                  "{@spell 防死护咒}, {@spell 高等隐形术}"
-                ],
-                [
-                  "第五",
-                  "{@spell 反活物护罩}, {@spell 死云术}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "战栗形态|邪术师||死灵|VRGR|1"
-        }
-      ]
-    },
-    {
-      "name": "战栗形态",
-      "ENG_name": "Form of Dread",
-      "source": "VRGR",
-      "page": 30,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "死灵",
-      "subclassSource": "VRGR",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "{@i 1级亡灵特性}",
-        "你显现出你守护者的可怕力量的一个方面。作为奖励行动，你变身持续1分钟。在变身期间，你获得以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "你获得了等同于{@dice 1d10}加上你的术士等级的临时生命值。",
-            "在你的每个回合中，每当你用攻击检定命中一个生物时，你可以迫使它进行一次智力豁免投掷，如果豁免失败，目标将在你下一个回合结束前对你感到{@condition 恐惧}。",
-            "你对{@condition 恐惧}状态免疫。"
-          ]
-        },
-        "你可以变身的次数等于你的熟练加值，并且在完成长时间休息后你将重新获得所有已用尽的使用次数。",
-        "你的恐怖形态（Form of Dread）的外观反映了你的赞助者（patron）的某些方面。例如，你的形式可能是由阴影构成的，形成你巫妖赞助者的王冠和长袍，或者你的身体可能因古代葬礼仪式的符文而发光，并被沙漠之风环绕，暗示你的木乃伊赞助者。"
-      ]
-    },
-    {
-      "name": "坟冢之触",
-      "ENG_name": "Grave Touched",
-      "source": "VRGR",
-      "page": 30,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "死灵",
-      "subclassSource": "VRGR",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "{@i 6级亡灵特性}",
-        "你恩人的力量对你的身体和魔法产生了深远的影响。你不需要进食、饮水或呼吸。",
-        "此外，在你的每个回合中，当你用攻击骰命中一个生物并对其造成伤害时，你可以将伤害类型替换为死灵伤害。在使用你的恐怖形态时，你可以在确定目标承受的死灵伤害时多掷一个伤害骰。"
-      ]
-    },
-    {
-      "name": "死疽躯壳",
-      "ENG_name": "Necrotic Husk",
-      "source": "VRGR",
-      "page": 30,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "死灵",
-      "subclassSource": "VRGR",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "{@i 10级亡灵特性}",
-        "你与亡灵和死灵能量的联系现在弥漫你的身体。你对死灵伤害有抗性。如果你使用恐惧形态进行变身，你反而会对死灵伤害免疫。",
-        "此外，当你的生命值将降至0点时，你可以使用你的反应来降至1点生命值，并使你的身体爆发出死亡能量。你选择的每个生物，如果距离你30英尺内，则会受到等于{@damage 2d10}加上你的术士等级的坏死伤害。然后你获得1级的{@condition 力竭}。一旦你使用了这个反应，直到你完成{@dice 1d4}次长时间休息后，你才能再次使用。"
-      ]
-    },
-    {
-      "name": "灵魂投射",
-      "ENG_name": "Spirit Projection",
-      "source": "VRGR",
-      "page": 30,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "死灵",
-      "subclassSource": "VRGR",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "{@i 14级亡灵特性}",
-        "你的精神可以与你的物理形态分离。作为一个动作，你可以将你的精神从你的身体中投射出来。你留下的身体处于{@condition 昏迷}状态，并处于暂停动画的状态。",
-        "你的精神几乎在各个方面都类似于你的凡人形态，复制了你的游戏统计数据，但不包括你的财产。任何适用于你的精神或身体的伤害或其他效果都会影响另一个。你的精神可以在你的身体外保持长达1小时，或者直到你的{@status 专注}被打破（就好像{@status 专注||集中精神}在施法上）。当你的精神投影结束时，你的精神返回到你的身体，或者你的身体神奇地传送到你精神的空间（由你选择）。",
-        "在投射你的灵魂时，你获得了以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "你的精神和身体获得了对钝击、穿刺和斩击伤害的抗性。",
-            "当你施放召唤术或死灵术学派的法术时，该法术不需要语言或肢体成分，也不需要没有黄金成本的物质成分。",
-            "你的飞行速度等同于你的行走速度，并且可以悬停。你可以像通过{@quickref 困难地型||3}一样通过生物和物体，但如果你的回合结束时位于生物或物体内部，你将受到{@dice 1d10}点力量伤害。",
-            "当你使用你的恐怖形态时，在你的每个回合中，每当你对一个生物造成死灵伤害时，你恢复的生命值等于造成死灵伤害的一半。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再这样做。"
-      ]
-    },
-    {
-      "name": "天界宗主",
-      "ENG_name": "The Celestial",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 1,
-      "entries": [
-        "你的守护者是上层界的一个强大存在。你与一个古老的天界生物、太阳灵、麒麟、独角兽或其他居住在永恒幸福的位面的实体缔结了契约。你与那个存在的契约让你能够体验到照亮多元宇宙的圣光的一丝丝触碰。",
-        "与这样的力量相连可能会引起你行为和信仰的变化。你可能发现自己被驱使去消灭亡灵，击败恶魔，保护无辜者。有时，你的心也可能充满了对你恩人天界领域的向往，渴望在你的余生中漫游那个天堂。但你知道，你目前的使命是在凡人之中，你的契约将你束缚于为世界上的黑暗之地带来光明。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "天界让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "天界扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 治疗伤势}, {@spell 光导箭}"
-                ],
-                [
-                  "第二",
-                  "{@spell 炽焰法球}, {@spell 次级复原术}"
-                ],
-                [
-                  "第三",
-                  "{@spell 昼明术}, {@spell 回生术}"
-                ],
-                [
-                  "第四",
-                  "{@spell 虔诚守卫}, {@spell 火墙术}"
-                ],
-                [
-                  "第五",
-                  "{@spell 焰击术}, {@spell 高等复原术}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "额外戏法|邪术师||天界|XGE|1"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "治愈之光|邪术师||天界|XGE|1"
-        }
-      ]
-    },
-    {
-      "name": "额外戏法",
-      "ENG_name": "Bonus Cantrips",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "在1级时，你学会了{@spell 圣焰}和{@spell 光亮术}戏法。它们对你来说算作术士戏法，但它们不计入你所知戏法的数量。"
-      ]
-    },
-    {
-      "name": "治愈之光",
-      "ENG_name": "Healing Light",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "在1级时，你获得了引导天界能量来治疗伤口的能力。你有一个由{@dice d6}骰子组成的池，用来为这种治疗提供能量。池中的骰子数量等于1加上你的术士等级。",
-        "作为一个奖励动作，你可以治疗一个你能看到的60英尺内的一个生物，消耗来自池子的骰子。你一次能消耗的最大骰子数等于你的的魅力调整值（最少一个骰子）。掷出你消耗的骰子，将它们加在一起，并恢复等于总数的生命值。",
-        "当您完成一次长休息时，您的骰池恢复所有消耗的骰子。"
-      ]
-    },
-    {
-      "name": "光耀之魂",
-      "ENG_name": "Radiant Soul",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "从6级开始，你与天界的联系使你能够成为辐射能量的传导体。你对辐射伤害有抗性，当你施放一个造成辐射或火焰伤害的法术时，你可以将你的感知调整值加到该法术对其中一个目标的一个辐射或火焰伤害骰上。"
-      ]
-    },
-    {
-      "name": "天界韧性",
-      "ENG_name": "Celestial Resilience",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "从10级开始，每当你完成短休息或长休息时，你将获得临时生命值。这些临时生命值等于你的术士等级加上你的的魅力调整值。此外，在休息结束时，选择你能看到的最多五个生物。这些生物每个将获得等于你的术士等级的一半加上你的魅力调整值的临时生命值。"
-      ]
-    },
-    {
-      "name": "灼光复仇",
-      "ENG_name": "Searing Vengeance",
-      "source": "XGE",
-      "page": 54,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "天界",
-      "subclassSource": "XGE",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "从14级开始，你引导的辐射能量允许你抵抗死亡。当你在你的回合开始时需要进行死亡豁免骰时，你可以用辐射能量的爆发弹跳起来。你恢复等同于你生命值最大值一半的生命值，如果你选择，然后你可以站起来。你选择的每个生物，如果在你30英尺范围内，将受到辐射伤害，等于{@dice 2d8}加上你的感知调整值，并且在当前回合结束之前处于{@condition 目盲}状态。",
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "咒剑宗主",
-      "ENG_name": "The Hexblade",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 1,
-      "entries": [
-        "你与来自影界的神秘实体缔结了契约——这是一种在有感知的魔法武器中显现的力量，这些武器是用影界的物质雕刻而成的。黑刃剑是这些武器中最有名的，这些武器随着时间的推移遍布了整个多元宇宙。这些武器背后的阴影力量可以为与它缔结契约的术士提供力量。许多六刃术士创造了模仿在影界形成的武器。其他人则放弃了这样的武器，满足于将那个位面的黑暗魔法编织进他们的施法之中。",
-        "因为人们知道渡鸦女王锻造了这些武器中的第一个，许多学者推测她和这股力量是一体的，认为这些武器以及咒刃术士是她用来在物质位面上操纵事件以实现她难以理解的目的的工具。",
-        {
-          "type": "entries",
-          "name": "扩展法术列表",
-          "ENG_name": "Expanded Spell List",
-          "entries": [
-            "咒剑使让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
-            {
-              "type": "table",
-              "caption": "咒剑扩展法术",
-              "colLabels": [
-                "法术环阶",
-                "法术"
-              ],
-              "colStyles": [
-                "col-2 text-center",
-                "col-10"
-              ],
-              "rows": [
-                [
-                  "第一",
-                  "{@spell 护盾术}, {@spell 激愤斩}"
-                ],
-                [
-                  "第二",
-                  "{@spell 朦胧术}, {@spell 烙印斩}"
-                ],
-                [
-                  "第三",
-                  "{@spell 闪现术}, {@spell 元素武器}"
-                ],
-                [
-                  "第四",
-                  "{@spell 魅影杀手}, {@spell 惊震斩}"
-                ],
-                [
-                  "第五",
-                  "{@spell 放逐斩}, {@spell 寒冰锥}"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "咒剑诅咒|邪术师||咒剑|XGE|1"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "巫咒战士|邪术师||咒剑|XGE|1"
-        }
-      ]
-    },
-    {
-      "name": "巫咒战士",
-      "ENG_name": "Hex Warrior",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "在1级时，你获得了必要的训练，以有效地武装自己进行战斗。你对中型盔甲、盾牌和武术武器获得了熟练度。",
-        "你的恩主的影响还允许你神秘地通过特定的武器传达你的意志。每当你完成一次长时间休息时，你可以触摸一件你熟练且没有双手特性的武器。当你用那件武器攻击时，你可以使用你的魅力调整值，而不是力量或敏捷，来进行攻击和伤害判定。这个好处持续到你完成下一次长时间休息。如果你后来获得了契约之刃特性，这个好处会扩展到你用那个特性召唤的每一个契约武器，无论武器的类型。"
-      ]
-    },
-    {
-      "name": "咒剑诅咒",
-      "ENG_name": "Hexblade's Curse",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 1,
-      "header": 1,
-      "entries": [
-        "从1级开始，你获得了给某人施加恶毒诅咒的能力。作为奖励行动，选择一个你能看到的30英尺内的一个生物。目标被诅咒持续1分钟。如果目标死亡、你死亡或你被{@condition 无力}，则诅咒会提前结束。直到诅咒结束，你获得以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "你对被诅咒目标的伤害骰获得加值。该加值等于你的熟练加值。",
-            "你对被诅咒目标进行的任何攻击检定，当骰出19或20时，视为致命一击。",
-            "如果被诅咒的目标死亡，你恢复的生命值等于你的术士等级加上你的魅力调整值（最少为1点生命值）。"
-          ]
-        },
-        "在你完成短暂或长时间休息之前，你不能再次使用这个特性。"
-      ]
-    },
-    {
-      "name": "咒缚幽灵",
-      "ENG_name": "Accursed Specter",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 6,
-      "header": 2,
-      "entries": [
-        "从6级开始，你可以诅咒你杀死的人的灵魂，暂时将其绑定为你服务。当你杀死一个人形生物时，你可以使其灵魂从尸体中升起成为一个{@creature 幽灵}，其统计数据在《怪物手册》中。当幽灵出现时，它获得等于你术士等级一半的临时生命值。为幽灵掷先攻骰，它有自己的回合。它服从你的口头命令，并在攻击判定上获得一个特殊加值，等于你的魅力调整值（最少为+0）。",
-        "这个幽灵会一直为你服务，直到你下一次长时间休息结束，届时它会消失到来世。",
-        "一旦你使用这个特性绑定了一个幽灵，直到你完成一次长休息之前，你不能再使用这个特性。"
-      ]
-    },
-    {
-      "name": "巫咒护甲",
-      "ENG_name": "Armor of Hexes",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 10,
-      "header": 2,
-      "entries": [
-        "当你达到10级时，你的咒术变得更加强大。如果被你的剑刃诅咒所诅咒的目标用攻击骰命中你，你可以使用你的反应来掷一个{@dice d6}。如果是4或更高，攻击就会错过你，不管它的骰点是多少。"
-      ]
-    },
-    {
-      "name": "巫咒大师",
-      "ENG_name": "Master of Hexes",
-      "source": "XGE",
-      "page": 55,
-      "className": "邪术师",
-      "classSource": "PHB",
-      "subclassShortName": "咒剑",
-      "subclassSource": "XGE",
-      "level": 14,
-      "header": 2,
-      "entries": [
-        "从14级开始，你可以将你的咒剑之咒从一个被杀死的生物传播到另一个生物。当你的咒剑之咒所诅咒的生物死亡时，你可以将诅咒施加给你能看到的30英尺内的另一个生物，只要你不是{@condition 无力}。当你以这种方式施加诅咒时，你不会从之前被诅咒生物的死亡中恢复生命值。"
-      ]
-    },
-    {
-      "name": "瓶中小憩",
-      "ENG_name": "Bottled Respite",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "TCE",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 1,
-      "entries": [
-        "作为一个动作，你可以神奇地消失并进入你的容器，它留在你离开的空间。容器的内部是一个超维度空间，形状为20英尺半径的圆柱体，高20英尺，并且类似于你的容器。内部配备了垫子和低桌子，并且温度舒适。在内部时，你可以听到容器周围区域的声音，就好像你在它的空间里一样。你可以在容器内停留的时间最多等于你的熟练加值的两倍小时数。如果你使用奖励动作离开、死亡或容器被摧毁，你可以提前离开容器。当你退出容器时，你出现在最靠近它的未被占据的空间。留在容器中的任何物品都留在那里，直到被搬出，如果容器被摧毁，存放在那里的每个物品都会无害地出现在容器前空间的最靠近的未被占据的空间。一旦你进入容器，你就不能再次进入，直到你完成一次长时间休息。"
-      ]
-    },
-    {
-      "name": "巨灵之怒",
-      "ENG_name": "Genie's Wrath",
-      "source": "TCE",
-      "page": 73,
-      "className": "邪术师",
-      "classSource": "TCE",
-      "subclassShortName": "巨灵",
-      "subclassSource": "TCE",
-      "level": 1,
-      "entries": [
-        "在你的每个回合中，每当你用攻击骰命中目标时，你可以对目标造成额外伤害，等于你的熟练加值。这种伤害的类型由你的恩主决定：钝击（刀）、雷击（神灵）、火焰（伊夫利特）或寒冷（马里德）。"
-      ]
-    }
-  ]
+	"class": [
+		{
+			"name": "邪术师",
+			"ENG_name": "Warlock",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "pact",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				13,
+				13,
+				14,
+				14,
+				15,
+				15
+			],
+			"spellsKnownProgressionFixedByLevel": {
+				"11": {
+					"6": 1
+				},
+				"13": {
+					"7": 1
+				},
+				"15": {
+					"8": 1
+				},
+				"17": {
+					"9": 1
+				}
+			},
+			"optionalfeatureProgression": [
+				{
+					"name": "魔能祈唤",
+					"ENG_name": "Eldritch Invocations",
+					"featureType": [
+						"EI"
+					],
+					"progression": [
+						0,
+						2,
+						2,
+						2,
+						3,
+						3,
+						4,
+						4,
+						5,
+						5,
+						5,
+						6,
+						6,
+						6,
+						7,
+						7,
+						7,
+						8,
+						8,
+						8
+					]
+				},
+				{
+					"name": "魔契恩泽",
+					"ENG_name": "Pact Boon",
+					"featureType": [
+						"PB"
+					],
+					"progression": {
+						"3": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"光亮术"
+				],
+				"weapons": [
+					"简单"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"奥秘",
+								"欺瞒",
+								"历史",
+								"威吓",
+								"调查",
+								"自然",
+								"宗教"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) 一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}或 (b) 任何{@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}",
+					"(a) 一个 {@item 材料包|PHB} 或者 (b) 一个 {@item 奥术法器|PHB}",
+					"(a) 一个学者包{@item 学者套组|PHB}或(b) 一个探险者包{@item 地城套组|PHB}",
+					"{@item 皮甲|PHB}，任意 {@filter 简易武器|物品|来源=phb|类别=基础|类型=简单武器}，以及两把 {@item 匕首|PHB|匕首}"
+				],
+				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|起始金币}",
+				"defaultData": [
+					{
+						"a": [
+							"轻弩|PHB",
+							"弩矢(20)|PHB"
+						],
+						"b": [
+							{
+								"equipmentType": "简易武器"
+							}
+						]
+					},
+					{
+						"a": [
+							"材料包|PHB"
+						],
+						"b": [
+							{
+								"equipmentType": "专注施法（奥术）"
+							}
+						]
+					},
+					{
+						"a": [
+							"学者套组|PHB"
+						],
+						"b": [
+							"地城套组|PHB"
+						]
+					},
+					{
+						"_": [
+							"皮甲|PHB",
+							{
+								"equipmentType": "简易武器"
+							},
+							{
+								"item": "匕首|PHB",
+								"quantity": 2
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"光亮术"
+					],
+					"weapons": [
+						"简单"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter 已知戏法|法术|level=0|职业=术士}",
+						"{@filter 已知法术|法术|职业=术士}",
+						"施法能力",
+						"插槽等级",
+						"{@filter 已知的呼唤|可选特性|特性类型=EI}"
+					],
+					"rows": [
+						[
+							2,
+							2,
+							1,
+							"{@filter 第一|法术|level=1|职业=术士}",
+							0
+						],
+						[
+							2,
+							3,
+							2,
+							"{@filter 第一|法术|level=1|职业=术士}",
+							2
+						],
+						[
+							2,
+							4,
+							2,
+							"{@filter 第二|法术|level=2|职业=术士}",
+							2
+						],
+						[
+							3,
+							5,
+							2,
+							"{@filter 第二|法术|level=2|职业=术士}",
+							2
+						],
+						[
+							3,
+							6,
+							2,
+							"{@filter 第三|法术|level=3|职业=术士}",
+							3
+						],
+						[
+							3,
+							7,
+							2,
+							"{@filter 第三|法术|level=3|职业=术士}",
+							3
+						],
+						[
+							3,
+							8,
+							2,
+							"{@filter 第四|法术|level=4|职业=术士}",
+							4
+						],
+						[
+							3,
+							9,
+							2,
+							"{@filter 第四|法术|level=4|职业=术士}",
+							4
+						],
+						[
+							3,
+							10,
+							2,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							5
+						],
+						[
+							4,
+							10,
+							2,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							5
+						],
+						[
+							4,
+							11,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							5
+						],
+						[
+							4,
+							11,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							6
+						],
+						[
+							4,
+							12,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							6
+						],
+						[
+							4,
+							12,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							6
+						],
+						[
+							4,
+							13,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							7
+						],
+						[
+							4,
+							13,
+							3,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							7
+						],
+						[
+							4,
+							14,
+							4,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							7
+						],
+						[
+							4,
+							14,
+							4,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							8
+						],
+						[
+							4,
+							15,
+							4,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							8
+						],
+						[
+							4,
+							15,
+							4,
+							"{@filter 第五|法术|level=5|职业=术士}",
+							8
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"契约魔法|邪术师||1",
+				{
+					"classFeature": "异界宗主|邪术师||1",
+					"gainSubclassFeature": true
+				},
+				"魔能祈唤|邪术师||2",
+				"魔契恩泽|邪术师||3",
+				"属性值提升|邪术师||4",
+				"替换魔能|邪术师||4|TCE",
+				{
+					"classFeature": "异界宗主能力|邪术师||6",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|邪术师||8",
+				{
+					"classFeature": "异界宗主能力|邪术师||10",
+					"gainSubclassFeature": true
+				},
+				"玄奥秘法(6环)|邪术师||11",
+				"属性值提升|邪术师||12",
+				"玄奥秘法(7环)|邪术师||13",
+				{
+					"classFeature": "异界宗主能力|邪术师||14",
+					"gainSubclassFeature": true
+				},
+				"玄奥秘法(8环)|邪术师||15",
+				"属性值提升|邪术师||16",
+				"玄奥秘法(9环)|邪术师||17",
+				"属性值提升|邪术师||19",
+				"魔能掌控|邪术师||20"
+			],
+			"subclassTitle": "异界宗主",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "至高妖精宗主",
+			"ENG_name": "The Archfey",
+			"shortName": "至高妖精",
+			"source": "PHB",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 108,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"妖火术",
+							"沉眠"
+						],
+						"s2": [
+							"安定心神",
+							"魅影之力"
+						],
+						"s3": [
+							"闪现术",
+							"植物滋长"
+						],
+						"s4": [
+							"支配野兽",
+							"高等隐形术"
+						],
+						"s5": [
+							"支配人类",
+							"伪装术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"至高妖精宗主|邪术师||至高妖精||1",
+				"雾遁|邪术师||至高妖精||6",
+				"斗转星移|邪术师||至高妖精||10",
+				"幻影黑幕|邪术师||至高妖精||14"
+			]
+		},
+		{
+			"name": "邪魔宗主",
+			"ENG_name": "The Fiend",
+			"shortName": "邪魔",
+			"source": "PHB",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 109,
+			"srd": true,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"燃烧之手",
+							"命令术"
+						],
+						"s2": [
+							"目盲/耳聋术",
+							"灼热射线"
+						],
+						"s3": [
+							"火球术",
+							"臭云术"
+						],
+						"s4": [
+							"火焰护盾",
+							"火墙术"
+						],
+						"s5": [
+							"焰击术",
+							"圣居"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"邪魔宗主|邪术师||邪魔||1",
+				"黑暗强运|邪术师||邪魔||6",
+				"邪魔体魄|邪术师||邪魔||10",
+				"直坠噩梦|邪术师||邪魔||14"
+			]
+		},
+		{
+			"name": "旧日支配者宗主",
+			"ENG_name": "The Great Old One",
+			"shortName": "旧日支配者",
+			"source": "PHB",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 109,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"噪音暗语",
+							"塔莎狂笑术"
+						],
+						"s2": [
+							"侦测思想",
+							"魅影之力"
+						],
+						"s3": [
+							"锐眼术",
+							"短讯术"
+						],
+						"s4": [
+							"支配野兽",
+							"艾伐黑触手"
+						],
+						"s5": [
+							"支配人类",
+							"心灵遥控"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"旧日支配者宗主|邪术师||旧日支配者||1",
+				"熵光结界|邪术师||旧日支配者||6",
+				"思维之盾|邪术师||旧日支配者||10",
+				"创造奴仆|邪术师||旧日支配者||14"
+			]
+		},
+		{
+			"name": "不朽者宗主",
+			"ENG_name": "The Undying",
+			"shortName": "不朽者",
+			"source": "SCAG",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 139,
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"拯救濒死#c"
+						]
+					},
+					"expanded": {
+						"s1": [
+							"摹造生命",
+							"致病射线"
+						],
+						"s2": [
+							"目盲/耳聋术",
+							"沉默术"
+						],
+						"s3": [
+							"假死术",
+							"死者交谈术"
+						],
+						"s4": [
+							"生命灵光",
+							"防死护咒"
+						],
+						"s5": [
+							"疫病术",
+							"通晓传奇"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"不朽者宗主|邪术师||不朽者|SCAG|1",
+				"反抗死亡|邪术师||不朽者|SCAG|6",
+				"不朽之理|邪术师||不朽者|SCAG|10",
+				"永恒生命|邪术师||不朽者|SCAG|14"
+			]
+		},
+		{
+			"name": "天界宗主",
+			"ENG_name": "The Celestial",
+			"shortName": "天界",
+			"source": "XGE",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 54,
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"圣焰#c",
+							"光亮术#c"
+						]
+					},
+					"expanded": {
+						"s1": [
+							"治疗伤势",
+							"光导箭"
+						],
+						"s2": [
+							"炽焰法球",
+							"次级复原术"
+						],
+						"s3": [
+							"昼明术",
+							"回生术"
+						],
+						"s4": [
+							"虔诚守卫",
+							"火墙术"
+						],
+						"s5": [
+							"焰击术",
+							"高等复原术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"天界宗主|邪术师||天界|XGE|1",
+				"光耀之魂|邪术师||天界|XGE|6",
+				"天界韧性|邪术师||天界|XGE|10",
+				"灼光复仇|邪术师||天界|XGE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "咒剑宗主",
+			"ENG_name": "The Hexblade",
+			"shortName": "咒剑",
+			"source": "XGE",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 55,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"护盾术",
+							"激愤斩"
+						],
+						"s2": [
+							"朦胧术",
+							"烙印斩"
+						],
+						"s3": [
+							"闪现术",
+							"元素武器"
+						],
+						"s4": [
+							"魅影杀手",
+							"惊震斩"
+						],
+						"s5": [
+							"放逐斩",
+							"寒冰锥"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"咒剑宗主|邪术师||咒剑|XGE|1",
+				"咒缚幽灵|邪术师||咒剑|XGE|6",
+				"巫咒护甲|邪术师||咒剑|XGE|10",
+				"巫咒大师|邪术师||咒剑|XGE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "深海意志宗主",
+			"ENG_name": "The Fathomless",
+			"shortName": "深海意志",
+			"source": "TCE",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 72,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"造水/枯水术",
+							"雷鸣波"
+						],
+						"s2": [
+							"造风术",
+							"沉默术"
+						],
+						"s3": [
+							"闪电束",
+							"雪雨暴"
+						],
+						"s4": [
+							"操控水体",
+							"元素召唤术|TCE"
+						],
+						"s5": [
+							"毕格比之掌",
+							"寒冰锥"
+						]
+					},
+					"known": {
+						"10": {
+							"daily": {
+								"1": [
+									"艾伐黑触手"
+								]
+							}
+						}
+					}
+				}
+			],
+			"subclassFeatures": [
+				"深海意志宗主|邪术师||深海意志|TCE|1",
+				"海渊魂灵|邪术师||深海意志|TCE|6",
+				"守卫缠绕|邪术师||深海意志|TCE|6",
+				"擒握触手|邪术师||深海意志|TCE|10",
+				"海渊传送|邪术师||深海意志|TCE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "巨灵宗主",
+			"ENG_name": "The Genie",
+			"shortName": "巨灵",
+			"source": "TCE",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 73,
+			"additionalSpells": [
+				{
+					"name": "土巨灵",
+					"ENG_name": "Dao",
+					"expanded": {
+						"9": [
+							"祈愿术"
+						],
+						"s1": [
+							"侦测善恶",
+							"圣域术"
+						],
+						"s2": [
+							"魅影之力",
+							"荆棘丛生"
+						],
+						"s3": [
+							"创造饮食",
+							"融身入石"
+						],
+						"s4": [
+							"魅影杀手",
+							"塑石术"
+						],
+						"s5": [
+							"造物术",
+							"石墙术"
+						]
+					}
+				},
+				{
+					"name": "气巨灵",
+					"ENG_name": "Djinni",
+					"expanded": {
+						"9": [
+							"祈愿术"
+						],
+						"s1": [
+							"侦测善恶",
+							"雷鸣波"
+						],
+						"s2": [
+							"魅影之力",
+							"造风术"
+						],
+						"s3": [
+							"创造饮食",
+							"风墙术"
+						],
+						"s4": [
+							"魅影杀手",
+							"高等隐形术"
+						],
+						"s5": [
+							"造物术",
+							"伪装术"
+						]
+					}
+				},
+				{
+					"name": "火巨灵",
+					"ENG_name": "Efreeti",
+					"expanded": {
+						"9": [
+							"祈愿术"
+						],
+						"s1": [
+							"侦测善恶",
+							"燃烧之手"
+						],
+						"s2": [
+							"魅影之力",
+							"灼热射线"
+						],
+						"s3": [
+							"创造饮食",
+							"火球术"
+						],
+						"s4": [
+							"魅影杀手",
+							"火焰护盾"
+						],
+						"s5": [
+							"造物术",
+							"焰击术"
+						]
+					}
+				},
+				{
+					"name": "水巨灵",
+					"ENG_name": "Marid",
+					"expanded": {
+						"9": [
+							"祈愿术"
+						],
+						"s1": [
+							"侦测善恶",
+							"云雾术"
+						],
+						"s2": [
+							"魅影之力",
+							"朦胧术"
+						],
+						"s3": [
+							"创造饮食",
+							"雪雨暴"
+						],
+						"s4": [
+							"魅影杀手",
+							"操控水体"
+						],
+						"s5": [
+							"造物术",
+							"寒冰锥"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"巨灵宗主|邪术师||巨灵|TCE|1",
+				"元素赐福|邪术师||巨灵|TCE|6",
+				"器皿庇护所|邪术师||巨灵|TCE|10",
+				"有限祈愿术|邪术师||巨灵|TCE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "死灵宗主",
+			"ENG_name": "The Undead",
+			"shortName": "死灵",
+			"source": "VRGR",
+			"className": "邪术师",
+			"classSource": "PHB",
+			"page": 30,
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": [
+							"灾祸术",
+							"摹造生命"
+						],
+						"s2": [
+							"目盲/耳聋术",
+							"魅影之力"
+						],
+						"s3": [
+							"魅影驹",
+							"死者交谈术"
+						],
+						"s4": [
+							"防死护咒",
+							"高等隐形术"
+						],
+						"s5": [
+							"反活物护罩",
+							"死云术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"死灵宗主|邪术师||死灵|VRGR|1",
+				"坟冢之触|邪术师||死灵|VRGR|6",
+				"死疽躯壳|邪术师||死灵|VRGR|10",
+				"灵魂投射|邪术师||死灵|VRGR|14"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "异界宗主",
+			"ENG_name": "Otherworldly Patron",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"在1级时，你与一个来自其他世界的生物达成了协议，该生物从可用的守护者列表中选择。你的选择在1级时赋予你特性，并且在6级、10级和14级时再次赋予你特性。"
+			]
+		},
+		{
+			"name": "契约魔法",
+			"ENG_name": "Pact Magic",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你的奥术研究以及你的守护者赋予你的魔法使你能够施展法术。请查看《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 术士法术列表|法术|职业=术士}。",
+				{
+					"type": "entries",
+					"name": "戏法",
+					"ENG_name": "Cantrips",
+					"entries": [
+						"你可以选择两个来自术士法术列表的戏法。随着等级的提升，如术士表格中的戏法已知列所示，你可以选择学习更多的术士戏法。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法能力",
+					"ENG_name": "Spell Slots",
+					"entries": [
+						"术士表格显示了你拥有多少个法术位来施放你的1至5级的{@filter 巫师法术|法术|职业=术士}。表格还显示了这些法术位的等级；你的所有法术位都是同一等级。要施放你的1级或更高等级的术士法术，你必须消耗一个法术位。当你完成短休或长休时，你恢复所有消耗的法术位。",
+						"例如，当你达到5级时，你有两个3级法术位。要施放1级法术{@spell 巫术箭}，你必须使用其中一个法术位，并且将其作为3级法术来施放。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "1级及更高等级已知法术",
+					"ENG_name": "Spells Known of 1st Level and Higher",
+					"entries": [
+						"在1级时，你可以从术士法术列表中选择两个1级的法术。",
+						"术士表格中的已知法术列显示了你何时可以学习更多你选择的1级及以上级别的术士法术。你选择的法术等级不能高于表格中对应你等级的法术位等级列所示的等级。例如，当你达到6级时，你将学习一个新的术士法术，它可以是1级、2级或3级。",
+						"此外，当你在此职业中升级时，你可以选择一个你所知道的术士法术，并用术士法术列表中的另一个法术替换它，这个新法术也必须是你有法术位的等级。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法关键属性",
+					"ENG_name": "Spellcasting Ability",
+					"entries": [
+						"魅力是你的术士法术的施法能力，所以当法术提到你的施法能力时，你将使用你的魅力。此外，当设定你施放的术士法术的豁免难度等级（DC）时，以及在使用该法术进行攻击检定时，你将使用你的魅力调整值。",
+						{
+							"type": "abilityDc",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法器",
+					"ENG_name": "Spellcasting Focus",
+					"entries": [
+						"你可以使用一个{@item 奥术法器|PHB}作为你的术士法术的施法焦点。"
+					]
+				}
+			]
+		},
+		{
+			"name": "魔能祈唤",
+			"ENG_name": "Eldritch Invocations",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"在你的神秘知识研究中，你发掘了奥术咒语，这些是被禁止的知识片段，它们赋予了你持久的魔法能力。",
+				"在2级时，你可以选择两个奥术咒语。可用选项的列表可以在{@filter 可选特性|可选特性|特性类型=EI}页面找到。当你获得特定的术士等级时，你将根据术士表格中的咒语已知列获得额外的咒语选择。",
+				"此外，当你在这个职业中升级时，你可以选择一个你已知的咒语并用那个等级你能学到的另一个咒语替换它。",
+				"如果奥术祈唤有先决条件，你必须满足这些条件才能学习它。你可以在满足其先决条件的同时学习这个祈唤。等级先决条件指的是你在本职业中的等级。"
+			]
+		},
+		{
+			"name": "魔契恩泽",
+			"ENG_name": "Pact Boon",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"在3级时，你的异界恩人因为你的忠诚服务而赐予你一份礼物。你可以选择以下特性之一。",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "链之魔契"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "刃之魔契"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "书之魔契"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "符之魔契|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "替换魔能",
+			"ENG_name": "Eldritch Versatility",
+			"source": "TCE",
+			"page": 70,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4级术士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"每当你在这个职业中达到一个提供能力值提升特性的等级时，你可以选择以下之一，代表你在神秘学研究中的焦点变化：",
+				{
+					"type": "list",
+					"items": [
+						"用来自{@filter 术士法术列表|法术|level=0|职业=术士}中的另一个戏法替换你从这个职业的契约魔法特性中学到的一个戏法。",
+						"将你为契约恩惠特性选择的选项替换为该特性的其他选项之一。",
+						"如果您达到12级或更高，可以用相同等级的另一个术士法术替换您神秘奥术特性中的一个法术。"
+					]
+				},
+				"如果这个变化使你不符合任何奥术祈唤的条件，你现在还必须替换它们，选择你符合条件的祈唤。"
+			]
+		},
+		{
+			"name": "异界宗主能力",
+			"ENG_name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"在6级时，你获得了由你的异界守护者赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "异界宗主能力",
+			"ENG_name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在10级时，你获得了由你的异界恩主赋予的特性。"
+			]
+		},
+		{
+			"name": "玄奥秘法(6环)",
+			"ENG_name": "Mystic Arcanum (6th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"在11级时，你的守护者赋予你一个名为奥术秘法的魔法秘密。从术士法术列表中选择一个{@filter 6级术士法术列表中的法术|法术|level=6|职业=术士}作为这个奥术秘法。",
+				"你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。",
+				"在更高等级时，你获得更多你选择的术士法术，可以以这种方式施放：在13级时一个7级法术，15级时一个8级法术，以及17级时一个9级法术。当你完成一次长休时，你恢复所有神秘奥术的使用次数。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "玄奥秘法(7环)",
+			"ENG_name": "Mystic Arcanum (7th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"在13级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个{@filter 来自术士法术列表的7级法术|法术|level=7|职业=术士}作为这个奥术。",
+				"你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+			]
+		},
+		{
+			"name": "异界宗主能力",
+			"ENG_name": "Otherworldly Patron feature",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"在14级时，您获得了由您的异界赞助者赋予的特性。"
+			]
+		},
+		{
+			"name": "玄奥秘法(8环)",
+			"ENG_name": "Mystic Arcanum (8th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"在15级时，你的恩人赐予你一个名为秘术的魔法秘密。从术士法术列表中选择一个{@filter 8级术士法术列表中的法术|法术|level=8|职业=术士}作为这个秘术。",
+				"你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "玄奥秘法(9环)",
+			"ENG_name": "Mystic Arcanum (9th level)",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"在17级时，你的守护者赋予你一个名为奥术的秘密。从术士法术列表中选择一个9级法术作为这个奥术。",
+				"你可以在不消耗法术位的情况下施展你的奥术咒语一次。你必须完成一次长休息才能再次这样做。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "魔能掌控",
+			"ENG_name": "Eldritch Master",
+			"source": "PHB",
+			"page": 105,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"在20级时，你可以在祈求你的守护者时，利用你内在的神秘力量来恢复已消耗的法术位。你可以花费1分钟祈求你的守护者帮助，以恢复你从契约魔法特性中消耗的所有法术位。一旦你通过这个特性恢复了法术位，你必须完成一次长时间休息才能再次这样做。"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "至高妖精宗主",
+			"ENG_name": "The Archfey",
+			"source": "PHB",
+			"page": 108,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "至高妖精",
+			"subclassSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你的守护者是仙女之王或女士，是传说中的生物，拥有在凡人种族诞生之前就被遗忘的秘密。这个存在的动机通常是难以理解的，有时是异想天开的，可能涉及追求更大的魔法力量或解决古老的仇恨。这类生物包括霜之王子；暮光宫廷的统治者，黑暗与空气的女王；夏季宫廷的泰坦尼亚；她的配偶奥伯伦，绿之主；愚者王子海萨姆；以及古老的女巫。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"仙女让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "仙灵扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 妖火术}, {@spell 沉眠}"
+								],
+								[
+									"第二",
+									"{@spell 安定心神}, {@spell 魅影之力}"
+								],
+								[
+									"第三",
+									"{@spell 闪现术}, {@spell 植物滋长}"
+								],
+								[
+									"第四",
+									"{@spell 支配野兽}, {@spell 高等隐形术}"
+								],
+								[
+									"第五",
+									"{@spell 支配人类}, {@spell 伪装术}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "妖精仪态|邪术师||至高妖精||1"
+				}
+			]
+		},
+		{
+			"name": "妖精仪态",
+			"ENG_name": "Fey Presence",
+			"source": "PHB",
+			"page": 108,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "至高妖精",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"从1级开始，你的守护者赋予你投射仙女迷人而可怕的存在感的能力。作为一个动作，你可以使源自你的10英尺立方体内的每个生物进行一次对抗你的术士法术豁免DC的智慧豁免。未能通过豁免的生物将被你选择的{@condition 魅惑}（魅惑）或{@condition 恐惧}（恐惧）状态影响，直到你的下一回合结束。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "雾遁",
+			"ENG_name": "Misty Escape",
+			"source": "PHB",
+			"page": 108,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "至高妖精",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"从6级开始，你可以在受到伤害时化作一团雾气消失。当你受到伤害时，你可以使用你的反应来变得{@condition 隐形}，并传送至你能看到的60英尺内的未被占据的空间。你保持{@condition 隐形}状态，直到你的下一回合开始，或者直到你攻击或施放法术。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "斗转星移",
+			"ENG_name": "Beguiling Defenses",
+			"source": "PHB",
+			"page": 108,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "至高妖精",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，你的恩主教你如何将敌人影响心智的魔法反击回去。你对被{@condition 魅惑}免疫，当另一个生物试图魅惑你时，你可以使用你的反应尝试将魅惑反击回那个生物。该生物必须对你的术士法术豁免DC进行一次智力豁免，否则将被你{@condition 魅惑}1分钟，或者直到该生物受到任何伤害。"
+			]
+		},
+		{
+			"name": "幻影黑幕",
+			"ENG_name": "Dark Delirium",
+			"source": "PHB",
+			"page": 108,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "至高妖精",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"从14级开始，你可以将一个生物投入虚幻领域。作为一个动作，选择一个你能在60英尺内看到的生物。它必须进行一次对抗你术士法术豁免难度等级（DC）的智慧豁免。豁免失败时，它将被你魅惑或恐惧（你选择）1分钟，或者直到你的专注被打破（就好像你在专注施法）。如果生物受到任何伤害，这个效果会提前结束。",
+				"在这个幻象结束之前，生物认为它迷失在一个你选择的雾气蒙蒙的领域中。生物只能看到和听到它自己、你和这个幻象。",
+				"你必须完成一次短休息或长休息后才能再次使用这个特性。"
+			]
+		},
+		{
+			"name": "邪魔宗主",
+			"ENG_name": "The Fiend",
+			"source": "PHB",
+			"page": 109,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "邪魔",
+			"subclassSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你与来自存在低层平面的恶魔签订了契约，这些生物的目标是邪恶的，即使你努力反对这些目标。这些生物渴望腐蚀或毁灭一切事物，最终包括你自己。足够强大的恶魔可以签订契约，包括诸如Demogorgon、Orcus、Fraz'Urb-luu和Baphomet等恶魔领主；Asmodeus、Dispater、Mephistopheles和Belial等大恶魔；特别强大的深渊恶魔和巴洛魔；以及ultroloths和其他yugoloths的领主。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"恶魔让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "恶魔扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 燃烧之手}, {@spell 命令术}"
+								],
+								[
+									"第二",
+									"{@spell 目盲/耳聋术}, {@spell 灼热射线}"
+								],
+								[
+									"第三",
+									"{@spell 火球术}, {@spell 臭云术}"
+								],
+								[
+									"第四",
+									"{@spell 火焰护盾}, {@spell 火墙术}"
+								],
+								[
+									"第五",
+									"{@spell 焰击术}, {@spell 圣居}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "黑暗赐福|邪术师||邪魔||1"
+				}
+			]
+		},
+		{
+			"name": "黑暗赐福",
+			"ENG_name": "Dark One's Blessing",
+			"source": "PHB",
+			"page": 109,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "邪魔",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"从1级开始，当你将一个敌对生物的生命值降至0时，你获得等同于你的感知调整值加上你的术士等级（最少为1）的临时生命值。"
+			]
+		},
+		{
+			"name": "黑暗强运",
+			"ENG_name": "Dark One's Own Luck",
+			"source": "PHB",
+			"page": 109,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "邪魔",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"从6级开始，你可以召唤你的守护者来改变命运，使之对你有利。当你进行能力检定或豁免骰时，你可以使用这个特性将一个{@dice d10}加到你的骰点上。你可以在看到初始骰点之后，但在骰点的任何效果发生之前这样做。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "邪魔体魄",
+			"ENG_name": "Fiendish Resilience",
+			"source": "PHB",
+			"page": 109,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "邪魔",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，你可以在完成短休息或长休息时选择一种伤害类型。你将对该伤害类型获得抗性，直到你通过此特性选择不同的类型。魔法武器或银质武器造成的伤害无视此抗性。"
+			]
+		},
+		{
+			"name": "直坠噩梦",
+			"ENG_name": "Hurl Through Hell",
+			"source": "PHB",
+			"page": 109,
+			"srd": true,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "邪魔",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"从14级开始，当你用攻击击中一个生物时，你可以使用这个特性立即将目标传送到低层平面。生物消失并在噩梦般的景象中穿梭。",
+				"在你的下一轮结束时，目标返回到它之前占据的空间，或者是最近的未被占据的空间。如果目标不是恶魔，它将因其可怕的经历而受到{@damage 10d10}精神伤害。",
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "旧日支配者宗主",
+			"ENG_name": "The Great Old One",
+			"source": "PHB",
+			"page": 109,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "旧日支配者",
+			"subclassSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你的守护者是一个神秘实体，其本质与现实的本质完全不同。它可能来自遥远的领域，即现实之外的空间，或者可能是传说中的古老神灵之一。其动机对凡人来说是难以理解的，其知识如此庞大和古老，以至于即使是最大的图书馆也相形见绌，无法比拟它所掌握的庞大秘密。伟大的古老者可能对你的存在一无所知或完全漠不关心，但你学到的秘密允许你从它那里汲取魔法。这类实体包括被称为潜伏者的Ghaunadar；被束缚的神Tharizdun；夜蛇Dendar；返回者Zargon；伟大的克苏鲁；以及其他深不可测的存在。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"古老存在让你在学会术士法术时可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "古老存在扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 噪音暗语}, {@spell 塔莎狂笑术}"
+								],
+								[
+									"第二",
+									"{@spell 侦测思想}, {@spell 魅影之力}"
+								],
+								[
+									"第三",
+									"{@spell 锐眼术}, {@spell 短讯术}"
+								],
+								[
+									"第四",
+									"{@spell 支配野兽}, {@spell 艾伐黑触手}"
+								],
+								[
+									"第五",
+									"{@spell 支配人类}, {@spell 心灵遥控}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "唤醒心灵|邪术师||旧日支配者||1"
+				}
+			]
+		},
+		{
+			"name": "唤醒心灵",
+			"ENG_name": "Awakened Mind",
+			"source": "PHB",
+			"page": 109,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "旧日支配者",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"从1级开始，你异乎寻常的知识赋予了你触摸其他生物心智的能力。你可以心灵感应地与任何你能在30英尺内看到生物交流。生物不需要与你共享语言就能理解你的心灵感应话语，但生物必须至少能理解一种语言。"
+			]
+		},
+		{
+			"name": "熵光结界",
+			"ENG_name": "Entropic Ward",
+			"source": "PHB",
+			"page": 109,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "旧日支配者",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"在6级时，你学会了用魔法保护自己免受攻击，并将敌人的失败攻击转变为自己的好运。当一个生物对你进行攻击检定时，你可以使用你的反应来使该检定不利。如果攻击未命中你，在你下一个回合结束前，你对生物的下一次攻击检定将具有优势。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "思维之盾",
+			"ENG_name": "Thought Shield",
+			"source": "PHB",
+			"page": 109,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "旧日支配者",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，你的思想不能被心灵感应或其他方式读取，除非你允许。你还对精神伤害有抗性，并且每当一个生物对你造成精神伤害时，那个生物也会受到与你相同的伤害。"
+			]
+		},
+		{
+			"name": "创造奴仆",
+			"ENG_name": "Create Thrall",
+			"source": "PHB",
+			"page": 109,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "旧日支配者",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"在14级时，你获得了用你守护者的异域魔法感染人形生物心智的能力。你可以使用你的行动来触摸一个{@condition 无力}的人形生物。那个生物随后被你{@condition 魅惑}，直到有{@spell 移除诅咒}法术施加在它身上，{@condition 魅惑}状态被移除，或者你再次使用这个特性。",
+				"只要你和被魅惑的生物处于同一存在平面上，你就可以通过心灵感应与该生物沟通。"
+			]
+		},
+		{
+			"name": "不朽者宗主",
+			"ENG_name": "The Undying",
+			"source": "SCAG",
+			"page": 139,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "不朽者",
+			"subclassSource": "SCAG",
+			"level": 1,
+			"entries": [
+				"死亡对你的恩主没有任何影响，他已经解开了永生的秘密，尽管这样的奖赏\u2014\u2014像所有力量一样\u2014\u2014是有代价的。曾是凡人的不死之身已经看到凡人的一生如同季节般流逝，如同无尽日日夜夜的闪烁。它拥有分享岁月的秘密，生命和死亡的秘密。这类生物包括Vecna，手与眼之主；可怕的Iuz；巫妖女王Vol；Aerenal的不死法庭；githyanki的巫妖女王Vlaakith；以及不死巫师Fistandantalus。",
+				"在领域中，不朽的恩人包括传说中的术士之墓的主人拉洛奇（Larloch the Shadow King），以及昂瑟尔（Unther）的神王吉尔吉姆（Gilgeam）。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"不死族让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "不死扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 摹造生命}, {@spell 致病射线}"
+								],
+								[
+									"第二",
+									"{@spell 目盲/耳聋术}, {@spell 沉默术}"
+								],
+								[
+									"第三",
+									"{@spell 假死术}, {@spell 死者交谈术}"
+								],
+								[
+									"第四",
+									"{@spell 生命灵光}, {@spell 防死护咒}"
+								],
+								[
+									"第五",
+									"{@spell 疫病术}, {@spell 通晓传奇}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "历经死亡|邪术师||不朽者|SCAG|1"
+				}
+			]
+		},
+		{
+			"name": "历经死亡",
+			"ENG_name": "Among the Dead",
+			"source": "SCAG",
+			"page": 139,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "不朽者",
+			"subclassSource": "SCAG",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"从1级开始，你学会了{@spell 拯救濒死}戏法，这对你来说算作术士戏法。此外，你对任何疾病的豁免投掷具有优势。",
+				"此外，亡灵很难伤害你。如果一个亡灵直接用攻击或有害法术以你为目标，那个生物必须进行一次对抗你法术豁免难度等级（DC）的智慧豁免（当亡灵将你包含在区域效果中时，如{@spell 火球术}的爆炸，亡灵不需要进行豁免）。豁免失败时，生物必须选择一个新的目标或放弃以你为目标，可能会浪费这次攻击或法术。豁免成功时，生物在接下来的24小时内对这种效果免疫。如果你用攻击或有害法术以亡灵为目标，亡灵也将在接下来的24小时内对这种效果免疫。"
+			]
+		},
+		{
+			"name": "反抗死亡",
+			"ENG_name": "Defy Death",
+			"source": "SCAG",
+			"page": 139,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "不朽者",
+			"subclassSource": "SCAG",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"从6级开始，当你欺骗死亡或帮助他人欺骗死亡时，你可以给自己注入活力。当你成功进行死亡豁免投掷或使用{@spell 拯救濒死}法术稳定一个生物时，你可以恢复等于{@spell 拯救濒死}加上你的体质调整值（最少为1点生命值）的生命值。",
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "不朽之理",
+			"ENG_name": "Undying Nature",
+			"source": "SCAG",
+			"page": 139,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "不朽者",
+			"subclassSource": "SCAG",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，你可以无限期地屏住呼吸，你也不需要食物、水或睡眠，尽管你仍然需要休息来减少{@condition 力竭}，并且仍然从完成短暂休息和长时间休息中获益。",
+				"此外，你的衰老速度会减慢。每过10年，你的身体只老化1年，并且你对魔法造成的老化免疫。"
+			]
+		},
+		{
+			"name": "永恒生命",
+			"ENG_name": "Indestructible Life",
+			"source": "SCAG",
+			"page": 139,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "不朽者",
+			"subclassSource": "SCAG",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"当你达到14级时，你掌握了不死族的一些真正秘密。在你的回合，你可以使用一个奖励动作来恢复等同于{@dice 1d8}加上你的术士等级的生命值。此外，如果你在使用这个特性时将你身体的断肢放回原位，该部分将会重新连接。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "深海意志宗主",
+			"ENG_name": "The Fathomless",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"你已经与深渊签订了契约。海洋的实体、水元素位面或另一个异界海洋现在允许你借助其海洋力量。它是否只是在利用你来了解陆地领域，还是它希望你打开宇宙的洪水之门并淹没世界？",
+				"或许你出生在一个崇拜深不可测及其后代的世代相传的邪教中。或者你可能遭遇船难，在溺水边缘时你的恩主的掌握给了你一次生命的机会。无论你与恩主签订契约的原因是什么，大海及其未知的深处都在呼唤你。",
+				"可能赋予术士力量的深海实体包括巨型乌贼、古老的水元素、由库托亚族幻想成真的神性幻觉、半人马半神以及海巫婆的女巫会。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"{@i 1级深不见底特性}",
+						"深渊之主允许你在学会术士法术时从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "深不可测扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 造水/枯水术}, {@spell 雷鸣波}"
+								],
+								[
+									"第二",
+									"{@spell 造风术}, {@spell 沉默术}"
+								],
+								[
+									"第三",
+									"{@spell 闪电束}, {@spell 雪雨暴}"
+								],
+								[
+									"第四",
+									"{@spell 操控水体}, {@spell 元素召唤术|TCE}（仅限水元素）"
+								],
+								[
+									"第五",
+									"{@spell 毕格比之掌}（呈现为触手形态）, {@spell 寒冰锥}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "深海触手|邪术师||深海意志|TCE|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "海洋馈赠|邪术师||深海意志|TCE|1"
+				}
+			]
+		},
+		{
+			"name": "海洋馈赠",
+			"ENG_name": "Gift of the Sea",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1级深不见底特性}",
+				"你的游泳速度增加到40英尺，并且你可以在水下呼吸。"
+			]
+		},
+		{
+			"name": "深海触手",
+			"ENG_name": "Tentacle of the Deeps",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1级深不见底特性}",
+				"你可以神奇地召唤一个幽灵触手来攻击你的敌人。作为一个奖励动作，你可以在你60英尺内能看到的某点创造一个10英尺长的触手。这个触手持续1分钟，或者直到你使用这个特性来创造另一个触手。",
+				"当你创造触手时，你可以对距离它10英尺内的生物进行近战法术攻击。命中时，目标受到{@damage 1d8}点寒冷伤害，并且其速度在下一轮你回合开始前减少10英尺。当你在这个职业达到10级时，伤害增加到{@dice 2d8}。",
+				"在你的回合上，作为奖励行动，你可以使触手移动最多30英尺，并重新进行攻击。",
+				"你可以召唤触手的次数等于你的熟练加值，当你完成一次长休息时，你将重新获得所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "守卫缠绕",
+			"ENG_name": "Guardian Coil",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级深渊特性}",
+				"你的深海触手可以保护你和其他人，将自身置于他们与伤害之间。当你或你能看到的生物在触手10英尺范围内受到伤害时，你可以使用你的反应来选择其中一个生物，并将对该生物的伤害减少{@dice 1d8}。当你在这个职业中达到10级时，触手减少的伤害增加到{@dice 2d8}。"
+			]
+		},
+		{
+			"name": "海渊魂灵",
+			"ENG_name": "Oceanic Soul",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级深渊特性}",
+				"你现在在深海中更加如鱼得水。你对寒冷伤害获得抗性。此外，当你完全浸没在水中时，任何也完全浸没在水中的生物都能理解你的语言，你也能听懂他们的语言。"
+			]
+		},
+		{
+			"name": "擒握触手",
+			"ENG_name": "Grasping Tentacles",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级深不可测特性}",
+				"你学会了法术{@spell 艾伐黑触手}。它对你来说是术士法术，但不计入你所知法术的数量。你还可以不使用法术位就施放它一次，并且在完成长时间休息后再次获得这样做的能力。",
+				"每当你施展这个法术时，你的守护者的魔法会增强你，赋予你等于你的术士等级数的临时生命值。此外，伤害不能打破你对这个法术的{@status 专注}。"
+			]
+		},
+		{
+			"name": "海渊传送",
+			"ENG_name": "Fathomless Plunge",
+			"source": "TCE",
+			"page": 72,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "深海意志",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级深渊特性}",
+				"你可以用魔法打开通往水域的临时通道。作为一个动作，你可以将自己和在你30英尺内你能看到的最多五名其他愿意的生物传送走。在一阵触手的旋转中，你们都消失了，然后在你曾见过的水域（池塘大小或更大）或其30英尺范围内重新出现，每个人出现在彼此30英尺内的未被占据的空间中。",
+				"一旦你使用这个特性，直到你完成一次短休息或长休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "巨灵宗主",
+			"ENG_name": "The Genie",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"你与一种极为罕见的灯神\u2014\u2014贵族灯神\u2014\u2014缔结了契约。这些实体统治着元素位面上广阔的领地，并对低级灯神和元素生物有着巨大的影响力。贵族灯神的动机多种多样，但大多数都傲慢自大，他们拥有与低级神祇相媲美的力量。他们喜欢颠覆凡人的规则，因为凡人经常将灯神束缚为仆役，并且他们愿意进入扩大自己影响力的契约。",
+				"你选择你的恩主的种类或使用神灵种类表随机决定。",
+				{
+					"type": "table",
+					"caption": "精灵种类",
+					"colLabels": [
+						"d4",
+						"善良",
+						"元素"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-5",
+						"col-5"
+					],
+					"rows": [
+						[
+							1,
+							"{@creature 土巨灵}",
+							"土"
+						],
+						[
+							2,
+							"{@creature 气巨灵}",
+							"气"
+						],
+						[
+							3,
+							"{@creature 火巨灵}",
+							"火"
+						],
+						[
+							4,
+							"{@creature 水巨灵}",
+							"饮水"
+						]
+					]
+				},
+				{
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"type": "entries",
+					"entries": [
+						"{@i 1级精灵特性}",
+						"精灵让你在学会术士法术时可以从扩展的法术列表中选择。精灵扩展法术表显示了对你来说被添加到术士法术列表中的精灵法术，以及与你守护者种类相关联的法术：道（dao）、精灵（djinni）、伊弗里特（efreeti）或马里德（marid）。",
+						{
+							"type": "table",
+							"caption": "贵族灯神扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"灯神法术",
+								"道术",
+								"精灵法术",
+								"伊夫利特法术",
+								"马里德法术"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 侦测善恶}",
+									"{@spell 圣域术}",
+									"{@spell 雷鸣波}",
+									"{@spell 燃烧之手}",
+									"{@spell 云雾术}"
+								],
+								[
+									"第二",
+									"{@spell 魅影之力}",
+									"{@spell 荆棘丛生}",
+									"{@spell 造风术}",
+									"{@spell 灼热射线}",
+									"{@spell 朦胧术}"
+								],
+								[
+									"第三",
+									"{@spell 创造饮食}",
+									"{@spell 融身入石}",
+									"{@spell 风墙术}",
+									"{@spell 火球术}",
+									"{@spell 雪雨暴}"
+								],
+								[
+									"第四",
+									"{@spell 魅影杀手}",
+									"{@spell 塑石术}",
+									"{@spell 高等隐形术}",
+									"{@spell 火焰护盾}",
+									"{@spell 操控水体}"
+								],
+								[
+									"第五",
+									"{@spell 造物术}",
+									"{@spell 石墙术}",
+									"{@spell 伪装术}",
+									"{@spell 焰击术}",
+									"{@spell 寒冰锥}"
+								],
+								[
+									"第九",
+									"{@spell 祈愿术}",
+									"\u2014",
+									"\u2014",
+									"\u2014",
+									"\u2014"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "巨灵器皿|邪术师||巨灵|TCE|1"
+				}
+			]
+		},
+		{
+			"name": "巨灵器皿",
+			"ENG_name": "Genie's Vessel",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1级精灵特性}",
+				"你的恩主赠予你一个魔法容器，它赋予你一定程度的神灵之力。这个容器是一个微小的物体，你可以将其作为施放术士法术的法术焦点。你可以决定这个物体是什么，或者通过在神灵之器表上掷骰来随机决定它是什么。",
+				{
+					"type": "table",
+					"caption": "巨灵器皿",
+					"colLabels": [
+						"d6",
+						"容器"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"油灯"
+						],
+						[
+							"2",
+							"骨灰盒"
+						],
+						[
+							"3",
+							"带有隔间的戒指"
+						],
+						[
+							"4",
+							"塞住的瓶子"
+						],
+						[
+							"5",
+							"空心小雕像"
+						],
+						[
+							"6",
+							"华丽的灯笼"
+						]
+					]
+				},
+				"当你触摸这个容器时，你可以用以下方式使用它：",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "瓶中小憩|邪术师|TCE|巨灵|TCE|1"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "巨灵之怒|邪术师|TCE|巨灵|TCE|1"
+						}
+					]
+				},
+				"容器的AC等于你的法术豁免难度等级（DC）。其生命值等于你的术士等级加上你的熟练加值，并且对毒素和精神伤害免疫。",
+				"如果容器被摧毁或者你失去了它，你可以进行1小时的仪式来从你的恩人那里获得一个替代品。这个仪式可以在短休息或长休息期间进行，如果之前的容器仍然存在，它将被摧毁。当你死亡时，容器会在元素力量的闪光中消失。"
+			]
+		},
+		{
+			"name": "元素赐福",
+			"ENG_name": "Elemental Gift",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级灵怪特性}",
+				"你开始拥有你恩人种类的特征。你现在对由你恩人种类决定的一种伤害类型具有抗性：钝击（刀）、雷击（灯神）、火焰（伊夫利特）或寒冷（马里德）。",
+				"此外，作为奖励行动，你可以给自己一个持续10分钟的飞行速度30英尺，在此期间你可以悬停。你可以使用这个奖励行动的次数等于你的熟练加值，并且在完成长时间休息后恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "器皿庇护所",
+			"ENG_name": "Sanctuary Vessel",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级精灵特性}",
+				"当您通过瓶中慰藉特性进入您的神灯容器时，您现在可以选择多达五个您能看到的、愿意的生物，并且这些选定的生物会随您一起被拉入容器中。",
+				"作为一个奖励动作，你可以从容器中驱逐任意数量的生物，如果你离开、死亡或容器被摧毁，所有人都会被驱逐出去。",
+				"此外，任何（包括你）在容器内停留至少10分钟的人将获得完成短暂休息的好处，任何人还可以将你的熟练加值加到他们在容器内进行短暂休息时恢复的生命值中，如果他们花费任何生命骰来作为短暂休息的一部分。"
+			]
+		},
+		{
+			"name": "有限祈愿术",
+			"ENG_name": "Limited Wish",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级灵族特性}",
+				"你恳求你的恩主赐予你一个小愿望。作为一个动作，你可以向你的神灵之器表达你的愿望，请求实现一个{@filter 等级为6级或以下，施法时间为1个动作的法术|法术|施法时间=动作|level=0;1;2;3;4;5;6}的效果。法术可以来自任何职业的法术列表，你不需要满足该法术的要求，包括昂贵的成分；该法术简单地作为这个动作的一部分而生效。",
+				"一旦你使用了这个特性，直到你完成{@dice 1d4}次长时间的休息之后，你才能再次使用它。"
+			]
+		},
+		{
+			"name": "死灵宗主",
+			"ENG_name": "The Undead",
+			"source": "VRGR",
+			"page": 30,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "死灵",
+			"subclassSource": "VRGR",
+			"level": 1,
+			"entries": [
+				"你与一个不朽的存在缔结了契约，这个生物违背了生死循环，放弃了它的凡人躯壳，以便永恒地追求其深不可测的野心。对于这样的存在来说，时间和道德是短暂的事物，是那些对生命沙漏中沙粒仍然匆匆流逝的人的关切。这些古老的亡灵曾经也是凡人，他们亲身经历了野心之路和通往死亡之门的路线。他们渴望分享这种亵渎的知识以及其他秘密，与那些在生者中实现他们意志的人。",
+				"这类生物包括半巫妖阿瑟拉克（Acererak）、吸血鬼暴君卡斯（Kas the Bloody-Handed）、吉斯洋基巫妖女王弗拉基斯（Vlaakith）、龙巫妖德拉戈萨（Dragotha）、不死法老安赫特波（Ankhtepot）以及难以捉摸的黑暗领主阿扎林·雷克斯（Azalin Rex）。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"{@i 1级亡灵特性}",
+						"亡灵让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "亡灵扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 灾祸术}, {@spell 摹造生命}"
+								],
+								[
+									"第二",
+									"{@spell 目盲/耳聋术}, {@spell 魅影之力}"
+								],
+								[
+									"第三",
+									"{@spell 魅影驹}, {@spell 死者交谈术}"
+								],
+								[
+									"第四",
+									"{@spell 防死护咒}, {@spell 高等隐形术}"
+								],
+								[
+									"第五",
+									"{@spell 反活物护罩}, {@spell 死云术}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战栗形态|邪术师||死灵|VRGR|1"
+				}
+			]
+		},
+		{
+			"name": "战栗形态",
+			"ENG_name": "Form of Dread",
+			"source": "VRGR",
+			"page": 30,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "死灵",
+			"subclassSource": "VRGR",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1级亡灵特性}",
+				"你显现出你守护者的可怕力量的一个方面。作为奖励行动，你变身持续1分钟。在变身期间，你获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"你获得了等同于{@dice 1d10}加上你的术士等级的临时生命值。",
+						"在你的每个回合中，每当你用攻击检定命中一个生物时，你可以迫使它进行一次智力豁免投掷，如果豁免失败，目标将在你下一个回合结束前对你感到{@condition 恐惧}。",
+						"你对{@condition 恐惧}状态免疫。"
+					]
+				},
+				"你可以变身的次数等于你的熟练加值，并且在完成长时间休息后你将重新获得所有已用尽的使用次数。",
+				"你的恐怖形态（Form of Dread）的外观反映了你的赞助者（patron）的某些方面。例如，你的形式可能是由阴影构成的，形成你巫妖赞助者的王冠和长袍，或者你的身体可能因古代葬礼仪式的符文而发光，并被沙漠之风环绕，暗示你的木乃伊赞助者。"
+			]
+		},
+		{
+			"name": "坟冢之触",
+			"ENG_name": "Grave Touched",
+			"source": "VRGR",
+			"page": 30,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "死灵",
+			"subclassSource": "VRGR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级亡灵特性}",
+				"你恩人的力量对你的身体和魔法产生了深远的影响。你不需要进食、饮水或呼吸。",
+				"此外，在你的每个回合中，当你用攻击骰命中一个生物并对其造成伤害时，你可以将伤害类型替换为死灵伤害。在使用你的恐怖形态时，你可以在确定目标承受的死灵伤害时多掷一个伤害骰。"
+			]
+		},
+		{
+			"name": "死疽躯壳",
+			"ENG_name": "Necrotic Husk",
+			"source": "VRGR",
+			"page": 30,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "死灵",
+			"subclassSource": "VRGR",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级亡灵特性}",
+				"你与亡灵和死灵能量的联系现在弥漫你的身体。你对死灵伤害有抗性。如果你使用恐惧形态进行变身，你反而会对死灵伤害免疫。",
+				"此外，当你的生命值将降至0点时，你可以使用你的反应来降至1点生命值，并使你的身体爆发出死亡能量。你选择的每个生物，如果距离你30英尺内，则会受到等于{@damage 2d10}加上你的术士等级的坏死伤害。然后你获得1级的{@condition 力竭}。一旦你使用了这个反应，直到你完成{@dice 1d4}次长时间休息后，你才能再次使用。"
+			]
+		},
+		{
+			"name": "灵魂投射",
+			"ENG_name": "Spirit Projection",
+			"source": "VRGR",
+			"page": 30,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "死灵",
+			"subclassSource": "VRGR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级亡灵特性}",
+				"你的精神可以与你的物理形态分离。作为一个动作，你可以将你的精神从你的身体中投射出来。你留下的身体处于{@condition 昏迷}状态，并处于暂停动画的状态。",
+				"你的精神几乎在各个方面都类似于你的凡人形态，复制了你的游戏统计数据，但不包括你的财产。任何适用于你的精神或身体的伤害或其他效果都会影响另一个。你的精神可以在你的身体外保持长达1小时，或者直到你的{@status 专注}被打破（就好像{@status 专注||集中精神}在施法上）。当你的精神投影结束时，你的精神返回到你的身体，或者你的身体神奇地传送到你精神的空间（由你选择）。",
+				"在投射你的灵魂时，你获得了以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"你的精神和身体获得了对钝击、穿刺和斩击伤害的抗性。",
+						"当你施放召唤术或死灵术学派的法术时，该法术不需要语言或肢体成分，也不需要没有黄金成本的物质成分。",
+						"你的飞行速度等同于你的行走速度，并且可以悬停。你可以像通过{@quickref 困难地型||3}一样通过生物和物体，但如果你的回合结束时位于生物或物体内部，你将受到{@dice 1d10}点力量伤害。",
+						"当你使用你的恐怖形态时，在你的每个回合中，每当你对一个生物造成死灵伤害时，你恢复的生命值等于造成死灵伤害的一半。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再这样做。"
+			]
+		},
+		{
+			"name": "天界宗主",
+			"ENG_name": "The Celestial",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 1,
+			"entries": [
+				"你的守护者是上层界的一个强大存在。你与一个古老的天界生物、太阳灵、麒麟、独角兽或其他居住在永恒幸福的位面的实体缔结了契约。你与那个存在的契约让你能够体验到照亮多元宇宙的圣光的一丝丝触碰。",
+				"与这样的力量相连可能会引起你行为和信仰的变化。你可能发现自己被驱使去消灭亡灵，击败恶魔，保护无辜者。有时，你的心也可能充满了对你恩人天界领域的向往，渴望在你的余生中漫游那个天堂。但你知道，你目前的使命是在凡人之中，你的契约将你束缚于为世界上的黑暗之地带来光明。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"天界让你在学习术士法术时可以从扩展的法术列表中选择。以下法术被添加到你的术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "天界扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 治疗伤势}, {@spell 光导箭}"
+								],
+								[
+									"第二",
+									"{@spell 炽焰法球}, {@spell 次级复原术}"
+								],
+								[
+									"第三",
+									"{@spell 昼明术}, {@spell 回生术}"
+								],
+								[
+									"第四",
+									"{@spell 虔诚守卫}, {@spell 火墙术}"
+								],
+								[
+									"第五",
+									"{@spell 焰击术}, {@spell 高等复原术}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "额外戏法|邪术师||天界|XGE|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "治愈之光|邪术师||天界|XGE|1"
+				}
+			]
+		},
+		{
+			"name": "额外戏法",
+			"ENG_name": "Bonus Cantrips",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"在1级时，你学会了{@spell 圣焰}和{@spell 光亮术}戏法。它们对你来说算作术士戏法，但它们不计入你所知戏法的数量。"
+			]
+		},
+		{
+			"name": "治愈之光",
+			"ENG_name": "Healing Light",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"在1级时，你获得了引导天界能量来治疗伤口的能力。你有一个由{@dice d6}骰子组成的池，用来为这种治疗提供能量。池中的骰子数量等于1加上你的术士等级。",
+				"作为一个奖励动作，你可以治疗一个你能看到的60英尺内的一个生物，消耗来自池子的骰子。你一次能消耗的最大骰子数等于你的的魅力调整值（最少一个骰子）。掷出你消耗的骰子，将它们加在一起，并恢复等于总数的生命值。",
+				"当您完成一次长休息时，您的骰池恢复所有消耗的骰子。"
+			]
+		},
+		{
+			"name": "光耀之魂",
+			"ENG_name": "Radiant Soul",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"从6级开始，你与天界的联系使你能够成为辐射能量的传导体。你对辐射伤害有抗性，当你施放一个造成辐射或火焰伤害的法术时，你可以将你的感知调整值加到该法术对其中一个目标的一个辐射或火焰伤害骰上。"
+			]
+		},
+		{
+			"name": "天界韧性",
+			"ENG_name": "Celestial Resilience",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"从10级开始，每当你完成短休息或长休息时，你将获得临时生命值。这些临时生命值等于你的术士等级加上你的的魅力调整值。此外，在休息结束时，选择你能看到的最多五个生物。这些生物每个将获得等于你的术士等级的一半加上你的魅力调整值的临时生命值。"
+			]
+		},
+		{
+			"name": "灼光复仇",
+			"ENG_name": "Searing Vengeance",
+			"source": "XGE",
+			"page": 54,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "天界",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"从14级开始，你引导的辐射能量允许你抵抗死亡。当你在你的回合开始时需要进行死亡豁免骰时，你可以用辐射能量的爆发弹跳起来。你恢复等同于你生命值最大值一半的生命值，如果你选择，然后你可以站起来。你选择的每个生物，如果在你30英尺范围内，将受到辐射伤害，等于{@dice 2d8}加上你的感知调整值，并且在当前回合结束之前处于{@condition 目盲}状态。",
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "咒剑宗主",
+			"ENG_name": "The Hexblade",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 1,
+			"entries": [
+				"你与来自影界的神秘实体缔结了契约\u2014\u2014这是一种在有感知的魔法武器中显现的力量，这些武器是用影界的物质雕刻而成的。黑刃剑是这些武器中最有名的，这些武器随着时间的推移遍布了整个多元宇宙。这些武器背后的阴影力量可以为与它缔结契约的术士提供力量。许多六刃术士创造了模仿在影界形成的武器。其他人则放弃了这样的武器，满足于将那个位面的黑暗魔法编织进他们的施法之中。",
+				"因为人们知道渡鸦女王锻造了这些武器中的第一个，许多学者推测她和这股力量是一体的，认为这些武器以及咒刃术士是她用来在物质位面上操纵事件以实现她难以理解的目的的工具。",
+				{
+					"type": "entries",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
+					"entries": [
+						"咒剑使让你在学会术士法术时，可以从扩展的法术列表中选择。以下法术对你来说被添加到术士法术列表中。",
+						{
+							"type": "table",
+							"caption": "咒剑扩展法术",
+							"colLabels": [
+								"法术环阶",
+								"法术"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"第一",
+									"{@spell 护盾术}, {@spell 激愤斩}"
+								],
+								[
+									"第二",
+									"{@spell 朦胧术}, {@spell 烙印斩}"
+								],
+								[
+									"第三",
+									"{@spell 闪现术}, {@spell 元素武器}"
+								],
+								[
+									"第四",
+									"{@spell 魅影杀手}, {@spell 惊震斩}"
+								],
+								[
+									"第五",
+									"{@spell 放逐斩}, {@spell 寒冰锥}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "咒剑诅咒|邪术师||咒剑|XGE|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "巫咒战士|邪术师||咒剑|XGE|1"
+				}
+			]
+		},
+		{
+			"name": "巫咒战士",
+			"ENG_name": "Hex Warrior",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"在1级时，你获得了必要的训练，以有效地武装自己进行战斗。你对中型盔甲、盾牌和武术武器获得了熟练度。",
+				"你的恩主的影响还允许你神秘地通过特定的武器传达你的意志。每当你完成一次长时间休息时，你可以触摸一件你熟练且没有双手特性的武器。当你用那件武器攻击时，你可以使用你的魅力调整值，而不是力量或敏捷，来进行攻击和伤害判定。这个好处持续到你完成下一次长时间休息。如果你后来获得了契约之刃特性，这个好处会扩展到你用那个特性召唤的每一个契约武器，无论武器的类型。"
+			]
+		},
+		{
+			"name": "咒剑诅咒",
+			"ENG_name": "Hexblade's Curse",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"从1级开始，你获得了给某人施加恶毒诅咒的能力。作为奖励行动，选择一个你能看到的30英尺内的一个生物。目标被诅咒持续1分钟。如果目标死亡、你死亡或你被{@condition 无力}，则诅咒会提前结束。直到诅咒结束，你获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"你对被诅咒目标的伤害骰获得加值。该加值等于你的熟练加值。",
+						"你对被诅咒目标进行的任何攻击检定，当骰出19或20时，视为致命一击。",
+						"如果被诅咒的目标死亡，你恢复的生命值等于你的术士等级加上你的魅力调整值（最少为1点生命值）。"
+					]
+				},
+				"在你完成短暂或长时间休息之前，你不能再次使用这个特性。"
+			]
+		},
+		{
+			"name": "咒缚幽灵",
+			"ENG_name": "Accursed Specter",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"从6级开始，你可以诅咒你杀死的人的灵魂，暂时将其绑定为你服务。当你杀死一个人形生物时，你可以使其灵魂从尸体中升起成为一个{@creature 幽灵}，其统计数据在《怪物手册》中。当幽灵出现时，它获得等于你术士等级一半的临时生命值。为幽灵掷先攻骰，它有自己的回合。它服从你的口头命令，并在攻击判定上获得一个特殊加值，等于你的魅力调整值（最少为+0）。",
+				"这个幽灵会一直为你服务，直到你下一次长时间休息结束，届时它会消失到来世。",
+				"一旦你使用这个特性绑定了一个幽灵，直到你完成一次长休息之前，你不能再使用这个特性。"
+			]
+		},
+		{
+			"name": "巫咒护甲",
+			"ENG_name": "Armor of Hexes",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"当你达到10级时，你的咒术变得更加强大。如果被你的剑刃诅咒所诅咒的目标用攻击骰命中你，你可以使用你的反应来掷一个{@dice d6}。如果是4或更高，攻击就会错过你，不管它的骰点是多少。"
+			]
+		},
+		{
+			"name": "巫咒大师",
+			"ENG_name": "Master of Hexes",
+			"source": "XGE",
+			"page": 55,
+			"className": "邪术师",
+			"classSource": "PHB",
+			"subclassShortName": "咒剑",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"从14级开始，你可以将你的咒剑之咒从一个被杀死的生物传播到另一个生物。当你的咒剑之咒所诅咒的生物死亡时，你可以将诅咒施加给你能看到的30英尺内的另一个生物，只要你不是{@condition 无力}。当你以这种方式施加诅咒时，你不会从之前被诅咒生物的死亡中恢复生命值。"
+			]
+		},
+		{
+			"name": "瓶中小憩",
+			"ENG_name": "Bottled Respite",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "TCE",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"作为一个动作，你可以神奇地消失并进入你的容器，它留在你离开的空间。容器的内部是一个超维度空间，形状为20英尺半径的圆柱体，高20英尺，并且类似于你的容器。内部配备了垫子和低桌子，并且温度舒适。在内部时，你可以听到容器周围区域的声音，就好像你在它的空间里一样。你可以在容器内停留的时间最多等于你的熟练加值的两倍小时数。如果你使用奖励动作离开、死亡或容器被摧毁，你可以提前离开容器。当你退出容器时，你出现在最靠近它的未被占据的空间。留在容器中的任何物品都留在那里，直到被搬出，如果容器被摧毁，存放在那里的每个物品都会无害地出现在容器前空间的最靠近的未被占据的空间。一旦你进入容器，你就不能再次进入，直到你完成一次长时间休息。"
+			]
+		},
+		{
+			"name": "巨灵之怒",
+			"ENG_name": "Genie's Wrath",
+			"source": "TCE",
+			"page": 73,
+			"className": "邪术师",
+			"classSource": "TCE",
+			"subclassShortName": "巨灵",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"在你的每个回合中，每当你用攻击骰命中目标时，你可以对目标造成额外伤害，等于你的熟练加值。这种伤害的类型由你的恩主决定：钝击（刀）、雷击（神灵）、火焰（伊夫利特）或寒冷（马里德）。"
+			]
+		}
+	]
 }

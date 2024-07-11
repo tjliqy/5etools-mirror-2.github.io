@@ -699,7 +699,7 @@ class _DataTypeLoaderSingleSource extends _DataTypeLoader {
 	_getSiteIdent ({pageClean, sourceClean}) { return this._filename; }
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		return DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/${this._filename}`);
+		return DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${this._filename}`);
 	}
 }
 
@@ -1509,7 +1509,7 @@ class _DataTypeLoaderCustomQuickref extends _DataTypeLoader {
 	_isBrewAvailable () { return false; }
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/generated/bookref-quick.json`);
+		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/generated/bookref-quick.json`);
 		return {
 			reference: json.reference["bookref-quick"],
 			referenceData: json.data["bookref-quick"],
@@ -1597,12 +1597,12 @@ class _DataTypeLoaderCustomAdventureBook extends _DataTypeLoader {
 	async _pGetSiteData ({pageClean, sourceClean}) {
 		const [prop, propData] = this.constructor.PROPS;
 
-		const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/${this._filename}`);
+		const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${this._filename}`);
 		const contents = index[prop].find(contents => _DataLoaderInternalUtil.getCleanSource({source: contents.source}) === sourceClean);
 
 		if (!contents) return {};
 
-		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./${DataUtil.data_dir()}/${prop}/${prop}-${UrlUtil.encodeForHash(contents.id.toLowerCase())}.json`);
+		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${prop}/${prop}-${UrlUtil.encodeForHash(contents.id.toLowerCase())}.json`);
 
 		return {
 			[prop]: [contents],

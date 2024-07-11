@@ -1,3718 +1,3718 @@
 {
-  "class": [
-    {
-      "name": "圣武士",
-      "ENG_name": "Paladin",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "hd": {
-        "number": 1,
-        "faces": 10
-      },
-      "proficiency": [
-        "wis",
-        "cha"
-      ],
-      "spellcastingAbility": "cha",
-      "casterProgression": "1/2",
-      "preparedSpells": "<$level$> / 2 + <$cha_mod$>",
-      "optionalfeatureProgression": [
-        {
-          "name": "战斗风格",
-          "ENG_name": "Fighting Style",
-          "featureType": [
-            "FS:P"
-          ],
-          "progression": {
-            "2": 1
-          }
-        }
-      ],
-      "startingProficiencies": {
-        "armor": [
-          "光亮术",
-          "中等",
-          "重型",
-          "{@item 护盾术|PHB|盾牌}"
-        ],
-        "weapons": [
-          "简单",
-          "武术"
-        ],
-        "skills": [
-          {
-            "choose": {
-              "from": [
-                "运动",
-                "洞悉",
-                "威吓",
-                "医药",
-                "游说",
-                "宗教"
-              ],
-              "count": 2
-            }
-          }
-        ]
-      },
-      "startingEquipment": {
-        "additionalFromBackground": true,
-        "default": [
-          "(a) 一把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}和一面{@item 护盾术|PHB}，或 (b) 两把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}",
-          "(a) 五把{@item 标枪|PHB|标枪}或(b)任何{@filter 简易近战武器|物品|来源=phb|类别=基础|类型=简易武器；近战武器=u~u~沙}",
-          "(a) 一个{@item 祭司套组|PHB}或 (b) 一个{@item 探索套组|PHB}",
-          "{@item 链甲|PHB} 和一个 {@item 圣徽|PHB}"
-        ],
-        "goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
-        "defaultData": [
-          {
-            "a": [
-              {
-                "equipmentType": "武器（武术）"
-              },
-              "护盾术|PHB"
-            ],
-            "b": [
-              {
-                "equipmentType": "武器（武术）",
-                "quantity": 2
-              }
-            ]
-          },
-          {
-            "a": [
-              {
-                "item": "标枪|PHB",
-                "quantity": 5
-              }
-            ],
-            "b": [
-              {
-                "equipmentType": "简单近战武器"
-              }
-            ]
-          },
-          {
-            "a": [
-              "祭司套组|PHB"
-            ],
-            "b": [
-              "探索套组|PHB"
-            ]
-          },
-          {
-            "_": [
-              "链甲|PHB",
-              {
-                "equipmentType": "神圣专注施法"
-              }
-            ]
-          }
-        ]
-      },
-      "multiclassing": {
-        "requirements": {
-          "str": 13,
-          "cha": 13
-        },
-        "proficienciesGained": {
-          "armor": [
-            "光亮术",
-            "中等",
-            "{@item 护盾术|PHB|盾牌}"
-          ],
-          "weapons": [
-            "简单",
-            "武术"
-          ]
-        }
-      },
-      "classTableGroups": [
-        {
-          "title": "每个法术等级的法术位",
-          "colLabels": [
-            "{@filter 第一|法术|level=1|职业=圣武士}",
-            "{@filter 第二|法术|level=2|职业=圣武士}",
-            "{@filter 第三|法术|level=3|职业=圣武士}",
-            "{@filter 第四|法术|level=4|职业=圣武士}",
-            "{@filter 第五|法术|level=5|职业=圣武士}"
-          ],
-          "rowsSpellProgression": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              2,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              0,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              2,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              0,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              1,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              1,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              2,
-              0
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              1
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              1
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              2
-            ],
-            [
-              4,
-              3,
-              3,
-              3,
-              2
-            ]
-          ]
-        }
-      ],
-      "classFeatures": [
-        "神圣感知|圣武士||1",
-        "圣疗|圣武士||1",
-        "至圣斩|圣武士||2",
-        "战斗风格|圣武士||2",
-        "施法|圣武士||2",
-        "神佑|圣武士||3",
-        {
-          "classFeature": "神圣誓言|圣武士||3",
-          "gainSubclassFeature": true,
-          "gainSubclassFeatureHasContent": true
-        },
-        "属性值提升|圣武士||4",
-        "替换武术|圣武士||4|TCE",
-        "额外攻击|圣武士||5",
-        "守护灵光|圣武士||6",
-        {
-          "classFeature": "神圣誓言能力|圣武士||7",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|圣武士||8",
-        "勇气灵光|圣武士||10",
-        "精通至圣斩|圣武士||11",
-        "属性值提升|圣武士||12",
-        "净化之触|圣武士||14",
-        {
-          "classFeature": "神圣誓言能力|圣武士||15",
-          "gainSubclassFeature": true
-        },
-        "属性值提升|圣武士||16",
-        "灵光强化|圣武士||18",
-        "属性值提升|圣武士||19",
-        {
-          "classFeature": "神圣誓言能力|圣武士||20",
-          "gainSubclassFeature": true
-        }
-      ],
-      "subclassTitle": "神圣誓言",
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ],
-  "subclass": [
-    {
-      "name": "奉献之誓",
-      "ENG_name": "Oath of Devotion",
-      "shortName": "奉献",
-      "source": "PHB",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 85,
-      "srd": true,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "防护善恶",
-              "圣域术"
-            ],
-            "5": [
-              "次级复原术",
-              "诚实之域"
-            ],
-            "9": [
-              "希望信标",
-              "解除魔法"
-            ],
-            "13": [
-              "行动自如",
-              "虔诚守卫"
-            ],
-            "17": [
-              "通神术",
-              "焰击术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "奉献之誓|圣武士||奉献||3",
-        "奉献灵光|圣武士||奉献||7",
-        "纯净之魂|圣武士||奉献||15",
-        "至圣光轮|圣武士||奉献||20"
-      ]
-    },
-    {
-      "name": "古贤之誓",
-      "ENG_name": "Oath of the Ancients",
-      "shortName": "远古",
-      "source": "PHB",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 86,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "诱捕打击",
-              "动物交谈术"
-            ],
-            "5": [
-              "月华之光",
-              "迷踪步"
-            ],
-            "9": [
-              "植物滋长",
-              "防护能量"
-            ],
-            "13": [
-              "冰风暴",
-              "石肤术"
-            ],
-            "17": [
-              "问道自然",
-              "树跃术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "古贤之誓|圣武士||远古||3",
-        "守御灵光|圣武士||远古||7",
-        "不灭哨卫|圣武士||远古||15",
-        "上古斗士|圣武士||远古||20"
-      ]
-    },
-    {
-      "name": "复仇之誓",
-      "ENG_name": "Oath of Vengeance",
-      "shortName": "复仇",
-      "source": "PHB",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 87,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "灾祸术",
-              "猎人印记"
-            ],
-            "5": [
-              "人类定身术",
-              "迷踪步"
-            ],
-            "9": [
-              "加速术",
-              "防护能量"
-            ],
-            "13": [
-              "放逐术",
-              "次元门"
-            ],
-            "17": [
-              "怪物定身术",
-              "探知"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "复仇之誓|圣武士||复仇||3",
-        "坚韧复仇|圣武士||复仇||7",
-        "复仇之魂|圣武士||复仇||15",
-        "复仇天使|圣武士||复仇||20"
-      ]
-    },
-    {
-      "name": "破誓者",
-      "ENG_name": "Oathbreaker",
-      "shortName": "破誓者",
-      "source": "DMG",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 97,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "炼狱叱喝",
-              "造成伤势"
-            ],
-            "5": [
-              "疯狂冠冕",
-              "黑暗"
-            ],
-            "9": [
-              "活化死尸",
-              "降咒"
-            ],
-            "13": [
-              "枯萎术",
-              "困惑术"
-            ],
-            "17": [
-              "疫病术",
-              "支配人类"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "破誓者|圣武士||破誓者|DMG|3",
-        "憎恨灵光|圣武士||破誓者|DMG|7",
-        "超然抗性|圣武士||破誓者|DMG|15",
-        "恐惧之王|圣武士||破誓者|DMG|20"
-      ]
-    },
-    {
-      "name": "王冠之誓",
-      "ENG_name": "Oath of the Crown",
-      "shortName": "王冠",
-      "source": "SCAG",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 132,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "命令术",
-              "强迫决斗"
-            ],
-            "5": [
-              "守护联结",
-              "诚实之域"
-            ],
-            "9": [
-              "活力灵光",
-              "灵体守卫"
-            ],
-            "13": [
-              "放逐术",
-              "虔诚守卫"
-            ],
-            "17": [
-              "威能法环",
-              "指使术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "王冠之誓|圣武士||王冠|SCAG|3",
-        "神圣誓忠|圣武士||王冠|SCAG|7",
-        "顽强精神|圣武士||王冠|SCAG|15",
-        "崇高卫士|圣武士||王冠|SCAG|20"
-      ]
-    },
-    {
-      "name": "征服之誓",
-      "ENG_name": "Oath of Conquest",
-      "shortName": "征服",
-      "source": "XGE",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 37,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "艾嘉西斯之铠",
-              "命令术"
-            ],
-            "5": [
-              "人类定身术",
-              "灵体武器"
-            ],
-            "9": [
-              "降咒",
-              "恐惧术"
-            ],
-            "13": [
-              "支配野兽",
-              "石肤术"
-            ],
-            "17": [
-              "死云术",
-              "支配人类"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "征服之誓|圣武士||征服|XGE|3",
-        "征服灵光|圣武士||征服|XGE|7",
-        "轻蔑呵斥|圣武士||征服|XGE|15",
-        "不移胜者|圣武士||征服|XGE|20"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "救赎之誓",
-      "ENG_name": "Oath of Redemption",
-      "shortName": "救赎",
-      "source": "XGE",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 38,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "圣域术",
-              "沉眠"
-            ],
-            "5": [
-              "安定心神",
-              "人类定身术"
-            ],
-            "9": [
-              "反制法术",
-              "催眠图纹"
-            ],
-            "13": [
-              "欧提路克魔封法球",
-              "石肤术"
-            ],
-            "17": [
-              "怪物定身术",
-              "力墙术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "救赎之誓|圣武士||救赎|XGE|3",
-        "护卫灵光|圣武士||救赎|XGE|7",
-        "守护之魂|圣武士||救赎|XGE|15",
-        "救赎使者|圣武士||救赎|XGE|20"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "荣耀之誓",
-      "ENG_name": "Oath of Glory",
-      "shortName": "荣耀",
-      "source": "TCE",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "光导箭",
-              "英雄气概"
-            ],
-            "5": [
-              "强化属性",
-              "魔化武器"
-            ],
-            "9": [
-              "加速术",
-              "防护能量"
-            ],
-            "13": [
-              "强迫术",
-              "行动自如"
-            ],
-            "17": [
-              "通神术",
-              "焰击术"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "荣耀之誓|圣武士||荣耀|TCE|3",
-        "迅捷灵光|圣武士||荣耀|TCE|7",
-        "辉煌防御|圣武士||荣耀|TCE|15",
-        "现世传说|圣武士||荣耀|TCE|20"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "守望之誓",
-      "ENG_name": "Oath of the Watchers",
-      "shortName": "守望",
-      "source": "TCE",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 54,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "警报术",
-              "侦测魔法"
-            ],
-            "5": [
-              "月华之光",
-              "识破隐形"
-            ],
-            "9": [
-              "反制法术",
-              "回避侦测"
-            ],
-            "13": [
-              "净化灵光",
-              "放逐术"
-            ],
-            "17": [
-              "怪物定身术",
-              "探知"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "守望之誓|圣武士||守望|TCE|3",
-        "哨卫灵光|圣武士||守望|TCE|7",
-        "警戒呵斥|圣武士||守望|TCE|15",
-        "尘世壁垒|圣武士||守望|TCE|20"
-      ],
-      "hasFluffImages": true
-    },
-    {
-      "name": "开放海域誓言",
-      "ENG_name": "Oath of the Open Sea",
-      "shortName": "开阔海域",
-      "source": "TDCSR",
-      "className": "圣武士",
-      "classSource": "PHB",
-      "page": 174,
-      "additionalSpells": [
-        {
-          "prepared": {
-            "3": [
-              "造水/枯水术",
-              "脚底抹油"
-            ],
-            "5": [
-              "卜筮",
-              "迷踪步"
-            ],
-            "9": [
-              "召雷术",
-              "波涛自由|TDCSR"
-            ],
-            "13": [
-              "操控水体",
-              "行动自如"
-            ],
-            "17": [
-              "问道自然",
-              "风之自由|TDCSR"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "开放海域誓言|圣武士|PHB|开阔海域|TDCSR|3",
-        "解放灵光|圣武士|PHB|开阔海域|TDCSR|7",
-        "暴风雨水域|圣武士|PHB|开阔海域|TDCSR|15",
-        "解放光环（18级）|圣武士|PHB|开阔海域|TDCSR|18",
-        "神话浪客|圣武士|PHB|开阔海域|TDCSR|20"
-      ],
-      "hasFluffImages": true
-    }
-  ],
-  "classFeature": [
-    {
-      "name": "神圣感知",
-      "ENG_name": "Divine Sense",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "强大的邪恶在你感知中如同恶臭，而强大的善良则在你耳边响起如同天籁之音。作为一个动作，你可以开启你的感知去探测这些力量。直到你的下一个回合结束，你知道任何在你60英尺范围内的天界生物、恶魔或不死生物的位置，这些生物不被完全掩蔽。你知道你所感知到的存在的类型（天界生物、恶魔或不死生物），但不知道它的身份（例如吸血鬼伯爵斯特拉德·冯·扎罗维奇）。在相同的半径内，你也能探测到任何被祝福或亵渎的地方或物品，就像使用了{@spell 圣居}法术一样。",
-        "你可以使用这个特性的次数等于1加上你的魅力调整值。当你完成一次长休息后，你恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "圣疗",
-      "ENG_name": "Lay on Hands",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 1,
-      "entries": [
-        "你的祝福之触可以治愈伤口。你有一股治疗能量池，在进行长时间休息时会重新补充。使用这个能量池，你可以恢复总共等于你的圣骑士等级乘以5的生命值点数。",
-        "作为动作，你可以触摸一个生物，并从池中汲取力量来恢复该生物的生命值，最多不超过你池中剩余的最大数量。",
-        "或者，你可以从你的治愈池中消耗5点生命值来治愈目标的一种疾病或中和影响它的某种毒素。你可以在单次援手的使用中治愈多种疾病并中和多种毒素，每种疾病或毒素分别消耗生命值。",
-        "这个特性对亡灵和构造物无效。"
-      ]
-    },
-    {
-      "name": "至圣斩",
-      "ENG_name": "Divine Smite",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 2,
-      "entries": [
-        "从2级开始，当你用近战武器攻击命中一个生物时，你可以消耗一个法术位来对目标造成额外的辐射伤害，加上武器的伤害。额外伤害对于1级法术位是{@dice 2d8}，每比1级高一个法术位就增加{@dice 1d8}，最高不超过{@dice 5d8}。如果目标是亡灵或恶魔，伤害增加{@dice 1d8}，最高不超过{@dice 6d8}。"
-      ]
-    },
-    {
-      "name": "战斗风格",
-      "ENG_name": "Fighting Style",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 2,
-      "entries": [
-        "在2级时，你选择一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能重复选择相同的战斗风格选项，即使你再次获得选择机会。",
-        {
-          "type": "options",
-          "count": 1,
-          "entries": [
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "防御"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "对决"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "巨武器战斗"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "守护"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "受祝福的勇士|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "盲斗|TCE"
-            },
-            {
-              "type": "refOptionalfeature",
-              "optionalfeature": "拦截|TCE"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "施法",
-      "ENG_name": "Spellcasting",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 2,
-      "entries": [
-        "到了2级，你已经学会了通过冥想和祈祷来借助神圣魔法，像牧师一样施放法术。请参阅《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 圣骑士法术列表|spells|class=paladin}。",
-        {
-          "type": "entries",
-          "name": "法术的准备和施展",
-          "ENG_name": "Preparing and Casting Spells",
-          "entries": [
-            "圣骑士表格显示了你拥有多少法术位来施放你的{@filter 圣骑士法术|法术|职业=圣骑士}。要施放你的圣骑士法术中1级或更高级别的法术，你必须消耗相应法术等级或更高等级的法术位。你在完成一次长时间的休息后恢复所有消耗的法术位。",
-            "你准备你可以施放的圣骑士法术列表，从圣骑士法术列表中选择。当你这样做时，选择等于你的感知调整值加上你的圣骑士等级一半的圣骑士法术数量，向下取整（最少一个法术）。法术必须是你有法术位的等级。",
-            "例如，如果你是一个5级圣骑士，你有四个1级和两个2级法术位。如果魅力值为14，你准备的法术列表可以包括四个1级或2级的法术，任意组合。如果你准备了1级的法术{@spell 治疗伤势}，你可以使用1级或2级法术位来施放它。施放法术不会将其从你准备的法术列表中移除。",
-            "当你完成一次长休息时，你可以更改你的准备法术列表。准备新的圣武士法术列表需要花费时间进行祈祷和冥想：每个法术至少需要1分钟乘以法术等级。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "施法关键属性",
-          "ENG_name": "Spellcasting Ability",
-          "entries": [
-            "魅力是你的圣骑士法术的施法能力，因为它们的力量源自你信念的坚定。每当法术提到你的施法能力时，你都会使用你的魅力。此外，当你为施放的圣骑士法术设定豁免投掷的DC（困难等级）以及进行法术攻击投掷时，也会使用你的魅力调整值。",
-            {
-              "type": "abilityDc",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "cha"
-              ]
-            },
-            {
-              "type": "abilityAttackMod",
-              "name": "法术",
-              "ENG_name": "Spell",
-              "attributes": [
-                "cha"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "法器",
-          "ENG_name": "Spellcasting Focus",
-          "entries": [
-            "你可以使用一个{@item 圣徽|PHB}作为你的圣骑士法术的施法焦点。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 3,
-      "entries": [
-        "你的誓言允许你引导神圣能量以激发魔法效果。你的誓言提供的每个神圣通道选项都解释了如何使用它。",
-        "当你使用你的神圣化身时，你选择使用哪个选项。然后你必须完成一次短休或长休才能再次使用你的神圣化身。",
-        "某些神圣化身效果需要进行豁免投掷。当你使用此类职业的此类效果时，难度等级等于你的圣骑士法术豁免DC。"
-      ]
-    },
-    {
-      "name": "引导神力：神力掌控",
-      "ENG_name": "Channel Divinity: Harness Divine Power",
-      "source": "TCE",
-      "page": 52,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 3,
-      "isClassFeatureVariant": true,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "{@i 三级圣骑士{@variantrule 可选职业特性|tce|可选特性}}",
-        "你可以消耗一次你的神圣通道能力来为你的法术提供能量。作为一个奖励动作，你触摸你的圣徽，念出祷文，并恢复一个已消耗的法术位，其等级不能高于你熟练加值的一半（向上取整）。你使用这个特性的次数基于你在本职业中达到的等级：3级时，一次；7级时，两次；15级时，三次。当你完成一次长休息时，你恢复所有已消耗的使用次数。"
-      ]
-    },
-    {
-      "name": "神佑",
-      "ENG_name": "Divine Health",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 3,
-      "entries": [
-        "到了3级，流经你的神圣魔法使你对疾病免疫。"
-      ]
-    },
-    {
-      "name": "神圣誓言",
-      "ENG_name": "Sacred Oath",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 3,
-      "entries": [
-        "当你达到3级时，你发誓遵守作为圣骑士的誓言，这将永远束缚你。在此之前，你一直处于准备阶段，致力于这条道路，但尚未宣誓。现在，你从可用的誓言列表中选择。",
-        "你的选择在3级时赋予你特性，并在7级、15级和20级时再次赋予你特性。这些特性包括誓言法术和神圣化身特性。",
-        {
-          "name": "圣誓法术",
-          "ENG_name": "Oath Spells",
-          "type": "entries",
-          "entries": [
-            "每个誓言都有一个相关的法术列表。你在誓言描述中指定的等级获得这些法术的访问权限。一旦你获得了一个誓言法术，你就始终准备好了它。誓言法术不计入你每天可以准备的法术数量。",
-            "如果你获得一个誓言法术，即使它不出现在圣骑士法术列表上，该法术对你而言仍然是一个圣骑士法术。"
-          ]
-        },
-        {
-          "type": "refClassFeature",
-          "classFeature": "引导神力|圣武士||3"
-        },
-        {
-          "type": "refClassFeature",
-          "classFeature": "引导神力：神力掌控|圣武士||3|TCE"
-        },
-        {
-          "name": "背弃誓言",
-          "ENG_name": "Breaking Your Oath",
-          "type": "inset",
-          "entries": [
-            "圣武士努力坚持最高的行为标准，但即使是最正直的圣武士也会犯错。有时正确的道路证明太过苛刻，有时情况需要选择两个恶中的较小者，有时情感的热度会导致圣武士违背他的誓言。",
-            "违反誓言的圣骑士通常会寻求与自己信仰相同的牧师或同一骑士团的另一位圣骑士的宽恕。圣骑士可能会通过整夜的守夜祈祷作为悔改的标志，或者进行禁食或类似的自我克制行为。在忏悔和宽恕的仪式之后，圣骑士重新开始。",
-            "如果圣骑士故意违反他的誓言并且没有悔改的迹象，后果可能更为严重。在DM的自由裁量下，一个不知悔改的圣骑士可能被迫放弃这个职业并选择另一个，或者可能采用《地下城主指南》中出现的誓言破坏者圣骑士选项。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 4,
-      "entries": [
-        "当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "替换武术",
-      "ENG_name": "Martial Versatility",
-      "source": "TCE",
-      "page": 52,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 4,
-      "isClassFeatureVariant": true,
-      "entries": [
-        "{@i 4级圣骑士 {@variantrule 可选职业特性|tce|可选特性}}",
-        "每当你达到这个职业的一个等级，该等级提供能力值提升特性时，你可以用另一个圣骑士可用的战斗风格替换你所知的{@filter 战斗风格|可选特性|特性类型=FS:P}。这种替换代表了你战斗实践中的焦点转移。"
-      ]
-    },
-    {
-      "name": "额外攻击",
-      "ENG_name": "Extra Attack",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 5,
-      "entries": [
-        "从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
-      ]
-    },
-    {
-      "name": "守护灵光",
-      "ENG_name": "Aura of Protection",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 6,
-      "entries": [
-        "从6级开始，每当你或一个友好生物在你10英尺范围内必须进行豁免检定时，该生物获得等于你的感知调整值的豁免检定加值（最少为+1）。你必须保持清醒才能授予这个加值。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "神圣誓言能力",
-      "ENG_name": "Sacred Oath feature",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 7,
-      "entries": [
-        "在7级时，你获得了由你的神圣誓言赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 8,
-      "entries": [
-        "当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "勇气灵光",
-      "ENG_name": "Aura of Courage",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 10,
-      "entries": [
-        "从10级开始，只要你保持清醒，你和10英尺范围内的友方生物不会进入{@condition 恐惧}状态。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "精通至圣斩",
-      "ENG_name": "Improved Divine Smite",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 11,
-      "entries": [
-        "到了11级，你充满了正义之力，以至于你所有的近战武器攻击都带有神圣的力量。每当你用近战武器击中一个生物时，该生物会额外受到{@damage 1d8}点辐射伤害。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 12,
-      "entries": [
-        "当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "净化之触",
-      "ENG_name": "Cleansing Touch",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 14,
-      "entries": [
-        "从14级开始，你可以使用你的行动结束自己身上的一个法术，或者结束你触摸的愿意的生物身上的一个法术。",
-        "你可以使用这个特性的次数等于你的魅力调整值（最少一次）。当你完成一次长休息时，你恢复所有已使用的使用次数。"
-      ]
-    },
-    {
-      "name": "神圣誓言能力",
-      "ENG_name": "Sacred Oath feature",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 15,
-      "entries": [
-        "在15级时，你获得了由你的神圣誓言赋予的特性。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 16,
-      "entries": [
-        "当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "灵光强化",
-      "ENG_name": "Aura improvements",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 18,
-      "entries": [
-        "在18级时，你的防护光环范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "属性值提升",
-      "ENG_name": "Ability Score Improvement",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 19,
-      "entries": [
-        "当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
-        "如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
-      ]
-    },
-    {
-      "name": "神圣誓言能力",
-      "ENG_name": "Sacred Oath feature",
-      "source": "PHB",
-      "page": 82,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "level": 20,
-      "entries": [
-        "在20级时，你获得了由你的神圣誓言赋予的特性。"
-      ]
-    }
-  ],
-  "subclassFeature": [
-    {
-      "name": "破誓者",
-      "ENG_name": "Oathbreaker",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 3,
-      "entries": [
-        "誓言破坏者是一个违背了他或她的神圣誓言，去追求某种黑暗野心或为邪恶势力服务的圣骑士。在圣骑士心中曾经燃烧的光明已被熄灭。只剩下黑暗。",
-        "一个圣武士必须是邪恶的，并且至少达到3级才能成为誓言破坏者。圣武士用誓言破坏者的特性取代他或她的神圣誓言特有的特性。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "破誓者法术|圣武士||破誓者|DMG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||破誓者|DMG|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "3级或更高等级的誓言破坏者圣骑士获得以下两种神圣通道选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "控制亡灵|圣武士||破誓者|DMG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "恐怖具现 (短休或长休之后充能)|圣武士||破誓者|DMG|3"
-        }
-      ]
-    },
-    {
-      "name": "控制亡灵",
-      "ENG_name": "Control Undead",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "作为一个动作，圣骑士指定一个他或她能看到的，距离他或她30英尺以内的不死生物。目标必须进行一次智力豁免检定。如果豁免失败，目标必须在接下来的24小时内服从圣骑士的命令，或者直到圣骑士再次使用这个神圣化身选项。挑战等级等于或高于圣骑士等级的不死生物对此效果免疫。"
-      ]
-    },
-    {
-      "name": "恐怖具现 (短休或长休之后充能)",
-      "ENG_name": "Dreadful Aspect",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "作为一项行动，圣骑士引导最黑暗的情感，并将它们聚焦成一股魔法威胁。每个圣骑士选择的、在圣骑士30英尺范围内的生物，如果能看到圣骑士，必须进行一次智力豁免投掷。如果豁免失败，目标将对圣骑士感到{@condition 恐惧}，持续1分钟。如果被这个效果{@condition 恐惧}的生物在其回合结束时距离圣骑士超过30英尺，它可以再次尝试智力豁免投掷，以结束这个效果。"
-      ]
-    },
-    {
-      "name": "破誓者法术",
-      "ENG_name": "Oathbreaker Spells",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言破坏者法术。",
-        {
-          "type": "table",
-          "caption": "破誓者法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 炼狱叱喝}, {@spell 造成伤势}"
-            ],
-            [
-              "第五",
-              "{@spell 疯狂冠冕}, {@spell 黑暗}"
-            ],
-            [
-              "第九",
-              "{@spell 活化死尸}, {@spell 降咒}"
-            ],
-            [
-              "13级",
-              "{@spell 枯萎术}, {@spell 困惑术}"
-            ],
-            [
-              "17级",
-              "{@spell 疫病术}, {@spell 支配人类}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "憎恨灵光",
-      "ENG_name": "Aura of Hate",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，圣骑士以及圣骑士10英尺范围内的所有恶魔和不死生物，在进行近战武器伤害骰时，获得等于圣骑士感知调整值的加值（最少为+1）。一个生物一次只能从一位圣骑士的这项特性中获益。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "超然抗性",
-      "ENG_name": "Supernatural Resistance",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，圣骑士获得对来自非魔法武器的钝击、穿刺和斩击伤害的抗性。"
-      ]
-    },
-    {
-      "name": "恐惧之王",
-      "ENG_name": "Dread Lord",
-      "source": "DMG",
-      "page": 97,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "破誓者",
-      "subclassSource": "DMG",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，圣骑士可以作为一个动作，将自己周围笼罩在持续1分钟的阴郁光环中。这个光环将圣骑士周围30英尺范围内的明亮光线减弱为昏暗光线。每当一个被圣骑士{@condition 恐惧}的敌人在其光环内开始其回合时，它会受到{@damage 4d10}点心灵伤害。此外，圣骑士和他或她选择的光环内的生物被更深的阴影所覆盖。依赖视力的生物在攻击被这种阴影覆盖的生物时攻击骰有劣势。",
-        "当光环持续时，圣骑士可以在自己的回合使用奖励动作来使光环中的阴影攻击一个生物。圣骑士对目标进行近战法术攻击。如果攻击命中，目标将受到等同于{@dice 3d10}加上圣骑士魅力调整值的死灵伤害。",
-        "激活光环后，圣骑士必须完成一次长时间休息后才能再次激活。"
-      ]
-    },
-    {
-      "name": "古贤之誓",
-      "ENG_name": "Oath of the Ancients",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "古代誓言和精灵族一样古老，与德鲁伊的仪式同源。有时被称为仙女骑士、绿骑士或角骑士，宣誓这个誓言的圣骑士选择站在光明一方，在与黑暗的宇宙斗争中，因为他们热爱世界上美丽而赋予生命的事物，而不一定是因为他们信仰荣誉、勇气和正义的原则。他们在盔甲和衣物上装饰着生长物的图案——树叶、鹿角或花朵——以反映他们致力于保护世界上的生命和光明。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "古贤之信条|圣武士||远古||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||远古||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||远古||3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "自然的愤怒|圣武士||远古||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "转变不信仰者|圣武士||远古||3"
-        }
-      ]
-    },
-    {
-      "name": "自然的愤怒",
-      "ENG_name": "Nature's Wrath",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣化身来召唤原始力量来困住一个敌人。作为一个动作，你可以使幽灵藤蔓在你10英尺范围内且你能看到的生物周围突然出现并伸向它。该生物必须进行一次力量或敏捷豁免检定（它选择），否则会被{@condition 束缚}。在被藤蔓{@condition 束缚}时，生物在其每个回合结束时重复进行豁免检定。如果成功，它将自己解放，藤蔓消失。"
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "古贤圣誓法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 诱捕打击}, {@spell 动物交谈术}"
-            ],
-            [
-              "第五",
-              "{@spell 月华之光}, {@spell 迷踪步}"
-            ],
-            [
-              "第九",
-              "{@spell 植物滋长}, {@spell 防护能量}"
-            ],
-            [
-              "13级",
-              "{@spell 冰风暴}, {@spell 石肤术}"
-            ],
-            [
-              "17级",
-              "{@spell 问道自然}, {@spell 树跃术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "古贤之信条",
-      "ENG_name": "Tenets of the Ancients",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "远古誓言的信条已经保存了无数世纪。这个誓言强调善良的原则，超越了对法律或混乱的任何顾虑。它的四个核心原则是简单的。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "点燃光明",
-              "ENG_name": "Kindle the Light",
-              "entries": [
-                "通过你的仁慈、善良和宽恕行为，在世界上点燃希望之光，击退绝望。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "守护明光",
-              "ENG_name": "Shelter the Light",
-              "entries": [
-                "在世界上有善良、美丽、爱和欢笑的地方，就要对抗那些想要吞噬它们的邪恶。在生命繁盛的地方，就要对抗那些会使它变得贫瘠的力量。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "维持己身光辉",
-              "ENG_name": "Preserve Your Own Light",
-              "entries": [
-                "享受歌声和笑声，享受美丽和艺术。如果你让自己心中的光明熄灭，你就无法在世界上保留它。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "成为真光",
-              "ENG_name": "Be the Light",
-              "entries": [
-                "成为所有生活在绝望中的人的光辉灯塔。让你的欢乐和勇气之光在你的所有行为中闪耀。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "转变不信仰者",
-      "ENG_name": "Turn the Faithless",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣化身来诵读对仙女和恶魔来说痛苦难忍的古老咒语。作为一个动作，你展示你的圣徽，并且每个在你30英尺范围内且能听到你的仙女或恶魔必须进行一次智力豁免检定。如果豁免失败，该生物将被驱散1分钟，或者直到它受到伤害。",
-        "被转化的生物必须在其回合尽力尽可能远离你移动，并且它不能自愿移动到距离你30英尺以内的空间。它也不能进行反应。对于它的行动，它只能使用{@action 疾走}动作或尝试逃离阻止其移动的效果。如果没有地方移动，生物可以使用{@action 回避}动作。",
-        "如果生物的真实形态被幻象、变形或其他效果所隐藏，那么在它被转变时，该形态将被揭示。"
-      ]
-    },
-    {
-      "name": "守御灵光",
-      "ENG_name": "Aura of Warding",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，古老的魔法如此沉重地笼罩着你，以至于形成了一个奥术守护。你和在你10英尺范围内的友方生物对法术伤害具有抗性。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "不灭哨卫",
-      "ENG_name": "Undying Sentinel",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，当你的生命值降至0点且没有直接死亡时，你可以选择降至1点生命值。一旦你使用了这个能力，直到你完成一次长时间的休息之前，你不能再使用它。",
-        "此外，你不会遭受任何老年带来的不利影响，你也不能被魔法老化。"
-      ]
-    },
-    {
-      "name": "上古斗士",
-      "ENG_name": "Elder Champion",
-      "source": "PHB",
-      "page": 86,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "远古",
-      "subclassSource": "PHB",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你可以化身为一种古老的自然力量，选择你想要的外观。例如，你的皮肤可能会变成绿色或具有树皮般的质地，你的头发可能会变得像树叶或苔藓一样，或者你可能会长出鹿角或狮子般的鬃毛。",
-        "使用你的动作，你经历了一次转变。在1分钟内，你获得以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "在你的每个回合开始时，你恢复10点生命值。",
-            "每当你施放一个施法时间为1个动作的圣骑士法术时，你可以使用你的奖励行动来施放它。",
-            "在你10英尺范围内的敌对生物在对抗你的圣骑士法术和神圣通道选项的豁免投掷上具有劣势。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "奉献之誓",
-      "ENG_name": "Oath of Devotion",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "奉献誓言将圣骑士与正义、美德和秩序的最高理想联系在一起。有时被称为骑士、白衣骑士或圣战士，这些圣骑士符合闪亮盔甲骑士的理想，以荣誉行事，追求正义和更大的利益。他们要求自己遵守最高的行为标准，有些圣骑士，无论好坏，也以同样的标准要求世界。许多宣誓此誓言的人致力于法律和善良的神，并使用他们神的信条作为他们奉献的衡量标准。他们将天使——完美的善良仆人——视为他们的理想，并在他们的头盔或纹章中加入天使翅膀的形象。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "奉献之信条|圣武士||奉献||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||奉献||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||奉献||3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "神圣武器|圣武士||奉献||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "驱逐邪恶|圣武士||奉献||3"
-        }
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "奉献圣誓法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 防护善恶}, {@spell 圣域术}"
-            ],
-            [
-              "第五",
-              "{@spell 次级复原术}, {@spell 诚实之域}"
-            ],
-            [
-              "第九",
-              "{@spell 希望信标}, {@spell 解除魔法}"
-            ],
-            [
-              "13级",
-              "{@spell 行动自如}, {@spell 虔诚守卫}"
-            ],
-            [
-              "17级",
-              "{@spell 通神术}, {@spell 焰击术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "神圣武器",
-      "ENG_name": "Sacred Weapon",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为一个动作，你可以使用你的神圣化身将你持有的一件武器注入正能量。在1分钟内，你将你的的魅力调整值加到用该武器进行的攻击骰上（最小加值为+1）。该武器还会在20英尺半径内发出明亮的光，以及在那之外的20英尺内发出昏暗的光。如果该武器本来就不是魔法武器，它在持续时间内会成为魔法武器。",
-        "你可以在你的回合作为任何其他行动的一部分结束这个效果。如果你不再持有或携带这件武器，或者如果你进入{@condition 昏迷}状态，这个效果会结束。"
-      ]
-    },
-    {
-      "name": "奉献之信条",
-      "ENG_name": "Tenets of Devotion",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "尽管奉献誓言的确切言辞和约束各不相同，但这个誓言的圣骑士们共同分享这些信条。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "诚实",
-              "ENG_name": "Honesty",
-              "entries": [
-                "不要撒谎或欺骗。让你的话语成为你的承诺。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "勇气",
-              "ENG_name": "Courage",
-              "entries": [
-                "即使谨慎是明智的，也永远不要害怕行动。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "怜悯",
-              "ENG_name": "Compassion",
-              "entries": [
-                "帮助他人，保护弱者，并惩罚那些威胁他们的人。对敌人显示怜悯，但要用智慧加以调和。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "荣誉",
-              "ENG_name": "Honor",
-              "entries": [
-                "公平对待他人，让你的高尚行为成为他们的榜样。尽可能做更多的好事，同时造成最少的伤害。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "尽责",
-              "ENG_name": "Duty",
-              "entries": [
-                "对自己的行为及其后果负责，保护那些托付给你的人，并服从那些对你有正当权威的人士。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "驱逐邪恶",
-      "ENG_name": "Turn the Unholy",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为一个动作，你展示你的圣徽并说出谴责恶魔和亡灵的祈祷，使用你的神圣化身。每个能看见或听见你的恶魔或亡灵，如果它在你30英尺范围内，必须进行一次智力豁免。如果这个生物未能通过豁免，它将被转化1分钟，或者直到它受到伤害。",
-        "被转化的生物必须在其回合尽力尽可能远离你移动，并且它不能自愿移动到距离你30英尺以内的空间。它也不能进行反应。对于它的行动，它只能使用{@action 疾走}动作或尝试逃离阻止其移动的效果。如果没有地方移动，生物可以使用{@action 回避}动作。"
-      ]
-    },
-    {
-      "name": "奉献灵光",
-      "ENG_name": "Aura of Devotion",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，只要你保持清醒，你和在你10英尺范围内的友方生物不能被{@condition 魅惑}。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "纯净之魂",
-      "ENG_name": "Purity of Spirit",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你始终处于{@spell 防护善恶}法术的效果之下。"
-      ]
-    },
-    {
-      "name": "至圣光轮",
-      "ENG_name": "Holy Nimbus",
-      "source": "PHB",
-      "page": 85,
-      "srd": true,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "奉献",
-      "subclassSource": "PHB",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，作为一项行动，你可以散发出阳光光环。在1分钟的时间内，明亮的光线从你身上照耀出30英尺的半径，而昏暗的光线则照耀出超出该半径30英尺的范围。",
-        "每当一个敌人生物在明亮光线中开始其回合时，该生物会受到10点辐射伤害。",
-        "此外，在持续时间内，你在对抗恶魔或亡灵施放的法术的豁免骰上拥有优势。",
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "复仇之誓",
-      "ENG_name": "Oath of Vengeance",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "entries": [
-        "复仇誓言是对惩罚犯下严重罪行者的庄严承诺。当邪恶势力屠杀无助的村民，当整个民族违背神的意志，当盗贼公会变得过于暴力和强大，当一条龙在乡村肆虐——在这样的时刻，圣骑士们崛起并宣誓复仇誓言，以纠正错误。对这些圣骑士——有时被称为复仇者或黑暗骑士——他们自己的纯洁性并不像伸张正义那样重要。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "复仇之信条|圣武士||复仇||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||复仇||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||复仇||3"
-        }
-      ]
-    },
-    {
-      "name": "驱逐敌人",
-      "ENG_name": "Abjure Enemy",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为一项行动，你展示你的圣徽并说出谴责的祈祷，使用你的神圣化身。选择一个在你60英尺范围内你能看到的生物。那个生物必须进行一次智力豁免投掷，除非它免疫于被{@condition 恐惧}。恶魔和亡灵在这个豁免投掷上处于劣势。",
-        "在豁免失败的情况下，生物将处于{@condition 恐惧}状态，持续1分钟或直到它受到任何伤害。在{@condition 恐惧}状态下，生物的速度变为0，并且它不能从任何速度加成中受益。",
-        "如果豁免成功，生物的移动速度在1分钟内减半，或者直到生物受到任何伤害。"
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "驱逐敌人|圣武士||复仇||3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "敌意誓言|圣武士||复仇||3"
-        }
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "复仇圣誓法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 灾祸术}, {@spell 猎人印记}"
-            ],
-            [
-              "第五",
-              "{@spell 人类定身术}, {@spell 迷踪步}"
-            ],
-            [
-              "第九",
-              "{@spell 加速术}, {@spell 防护能量}"
-            ],
-            [
-              "13级",
-              "{@spell 放逐术}, {@spell 次元门}"
-            ],
-            [
-              "17级",
-              "{@spell 怪物定身术}, {@spell 探知}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "复仇之信条",
-      "ENG_name": "Tenets of Vengeance",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "复仇誓言的信条因圣骑士而异，但所有的信条都围绕着以任何必要的手段惩罚不法之徒。坚守这些信条的圣骑士愿意为了对那些作恶的人施加正义而牺牲自己的正义感，因此这些圣骑士通常在阵营上是中立或守序中立。信条的核心原则极其简单。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "追寻以迎战大恶",
-              "ENG_name": "Fight the Greater Evil",
-              "entries": [
-                "面对选择与我的誓言敌人战斗或对抗较小的邪恶时，我选择更大的邪恶。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "对恶徒不留慈悲",
-              "ENG_name": "No Mercy for the Wicked",
-              "entries": [
-                "普通的敌人可能会得到我的怜悯，但我的誓言敌人不会。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "为目的不择手段",
-              "ENG_name": "By Any Means Necessary",
-              "entries": [
-                "我的顾虑不能妨碍我消灭敌人。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "为恶行尽力补偿",
-              "ENG_name": "Restitution",
-              "entries": [
-                "如果我的敌人给世界带来毁灭，那是因为我未能阻止他们。我必须帮助那些被他们的恶行伤害的人。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "敌意誓言",
-      "ENG_name": "Vow of Enmity",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为奖励行动，你可以利用你的神圣通道，对你能看到的10英尺内的一个生物发出敌意誓言。在1分钟或直到它的生命值降至0点或进入{@condition 昏迷}状态之前，你对生物的攻击检定获得优势。"
-      ]
-    },
-    {
-      "name": "坚韧复仇",
-      "ENG_name": "Relentless Avenger",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "到了7级，你的超自然专注帮助你切断敌人的退路。当你用机会攻击击中一个生物时，你可以在攻击后立即作为同一反应的一部分移动至多相当于你速度的一半。这次移动不会引发机会攻击。"
-      ]
-    },
-    {
-      "name": "复仇之魂",
-      "ENG_name": "Soul of Vengeance",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你发出敌意誓言的权威使你对敌人拥有更大的力量。当受到你敌意誓言影响的生物进行攻击时，如果它在你武器的范围内，你可以使用你的反应来进行一次近战武器攻击。"
-      ]
-    },
-    {
-      "name": "复仇天使",
-      "ENG_name": "Avenging Angel",
-      "source": "PHB",
-      "page": 87,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "复仇",
-      "subclassSource": "PHB",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你可以化身为天使般的复仇者。使用你的行动，你经历了一次转变。在1小时内，你获得以下好处：",
-        {
-          "type": "list",
-          "items": [
-            "翅膀从你的背部长出，赋予你60英尺的飞行速度。",
-            "你在30英尺半径内散发出威胁的光环。在战斗中，任何敌人生物第一次进入这个光环或在其内开始回合时，必须进行一次智力豁免检定，否则在1分钟或直到它受到任何伤害之前都会对你感到{@condition 恐惧}。对{@condition 恐惧}生物的{@condition 恐惧}检定具有优势。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "王冠之誓",
-      "ENG_name": "Oath of the Crown",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "entries": [
-        "王冠誓言是向文明的理想宣誓，无论是国家的精神、对君主的忠诚，还是对法律和统治之神的服务。宣誓这一誓言的圣骑士致力于服务社会，特别是维系社会的法律。这些圣骑士是警惕的守护者，站在墙上，对抗威胁要摧毁文明所建立一切的野蛮混乱浪潮，通常被称为守护者、典范或哨兵。通常，宣誓这一誓言的圣骑士是服务于国家或君主的骑士团的成员，并作为他们加入该团等级的一部分而宣誓这一誓言。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "王冠之信条|圣武士||王冠|SCAG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||王冠|SCAG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||王冠|SCAG|3"
-        }
-      ]
-    },
-    {
-      "name": "冠军挑战",
-      "ENG_name": "Champion Challenge",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为奖励行动，你发出挑战，迫使其他生物与你战斗。你可以选择每个在你30英尺内你能看到的生物必须进行一次智力豁免检定。检定失败的生物不能自愿移动到离你超过30英尺的地方。如果你被{@condition 无力}或死亡，或者生物离你超过30英尺，这个效果就会结束。"
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "冠军挑战|圣武士||王冠|SCAG|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "扭转乾坤|圣武士||王冠|SCAG|3"
-        }
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "王冠誓言法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 命令术}, {@spell 强迫决斗}"
-            ],
-            [
-              "第五",
-              "{@spell 守护联结}, {@spell 诚实之域}"
-            ],
-            [
-              "第九",
-              "{@spell 活力灵光}, {@spell 灵体守卫}"
-            ],
-            [
-              "13级",
-              "{@spell 放逐术}, {@spell 虔诚守卫}"
-            ],
-            [
-              "17级",
-              "{@spell 威能法环}, {@spell 指使术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "王冠之信条",
-      "ENG_name": "Tenets of the Crown",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "王冠誓言的信条通常由其宣誓效忠的君主设定，但通常强调以下信条。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "律法",
-              "ENG_name": "Law",
-              "entries": [
-                "法律是至高无上的。它是粘合文明之石的砂浆，必须得到尊重。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "忠诚",
-              "ENG_name": "Loyalty",
-              "entries": [
-                "你的话就是你的承诺。没有忠诚，誓言和法律就没有意义。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "勇气",
-              "ENG_name": "Courage",
-              "entries": [
-                "你必须愿意为了秩序去做需要做的事情，即使面对压倒性的困难。如果你不采取行动，那么谁会呢？"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "责任",
-              "ENG_name": "Responsibility",
-              "entries": [
-                "你必须承担自己行为的后果，并且有责任履行你的职责和义务。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "扭转乾坤",
-      "ENG_name": "Turn the Tide",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为一个奖励动作，你可以使用你的神圣通道来加强受伤的生物。每个你选择的，能听到你在30英尺范围内的生物，如果它的生命值不超过其最大生命值的一半，将恢复等同于{@dice 1d6} + 你的感知调整值（最少为1）的生命值。"
-      ]
-    },
-    {
-      "name": "神圣誓忠",
-      "ENG_name": "Divine Allegiance",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，当一个生物在你5英尺范围内受到伤害时，你可以使用你的反应来魔法性地用你自己的生命值替代目标生物的生命值，使那个生物不受到伤害。相反，你将承受伤害。你受到的这种伤害无法以任何方式减少或防止。"
-      ]
-    },
-    {
-      "name": "顽强精神",
-      "ENG_name": "Unyielding Spirit",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，你在避免进入{@condition 麻痹}或{@condition 震慑}状态的豁免投掷上拥有优势。"
-      ]
-    },
-    {
-      "name": "崇高卫士",
-      "ENG_name": "Exalted Champion",
-      "source": "SCAG",
-      "page": 132,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "王冠",
-      "subclassSource": "SCAG",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你在战场上的存在对于那些致力于你事业的人是一种鼓舞。你可以使用你的行动来获得以下好处，持续1小时：",
-        {
-          "type": "list",
-          "items": [
-            "你对来自非魔法武器的钝击、穿刺和斩击伤害具有抗性。",
-            "你的盟友在距离你30英尺范围内时，在死亡豁免投掷上拥有优势。",
-            "你在智慧豁免投掷上拥有优势，同样，距离你30英尺内的盟友也拥有优势。"
-          ]
-        },
-        "如果你被{@condition 无力}或死亡，此效果会提前结束。一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "荣耀之誓",
-      "ENG_name": "Oath of Glory",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "选择荣耀誓言的圣骑士相信他们和他们的同伴注定要通过英勇行为来实现荣耀。他们勤奋训练，并鼓励他们的同伴，以便在命运召唤时，所有人都准备好了。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "荣耀之信条|圣武士||荣耀|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||荣耀|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||荣耀|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级荣耀誓言特性}",
-        "你获得了以下两种神圣通道选项。关于神圣通道如何运作，请参见神圣誓言职业特性。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "绝伦健将|圣武士||荣耀|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "鼓舞一击|圣武士||荣耀|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级荣耀誓言特性}",
-        "你根据荣耀誓言法术表中列出的圣骑士等级获得誓言法术。关于誓言法术如何运作，请参见神圣誓言职业特性。",
-        {
-          "type": "table",
-          "caption": "荣耀誓言法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 光导箭}, {@spell 英雄气概}"
-            ],
-            [
-              "第五",
-              "{@spell 强化属性}, {@spell 魔化武器}"
-            ],
-            [
-              "第九",
-              "{@spell 加速术}, {@spell 防护能量}"
-            ],
-            [
-              "13级",
-              "{@spell 强迫术}, {@spell 行动自如}"
-            ],
-            [
-              "17级",
-              "{@spell 通神术}, {@spell 焰击术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "荣耀之信条",
-      "ENG_name": "Tenets of Glory",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "荣耀誓言的信条驱使圣骑士去尝试那些有一天可能会在传说中闪耀的英雄事迹。",
-        {
-          "type": "entries",
-          "name": "行动胜于言辞",
-          "ENG_name": "Actions over Words",
-          "entries": [
-            "努力以辉煌的事迹而非言辞而闻名。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "挑战不过是考验",
-          "ENG_name": "Challenges Are but Tests",
-          "entries": [
-            "勇敢面对困难，并鼓励你的盟友与你一起面对它们。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "锻炼体魄",
-          "ENG_name": "Hone the Body",
-          "entries": [
-            "像原始的石头一样，你的身体必须经过锻炼，才能实现其潜能。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "修炼灵魂",
-          "ENG_name": "Discipline the Soul",
-          "entries": [
-            "你必须集结纪律来克服自身的缺点，这些缺点可能会威胁到你和你的朋友们的荣耀。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "鼓舞一击",
-      "ENG_name": "Inspiring Smite",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "在使用神圣打击特性对生物造成伤害后，你可以立即使用你的神圣通道作为奖励动作，将临时生命值分配给你选择的30英尺范围内的生物，包括你自己。临时生命值的总数等于{@dice 2d8}加上你在这个职业中的等级，你可以随意分配给选定的生物。"
-      ]
-    },
-    {
-      "name": "绝伦健将",
-      "ENG_name": "Peerless Athlete",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为奖励行动，你可以使用你的神圣通道来增强你的运动能力。在接下来的10分钟内，你在力量（{@skill 运动}）和敏捷（{@skill 特技}）检定上拥有优势；你可以携带、推动、拖拽和举起的重量是正常情况下的两倍；你的长跳和高跳距离增加10英尺（这个额外的距离正常消耗移动力）。"
-      ]
-    },
-    {
-      "name": "迅捷灵光",
-      "ENG_name": "Aura of Alacrity",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 7级荣耀誓言特性}",
-        "你散发出一种光环，让你和你的同伴们拥有超自然的敏捷，使你们能够成队地在战场上快速移动。你的行走速度增加10英尺。此外，如果你没有被{@condition 无力}，任何在他们的回合开始时距离你5英尺范围内的盟友的行走速度也会增加10英尺，直到那个回合结束。",
-        "当你在这个职业达到18级时，光环的范围增加到10英尺。"
-      ]
-    },
-    {
-      "name": "辉煌防御",
-      "ENG_name": "Glorious Defense",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级荣耀誓言特性}",
-        "你可以将防御转化为突然的攻击。当你或你能看到的10英尺范围内的另一个生物被攻击检定击中时，你可以使用你的反应来给予目标对那次攻击的AC加上一个奖励，可能会使其未命中。奖励等于你的感知调整值（最少为+1）。如果攻击未命中，你可以作为这个反应的一部分对攻击者进行一次武器攻击，前提是攻击者在你的武器范围内。",
-        "你可以使用这个特性的次数等于你的感知调整值（最少一次），并且在你完成长时间休息后恢复所有已使用的点数。"
-      ]
-    },
-    {
-      "name": "现世传说",
-      "ENG_name": "Living Legend",
-      "source": "TCE",
-      "page": 53,
-      "otherSources": [
-        {
-          "source": "MOT",
-          "page": 29
-        }
-      ],
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "荣耀",
-      "subclassSource": "TCE",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "{@i 20级荣耀誓言特性}",
-        "你可以用关于你伟大事迹的传说——无论是真实的还是夸大的——来增强自己。作为奖励行动，你获得以下好处，持续1分钟：",
-        {
-          "type": "list",
-          "items": [
-            "你被赋予了超凡的存在，所有魅力检定上获得优势。",
-            "每当你进行武器攻击并且未命中时，在你的每个回合上，你可以选择让那次攻击命中。",
-            "如果你未能通过豁免投掷，你可以使用你的反应来重新投掷。你必须使用这次新的投掷结果。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再使用它，除非你消耗一个5级法术位来再次使用它。"
-      ]
-    },
-    {
-      "name": "守望之誓",
-      "ENG_name": "Oath of the Watchers",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "entries": [
-        "守望者誓言将圣骑士绑定起来，以保护凡人领域免受来自异界生物的侵害，许多这些生物能够摧毁凡人士兵。因此，守望者磨练他们的思想、精神和身体，成为对抗此类威胁的终极武器。",
-        "遵循守望者誓言的圣骑士在发现异界势力的影响上总是保持警惕，经常建立间谍和线人网络来收集有关疑似邪教的信息。对于守望者来说，保持对周围环境的健康怀疑和意识就像在战斗中穿戴盔甲一样自然。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "守望之信条|圣武士||守望|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||守望|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||守望|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级守望者誓言特性}",
-        "你获得了以下神圣通道选项。关于神圣通道如何运作，请参见神圣誓言职业特性。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "守望意志|圣武士||守望|TCE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "驱散异域|圣武士||守望|TCE|3"
-        }
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "{@i 3级守望者誓言特性}",
-        "你根据守望者誓言法术表中列出的圣骑士等级获得誓言法术。关于誓言法术如何运作，请参见神圣誓言职业特性。",
-        {
-          "type": "table",
-          "caption": "守望者誓言法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 警报术}, {@spell 侦测魔法}"
-            ],
-            [
-              "第五",
-              "{@spell 月华之光}, {@spell 识破隐形}"
-            ],
-            [
-              "第九",
-              "{@spell 反制法术}, {@spell 回避侦测}"
-            ],
-            [
-              "13级",
-              "{@spell 净化灵光}, {@spell 放逐术}"
-            ],
-            [
-              "17级",
-              "{@spell 怪物定身术}, {@spell 探知}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "守望之信条",
-      "ENG_name": "Tenets of the Watchers",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "一个圣骑士如果宣誓守护者的誓言，就承诺保护凡人领域不受超自然威胁的侵害。",
-        {
-          "type": "entries",
-          "name": "警惕",
-          "ENG_name": "Vigilance",
-          "entries": [
-            "你所面对的威胁是狡猾的、强大的、并且具有颠覆性。要时刻警惕它们的腐蚀。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "忠诚",
-          "ENG_name": "Loyalty",
-          "entries": [
-            "永远不要接受来自恶魔或与恶魔打交道的人的礼物或恩惠。忠于你的秩序、你的同伴以及你的职责。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "纪律",
-          "ENG_name": "Discipline",
-          "entries": [
-            "你是抵御那些存在于星辰之外无尽恐怖的盾牌。你的刀刃必须永远锋利，你的心智必须敏锐，才能在未知领域中生存。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "驱散异域",
-      "ENG_name": "Abjure the Extraplanar",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣通道来惩戒非尘世生物。作为一个动作，你展示你的神圣符号，并且每个在你30英尺内能听到你的畸变体、天界生物、元素生物、仙女或者恶魔必须进行一次智力豁免。豁免失败的生物将被驱散1分钟，或者直到它受到伤害。",
-        "被驱散的生物必须在其回合尽力远离你移动，并且它不能自愿结束在距离你30英尺以内的空间。在其行动中，它只能使用{@action 疾走}动作或尝试逃离阻止它移动的效果。如果没有地方移动，生物可以采取{@action 回避}动作。"
-      ]
-    },
-    {
-      "name": "守望意志",
-      "ENG_name": "Watcher's Will",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣通道来赋予你的存在以你的信仰的守护力量。作为一个动作，你可以选择你能看到的在你30英尺内的一定数量的生物，数量等于你的感知调整值（最少一个生物）。在接下来的1分钟内，你和所选生物在智力、智慧和感知豁免投掷上有优势。"
-      ]
-    },
-    {
-      "name": "哨卫灵光",
-      "ENG_name": "Aura of the Sentinel",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "{@i 7级守望者誓言特性}",
-        "当你没有处于{@condition 无力}时，你散发出警觉的光环。当你和你选择的在你10英尺内的任何生物进行先攻骰时，你们所有人都会获得等于你的熟练加值的先攻加值。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "警戒呵斥",
-      "ENG_name": "Vigilant Rebuke",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "{@i 15级守望者誓言特性}",
-        "你学会了如何斥责任何敢于对你和你的守护者使用魅惑的人。每当你或你能看到的30英尺内的生物成功进行智力、智慧或魅力豁免时，你可以使用你的反应对强制进行豁免投掷的生物造成{@damage 2d8} + 你的感知调整值的心灵伤害。"
-      ]
-    },
-    {
-      "name": "尘世壁垒",
-      "ENG_name": "Mortal Bulwark",
-      "source": "TCE",
-      "page": 54,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "守望",
-      "subclassSource": "TCE",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "{@i 20级守望者誓言特性}",
-        "你在凡人领域的防御中显现出神圣力量的火花。作为奖励动作，你获得以下好处，持续1分钟：",
-        {
-          "type": "list",
-          "items": [
-            "你获得了范围为120英尺的{@sense 真实视觉}。",
-            "你对畸变体、天界生物、元素生物、仙女和恶魔的攻击检定有优势。",
-            "当你用攻击检定命中一个生物并对其造成伤害时，你还可以强迫它对抗你的法术豁免DC进行一次魅力豁免。如果豁免失败，如果它当前不在它的原生位面，那么它将被魔法驱逐到它的原生位面。如果豁免成功，那么生物在接下来的24小时内不能通过这个特性被驱逐。"
-          ]
-        },
-        "一旦你使用了这个奖励动作，直到你完成一次长时间休息之前，你不能再使用它，除非你消耗一个5级法术位来再次使用它。"
-      ]
-    },
-    {
-      "name": "开放海域誓言",
-      "ENG_name": "Oath of the Open Sea",
-      "source": "TDCSR",
-      "page": 174,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "开放之海的誓言召唤着航海战士、豪放的船员和旅行的守护者，他们寻求无限地平线的激动。被驱动去探索每个无尽的海洋和其下的冒险和神秘，发誓遵守这个誓言的圣骑士反对那些会剥夺志同道合旅行者自由的人，无论在哪里发现暴政和腐败，都要根除它们。",
-        "这样的守护者相信海洋的自然之美，经常向影响安全通行的实体或神祇如{@deity 荒野之母|埃克桑迪亚|TDCSR|荒野之母}或{@deity 风暴领主|埃克桑迪亚|TDCSR|风暴领主}献祭和祈祷。同时，他们响应号召去追猎那些常常以肆意的暴力和恶意血腥水域的怪物，并恐吓海洋和海岸的人民。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "远洋之信条|圣武士|PHB|开阔海域|TDCSR|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士|PHB|开阔海域|TDCSR|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士|PHB|开阔海域|TDCSR|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 2,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "海洋层|圣武士||开阔海域|TDCSR|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "潮汐之怒|圣武士||开阔海域|TDCSR|3"
-        },
-        {
-          "type": "inset",
-          "name": "规则提示：可见度",
-          "ENG_name": "Rules Tip: Visibility",
-          "page": 175,
-          "entries": [
-            "雾和其他效果可以模糊你、你的敌人和你的盟友的视线。当你使用你的海洋层神圣通道选项严重模糊一个区域时，区域内的所有生物的视线完全被阻挡，区域外的生物也看不见里面。看不见的生物自动失败需要视觉的{@quickref 属性检定|PHB|2|0}。此外，对看不见的生物的攻击检定有{@quickref 优势与劣势|PHB|2|0|检定优势}，而它们自己的攻击检定有{@quickref 优势与劣势|PHB|2|0|劣势}。",
-            "在轻微遮蔽区域内的生物在依赖视觉的感知（Perception）检定时只有{@quickref 优势和劣势|玩家手册|2|0|劣势}。第五版核心规则中详细描述了你的视野被遮蔽时的规则。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "潮汐之怒",
-      "ENG_name": "Fury of the Tides",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为奖励动作，你引导波涛的强大力量，以增强你在1分钟内的攻击。持续期间，每次当你用武器攻击命中一个生物时，你可以选择将目标推离你10英尺。如果被推入障碍物或其他生物，目标将受到等于你的感知调整值的钝击伤害。"
-      ]
-    },
-    {
-      "name": "海洋层",
-      "ENG_name": "Marine Layer",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 2,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "作为一个动作，你引导海洋创造出一个浓密的雾气云团，这个云团在你周围20英尺的所有方向上环绕着你。雾气随你移动，保持以你为中心，并且使该区域变得严重遮蔽。你和每个在你5英尺范围内的生物将该区域视为轻微遮蔽。这个雾气持续10分钟，可以绕过角落，除非你选择结束这个效果（无需动作）。"
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 2,
-      "entries": [
-        "你在开放之海誓言法术表中列出的圣骑士等级获得誓言法术。带有星号的法术是新法术，描述在{@filter 法术页面|法术|来源=TDCSR}上。",
-        {
-          "type": "table",
-          "caption": "开放之海誓言法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 造水/枯水术}, {@spell 脚底抹油}"
-            ],
-            [
-              "第五",
-              "{@spell 卜筮}, {@spell 迷踪步}"
-            ],
-            [
-              "第九",
-              "{@spell 召雷术}, {@spell 波涛自由|TDCSR}*"
-            ],
-            [
-              "13级",
-              "{@spell 操控水体}, {@spell 行动自如}"
-            ],
-            [
-              "17级",
-              "{@spell 问道自然}, {@spell 风之自由|TDCSR}*"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "远洋之信条",
-      "ENG_name": "Tenets of the Open Sea",
-      "source": "TDCSR",
-      "page": 174,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 3,
-      "header": 2,
-      "entries": [
-        "自由可以是一种无私的美德，也可以是一种自私的欲望。对于发誓效忠开阔海域的圣骑士来说，自由是最高的召唤，是一种要赐予所有人的礼物。",
-        {
-          "type": "entries",
-          "name": "没有比自由生活更伟大的生活",
-          "ENG_name": "No Greater Life than a Life Lived Free",
-          "page": 175,
-          "entries": [
-            "人应该自由地规划自己的道路，不受压迫。那些试图用权力支配他人的人应该被打击。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "信赖天空",
-          "ENG_name": "Trust the Skies",
-          "page": 175,
-          "entries": [
-            "一阵强风的指引。即将来临的暴风雨的隆隆警告。自然是一个应该被重视的征兆和建议的源泉。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "像水一样适应",
-          "ENG_name": "Adapt Like the Water",
-          "page": 175,
-          "entries": [
-            "海洋之水能够绕过任何障碍——或者变成最难以逾越的障碍。它们侵蚀大地，揭示过去的秘密，或者吞噬真相，永远隐藏它。拥抱这种流动性，就是为任何挑战做好准备。"
-          ]
-        },
-        {
-          "type": "entries",
-          "name": "探索未知",
-          "ENG_name": "Explore the Uncharted",
-          "page": 175,
-          "entries": [
-            "世界充满了神秘。通过追求神秘的目标，人们可以揭露隐藏着的恶行，并找到成为伟大存在的道路。"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "解放灵光",
-      "ENG_name": "Aura of Liberation",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，你将移动的能量注入附近的生物。只要你不是{@condition 无力}，你和你选择的在你10英尺范围内的生物不能被{@condition 被擒}或{@condition 束缚}，并且{@quickref 水下战斗|PHB|3|0|在水中时忽略移动和攻击的减值}。当生物进入这个光环时，如果它们已经被{@condition 被擒}或{@condition 束缚}，可以花费5英尺的移动来自动逃脱，除非它们被魔法束缚。"
-      ]
-    },
-    {
-      "name": "暴风雨水域",
-      "ENG_name": "Stormy Waters",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "在15级时，每当一个生物进入或离开你的触及范围时，你可以作为反应召唤激流的力量。该生物受到{@damage 1d12}钝击伤害，并必须在力量{@quickref 豁免检定|PHB|2|1|豁免检定}上成功对抗你的法术豁免DC，否则会被击倒{@condition 伏地}。"
-      ]
-    },
-    {
-      "name": "解放光环（18级）",
-      "ENG_name": "Aura of Liberation (18th Level)",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 18,
-      "header": 2,
-      "entries": [
-        "当你达到这个职业的18级时，光环会影响你周围30英尺内的生物。"
-      ]
-    },
-    {
-      "name": "神话浪客",
-      "ENG_name": "Mythic Swashbuckler",
-      "source": "TDCSR",
-      "page": 175,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "开阔海域",
-      "subclassSource": "TDCSR",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你学会了引导历史上的海船船长的灵魂，短暂地成为一个英雄冒险的典范。作为一个动作，你拥抱这些海洋的灵魂，以获得以下好处，持续1分钟：",
-        {
-          "type": "list",
-          "items": [
-            "你在力量（{@quickref 优势与劣势|PHB|2|0|检定优势})检定上具有{@skill 运动}，并且你获得等同于你行走速度的攀爬速度。如果你已经有攀爬速度，则其速度翻倍。",
-            "如果你在生物5英尺范围内，并且没有其他生物在你5英尺范围内，你对那个生物的攻击检定有{@quickref 优势与劣势|PHB|2|0|检定优势}。",
-            "你可以将{@action 疾走}或{@action 撤离}动作作为奖励动作。",
-            "你在对抗可见效果的敏捷检定和敏捷豁免骰上具有{@quickref 优势和劣势|PHB|2|0|advantage}。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次{@quickref 休息|PHB|2|0|长休}之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "征服之誓",
-      "ENG_name": "Oath of Conquest",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "entries": [
-        "征服之誓吸引那些在战斗中寻求荣耀和征服敌人的圣骑士。对这些圣骑士来说，仅仅建立秩序是不够的，他们必须粉碎混乱的力量。有时被称为骑士暴君或铁器商，那些发誓的人聚集成阴沉的秩序，服务于战争之神或有序力量的哲学。",
-        "这些圣骑士中有些人甚至走得如此之远，以至于与九层地狱的力量勾结，他们重视法律的统治胜过仁慈的安慰。大恶魔贝尔，阿弗纳斯的战争领主，将这些被称为地狱骑士的圣骑士视为他最热心的支持者。地狱骑士们用从倒下的敌人那里夺取的战利品覆盖他们的盔甲，向任何敢于反对他们及其领主命令的人发出阴森的警告。这些骑士通常最激烈地受到其他圣骑士的抵抗，后者认为地狱骑士已经走得太远，陷入了黑暗之中。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "征服之信条|圣武士||征服|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||征服|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||征服|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "征服之威|圣武士||征服|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导打击|圣武士||征服|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "征服之威",
-      "ENG_name": "Conquering Presence",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣化身来散发出令人恐惧的气息。作为一个动作，你迫使你能看到的30英尺内的每个生物进行一次智力豁免投掷。如果豁免失败，生物会因你而感到{@condition 恐惧}持续1分钟。感到{@condition 恐惧}的生物可以在每个回合结束时重复这个豁免投掷，如果成功则结束这个效果。"
-      ]
-    },
-    {
-      "name": "引导打击",
-      "ENG_name": "Guided Strike",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣通道以超自然的准确性进行打击。当你进行攻击检定时，你可以使用你的神圣通道获得+10的加值。你在看到检定结果之后，但在DM宣布攻击是否命中之前做出这个选择。"
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "征服圣誓法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 艾嘉西斯之铠}, {@spell 命令术}"
-            ],
-            [
-              "第五",
-              "{@spell 人类定身术}, {@spell 灵体武器}"
-            ],
-            [
-              "第九",
-              "{@spell 降咒}, {@spell 恐惧术}"
-            ],
-            [
-              "13级",
-              "{@spell 支配野兽}, {@spell 石肤术}"
-            ],
-            [
-              "17级",
-              "{@spell 死云术}, {@spell 支配人类}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "征服之信条",
-      "ENG_name": "Tenets of Conquest",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "选择这个誓言的圣骑士会在上臂上烙印征服的信条。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "熄灭希望之火",
-              "ENG_name": "Douse the Flame of Hope",
-              "entries": [
-                "仅仅在战斗中击败敌人是不够的。你的胜利必须是压倒性的，以至于敌人的战斗意志永远被粉碎。刀剑可以结束一个生命。恐惧可以结束一个帝国。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "以铁腕统治",
-              "ENG_name": "Rule with an Iron Fist",
-              "entries": [
-                "一旦你征服了，就不容许任何异议。你的话就是法律。服从它的人将受到青睐。违抗它的人将受到惩罚，作为所有可能效仿者的榜样。"
-              ]
-            },
-            {
-              "type": "entries",
-              "name": "力量高于一切",
-              "ENG_name": "Strength Above All",
-              "entries": [
-                "你将统治，直到一个更强大的人出现。然后你必须变得更强大并迎接挑战，否则就会自取灭亡。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "征服灵光",
-      "ENG_name": "Aura of Conquest",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，当你不是{@condition 无力}状态时，你不断地散发出一种威胁性的光环。这个光环从你身上向每个方向延伸10英尺，但不会穿过完全覆盖。",
-        "如果一个生物对你感到{@condition 恐惧}，那么当它处于这个光环中时，它的速度会减少到0，并且如果它在光环中开始自己的回合，它会受到等于你圣骑士等级一半的心理伤害。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "轻蔑呵斥",
-      "ENG_name": "Scornful Rebuke",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，那些敢于攻击你的人在精神上会因为他们的胆大妄为而受到惩罚。每当一个生物用攻击命中你时，如果它没有处于{@condition 无力}，那个生物会受到等于你的感知调整值（最少为1）的心灵伤害。"
-      ]
-    },
-    {
-      "name": "不移胜者",
-      "ENG_name": "Invincible Conqueror",
-      "source": "XGE",
-      "page": 37,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "征服",
-      "subclassSource": "XGE",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你获得了利用非凡的战斗技巧的能力。作为一个动作，你可以神奇地变成征服的化身，获得以下好处，持续1分钟：",
-        {
-          "type": "list",
-          "items": [
-            "你对所有伤害都有抗性。",
-            "当你在你的回合采取{@action 攻击}动作时，你可以作为该动作的一部分额外进行一次攻击。",
-            "当掷出19或20点时，你的近战武器攻击会打出致命一击。"
-          ]
-        },
-        "一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
-      ]
-    },
-    {
-      "name": "救赎之誓",
-      "ENG_name": "Oath of Redemption",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "entries": [
-        "救赎誓言为圣武士设定了一条艰难的道路，这条路要求神圣战士将暴力作为最后的手段。致力于这一誓言的圣武士相信，任何人都可以得到救赎，并且仁慈与正义的道路是任何人都可以行走的。这些圣武士面对邪恶生物，希望将他们的敌人引向光明，并且只有在这样做显然能拯救其他生命时，他们才会杀死敌人。遵循这条道路的圣武士被称为救赎者。",
-        "虽然救赎者是理想主义者，但他们并非愚蠢之人。救赎者知道不死生物、恶魔、魔鬼和其他超自然威胁可能本质上是邪恶的。面对这样的敌人，发誓这个誓言的圣骑士会全力发挥他们的武器和法术的威力。然而，救赎者仍然祈祷，有一天，即使是邪恶的生物也会邀请自己的救赎。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "救赎之信条|圣武士||救赎|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "圣誓法术|圣武士||救赎|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "引导神力|圣武士||救赎|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "引导神力",
-      "ENG_name": "Channel Divinity",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "和平使者|圣武士||救赎|XGE|3"
-        },
-        {
-          "type": "refSubclassFeature",
-          "subclassFeature": "斥责暴徒|圣武士||救赎|XGE|3"
-        }
-      ]
-    },
-    {
-      "name": "和平使者",
-      "ENG_name": "Emissary of Peace",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣化身来增强你的存在，借助神力。作为一个奖励动作，你为自己在接下来的10分钟内的感知（{@skill 游说}）检定提供+5的加值。"
-      ]
-    },
-    {
-      "name": "圣誓法术",
-      "ENG_name": "Oath Spells",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "你在列出的圣骑士等级时获得誓言法术。",
-        {
-          "type": "table",
-          "caption": "救赎圣誓法术",
-          "colLabels": [
-            "圣武士等级",
-            "法术"
-          ],
-          "colStyles": [
-            "col-2 text-center",
-            "col-10"
-          ],
-          "rows": [
-            [
-              "第三",
-              "{@spell 圣域术}, {@spell 沉眠}"
-            ],
-            [
-              "第五",
-              "{@spell 安定心神}, {@spell 人类定身术}"
-            ],
-            [
-              "第九",
-              "{@spell 反制法术}, {@spell 催眠图纹}"
-            ],
-            [
-              "13级",
-              "{@spell 欧提路克魔封法球}, {@spell 石肤术}"
-            ],
-            [
-              "17级",
-              "{@spell 怪物定身术}, {@spell 力墙术}"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "斥责暴徒",
-      "ENG_name": "Rebuke the Violent",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "consumes": {
-        "name": "引导神力",
-        "ENG_name": "Channel Divinity"
-      },
-      "entries": [
-        "你可以使用你的神圣通道来斥责那些使用暴力的人。当一个距离你30英尺内的攻击者用攻击对除了你之外的生物造成伤害后，你可以使用你的反应来迫使攻击者进行一次智力豁免投掷。如果豁免失败，攻击者会受到等于它刚刚造成的伤害的辐射伤害。如果豁免成功，它受到的伤害减半。"
-      ]
-    },
-    {
-      "name": "救赎之信条",
-      "ENG_name": "Tenets of Redemption",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 3,
-      "header": 1,
-      "entries": [
-        "救赎誓言的信条要求圣骑士遵循高标准的和平与正义。",
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "和平",
-              "ENG_name": "Peace",
-              "entries": [
-                "暴力是最后的手段。外交和理解是通往持久和平的道路。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "无辜",
-              "ENG_name": "Innocence",
-              "entries": [
-                "所有人在生命的开始都是处于一种无辜的状态，是他们所处的环境或黑暗势力的影响驱使他们走向邪恶。通过树立正确的榜样，并努力治愈这个严重缺陷的世界的创伤，你可以让任何人走上正义之路。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "耐心",
-              "ENG_name": "Patience",
-              "entries": [
-                "改变需要时间。那些曾经走上邪恶之路的人必须不断提醒，以保持他们的诚实和真实。一旦你在生物心中播下了正义的种子，你必须日复一日地努力，让这颗种子生存并茁壮成长。"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "entries",
-          "entries": [
-            {
-              "type": "entries",
-              "name": "感知",
-              "ENG_name": "Wisdom",
-              "entries": [
-                "你的心志必须保持清晰，因为最终你将被迫承认失败。虽然每个生物都可以得到救赎，但有些生物在邪恶的道路上走得太远，你别无选择，只能为了更大的利益结束它们的生命。任何此类行动都必须仔细权衡，并充分理解其后果，但一旦你做出了决定，就坚定地执行它，知道你的道路是正义的。"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "护卫灵光",
-      "ENG_name": "Aura of the Guardian",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 7,
-      "header": 2,
-      "entries": [
-        "从7级开始，你可以以自己的健康为代价保护他人免受伤害。当10英尺范围内的生物受到伤害时，你可以使用你的反应来神奇地承受该伤害，而不是让那个生物承受。这个特性不会转移任何可能伴随伤害的其他效果，而且这个伤害无法以任何方式减少。",
-        "在18级时，这个光环的范围增加到30英尺。"
-      ]
-    },
-    {
-      "name": "守护之魂",
-      "ENG_name": "Protective Spirit",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 15,
-      "header": 2,
-      "entries": [
-        "从15级开始，圣洁的存在在战斗中治愈你的伤口。如果你在你的回合结束时生命值不足一半，并且你没有处于{@condition 无力}状态，你将恢复等同于{@condition 无力}加上你圣骑士等级一半的生命值。"
-      ]
-    },
-    {
-      "name": "救赎使者",
-      "ENG_name": "Emissary of Redemption",
-      "source": "XGE",
-      "page": 38,
-      "className": "圣武士",
-      "classSource": "PHB",
-      "subclassShortName": "救赎",
-      "subclassSource": "XGE",
-      "level": 20,
-      "header": 2,
-      "entries": [
-        "在20级时，你成为了和平的化身，这给你带来了两个好处：",
-        {
-          "type": "list",
-          "items": [
-            "你对其他生物造成的伤害（它们的攻击、法术和其他效果）具有抗性。",
-            "每当一个生物用攻击命中你时，它会受到等同于你从攻击中受到的伤害一半的辐射伤害。"
-          ]
-        },
-        "如果你攻击一个生物、对它施法，或者通过任何方式对它造成伤害，但不是通过这个特性，那么直到你完成一次长时间休息之前，这两个效果都不会对这个生物起作用。"
-      ]
-    }
-  ]
+	"class": [
+		{
+			"name": "圣武士",
+			"ENG_name": "Paladin",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "1/2",
+			"preparedSpells": "<$level$> / 2 + <$cha_mod$>",
+			"optionalfeatureProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"featureType": [
+						"FS:P"
+					],
+					"progression": {
+						"2": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"光亮术",
+					"中等",
+					"重型",
+					"{@item 护盾术|PHB|盾牌}"
+				],
+				"weapons": [
+					"简单",
+					"武术"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"运动",
+								"洞悉",
+								"威吓",
+								"医药",
+								"游说",
+								"宗教"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) 一把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}和一面{@item 护盾术|PHB}，或 (b) 两把{@filter 军用武器|物品|来源=phb|类别=基础|类型=武术武器}",
+					"(a) 五把{@item 标枪|PHB|标枪}或(b)任何{@filter 简易近战武器|物品|来源=phb|类别=基础|类型=简易武器；近战武器=u~u~沙}",
+					"(a) 一个{@item 祭司套组|PHB}或 (b) 一个{@item 探索套组|PHB}",
+					"{@item 链甲|PHB} 和一个 {@item 圣徽|PHB}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
+				"defaultData": [
+					{
+						"a": [
+							{
+								"equipmentType": "武器（武术）"
+							},
+							"护盾术|PHB"
+						],
+						"b": [
+							{
+								"equipmentType": "武器（武术）",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							{
+								"item": "标枪|PHB",
+								"quantity": 5
+							}
+						],
+						"b": [
+							{
+								"equipmentType": "简单近战武器"
+							}
+						]
+					},
+					{
+						"a": [
+							"祭司套组|PHB"
+						],
+						"b": [
+							"探索套组|PHB"
+						]
+					},
+					{
+						"_": [
+							"链甲|PHB",
+							{
+								"equipmentType": "神圣专注施法"
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"str": 13,
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"光亮术",
+						"中等",
+						"{@item 护盾术|PHB|盾牌}"
+					],
+					"weapons": [
+						"简单",
+						"武术"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"title": "每个法术等级的法术位",
+					"colLabels": [
+						"{@filter 第一|法术|level=1|职业=圣武士}",
+						"{@filter 第二|法术|level=2|职业=圣武士}",
+						"{@filter 第三|法术|level=3|职业=圣武士}",
+						"{@filter 第四|法术|level=4|职业=圣武士}",
+						"{@filter 第五|法术|level=5|职业=圣武士}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"神圣感知|圣武士||1",
+				"圣疗|圣武士||1",
+				"至圣斩|圣武士||2",
+				"战斗风格|圣武士||2",
+				"施法|圣武士||2",
+				"神佑|圣武士||3",
+				{
+					"classFeature": "神圣誓言|圣武士||3",
+					"gainSubclassFeature": true,
+					"gainSubclassFeatureHasContent": true
+				},
+				"属性值提升|圣武士||4",
+				"替换武术|圣武士||4|TCE",
+				"额外攻击|圣武士||5",
+				"守护灵光|圣武士||6",
+				{
+					"classFeature": "神圣誓言能力|圣武士||7",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|圣武士||8",
+				"勇气灵光|圣武士||10",
+				"精通至圣斩|圣武士||11",
+				"属性值提升|圣武士||12",
+				"净化之触|圣武士||14",
+				{
+					"classFeature": "神圣誓言能力|圣武士||15",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|圣武士||16",
+				"灵光强化|圣武士||18",
+				"属性值提升|圣武士||19",
+				{
+					"classFeature": "神圣誓言能力|圣武士||20",
+					"gainSubclassFeature": true
+				}
+			],
+			"subclassTitle": "神圣誓言",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "奉献之誓",
+			"ENG_name": "Oath of Devotion",
+			"shortName": "奉献",
+			"source": "PHB",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 85,
+			"srd": true,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"防护善恶",
+							"圣域术"
+						],
+						"5": [
+							"次级复原术",
+							"诚实之域"
+						],
+						"9": [
+							"希望信标",
+							"解除魔法"
+						],
+						"13": [
+							"行动自如",
+							"虔诚守卫"
+						],
+						"17": [
+							"通神术",
+							"焰击术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"奉献之誓|圣武士||奉献||3",
+				"奉献灵光|圣武士||奉献||7",
+				"纯净之魂|圣武士||奉献||15",
+				"至圣光轮|圣武士||奉献||20"
+			]
+		},
+		{
+			"name": "古贤之誓",
+			"ENG_name": "Oath of the Ancients",
+			"shortName": "远古",
+			"source": "PHB",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 86,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"诱捕打击",
+							"动物交谈术"
+						],
+						"5": [
+							"月华之光",
+							"迷踪步"
+						],
+						"9": [
+							"植物滋长",
+							"防护能量"
+						],
+						"13": [
+							"冰风暴",
+							"石肤术"
+						],
+						"17": [
+							"问道自然",
+							"树跃术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"古贤之誓|圣武士||远古||3",
+				"守御灵光|圣武士||远古||7",
+				"不灭哨卫|圣武士||远古||15",
+				"上古斗士|圣武士||远古||20"
+			]
+		},
+		{
+			"name": "复仇之誓",
+			"ENG_name": "Oath of Vengeance",
+			"shortName": "复仇",
+			"source": "PHB",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 87,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"灾祸术",
+							"猎人印记"
+						],
+						"5": [
+							"人类定身术",
+							"迷踪步"
+						],
+						"9": [
+							"加速术",
+							"防护能量"
+						],
+						"13": [
+							"放逐术",
+							"次元门"
+						],
+						"17": [
+							"怪物定身术",
+							"探知"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"复仇之誓|圣武士||复仇||3",
+				"坚韧复仇|圣武士||复仇||7",
+				"复仇之魂|圣武士||复仇||15",
+				"复仇天使|圣武士||复仇||20"
+			]
+		},
+		{
+			"name": "破誓者",
+			"ENG_name": "Oathbreaker",
+			"shortName": "破誓者",
+			"source": "DMG",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 97,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"炼狱叱喝",
+							"造成伤势"
+						],
+						"5": [
+							"疯狂冠冕",
+							"黑暗"
+						],
+						"9": [
+							"活化死尸",
+							"降咒"
+						],
+						"13": [
+							"枯萎术",
+							"困惑术"
+						],
+						"17": [
+							"疫病术",
+							"支配人类"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"破誓者|圣武士||破誓者|DMG|3",
+				"憎恨灵光|圣武士||破誓者|DMG|7",
+				"超然抗性|圣武士||破誓者|DMG|15",
+				"恐惧之王|圣武士||破誓者|DMG|20"
+			]
+		},
+		{
+			"name": "王冠之誓",
+			"ENG_name": "Oath of the Crown",
+			"shortName": "王冠",
+			"source": "SCAG",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 132,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"命令术",
+							"强迫决斗"
+						],
+						"5": [
+							"守护联结",
+							"诚实之域"
+						],
+						"9": [
+							"活力灵光",
+							"灵体守卫"
+						],
+						"13": [
+							"放逐术",
+							"虔诚守卫"
+						],
+						"17": [
+							"威能法环",
+							"指使术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"王冠之誓|圣武士||王冠|SCAG|3",
+				"神圣誓忠|圣武士||王冠|SCAG|7",
+				"顽强精神|圣武士||王冠|SCAG|15",
+				"崇高卫士|圣武士||王冠|SCAG|20"
+			]
+		},
+		{
+			"name": "征服之誓",
+			"ENG_name": "Oath of Conquest",
+			"shortName": "征服",
+			"source": "XGE",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 37,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"艾嘉西斯之铠",
+							"命令术"
+						],
+						"5": [
+							"人类定身术",
+							"灵体武器"
+						],
+						"9": [
+							"降咒",
+							"恐惧术"
+						],
+						"13": [
+							"支配野兽",
+							"石肤术"
+						],
+						"17": [
+							"死云术",
+							"支配人类"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"征服之誓|圣武士||征服|XGE|3",
+				"征服灵光|圣武士||征服|XGE|7",
+				"轻蔑呵斥|圣武士||征服|XGE|15",
+				"不移胜者|圣武士||征服|XGE|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "救赎之誓",
+			"ENG_name": "Oath of Redemption",
+			"shortName": "救赎",
+			"source": "XGE",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 38,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"圣域术",
+							"沉眠"
+						],
+						"5": [
+							"安定心神",
+							"人类定身术"
+						],
+						"9": [
+							"反制法术",
+							"催眠图纹"
+						],
+						"13": [
+							"欧提路克魔封法球",
+							"石肤术"
+						],
+						"17": [
+							"怪物定身术",
+							"力墙术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"救赎之誓|圣武士||救赎|XGE|3",
+				"护卫灵光|圣武士||救赎|XGE|7",
+				"守护之魂|圣武士||救赎|XGE|15",
+				"救赎使者|圣武士||救赎|XGE|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "荣耀之誓",
+			"ENG_name": "Oath of Glory",
+			"shortName": "荣耀",
+			"source": "TCE",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"光导箭",
+							"英雄气概"
+						],
+						"5": [
+							"强化属性",
+							"魔化武器"
+						],
+						"9": [
+							"加速术",
+							"防护能量"
+						],
+						"13": [
+							"强迫术",
+							"行动自如"
+						],
+						"17": [
+							"通神术",
+							"焰击术"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"荣耀之誓|圣武士||荣耀|TCE|3",
+				"迅捷灵光|圣武士||荣耀|TCE|7",
+				"辉煌防御|圣武士||荣耀|TCE|15",
+				"现世传说|圣武士||荣耀|TCE|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "守望之誓",
+			"ENG_name": "Oath of the Watchers",
+			"shortName": "守望",
+			"source": "TCE",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 54,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"警报术",
+							"侦测魔法"
+						],
+						"5": [
+							"月华之光",
+							"识破隐形"
+						],
+						"9": [
+							"反制法术",
+							"回避侦测"
+						],
+						"13": [
+							"净化灵光",
+							"放逐术"
+						],
+						"17": [
+							"怪物定身术",
+							"探知"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"守望之誓|圣武士||守望|TCE|3",
+				"哨卫灵光|圣武士||守望|TCE|7",
+				"警戒呵斥|圣武士||守望|TCE|15",
+				"尘世壁垒|圣武士||守望|TCE|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "开放海域誓言",
+			"ENG_name": "Oath of the Open Sea",
+			"shortName": "开阔海域",
+			"source": "TDCSR",
+			"className": "圣武士",
+			"classSource": "PHB",
+			"page": 174,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"造水/枯水术",
+							"脚底抹油"
+						],
+						"5": [
+							"卜筮",
+							"迷踪步"
+						],
+						"9": [
+							"召雷术",
+							"波涛自由|TDCSR"
+						],
+						"13": [
+							"操控水体",
+							"行动自如"
+						],
+						"17": [
+							"问道自然",
+							"风之自由|TDCSR"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"开放海域誓言|圣武士|PHB|开阔海域|TDCSR|3",
+				"解放灵光|圣武士|PHB|开阔海域|TDCSR|7",
+				"暴风雨水域|圣武士|PHB|开阔海域|TDCSR|15",
+				"解放光环（18级）|圣武士|PHB|开阔海域|TDCSR|18",
+				"神话浪客|圣武士|PHB|开阔海域|TDCSR|20"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "神圣感知",
+			"ENG_name": "Divine Sense",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"强大的邪恶在你感知中如同恶臭，而强大的善良则在你耳边响起如同天籁之音。作为一个动作，你可以开启你的感知去探测这些力量。直到你的下一个回合结束，你知道任何在你60英尺范围内的天界生物、恶魔或不死生物的位置，这些生物不被完全掩蔽。你知道你所感知到的存在的类型（天界生物、恶魔或不死生物），但不知道它的身份（例如吸血鬼伯爵斯特拉德·冯·扎罗维奇）。在相同的半径内，你也能探测到任何被祝福或亵渎的地方或物品，就像使用了{@spell 圣居}法术一样。",
+				"你可以使用这个特性的次数等于1加上你的魅力调整值。当你完成一次长休息后，你恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "圣疗",
+			"ENG_name": "Lay on Hands",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你的祝福之触可以治愈伤口。你有一股治疗能量池，在进行长时间休息时会重新补充。使用这个能量池，你可以恢复总共等于你的圣骑士等级乘以5的生命值点数。",
+				"作为动作，你可以触摸一个生物，并从池中汲取力量来恢复该生物的生命值，最多不超过你池中剩余的最大数量。",
+				"或者，你可以从你的治愈池中消耗5点生命值来治愈目标的一种疾病或中和影响它的某种毒素。你可以在单次援手的使用中治愈多种疾病并中和多种毒素，每种疾病或毒素分别消耗生命值。",
+				"这个特性对亡灵和构造物无效。"
+			]
+		},
+		{
+			"name": "至圣斩",
+			"ENG_name": "Divine Smite",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"从2级开始，当你用近战武器攻击命中一个生物时，你可以消耗一个法术位来对目标造成额外的辐射伤害，加上武器的伤害。额外伤害对于1级法术位是{@dice 2d8}，每比1级高一个法术位就增加{@dice 1d8}，最高不超过{@dice 5d8}。如果目标是亡灵或恶魔，伤害增加{@dice 1d8}，最高不超过{@dice 6d8}。"
+			]
+		},
+		{
+			"name": "战斗风格",
+			"ENG_name": "Fighting Style",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"在2级时，你选择一种特定的战斗风格作为你的专长。从以下选项中选择一个。你不能重复选择相同的战斗风格选项，即使你再次获得选择机会。",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "防御"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "对决"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "巨武器战斗"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "守护"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "受祝福的勇士|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "盲斗|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "拦截|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"到了2级，你已经学会了通过冥想和祈祷来借助神圣魔法，像牧师一样施放法术。请参阅《玩家手册》第10章了解施法的一般规则，以及第11章了解{@filter 圣骑士法术列表|spells|class=paladin}。",
+				{
+					"type": "entries",
+					"name": "法术的准备和施展",
+					"ENG_name": "Preparing and Casting Spells",
+					"entries": [
+						"圣骑士表格显示了你拥有多少法术位来施放你的{@filter 圣骑士法术|法术|职业=圣骑士}。要施放你的圣骑士法术中1级或更高级别的法术，你必须消耗相应法术等级或更高等级的法术位。你在完成一次长时间的休息后恢复所有消耗的法术位。",
+						"你准备你可以施放的圣骑士法术列表，从圣骑士法术列表中选择。当你这样做时，选择等于你的感知调整值加上你的圣骑士等级一半的圣骑士法术数量，向下取整（最少一个法术）。法术必须是你有法术位的等级。",
+						"例如，如果你是一个5级圣骑士，你有四个1级和两个2级法术位。如果魅力值为14，你准备的法术列表可以包括四个1级或2级的法术，任意组合。如果你准备了1级的法术{@spell 治疗伤势}，你可以使用1级或2级法术位来施放它。施放法术不会将其从你准备的法术列表中移除。",
+						"当你完成一次长休息时，你可以更改你的准备法术列表。准备新的圣武士法术列表需要花费时间进行祈祷和冥想：每个法术至少需要1分钟乘以法术等级。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法关键属性",
+					"ENG_name": "Spellcasting Ability",
+					"entries": [
+						"魅力是你的圣骑士法术的施法能力，因为它们的力量源自你信念的坚定。每当法术提到你的施法能力时，你都会使用你的魅力。此外，当你为施放的圣骑士法术设定豁免投掷的DC（困难等级）以及进行法术攻击投掷时，也会使用你的魅力调整值。",
+						{
+							"type": "abilityDc",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "法术",
+							"ENG_name": "Spell",
+							"attributes": [
+								"cha"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法器",
+					"ENG_name": "Spellcasting Focus",
+					"entries": [
+						"你可以使用一个{@item 圣徽|PHB}作为你的圣骑士法术的施法焦点。"
+					]
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"你的誓言允许你引导神圣能量以激发魔法效果。你的誓言提供的每个神圣通道选项都解释了如何使用它。",
+				"当你使用你的神圣化身时，你选择使用哪个选项。然后你必须完成一次短休或长休才能再次使用你的神圣化身。",
+				"某些神圣化身效果需要进行豁免投掷。当你使用此类职业的此类效果时，难度等级等于你的圣骑士法术豁免DC。"
+			]
+		},
+		{
+			"name": "引导神力：神力掌控",
+			"ENG_name": "Channel Divinity: Harness Divine Power",
+			"source": "TCE",
+			"page": 52,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"{@i 三级圣骑士{@variantrule 可选职业特性|tce|可选特性}}",
+				"你可以消耗一次你的神圣通道能力来为你的法术提供能量。作为一个奖励动作，你触摸你的圣徽，念出祷文，并恢复一个已消耗的法术位，其等级不能高于你熟练加值的一半（向上取整）。你使用这个特性的次数基于你在本职业中达到的等级：3级时，一次；7级时，两次；15级时，三次。当你完成一次长休息时，你恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "神佑",
+			"ENG_name": "Divine Health",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"到了3级，流经你的神圣魔法使你对疾病免疫。"
+			]
+		},
+		{
+			"name": "神圣誓言",
+			"ENG_name": "Sacred Oath",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"当你达到3级时，你发誓遵守作为圣骑士的誓言，这将永远束缚你。在此之前，你一直处于准备阶段，致力于这条道路，但尚未宣誓。现在，你从可用的誓言列表中选择。",
+				"你的选择在3级时赋予你特性，并在7级、15级和20级时再次赋予你特性。这些特性包括誓言法术和神圣化身特性。",
+				{
+					"name": "圣誓法术",
+					"ENG_name": "Oath Spells",
+					"type": "entries",
+					"entries": [
+						"每个誓言都有一个相关的法术列表。你在誓言描述中指定的等级获得这些法术的访问权限。一旦你获得了一个誓言法术，你就始终准备好了它。誓言法术不计入你每天可以准备的法术数量。",
+						"如果你获得一个誓言法术，即使它不出现在圣骑士法术列表上，该法术对你而言仍然是一个圣骑士法术。"
+					]
+				},
+				{
+					"type": "refClassFeature",
+					"classFeature": "引导神力|圣武士||3"
+				},
+				{
+					"type": "refClassFeature",
+					"classFeature": "引导神力：神力掌控|圣武士||3|TCE"
+				},
+				{
+					"name": "背弃誓言",
+					"ENG_name": "Breaking Your Oath",
+					"type": "inset",
+					"entries": [
+						"圣武士努力坚持最高的行为标准，但即使是最正直的圣武士也会犯错。有时正确的道路证明太过苛刻，有时情况需要选择两个恶中的较小者，有时情感的热度会导致圣武士违背他的誓言。",
+						"违反誓言的圣骑士通常会寻求与自己信仰相同的牧师或同一骑士团的另一位圣骑士的宽恕。圣骑士可能会通过整夜的守夜祈祷作为悔改的标志，或者进行禁食或类似的自我克制行为。在忏悔和宽恕的仪式之后，圣骑士重新开始。",
+						"如果圣骑士故意违反他的誓言并且没有悔改的迹象，后果可能更为严重。在DM的自由裁量下，一个不知悔改的圣骑士可能被迫放弃这个职业并选择另一个，或者可能采用《地下城主指南》中出现的誓言破坏者圣骑士选项。"
+					]
+				}
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"当你达到4级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。和通常一样，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "替换武术",
+			"ENG_name": "Martial Versatility",
+			"source": "TCE",
+			"page": 52,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4级圣骑士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"每当你达到这个职业的一个等级，该等级提供能力值提升特性时，你可以用另一个圣骑士可用的战斗风格替换你所知的{@filter 战斗风格|可选特性|特性类型=FS:P}。这种替换代表了你战斗实践中的焦点转移。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"从5级开始，每当你在自己回合采取{@action 攻击}动作时，你可以攻击两次，而不是一次。"
+			]
+		},
+		{
+			"name": "守护灵光",
+			"ENG_name": "Aura of Protection",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"从6级开始，每当你或一个友好生物在你10英尺范围内必须进行豁免检定时，该生物获得等于你的感知调整值的豁免检定加值（最少为+1）。你必须保持清醒才能授予这个加值。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "神圣誓言能力",
+			"ENG_name": "Sacred Oath feature",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 7,
+			"entries": [
+				"在7级时，你获得了由你的神圣誓言赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"当你达到8级时，你可以选择一个能力值增加2点，或者选择两个能力值各自增加1点。和通常一样，你不能使用这个特性将任何能力值提高到20以上。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "勇气灵光",
+			"ENG_name": "Aura of Courage",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"从10级开始，只要你保持清醒，你和10英尺范围内的友方生物不会进入{@condition 恐惧}状态。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "精通至圣斩",
+			"ENG_name": "Improved Divine Smite",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"到了11级，你充满了正义之力，以至于你所有的近战武器攻击都带有神圣的力量。每当你用近战武器击中一个生物时，该生物会额外受到{@damage 1d8}点辐射伤害。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"当你达到12级时，你可以选择提升一个属性值2点，或者提升两个属性值各1点。如常，你不能使用这个特性将属性值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "净化之触",
+			"ENG_name": "Cleansing Touch",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"从14级开始，你可以使用你的行动结束自己身上的一个法术，或者结束你触摸的愿意的生物身上的一个法术。",
+				"你可以使用这个特性的次数等于你的魅力调整值（最少一次）。当你完成一次长休息时，你恢复所有已使用的使用次数。"
+			]
+		},
+		{
+			"name": "神圣誓言能力",
+			"ENG_name": "Sacred Oath feature",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"在15级时，你获得了由你的神圣誓言赋予的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"当你达到16级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "灵光强化",
+			"ENG_name": "Aura improvements",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"在18级时，你的防护光环范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"当你达到19级时，你可以选择提升一个能力值2点，或者提升两个能力值各1点。如常，你不能使用这个特性将能力值提升超过20点。",
+				"如果你的地下城主允许使用特长，你也可以选择一个{@5etools 专长|特性.html}。"
+			]
+		},
+		{
+			"name": "神圣誓言能力",
+			"ENG_name": "Sacred Oath feature",
+			"source": "PHB",
+			"page": 82,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"在20级时，你获得了由你的神圣誓言赋予的特性。"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "破誓者",
+			"ENG_name": "Oathbreaker",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 3,
+			"entries": [
+				"誓言破坏者是一个违背了他或她的神圣誓言，去追求某种黑暗野心或为邪恶势力服务的圣骑士。在圣骑士心中曾经燃烧的光明已被熄灭。只剩下黑暗。",
+				"一个圣武士必须是邪恶的，并且至少达到3级才能成为誓言破坏者。圣武士用誓言破坏者的特性取代他或她的神圣誓言特有的特性。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "破誓者法术|圣武士||破誓者|DMG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||破誓者|DMG|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"3级或更高等级的誓言破坏者圣骑士获得以下两种神圣通道选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "控制亡灵|圣武士||破誓者|DMG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "恐怖具现 (短休或长休之后充能)|圣武士||破誓者|DMG|3"
+				}
+			]
+		},
+		{
+			"name": "控制亡灵",
+			"ENG_name": "Control Undead",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"作为一个动作，圣骑士指定一个他或她能看到的，距离他或她30英尺以内的不死生物。目标必须进行一次智力豁免检定。如果豁免失败，目标必须在接下来的24小时内服从圣骑士的命令，或者直到圣骑士再次使用这个神圣化身选项。挑战等级等于或高于圣骑士等级的不死生物对此效果免疫。"
+			]
+		},
+		{
+			"name": "恐怖具现 (短休或长休之后充能)",
+			"ENG_name": "Dreadful Aspect",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"作为一项行动，圣骑士引导最黑暗的情感，并将它们聚焦成一股魔法威胁。每个圣骑士选择的、在圣骑士30英尺范围内的生物，如果能看到圣骑士，必须进行一次智力豁免投掷。如果豁免失败，目标将对圣骑士感到{@condition 恐惧}，持续1分钟。如果被这个效果{@condition 恐惧}的生物在其回合结束时距离圣骑士超过30英尺，它可以再次尝试智力豁免投掷，以结束这个效果。"
+			]
+		},
+		{
+			"name": "破誓者法术",
+			"ENG_name": "Oathbreaker Spells",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言破坏者法术。",
+				{
+					"type": "table",
+					"caption": "破誓者法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 炼狱叱喝}, {@spell 造成伤势}"
+						],
+						[
+							"第五",
+							"{@spell 疯狂冠冕}, {@spell 黑暗}"
+						],
+						[
+							"第九",
+							"{@spell 活化死尸}, {@spell 降咒}"
+						],
+						[
+							"13级",
+							"{@spell 枯萎术}, {@spell 困惑术}"
+						],
+						[
+							"17级",
+							"{@spell 疫病术}, {@spell 支配人类}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "憎恨灵光",
+			"ENG_name": "Aura of Hate",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，圣骑士以及圣骑士10英尺范围内的所有恶魔和不死生物，在进行近战武器伤害骰时，获得等于圣骑士感知调整值的加值（最少为+1）。一个生物一次只能从一位圣骑士的这项特性中获益。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "超然抗性",
+			"ENG_name": "Supernatural Resistance",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，圣骑士获得对来自非魔法武器的钝击、穿刺和斩击伤害的抗性。"
+			]
+		},
+		{
+			"name": "恐惧之王",
+			"ENG_name": "Dread Lord",
+			"source": "DMG",
+			"page": 97,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "破誓者",
+			"subclassSource": "DMG",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，圣骑士可以作为一个动作，将自己周围笼罩在持续1分钟的阴郁光环中。这个光环将圣骑士周围30英尺范围内的明亮光线减弱为昏暗光线。每当一个被圣骑士{@condition 恐惧}的敌人在其光环内开始其回合时，它会受到{@damage 4d10}点心灵伤害。此外，圣骑士和他或她选择的光环内的生物被更深的阴影所覆盖。依赖视力的生物在攻击被这种阴影覆盖的生物时攻击骰有劣势。",
+				"当光环持续时，圣骑士可以在自己的回合使用奖励动作来使光环中的阴影攻击一个生物。圣骑士对目标进行近战法术攻击。如果攻击命中，目标将受到等同于{@dice 3d10}加上圣骑士魅力调整值的死灵伤害。",
+				"激活光环后，圣骑士必须完成一次长时间休息后才能再次激活。"
+			]
+		},
+		{
+			"name": "古贤之誓",
+			"ENG_name": "Oath of the Ancients",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"古代誓言和精灵族一样古老，与德鲁伊的仪式同源。有时被称为仙女骑士、绿骑士或角骑士，宣誓这个誓言的圣骑士选择站在光明一方，在与黑暗的宇宙斗争中，因为他们热爱世界上美丽而赋予生命的事物，而不一定是因为他们信仰荣誉、勇气和正义的原则。他们在盔甲和衣物上装饰着生长物的图案\u2014\u2014树叶、鹿角或花朵\u2014\u2014以反映他们致力于保护世界上的生命和光明。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "古贤之信条|圣武士||远古||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||远古||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||远古||3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "自然的愤怒|圣武士||远古||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "转变不信仰者|圣武士||远古||3"
+				}
+			]
+		},
+		{
+			"name": "自然的愤怒",
+			"ENG_name": "Nature's Wrath",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣化身来召唤原始力量来困住一个敌人。作为一个动作，你可以使幽灵藤蔓在你10英尺范围内且你能看到的生物周围突然出现并伸向它。该生物必须进行一次力量或敏捷豁免检定（它选择），否则会被{@condition 束缚}。在被藤蔓{@condition 束缚}时，生物在其每个回合结束时重复进行豁免检定。如果成功，它将自己解放，藤蔓消失。"
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "古贤圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 诱捕打击}, {@spell 动物交谈术}"
+						],
+						[
+							"第五",
+							"{@spell 月华之光}, {@spell 迷踪步}"
+						],
+						[
+							"第九",
+							"{@spell 植物滋长}, {@spell 防护能量}"
+						],
+						[
+							"13级",
+							"{@spell 冰风暴}, {@spell 石肤术}"
+						],
+						[
+							"17级",
+							"{@spell 问道自然}, {@spell 树跃术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "古贤之信条",
+			"ENG_name": "Tenets of the Ancients",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"远古誓言的信条已经保存了无数世纪。这个誓言强调善良的原则，超越了对法律或混乱的任何顾虑。它的四个核心原则是简单的。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "点燃光明",
+							"ENG_name": "Kindle the Light",
+							"entries": [
+								"通过你的仁慈、善良和宽恕行为，在世界上点燃希望之光，击退绝望。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "守护明光",
+							"ENG_name": "Shelter the Light",
+							"entries": [
+								"在世界上有善良、美丽、爱和欢笑的地方，就要对抗那些想要吞噬它们的邪恶。在生命繁盛的地方，就要对抗那些会使它变得贫瘠的力量。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "维持己身光辉",
+							"ENG_name": "Preserve Your Own Light",
+							"entries": [
+								"享受歌声和笑声，享受美丽和艺术。如果你让自己心中的光明熄灭，你就无法在世界上保留它。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "成为真光",
+							"ENG_name": "Be the Light",
+							"entries": [
+								"成为所有生活在绝望中的人的光辉灯塔。让你的欢乐和勇气之光在你的所有行为中闪耀。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "转变不信仰者",
+			"ENG_name": "Turn the Faithless",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣化身来诵读对仙女和恶魔来说痛苦难忍的古老咒语。作为一个动作，你展示你的圣徽，并且每个在你30英尺范围内且能听到你的仙女或恶魔必须进行一次智力豁免检定。如果豁免失败，该生物将被驱散1分钟，或者直到它受到伤害。",
+				"被转化的生物必须在其回合尽力尽可能远离你移动，并且它不能自愿移动到距离你30英尺以内的空间。它也不能进行反应。对于它的行动，它只能使用{@action 疾走}动作或尝试逃离阻止其移动的效果。如果没有地方移动，生物可以使用{@action 回避}动作。",
+				"如果生物的真实形态被幻象、变形或其他效果所隐藏，那么在它被转变时，该形态将被揭示。"
+			]
+		},
+		{
+			"name": "守御灵光",
+			"ENG_name": "Aura of Warding",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，古老的魔法如此沉重地笼罩着你，以至于形成了一个奥术守护。你和在你10英尺范围内的友方生物对法术伤害具有抗性。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "不灭哨卫",
+			"ENG_name": "Undying Sentinel",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，当你的生命值降至0点且没有直接死亡时，你可以选择降至1点生命值。一旦你使用了这个能力，直到你完成一次长时间的休息之前，你不能再使用它。",
+				"此外，你不会遭受任何老年带来的不利影响，你也不能被魔法老化。"
+			]
+		},
+		{
+			"name": "上古斗士",
+			"ENG_name": "Elder Champion",
+			"source": "PHB",
+			"page": 86,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "远古",
+			"subclassSource": "PHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你可以化身为一种古老的自然力量，选择你想要的外观。例如，你的皮肤可能会变成绿色或具有树皮般的质地，你的头发可能会变得像树叶或苔藓一样，或者你可能会长出鹿角或狮子般的鬃毛。",
+				"使用你的动作，你经历了一次转变。在1分钟内，你获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"在你的每个回合开始时，你恢复10点生命值。",
+						"每当你施放一个施法时间为1个动作的圣骑士法术时，你可以使用你的奖励行动来施放它。",
+						"在你10英尺范围内的敌对生物在对抗你的圣骑士法术和神圣通道选项的豁免投掷上具有劣势。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "奉献之誓",
+			"ENG_name": "Oath of Devotion",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"奉献誓言将圣骑士与正义、美德和秩序的最高理想联系在一起。有时被称为骑士、白衣骑士或圣战士，这些圣骑士符合闪亮盔甲骑士的理想，以荣誉行事，追求正义和更大的利益。他们要求自己遵守最高的行为标准，有些圣骑士，无论好坏，也以同样的标准要求世界。许多宣誓此誓言的人致力于法律和善良的神，并使用他们神的信条作为他们奉献的衡量标准。他们将天使\u2014\u2014完美的善良仆人\u2014\u2014视为他们的理想，并在他们的头盔或纹章中加入天使翅膀的形象。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奉献之信条|圣武士||奉献||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||奉献||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||奉献||3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "神圣武器|圣武士||奉献||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "驱逐邪恶|圣武士||奉献||3"
+				}
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "奉献圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 防护善恶}, {@spell 圣域术}"
+						],
+						[
+							"第五",
+							"{@spell 次级复原术}, {@spell 诚实之域}"
+						],
+						[
+							"第九",
+							"{@spell 希望信标}, {@spell 解除魔法}"
+						],
+						[
+							"13级",
+							"{@spell 行动自如}, {@spell 虔诚守卫}"
+						],
+						[
+							"17级",
+							"{@spell 通神术}, {@spell 焰击术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "神圣武器",
+			"ENG_name": "Sacred Weapon",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个动作，你可以使用你的神圣化身将你持有的一件武器注入正能量。在1分钟内，你将你的的魅力调整值加到用该武器进行的攻击骰上（最小加值为+1）。该武器还会在20英尺半径内发出明亮的光，以及在那之外的20英尺内发出昏暗的光。如果该武器本来就不是魔法武器，它在持续时间内会成为魔法武器。",
+				"你可以在你的回合作为任何其他行动的一部分结束这个效果。如果你不再持有或携带这件武器，或者如果你进入{@condition 昏迷}状态，这个效果会结束。"
+			]
+		},
+		{
+			"name": "奉献之信条",
+			"ENG_name": "Tenets of Devotion",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"尽管奉献誓言的确切言辞和约束各不相同，但这个誓言的圣骑士们共同分享这些信条。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "诚实",
+							"ENG_name": "Honesty",
+							"entries": [
+								"不要撒谎或欺骗。让你的话语成为你的承诺。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "勇气",
+							"ENG_name": "Courage",
+							"entries": [
+								"即使谨慎是明智的，也永远不要害怕行动。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "怜悯",
+							"ENG_name": "Compassion",
+							"entries": [
+								"帮助他人，保护弱者，并惩罚那些威胁他们的人。对敌人显示怜悯，但要用智慧加以调和。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "荣誉",
+							"ENG_name": "Honor",
+							"entries": [
+								"公平对待他人，让你的高尚行为成为他们的榜样。尽可能做更多的好事，同时造成最少的伤害。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "尽责",
+							"ENG_name": "Duty",
+							"entries": [
+								"对自己的行为及其后果负责，保护那些托付给你的人，并服从那些对你有正当权威的人士。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "驱逐邪恶",
+			"ENG_name": "Turn the Unholy",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个动作，你展示你的圣徽并说出谴责恶魔和亡灵的祈祷，使用你的神圣化身。每个能看见或听见你的恶魔或亡灵，如果它在你30英尺范围内，必须进行一次智力豁免。如果这个生物未能通过豁免，它将被转化1分钟，或者直到它受到伤害。",
+				"被转化的生物必须在其回合尽力尽可能远离你移动，并且它不能自愿移动到距离你30英尺以内的空间。它也不能进行反应。对于它的行动，它只能使用{@action 疾走}动作或尝试逃离阻止其移动的效果。如果没有地方移动，生物可以使用{@action 回避}动作。"
+			]
+		},
+		{
+			"name": "奉献灵光",
+			"ENG_name": "Aura of Devotion",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，只要你保持清醒，你和在你10英尺范围内的友方生物不能被{@condition 魅惑}。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "纯净之魂",
+			"ENG_name": "Purity of Spirit",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你始终处于{@spell 防护善恶}法术的效果之下。"
+			]
+		},
+		{
+			"name": "至圣光轮",
+			"ENG_name": "Holy Nimbus",
+			"source": "PHB",
+			"page": 85,
+			"srd": true,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "PHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，作为一项行动，你可以散发出阳光光环。在1分钟的时间内，明亮的光线从你身上照耀出30英尺的半径，而昏暗的光线则照耀出超出该半径30英尺的范围。",
+				"每当一个敌人生物在明亮光线中开始其回合时，该生物会受到10点辐射伤害。",
+				"此外，在持续时间内，你在对抗恶魔或亡灵施放的法术的豁免骰上拥有优势。",
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "复仇之誓",
+			"ENG_name": "Oath of Vengeance",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"复仇誓言是对惩罚犯下严重罪行者的庄严承诺。当邪恶势力屠杀无助的村民，当整个民族违背神的意志，当盗贼公会变得过于暴力和强大，当一条龙在乡村肆虐\u2014\u2014在这样的时刻，圣骑士们崛起并宣誓复仇誓言，以纠正错误。对这些圣骑士\u2014\u2014有时被称为复仇者或黑暗骑士\u2014\u2014他们自己的纯洁性并不像伸张正义那样重要。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "复仇之信条|圣武士||复仇||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||复仇||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||复仇||3"
+				}
+			]
+		},
+		{
+			"name": "驱逐敌人",
+			"ENG_name": "Abjure Enemy",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一项行动，你展示你的圣徽并说出谴责的祈祷，使用你的神圣化身。选择一个在你60英尺范围内你能看到的生物。那个生物必须进行一次智力豁免投掷，除非它免疫于被{@condition 恐惧}。恶魔和亡灵在这个豁免投掷上处于劣势。",
+				"在豁免失败的情况下，生物将处于{@condition 恐惧}状态，持续1分钟或直到它受到任何伤害。在{@condition 恐惧}状态下，生物的速度变为0，并且它不能从任何速度加成中受益。",
+				"如果豁免成功，生物的移动速度在1分钟内减半，或者直到生物受到任何伤害。"
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "驱逐敌人|圣武士||复仇||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "敌意誓言|圣武士||复仇||3"
+				}
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "复仇圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 灾祸术}, {@spell 猎人印记}"
+						],
+						[
+							"第五",
+							"{@spell 人类定身术}, {@spell 迷踪步}"
+						],
+						[
+							"第九",
+							"{@spell 加速术}, {@spell 防护能量}"
+						],
+						[
+							"13级",
+							"{@spell 放逐术}, {@spell 次元门}"
+						],
+						[
+							"17级",
+							"{@spell 怪物定身术}, {@spell 探知}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "复仇之信条",
+			"ENG_name": "Tenets of Vengeance",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"复仇誓言的信条因圣骑士而异，但所有的信条都围绕着以任何必要的手段惩罚不法之徒。坚守这些信条的圣骑士愿意为了对那些作恶的人施加正义而牺牲自己的正义感，因此这些圣骑士通常在阵营上是中立或守序中立。信条的核心原则极其简单。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "追寻以迎战大恶",
+							"ENG_name": "Fight the Greater Evil",
+							"entries": [
+								"面对选择与我的誓言敌人战斗或对抗较小的邪恶时，我选择更大的邪恶。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "对恶徒不留慈悲",
+							"ENG_name": "No Mercy for the Wicked",
+							"entries": [
+								"普通的敌人可能会得到我的怜悯，但我的誓言敌人不会。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "为目的不择手段",
+							"ENG_name": "By Any Means Necessary",
+							"entries": [
+								"我的顾虑不能妨碍我消灭敌人。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "为恶行尽力补偿",
+							"ENG_name": "Restitution",
+							"entries": [
+								"如果我的敌人给世界带来毁灭，那是因为我未能阻止他们。我必须帮助那些被他们的恶行伤害的人。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "敌意誓言",
+			"ENG_name": "Vow of Enmity",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为奖励行动，你可以利用你的神圣通道，对你能看到的10英尺内的一个生物发出敌意誓言。在1分钟或直到它的生命值降至0点或进入{@condition 昏迷}状态之前，你对生物的攻击检定获得优势。"
+			]
+		},
+		{
+			"name": "坚韧复仇",
+			"ENG_name": "Relentless Avenger",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"到了7级，你的超自然专注帮助你切断敌人的退路。当你用机会攻击击中一个生物时，你可以在攻击后立即作为同一反应的一部分移动至多相当于你速度的一半。这次移动不会引发机会攻击。"
+			]
+		},
+		{
+			"name": "复仇之魂",
+			"ENG_name": "Soul of Vengeance",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你发出敌意誓言的权威使你对敌人拥有更大的力量。当受到你敌意誓言影响的生物进行攻击时，如果它在你武器的范围内，你可以使用你的反应来进行一次近战武器攻击。"
+			]
+		},
+		{
+			"name": "复仇天使",
+			"ENG_name": "Avenging Angel",
+			"source": "PHB",
+			"page": 87,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "PHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你可以化身为天使般的复仇者。使用你的行动，你经历了一次转变。在1小时内，你获得以下好处：",
+				{
+					"type": "list",
+					"items": [
+						"翅膀从你的背部长出，赋予你60英尺的飞行速度。",
+						"你在30英尺半径内散发出威胁的光环。在战斗中，任何敌人生物第一次进入这个光环或在其内开始回合时，必须进行一次智力豁免检定，否则在1分钟或直到它受到任何伤害之前都会对你感到{@condition 恐惧}。对{@condition 恐惧}生物的{@condition 恐惧}检定具有优势。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "王冠之誓",
+			"ENG_name": "Oath of the Crown",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"entries": [
+				"王冠誓言是向文明的理想宣誓，无论是国家的精神、对君主的忠诚，还是对法律和统治之神的服务。宣誓这一誓言的圣骑士致力于服务社会，特别是维系社会的法律。这些圣骑士是警惕的守护者，站在墙上，对抗威胁要摧毁文明所建立一切的野蛮混乱浪潮，通常被称为守护者、典范或哨兵。通常，宣誓这一誓言的圣骑士是服务于国家或君主的骑士团的成员，并作为他们加入该团等级的一部分而宣誓这一誓言。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "王冠之信条|圣武士||王冠|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||王冠|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||王冠|SCAG|3"
+				}
+			]
+		},
+		{
+			"name": "冠军挑战",
+			"ENG_name": "Champion Challenge",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为奖励行动，你发出挑战，迫使其他生物与你战斗。你可以选择每个在你30英尺内你能看到的生物必须进行一次智力豁免检定。检定失败的生物不能自愿移动到离你超过30英尺的地方。如果你被{@condition 无力}或死亡，或者生物离你超过30英尺，这个效果就会结束。"
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "冠军挑战|圣武士||王冠|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "扭转乾坤|圣武士||王冠|SCAG|3"
+				}
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "王冠誓言法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 命令术}, {@spell 强迫决斗}"
+						],
+						[
+							"第五",
+							"{@spell 守护联结}, {@spell 诚实之域}"
+						],
+						[
+							"第九",
+							"{@spell 活力灵光}, {@spell 灵体守卫}"
+						],
+						[
+							"13级",
+							"{@spell 放逐术}, {@spell 虔诚守卫}"
+						],
+						[
+							"17级",
+							"{@spell 威能法环}, {@spell 指使术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "王冠之信条",
+			"ENG_name": "Tenets of the Crown",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"王冠誓言的信条通常由其宣誓效忠的君主设定，但通常强调以下信条。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "律法",
+							"ENG_name": "Law",
+							"entries": [
+								"法律是至高无上的。它是粘合文明之石的砂浆，必须得到尊重。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "忠诚",
+							"ENG_name": "Loyalty",
+							"entries": [
+								"你的话就是你的承诺。没有忠诚，誓言和法律就没有意义。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "勇气",
+							"ENG_name": "Courage",
+							"entries": [
+								"你必须愿意为了秩序去做需要做的事情，即使面对压倒性的困难。如果你不采取行动，那么谁会呢？"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "责任",
+							"ENG_name": "Responsibility",
+							"entries": [
+								"你必须承担自己行为的后果，并且有责任履行你的职责和义务。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "扭转乾坤",
+			"ENG_name": "Turn the Tide",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个奖励动作，你可以使用你的神圣通道来加强受伤的生物。每个你选择的，能听到你在30英尺范围内的生物，如果它的生命值不超过其最大生命值的一半，将恢复等同于{@dice 1d6} + 你的感知调整值（最少为1）的生命值。"
+			]
+		},
+		{
+			"name": "神圣誓忠",
+			"ENG_name": "Divine Allegiance",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，当一个生物在你5英尺范围内受到伤害时，你可以使用你的反应来魔法性地用你自己的生命值替代目标生物的生命值，使那个生物不受到伤害。相反，你将承受伤害。你受到的这种伤害无法以任何方式减少或防止。"
+			]
+		},
+		{
+			"name": "顽强精神",
+			"ENG_name": "Unyielding Spirit",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，你在避免进入{@condition 麻痹}或{@condition 震慑}状态的豁免投掷上拥有优势。"
+			]
+		},
+		{
+			"name": "崇高卫士",
+			"ENG_name": "Exalted Champion",
+			"source": "SCAG",
+			"page": 132,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "王冠",
+			"subclassSource": "SCAG",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你在战场上的存在对于那些致力于你事业的人是一种鼓舞。你可以使用你的行动来获得以下好处，持续1小时：",
+				{
+					"type": "list",
+					"items": [
+						"你对来自非魔法武器的钝击、穿刺和斩击伤害具有抗性。",
+						"你的盟友在距离你30英尺范围内时，在死亡豁免投掷上拥有优势。",
+						"你在智慧豁免投掷上拥有优势，同样，距离你30英尺内的盟友也拥有优势。"
+					]
+				},
+				"如果你被{@condition 无力}或死亡，此效果会提前结束。一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "荣耀之誓",
+			"ENG_name": "Oath of Glory",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"选择荣耀誓言的圣骑士相信他们和他们的同伴注定要通过英勇行为来实现荣耀。他们勤奋训练，并鼓励他们的同伴，以便在命运召唤时，所有人都准备好了。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "荣耀之信条|圣武士||荣耀|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||荣耀|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||荣耀|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级荣耀誓言特性}",
+				"你获得了以下两种神圣通道选项。关于神圣通道如何运作，请参见神圣誓言职业特性。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "绝伦健将|圣武士||荣耀|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "鼓舞一击|圣武士||荣耀|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级荣耀誓言特性}",
+				"你根据荣耀誓言法术表中列出的圣骑士等级获得誓言法术。关于誓言法术如何运作，请参见神圣誓言职业特性。",
+				{
+					"type": "table",
+					"caption": "荣耀誓言法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 光导箭}, {@spell 英雄气概}"
+						],
+						[
+							"第五",
+							"{@spell 强化属性}, {@spell 魔化武器}"
+						],
+						[
+							"第九",
+							"{@spell 加速术}, {@spell 防护能量}"
+						],
+						[
+							"13级",
+							"{@spell 强迫术}, {@spell 行动自如}"
+						],
+						[
+							"17级",
+							"{@spell 通神术}, {@spell 焰击术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "荣耀之信条",
+			"ENG_name": "Tenets of Glory",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"荣耀誓言的信条驱使圣骑士去尝试那些有一天可能会在传说中闪耀的英雄事迹。",
+				{
+					"type": "entries",
+					"name": "行动胜于言辞",
+					"ENG_name": "Actions over Words",
+					"entries": [
+						"努力以辉煌的事迹而非言辞而闻名。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "挑战不过是考验",
+					"ENG_name": "Challenges Are but Tests",
+					"entries": [
+						"勇敢面对困难，并鼓励你的盟友与你一起面对它们。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "锻炼体魄",
+					"ENG_name": "Hone the Body",
+					"entries": [
+						"像原始的石头一样，你的身体必须经过锻炼，才能实现其潜能。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "修炼灵魂",
+					"ENG_name": "Discipline the Soul",
+					"entries": [
+						"你必须集结纪律来克服自身的缺点，这些缺点可能会威胁到你和你的朋友们的荣耀。"
+					]
+				}
+			]
+		},
+		{
+			"name": "鼓舞一击",
+			"ENG_name": "Inspiring Smite",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"在使用神圣打击特性对生物造成伤害后，你可以立即使用你的神圣通道作为奖励动作，将临时生命值分配给你选择的30英尺范围内的生物，包括你自己。临时生命值的总数等于{@dice 2d8}加上你在这个职业中的等级，你可以随意分配给选定的生物。"
+			]
+		},
+		{
+			"name": "绝伦健将",
+			"ENG_name": "Peerless Athlete",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为奖励行动，你可以使用你的神圣通道来增强你的运动能力。在接下来的10分钟内，你在力量（{@skill 运动}）和敏捷（{@skill 特技}）检定上拥有优势；你可以携带、推动、拖拽和举起的重量是正常情况下的两倍；你的长跳和高跳距离增加10英尺（这个额外的距离正常消耗移动力）。"
+			]
+		},
+		{
+			"name": "迅捷灵光",
+			"ENG_name": "Aura of Alacrity",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7级荣耀誓言特性}",
+				"你散发出一种光环，让你和你的同伴们拥有超自然的敏捷，使你们能够成队地在战场上快速移动。你的行走速度增加10英尺。此外，如果你没有被{@condition 无力}，任何在他们的回合开始时距离你5英尺范围内的盟友的行走速度也会增加10英尺，直到那个回合结束。",
+				"当你在这个职业达到18级时，光环的范围增加到10英尺。"
+			]
+		},
+		{
+			"name": "辉煌防御",
+			"ENG_name": "Glorious Defense",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级荣耀誓言特性}",
+				"你可以将防御转化为突然的攻击。当你或你能看到的10英尺范围内的另一个生物被攻击检定击中时，你可以使用你的反应来给予目标对那次攻击的AC加上一个奖励，可能会使其未命中。奖励等于你的感知调整值（最少为+1）。如果攻击未命中，你可以作为这个反应的一部分对攻击者进行一次武器攻击，前提是攻击者在你的武器范围内。",
+				"你可以使用这个特性的次数等于你的感知调整值（最少一次），并且在你完成长时间休息后恢复所有已使用的点数。"
+			]
+		},
+		{
+			"name": "现世传说",
+			"ENG_name": "Living Legend",
+			"source": "TCE",
+			"page": 53,
+			"otherSources": [
+				{
+					"source": "MOT",
+					"page": 29
+				}
+			],
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "TCE",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"{@i 20级荣耀誓言特性}",
+				"你可以用关于你伟大事迹的传说\u2014\u2014无论是真实的还是夸大的\u2014\u2014来增强自己。作为奖励行动，你获得以下好处，持续1分钟：",
+				{
+					"type": "list",
+					"items": [
+						"你被赋予了超凡的存在，所有魅力检定上获得优势。",
+						"每当你进行武器攻击并且未命中时，在你的每个回合上，你可以选择让那次攻击命中。",
+						"如果你未能通过豁免投掷，你可以使用你的反应来重新投掷。你必须使用这次新的投掷结果。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次长时间休息之前，你不能再使用它，除非你消耗一个5级法术位来再次使用它。"
+			]
+		},
+		{
+			"name": "守望之誓",
+			"ENG_name": "Oath of the Watchers",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"守望者誓言将圣骑士绑定起来，以保护凡人领域免受来自异界生物的侵害，许多这些生物能够摧毁凡人士兵。因此，守望者磨练他们的思想、精神和身体，成为对抗此类威胁的终极武器。",
+				"遵循守望者誓言的圣骑士在发现异界势力的影响上总是保持警惕，经常建立间谍和线人网络来收集有关疑似邪教的信息。对于守望者来说，保持对周围环境的健康怀疑和意识就像在战斗中穿戴盔甲一样自然。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "守望之信条|圣武士||守望|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||守望|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||守望|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级守望者誓言特性}",
+				"你获得了以下神圣通道选项。关于神圣通道如何运作，请参见神圣誓言职业特性。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "守望意志|圣武士||守望|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "驱散异域|圣武士||守望|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级守望者誓言特性}",
+				"你根据守望者誓言法术表中列出的圣骑士等级获得誓言法术。关于誓言法术如何运作，请参见神圣誓言职业特性。",
+				{
+					"type": "table",
+					"caption": "守望者誓言法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 警报术}, {@spell 侦测魔法}"
+						],
+						[
+							"第五",
+							"{@spell 月华之光}, {@spell 识破隐形}"
+						],
+						[
+							"第九",
+							"{@spell 反制法术}, {@spell 回避侦测}"
+						],
+						[
+							"13级",
+							"{@spell 净化灵光}, {@spell 放逐术}"
+						],
+						[
+							"17级",
+							"{@spell 怪物定身术}, {@spell 探知}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "守望之信条",
+			"ENG_name": "Tenets of the Watchers",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"一个圣骑士如果宣誓守护者的誓言，就承诺保护凡人领域不受超自然威胁的侵害。",
+				{
+					"type": "entries",
+					"name": "警惕",
+					"ENG_name": "Vigilance",
+					"entries": [
+						"你所面对的威胁是狡猾的、强大的、并且具有颠覆性。要时刻警惕它们的腐蚀。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "忠诚",
+					"ENG_name": "Loyalty",
+					"entries": [
+						"永远不要接受来自恶魔或与恶魔打交道的人的礼物或恩惠。忠于你的秩序、你的同伴以及你的职责。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "纪律",
+					"ENG_name": "Discipline",
+					"entries": [
+						"你是抵御那些存在于星辰之外无尽恐怖的盾牌。你的刀刃必须永远锋利，你的心智必须敏锐，才能在未知领域中生存。"
+					]
+				}
+			]
+		},
+		{
+			"name": "驱散异域",
+			"ENG_name": "Abjure the Extraplanar",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣通道来惩戒非尘世生物。作为一个动作，你展示你的神圣符号，并且每个在你30英尺内能听到你的畸变体、天界生物、元素生物、仙女或者恶魔必须进行一次智力豁免。豁免失败的生物将被驱散1分钟，或者直到它受到伤害。",
+				"被驱散的生物必须在其回合尽力远离你移动，并且它不能自愿结束在距离你30英尺以内的空间。在其行动中，它只能使用{@action 疾走}动作或尝试逃离阻止它移动的效果。如果没有地方移动，生物可以采取{@action 回避}动作。"
+			]
+		},
+		{
+			"name": "守望意志",
+			"ENG_name": "Watcher's Will",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣通道来赋予你的存在以你的信仰的守护力量。作为一个动作，你可以选择你能看到的在你30英尺内的一定数量的生物，数量等于你的感知调整值（最少一个生物）。在接下来的1分钟内，你和所选生物在智力、智慧和感知豁免投掷上有优势。"
+			]
+		},
+		{
+			"name": "哨卫灵光",
+			"ENG_name": "Aura of the Sentinel",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7级守望者誓言特性}",
+				"当你没有处于{@condition 无力}时，你散发出警觉的光环。当你和你选择的在你10英尺内的任何生物进行先攻骰时，你们所有人都会获得等于你的熟练加值的先攻加值。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "警戒呵斥",
+			"ENG_name": "Vigilant Rebuke",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级守望者誓言特性}",
+				"你学会了如何斥责任何敢于对你和你的守护者使用魅惑的人。每当你或你能看到的30英尺内的生物成功进行智力、智慧或魅力豁免时，你可以使用你的反应对强制进行豁免投掷的生物造成{@damage 2d8} + 你的感知调整值的心灵伤害。"
+			]
+		},
+		{
+			"name": "尘世壁垒",
+			"ENG_name": "Mortal Bulwark",
+			"source": "TCE",
+			"page": 54,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "守望",
+			"subclassSource": "TCE",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"{@i 20级守望者誓言特性}",
+				"你在凡人领域的防御中显现出神圣力量的火花。作为奖励动作，你获得以下好处，持续1分钟：",
+				{
+					"type": "list",
+					"items": [
+						"你获得了范围为120英尺的{@sense 真实视觉}。",
+						"你对畸变体、天界生物、元素生物、仙女和恶魔的攻击检定有优势。",
+						"当你用攻击检定命中一个生物并对其造成伤害时，你还可以强迫它对抗你的法术豁免DC进行一次魅力豁免。如果豁免失败，如果它当前不在它的原生位面，那么它将被魔法驱逐到它的原生位面。如果豁免成功，那么生物在接下来的24小时内不能通过这个特性被驱逐。"
+					]
+				},
+				"一旦你使用了这个奖励动作，直到你完成一次长时间休息之前，你不能再使用它，除非你消耗一个5级法术位来再次使用它。"
+			]
+		},
+		{
+			"name": "开放海域誓言",
+			"ENG_name": "Oath of the Open Sea",
+			"source": "TDCSR",
+			"page": 174,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"开放之海的誓言召唤着航海战士、豪放的船员和旅行的守护者，他们寻求无限地平线的激动。被驱动去探索每个无尽的海洋和其下的冒险和神秘，发誓遵守这个誓言的圣骑士反对那些会剥夺志同道合旅行者自由的人，无论在哪里发现暴政和腐败，都要根除它们。",
+				"这样的守护者相信海洋的自然之美，经常向影响安全通行的实体或神祇如{@deity 荒野之母|埃克桑迪亚|TDCSR|荒野之母}或{@deity 风暴领主|埃克桑迪亚|TDCSR|风暴领主}献祭和祈祷。同时，他们响应号召去追猎那些常常以肆意的暴力和恶意血腥水域的怪物，并恐吓海洋和海岸的人民。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "远洋之信条|圣武士|PHB|开阔海域|TDCSR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士|PHB|开阔海域|TDCSR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士|PHB|开阔海域|TDCSR|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "海洋层|圣武士||开阔海域|TDCSR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "潮汐之怒|圣武士||开阔海域|TDCSR|3"
+				},
+				{
+					"type": "inset",
+					"name": "规则提示：可见度",
+					"ENG_name": "Rules Tip: Visibility",
+					"page": 175,
+					"entries": [
+						"雾和其他效果可以模糊你、你的敌人和你的盟友的视线。当你使用你的海洋层神圣通道选项严重模糊一个区域时，区域内的所有生物的视线完全被阻挡，区域外的生物也看不见里面。看不见的生物自动失败需要视觉的{@quickref 属性检定|PHB|2|0}。此外，对看不见的生物的攻击检定有{@quickref 优势与劣势|PHB|2|0|检定优势}，而它们自己的攻击检定有{@quickref 优势与劣势|PHB|2|0|劣势}。",
+						"在轻微遮蔽区域内的生物在依赖视觉的感知（Perception）检定时只有{@quickref 优势和劣势|玩家手册|2|0|劣势}。第五版核心规则中详细描述了你的视野被遮蔽时的规则。"
+					]
+				}
+			]
+		},
+		{
+			"name": "潮汐之怒",
+			"ENG_name": "Fury of the Tides",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为奖励动作，你引导波涛的强大力量，以增强你在1分钟内的攻击。持续期间，每次当你用武器攻击命中一个生物时，你可以选择将目标推离你10英尺。如果被推入障碍物或其他生物，目标将受到等于你的感知调整值的钝击伤害。"
+			]
+		},
+		{
+			"name": "海洋层",
+			"ENG_name": "Marine Layer",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个动作，你引导海洋创造出一个浓密的雾气云团，这个云团在你周围20英尺的所有方向上环绕着你。雾气随你移动，保持以你为中心，并且使该区域变得严重遮蔽。你和每个在你5英尺范围内的生物将该区域视为轻微遮蔽。这个雾气持续10分钟，可以绕过角落，除非你选择结束这个效果（无需动作）。"
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你在开放之海誓言法术表中列出的圣骑士等级获得誓言法术。带有星号的法术是新法术，描述在{@filter 法术页面|法术|来源=TDCSR}上。",
+				{
+					"type": "table",
+					"caption": "开放之海誓言法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 造水/枯水术}, {@spell 脚底抹油}"
+						],
+						[
+							"第五",
+							"{@spell 卜筮}, {@spell 迷踪步}"
+						],
+						[
+							"第九",
+							"{@spell 召雷术}, {@spell 波涛自由|TDCSR}*"
+						],
+						[
+							"13级",
+							"{@spell 操控水体}, {@spell 行动自如}"
+						],
+						[
+							"17级",
+							"{@spell 问道自然}, {@spell 风之自由|TDCSR}*"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "远洋之信条",
+			"ENG_name": "Tenets of the Open Sea",
+			"source": "TDCSR",
+			"page": 174,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"自由可以是一种无私的美德，也可以是一种自私的欲望。对于发誓效忠开阔海域的圣骑士来说，自由是最高的召唤，是一种要赐予所有人的礼物。",
+				{
+					"type": "entries",
+					"name": "没有比自由生活更伟大的生活",
+					"ENG_name": "No Greater Life than a Life Lived Free",
+					"page": 175,
+					"entries": [
+						"人应该自由地规划自己的道路，不受压迫。那些试图用权力支配他人的人应该被打击。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "信赖天空",
+					"ENG_name": "Trust the Skies",
+					"page": 175,
+					"entries": [
+						"一阵强风的指引。即将来临的暴风雨的隆隆警告。自然是一个应该被重视的征兆和建议的源泉。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "像水一样适应",
+					"ENG_name": "Adapt Like the Water",
+					"page": 175,
+					"entries": [
+						"海洋之水能够绕过任何障碍\u2014\u2014或者变成最难以逾越的障碍。它们侵蚀大地，揭示过去的秘密，或者吞噬真相，永远隐藏它。拥抱这种流动性，就是为任何挑战做好准备。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "探索未知",
+					"ENG_name": "Explore the Uncharted",
+					"page": 175,
+					"entries": [
+						"世界充满了神秘。通过追求神秘的目标，人们可以揭露隐藏着的恶行，并找到成为伟大存在的道路。"
+					]
+				}
+			]
+		},
+		{
+			"name": "解放灵光",
+			"ENG_name": "Aura of Liberation",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，你将移动的能量注入附近的生物。只要你不是{@condition 无力}，你和你选择的在你10英尺范围内的生物不能被{@condition 被擒}或{@condition 束缚}，并且{@quickref 水下战斗|PHB|3|0|在水中时忽略移动和攻击的减值}。当生物进入这个光环时，如果它们已经被{@condition 被擒}或{@condition 束缚}，可以花费5英尺的移动来自动逃脱，除非它们被魔法束缚。"
+			]
+		},
+		{
+			"name": "暴风雨水域",
+			"ENG_name": "Stormy Waters",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"在15级时，每当一个生物进入或离开你的触及范围时，你可以作为反应召唤激流的力量。该生物受到{@damage 1d12}钝击伤害，并必须在力量{@quickref 豁免检定|PHB|2|1|豁免检定}上成功对抗你的法术豁免DC，否则会被击倒{@condition 伏地}。"
+			]
+		},
+		{
+			"name": "解放光环（18级）",
+			"ENG_name": "Aura of Liberation (18th Level)",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"当你达到这个职业的18级时，光环会影响你周围30英尺内的生物。"
+			]
+		},
+		{
+			"name": "神话浪客",
+			"ENG_name": "Mythic Swashbuckler",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "开阔海域",
+			"subclassSource": "TDCSR",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你学会了引导历史上的海船船长的灵魂，短暂地成为一个英雄冒险的典范。作为一个动作，你拥抱这些海洋的灵魂，以获得以下好处，持续1分钟：",
+				{
+					"type": "list",
+					"items": [
+						"你在力量（{@quickref 优势与劣势|PHB|2|0|检定优势})检定上具有{@skill 运动}，并且你获得等同于你行走速度的攀爬速度。如果你已经有攀爬速度，则其速度翻倍。",
+						"如果你在生物5英尺范围内，并且没有其他生物在你5英尺范围内，你对那个生物的攻击检定有{@quickref 优势与劣势|PHB|2|0|检定优势}。",
+						"你可以将{@action 疾走}或{@action 撤离}动作作为奖励动作。",
+						"你在对抗可见效果的敏捷检定和敏捷豁免骰上具有{@quickref 优势和劣势|PHB|2|0|advantage}。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次{@quickref 休息|PHB|2|0|长休}之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "征服之誓",
+			"ENG_name": "Oath of Conquest",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"征服之誓吸引那些在战斗中寻求荣耀和征服敌人的圣骑士。对这些圣骑士来说，仅仅建立秩序是不够的，他们必须粉碎混乱的力量。有时被称为骑士暴君或铁器商，那些发誓的人聚集成阴沉的秩序，服务于战争之神或有序力量的哲学。",
+				"这些圣骑士中有些人甚至走得如此之远，以至于与九层地狱的力量勾结，他们重视法律的统治胜过仁慈的安慰。大恶魔贝尔，阿弗纳斯的战争领主，将这些被称为地狱骑士的圣骑士视为他最热心的支持者。地狱骑士们用从倒下的敌人那里夺取的战利品覆盖他们的盔甲，向任何敢于反对他们及其领主命令的人发出阴森的警告。这些骑士通常最激烈地受到其他圣骑士的抵抗，后者认为地狱骑士已经走得太远，陷入了黑暗之中。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "征服之信条|圣武士||征服|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||征服|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||征服|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "征服之威|圣武士||征服|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导打击|圣武士||征服|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "征服之威",
+			"ENG_name": "Conquering Presence",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣化身来散发出令人恐惧的气息。作为一个动作，你迫使你能看到的30英尺内的每个生物进行一次智力豁免投掷。如果豁免失败，生物会因你而感到{@condition 恐惧}持续1分钟。感到{@condition 恐惧}的生物可以在每个回合结束时重复这个豁免投掷，如果成功则结束这个效果。"
+			]
+		},
+		{
+			"name": "引导打击",
+			"ENG_name": "Guided Strike",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣通道以超自然的准确性进行打击。当你进行攻击检定时，你可以使用你的神圣通道获得+10的加值。你在看到检定结果之后，但在DM宣布攻击是否命中之前做出这个选择。"
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "征服圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 艾嘉西斯之铠}, {@spell 命令术}"
+						],
+						[
+							"第五",
+							"{@spell 人类定身术}, {@spell 灵体武器}"
+						],
+						[
+							"第九",
+							"{@spell 降咒}, {@spell 恐惧术}"
+						],
+						[
+							"13级",
+							"{@spell 支配野兽}, {@spell 石肤术}"
+						],
+						[
+							"17级",
+							"{@spell 死云术}, {@spell 支配人类}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "征服之信条",
+			"ENG_name": "Tenets of Conquest",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"选择这个誓言的圣骑士会在上臂上烙印征服的信条。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "熄灭希望之火",
+							"ENG_name": "Douse the Flame of Hope",
+							"entries": [
+								"仅仅在战斗中击败敌人是不够的。你的胜利必须是压倒性的，以至于敌人的战斗意志永远被粉碎。刀剑可以结束一个生命。恐惧可以结束一个帝国。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "以铁腕统治",
+							"ENG_name": "Rule with an Iron Fist",
+							"entries": [
+								"一旦你征服了，就不容许任何异议。你的话就是法律。服从它的人将受到青睐。违抗它的人将受到惩罚，作为所有可能效仿者的榜样。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "力量高于一切",
+							"ENG_name": "Strength Above All",
+							"entries": [
+								"你将统治，直到一个更强大的人出现。然后你必须变得更强大并迎接挑战，否则就会自取灭亡。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "征服灵光",
+			"ENG_name": "Aura of Conquest",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，当你不是{@condition 无力}状态时，你不断地散发出一种威胁性的光环。这个光环从你身上向每个方向延伸10英尺，但不会穿过完全覆盖。",
+				"如果一个生物对你感到{@condition 恐惧}，那么当它处于这个光环中时，它的速度会减少到0，并且如果它在光环中开始自己的回合，它会受到等于你圣骑士等级一半的心理伤害。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "轻蔑呵斥",
+			"ENG_name": "Scornful Rebuke",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，那些敢于攻击你的人在精神上会因为他们的胆大妄为而受到惩罚。每当一个生物用攻击命中你时，如果它没有处于{@condition 无力}，那个生物会受到等于你的感知调整值（最少为1）的心灵伤害。"
+			]
+		},
+		{
+			"name": "不移胜者",
+			"ENG_name": "Invincible Conqueror",
+			"source": "XGE",
+			"page": 37,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "征服",
+			"subclassSource": "XGE",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你获得了利用非凡的战斗技巧的能力。作为一个动作，你可以神奇地变成征服的化身，获得以下好处，持续1分钟：",
+				{
+					"type": "list",
+					"items": [
+						"你对所有伤害都有抗性。",
+						"当你在你的回合采取{@action 攻击}动作时，你可以作为该动作的一部分额外进行一次攻击。",
+						"当掷出19或20点时，你的近战武器攻击会打出致命一击。"
+					]
+				},
+				"一旦你使用了这个特性，直到你完成一次长时间的休息之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "救赎之誓",
+			"ENG_name": "Oath of Redemption",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"救赎誓言为圣武士设定了一条艰难的道路，这条路要求神圣战士将暴力作为最后的手段。致力于这一誓言的圣武士相信，任何人都可以得到救赎，并且仁慈与正义的道路是任何人都可以行走的。这些圣武士面对邪恶生物，希望将他们的敌人引向光明，并且只有在这样做显然能拯救其他生命时，他们才会杀死敌人。遵循这条道路的圣武士被称为救赎者。",
+				"虽然救赎者是理想主义者，但他们并非愚蠢之人。救赎者知道不死生物、恶魔、魔鬼和其他超自然威胁可能本质上是邪恶的。面对这样的敌人，发誓这个誓言的圣骑士会全力发挥他们的武器和法术的威力。然而，救赎者仍然祈祷，有一天，即使是邪恶的生物也会邀请自己的救赎。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "救赎之信条|圣武士||救赎|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "圣誓法术|圣武士||救赎|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "引导神力|圣武士||救赎|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你在3级时选择这个誓言，你获得了以下两种神圣化身选项。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "和平使者|圣武士||救赎|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "斥责暴徒|圣武士||救赎|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "和平使者",
+			"ENG_name": "Emissary of Peace",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣化身来增强你的存在，借助神力。作为一个奖励动作，你为自己在接下来的10分钟内的感知（{@skill 游说}）检定提供+5的加值。"
+			]
+		},
+		{
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在列出的圣骑士等级时获得誓言法术。",
+				{
+					"type": "table",
+					"caption": "救赎圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"法术"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"第三",
+							"{@spell 圣域术}, {@spell 沉眠}"
+						],
+						[
+							"第五",
+							"{@spell 安定心神}, {@spell 人类定身术}"
+						],
+						[
+							"第九",
+							"{@spell 反制法术}, {@spell 催眠图纹}"
+						],
+						[
+							"13级",
+							"{@spell 欧提路克魔封法球}, {@spell 石肤术}"
+						],
+						[
+							"17级",
+							"{@spell 怪物定身术}, {@spell 力墙术}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "斥责暴徒",
+			"ENG_name": "Rebuke the Violent",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以使用你的神圣通道来斥责那些使用暴力的人。当一个距离你30英尺内的攻击者用攻击对除了你之外的生物造成伤害后，你可以使用你的反应来迫使攻击者进行一次智力豁免投掷。如果豁免失败，攻击者会受到等于它刚刚造成的伤害的辐射伤害。如果豁免成功，它受到的伤害减半。"
+			]
+		},
+		{
+			"name": "救赎之信条",
+			"ENG_name": "Tenets of Redemption",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"救赎誓言的信条要求圣骑士遵循高标准的和平与正义。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "和平",
+							"ENG_name": "Peace",
+							"entries": [
+								"暴力是最后的手段。外交和理解是通往持久和平的道路。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "无辜",
+							"ENG_name": "Innocence",
+							"entries": [
+								"所有人在生命的开始都是处于一种无辜的状态，是他们所处的环境或黑暗势力的影响驱使他们走向邪恶。通过树立正确的榜样，并努力治愈这个严重缺陷的世界的创伤，你可以让任何人走上正义之路。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "耐心",
+							"ENG_name": "Patience",
+							"entries": [
+								"改变需要时间。那些曾经走上邪恶之路的人必须不断提醒，以保持他们的诚实和真实。一旦你在生物心中播下了正义的种子，你必须日复一日地努力，让这颗种子生存并茁壮成长。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "感知",
+							"ENG_name": "Wisdom",
+							"entries": [
+								"你的心志必须保持清晰，因为最终你将被迫承认失败。虽然每个生物都可以得到救赎，但有些生物在邪恶的道路上走得太远，你别无选择，只能为了更大的利益结束它们的生命。任何此类行动都必须仔细权衡，并充分理解其后果，但一旦你做出了决定，就坚定地执行它，知道你的道路是正义的。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "护卫灵光",
+			"ENG_name": "Aura of the Guardian",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"从7级开始，你可以以自己的健康为代价保护他人免受伤害。当10英尺范围内的生物受到伤害时，你可以使用你的反应来神奇地承受该伤害，而不是让那个生物承受。这个特性不会转移任何可能伴随伤害的其他效果，而且这个伤害无法以任何方式减少。",
+				"在18级时，这个光环的范围增加到30英尺。"
+			]
+		},
+		{
+			"name": "守护之魂",
+			"ENG_name": "Protective Spirit",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"从15级开始，圣洁的存在在战斗中治愈你的伤口。如果你在你的回合结束时生命值不足一半，并且你没有处于{@condition 无力}状态，你将恢复等同于{@condition 无力}加上你圣骑士等级一半的生命值。"
+			]
+		},
+		{
+			"name": "救赎使者",
+			"ENG_name": "Emissary of Redemption",
+			"source": "XGE",
+			"page": 38,
+			"className": "圣武士",
+			"classSource": "PHB",
+			"subclassShortName": "救赎",
+			"subclassSource": "XGE",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"在20级时，你成为了和平的化身，这给你带来了两个好处：",
+				{
+					"type": "list",
+					"items": [
+						"你对其他生物造成的伤害（它们的攻击、法术和其他效果）具有抗性。",
+						"每当一个生物用攻击命中你时，它会受到等同于你从攻击中受到的伤害一半的辐射伤害。"
+					]
+				},
+				"如果你攻击一个生物、对它施法，或者通过任何方式对它造成伤害，但不是通过这个特性，那么直到你完成一次长时间休息之前，这两个效果都不会对这个生物起作用。"
+			]
+		}
+	]
 }

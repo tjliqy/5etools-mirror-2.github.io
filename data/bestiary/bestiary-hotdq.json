@@ -1,2824 +1,2824 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM",
-        "VGM"
-      ]
-    },
-    "otherSources": {
-      "monster": {
-        "MM": "HotDQ"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "伏击龙",
-      "ENG_name": "Ambush Drake",
-      "source": "HotDQ",
-      "page": 88,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 180
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": "dragon",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 22,
-        "formula": "4d6 + 8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 13,
-      "dex": 15,
-      "con": 14,
-      "int": 4,
-      "wis": 11,
-      "cha": 6,
-      "skill": {
-        "perception": "+4",
-        "stealth": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 14,
-      "resist": [
-        "毁灭诅咒"
-      ],
-      "languages": [
-        "能理解龙语但无法说它"
-      ],
-      "cr": "1/2",
-      "trait": [
-        {
-          "name": "群体战术",
-          "ENG_name": "Pack Tactics",
-          "entries": [
-            "如果至少有一个幼龙的盟友在生物的5英尺范围内，并且该盟友没有处于{@condition 无力}，幼龙在对生物的攻击骰上具有优势。"
-          ]
-        },
-        {
-          "name": "突袭攻击",
-          "ENG_name": "Surprise Attack",
-          "entries": [
-            "如果幼龙在战斗的第一轮突袭并用攻击命中生物，目标将从这次攻击中额外承受7点({@dice 2d6})伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}4 ({@damage 1d6 + 1}) 穿刺h。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "群体战术"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "CS",
-        "DR"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "阿兹巴拉·乔斯",
-      "ENG_name": "Azbara Jos",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 88,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 180
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        13,
-        {
-          "ac": 16,
-          "condition": "带有{@spell 法师护甲}",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 39,
-        "formula": "6d8 + 12"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 9,
-      "dex": 16,
-      "con": 14,
-      "int": 16,
-      "wis": 13,
-      "cha": 11,
-      "save": {
-        "int": "+5",
-        "wis": "+3"
-      },
-      "skill": {
-        "arcana": "+5",
-        "deception": "+2",
-        "insight": "+3",
-        "stealth": "+5"
-      },
-      "passive": 11,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "地狱语",
-        "原始语",
-        "泰杨"
-      ],
-      "cr": "4",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "阿兹巴拉是一个6级施法者，使用智力作为他的施法能力（法术豁免{@dc 13}，{@hit 5}命中法术攻击）。阿兹巴拉从巫师法术列表中准备了以下法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 法师之手}",
-                "{@spell 魔法技俩}",
-                "{@spell 冷冻射线}",
-                "{@spell 电爪}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 云雾术}",
-                "{@spell 魔法飞弹}",
-                "{@spell 护盾术}",
-                "{@spell 雷鸣波}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 隐形术}",
-                "{@spell 迷踪步}",
-                "{@spell 灼热射线}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 反制法术}",
-                "{@spell 解除魔法}",
-                "{@spell 火球术}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "阿兹巴拉有两个第一级法术卷轴，包含法术{@spell 法师护甲}。"
-          ]
-        },
-        {
-          "name": "强力戏法",
-          "ENG_name": "Potent Cantrips",
-          "entries": [
-            "当阿兹巴拉施放咒法系的戏法并且未命中，或者目标成功通过其豁免检定时，目标仍然承受戏法一半的伤害，但不会受到其他效果。"
-          ]
-        },
-        {
-          "name": "法术塑形",
-          "ENG_name": "Sculpt Spells",
-          "entries": [
-            "当阿兹巴拉施放影响他能看见的其他生物的咒法法术时，他可以选择等于1加法术等级数量的生物在对抗法术的豁免骰上成功。如果这些生物通常会从法术中受到一半伤害，那么他们将不会受到任何伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战武器，远程武器} {@hit 5} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "I",
-        "其他",
-        "P"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "damageTagsSpell": [
-        "C",
-        "F",
-        "L",
-        "O",
-        "T"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "布拉戈图斯",
-      "ENG_name": "Blagothkus",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 89,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 181
-        }
-      ],
-      "size": [
-        "H"
-      ],
-      "type": {
-        "type": "giant",
-        "tags": [
-          "cloud giant"
-        ]
-      },
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "{@item 板条甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 138,
-        "formula": "12d12 + 60"
-      },
-      "speed": {
-        "walk": 40
-      },
-      "str": 26,
-      "dex": 13,
-      "con": 20,
-      "int": 16,
-      "wis": 15,
-      "cha": 15,
-      "save": {
-        "con": "+9",
-        "wis": "+6",
-        "cha": "+6"
-      },
-      "skill": {
-        "arcana": "+7",
-        "insight": "+6",
-        "intimidation": "+6",
-        "perception": "+6"
-      },
-      "passive": 16,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "巨人"
-      ],
-      "cr": "9",
-      "spellcasting": [
-        {
-          "name": "天生施法",
-          "ENG_name": "Innate Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Blagothkus 能够天生施放以下法术（法术豁免 {@dc 15}），无需任何材料："
-          ],
-          "daily": {
-            "3e": [
-              "{@spell 云雾术}",
-              "{@spell 浮空术}"
-            ]
-          }
-        },
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "布莱戈斯库斯是一个5级施法者，使用智力作为他的施法能力（法术豁免{@dc 15}，{@hit 7}命中法术攻击）。布莱戈斯库斯从巫师法术列表中准备了以下法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 光亮术}",
-                "{@spell 法师之手}",
-                "{@spell 魔法技俩}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 侦测魔法}",
-                "{@spell 鉴定术}",
-                "{@spell 魔法飞弹}",
-                "{@spell 护盾术}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 造风术}",
-                "{@spell 迷踪步}",
-                "{@spell 粉碎音波}"
-              ]
-            },
-            "3": {
-              "slots": 2,
-              "spells": [
-                "{@spell 飞行术}",
-                "{@spell 闪电束}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "敏锐嗅觉",
-          "ENG_name": "Keen Smell",
-          "entries": [
-            "Blagothkus 在依赖嗅觉的感知（{@skill 察觉}）检定上具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "布拉戈斯库斯用他的晨星攻击两次。"
-          ]
-        },
-        {
-          "name": "钉头锤",
-          "ENG_name": "Morningstar",
-          "entries": [
-            "{@atk 近战武器} 命中骰：10，触及范围10英尺，单一目标。{@h}21（{@damage 3d8 + 8}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "钉头锤|PHB"
-      ],
-      "traitTags": [
-        "敏锐感官"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "GI"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "damageTagsSpell": [
-        "L",
-        "O",
-        "T"
-      ],
-      "spellcastingTags": [
-        "CW",
-        "I"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "敏捷",
-        "力量"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "奥瑟斯坦船长",
-      "ENG_name": "Captain Othelstan",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 89,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 181
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 19,
-          "from": [
-            "{@item 板条甲|PHB}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 93,
-        "formula": "11d10 + 33"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 19,
-      "dex": 10,
-      "con": 16,
-      "int": 13,
-      "wis": 14,
-      "cha": 12,
-      "save": {
-        "str": "+7",
-        "con": "+6"
-      },
-      "skill": {
-        "athletics": "+7",
-        "intimidation": "+7",
-        "perception": "+5",
-        "religion": "+4"
-      },
-      "passive": 15,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "巨人"
-      ],
-      "cr": "5",
-      "trait": [
-        {
-          "name": "行动激增（短暂或长时间休息后重置）",
-          "ENG_name": "Action Surge (Recharges on a Short or Long Rest)",
-          "entries": [
-            "在他的回合，奥瑟斯坦可以进行一个额外的行动。"
-          ]
-        },
-        {
-          "name": "提亚玛特的复仇祝福",
-          "ENG_name": "Tiamat's Blessing of Retribution",
-          "entries": [
-            "当Othelstan受到的伤害使其生命值降至0点时，他立即恢复20点生命值。如果他在自己的下一个回合结束时生命值或更少，他将死亡。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "奥瑟斯坦可以用他的连枷或长矛进行两次攻击，或者用他的长矛进行两次远程攻击。"
-          ]
-        },
-        {
-          "name": "链枷",
-          "ENG_name": "Flail",
-          "entries": [
-            "{@atk 近战武器} 命中骰：7，射程5英尺，一个目标。{@h}8（{@damage 1d8 + 4}）钝击伤害。"
-          ]
-        },
-        {
-          "name": "矛",
-          "ENG_name": "Spear",
-          "entries": [
-            "{@atk 近战武器，远程武器} {@hit 7} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "连枷|PHB",
-        "矛|PHB"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "GI"
-      ],
-      "damageTags": [
-        "B",
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "Dragonclaw",
-      "ENG_name": "Dragonclaw",
-      "source": "HotDQ",
-      "page": 89,
-      "otherSources": [
-        {
-          "source": "RoT",
-          "page": 89
-        },
-        {
-          "source": "ToD",
-          "page": 182
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "{@item 皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 16,
-        "formula": "3d8 + 3"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 9,
-      "dex": 16,
-      "con": 13,
-      "int": 11,
-      "wis": 10,
-      "cha": 12,
-      "save": {
-        "wis": "+2"
-      },
-      "skill": {
-        "deception": "+3",
-        "stealth": "+5"
-      },
-      "passive": 10,
-      "languages": [
-        "普通",
-        "龙族血脉"
-      ],
-      "cr": "1",
-      "trait": [
-        {
-          "name": "龙之狂热者",
-          "ENG_name": "Dragon Fanatic",
-          "entries": [
-            "龙爪在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投骰上具有优势。当龙爪能看到一条龙或对其友好的更高级别的龙之教团成员时，龙爪忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
-          ]
-        },
-        {
-          "name": "狂信徒优势",
-          "ENG_name": "Fanatic Advantage",
-          "entries": [
-            "每回合一次，如果龙爪在武器攻击检定上有优势并且命中目标，它将额外造成7点({@dice 2d6})伤害。"
-          ]
-        },
-        {
-          "name": "群体战术",
-          "ENG_name": "Pack Tactics",
-          "entries": [
-            "如果龙爪的至少一个盟友在生物5英尺范围内，并且盟友不是{@condition 无力}，龙爪在对生物的攻击检定上有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "龙爪用其弯刀攻击两次。"
-          ]
-        },
-        {
-          "name": "弯刀",
-          "ENG_name": "Scimitar",
-          "entries": [
-            "使用近战武器攻击，命中骰为5，攻击范围5英尺，一个目标。造成6点（1d6 + 3）斩击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "弯刀|PHB"
-      ],
-      "traitTags": [
-        "群体战术"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR"
-      ],
-      "damageTags": [
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "龙翼",
-      "ENG_name": "Dragonwing",
-      "source": "HotDQ",
-      "page": 90,
-      "otherSources": [
-        {
-          "source": "RoT",
-          "page": 89
-        },
-        {
-          "source": "ToD",
-          "page": 183
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "{@item 皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 33,
-        "formula": "6d8 + 6"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 11,
-      "dex": 16,
-      "con": 13,
-      "int": 11,
-      "wis": 11,
-      "cha": 13,
-      "save": {
-        "wis": "+2"
-      },
-      "skill": {
-        "deception": "+3",
-        "stealth": "+5"
-      },
-      "passive": 10,
-      "resist": [
-        {
-          "resist": [
-            "酸性",
-            "寒冷",
-            "火",
-            "闪电",
-            "毁灭诅咒"
-          ],
-          "preNote": "以下之一："
-        }
-      ],
-      "languages": [
-        "普通",
-        "龙族血脉"
-      ],
-      "cr": "2",
-      "trait": [
-        {
-          "name": "龙之狂热者",
-          "ENG_name": "Dragon Fanatic",
-          "entries": [
-            "龙翼在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投骰上具有优势。当龙翼能看到一条龙或对其友好的更高级别的龙之教团成员时，龙翼忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
-          ]
-        },
-        {
-          "name": "狂信徒优势",
-          "ENG_name": "Fanatic Advantage",
-          "entries": [
-            "每当轮到龙翼进行攻击时，如果攻击检定获得优势并且命中，目标将额外受到7点（{@dice 2d6}）伤害。"
-          ]
-        },
-        {
-          "name": "有限飞行",
-          "ENG_name": "Limited Flight",
-          "entries": [
-            "龙翼可以使用一个奖励动作，在它的回合结束前获得30英尺的飞行速度。"
-          ]
-        },
-        {
-          "name": "群体战术",
-          "ENG_name": "Pack Tactics",
-          "entries": [
-            "如果至少有一个龙翼的盟友在目标生物5英尺范围内，并且该盟友没有处于{@condition 无力}，则龙翼在对目标生物的攻击骰上具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "龙翼用其弯刀攻击两次。"
-          ]
-        },
-        {
-          "name": "弯刀",
-          "ENG_name": "Scimitar",
-          "entries": [
-            "{@atk 近战} {@hit 5} hit，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 斩击伤害，加上3 ({@dice 1d6}) 点该邪教徒有抗性的类型的伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "弯刀|PHB"
-      ],
-      "traitTags": [
-        "群体战术"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR"
-      ],
-      "damageTags": [
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "德拉莫尔·博恩格雷",
-      "ENG_name": "Dralmorrer Borngray",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 90,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 184
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          {
-            "tag": "elf",
-            "prefix": "High"
-          }
-        ]
-      },
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 52,
-        "formula": "7d10 + 14"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 18,
-      "dex": 14,
-      "con": 14,
-      "int": 16,
-      "wis": 10,
-      "cha": 8,
-      "save": {
-        "str": "+6",
-        "con": "+4"
-      },
-      "skill": {
-        "arcana": "+5",
-        "deception": "+1",
-        "insight": "+2",
-        "perception": "+2",
-        "religion": "+5"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 12,
-      "languages": [
-        "普通",
-        "狂蛙人",
-        "龙族血脉",
-        "精灵语",
-        "地精",
-        "森林"
-      ],
-      "cr": "3",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "德拉莫雷尔是一个7级法术施法者，使用智力作为他的施法能力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。德拉莫雷尔从巫师法术列表中准备了以下法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 火焰箭}",
-                "{@spell 魔法技俩}",
-                "{@spell 电爪}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 大步奔行}",
-                "{@spell 魔法飞弹}",
-                "{@spell 护盾术}",
-                "{@spell 雷鸣波}"
-              ]
-            },
-            "2": {
-              "slots": 2,
-              "spells": [
-                "{@spell 魔化武器}",
-                "{@spell 迷踪步}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "精类血统",
-          "ENG_name": "Fey Ancestry",
-          "entries": [
-            "Dralmorrer 在对抗被 {@condition 魅惑} 的豁免投骰上具有优势，魔法无法使他入睡。"
-          ]
-        },
-        {
-          "name": "战争魔法",
-          "ENG_name": "War Magic",
-          "entries": [
-            "当Dralmorrer使用他的行动来施放一个戏法时，他还可以额外采取一个奖励行动来进行一次武器攻击。"
-          ]
-        },
-        {
-          "name": "武器联结",
-          "ENG_name": "Weapon Bond",
-          "entries": [
-            "只要他的长剑在同一个平面上，德拉莫雷可以用奖励动作将其传送到他的手中。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "德拉莫雷尔进行两次攻击，使用他的长剑或匕首。"
-          ]
-        },
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战武器} {@hit 6} hit，射程5英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 斩击h。"
-          ]
-        },
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战武器，远程武器} 命中骰：6，触及范围5英尺或远程20/60英尺，单一目标。{@h}6（{@damage 1d4 + 4}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB",
-        "长剑|PHB"
-      ],
-      "traitTags": [
-        "精类血统"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "E",
-        "GO",
-        "其他",
-        "S"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "damageTagsSpell": [
-        "F",
-        "L",
-        "O",
-        "T"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "savingThrowForcedSpell": [
-        "体质"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "四臂巨魔",
-      "ENG_name": "Four-Armed Troll",
-      "source": "HotDQ",
-      "page": 65,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 81
-        }
-      ],
-      "_copy": {
-        "name": "巨魔",
-        "ENG_name": "Troll",
-        "source": "MM",
-        "_mod": {
-          "action": {
-            "mode": "replaceArr",
-            "replace": "多重攻击",
-            "items": {
-              "name": "多重攻击",
-              "ENG_name": "Multiattack",
-              "entries": [
-                "巨魔进行五次攻击，一次用它的咬击，四次用它的爪击。如果两次或更多的爪击击中同一个目标，巨魔会撕扯目标，额外造成{@dice 2d6}的斩击伤害。"
-              ]
-            }
-          }
-        }
-      },
-      "cr": "6",
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "弗鲁拉姆·蒙达斯",
-      "ENG_name": "Frulam Mondath",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 90,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 184
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "{@item 链甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 44,
-        "formula": "8d8 + 8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 14,
-      "dex": 10,
-      "con": 13,
-      "int": 11,
-      "wis": 18,
-      "cha": 15,
-      "save": {
-        "wis": "+6",
-        "cha": "+4"
-      },
-      "skill": {
-        "deception": "+4",
-        "history": "+2",
-        "religion": "+2"
-      },
-      "passive": 14,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "地狱语"
-      ],
-      "cr": "2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "弗鲁拉姆是一个5级施法者，使用智慧作为她的施法能力（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。弗鲁拉姆从牧师法术列表中准备了以下法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 光亮术}",
-                "{@spell 圣焰}",
-                "{@spell 奇术}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 命令术}",
-                "{@spell 治疗伤势}",
-                "{@spell 治愈真言}",
-                "{@spell 圣域术}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 安定心神}",
-                "{@spell 人类定身术}",
-                "{@spell 灵体武器}"
-              ]
-            },
-            "3": {
-              "slots": 2,
-              "spells": [
-                "{@spell 群体治愈真言}",
-                "{@spell 灵体守卫}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "弗鲁拉姆用她的长戟进行两次攻击。"
-          ]
-        },
-        {
-          "name": "戟",
-          "ENG_name": "Halberd",
-          "entries": [
-            "{@atk 近战攻击} {@hit 命中5} 命中，触及范围10英尺，一个目标。{@h}7 ({@damage 1d10 + 2}) 钝击伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "戟|PHB"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "I"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "N",
-        "O",
-        "R"
-      ],
-      "spellcastingTags": [
-        "CC"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力",
-        "敏捷",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "金色雄鹿",
-      "ENG_name": "Golden Stag",
-      "source": "HotDQ",
-      "page": 35,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 51
-        }
-      ],
-      "_copy": {
-        "name": "麋鹿",
-        "ENG_name": "Elk",
-        "source": "MM"
-      },
-      "hasToken": true
-    },
-    {
-      "name": "守卫亚龙",
-      "ENG_name": "Guard Drake",
-      "source": "HotDQ",
-      "page": 91,
-      "otherSources": [
-        {
-          "source": "RoT",
-          "page": 90
-        },
-        {
-          "source": "ToD",
-          "page": 185
-        }
-      ],
-      "reprintedAs": [
-        "守卫亚龙|MPMM"
-      ],
-      "size": [
-        "M"
-      ],
-      "type": "dragon",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 14,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 52,
-        "formula": "7d8 + 21"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 11,
-      "con": 16,
-      "int": 4,
-      "wis": 10,
-      "cha": 7,
-      "skill": {
-        "perception": "+2"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 12,
-      "resist": [
-        "闪电"
-      ],
-      "languages": [
-        "能理解龙语但无法说它"
-      ],
-      "cr": "2",
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "幼龙进行两次攻击，一次用它的咬击，一次用它的尾巴。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战攻击} 命中骰5，射程5英尺，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
-          ]
-        },
-        {
-          "name": "尾击",
-          "ENG_name": "Tail",
-          "entries": [
-            "{@atk 近战武器攻击} {@hit 命中骰 5}命中，射程 5 英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 钝击伤害。"
-          ]
-        }
-      ],
-      "soundClip": {
-        "type": "internal",
-        "path": "bestiary/guard-drake.mp3"
-      },
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "CS",
-        "DR"
-      ],
-      "damageTags": [
-        "B",
-        "P"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "贾姆纳·光辉银",
-      "ENG_name": "Jamna Gleamsilver",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 91,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 185
-        }
-      ],
-      "size": [
-        "S"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "gnome"
-        ]
-      },
-      "alignment": [
-        "N"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "{@item 皮甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 22,
-        "formula": "4d6 + 8"
-      },
-      "speed": {
-        "walk": 25
-      },
-      "str": 8,
-      "dex": 17,
-      "con": 14,
-      "int": 15,
-      "wis": 10,
-      "cha": 12,
-      "save": {
-        "dex": "+5",
-        "int": "+4"
-      },
-      "skill": {
-        "acrobatics": "+5",
-        "deception": "+3",
-        "insight": "+2",
-        "perception": "+4",
-        "persuasion": "+3",
-        "stealth": "+7"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 14,
-      "languages": [
-        "普通",
-        "侏儒语",
-        "地精",
-        "森林"
-      ],
-      "cr": "1",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "贾姆娜是一个4级法术施法者，使用智力作为她的施法能力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。贾姆娜从巫师法术列表中准备了以下法术。"
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 法师之手}",
-                "{@spell 次级幻象}",
-                "{@spell 魔法技俩}",
-                "{@spell 冷冻射线}"
-              ]
-            },
-            "1": {
-              "slots": 3,
-              "spells": [
-                "{@spell 魅惑人类}",
-                "{@spell 七彩喷射}",
-                "{@spell 易容术}",
-                "{@spell 大步奔行}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "灵巧动作",
-          "ENG_name": "Cunning Action",
-          "entries": [
-            "Jamna可以采取一个奖励行动来执行冲刺、脱离战斗或隐藏行动。"
-          ]
-        },
-        {
-          "name": "侏儒狡黠",
-          "ENG_name": "Gnome Cunning",
-          "entries": [
-            "Jamna 在对抗魔法的智力、智慧和魅力豁免投骰上具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "Jamna用她的双短剑攻击两次。"
-          ]
-        },
-        {
-          "name": "短剑",
-          "ENG_name": "Shortsword",
-          "entries": [
-            "{@atk mw} 命中5，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3})穿刺伤害，如果目标是中型或更大，则额外造成({@dice 1d6})穿刺伤害，总计9 ({@dice 1d6 + 3})。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "短剑|PHB"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "G",
-        "GO",
-        "S"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "damageTagsSpell": [
-        "C"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "兰格德罗萨·塞安沃拉斯",
-      "ENG_name": "Langdedrosa Cyanwrath",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 91,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 186
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "half-dragon"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "{@item 板条甲|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 57,
-        "formula": "6d12 + 18"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 19,
-      "dex": 13,
-      "con": 16,
-      "int": 10,
-      "wis": 14,
-      "cha": 12,
-      "save": {
-        "str": "+6",
-        "con": "+5"
-      },
-      "skill": {
-        "athletics": "+6",
-        "intimidation": "+3",
-        "perception": "+4"
-      },
-      "senses": [
-        "盲视 10 英尺。",
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 14,
-      "resist": [
-        "闪电"
-      ],
-      "languages": [
-        "普通",
-        "龙族血脉"
-      ],
-      "cr": "4",
-      "trait": [
-        {
-          "name": "行动激增（短暂或长时间休息后重置）",
-          "ENG_name": "Action Surge (Recharges on a Short or Long Rest)",
-          "entries": [
-            "在他的回合，兰格德罗萨可以进行一次额外的动作。"
-          ]
-        },
-        {
-          "name": "精通重击",
-          "ENG_name": "Improved Critical",
-          "entries": [
-            "Langdedrosa 的武器攻击在掷骰结果为 19 或 20 时会打出致命一击。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "兰格德罗萨攻击两次，使用他的大剑或长矛。"
-          ]
-        },
-        {
-          "name": "巨剑",
-          "ENG_name": "Greatsword",
-          "entries": [
-            "{@atk 近战武器} 命中骰：6，射程5英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 斩击伤害。"
-          ]
-        },
-        {
-          "name": "矛",
-          "ENG_name": "Spear",
-          "entries": [
-            "{@atk 近战武器，远程武器} 命中骰：6，触及范围5英尺或远程20/60英尺，单一目标。{@h}7（{@damage 1d6 + 4}）穿刺伤害。"
-          ]
-        },
-        {
-          "name": "闪电吐息{@recharge 5}",
-          "ENG_name": "Lightning Breath {@recharge 5}",
-          "entries": [
-            "兰格德罗萨在一条30英尺长、5英尺宽的线上呼吸闪电。线上的每个生物都必须进行一次{@dc 13}敏捷豁免，失败则受到22（{@damage 4d10}）闪电伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "巨剑|PHB",
-        "矛|PHB"
-      ],
-      "senseTags": [
-        "B",
-        "D"
-      ],
-      "actionTags": [
-        "龙息武器",
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "DR"
-      ],
-      "damageTags": [
-        "L",
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "范围伤害",
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "Leosin Erlanthar",
-      "ENG_name": "Leosin Erlanthar",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 87,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 34
-        }
-      ],
-      "_copy": {
-        "name": "武术高手",
-        "ENG_name": "Martial Arts Adept",
-        "source": "VGM",
-        "_mod": {
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "5e工具注",
-              "ENG_name": "5etools Note",
-              "entries": [
-                "利奥辛·埃尔兰萨在《龙后的宝藏》(Hoard of the Dragon Queen, HotDQ)冒险中被介绍为半精灵武僧。为了方便使用，这里提供了《怪物图鉴：沃洛指南》(Volo's Guide to Monsters, VGM)中的武术高手(creature martial arts adept)的统计数据块。"
-              ]
-            }
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "利南·斯威夫特",
-      "ENG_name": "Linan Swift",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 8,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 24
-        }
-      ],
-      "_copy": {
-        "name": "平民",
-        "ENG_name": "Commoner",
-        "source": "MM"
-      },
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "hp": {
-        "average": 8,
-        "formula": "1d8"
-      },
-      "action": [
-        {
-          "name": "矛",
-          "ENG_name": "Spear",
-          "entries": [
-            "{@atk 近战武器} 命中骰{@hit 2}，射程5英尺，一个目标。{@h}3（{@damage 1d6}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "矛|PHB"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "猛击"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "昂塔尔·弗鲁姆",
-      "ENG_name": "Ontharr Frume",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 28,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 15
-        }
-      ],
-      "_copy": {
-        "name": "战争祭司",
-        "ENG_name": "War Priest",
-        "source": "VGM",
-        "_mod": {
-          "trait": {
-            "mode": "prependArr",
-            "items": {
-              "name": "5e工具注",
-              "ENG_name": "5etools Note",
-              "entries": [
-                "翁塔尔·弗鲁姆在《龙后的宝藏》（Hoard of the Dragon Queen）和《提亚玛特的崛起》（Rise of Tiamat）中被描述为一位守序善良的人族托尔姆圣武士。为了方便使用，这里提供了《沃洛的怪物指南》（Volo's Guide to Monsters）中的{@creature 战争牧师|vgm}统计数据块。"
-              ]
-            }
-          }
-        }
-      },
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "法布尔克斯·斯帕特古",
-      "ENG_name": "Pharblex Spattergoo",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 91,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 187
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "bullywug"
-        ]
-      },
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 59,
-        "formula": "7d8 + 28"
-      },
-      "speed": {
-        "walk": 20,
-        "swim": 40
-      },
-      "str": 15,
-      "dex": 12,
-      "con": 18,
-      "int": 11,
-      "wis": 16,
-      "cha": 7,
-      "save": {
-        "str": "+4",
-        "con": "+6"
-      },
-      "skill": {
-        "perception": "+5",
-        "religion": "+2",
-        "stealth": "+3"
-      },
-      "passive": 15,
-      "languages": [
-        "普通",
-        "狂蛙人"
-      ],
-      "cr": "3",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Pharblex 是一名 6 级施法者，使用智慧作为他的施法能力（法术豁免 {@dc 13}，法术攻击命中需要 {@hit 5}）。Pharblex 准备了以下来自德鲁伊法术列表的法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 德鲁伊伎俩}",
-                "{@spell 神导术}",
-                "{@spell 毒气喷洒}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 治疗伤势}",
-                "{@spell 纠缠术}",
-                "{@spell 治愈真言}",
-                "{@spell 雷鸣波}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 树肤术}",
-                "{@spell 野兽知觉}",
-                "{@spell 荆棘丛生}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 植物滋长}",
-                "{@spell 水面行走}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "trait": [
-        {
-          "name": "两栖",
-          "ENG_name": "Amphibious",
-          "entries": [
-            "法布莱克斯可以呼吸空气和水。"
-          ]
-        },
-        {
-          "name": "毒素攻击（每日3次）",
-          "ENG_name": "Poison Strike (3/Day)",
-          "entries": [
-            "每次轮到Pharblex进行攻击时，当他用近战攻击命中目标，他可以消耗这个特性的使用次数，额外造成9点（{@damage 2d8}）毒素伤害。"
-          ]
-        },
-        {
-          "name": "立定跳跃",
-          "ENG_name": "Standing Leap",
-          "entries": [
-            "作为他移动的一部分，且无需助跑，Pharblex可以进行长达20英尺的立定跳远和高达10英尺的立定跳高。"
-          ]
-        },
-        {
-          "name": "沼泽伪装",
-          "ENG_name": "Swamp Camouflage",
-          "entries": [
-            "Pharblex在沼泽地形中进行敏捷（{@skill 隐匿}）检定时具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "法布莱克斯进行两次攻击。一次用咬击，一次用长矛。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk mw} 命中{@hit 5}，触及5尺，单一目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害。"
-          ]
-        },
-        {
-          "name": "矛",
-          "ENG_name": "Spear",
-          "entries": [
-            "{@atk 近战武器，远程武器} 命中骰：5，触及范围5英尺或远程20/60英尺，单一目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "矛|PHB"
-      ],
-      "traitTags": [
-        "两栖"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "其他"
-      ],
-      "damageTags": [
-        "I",
-        "P"
-      ],
-      "damageTagsSpell": [
-        "I",
-        "P",
-        "T"
-      ],
-      "spellcastingTags": [
-        "CD"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "力量"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "拉格纳·红齿",
-      "ENG_name": "Raggnar Redtooth",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 74,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 90
-        }
-      ],
-      "_copy": {
-        "name": "老兵",
-        "ENG_name": "Veteran",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "老兵",
-            "with": "拉格纳",
-            "flags": "i"
-          }
-        }
-      },
-      "ac": [
-        11
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "拉斯·莫达尔",
-      "ENG_name": "Rath Modar",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 92,
-      "otherSources": [
-        {
-          "source": "RoT",
-          "page": 91
-        },
-        {
-          "source": "ToD",
-          "page": 188
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        13,
-        {
-          "ac": 16,
-          "condition": "带有{@spell 法师护甲}",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 71,
-        "formula": "11d8 + 22"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 11,
-      "dex": 16,
-      "con": 14,
-      "int": 18,
-      "wis": 14,
-      "cha": 10,
-      "save": {
-        "int": "+7",
-        "wis": "+5"
-      },
-      "skill": {
-        "arcana": "+7",
-        "deception": "+3",
-        "insight": "+5",
-        "stealth": "+6"
-      },
-      "passive": 12,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "地狱语",
-        "原始语",
-        "泰杨"
-      ],
-      "cr": "6",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "Rath 是一名 11 级施法者，使用智力作为他的施法能力（法术豁免 {@dc 15}，法术攻击命中需要 {@hit 7}）。Rath 准备了以下来自巫师法术列表的法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 火焰箭}",
-                "{@spell 次级幻象}",
-                "{@spell 魔法技俩}",
-                "{@spell 电爪}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 幻色法球}",
-                "{@spell 七彩喷射}",
-                "{@spell 法师护甲}",
-                "{@spell 魔法飞弹}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 侦测思想}",
-                "{@spell 镜影术}",
-                "{@spell 魅影之力}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 反制法术}",
-                "{@spell 火球术}",
-                "{@spell 强效幻影}"
-              ]
-            },
-            "4": {
-              "slots": 3,
-              "spells": [
-                "{@spell 困惑术}",
-                "{@spell 高等隐形术}"
-              ]
-            },
-            "5": {
-              "slots": 2,
-              "spells": [
-                "{@spell 假象术}",
-                "{@spell 伪装术}"
-              ]
-            },
-            "6": {
-              "slots": 1,
-              "spells": [
-                "{@spell 法术无效结界}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "Rath拥有一根{@item 火焰法杖}，以及{@spell 次元门}、{@spell 羽落术}和{@spell 火球术}的卷轴。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} 命中骰：4，触及范围5英尺，单一目标。{@h}4（{@damage 1d8}）钝击伤害。"
-          ]
-        }
-      ],
-      "reaction": [
-        {
-          "name": "幻象自我（短休或长休时充能）",
-          "ENG_name": "Illusory Self (Recharges on a Short or Long Rest)",
-          "entries": [
-            "当一个拉特能看到的生物对他进行攻击骰时，他可以在攻击者和他之间插入一个幻象副本。攻击自动错过拉特，然后幻象消散。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "I",
-        "其他",
-        "P"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "A",
-        "C",
-        "F",
-        "I",
-        "L",
-        "O",
-        "T",
-        "Y"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "魅力",
-        "敏捷",
-        "智力",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "Rezmir",
-      "ENG_name": "Rezmir",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 93,
-      "otherSources": [
-        {
-          "source": "RoT"
-        },
-        {
-          "source": "ToD",
-          "page": 180
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "half-black dragon"
-        ]
-      },
-      "alignment": [
-        "N",
-        "E"
-      ],
-      "ac": [
-        13,
-        {
-          "ac": 15,
-          "condition": "佩戴黑龙面具",
-          "braces": true
-        }
-      ],
-      "hp": {
-        "average": 90,
-        "formula": "12d8 + 36"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 18,
-      "dex": 16,
-      "con": 16,
-      "int": 15,
-      "wis": 12,
-      "cha": 14,
-      "save": {
-        "dex": "+6",
-        "wis": "+4"
-      },
-      "skill": {
-        "arcana": "+5",
-        "stealth": "+9"
-      },
-      "senses": [
-        "盲视 10 英尺。",
-        "黑暗视觉 120 英尺"
-      ],
-      "passive": 11,
-      "immune": [
-        "酸性"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "恐惧"
-      ],
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "地狱语",
-        "巨人",
-        "尼瑟瑞尔"
-      ],
-      "cr": "7",
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "Rezmir拥有{@item 黑龙面具|炽热的疑问}、{@item 哈兹瑞恩|炽热的疑问}以及一个{@item 利爪徽章|炽热的疑问}。"
-          ]
-        },
-        {
-          "name": "两栖",
-          "ENG_name": "Amphibious",
-          "entries": [
-            "Rezmir能够呼吸空气和水。"
-          ]
-        },
-        {
-          "name": "黑暗优势",
-          "ENG_name": "Dark Advantage",
-          "entries": [
-            "每回合一次，当Rezmir使用武器攻击命中目标时，如果Rezmir在攻击检定上有优势，她可以额外造成10点({@dice 3d6})伤害。"
-          ]
-        },
-        {
-          "name": "龙族威严",
-          "ENG_name": "Draconic Majesty",
-          "entries": [
-            "穿着不穿戴盔甲并戴上黑龙面具时，雷兹米尔将她的魅力加值加到她的护甲等级上（已包含）。"
-          ]
-        },
-        {
-          "name": "焚烧术",
-          "ENG_name": "Immolation",
-          "entries": [
-            "当Rezmir的生命值降至0点时，她的身体会分解成一堆灰烬。"
-          ]
-        },
-        {
-          "name": "传奇抗性（每日1次）",
-          "ENG_name": "Legendary Resistance (1/Day)",
-          "entries": [
-            "如果雷兹米尔在佩戴黑龙面具时失败豁免检定，她可以选择成功。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "巨剑（哈兹劳恩）",
-          "ENG_name": "Greatsword (Hazirawn)",
-          "entries": [
-            "{@atk 近战武器} {@hit 9} 命中，触及范围 5 英尺，一个目标。{@h}13 ({@damage 2d6 + 6}) 斩击伤害加上 7 ({@damage 2d6}) 死灵伤害。如果目标是一个生物，它在接下来的1分钟内不能恢复生命值。目标可以在它每个回合结束时进行一次 {@dc 15} 体质豁免，成功则提前结束这个效果。"
-          ]
-        },
-        {
-          "name": "腐蚀之箭",
-          "ENG_name": "Caustic Bolt",
-          "entries": [
-            "{@atk 远程攻击} {@hit 8} hit，射程90英尺，一个目标。{@h}18 ({@damage 4d8}) 酸性h。"
-          ]
-        },
-        {
-          "name": "强酸吐息 {@recharge 5}",
-          "ENG_name": "Acid Breath {@recharge 5}",
-          "entries": [
-            "雷兹米尔在一条30英尺长、5英尺宽的线上呼吸酸液。线上的每个生物都必须进行一次{@dc 14}敏捷豁免，失败则受到22（{@damage 5d8}）酸伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "legendaryHeader": [
-        "如果她佩戴着黑龙面具，雷兹米尔可以在她的每个回合之间进行最多两次传奇行动，可以一次性采取所有行动，也可以在整个回合中分散进行。传奇行动只能在回合的开始或结束时采取。"
-      ],
-      "legendaryActions": 2,
-      "legendary": [
-        {
-          "name": "黑暗（消耗2个行动）",
-          "ENG_name": "Darkness (Costs 2 Actions)",
-          "entries": [
-            "从Rezmir能看到的60英尺范围内的某点开始，一个15英尺半径的魔法黑暗区域扩散开来，并能绕过角落。只要Rezmir保持{@status 专注}，黑暗就会持续存在，最长可达1分钟。具有黑暗视觉的生物无法穿透这片黑暗，没有任何自然光能照亮它。如果这个区域与由2级或更低级别的法术创造的光区域重叠，创造光的法术将被解除。"
-          ]
-        },
-        {
-          "name": "近战攻击",
-          "ENG_name": "Melee Attack",
-          "entries": [
-            "Rezmir 进行一次近战攻击。"
-          ]
-        },
-        {
-          "name": "躲藏",
-          "ENG_name": "Hide",
-          "entries": [
-            "雷兹米尔采取隐蔽行动。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "巨剑|PHB"
-      ],
-      "traitTags": [
-        "两栖",
-        "传奇抗性"
-      ],
-      "senseTags": [
-        "B",
-        "SD"
-      ],
-      "actionTags": [
-        "龙息武器"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "GI",
-        "I",
-        "其他"
-      ],
-      "damageTags": [
-        "A",
-        "N",
-        "S"
-      ],
-      "miscTags": [
-        "范围伤害",
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForced": [
-        "体质",
-        "敏捷"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "桑德西尔·莫吉亚",
-      "ENG_name": "Sandesyl Morgia",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 81,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 98
-        }
-      ],
-      "_copy": {
-        "name": "吸血鬼",
-        "ENG_name": "Vampire",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "吸血鬼",
-            "with": "桑德西尔",
-            "flags": "i"
-          }
-        }
-      },
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "塔利斯·怀特",
-      "ENG_name": "Talis the White",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 93,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 189
-        }
-      ],
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "half-elf"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 18,
-          "from": [
-            "{@item +1 鳞甲}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 58,
-        "formula": "9d8 + 18"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 14,
-      "dex": 12,
-      "con": 14,
-      "int": 10,
-      "wis": 16,
-      "cha": 16,
-      "save": {
-        "wis": "+6",
-        "cha": "+6"
-      },
-      "skill": {
-        "deception": "+6",
-        "insight": "+6",
-        "perception": "+6",
-        "persuasion": "+6"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 16,
-      "languages": [
-        "普通",
-        "龙族血脉",
-        "精灵语",
-        "地狱语"
-      ],
-      "cr": "5",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "塔利斯是一个9级施法者，使用智慧作为她的施法能力（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。塔利斯从牧师法术列表中准备了以下法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 神导术}",
-                "{@spell 提升抗力}",
-                "{@spell 奇术}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 命令术}",
-                "{@spell 治疗伤势}",
-                "{@spell 治愈真言}",
-                "{@spell 造成伤势}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 目盲/耳聋术}",
-                "{@spell 次级复原术}",
-                "{@spell 灵体武器}（长矛）"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 解除魔法}",
-                "{@spell 群体治愈真言}",
-                "{@spell 短讯术}"
-              ]
-            },
-            "4": {
-              "slots": 3,
-              "spells": [
-                "{@spell 防死护咒}",
-                "{@spell 行动自如}"
-              ]
-            },
-            "5": {
-              "slots": 1,
-              "spells": [
-                "{@spell 疫病虫群}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "trait": [
-        {
-          "name": "特殊装备",
-          "ENG_name": "Special Equipment",
-          "entries": [
-            "塔利斯有一件{@item +1 鳞甲}和一个{@item 凛冬魔杖|炽热的疑问}。"
-          ]
-        },
-        {
-          "name": "精类血统",
-          "ENG_name": "Fey Ancestry",
-          "entries": [
-            "Talis在对抗被{@condition 魅惑}的豁免骰上具有优势，魔法也无法让她入睡。"
-          ]
-        },
-        {
-          "name": "冬日打击（每日3次）",
-          "ENG_name": "Winter Strike (3/Day)",
-          "entries": [
-            "每回合一次，当塔利斯用近战攻击命中时，她可以消耗这个特性的使用次数，额外造成9（{@damage 2d8}）点冰冷伤害。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "矛",
-          "ENG_name": "Spear",
-          "entries": [
-            "{@atk 近战武器，远程武器} {@hit 5} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}6 ({@damage 1d6 + 2}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "矛|PHB"
-      ],
-      "traitTags": [
-        "精类血统"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "languageTags": [
-        "C",
-        "DR",
-        "E",
-        "I"
-      ],
-      "damageTags": [
-        "C",
-        "P"
-      ],
-      "damageTagsSpell": [
-        "N",
-        "O",
-        "P"
-      ],
-      "spellcastingTags": [
-        "CC"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "conditionInflictSpell": [
-        "目盲",
-        "耳聋",
-        "伏地"
-      ],
-      "savingThrowForcedSpell": [
-        "体质",
-        "感知"
-      ],
-      "hasToken": true,
-      "hasFluffImages": true
-    },
-    {
-      "name": "特雷普辛",
-      "ENG_name": "Trepsin",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "HotDQ",
-      "page": 63,
-      "otherSources": [
-        {
-          "source": "ToD",
-          "page": 79
-        }
-      ],
-      "size": [
-        "L"
-      ],
-      "type": "giant",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 84,
-        "formula": "8d10 + 40"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 18,
-      "dex": 13,
-      "con": 20,
-      "int": 7,
-      "wis": 9,
-      "cha": 7,
-      "skill": {
-        "perception": "+2"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 11,
-      "languages": [
-        "巨人"
-      ],
-      "cr": "6",
-      "trait": [
-        {
-          "name": "敏锐嗅觉",
-          "ENG_name": "Keen Smell",
-          "entries": [
-            "这个食人魔在依赖嗅觉的感知（{@skill 察觉}）检定上具有优势。"
-          ]
-        },
-        {
-          "name": "再生",
-          "ENG_name": "Regeneration",
-          "entries": [
-            "食尸鬼在其回合开始时恢复10点生命值。如果食尸鬼受到酸性或火焰伤害，这个特性在食尸鬼下一个回合开始时不会生效。只有当食尸鬼在其回合开始时生命值为0并且没有再生时，食尸鬼才会死亡。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "巨魔进行五次攻击，一次用它的咬击，四次用它的爪击。如果两次或更多的爪击击中同一个目标，巨魔会撕扯目标，额外造成{@dice 2d6}的斩击伤害。"
-          ]
-        },
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器} {@hit +7} hit，射程5英尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿刺h。"
-          ]
-        },
-        {
-          "name": "爪抓",
-          "ENG_name": "Claw",
-          "entries": [
-            "{@atk 近战武器} 命中加值 {@hit +7}，触及范围 5 英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 斩击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "敏锐感官",
-        "再生"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "GI"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true,
-      "hasFluff": true,
-      "hasFluffImages": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "HotDQ"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "伏击龙",
+			"ENG_name": "Ambush Drake",
+			"source": "HotDQ",
+			"page": 88,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 180
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 14,
+			"int": 4,
+			"wis": 11,
+			"cha": 6,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 14,
+			"resist": [
+				"毁灭诅咒"
+			],
+			"languages": [
+				"能理解龙语但无法说它"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "群体战术",
+					"ENG_name": "Pack Tactics",
+					"entries": [
+						"如果至少有一个幼龙的盟友在生物的5英尺范围内，并且该盟友没有处于{@condition 无力}，幼龙在对生物的攻击骰上具有优势。"
+					]
+				},
+				{
+					"name": "突袭攻击",
+					"ENG_name": "Surprise Attack",
+					"entries": [
+						"如果幼龙在战斗的第一轮突袭并用攻击命中生物，目标将从这次攻击中额外承受7点({@dice 2d6})伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器} {@hit 4} hit，射程5英尺，一个目标。{@h}4 ({@damage 1d6 + 1}) 穿刺h。"
+					]
+				}
+			],
+			"traitTags": [
+				"群体战术"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "阿兹巴拉·乔斯",
+			"ENG_name": "Azbara Jos",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 88,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 180
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "带有{@spell 法师护甲}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 16,
+			"con": 14,
+			"int": 16,
+			"wis": 13,
+			"cha": 11,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+2",
+				"insight": "+3",
+				"stealth": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"地狱语",
+				"原始语",
+				"泰杨"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"阿兹巴拉是一个6级施法者，使用智力作为他的施法能力（法术豁免{@dc 13}，{@hit 5}命中法术攻击）。阿兹巴拉从巫师法术列表中准备了以下法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}",
+								"{@spell 电爪}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 云雾术}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}",
+								"{@spell 雷鸣波}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 隐形术}",
+								"{@spell 迷踪步}",
+								"{@spell 灼热射线}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 反制法术}",
+								"{@spell 解除魔法}",
+								"{@spell 火球术}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"阿兹巴拉有两个第一级法术卷轴，包含法术{@spell 法师护甲}。"
+					]
+				},
+				{
+					"name": "强力戏法",
+					"ENG_name": "Potent Cantrips",
+					"entries": [
+						"当阿兹巴拉施放咒法系的戏法并且未命中，或者目标成功通过其豁免检定时，目标仍然承受戏法一半的伤害，但不会受到其他效果。"
+					]
+				},
+				{
+					"name": "法术塑形",
+					"ENG_name": "Sculpt Spells",
+					"entries": [
+						"当阿兹巴拉施放影响他能看见的其他生物的咒法法术时，他可以选择等于1加法术等级数量的生物在对抗法术的豁免骰上成功。如果这些生物通常会从法术中受到一半伤害，那么他们将不会受到任何伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战武器，远程武器} {@hit 5} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I",
+				"其他",
+				"P"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "布拉戈图斯",
+			"ENG_name": "Blagothkus",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 181
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"cloud giant"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item 板条甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 26,
+			"dex": 13,
+			"con": 20,
+			"int": 16,
+			"wis": 15,
+			"cha": 15,
+			"save": {
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"insight": "+6",
+				"intimidation": "+6",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"巨人"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "天生施法",
+					"ENG_name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Blagothkus 能够天生施放以下法术（法术豁免 {@dc 15}），无需任何材料："
+					],
+					"daily": {
+						"3e": [
+							"{@spell 云雾术}",
+							"{@spell 浮空术}"
+						]
+					}
+				},
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"布莱戈斯库斯是一个5级施法者，使用智力作为他的施法能力（法术豁免{@dc 15}，{@hit 7}命中法术攻击）。布莱戈斯库斯从巫师法术列表中准备了以下法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 侦测魔法}",
+								"{@spell 鉴定术}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 造风术}",
+								"{@spell 迷踪步}",
+								"{@spell 粉碎音波}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell 飞行术}",
+								"{@spell 闪电束}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "敏锐嗅觉",
+					"ENG_name": "Keen Smell",
+					"entries": [
+						"Blagothkus 在依赖嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"布拉戈斯库斯用他的晨星攻击两次。"
+					]
+				},
+				{
+					"name": "钉头锤",
+					"ENG_name": "Morningstar",
+					"entries": [
+						"{@atk 近战武器} 命中骰：10，触及范围10英尺，单一目标。{@h}21（{@damage 3d8 + 8}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"钉头锤|PHB"
+			],
+			"traitTags": [
+				"敏锐感官"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷",
+				"力量"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "奥瑟斯坦船长",
+			"ENG_name": "Captain Othelstan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 181
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item 板条甲|PHB}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d10 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 16,
+			"int": 13,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+7",
+				"perception": "+5",
+				"religion": "+4"
+			},
+			"passive": 15,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"巨人"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "行动激增（短暂或长时间休息后重置）",
+					"ENG_name": "Action Surge (Recharges on a Short or Long Rest)",
+					"entries": [
+						"在他的回合，奥瑟斯坦可以进行一个额外的行动。"
+					]
+				},
+				{
+					"name": "提亚玛特的复仇祝福",
+					"ENG_name": "Tiamat's Blessing of Retribution",
+					"entries": [
+						"当Othelstan受到的伤害使其生命值降至0点时，他立即恢复20点生命值。如果他在自己的下一个回合结束时生命值或更少，他将死亡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"奥瑟斯坦可以用他的连枷或长矛进行两次攻击，或者用他的长矛进行两次远程攻击。"
+					]
+				},
+				{
+					"name": "链枷",
+					"ENG_name": "Flail",
+					"entries": [
+						"{@atk 近战武器} 命中骰：7，射程5英尺，一个目标。{@h}8（{@damage 1d8 + 4}）钝击伤害。"
+					]
+				},
+				{
+					"name": "矛",
+					"ENG_name": "Spear",
+					"entries": [
+						"{@atk 近战武器，远程武器} {@hit 7} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"连枷|PHB",
+				"矛|PHB"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dragonclaw",
+			"ENG_name": "Dragonclaw",
+			"source": "HotDQ",
+			"page": 89,
+			"otherSources": [
+				{
+					"source": "RoT",
+					"page": 89
+				},
+				{
+					"source": "ToD",
+					"page": 182
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item 皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 16,
+			"con": 13,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"deception": "+3",
+				"stealth": "+5"
+			},
+			"passive": 10,
+			"languages": [
+				"普通",
+				"龙族血脉"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "龙之狂热者",
+					"ENG_name": "Dragon Fanatic",
+					"entries": [
+						"龙爪在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投骰上具有优势。当龙爪能看到一条龙或对其友好的更高级别的龙之教团成员时，龙爪忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
+					]
+				},
+				{
+					"name": "狂信徒优势",
+					"ENG_name": "Fanatic Advantage",
+					"entries": [
+						"每回合一次，如果龙爪在武器攻击检定上有优势并且命中目标，它将额外造成7点({@dice 2d6})伤害。"
+					]
+				},
+				{
+					"name": "群体战术",
+					"ENG_name": "Pack Tactics",
+					"entries": [
+						"如果龙爪的至少一个盟友在生物5英尺范围内，并且盟友不是{@condition 无力}，龙爪在对生物的攻击检定上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"龙爪用其弯刀攻击两次。"
+					]
+				},
+				{
+					"name": "弯刀",
+					"ENG_name": "Scimitar",
+					"entries": [
+						"使用近战武器攻击，命中骰为5，攻击范围5英尺，一个目标。造成6点（1d6 + 3）斩击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"弯刀|PHB"
+			],
+			"traitTags": [
+				"群体战术"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "龙翼",
+			"ENG_name": "Dragonwing",
+			"source": "HotDQ",
+			"page": 90,
+			"otherSources": [
+				{
+					"source": "RoT",
+					"page": 89
+				},
+				{
+					"source": "ToD",
+					"page": 183
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item 皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 13,
+			"int": 11,
+			"wis": 11,
+			"cha": 13,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"deception": "+3",
+				"stealth": "+5"
+			},
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"酸性",
+						"寒冷",
+						"火",
+						"闪电",
+						"毁灭诅咒"
+					],
+					"preNote": "以下之一："
+				}
+			],
+			"languages": [
+				"普通",
+				"龙族血脉"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "龙之狂热者",
+					"ENG_name": "Dragon Fanatic",
+					"entries": [
+						"龙翼在对抗被{@condition 魅惑}或{@condition 恐惧}的豁免投骰上具有优势。当龙翼能看到一条龙或对其友好的更高级别的龙之教团成员时，龙翼忽略被{@condition 魅惑}或{@condition 恐惧}的效果。"
+					]
+				},
+				{
+					"name": "狂信徒优势",
+					"ENG_name": "Fanatic Advantage",
+					"entries": [
+						"每当轮到龙翼进行攻击时，如果攻击检定获得优势并且命中，目标将额外受到7点（{@dice 2d6}）伤害。"
+					]
+				},
+				{
+					"name": "有限飞行",
+					"ENG_name": "Limited Flight",
+					"entries": [
+						"龙翼可以使用一个奖励动作，在它的回合结束前获得30英尺的飞行速度。"
+					]
+				},
+				{
+					"name": "群体战术",
+					"ENG_name": "Pack Tactics",
+					"entries": [
+						"如果至少有一个龙翼的盟友在目标生物5英尺范围内，并且该盟友没有处于{@condition 无力}，则龙翼在对目标生物的攻击骰上具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"龙翼用其弯刀攻击两次。"
+					]
+				},
+				{
+					"name": "弯刀",
+					"ENG_name": "Scimitar",
+					"entries": [
+						"{@atk 近战} {@hit 5} hit，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 斩击伤害，加上3 ({@dice 1d6}) 点该邪教徒有抗性的类型的伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"弯刀|PHB"
+			],
+			"traitTags": [
+				"群体战术"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "德拉莫尔·博恩格雷",
+			"ENG_name": "Dralmorrer Borngray",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 184
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "elf",
+						"prefix": "High"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d10 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 14,
+			"int": 16,
+			"wis": 10,
+			"cha": 8,
+			"save": {
+				"str": "+6",
+				"con": "+4"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+1",
+				"insight": "+2",
+				"perception": "+2",
+				"religion": "+5"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 12,
+			"languages": [
+				"普通",
+				"狂蛙人",
+				"龙族血脉",
+				"精灵语",
+				"地精",
+				"森林"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"德拉莫雷尔是一个7级法术施法者，使用智力作为他的施法能力（法术豁免{@dc 13}，法术攻击命中{@hit 5}）。德拉莫雷尔从巫师法术列表中准备了以下法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 火焰箭}",
+								"{@spell 魔法技俩}",
+								"{@spell 电爪}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 大步奔行}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}",
+								"{@spell 雷鸣波}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell 魔化武器}",
+								"{@spell 迷踪步}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "精类血统",
+					"ENG_name": "Fey Ancestry",
+					"entries": [
+						"Dralmorrer 在对抗被 {@condition 魅惑} 的豁免投骰上具有优势，魔法无法使他入睡。"
+					]
+				},
+				{
+					"name": "战争魔法",
+					"ENG_name": "War Magic",
+					"entries": [
+						"当Dralmorrer使用他的行动来施放一个戏法时，他还可以额外采取一个奖励行动来进行一次武器攻击。"
+					]
+				},
+				{
+					"name": "武器联结",
+					"ENG_name": "Weapon Bond",
+					"entries": [
+						"只要他的长剑在同一个平面上，德拉莫雷可以用奖励动作将其传送到他的手中。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"德拉莫雷尔进行两次攻击，使用他的长剑或匕首。"
+					]
+				},
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战武器} {@hit 6} hit，射程5英尺，一个目标。{@h}8 ({@damage 1d8 + 4}) 斩击h。"
+					]
+				},
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战武器，远程武器} 命中骰：6，触及范围5英尺或远程20/60英尺，单一目标。{@h}6（{@damage 1d4 + 4}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB",
+				"长剑|PHB"
+			],
+			"traitTags": [
+				"精类血统"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E",
+				"GO",
+				"其他",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"savingThrowForcedSpell": [
+				"体质"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "四臂巨魔",
+			"ENG_name": "Four-Armed Troll",
+			"source": "HotDQ",
+			"page": 65,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 81
+				}
+			],
+			"_copy": {
+				"name": "巨魔",
+				"ENG_name": "Troll",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "多重攻击",
+						"items": {
+							"name": "多重攻击",
+							"ENG_name": "Multiattack",
+							"entries": [
+								"巨魔进行五次攻击，一次用它的咬击，四次用它的爪击。如果两次或更多的爪击击中同一个目标，巨魔会撕扯目标，额外造成{@dice 2d6}的斩击伤害。"
+							]
+						}
+					}
+				}
+			},
+			"cr": "6",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "弗鲁拉姆·蒙达斯",
+			"ENG_name": "Frulam Mondath",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 184
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item 链甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 13,
+			"int": 11,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"wis": "+6",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+4",
+				"history": "+2",
+				"religion": "+2"
+			},
+			"passive": 14,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"地狱语"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"弗鲁拉姆是一个5级施法者，使用智慧作为她的施法能力（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。弗鲁拉姆从牧师法术列表中准备了以下法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 光亮术}",
+								"{@spell 圣焰}",
+								"{@spell 奇术}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 命令术}",
+								"{@spell 治疗伤势}",
+								"{@spell 治愈真言}",
+								"{@spell 圣域术}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 安定心神}",
+								"{@spell 人类定身术}",
+								"{@spell 灵体武器}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell 群体治愈真言}",
+								"{@spell 灵体守卫}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"弗鲁拉姆用她的长戟进行两次攻击。"
+					]
+				},
+				{
+					"name": "戟",
+					"ENG_name": "Halberd",
+					"entries": [
+						"{@atk 近战攻击} {@hit 命中5} 命中，触及范围10英尺，一个目标。{@h}7 ({@damage 1d10 + 2}) 钝击伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"戟|PHB"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程"
+			],
+			"savingThrowForcedSpell": [
+				"魅力",
+				"敏捷",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "金色雄鹿",
+			"ENG_name": "Golden Stag",
+			"source": "HotDQ",
+			"page": 35,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 51
+				}
+			],
+			"_copy": {
+				"name": "麋鹿",
+				"ENG_name": "Elk",
+				"source": "MM"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "守卫亚龙",
+			"ENG_name": "Guard Drake",
+			"source": "HotDQ",
+			"page": 91,
+			"otherSources": [
+				{
+					"source": "RoT",
+					"page": 90
+				},
+				{
+					"source": "ToD",
+					"page": 185
+				}
+			],
+			"reprintedAs": [
+				"守卫亚龙|MPMM"
+			],
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d8 + 21"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 16,
+			"int": 4,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 12,
+			"resist": [
+				"闪电"
+			],
+			"languages": [
+				"能理解龙语但无法说它"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"幼龙进行两次攻击，一次用它的咬击，一次用它的尾巴。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战攻击} 命中骰5，射程5英尺，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
+					]
+				},
+				{
+					"name": "尾击",
+					"ENG_name": "Tail",
+					"entries": [
+						"{@atk 近战武器攻击} {@hit 命中骰 5}命中，射程 5 英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 钝击伤害。"
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/guard-drake.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "贾姆纳·光辉银",
+			"ENG_name": "Jamna Gleamsilver",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 185
+				}
+			],
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item 皮甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d6 + 8"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 8,
+			"dex": 17,
+			"con": 14,
+			"int": 15,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+5",
+				"int": "+4"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+3",
+				"insight": "+2",
+				"perception": "+4",
+				"persuasion": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 14,
+			"languages": [
+				"普通",
+				"侏儒语",
+				"地精",
+				"森林"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"贾姆娜是一个4级法术施法者，使用智力作为她的施法能力（法术豁免{@dc 12}，法术攻击命中{@hit 4}）。贾姆娜从巫师法术列表中准备了以下法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 法师之手}",
+								"{@spell 次级幻象}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell 魅惑人类}",
+								"{@spell 七彩喷射}",
+								"{@spell 易容术}",
+								"{@spell 大步奔行}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "灵巧动作",
+					"ENG_name": "Cunning Action",
+					"entries": [
+						"Jamna可以采取一个奖励行动来执行冲刺、脱离战斗或隐藏行动。"
+					]
+				},
+				{
+					"name": "侏儒狡黠",
+					"ENG_name": "Gnome Cunning",
+					"entries": [
+						"Jamna 在对抗魔法的智力、智慧和魅力豁免投骰上具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"Jamna用她的双短剑攻击两次。"
+					]
+				},
+				{
+					"name": "短剑",
+					"ENG_name": "Shortsword",
+					"entries": [
+						"{@atk mw} 命中5，射程5英尺，一个目标。{@h}6 ({@damage 1d6 + 3})穿刺伤害，如果目标是中型或更大，则额外造成({@dice 1d6})穿刺伤害，总计9 ({@dice 1d6 + 3})。"
+					]
+				}
+			],
+			"attachedItems": [
+				"短剑|PHB"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"G",
+				"GO",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "兰格德罗萨·塞安沃拉斯",
+			"ENG_name": "Langdedrosa Cyanwrath",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 186
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-dragon"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item 板条甲|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 57,
+				"formula": "6d12 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 16,
+			"int": 10,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"str": "+6",
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+6",
+				"intimidation": "+3",
+				"perception": "+4"
+			},
+			"senses": [
+				"盲视 10 英尺。",
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 14,
+			"resist": [
+				"闪电"
+			],
+			"languages": [
+				"普通",
+				"龙族血脉"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "行动激增（短暂或长时间休息后重置）",
+					"ENG_name": "Action Surge (Recharges on a Short or Long Rest)",
+					"entries": [
+						"在他的回合，兰格德罗萨可以进行一次额外的动作。"
+					]
+				},
+				{
+					"name": "精通重击",
+					"ENG_name": "Improved Critical",
+					"entries": [
+						"Langdedrosa 的武器攻击在掷骰结果为 19 或 20 时会打出致命一击。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"兰格德罗萨攻击两次，使用他的大剑或长矛。"
+					]
+				},
+				{
+					"name": "巨剑",
+					"ENG_name": "Greatsword",
+					"entries": [
+						"{@atk 近战武器} 命中骰：6，射程5英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 斩击伤害。"
+					]
+				},
+				{
+					"name": "矛",
+					"ENG_name": "Spear",
+					"entries": [
+						"{@atk 近战武器，远程武器} 命中骰：6，触及范围5英尺或远程20/60英尺，单一目标。{@h}7（{@damage 1d6 + 4}）穿刺伤害。"
+					]
+				},
+				{
+					"name": "闪电吐息{@recharge 5}",
+					"ENG_name": "Lightning Breath {@recharge 5}",
+					"entries": [
+						"兰格德罗萨在一条30英尺长、5英尺宽的线上呼吸闪电。线上的每个生物都必须进行一次{@dc 13}敏捷豁免，失败则受到22（{@damage 4d10}）闪电伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"attachedItems": [
+				"巨剑|PHB",
+				"矛|PHB"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"龙息武器",
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"范围伤害",
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Leosin Erlanthar",
+			"ENG_name": "Leosin Erlanthar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 87,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 34
+				}
+			],
+			"_copy": {
+				"name": "武术高手",
+				"ENG_name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "5e工具注",
+							"ENG_name": "5etools Note",
+							"entries": [
+								"利奥辛·埃尔兰萨在《龙后的宝藏》(Hoard of the Dragon Queen, HotDQ)冒险中被介绍为半精灵武僧。为了方便使用，这里提供了《怪物图鉴：沃洛指南》(Volo's Guide to Monsters, VGM)中的武术高手(creature martial arts adept)的统计数据块。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "利南·斯威夫特",
+			"ENG_name": "Linan Swift",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 8,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 24
+				}
+			],
+			"_copy": {
+				"name": "平民",
+				"ENG_name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hp": {
+				"average": 8,
+				"formula": "1d8"
+			},
+			"action": [
+				{
+					"name": "矛",
+					"ENG_name": "Spear",
+					"entries": [
+						"{@atk 近战武器} 命中骰{@hit 2}，射程5英尺，一个目标。{@h}3（{@damage 1d6}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"矛|PHB"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"猛击"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "昂塔尔·弗鲁姆",
+			"ENG_name": "Ontharr Frume",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 28,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 15
+				}
+			],
+			"_copy": {
+				"name": "战争祭司",
+				"ENG_name": "War Priest",
+				"source": "VGM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "5e工具注",
+							"ENG_name": "5etools Note",
+							"entries": [
+								"翁塔尔·弗鲁姆在《龙后的宝藏》（Hoard of the Dragon Queen）和《提亚玛特的崛起》（Rise of Tiamat）中被描述为一位守序善良的人族托尔姆圣武士。为了方便使用，这里提供了《沃洛的怪物指南》（Volo's Guide to Monsters）中的{@creature 战争牧师|vgm}统计数据块。"
+							]
+						}
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "法布尔克斯·斯帕特古",
+			"ENG_name": "Pharblex Spattergoo",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 187
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"bullywug"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d8 + 28"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 18,
+			"int": 11,
+			"wis": 16,
+			"cha": 7,
+			"save": {
+				"str": "+4",
+				"con": "+6"
+			},
+			"skill": {
+				"perception": "+5",
+				"religion": "+2",
+				"stealth": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"普通",
+				"狂蛙人"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Pharblex 是一名 6 级施法者，使用智慧作为他的施法能力（法术豁免 {@dc 13}，法术攻击命中需要 {@hit 5}）。Pharblex 准备了以下来自德鲁伊法术列表的法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 德鲁伊伎俩}",
+								"{@spell 神导术}",
+								"{@spell 毒气喷洒}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 治疗伤势}",
+								"{@spell 纠缠术}",
+								"{@spell 治愈真言}",
+								"{@spell 雷鸣波}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 树肤术}",
+								"{@spell 野兽知觉}",
+								"{@spell 荆棘丛生}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 植物滋长}",
+								"{@spell 水面行走}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "两栖",
+					"ENG_name": "Amphibious",
+					"entries": [
+						"法布莱克斯可以呼吸空气和水。"
+					]
+				},
+				{
+					"name": "毒素攻击（每日3次）",
+					"ENG_name": "Poison Strike (3/Day)",
+					"entries": [
+						"每次轮到Pharblex进行攻击时，当他用近战攻击命中目标，他可以消耗这个特性的使用次数，额外造成9点（{@damage 2d8}）毒素伤害。"
+					]
+				},
+				{
+					"name": "立定跳跃",
+					"ENG_name": "Standing Leap",
+					"entries": [
+						"作为他移动的一部分，且无需助跑，Pharblex可以进行长达20英尺的立定跳远和高达10英尺的立定跳高。"
+					]
+				},
+				{
+					"name": "沼泽伪装",
+					"ENG_name": "Swamp Camouflage",
+					"entries": [
+						"Pharblex在沼泽地形中进行敏捷（{@skill 隐匿}）检定时具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"法布莱克斯进行两次攻击。一次用咬击，一次用长矛。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk mw} 命中{@hit 5}，触及5尺，单一目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害。"
+					]
+				},
+				{
+					"name": "矛",
+					"ENG_name": "Spear",
+					"entries": [
+						"{@atk 近战武器，远程武器} 命中骰：5，触及范围5英尺或远程20/60英尺，单一目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"矛|PHB"
+			],
+			"traitTags": [
+				"两栖"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"其他"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"damageTagsSpell": [
+				"I",
+				"P",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"力量"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "拉格纳·红齿",
+			"ENG_name": "Raggnar Redtooth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 74,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 90
+				}
+			],
+			"_copy": {
+				"name": "老兵",
+				"ENG_name": "Veteran",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "老兵",
+						"with": "拉格纳",
+						"flags": "i"
+					}
+				}
+			},
+			"ac": [
+				11
+			],
+			"hasToken": true
+		},
+		{
+			"name": "拉斯·莫达尔",
+			"ENG_name": "Rath Modar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 92,
+			"otherSources": [
+				{
+					"source": "RoT",
+					"page": 91
+				},
+				{
+					"source": "ToD",
+					"page": 188
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "带有{@spell 法师护甲}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "11d8 + 22"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 14,
+			"int": 18,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+3",
+				"insight": "+5",
+				"stealth": "+6"
+			},
+			"passive": 12,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"地狱语",
+				"原始语",
+				"泰杨"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Rath 是一名 11 级施法者，使用智力作为他的施法能力（法术豁免 {@dc 15}，法术攻击命中需要 {@hit 7}）。Rath 准备了以下来自巫师法术列表的法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 火焰箭}",
+								"{@spell 次级幻象}",
+								"{@spell 魔法技俩}",
+								"{@spell 电爪}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 幻色法球}",
+								"{@spell 七彩喷射}",
+								"{@spell 法师护甲}",
+								"{@spell 魔法飞弹}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 侦测思想}",
+								"{@spell 镜影术}",
+								"{@spell 魅影之力}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 反制法术}",
+								"{@spell 火球术}",
+								"{@spell 强效幻影}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell 困惑术}",
+								"{@spell 高等隐形术}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell 假象术}",
+								"{@spell 伪装术}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell 法术无效结界}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"Rath拥有一根{@item 火焰法杖}，以及{@spell 次元门}、{@spell 羽落术}和{@spell 火球术}的卷轴。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} 命中骰：4，触及范围5英尺，单一目标。{@h}4（{@damage 1d8}）钝击伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "幻象自我（短休或长休时充能）",
+					"ENG_name": "Illusory Self (Recharges on a Short or Long Rest)",
+					"entries": [
+						"当一个拉特能看到的生物对他进行攻击骰时，他可以在攻击者和他之间插入一个幻象副本。攻击自动错过拉特，然后幻象消散。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I",
+				"其他",
+				"P"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"魅力",
+				"敏捷",
+				"智力",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rezmir",
+			"ENG_name": "Rezmir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 93,
+			"otherSources": [
+				{
+					"source": "RoT"
+				},
+				{
+					"source": "ToD",
+					"page": 180
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-black dragon"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 15,
+					"condition": "佩戴黑龙面具",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 16,
+			"int": 15,
+			"wis": 12,
+			"cha": 14,
+			"save": {
+				"dex": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+5",
+				"stealth": "+9"
+			},
+			"senses": [
+				"盲视 10 英尺。",
+				"黑暗视觉 120 英尺"
+			],
+			"passive": 11,
+			"immune": [
+				"酸性"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"恐惧"
+			],
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"地狱语",
+				"巨人",
+				"尼瑟瑞尔"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"Rezmir拥有{@item 黑龙面具|炽热的疑问}、{@item 哈兹瑞恩|炽热的疑问}以及一个{@item 利爪徽章|炽热的疑问}。"
+					]
+				},
+				{
+					"name": "两栖",
+					"ENG_name": "Amphibious",
+					"entries": [
+						"Rezmir能够呼吸空气和水。"
+					]
+				},
+				{
+					"name": "黑暗优势",
+					"ENG_name": "Dark Advantage",
+					"entries": [
+						"每回合一次，当Rezmir使用武器攻击命中目标时，如果Rezmir在攻击检定上有优势，她可以额外造成10点({@dice 3d6})伤害。"
+					]
+				},
+				{
+					"name": "龙族威严",
+					"ENG_name": "Draconic Majesty",
+					"entries": [
+						"穿着不穿戴盔甲并戴上黑龙面具时，雷兹米尔将她的魅力加值加到她的护甲等级上（已包含）。"
+					]
+				},
+				{
+					"name": "焚烧术",
+					"ENG_name": "Immolation",
+					"entries": [
+						"当Rezmir的生命值降至0点时，她的身体会分解成一堆灰烬。"
+					]
+				},
+				{
+					"name": "传奇抗性（每日1次）",
+					"ENG_name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"如果雷兹米尔在佩戴黑龙面具时失败豁免检定，她可以选择成功。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "巨剑（哈兹劳恩）",
+					"ENG_name": "Greatsword (Hazirawn)",
+					"entries": [
+						"{@atk 近战武器} {@hit 9} 命中，触及范围 5 英尺，一个目标。{@h}13 ({@damage 2d6 + 6}) 斩击伤害加上 7 ({@damage 2d6}) 死灵伤害。如果目标是一个生物，它在接下来的1分钟内不能恢复生命值。目标可以在它每个回合结束时进行一次 {@dc 15} 体质豁免，成功则提前结束这个效果。"
+					]
+				},
+				{
+					"name": "腐蚀之箭",
+					"ENG_name": "Caustic Bolt",
+					"entries": [
+						"{@atk 远程攻击} {@hit 8} hit，射程90英尺，一个目标。{@h}18 ({@damage 4d8}) 酸性h。"
+					]
+				},
+				{
+					"name": "强酸吐息 {@recharge 5}",
+					"ENG_name": "Acid Breath {@recharge 5}",
+					"entries": [
+						"雷兹米尔在一条30英尺长、5英尺宽的线上呼吸酸液。线上的每个生物都必须进行一次{@dc 14}敏捷豁免，失败则受到22（{@damage 5d8}）酸伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"legendaryHeader": [
+				"如果她佩戴着黑龙面具，雷兹米尔可以在她的每个回合之间进行最多两次传奇行动，可以一次性采取所有行动，也可以在整个回合中分散进行。传奇行动只能在回合的开始或结束时采取。"
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "黑暗（消耗2个行动）",
+					"ENG_name": "Darkness (Costs 2 Actions)",
+					"entries": [
+						"从Rezmir能看到的60英尺范围内的某点开始，一个15英尺半径的魔法黑暗区域扩散开来，并能绕过角落。只要Rezmir保持{@status 专注}，黑暗就会持续存在，最长可达1分钟。具有黑暗视觉的生物无法穿透这片黑暗，没有任何自然光能照亮它。如果这个区域与由2级或更低级别的法术创造的光区域重叠，创造光的法术将被解除。"
+					]
+				},
+				{
+					"name": "近战攻击",
+					"ENG_name": "Melee Attack",
+					"entries": [
+						"Rezmir 进行一次近战攻击。"
+					]
+				},
+				{
+					"name": "躲藏",
+					"ENG_name": "Hide",
+					"entries": [
+						"雷兹米尔采取隐蔽行动。"
+					]
+				}
+			],
+			"attachedItems": [
+				"巨剑|PHB"
+			],
+			"traitTags": [
+				"两栖",
+				"传奇抗性"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"龙息武器"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"GI",
+				"I",
+				"其他"
+			],
+			"damageTags": [
+				"A",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"范围伤害",
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForced": [
+				"体质",
+				"敏捷"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "桑德西尔·莫吉亚",
+			"ENG_name": "Sandesyl Morgia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 81,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 98
+				}
+			],
+			"_copy": {
+				"name": "吸血鬼",
+				"ENG_name": "Vampire",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "吸血鬼",
+						"with": "桑德西尔",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "塔利斯·怀特",
+			"ENG_name": "Talis the White",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 93,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 189
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item +1 鳞甲}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"insight": "+6",
+				"perception": "+6",
+				"persuasion": "+6"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 16,
+			"languages": [
+				"普通",
+				"龙族血脉",
+				"精灵语",
+				"地狱语"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"塔利斯是一个9级施法者，使用智慧作为她的施法能力（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。塔利斯从牧师法术列表中准备了以下法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 神导术}",
+								"{@spell 提升抗力}",
+								"{@spell 奇术}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 命令术}",
+								"{@spell 治疗伤势}",
+								"{@spell 治愈真言}",
+								"{@spell 造成伤势}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 目盲/耳聋术}",
+								"{@spell 次级复原术}",
+								"{@spell 灵体武器}（长矛）"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 解除魔法}",
+								"{@spell 群体治愈真言}",
+								"{@spell 短讯术}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell 防死护咒}",
+								"{@spell 行动自如}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell 疫病虫群}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "特殊装备",
+					"ENG_name": "Special Equipment",
+					"entries": [
+						"塔利斯有一件{@item +1 鳞甲}和一个{@item 凛冬魔杖|炽热的疑问}。"
+					]
+				},
+				{
+					"name": "精类血统",
+					"ENG_name": "Fey Ancestry",
+					"entries": [
+						"Talis在对抗被{@condition 魅惑}的豁免骰上具有优势，魔法也无法让她入睡。"
+					]
+				},
+				{
+					"name": "冬日打击（每日3次）",
+					"ENG_name": "Winter Strike (3/Day)",
+					"entries": [
+						"每回合一次，当塔利斯用近战攻击命中时，她可以消耗这个特性的使用次数，额外造成9（{@damage 2d8}）点冰冷伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "矛",
+					"ENG_name": "Spear",
+					"entries": [
+						"{@atk 近战武器，远程武器} {@hit 5} 命中，触及范围 5 英尺或远程 20/60 英尺，一个目标。{@h}6 ({@damage 1d6 + 2}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"矛|PHB"
+			],
+			"traitTags": [
+				"精类血统"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"conditionInflictSpell": [
+				"目盲",
+				"耳聋",
+				"伏地"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"感知"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "特雷普辛",
+			"ENG_name": "Trepsin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HotDQ",
+			"page": 63,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 79
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "8d10 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 20,
+			"int": 7,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 11,
+			"languages": [
+				"巨人"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "敏锐嗅觉",
+					"ENG_name": "Keen Smell",
+					"entries": [
+						"这个食人魔在依赖嗅觉的感知（{@skill 察觉}）检定上具有优势。"
+					]
+				},
+				{
+					"name": "再生",
+					"ENG_name": "Regeneration",
+					"entries": [
+						"食尸鬼在其回合开始时恢复10点生命值。如果食尸鬼受到酸性或火焰伤害，这个特性在食尸鬼下一个回合开始时不会生效。只有当食尸鬼在其回合开始时生命值为0并且没有再生时，食尸鬼才会死亡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"巨魔进行五次攻击，一次用它的咬击，四次用它的爪击。如果两次或更多的爪击击中同一个目标，巨魔会撕扯目标，额外造成{@dice 2d6}的斩击伤害。"
+					]
+				},
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器} {@hit +7} hit，射程5英尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿刺h。"
+					]
+				},
+				{
+					"name": "爪抓",
+					"ENG_name": "Claw",
+					"entries": [
+						"{@atk 近战武器} 命中加值 {@hit +7}，触及范围 5 英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 斩击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"敏锐感官",
+				"再生"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
 }

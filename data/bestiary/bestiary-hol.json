@@ -1,391 +1,391 @@
 {
-  "monster": [
-    {
-      "name": "学徒",
-      "ENG_name": "Apprentice",
-      "source": "HoL",
-      "page": 201,
-      "size": [
-        "M"
-      ],
-      "type": "humanoid",
-      "ac": [
-        10
-      ],
-      "hp": {
-        "average": 7,
-        "formula": "2d8 - 2"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 8,
-      "dex": 10,
-      "con": 9,
-      "int": 13,
-      "wis": 11,
-      "cha": 12,
-      "save": {
-        "int": "+3"
-      },
-      "skill": {
-        "arcana": "+3",
-        "history": "+3"
-      },
-      "passive": 10,
-      "languages": [
-        "任何一种语言（通常是通用语）"
-      ],
-      "pbNote": "+2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "你施放以下巫师法术之一（法术豁免{@dc 11}），使用智力作为施法能力："
-          ],
-          "will": [
-            "{@spell 次级幻象}",
-            {
-              "entry": "{@spell 火焰箭}",
-              "hidden": true
-            }
-          ],
-          "daily": {
-            "2": [
-              "{@spell 油腻术}"
-            ],
-            "2e": [
-              {
-                "entry": "{@spell 燃烧之手}",
-                "hidden": true
-              }
-            ]
-          },
-          "ability": "int",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战} {@hit 1} hit，射程5英尺，一个目标。{@h}2 ({@damage 1d6 - 1}) 钝击伤害，或者如果用双手则为3 ({@damage 1d8 - 1}) 钝击伤害。"
-          ]
-        },
-        {
-          "name": "炽手术（1级法术；每日2次）",
-          "ENG_name": "Burning Hands (1st-Level Spell; 2/Day)",
-          "entries": [
-            "你发射出一道15英尺长的火焰锥。在该区域内的每个生物都必须进行一次敏捷豁免检定，难度为{@dc 11}。如果检定失败，生物将承受10 ({@damage 3d6})点火焰伤害，如果检定成功，则承受一半的伤害。火焰会点燃区域内所有未被穿戴或携带的易燃物品。"
-          ]
-        },
-        {
-          "name": "火球术（戏法）",
-          "ENG_name": "Fire Bolt (Cantrip)",
-          "entries": [
-            "远程法术攻击：命中骰为{@hit 3}，射程120英尺，单一目标。造成{@h}5点（{@damage 1d10}）火焰伤害。如果被此法术击中的易燃物体没有被穿戴或携带，则会被点燃。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "X"
-      ],
-      "damageTags": [
-        "B",
-        "F"
-      ],
-      "damageTagsSpell": [
-        "F"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "范围伤害",
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "conditionInflictSpell": [
-        "伏地"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "门徒",
-      "ENG_name": "Disciple",
-      "source": "HoL",
-      "page": 201,
-      "size": [
-        "M"
-      ],
-      "type": "humanoid",
-      "ac": [
-        {
-          "ac": 11,
-          "from": [
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 9,
-        "formula": "2d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 12,
-      "dex": 9,
-      "con": 10,
-      "int": 11,
-      "wis": 13,
-      "cha": 9,
-      "save": {
-        "wis": "+3"
-      },
-      "skill": {
-        "perception": "+3",
-        "religion": "+2"
-      },
-      "passive": 13,
-      "languages": [
-        "任何一种语言（通常是通用语）"
-      ],
-      "pbNote": "+2",
-      "spellcasting": [
-        {
-          "name": "施法",
-          "ENG_name": "Spellcasting",
-          "type": "spellcasting",
-          "headerEntries": [
-            "你施放以下牧师法术之一（法术豁免{@dc 11}），使用智慧作为施法能力："
-          ],
-          "will": [
-            "{@spell 神导术}",
-            {
-              "entry": "{@spell 圣火术}",
-              "hidden": true
-            }
-          ],
-          "daily": {
-            "2": [
-              "{@spell 治疗伤势}"
-            ]
-          },
-          "ability": "wis",
-          "displayAs": "肉体雕塑者"
-        }
-      ],
-      "action": [
-        {
-          "name": "硬头锤",
-          "ENG_name": "Mace",
-          "entries": [
-            "{@atk 近战武器} 命中：3，射程5英尺，一个目标。{@h}4 ({@damage 1d6 + 1}) 钝击伤害。"
-          ]
-        },
-        {
-          "name": "圣光（戏法）",
-          "ENG_name": "Sacred Flame (Cantrip)",
-          "entries": [
-            "你选择一个在你60英尺范围内你能看到的生物作为目标。目标必须进行一次敏捷豁免（{@dc 11}），否则将受到4点（{@damage 1d8}）辐射伤害。在这个豁免投掷中，目标不会因掩体而获得任何好处。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "硬头锤|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "X"
-      ],
-      "damageTags": [
-        "B",
-        "R"
-      ],
-      "damageTagsSpell": [
-        "R"
-      ],
-      "spellcastingTags": [
-        "CC"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "潜行",
-      "ENG_name": "Sneak",
-      "source": "HoL",
-      "page": 201,
-      "size": [
-        "S"
-      ],
-      "type": "humanoid",
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 9,
-        "formula": "2d6 + 2"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 8,
-      "dex": 13,
-      "con": 12,
-      "int": 11,
-      "wis": 12,
-      "cha": 9,
-      "save": {
-        "dex": "+3"
-      },
-      "skill": {
-        "sleight of hand": "+3",
-        "stealth": "+3"
-      },
-      "passive": 11,
-      "languages": [
-        "任何一种语言（通常是通用语）"
-      ],
-      "pbNote": "+2",
-      "action": [
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战武器, 远程武器} 命中骰：3，射程5英尺或20/60英尺，一个目标。{@h}3（{@damage 1d4 + 1}）穿刺伤害。"
-          ]
-        }
-      ],
-      "bonus": [
-        {
-          "name": "撤离",
-          "ENG_name": "Disengage",
-          "entries": [
-            "你采取了脱离战斗动作。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "X"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "侍从",
-      "ENG_name": "Squire",
-      "source": "HoL",
-      "page": 201,
-      "size": [
-        "M"
-      ],
-      "type": "humanoid",
-      "ac": [
-        {
-          "ac": 12,
-          "from": [
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 11,
-        "formula": "2d8 + 2"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 13,
-      "dex": 10,
-      "con": 12,
-      "int": 8,
-      "wis": 11,
-      "cha": 9,
-      "save": {
-        "str": "+3"
-      },
-      "skill": {
-        "athletics": "+3"
-      },
-      "passive": 10,
-      "languages": [
-        "任何一种语言（通常是通用语）"
-      ],
-      "pbNote": "+2",
-      "action": [
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战武器} 命中骰：3，射程5英尺，单一目标。{@h}5（{@damage 1d8 + 1}）斩击伤害，或如果用双手使用则为6（{@damage 1d10 + 1}）斩击伤害。"
-          ]
-        }
-      ],
-      "bonus": [
-        {
-          "name": "推撞",
-          "ENG_name": "Shove",
-          "entries": [
-            "当你持盾时，你尝试推动距离你5英尺内的一只生物。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长剑|PHB"
-      ],
-      "languageTags": [
-        "C",
-        "X"
-      ],
-      "damageTags": [
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "hasToken": true
-    }
-  ]
+	"monster": [
+		{
+			"name": "学徒",
+			"ENG_name": "Apprentice",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d8 - 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 9,
+			"int": 13,
+			"wis": 11,
+			"cha": 12,
+			"save": {
+				"int": "+3"
+			},
+			"skill": {
+				"arcana": "+3",
+				"history": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"任何一种语言（通常是通用语）"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"你施放以下巫师法术之一（法术豁免{@dc 11}），使用智力作为施法能力："
+					],
+					"will": [
+						"{@spell 次级幻象}",
+						{
+							"entry": "{@spell 火焰箭}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell 油腻术}"
+						],
+						"2e": [
+							{
+								"entry": "{@spell 燃烧之手}",
+								"hidden": true
+							}
+						]
+					},
+					"ability": "int",
+					"displayAs": "动作"
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战} {@hit 1} hit，射程5英尺，一个目标。{@h}2 ({@damage 1d6 - 1}) 钝击伤害，或者如果用双手则为3 ({@damage 1d8 - 1}) 钝击伤害。"
+					]
+				},
+				{
+					"name": "炽手术（1级法术；每日2次）",
+					"ENG_name": "Burning Hands (1st-Level Spell; 2/Day)",
+					"entries": [
+						"你发射出一道15英尺长的火焰锥。在该区域内的每个生物都必须进行一次敏捷豁免检定，难度为{@dc 11}。如果检定失败，生物将承受10 ({@damage 3d6})点火焰伤害，如果检定成功，则承受一半的伤害。火焰会点燃区域内所有未被穿戴或携带的易燃物品。"
+					]
+				},
+				{
+					"name": "火球术（戏法）",
+					"ENG_name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"远程法术攻击：命中骰为{@hit 3}，射程120英尺，单一目标。造成{@h}5点（{@damage 1d10}）火焰伤害。如果被此法术击中的易燃物体没有被穿戴或携带，则会被点燃。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"范围伤害",
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"伏地"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "门徒",
+			"ENG_name": "Disciple",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 9,
+			"con": 10,
+			"int": 11,
+			"wis": 13,
+			"cha": 9,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"religion": "+2"
+			},
+			"passive": 13,
+			"languages": [
+				"任何一种语言（通常是通用语）"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"你施放以下牧师法术之一（法术豁免{@dc 11}），使用智慧作为施法能力："
+					],
+					"will": [
+						"{@spell 神导术}",
+						{
+							"entry": "{@spell 圣火术}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell 治疗伤势}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "动作"
+				}
+			],
+			"action": [
+				{
+					"name": "硬头锤",
+					"ENG_name": "Mace",
+					"entries": [
+						"{@atk 近战武器} 命中：3，射程5英尺，一个目标。{@h}4 ({@damage 1d6 + 1}) 钝击伤害。"
+					]
+				},
+				{
+					"name": "圣光（戏法）",
+					"ENG_name": "Sacred Flame (Cantrip)",
+					"entries": [
+						"你选择一个在你60英尺范围内你能看到的生物作为目标。目标必须进行一次敏捷豁免（{@dc 11}），否则将受到4点（{@damage 1d8}）辐射伤害。在这个豁免投掷中，目标不会因掩体而获得任何好处。"
+					]
+				}
+			],
+			"attachedItems": [
+				"硬头锤|PHB"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "潜行",
+			"ENG_name": "Sneak",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 11,
+			"wis": 12,
+			"cha": 9,
+			"save": {
+				"dex": "+3"
+			},
+			"skill": {
+				"sleight of hand": "+3",
+				"stealth": "+3"
+			},
+			"passive": 11,
+			"languages": [
+				"任何一种语言（通常是通用语）"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战武器, 远程武器} 命中骰：3，射程5英尺或20/60英尺，一个目标。{@h}3（{@damage 1d4 + 1}）穿刺伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "撤离",
+					"ENG_name": "Disengage",
+					"entries": [
+						"你采取了脱离战斗动作。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "侍从",
+			"ENG_name": "Squire",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 12,
+			"int": 8,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"str": "+3"
+			},
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"任何一种语言（通常是通用语）"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战武器} 命中骰：3，射程5英尺，单一目标。{@h}5（{@damage 1d8 + 1}）斩击伤害，或如果用双手使用则为6（{@damage 1d10 + 1}）斩击伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "推撞",
+					"ENG_name": "Shove",
+					"entries": [
+						"当你持盾时，你尝试推动距离你5英尺内的一只生物。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长剑|PHB"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"hasToken": true
+		}
+	]
 }

@@ -1,866 +1,866 @@
 {
-  "_meta": {
-    "otherSources": {
-      "monster": {
-        "SKT": "SLW",
-        "MM": "SLW",
-        "VGM": "SLW",
-        "PotA": "SLW",
-        "MTF": "SLW",
-        "GoS": "SLW",
-        "TftYP": "SLW"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "专家",
-      "ENG_name": "Expert",
-      "source": "SLW",
-      "level": 7,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "expert",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 44,
-        "formula": "8d8 + 8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 16,
-      "con": 12,
-      "int": 14,
-      "wis": 10,
-      "cha": 14,
-      "save": {
-        "dex": "+6"
-      },
-      "skill": {
-        "acrobatics": "+9",
-        "performance": "+5",
-        "persuasion": "+5",
-        "sleight of hand": "+6",
-        "stealth": "+9"
-      },
-      "passive": 10,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "好帮手",
-          "ENG_name": "Helpful",
-          "entries": [
-            "专家可以将协助动作作为奖励动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
-          ]
-        },
-        {
-          "name": "工具",
-          "ENG_name": "Tools",
-          "entries": [
-            "该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "额外攻击",
-          "ENG_name": "Extra Attack",
-          "entries": [
-            "专家在其回合采取{@action 攻击}行动时，可以进行两次攻击，而不是一次。"
-          ]
-        },
-        {
-          "name": "短剑",
-          "ENG_name": "Shortsword",
-          "entries": [
-            "{@atk 近战武器} {@hit 6} hit，射程 5 英尺，单一目标。{@h}6 ({@damage 1d6 + 3}) 穿刺h。"
-          ]
-        },
-        {
-          "name": "匕首",
-          "ENG_name": "Dagger",
-          "entries": [
-            "{@atk 近战，远程} {@hit 6}命中，射程5英尺或20/60英尺，单一目标。{@h}5 ({@damage 1d4 + 3})穿刺伤害。"
-          ]
-        },
-        {
-          "name": "短弓",
-          "ENG_name": "Shortbow",
-          "entries": [
-            "{@atk 远程武器} {@hit 命中6} 命中，射程80/320英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "匕首|PHB",
-        "短弓|PHB",
-        "短剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW",
-        "猛击"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "骷髅飞人",
-      "ENG_name": "Skull Flier",
-      "source": "SLW",
-      "size": [
-        "M"
-      ],
-      "type": "construct",
-      "alignment": [
-        "U"
-      ],
-      "ac": [
-        {
-          "ac": 16,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 24,
-        "formula": "3d8"
-      },
-      "speed": {
-        "walk": 10,
-        "fly": 50
-      },
-      "str": 10,
-      "dex": 14,
-      "con": 10,
-      "int": 1,
-      "wis": 10,
-      "cha": 3,
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 10,
-      "immune": [
-        "毁灭诅咒",
-        "心灵"
-      ],
-      "conditionImmune": [
-        "魅惑",
-        "恐惧",
-        "麻痹",
-        "石化",
-        "中毒"
-      ],
-      "cr": "1/2",
-      "action": [
-        {
-          "name": "螫刺",
-          "ENG_name": "Sting",
-          "entries": [
-            "{@atk 近战武器} 命中骰：4，射程5英尺，单一生物。{@h}5（{@damage 1d6 + 2}）穿刺伤害，目标必须进行一次{@dc 11}体质豁免，失败则受到10（{@damage 3d6}）毒素伤害，成功则伤害减半。如果毒素伤害使目标生命值降至0点，目标稳定但会{@condition poisoned}1小时，即使恢复生命值，也会在这样被{@condition poisoned}的状态下{@condition paralyzed}。"
-          ]
-        }
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "damageTags": [
-        "I",
-        "P"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "conditionInflict": [
-        "麻痹",
-        "中毒"
-      ],
-      "savingThrowForced": [
-        "体质"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "施法者（治疗者）",
-      "ENG_name": "Spellcaster (Healer)",
-      "source": "SLW",
-      "level": 7,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "spellcaster",
-        "tags": [
-          "healer"
-        ],
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 36,
-        "formula": "8d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 15,
-      "wis": 16,
-      "cha": 13,
-      "save": {
-        "wis": "+6"
-      },
-      "skill": {
-        "arcana": "+5",
-        "investigation": "+5",
-        "religion": "+5"
-      },
-      "passive": 13,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法（治疗者）",
-          "ENG_name": "Spellcasting (Healer)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的施法能力是智慧（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。施法者准备了以下牧师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 神导术}",
-                "{@spell 光亮术}",
-                "{@spell 提升抗力}",
-                "{@spell 圣焰}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 祝福术}",
-                "{@spell 治疗伤势}",
-                "{@spell 虔诚护盾}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 援助术}",
-                "{@spell 次级复原术}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 防护能量}",
-                "{@spell 回生术}"
-              ]
-            },
-            "4": {
-              "slots": 1,
-              "spells": [
-                "{@spell 防死护咒}"
-              ]
-            }
-          },
-          "ability": "wis"
-        }
-      ],
-      "trait": [
-        {
-          "name": "强力戏法",
-          "ENG_name": "Potent Cantrip",
-          "entries": [
-            "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} {@hit 3} hit，射程 5 英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "R"
-      ],
-      "spellcastingTags": [
-        "CC"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "施法者（法师）",
-      "ENG_name": "Spellcaster (Mage)",
-      "source": "SLW",
-      "level": 7,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "spellcaster",
-        "tags": [
-          "mage"
-        ],
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 13,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 36,
-        "formula": "8d8"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 10,
-      "dex": 12,
-      "con": 10,
-      "int": 16,
-      "wis": 14,
-      "cha": 13,
-      "save": {
-        "wis": "+5"
-      },
-      "skill": {
-        "arcana": "+6",
-        "investigation": "+6",
-        "religion": "+6"
-      },
-      "passive": 12,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "spellcasting": [
-        {
-          "name": "施法（法师）",
-          "ENG_name": "Spellcasting (Mage)",
-          "type": "spellcasting",
-          "headerEntries": [
-            "施法者的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。施法者准备了以下巫师法术："
-          ],
-          "spells": {
-            "0": {
-              "spells": [
-                "{@spell 火焰箭}",
-                "{@spell 光亮术}",
-                "{@spell 法师之手}",
-                "{@spell 次级幻象}"
-              ]
-            },
-            "1": {
-              "slots": 4,
-              "spells": [
-                "{@spell 燃烧之手}",
-                "{@spell 护盾术}",
-                "{@spell 沉眠}"
-              ]
-            },
-            "2": {
-              "slots": 3,
-              "spells": [
-                "{@spell 炽焰法球}",
-                "{@spell 隐形术}"
-              ]
-            },
-            "3": {
-              "slots": 3,
-              "spells": [
-                "{@spell 火球术}",
-                "{@spell 飞行术}"
-              ]
-            },
-            "4": {
-              "slots": 1,
-              "spells": [
-                "{@spell 火墙术}"
-              ]
-            }
-          },
-          "ability": "int"
-        }
-      ],
-      "trait": [
-        {
-          "name": "强力戏法",
-          "ENG_name": "Potent Cantrip",
-          "entries": [
-            "施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "长棍",
-          "ENG_name": "Quarterstaff",
-          "entries": [
-            "{@atk 近战武器} {@hit 3} hit，射程 5 英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "长棍|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "B"
-      ],
-      "damageTagsSpell": [
-        "F"
-      ],
-      "spellcastingTags": [
-        "CW"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW"
-      ],
-      "savingThrowForcedSpell": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "塔洛斯雕像",
-      "ENG_name": "Statue of Talos",
-      "source": "SLW",
-      "size": [
-        "L"
-      ],
-      "type": "elemental",
-      "alignment": [
-        "C",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 17,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 147,
-        "formula": "14d10 + 70"
-      },
-      "speed": {
-        "walk": 30,
-        "fly": 60
-      },
-      "str": 19,
-      "dex": 11,
-      "con": 20,
-      "int": 6,
-      "wis": 11,
-      "cha": 9,
-      "save": {
-        "wis": "+4"
-      },
-      "skill": {
-        "perception": "+4"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 14,
-      "resist": [
-        {
-          "resist": [
-            "钝击",
-            "穿刺",
-            "斩击"
-          ],
-          "note": "来自非魔法攻击，且攻击武器不是精金材质的",
-          "cond": true
-        }
-      ],
-      "immune": [
-        "毁灭诅咒"
-      ],
-      "conditionImmune": [
-        "力竭",
-        "石化",
-        "中毒"
-      ],
-      "languages": [
-        "泰坦"
-      ],
-      "cr": "10",
-      "trait": [
-        {
-          "name": "拟形",
-          "ENG_name": "False Appearance",
-          "entries": [
-            "当雕像保持静止时，它与无生命的雕像无法区分。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "雕像进行五次攻击：一次用头槌，四次用其闪电剑刃。"
-          ]
-        },
-        {
-          "name": "头槌",
-          "ENG_name": "Headbutt",
-          "entries": [
-            "{@atk 近战武器}命中{@hit 8}，射程5英尺，一个目标。{@h}11（{@damage 2d6 + 4}）穿刺伤害。"
-          ]
-        },
-        {
-          "name": "闪电刀刃",
-          "ENG_name": "Lightning Bolt Blades",
-          "entries": [
-            "{@atk 近战武器} 命中：8，射程5英尺，一个目标。{@h}9（{@damage 2d4 + 4}）斩击伤害。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "拟形"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "T"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "MW"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "爪牙",
-      "ENG_name": "Tooth-N-Claw",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "SLW",
-      "size": [
-        "M"
-      ],
-      "type": "fiend",
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "天生护甲"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 45,
-        "formula": "7d8 + 14"
-      },
-      "speed": {
-        "walk": 50
-      },
-      "str": 17,
-      "dex": 12,
-      "con": 14,
-      "int": 6,
-      "wis": 13,
-      "cha": 6,
-      "skill": {
-        "perception": "+5"
-      },
-      "senses": [
-        "黑暗视觉 60 英尺。"
-      ],
-      "passive": 15,
-      "immune": [
-        "寒冷"
-      ],
-      "languages": [
-        "能理解深渊语但无法说它"
-      ],
-      "cr": "3",
-      "trait": [
-        {
-          "name": "敏锐听觉和嗅觉",
-          "ENG_name": "Keen Hearing and Smell",
-          "entries": [
-            "Tooth-N-Claw 在依靠听觉或嗅觉的智力（{@skill 察觉}）检定上具有优势。"
-          ]
-        },
-        {
-          "name": "群体战术",
-          "ENG_name": "Pack Tactics",
-          "entries": [
-            "如果至少有一个盟友在5英尺内且该盟友不是{@condition 无力}状态，Tooth-N-Claw在对生物进行攻击检定时具有优势。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "啃咬",
-          "ENG_name": "Bite",
-          "entries": [
-            "{@atk 近战武器}命中{@hit 5}，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）穿刺伤害加上7（{@damage 2d6}）冰冷伤害。"
-          ]
-        },
-        {
-          "name": "冰冷吐息 {@recharge 5}",
-          "ENG_name": "Freezing Breath {@recharge 5}",
-          "entries": [
-            "Tooth-N-Claw 呼出一道15英尺锥形的冰冷气流。该区域内的每个生物都必须进行一次敏捷豁免检定，DC为12，失败则受到21点（6d6）冰霜伤害，成功则伤害减半。"
-          ]
-        }
-      ],
-      "traitTags": [
-        "敏锐感官",
-        "群体战术"
-      ],
-      "senseTags": [
-        "D"
-      ],
-      "actionTags": [
-        "龙息武器"
-      ],
-      "languageTags": [
-        "CS",
-        "I"
-      ],
-      "damageTags": [
-        "C",
-        "P"
-      ],
-      "miscTags": [
-        "范围伤害",
-        "MW"
-      ],
-      "savingThrowForced": [
-        "敏捷"
-      ],
-      "hasToken": true
-    },
-    {
-      "name": "战士",
-      "ENG_name": "Warrior",
-      "source": "SLW",
-      "level": 7,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "sidekickType": "warrior",
-        "sidekickHidden": true
-      },
-      "ac": [
-        {
-          "ac": 20,
-          "from": [
-            "{@item 板甲|PHB}",
-            "{@item 护盾术|PHB}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 52,
-        "formula": "8d8 + 16"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 16,
-      "dex": 14,
-      "con": 14,
-      "int": 10,
-      "wis": 12,
-      "cha": 10,
-      "save": {
-        "con": "+5"
-      },
-      "skill": {
-        "athletics": "+6",
-        "perception": "+4",
-        "survival": "+4"
-      },
-      "passive": 14,
-      "languages": [
-        "普通",
-        "增加你选择的一项"
-      ],
-      "trait": [
-        {
-          "name": "备战",
-          "ENG_name": "Battle Readiness",
-          "entries": [
-            "战士在先攻骰上有优势。"
-          ]
-        },
-        {
-          "name": "精通重击",
-          "ENG_name": "Improved Critical",
-          "entries": [
-            "战士的攻击检定在d20骰出19或20时获得致命一击。"
-          ]
-        },
-        {
-          "name": "战斗职能",
-          "ENG_name": "Martial Role",
-          "entries": [
-            "该战士具有以下特质之一，由你选择：",
-            {
-              "type": "list",
-              "style": "list-hang-notitle",
-              "items": [
-                {
-                  "type": "item",
-                  "name": "攻击者",
-                  "ENG_name": "Attacker",
-                  "entry": "战士获得攻击检定的+2加值。"
-                },
-                {
-                  "type": "item",
-                  "name": "防御者",
-                  "ENG_name": "Defender",
-                  "entry": "战士获得了以下保护反应。"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "额外攻击",
-          "ENG_name": "Extra Attack",
-          "entries": [
-            "战士在其回合采取{@action 攻击}行动时，可以进行两次攻击，而不是一次。"
-          ]
-        },
-        {
-          "name": "长剑",
-          "ENG_name": "Longsword",
-          "entries": [
-            "{@atk 近战武器} 命中：6，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）斩击伤害，或者如果用双手使用则为8（{@damage 1d10 + 3}）斩击伤害。"
-          ]
-        },
-        {
-          "name": "长弓",
-          "ENG_name": "Longbow",
-          "entries": [
-            "{@atk 远程} {@hit 5}命中，射程150/600英尺，单一目标。{@h}6 ({@damage 1d8 + 2})穿刺伤害。"
-          ]
-        }
-      ],
-      "reaction": [
-        {
-          "name": "防护（仅限守卫者）",
-          "ENG_name": "Protection (Defender Only)",
-          "entries": [
-            "战士对5英尺内的目标不是战士的生物的攻击检定施加劣势。战士必须能看到攻击者。"
-          ]
-        }
-      ],
-      "altArt": [
-        {
-          "name": "战士（守卫者）",
-          "ENG_name": "Warrior (Defender)",
-          "source": "SLW"
-        }
-      ],
-      "attachedItems": [
-        "长弓|PHB",
-        "长剑|PHB"
-      ],
-      "languageTags": [
-        "C"
-      ],
-      "damageTags": [
-        "P",
-        "S"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW"
-      ],
-      "hasToken": true
-    }
-  ]
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"SKT": "SLW",
+				"MM": "SLW",
+				"VGM": "SLW",
+				"PotA": "SLW",
+				"MTF": "SLW",
+				"GoS": "SLW",
+				"TftYP": "SLW"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "专家",
+			"ENG_name": "Expert",
+			"source": "SLW",
+			"level": 7,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "expert",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"dex": "+6"
+			},
+			"skill": {
+				"acrobatics": "+9",
+				"performance": "+5",
+				"persuasion": "+5",
+				"sleight of hand": "+6",
+				"stealth": "+9"
+			},
+			"passive": 10,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "好帮手",
+					"ENG_name": "Helpful",
+					"entries": [
+						"专家可以将协助动作作为奖励动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
+					]
+				},
+				{
+					"name": "工具",
+					"ENG_name": "Tools",
+					"entries": [
+						"该专家拥有{@item 盗贼工具|PHB}和一件乐器。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "额外攻击",
+					"ENG_name": "Extra Attack",
+					"entries": [
+						"专家在其回合采取{@action 攻击}行动时，可以进行两次攻击，而不是一次。"
+					]
+				},
+				{
+					"name": "短剑",
+					"ENG_name": "Shortsword",
+					"entries": [
+						"{@atk 近战武器} {@hit 6} hit，射程 5 英尺，单一目标。{@h}6 ({@damage 1d6 + 3}) 穿刺h。"
+					]
+				},
+				{
+					"name": "匕首",
+					"ENG_name": "Dagger",
+					"entries": [
+						"{@atk 近战，远程} {@hit 6}命中，射程5英尺或20/60英尺，单一目标。{@h}5 ({@damage 1d4 + 3})穿刺伤害。"
+					]
+				},
+				{
+					"name": "短弓",
+					"ENG_name": "Shortbow",
+					"entries": [
+						"{@atk 远程武器} {@hit 命中6} 命中，射程80/320英尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"匕首|PHB",
+				"短弓|PHB",
+				"短剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW",
+				"猛击"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "骷髅飞人",
+			"ENG_name": "Skull Flier",
+			"source": "SLW",
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 24,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 50
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 10,
+			"immune": [
+				"毁灭诅咒",
+				"心灵"
+			],
+			"conditionImmune": [
+				"魅惑",
+				"恐惧",
+				"麻痹",
+				"石化",
+				"中毒"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "螫刺",
+					"ENG_name": "Sting",
+					"entries": [
+						"{@atk 近战武器} 命中骰：4，射程5英尺，单一生物。{@h}5（{@damage 1d6 + 2}）穿刺伤害，目标必须进行一次{@dc 11}体质豁免，失败则受到10（{@damage 3d6}）毒素伤害，成功则伤害减半。如果毒素伤害使目标生命值降至0点，目标稳定但会{@condition poisoned}1小时，即使恢复生命值，也会在这样被{@condition poisoned}的状态下{@condition paralyzed}。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"麻痹",
+				"中毒"
+			],
+			"savingThrowForced": [
+				"体质"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "施法者（治疗者）",
+			"ENG_name": "Spellcaster (Healer)",
+			"source": "SLW",
+			"level": 7,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"healer"
+				],
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 15,
+			"wis": 16,
+			"cha": 13,
+			"save": {
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+5",
+				"investigation": "+5",
+				"religion": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"spellcasting": [
+				{
+					"name": "施法（治疗者）",
+					"ENG_name": "Spellcasting (Healer)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的施法能力是智慧（法术豁免{@dc 14}，{@hit 6}命中法术攻击）。施法者准备了以下牧师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 神导术}",
+								"{@spell 光亮术}",
+								"{@spell 提升抗力}",
+								"{@spell 圣焰}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 祝福术}",
+								"{@spell 治疗伤势}",
+								"{@spell 虔诚护盾}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 援助术}",
+								"{@spell 次级复原术}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 防护能量}",
+								"{@spell 回生术}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell 防死护咒}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "强力戏法",
+					"ENG_name": "Potent Cantrip",
+					"entries": [
+						"施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} {@hit 3} hit，射程 5 英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "施法者（法师）",
+			"ENG_name": "Spellcaster (Mage)",
+			"source": "SLW",
+			"level": 7,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "spellcaster",
+				"tags": [
+					"mage"
+				],
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 16,
+			"wis": 14,
+			"cha": 13,
+			"save": {
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"investigation": "+6",
+				"religion": "+6"
+			},
+			"passive": 12,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"spellcasting": [
+				{
+					"name": "施法（法师）",
+					"ENG_name": "Spellcasting (Mage)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"施法者的施法能力是智力（法术豁免{@dc 14}，法术攻击命中{@hit 6}）。施法者准备了以下巫师法术："
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell 火焰箭}",
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 次级幻象}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell 燃烧之手}",
+								"{@spell 护盾术}",
+								"{@spell 沉眠}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell 炽焰法球}",
+								"{@spell 隐形术}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell 火球术}",
+								"{@spell 飞行术}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell 火墙术}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "强力戏法",
+					"ENG_name": "Potent Cantrip",
+					"entries": [
+						"施法者可以将它的法术施放能力调整值加到它用任何戏法造成的伤害中。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "长棍",
+					"ENG_name": "Quarterstaff",
+					"entries": [
+						"{@atk 近战武器} {@hit 3} hit，射程 5 英尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
+					]
+				}
+			],
+			"attachedItems": [
+				"长棍|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "塔洛斯雕像",
+			"ENG_name": "Statue of Talos",
+			"source": "SLW",
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 147,
+				"formula": "14d10 + 70"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 20,
+			"int": 6,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"钝击",
+						"穿刺",
+						"斩击"
+					],
+					"note": "来自非魔法攻击，且攻击武器不是精金材质的",
+					"cond": true
+				}
+			],
+			"immune": [
+				"毁灭诅咒"
+			],
+			"conditionImmune": [
+				"力竭",
+				"石化",
+				"中毒"
+			],
+			"languages": [
+				"泰坦"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "拟形",
+					"ENG_name": "False Appearance",
+					"entries": [
+						"当雕像保持静止时，它与无生命的雕像无法区分。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"雕像进行五次攻击：一次用头槌，四次用其闪电剑刃。"
+					]
+				},
+				{
+					"name": "头槌",
+					"ENG_name": "Headbutt",
+					"entries": [
+						"{@atk 近战武器}命中{@hit 8}，射程5英尺，一个目标。{@h}11（{@damage 2d6 + 4}）穿刺伤害。"
+					]
+				},
+				{
+					"name": "闪电刀刃",
+					"ENG_name": "Lightning Bolt Blades",
+					"entries": [
+						"{@atk 近战武器} 命中：8，射程5英尺，一个目标。{@h}9（{@damage 2d4 + 4}）斩击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"拟形"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "爪牙",
+			"ENG_name": "Tooth-N-Claw",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "SLW",
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 14,
+			"int": 6,
+			"wis": 13,
+			"cha": 6,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"黑暗视觉 60 英尺。"
+			],
+			"passive": 15,
+			"immune": [
+				"寒冷"
+			],
+			"languages": [
+				"能理解深渊语但无法说它"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "敏锐听觉和嗅觉",
+					"ENG_name": "Keen Hearing and Smell",
+					"entries": [
+						"Tooth-N-Claw 在依靠听觉或嗅觉的智力（{@skill 察觉}）检定上具有优势。"
+					]
+				},
+				{
+					"name": "群体战术",
+					"ENG_name": "Pack Tactics",
+					"entries": [
+						"如果至少有一个盟友在5英尺内且该盟友不是{@condition 无力}状态，Tooth-N-Claw在对生物进行攻击检定时具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atk 近战武器}命中{@hit 5}，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）穿刺伤害加上7（{@damage 2d6}）冰冷伤害。"
+					]
+				},
+				{
+					"name": "冰冷吐息 {@recharge 5}",
+					"ENG_name": "Freezing Breath {@recharge 5}",
+					"entries": [
+						"Tooth-N-Claw 呼出一道15英尺锥形的冰冷气流。该区域内的每个生物都必须进行一次敏捷豁免检定，DC为12，失败则受到21点（6d6）冰霜伤害，成功则伤害减半。"
+					]
+				}
+			],
+			"traitTags": [
+				"敏锐感官",
+				"群体战术"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"龙息武器"
+			],
+			"languageTags": [
+				"CS",
+				"I"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"范围伤害",
+				"MW"
+			],
+			"savingThrowForced": [
+				"敏捷"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "战士",
+			"ENG_name": "Warrior",
+			"source": "SLW",
+			"level": 7,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"sidekickType": "warrior",
+				"sidekickHidden": true
+			},
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item 板甲|PHB}",
+						"{@item 护盾术|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+6",
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"普通",
+				"增加你选择的一项"
+			],
+			"trait": [
+				{
+					"name": "备战",
+					"ENG_name": "Battle Readiness",
+					"entries": [
+						"战士在先攻骰上有优势。"
+					]
+				},
+				{
+					"name": "精通重击",
+					"ENG_name": "Improved Critical",
+					"entries": [
+						"战士的攻击检定在d20骰出19或20时获得致命一击。"
+					]
+				},
+				{
+					"name": "战斗职能",
+					"ENG_name": "Martial Role",
+					"entries": [
+						"该战士具有以下特质之一，由你选择：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "攻击者",
+									"ENG_name": "Attacker",
+									"entry": "战士获得攻击检定的+2加值。"
+								},
+								{
+									"type": "item",
+									"name": "防御者",
+									"ENG_name": "Defender",
+									"entry": "战士获得了以下保护反应。"
+								}
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "额外攻击",
+					"ENG_name": "Extra Attack",
+					"entries": [
+						"战士在其回合采取{@action 攻击}行动时，可以进行两次攻击，而不是一次。"
+					]
+				},
+				{
+					"name": "长剑",
+					"ENG_name": "Longsword",
+					"entries": [
+						"{@atk 近战武器} 命中：6，射程5英尺，一个目标。{@h}7（{@damage 1d8 + 3}）斩击伤害，或者如果用双手使用则为8（{@damage 1d10 + 3}）斩击伤害。"
+					]
+				},
+				{
+					"name": "长弓",
+					"ENG_name": "Longbow",
+					"entries": [
+						"{@atk 远程} {@hit 5}命中，射程150/600英尺，单一目标。{@h}6 ({@damage 1d8 + 2})穿刺伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "防护（仅限守卫者）",
+					"ENG_name": "Protection (Defender Only)",
+					"entries": [
+						"战士对5英尺内的目标不是战士的生物的攻击检定施加劣势。战士必须能看到攻击者。"
+					]
+				}
+			],
+			"altArt": [
+				{
+					"name": "战士（守卫者）",
+					"ENG_name": "Warrior (Defender)",
+					"source": "SLW"
+				}
+			],
+			"attachedItems": [
+				"长弓|PHB",
+				"长剑|PHB"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW"
+			],
+			"hasToken": true
+		}
+	]
 }

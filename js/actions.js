@@ -49,7 +49,7 @@ class ActionsPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterActions();
 		super({
-			dataSource: `${DataUtil.data_dir()}/actions.json`,
+			dataSource: `data/actions.json`,
 
 			pageFilter,
 

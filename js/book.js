@@ -1,6 +1,6 @@
 "use strict";
 
-const JSON_URL = `${DataUtil.data_dir()}/books.json`;
+const JSON_URL = `data/books.json`;
 
 window.addEventListener("load", async () => {
 	BookUtil.$dispBook = $(`#pagecontent`);
@@ -13,7 +13,7 @@ window.addEventListener("load", async () => {
 });
 
 async function onJsonLoad (data) {
-	BookUtil.baseDataUrl = `${DataUtil.data_dir()}/book/book-`;
+	BookUtil.baseDataUrl = `data/book/book-`;
 	BookUtil.allPageUrl = "books.html";
 	BookUtil.propHomebrewData = "bookData";
 	BookUtil.typeTitle = "Book";

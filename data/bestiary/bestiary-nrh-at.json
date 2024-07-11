@@ -1,285 +1,285 @@
 {
-  "_meta": {
-    "dependencies": {
-      "monster": [
-        "MM"
-      ]
-    },
-    "otherSources": {
-      "monster": {
-        "NRH-TCMC": "NRH-AT",
-        "NRH-ASS": "NRH-AT"
-      }
-    }
-  },
-  "monster": [
-    {
-      "name": "情绪",
-      "ENG_name": "Emo",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "NRH-AT",
-      "page": 9,
-      "_copy": {
-        "name": "眼魔",
-        "ENG_name": "Beholder",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "眼魔",
-            "with": "情绪",
-            "flags": "i"
-          },
-          "action": [
-            {
-              "mode": "replaceArr",
-              "replace": "眼波射线",
-              "items": {
-                "name": "眼波射线",
-                "ENG_name": "Eye Rays",
-                "entries": [
-                  "Emo随机发射以下三种魔法眼射线（重掷重复项），选择它能看到的1至3个目标，目标必须在其120英尺范围内：",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "name": "1. 快乐射线",
-                        "ENG_name": "1. Happiness Ray",
-                        "entries": [
-                          "目标生物必须在一次智慧豁免检定上成功，难度等级为{@dc 14}，否则会因大笑而倒地，变成{@condition incapacitated}状态，无法站立，持续1分钟或直到Emo伤害该生物。目标可以在每个回合的末尾重复豁免检定，成功则结束自身上的此效果。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "2. 悲伤射线",
-                        "ENG_name": "2. Sadness Ray",
-                        "entries": [
-                          "目标生物必须成功进行一次智力豁免投掷（DC 15）。豁免失败时，目标将被悲伤所压倒，并受到3d6点精神伤害，直到其下回合结束前不能采取反应。在其下回合，它可以使用动作或奖励动作，但不能同时使用两者。豁免成功时，目标受到的伤害减半，并且不会遭受其他效果。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "3. 愤怒射线",
-                        "ENG_name": "3. Anger Ray",
-                        "entries": [
-                          "目标生物必须成功通过一次智力豁免检定，难度为{@dc 14}，否则将被迫与Emo决斗1分钟。目标在对Emo以外的生物进行攻击检定时处于劣势，并且每次尝试远离Emo超过30英尺时，都必须进行一次智力豁免检定。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "4. 焦虑射线",
-                        "ENG_name": "4. Anxiety Ray",
-                        "entries": [
-                          "目标生物必须在一次{@dc 15}智力豁免投掷中成功，否则在1分钟内失去区分友敌的能力，将所有它能看到的生物视为敌人。每次目标受到伤害时，它可以重复豁免投掷，成功则结束自身的这种效果。",
-                          "每当受影响的生物用攻击、法术或其他能力瞄准另一个生物时，它必须从它能看到的范围内使用攻击、法术或其他能力的生物中随机选择目标。如果敌人从受影响的生物那里引发机会攻击，如果生物能够做到，它必须进行那次攻击。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "5. 恐惧射线",
-                        "ENG_name": "5. Fear Ray",
-                        "entries": [
-                          "目标生物必须在一次{@dc 14}智力豁免投掷中成功，否则将被{@condition 恐惧}1分钟。",
-                          "目标可以在每个回合结束时重复豁免投掷，成功则结束自身的效果。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "6. 荒芜射线",
-                        "ENG_name": "6. Desolation Ray",
-                        "entries": [
-                          "目标生物必须在一次智力豁免检定上成功，难度等级为{@dc 14}。如果豁免成功，目标受到{@damage 5d10}点心灵伤害，法术结束。如果豁免失败，目标受到{@damage 5d10}点心灵伤害，并在1分钟内认为自己被限制在一个虚幻的石牢中。目标无法看到或听到牢房之外的任何事物，并且处于{@condition 束缚}状态。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "7. 嫉妒射线",
-                        "ENG_name": "7. Jealousy Ray",
-                        "entries": [
-                          "目标生物必须在一次{@dc 14}智力豁免投掷中成功，否则将被{@condition 魅惑}1分钟。当目标以这种方式被{@condition 魅惑}时，它必须在每个回合行动前使用其动作对Emo选择的生物进行近战攻击。目标可以在每个回合结束时重复豁免投掷，成功则结束此效果。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "8. 令人作呕射线",
-                        "ENG_name": "8. Disgusting Ray",
-                        "entries": [
-                          "目标生物必须通过一次对抗毒素的智力豁免检定，难度为{@dc 15}。如果豁免失败，目标将被黄色、令人作呕的气体包围，并在其下一回合花费动作呕吐和摇晃。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "9. 惊喜射线",
-                        "ENG_name": "9. Surprise Ray",
-                        "entries": [
-                          "被指定的生物必须成功进行一次",
-                          "{@dc 15} 敏捷豁免投掷，否则在下回合结束前被彩色喷雾致盲。"
-                        ],
-                        "type": "item"
-                      },
-                      {
-                        "name": "10. 信任射线",
-                        "ENG_name": "10. Trust Ray",
-                        "entries": [
-                          "被指定的生物必须成功进行一次",
-                          "{@dc 16} 进行一次智力豁免检定，否则在1小时内或直到Emo伤害该生物前被Emo所{@condition 魅惑}。"
-                        ],
-                        "type": "item"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      "hasToken": true
-    },
-    {
-      "name": "玛德",
-      "ENG_name": "Maude",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "NRH-AT",
-      "page": 12,
-      "_copy": {
-        "name": "熊地精酋长",
-        "ENG_name": "Bugbear Chief",
-        "source": "MM",
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "地精强盗",
-            "with": "玛德",
-            "flags": "i"
-          }
-        }
-      },
-      "hasToken": true
-    },
-    {
-      "name": "Mr. Greystone",
-      "ENG_name": "Mr. Greystone",
-      "isNpc": true,
-      "isNamedCreature": true,
-      "source": "NRH-AT",
-      "page": 13,
-      "size": [
-        "M"
-      ],
-      "type": {
-        "type": "humanoid",
-        "tags": [
-          "human"
-        ]
-      },
-      "alignment": [
-        "L",
-        "E"
-      ],
-      "ac": [
-        {
-          "ac": 15,
-          "from": [
-            "{@item 镶钉皮甲|PHB|铆钉皮甲}"
-          ]
-        }
-      ],
-      "hp": {
-        "average": 112,
-        "formula": "15d8 + 45"
-      },
-      "speed": {
-        "walk": 30
-      },
-      "str": 18,
-      "dex": 15,
-      "con": 16,
-      "int": 10,
-      "wis": 12,
-      "cha": 15,
-      "save": {
-        "str": "+7",
-        "dex": "+5",
-        "con": "+6"
-      },
-      "skill": {
-        "athletics": "+10",
-        "intimidation": "+5"
-      },
-      "passive": 11,
-      "languages": [
-        "普通",
-        "地精"
-      ],
-      "cr": "5",
-      "trait": [
-        {
-          "name": "勇敢",
-          "ENG_name": "Brave",
-          "entries": [
-            "格雷斯顿先生在对抗被{@condition 恐惧}的豁免投掷上有优势。"
-          ]
-        },
-        {
-          "name": "残暴",
-          "ENG_name": "Brute",
-          "entries": [
-            "当格雷斯顿先生用它命中时，近战武器会额外造成一骰的伤害（包含在攻击中）。"
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "多重攻击",
-          "ENG_name": "Multiattack",
-          "entries": [
-            "格雷斯顿先生进行两次近战攻击或两次远程攻击。"
-          ]
-        },
-        {
-          "name": "短棒",
-          "ENG_name": "Club",
-          "entries": [
-            "{@atk 近战武器攻击} {@hit 命中骰 7}命中，射程 5 英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 钝击伤害。"
-          ]
-        },
-        {
-          "name": "手弩",
-          "ENG_name": "Hand Crossbow",
-          "entries": [
-            "{@atk 远程攻击} 命中骰5，射程30/120英尺，单一目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
-          ]
-        }
-      ],
-      "attachedItems": [
-        "棍棒|PHB",
-        "手弩|PHB"
-      ],
-      "traitTags": [
-        "残暴"
-      ],
-      "actionTags": [
-        "多重攻击"
-      ],
-      "languageTags": [
-        "C",
-        "GO"
-      ],
-      "damageTags": [
-        "B",
-        "P"
-      ],
-      "miscTags": [
-        "魔法学习(Magic Learning Wheel)",
-        "MW",
-        "射程",
-        "RW"
-      ],
-      "hasToken": true
-    }
-  ]
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"NRH-TCMC": "NRH-AT",
+				"NRH-ASS": "NRH-AT"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "情绪",
+			"ENG_name": "Emo",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 9,
+			"_copy": {
+				"name": "眼魔",
+				"ENG_name": "Beholder",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "眼魔",
+						"with": "情绪",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "眼波射线",
+							"items": {
+								"name": "眼波射线",
+								"ENG_name": "Eye Rays",
+								"entries": [
+									"Emo随机发射以下三种魔法眼射线（重掷重复项），选择它能看到的1至3个目标，目标必须在其120英尺范围内：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"name": "1. 快乐射线",
+												"ENG_name": "1. Happiness Ray",
+												"entries": [
+													"目标生物必须在一次智慧豁免检定上成功，难度等级为{@dc 14}，否则会因大笑而倒地，变成{@condition incapacitated}状态，无法站立，持续1分钟或直到Emo伤害该生物。目标可以在每个回合的末尾重复豁免检定，成功则结束自身上的此效果。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "2. 悲伤射线",
+												"ENG_name": "2. Sadness Ray",
+												"entries": [
+													"目标生物必须成功进行一次智力豁免投掷（DC 15）。豁免失败时，目标将被悲伤所压倒，并受到3d6点精神伤害，直到其下回合结束前不能采取反应。在其下回合，它可以使用动作或奖励动作，但不能同时使用两者。豁免成功时，目标受到的伤害减半，并且不会遭受其他效果。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "3. 愤怒射线",
+												"ENG_name": "3. Anger Ray",
+												"entries": [
+													"目标生物必须成功通过一次智力豁免检定，难度为{@dc 14}，否则将被迫与Emo决斗1分钟。目标在对Emo以外的生物进行攻击检定时处于劣势，并且每次尝试远离Emo超过30英尺时，都必须进行一次智力豁免检定。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "4. 焦虑射线",
+												"ENG_name": "4. Anxiety Ray",
+												"entries": [
+													"目标生物必须在一次{@dc 15}智力豁免投掷中成功，否则在1分钟内失去区分友敌的能力，将所有它能看到的生物视为敌人。每次目标受到伤害时，它可以重复豁免投掷，成功则结束自身的这种效果。",
+													"每当受影响的生物用攻击、法术或其他能力瞄准另一个生物时，它必须从它能看到的范围内使用攻击、法术或其他能力的生物中随机选择目标。如果敌人从受影响的生物那里引发机会攻击，如果生物能够做到，它必须进行那次攻击。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "5. 恐惧射线",
+												"ENG_name": "5. Fear Ray",
+												"entries": [
+													"目标生物必须在一次{@dc 14}智力豁免投掷中成功，否则将被{@condition 恐惧}1分钟。",
+													"目标可以在每个回合结束时重复豁免投掷，成功则结束自身的效果。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "6. 荒芜射线",
+												"ENG_name": "6. Desolation Ray",
+												"entries": [
+													"目标生物必须在一次智力豁免检定上成功，难度等级为{@dc 14}。如果豁免成功，目标受到{@damage 5d10}点心灵伤害，法术结束。如果豁免失败，目标受到{@damage 5d10}点心灵伤害，并在1分钟内认为自己被限制在一个虚幻的石牢中。目标无法看到或听到牢房之外的任何事物，并且处于{@condition 束缚}状态。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "7. 嫉妒射线",
+												"ENG_name": "7. Jealousy Ray",
+												"entries": [
+													"目标生物必须在一次{@dc 14}智力豁免投掷中成功，否则将被{@condition 魅惑}1分钟。当目标以这种方式被{@condition 魅惑}时，它必须在每个回合行动前使用其动作对Emo选择的生物进行近战攻击。目标可以在每个回合结束时重复豁免投掷，成功则结束此效果。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "8. 令人作呕射线",
+												"ENG_name": "8. Disgusting Ray",
+												"entries": [
+													"目标生物必须通过一次对抗毒素的智力豁免检定，难度为{@dc 15}。如果豁免失败，目标将被黄色、令人作呕的气体包围，并在其下一回合花费动作呕吐和摇晃。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "9. 惊喜射线",
+												"ENG_name": "9. Surprise Ray",
+												"entries": [
+													"被指定的生物必须成功进行一次",
+													"{@dc 15} 敏捷豁免投掷，否则在下回合结束前被彩色喷雾致盲。"
+												],
+												"type": "item"
+											},
+											{
+												"name": "10. 信任射线",
+												"ENG_name": "10. Trust Ray",
+												"entries": [
+													"被指定的生物必须成功进行一次",
+													"{@dc 16} 进行一次智力豁免检定，否则在1小时内或直到Emo伤害该生物前被Emo所{@condition 魅惑}。"
+												],
+												"type": "item"
+											}
+										]
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "玛德",
+			"ENG_name": "Maude",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 12,
+			"_copy": {
+				"name": "熊地精酋长",
+				"ENG_name": "Bugbear Chief",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "地精强盗",
+						"with": "玛德",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Mr. Greystone",
+			"ENG_name": "Mr. Greystone",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 13,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item 镶钉皮甲|PHB|铆钉皮甲}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"str": "+7",
+				"dex": "+5",
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+10",
+				"intimidation": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"普通",
+				"地精"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "勇敢",
+					"ENG_name": "Brave",
+					"entries": [
+						"格雷斯顿先生在对抗被{@condition 恐惧}的豁免投掷上有优势。"
+					]
+				},
+				{
+					"name": "残暴",
+					"ENG_name": "Brute",
+					"entries": [
+						"当格雷斯顿先生用它命中时，近战武器会额外造成一骰的伤害（包含在攻击中）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"格雷斯顿先生进行两次近战攻击或两次远程攻击。"
+					]
+				},
+				{
+					"name": "短棒",
+					"ENG_name": "Club",
+					"entries": [
+						"{@atk 近战武器攻击} {@hit 命中骰 7}命中，射程 5 英尺，一个目标。{@h}11 ({@damage 2d6 + 4}) 钝击伤害。"
+					]
+				},
+				{
+					"name": "手弩",
+					"ENG_name": "Hand Crossbow",
+					"entries": [
+						"{@atk 远程攻击} 命中骰5，射程30/120英尺，单一目标。{@h}5（{@damage 1d6 + 2}）穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"棍棒|PHB",
+				"手弩|PHB"
+			],
+			"traitTags": [
+				"残暴"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"魔法学习(Magic Learning Wheel)",
+				"MW",
+				"射程",
+				"RW"
+			],
+			"hasToken": true
+		}
+	]
 }

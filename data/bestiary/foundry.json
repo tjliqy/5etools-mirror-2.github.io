@@ -1,226 +1,226 @@
 {
-  "monster": [
-    {
-      "name": "大地野兽",
-      "ENG_name": "Beast of the Land",
-      "source": "TCE",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "游侠的领导力",
-          "ENG_name": "Ranger's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+ 5 × @srd5e.userchar.classes.ranger.levels"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "海洋野兽",
-      "ENG_name": "Beast of the Sea",
-      "source": "TCE",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "游侠的领导力",
-          "ENG_name": "Ranger's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+ 5 × @srd5e.userchar.classes.ranger.levels"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "天空野兽",
-      "ENG_name": "Beast of the Sky",
-      "source": "TCE",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "游侠的领导力",
-          "ENG_name": "Ranger's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+ 4 * @srd5e.userchar.classes.ranger.levels"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "枯萎幼苗",
-      "ENG_name": "Blighted Sapling",
-      "source": "TDCSR",
-      "effects": [
-        {
-          "name": "德鲁伊的领导力",
-          "ENG_name": "Druid's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+(2 * @srd5e.userchar.classes.druid.levels)"
-            },
-            {
-              "key": "数据属性.护甲等级.公式",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "龙兽伙伴",
-      "ENG_name": "Drake Companion",
-      "source": "FTD",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "游侠的领导力",
-          "ENG_name": "Ranger's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+(5 × @srd5e.userchar.classes.ranger.levels)"
-            },
-            {
-              "key": "数据属性.护甲等级.公式",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.abilities.dex.bonuses.save",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.abilities.wis.bonuses.save",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "数据.属性.移动.飞行",
-              "mode": "UPGRADE",
-              "value": "min(1, max(@srd5e.userchar.classes.ranger.levels - 6, 0)) * @attributes.movement.walk"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "人工生命仆从",
-      "ENG_name": "Homunculus Servant",
-      "source": "TCE",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "炼金术士的领导力",
-          "ENG_name": "Artificer's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.abilities.int.mod + @srd5e.userchar.classes.artificer.levels"
-            },
-            {
-              "key": "data.abilities.dex.bonuses.save",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.skills.prc.bonuses.check",
-              "mode": "ADD",
-              "value": "+(2 * @srd5e.userchar.pb)"
-            },
-            {
-              "key": "data.skills.ste.bonuses.check",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "钢铁守卫",
-      "ENG_name": "Steel Defender",
-      "source": "TCE",
-      "prototypeToken": {
-        "actorLink": true
-      },
-      "effects": [
-        {
-          "name": "炼金术士的领导力",
-          "ENG_name": "Artificer's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.abilities.int.mod + (5 * @srd5e.userchar.classes.artificer.levels)"
-            },
-            {
-              "key": "data.abilities.dex.bonuses.save",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.abilities.con.bonuses.save",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.skills.athletic.bonuses.check",
-              "mode": "ADD",
-              "value": "+ @srd5e.userchar.pb"
-            },
-            {
-              "key": "data.skills.prc.bonuses.check",
-              "mode": "ADD",
-              "value": "+(2 * @srd5e.userchar.pb)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "野火精魂",
-      "ENG_name": "Wildfire Spirit",
-      "source": "TCE",
-      "effects": [
-        {
-          "name": "德鲁伊的领导力",
-          "ENG_name": "Druid's Leadership",
-          "changes": [
-            {
-              "key": "system.attributes.hp.max",
-              "mode": "ADD",
-              "value": "+(5 * @srd5e.userchar.classes.druid.levels)"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"monster": [
+		{
+			"name": "大地野兽",
+			"ENG_name": "Beast of the Land",
+			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "游侠的领导力",
+					"ENG_name": "Ranger's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+ 5 × @srd5e.userchar.classes.ranger.levels"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "海洋野兽",
+			"ENG_name": "Beast of the Sea",
+			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "游侠的领导力",
+					"ENG_name": "Ranger's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+ 5 × @srd5e.userchar.classes.ranger.levels"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "天空野兽",
+			"ENG_name": "Beast of the Sky",
+			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "游侠的领导力",
+					"ENG_name": "Ranger's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+ 4 * @srd5e.userchar.classes.ranger.levels"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "枯萎幼苗",
+			"ENG_name": "Blighted Sapling",
+			"source": "TDCSR",
+			"effects": [
+				{
+					"name": "德鲁伊的领导力",
+					"ENG_name": "Druid's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+(2 * @srd5e.userchar.classes.druid.levels)"
+						},
+						{
+							"key": "数据属性.护甲等级.公式",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "龙兽伙伴",
+			"ENG_name": "Drake Companion",
+			"source": "FTD",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "游侠的领导力",
+					"ENG_name": "Ranger's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+(5 × @srd5e.userchar.classes.ranger.levels)"
+						},
+						{
+							"key": "数据属性.护甲等级.公式",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.abilities.dex.bonuses.save",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.abilities.wis.bonuses.save",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "数据.属性.移动.飞行",
+							"mode": "UPGRADE",
+							"value": "min(1, max(@srd5e.userchar.classes.ranger.levels - 6, 0)) * @attributes.movement.walk"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "人工生命仆从",
+			"ENG_name": "Homunculus Servant",
+			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "炼金术士的领导力",
+					"ENG_name": "Artificer's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.abilities.int.mod + @srd5e.userchar.classes.artificer.levels"
+						},
+						{
+							"key": "data.abilities.dex.bonuses.save",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.skills.prc.bonuses.check",
+							"mode": "ADD",
+							"value": "+(2 * @srd5e.userchar.pb)"
+						},
+						{
+							"key": "data.skills.ste.bonuses.check",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "钢铁守卫",
+			"ENG_name": "Steel Defender",
+			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
+			"effects": [
+				{
+					"name": "炼金术士的领导力",
+					"ENG_name": "Artificer's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.abilities.int.mod + (5 * @srd5e.userchar.classes.artificer.levels)"
+						},
+						{
+							"key": "data.abilities.dex.bonuses.save",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.abilities.con.bonuses.save",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.skills.athletic.bonuses.check",
+							"mode": "ADD",
+							"value": "+ @srd5e.userchar.pb"
+						},
+						{
+							"key": "data.skills.prc.bonuses.check",
+							"mode": "ADD",
+							"value": "+(2 * @srd5e.userchar.pb)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "野火精魂",
+			"ENG_name": "Wildfire Spirit",
+			"source": "TCE",
+			"effects": [
+				{
+					"name": "德鲁伊的领导力",
+					"ENG_name": "Druid's Leadership",
+					"changes": [
+						{
+							"key": "system.attributes.hp.max",
+							"mode": "ADD",
+							"value": "+(5 * @srd5e.userchar.classes.druid.levels)"
+						}
+					]
+				}
+			]
+		}
+	]
 }

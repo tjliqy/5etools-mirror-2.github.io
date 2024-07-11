@@ -591,13 +591,13 @@ class AdventureBookTag {
 				propRes: "_ADVENTURE_RES",
 				propData: "adventure",
 				tag: "adventure",
-				contentsUrl: `${Renderer.get().baseUrl}${DataUtil.data_dir()}/adventures.json`,
+				contentsUrl: `${Renderer.get().baseUrl}data/adventures.json`,
 			},
 			{
 				propRes: "_BOOK_RES",
 				propData: "book",
 				tag: "book",
-				contentsUrl: `${Renderer.get().baseUrl}${DataUtil.data_dir()}/books.json`,
+				contentsUrl: `${Renderer.get().baseUrl}data/books.json`,
 			},
 		]) {
 			const contents = await DataUtil.loadJSON(meta.contentsUrl);

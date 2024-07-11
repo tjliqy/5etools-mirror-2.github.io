@@ -1,3238 +1,3238 @@
 {
-  "_meta": {
-    "internalCopies": [
-      "monsterTemplate"
-    ]
-  },
-  "monsterTemplate": [
-    {
-      "name": "阿兰寇拉鹰人",
-      "ENG_name": "Aarakocra",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 阿兰寇拉鹰人|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "aarakocra"
-            ]
-          },
-          "speed": {
-            "walk": 30,
-            "fly": 50
-          }
-        }
-      }
-    },
-    {
-      "name": "觉醒",
-      "ENG_name": "Awakened",
-      "source": "PHB",
-      "page": 216,
-      "ref": "{@spell 启蒙术}",
-      "prerequisite": {
-        "size": {
-          "max": "H"
-        },
-        "type": {
-          "oneOf": [
-            "beast",
-            "plant"
-          ]
-        },
-        "int": {
-          "max": 3
-        }
-      },
-      "apply": {
-        "_root": {
-          "int": 10
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "一种由其创造者所知晓的语言"
-          }
-        }
-      }
-    },
-    {
-      "name": "狂蛙人",
-      "ENG_name": "Bullywug",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 狂蛙人|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "bullywug"
-            ]
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "狂蛙人"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "type": "entries",
-                "name": "两栖",
-                "ENG_name": "Amphibious",
-                "entries": [
-                  "<$title_short_name$>可以呼吸空气和水。"
-                ]
-              },
-              {
-                "name": "沼泽伪装",
-                "ENG_name": "Swamp Camouflage",
-                "type": "entries",
-                "entries": [
-                  "<$title_short_name$>在沼泽地形中进行敏捷（{@skill 隐匿})检定时拥有优势。"
-                ]
-              },
-              {
-                "name": "立定跳跃",
-                "ENG_name": "Standing Leap",
-                "type": "entries",
-                "entries": [
-                  "<$title_short_name$>的远跳可达20英尺，高跳可达10英尺，无论是否助跑。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "地底侏儒",
-      "ENG_name": "Deep Gnome",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 侏儒 (地底)|DMG|地底侏儒}",
-      "apply": {
-        "_root": {
-          "size": [
-            "S"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "gnome",
-                "prefix": "Deep"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 20
-          }
-        },
-        "_mod": {
-          "_": {
-            "mode": "addSenses",
-            "senses": {
-              "type": "darkvision",
-              "range": 120
-            }
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "侏儒语",
-              "泰坦",
-              "地下通用语"
-            ]
-          },
-          "spellcasting": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "天生施法",
-                "ENG_name": "Innate Spellcasting",
-                "headerEntries": [
-                  "<$title_short_name$>的天生施法能力是智力（法术豁免{@dc <$spell_dc__int$>}）。<$title_short_name$>天生能够施放以下法术，无需任何材料组件："
-                ],
-                "will": [
-                  "{\"spell\": \"{@spell 回避侦测}\", \"description\": \"(仅限自身)\"}"
-                ],
-                "daily": {
-                  "1e": [
-                    "{@spell 目盲/耳聋术}",
-                    "{@spell 朦胧术}",
-                    "{@spell 易容术}"
-                  ]
-                },
-                "ability": "int"
-              }
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "侏儒狡黠",
-                "ENG_name": "Gnome Cunning",
-                "entries": [
-                  "<$title_short_name$> 在对抗魔法的所有智力、智慧和魅力豁免投掷上具有优势。"
-                ]
-              },
-              {
-                "name": "岩地伪装",
-                "ENG_name": "Stone Camouflage",
-                "entries": [
-                  "<$title_short_name$>在岩石地形中进行敏捷（{@skill 隐匿})检定时具有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "龙巫妖",
-      "ENG_name": "Dracolich",
-      "source": "MM",
-      "page": 83,
-      "apply": {
-        "_root": {
-          "type": {
-            "type": "undead"
-          }
-        },
-        "_mod": {
-          "*": {
-            "mode": "replaceTxt",
-            "replace": "龙",
-            "with": "龙巫妖"
-          },
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "死灵"
-          },
-          "immune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "conditionImmune": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "魅惑",
-              "恐惧",
-              "麻痹",
-              "中毒",
-              "力竭"
-            ]
-          },
-          "trait": [
-            {
-              "mode": "appendArr",
-              "items": [
-                {
-                  "name": "魔法抗性",
-                  "ENG_name": "Magic Resistance",
-                  "entries": [
-                    "巫妖龙在对抗法术和其他魔法效果的豁免检定上有优势。"
-                  ]
-                }
-              ]
-            },
-            {
-              "mode": "removeArr",
-              "names": "两栖",
-              "force": true
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "红龙裔",
-      "ENG_name": "Dragonborn (Red)",
-      "source": "PHB",
-      "page": 32,
-      "ref": "{@race 龙裔||红龙裔}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "dragonborn"
-            ]
-          }
-        },
-        "_mod": {
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          }
-        }
-      }
-    },
-    {
-      "name": "卓尔",
-      "ENG_name": "Drow",
-      "source": "PHB",
-      "page": 21,
-      "ref": "{@race 精灵（卓尔）||卓尔}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "drow",
-              "elf"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 120
-              }
-            },
-            {
-              "mode": "addSkills",
-              "skills": {
-                "perception": 1
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "精灵语"
-          },
-          "spellcasting": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "天生施法",
-                "ENG_name": "Innate Spellcasting",
-                "headerEntries": [
-                  "<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
-                ],
-                "will": [
-                  "{@spell 舞光术}"
-                ],
-                "daily": {
-                  "1e": [
-                    "{@spell 黑暗}",
-                    "{@spell 妖火术}"
-                  ]
-                },
-                "ability": "cha"
-              }
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "精类血统",
-                "ENG_name": "Fey Ancestry",
-                "entries": [
-                  "<$title_short_name$>在对抗魅惑的豁免投掷上具有优势，魔法不能使<$short_name$>入睡。"
-                ]
-              },
-              {
-                "name": "日光敏感",
-                "ENG_name": "Sunlight Sensitivity",
-                "entries": [
-                  "在日光下，<$short_name$>在攻击骰上会有劣势，以及在依赖视力的智慧（{@skill 察觉}）检定上也会有劣势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "灰矮人",
-      "ENG_name": "Duergar",
-      "source": "MTF",
-      "page": 81,
-      "ref": "{@race 矮人(灰)|MTF|灰矮人}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "dwarf",
-                "prefix": "Duergar"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 25
-          }
-        },
-        "_mod": {
-          "_": {
-            "mode": "addSenses",
-            "senses": {
-              "type": "darkvision",
-              "range": 120
-            }
-          },
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "languages": [
-            {
-              "mode": "appendIfNotExistsArr",
-              "items": [
-                "矮人语",
-                "地下通用语"
-              ]
-            }
-          ],
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "矮人韧性",
-                "ENG_name": "Dwarven Resilience",
-                "entries": [
-                  "<$title_short_name$>在对抗毒素的豁免投掷上具有优势，并且对毒素伤害具有抗性。"
-                ]
-              },
-              {
-                "name": "增大（短休或长休后重新充能）",
-                "ENG_name": "Enlarge (Recharges after a Short or Long Rest)",
-                "entries": [
-                  "在1分钟内，<$short_name$>的体型连同他们穿戴或携带的任何物品都会神奇地增大。在增大期间，<$short_name$>变为大型，基于力量的武器攻击的伤害骰加倍（包含在攻击中），并且在进行力量检定和力量豁免骰时拥有优势。如果<$short_name$>没有足够的空间变得大型，他们会达到在可用空间内的最大尺寸。"
-                ]
-              },
-              {
-                "name": "隐形（短休或长休后重新充能）",
-                "ENG_name": "Invisibility (Recharges after a Short or Long Rest)",
-                "entries": [
-                  "<$title_short_name$> 可以神奇地变得{@condition 隐形}，直到他们攻击、施放法术、使用他们的放大能力，或者直到他们的{@status 专注}被打破，最长持续1小时（就好像在专注于一个法术）。<$short_name$>穿戴或携带的任何装备也会随着他们一起变得隐形。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "埃德拉扎",
-      "ENG_name": "Eldrazi",
-      "source": "PSZ",
-      "page": 38,
-      "apply": {
-        "_mod": {
-          "immune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "心灵"
-          },
-          "conditionImmune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "魅惑"
-          }
-        }
-      }
-    },
-    {
-      "name": "费尔伯格人",
-      "ENG_name": "Firbolg",
-      "source": "VGM",
-      "page": 107,
-      "ref": "{@race 费尔伯格人|VGM}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "firbolg"
-            ]
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "精灵语",
-              "巨人"
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "强壮体格",
-                "ENG_name": "Powerful Build",
-                "entries": [
-                  "<$title_short_name$>在确定他们的携带能力以及他们能推动、拖拽或举起的重量时，被视为大一号尺寸。"
-                ]
-              },
-              {
-                "name": "兽语与叶语",
-                "ENG_name": "Speech of Beast and Leaf",
-                "entries": [
-                  "<$title_short_name$> 能以有限的方式与野兽和植物交流。这些生物能理解 <$title_short_name$> 的话语含义，尽管 <$title_short_name$> 没有能力理解它们的语言。此外，<$title_short_name$> 在进行魅力检定时，影响野兽或植物具有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "超巨型半黑龙",
-      "ENG_name": "Gargantuan Half-Black Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "强酸吐息 {@recharge 5}",
-                "ENG_name": "Acid Breath {@recharge 5}",
-                "entries": [
-                  "半龙在60英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 18的敏捷豁免检定，失败则受到54点（{@damage 12d8}）酸蚀伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "超巨型半蓝龙",
-      "ENG_name": "Gargantuan Half-Blue Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "闪电"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "闪电吐息{@recharge 5}",
-                "ENG_name": "Lightning Breath {@recharge 5}",
-                "entries": [
-                  "半龙在90英尺长、5英尺宽的直线上吐出闪电。该直线上的每个生物必须进行一次DC 19的敏捷豁免投掷，失败则受到66（{@damage 12d10}）点闪电伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "超巨型半铜龙",
-      "ENG_name": "Gargantuan Half-Brass Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在60英尺长、5英尺宽的直线上呼出火焰。那条线上的每个生物都必须进行一次DC 18的敏捷豁免投掷，失败时受到45（{@damage 13d6}）点火焰伤害，成功则只受到一半的伤害。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "催眠吐息：",
-                        "ENG_name": "Sleep Breath",
-                        "entry": "半龙在60英尺的锥形区域内吐出催眠气体。该区域内的每个生物必须成功进行一次DC 18的体质豁免投掷，否则会进入{@condition 昏迷}状态10分钟。如果生物受到伤害或有人采取动作唤醒它，则此效果会结束。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半铜龙",
-      "ENG_name": "Gargantuan Half-Copper Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "强酸吐息：",
-                        "ENG_name": "Acid Breath",
-                        "entry": "半龙在60英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 18的敏捷豁免检定，失败则受到54点（{@damage 12d8}）酸蚀伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "缓速吐息：",
-                        "ENG_name": "Slowing Breath",
-                        "entry": "半龙在60英尺的锥形区域内呼出气体。该区域内的每个生物必须成功通过一次DC 18的体质豁免投掷。豁免失败的生物不能使用反应，其速度减半，并且在其回合内不能进行超过一次攻击。此外，生物在其回合内只能使用动作或奖励动作，不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免投掷，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "超巨型半金龙",
-      "ENG_name": "Gargantuan Half-Gold Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在60英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 21的敏捷豁免投掷，失败则受到66（{@damage 12d10}）点火焰伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "弱化吐息：",
-                        "ENG_name": "Weakening Breath",
-                        "entry": "半龙在60英尺的锥形区域内呼出气体。该区域内的每个生物都必须成功进行一次DC 21的体质豁免骰，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免骰上会有劣势。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半绿龙",
-      "ENG_name": "Gargantuan Half-Green Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "毒液喷吐 {@recharge 5}",
-                "ENG_name": "Poison Breath {@recharge 5}",
-                "entries": [
-                  "半龙在60英尺的锥形区域内吐出有毒气体。该区域内的每个生物都必须进行一次DC 18的体质豁免骰，失败则受到56({@damage 16d6})点毒素伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半红龙",
-      "ENG_name": "Gargantuan Half-Red Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "火焰吐息 {@recharge 5}",
-                "ENG_name": "Fire Breath {@recharge 5}",
-                "entries": [
-                  "半龙在60英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 21的敏捷豁免投掷，失败则受到63（{@damage 18d6}）点火焰伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "超巨型半银龙",
-      "ENG_name": "Gargantuan Half-Silver Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "冷冻吐息：",
-                        "ENG_name": "Cold Breath",
-                        "entry": "半龙吐出一道60英尺的锥形冰霜。该区域内的每个生物必须进行一次DC 20的体质豁免投掷，失败则受到58（{@damage 13d8}）点寒冷伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "麻痹吐息：",
-                        "ENG_name": "Paralyzing Breath",
-                        "entry": "半龙在60英尺的锥形区域内吐出麻痹气体。该区域内的每个生物都必须成功进行一次DC 20的体质豁免骰，否则将被{@condition 麻痹}1分钟。生物可以在每个回合结束时重复豁免骰，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半白龙",
-      "ENG_name": "Gargantuan Half-White Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "8",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "寒气呼吸 {@recharge 5}",
-                "ENG_name": "Cold Breath {@recharge 5}",
-                "entries": [
-                  "半龙在60英尺的锥形区域内喷吐冰冷的冲击波。该区域内的每个生物都必须进行一次DC 19的体质豁免投掷，失败则受到54点（{@damage 12d8}）寒冷伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "地精",
-      "ENG_name": "Goblin",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 地精|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "S"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "goblinoid"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "地精"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "灵敏脱逃",
-                "ENG_name": "Nimble Escape",
-                "entries": [
-                  "<$title_short_name$>在其每个回合上可以作为额外动作采取{@action 撤离}或{@action 躲藏}行动。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "歌利亚",
-      "ENG_name": "Goliath",
-      "source": "VGM",
-      "page": 108,
-      "ref": "{@race 歌利亚|VGM}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "goliath"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSkills",
-              "skills": {
-                "athletics": 1
-              }
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "巨人"
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "强壮体格",
-                "ENG_name": "Powerful Build",
-                "entries": [
-                  "<$title_short_name$>在确定他们的携带能力以及他们能推动、拖拽或举起的重量时，被视为大一号尺寸。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "半精灵",
-      "ENG_name": "Half-Elf",
-      "source": "PHB",
-      "page": 38,
-      "ref": "{@race 半精灵}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "half-elf"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "精灵语"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "精类血统",
-                "ENG_name": "Fey Ancestry",
-                "entries": [
-                  "<$title_short_name$> 在对抗魅惑的豁免投掷中具有优势，魔法不能使 <$title_short_name$> 入睡。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "半兽人",
-      "ENG_name": "Half-Orc",
-      "source": "PHB",
-      "page": 40,
-      "ref": "{@race 半兽人}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "half-orc"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            },
-            {
-              "mode": "addSkills",
-              "skills": {
-                "intimidation": 1
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "兽人"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "顽强耐性",
-                "ENG_name": "Relentless Endurance",
-                "entries": [
-                  "当生命值降至0点时，<$title_short_name$> 会降至1点生命值（但在完成一次长时间休息之前不能再这样做）。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "高等精灵",
-      "ENG_name": "High Elf",
-      "source": "PHB",
-      "page": 23,
-      "ref": "{@race 精灵(高等)||高等精灵}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "elf",
-                "prefix": "High"
-              }
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            },
-            {
-              "mode": "addSkills",
-              "skills": {
-                "perception": 1
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "精灵语"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "精类血统",
-                "ENG_name": "Fey Ancestry",
-                "entries": [
-                  "<$title_short_name$> 在对抗魅惑的豁免投掷中具有优势，魔法不能使 <$title_short_name$> 入睡。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "丘陵矮人",
-      "ENG_name": "Hill Dwarf",
-      "source": "PHB",
-      "_copy": {
-        "name": "山地矮人",
-        "ENG_name": "Mountain Dwarf",
-        "source": "PHB",
-        "_mod": {
-          "*": {
-            "mode": "setProp",
-            "prop": "应用._root.type",
-            "value": {
-              "type": "humanoid",
-              "tags": [
-                {
-                  "tag": "矮人",
-                  "prefix": "丘陵"
-                }
-              ]
-            }
-          }
-        },
-        "_preserve": {
-          "page": true
-        }
-      }
-    },
-    {
-      "name": "巨型半黑龙",
-      "ENG_name": "Huge Half-Black Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "强酸吐息 {@recharge 5}",
-                "ENG_name": "Acid Breath {@recharge 5}",
-                "entries": [
-                  "半龙在30英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 14的敏捷豁免检定，失败则受到49点（{@damage 11d8}）酸蚀伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨大的半蓝龙",
-      "ENG_name": "Huge Half-Blue Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "闪电"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "闪电吐息{@recharge 5}",
-                "ENG_name": "Lightning Breath {@recharge 5}",
-                "entries": [
-                  "半龙在60英尺长、5英尺宽的直线上喷吐闪电。该直线上的每个生物都必须进行一次DC 16的敏捷豁免投掷，失败则受到55点（{@damage 10d10}）闪电伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半铜龙",
-      "ENG_name": "Huge Half-Brass Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在40英尺长、5英尺宽的直线上呼出火焰。那条线上的每个生物都必须进行一次DC 14的敏捷豁免投掷，失败时受到42（{@damage 12d6}）点火焰伤害，成功则只受到一半的伤害。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "催眠吐息：",
-                        "ENG_name": "Sleep Breath",
-                        "entry": "半龙在30英尺的锥形区域内吐出催眠气体。该区域内的每个生物都必须成功进行一次DC 14的体质豁免骰，否则将进入{@condition 昏迷}状态，持续5分钟。如果生物受到伤害或有人采取行动唤醒它，这种效果将结束。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半铜龙",
-      "ENG_name": "Huge Half-Copper Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "强酸吐息：",
-                        "ENG_name": "Acid Breath",
-                        "entry": "半龙在40英尺长、5英尺宽的直线上吐出酸性物质。该直线上的每个生物必须进行一次DC 14的敏捷豁免投掷，失败则受到40（{@damage 9d8}）点酸性伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "缓速吐息：",
-                        "ENG_name": "Slowing Breath",
-                        "entry": "半龙在30英尺的锥形区域内呼出气体。该区域内的每个生物都必须进行一次DC 14的体质豁免骰。豁免失败的生物将无法使用反应动作，其移动速度减半，并且在其回合上不能进行超过一次攻击。此外，生物在其回合上只能使用动作或额外动作，但不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半金龙",
-      "ENG_name": "Huge Half-Gold Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在30英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 17的敏捷豁免骰，失败则受到55({@damage 10d10})点火焰伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "弱化吐息：",
-                        "ENG_name": "Weakening Breath",
-                        "entry": "半龙在30英尺的锥形区域内呼出气体。该区域内的每个生物必须成功通过一次DC 17的力量豁免投掷，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免投掷上具有劣势。生物可以在每个回合结束时重复进行豁免投掷，成功则结束此效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半绿龙",
-      "ENG_name": "Huge Half-Green Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "毒液喷吐 {@recharge 5}",
-                "ENG_name": "Poison Breath {@recharge 5}",
-                "entries": [
-                  "半龙在30英尺的锥形区域内呼出有毒气体。该区域内的每个生物都必须进行一次DC 14的体质豁免投掷，失败时受到42（{@damage 12d6}）点毒素伤害，成功则只受到一半的伤害。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半红龙",
-      "ENG_name": "Huge Half-Red Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "火焰吐息 {@recharge 5}",
-                "ENG_name": "Fire Breath {@recharge 5}",
-                "entries": [
-                  "半龙在30英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 17的敏捷豁免投掷，失败则受到56（{@damage 16d6}）点火焰伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半银龙",
-      "ENG_name": "Huge Half-Silver Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "冷冻吐息：",
-                        "ENG_name": "Cold Breath",
-                        "entry": "半龙在30英尺的锥形区域内释放冰冷的冲击波。该区域内的每个生物都必须进行一次DC 17的体质豁免检定，失败则受到54点（{@damage 12d8}）冰冻伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "麻痹吐息：",
-                        "ENG_name": "Paralyzing Breath",
-                        "entry": "半龙在30英尺的锥形区域内喷吐麻痹气体。该区域内的每个生物都必须成功通过一次DC 17的体质豁免投掷，否则将被{@condition 麻痹}状态影响1分钟。生物可以在每个回合结束时重新进行豁免投掷，成功则结束该效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "巨型半白龙",
-      "ENG_name": "Huge Half-White Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "7",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "寒气呼吸 {@recharge 5}",
-                "ENG_name": "Cold Breath {@recharge 5}",
-                "entries": [
-                  "半龙在30英尺的锥形区域内呼出冰冷的冲击波。该区域内的每个生物都必须进行一次DC 15的体质豁免骰，豁免失败将受到45点（{@damage 10d8}）的冰冷伤害，豁免成功则只受到一半的伤害。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "天狗",
-      "ENG_name": "Kenku",
-      "source": "VGM",
-      "page": 109,
-      "ref": "{@race 天狗|VGM}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "kenku"
-            ]
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "奥兰"
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "拟声",
-                "ENG_name": "Mimicry",
-                "entries": [
-                  "<$title_short_name$>可以模仿它听到的任何声音，包括声音。听到这些声音的生物可以通过成功的{@dc 14}智力（{@skill 洞悉}）检定来分辨出它们是模仿的。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "狗头人",
-      "ENG_name": "Kobold",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 狗头人|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "S"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "kobold"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "日光敏感",
-                "ENG_name": "Sunlight Sensitivity",
-                "entries": [
-                  "在阳光下，<$title_short_name$>在攻击骰上以及依赖视觉的感知（{@skill 察觉}）检定上具有劣势。"
-                ]
-              },
-              {
-                "name": "群体战术",
-                "ENG_name": "Pack Tactics",
-                "entries": [
-                  "如果至少有一个盟友在5英尺内且该盟友没有处于{@condition 无力}状态，<$title_short_name$>对生物的攻击检定拥有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小型的半黑龙",
-      "ENG_name": "Large or Smaller Half-Black Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "强酸吐息 {@recharge 5}",
-                "ENG_name": "Acid Breath {@recharge 5}",
-                "entries": [
-                  "半龙在15英尺长、5英尺宽的直线上喷吐酸性物质。该直线上的每个生物都必须进行一次DC 11的敏捷豁免投掷，失败则受到22点（{@damage 5d8}）酸性伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小型的半蓝龙",
-      "ENG_name": "Large or Smaller Half-Blue Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "闪电"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "闪电吐息{@recharge 5}",
-                "ENG_name": "Lightning Breath {@recharge 5}",
-                "entries": [
-                  "半龙在30英尺长、5英尺宽的直线上释放闪电。该直线上的每个生物都必须进行一次DC 12的敏捷豁免检定，失败则受到22点（{@damage 4d10}）闪电伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小型的半铜龙",
-      "ENG_name": "Large or Smaller Half-Brass Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在一条20英尺长、5英尺宽的线上吐出火焰。那条线上的每个生物都必须进行一次DC 11的敏捷豁免骰，失败则受到14({@damage 4d6})点火焰伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "催眠吐息：",
-                        "ENG_name": "Sleep Breath",
-                        "entry": "半龙在15英尺的锥形区域内呼出催眠气体。该区域内的每个生物必须成功通过一次DC 11的体质豁免投掷，否则将进入{@condition 昏迷}状态，持续1分钟。如果生物受到伤害或有人采取行动唤醒它，则此效果结束。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小的半铜龙",
-      "ENG_name": "Large or Smaller Half-Copper Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "强酸吐息：",
-                        "ENG_name": "Acid Breath",
-                        "entry": "半龙在20英尺长、5英尺宽的直线上喷吐酸性物质。该直线上的每个生物都必须进行一次DC 11的敏捷豁免投掷，失败则受到18点（{@damage 4d8}）酸性伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "缓速吐息：",
-                        "ENG_name": "Slowing Breath",
-                        "entry": "半龙在15英尺的锥形区域内呼出气体。该区域内的每个生物都必须进行一次DC 11的体质豁免骰。豁免失败的生物将无法使用反应动作，其移动速度减半，并且在其回合上不能进行超过一次攻击。此外，生物在其回合上只能使用动作或额外动作，但不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小型的半金龙",
-      "ENG_name": "Large or Smaller Half-Gold Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "火焰吐息：",
-                        "ENG_name": "Fire Breath",
-                        "entry": "半龙在15英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 13的敏捷豁免投掷，失败则受到22（{@damage 4d10}）点火焰伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "弱化吐息：",
-                        "ENG_name": "Weakening Breath",
-                        "entry": "半龙在15英尺的锥形区域内释放气体。该区域内的每个生物都必须进行一次DC 13的力量豁免检定，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免检定上会有劣势。生物可以在每个回合结束时重新进行豁免检定，成功则结束该效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小的半绿龙",
-      "ENG_name": "Large or Smaller Half-Green Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "毒液喷吐 {@recharge 5}",
-                "ENG_name": "Poison Breath {@recharge 5}",
-                "entries": [
-                  "半龙在15英尺的锥形区域内呼出有毒气体。该区域内的每个生物必须进行一次DC 11的体质豁免投掷，失败则受到21（{@damage 6d6}）点毒药伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小型的半红龙",
-      "ENG_name": "Large or Smaller Half-Red Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "火焰吐息 {@recharge 5}",
-                "ENG_name": "Fire Breath {@recharge 5}",
-                "entries": [
-                  "半龙在15英尺的锥形区域内喷吐火焰。该区域内的每个生物都必须进行一次DC 13的敏捷豁免投掷，失败则受到24点（{@damage 7d6}）火焰伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小的半银龙",
-      "ENG_name": "Large or Smaller Half-Silver Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "吐息武器 {@recharge 5}",
-                "ENG_name": "Breath Weapons {@recharge 5}",
-                "entries": [
-                  "半龙使用以下任一吐息武器。",
-                  {
-                    "type": "list",
-                    "style": "list-hang-notitle",
-                    "items": [
-                      {
-                        "type": "item",
-                        "name": "冷冻吐息：",
-                        "ENG_name": "Cold Breath",
-                        "entry": "半龙吐出一道15英尺的冰霜锥形攻击。该区域内的每个生物必须进行一次DC 13的体质豁免骰，失败则受到18({@damage 4d8})点冷伤害，成功则伤害减半。"
-                      },
-                      {
-                        "type": "item",
-                        "name": "麻痹吐息：",
-                        "ENG_name": "Paralyzing Breath",
-                        "entry": "半龙在15英尺的锥形区域内呼出麻痹气体。该区域内的每个生物都必须进行一次DC 13的体质豁免骰，否则将被{@condition 麻痹}1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "大型或更小的半白龙",
-      "ENG_name": "Large or Smaller Half-White Dragon",
-      "source": "MM",
-      "page": 180,
-      "crMin": "2",
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": [
-                {
-                  "type": "blindsight",
-                  "range": 10
-                },
-                {
-                  "type": "darkvision",
-                  "range": 60
-                }
-              ]
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "寒冷"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "寒气呼吸 {@recharge 5}",
-                "ENG_name": "Cold Breath {@recharge 5}",
-                "entries": [
-                  "半龙吐出一道15英尺的冰雹锥形攻击。该区域内的每个生物必须进行一次DC 12的体质豁免投掷，失败则受到22（{@damage 5d8}）点寒冷伤害，成功则伤害减半。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "传奇影龙",
-      "ENG_name": "Legendary Shadow Dragon",
-      "source": "MM",
-      "page": 84,
-      "apply": {
-        "_root": {
-          "legendaryGroup": {
-            "name": "影龙",
-            "ENG_name": "Shadow Dragon",
-            "source": "FTD"
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSkills",
-              "skills": {
-                "stealth": 2
-              }
-            }
-          ],
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "死灵"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "活影",
-                "ENG_name": "Living Shadow",
-                "entries": [
-                  "在昏暗或黑暗中，龙对非力量、精神或辐射伤害具有抗性。"
-                ]
-              },
-              {
-                "name": "暗影潜匿.",
-                "ENG_name": "Shadow Stealth",
-                "entries": [
-                  "在微光或黑暗中，龙可以作为奖励行动执行{@action 躲藏}动作。"
-                ]
-              },
-              {
-                "name": "日光敏感",
-                "ENG_name": "Sunlight Sensitivity",
-                "entries": [
-                  "在阳光下，龙在攻击检定以及依赖视力的感知（{@skill 察觉}）技能检定上具有劣势。"
-                ]
-              }
-            ]
-          },
-          "action": [
-            {
-              "mode": "replaceTxt",
-              "replace": "（酸性）|寒冷|火|闪电|毒药)",
-              "with": "死灵"
-            },
-            {
-              "mode": "replaceTxt",
-              "replace": "(酸性|寒冷|火|闪电|中毒)",
-              "with": "死灵"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "蜥蜴人",
-      "ENG_name": "Lizardfolk",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 蜥蜴人|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "lizardfolk"
-            ]
-          },
-          "speed": {
-            "walk": 30,
-            "swim": 30
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "龙族血脉"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "type": "entries",
-                "name": "屏息",
-                "ENG_name": "Hold Breath",
-                "entries": [
-                  "<$title_short_name$>可以一次性屏住呼吸长达15分钟。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "人鱼",
-      "ENG_name": "Merfolk",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 人鱼|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "merfolk"
-            ]
-          },
-          "speed": {
-            "walk": 10,
-            "swim": 40
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "水族"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "两栖",
-                "ENG_name": "Amphibious",
-                "entries": [
-                  "<$title_short_name$>可以呼吸空气和水。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "山地矮人",
-      "ENG_name": "Mountain Dwarf",
-      "source": "PHB",
-      "page": 18,
-      "ref": "{@race 矮人(高山)||山地矮人}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "dwarf",
-                "prefix": "Mountain"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 25
-          }
-        },
-        "_mod": {
-          "_": {
-            "mode": "addSenses",
-            "senses": {
-              "type": "darkvision",
-              "range": 60
-            }
-          },
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "矮人语"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "矮人韧性",
-                "ENG_name": "Dwarven Resilience",
-                "entries": [
-                  "<$title_short_name$>在对抗毒素的豁免投掷上具有优势，并且对毒素伤害具有抗性。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "兽人",
-      "ENG_name": "Orc",
-      "source": "DMG",
-      "page": 120,
-      "ref": "{@race 兽人|DMG}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "orc"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "兽人"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "侵略性",
-                "ENG_name": "Aggressive",
-                "entries": [
-                  "作为一个奖励行动，<$short_name$>可以向他们能看到的敌对生物移动，距离最多达到你的速度。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "威胁降低",
-      "ENG_name": "Reduced Threat",
-      "source": "TftYP",
-      "page": 113,
-      "apply": {
-        "_mod": {
-          "_": [
-            {
-              "mode": "maxSize",
-              "max": "L"
-            },
-            {
-              "mode": "scalarMultXp",
-              "scalar": 0.5,
-              "floor": true
-            }
-          ],
-          "hp": {
-            "mode": "scalarMultProp",
-            "prop": "平均",
-            "scalar": 0.5,
-            "floor": true
-          },
-          "save": {
-            "mode": "scalarAddProp",
-            "scalar": -2,
-            "prop": "*"
-          },
-          "skill": {
-            "mode": "scalarAddProp",
-            "scalar": -2,
-            "prop": "*"
-          },
-          "spellcasting": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            }
-          ],
-          "trait": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            },
-            {
-              "mode": "prependArr",
-              "items": {
-                "name": "威胁降低",
-                "ENG_name": "Reduced Threat",
-                "entries": [
-                  "一个威胁降低的怪物在攻击检定上受到-2的惩罚（已包含在属性块中），技能检定（已包含在属性块中，针对技能熟练度），豁免投掷（已包含在属性块中，针对豁免投掷熟练度），以及豁免投掷难度等级（已包含在属性块中）。"
-                ]
-              }
-            }
-          ],
-          "action": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            }
-          ],
-          "reaction": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            }
-          ],
-          "legendary": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            }
-          ],
-          "variant": [
-            {
-              "mode": "scalarAddHit",
-              "scalar": -2
-            },
-            {
-              "mode": "scalarAddDc",
-              "scalar": -2
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "岩侏儒",
-      "ENG_name": "Rock Gnome",
-      "source": "PHB",
-      "page": 35,
-      "ref": "{@race 侏儒(岩)||岩侏儒}",
-      "apply": {
-        "_root": {
-          "size": [
-            "S"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "gnome",
-                "prefix": "Rock"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 25
-          }
-        },
-        "_mod": {
-          "_": {
-            "mode": "addSenses",
-            "senses": {
-              "type": "darkvision",
-              "range": 60
-            }
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "侏儒语"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "侏儒狡黠",
-                "ENG_name": "Gnome Cunning",
-                "entries": [
-                  "<$title_short_name$> 在对抗魔法的所有智力、智慧和魅力豁免投掷上具有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "盾矮人",
-      "ENG_name": "Shield Dwarf",
-      "source": "PHB",
-      "_copy": {
-        "name": "山地矮人",
-        "ENG_name": "Mountain Dwarf",
-        "source": "PHB",
-        "_mod": {
-          "*": {
-            "mode": "setProp",
-            "prop": "应用._root.type",
-            "value": {
-              "type": "humanoid",
-              "tags": [
-                {
-                  "tag": "矮人",
-                  "prefix": "护盾术"
-                }
-              ]
-            }
-          }
-        },
-        "_preserve": {
-          "page": true
-        }
-      }
-    },
-    {
-      "name": "骷髅",
-      "ENG_name": "Skeleton",
-      "source": "DMG",
-      "page": 282,
-      "ref": "{@race 骷髅|DMG}",
-      "apply": {
-        "_root": {
-          "type": {
-            "type": "undead"
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "immune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "vulnerable": {
-            "mode": "appendIfNotExistsArr",
-            "items": "钝击"
-          },
-          "conditionImmune": [
-            {
-              "mode": "appendIfNotExistsArr",
-              "items": [
-                "力竭",
-                "中毒"
-              ]
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "能理解它生前所说的所有语言，但不能说话"
-          }
-        }
-      }
-    },
-    {
-      "name": "敦实半身人",
-      "ENG_name": "Stout Halfling",
-      "source": "PHB",
-      "page": 35,
-      "ref": "{@race 半身人(强魄)||敦实半身人}",
-      "apply": {
-        "_root": {
-          "size": [
-            "S"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "halfling",
-                "prefix": "Stout"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 25
-          }
-        },
-        "_mod": {
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "半身人"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "半身人敏捷",
-                "ENG_name": "Halfling Nimbleness",
-                "entries": [
-                  "<$title_short_name$>可以穿过一个中等大小或更大的生物所占据的空间。"
-                ]
-              },
-              {
-                "name": "勇敢",
-                "ENG_name": "Brave",
-                "entries": [
-                  "<$title_short_name$>在对抗{@condition 恐惧}状态的豁免骰上有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "斑猫人",
-      "ENG_name": "Tabaxi",
-      "source": "VGM",
-      "page": 113,
-      "ref": "{@race 斑猫人|VGM}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "tabaxi"
-            ]
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "猫科动物的敏捷",
-                "ENG_name": "Feline Agility",
-                "entries": [
-                  "当<$short_name$>在其回合进行移动时，在战斗中，它们可以将速度加倍，直到回合结束。一旦使用了这个能力，<$title_short_name$>在它们其中一个回合移动了0英尺之前，不能再使用这个能力。"
-                ]
-              }
-            ]
-          },
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "爪抓",
-                "ENG_name": "Claws",
-                "entries": [
-                  "{@atk 近战武器} 命中骰：{@hit <$to_hit__str$>}，射程5英尺，一个目标。{@h}<$damage_avg__2.5+str$>（{@damage 1d4<$damage_mod__str$>}）斩击伤害。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "提夫林",
-      "ENG_name": "Tiefling",
-      "source": "PHB",
-      "page": 42,
-      "ref": "{@race 提夫林}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "tiefling"
-            ]
-          }
-        },
-        "_mod": {
-          "_": {
-            "mode": "addSenses",
-            "senses": {
-              "type": "darkvision",
-              "range": 60
-            }
-          },
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "火"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "地狱语"
-          },
-          "spellcasting": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "天生施法",
-                "ENG_name": "Innate Spellcasting",
-                "headerEntries": [
-                  "<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
-                ],
-                "will": [
-                  "{@spell 奇术}"
-                ],
-                "daily": {
-                  "1e": [
-                    "{@spell 黑暗}",
-                    "{@spell 炼狱叱喝}"
-                  ]
-                },
-                "ability": "cha"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "维斯塔娜",
-      "ENG_name": "Vistana",
-      "source": "CoS",
-      "page": 28,
-      "apply": {
-        "_mod": {
-          "action": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "诅咒（长休息后重新充能）",
-                "ENG_name": "Curse (Recharges After a Long Rest)",
-                "entries": [
-                  "凡塔纳可以针对它能看到的30英尺范围内的一个生物。目标必须通过一个{@dc <$spell_dc__cha$>}智力豁免检定，否则会被诅咒。凡塔纳从以下选项中选择诅咒的效果；其他凡塔纳的诅咒也是可能的。所有这些效果在结束时都会对发出它们的凡塔纳造成精神伤害：",
-                  {
-                    "type": "list",
-                    "items": [
-                      "目标无法执行涉及精细运动控制的特定行为，例如打结、写字、演奏乐器、缝纫或施放具有身体成分的法术。当这个诅咒结束时，Vistana承受{@damage 1d6}心灵伤害。",
-                      "目标的外观以一种邪恶但纯粹是外表的方式发生了变化。例如，诅咒可以在目标的脸上留下疤痕，将目标的牙齿变成黄色的獠牙，或使目标有口臭。当这个诅咒结束时，Vistana受到{@damage 1d6}点心灵伤害。",
-                      "目标所持有的一件非魔法物品（由DM选择）消失，直到诅咒结束前无法找到。丢失的物品重量不得超过1磅。当这个诅咒结束时，Vistana受到{@damage 1d6}点心灵伤害。",
-                      "目标获得对Vistana选择的伤害类型的易伤。当这个诅咒结束时，Vistana承受{@damage 3d6}心灵伤害。",
-                      "目标在与Vistana选择的一项能力值相关的能力检定和豁免投掷上具有劣势。当这个诅咒结束时，Vistana受到{@damage 3d6}点心灵伤害。",
-                      "目标对一件魔法物品（由DM选择）的协调结束，并且直到诅咒结束前，目标不能协调选定的物品。当这个诅咒结束时，Vistana受到{@damage 5d6}点心灵伤害。",
-                      "目标处于{@condition 目盲}状态，{@condition 耳聋}状态，或两者兼有。当这个诅咒结束时，维斯塔纳承受{@damage 5d6}点心灵伤害。"
-                    ]
-                  },
-                  "诅咒持续有效，直到通过{@spell 高等复原术}法术、{@spell 移除诅咒}法术或类似的魔法来结束。它不会在目标死亡时结束。如果被诅咒的目标复活，诅咒仍然有效。"
-                ]
-              },
-              {
-                "name": "邪恶之眼（短暂或长时间休息后重置）",
-                "ENG_name": "Evil Eye (Recharges after a Short or Long Rest)",
-                "entries": [
-                  "作为一个动作，凡塔纳可以针对凡塔纳能看到的10英尺范围内的一个生物。凡塔纳人称之为邪恶之眼的这种魔法能力，复制了{@spell 化兽为友}、{@spell 魅惑人类}或{@spell 人类定身术}法术（凡塔纳选择；法术{@dc <$spell_dc__cha$>}）的持续时间和效果，但不需要任何肢体或材料成分。如果目标成功通过豁免，凡塔纳在凡塔纳下个回合结束前处于{@condition 目盲}状态。",
-                  "使用邪眼的瓦斯塔纳人在完成一次短休或长休之前不能再使用它。一旦目标成功通过对抗瓦斯塔纳人邪眼的豁免检定，它将对所有瓦斯塔纳人的邪眼免疫24小时。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "水元素裔",
-      "ENG_name": "Water Genasi",
-      "source": "EEPC",
-      "page": 10,
-      "ref": "{@race 元素裔(水)|EEPC|水元素裔}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "genasi",
-                "prefix": "Water"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 30,
-            "swim": 30
-          }
-        },
-        "_mod": {
-          "resist": {
-            "mode": "appendIfNotExistsArr",
-            "items": "酸性"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "两栖",
-                "ENG_name": "Amphibious",
-                "entries": [
-                  "<$title_short_name$>可以呼吸空气和水。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "木精灵",
-      "ENG_name": "Wood Elf",
-      "source": "PHB",
-      "page": 21,
-      "ref": "{@race 精灵(木)||木精灵}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              {
-                "tag": "elf",
-                "prefix": "Wood"
-              }
-            ]
-          },
-          "speed": {
-            "walk": 35
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            },
-            {
-              "mode": "addSkills",
-              "skills": {
-                "perception": 1
-              }
-            }
-          ],
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": "精灵语"
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "精类血统",
-                "ENG_name": "Fey Ancestry",
-                "entries": [
-                  "<$title_short_name$> 在对抗{@condition 魅惑}的豁免骰上拥有优势，魔法不能使<$short_name$>入睡。"
-                ]
-              },
-              {
-                "name": "荒野隐蔽",
-                "ENG_name": "Mask of the Wild",
-                "entries": [
-                  "<$title_short_name$> 即使在只有轻微的遮挡，如树叶、大雨、下雪、雾和其他自然现象下，也可以尝试进行{@action 躲藏}。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "name": "纯血原体蛇人",
-      "ENG_name": "Yuan-ti Pureblood",
-      "source": "VGM",
-      "page": 120,
-      "ref": "{@race 纯血原体蛇人|VGM}",
-      "apply": {
-        "_root": {
-          "size": [
-            "M"
-          ],
-          "type": {
-            "type": "humanoid",
-            "tags": [
-              "yuan-ti"
-            ]
-          },
-          "speed": {
-            "walk": 35
-          }
-        },
-        "_mod": {
-          "_": [
-            {
-              "mode": "addSenses",
-              "senses": {
-                "type": "darkvision",
-                "range": 60
-              }
-            }
-          ],
-          "immune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "毁灭诅咒"
-          },
-          "conditionImmune": {
-            "mode": "appendIfNotExistsArr",
-            "items": "中毒"
-          },
-          "languages": {
-            "mode": "appendIfNotExistsArr",
-            "items": [
-              "深渊",
-              "龙族血脉"
-            ]
-          },
-          "spellcasting": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "天生施法",
-                "ENG_name": "Innate Spellcasting",
-                "headerEntries": [
-                  "<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
-                ],
-                "will": [
-                  "{@spell 化兽为友}（仅限蛇类）",
-                  "{@spell 毒气喷洒}"
-                ],
-                "daily": {
-                  "3e": [
-                    "{@spell 暗示术}"
-                  ]
-                },
-                "ability": "cha"
-              }
-            ]
-          },
-          "trait": {
-            "mode": "appendArr",
-            "items": [
-              {
-                "name": "魔法抗性",
-                "ENG_name": "Magic Resistance",
-                "entries": [
-                  "<$title_short_name$>在对抗法术和其他魔法效果的豁免投掷中具有优势。"
-                ]
-              }
-            ]
-          }
-        }
-      }
-    }
-  ]
+	"_meta": {
+		"internalCopies": [
+			"monsterTemplate"
+		]
+	},
+	"monsterTemplate": [
+		{
+			"name": "阿兰寇拉鹰人",
+			"ENG_name": "Aarakocra",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 阿兰寇拉鹰人|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"aarakocra"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 50
+					}
+				}
+			}
+		},
+		{
+			"name": "觉醒",
+			"ENG_name": "Awakened",
+			"source": "PHB",
+			"page": 216,
+			"ref": "{@spell 启蒙术}",
+			"prerequisite": {
+				"size": {
+					"max": "H"
+				},
+				"type": {
+					"oneOf": [
+						"beast",
+						"plant"
+					]
+				},
+				"int": {
+					"max": 3
+				}
+			},
+			"apply": {
+				"_root": {
+					"int": 10
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "一种由其创造者所知晓的语言"
+					}
+				}
+			}
+		},
+		{
+			"name": "狂蛙人",
+			"ENG_name": "Bullywug",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 狂蛙人|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"bullywug"
+						]
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "狂蛙人"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"type": "entries",
+								"name": "两栖",
+								"ENG_name": "Amphibious",
+								"entries": [
+									"<$title_short_name$>可以呼吸空气和水。"
+								]
+							},
+							{
+								"name": "沼泽伪装",
+								"ENG_name": "Swamp Camouflage",
+								"type": "entries",
+								"entries": [
+									"<$title_short_name$>在沼泽地形中进行敏捷（{@skill 隐匿})检定时拥有优势。"
+								]
+							},
+							{
+								"name": "立定跳跃",
+								"ENG_name": "Standing Leap",
+								"type": "entries",
+								"entries": [
+									"<$title_short_name$>的远跳可达20英尺，高跳可达10英尺，无论是否助跑。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "地底侏儒",
+			"ENG_name": "Deep Gnome",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 侏儒 (地底)|DMG|地底侏儒}",
+			"apply": {
+				"_root": {
+					"size": [
+						"S"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "gnome",
+								"prefix": "Deep"
+							}
+						]
+					},
+					"speed": {
+						"walk": 20
+					}
+				},
+				"_mod": {
+					"_": {
+						"mode": "addSenses",
+						"senses": {
+							"type": "darkvision",
+							"range": 120
+						}
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"侏儒语",
+							"泰坦",
+							"地下通用语"
+						]
+					},
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "天生施法",
+								"ENG_name": "Innate Spellcasting",
+								"headerEntries": [
+									"<$title_short_name$>的天生施法能力是智力（法术豁免{@dc <$spell_dc__int$>}）。<$title_short_name$>天生能够施放以下法术，无需任何材料组件："
+								],
+								"will": [
+									"{\"spell\": \"{@spell 回避侦测}\", \"description\": \"(仅限自身)\"}"
+								],
+								"daily": {
+									"1e": [
+										"{@spell 目盲/耳聋术}",
+										"{@spell 朦胧术}",
+										"{@spell 易容术}"
+									]
+								},
+								"ability": "int"
+							}
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "侏儒狡黠",
+								"ENG_name": "Gnome Cunning",
+								"entries": [
+									"<$title_short_name$> 在对抗魔法的所有智力、智慧和魅力豁免投掷上具有优势。"
+								]
+							},
+							{
+								"name": "岩地伪装",
+								"ENG_name": "Stone Camouflage",
+								"entries": [
+									"<$title_short_name$>在岩石地形中进行敏捷（{@skill 隐匿})检定时具有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "龙巫妖",
+			"ENG_name": "Dracolich",
+			"source": "MM",
+			"page": 83,
+			"apply": {
+				"_root": {
+					"type": {
+						"type": "undead"
+					}
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "龙",
+						"with": "龙巫妖"
+					},
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "死灵"
+					},
+					"immune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"conditionImmune": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"魅惑",
+							"恐惧",
+							"麻痹",
+							"中毒",
+							"力竭"
+						]
+					},
+					"trait": [
+						{
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "魔法抗性",
+									"ENG_name": "Magic Resistance",
+									"entries": [
+										"巫妖龙在对抗法术和其他魔法效果的豁免检定上有优势。"
+									]
+								}
+							]
+						},
+						{
+							"mode": "removeArr",
+							"names": "两栖",
+							"force": true
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "红龙裔",
+			"ENG_name": "Dragonborn (Red)",
+			"source": "PHB",
+			"page": 32,
+			"ref": "{@race 龙裔||红龙裔}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"dragonborn"
+						]
+					}
+				},
+				"_mod": {
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					}
+				}
+			}
+		},
+		{
+			"name": "卓尔",
+			"ENG_name": "Drow",
+			"source": "PHB",
+			"page": 21,
+			"ref": "{@race 精灵（卓尔）||卓尔}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"drow",
+							"elf"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 120
+							}
+						},
+						{
+							"mode": "addSkills",
+							"skills": {
+								"perception": 1
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "精灵语"
+					},
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "天生施法",
+								"ENG_name": "Innate Spellcasting",
+								"headerEntries": [
+									"<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
+								],
+								"will": [
+									"{@spell 舞光术}"
+								],
+								"daily": {
+									"1e": [
+										"{@spell 黑暗}",
+										"{@spell 妖火术}"
+									]
+								},
+								"ability": "cha"
+							}
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "精类血统",
+								"ENG_name": "Fey Ancestry",
+								"entries": [
+									"<$title_short_name$>在对抗魅惑的豁免投掷上具有优势，魔法不能使<$short_name$>入睡。"
+								]
+							},
+							{
+								"name": "日光敏感",
+								"ENG_name": "Sunlight Sensitivity",
+								"entries": [
+									"在日光下，<$short_name$>在攻击骰上会有劣势，以及在依赖视力的智慧（{@skill 察觉}）检定上也会有劣势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "灰矮人",
+			"ENG_name": "Duergar",
+			"source": "MTF",
+			"page": 81,
+			"ref": "{@race 矮人(灰)|MTF|灰矮人}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "dwarf",
+								"prefix": "Duergar"
+							}
+						]
+					},
+					"speed": {
+						"walk": 25
+					}
+				},
+				"_mod": {
+					"_": {
+						"mode": "addSenses",
+						"senses": {
+							"type": "darkvision",
+							"range": 120
+						}
+					},
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"矮人语",
+								"地下通用语"
+							]
+						}
+					],
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "矮人韧性",
+								"ENG_name": "Dwarven Resilience",
+								"entries": [
+									"<$title_short_name$>在对抗毒素的豁免投掷上具有优势，并且对毒素伤害具有抗性。"
+								]
+							},
+							{
+								"name": "增大（短休或长休后重新充能）",
+								"ENG_name": "Enlarge (Recharges after a Short or Long Rest)",
+								"entries": [
+									"在1分钟内，<$short_name$>的体型连同他们穿戴或携带的任何物品都会神奇地增大。在增大期间，<$short_name$>变为大型，基于力量的武器攻击的伤害骰加倍（包含在攻击中），并且在进行力量检定和力量豁免骰时拥有优势。如果<$short_name$>没有足够的空间变得大型，他们会达到在可用空间内的最大尺寸。"
+								]
+							},
+							{
+								"name": "隐形（短休或长休后重新充能）",
+								"ENG_name": "Invisibility (Recharges after a Short or Long Rest)",
+								"entries": [
+									"<$title_short_name$> 可以神奇地变得{@condition 隐形}，直到他们攻击、施放法术、使用他们的放大能力，或者直到他们的{@status 专注}被打破，最长持续1小时（就好像在专注于一个法术）。<$short_name$>穿戴或携带的任何装备也会随着他们一起变得隐形。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "埃德拉扎",
+			"ENG_name": "Eldrazi",
+			"source": "PSZ",
+			"page": 38,
+			"apply": {
+				"_mod": {
+					"immune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "心灵"
+					},
+					"conditionImmune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "魅惑"
+					}
+				}
+			}
+		},
+		{
+			"name": "费尔伯格人",
+			"ENG_name": "Firbolg",
+			"source": "VGM",
+			"page": 107,
+			"ref": "{@race 费尔伯格人|VGM}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"firbolg"
+						]
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"精灵语",
+							"巨人"
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "强壮体格",
+								"ENG_name": "Powerful Build",
+								"entries": [
+									"<$title_short_name$>在确定他们的携带能力以及他们能推动、拖拽或举起的重量时，被视为大一号尺寸。"
+								]
+							},
+							{
+								"name": "兽语与叶语",
+								"ENG_name": "Speech of Beast and Leaf",
+								"entries": [
+									"<$title_short_name$> 能以有限的方式与野兽和植物交流。这些生物能理解 <$title_short_name$> 的话语含义，尽管 <$title_short_name$> 没有能力理解它们的语言。此外，<$title_short_name$> 在进行魅力检定时，影响野兽或植物具有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "超巨型半黑龙",
+			"ENG_name": "Gargantuan Half-Black Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "强酸吐息 {@recharge 5}",
+								"ENG_name": "Acid Breath {@recharge 5}",
+								"entries": [
+									"半龙在60英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 18的敏捷豁免检定，失败则受到54点（{@damage 12d8}）酸蚀伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "超巨型半蓝龙",
+			"ENG_name": "Gargantuan Half-Blue Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "闪电"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "闪电吐息{@recharge 5}",
+								"ENG_name": "Lightning Breath {@recharge 5}",
+								"entries": [
+									"半龙在90英尺长、5英尺宽的直线上吐出闪电。该直线上的每个生物必须进行一次DC 19的敏捷豁免投掷，失败则受到66（{@damage 12d10}）点闪电伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "超巨型半铜龙",
+			"ENG_name": "Gargantuan Half-Brass Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在60英尺长、5英尺宽的直线上呼出火焰。那条线上的每个生物都必须进行一次DC 18的敏捷豁免投掷，失败时受到45（{@damage 13d6}）点火焰伤害，成功则只受到一半的伤害。"
+											},
+											{
+												"type": "item",
+												"name": "催眠吐息：",
+												"ENG_name": "Sleep Breath",
+												"entry": "半龙在60英尺的锥形区域内吐出催眠气体。该区域内的每个生物必须成功进行一次DC 18的体质豁免投掷，否则会进入{@condition 昏迷}状态10分钟。如果生物受到伤害或有人采取动作唤醒它，则此效果会结束。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半铜龙",
+			"ENG_name": "Gargantuan Half-Copper Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "强酸吐息：",
+												"ENG_name": "Acid Breath",
+												"entry": "半龙在60英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 18的敏捷豁免检定，失败则受到54点（{@damage 12d8}）酸蚀伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "缓速吐息：",
+												"ENG_name": "Slowing Breath",
+												"entry": "半龙在60英尺的锥形区域内呼出气体。该区域内的每个生物必须成功通过一次DC 18的体质豁免投掷。豁免失败的生物不能使用反应，其速度减半，并且在其回合内不能进行超过一次攻击。此外，生物在其回合内只能使用动作或奖励动作，不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免投掷，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "超巨型半金龙",
+			"ENG_name": "Gargantuan Half-Gold Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在60英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 21的敏捷豁免投掷，失败则受到66（{@damage 12d10}）点火焰伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "弱化吐息：",
+												"ENG_name": "Weakening Breath",
+												"entry": "半龙在60英尺的锥形区域内呼出气体。该区域内的每个生物都必须成功进行一次DC 21的体质豁免骰，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免骰上会有劣势。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半绿龙",
+			"ENG_name": "Gargantuan Half-Green Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "毒液喷吐 {@recharge 5}",
+								"ENG_name": "Poison Breath {@recharge 5}",
+								"entries": [
+									"半龙在60英尺的锥形区域内吐出有毒气体。该区域内的每个生物都必须进行一次DC 18的体质豁免骰，失败则受到56({@damage 16d6})点毒素伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半红龙",
+			"ENG_name": "Gargantuan Half-Red Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "火焰吐息 {@recharge 5}",
+								"ENG_name": "Fire Breath {@recharge 5}",
+								"entries": [
+									"半龙在60英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 21的敏捷豁免投掷，失败则受到63（{@damage 18d6}）点火焰伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "超巨型半银龙",
+			"ENG_name": "Gargantuan Half-Silver Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "冷冻吐息：",
+												"ENG_name": "Cold Breath",
+												"entry": "半龙吐出一道60英尺的锥形冰霜。该区域内的每个生物必须进行一次DC 20的体质豁免投掷，失败则受到58（{@damage 13d8}）点寒冷伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "麻痹吐息：",
+												"ENG_name": "Paralyzing Breath",
+												"entry": "半龙在60英尺的锥形区域内吐出麻痹气体。该区域内的每个生物都必须成功进行一次DC 20的体质豁免骰，否则将被{@condition 麻痹}1分钟。生物可以在每个回合结束时重复豁免骰，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半白龙",
+			"ENG_name": "Gargantuan Half-White Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "8",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "寒气呼吸 {@recharge 5}",
+								"ENG_name": "Cold Breath {@recharge 5}",
+								"entries": [
+									"半龙在60英尺的锥形区域内喷吐冰冷的冲击波。该区域内的每个生物都必须进行一次DC 19的体质豁免投掷，失败则受到54点（{@damage 12d8}）寒冷伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "地精",
+			"ENG_name": "Goblin",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 地精|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"S"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"goblinoid"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "地精"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "灵敏脱逃",
+								"ENG_name": "Nimble Escape",
+								"entries": [
+									"<$title_short_name$>在其每个回合上可以作为额外动作采取{@action 撤离}或{@action 躲藏}行动。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "歌利亚",
+			"ENG_name": "Goliath",
+			"source": "VGM",
+			"page": 108,
+			"ref": "{@race 歌利亚|VGM}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"goliath"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"athletics": 1
+							}
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"巨人"
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "强壮体格",
+								"ENG_name": "Powerful Build",
+								"entries": [
+									"<$title_short_name$>在确定他们的携带能力以及他们能推动、拖拽或举起的重量时，被视为大一号尺寸。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "半精灵",
+			"ENG_name": "Half-Elf",
+			"source": "PHB",
+			"page": 38,
+			"ref": "{@race 半精灵}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"half-elf"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "精灵语"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "精类血统",
+								"ENG_name": "Fey Ancestry",
+								"entries": [
+									"<$title_short_name$> 在对抗魅惑的豁免投掷中具有优势，魔法不能使 <$title_short_name$> 入睡。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "半兽人",
+			"ENG_name": "Half-Orc",
+			"source": "PHB",
+			"page": 40,
+			"ref": "{@race 半兽人}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"half-orc"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						},
+						{
+							"mode": "addSkills",
+							"skills": {
+								"intimidation": 1
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "兽人"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "顽强耐性",
+								"ENG_name": "Relentless Endurance",
+								"entries": [
+									"当生命值降至0点时，<$title_short_name$> 会降至1点生命值（但在完成一次长时间休息之前不能再这样做）。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "高等精灵",
+			"ENG_name": "High Elf",
+			"source": "PHB",
+			"page": 23,
+			"ref": "{@race 精灵(高等)||高等精灵}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "elf",
+								"prefix": "High"
+							}
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						},
+						{
+							"mode": "addSkills",
+							"skills": {
+								"perception": 1
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "精灵语"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "精类血统",
+								"ENG_name": "Fey Ancestry",
+								"entries": [
+									"<$title_short_name$> 在对抗魅惑的豁免投掷中具有优势，魔法不能使 <$title_short_name$> 入睡。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "丘陵矮人",
+			"ENG_name": "Hill Dwarf",
+			"source": "PHB",
+			"_copy": {
+				"name": "山地矮人",
+				"ENG_name": "Mountain Dwarf",
+				"source": "PHB",
+				"_mod": {
+					"*": {
+						"mode": "setProp",
+						"prop": "应用._root.type",
+						"value": {
+							"type": "humanoid",
+							"tags": [
+								{
+									"tag": "矮人",
+									"prefix": "丘陵"
+								}
+							]
+						}
+					}
+				},
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "巨型半黑龙",
+			"ENG_name": "Huge Half-Black Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "强酸吐息 {@recharge 5}",
+								"ENG_name": "Acid Breath {@recharge 5}",
+								"entries": [
+									"半龙在30英尺长、5英尺宽的直线上释放酸液。该直线上的每个生物都必须进行一次DC 14的敏捷豁免检定，失败则受到49点（{@damage 11d8}）酸蚀伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨大的半蓝龙",
+			"ENG_name": "Huge Half-Blue Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "闪电"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "闪电吐息{@recharge 5}",
+								"ENG_name": "Lightning Breath {@recharge 5}",
+								"entries": [
+									"半龙在60英尺长、5英尺宽的直线上喷吐闪电。该直线上的每个生物都必须进行一次DC 16的敏捷豁免投掷，失败则受到55点（{@damage 10d10}）闪电伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半铜龙",
+			"ENG_name": "Huge Half-Brass Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在40英尺长、5英尺宽的直线上呼出火焰。那条线上的每个生物都必须进行一次DC 14的敏捷豁免投掷，失败时受到42（{@damage 12d6}）点火焰伤害，成功则只受到一半的伤害。"
+											},
+											{
+												"type": "item",
+												"name": "催眠吐息：",
+												"ENG_name": "Sleep Breath",
+												"entry": "半龙在30英尺的锥形区域内吐出催眠气体。该区域内的每个生物都必须成功进行一次DC 14的体质豁免骰，否则将进入{@condition 昏迷}状态，持续5分钟。如果生物受到伤害或有人采取行动唤醒它，这种效果将结束。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半铜龙",
+			"ENG_name": "Huge Half-Copper Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "强酸吐息：",
+												"ENG_name": "Acid Breath",
+												"entry": "半龙在40英尺长、5英尺宽的直线上吐出酸性物质。该直线上的每个生物必须进行一次DC 14的敏捷豁免投掷，失败则受到40（{@damage 9d8}）点酸性伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "缓速吐息：",
+												"ENG_name": "Slowing Breath",
+												"entry": "半龙在30英尺的锥形区域内呼出气体。该区域内的每个生物都必须进行一次DC 14的体质豁免骰。豁免失败的生物将无法使用反应动作，其移动速度减半，并且在其回合上不能进行超过一次攻击。此外，生物在其回合上只能使用动作或额外动作，但不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半金龙",
+			"ENG_name": "Huge Half-Gold Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在30英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 17的敏捷豁免骰，失败则受到55({@damage 10d10})点火焰伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "弱化吐息：",
+												"ENG_name": "Weakening Breath",
+												"entry": "半龙在30英尺的锥形区域内呼出气体。该区域内的每个生物必须成功通过一次DC 17的力量豁免投掷，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免投掷上具有劣势。生物可以在每个回合结束时重复进行豁免投掷，成功则结束此效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半绿龙",
+			"ENG_name": "Huge Half-Green Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "毒液喷吐 {@recharge 5}",
+								"ENG_name": "Poison Breath {@recharge 5}",
+								"entries": [
+									"半龙在30英尺的锥形区域内呼出有毒气体。该区域内的每个生物都必须进行一次DC 14的体质豁免投掷，失败时受到42（{@damage 12d6}）点毒素伤害，成功则只受到一半的伤害。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半红龙",
+			"ENG_name": "Huge Half-Red Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "火焰吐息 {@recharge 5}",
+								"ENG_name": "Fire Breath {@recharge 5}",
+								"entries": [
+									"半龙在30英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 17的敏捷豁免投掷，失败则受到56（{@damage 16d6}）点火焰伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半银龙",
+			"ENG_name": "Huge Half-Silver Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "冷冻吐息：",
+												"ENG_name": "Cold Breath",
+												"entry": "半龙在30英尺的锥形区域内释放冰冷的冲击波。该区域内的每个生物都必须进行一次DC 17的体质豁免检定，失败则受到54点（{@damage 12d8}）冰冻伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "麻痹吐息：",
+												"ENG_name": "Paralyzing Breath",
+												"entry": "半龙在30英尺的锥形区域内喷吐麻痹气体。该区域内的每个生物都必须成功通过一次DC 17的体质豁免投掷，否则将被{@condition 麻痹}状态影响1分钟。生物可以在每个回合结束时重新进行豁免投掷，成功则结束该效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "巨型半白龙",
+			"ENG_name": "Huge Half-White Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "7",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "寒气呼吸 {@recharge 5}",
+								"ENG_name": "Cold Breath {@recharge 5}",
+								"entries": [
+									"半龙在30英尺的锥形区域内呼出冰冷的冲击波。该区域内的每个生物都必须进行一次DC 15的体质豁免骰，豁免失败将受到45点（{@damage 10d8}）的冰冷伤害，豁免成功则只受到一半的伤害。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "天狗",
+			"ENG_name": "Kenku",
+			"source": "VGM",
+			"page": 109,
+			"ref": "{@race 天狗|VGM}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"kenku"
+						]
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"奥兰"
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "拟声",
+								"ENG_name": "Mimicry",
+								"entries": [
+									"<$title_short_name$>可以模仿它听到的任何声音，包括声音。听到这些声音的生物可以通过成功的{@dc 14}智力（{@skill 洞悉}）检定来分辨出它们是模仿的。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "狗头人",
+			"ENG_name": "Kobold",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 狗头人|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"S"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"kobold"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "日光敏感",
+								"ENG_name": "Sunlight Sensitivity",
+								"entries": [
+									"在阳光下，<$title_short_name$>在攻击骰上以及依赖视觉的感知（{@skill 察觉}）检定上具有劣势。"
+								]
+							},
+							{
+								"name": "群体战术",
+								"ENG_name": "Pack Tactics",
+								"entries": [
+									"如果至少有一个盟友在5英尺内且该盟友没有处于{@condition 无力}状态，<$title_short_name$>对生物的攻击检定拥有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小型的半黑龙",
+			"ENG_name": "Large or Smaller Half-Black Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "强酸吐息 {@recharge 5}",
+								"ENG_name": "Acid Breath {@recharge 5}",
+								"entries": [
+									"半龙在15英尺长、5英尺宽的直线上喷吐酸性物质。该直线上的每个生物都必须进行一次DC 11的敏捷豁免投掷，失败则受到22点（{@damage 5d8}）酸性伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小型的半蓝龙",
+			"ENG_name": "Large or Smaller Half-Blue Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "闪电"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "闪电吐息{@recharge 5}",
+								"ENG_name": "Lightning Breath {@recharge 5}",
+								"entries": [
+									"半龙在30英尺长、5英尺宽的直线上释放闪电。该直线上的每个生物都必须进行一次DC 12的敏捷豁免检定，失败则受到22点（{@damage 4d10}）闪电伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小型的半铜龙",
+			"ENG_name": "Large or Smaller Half-Brass Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在一条20英尺长、5英尺宽的线上吐出火焰。那条线上的每个生物都必须进行一次DC 11的敏捷豁免骰，失败则受到14({@damage 4d6})点火焰伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "催眠吐息：",
+												"ENG_name": "Sleep Breath",
+												"entry": "半龙在15英尺的锥形区域内呼出催眠气体。该区域内的每个生物必须成功通过一次DC 11的体质豁免投掷，否则将进入{@condition 昏迷}状态，持续1分钟。如果生物受到伤害或有人采取行动唤醒它，则此效果结束。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小的半铜龙",
+			"ENG_name": "Large or Smaller Half-Copper Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "强酸吐息：",
+												"ENG_name": "Acid Breath",
+												"entry": "半龙在20英尺长、5英尺宽的直线上喷吐酸性物质。该直线上的每个生物都必须进行一次DC 11的敏捷豁免投掷，失败则受到18点（{@damage 4d8}）酸性伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "缓速吐息：",
+												"ENG_name": "Slowing Breath",
+												"entry": "半龙在15英尺的锥形区域内呼出气体。该区域内的每个生物都必须进行一次DC 11的体质豁免骰。豁免失败的生物将无法使用反应动作，其移动速度减半，并且在其回合上不能进行超过一次攻击。此外，生物在其回合上只能使用动作或额外动作，但不能同时使用两者。这些效果持续1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小型的半金龙",
+			"ENG_name": "Large or Smaller Half-Gold Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰吐息：",
+												"ENG_name": "Fire Breath",
+												"entry": "半龙在15英尺的锥形区域内吐出火焰。该区域内的每个生物必须进行一次DC 13的敏捷豁免投掷，失败则受到22（{@damage 4d10}）点火焰伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "弱化吐息：",
+												"ENG_name": "Weakening Breath",
+												"entry": "半龙在15英尺的锥形区域内释放气体。该区域内的每个生物都必须进行一次DC 13的力量豁免检定，否则在接下来的1分钟内，在基于力量的攻击骰、力量检定和力量豁免检定上会有劣势。生物可以在每个回合结束时重新进行豁免检定，成功则结束该效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小的半绿龙",
+			"ENG_name": "Large or Smaller Half-Green Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "毒液喷吐 {@recharge 5}",
+								"ENG_name": "Poison Breath {@recharge 5}",
+								"entries": [
+									"半龙在15英尺的锥形区域内呼出有毒气体。该区域内的每个生物必须进行一次DC 11的体质豁免投掷，失败则受到21（{@damage 6d6}）点毒药伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小型的半红龙",
+			"ENG_name": "Large or Smaller Half-Red Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "火焰吐息 {@recharge 5}",
+								"ENG_name": "Fire Breath {@recharge 5}",
+								"entries": [
+									"半龙在15英尺的锥形区域内喷吐火焰。该区域内的每个生物都必须进行一次DC 13的敏捷豁免投掷，失败则受到24点（{@damage 7d6}）火焰伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小的半银龙",
+			"ENG_name": "Large or Smaller Half-Silver Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "吐息武器 {@recharge 5}",
+								"ENG_name": "Breath Weapons {@recharge 5}",
+								"entries": [
+									"半龙使用以下任一吐息武器。",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "冷冻吐息：",
+												"ENG_name": "Cold Breath",
+												"entry": "半龙吐出一道15英尺的冰霜锥形攻击。该区域内的每个生物必须进行一次DC 13的体质豁免骰，失败则受到18({@damage 4d8})点冷伤害，成功则伤害减半。"
+											},
+											{
+												"type": "item",
+												"name": "麻痹吐息：",
+												"ENG_name": "Paralyzing Breath",
+												"entry": "半龙在15英尺的锥形区域内呼出麻痹气体。该区域内的每个生物都必须进行一次DC 13的体质豁免骰，否则将被{@condition 麻痹}1分钟。生物可以在每个回合结束时重复进行豁免骰，成功则结束自身的效果。"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "大型或更小的半白龙",
+			"ENG_name": "Large or Smaller Half-White Dragon",
+			"source": "MM",
+			"page": 180,
+			"crMin": "2",
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": [
+								{
+									"type": "blindsight",
+									"range": 10
+								},
+								{
+									"type": "darkvision",
+									"range": 60
+								}
+							]
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "寒冷"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "寒气呼吸 {@recharge 5}",
+								"ENG_name": "Cold Breath {@recharge 5}",
+								"entries": [
+									"半龙吐出一道15英尺的冰雹锥形攻击。该区域内的每个生物必须进行一次DC 12的体质豁免投掷，失败则受到22（{@damage 5d8}）点寒冷伤害，成功则伤害减半。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "传奇影龙",
+			"ENG_name": "Legendary Shadow Dragon",
+			"source": "MM",
+			"page": 84,
+			"apply": {
+				"_root": {
+					"legendaryGroup": {
+						"name": "影龙",
+						"ENG_name": "Shadow Dragon",
+						"source": "FTD"
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"stealth": 2
+							}
+						}
+					],
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "死灵"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "活影",
+								"ENG_name": "Living Shadow",
+								"entries": [
+									"在昏暗或黑暗中，龙对非力量、精神或辐射伤害具有抗性。"
+								]
+							},
+							{
+								"name": "暗影潜匿.",
+								"ENG_name": "Shadow Stealth",
+								"entries": [
+									"在微光或黑暗中，龙可以作为奖励行动执行{@action 躲藏}动作。"
+								]
+							},
+							{
+								"name": "日光敏感",
+								"ENG_name": "Sunlight Sensitivity",
+								"entries": [
+									"在阳光下，龙在攻击检定以及依赖视力的感知（{@skill 察觉}）技能检定上具有劣势。"
+								]
+							}
+						]
+					},
+					"action": [
+						{
+							"mode": "replaceTxt",
+							"replace": "(酸性|寒冷|火|闪电|毒药)",
+							"with": "死灵"
+						},
+						{
+							"mode": "replaceTxt",
+							"replace": "(酸性|寒冷|火|闪电|中毒)",
+							"with": "死灵"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "蜥蜴人",
+			"ENG_name": "Lizardfolk",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 蜥蜴人|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"lizardfolk"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"swim": 30
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "龙族血脉"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"type": "entries",
+								"name": "屏息",
+								"ENG_name": "Hold Breath",
+								"entries": [
+									"<$title_short_name$>可以一次性屏住呼吸长达15分钟。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "人鱼",
+			"ENG_name": "Merfolk",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 人鱼|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"merfolk"
+						]
+					},
+					"speed": {
+						"walk": 10,
+						"swim": 40
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "水族"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "两栖",
+								"ENG_name": "Amphibious",
+								"entries": [
+									"<$title_short_name$>可以呼吸空气和水。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "山地矮人",
+			"ENG_name": "Mountain Dwarf",
+			"source": "PHB",
+			"page": 18,
+			"ref": "{@race 矮人(高山)||山地矮人}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "dwarf",
+								"prefix": "Mountain"
+							}
+						]
+					},
+					"speed": {
+						"walk": 25
+					}
+				},
+				"_mod": {
+					"_": {
+						"mode": "addSenses",
+						"senses": {
+							"type": "darkvision",
+							"range": 60
+						}
+					},
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "矮人语"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "矮人韧性",
+								"ENG_name": "Dwarven Resilience",
+								"entries": [
+									"<$title_short_name$>在对抗毒素的豁免投掷上具有优势，并且对毒素伤害具有抗性。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "兽人",
+			"ENG_name": "Orc",
+			"source": "DMG",
+			"page": 120,
+			"ref": "{@race 兽人|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"orc"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "兽人"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "侵略性",
+								"ENG_name": "Aggressive",
+								"entries": [
+									"作为一个奖励行动，<$short_name$>可以向他们能看到的敌对生物移动，距离最多达到你的速度。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "威胁降低",
+			"ENG_name": "Reduced Threat",
+			"source": "TftYP",
+			"page": 113,
+			"apply": {
+				"_mod": {
+					"_": [
+						{
+							"mode": "maxSize",
+							"max": "L"
+						},
+						{
+							"mode": "scalarMultXp",
+							"scalar": 0.5,
+							"floor": true
+						}
+					],
+					"hp": {
+						"mode": "scalarMultProp",
+						"prop": "平均",
+						"scalar": 0.5,
+						"floor": true
+					},
+					"save": {
+						"mode": "scalarAddProp",
+						"scalar": -2,
+						"prop": "*"
+					},
+					"skill": {
+						"mode": "scalarAddProp",
+						"scalar": -2,
+						"prop": "*"
+					},
+					"spellcasting": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						}
+					],
+					"trait": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						},
+						{
+							"mode": "prependArr",
+							"items": {
+								"name": "威胁降低",
+								"ENG_name": "Reduced Threat",
+								"entries": [
+									"一个威胁降低的怪物在攻击检定上受到-2的惩罚（已包含在属性块中），技能检定（已包含在属性块中，针对技能熟练度），豁免投掷（已包含在属性块中，针对豁免投掷熟练度），以及豁免投掷难度等级（已包含在属性块中）。"
+								]
+							}
+						}
+					],
+					"action": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						}
+					],
+					"reaction": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						}
+					],
+					"legendary": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						}
+					],
+					"variant": [
+						{
+							"mode": "scalarAddHit",
+							"scalar": -2
+						},
+						{
+							"mode": "scalarAddDc",
+							"scalar": -2
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "岩侏儒",
+			"ENG_name": "Rock Gnome",
+			"source": "PHB",
+			"page": 35,
+			"ref": "{@race 侏儒(岩)||岩侏儒}",
+			"apply": {
+				"_root": {
+					"size": [
+						"S"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "gnome",
+								"prefix": "Rock"
+							}
+						]
+					},
+					"speed": {
+						"walk": 25
+					}
+				},
+				"_mod": {
+					"_": {
+						"mode": "addSenses",
+						"senses": {
+							"type": "darkvision",
+							"range": 60
+						}
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "侏儒语"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "侏儒狡黠",
+								"ENG_name": "Gnome Cunning",
+								"entries": [
+									"<$title_short_name$> 在对抗魔法的所有智力、智慧和魅力豁免投掷上具有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "盾矮人",
+			"ENG_name": "Shield Dwarf",
+			"source": "PHB",
+			"_copy": {
+				"name": "山地矮人",
+				"ENG_name": "Mountain Dwarf",
+				"source": "PHB",
+				"_mod": {
+					"*": {
+						"mode": "setProp",
+						"prop": "应用._root.type",
+						"value": {
+							"type": "humanoid",
+							"tags": [
+								{
+									"tag": "矮人",
+									"prefix": "护盾术"
+								}
+							]
+						}
+					}
+				},
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "骷髅",
+			"ENG_name": "Skeleton",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race 骷髅|DMG}",
+			"apply": {
+				"_root": {
+					"type": {
+						"type": "undead"
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"immune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"vulnerable": {
+						"mode": "appendIfNotExistsArr",
+						"items": "钝击"
+					},
+					"conditionImmune": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"力竭",
+								"中毒"
+							]
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "能理解它生前所说的所有语言，但不能说话"
+					}
+				}
+			}
+		},
+		{
+			"name": "敦实半身人",
+			"ENG_name": "Stout Halfling",
+			"source": "PHB",
+			"page": 35,
+			"ref": "{@race 半身人(强魄)||敦实半身人}",
+			"apply": {
+				"_root": {
+					"size": [
+						"S"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "halfling",
+								"prefix": "Stout"
+							}
+						]
+					},
+					"speed": {
+						"walk": 25
+					}
+				},
+				"_mod": {
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "半身人"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "半身人敏捷",
+								"ENG_name": "Halfling Nimbleness",
+								"entries": [
+									"<$title_short_name$>可以穿过一个中等大小或更大的生物所占据的空间。"
+								]
+							},
+							{
+								"name": "勇敢",
+								"ENG_name": "Brave",
+								"entries": [
+									"<$title_short_name$>在对抗{@condition 恐惧}状态的豁免骰上有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "斑猫人",
+			"ENG_name": "Tabaxi",
+			"source": "VGM",
+			"page": 113,
+			"ref": "{@race 斑猫人|VGM}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"tabaxi"
+						]
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "猫科动物的敏捷",
+								"ENG_name": "Feline Agility",
+								"entries": [
+									"当<$short_name$>在其回合进行移动时，在战斗中，它们可以将速度加倍，直到回合结束。一旦使用了这个能力，<$title_short_name$>在它们其中一个回合移动了0英尺之前，不能再使用这个能力。"
+								]
+							}
+						]
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "爪抓",
+								"ENG_name": "Claws",
+								"entries": [
+									"{@atk 近战武器} 命中骰：{@hit <$to_hit__str$>}，射程5英尺，一个目标。{@h}<$damage_avg__2.5+str$>（{@damage 1d4<$damage_mod__str$>}）斩击伤害。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "提夫林",
+			"ENG_name": "Tiefling",
+			"source": "PHB",
+			"page": 42,
+			"ref": "{@race 提夫林}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"tiefling"
+						]
+					}
+				},
+				"_mod": {
+					"_": {
+						"mode": "addSenses",
+						"senses": {
+							"type": "darkvision",
+							"range": 60
+						}
+					},
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "火"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "地狱语"
+					},
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "天生施法",
+								"ENG_name": "Innate Spellcasting",
+								"headerEntries": [
+									"<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
+								],
+								"will": [
+									"{@spell 奇术}"
+								],
+								"daily": {
+									"1e": [
+										"{@spell 黑暗}",
+										"{@spell 炼狱叱喝}"
+									]
+								},
+								"ability": "cha"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "维斯塔娜",
+			"ENG_name": "Vistana",
+			"source": "CoS",
+			"page": 28,
+			"apply": {
+				"_mod": {
+					"action": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "诅咒（长休息后重新充能）",
+								"ENG_name": "Curse (Recharges After a Long Rest)",
+								"entries": [
+									"凡塔纳可以针对它能看到的30英尺范围内的一个生物。目标必须通过一个{@dc <$spell_dc__cha$>}智力豁免检定，否则会被诅咒。凡塔纳从以下选项中选择诅咒的效果；其他凡塔纳的诅咒也是可能的。所有这些效果在结束时都会对发出它们的凡塔纳造成精神伤害：",
+									{
+										"type": "list",
+										"items": [
+											"目标无法执行涉及精细运动控制的特定行为，例如打结、写字、演奏乐器、缝纫或施放具有身体成分的法术。当这个诅咒结束时，Vistana承受{@damage 1d6}心灵伤害。",
+											"目标的外观以一种邪恶但纯粹是外表的方式发生了变化。例如，诅咒可以在目标的脸上留下疤痕，将目标的牙齿变成黄色的獠牙，或使目标有口臭。当这个诅咒结束时，Vistana受到{@damage 1d6}点心灵伤害。",
+											"目标所持有的一件非魔法物品（由DM选择）消失，直到诅咒结束前无法找到。丢失的物品重量不得超过1磅。当这个诅咒结束时，Vistana受到{@damage 1d6}点心灵伤害。",
+											"目标获得对Vistana选择的伤害类型的易伤。当这个诅咒结束时，Vistana承受{@damage 3d6}心灵伤害。",
+											"目标在与Vistana选择的一项能力值相关的能力检定和豁免投掷上具有劣势。当这个诅咒结束时，Vistana受到{@damage 3d6}点心灵伤害。",
+											"目标对一件魔法物品（由DM选择）的协调结束，并且直到诅咒结束前，目标不能协调选定的物品。当这个诅咒结束时，Vistana受到{@damage 5d6}点心灵伤害。",
+											"目标处于{@condition 目盲}状态，{@condition 耳聋}状态，或两者兼有。当这个诅咒结束时，维斯塔纳承受{@damage 5d6}点心灵伤害。"
+										]
+									},
+									"诅咒持续有效，直到通过{@spell 高等复原术}法术、{@spell 移除诅咒}法术或类似的魔法来结束。它不会在目标死亡时结束。如果被诅咒的目标复活，诅咒仍然有效。"
+								]
+							},
+							{
+								"name": "邪恶之眼（短暂或长时间休息后重置）",
+								"ENG_name": "Evil Eye (Recharges after a Short or Long Rest)",
+								"entries": [
+									"作为一个动作，凡塔纳可以针对凡塔纳能看到的10英尺范围内的一个生物。凡塔纳人称之为邪恶之眼的这种魔法能力，复制了{@spell 化兽为友}、{@spell 魅惑人类}或{@spell 人类定身术}法术（凡塔纳选择；法术{@dc <$spell_dc__cha$>}）的持续时间和效果，但不需要任何肢体或材料成分。如果目标成功通过豁免，凡塔纳在凡塔纳下个回合结束前处于{@condition 目盲}状态。",
+									"使用邪眼的瓦斯塔纳人在完成一次短休或长休之前不能再使用它。一旦目标成功通过对抗瓦斯塔纳人邪眼的豁免检定，它将对所有瓦斯塔纳人的邪眼免疫24小时。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "水元素裔",
+			"ENG_name": "Water Genasi",
+			"source": "EEPC",
+			"page": 10,
+			"ref": "{@race 元素裔(水)|EEPC|水元素裔}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "genasi",
+								"prefix": "Water"
+							}
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"swim": 30
+					}
+				},
+				"_mod": {
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "酸性"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "两栖",
+								"ENG_name": "Amphibious",
+								"entries": [
+									"<$title_short_name$>可以呼吸空气和水。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "木精灵",
+			"ENG_name": "Wood Elf",
+			"source": "PHB",
+			"page": 21,
+			"ref": "{@race 精灵(木)||木精灵}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							{
+								"tag": "elf",
+								"prefix": "Wood"
+							}
+						]
+					},
+					"speed": {
+						"walk": 35
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						},
+						{
+							"mode": "addSkills",
+							"skills": {
+								"perception": 1
+							}
+						}
+					],
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "精灵语"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "精类血统",
+								"ENG_name": "Fey Ancestry",
+								"entries": [
+									"<$title_short_name$> 在对抗{@condition 魅惑}的豁免骰上拥有优势，魔法不能使<$short_name$>入睡。"
+								]
+							},
+							{
+								"name": "荒野隐蔽",
+								"ENG_name": "Mask of the Wild",
+								"entries": [
+									"<$title_short_name$> 即使在只有轻微的遮挡，如树叶、大雨、下雪、雾和其他自然现象下，也可以尝试进行{@action 躲藏}。"
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "纯血原体蛇人",
+			"ENG_name": "Yuan-ti Pureblood",
+			"source": "VGM",
+			"page": 120,
+			"ref": "{@race 纯血原体蛇人|VGM}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"yuan-ti"
+						]
+					},
+					"speed": {
+						"walk": 35
+					}
+				},
+				"_mod": {
+					"_": [
+						{
+							"mode": "addSenses",
+							"senses": {
+								"type": "darkvision",
+								"range": 60
+							}
+						}
+					],
+					"immune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "毁灭诅咒"
+					},
+					"conditionImmune": {
+						"mode": "appendIfNotExistsArr",
+						"items": "中毒"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"深渊",
+							"龙族血脉"
+						]
+					},
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "天生施法",
+								"ENG_name": "Innate Spellcasting",
+								"headerEntries": [
+									"<$title_short_name$>的天赋施法能力是魅力（法术豁免{@dc <$spell_dc__cha$>}）。<$title_short_name$>天生能够施展以下法术，无需任何材料成分："
+								],
+								"will": [
+									"{@spell 化兽为友}（仅限蛇类）",
+									"{@spell 毒气喷洒}"
+								],
+								"daily": {
+									"3e": [
+										"{@spell 暗示术}"
+									]
+								},
+								"ability": "cha"
+							}
+						]
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "魔法抗性",
+								"ENG_name": "Magic Resistance",
+								"entries": [
+									"<$title_short_name$>在对抗法术和其他魔法效果的豁免投掷中具有优势。"
+								]
+							}
+						]
+					}
+				}
+			}
+		}
+	]
 }
