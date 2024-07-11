@@ -138,15 +138,25 @@
 					</table>
 				</div>
 
-				<div class="ve-text-center mt-2 no-print best-ecgen__hidden">
-					<button type="button" class="btn btn-success btn-xs" id="btn-encounterbuild">遭遇构筑器 </button>
-					<div id="wrp-profbonusdice" class="ve-inline-block">
-						<button type="button" class="btn btn-default btn-xs" id="profbonusdice" title="See the Dungeon Master&apos;s Guide, p263.">使用熟练骰</button>
+				<div class="ve-flex-vh-center mt-2 no-print mobile__ve-flex-col best-ecgen__hidden">
+					<div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
+						<button type="button" class="btn btn-success btn-xs mr-2" id="btn-encounterbuild">遭遇构筑器 </button>
+						<div id="wrp-profbonusdice" class="ve-flex-v-center">
+							<button type="button" class="btn btn-default btn-xs" id="profbonusdice" title="See the Dungeon Master&apos;s Guide, p263.">使用熟练骰</button>
+						</div>
 					</div>
-					<button type="button" class="btn btn-default btn-xs" id="btn-go-english">查看英文站</button>
-					<button type="button" class="btn btn-default btn-xs" id="btn-book">书页查看</button>
-					<button type="button" class="btn btn-default btn-xs" id="btn-show-table" title="View and Download Creatures in Tabular Format">表格查看</button>
-					<button type="button" class="btn btn-xs btn-info" id="manage-brew">管理自制内容</button>
+
+					<div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
+						<button type="button" class="btn btn-default btn-xs mr-2" id="btn-go-english">查看英文站</button>
+						<button type="button" class="btn btn-default btn-xs" id="btn-book">书页查看</button>
+						<button type="button" class="btn btn-default btn-xs" id="btn-show-table" title="View and Download Creatures in Tabular Format">表格查看</button>
+					</div>
+
+					<div class="ve-flex-v-center btn-group" id="btngroup-manager">
+						<button type="button" class="btn btn-xs btn-primary" name="manage-content">Manage Content</button>
+						<button type="button" class="btn btn-xs btn-primary" name="manage-prerelease" title="Manage Prerelease Content"><span class="glyphicon glyphicon-wrench"></span></button>
+						<button type="button" class="btn btn-xs btn-info" name="manage-brew" title="管理自制内容"><span class="glyphicon glyphicon-glass"></span></button>
+					</div>
 				</div>
 
 				<div class="best-ecgen__visible--flex-col best-ecgen__wrp pb-1 px-2" id="wrp-encounterbuild-group-and-difficulty"></div>
@@ -158,32 +168,32 @@
 <!--5ETOOLS_SCRIPT_ANCHOR-->
 <!--5ETOOLS_AD_ADHESION-->
 
-<script type="text/javascript" src="lib/jquery.js"></script>
-<script type="text/javascript" src="js/parser.js"></script>
-<script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/utils-ui.js"></script>
-<script type="text/javascript" src="lib/localforage.js"></script>
-<script type="text/javascript" src="js/omnidexer.js"></script>
-<script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/filter.js"></script>
-<script type="text/javascript" src="js/utils-dataloader.js"></script>
-<script type="text/javascript" src="js/utils-brew.js"></script>
+<script type="text/javascript" defer src="lib/jquery.js"></script>
+<script type="text/javascript" defer src="js/parser.js"></script>
+<script type="text/javascript" defer src="js/utils.js"></script>
+<script type="text/javascript" defer src="js/utils-ui.js"></script>
+<script type="text/javascript" defer src="lib/localforage.js"></script>
+<script type="text/javascript" defer src="js/omnidexer.js"></script>
+<script type="module" src="js/omnisearch.js"></script>
+<script type="module" src="js/filter.js"></script>
+<script type="text/javascript" defer src="js/utils-dataloader.js"></script>
+<script type="module" src="js/utils-brew.js"></script>
 <script type="module" src="js/utils-config.js"></script>
-<script type="text/javascript" src="js/utils-list.js"></script>
-<script type="text/javascript" src="js/utils-tableview.js"></script>
-<script type="text/javascript" src="js/render.js"></script>
-<script type="text/javascript" src="js/render-dice.js"></script>
-<script type="text/javascript" src="js/render-markdown.js"></script>
-<script type="text/javascript" src="js/render-bestiary.js"></script>
-<script type="text/javascript" src="js/scalecreature.js"></script>
-<script type="text/javascript" src="js/hist.js"></script>
-<script type="text/javascript" src="js/listpage.js"></script>
-<script type="text/javascript" src="js/multisource.js"></script>
-<script type="text/javascript" src="js/filter-common.js"></script>
-<script type="text/javascript" src="js/filter-bestiary.js"></script>
+<script type="text/javascript" defer src="js/utils-list.js"></script>
+<script type="text/javascript" defer src="js/utils-tableview.js"></script>
+<script type="text/javascript" defer src="js/render.js"></script>
+<script type="text/javascript" defer src="js/render-dice.js"></script>
+<script type="text/javascript" defer src="js/render-markdown.js"></script>
+<script type="text/javascript" defer src="js/render-bestiary.js"></script>
+<script type="text/javascript" defer src="js/scalecreature.js"></script>
+<script type="text/javascript" defer src="js/hist.js"></script>
+<script type="text/javascript" defer src="js/listpage.js"></script>
+<script type="text/javascript" defer src="js/multisource.js"></script>
+<script type="text/javascript" defer src="js/filter-common.js"></script>
+<script type="text/javascript" defer src="js/filter-bestiary.js"></script>
 <script type="module" src="js/bestiary.js"></script>
-<script type="text/javascript" src="js/list2.js"></script>
-<script type="text/javascript" src="lib/elasticlunr.js"></script>
+<script type="text/javascript" defer src="js/list2.js"></script>
+<script type="text/javascript" defer src="lib/elasticlunr.js"></script>
 
 </body>
 </html>

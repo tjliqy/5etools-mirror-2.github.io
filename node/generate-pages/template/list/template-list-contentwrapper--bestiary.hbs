@@ -11,15 +11,22 @@
 
 	{{> "listWrpPagecontent" }}
 
-	<div class="ve-text-center mt-2 no-print best-ecgen__hidden">
-		<button type="button" class="btn btn-success btn-xs" id="btn-encounterbuild">遭遇构筑器 </button>
-		<div id="wrp-profbonusdice" class="ve-inline-block">
-			<button type="button" class="btn btn-default btn-xs" id="profbonusdice" title="See the Dungeon Master&apos;s Guide, p263.">使用熟练骰</button>
+	<div class="ve-flex-vh-center mt-2 no-print mobile__ve-flex-col best-ecgen__hidden">
+		<div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
+			<button type="button" class="btn btn-success btn-xs mr-2" id="btn-encounterbuild">遭遇构筑器</button>
+			<div id="wrp-profbonusdice" class="ve-flex-v-center">
+				<button type="button" class="btn btn-default btn-xs" id="profbonusdice" title="See the Dungeon Master&apos;s Guide, p263.">使用熟练骰</button>
+			</div>
 		</div>
-		<button type="button" class="btn btn-default btn-xs" id="btn-go-english">查看英文站</button>
-		<button type="button" class="btn btn-default btn-xs" id="btn-book">书页查看</button>
-		<button type="button" class="btn btn-default btn-xs" id="btn-show-table" title="View and Download Creatures in Tabular Format">表格查看</button>
-		<button type="button" class="btn btn-xs btn-info" id="manage-brew">管理自制内容</button>
+
+		<div class="ve-flex-v-center mr-2 mobile__mb-2 mobile__mr-0">
+			<button type="button" class="btn btn-default btn-xs" id="btn-go-english">查看英文站</button>
+
+			<button type="button" class="btn btn-default btn-xs mr-2" id="btn-book">书页查看</button>
+			<button type="button" class="btn btn-default btn-xs" id="btn-show-table" title="View and Download Creatures in Tabular Format">表格查看</button>
+		</div>
+
+		{{> "btngroupManager" }}
 	</div>
 
 	<div class="best-ecgen__visible--flex-col best-ecgen__wrp pb-1 px-2" id="wrp-encounterbuild-group-and-difficulty"></div>
