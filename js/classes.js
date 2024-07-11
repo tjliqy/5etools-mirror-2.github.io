@@ -996,8 +996,8 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				${$tblGroupHeaders}
 			</tr>
 			<tr>
-				<th class="cls-tbl__col-level">等级 </th>
-				<th class="cls-tbl__col-prof-bonus">Proficiency Bonus</th>
+				<th class="cls-tbl__col-level">等级</th>
+				<th class="cls-tbl__col-prof-bonus" style="width:4.5em">熟练项加值</th>
 				<th>Features</th>
 				${$tblHeaders}
 			</tr>
@@ -1028,7 +1028,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		// Render column headers (bottom section)
 		const $tblHeadersGroup = colLabels
 			.map(lbl => {
-				const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header"></div></th>`)
+				const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header" style="width:2em"></div></th>`)
 					.fastSetHtml(Renderer.get().render(lbl));
 				$tblHeaders.push($tblHeader);
 				return $tblHeader;
@@ -1044,7 +1044,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			$thGroupHeaderSpellPoints = $(`<th colspan="1" class="cls-tbl__cell-spell-points"></th>`);
 			$tblGroupHeaders.push($thGroupHeaderSpellPoints);
 
-			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header"></div></th>`)
+			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" ></div></th>`)
 				.fastSetHtml(Renderer.get().render(`{@variantrule Spell Points}`));
 			$tblHeaders.push($tblHeaderSpellPoints);
 
