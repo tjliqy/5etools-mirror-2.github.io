@@ -127,8 +127,9 @@ class Omnisearch {
 					],
 				}),
 			],
-		})
-			.appendTo(eleNavbar);
+		});
+		//TODO 因为elasticlunr不支持对中文的搜索，所以只能暂时屏蔽搜索功能
+			// .appendTo(eleNavbar);
 
 		this._dispSearchOutput = e_({
 			tag: "div",

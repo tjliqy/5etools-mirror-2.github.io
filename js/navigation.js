@@ -36,7 +36,7 @@ class NavBar {
 		// create mobile "Menu" button
 		const btnShowHide = document.createElement("button");
 		btnShowHide.className = "btn btn-default page__btn-toggle-nav";
-		btnShowHide.innerHTML = "Menu";
+		btnShowHide.innerHTML = "菜单";
 		btnShowHide.onclick = () => {
 			$(btnShowHide).toggleClass("active");
 			$(`.page__nav-hidden-mobile`).toggleClass("block", $(btnShowHide).hasClass("active"));
@@ -97,8 +97,9 @@ class NavBar {
 		this._addElement_li(NavBar._CAT_REFERENCES, "recipes.html", "食谱");
 
 		this._addElement_dropdown(null, NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "搜索");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
+		//TODO 因为elasticlunr不支持对中文的搜索，所以只能暂时屏蔽搜索功能
+		// this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "搜索");
+		// this._addElement_divider(NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "blocklist.html", "内容黑名单");
 		this._addElement_li(NavBar._CAT_UTILITIES, "manageprerelease.html", "Prerelease Content Manager");
 		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "自制内容生成器");

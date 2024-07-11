@@ -77,7 +77,7 @@ class SearchPage {
 			fnAddHookOmnisearch: "addHookBrew",
 			fnDoToggleOmnisearch: "doToggleBrew",
 			title: "Filter Homebrew",
-			text: "Include Homebrew",
+			text: "包含自制内容",
 		});
 
 		const $btnToggleUa = this._render_$getBtnToggleFilter({
@@ -85,7 +85,7 @@ class SearchPage {
 			fnAddHookOmnisearch: "addHookUa",
 			fnDoToggleOmnisearch: "doToggleUa",
 			title: "Filter Unearthed Arcana and other unofficial source results",
-			text: "Include UA",
+			text: "包含UA",
 		});
 
 		const $btnToggleBlocklisted = this._render_$getBtnToggleFilter({
@@ -93,7 +93,7 @@ class SearchPage {
 			fnAddHookOmnisearch: "addHookBlocklisted",
 			fnDoToggleOmnisearch: "doToggleBlocklisted",
 			title: "Filter blocklisted content results",
-			text: "Include Blocklisted",
+			text: "包含黑名单",
 		});
 
 		const $btnToggleSrd = this._render_$getBtnToggleFilter({
