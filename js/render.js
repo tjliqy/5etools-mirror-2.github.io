@@ -2537,12 +2537,12 @@ Renderer.parseScaleDice = function (tag, text) {
 };
 
 Renderer.getAbilityData = function (abArr, {isOnlyShort, isCurrentLineage} = {}) {
-	if (isOnlyShort && isCurrentLineage) return new Renderer._AbilityData({asTextShort: "Lineage (choose)"});
+	if (isOnlyShort && isCurrentLineage) return new Renderer._AbilityData({asTextShort: "多项选择"});
 
 	const outerStack = (abArr || [null]).map(it => Renderer.getAbilityData._doRenderOuter(it));
 	if (outerStack.length <= 1) return outerStack[0];
 	return new Renderer._AbilityData({
-		asText: `Choose one of: ${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asText}`).join(" ")}`,
+		asText: `选择一个: ${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asText}`).join(" ")}`,
 		asTextShort: `${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asTextShort}`).join(" ")}`,
 		asCollection: [...new Set(outerStack.map(it => it.asCollection).flat())],
 		areNegative: [...new Set(outerStack.map(it => it.areNegative).flat())],
@@ -2578,7 +2578,8 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 	function handleAbility (abObj, shortLabel, optToConvertToTextStorage) {
 		if (abObj[shortLabel] != null) {
 			const isNegMod = abObj[shortLabel] < 0;
-			const toAdd = `${shortLabel.uppercaseFirst()} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
+			const toAdd = `${Parser.ABILITY_TO_CN[shortLabel]} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
+			// const toAdd = `${shortLabel.uppercaseFirst()} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
 
 			if (optToConvertToTextStorage) {
 				optToConvertToTextStorage.push(toAdd);
@@ -2611,56 +2612,56 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 				const areIncrease = isAny && isAllEqual && w.weights.length > 1 && w.weights[0] >= 0
 					? (() => {
 						weightsIncrease.forEach(it => areIncreaseShort.push(`+${it}`));
-						return [`${cntProcessed ? "choose " : ""}${Parser.numberToText(w.weights.length)} different +${weightsIncrease[0]}`];
+						return [`${cntProcessed ? "选择" : ""}${Parser.numberToText(w.weights.length)}个不同的 +${weightsIncrease[0]}`];
 					})()
 					: weightsIncrease.map(it => {
 						areIncreaseShort.push(`+${it}`);
-						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}+${it}`;
-						return `one ${cntProcessed++ ? `other ` : ""}ability to increase by ${it}`;
+						if (isAny) return `${cntProcessed ? "选择" : ""}任意一个${cntProcessed++ ? `其他的 ` : ""}+${it}`;
+						return `一个 ${cntProcessed++ ? `其他` : ""}属性增加 ${it}`;
 					});
 
 				const areReduceShort = [];
 				const areReduce = isAny && isAllEqual && w.weights.length > 1 && w.weights[0] < 0
 					? (() => {
 						weightsReduce.forEach(it => areReduceShort.push(`-${it}`));
-						return [`${cntProcessed ? "choose " : ""}${Parser.numberToText(w.weights.length)} different -${weightsReduce[0]}`];
+						return [`${cntProcessed ? "选择" : ""}${Parser.numberToText(w.weights.length)}个不同的 -${weightsReduce[0]}`];
 					})()
 					: weightsReduce.map(it => {
 						areReduceShort.push(`-${it}`);
-						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}-${it}`;
-						return `one ${cntProcessed++ ? `other ` : ""}ability to decrease by ${it}`;
+						if (isAny) return `${cntProcessed ? "选择" : ""}任意一个${cntProcessed++ ? `其他的 ` : ""}-${it}`;
+						return `一个 ${cntProcessed++ ? `其他 ` : ""}属性减少 ${it}`;
 					});
 
 				const startText = isAny
-					? `Choose `
-					: `From ${froms.joinConjunct(", ", " and ")} choose `;
+					? `选择`
+					: `从 ${froms.joinConjunct(", ", " 和 ")} 中选择 `;
 
 				const ptAreaIncrease = isAny
 					? areIncrease.concat(areReduce).join("; ")
-					: areIncrease.concat(areReduce).joinConjunct(", ", isAny ? "; " : " and ");
+					: areIncrease.concat(areReduce).joinConjunct(", ", isAny ? "; " : " 和 ");
 				toConvertToText.push(`${startText}${ptAreaIncrease}`);
-				toConvertToShortText.push(`${isAny ? "Any combination " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` from ${froms.join("/")}`}`);
+				toConvertToShortText.push(`${isAny ? "任意组合 " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` 从 ${froms.join("/")}中`}`);
 			} else {
 				const allAbilities = ch.from.length === 6;
 				const allAbilitiesWithParent = isAllAbilitiesWithParent(ch);
 				let amount = ch.amount === undefined ? 1 : ch.amount;
 				amount = (amount < 0 ? "" : "+") + amount;
 				if (allAbilities) {
-					outStack += "any ";
+					outStack += "任意";
 				} else if (allAbilitiesWithParent) {
-					outStack += "any other ";
+					outStack += "任意其他";
 				}
 				if (ch.count != null && ch.count > 1) {
-					outStack += `${Parser.numberToText(ch.count)} `;
+					outStack += `${Parser.numberToText(ch.count)}个`;
 				}
 				if (allAbilities || allAbilitiesWithParent) {
-					outStack += `${ch.count > 1 ? "unique " : ""}${amount}`;
+					outStack += `${ch.count > 1 ? "不同的 " : ""}${amount}`;
 				} else {
 					for (let j = 0; j < ch.from.length; ++j) {
 						let suffix = "";
 						if (ch.from.length > 1) {
 							if (j === ch.from.length - 2) {
-								suffix = " or ";
+								suffix = " 或者 ";
 							} else if (j < ch.from.length - 2) {
 								suffix = ", ";
 							}
@@ -2677,7 +2678,7 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 			}
 
 			if (outStack.trim()) {
-				toConvertToText.push(`Choose ${outStack}`);
+				toConvertToText.push(`选择 ${outStack}`);
 				toConvertToShortText.push(outStack.uppercaseFirst());
 			}
 		}
@@ -6348,9 +6349,9 @@ Renderer.race = class {
 			<tr><td colspan="6">
 				<table class="w-100 summary stripe-even-table">
 					<tr>
-						<th class="ve-col-4 ve-text-center">Ability Scores</th>
-						<th class="ve-col-4 ve-text-center">尺寸 </th>
-						<th class="ve-col-4 ve-text-center">Speed</th>
+						<th class="ve-col-4 ve-text-center">属性值</th>
+						<th class="ve-col-4 ve-text-center">体型</th>
+						<th class="ve-col-4 ve-text-center">速度</th>
 					</tr>
 					<tr>
 						<td class="ve-text-center">${Renderer.getAbilityData(race.ability).asText}</td>
@@ -6381,7 +6382,7 @@ Renderer.race = class {
 	}
 
 	static getHeightAndWeightEntries (race, {isStatic = false} = {}) {
-		const colLabels = ["Base Height", "Base Weight", "Height Modifier", "Weight Modifier"];
+		const colLabels = ["基础身高", "基础体重", "身高修正", "体重修正"];
 		const colStyles = ["col-2-3 text-center", "col-2-3 text-center", "col-2-3 text-center", "col-2 text-center"];
 
 		const cellHeightMod = !isStatic
@@ -6414,10 +6415,10 @@ Renderer.race = class {
 		}
 
 		return [
-			"You may roll for your character's height and weight on the Random Height and Weight table. The roll in the Height Modifier column adds a number (in inches) to the character's base height. To get a weight, multiply the number you rolled for height by the roll in the Weight Modifier column and add the result (in pounds) to the base weight.",
+			"您可以在“随机身高体重表”中随机生成角色的身高体重。 “身高修正”列中会随机向角色的基准身高添加一个值（以英寸为单位）。若要获得体重，请将为身高随机的值乘以“体重修正”列中随机的值，然后将结果（以磅为单位）添加到基本体重上。",
 			{
 				type: "table",
-				caption: "Random Height and Weight",
+				caption: "随机身高体重表",
 				colLabels,
 				colStyles,
 				rows: [row],
@@ -6483,8 +6484,8 @@ Renderer.race = class {
 				race.entries = race.entries || [];
 				race.entries.push({
 					type: "entries",
-					name: "Languages",
-					entries: ["You can speak, read, and write Common and one other language that you and your DM agree is appropriate for your character."],
+					name: "语言",
+					entries: ["你能读、写、说通用语和另一种DM允许的语言。"],
 				});
 
 				race.languageProficiencies = race.languageProficiencies || [{"common": true, "anyStandard": 1}];
@@ -7207,7 +7208,7 @@ Renderer.cultboon = class {
 			benefits.items.push({
 				type: "item",
 				name: "Ability Score Adjustment:",
-				entry: ent.ability ? ent.ability.entry : "None",
+				entry: ent.ability ? ent.ability.entry : "无",
 			});
 		}
 
@@ -7215,7 +7216,7 @@ Renderer.cultboon = class {
 			benefits.items.push({
 				type: "item",
 				name: "Signature Spells:",
-				entry: ent.signaturespells ? ent.signaturespells.entry : "None",
+				entry: ent.signaturespells ? ent.signaturespells.entry : "无",
 			});
 		}
 

@@ -1270,17 +1270,17 @@ RendererMarkdown.race = class {
 				items: [
 					{
 						type: "item",
-						name: "Ability Scores",
+						name: "属性值",
 						entry: Renderer.getAbilityData(ent.ability).asText,
 					},
 					{
 						type: "item",
-						name: "Size",
+						name: "体型",
 						entry: Renderer.race.getRenderedSize(ent),
 					},
 					{
 						type: "item",
-						name: "Speed",
+						name: "速度",
 						entry: Parser.getSpeedString(ent),
 					},
 				],

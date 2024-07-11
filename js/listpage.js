@@ -1511,7 +1511,7 @@ class ListPage {
 		// endregion
 
 		if (dispPageTagline) {
-			dispPageTagline.innerHTML += ` Press J/K to navigate${isPreviewable ? `, M to expand` : ""}.`;
+			dispPageTagline.innerHTML += ` 按J/K来移动光标${isPreviewable ? `, M to expand` : ""}。`;
 			this._initList_bindWindowHandlers();
 		}
 

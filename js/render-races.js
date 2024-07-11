@@ -10,10 +10,10 @@ class RenderRaces {
 		${Renderer.utils.getBorderTr()}
 		${Renderer.utils.getExcludedTr({entity: race, dataProp: "race"})}
 		${Renderer.utils.getNameTr(race, {controlRhs: race.soundClip ? RenderRaces._getPronunciationButton(race) : "", page: UrlUtil.PG_RACES})}
-		<tr><td colspan="6"><b>Ability Scores:</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "None"}).asText}</td></tr>
-		${(race.creatureTypes || []).filter(it => `${it}`.toLowerCase() !== "humanoid").length ? `<tr><td colspan="6"><b>Creature Type:</b> ${Parser.raceCreatureTypesToFull(race.creatureTypes)}</td></tr>` : ""}
-		<tr><td colspan="6"><b>Size:</b> ${Renderer.utils.getRenderedSize(race.size || [Parser.SZ_VARIES])}</td></tr>
-		<tr><td colspan="6"><b>Speed:</b> ${Parser.getSpeedString(race)}</td></tr>
+		<tr><td colspan="6"><b>属性值:</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "None"}).asText}</td></tr>
+		${(race.creatureTypes || []).filter(it => `${it}`.toLowerCase() !== "humanoid").length ? `<tr><td colspan="6"><b>生物类型:</b> ${Parser.raceCreatureTypesToFull(race.creatureTypes)}</td></tr>` : ""}
+		<tr><td colspan="6"><b>体型:</b> ${Renderer.utils.getRenderedSize(race.size || [Parser.SZ_VARIES])}</td></tr>
+		<tr><td colspan="6"><b>速度:</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		${race._isBaseRace ? `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race._baseRaceEntries}, 1)}</td></tr>` : `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race.entries}, 1)}</td></tr>`}
 

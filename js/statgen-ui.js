@@ -1914,7 +1914,7 @@ class UtilAdditionalFeats {
 					const out = [];
 
 					if (featSet.any) {
-						out.push(`Choose any${featSet.any > 1 ? ` ${Parser.numberToText(featSet.any)}` : ""}`);
+						out.push(`选择任意一个${featSet.any > 1 ? ` ${Parser.numberToText(featSet.any)}` : ""}`);
 					}
 
 					this.getUidsStatic(featSet)
