@@ -938,9 +938,11 @@ Parser.skillProficienciesToFull = function (skillProficiencies) {
 		if (~ixChoose) {
 			const chObj = skProf.choose;
 			if (chObj.from.length === 18) {
-				chooseStack.push(`choose any ${!chObj.count || chObj.count === 1 ? "skill" : chObj.count}`);
+				// chooseStack.push(`choose any ${!chObj.count || chObj.count === 1 ? "skill" : chObj.count}`);
+				chooseStack.push(`自选${!chObj.count || chObj.count === 1 ? "1项技能" : chObj.count + '项技能'}`);
 			} else {
-				chooseStack.push(`choose ${chObj.count || 1} from ${chObj.from.map(it => Renderer.get().render(`{@skill ${it.toTitleCase()}}`)).joinConjunct(", ", " and ")}`);
+				// chooseStack.push(`choose ${chObj.count || 1} from ${chObj.from.map(it => Renderer.get().render(`{@skill ${it.toTitleCase()}}`)).joinConjunct(", ", " and ")}`);
+				chooseStack.push(`从 ${chObj.from.map(it => Renderer.get().render(`{@skill ${it.toTitleCase()}}`)).joinConjunct(",", " 和")}中选择${chObj.count || 1}项技能`);
 			}
 		}
 

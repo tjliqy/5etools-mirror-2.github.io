@@ -1293,7 +1293,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			const abilityPart = [orPart, basePart].filter(Boolean).join("; ");
 
 			const allEntries = [
-				abilityPart ? `{@b Ability Score Minimum:} ${abilityPart}` : null,
+				abilityPart ? `{@b 最低属性值:} ${abilityPart}` : null,
 				...requirements.entries || [],
 			].filter(Boolean);
 
@@ -1319,10 +1319,10 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		if (cls.hd) {
 			$ptHp = $(`<tr></tr>`)
 				.fastSetHtml(`<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">Hit Points</h5>
-					<div><strong>Hit Dice:</strong> ${Renderer.get().render(Renderer.class.getHitDiceEntry(cls.hd))}</div>
-					<div><strong>Hit Points at 1st Level:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd)}</div>
-					<div><strong>Hit Points at Higher Levels:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd)}</div>
+					<h5 class="cls-side__section-head">生命值 Hit Points</h5>
+					<div><strong>生命骰:</strong> ${Renderer.get().render(Renderer.class.getHitDiceEntry(cls.hd))}</div>
+					<div><strong>第一级的生命值:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd)}</div>
+					<div><strong>后续升级生命值:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd)}</div>
 				</td>`);
 			$ptsToToggle.push($ptHp);
 		}
@@ -1337,15 +1337,15 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		if (cls.startingEquipment) {
 			const equip = cls.startingEquipment;
 			const rendered = [
-				equip.additionalFromBackground ? "<p>You start with the following items, plus anything provided by your background.</p>" : "",
+				equip.additionalFromBackground ? "<p>你带着以下装备开始游戏，此外该角色还可以从其背景项中获得额外的启始装备:</p>" : "",
 				equip.default && equip.default.length ? `<ul class="pl-4"><li>${equip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>` : "",
-				equip.goldAlternative != null ? `<p>Alternatively, you may start with ${Renderer.get().render(equip.goldAlternative)} gp to buy your own equipment.</p>` : "",
+				equip.goldAlternative != null ? `<p>或者,你也可以选择用${Renderer.get().render(equip.goldAlternative)}gp来自行购买装备</p>` : "",
 			].filter(Boolean).join("");
 			const $dispRendered = $(`<div></div>`);
 
 			$ptEquipment = $$`<tr>
 				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">Starting Equipment</h5>
+					<h5 class="cls-side__section-head">初始装备 Starting Equipment</h5>
 					<div>${$dispRendered}</div>
 				</td>
 			</tr>`;
@@ -1379,15 +1379,15 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			let $ptMcProfsTools = null;
 			let $ptMcProfsSkills = null;
 			if (mc.proficienciesGained) {
-				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies.</div>`);
+				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>当你不是以起始等级获得新职业的等级，你只会获得该职业一部分的起始熟练项。</div>`);
 
-				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>Armor:</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor)}</div>`);
+				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>护甲:</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor)}</div>`);
 
-				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>Weapons:</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons)}</div>`);
+				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>武器:</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons)}</div>`);
 
-				if (mc.proficienciesGained.tools) $ptMcProfsTools = $(`<div><b>Tools:</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools)}</div>`);
+				if (mc.proficienciesGained.tools) $ptMcProfsTools = $(`<div><b>工具:</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools)}</div>`);
 
-				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>Skills:</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills)}</div>`);
+				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>技能:</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills)}</div>`);
 			}
 
 			let $ptMcEntries = null;
@@ -1397,7 +1397,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 			$ptMulticlassing = $$`<tr>
 				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">Multiclassing</h5>
+					<h5 class="cls-side__section-head">兼职 Multiclassing</h5>
 					${$ptMcPrereq}
 					${$ptMcPrereqSpecial}
 					${$ptMcEntries}
@@ -1414,12 +1414,12 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		const $ptProfs = $$`<tr>
 			<td colspan="6" class="cls-side__section">
-				<h5 class="cls-side__section-head">Proficiencies</h5>
-				<div><b>Armor:</b> <span>${profs.armor ? Renderer.class.getRenderedArmorProfs(profs.armor) : "none"}</span></div>
-				<div><b>Weapons:</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "none"}</span></div>
-				<div><b>Tools:</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "none"}</span></div>
-				<div><b>Saving Throws:</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "none"}</span></div>
-				<div><b>Skills:</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "none"}</span></div>
+				<h5 class="cls-side__section-head">熟练项 Proficiencies</h5>
+				<div><b>护甲:</b> <span>${profs.armor ? Renderer.class.getRenderedArmorProfs(profs.armor) : "none"}</span></div>
+				<div><b>武器:</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "none"}</span></div>
+				<div><b>工具:</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "none"}</span></div>
+				<div><b>豁免:</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "none"}</span></div>
+				<div><b>技能:</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "none"}</span></div>
 			</td>
 		</tr>`;
 		$ptsToToggle.push($ptProfs);
