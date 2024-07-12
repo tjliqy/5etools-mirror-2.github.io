@@ -129,7 +129,7 @@ class BaseParser {
 			// Connect together likely determiners/conjunctions/etc.
 			.replace(/(?<start>\b(the|a|a cumulative|an|this|that|these|those|its|his|her|their|they|have|extra|and|or|as|on|uses|to|at|using|reduced|effect|reaches|with|of) *)\n+\s*/g, (...m) => `${m.last().start} `)
 			// Connect together e.g.:
-			//  - `+5\nto hit`, `your Spell Attack Modifier\nto hit`
+			//  - `+5\nto hit`, `你的法术攻击调整值\nto hit`
 			//  - `your Wisdom\nmodifier`
 			.replace(/(?<start>[a-z0-9]) *\n+ *(?<end>to hit|modifier)\b/g, (...m) => `${m.last().start} ${m.last().end}`)
 			// Connect together `<ability> (<skill>)`

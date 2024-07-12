@@ -1211,7 +1211,7 @@ globalThis.Renderer = function () {
 		this._renderPrefix(entry, textStack, meta, options);
 		textStack[0] += `<div class="ve-text-center"><b>`;
 		this._recursiveRender(entry.name, textStack, meta);
-		textStack[0] += ` save DC</b> = 8 + your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</div>`;
+		textStack[0] += `豁免DC</b> = 8 + 你的熟练加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</div>`;
 		this._renderSuffix(entry, textStack, meta, options);
 	};
 
@@ -1219,7 +1219,7 @@ globalThis.Renderer = function () {
 		this._renderPrefix(entry, textStack, meta, options);
 		textStack[0] += `<div class="ve-text-center"><b>`;
 		this._recursiveRender(entry.name, textStack, meta);
-		textStack[0] += ` attack modifier</b> = your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</div>`;
+		textStack[0] += `攻击调整值</b> = 你的熟练加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</div>`;
 		this._renderSuffix(entry, textStack, meta, options);
 	};
 
@@ -1282,7 +1282,7 @@ globalThis.Renderer = function () {
 		const cachedLastDepthTrackerProps = MiscUtil.copyFast(this._lastDepthTrackerInheritedProps);
 		this._handleTrackDepth(entry, 2);
 
-		textStack[0] += `<${this.wrapperTag} class="${Renderer.HEAD_2}" ${dataString}><span class="rd__h rd__h--3" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">${entry.name}.</span></span> `;
+		textStack[0] += `<${this.wrapperTag} class="${Renderer.HEAD_2}" ${dataString}><span class="rd__h rd__h--3" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">${entry.name}.</span><span class="entry-title-inner">${entry.ENG_name}.</span></span> `;
 		const len = entry.entries.length;
 		for (let i = 0; i < len; ++i) this._recursiveRender(entry.entries[i], textStack, meta, {prefix: "<p>", suffix: "</p>"});
 		textStack[0] += `</${this.wrapperTag}>`;
@@ -1790,7 +1790,7 @@ globalThis.Renderer = function () {
 
 			case "@dcYourSpellSave": {
 				const [displayText] = Renderer.splitTagByPipe(text);
-				textStack[0] += displayText || "your spell save DC";
+				textStack[0] += displayText || "你的法术豁免DC";
 				break;
 			}
 
@@ -2048,8 +2048,8 @@ globalThis.Renderer = function () {
 			type: "dice",
 			rollable: true,
 			subType: "d20",
-			displayText: displayText || "your spell attack modifier",
-			toRoll: `1d20 + #$prompt_number:title=Enter your Spell Attack Modifier$#`,
+			displayText: displayText || "你的法术攻击调整值",
+			toRoll: `1d20 + #$prompt_number:title=Enter 你的法术攻击调整值$#`,
 		};
 		return this._recursiveRender(fauxEntry, textStack, meta);
 	};
@@ -2578,7 +2578,7 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 	function handleAbility (abObj, shortLabel, optToConvertToTextStorage) {
 		if (abObj[shortLabel] != null) {
 			const isNegMod = abObj[shortLabel] < 0;
-			const toAdd = `${Parser.ABILITY_TO_CN[shortLabel]} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
+			const toAdd = `${Parser.ATB_ABV_TO_FULL[shortLabel]} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
 			// const toAdd = `${shortLabel.uppercaseFirst()} ${(isNegMod ? "" : "+")}${abObj[shortLabel]}`;
 
 			if (optToConvertToTextStorage) {
@@ -4509,7 +4509,7 @@ Renderer.tag = class {
 
 		_getStripped (tag, text) {
 			const [displayText] = Renderer.splitTagByPipe(text);
-			return displayText || "your spell attack modifier";
+			return displayText || "你的法术攻击调整值";
 		}
 	};
 
@@ -4527,7 +4527,7 @@ Renderer.tag = class {
 
 		_getStripped (tag, text) {
 			const [displayText] = Renderer.splitTagByPipe(text);
-			return displayText || "your spell save DC";
+			return displayText || "你的法术豁免DC";
 		}
 	};
 
@@ -7505,7 +7505,7 @@ Renderer.monster = class {
 				name: "Dragons as Innate Spellcasters",
 				entries: [
 					"Dragons are innately magical creatures that can master a few spells as they age, using this variant.",
-					`A young or older dragon can innately cast a number of spells equal to its Charisma modifier. Each spell can be cast once per day, requiring no material components, and the spell's level can be no higher than one-third the dragon's challenge rating (rounded down). The dragon's bonus to hit with spell attacks is equal to its proficiency bonus + its Charisma bonus. The dragon's spell save DC equals 8 + its proficiency bonus + its Charisma modifier.`,
+					`A young or older dragon can innately cast a number of spells equal to its魅力调整值. Each spell can be cast once per day, requiring no material components, and the spell's level can be no higher than one-third the dragon's challenge rating (rounded down). The dragon's bonus to hit with spell attacks is equal to its proficiency bonus + its Charisma bonus. The dragon's spell save DC equals 8 + its proficiency bonus + its魅力调整值.`,
 					`{@note ${Renderer.monster.dragonCasterVariant.getSpellcasterDetailsPart({...meta, isSeeSpellsPageNote: true})}${exampleSpellsUnofficial?.length ? ` A selection of examples are shown below:` : ""}}`,
 				],
 			};

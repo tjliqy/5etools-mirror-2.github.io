@@ -2817,8 +2817,8 @@ globalThis.ScaleClassSummonedCreature = {
 			{
 				string: (str) => {
 					str = str
-						// "add your proficiency bonus"
-						.replace(/add your proficiency bonus/gi, (...m) => {
+						// "add 你的熟练加值"
+						.replace(/add 你的熟练加值/gi, (...m) => {
 							return `${m[0]} (${UiUtil.intToBonus(state.proficiencyBonus)})`;
 						})
 						// "{@damage 1d8 + 2 + PB}"

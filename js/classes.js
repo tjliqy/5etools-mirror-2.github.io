@@ -998,7 +998,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			<tr>
 				<th class="cls-tbl__col-level">等级</th>
 				<th class="cls-tbl__col-prof-bonus" style="width:4.5em">熟练项加值</th>
-				<th>Features</th>
+				<th>特性</th>
 				${$tblHeaders}
 			</tr>
 			${metasTblRows.map(it => it.$row)}
@@ -1459,9 +1459,9 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		const cls = this.activeClass;
 
 		// region features/fluff
-		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "Features", activeClass: "cls__btn-cf--active", isInverted: true}).title("Toggle Class Features");
+		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "特性", activeClass: "cls__btn-cf--active", isInverted: true}).title("切换职业特性");
 
-		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="Toggle Class Feature Options/Variants">Variants</button>`)
+		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="切换职业特性选项/变体">变体</button>`)
 			.click(() => {
 				const f = this.filterBox.getValues();
 				const isClassFeatureVariantsDisplayed = f[this._pageFilter.optionsFilter.header].isClassFeatureVariant;
@@ -1476,7 +1476,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		this.filterBox.on(FILTER_BOX_EVNT_VALCHANGE, () => hkUpdateBtnFeatureVariants());
 		hkUpdateBtnFeatureVariants();
 
-		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Class Info");
+		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "信息"}).title("切换职业信息");
 
 		$$`<div class="ve-flex-v-center m-1 btn-group mr-3 no-shrink">${$btnToggleFeatures}${$btnToggleFeatureVariants}${$btnToggleFluff}</div>`.appendTo($wrp);
 		// endregion
@@ -2173,7 +2173,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		// Add a placeholder feature to display when no subclasses are active
 		const $trSubclassFeature = $(`<tr class="cls-main__sc-feature" data-subclass-none-message="true"><td colspan="6"></td></tr>`)
-			.fastSetHtml(Renderer.get().setDepthTracker([]).render({type: "entries", entries: [{name: `{@note No Subclass Selected}`, type: "entries", entries: [`{@note <span class="clickable roller" data-jump-select-a-subclass="true">Select a subclass</span> to view its feature(s) here.}`]}]}))
+			.fastSetHtml(Renderer.get().setDepthTracker([]).render({type: "entries", entries: [{name: `{@note 未选择子职业}`, type: "entries", entries: [`{@note <span class="clickable roller" data-jump-select-a-subclass="true">选择一个子职业</span> 来在此处查看特性}`]}]}))
 			.appendTo($content);
 
 		await cls.subclasses.pSerialAwaitMap(async sc => {
@@ -2629,10 +2629,10 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 		$tblBook.append(renderStack.join(""));
 
 		// Menu panel
-		const $btnToggleCf = $(`<span class="cls-bkmv__btn-tab">Features</span>`).on("click", () => {
+		const $btnToggleCf = $(`<span class="cls-bkmv__btn-tab">特性</span>`).on("click", () => {
 			this._parent.set("isHideFeatures", !this._parent.get("isHideFeatures"));
 		});
-		const $btnToggleInfo = $(`<span class="cls-bkmv__btn-tab">Info</span>`).on("click", () => {
+		const $btnToggleInfo = $(`<span class="cls-bkmv__btn-tab">信息</span>`).on("click", () => {
 			this._parent.set("isShowFluff", !this._parent.get("isShowFluff"));
 		});
 

@@ -300,7 +300,7 @@ function calculateCr () {
 		<p>Effective HP: ${effectiveHp} (${hitDice}${hitDiceSize}${conMod < 0 ? "" : "+"}${conMod * hitDice})</p>
 		<p>Effective AC: ${ac}</p>
 		<p>Average Damage Per Round: ${effectiveDpr}</p>
-		<p>${useSaveDc ? "Save DC: " : "Effective Attack Bonus: +"}${attackBonus}</p>
+		<p>${useSaveDc ? "豁免DC: " : "Effective Attack Bonus: +"}${attackBonus}</p>
 		<p>Experience Points: ${Parser.crToXp(msbcr.cr[finalCr]._cr)}</p>
 	`);
 }

@@ -407,13 +407,13 @@ class RendererMarkdown {
 	// region block
 	_renderAbilityDc (entry, textStack, meta, options) {
 		this._renderPrefix(entry, textStack, meta, options);
-		textStack[0] += `**${entry.name} save DC** = 8 + your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}`;
+		textStack[0] += `**${entry.name}豁免DC** = 8 + 你的熟练加值 + your ${Parser.attrChooseToFull(entry.attributes)}`;
 		this._renderSuffix(entry, textStack, meta, options);
 	}
 
 	_renderAbilityAttackMod (entry, textStack, meta, options) {
 		this._renderPrefix(entry, textStack, meta, options);
-		textStack[0] += `**${entry.name} attack modifier** = your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}`;
+		textStack[0] += `**${entry.name}攻击调整值** = 你的熟练加值 + your ${Parser.attrChooseToFull(entry.attributes)}`;
 		this._renderSuffix(entry, textStack, meta, options);
 	}
 

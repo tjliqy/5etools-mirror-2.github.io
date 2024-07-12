@@ -21,7 +21,7 @@ Parser._parse_bToA = function (abMap, b, fallback) {
 };
 
 Parser.attrChooseToFull = function (attList) {
-	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])} modifier`;
+	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])}调整值`;
 	else {
 		const attsTemp = [];
 		for (let i = 0; i < attList.length; ++i) {
@@ -2379,23 +2379,23 @@ Parser.SP_SCHOOL_ABV_TO_FULL[Parser.SKL_ABV_CON] = Parser.SKL_CON;
 Parser.SP_SCHOOL_ABV_TO_FULL[Parser.SKL_ABV_PSI] = Parser.SKL_PSI;
 
 Parser.SP_SCHOOL_ABV_TO_SHORT = {};
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ABJ] = "Abj.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_EVO] = "Evoc.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ENC] = "Ench.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ILL] = "Illu.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_DIV] = "Divin.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_NEC] = "Necro.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_TRA] = "Trans.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_CON] = "Conj.";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ABJ] = "防护";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_EVO] = "塑能";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ENC] = "惑控";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_ILL] = "幻术";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_DIV] = "预言";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_NEC] = "死灵";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_TRA] = "变化";
+Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_CON] = "咒法";
 Parser.SP_SCHOOL_ABV_TO_SHORT[Parser.SKL_ABV_PSI] = "Psi.";
 
 Parser.ATB_ABV_TO_FULL = {
-	"str": "Strength",
-	"dex": "Dexterity",
-	"con": "Constitution",
-	"int": "Intelligence",
-	"wis": "Wisdom",
-	"cha": "Charisma",
+	"str": "力量",
+	"dex": "敏捷",
+	"con": "体质",
+	"int": "智慧",
+	"wis": "感知",
+	"cha": "魅力",
 };
 
 Parser.TP_ABERRATION = "aberration";
@@ -3773,14 +3773,6 @@ Parser.MAP_GRID_TYPE_TO_FULL["hexRowsOdd"] = "Hex Rows (Odd)";
 Parser.MAP_GRID_TYPE_TO_FULL["hexRowsEven"] = "Hex Rows (Even)";
 Parser.MAP_GRID_TYPE_TO_FULL["hexColsOdd"] = "Hex Columns (Odd)";
 Parser.MAP_GRID_TYPE_TO_FULL["hexColsEven"] = "Hex Columns (Even)";
-
-Parser.ABILITY_TO_CN = {}
-Parser.ABILITY_TO_CN["wis"] = "感知";
-Parser.ABILITY_TO_CN["cha"] = "魅力";
-Parser.ABILITY_TO_CN["str"] = "力量";
-Parser.ABILITY_TO_CN["dex"] = "敏捷";
-Parser.ABILITY_TO_CN["int"] = "智力";
-Parser.ABILITY_TO_CN["con"] = "体质";
 
 Parser.mapGridTypeToFull = function (gridType) {
 	return Parser._parse_aToB(Parser.MAP_GRID_TYPE_TO_FULL, gridType);
