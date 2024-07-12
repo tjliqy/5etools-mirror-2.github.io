@@ -878,7 +878,7 @@ globalThis.Renderer = function () {
 
 	this._renderEntriesSubtypes_renderPreReqText = function (entry, textStack, meta) {
 		if (entry.prerequisite) {
-			textStack[0] += `<span class="rd__prerequisite">Prerequisite: `;
+			textStack[0] += `<span class="rd__prerequisite">先决条件: `;
 			this._recursiveRender({type: "inline", entries: [entry.prerequisite]}, textStack, meta);
 			textStack[0] += `</span>`;
 		}
@@ -3332,7 +3332,7 @@ Renderer.utils = class {
 						.filter(Boolean);
 
 					const ptPrereqs = prereqsToJoin
-						.join(prereqsToJoin.some(it => / or /.test(it)) ? "; " : ", ");
+						.join(prereqsToJoin.some(it => / 或 /.test(it)) ? "; " : ", ");
 
 					return [ptPrereqs, ptNote]
 						.filter(Boolean)
@@ -3456,7 +3456,7 @@ Renderer.utils = class {
 		}
 
 		static _getHtml_other ({v, isListMode, isTextOnly}) {
-			return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render(v));
+			return isListMode ? "特殊条件" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render(v));
 		}
 
 		static _getHtml_race ({v, isListMode, isTextOnly}) {
@@ -3505,7 +3505,7 @@ Renderer.utils = class {
 				if (allValuesEqual) {
 					const abList = Object.keys(abMeta);
 					hadMultipleInner = hadMultipleInner || abList.length > 1;
-					return isListMode ? abList.map(ab => ab.uppercaseFirst()).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ");
+					return isListMode ? abList.map(ab => Parser.attAbvToFull(ab)).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " 和 ");
 				} else {
 					const groups = {};
 
@@ -3522,13 +3522,13 @@ Renderer.utils = class {
 
 							abs = abs.sort(SortUtil.ascSortAtts);
 							return isListMode
-								? `${abs.map(ab => ab.uppercaseFirst()).join(", ")} ${req}+`
-								: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ")} ${req} or higher`;
+								? `${abs.map(ab => Parser.attAbvToFull(ab)).join(", ")} ${req}+`
+								: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " 和 ")} ${req}或以上`;
 						});
 
 					return isListMode
 						? `${isMulti || byScore.length > 1 ? "(" : ""}${byScore.join(" & ")}${isMulti || byScore.length > 1 ? ")" : ""}`
-						: isMulti ? byScore.joinConjunct("; ", " and ") : byScore.joinConjunct(", ", " and ");
+						: isMulti ? byScore.joinConjunct("; ", "和") : byScore.joinConjunct(", ", " 和 ");
 				}
 			});
 
@@ -3539,9 +3539,9 @@ Renderer.utils = class {
 				const isComplex = hadMultiMultipleInner || hadMultipleInner || allValuesEqual == null;
 				const joined = abilityOptions.joinConjunct(
 					hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : ", ",
-					isComplex ? (isTextOnly ? ` /or/ ` : ` <i>or</i> `) : " or ",
+					isComplex ? (isTextOnly ? ` /或/ ` : ` <i>或</i> `) : " 或 ",
 				);
-				return `${joined}${allValuesEqual != null ? ` ${allValuesEqual} or higher` : ""}`;
+				return `${joined}${allValuesEqual != null ? ` ${allValuesEqual}或以上` : ""}`;
 			}
 		}
 
@@ -3550,13 +3550,13 @@ Renderer.utils = class {
 				return Object.entries(obj).map(([profType, prof]) => {
 					switch (profType) {
 						case "armor": {
-							return isListMode ? `Prof ${Parser.armorFullToAbv(prof)} armor` : `Proficiency with ${prof} armor`;
+							return isListMode ? `熟练于${Parser.armorFullToAbv(prof)}护甲` : `熟练于${prof}护甲`;
 						}
 						case "weapon": {
-							return isListMode ? `Prof ${Parser.weaponFullToAbv(prof)} weapon` : `Proficiency with a ${prof} weapon`;
+							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `熟练于一个${prof}武器`;
 						}
 						case "weaponGroup": {
-							return isListMode ? `Prof ${Parser.weaponFullToAbv(prof)} weapons` : `${prof.toTitleCase()} Proficiency`;
+							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `${prof.toTitleCase()}武器熟练度`;
 						}
 						default: throw new Error(`Unhandled proficiency type: "${profType}"`);
 					}
@@ -3566,15 +3566,15 @@ Renderer.utils = class {
 		}
 
 		static _getHtml_spellcasting ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
+			return isListMode ? "施法" : "具有施展至少一种法术的能力";
 		}
 
 		static _getHtml_spellcasting2020 ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
+			return isListMode ? "施法" : "施法或契约魔法特性";
 		}
 
 		static _getHtml_spellcastingFeature ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "Spellcasting Feature";
+			return isListMode ? "施法" : "施法特性";
 		}
 
 		static _getHtml_spellcastingPrepared ({v, isListMode}) {
@@ -5361,7 +5361,7 @@ Renderer.feat = class {
 	}
 
 	static getJoinedCategoryPrerequisites (category, rdPrereqs) {
-		const ptCategory = category ? `${category.toTitleCase()} Feat` : "";
+		const ptCategory = category ? `${category.toTitleCase()}特性` : "";
 
 		return ptCategory && rdPrereqs
 			? `${ptCategory} (${rdPrereqs})`
@@ -7991,8 +7991,8 @@ Renderer.monster = class {
 	static initParsed (mon) {
 		mon._pTypes = mon._pTypes || Parser.monTypeToFullObj(mon.type); // store the parsed type
 		if (!mon._pCr) {
-			if (Parser.crToNumber(mon.cr) === VeCt.CR_CUSTOM) mon._pCr = "Special";
-			else if (Parser.crToNumber(mon.cr) === VeCt.CR_UNKNOWN) mon._pCr = "Unknown";
+			if (Parser.crToNumber(mon.cr) === VeCt.CR_CUSTOM) mon._pCr = "特殊条件";
+			else if (Parser.crToNumber(mon.cr) === VeCt.CR_UNKNOWN) mon._pCr = "未知条件";
 			else mon._pCr = mon.cr == null ? "\u2014" : (mon.cr.cr || mon.cr);
 		}
 		if (!mon._fCr) {

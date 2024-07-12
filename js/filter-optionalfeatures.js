@@ -188,11 +188,11 @@ class ModalFilterOptionalFeatures extends ModalFilterBase {
 
 	_$getColumnHeaders () {
 		const btnMeta = [
-			{sort: "name", text: "Name", width: "3"},
-			{sort: "type", text: "Type", width: "2"},
-			{sort: "prerequisite", text: "Prerequisite", width: "4"},
-			{sort: "level", text: "Level", width: "1"},
-			{sort: "source", text: "Source", width: "1"},
+			{sort: "name", text: "名称", width: "3"},
+			{sort: "type", text: "类型", width: "2"},
+			{sort: "prerequisite", text: "先决条件", width: "4"},
+			{sort: "level", text: "等级", width: "1"},
+			{sort: "source", text: "资源", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}

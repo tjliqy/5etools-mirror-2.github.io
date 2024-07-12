@@ -208,16 +208,16 @@ class _PageGeneratorListFeats extends PageGeneratorListBase {
 
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtnPreviewToggle(),
-		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "name", text: "Name"}),
-		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "ability", text: "Ability"}),
-		HtmlGeneratorListButtons.getBtn({width: "3", sortIdent: "prerequisite", text: "Prerequisite"}),
+		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "name", text: "名称"}),
+		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "ability", text: "能力"}),
+		HtmlGeneratorListButtons.getBtn({width: "3", sortIdent: "prerequisite", text: "先决条件"}),
 		HtmlGeneratorListButtons.getBtnSource(),
 	];
 
 	_btnsSublist = [
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "ability", text: "Ability"}),
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "prerequisite", text: "Prerequisite"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "名称"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "ability", text: "能力"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "prerequisite", text: "先决条件"}),
 	];
 
 	_isPrinterView = true;

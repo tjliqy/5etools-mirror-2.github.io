@@ -18,7 +18,7 @@ class BaseParserFeature extends BaseParser {
 	}
 
 	static _doPostProcess_setPrerequisites (state, options) {
-		const [entsPrereq, entsRest] = state.entity.entries.segregate(ent => ent.name === "Prerequisite:");
+		const [entsPrereq, entsRest] = state.entity.entries.segregate(ent => ent.name === "先决条件:");
 		if (!entsPrereq.length) return;
 
 		if (entsPrereq.length > 1) {

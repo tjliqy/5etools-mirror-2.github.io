@@ -1556,11 +1556,11 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			});
 
 		const filterSets = [
-			{name: "View Default", subHashes: [], isClearSources: false},
-			{name: "View Standard Plus Partnered", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_PARTNERED]},
-			{name: "View Standard Plus Homebrew", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_HOMEBREW]},
-			{name: "View Most Recent", subHashes: [], isClearSources: true},
-			{name: "View All", subHashes: ["flstmiscellaneous:reprinted=0"], isClearSources: true},
+			{name: "查看默认", subHashes: [], isClearSources: false},
+			{name: "查看 Standard Plus Partnered", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_PARTNERED]},
+			{name: "查看 Standard Plus Homebrew", subHashes: [], isClearSources: false, sourceCategories: [SourceUtil.FILTER_GROUP_STANDARD, SourceUtil.FILTER_GROUP_HOMEBREW]},
+			{name: "查看最新", subHashes: [], isClearSources: true},
+			{name: "查看全部", subHashes: ["flstmiscellaneous:reprinted=0"], isClearSources: true},
 		];
 		const setFilterSet = ix => {
 			const filterSet = filterSets[ix];

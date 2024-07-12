@@ -677,7 +677,7 @@ class FeatConverter extends BaseConverter {
 }
 // region sample
 FeatConverter._SAMPLE_TEXT = `Metamagic Adept
-Prerequisite: Spellcasting or Pact Magic feature
+先决条件: Spellcasting or Pact Magic feature
 You’ve learned how to exert your will on your spells to alter how they function. You gain the following benefits:
 • Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
 • You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you gain a level, you can replace one of your Metamagic options with another one from the sorcerer class.

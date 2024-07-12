@@ -78,7 +78,7 @@ class RendererMarkdown {
 
 	_renderEntriesSubtypes_renderPreReqText (entry, textStack, meta) {
 		if (entry.prerequisite) {
-			textStack[0] += `*Prerequisite: `;
+			textStack[0] += `*先决条件: `;
 			this._recursiveRender({type: "inline", entries: [entry.prerequisite]}, textStack, meta);
 			textStack[0] += `*\n\n`;
 		}
@@ -1829,7 +1829,7 @@ RendererMarkdown.generic = class {
 
 	static getRenderedPrerequisite (ent) {
 		const out = Renderer.utils.prerequisite.getHtml(ent.prerequisite, {isTextOnly: true, isSkipPrefix: true});
-		return out ? `Prerequisite: ${out}` : "";
+		return out ? `先决条件: ${out}` : "";
 	}
 };
 

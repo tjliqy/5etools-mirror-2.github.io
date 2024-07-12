@@ -59,7 +59,7 @@ class RendererCard {
 
 	_renderEntriesSubtypes_renderPreReqText (entry, textStack, meta) {
 		if (entry.prerequisite) {
-			textStack[0] += `text | <i>Prerequisite: `;
+			textStack[0] += `text | <i>先决条件: `;
 			this._recursiveRender({type: "inline", entries: [entry.prerequisite]}, textStack, meta);
 			textStack[0] += `</i>\n`;
 		}

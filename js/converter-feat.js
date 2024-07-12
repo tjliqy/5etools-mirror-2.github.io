@@ -58,7 +58,7 @@ class FeatParser extends BaseParserFeature {
 		if (/^prerequisite:/i.test(state.curLine)) {
 			state.entity.entries = [
 				{
-					name: "Prerequisite:",
+					name: "先决条件:",
 					entries: [
 						state.curLine
 							.replace(/^prerequisite:/i, "")
