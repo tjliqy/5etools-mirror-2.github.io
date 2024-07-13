@@ -14,7 +14,7 @@ class FeatsSublistManager extends SublistManager {
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
-				name: "Prerequisite",
+				name: "先决条件",
 				css: "ve-col-4 pr-0",
 				colStyle: "",
 			}),

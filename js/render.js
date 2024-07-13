@@ -3353,17 +3353,17 @@ Renderer.utils = class {
 					? listOfChoicesTrimmed.join(" Or, ")
 					: listOfChoicesTrimmed.joinConjunct(listOfChoicesTrimmed.some(it => / or /.test(it)) ? "; " : ", ", " or ")
 			) + sharedSuffix;
-			return `${isSkipPrefix ? "" : `Prerequisite${cntPrerequisites === 1 ? "" : "s"}: `}${[shared, joinedChoices].filter(Boolean).join(", plus ")}`;
+			return `${isSkipPrefix ? "" : `先决条件: `}${[shared, joinedChoices].filter(Boolean).join(", plus ")}`;
 		}
 
 		static _getHtml_level ({v, isListMode}) {
 			// a generic level requirement
 			if (typeof v === "number") {
 				if (isListMode) return `Lvl ${v}`;
-				else return `${Parser.getOrdinalForm(v)} level`;
+				else return `${Parser.getOrdinalForm(v)}级`;
 			} else if (!v.class && !v.subclass) {
 				if (isListMode) return `Lvl ${v.level}`;
-				else return `${Parser.getOrdinalForm(v.level)} level`;
+				else return `${Parser.getOrdinalForm(v.level)}级`;
 			}
 
 			const isLevelVisible = v.level !== 1; // Hide the "implicit" 1st level.
@@ -3401,13 +3401,13 @@ Renderer.utils = class {
 					if (typeof sp === "string") return Parser.prereqSpellToFull(sp, {isTextOnly});
 					return isTextOnly ? Renderer.stripTags(sp.entry) : Renderer.get().render(`{@filter ${sp.entry}|spells|${sp.choose}}`);
 				})
-					.joinConjunct(", ", " or ");
+					.joinConjunct("，", "或");
 		}
 
 		static _getHtml_feat ({v, isListMode, isTextOnly}) {
 			return isListMode
 				? v.map(x => x.split("|")[0].toTitleCase()).join("/")
-				: v.map(it => (isTextOnly ? Renderer.stripTags.bind(Renderer) : Renderer.get().render.bind(Renderer.get()))(`{@feat ${it}} feat`)).joinConjunct(", ", " or ");
+				: v.map(it => (isTextOnly ? Renderer.stripTags.bind(Renderer) : Renderer.get().render.bind(Renderer.get()))(`{@feat ${it}}专长`)).joinConjunct("，", "或");
 		}
 
 		static _getHtml_feature ({v, isListMode, isTextOnly}) {
@@ -3550,7 +3550,7 @@ Renderer.utils = class {
 				return Object.entries(obj).map(([profType, prof]) => {
 					switch (profType) {
 						case "armor": {
-							return isListMode ? `熟练于${Parser.armorFullToAbv(prof)}护甲` : `熟练于${prof}护甲`;
+							return isListMode ? `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}护甲` : `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}护甲`;
 						}
 						case "weapon": {
 							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `熟练于一个${prof}武器`;
@@ -3599,7 +3599,7 @@ Renderer.utils = class {
 		static _getHtml_campaign ({v, isListMode}) {
 			return isListMode
 				? v.join("/")
-				: `${v.joinConjunct(", ", " or ")} Campaign`;
+				: `${v.joinConjunct(", ", " 或 ")}战役`;
 		}
 
 		static _getHtml_group ({v, isListMode}) {
@@ -5299,7 +5299,7 @@ Renderer.feat = class {
 	static _mergeAbilityIncrease_getListItemItem (abilityObj) {
 		return {
 			type: "item",
-			name: "Ability Score Increase.",
+			name: "属性值提升.",
 			entry: Renderer.feat._mergeAbilityIncrease_getText(abilityObj),
 		};
 	}
@@ -5310,18 +5310,18 @@ Renderer.feat = class {
 		if (!abilityObj.choose) {
 			return Object.keys(abilityObj)
 				.filter(k => k !== "max")
-				.map(ab => `Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]}, to a maximum of ${maxScore}.`)
+				.map(ab => `Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]},上限为${maxScore}.`)
 				.join(" ");
 		}
 
 		if (abilityObj.choose.from.length === 6) {
 			return abilityObj.choose.entry
 				? Renderer.get().render(abilityObj.choose.entry) // only used in "Resilient"
-				: `Increase one ability score of your choice by ${abilityObj.choose.amount ?? 1}, to a maximum of ${maxScore}.`;
+				: `你自选一项属性提升${abilityObj.choose.amount ?? 1}，上限为${maxScore}。`;
 		}
 
-		const abbChoicesText = abilityObj.choose.from.map(it => Parser.attAbvToFull(it)).joinConjunct(", ", " or ");
-		return `Increase your ${abbChoicesText} by ${abilityObj.choose.amount ?? 1}, to a maximum of ${maxScore}.`;
+		const abbChoicesText = abilityObj.choose.from.map(it => Parser.attAbvToFull(it)).joinConjunct(", ", "或");
+		return `你的${abbChoicesText}加${abilityObj.choose.amount ?? 1}，上限为${maxScore}。`;
 	}
 
 	static initFullEntries (feat) {
@@ -8432,17 +8432,17 @@ Renderer.item = class {
 		let attunementCat = VeCt.STR_NO_ATTUNEMENT;
 		if (item[prop] != null && item[prop] !== false) {
 			if (item[prop] === true) {
-				attunementCat = "Requires Attunement";
-				attunement = "(requires attunement)";
+				attunementCat = "需要同调";
+				attunement = "(需要同调)";
 			} else if (item[prop] === "optional") {
 				attunementCat = "Attunement Optional";
 				attunement = "(attunement optional)";
 			} else if (item[prop].toLowerCase().startsWith("by")) {
-				attunementCat = "Requires Attunement By...";
-				attunement = `(requires attunement ${Renderer.get().render(item[prop])})`;
+				attunementCat = "需要由...同调";
+				attunement = `(需要${Renderer.get().render(item[prop])}同调)`;
 			} else {
-				attunementCat = "Requires Attunement"; // throw any weird ones in the "Yes" category (e.g. "outdoors at night")
-				attunement = `(requires attunement ${Renderer.get().render(item[prop])})`;
+				attunementCat = "需要同调"; // throw any weird ones in the "Yes" category (e.g. "outdoors at night")
+				attunement = `(需要${Renderer.get().render(item[prop])}同调)`;
 			}
 		}
 		return [attunement, attunementCat];
@@ -8455,23 +8455,23 @@ Renderer.item = class {
 
 		let showingBase = false;
 		if (item.wondrous) {
-			typeHtml.push(`wondrous item${item.tattoo ? ` (tattoo)` : ""}`);
-			typeListText.push("wondrous item");
+			typeHtml.push(`奇物${item.tattoo ? ` (刺青)` : ""}`);
+			typeListText.push("奇物");
 		}
 		if (item.tattoo) {
-			typeListText.push("tattoo");
+			typeListText.push("刺青");
 		}
 		if (item.staff) {
 			typeHtml.push("staff");
-			typeListText.push("staff");
+			typeListText.push("法杖");
 		}
 		if (item.ammo) {
-			typeHtml.push(`ammunition`);
-			typeListText.push("ammunition");
+			typeHtml.push(`弹药`);
+			typeListText.push("弹药");
 		}
 		if (item.firearm) {
-			subTypeHtml.push("firearm");
-			typeListText.push("firearm");
+			subTypeHtml.push("火器");
+			typeListText.push("火器");
 		}
 		if (item.age) {
 			subTypeHtml.push(item.age);
@@ -8479,19 +8479,19 @@ Renderer.item = class {
 		}
 		if (item.weaponCategory) {
 			typeHtml.push(`weapon${item.baseItem ? ` (${Renderer.get().render(`{@item ${item.baseItem}}`)})` : ""}`);
-			subTypeHtml.push(`${item.weaponCategory} weapon`);
-			typeListText.push(`${item.weaponCategory} weapon`);
+			subTypeHtml.push(`${item.weaponCategory}武器`);
+			typeListText.push(`${item.weaponCategory}武器`);
 			showingBase = true;
 		}
 		if (item.staff && (item.type !== "M" && item.typeAlt !== "M")) { // DMG p140: "Unless a staff's description says otherwise, a staff can be used as a quarterstaff."
-			subTypeHtml.push("melee weapon");
-			typeListText.push("melee weapon");
+			subTypeHtml.push("近战武器");
+			typeListText.push("近战武器");
 		}
 		if (item.type) Renderer.item._getHtmlAndTextTypes_type({type: item.type, typeHtml, typeListText, subTypeHtml, showingBase, item});
 		if (item.typeAlt) Renderer.item._getHtmlAndTextTypes_type({type: item.typeAlt, typeHtml, typeListText, subTypeHtml, showingBase, item});
 		if (item.poison) {
-			typeHtml.push(`poison${item.poisonTypes ? ` (${item.poisonTypes.joinConjunct(", ", " or ")})` : ""}`);
-			typeListText.push("poison");
+			typeHtml.push(`毒药${item.poisonTypes ? ` (${item.poisonTypes.joinConjunct(", ", " 或 ")})` : ""}`);
+			typeListText.push("毒药");
 		}
 		return [typeListText, typeHtml.join(", "), subTypeHtml.join(", ")];
 	}

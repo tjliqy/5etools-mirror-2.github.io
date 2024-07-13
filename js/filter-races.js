@@ -254,7 +254,7 @@ class ModalFilterRaces extends ModalFilterBase {
 			{sort: "name", text: "名称", width: "4"},
 			{sort: "ability", text: "能力", width: "4"},
 			{sort: "size", text: "体型", width: "2"},
-			{sort: "source", text: "资源", width: "1"},
+			{sort: "source", text: "来源", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}

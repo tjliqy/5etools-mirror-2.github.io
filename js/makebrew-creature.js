@@ -3142,7 +3142,7 @@ class CreatureBuilder extends Builder {
 			(this._$eles.$selVariantSources = this._$eles.$selVariantSources || []).push($selVariantSource);
 
 			const $ele = $$`<div class="ve-flex-col">
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">资源 </span>${$selVariantSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">来源 </span>${$selVariantSource}</div>
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">Page</span>${$iptPage}</div>
 			</div>`;
 
@@ -3316,7 +3316,7 @@ class CreatureBuilder extends Builder {
 
 		const $stgExistingCreature = $$`<div class="ve-flex-col mb-2">
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--25">名称 </span>${$iptExistingName}</div>
-			<div class="ve-flex-v-center"><span class="mr-2 mkbru__sub-name--25">资源 </span>${$iptExistingSource}</div>
+			<div class="ve-flex-v-center"><span class="mr-2 mkbru__sub-name--25">来源 </span>${$iptExistingSource}</div>
 		</div>`
 			.toggleVe(initialMode === "0");
 		// endregion

@@ -357,7 +357,7 @@ class SpellBuilder extends Builder {
 
 		const $wrpBtnRemove = $(`<div class="text-right mb-2"></div>`);
 		const $wrp = $$`<div class="ve-flex-col mkbru__wrp-rows mkbru__wrp-rows--removable">
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">资源 </span>${$selSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">来源 </span>${$selSource}</div>
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">Page</span>${$iptPage}</div>
 			${$wrpBtnRemove}
 		</div>`;
@@ -978,7 +978,7 @@ class SpellBuilder extends Builder {
 		const $wrpBtnRemove = $(`<div class="text-right mb-2"></div>`);
 		const $wrp = $$`<div class="ve-flex-col mkbru__wrp-rows">
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">名称 </span>${$iptRace}</div>
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">资源 </span>${$selSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">来源 </span>${$selSource}</div>
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33 help" title="The name of the base race, e.g. &quot;Elf&quot;. This is used in filtering.">Base Name</span>${$iptBaseRace}</div>
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33 help" title="For example, the &quot;Elf&quot; base race has a source of &quot;${Parser.SRC_PHB}&quot;">Base Source</span>${$selBaseSource}</div>
 			${$wrpBtnRemove}
@@ -1045,7 +1045,7 @@ class SpellBuilder extends Builder {
 		const $wrpBtnRemove = $(`<div class="text-right mb-2"></div>`);
 		const $wrp = $$`<div class="ve-flex-col mkbru__wrp-rows">
 			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">名称 </span>${$iptName}</div>
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">资源 </span>${$selSource}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--33">来源 </span>${$selSource}</div>
 			${$wrpBtnRemove}
 		</div>`;
 		Builder.$getBtnRemoveRow(doUpdateState, rows, out, $wrp, nameSingle).appendTo($wrpBtnRemove);

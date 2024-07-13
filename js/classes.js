@@ -1306,7 +1306,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 			$ptRequirements = $$`<tr>
 				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">Prerequisites</h5>
+					<h5 class="cls-side__section-head">先决条件</h5>
 					${$ptPrereq}
 				</td>
 			</tr>`;
@@ -1369,7 +1369,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			if (mc.requirementsSpecial) {
 				$ptMcPrereqSpecial = $$`<div>
 					${mc.requirements ? "" : htmlMCcPrereqPreText}
-					<b>${mc.requirements ? "Other " : ""}Prerequisites:</b> ${Renderer.get().render(mc.requirementsSpecial || "")}
+					<b>${mc.requirements ? "其他 " : ""}先决条件:</b> ${Renderer.get().render(mc.requirementsSpecial || "")}
 				</div>`;
 			}
 

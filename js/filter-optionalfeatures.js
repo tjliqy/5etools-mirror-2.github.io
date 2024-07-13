@@ -192,7 +192,7 @@ class ModalFilterOptionalFeatures extends ModalFilterBase {
 			{sort: "type", text: "类型", width: "2"},
 			{sort: "prerequisite", text: "先决条件", width: "4"},
 			{sort: "level", text: "等级", width: "1"},
-			{sort: "source", text: "资源", width: "1"},
+			{sort: "source", text: "来源", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}

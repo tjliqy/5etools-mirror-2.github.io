@@ -185,7 +185,7 @@ class MakeCards extends BaseComponent {
 		$$`<div class="w-100 no-shrink ve-flex-v-center bold">
 			<div class="ve-col-1 mr-2 ve-flex-vh-center">${$cbSelAll}</div>
 			<div class="ve-col-3 mr-2 ve-flex-vh-center">名称 </div>
-			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">资源 </div>
+			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">来源 </div>
 			<div class="ve-col-1-5 mr-2 ve-flex-vh-center">类型 </div>
 			<div class="ve-col-1-1 mr-2 ve-flex-vh-center">Color</div>
 			<div class="ve-col-1-1 mr-2 ve-flex-vh-center">Icon</div>
@@ -561,7 +561,7 @@ class MakeCards extends BaseComponent {
 		const ptRepeatable = Renderer.utils.getRepeatableHtml(feat, {isListMode: true});
 		Renderer.feat.initFullEntries(feat);
 		return [
-			(prerequisite && prerequisite !== "\u2014") ? this._ct_property("Prerequisites", prerequisite) : null,
+			(prerequisite && prerequisite !== "\u2014") ? this._ct_property("先决条件", prerequisite) : null,
 			(ptRepeatable && ptRepeatable !== "\u2014") ? this._ct_property("Repeatable", ptRepeatable) : null,
 			(prerequisite || ptRepeatable) ? this._ct_rule() : null,
 			...this._ct_renderEntries(feat._fullEntries || feat.entries, 2),
@@ -572,7 +572,7 @@ class MakeCards extends BaseComponent {
 		const prerequisite = Renderer.utils.prerequisite.getHtml(optfeat.prerequisite, {isListMode: true});
 		Renderer.feat.initFullEntries(optfeat);
 		return [
-			prerequisite ? this._ct_property("Prerequisites", prerequisite) : null,
+			prerequisite ? this._ct_property("先决条件", prerequisite) : null,
 			prerequisite ? this._ct_rule() : null,
 			...this._ct_renderEntries(optfeat._fullEntries || optfeat.entries, 2),
 		].filter(Boolean);

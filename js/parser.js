@@ -1007,11 +1007,12 @@ Parser._spSchoolAbvToStylePart_prereleaseBrew = function ({school, brewUtil}) {
 Parser.getOrdinalForm = function (i) {
 	i = Number(i);
 	if (isNaN(i)) return "";
-	const j = i % 10; const k = i % 100;
-	if (j === 1 && k !== 11) return `${i}st`;
-	if (j === 2 && k !== 12) return `${i}nd`;
-	if (j === 3 && k !== 13) return `${i}rd`;
-	return `${i}th`;
+	// const j = i % 10; const k = i % 100;
+	// if (j === 1 && k !== 11) return `${i}st`;
+	// if (j === 2 && k !== 12) return `${i}nd`;
+	// if (j === 3 && k !== 13) return `${i}rd`;
+	// return `${i}th`;
+	return `第${i}`
 };
 
 Parser.spLevelToFull = function (level) {
@@ -1791,24 +1792,24 @@ Parser.prereqPatronToShort = function (patron) {
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
-	AI: "Artificer Infusion",
-	ED: "Elemental Discipline",
-	EI: "Eldritch Invocation",
-	MM: "Metamagic",
-	"MV": "Maneuver",
-	"MV:B": "Maneuver, Battle Master",
-	"MV:C2-UA": "Maneuver, Cavalier V2 (UA)",
-	"AS:V1-UA": "Arcane Shot, V1 (UA)",
-	"AS:V2-UA": "Arcane Shot, V2 (UA)",
-	"AS": "Arcane Shot",
-	OTH: "Other",
-	"FS:F": "Fighting Style; Fighter",
-	"FS:B": "Fighting Style; Bard",
-	"FS:P": "Fighting Style; Paladin",
-	"FS:R": "Fighting Style; Ranger",
-	"PB": "Pact Boon",
+	AI: "奇械师注法",
+	ED: "法门",
+	EI: "魔能祈唤",
+	MM: "超魔法",
+	"MV": "战技",
+	"MV:B": "战技, 战斗大师",
+	"MV:C2-UA": "战技, 骑兵 V2 (UA)",
+	"AS:V1-UA": "奥术射击, V1 (UA)",
+	"AS:V2-UA": "奥术射击, V2 (UA)",
+	"AS": "奥术射击",
+	OTH: "其他",
+	"FS:F": "战斗风格; 战士",
+	"FS:B": "战斗风格; 野蛮人",
+	"FS:P": "战斗风格; 圣武士",
+	"FS:R": "战斗风格; 游荡者",
+	"PB": "魔契恩泽",
 	"OR": "Onomancy Resonant",
-	"RN": "Rune Knight Rune",
+	"RN": "符文骑士符文",
 	"AF": "Alchemical Formula",
 };
 
@@ -2492,10 +2493,16 @@ Parser.XP_CHART_ALT = {
 };
 
 Parser.ARMOR_ABV_TO_FULL = {
-	"l.": "轻型",
-	"m.": "中型",
-	"h.": "重型",
+	"l.": "light",
+	"m.": "medium",
+	"h.": "heavy",
 };
+
+Parser.ARMOR_FULL_TO_CN = {
+	"light": "轻型",
+	"medium": "中型",
+	"heavy": "重型"
+}
 
 Parser.WEAPON_ABV_TO_FULL = {
 	"s.": "简易",
@@ -3660,62 +3667,62 @@ Parser.getPropDisplayName = function (prop, {suffix = ""} = {}) {
 };
 
 Parser.ITEM_TYPE_JSON_TO_ABV = {
-	"A": "ammunition",
-	"AF": "ammunition",
+	"A": "弹药",
+	"AF": "弹药",
 	"AT": "artisan's tools",
 	"EM": "eldritch machine",
-	"EXP": "explosive",
-	"FD": "food and drink",
-	"G": "adventuring gear",
+	"EXP": "爆炸物",
+	"FD": "食物和饮品",
+	"G": "冒险装备",
 	"GS": "gaming set",
-	"HA": "heavy armor",
+	"HA": "重型护甲",
 	"IDG": "illegal drug",
-	"INS": "instrument",
-	"LA": "light armor",
-	"M": "melee weapon",
-	"MA": "medium armor",
-	"MNT": "mount",
+	"INS": "乐器",
+	"LA": "轻型护甲",
+	"M": "近战武器",
+	"MA": "中型护甲",
+	"MNT": "坐骑",
 	"MR": "master rune",
-	"GV": "generic variant",
-	"P": "potion",
-	"R": "ranged weapon",
-	"RD": "rod",
-	"RG": "ring",
-	"S": "shield",
-	"SC": "scroll",
-	"SCF": "spellcasting focus",
-	"OTH": "other",
-	"T": "tools",
-	"TAH": "tack and harness",
-	"TG": "trade good",
-	"$": "treasure",
-	"$A": "treasure (art object)",
-	"$C": "treasure (coinage)",
-	"$G": "treasure (gemstone)",
-	"VEH": "vehicle (land)",
-	"SHP": "vehicle (water)",
-	"AIR": "vehicle (air)",
-	"SPC": "vehicle (space)",
-	"WD": "wand",
+	"GV": "通用变体",
+	"P": "药水",
+	"R": "远程武器",
+	"RD": "权杖",
+	"RG": "戒指",
+	"S": "盾牌",
+	"SC": "卷轴",
+	"SCF": "法器",
+	"OTH": "其他",
+	"T": "工具",
+	"TAH": "鞍辔和马具",
+	"TG": "贸易货物",
+	"$": "宝藏",
+	"$A": "宝藏 (艺术品)",
+	"$C": "宝藏 (货币)",
+	"$G": "宝藏 (gemstone)",
+	"VEH": "载具 (陆地)",
+	"SHP": "载具 (水面)",
+	"AIR": "载具 (空中)",
+	"SPC": "载具 (太空)",
+	"WD": "魔杖",
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
 	"A": "acid",
-	"B": "bludgeoning",
+	"B": "钝击",
 	"C": "cold",
 	"F": "fire",
 	"O": "force",
 	"L": "lightning",
 	"N": "necrotic",
-	"P": "piercing",
+	"P": "穿刺",
 	"I": "poison",
 	"Y": "psychic",
 	"R": "radiant",
-	"S": "slashing",
+	"S": "挥砍",
 	"T": "thunder",
 };
 
-Parser.DMG_TYPES = ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"];
+Parser.DMG_TYPES = ["acid", "钝击", "cold", "fire", "force", "lightning", "necrotic", "穿刺", "poison", "psychic", "radiant", "挥砍", "thunder"];
 Parser.CONDITIONS = ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"];
 
 Parser.SENSES = [

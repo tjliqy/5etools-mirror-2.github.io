@@ -121,7 +121,7 @@ class BaseParserFeature extends BaseParser {
 				}
 
 				pre.other = pt;
-				options.cbWarning(`(${state.entity.name}) Prerequisite "${pt}" requires manual conversion`);
+				options.cbWarning(`(${state.entity.name}) 先决条件 "${pt}" requires manual conversion`);
 			});
 
 			if (Object.keys(pre).length) pres.push(pre);

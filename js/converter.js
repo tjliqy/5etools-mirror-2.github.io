@@ -231,7 +231,7 @@ class BaseConverter extends BaseComponent {
 		this._addHookBase("source", hkSource);
 		hkSource();
 
-		$$`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label mr-2">资源 </div>${$selSource}</div>`.appendTo($wrpSidebar);
+		$$`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label mr-2">来源 </div>${$selSource}</div>`.appendTo($wrpSidebar);
 
 		const $btnSourceEdit = $(`<button class="btn btn-default btn-xs">Edit Selected</button>`)
 			.click(() => {

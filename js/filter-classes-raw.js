@@ -771,7 +771,7 @@ class ModalFilterClasses extends ModalFilterBase {
 			const $wrpFormHeaders = $(`<div class="input-group input-group--bottom ve-flex no-shrink">
 				<div class="btn btn-default disabled ve-col-1 pl-0"></div>
 				<button class="ve-col-9 sort btn btn-default btn-xs" data-sort="name">名称 </button>
-				<button class="ve-col-2 pr-0 sort btn btn-default btn-xs ve-grow" data-sort="source">资源 </button>
+				<button class="ve-col-2 pr-0 sort btn btn-default btn-xs ve-grow" data-sort="source">来源 </button>
 			</div>`);
 
 			const $wrpForm = $$`<div class="ve-flex-col w-100 mb-2">${$wrpFormTop}${$wrpFormBottom}${$wrpFormHeaders}</div>`;

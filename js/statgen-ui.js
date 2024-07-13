@@ -1047,7 +1047,7 @@ class StatGenUi extends BaseComponent {
 			);
 
 			const $stgAbilityScoreSet = $$`<div class="ve-flex-v-center mb-2">
-				<div class="mr-2">Ability Score Increase</div>
+				<div class="mr-2">属性值提升</div>
 				<div>${$selAbilitySet}</div>
 			</div>`;
 
@@ -2378,7 +2378,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 			.addClass("w-100p ve-text-center");
 
 		$$($wrpAsi)`
-			<h4 class="my-2 bold">Ability Score Increases</h4>
+			<h4 class="my-2 bold">属性值提升</h4>
 			${this._render_$getStageCntAsi()}
 			${$wrpRowsAsi}
 
