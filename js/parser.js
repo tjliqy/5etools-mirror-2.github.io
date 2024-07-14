@@ -1836,13 +1836,13 @@ Parser.charCreationOptionTypeToFull = function (type) {
 };
 
 Parser._ALIGNMENT_ABV_TO_FULL = {
-	"L": "lawful",
-	"N": "neutral",
+	"L": "守序",
+	"N": "中立",
 	"NX": "neutral (law/chaos axis)",
 	"NY": "neutral (good/evil axis)",
-	"C": "chaotic",
-	"G": "good",
-	"E": "evil",
+	"C": "混乱",
+	"G": "善良",
+	"E": "邪恶",
 	// "special" values
 	"U": "unaligned",
 	"A": "any alignment",
@@ -2221,16 +2221,16 @@ Parser.trapHazTypeToFull = function (type) {
 };
 
 Parser.TRAP_HAZARD_TYPE_TO_FULL = {
-	MECH: "Mechanical Trap",
-	MAG: "Magical Trap",
-	SMPL: "Simple Trap",
-	CMPX: "Complex Trap",
-	HAZ: "Hazard",
-	WTH: "Weather",
-	ENV: "Environmental Hazard",
-	WLD: "Wilderness Hazard",
-	GEN: "Generic",
-	EST: "Eldritch Storm",
+	MECH: "机械陷阱",
+	MAG: "魔法陷阱",
+	SMPL: "简易陷阱",
+	CMPX: "复杂陷阱",
+	HAZ: "危害物",
+	WTH: "天气",
+	ENV: "环境危害",
+	WLD: "野外危害",
+	GEN: "通用",
+	EST: "奥法风暴",
 };
 
 Parser.tierToFullLevel = function (tier) {
@@ -2451,7 +2451,7 @@ Parser.SIZE_ABV_TO_FULL[Parser.SZ_SMALL] = "小型";
 Parser.SIZE_ABV_TO_FULL[Parser.SZ_MEDIUM] = "中型";
 Parser.SIZE_ABV_TO_FULL[Parser.SZ_LARGE] = "大型";
 Parser.SIZE_ABV_TO_FULL[Parser.SZ_HUGE] = "巨型";
-Parser.SIZE_ABV_TO_FULL[Parser.SZ_GARGANTUAN] = "Gargantuan";
+Parser.SIZE_ABV_TO_FULL[Parser.SZ_GARGANTUAN] = "超巨型";
 Parser.SIZE_ABV_TO_FULL[Parser.SZ_COLOSSAL] = "Colossal";
 Parser.SIZE_ABV_TO_FULL[Parser.SZ_VARIES] = "变化";
 

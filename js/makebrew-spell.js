@@ -427,7 +427,7 @@ class SpellBuilder extends Builder {
 		const out = {getTime};
 
 		const $stageCond = $$`<div class="ve-flex-v-center mb-2">
-			<span class="mr-2 mkbru__sub-name--33">Condition</span>${$iptCond}
+			<span class="mr-2 mkbru__sub-name--33">状态</span>${$iptCond}
 		</div>`.toggleVe(ixInitial === 2);
 
 		const $wrpBtnRemove = $(`<div class="text-right mb-2"></div>`);

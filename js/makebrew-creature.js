@@ -1176,7 +1176,7 @@ class CreatureBuilder extends Builder {
 		const $wrp = $$`<div class="ve-flex-col mkbru__wrp-rows mkbru__wrp-rows--removable">
 			<div class="ve-flex-v-center mb-2">${$iptAc}${$iptSpecial}${$selMode}</div>
 			${$$`<div>${$stageFrom}</div>`}
-			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">Condition</span>${$iptCond}</div>
+			<div class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">状态</span>${$iptCond}</div>
 			<label class="ve-flex-v-center mb-2"><span class="mr-2 mkbru__sub-name--50">Surround with brackets</span>${$cbBraces}</label>
 			${$$`<div class="text-right">${$btnRemove}</div>`}
 		</div>`;
