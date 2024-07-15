@@ -6943,31 +6943,31 @@ Renderer.object = class {
 				? `{@b Cargo Capacity:} ${Renderer.vehicle.getShipCargoCapacity(ent)}`
 				: null,
 			entryArmorClass: ent.ac != null
-				? `{@b Armor Class:} ${ent.ac.special ?? ent.ac}`
+				? `{@b 护甲等级:} ${ent.ac.special ?? ent.ac}`
 				: null,
 			entryHitPoints: ent.hp != null
-				? `{@b Hit Points:} ${ent.hp.special ?? ent.hp}`
+				? `{@b 生命值:} ${ent.hp.special ?? ent.hp}`
 				: null,
 			entrySpeed: ent.speed != null
-				? `{@b Speed:} ${Parser.getSpeedString(ent)}`
+				? `{@b 速度:} ${Parser.getSpeedString(ent)}`
 				: null,
 			entryAbilityScores: Parser.ABIL_ABVS.some(ab => ent[ab] != null)
-				? `{@b Ability Scores:} ${Parser.ABIL_ABVS.filter(ab => ent[ab] != null).map(ab => `${ab.toUpperCase()} ${Renderer.utils.getAbilityRollerEntry(ent, ab)}`).join(", ")}`
+				? `{@b 属性值:} ${Parser.ABIL_ABVS.filter(ab => ent[ab] != null).map(ab => `${ab.toUpperCase()} ${Renderer.utils.getAbilityRollerEntry(ent, ab)}`).join(", ")}`
 				: null,
 			entryDamageImmunities: ent.immune != null
-				? `{@b Damage Immunities:} ${Parser.getFullImmRes(ent.immune)}`
+				? `{@b 免疫:} ${Parser.getFullImmRes(ent.immune)}`
 				: null,
 			entryDamageResistances: ent.resist
-				? `{@b Damage Resistances:} ${Parser.getFullImmRes(ent.resist)}`
+				? `{@b 抗性:} ${Parser.getFullImmRes(ent.resist)}`
 				: null,
 			entryDamageVulnerabilities: ent.vulnerable
-				? `{@b Damage Vulnerabilities:} ${Parser.getFullImmRes(ent.vulnerable)}`
+				? `{@b 易伤:} ${Parser.getFullImmRes(ent.vulnerable)}`
 				: null,
 			entryConditionImmunities: ent.conditionImmune
-				? `{@b Condition Immunities:} ${Parser.getFullCondImm(ent.conditionImmune, {isEntry: true})}`
+				? `{@b 条件免疫:} ${Parser.getFullCondImm(ent.conditionImmune, {isEntry: true})}`
 				: null,
 			entrySenses: ent.senses
-				? `{@b Senses:} ${Renderer.utils.getSensesEntry(ent.senses)}`
+				? `{@b 感官:} ${Renderer.utils.getSensesEntry(ent.senses)}`
 				: null,
 		};
 	}
@@ -7741,9 +7741,9 @@ Renderer.monster = class {
 			<tr><td colspan="6">
 				<table class="w-100 summary-noback relative table-layout-fixed my-1">
 					<tr>
-						<th colspan="2">Armor Class</th>
-						<th colspan="2">Hit Points</th>
-						<th colspan="2">Speed</th>
+						<th colspan="2">护甲等级</th>
+						<th colspan="2">生命值</th>
+						<th colspan="2">速度</th>
 						<th colspan="2">${isShowSpellLevelScaler ? "Spell Level" : isShowClassLevelScaler ? "Class Level" : "Challenge"}</th>
 						${mon.pbNote || Parser.crToNumber(mon.cr) < VeCt.CR_CUSTOM ? `<th colspan="1" title="Proficiency Bonus">PB</th>` : ""}
 						${hasToken && !opts.isCompact ? `<th colspan="1"></th>` : ""}

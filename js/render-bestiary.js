@@ -51,31 +51,31 @@ class RenderBestiary {
 		</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
-		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>Armor Class</strong> ${mon.ac == null ? "\u2014" : Parser.acToFull(mon.ac)}</div></td></tr>
-		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>Hit Points</strong> ${mon.hp == null ? "\u2014" : Renderer.monster.getRenderedHp(mon.hp)}</div></td></tr>
+		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>护甲等级</strong> ${mon.ac == null ? "\u2014" : Parser.acToFull(mon.ac)}</div></td></tr>
+		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>生命值</strong> ${mon.hp == null ? "\u2014" : Renderer.monster.getRenderedHp(mon.hp)}</div></td></tr>
 		${ptsResource.join("")}
-		<tr><td colspan="6"><strong>Speed</strong> ${Parser.getSpeedString(mon)}</td></tr>
+		<tr><td colspan="6"><strong>速度</strong> ${Parser.getSpeedString(mon)}</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
 		${Renderer.monster.getRenderedAbilityScores(mon)}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
-		${mon.save ? `<tr><td colspan="6"><strong>Saving Throws</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : ""}
-		${mon.skill ? `<tr><td colspan="6"><strong>技能 </strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
-		${mon.vulnerable ? `<tr><td colspan="6"><strong>Damage Vulnerabilities</strong> ${Parser.getFullImmRes(mon.vulnerable)}</td></tr>` : ""}
-		${mon.resist ? `<tr><td colspan="6"><strong>Damage Resistances</strong> ${Parser.getFullImmRes(mon.resist)}</td></tr>` : ""}
-		${mon.immune ? `<tr><td colspan="6"><strong>Damage Immunities</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : ""}
-		${mon.conditionImmune ? `<tr><td colspan="6"><strong>Condition Immunities</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : ""}
-		<tr><td colspan="6"><strong>Senses</strong> ${Renderer.monster.getSensesPart(mon)}</td></tr>
-		<tr><td colspan="6"><strong>Languages</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
+		${mon.save ? `<tr><td colspan="6"><strong>豁免检定</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : ""}
+		${mon.skill ? `<tr><td colspan="6"><strong>技能</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
+		${mon.vulnerable ? `<tr><td colspan="6"><strong>易伤</strong> ${Parser.getFullImmRes(mon.vulnerable)}</td></tr>` : ""}
+		${mon.resist ? `<tr><td colspan="6"><strong>抗性</strong> ${Parser.getFullImmRes(mon.resist)}</td></tr>` : ""}
+		${mon.immune ? `<tr><td colspan="6"><strong>免疫</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : ""}
+		${mon.conditionImmune ? `<tr><td colspan="6"><strong>条件免疫</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : ""}
+		<tr><td colspan="6"><strong>感官</strong> ${Renderer.monster.getSensesPart(mon)}</td></tr>
+		<tr><td colspan="6"><strong>语言</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
 
 		<tr class="relative">
 			${this._$getRenderedCreature_$getTdChallenge(mon, options)}
 			${this._$getRenderedCreature_getTdPb(mon, options)}
 		</tr>
 
-		<tr>${options.selSummonSpellLevel ? $$`<td colspan="6"><strong>Spell Level</strong> ${options.selSummonSpellLevel}</td>` : ""}</tr>
-		<tr>${options.selSummonClassLevel ? $$`<td colspan="6"><strong>Class Level</strong> ${options.selSummonClassLevel}</td>` : ""}</tr>
+		<tr>${options.selSummonSpellLevel ? $$`<td colspan="6"><strong>施法等级</strong> ${options.selSummonSpellLevel}</td>` : ""}</tr>
+		<tr>${options.selSummonClassLevel ? $$`<td colspan="6"><strong>职业等级</strong> ${options.selSummonClassLevel}</td>` : ""}</tr>
 
 		${allTraits?.length ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection({prop: "trait", entries: allTraits})}` : ""}
 		${allActions?.length ? `${this._getRenderedSectionHeader({mon, title: "Actions", prop: "action"})}
@@ -158,9 +158,9 @@ class RenderBestiary {
 	}
 
 	static _$getRenderedCreature_$getTdChallenge (mon, options) {
-		if (Parser.crToNumber(mon.cr) >= VeCt.CR_UNKNOWN) return `<td colspan="3"><strong>Challenge</strong> <span>\u2014</span></td>`;
+		if (Parser.crToNumber(mon.cr) >= VeCt.CR_UNKNOWN) return `<td colspan="3"><strong>挑战等级</strong> <span>\u2014</span></td>`;
 
-		return $$`<td colspan="3"><strong>Challenge</strong>
+		return $$`<td colspan="3"><strong>挑战等级</strong>
 			<span>${Parser.monCrToFull(mon.cr, {isMythic: !!mon.mythic})}</span>
 			${options.$btnScaleCr || ""}
 			${options.$btnResetScaleCr || ""}
