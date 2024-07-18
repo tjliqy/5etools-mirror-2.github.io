@@ -3,8 +3,8 @@
 class FilterCommon {
 	static getDamageVulnerableFilter () {
 		return this._getDamageResistVulnImmuneFilter({
-			header: "弱点Vulnerabilities",
-			headerShort: "弱点Vuln.",
+			header: "易伤Vulnerabilities",
+			headerShort: "易伤Vuln.",
 		});
 	}
 
