@@ -88,7 +88,7 @@ export class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA/etc.`,
-			html: `Core/Supplements`,
+			html: `核心/资源`,
 			click: evt => this._doSetPinsSupplements({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
 		});
 
@@ -96,7 +96,7 @@ export class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA`,
-			html: `Adventures`,
+			html: `冒险`,
 			click: evt => this._doSetPinsAdventures({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
 		});
 
