@@ -681,7 +681,8 @@ Parser.sourceJsonToMarkerHtml = function (source, {isList = true, additionalStyl
 };
 
 Parser.stringToSlug = function (str) {
-	return str.trim().toLowerCase().toAscii().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
+	// return str.trim().toLowerCase().toAscii().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
+	return str.trim().toLowerCase().toAscii().toUrlified().replace(/[^\w ]+/g, "").replace(/ +/g, "-")
 };
 
 Parser.stringToCasedSlug = function (str) {
