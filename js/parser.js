@@ -434,6 +434,27 @@ Parser.skillToAbilityAbv = function (skill) {
 	return Parser._parse_aToB(Parser.SKILL_TO_ATB_ABV, skill);
 };
 
+Parser.SKILL_TO_CN = {
+	"athletics": "运动",
+	"acrobatics": "体操",
+	"sleight of hand": "巧手",
+	"stealth": "隐匿",
+	"arcana": "奥秘",
+	"history": "历史",
+	"investigation": "调查",
+	"nature": "自然",
+	"religion": "宗教",
+	"animal handling": "驯兽",
+	"insight": "洞悉",
+	"medicine": "医疗",
+	"perception": "察觉",
+	"survival": "生存",
+	"deception": "欺瞒",
+	"intimidation": "威吓",
+	"performance": "表演",
+	"persuasion": "说服",
+};
+
 Parser.SKILL_TO_SHORT = {
 	"athletics": "ath",
 	"acrobatics": "acro",

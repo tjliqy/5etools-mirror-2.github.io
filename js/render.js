@@ -6554,7 +6554,7 @@ Renderer.race = class {
 				const isAnyNoName = race.subraces.some(it => !it.name);
 				if (isAnyNoName) {
 					baseRace._rawName = baseRace.name;
-					baseRace.name = `${baseRace.name} (Base)`;
+					baseRace.name = `${baseRace.name} (本相)`;
 				}
 
 				const nameCounts = {};
@@ -11101,7 +11101,8 @@ Renderer.generic = class {
 								collectionSet.add(this._summariseProfs_getCollectionKey(s, anyAlt));
 								return this._summariseProfs_getEntry({str: s, isShort, hoverTag});
 							});
-						return `${isShort ? `${i === 0 ? "C" : "c"}hoose ` : ""}${v.count || 1} ${isShort ? `of` : `from`} ${chooseProfs.joinConjunct(", ", " or ")}`;
+						// return `${isShort ? `${i === 0 ? "C" : "c"}hoose ` : ""}${v.count || 1} ${isShort ? `of` : `from`} ${chooseProfs.joinConjunct(", ", " or ")}`;
+						return `从 ${chooseProfs.joinConjunct("，", "或 ")} 中选择${v.count || 1}个`
 					}
 
 					collectionSet.add(this._summariseProfs_getCollectionKey(k, anyAlt));

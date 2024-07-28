@@ -2756,10 +2756,10 @@ class InputUiUtil {
 
 		let title = opts.title;
 		if (!title) {
-			if (opts.count != null) title = `Choose ${Parser.numberToText(opts.count).uppercaseFirst()}`;
-			else if (opts.min != null && opts.max != null) title = `Choose Between ${Parser.numberToText(opts.min).uppercaseFirst()} and ${Parser.numberToText(opts.max).uppercaseFirst()} Options`;
-			else if (opts.min != null) title = `Choose At Least ${Parser.numberToText(opts.min).uppercaseFirst()}`;
-			else title = `Choose At Most ${Parser.numberToText(opts.max).uppercaseFirst()}`;
+			if (opts.count != null) title = `选择 ${Parser.numberToText(opts.count).uppercaseFirst()}`;
+			else if (opts.min != null && opts.max != null) title = `从 ${Parser.numberToText(opts.min).uppercaseFirst()} 和 ${Parser.numberToText(opts.max).uppercaseFirst()} 中选择`;
+			else if (opts.min != null) title = `最少选择 ${Parser.numberToText(opts.min).uppercaseFirst()}个`;
+			else title = `最多选择 ${Parser.numberToText(opts.max).uppercaseFirst()}个`;
 		}
 
 		const {$ele: $wrpList, $iptSearch, propIsAcceptable} = ComponentUiUtil.getMetaWrpMultipleChoice(comp, prop, opts);
