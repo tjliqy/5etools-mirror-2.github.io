@@ -104,7 +104,7 @@ export class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
-			html: `Partnered`,
+			html: `合作`,
 			click: evt => this._doSetPinsPartnered({isAdditive: evt.shiftKey}),
 		});
 
@@ -112,7 +112,7 @@ export class SourceFilter extends Filter {
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
-			html: `Homebrew`,
+			html: `自制内容`,
 			click: evt => this._doSetPinsHomebrew({isAdditive: evt.shiftKey}),
 		});
 
@@ -137,48 +137,48 @@ export class SourceFilter extends Filter {
 
 		const menu = ContextUtil.getMenu([
 			new ContextUtil.Action(
-				"Select All Standard Sources",
+				"选择所有标准资源",
 				() => this._doSetPinsStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Partnered Sources",
+				"选择所有合作资源",
 				() => this._doSetPinsPartnered(),
 			),
 			new ContextUtil.Action(
-				"Select All Non-Standard Sources",
+				"选择所有非标准资源",
 				() => this._doSetPinsNonStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Prerelease Sources",
+				"选择所有预发布资源",
 				() => this._doSetPinsPrerelease(),
 			),
 			new ContextUtil.Action(
-				"Select All Homebrew Sources",
+				"选择所有自制资源",
 				() => this._doSetPinsHomebrew(),
 			),
 			null,
 			new ContextUtil.Action(
-				`Select "Vanilla" Sources`,
+				`选择“寻常”资源`,
 				() => this._doSetPinsVanilla(),
 				{title: `Select a baseline set of sources suitable for any campaign.`},
 			),
 			new ContextUtil.Action(
-				"Select All Non-UA Sources",
+				"选择所有非UA资源",
 				() => this._doSetPinsNonUa(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Select SRD Sources",
+				"选择SRD资源",
 				() => this._doSetPinsSrd(),
 				{title: `Select System Reference Document Sources.`},
 			),
 			new ContextUtil.Action(
-				"Select Basic Rules Sources",
+				"选择基础规则资源",
 				() => this._doSetPinsBasicRules(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Invert Selection",
+				"反向选择",
 				() => this._doInvertPins(),
 			),
 			null,
@@ -189,13 +189,13 @@ export class SourceFilter extends Filter {
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
 			html: `<span class="glyphicon glyphicon-option-vertical"></span>`,
 			click: evt => ContextUtil.pOpenMenu(evt, menu),
-			title: "Other Options",
+			title: "其他选项",
 		});
 
 		const btnOnlyPrimary = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			html: `Include References`,
+			html: `包含引用`,
 			title: `Consider entities as belonging to every source they appear in (i.e. reprints) as well as their primary source`,
 			click: () => this._meta.isIncludeOtherSources = !this._meta.isIncludeOtherSources,
 		});
@@ -351,7 +351,7 @@ export class SourceFilter extends Filter {
 		const btnCancel = e_({
 			tag: "button",
 			clazz: `btn btn-xs btn-default px-1`,
-			html: "Cancel",
+			html: "取消",
 			click: () => {
 				grpBtnsInactive.showVe();
 				wrpWrpSlider.hideVe();
@@ -362,7 +362,7 @@ export class SourceFilter extends Filter {
 		const btnConfirm = e_({
 			tag: "button",
 			clazz: `btn btn-xs btn-default px-1`,
-			html: "Confirm",
+			html: "确认",
 			click: () => {
 				grpBtnsInactive.showVe();
 				wrpWrpSlider.hideVe();
@@ -386,7 +386,7 @@ export class SourceFilter extends Filter {
 		const btnShowSlider = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Select by Date",
+			html: "按日期选择",
 			click: () => {
 				grpBtnsInactive.hideVe();
 				wrpWrpSlider.showVe();
@@ -416,7 +416,7 @@ export class SourceFilter extends Filter {
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Clear",
+			html: "清除",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)
@@ -472,7 +472,7 @@ export class SourceFilter extends Filter {
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Clear",
+			html: "清除",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)

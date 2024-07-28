@@ -448,25 +448,25 @@ export class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--all w-100`,
 			click: () => this._doSetPillsAll(),
-			html: "All",
+			html: "全选",
 		});
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--clear w-100`,
 			click: () => this._doSetPillsClear(),
-			html: "Clear",
+			html: "清除",
 		});
 		const btnNone = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--none w-100`,
 			click: () => this._doSetPillsNone(),
-			html: "None",
+			html: "全无",
 		});
 		const btnDefault = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} w-100`,
 			click: () => this._doSetPinsDefault(),
-			html: "Default",
+			html: "缺省",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -513,7 +513,7 @@ export class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "隐藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);

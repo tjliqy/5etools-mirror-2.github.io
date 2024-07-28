@@ -97,7 +97,7 @@ class PageFilterRaces extends PageFilterBase {
 			umbrellaItems: ["Choose"],
 		});
 		this._creatureTypeFilter = new Filter({
-			header: "Creature Type",
+			header: "生物类型Creature Type",
 			items: Parser.MON_TYPES,
 			displayFn: StrUtil.toTitleCase,
 			itemSortFn: SortUtil.ascSortLower,

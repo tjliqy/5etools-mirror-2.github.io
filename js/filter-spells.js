@@ -637,7 +637,7 @@ class ModalFilterSpells extends ModalFilterBase {
 			{sort: "school", text: "School", width: "1"},
 			{sort: "concentration", text: "C.", title: "Concentration", width: "0-5"},
 			{sort: "range", text: "Range", width: "2"},
-			{sort: "source", text: "Source", width: "1"},
+			{sort: "source", text: "来源", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}

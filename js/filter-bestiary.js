@@ -644,7 +644,7 @@ class ModalFilterBestiary extends ModalFilterBase {
 			{sort: "name", text: "Name", width: "4"},
 			{sort: "type", text: "Type", width: "4"},
 			{sort: "cr", text: "CR", width: "2"},
-			{sort: "source", text: "Source", width: "1"},
+			{sort: "source", text: "来源", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}

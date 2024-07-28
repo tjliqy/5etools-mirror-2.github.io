@@ -1994,13 +1994,13 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 	static _getFauxGainSubclassFeatureFeature (cls, level) {
 		return {
-			name: "Subclass Feature",
+			name: "子职特性",
 			source: cls.source,
 			className: cls.name,
 			classSource: cls.source,
 			level: level,
 			entries: [
-				"Depending on your choice of subclass, you may gain certain subclass features\u2014or meet prerequisites for acquiring them\u2014at this level.",
+				"根据您选择的子职业，您可能会此处看到这个级别的某些子职特性、或者获取它们的先决条件。",
 			],
 			gainSubclassFeature: true,
 			_isStandardSource: true,

@@ -3629,7 +3629,7 @@ class SourceUiUtil {
 
 		const $btnCancel = options.isRequired && !isEditMode
 			? null
-			: $(`<button class="btn btn-default ml-2">Cancel</button>`).click(() => options.cbCancel());
+			: $(`<button class="btn btn-default ml-2">取消</button>`).click(() => options.cbCancel());
 
 		const $btnUseExisting = $(`<button class="btn btn-default">Use an Existing Source</button>`)
 			.click(() => {

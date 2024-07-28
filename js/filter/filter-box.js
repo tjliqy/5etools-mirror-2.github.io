@@ -212,7 +212,7 @@ export class FilterBox extends ProxyBase {
 
 		if (this._$wrpFormTop || this._$btnOpen) {
 			if (!this._$btnOpen) {
-				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
+				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">筛选</button>`)
 					.prependTo(this._$wrpFormTop);
 			} else if (!this._$btnOpen.parent().length) {
 				this._$btnOpen.prependTo(this._$wrpFormTop);
@@ -245,7 +245,7 @@ export class FilterBox extends ProxyBase {
 			isIndestructible: true,
 			isClosed: true,
 			isEmpty: true,
-			title: "Filter", // Not shown due toe `isEmpty`, but useful for external overrides
+			title: "筛选", // Not shown due toe `isEmpty`, but useful for external overrides
 			cbClose: (isDataEntered) => this._pHandleHide(!isDataEntered),
 		});
 
@@ -253,25 +253,25 @@ export class FilterBox extends ProxyBase {
 
 		this._metaIptSearch = ComponentUiUtil.$getIptStr(
 			this._compSearch, "search",
-			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="Search...">`},
+			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="搜索...">`},
 		);
 		this._compSearch._addHookBase("search", () => {
 			const searchTerm = this._compSearch._state.search.toLowerCase();
 			this._filters.forEach(f => f.handleSearch(searchTerm));
 		});
 
-		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Show All</button>`)
+		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">显示全部</button>`)
 			.click(() => this.showAllFilters());
-		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Hide All</button>`)
+		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">隐藏全部</button>`)
 			.click(() => this.hideAllFilters());
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="${TITLE_BTN_RESET}">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="${TITLE_BTN_RESET}">重置</button>`)
 			.click(evt => this.reset(evt.shiftKey));
 
 		const $btnSettings = $(`<button class="btn btn-xs btn-default mr-3"><span class="glyphicon glyphicon-cog"></span></button>`)
 			.click(() => this._pOpenSettingsModal());
 
-		const $btnSaveAlt = $(`<button class="btn btn-xs btn-primary" title="Save"><span class="glyphicon glyphicon-ok"></span></button>`)
+		const $btnSaveAlt = $(`<button class="btn btn-xs btn-primary" title="保存"><span class="glyphicon glyphicon-ok"></span></button>`)
 			.click(() => this._modalMeta.doClose(true));
 
 		const $wrpBtnCombineFilters = $(`<div class="btn-group mr-3"></div>`);
@@ -282,7 +282,7 @@ export class FilterBox extends ProxyBase {
 			tag: "button",
 			clazz: `btn btn-xs btn-default`,
 			click: () => this._meta.modeCombineFilters = FilterBox._COMBINE_MODES.getNext(this._meta.modeCombineFilters),
-			title: `"AND" requires every filter to match. "OR" requires any filter to match. "Custom" allows you to specify a combination (every "AND" filter must match; only one "OR" filter must match) .`,
+			title: `"并" requires every filter to match. "OR" requires any filter to match. "Custom" allows you to specify a combination (every "并" filter must match; only one "OR" filter must match) .`,
 		}).appendTo($wrpBtnCombineFilters[0]);
 
 		const hook = () => {
@@ -294,20 +294,20 @@ export class FilterBox extends ProxyBase {
 		this._addHook("meta", "modeCombineFilters", hook);
 		hook();
 
-		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">Save</button>`)
+		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">保存</button>`)
 			.click(() => this._modalMeta.doClose(true));
 
-		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">Cancel</button>`)
+		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">取消</button>`)
 			.click(() => this._modalMeta.doClose(false));
 
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 ve-flex-v-center mobile__ve-flex-col">
 			<div class="ve-flex-v-baseline mobile__ve-flex-col">
-				<h4 class="m-0 mr-2 mobile__mb-2">Filters</h4>
+				<h4 class="m-0 mr-2 mobile__mb-2">筛选</h4>
 				${this._metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="ve-flex-v-center mobile__ve-flex-col">
 				<div class="ve-flex-v-center mobile__m-1">
-					<div class="mr-2">Combine as</div>
+					<div class="mr-2">合并方式</div>
 					${$wrpBtnCombineFilters}
 				</div>
 				<div class="ve-flex-v-center mobile__m-1">
@@ -332,24 +332,24 @@ export class FilterBox extends ProxyBase {
 	}
 
 	async _pOpenSettingsModal () {
-		const {$modalInner} = await UiUtil.pGetShowModal({title: "Settings"});
+		const {$modalInner} = await UiUtil.pGetShowModal({title: "设置"});
 
-		UiUtil.$getAddModalRowCb($modalInner, "Deselect Homebrew Sources by Default", this._meta, "isBrewDefaultHidden");
+		UiUtil.$getAddModalRowCb($modalInner, "默认反选自制资源", this._meta, "isBrewDefaultHidden");
 
 		UiUtil.addModalSep($modalInner);
 
-		UiUtil.$getAddModalRowHeader($modalInner, "Hide summary for filter...", {helpText: "The summary is the small red and blue button panel which appear below the search bar."});
+		UiUtil.$getAddModalRowHeader($modalInner, "概览隐藏筛选器...", {helpText: "The summary is the small red and blue button panel which appear below the search bar."});
 		this._filters.forEach(f => UiUtil.$getAddModalRowCb($modalInner, f.header, this._minisHidden, f.header));
 
 		UiUtil.addModalSep($modalInner);
 
 		const $rowResetAlwaysSave = UiUtil.$getAddModalRow($modalInner, "div").addClass("pr-2");
-		$rowResetAlwaysSave.append(`<span>Always Save on Close</span>`);
-		$(`<button class="btn btn-xs btn-default">Reset</button>`)
+		$rowResetAlwaysSave.append(`<span>总是在关闭时保存</span>`);
+		$(`<button class="btn btn-xs btn-default">重置</button>`)
 			.appendTo($rowResetAlwaysSave)
 			.click(async () => {
 				await StorageUtil.pRemove(FilterBox._STORAGE_KEY_ALWAYS_SAVE_UNCHANGED);
-				JqueryUtil.doToast("Saved!");
+				JqueryUtil.doToast("保存成功！");
 			});
 	}
 
