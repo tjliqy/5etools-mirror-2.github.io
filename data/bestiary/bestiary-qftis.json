@@ -18,6 +18,27 @@
 	},
 	"monster": [
 		{
+			"name": "阿蒙·萨",
+			"ENG_name": "Amun Sa",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "幽魂",
+				"ENG_name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "幽灵",
+						"with": "阿蒙",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
 			"name": "安卓",
 			"ENG_name": "Android",
 			"source": "QftIS",
@@ -180,71 +201,75 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Android Aerialist",
+					"name": "安卓空中飞人",
+					"ENG_name": "Android Aerialist",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						}
 					},
 					"speed": {
 						"walk": 30,
 						"fly": {
 							"number": 30,
-							"condition": "(hover)"
+							"condition": "悬停"
 						},
 						"canHover": true
 					},
 					"senses": [
-						"darkvision 60 ft."
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": null,
 					"reaction": null,
 					"hasToken": true
 				},
 				{
-					"name": "Android Diplomat",
+					"name": "安卓外交官",
+					"ENG_name": "Android Diplomat",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						}
 					},
 					"speed": {
 						"walk": 30
 					},
 					"senses": [
-						"darkvision 60 ft."
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": [
 						{
-							"name": "Spellcasting",
+							"name": "施法",
+							"ENG_name": "Spellcasting",
 							"type": "spellcasting",
 							"headerEntries": [
-								"The android casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability:"
+								"这个机器人施放以下法术之一，不需要材料成分，并使用智力作为施法能力："
 							],
 							"daily": {
 								"2e": [
-									"{@spell Identify}",
-									"{@spell Tongues}"
+									"{@spell 鉴定术}",
+									"{@spell 巧言术}"
 								]
 							},
-							"ability": "int",
-							"displayAs": "action"
+							"ability": "智慧",
+							"displayAs": "动作"
 						}
 					],
 					"reaction": null,
 					"hasToken": true
 				},
 				{
-					"name": "Android Diver",
+					"name": "安卓潜水员",
+					"ENG_name": "Android Diver",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						}
 					},
 					"speed": {
@@ -252,24 +277,25 @@
 						"swim": 30
 					},
 					"senses": [
-						"darkvision 60 ft."
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": null,
 					"reaction": null
 				},
 				{
-					"name": "Android Duelist",
+					"name": "安卓决斗者",
+					"ENG_name": "Android Duelist",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						},
 						"reaction": {
 							"mode": "renameArr",
 							"renames": {
-								"rename": "Parry (Duelist Only)",
-								"with": "Parry"
+								"rename": "招架（仅限剑客）",
+								"with": "格挡"
 							}
 						}
 					},
@@ -277,61 +303,64 @@
 						"walk": 30
 					},
 					"senses": [
-						"darkvision 60 ft."
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": null,
 					"hasToken": true
 				},
 				{
-					"name": "Android Medic",
+					"name": "安卓医疗机器人",
+					"ENG_name": "Android Medic",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						}
 					},
 					"speed": {
 						"walk": 30
 					},
 					"senses": [
-						"darkvision 60 ft."
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": [
 						{
-							"name": "Spellcasting",
+							"name": "施法",
+							"ENG_name": "Spellcasting",
 							"type": "spellcasting",
 							"headerEntries": [
-								"The android casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability:"
+								"这个机器人施放以下法术之一，不需要材料成分，并使用智力作为施法能力："
 							],
 							"daily": {
 								"2e": [
-									"{@spell Cure Wounds} (as a 3rd-level spell)",
-									"{@spell Identify}"
+									"{@spell 疗伤术}（作为3级法术）",
+									"{@spell 鉴定术}"
 								]
 							},
-							"ability": "int",
-							"displayAs": "action"
+							"ability": "智慧",
+							"displayAs": "动作"
 						}
 					],
 					"reaction": null,
 					"hasToken": true
 				},
 				{
-					"name": "Android Sentry",
+					"name": "安卓哨兵",
+					"ENG_name": "Android Sentry",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Design Specialization"
+							"names": "设计专业化"
 						}
 					},
 					"speed": {
 						"walk": 30
 					},
 					"senses": [
-						"blindsight 60 ft.",
-						"darkvision 60 ft."
+						"盲视 60 尺",
+						"黑暗视觉 60 尺。"
 					],
 					"spellcasting": null,
 					"reaction": null,
@@ -805,6 +834,38 @@
 			],
 			"hasToken": true,
 			"hasFluff": true
+		},
+		{
+			"name": "西波尔拉",
+			"ENG_name": "Cipolla",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "塔楼贤者",
+				"ENG_name": "Tower Sage",
+				"source": "QftIS",
+				"_templates": [
+					{
+						"name": "银龙裔",
+						"ENG_name": "Dragonborn (Silver)",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "塔之贤者",
+						"with": "西波尔拉",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "战斗机器人",
@@ -1783,6 +1844,27 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "格里斯德尔法",
+			"ENG_name": "Grisdelfawr",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "青年红龙",
+				"ENG_name": "Young Red Dragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "龙",
+						"with": "格里斯德尔法",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
 			"name": "Gorm的守护者",
 			"ENG_name": "Guardian of Gorm",
 			"source": "QftIS",
@@ -1994,78 +2076,81 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Horrid Plant Dew Drinker",
+					"name": "恐怖植物露水饮者",
+					"ENG_name": "Horrid Plant Dew Drinker",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Horrid Plant Varieties"
+							"names": "恐怖植物种类"
 						},
 						"bonus": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Sap Squirt (Purple Blossom Only)",
-									"Spiked Leaves (Snapper Saw Only)"
+									"汁液喷射（仅限紫花）",
+									"带刺的叶子（仅限捕食者锯使用）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Vampiric Tendril (Dew Drinker Only)",
-									"with": "Vampiric Tendril"
+									"rename": "吸血触须（仅限露水饮者）",
+									"with": "吸血触须"
 								}
 							}
 						]
 					}
 				},
 				{
-					"name": "Horrid Plant Purple Blossom",
+					"name": "恐怖植物紫花",
+					"ENG_name": "Horrid Plant Purple Blossom",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Horrid Plant Varieties"
+							"names": "恐怖植物种类"
 						},
 						"bonus": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Spiked Leaves (Snapper Saw Only)",
-									"Vampiric Tendril (Dew Drinker Only)"
+									"带刺的叶子（仅限捕食者锯使用）",
+									"吸血触须（仅限露水饮者）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Sap Squirt (Purple Blossom Only)",
-									"with": "Sap Squirt"
+									"rename": "汁液喷射（仅限紫花）",
+									"with": "树液喷射"
 								}
 							}
 						]
 					}
 				},
 				{
-					"name": "Horrid Plant Snapper Saw",
+					"name": "恐怖植物快刀锯",
+					"ENG_name": "Horrid Plant Snapper Saw",
 					"source": "QftIS",
 					"_mod": {
 						"trait": {
 							"mode": "removeArr",
-							"names": "Horrid Plant Varieties"
+							"names": "恐怖植物种类"
 						},
 						"bonus": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Sap Squirt (Purple Blossom Only)",
-									"Vampiric Tendril (Dew Drinker Only)"
+									"汁液喷射（仅限紫花）",
+									"吸血触须（仅限露水饮者）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Spiked Leaves (Snapper Saw Only)",
-									"with": "Spiked Leaves"
+									"rename": "带刺的叶子（仅限捕食者锯使用）",
+									"with": "带刺的叶子"
 								}
 							}
 						]
@@ -2074,24 +2159,27 @@
 			]
 		},
 		{
-			"name": "Iaseda",
+			"name": "伊阿西达",
+			"ENG_name": "Iaseda",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "QftIS",
 			"_copy": {
-				"name": "Acolyte",
+				"name": "侍僧",
+				"ENG_name": "Acolyte",
 				"source": "MM",
 				"_templates": [
 					{
-						"name": "Human",
+						"name": "人类",
+						"ENG_name": "Human",
 						"source": "PHB"
 					}
 				],
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the acolyte",
-						"with": "Iaseda",
+						"replace": "侍僧",
+						"with": "伊阿西达",
 						"flags": "i"
 					}
 				}
@@ -2103,24 +2191,27 @@
 			"hasToken": true
 		},
 		{
-			"name": "Isabela Folcarae",
+			"name": "伊莎贝拉·福尔卡雷",
+			"ENG_name": "Isabela Folcarae",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "QftIS",
 			"_copy": {
-				"name": "Bandit Captain",
+				"name": "强盗首领",
+				"ENG_name": "Bandit Captain",
 				"source": "MM",
 				"_templates": [
 					{
-						"name": "Human",
+						"name": "人类",
+						"ENG_name": "Human",
 						"source": "PHB"
 					}
 				],
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the captain",
-						"with": "Isabela",
+						"replace": "船长",
+						"with": "伊莎贝拉",
 						"flags": "i"
 					}
 				}
@@ -2132,24 +2223,27 @@
 			"hasToken": true
 		},
 		{
-			"name": "Juliana",
+			"name": "朱莉安娜",
+			"ENG_name": "Juliana",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "QftIS",
 			"_copy": {
-				"name": "Noble",
+				"name": "贵族",
+				"ENG_name": "Noble",
 				"source": "MM",
 				"_templates": [
 					{
-						"name": "Human",
+						"name": "人类",
+						"ENG_name": "Human",
 						"source": "PHB"
 					}
 				],
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the noble",
-						"with": "Juliana",
+						"replace": "贵族",
+						"with": "朱莉安娜",
 						"flags": "i"
 					}
 				}
@@ -3109,6 +3203,42 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "奥兰多",
+			"ENG_name": "Orlando",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "贵族",
+				"ENG_name": "Noble",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "人类",
+						"ENG_name": "Human",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "贵族",
+						"with": "奥兰多",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				11
+			],
+			"action": null,
+			"hasToken": true
+		},
+		{
 			"name": "岩精",
 			"ENG_name": "Pech",
 			"source": "QftIS",
@@ -3262,6 +3392,181 @@
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "皮亚尔兹",
+			"ENG_name": "Piyarz",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "塔楼贤者",
+				"ENG_name": "Tower Sage",
+				"source": "QftIS",
+				"_templates": [
+					{
+						"name": "人类",
+						"ENG_name": "Human",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "塔之贤者",
+						"with": "皮亚尔兹",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "特殊装备",
+							"ENG_name": "Special Equipment",
+							"entries": [
+								"皮亚兹佩戴了一枚{@item 火焰抗性戒指}, 赋予他对火焰伤害的抗性。"
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"resist": [
+				"火焰"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "然而",
+			"ENG_name": "Porro",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "塔楼贤者",
+				"ENG_name": "Tower Sage",
+				"source": "QftIS",
+				"_templates": [
+					{
+						"name": "敦实半身人",
+						"ENG_name": "Stout Halfling",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "塔之贤者",
+						"with": "然而",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "女王扎诺比斯",
+			"ENG_name": "Queen Zanobis",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "尸妖",
+				"ENG_name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wight",
+						"with": "女王扎诺比斯",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "多重攻击",
+							"items": {
+								"name": "多重攻击",
+								"ENG_name": "Multiattack",
+								"entries": [
+									"食尸鬼进行两次权杖攻击或两次长弓攻击。它可以将生命吸取替换一次权杖攻击。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "长剑",
+							"items": {
+								"name": "长剑",
+								"ENG_name": "Longsword",
+								"entries": [
+									"{@atk 近战武器} 命中骰：4，射程5尺，单一目标。{@h}6 ({@damage 1d8 + 2}) 钝击伤害，或者如果用双手使用则为7 ({@damage 1d10 + 2}) 钝击伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "沙尔菲",
+			"ENG_name": "Shalfey",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "塔楼贤者",
+				"ENG_name": "Tower Sage",
+				"source": "QftIS",
+				"_templates": [
+					{
+						"name": "人类",
+						"ENG_name": "Human",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "塔之贤者",
+						"with": "沙尔菲",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "银百合",
+			"ENG_name": "Silverlily",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "独角兽",
+				"ENG_name": "Unicorn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "独角兽",
+						"with": "银百合",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "赛恩",
@@ -3435,6 +3740,48 @@
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "饥饿之灵",
+			"ENG_name": "Spirit of Hunger",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "缚灵",
+				"ENG_name": "Wraith",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "幽魂",
+						"with": "饥饿之灵",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "星光",
+			"ENG_name": "Stargleam",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "独角兽",
+				"ENG_name": "Unicorn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "独角兽",
+						"with": "星光",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "呓语怪群",
@@ -3990,6 +4337,34 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "乌玛",
+			"ENG_name": "Uma",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "骑士",
+				"ENG_name": "Knight",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "人类",
+						"ENG_name": "Human",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "骑士",
+						"with": "乌玛",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
 			"name": "蔬菜皮格米模具制造者",
 			"ENG_name": "Vegepygmy Moldmaker",
 			"source": "QftIS",
@@ -4334,6 +4709,27 @@
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "沃瑟拉米斯",
+			"ENG_name": "Vuuthramis",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "QftIS",
+			"_copy": {
+				"name": "青年青铜龙",
+				"ENG_name": "Young Bronze Dragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "龙",
+						"with": "沃瑟拉米斯",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "玛达鲁阿的战士",
