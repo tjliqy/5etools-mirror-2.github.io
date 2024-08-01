@@ -254,7 +254,7 @@ export class ManageBrewUi {
 		const btnLoadPartnered = ee`<button class="btn btn-default btn-sm">Load All Partnered</button>`
 			.onn("click", () => this._pHandleClick_btnLoadPartnered(rdState));
 
-		const $btnLoadFromFile = $(`<button class="btn btn-default btn-sm">Load from File</button>`)
+		const $btnLoadFromFile = $(`<button class="btn btn-default btn-sm">从文件加载</button>`)
 			.click(() => this._pHandleClick_btnLoadFromFile(rdState));
 
 		const $btnLoadFromUrl = $(`<button class="btn btn-default btn-sm">Load from URL</button>`)

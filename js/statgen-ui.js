@@ -232,10 +232,10 @@ class StatGenUi extends BaseComponent {
 			]
 			: [
 				this._isFvttMode ? new TabUiUtil.TabMeta({name: "Select...", icon: this._isFvttMode ? `fas fa-fw fa-square` : `far fa-fw fa-square`, hasBorder: true, isNoPadding: this._isFvttMode}) : null,
-				new TabUiUtil.TabMeta({name: "Roll", icon: this._isFvttMode ? `fas fa-fw fa-dice` : `far fa-fw fa-dice`, hasBorder: true, isNoPadding: this._isFvttMode}),
-				new TabUiUtil.TabMeta({name: "Standard Array", icon: this._isFvttMode ? `fas fa-fw fa-signal` : `far fa-fw fa-signal-alt`, hasBorder: true, isNoPadding: this._isFvttMode}),
-				new TabUiUtil.TabMeta({name: "Point Buy", icon: this._isFvttMode ? `fas fa-fw fa-chart-bar` : `far fa-fw fa-chart-bar`, hasBorder: true, isNoPadding: this._isFvttMode}),
-				new TabUiUtil.TabMeta({name: "Manual", icon: this._isFvttMode ? `fas fa-fw fa-tools` : `far fa-fw fa-tools`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "掷骰", icon: this._isFvttMode ? `fas fa-fw fa-dice` : `far fa-fw fa-dice`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "标准数组", icon: this._isFvttMode ? `fas fa-fw fa-signal` : `far fa-fw fa-signal-alt`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "购点", icon: this._isFvttMode ? `fas fa-fw fa-chart-bar` : `far fa-fw fa-chart-bar`, hasBorder: true, isNoPadding: this._isFvttMode}),
+				new TabUiUtil.TabMeta({name: "手动", icon: this._isFvttMode ? `fas fa-fw fa-tools` : `far fa-fw fa-tools`, hasBorder: true, isNoPadding: this._isFvttMode}),
 				...this._tabMetasAdditional || [],
 			].filter(Boolean);
 
@@ -291,7 +291,7 @@ class StatGenUi extends BaseComponent {
 			.change(() => this._$rollIptFormula.removeClass("form-control--error"));
 
 		const lockRoll = new VeLock();
-		const $btnRoll = $(`<button class="btn btn-primary bold">Roll</button>`)
+		const $btnRoll = $(`<button class="btn btn-primary bold">掷骰</button>`)
 			.click(async () => {
 				try {
 					await lockRoll.pLock();
@@ -301,7 +301,7 @@ class StatGenUi extends BaseComponent {
 				}
 			});
 
-		const $btnRandom = $(`<button class="btn btn-xs btn-default mt-2">Randomly Assign</button>`)
+		const $btnRandom = $(`<button class="btn btn-xs btn-default mt-2">随机分配</button>`)
 			.hideVe()
 			.click(() => {
 				const abs = [...Parser.ABIL_ABVS].shuffle();
@@ -329,9 +329,9 @@ class StatGenUi extends BaseComponent {
 		return $$`<div class="ve-flex-col mb-3 mr-auto">
 			<div class="ve-flex mb-2">
 				<div class="ve-flex-col ve-flex-h-center mr-3">
-					<label class="ve-flex-v-center"><div class="mr-2 no-shrink w-100p">Formula:</div>${this._$rollIptFormula}</label>
+					<label class="ve-flex-v-center"><div class="mr-2 no-shrink w-100p">公式：</div>${this._$rollIptFormula}</label>
 
-					${this._isCharacterMode ? null : $$`<label class="ve-flex-v-center mt-2"><div class="mr-2 no-shrink w-100p">Number of rolls:</div>${$iptRollCount}</label>`}
+					${this._isCharacterMode ? null : $$`<label class="ve-flex-v-center mt-2"><div class="mr-2 no-shrink w-100p">掷骰次数：</div>${$iptRollCount}</label>`}
 				</div>
 				${$btnRoll}
 			</div>
@@ -343,7 +343,7 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_render_$getStgArrayHeader () {
-		const $btnRandom = $(`<button class="btn btn-xs btn-default">Randomly Assign</button>`)
+		const $btnRandom = $(`<button class="btn btn-xs btn-default">随机分配</button>`)
 			.click(() => {
 				const abs = [...Parser.ABIL_ABVS].shuffle();
 				abs.forEach((ab, i) => {
@@ -353,7 +353,7 @@ class StatGenUi extends BaseComponent {
 			});
 
 		return $$`<div class="ve-flex-col mb-3 mr-auto">
-			<div class="mb-2">Assign these numbers to your abilities as desired:</div>
+			<div class="mb-2">将这些数值任意分配到你的属性上:</div>
 			<div class="bold mb-2">${StatGenUi._STANDARD_ARRAY.join(", ")}</div>
 			<div class="ve-flex">${$btnRandom}</div>
 		</div>`;
@@ -361,7 +361,7 @@ class StatGenUi extends BaseComponent {
 
 	_render_$getStgManualHeader () {
 		return $$`<div class="ve-flex-col mb-3 mr-auto">
-			<div>Enter your desired ability scores in the &quot;Base&quot; column below.</div>
+			<div>在下方的"基础"列中输入你想要的属性值。</div>
 		</div>`;
 	}
 
@@ -423,7 +423,7 @@ class StatGenUi extends BaseComponent {
 		const $btnReset = $(`<button class="btn btn-default">重置</button>`)
 			.click(() => this._doReset());
 
-		const $btnRandom = $(`<button class="btn btn-default">Random</button>`)
+		const $btnRandom = $(`<button class="btn btn-default">随机</button>`)
 			.click(() => {
 				this._doReset();
 
@@ -462,12 +462,12 @@ class StatGenUi extends BaseComponent {
 				<div class="statgen-pb__cell mr-4 mobile__hidden"></div>
 
 				<label class="ve-flex-col mr-2">
-					<div class="mb-1 ve-text-center">Budget</div>
+					<div class="mb-1 ve-text-center">总点数</div>
 					${$iptBudget}
 				</label>
 
 				<label class="ve-flex-col mr-2">
-					<div class="mb-1 ve-text-center">Remain</div>
+					<div class="mb-1 ve-text-center">剩余点</div>
 					${$iptRemaining}
 				</label>
 			</div>
@@ -487,7 +487,7 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_render_$getStgPbCustom () {
-		const $btnAddLower = $(`<button class="btn btn-default btn-xs">Add Lower Score</button>`)
+		const $btnAddLower = $(`<button class="btn btn-default btn-xs">添加更低的属性值</button>`)
 			.click(() => {
 				const prevLowest = this._state.pb_rules[0];
 				const score = prevLowest.entity.score - 1;
@@ -495,7 +495,7 @@ class StatGenUi extends BaseComponent {
 				this._state.pb_rules = [this._getDefaultState_pb_rule(score, cost), ...this._state.pb_rules];
 			});
 
-		const $btnAddHigher = $(`<button class="btn btn-default btn-xs">Add Higher Score</button>`)
+		const $btnAddHigher = $(`<button class="btn btn-default btn-xs">添加更高的属性值</button>`)
 			.click(() => {
 				const prevHighest = this._state.pb_rules.last();
 				const score = prevHighest.entity.score + 1;
@@ -510,14 +510,14 @@ class StatGenUi extends BaseComponent {
 
 		const menuCustom = ContextUtil.getMenu([
 			new ContextUtil.Action(
-				"Export as Code",
+				"导出为代码",
 				async () => {
 					await MiscUtil.pCopyTextToClipboard(this._serialize_pb_rules());
 					JqueryUtil.showCopiedEffect($btnContext);
 				},
 			),
 			new ContextUtil.Action(
-				"Import from Code",
+				"从代码导入",
 				async () => {
 					const raw = await InputUiUtil.pGetUserString({title: "Enter Code", isCode: true});
 					if (raw == null) return;
@@ -583,15 +583,15 @@ class StatGenUi extends BaseComponent {
 		hkIsCustomReset();
 
 		return $$`<div class="ve-flex-col">
-			<h4>Ability Score Point Cost</h4>
+			<h4>属性值点数花费</h4>
 
 			<div class="ve-flex-col">
 				<div class="ve-flex mobile__ve-flex-col">
 					<div class="ve-flex-col mr-3mobile__mr-0">
 						<div class="ve-flex-v-center mb-1">
-							<div class="statgen-pb__col-cost ve-flex-vh-center bold">Score</div>
-							<div class="statgen-pb__col-cost ve-flex-vh-center bold">Modifier</div>
-							<div class="statgen-pb__col-cost ve-flex-vh-center bold">Point Cost</div>
+							<div class="statgen-pb__col-cost ve-flex-vh-center bold">属性值</div>
+							<div class="statgen-pb__col-cost ve-flex-vh-center bold">调整值</div>
+							<div class="statgen-pb__col-cost ve-flex-vh-center bold">花费点数</div>
 							<div class="statgen-pb__col-cost-delete"></div>
 						</div>
 
@@ -605,7 +605,7 @@ class StatGenUi extends BaseComponent {
 			<hr class="hr-4 mb-2">
 
 			<label class="ve-flex-v-center">
-				<div class="mr-2">Custom Rules</div>
+				<div class="mr-2">自定规则</div>
 				${ComponentUiUtil.$getCbBool(this, "pb_isCustom")}
 			</label>
 		</div>`;
@@ -882,7 +882,7 @@ class StatGenUi extends BaseComponent {
 
 						<div class="ve-flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
-							<div class="my-1 bold statgen-pb__header ve-flex-vh-center">Base</div>
+							<div class="my-1 bold statgen-pb__header ve-flex-vh-center">基础</div>
 							${$wrpsBase}
 						</div>
 
@@ -892,19 +892,19 @@ class StatGenUi extends BaseComponent {
 
 						<div class="ve-flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
-							<div class="my-1 statgen-pb__header ve-flex-vh-center help text-muted" title="Input any additional/custom bonuses here">User</div>
+							<div class="my-1 statgen-pb__header ve-flex-vh-center help text-muted" title="此处输入额外/自定义的加值">用户</div>
 							${$wrpsUser}
 						</div>
 
 						<div class="ve-flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
-							<div class="my-1 statgen-pb__header ve-flex-vh-center">Total</div>
+							<div class="my-1 statgen-pb__header ve-flex-vh-center">总计</div>
 							${metasTotalAndMod.map(it => it.$wrpIptTotal)}
 						</div>
 
 						<div class="ve-flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
-							<div class="my-1 statgen-pb__header ve-flex-vh-center" title="Modifier">Mod.</div>
+							<div class="my-1 statgen-pb__header ve-flex-vh-center" title="Modifier">调整值</div>
 							${metasTotalAndMod.map(it => it.$wrpIptMod)}
 						</div>
 					</div>
@@ -1085,7 +1085,7 @@ class StatGenUi extends BaseComponent {
 			const {$hrPreview} = this._getHrPreviewMeta();
 
 			const $stgSel = $$`<div class="ve-flex-col mt-3">
-				<div class="mb-1">Select a ${this._title}</div>
+				<div class="mb-1">选择${this._title}</div>
 				<div class="ve-flex-v-center mb-2">
 					<div class="ve-flex-v-center btn-group w-100 mr-2">${$btnFilterForEntity}${$selEntity}</div>
 					<div>${$btnPreview}</div>
@@ -1123,7 +1123,7 @@ class StatGenUi extends BaseComponent {
 				});
 
 				$ptBase = $$`<div class="ve-flex-col mr-3">
-					<div class="my-1 statgen-pb__header ve-flex-vh-center">Static</div>
+					<div class="my-1 statgen-pb__header ve-flex-vh-center">静态</div>
 					${$wrpsEntity}
 				</div>`;
 			}
@@ -1251,8 +1251,8 @@ class StatGenUi extends BaseComponent {
 	};
 
 	static _RenderLevelOneRace = class extends this._RenderLevelOneEntity {
-		_title = "Race";
-		_titleShort = "Race";
+		_title = "种族";
+		_titleShort = "种族";
 		_propIxEntity = "common_ixRace";
 		_propIxAbilityScoreSet = "common_ixAbilityScoreSetRace";
 		_propData = "_races";
@@ -1269,14 +1269,14 @@ class StatGenUi extends BaseComponent {
 			const {$btnToggleTashasPin, $dispTashas} = this._$getPtsTashas();
 
 			out.$stgSel.append($$`<label class="ve-flex-v-center mb-1">
-				<div class="mr-2">Allow Origin Customization</div>
+				<div class="mr-2">允许自定义出身</div>
 				${ComponentUiUtil.$getCbBool(this._parent, "common_isTashas")}
 			</label>`);
 
 			out.$stgSel.append($$`<div class="ve-flex">
-				<div class="ve-small ve-muted italic mr-1">${Renderer.get().render(`An {@variantrule Customizing Your Origin|TCE|optional rule}`)}</div>
+				<div class="ve-small ve-muted italic mr-1">${Renderer.get().render(`一条{@variantrule 定制你的出身|TCE|可选规则}`)}</div>
 				${$btnToggleTashasPin}
-				<div class="ve-small ve-muted italic ml-1">${Renderer.get().render(`from Tasha's Cauldron of Everything, page 8.`)}</div>
+				<div class="ve-small ve-muted italic ml-1">${Renderer.get().render(`选自塔莎的万象坩埚，第 8 页。`)}</div>
 			</div>`);
 
 			out.$dispTashas = $dispTashas;
@@ -1341,8 +1341,8 @@ class StatGenUi extends BaseComponent {
 	_renderLevelOneRace = new this.constructor._RenderLevelOneRace({parent: this});
 
 	static _RenderLevelOneBackground = class extends this._RenderLevelOneEntity {
-		_title = "Background";
-		_titleShort = "Backg.";
+		_title = "背景";
+		_titleShort = "背景";
 		_propIxEntity = "common_ixBackground";
 		_propIxAbilityScoreSet = "common_ixAbilityScoreSetBackground";
 		_propData = "_backgrounds";
@@ -1959,13 +1959,13 @@ StatGenUi.CompAsi = class extends BaseComponent {
 				if (!this._metasAsi[namespace][ix_]) {
 					this._parent.state[propMode] = this._parent.state[propMode] || (namespace === "ability" ? "asi" : "feat");
 
-					const $btnAsi = namespace !== "ability" ? null : $(`<button class="btn btn-xs btn-default w-50p">ASI</button>`)
+					const $btnAsi = namespace !== "ability" ? null : $(`<button class="btn btn-xs btn-default w-50p">属性</button>`)
 						.click(() => {
 							this._parent.state[propMode] = "asi";
 							this._doPulseThrottled();
 						});
 
-					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">Feat</div>`) : $(`<button class="btn btn-xs btn-default w-50p">Feat</button>`)
+					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">Feat</div>`) : $(`<button class="btn btn-xs btn-default w-50p">专长</button>`)
 						.click(() => {
 							this._parent.state[propMode] = "feat";
 							this._doPulseThrottled();
@@ -2236,7 +2236,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 			$stgFeat.removeClass("ve-flex-v-end").addClass("ve-flex-v-center");
 			$dispFeat.toggleClass("italic ve-muted", !feat);
-			$dispFeat.html(feat ? Renderer.get().render(`{@feat ${feat.name.toLowerCase()}|${feat.source}}`) : `(Choose a feat)`);
+			$dispFeat.html(feat ? Renderer.get().render(`{@feat ${feat.name.toLowerCase()}|${feat.source}}`) : `(选择一项专长)`);
 
 			this._parent.state[propIxFeatAbility] = 0;
 
@@ -2387,9 +2387,9 @@ StatGenUi.CompAsi = class extends BaseComponent {
 			${$stgBackground}
 
 			<hr class="hr-3 hr--dotted">
-			<h4 class="my-2 bold">Additional Feats</h4>
+			<h4 class="my-2 bold">额外特性</h4>
 			<label class="w-100 ve-flex-v-center mb-2">
-				<div class="mr-2 no-shrink">Number of additional feats:</div>${$iptCountFeatsCustom}
+				<div class="mr-2 no-shrink">额外特性个数：</div>${$iptCountFeatsCustom}
 			</label>
 			${$wrpRowsCustom}
 		`;
@@ -2399,10 +2399,10 @@ StatGenUi.CompAsi = class extends BaseComponent {
 		if (!this._parent.isCharacterMode) {
 			const $iptCountAsi = ComponentUiUtil.$getIptInt(this._parent, "common_cntAsi", 0, {min: 0, max: 20})
 				.addClass("w-100p ve-text-center");
-			return $$`<label class="w-100 ve-flex-v-center mb-2"><div class="mr-2 no-shrink">Number of Ability Score Increases to apply:</div>${$iptCountAsi}</label>`;
+			return $$`<label class="w-100 ve-flex-v-center mb-2"><div class="mr-2 no-shrink">属性值提升次数：</div>${$iptCountAsi}</label>`;
 		}
 
-		const $out = $$`<div class="w-100 ve-flex-v-center mb-2 italic ve-muted">No ability score increases available.</div>`;
+		const $out = $$`<div class="w-100 ve-flex-v-center mb-2 italic ve-muted">没有可以提升的属性值</div>`;
 		const hkCntAsis = () => $out.toggleVe(this._parent.state.common_cntAsi === 0);
 		this._parent.addHookBase("common_cntAsi", hkCntAsis);
 		hkCntAsis();

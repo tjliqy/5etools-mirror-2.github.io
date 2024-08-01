@@ -785,7 +785,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	}
 
 	async _pDoRender () {
-		// reset all hooks in preparation for rendering
+		// 重置所有 hooks in preparation for rendering
 		this._initHashAndStateSync();
 		this.filterBox
 			.off(FILTER_BOX_EVNT_VALCHANGE)

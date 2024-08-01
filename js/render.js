@@ -6454,7 +6454,7 @@ Renderer.race = class {
 					<div class="race__disp-result-weight mr-1"></div>
 					<div class="small">lb.</div>
 				</div>
-				<button class="btn btn-default btn-xs my-1 race__btn-roll-height-weight">Roll</button>
+				<button class="btn btn-default btn-xs my-1 race__btn-roll-height-weight">掷骰</button>
 			</div>`);
 		}
 

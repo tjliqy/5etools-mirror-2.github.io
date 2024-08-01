@@ -7,16 +7,16 @@ const UtilBookReference = {
 		switch (refId) {
 			case "bookref-quick":
 				return [
-					"Character Creation",
-					"Equipment",
-					"Playing the Game",
-					"Combat",
-					"Adventuring",
+					"创建你的角色",
+					"装备",
+					"开始游戏",
+					"战斗规则",
+					"冒险",
 				];
 			case "bookref-dmscreen":
 				return [
-					"Running the Game",
-					"Combat",
+					"运作游戏",
+					"战斗规则",
 					"Factions",
 				];
 			default:

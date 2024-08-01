@@ -157,7 +157,7 @@ export class MultiFilter extends FilterBase {
 		const btnResetAll = e_({
 			tag: "button",
 			clazz: "btn btn-default btn-xs ml-2",
-			text: "Reset All",
+			text: "重置所有",
 			click: () => this._filters.forEach(it => it.reset()),
 		});
 

@@ -76,9 +76,9 @@ export class EncounterBuilderUiBestiary extends EncounterBuilderUi {
 
 		const $btnSaveToUrl = $(`<button class="btn btn-default btn-xs mr-2">Save to URL</button>`)
 			.click(() => this._sublistManager.pHandleClick_download({isUrl: true, $eleCopyEffect: $btnSaveToUrl}));
-		const $btnSaveToFile = $(`<button class="btn btn-default btn-xs">Save to File</button>`)
+		const $btnSaveToFile = $(`<button class="btn btn-default btn-xs">保存到文件</button>`)
 			.click(() => this._sublistManager.pHandleClick_download());
-		const $btnLoadFromFile = $(`<button class="btn btn-default btn-xs">Load from File</button>`)
+		const $btnLoadFromFile = $(`<button class="btn btn-default btn-xs">从文件加载</button>`)
 			.click(evt => this._sublistManager.pHandleClick_upload({isAdditive: evt.shiftKey}));
 		const $btnCopyAsText = $(`<button class="btn btn-default btn-xs mr-2" title="SHIFT for Multi-Line Format">Copy as Text</button>`).click((evt) => this._handleClickCopyAsText(evt));
 		const $btnReset = $(`<button class="btn btn-danger btn-xs" title="SHIFT to Reset Players">重置</button>`)

@@ -181,7 +181,7 @@ export class InitiativeTrackerNetworking {
 				JqueryUtil.showCopiedEffect($btnGetToken);
 			});
 
-		const $btnGetLink = $(`<button class="btn btn-default" disabled><span class="glyphicon glyphicon-link"></span> Copy Link</button>`).appendTo($wrpHelp)
+		const $btnGetLink = $(`<button class="btn btn-default" disabled><span class="glyphicon glyphicon-link"></span> 复制链接</button>`).appendTo($wrpHelp)
 			.click(async () => {
 				const cleanOrigin = window.location.origin.replace(/\/+$/, "");
 				const url = `${cleanOrigin}/inittrackerplayerview.html#v1:${this._p2pMetaV1.serverPeer.token}`;

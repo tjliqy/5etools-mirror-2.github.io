@@ -1803,7 +1803,7 @@ class ListPage {
 			),
 			null,
 			new ContextUtil.Action(
-				"Download Pinned List (SHIFT to Copy Link)",
+				"Download Pinned List (SHIFT to 复制链接)",
 				evt => this._sublistManager.pHandleClick_download({isUrl: evt.shiftKey, $eleCopyEffect: $btnOptions}),
 			),
 			new ContextUtil.Action(

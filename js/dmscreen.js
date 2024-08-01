@@ -804,11 +804,11 @@ class SideMenu {
 
 		const $wrpSaveLoad = $(`<div class="w-100"></div>`).appendTo(this.$mnu);
 		const $wrpSaveLoadFile = $(`<div class="w-100 mb-2 ve-flex-vh-center-around"></div>`).appendTo($wrpSaveLoad);
-		const $btnSaveFile = $(`<button class="btn btn-primary">Save to File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnSaveFile = $(`<button class="btn btn-primary">保存到文件</button>`).appendTo($wrpSaveLoadFile);
 		$btnSaveFile.on("click", () => {
 			DataUtil.userDownload(`dm-screen`, this.board.getSaveableState(), {fileType: "dm-screen"});
 		});
-		const $btnLoadFile = $(`<button class="btn btn-primary">Load from File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnLoadFile = $(`<button class="btn btn-primary">从文件加载</button>`).appendTo($wrpSaveLoadFile);
 		$btnLoadFile.on("click", async () => {
 			const {jsons, errors} = await InputUiUtil.pGetUserUploadJson({expectedFileTypes: ["dm-screen"]});
 
