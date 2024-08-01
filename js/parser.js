@@ -2764,7 +2764,7 @@ Parser.SRC_AATM = `${Parser.SRC_AA_PREFIX}TM`;
 
 Parser.AL_PREFIX = "冒险者联盟：";
 Parser.AL_PREFIX_SHORT = "AL: ";
-Parser.PS_PREFIX = "Plane Shift: ";
+Parser.PS_PREFIX = "异界传送系列：";
 Parser.PS_PREFIX_SHORT = "PS: ";
 Parser.UA_PREFIX = "Unearthed Arcana: ";
 Parser.UA_PREFIX_SHORT = "UA: ";
@@ -2802,7 +2802,7 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TYP_THSoT] = `${Parser.TftYP_NAME}: 隐秘
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TYP_TSC] = `${Parser.TftYP_NAME}: 暗无天日`;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TYP_ToH] = `${Parser.TftYP_NAME}: 恐怖墓穴`;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TYP_WPM] = `${Parser.TftYP_NAME}: 白羽山`;
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_VGM] = "瓦罗的怪物手册";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_VGM] = "瓦罗的怪物指南";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XGE] = "珊娜萨的万事指南";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_OGA] = "一蛙之上";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_MTF] = "魔邓肯的众敌卷册";
