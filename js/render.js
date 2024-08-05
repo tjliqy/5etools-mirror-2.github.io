@@ -9723,7 +9723,7 @@ Renderer.table = class {
 	}
 
 	static getConvertedNameTableName (group, tableRaw) {
-		return `${group.name} Names \u2013 ${tableRaw.option}`;
+		return `${group.name} 名字 \u2013 ${tableRaw.option}`;
 	}
 
 	static getHeaderRowMetas (ent) {
