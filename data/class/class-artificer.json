@@ -17,9 +17,9 @@
 			},
 			"proficiency": [
 				"体质",
-				"智慧"
+				"智力"
 			],
-			"spellcastingAbility": "智慧",
+			"spellcastingAbility": "智力",
 			"casterProgression": "奇械师",
 			"preparedSpells": "<$level$> / 2 + <$int_mod$>",
 			"cantripProgression": [
@@ -46,7 +46,7 @@
 			],
 			"optionalfeatureProgression": [
 				{
-					"name": "注入",
+					"name": "已知注法",
 					"ENG_name": "Infusions",
 					"featureType": [
 						"AI"
@@ -123,7 +123,7 @@
 					"你选择的任意两种{@filter 简单武器|items|source=PHB|category=基础|type=简易武器}",
 					"一把{@item 轻弩|PHB}和{@item 弩矢(20)|PHB|20支弩箭}",
 					"(a) {@item 镶钉皮甲|PHB} 或 (b) {@item 鳞甲|PHB}",
-					"{@item 盗贼工具|PHB} 和一个 {@item 地城套组|PHB}"
+					"{@item 盗贼工具|PHB}和一个{@item 地城套组|PHB}"
 				],
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金币}",
 				"defaultData": [
@@ -183,7 +183,7 @@
 				{
 					"colLabels": [
 						"{@filter 已知注法|可选特性|特性类型=ai|source=TCE}",
-						"注入物品",
+						"注法数量",
 						"{@filter 已知戏法|spells|level=0|class=奇械师}"
 					],
 					"rows": [
@@ -443,7 +443,7 @@
 				}
 			],
 			"classFeatures": [
-				"可选规则：火器熟练|奇械师|TCE|1",
+				"可选规则：枪械熟练|奇械师|TCE|1",
 				"魔法工艺|奇械师|TCE|1",
 				"施法|奇械师|TCE|1",
 				"物品注法|奇械师|TCE|2",
@@ -454,14 +454,14 @@
 				"称手工具|奇械师|TCE|3",
 				"属性值提升|奇械师|TCE|4",
 				{
-					"classFeature": "奇械师专业能力|奇械师|TCE|5",
+					"classFeature": "奇械师专业特性|奇械师|TCE|5",
 					"gainSubclassFeature": true
 				},
 				"工具专精|奇械师|TCE|6",
 				"灵光一闪|奇械师|TCE|7",
 				"属性值提升|奇械师|TCE|8",
 				{
-					"classFeature": "奇械师专业能力|奇械师|TCE|9",
+					"classFeature": "奇械师专业特性|奇械师|TCE|9",
 					"gainSubclassFeature": true
 				},
 				"魔法物品熟稔|奇械师|TCE|10",
@@ -469,7 +469,7 @@
 				"属性值提升|奇械师|TCE|12",
 				"魔法物品专家|奇械师|TCE|14",
 				{
-					"classFeature": "奇械师专业能力|奇械师|TCE|15",
+					"classFeature": "奇械师专业特性|奇械师|TCE|15",
 					"gainSubclassFeature": true
 				},
 				"属性值提升|奇械师|TCE|16",
@@ -702,7 +702,7 @@
 			]
 		},
 		{
-			"name": "可选规则：火器熟练",
+			"name": "可选规则：枪械熟练",
 			"ENG_name": "Optional Rule: Firearm Proficiency",
 			"source": "TCE",
 			"page": 9,
@@ -757,7 +757,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "戏法",
+					"name": "戏法（0环法术）",
 					"ENG_name": "Cantrips (0-Level Spells)",
 					"entries": [
 						"在1级时，你可以选择两个来自{@filter 炼金术士法术列表|spells|level=0|class=奇械师}的戏法。在更高等级时，如炼金术士表格中的已知戏法列所示，你可以选择学习更多的炼金术士戏法。",
@@ -786,7 +786,7 @@
 							"name": "法术",
 							"ENG_name": "Spell",
 							"attributes": [
-								"智慧"
+								"智力"
 							]
 						},
 						{
@@ -794,7 +794,7 @@
 							"name": "法术",
 							"ENG_name": "Spell",
 							"attributes": [
-								"智慧"
+								"智力"
 							]
 						}
 					]
@@ -933,7 +933,7 @@
 			]
 		},
 		{
-			"name": "奇械师专业能力",
+			"name": "奇械师专业特性",
 			"ENG_name": "Artificer Specialist Feature",
 			"source": "TCE",
 			"page": 9,
@@ -1011,7 +1011,7 @@
 			]
 		},
 		{
-			"name": "奇械师专业能力",
+			"name": "奇械师专业特性",
 			"ENG_name": "Artificer Specialist Feature",
 			"source": "TCE",
 			"page": 9,
@@ -1122,7 +1122,7 @@
 			]
 		},
 		{
-			"name": "奇械师专业能力",
+			"name": "奇械师专业特性",
 			"ENG_name": "Artificer Specialist Feature",
 			"source": "TCE",
 			"page": 9,
@@ -1282,7 +1282,7 @@
 					"type": "table",
 					"caption": "炼金师法术",
 					"colLabels": [
-						"炼金术士等级",
+						"奇械师等级",
 						"法术"
 					],
 					"colStyles": [
@@ -1292,15 +1292,15 @@
 					"rows": [
 						[
 							"第3",
-							"{@spell 治愈真言}, {@spell 致病射线}"
+							"{@spell 治愈真言}，{@spell 致病射线}"
 						],
 						[
 							"第5",
-							"{@spell 炽焰法球}, {@spell 马友夫强酸箭}"
+							"{@spell 炽焰法球}，{@spell 马友夫强酸箭}"
 						],
 						[
 							"第9",
-							"{@spell 气化形体}, {@spell 群体治愈真言}"
+							"{@spell 气化形体}，{@spell 群体治愈真言}"
 						],
 						[
 							"第13",
@@ -1308,7 +1308,7 @@
 						],
 						[
 							"第17",
-							"{@spell 死云术}, {@spell 死者复活}"
+							"{@spell 死云术}，{@spell 死者复活}"
 						]
 					]
 				}
@@ -1505,7 +1505,7 @@
 			]
 		},
 		{
-			"name": "抑制场[未校对]",
+			"name": "减震场",
 			"ENG_name": "Dampening Field",
 			"source": "TCE",
 			"page": 15,
@@ -1520,7 +1520,7 @@
 			]
 		},
 		{
-			"name": "防御场[未校对]",
+			"name": "防护场",
 			"ENG_name": "Defensive Field",
 			"source": "TCE",
 			"page": 15,
@@ -1535,7 +1535,7 @@
 			]
 		},
 		{
-			"name": "闪电发射器[未校对]",
+			"name": "闪电发射器",
 			"ENG_name": "Lightning Launcher",
 			"source": "TCE",
 			"page": 15,
@@ -1550,7 +1550,7 @@
 			]
 		},
 		{
-			"name": "动力步伐[未校对]",
+			"name": "动力步伐",
 			"ENG_name": "Powered Steps",
 			"source": "TCE",
 			"page": 15,
@@ -1565,7 +1565,7 @@
 			]
 		},
 		{
-			"name": "雷霆护手[未校对]",
+			"name": "雷霆战拳",
 			"ENG_name": "Thunder Gauntlets",
 			"source": "TCE",
 			"page": 15,
@@ -1636,11 +1636,11 @@
 									"items": [
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "雷霆护手[未校对]|奇械师|TCE|装甲师|TCE|3"
+											"subclassFeature": "雷霆战拳|奇械师|TCE|装甲师|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "防御场[未校对]|奇械师|TCE|装甲师|TCE|3"
+											"subclassFeature": "防护场|奇械师|TCE|装甲师|TCE|3"
 										}
 									]
 								}
@@ -1658,15 +1658,15 @@
 									"items": [
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "闪电发射器[未校对]|奇械师|TCE|装甲师|TCE|3"
+											"subclassFeature": "闪电发射器|奇械师|TCE|装甲师|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "动力步伐[未校对]|奇械师|TCE|装甲师|TCE|3"
+											"subclassFeature": "动力步伐|奇械师|TCE|装甲师|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "抑制场[未校对]|奇械师|TCE|装甲师|TCE|3"
+											"subclassFeature": "减震场|奇械师|TCE|装甲师|TCE|3"
 										}
 									]
 								}
@@ -1694,7 +1694,7 @@
 					"type": "table",
 					"caption": "装甲师法术",
 					"colLabels": [
-						"炼金术士等级",
+						"奇械师等级",
 						"法术"
 					],
 					"colStyles": [
@@ -1704,23 +1704,23 @@
 					"rows": [
 						[
 							"第3",
-							"{@spell 魔法飞弹}, {@spell 雷鸣波}"
+							"{@spell 魔法飞弹}，{@spell 雷鸣波}"
 						],
 						[
 							"第5",
-							"{@spell 镜影术}, {@spell 粉碎音波}"
+							"{@spell 镜影术}，{@spell 粉碎音波}"
 						],
 						[
 							"第9",
-							"{催眠图样}, {闪电箭}"
+							"{@spell 催眠图纹}，{@spell 闪电束}"
 						],
 						[
 							"第13",
-							"{@spell 火焰护盾}, {@spell 高等隐形术}"
+							"{@spell 火焰护盾}，{@spell 高等隐形术}"
 						],
 						[
 							"第17",
-							"{@spell 穿墙术}, {@spell 力场墙}"
+							"{@spell 穿墙术}，{@spell 力场墙}"
 						]
 					]
 				}
@@ -1863,7 +1863,7 @@
 					"type": "table",
 					"caption": "魔炮师法术",
 					"colLabels": [
-						"炼金术士等级",
+						"奇械师等级",
 						"法术"
 					],
 					"colStyles": [
@@ -1873,23 +1873,23 @@
 					"rows": [
 						[
 							"第3",
-							"{@spell 护盾术}, {@spell 雷鸣波}"
+							"{@spell 护盾术}，{@spell 雷鸣波}"
 						],
 						[
 							"第5",
-							"{@spell 灼热射线}, {@spell 粉碎音波}"
+							"{@spell 灼热射线}，{@spell 粉碎音波}"
 						],
 						[
 							"第9",
-							"{@spell 火球术}, {@spell 风墙术}"
+							"{@spell 火球术}，{@spell 风墙术}"
 						],
 						[
 							"第13",
-							"{@spell 冰风暴}, {@spell 火墙术}"
+							"{@spell 冰风暴}，{@spell 火墙术}"
 						],
 						[
 							"第17",
-							"{@spell 寒冰锥}, {@spell 力场墙}"
+							"{@spell 寒冰锥}，{@spell 力场墙}"
 						]
 					]
 				}
@@ -1919,10 +1919,10 @@
 				"当你创建大炮时，你决定它的外观以及它是否有腿。你还决定它的类型，从奥术大炮表中选择选项。在你的每个回合中，如果你在大炮60尺范围内，你可以采取一个附赠动作来激活大炮。作为同一附赠动作的一部分，如果大炮有腿，你可以指示大炮走到或爬上最多15尺到达一个未被占据的空间。",
 				{
 					"type": "table",
-					"caption": "奥术炮",
+					"caption": "魔能炮台",
 					"colLabels": [
-						"火炮",
-						"激活"
+						"炮台",
+						"激活效应"
 					],
 					"colStyles": [
 						"col-2",
@@ -2132,7 +2132,7 @@
 					"type": "table",
 					"caption": "战地匠师法术",
 					"colLabels": [
-						"炼金术士等级",
+						"奇械师等级",
 						"法术"
 					],
 					"colStyles": [
@@ -2142,23 +2142,23 @@
 					"rows": [
 						[
 							"第3",
-							"{@spell 英雄气概}, {@spell 护盾术}"
+							"{@spell 英雄气概}，{@spell 护盾术}"
 						],
 						[
 							"第5",
-							"{@spell 印记斩}, {@spell 守护之链}"
+							"{@spell 印记斩}，{@spell 守护之链}"
 						],
 						[
 							"第9",
-							"{@spell 活力灵光}, {@spell 召唤箭雨}"
+							"{@spell 活力灵光}，{@spell 召唤箭雨}"
 						],
 						[
 							"第13",
-							"{@spell 净化灵光}, {@spell 火焰护盾}"
+							"{@spell 净化灵光}，{@spell 火焰护盾}"
 						],
 						[
 							"第17",
-							"{@spell 放逐斩}, {@spell 群体疗伤术}"
+							"{@spell 放逐斩}，{@spell 群体疗伤术}"
 						]
 					]
 				}
