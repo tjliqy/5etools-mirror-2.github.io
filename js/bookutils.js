@@ -266,10 +266,10 @@ class BookUtil {
 		BookUtil.curRender.controls.$btnsPrv = BookUtil.curRender.controls.$btnsPrv || [];
 		let $btnPrev;
 		if (BookUtil.referenceId) {
-			$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item no-print"><span class="glyphicon glyphicon-chevron-left"></span>Previous</button>`)
+			$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item no-print"><span class="glyphicon glyphicon-chevron-left"></span>上一章</button>`)
 				.click(() => this._showBookContent_goToPage({mod: -1, bookId, ixChapter}));
 		} else {
-			$btnPrev = $(`<a href="#${this._showBookContent_goToPage({mod: -1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item no-print"><span class="glyphicon glyphicon-chevron-left"></span>Previous</a>`)
+			$btnPrev = $(`<a href="#${this._showBookContent_goToPage({mod: -1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item no-print"><span class="glyphicon glyphicon-chevron-left"></span>上一章</a>`)
 				.click(() => MiscUtil.scrollPageTop());
 		}
 		$btnPrev
@@ -289,10 +289,10 @@ class BookUtil {
 		BookUtil.curRender.controls.$btnsNxt = BookUtil.curRender.controls.$btnsNxt || [];
 		let $btnNext;
 		if (BookUtil.referenceId) {
-			$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item no-print">Next<span class="glyphicon glyphicon-chevron-right"></span></button>`)
+			$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item no-print">下一章<span class="glyphicon glyphicon-chevron-right"></span></button>`)
 				.click(() => this._showBookContent_goToPage({mod: 1, bookId, ixChapter}));
 		} else {
-			$btnNext = $(`<a href="#${this._showBookContent_goToPage({mod: 1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item no-print">Next<span class="glyphicon glyphicon-chevron-right"></span></a>`)
+			$btnNext = $(`<a href="#${this._showBookContent_goToPage({mod: 1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item no-print">下一章<span class="glyphicon glyphicon-chevron-right"></span></a>`)
 				.click(() => MiscUtil.scrollPageTop());
 		}
 		$btnNext
@@ -319,7 +319,7 @@ class BookUtil {
 			$btnPrev
 				.toggle(showPrev)
 				.appendTo(BookUtil.$wrpFloatControls)
-				.title("Previous Chapter");
+				.title("上一章");
 			BookUtil.curRender.controls.$btnsPrv.push($btnPrev);
 
 			let $btnNext;
@@ -333,7 +333,7 @@ class BookUtil {
 			$btnNext
 				.toggle(showNxt)
 				.appendTo(BookUtil.$wrpFloatControls)
-				.title("Next Chapter");
+				.title("下一章");
 			BookUtil.curRender.controls.$btnsNxt.push($btnNext);
 
 			BookUtil.$wrpFloatControls.toggleClass("btn-group", showPrev && showNxt);
@@ -347,7 +347,7 @@ class BookUtil {
 		const href = ~this.curRender.chapter
 			? this._getHrefShowAll(bookId)
 			: `#${UrlUtil.encodeForHash(bookId)}`;
-		const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~this.curRender.chapter ? "" : "active"}" title="Warning: Slow">View Entire ${this.contentType.uppercaseFirst()}</a>`);
+		const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~this.curRender.chapter ? "" : "active"}" title="Warning: Slow">查看完整${BookUtil.contentTypeToCn(this.contentType)}</a>`);
 
 		if (this._isNarrow == null) {
 			const saved = StorageUtil.syncGetForPage("narrowMode");
@@ -379,7 +379,7 @@ class BookUtil {
 
 			this._TOP_MENU = ContextUtil.getMenu([
 				new ContextUtil.Action(
-					"Download Chapter as Markdown",
+					"下载此章节的Markdown格式文件",
 					() => {
 						if (!~BookUtil.curRender.chapter) return doDownloadFullText();
 
@@ -391,7 +391,7 @@ class BookUtil {
 					},
 				),
 				new ContextUtil.Action(
-					`Download ${this.typeTitle} as Markdown`,
+					`下载${this.typeTitle}的Markdown格式文件`,
 					() => {
 						doDownloadFullText();
 					},
@@ -406,7 +406,7 @@ class BookUtil {
 	}
 
 	static _showBookContent_renderNavButtons_bottom ({bookId, $wrpControls}) {
-		$(`<button class="btn btn-xs btn-default no-print">Back to Top</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
+		$(`<button class="btn btn-xs btn-default no-print">回到顶端</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
 	}
 
 	static _showBookContent_updateSidebar ({ixChapter, ixChapterPrev, bookIdPrev, bookId}) {
@@ -690,8 +690,8 @@ class BookUtil {
 
 	static _getAllTitle () {
 		switch (BookUtil.contentType) {
-			case "adventure": return "All Adventures";
-			case "book": return "All Books";
+			case "adventure": return "全部冒险模组";
+			case "book": return "全部书籍";
 			default: throw new Error(`Unhandled book content type: "${BookUtil.contentType}"`);
 		}
 	}
@@ -884,7 +884,7 @@ class BookUtil {
 					<span class="name">${book.name}</span>
 				</a>
 				<div class="ve-flex-v-center">
-					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1p ve-flex-v-center lst__wrp-cells lst__row-inner" title="View Entire ${BookUtil.contentType.uppercaseFirst()} (Warning: Slow)">
+					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1p ve-flex-v-center lst__wrp-cells lst__row-inner" title="查看完整${BookUtil.contentTypeToCn(BookUtil.contentType)} (Warning: Slow)">
 						<span class="glyphicon glyphicon glyphicon-book" style="top: 0;"></span>
 					</a>
 					${BookUtil.curRender.$btnToggleExpandAll}
@@ -895,7 +895,14 @@ class BookUtil {
 			</div>
 		</div>`;
 	}
-
+	static contentTypeToCn(contentType) {
+		switch(contentType) {
+			case "adventure": return "冒险模组";
+			case "book": return "书籍";
+			case "document": return "文档";
+		}
+		return cn
+	}
 	static getContentsSectionHeader (header) {
 		// handle entries with depth
 		if (header.depth) return `<span class="bk-contents__sub_spacer--1">\u2013</span>${header.header}`;
