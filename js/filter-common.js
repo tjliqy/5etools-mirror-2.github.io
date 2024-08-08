@@ -152,7 +152,7 @@ class FilterCommon {
 
 	static getLanguageProficienciesFilter () {
 		return new Filter({
-			header: "Language Proficiencies",
+			header: "语言熟练项",
 			displayFn: it => this._LANG_TO_DISPLAY[it] || StrUtil.toTitleCase(it),
 		});
 	}

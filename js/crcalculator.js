@@ -293,15 +293,15 @@ function calculateCr () {
 	window.location = `#${hashParts.join(",")}`;
 
 	$("#croutput").html(`
-		<h4>Challenge Rating: ${cr}</h4>
-		<p>Offensive CR: ${offensiveCR}</p>
-		<p>Defensive CR: ${defensiveCR}</p>
-		<p>Proficiency Bonus: +${msbcr.cr[finalCr].pb}</p>
-		<p>Effective HP: ${effectiveHp} (${hitDice}${hitDiceSize}${conMod < 0 ? "" : "+"}${conMod * hitDice})</p>
-		<p>Effective AC: ${ac}</p>
-		<p>Average Damage Per Round: ${effectiveDpr}</p>
-		<p>${useSaveDc ? "豁免DC: " : "Effective Attack Bonus: +"}${attackBonus}</p>
-		<p>Experience Points: ${Parser.crToXp(msbcr.cr[finalCr]._cr)}</p>
+		<h4>挑战等级CR: ${cr}</h4>
+		<p>进攻CR: ${offensiveCR}</p>
+		<p>防御CR: ${defensiveCR}</p>
+		<p>熟练度加值: +${msbcr.cr[finalCr].pb}</p>
+		<p>有效HP: ${effectiveHp} (${hitDice}${hitDiceSize}${conMod < 0 ? "" : "+"}${conMod * hitDice})</p>
+		<p>有效AC: ${ac}</p>
+		<p>每轮平均伤害: ${effectiveDpr}</p>
+		<p>${useSaveDc ? "豁免DC: " : "有效攻击加值: +"}${attackBonus}</p>
+		<p>经验值: ${Parser.crToXp(msbcr.cr[finalCr]._cr)}</p>
 	`);
 }
 

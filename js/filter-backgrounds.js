@@ -12,16 +12,16 @@ class PageFilterBackgrounds extends PageFilterBase {
 	constructor () {
 		super();
 
-		this._skillFilter = new Filter({header: "Skill Proficiencies", displayFn: StrUtil.toTitleCase});
+		this._skillFilter = new Filter({header: "技能熟练项", displayFn: StrUtil.toTitleCase});
 		this._prereqFilter = new Filter({
-			header: "Prerequisite",
+			header: "先决条件",
 			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 		});
-		this._toolFilter = new Filter({header: "Tool Proficiencies", displayFn: PageFilterBackgrounds._getToolDisplayText.bind(PageFilterBackgrounds)});
+		this._toolFilter = new Filter({header: "工具熟练项", displayFn: PageFilterBackgrounds._getToolDisplayText.bind(PageFilterBackgrounds)});
 		this._languageFilter = FilterCommon.getLanguageProficienciesFilter();
-		this._asiFilter = new AbilityScoreFilter({header: "Ability Scores"});
-		this._otherBenefitsFilter = new Filter({header: "Other Benefits"});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Has Info", "Has Images", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
+		this._asiFilter = new AbilityScoreFilter({header: "属性值"});
+		this._otherBenefitsFilter = new Filter({header: "其他优势"});
+		this._miscFilter = new Filter({header: "杂项", items: ["Has Info", "Has Images", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (bg) {

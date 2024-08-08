@@ -1385,7 +1385,7 @@ class ListPage {
 	}
 
 	_renderListFeelingLucky ({isCompact, $btnReset}) {
-		const $btnRoll = $(`<button class="btn btn-default ${isCompact ? "px-2" : ""}" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>`);
+		const $btnRoll = $(`<button class="btn btn-default ${isCompact ? "px-2" : ""}" title="随便选一个"><span class="glyphicon glyphicon-random"></span></button>`);
 
 		$btnRoll.on("click", () => {
 			const allLists = this.primaryLists.filter(l => l.visibleItems.length);
@@ -1424,13 +1424,13 @@ class ListPage {
 				await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 				JqueryUtil.showCopiedEffect($btn);
 			})
-			.title("Get link to filters (SHIFT adds list; CTRL copies @filter tag)");
+			.title("复制筛选链接(SHIFT adds list; CTRL copies @filter tag)");
 	}
 
 	_bindPopoutButton () {
 		this._getOrTabRightButton(`popout`, `new-window`)
 			.off("click")
-			.title(`Popout Window (SHIFT for Source Data; CTRL for Markdown Render)`)
+			.title(`弹出框 (按住SHIFT键弹出源数据；按住CTRL键弹出Markdown文本）`)
 			.on(
 				"click",
 				(evt) => {
@@ -1753,7 +1753,7 @@ class ListPage {
 		this._getOrTabRightButton(`pin`, `pushpin`)
 			.off("click")
 			.on("click", () => this._sublistManager.pHandleClick_btnPin({entity: this._lastRender.entity}))
-			.title("Pin (Toggle) (Hotkey: p/P)");
+			.title("钉选(开/关) (快捷键：p/P)");
 	}
 
 	_bindAddButton () {
@@ -1785,29 +1785,29 @@ class ListPage {
 
 		const contextOptions = [
 			new ContextUtil.Action(
-				"New Pinned List",
+				"新建钉选列表",
 				evt => this._sublistManager.pHandleClick_new(evt),
 			),
 			new ContextUtil.Action(
-				"Load Pinned List",
+				"载入钉选列表",
 				evt => this._sublistManager.pHandleClick_load(evt),
 			),
 			new ContextUtil.Action(
-				"Save Pinned List",
+				"保存钉选列表",
 				evt => this._sublistManager.pHandleClick_save(evt),
 			),
 			null,
 			new ContextUtil.Action(
-				"Export as Image (SHIFT to Copy Image)",
+				"导出为图片（按住SHIFT复制图片）",
 				evt => this._pHandleClick_exportAsImage({evt, isFast: evt.shiftKey, $eleCopyEffect: $btnOptions}),
 			),
 			null,
 			new ContextUtil.Action(
-				"Download Pinned List (SHIFT to 复制链接)",
+				"下载钉选列表(按住SHIFT来复制链接)",
 				evt => this._sublistManager.pHandleClick_download({isUrl: evt.shiftKey, $eleCopyEffect: $btnOptions}),
 			),
 			new ContextUtil.Action(
-				"Upload Pinned List (SHIFT for Add Only)",
+				"上传钉选列表(SHIFT for Add Only)",
 				evt => this._sublistManager.pHandleClick_upload({isAdditive: evt.shiftKey}),
 			),
 		];
@@ -1846,7 +1846,7 @@ class ListPage {
 		contextOptions.push(
 			null,
 			new ContextUtil.Action(
-				"Blocklist",
+				"黑名单",
 				async () => {
 					await this._pDoMassBlocklist([this._dataList[Hist.lastLoadedId]]);
 				},
@@ -1887,7 +1887,7 @@ class ListPage {
 			}),
 		);
 
-		JqueryUtil.doToast(`Added ${ents.length} entr${ents.length === 1 ? "y" : "ies"} to the blocklist! Reload the page to view any changes.`);
+		JqueryUtil.doToast(`新增 ${ents.length}个 黑名单条目! 刷新网页来查看改变`);
 	}
 
 	doDeselectAll () { this.primaryLists.forEach(list => list.deselectAll()); }

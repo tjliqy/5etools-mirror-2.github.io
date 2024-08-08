@@ -216,7 +216,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	static getBtnTitleSubclass (sc) {
 		const titlePartReprint = sc.isReprinted ? " (this subclass has been reprinted in a more recent source)" : "";
 		const sourcePart = Renderer.utils.getSourceAndPageText(sc);
-		return `${sc.name}; Source: ${sourcePart}${titlePartReprint}`;
+		return `${sc.name}; 来源: ${sourcePart}${titlePartReprint}`;
 	}
 
 	static getBaseShortName (sc) {
@@ -668,7 +668,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	_doBindBtnSettingsSidebar () {
 		const menu = ContextUtil.getMenu([
 			new ContextUtil.Action(
-				"Toggle Spell Points Mode",
+				"切换法术值模式",
 				() => {
 					this._stateGlobal.isUseSpellPoints = !this._stateGlobal.isUseSpellPoints;
 				},
@@ -1045,11 +1045,11 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			$thGroupHeaderSpellPoints = $(`<th colspan="1" class="cls-tbl__cell-spell-points"></th>`);
 			$tblGroupHeaders.push($thGroupHeaderSpellPoints);
 
-			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" ></div></th>`)
-				.fastSetHtml(Renderer.get().render(`{@variantrule Spell Points}`));
+			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" style="width:2em"></div></th>`)
+				.fastSetHtml(Renderer.get().render(`{@variantrule 法术值}`));
 			$tblHeaders.push($tblHeaderSpellPoints);
 
-			$tblHeaderSpellPointsMaxSpellLevel = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header">Spell Level</div></th>`);
+			$tblHeaderSpellPointsMaxSpellLevel = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" style="width:2em">法术环阶</div></th>`);
 			$tblHeaders.push($tblHeaderSpellPointsMaxSpellLevel);
 
 			const $elesDefault = [$thGroupHeader, ...$tblHeadersGroup];
@@ -1532,7 +1532,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	async _render_pInitSubclassControls ($wrp) {
 		const cls = this.activeClass;
 
-		const $btnSelAll = $(`<button class="btn btn-xs btn-default" title="Select All (SHIFT to filter for and include most recent; CTRL to select official plus homebrew)"><span class="glyphicon glyphicon-check"></span></button>`)
+		const $btnSelAll = $(`<button class="btn btn-xs btn-default" title="全选(按SHIFT键筛选常用选项；按CTRL键筛选官方补充内容)"><span class="glyphicon glyphicon-check"></span></button>`)
 			.click(evt => {
 				const allStateKeys = cls.subclasses.map(sc => UrlUtil.getStateKeySubclass(sc));
 				if (evt.shiftKey) {
@@ -1611,7 +1611,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			].filter(Boolean), {force: true});
 			$selFilterPreset.val("-1");
 		};
-		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset"><option value="-1" disabled>Filter...</option></select>`)
+		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset"><option value="-1" disabled>筛选...</option></select>`)
 			.change(() => {
 				const val = Number($selFilterPreset.val());
 				if (val == null) return;
@@ -1620,7 +1620,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${it.name}</option>`));
 		$selFilterPreset.val("-1");
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default" title="Reset Selection"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default" title="重置选择"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => {
 				this._proxyAssign("state", "_state", "__state", cls.subclasses.mergeMap(sc => ({[UrlUtil.getStateKeySubclass(sc)]: false})));
 			});
@@ -1630,9 +1630,9 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		// Remove the temporary "hidden" class used to prevent popping
 		this._listSubclass.items.forEach(it => it.ele.showVe());
 
-		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default ve-flex-1" title="Show Subclass Sources"><span class="glyphicon glyphicon-book"></span></button>`)});
+		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default ve-flex-1" title="显示子职来源"><span class="glyphicon glyphicon-book"></span></button>`)});
 
-		const $btnShuffle = $(`<button title="Feeling Lucky?" class="btn btn-xs btn-default ve-flex-1"><span class="glyphicon glyphicon-random"></span></button>`)
+		const $btnShuffle = $(`<button title="随便选一个" class="btn btn-xs btn-default ve-flex-1"><span class="glyphicon glyphicon-random"></span></button>`)
 			.click(() => {
 				if (!this._listSubclass.visibleItems.length) return JqueryUtil.doToast({content: "No subclasses to choose from!", type: "warning"});
 
@@ -2121,7 +2121,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		if (cls.otherSources) {
 			const text = Renderer.utils.getSourceAndPageHtml(cls);
 			const $trClassFeature = $(`<tr data-feature-type="class"><td colspan="6"></td></tr>`)
-				.fastSetHtml(`<hr class="hr-1"><b>Class source:</b> ${text}`)
+				.fastSetHtml(`<hr class="hr-1"><b>职业来源：</b> ${text}`)
 				.appendTo($content);
 		}
 
@@ -2198,7 +2198,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				const ptDate = ptrIsFirstSubclassLevel._ === true && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
 					? Renderer.get().render(`{@note This subclass was published on ${DatetimeUtil.getDateStr({date: new Date(Parser.sourceJsonToDate(sc.source))})}.}`)
 					: "";
-				const ptSources = ptrIsFirstSubclassLevel._ === true && sc.otherSources ? `{@note {@b Subclass source:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
+				const ptSources = ptrIsFirstSubclassLevel._ === true && sc.otherSources ? `{@note {@b 子职业 来源:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
 				const toRender = MiscUtil.copyFast(scFeature);
 
 				if (ptDate && toRender.entries) toRender.entries.unshift(ptDate);

@@ -13,7 +13,7 @@ class PageFilterActions extends PageFilterBase {
 			displayFn: StrUtil.uppercaseFirst,
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Optional/Variant Action", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "杂项", items: ["Optional/Variant Action", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {

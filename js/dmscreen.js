@@ -762,14 +762,14 @@ class SideMenu {
 	render () {
 		const renderDivider = () => this.$mnu.append(`<hr class="w-100 hr-2 sidemenu__row__divider">`);
 
-		const $wrpResizeW = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label">Width</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeW = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label">宽</div></div>`).appendTo(this.$mnu);
 		const $iptWidth = $(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo($wrpResizeW);
 		this.$iptWidth = $iptWidth;
-		const $wrpResizeH = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label">Height</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeH = $(`<div class="w-100 mb-2 split-v-center"><div class="sidemenu__row__label">高</div></div>`).appendTo(this.$mnu);
 		const $iptHeight = $(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo($wrpResizeH);
 		this.$iptHeight = $iptHeight;
 		const $wrpSetDim = $(`<div class="w-100 split-v-center"></div>`).appendTo(this.$mnu);
-		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">Set Dimensions</div>`).appendTo($wrpSetDim);
+		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">设置尺寸</div>`).appendTo($wrpSetDim);
 		$btnSetDim.on("click", async () => {
 			const w = Number($iptWidth.val());
 			const h = Number($iptHeight.val());
@@ -783,7 +783,7 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpFullscreen = $(`<div class="w-100 ve-flex-vh-center-around"></div>`).appendTo(this.$mnu);
-		const $btnFullscreen = $(`<button class="btn btn-primary">Toggle Fullscreen</button>`).appendTo($wrpFullscreen);
+		const $btnFullscreen = $(`<button class="btn btn-primary">切换全屏</button>`).appendTo($wrpFullscreen);
 		this.board.$btnFullscreen = $btnFullscreen;
 		$btnFullscreen.on("click", () => this.board.doToggleFullscreen());
 		const $btnLockPanels = $(`<button class="btn btn-danger" title="Lock Panels"><span class="glyphicon glyphicon-lock"></span></button>`).appendTo($wrpFullscreen);
@@ -819,7 +819,7 @@ class SideMenu {
 			await this.board.pDoLoadStateFrom(jsons[0]);
 		});
 		const $wrpSaveLoadUrl = $(`<div class="w-100 ve-flex-vh-center-around"></div>`).appendTo($wrpSaveLoad);
-		const $btnSaveLink = $(`<button class="btn btn-primary">Save to URL</button>`).appendTo($wrpSaveLoadUrl);
+		const $btnSaveLink = $(`<button class="btn btn-primary">保存为URL</button>`).appendTo($wrpSaveLoadUrl);
 		$btnSaveLink.on("click", async () => {
 			const encoded = `${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;
 			await MiscUtil.pCopyTextToClipboard(encoded);
@@ -827,12 +827,12 @@ class SideMenu {
 		});
 		renderDivider();
 
-		const $wrpCbConfirm = $(`<div class="w-100 split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>Confirm on Panel Tab Close</span></label></div>`).appendTo(this.$mnu);
+		const $wrpCbConfirm = $(`<div class="w-100 split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>关闭时保存</span></label></div>`).appendTo(this.$mnu);
 		this.board.$cbConfirmTabClose = $(`<input type="checkbox" class="sidemenu__row__label__cb">`).appendTo($wrpCbConfirm.find(`label`));
 		renderDivider();
 
 		const $wrpReset = $(`<div class="w-100 split-v-center"></div>`).appendTo(this.$mnu);
-		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">Reset Screen</button>`).appendTo($wrpReset);
+		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">重置帷幕</button>`).appendTo($wrpReset);
 		$btnReset.on("click", async () => {
 			if (!await InputUiUtil.pGetUserBoolean({title: "Reset", htmlDescription: "Are you sure?", textYes: "Yes", textNo: "Cancel"})) return;
 			this.board.doReset();
@@ -3399,10 +3399,10 @@ class AddMenuSpecialTab extends AddMenuTab {
 class AddMenuSearchTab extends AddMenuTab {
 	static _getTitle (subType) {
 		switch (subType) {
-			case "content": return "Content";
-			case "rule": return "Rules";
-			case "adventure": return "Adventures";
-			case "book": return "Books";
+			case "content": return "内容";
+			case "rule": return "规则";
+			case "adventure": return "模组";
+			case "book": return "书籍";
 			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
 		}
 	}
@@ -3487,10 +3487,10 @@ class AddMenuSearchTab extends AddMenuTab {
 
 	_getAllTitle () {
 		switch (this.subType) {
-			case "content": return "All Categories";
-			case "rule": return "All Categories";
-			case "adventure": return "All Adventures";
-			case "book": return "All Books";
+			case "content": return "全部类别";
+			case "rule": return "全部类别";
+			case "adventure": return "全部模组";
+			case "book": return "全部书籍";
 			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
 		}
 	}
@@ -3611,7 +3611,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				this.doSearch();
 			});
 
-			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).blurOnEsc().appendTo($wrpCtrls);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...">`).blurOnEsc().appendTo($wrpCtrls);
 			const $results = $(`<div class="ui-search__wrp-results"></div>`).appendTo($tab);
 
 			SearchWidget.bindAutoSearch($srch, {

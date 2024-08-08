@@ -209,7 +209,7 @@ class PageFilterClasses extends PageFilterClassesBase {
 		super();
 
 		this._levelFilter = new RangeFilter({
-			header: "Feature Level",
+			header: "特性等级",
 			min: 1,
 			max: 20,
 		});

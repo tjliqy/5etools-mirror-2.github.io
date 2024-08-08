@@ -90,10 +90,10 @@ class RenderSpells {
 			${!isSkipExcludesRender ? Renderer.utils.getExcludedTr({entity: sp, dataProp: "spell", page: UrlUtil.PG_SPELLS}) : ""}
 			${Renderer.utils.getNameTr(sp, {page: UrlUtil.PG_SPELLS})}
 			<tr><td class="rd-spell__level-school-ritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(sp.level, sp.school, sp.meta, sp.subschools)}</span></td></tr>
-			<tr><td colspan="6"><span class="bold">Casting Time: </span>${Parser.spTimeListToFull(sp.time)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Range: </span>${Parser.spRangeToFull(sp.range)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Components: </span>${Parser.spComponentsToFull(sp.components, sp.level)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Duration: </span>${Parser.spDurationToFull(sp.duration)}</td></tr>
+			<tr><td colspan="6"><span class="bold">施法时间: </span>${Parser.spTimeListToFull(sp.time)}</td></tr>
+			<tr><td colspan="6"><span class="bold">施法范围: </span>${Parser.spRangeToFull(sp.range)}</td></tr>
+			<tr><td colspan="6"><span class="bold">法术成分: </span>${Parser.spComponentsToFull(sp.components, sp.level)}</td></tr>
+			<tr><td colspan="6"><span class="bold">持续时间: </span>${Parser.spDurationToFull(sp.duration)}</td></tr>
 			${Renderer.utils.getDividerTr()}
 		`);
 
@@ -125,10 +125,10 @@ class RenderSpells {
 		if (fromSubclass.length) {
 			const [current, legacy] = Parser.spSubclassesToCurrentAndLegacyFull(sp, subclassLookup);
 			if (settings.isDisplaySubclasses) {
-				stackFroms.push(`<div><span class="bold">Subclasses: </span>${current}</div>`);
+				stackFroms.push(`<div><span class="bold">子职: </span>${current}</div>`);
 			}
 			if (settings.isDisplaySubclassesLegacy && legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">Subclasses (legacy): </span>${legacy}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">子职 (传奇): </span>${legacy}</div>`);
 			}
 		}
 
@@ -143,10 +143,10 @@ class RenderSpells {
 			}
 		}
 
-		if (settings.isDisplayRaces) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "Races", propSpell: "races", prop: "race", tag: "race"});
-		if (settings.isDisplayBackgrounds) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "Backgrounds", propSpell: "backgrounds", prop: "background", tag: "background"});
-		if (settings.isDisplayFeats) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "Feats", propSpell: "feats", prop: "feat", tag: "feat"});
-		if (settings.isDisplayOptionalfeatures) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "Other Options/Features", propSpell: "optionalfeatures", prop: "optionalfeature", tag: "optfeature"});
+		if (settings.isDisplayRaces) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "种族", propSpell: "races", prop: "race", tag: "race"});
+		if (settings.isDisplayBackgrounds) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "背景", propSpell: "backgrounds", prop: "background", tag: "background"});
+		if (settings.isDisplayFeats) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "专长", propSpell: "feats", prop: "feat", tag: "feat"});
+		if (settings.isDisplayOptionalfeatures) this._mutStackPtSpellSource({sp, stackFroms, renderer, title: "其他选项/专长", propSpell: "optionalfeatures", prop: "optionalfeature", tag: "optfeature"});
 
 		if (stackFroms.length) {
 			renderStack.push(`<tr class="text"><td colspan="6">${stackFroms.join("")}</td></tr>`);

@@ -2946,7 +2946,7 @@ Renderer.utils = class {
 
 	static getSourceAndPageTrHtml (it, {tag, fnUnpackUid} = {}) {
 		const html = Renderer.utils.getSourceAndPageHtml(it, {tag, fnUnpackUid});
-		return html ? `<b>Source:</b> ${html}` : "";
+		return html ? `<b>来源：</b> ${html}` : "";
 	}
 
 	static _getAltSourceHtmlOrText (it, prop, introText, isText) {
@@ -2987,15 +2987,15 @@ Renderer.utils = class {
 
 	static _getSourceAndPageHtmlOrText (it, {isText, tag, fnUnpackUid} = {}) {
 		const sourceSub = Renderer.utils.getSourceSubText(it);
-		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, page ${it.page}` : ""}`;
+		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, ${it.page}页` : ""}`;
 		const reprintedAsText = Renderer.utils._getReprintedAsHtmlOrText(it, {isText, tag, fnUnpackUid});
 		const addSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "additionalSources", "Additional information from", isText);
 		const otherSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "otherSources", "Also found in", isText);
 		const externalSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "externalSources", "External sources:", isText);
 
-		const srdText = it.srd ? `${isText ? "" : `the <span title="Systems Reference Document">`}SRD${isText ? "" : `</span>`}${typeof it.srd === "string" ? ` (as &quot;${it.srd}&quot;)` : ""}` : "";
-		const basicRulesText = it.basicRules ? `the Basic Rules${typeof it.basicRules === "string" ? ` (as &quot;${it.basicRules}&quot;)` : ""}` : "";
-		const srdAndBasicRulesText = (srdText || basicRulesText) ? `Available in ${[srdText, basicRulesText].filter(it => it).join(" and ")}` : "";
+		const srdText = it.srd ? `${isText ? "" : `<span title="Systems Reference Document">`}SRD规则${isText ? "" : `</span>`}${typeof it.srd === "string" ? ` (as &quot;${it.srd}&quot;)` : ""}` : "";
+		const basicRulesText = it.basicRules ? `基础规则${typeof it.basicRules === "string" ? ` (as &quot;${it.basicRules}&quot;)` : ""}` : "";
+		const srdAndBasicRulesText = (srdText || basicRulesText) ? `可用于 ${[srdText, basicRulesText].filter(it => it).join(" 和 ")}` : "";
 
 		return `${[baseText, addSourceText, reprintedAsText, otherSourceText, srdAndBasicRulesText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || srdAndBasicRulesText || externalSourceText) ? "." : ""}`;
 	}
@@ -9719,7 +9719,7 @@ Renderer.table = class {
 	}
 
 	static getConvertedEncounterTableName (group, tableRaw) {
-		return `${group.name}${tableRaw.caption ? ` ${tableRaw.caption}` : ""}${/\bencounters?\b/i.test(group.name) ? "" : " Encounters"}${tableRaw.minlvl && tableRaw.maxlvl ? ` (Levels ${tableRaw.minlvl}\u2014${tableRaw.maxlvl})` : ""}`;
+		return `${group.name}${tableRaw.caption ? ` ${tableRaw.caption}` : ""}${/\bencounters?\b/i.test(group.name) ? "" : " 遭遇"}${tableRaw.minlvl && tableRaw.maxlvl ? ` (Levels ${tableRaw.minlvl}\u2014${tableRaw.maxlvl})` : ""}`;
 	}
 
 	static getConvertedNameTableName (group, tableRaw) {
