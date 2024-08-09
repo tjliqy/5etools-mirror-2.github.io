@@ -304,7 +304,7 @@ class PageFilterSpells extends PageFilterBase {
 			: `${time.number ? `${time.number} ` : ""}${Parser.spTimeUnitToShort(time.unit).uppercaseFirst()}`;
 	}
 
-	static getTblLevelStr (spell) { return `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (rit.)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}`; }
+	static getTblLevelStr (spell) { return `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (仪式)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}`; }
 
 	static getRaceFilterItem (r) {
 		const addSuffix = (

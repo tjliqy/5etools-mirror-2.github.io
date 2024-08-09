@@ -1039,12 +1039,12 @@ Parser.getOrdinalForm = function (i) {
 	// if (j === 2 && k !== 12) return `${i}nd`;
 	// if (j === 3 && k !== 13) return `${i}rd`;
 	// return `${i}th`;
-	return `第${i}`
+	return `${i}`
 };
 
 Parser.spLevelToFull = function (level) {
-	if (level === 0) return "Cantrip";
-	else return Parser.getOrdinalForm(level);
+	if (level === 0) return "戏法";
+	else return Parser.getOrdinalForm(level)+'环';
 };
 
 Parser.getArticle = function (str) {
@@ -1068,7 +1068,7 @@ Parser.spMetaToArr = function (meta) {
 	return Object.entries(meta)
 		.filter(([_, v]) => v)
 		.sort(SortUtil.ascSort)
-		.map(([k]) => k);
+		.map(([k]) => k === 'ritual'?'仪式':k);
 };
 
 Parser.spMetaToFull = function (meta) {
@@ -1079,7 +1079,7 @@ Parser.spMetaToFull = function (meta) {
 };
 
 Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
-	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}-level`;
+	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}`;
 	const levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)} ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}`;
 
 	const metaArr = Parser.spMetaToArr(meta);
@@ -1093,12 +1093,29 @@ Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
 	return levelSchoolStr;
 };
 
+Parser.TIME_TO_CN = {
+	"action": "动作",
+	"turn": "回合",
+	"round": "轮",
+	"minute": "分钟",
+	"hour": "小时",
+	"day":"天",
+	"week":"周",
+	"month":"月",
+	"year":"年"
+}
+
+Parser.timeToCn = function (unit) {
+	const res = Parser.TIME_TO_CN[unit]
+	return res === undefined? unit : res
+}
+
 Parser.spTimeListToFull = function (times, isStripTags) {
-	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${isStripTags ? Renderer.stripTags(t.condition) : Renderer.get().render(t.condition)}` : ""}`).join(" or ");
+	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${isStripTags ? Renderer.stripTags(t.condition) : Renderer.get().render(t.condition)}` : ""}`).join(" 或 ");
 };
 
 Parser.getTimeToFull = function (time) {
-	return `${time.number ? `${time.number} ` : ""}${time.unit === "bonus" ? "附赠动作" : time.unit}${time.number > 1 ? "s" : ""}`;
+	return `${time.number ? `${time.number} ` : ""}${time.unit === "bonus" ? "附赠动作" : Parser.timeToCn(time.unit)}`;
 };
 
 Parser.getMinutesToFull = function (mins, {isShort = false} = {}) {
@@ -1109,9 +1126,9 @@ Parser.getMinutesToFull = function (mins, {isShort = false} = {}) {
 	mins = mins % 60;
 
 	return [
-		days ? `${days} ${isShort ? `d` : `day${days > 1 ? "s" : ""}`}` : null,
-		hours ? `${hours} ${isShort ? `h` : `hour${hours > 1 ? "s" : ""}`}` : null,
-		mins ? `${mins} ${isShort ? `m` : `minute${mins > 1 ? "s" : ""}`}` : null,
+		days ? `${days} ${isShort ? `d` : `天`}` : null,
+		hours ? `${hours} ${isShort ? `h` : `小时`}` : null,
+		mins ? `${mins} ${isShort ? `m` : `分钟`}` : null,
 	].filter(Boolean)
 		.join(" ");
 };
@@ -1133,7 +1150,7 @@ Parser.RNG_TOUCH = "touch";
 Parser.SP_RANGE_TYPE_TO_FULL = {
 	[Parser.RNG_SPECIAL]: "特殊",
 	[Parser.RNG_POINT]: "点",
-	[Parser.RNG_LINE]: "直线",
+	[Parser.RNG_LINE]: "线状",
 	[Parser.RNG_CUBE]: "立方体",
 	[Parser.RNG_CONE]: "锥形",
 	[Parser.RNG_RADIUS]: "半径",
@@ -1259,19 +1276,19 @@ Parser.spRangeToFull._renderPoint = function (range) {
 		case Parser.UNT_YARDS:
 		case Parser.UNT_MILES:
 		default:
-			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : dist.type}`;
+			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : Parser.SP_DIST_TYPE_TO_FULL[dist.type]}`;
 	}
 };
 Parser.spRangeToFull._renderArea = function (range) {
 	const size = range.distance;
-	return `自身 (${size.amount}-${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === Parser.RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-高` : ""} 圆柱体` : ""})`;
+	return `自身 (${size.amount}${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === Parser.RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-高` : ""} 圆柱体` : ""})`;
 };
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
 		case Parser.RNG_SPHERE: return " 半径";
-		case Parser.RNG_HEMISPHERE: return `-半径 ${range.type}`;
+		case Parser.RNG_HEMISPHERE: return `-半径 ${Parser.SP_RANGE_TYPE_TO_FULL[range.type]}`;
 		case Parser.RNG_CYLINDER: return "-半径";
-		default: return ` ${range.type}`;
+		default: return ` ${Parser.SP_RANGE_TYPE_TO_FULL[range.type]}`;
 	}
 };
 
@@ -1335,7 +1352,7 @@ Parser.spComponentsToFull = function (comp, level, {isPlainText = false} = {}) {
 	if (comp.s) out.push("姿势");
 	if (comp.m != null) {
 		const fnRender = isPlainText ? Renderer.stripTags.bind(Renderer) : Renderer.get().render.bind(Renderer.get());
-		out.push(`M${comp.m !== true ? ` (${fnRender(comp.m.text != null ? comp.m.text : comp.m)})` : ""}`);
+		out.push(`成分${comp.m !== true ? ` (${fnRender(comp.m.text != null ? comp.m.text : comp.m)})` : ""}`);
 	}
 	if (comp.r) out.push(`R (${level} gp)`);
 	return out.join(", ") || "无";
@@ -1359,7 +1376,7 @@ Parser.spDurationToFull = function (dur) {
 			case "instant":
 				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "专注， " : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "至多 " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}`}`;
+				return `${d.concentration ? "专注， " : ""}${d.concentration || d.duration.upTo ? "至多 " : ""}${d.duration.amount} ${d.duration.amount === 1 ? Parser.TIME_TO_CN[d.duration.type] : `${Parser.TIME_TO_CN[d.duration.type]}`}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));

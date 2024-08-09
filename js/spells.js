@@ -366,7 +366,7 @@ class SpellsPage extends ListPageMultiSource {
 		return listItem;
 	}
 
-	_tabTitleStats = "Spell";
+	_tabTitleStats = "法术";
 
 	_renderStats_doBuildStatsTab ({ent}) {
 		this._$pgContent.empty().append(RenderSpells.$getRenderedSpell(ent, this._subclassLookup, {settings: this._compSettings.getValues()}));
