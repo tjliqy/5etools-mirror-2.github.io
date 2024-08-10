@@ -530,6 +530,15 @@ class SpellParser extends BaseParser {
 					case "warlocks": stats.classes.fromClassList.push({"name": "Warlock", "source": "PHB"}); break;
 					case "wizard":
 					case "wizards": stats.classes.fromClassList.push({"name": "Wizard", "source": "PHB"}); break;
+					case "奇械师": stats.classes.fromClassList.push({"name": "奇械师", "source": "TCE"}); break;
+					case "吟游诗人": stats.classes.fromClassList.push({"name": "吟游诗人", "source": "PHB"}); break;
+					case "牧师": stats.classes.fromClassList.push({"name": "牧师", "source": "PHB"}); break;
+					case "德鲁伊": stats.classes.fromClassList.push({"name": "德鲁伊", "source": "PHB"}); break;
+					case "圣武士": stats.classes.fromClassList.push({"name": "圣武士", "source": "PHB"}); break;
+					case "游侠": stats.classes.fromClassList.push({"name": "游侠", "source": "PHB"}); break;
+					case "术士": stats.classes.fromClassList.push({"name": "术士", "source": "PHB"}); break;
+					case "邪术师": stats.classes.fromClassList.push({"name": "邪术师", "source": "PHB"}); break;
+					case "法师": stats.classes.fromClassList.push({"name": "法师", "source": "PHB"}); break;
 					default: options.cbWarning(`${stats.name ? `(${stats.name}) ` : ""}Class "${lowerPt}" requires manual conversion`); break;
 				}
 			});
