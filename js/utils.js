@@ -547,10 +547,10 @@ globalThis.SourceUtil = class {
 
 	static getFilterGroupName (group) {
 		switch (group) {
-			case SourceUtil.FILTER_GROUP_NON_STANDARD: return "Other";
-			case SourceUtil.FILTER_GROUP_PRERELEASE: return "Prerelease";
-			case SourceUtil.FILTER_GROUP_HOMEBREW: return "Homebrew";
-			case SourceUtil.FILTER_GROUP_PARTNERED: return "Partnered";
+			case SourceUtil.FILTER_GROUP_NON_STANDARD: return "其他内容";
+			case SourceUtil.FILTER_GROUP_PRERELEASE: return "预发布内容";
+			case SourceUtil.FILTER_GROUP_HOMEBREW: return "自制内容";
+			case SourceUtil.FILTER_GROUP_PARTNERED: return "合作内容";
 			case SourceUtil.FILTER_GROUP_STANDARD: return null;
 			default: throw new Error(`Unhandled source filter group "${group}"`);
 		}

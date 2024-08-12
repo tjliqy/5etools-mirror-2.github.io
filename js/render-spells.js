@@ -114,10 +114,10 @@ class RenderSpells {
 		if (fromClassList.length) {
 			const [current, legacy] = Parser.spClassesToCurrentAndLegacy(fromClassList);
 			if (settings.isDisplayClasses) {
-				stackFroms.push(`<div><span class="bold">Classes: </span>${Parser.spMainClassesToFull(current)}</div>`);
+				stackFroms.push(`<div><span class="bold">职业: </span>${Parser.spMainClassesToFull(current)}</div>`);
 			}
 			if (settings.isDisplayClassesLegacy && legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">Classes (legacy): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">职业 (传奇): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
 			}
 		}
 
@@ -136,10 +136,10 @@ class RenderSpells {
 		if (fromClassListVariant.length) {
 			const [current, legacy] = Parser.spVariantClassesToCurrentAndLegacy(fromClassListVariant);
 			if (settings.isDisplayVariantClasses && current.length) {
-				stackFroms.push(`<div><span class="bold">Optional/Variant Classes: </span>${Parser.spMainClassesToFull(current)}</div>`);
+				stackFroms.push(`<div><span class="bold">可选/变体职业: </span>${Parser.spMainClassesToFull(current)}</div>`);
 			}
 			if (settings.isDisplayVariantClassesLegacy && legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">Optional/Variant Classes (legacy): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">可选/变体职业 (传奇): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
 			}
 		}
 

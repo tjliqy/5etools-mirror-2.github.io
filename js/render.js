@@ -2954,7 +2954,7 @@ Renderer.utils = class {
 
 		return `${introText} ${it[prop].map(as => {
 			if (as.entry) return (isText ? Renderer.stripTags : Renderer.get().render)(as.entry);
-			return `${isText ? "" : `<i class="help-subtle" title="${Parser.sourceJsonToFull(as.source).qq()}">`}${Parser.sourceJsonToAbv(as.source)}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(as.page) ? `, page ${as.page}` : ""}`;
+			return `${isText ? "" : `<i class="help-subtle" title="${Parser.sourceJsonToFull(as.source).qq()}">`}${Parser.sourceJsonToAbv(as.source)}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(as.page) ? `, ${as.page}页` : ""}`;
 		}).join("; ")}`;
 	}
 
@@ -2990,7 +2990,7 @@ Renderer.utils = class {
 		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, ${it.page}页` : ""}`;
 		const reprintedAsText = Renderer.utils._getReprintedAsHtmlOrText(it, {isText, tag, fnUnpackUid});
 		const addSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "additionalSources", "Additional information from", isText);
-		const otherSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "otherSources", "Also found in", isText);
+		const otherSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "otherSources", "同时来源于", isText);
 		const externalSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "externalSources", "External sources:", isText);
 
 		const srdText = it.srd ? `${isText ? "" : `<span title="Systems Reference Document">`}SRD规则${isText ? "" : `</span>`}${typeof it.srd === "string" ? ` (as &quot;${it.srd}&quot;)` : ""}` : "";
@@ -10102,12 +10102,12 @@ Renderer.vehicle = class {
 		return Parser.ABIL_ABVS.some(it => veh[it] != null) ? `<tr><td colspan="6">
 			<table class="w-100 summary stripe-even-table">
 				<tr>
-					<th class="ve-col-2 ve-text-center">STR</th>
-					<th class="ve-col-2 ve-text-center">DEX</th>
-					<th class="ve-col-2 ve-text-center">CON</th>
-					<th class="ve-col-2 ve-text-center">INT</th>
-					<th class="ve-col-2 ve-text-center">WIS</th>
-					<th class="ve-col-2 ve-text-center">CHA</th>
+					<th class="ve-col-2 ve-text-center">力量</th>
+					<th class="ve-col-2 ve-text-center">敏捷</th>
+					<th class="ve-col-2 ve-text-center">体质</th>
+					<th class="ve-col-2 ve-text-center">智力</th>
+					<th class="ve-col-2 ve-text-center">感知</th>
+					<th class="ve-col-2 ve-text-center">魅力</th>
 				</tr>
 				<tr>
 					<td class="ve-text-center">${Renderer.utils.getAbilityRoller(veh, "str")}</td>

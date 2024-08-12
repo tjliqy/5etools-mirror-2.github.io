@@ -1054,7 +1054,7 @@ Parser.getArticle = function (str) {
 };
 
 Parser.spLevelToFullLevelText = function (level, {isDash = false, isPluralCantrips = true} = {}) {
-	return `${Parser.spLevelToFull(level)}${(level === 0 ? (isPluralCantrips ? "s" : "") : `${isDash ? "-" : " "}环`)}`;
+	return `${Parser.spLevelToFull(level)}${(level === 0 ? (isPluralCantrips ? "s" : "") : `${isDash ? "-" : " "}`)}`;
 };
 
 Parser.spLevelToSpellPoints = function (lvl) {
@@ -1352,9 +1352,9 @@ Parser.spComponentsToFull = function (comp, level, {isPlainText = false} = {}) {
 	if (comp.s) out.push("姿势");
 	if (comp.m != null) {
 		const fnRender = isPlainText ? Renderer.stripTags.bind(Renderer) : Renderer.get().render.bind(Renderer.get());
-		out.push(`成分${comp.m !== true ? ` (${fnRender(comp.m.text != null ? comp.m.text : comp.m)})` : ""}`);
+		out.push(`材料${comp.m !== true ? ` (${fnRender(comp.m.text != null ? comp.m.text : comp.m)})` : ""}`);
 	}
-	if (comp.r) out.push(`R (${level} gp)`);
+	if (comp.r) out.push(`版税 (${level} gp)`);
 	return out.join(", ") || "无";
 };
 
@@ -1477,43 +1477,43 @@ Parser.spAttackTypeToFull = function (type) {
 };
 
 Parser.SPELL_AREA_TYPE_TO_FULL = {
-	ST: "Single Target",
-	MT: "Multiple Targets",
-	C: "Cube",
-	N: "Cone",
-	Y: "Cylinder",
-	S: "Sphere",
-	R: "Circle",
-	Q: "Square",
-	L: "Line",
-	H: "Hemisphere",
-	W: "Wall",
+	ST: "单目标",
+	MT: "多目标",
+	C: "立方体",
+	N: "锥形",
+	Y: "圆柱体",
+	S: "球体",
+	R: "圆形",
+	Q: "正方形",
+	L: "线形",
+	H: "半球体",
+	W: "墙壁",
 };
 Parser.spAreaTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SPELL_AREA_TYPE_TO_FULL, type);
 };
 
 Parser.SP_MISC_TAG_TO_FULL = {
-	HL: "Healing",
-	THP: "Grants Temporary Hit Points",
-	SGT: "Requires Sight",
-	PRM: "Permanent Effects",
-	SCL: "Scaling Effects",
-	SMN: "Summons Creature",
-	MAC: "Modifies AC",
-	TP: "Teleportation",
-	FMV: "Forced Movement",
-	RO: "Rollable Effects",
-	LGTS: "Creates Sunlight",
-	LGT: "Creates Light",
-	UBA: "Uses Bonus Action",
-	PS: "Plane Shifting",
-	OBS: "Obscures Vision",
-	DFT: "Difficult Terrain",
-	AAD: "Additional Attack Damage",
-	OBJ: "Affects Objects",
-	ADV: "Grants Advantage",
-	PIR: "Permanent If Repeated",
+	HL: "治疗",
+	THP: "提供临时生命值",
+	SGT: "需要视野",
+	PRM: "永久效应",
+	SCL: "动态变化的效应",
+	SMN: "召唤生物",
+	MAC: "改变AC",
+	TP: "传送",
+	FMV: "强制移动",
+	RO: "骰点效应",
+	LGTS: "制造阳光",
+	LGT: "制造光亮",
+	UBA: "使用附赠动作",
+	PS: "位面传送",
+	OBS: "遮蔽视野",
+	DFT: "D困难地形",
+	AAD: "额外攻击伤害",
+	OBJ: "影响物品",
+	ADV: "提供优势",
+	PIR: "重复施法使效用永久",
 };
 Parser.spMiscTagToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_MISC_TAG_TO_FULL, type);
@@ -2440,7 +2440,7 @@ Parser.ATB_ABV_TO_FULL = {
 	"str": "力量",
 	"dex": "敏捷",
 	"con": "体质",
-	"int": "智慧",
+	"int": "智力",
 	"wis": "感知",
 	"cha": "魅力",
 };

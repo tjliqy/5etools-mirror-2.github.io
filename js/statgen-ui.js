@@ -877,7 +877,7 @@ class StatGenUi extends BaseComponent {
 							<div class="my-1 statgen-pb__header"></div>
 							<div class="my-1 statgen-pb__header ve-flex-h-right">${$btnResetRolledOrArrayOrManual}</div>
 
-							${Parser.ABIL_ABVS.map(it => `<div class="my-1 bold statgen-pb__cell ve-flex-v-center ve-flex-h-right" title="${Parser.attAbvToFull(it)}">${it.toUpperCase()}</div>`)}
+							${Parser.ABIL_ABVS.map(it => `<div class="my-1 bold statgen-pb__cell ve-flex-v-center ve-flex-h-right" title="${Parser.attAbvToFull(it)}">${Parser.attAbvToFull(it)}</div>`)}
 						</div>
 
 						<div class="ve-flex-col mr-3">

@@ -435,9 +435,9 @@ class RendererCard {
 RendererCard.utils = class {
 	static getPageText (it) {
 		const sourceSub = Renderer.utils.getSourceSubText(it);
-		const baseText = Renderer.utils.isDisplayPage(it.page) ? `text | <b>Source:</b> <i>${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, page ${it.page}` : "";
+		const baseText = Renderer.utils.isDisplayPage(it.page) ? `text | <b>来源:</b> <i>${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, ${it.page}页` : "";
 		const addSourceText = this._getPageText_getAltSourceText(it, "additionalSources", "Additional information from");
-		const otherSourceText = this._getPageText_getAltSourceText(it, "otherSources", "Also found in");
+		const otherSourceText = this._getPageText_getAltSourceText(it, "otherSources", "同时来源于");
 		const externalSourceText = this._getPageText_getAltSourceText(it, "externalSources", "External sources:");
 
 		return `${[baseText, addSourceText, otherSourceText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || externalSourceText) ? "." : ""}\n`;
@@ -448,7 +448,7 @@ RendererCard.utils = class {
 
 		return `${introText} ${it[prop].map(as => {
 			if (as.entry) return Renderer.get().render(as.entry);
-			else return `<i>${Parser.sourceJsonToAbv(as.source)}</i>>${Renderer.utils.isDisplayPage(as.page) ? `, page ${as.page}` : ""}`;
+			else return `<i>${Parser.sourceJsonToAbv(as.source)}</i>>${Renderer.utils.isDisplayPage(as.page) ? `, ${as.page}页` : ""}`;
 		}).join("; ")}`;
 	}
 };
