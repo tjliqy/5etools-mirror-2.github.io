@@ -21,7 +21,7 @@ class VariantClassFilter extends Filter {
 
 class MultiFilterClasses extends MultiFilter {
 	constructor (opts) {
-		super({header: "职业分类", mode: "or", filters: [opts.classFilter, opts.subclassFilter, opts.variantClassFilter], ...opts});
+		super({header: "Classes", cnHeader: "职业分类", mode: "or", filters: [opts.classFilter, opts.subclassFilter, opts.variantClassFilter], ...opts});
 
 		this._classFilter = opts.classFilter;
 		this._subclassFilter = opts.subclassFilter;
@@ -330,16 +330,19 @@ class PageFilterSpells extends PageFilterBase {
 		super();
 
 		this._classFilter = new Filter({
-			header: "职业",
+			cnHeader: "职业",
+			header: "Class",
 			groupFn: it => it.userData.group,
 		});
 		this._subclassFilter = new Filter({
-			header: "子职",
+			cnHeader: "子职",
+			header: "Subclass",
 			nests: {},
 			groupFn: it => it.userData.group,
 		});
 		this._levelFilter = new Filter({
-			header: "环阶",
+			cnHeader: "环阶",
+			header: "Level",
 			items: [
 				0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
 			],
@@ -352,15 +355,17 @@ class PageFilterSpells extends PageFilterBase {
 			variantClassFilter: this._variantClassFilter,
 		});
 		this._raceFilter = new Filter({
-			header: "种族",
+			cnHeader: "种族",
+			header: "Race",
 			nests: {},
 			groupFn: it => it.userData.group,
 		});
-		this._backgroundFilter = new SearchableFilter({header: "背景"});
-		this._featFilter = new SearchableFilter({header: "专长"});
-		this._optionalfeaturesFilter = new SearchableFilter({header: "其他选项/特性"});
+		this._backgroundFilter = new SearchableFilter({cnHeader: "背景",header: "Background"});
+		this._featFilter = new SearchableFilter({cnHeader: "专长",header: "Feat"});
+		this._optionalfeaturesFilter = new SearchableFilter({cnHeader: "其他选项/特性",header: "Other Option/Feature"});
 		this._metaFilter = new Filter({
-			header: "构材＆杂项",
+			cnHeader: "构材＆杂项",
+			header: "Components & Miscellaneous",
 			items: [...PageFilterSpells._META_FILTER_BASE_ITEMS, "Ritual", "SRD", "基础规则", "传奇", "有图片", "有Token"],
 			itemSortFn: PageFilterSpells.sortMetaFilter,
 			isMiscFilter: true,
@@ -368,47 +373,55 @@ class PageFilterSpells extends PageFilterBase {
 		});
 		this._groupFilter = new Filter({header: "Group"});
 		this._schoolFilter = new Filter({
-			header: "学派",
+			cnHeader: "学派",
+			header:"School",
 			items: [...Parser.SKL_ABVS],
 			displayFn: Parser.spSchoolAbvToFull,
 			itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.spSchoolAbvToFull(a.item), Parser.spSchoolAbvToFull(b.item)),
 		});
 		this._subSchoolFilter = new Filter({
-			header: "子学派",
+			cnHeader: "子学派",
+			header: "Subschool",
 			items: [],
 			displayFn: it => Parser.spSchoolAbvToFull(it).toTitleCase(),
 			itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.spSchoolAbvToFull(a.item), Parser.spSchoolAbvToFull(b.item)),
 		});
 		this._damageFilter = new Filter({
-			header: "伤害类型",
+			cnHeader: "伤害类型",
+			header: "Damage Type",
 			items: MiscUtil.copy(Parser.DMG_TYPES),
 			displayFn: StrUtil.uppercaseFirst,
 		});
 		this._conditionFilter = new Filter({
-			header: "造成状态",
+			cnHeader: "造成状态",
+			header: "Conditions Inflicted",
 			items: [...Parser.CONDITIONS],
 			displayFn: uid => uid.split("|")[0].toTitleCase(),
 		});
 		this._spellAttackFilter = new Filter({
-			header: "法术攻击",
+			cnHeader: "法术攻击",
+			header: "Spell Attack",
 			items: ["M", "R", "O"],
 			displayFn: Parser.spAttackTypeToFull,
 			itemSortFn: null,
 		});
 		this._saveFilter = new Filter({
-			header: "豁免",
+			cnHeader: "豁免",
+			header: "Saving Throw",
 			items: ["力量", "敏捷", "体质", "智力", "感知", "魅力"],
 			displayFn: PageFilterSpells.getFilterAbilitySave,
 			itemSortFn: null,
 		});
 		this._checkFilter = new Filter({
-			header: "能力鉴定",
+			cnHeader: "能力鉴定",
+			header: "Ability Check",
 			items: ["力量", "敏捷", "体质", "智力", "感知", "魅力"],
 			displayFn: PageFilterSpells.getFilterAbilityCheck,
 			itemSortFn: null,
 		});
 		this._timeFilter = new Filter({
-			header: "施法时间",
+			cnHeader: "施法时间",
+			header: "Cast Time",
 			items: [
 				Parser.SP_TM_ACTION,
 				Parser.SP_TM_B_ACTION,
@@ -422,13 +435,15 @@ class PageFilterSpells extends PageFilterBase {
 			itemSortFn: null,
 		});
 		this._durationFilter = new RangeFilter({
-			header: "持续时间",
+			cnHeader: "持续时间",
+			header: "Duration",
 			isLabelled: true,
 			labelSortFn: null,
 			labels: ["Instant", "1 Round", "1 Minute", "10 Minutes", "1 Hour", "8 Hours", "24+ Hours", "Permanent", "Special"],
 		});
 		this._rangeFilter = new Filter({
-			header: "范围",
+			cnHeader: "范围",
+			header: "Range",
 			items: [
 				PageFilterSpells.F_RNG_SELF,
 				PageFilterSpells.F_RNG_TOUCH,
@@ -439,13 +454,15 @@ class PageFilterSpells extends PageFilterBase {
 			itemSortFn: null,
 		});
 		this._areaTypeFilter = new Filter({
-			header: "区域类型",
+			cnHeader: "区域类型",
+			header: "Area Style",
 			items: ["ST", "MT", "R", "N", "C", "Y", "H", "L", "S", "Q", "W"],
 			displayFn: Parser.spAreaTypeToFull,
 			itemSortFn: null,
 		});
 		this._affectsCreatureTypeFilter = new Filter({
-			header: "受术种族",
+			cnHeader: "受术种族",
+			header: "Affects Creature Types",
 			// items: [...Parser.MON_TYPES],
 			items: Parser.MON_TYPES.map(mon=>Parser.MON_TYPE_TO_PLURAL[mon]),
 			displayFn: StrUtil.toTitleCase,
