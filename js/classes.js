@@ -1504,9 +1504,9 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			$dispCount.off("click");
 			if (this._listSubclass.visibleItems.length) {
 				const cntNotShown = this._listSubclass.items.length - this._listSubclass.visibleItems.length;
-				$dispCount.html(cntNotShown ? `<i class="clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "").click(() => this._doSelectAllSubclasses());
+				$dispCount.html(cntNotShown ? `<i class="clickable" title="修改筛选条件来查看">(${cntNotShown}个未显示)</i>` : "").click(() => this._doSelectAllSubclasses());
 			} else if (this._listSubclass.items.length > 1) {
-				$dispCount.html(`<i class="clickable" title="Adjust your filters to see more.">(${this._listSubclass.items.length - 1} subclasses not shown)</i>`).click(() => this._doSelectAllSubclasses());
+				$dispCount.html(`<i class="clickable" title="修改筛选条件来查看">(${this._listSubclass.items.length - 1}个子职未显示)</i>`).click(() => this._doSelectAllSubclasses());
 			} else $dispCount.html("");
 		});
 

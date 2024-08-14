@@ -9333,7 +9333,7 @@ Renderer.item = class {
 		// handle item groups
 		if (item._isItemGroup && item.items?.length) {
 			Renderer.item._initFullEntries(item);
-			item._fullEntries.push({type: "wrapper", wrapped: "Multiple variations of this item exist, as listed below:", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "magicvariant"}});
+			item._fullEntries.push({type: "wrapper", wrapped: "此物品存在下列不同的变体：", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "magicvariant"}});
 			item._fullEntries.push({
 				type: "wrapper",
 				wrapped: {
