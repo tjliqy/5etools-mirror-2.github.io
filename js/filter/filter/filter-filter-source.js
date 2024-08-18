@@ -44,6 +44,7 @@ export class SourceFilter extends Filter {
 		opts = opts || {};
 
 		opts.header = opts.header === undefined ? SOURCE_HEADER : opts.header;
+		opts.cnHeader = "来源";
 		opts.displayFn = opts.displayFn === undefined ? item => Parser.sourceJsonToFullCompactPrefix(item.item || item) : opts.displayFn;
 		opts.displayFnMini = opts.displayFnMini === undefined ? SourceFilter._getDisplayHtmlMini.bind(SourceFilter) : opts.displayFnMini;
 		opts.displayFnTitle = opts.displayFnTitle === undefined ? item => Parser.sourceJsonToFull(item.item || item) : opts.displayFnTitle;
