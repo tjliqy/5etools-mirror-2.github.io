@@ -213,7 +213,7 @@ class CreatureBuilder extends Builder {
 
 		this._jsonCreatureActions = [
 			...items
-				.filter(it => !it._isItemGroup && it._category === "Basic" && (it.type === "M" || it.type === "R") && it.dmg1 && it.dmgType)
+				.filter(it => !it._isItemGroup && i(it._category === "Basic" || it._category === "基础") && (it.type === "M" || it.type === "R") && it.dmg1 && it.dmgType)
 				.map(item => {
 					const mDice = /^(?<count>\d+)d(?<face>\d+)\b/i.exec(item.dmg1);
 					if (!mDice) return null;

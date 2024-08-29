@@ -48,13 +48,16 @@ class PageFilterEquipment extends PageFilterBase {
 
 		this._typeFilter = new Filter({
 			header: "Type",
+			cnHeader: "类别",
 			deselFn: (it) => PageFilterItems._DEFAULT_HIDDEN_TYPES.has(it),
 			displayFn: StrUtil.toTitleCase,
 		});
 		this._propertyFilter = new Filter({header: "Property", displayFn: StrUtil.toTitleCase});
 		this._categoryFilter = new Filter({
 			header: "Category",
-			items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
+			cnHeader:"分类",
+			// items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
+			items: ["基础", "通用变体", "Specific Variant", "其他"],
 			deselFn: (it) => it === "Specific Variant",
 			itemSortFn: null,
 			...(filterOpts?.["Category"] || {}),
@@ -72,10 +75,10 @@ class PageFilterEquipment extends PageFilterBase {
 			],
 			labelDisplayFn: it => !it ? "None" : Parser.getDisplayCurrency(CurrencyUtil.doSimplifyCoins({cp: it})),
 		});
-		this._weightFilter = new RangeFilter({header: "Weight", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
+		this._weightFilter = new RangeFilter({header: "Weight", cnHeader:"重量", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
 		this._focusFilter = new Filter({header: "Spellcasting Focus", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES]});
-		this._damageTypeFilter = new Filter({header: "Weapon Damage Type", displayFn: it => Parser.dmgTypeToFull(it).uppercaseFirst(), itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.dmgTypeToFull(a), Parser.dmgTypeToFull(b))});
-		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
+		this._damageTypeFilter = new Filter({header: "Weapon Damage Type", cnHeader:"武器伤害类型", displayFn: it => Parser.dmgTypeToFull(it).uppercaseFirst(), itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.dmgTypeToFull(a), Parser.dmgTypeToFull(b))});
+		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", cnHeader:"武器伤害骰",items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			items: [...PageFilterEquipment._MISC_FILTER_ITEMS, ...Object.values(Parser.ITEM_MISC_TAG_TO_FULL)],
@@ -278,7 +281,8 @@ class PageFilterItems extends PageFilterEquipment {
 		this._attachedSpellsFilter = new SearchableFilter({header: "Attached Spells", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._lootTableFilter = new Filter({
 			header: "Found On",
-			items: ["Magic Item Table A", "Magic Item Table B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"],
+			// items: ["Magic Item Table A", "Magic Item Table B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"],
+			items: ["魔法物品表A", "魔法物品表B", "魔法物品表C", "魔法物品表D", "魔法物品表E", "魔法物品表F", "魔法物品表G", "魔法物品表H", "魔法物品表I"],
 			displayFn: it => {
 				const [name, sourceJson] = it.split("|");
 				return `${name}${sourceJson ? ` (${Parser.sourceJsonToAbv(sourceJson)})` : ""}`;
@@ -286,6 +290,7 @@ class PageFilterItems extends PageFilterEquipment {
 		});
 		this._rarityFilter = new Filter({
 			header: "Rarity",
+			cnHeader: "稀有度",
 			items: [...Parser.ITEM_RARITIES],
 			itemSortFn: null,
 			displayFn: StrUtil.toTitleCase,
@@ -307,6 +312,7 @@ class PageFilterItems extends PageFilterEquipment {
 		this._baseItemFilter = new Filter({header: "Base Item", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 		this._optionalfeaturesFilter = new Filter({
 			header: "Feature",
+			chHeader: "特性",
 			displayFn: (it) => {
 				const [name, source] = it.split("|");
 				if (!source) return name.toTitleCase();

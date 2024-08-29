@@ -8859,7 +8859,7 @@ Renderer.item = class {
 
 		const genericAndSpecificVariants = [];
 		baseItems.forEach((curBaseItem) => {
-			curBaseItem._category = "Basic";
+			curBaseItem._category = "基础";
 			if (curBaseItem.entries == null) curBaseItem.entries = [];
 
 			if (curBaseItem.packContents) return; // e.g. "Arrows (20)"
@@ -9206,8 +9206,8 @@ Renderer.item = class {
 		if (item._isEnhanced) return;
 		item._isEnhanced = true;
 		if (item.noDisplay) return;
-		if (item.type === "GV") item._category = "Generic Variant";
-		if (item._category == null) item._category = "Other";
+		if (item.type === "GV") item._category = "通用变体";
+		if (item._category == null) item._category = "其他";
 		if (item.entries == null) item.entries = [];
 		if (item.type && (Renderer.item.getType(item.type)?.entries || Renderer.item.getType(item.type)?.entriesTemplate)) {
 			Renderer.item._initFullEntries(item);
@@ -9493,7 +9493,7 @@ Renderer.item = class {
 		return specificVariants;
 	}
 
-	static isMundane (item) { return item.rarity === "none" || item.rarity === "unknown" || item._category === "Basic"; }
+	static isMundane (item) { return item.rarity === "none" || item.rarity === "unknown" || item._category === "Basic" || item._category === "基础"; }
 
 	static isExcluded (item, {hash = null} = {}) {
 		const name = item.name;

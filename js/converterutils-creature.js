@@ -1282,7 +1282,7 @@ class MiscTag {
 		this._WALKER = MiscUtil.getWalker({isNoModification: true, keyBlocklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLOCKLIST});
 
 		const weaponsBase = items
-			.filter(it => it._category === "Basic" && (it.type === "M" || it.type === "W"));
+			.filter(it => (it._category === "Basic" || it._category === "基础") && (it.type === "M" || it.type === "W"));
 
 		this._MELEE_WEAPON_MATCHERS = weaponsBase
 			.filter(it => it.type === "M")
