@@ -61,7 +61,7 @@
 								"变体规则：{@variantrule 对角线} 默认假设为DMG来源，{@variantrule 兼职|PHB} 可以通过管道添加来源，{@variantrule 兼职|PHB|并且添加了另一个管道的可选链接文本}。",
 								"载具：{@vehicle 桨帆船} 默认假设为GoS，{@vehicle 桨帆船|守护者} 可以通过管道添加来源，{@vehicle 桨帆船|守护者|并且添加了另一个管道的可选链接文本}。",
 								"载具升级：{@vehupgrade 守护者船首像} 默认假设为GoS来源，{@vehicle 镀金死亡盔甲|博格迪亚} 可以通过管道添加来源，{@vehicle 守护者船首像|守护者|并且添加了另一个管道的可选链接文本}。",
-								"表格：{@table 25 gp 艺术品} 默认假设为地下城主手册（DMG），{@table 冒险装备|PHB} 可以通过管道符添加来源，{@table 冒险装备|PHB|并且添加了另一个管道的可选链接文本}。",
+								"表格：{@table 25 gp 艺术品} 默认假设为地下城主手册（DMG），{@table 冒险用品|PHB} 可以通过管道符添加来源，{@table 冒险用品|PHB|并且添加了另一个管道的可选链接文本}。",
 								"动作：{@action 攻击} 默认假设为《玩家手册》(PHB)，{@action 翻滚|DMG} 可以通过管道符号添加来源，{@action 翻滚|DMG|并且添加了另一个管道的可选链接文本}。",
 								"语言：{@language 通用} 默认假设为PHB来源，{@language 丹布拉森|SCAG} 可以通过管道添加来源，{@language 丹布拉森|SCAG|并且添加了另一个管道的可选链接文本}。",
 								"其他角色创建选项：{@charoption 锻砧生物} 默认假设为《铁砧铸造》（MOT），{@charoption 空洞者|EGW} 可以通过管道符添加来源，{@charoption 空洞者|EGW|并且添加了另一个管道的可选链接文本}。",
@@ -81,13 +81,13 @@
 								"这个标签的目的是打开指定页面，并使用特定的过滤选项进行预过滤。这里有一个主要的注意事项，使得对于有志于成为JSON翻译专家的人来说使用起来有些棘手\u2014\u2014过滤值使用的是{@i 内部}版本，就像你在数据中找到的那样。例如，..|school=D|.. 会过滤出占卜学派的法术，因为'D'是数据中占卜学派的标识符。尝试使用例如 ..|school=Divination|.. 是不会起作用的。",
 								"这里的'filter_name_X'与下拉菜单中显示的过滤器的字面文本名称相匹配。",
 								"一些标签使用示例：",
-								"{@filter 智力有加成的种族|种族|能力值（包括亚种）=智力 +任意}",
+								"{@filter 具有智力加值的种族|种族|属性值（包括亚种）=智力 +任意}",
 								"{@filter 吟游诗人的戏法和一级法术|spells|level=0;1|class=吟游诗人}",
 								"{@filter 挑战等级为1或更低的野兽|怪物图鉴|challenge rating=[&0;&1]|type=野兽}",
 								"{@filter 力量值达到18或更高的生物|怪物图鉴|力量=[18;]}",
 								"{@filter 占卜和召唤法术|spells|school=D;V}",
 								"{@filter 所有稀有魔法物品|物品|source=|type=|rarity=稀有|miscellaneous=魔法}",
-								"{@filter 简单近战武器|物品|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand}",
+								"{@filter 简易近战武器|物品|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand}",
 								"可以设置元选项；用于个别过滤器的内联方式，以及使用'fbmt'来过滤元选项{@filter 过滤器元数据示例|spells|level=1;2=术士~沙子~b1|fbmt=巫师|fbmh=来源}",
 								"搜索可以设置；{@filter 查看恐龙|怪物图鉴|search=恐龙}",
 								"一个精确的起始实体；{@filter 筛选野兽并显示猫|怪物图鉴|type=野兽|hash=猫_mm}，其中 'hash' 是在查看实体时URL栏中'#'符号之后和任何逗号之前的部分。",
@@ -122,7 +122,7 @@
 									"items": [
 										"冒险标签：链接到一个冒险 {@adventure 显示文本|CoS}；冒险中的一个章节 {@adventure 显示文本|CoS|2}；冒险章节中的一个标题 {@adventure 显示文本|CoS|2|宝藏}；或者是冒险章节中给定名称的第N个标题 {@adventure 显示文本|CoS|2|宝藏|1}",
 										"书籍标签：链接到一本书{@book 显示文本|PHB}；书中的一章{@book 显示文本|PHB|2}；书中一章的标题{@book 显示文本|PHB|2|年龄}；或者是书中一章给定名称的第N个头标题{@book 显示文本|PHB|2|年龄|0}（尽管这通常是不必要的，因为与冒险不同，书籍通常不会频繁重复它们的标题。）",
-										"快速参考标签；{@code <名称>|&lt;源&gt;|<章节索引>|&lt;headerIndex&gt;|<显示文本>}：{@quickref 兼职}, {@quickref 兼职|PHB}, {@quickref 冒险装备|PHB|1}, {@quickref 冒险装备|PHB|1|0}, {@quickref 冒险装备|PHB|1|0|显示文本}。"
+										"快速参考标签；{@code <名称>|&lt;源&gt;|<章节索引>|&lt;headerIndex&gt;|<显示文本>}：{@quickref 兼职}, {@quickref 兼职|PHB}, {@quickref 冒险用品|PHB|1}, {@quickref 冒险用品|PHB|1|0}, {@quickref 冒险用品|PHB|1|0|显示文本}。"
 									]
 								}
 							]
@@ -426,7 +426,7 @@
 				},
 				{
 					"type": "list",
-					"style": "悬挂缩进列表",
+					"style": "list-hang",
 					"name": "悬挂列表",
 					"ENG_name": "Hanging List",
 					"items": [
@@ -436,7 +436,7 @@
 				},
 				{
 					"type": "list",
-					"style": "悬挂缩进列表",
+					"style": "list-hang",
 					"name": "悬挂列表",
 					"ENG_name": "Hanging List",
 					"items": [
@@ -680,7 +680,7 @@
 									"中毒"
 								],
 								"senses": [
-									"黑暗视觉 60 尺。"
+									"黑暗视觉 60 尺"
 								],
 								"passive": 13,
 								"languages": [
