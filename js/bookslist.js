@@ -174,6 +174,7 @@ class AdventuresBooksList {
 				{
 					source: Parser.sourceJsonToAbv(it.source),
 					alias: (it.alias || []).map(it => `"${it}"`).join(","),
+					ENG_name: it.ENG_name
 				},
 				{
 					$btnToggleExpand,
@@ -191,7 +192,7 @@ class AdventuresBooksList {
 				this._dataIx,
 				eleLiAlt,
 				it.name,
-				{source: it.id},
+				{source: it.id, ENG_name: it.ENG_name},
 			);
 			this._listAlt.addItem(listItemAlt);
 			// endregion

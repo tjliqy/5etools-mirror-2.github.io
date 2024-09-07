@@ -2445,20 +2445,20 @@ Parser.ATB_ABV_TO_FULL = {
 	"cha": "魅力",
 };
 
-Parser.TP_ABERRATION = "aberration";
-Parser.TP_BEAST = "beast";
-Parser.TP_CELESTIAL = "celestial";
-Parser.TP_CONSTRUCT = "construct";
-Parser.TP_DRAGON = "dragon";
-Parser.TP_ELEMENTAL = "elemental";
-Parser.TP_FEY = "fey";
-Parser.TP_FIEND = "fiend";
-Parser.TP_GIANT = "giant";
-Parser.TP_HUMANOID = "humanoid";
-Parser.TP_MONSTROSITY = "monstrosity";
-Parser.TP_OOZE = "ooze";
-Parser.TP_PLANT = "plant";
-Parser.TP_UNDEAD = "undead";
+Parser.TP_ABERRATION = "异怪";
+Parser.TP_BEAST = "野兽";
+Parser.TP_CELESTIAL = "天界生物";
+Parser.TP_CONSTRUCT = "构装体";
+Parser.TP_DRAGON = "龙";
+Parser.TP_ELEMENTAL = "元素";
+Parser.TP_FEY = "精类";
+Parser.TP_FIEND = "邪魔";
+Parser.TP_GIANT = "巨人";
+Parser.TP_HUMANOID = "类人生物";
+Parser.TP_MONSTROSITY = "怪兽";
+Parser.TP_OOZE = "泥怪";
+Parser.TP_PLANT = "植物";
+Parser.TP_UNDEAD = "不死生物";
 Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD];
 Parser.MON_TYPE_TO_PLURAL = {};
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_ABERRATION] = "异怪";
@@ -3831,4 +3831,24 @@ Parser.MAP_GRID_TYPE_TO_FULL["hexColsEven"] = "Hex Columns (Even)";
 Parser.mapGridTypeToFull = function (gridType) {
 	return Parser._parse_aToB(Parser.MAP_GRID_TYPE_TO_FULL, gridType);
 };
+
+Parser.LANGUAGES_TO_CN = {
+	"abyssal": "深渊语",
+	"celestial": "天界语",
+	// "Choose":,
+	"common": "通用语",
+	"draconic":"龙语",
+	"dwarvish": "矮人语",
+	"elvish": "精灵语",
+	"giant": "巨人语",
+	"gnomish": "侏儒语",
+	"goblin": "地精语",
+	"halfling": "半身人语",
+	"infernal": "炼狱语",
+	"orc": "兽人语",
+	"other": "其他",
+	"primordial": "原初语",
+	"sylvan": "木族语",
+	"undercommon": "地底通用语"
+}
 // endregion

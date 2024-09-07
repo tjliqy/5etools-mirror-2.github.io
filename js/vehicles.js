@@ -37,6 +37,7 @@ class VehiclesSublistManager extends SublistManager {
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
 				type: displayType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -91,6 +92,7 @@ class VehiclesPage extends ListPage {
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
 				type: displayType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

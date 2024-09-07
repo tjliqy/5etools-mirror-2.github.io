@@ -36,6 +36,7 @@ class TablesSublistManager extends SublistManager {
 			it.name,
 			{
 				hash,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -127,6 +128,7 @@ class TablesPage extends ListPage {
 				hash,
 				sortName,
 				source,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

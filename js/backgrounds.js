@@ -37,6 +37,7 @@ class BackgroundSublistManager extends SublistManager {
 				hash,
 				source: Parser.sourceJsonToAbv(it.source),
 				skills,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -90,6 +91,7 @@ class BackgroundPage extends ListPage {
 				hash,
 				source,
 				skills: bg._skillDisplay,
+				ENG_name: bg.ENG_name,
 			},
 			{
 				isExcluded,

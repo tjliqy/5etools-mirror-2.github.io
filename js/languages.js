@@ -44,6 +44,7 @@ class LanguagesSublistManager extends SublistManager {
 				hash,
 				type: it.type || "",
 				script: it.script || "",
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -94,6 +95,7 @@ class LanguagesPage extends ListPage {
 				dialects: it.dialects || [],
 				type: it.type || "",
 				script: it.script || "",
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

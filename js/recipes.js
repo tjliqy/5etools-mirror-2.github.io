@@ -40,6 +40,7 @@ class RecipesSublistManager extends SublistManager {
 			{
 				hash,
 				type: it.type,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -95,6 +96,7 @@ class RecipesPage extends ListPage {
 				source,
 				type: ent.type,
 				alias: PageFilterRecipes.getListAliases(ent),
+				ENG_name: ent.ENG_name,
 			},
 			{
 				isExcluded,

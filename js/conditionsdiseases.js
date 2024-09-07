@@ -34,6 +34,7 @@ class ConditionsDiseasesSublistManager extends SublistManager {
 			{
 				hash,
 				type: it.__prop,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -89,6 +90,7 @@ class ConditionsDiseasesPage extends ListPage {
 				hash,
 				source,
 				type: it.__prop,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

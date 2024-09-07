@@ -35,6 +35,7 @@ class CharCreationOptionsSublistManager extends SublistManager {
 				hash,
 				source: Parser.sourceJsonToAbv(it.source),
 				type: it._fOptionType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -82,6 +83,7 @@ class CharCreationOptionsPage extends ListPage {
 				hash,
 				source,
 				type: it._fOptionType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

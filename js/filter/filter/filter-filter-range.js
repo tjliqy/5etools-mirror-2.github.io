@@ -228,17 +228,17 @@ export class RangeFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs mr-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs mr-2">以下拉列表展示</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
 		);
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">重置</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="ve-flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);

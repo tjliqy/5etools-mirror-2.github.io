@@ -40,31 +40,32 @@ class FilterCommon {
 	/* -------------------------------------------- */
 
 	static _CONDS = [
-		"blinded",
-		"charmed",
-		"deafened",
-		"exhaustion",
-		"frightened",
-		"grappled",
-		"incapacitated",
-		"invisible",
-		"paralyzed",
-		"petrified",
-		"poisoned",
-		"prone",
-		"restrained",
-		"stunned",
-		"unconscious",
+		"目盲",
+		"魅惑",
+		"耳聋",
+		"力竭",
+		"恐慌",
+		"擒抱",
+		"失能",
+		"隐形",
+		"麻痹",
+		"石化",
+		"中毒",
+		"倒地",
+		"束缚",
+		"震慑",
+		"昏迷",
 		// not really a condition, but whatever
-		"disease",
+		"疾病",
 	];
 
 	static getConditionImmuneFilter () {
 		return new Filter({
-			header: "条件免疫Condition Immunity",
+			header: "Condition Immunity",
+			cnHeader:"条件免疫",
 			items: this._CONDS,
-			displayFnMini: str => `Imm. ${str.toTitleCase()}`,
-			displayFnTitle: str => `Condition Immunity: ${str.toTitleCase()}`,
+			displayFnMini: str => `免疫 ${str.toTitleCase()}`,
+			displayFnTitle: str => `条件免疫: ${str.toTitleCase()}`,
 			displayFn: StrUtil.uppercaseFirst,
 		});
 	}

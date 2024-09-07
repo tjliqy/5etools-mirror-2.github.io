@@ -80,6 +80,7 @@ class SpellsSublistManager extends SublistManager {
 				range,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
 			},
 			{
 				entity: spell,
@@ -357,6 +358,7 @@ class SpellsPage extends ListPageMultiSource {
 				concentration,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
 			},
 			{
 				isExcluded,

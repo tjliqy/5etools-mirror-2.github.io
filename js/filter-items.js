@@ -52,7 +52,7 @@ class PageFilterEquipment extends PageFilterBase {
 			deselFn: (it) => PageFilterItems._DEFAULT_HIDDEN_TYPES.has(it),
 			displayFn: StrUtil.toTitleCase,
 		});
-		this._propertyFilter = new Filter({header: "Property", displayFn: StrUtil.toTitleCase});
+		this._propertyFilter = new Filter({header: "Property", cnHeader:"物品属性", displayFn: StrUtil.toTitleCase});
 		this._categoryFilter = new Filter({
 			header: "Category",
 			cnHeader:"分类",
@@ -64,6 +64,7 @@ class PageFilterEquipment extends PageFilterBase {
 		});
 		this._costFilter = new RangeFilter({
 			header: "Cost",
+			cnHeader:"价值",
 			isLabelled: true,
 			isAllowGreater: true,
 			labelSortFn: null,
@@ -81,10 +82,11 @@ class PageFilterEquipment extends PageFilterBase {
 		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", cnHeader:"武器伤害骰",items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
+			cnHeader:"杂项",
 			items: [...PageFilterEquipment._MISC_FILTER_ITEMS, ...Object.values(Parser.ITEM_MISC_TAG_TO_FULL)],
 			isMiscFilter: true,
 		});
-		this._poisonTypeFilter = new Filter({header: "Poison Type", items: ["ingested", "injury", "inhaled", "contact"], displayFn: StrUtil.toTitleCase});
+		this._poisonTypeFilter = new Filter({header: "Poison Type", cnHeader:"毒药类型", items: ["ingested", "injury", "inhaled", "contact"], displayFn: StrUtil.toTitleCase});
 		this._masteryFilter = new Filter({header: "Mastery", displayFn: this.constructor._getMasteryDisplay.bind(this)});
 	}
 
@@ -277,10 +279,11 @@ class PageFilterItems extends PageFilterEquipment {
 	constructor (opts) {
 		super(opts);
 
-		this._tierFilter = new Filter({header: "Tier", items: ["none", "minor", "major"], itemSortFn: null, displayFn: StrUtil.toTitleCase});
+		this._tierFilter = new Filter({header: "Tier",cnHeader:"层级", items: ["none", "主要", "次要"], itemSortFn: null, displayFn: StrUtil.toTitleCase});
 		this._attachedSpellsFilter = new SearchableFilter({header: "Attached Spells", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._lootTableFilter = new Filter({
 			header: "Found On",
+			cnHeader:"位于魔法物品表",
 			// items: ["Magic Item Table A", "Magic Item Table B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"],
 			items: ["魔法物品表A", "魔法物品表B", "魔法物品表C", "魔法物品表D", "魔法物品表E", "魔法物品表F", "魔法物品表G", "魔法物品表H", "魔法物品表I"],
 			displayFn: it => {
@@ -295,7 +298,7 @@ class PageFilterItems extends PageFilterEquipment {
 			itemSortFn: null,
 			displayFn: StrUtil.toTitleCase,
 		});
-		this._attunementFilter = new Filter({header: "Attunement", items: [...PageFilterItems._FILTER_BASE_ITEMS_ATTUNEMENT], itemSortFn: PageFilterItems._sortAttunementFilter});
+		this._attunementFilter = new Filter({header: "Attunement", cnHeader:"同调", items: [...PageFilterItems._FILTER_BASE_ITEMS_ATTUNEMENT], itemSortFn: PageFilterItems._sortAttunementFilter});
 		this._bonusFilter = new Filter({
 			header: "Bonus",
 			items: [
@@ -306,10 +309,10 @@ class PageFilterItems extends PageFilterEquipment {
 			],
 			itemSortFn: null,
 		});
-		this._rechargeTypeFilter = new Filter({header: "Recharge Type", displayFn: Parser.itemRechargeToFull});
+		this._rechargeTypeFilter = new Filter({header: "Recharge Type",cnHeader:"充能类型", displayFn: Parser.itemRechargeToFull});
 		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Language", "Grants Proficiency", "Magic", "Mundane", "Sentient", "Speed Adjustment", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
-		this._baseItemFilter = new Filter({header: "Base Item", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
+		this._baseItemFilter = new Filter({header: "Base Item", cnHeader:"基础物品", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 		this._optionalfeaturesFilter = new Filter({
 			header: "Feature",
 			chHeader: "特性",
@@ -522,6 +525,7 @@ class ModalFilterItems extends ModalFilterBase {
 				source,
 				sourceJson: item.source,
 				type,
+				ENG_name: item.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

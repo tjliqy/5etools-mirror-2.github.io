@@ -35,6 +35,7 @@ class ActionsSublistManager extends SublistManager {
 			{
 				hash,
 				time,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -88,6 +89,7 @@ class ActionsPage extends ListPage {
 				hash,
 				source,
 				time,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

@@ -8467,7 +8467,7 @@ Renderer.item = class {
 		return [
 			item.reqAttune ? `${typeRarity} ${item._attunement}` : typeRarity,
 			item._subTypeHtml || "",
-			item.tier ? `${item.tier} tier` : "",
+			item.tier ? `${item.tier} 层级` : "",
 		];
 	}
 
@@ -9493,7 +9493,7 @@ Renderer.item = class {
 		return specificVariants;
 	}
 
-	static isMundane (item) { return item.rarity === "none" || item.rarity === "unknown" || item._category === "Basic" || item._category === "基础"; }
+	static isMundane (item) { return item.rarity === "none" || item.rarity === "unknown" || item._category === "Basic" || item._category === "基础" || item.rarity === "未知"; }
 
 	static isExcluded (item, {hash = null} = {}) {
 		const name = item.name;

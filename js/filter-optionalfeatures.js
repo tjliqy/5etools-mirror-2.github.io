@@ -241,6 +241,7 @@ class ModalFilterOptionalFeatures extends ModalFilterBase {
 				prerequisite,
 				level,
 				type: optfeat._lFeatureType,
+				ENG_name: optfeat.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

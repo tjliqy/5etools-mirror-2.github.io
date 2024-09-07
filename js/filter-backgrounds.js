@@ -182,6 +182,7 @@ class ModalFilterBackgrounds extends ModalFilterBase {
 				source,
 				sourceJson: bg.source,
 				skills: bg._skillDisplay,
+				ENG_name: bg.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

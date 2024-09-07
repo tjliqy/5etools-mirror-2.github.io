@@ -140,7 +140,7 @@ export class MultiFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs ml-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs ml-2">以下拉列表展示</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
@@ -167,7 +167,7 @@ export class MultiFilter extends FilterBase {
 		const btnShowHide = e_({
 			tag: "button",
 			clazz: `btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}`,
-			text: "Hide",
+			text: "隐藏",
 			click: () => this._meta.isHidden = !this._meta.isHidden,
 		});
 		const wrpControls = e_({tag: "div", clazz: "ve-flex-v-center", children: [wrpSummary, wrpBtns, btnShowHide]});

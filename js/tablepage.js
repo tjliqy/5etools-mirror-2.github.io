@@ -126,6 +126,7 @@ class TableListPage extends ListPage {
 				displayName,
 				{
 					hash,
+					ENG_name: data.ENG_name,
 				},
 				{
 					...this._getListItemData(ent, i),

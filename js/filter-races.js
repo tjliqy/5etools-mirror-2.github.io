@@ -9,15 +9,15 @@ class PageFilterRaces extends PageFilterBase {
 		lProfs.forEach(lProfGroup => {
 			Object.keys(lProfGroup)
 				.forEach(k => {
-					if (!["choose", "any", "anyStandard", "anyExotic"].includes(k)) outSet.add(k.toTitleCase());
-					else outSet.add("Choose");
+					if (!["choose", "any", "anyStandard", "anyExotic","自选","任意"].includes(k)) outSet.add(Parser.LANGUAGES_TO_CN[k]);
+					else outSet.add("自选");
 				});
 		});
 
 		return [...outSet];
 	}
 
-	static getSpeedRating (speed) { return speed > 30 ? "Walk (Fast)" : speed < 30 ? "Walk (Slow)" : "Walk"; }
+	static getSpeedRating (speed) { return speed > 30 ? "步行 (快)" : speed < 30 ? "步行 (慢)" : "步行"; }
 
 	static filterAscSortSize (a, b) {
 		a = a.item;
@@ -41,28 +41,29 @@ class PageFilterRaces extends PageFilterBase {
 		this._sizeFilter = new Filter({header: "体型Size", displayFn: Parser.sizeAbvToFull, itemSortFn: PageFilterRaces.filterAscSortSize});
 		this._asiFilter = new AbilityScoreFilter({header: "属性加值 (包括亚种)Ability Scores (Including Subrace)"});
 		this._baseRaceFilter = new Filter({header: "基础种族Base Race"});
-		this._speedFilter = new Filter({header: "速度Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+		this._speedFilter = new Filter({header: "速度Speed", items: ["攀爬", "飞行", "游泳", "步行 (快)", "步行", "步行 (慢)"]});
 		this._traitFilter = new Filter({
-			header: "种族Traits",
+			header: "Traits",
+			cnHeader:"特性",
 			items: [
-				"Amphibious",
-				"Armor Proficiency",
-				"Blindsight",
-				"Darkvision", "Superior Darkvision",
-				"Dragonmark",
-				"Feat",
-				"Improved Resting",
-				"Monstrous Race",
-				"Natural Armor",
-				"Natural Weapon",
+				"两栖",
+				"护甲熟练项",
+				"盲视",
+				"黑暗视觉", "增强黑暗视觉",
+				"龙纹",
+				"专长",
+				"修整强化",
+				"怪物种族",
+				"天生护甲",
+				"天生武器",
 				"NPC种族",
-				"Powerful Build",
-				"Skill Proficiency",
-				"Spellcasting",
-				"Sunlight Sensitivity",
-				"Tool Proficiency",
-				"Uncommon Race",
-				"Weapon Proficiency",
+				"强力构筑",
+				"技能熟练项",
+				"施法",
+				"日照敏感",
+				"工具熟练项",
+				"罕见种族",
+				"武器熟练项",
 			],
 			deselFn: (it) => {
 				return it === "NPC Race";
@@ -76,25 +77,25 @@ class PageFilterRaces extends PageFilterBase {
 		this._languageFilter = new Filter({
 			header: "语言Languages",
 			items: [
-				"Abyssal",
-				"Celestial",
-				"Choose",
-				"Common",
-				"Draconic",
-				"Dwarvish",
-				"Elvish",
-				"Giant",
-				"Gnomish",
-				"Goblin",
-				"Halfling",
-				"Infernal",
-				"Orc",
-				"Other",
-				"Primordial",
-				"Sylvan",
-				"Undercommon",
+				"深渊语",
+				"天界语",
+				"自选",
+				"通用语",
+				"龙语",
+				"矮人语",
+				"精灵语",
+				"巨人语",
+				"侏儒语",
+				"地精语",
+				"半身人语",
+				"炼狱语",
+				"兽人语",
+				"其他",
+				"原初语",
+				"木族语",
+				"地底通用语",
 			],
-			umbrellaItems: ["Choose"],
+			umbrellaItems: ["自选"],
 		});
 		this._creatureTypeFilter = new Filter({
 			header: "生物类型Creature Type",
@@ -110,8 +111,8 @@ class PageFilterRaces extends PageFilterBase {
 			displayFnTooltip: it => `${it} 岁`,
 		});
 		this._miscFilter = new Filter({
-			header: "Miscellaneous",
-			items: ["Base Race", "Key Race", "Lineage", "Modified Copy", "Reprinted", "SRD", "Basic Rules", "Legacy", "Has Images", "Has Info"],
+			header: "杂项Miscellaneous",
+			items: ["基础种族", "关键种族", "Lineage", "修改副本", "重置", "SRD", "基础规则", "传奇", "有图片", "有简介"],
 			isMiscFilter: true,
 			// N.b. "Reprinted" is not red by default, as we assume tastes vary w.r.t. ability score style
 		});
@@ -120,32 +121,32 @@ class PageFilterRaces extends PageFilterBase {
 	static mutateForFilters (r) {
 		r._fSize = r.size ? [...r.size] : [];
 		if (r._fSize.length > 1) r._fSize.push("V");
-		r._fSpeed = r.speed ? r.speed.walk ? [r.speed.climb ? "Climb" : null, r.speed.fly ? "Fly" : null, r.speed.swim ? "Swim" : null, PageFilterRaces.getSpeedRating(r.speed.walk)].filter(it => it) : [PageFilterRaces.getSpeedRating(r.speed)] : [];
+		r._fSpeed = r.speed ? r.speed.walk ? [r.speed.climb ? "攀爬" : null, r.speed.fly ? "飞行" : null, r.speed.swim ? "游泳" : null, PageFilterRaces.getSpeedRating(r.speed.walk)].filter(it => it) : [PageFilterRaces.getSpeedRating(r.speed)] : [];
 		r._fTraits = [
-			r.darkvision === 120 ? "Superior Darkvision" : r.darkvision ? "Darkvision" : null,
-			r.blindsight ? "Blindsight" : null,
-			r.skillProficiencies ? "Skill Proficiency" : null,
-			r.toolProficiencies ? "Tool Proficiency" : null,
-			r.feats ? "Feat" : null,
-			r.additionalSpells ? "Spellcasting" : null,
-			r.armorProficiencies ? "Armor Proficiency" : null,
-			r.weaponProficiencies ? "Weapon Proficiency" : null,
+			r.darkvision === 120 ? "增强黑暗视觉" : r.darkvision ? "黑暗视觉" : null,
+			r.blindsight ? "盲视" : null,
+			r.skillProficiencies ? "技能熟练项" : null,
+			r.toolProficiencies ? "工具熟练项" : null,
+			r.feats ? "专长" : null,
+			r.additionalSpells ? "施法" : null,
+			r.armorProficiencies ? "护甲熟练项" : null,
+			r.weaponProficiencies ? "武器熟练项" : null,
 		].filter(it => it);
 		r._fTraits.push(...(r.traitTags || []));
 		r._fSources = SourceFilter.getCompleteFilterSources(r);
 		r._fLangs = PageFilterRaces.getLanguageProficiencyTags(r.languageProficiencies);
-		r._fCreatureTypes = r.creatureTypes ? r.creatureTypes.map(it => it.choose || it).flat() : ["humanoid"];
+		r._fCreatureTypes = r.creatureTypes ? r.creatureTypes.map(it => it.choose || it).flat() : ["类人生物"];
 		r._fMisc = [];
-		if (r._isBaseRace) r._fMisc.push("Base Race");
-		if (r._isBaseRace || !r._isSubRace) r._fMisc.push("Key Race");
-		if (r._isCopy) r._fMisc.push("Modified Copy");
+		if (r._isBaseRace) r._fMisc.push("基础种族");
+		if (r._isBaseRace || !r._isSubRace) r._fMisc.push("关键种族");
+		if (r._isCopy) r._fMisc.push("修改副本");
 		if (r.srd) r._fMisc.push("SRD");
-		if (r.basicRules) r._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(r.source)) r._fMisc.push("Legacy");
-		if (this._hasFluff(r)) r._fMisc.push("Has Info");
-		if (this._hasFluffImages(r)) r._fMisc.push("Has Images");
-		if (r.lineage) r._fMisc.push("Lineage");
-		if (this._isReprinted({reprintedAs: r.reprintedAs, tag: "race", prop: "race", page: UrlUtil.PG_RACES})) r._fMisc.push("Reprinted");
+		if (r.basicRules) r._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(r.source)) r._fMisc.push("传奇");
+		if (this._hasFluff(r)) r._fMisc.push("有简介");
+		if (this._hasFluffImages(r)) r._fMisc.push("有图片");
+		if (r.lineage) r._fMisc.push("血缘");
+		if (this._isReprinted({reprintedAs: r.reprintedAs, tag: "race", prop: "race", page: UrlUtil.PG_RACES})) r._fMisc.push("重置");
 
 		const ability = r.ability ? Renderer.getAbilityData(r.ability, {isOnlyShort: true, isCurrentLineage: r.lineage === "VRGR"}) : {asTextShort: "None"};
 		r._slAbility = ability.asTextShort;
@@ -303,6 +304,7 @@ class ModalFilterRaces extends ModalFilterBase {
 				size,
 				cleanName: PageFilterRaces.getInvertedName(race.name) || "",
 				alias: PageFilterRaces.getListAliases(race),
+				ENG_name: race.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

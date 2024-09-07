@@ -213,6 +213,7 @@ class ModalFilterFeats extends ModalFilterBase {
 				sourceJson: feat.source,
 				ability: feat._slAbility,
 				prerequisite: feat._slPrereq,
+				ENG_name: feat.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

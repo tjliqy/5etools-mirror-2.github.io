@@ -401,7 +401,7 @@ class MakeCards extends BaseComponent {
 				icon: cardMeta.icon,
 				count: cardMeta.count,
 				entityType: cardMeta.entityType,
-
+				ENG_name: cardMeta.ENG_name,
 				entity: loaded,
 			},
 			{

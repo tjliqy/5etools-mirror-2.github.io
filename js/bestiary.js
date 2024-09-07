@@ -141,6 +141,7 @@ class BestiarySublistManager extends SublistManager {
 				type,
 				cr,
 				page: mon.page,
+				ENG_name: mon.ENG_name,
 			},
 			{
 				count,
@@ -456,6 +457,7 @@ class BestiaryPage extends ListPageMultiSource {
 				group: mon.group ? [mon.group].flat().join(",") : "",
 				alias: (mon.alias || []).map(it => `"${it}"`).join(","),
 				page: mon.page,
+				ENG_name: mon.ENG_name,
 			},
 			{
 				isExcluded,

@@ -367,6 +367,7 @@ export class GetBrewUi {
 				author: brewInfo._brewAuthor,
 				// category: brewInfo._brewPropDisplayName, // Unwanted in search
 				internalSources: brewInfo._brewInternalSources, // Used for search
+				ENG_name: brewInfo.ENG_name,
 			},
 			{
 				btnAdd,

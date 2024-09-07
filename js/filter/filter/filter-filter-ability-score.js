@@ -86,7 +86,7 @@ export class AbilityScoreFilter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--clear w-100`,
 			click: () => this._doSetPillsClear(),
-			html: "Clear",
+			html: "清除",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -109,7 +109,7 @@ export class AbilityScoreFilter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "隐藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -654,7 +654,7 @@ export class AbilityScoreFilter extends FilterBase {
 
 AbilityScoreFilter.FilterItem = class {
 	static getUid_ ({ability = null, isAnyIncrease = false, isAnyDecrease = false, modifier = null}) {
-		return `${Parser.attAbvToFull(ability)} ${modifier != null ? UiUtil.intToBonus(modifier) : (isAnyIncrease ? `+any` : isAnyDecrease ? `-any` : "?")}`;
+		return `${Parser.attAbvToFull(ability)} ${modifier != null ? UiUtil.intToBonus(modifier) : (isAnyIncrease ? `+任意` : isAnyDecrease ? `-任意` : "?")}`;
 	}
 
 	constructor ({isAnyIncrease = false, isAnyDecrease = false, modifier = null, ability = null}) {
@@ -680,14 +680,14 @@ AbilityScoreFilter.FilterItem = class {
 	get uid () { return this._uid; }
 
 	getMiniPillDisplayText () {
-		if (this._isAnyIncrease) return `+Any ${Parser.attAbvToFull(this._ability)}`;
-		if (this._isAnyDecrease) return `\u2012Any ${Parser.attAbvToFull(this._ability)}`;
+		if (this._isAnyIncrease) return `+任意 ${Parser.attAbvToFull(this._ability)}`;
+		if (this._isAnyDecrease) return `\u2012任意 ${Parser.attAbvToFull(this._ability)}`;
 		return `${UiUtil.intToBonus(this._modifier, {isPretty: true})} ${Parser.attAbvToFull(this._ability)}`;
 	}
 
 	getPillDisplayHtml () {
-		if (this._isAnyIncrease) return `+Any`;
-		if (this._isAnyDecrease) return `\u2012Any`;
+		if (this._isAnyIncrease) return `+任意`;
+		if (this._isAnyDecrease) return `\u2012任意`;
 		return UiUtil.intToBonus(this._modifier, {isPretty: true});
 	}
 };

@@ -1149,7 +1149,7 @@ RendererMarkdown.item = class {
 		return [
 			item.reqAttune ? `${typeRarity} ${item._attunement}` : typeRarity,
 			item._subTypeHtml || "",
-			item.tier ? `${item.tier} tier` : "",
+			item.tier ? `${item.tier} 层级` : "",
 		];
 	}
 };

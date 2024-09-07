@@ -2031,7 +2031,7 @@ class ListPage {
 		const tabMetas = [
 			tabMetaStats,
 			new Renderer.utils.TabButton({
-				label: "信息",
+				label: "简介",
 				fnChange: this._renderStats_onTabChangeFluff.bind(this),
 				fnPopulate: this._renderStats_doBuildFluffTab.bind(this, {ent, isImageTab: false}),
 				isVisible: hasFluffText,

@@ -61,6 +61,7 @@ class OptionalFeaturesSublistManager extends SublistManager {
 				type: it._lFeatureType,
 				prerequisite,
 				level,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -131,6 +132,7 @@ class OptionalFeaturesPage extends ListPage {
 				prerequisite,
 				level,
 				type: it._lFeatureType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

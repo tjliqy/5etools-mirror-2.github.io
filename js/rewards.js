@@ -34,6 +34,7 @@ class RewardsSublistManager extends SublistManager {
 			{
 				hash,
 				type: reward.type,
+				ENG_name: reward.ENG_name,
 			},
 			{
 				entity: reward,
@@ -88,6 +89,7 @@ class RewardsPage extends ListPage {
 				hash,
 				source,
 				type: reward.type,
+				ENG_name: reward.ENG_name,
 			},
 			{
 				isExcluded,

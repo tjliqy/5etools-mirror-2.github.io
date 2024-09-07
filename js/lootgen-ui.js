@@ -28,6 +28,19 @@ class LootGenUi extends BaseComponent {
 				"very rare": 0,
 				"legendary": 0,
 			},
+			"主要": {
+				"uncommon": 0,
+				"rare": 0,
+				"very rare": 0,
+				"legendary": 0,
+			},
+			"次要": {
+				"common": 0,
+				"uncommon": 0,
+				"rare": 0,
+				"very rare": 0,
+				"legendary": 0,
+			},
 		},
 		4: {
 			"major": {
@@ -37,6 +50,19 @@ class LootGenUi extends BaseComponent {
 				"legendary": 0,
 			},
 			"minor": {
+				"common": 6,
+				"uncommon": 2,
+				"rare": 1,
+				"very rare": 0,
+				"legendary": 0,
+			},
+			"主要": {
+				"uncommon": 2,
+				"rare": 0,
+				"very rare": 0,
+				"legendary": 0,
+			},
+			"次要": {
 				"common": 6,
 				"uncommon": 2,
 				"rare": 1,
@@ -58,6 +84,19 @@ class LootGenUi extends BaseComponent {
 				"very rare": 1,
 				"legendary": 0,
 			},
+			"主要": {
+				"uncommon": 5,
+				"rare": 1,
+				"very rare": 0,
+				"legendary": 0,
+			},
+			"次要": {
+				"common": 10,
+				"uncommon": 12,
+				"rare": 5,
+				"very rare": 1,
+				"legendary": 0,
+			},
 		},
 		16: {
 			"major": {
@@ -73,6 +112,19 @@ class LootGenUi extends BaseComponent {
 				"very rare": 5,
 				"legendary": 1,
 			},
+			"主要": {
+				"uncommon": 1,
+				"rare": 2,
+				"very rare": 2,
+				"legendary": 1,
+			},
+			"次要": {
+				"common": 3,
+				"uncommon": 6,
+				"rare": 9,
+				"very rare": 5,
+				"legendary": 1,
+			},
 		},
 		20: {
 			"major": {
@@ -82,6 +134,19 @@ class LootGenUi extends BaseComponent {
 				"legendary": 3,
 			},
 			"minor": {
+				"common": 0,
+				"uncommon": 0,
+				"rare": 4,
+				"very rare": 9,
+				"legendary": 6,
+			},
+			"主要": {
+				"uncommon": 0,
+				"rare": 1,
+				"very rare": 2,
+				"legendary": 3,
+			},
+			"次要": {
 				"common": 0,
 				"uncommon": 0,
 				"rare": 4,
@@ -1311,7 +1376,7 @@ class LootGenUi extends BaseComponent {
 globalThis.LootGenUi = LootGenUi;
 
 class LootGenOutput {
-	static _TIERS = ["other", "minor", "major"];
+	static _TIERS = ["other", "次要", "主要"];
 
 	constructor (
 		{

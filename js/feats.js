@@ -40,6 +40,7 @@ class FeatsSublistManager extends SublistManager {
 				hash,
 				ability: it._slAbility,
 				prerequisite: it._slPrereq,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -101,6 +102,7 @@ class FeatsPage extends ListPage {
 				source,
 				ability: feat._slAbility,
 				prerequisite: feat._slPrereq,
+				ENG_name: feat.ENG_name,
 			},
 			{
 				isExcluded,

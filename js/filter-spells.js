@@ -160,7 +160,7 @@ class PageFilterSpells extends PageFilterBase {
 		if (s.srd) out.push("SRD");
 		if (s.basicRules) out.push("基础规则");
 		if (SourceUtil.isLegacySourceWotc(s.source)) s._fMisc.push("传奇");
-		if (s.hasFluff || s.fluff?.entries) out.push("有信息");
+		if (s.hasFluff || s.fluff?.entries) out.push("有简介");
 		if (s.hasFluffImages || s.fluff?.images) out.push("有图片");
 		return out;
 	}
@@ -718,6 +718,7 @@ class ModalFilterSpells extends ModalFilterBase {
 				concentration,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

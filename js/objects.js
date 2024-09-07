@@ -35,6 +35,7 @@ class ObjectsSublistManager extends SublistManager {
 			{
 				hash,
 				size,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -89,6 +90,7 @@ class ObjectsPage extends ListPage {
 				hash,
 				source,
 				size,
+				ENG_name: obj.ENG_name,
 			},
 			{
 				isExcluded,

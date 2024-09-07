@@ -48,6 +48,7 @@ class DeitiesSublistManager extends SublistManager {
 				pantheon: it.pantheon,
 				alignment,
 				domains,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -102,6 +103,7 @@ class DeitiesPage extends ListPage {
 				pantheon: ent.pantheon,
 				alignment,
 				domains,
+				ENG_name: ent.ENG_name,
 			},
 			{
 				isExcluded,

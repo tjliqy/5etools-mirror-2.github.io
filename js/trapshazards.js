@@ -35,6 +35,7 @@ class TrapsHazardsSublistManager extends SublistManager {
 			{
 				hash,
 				trapType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				entity: it,
@@ -86,6 +87,7 @@ class TrapsHazardsPage extends ListPage {
 				hash,
 				source,
 				trapType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				isExcluded,

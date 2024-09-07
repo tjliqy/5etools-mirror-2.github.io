@@ -77,6 +77,7 @@ class ItemsSublistManager extends SublistManager {
 				source: Parser.sourceJsonToAbv(item.source),
 				weight: Parser.weightValueToNumber(item.weight),
 				cost: item.value || 0,
+				ENG_name: item.ENG_name,
 			},
 			{
 				count,
@@ -282,6 +283,7 @@ class ItemsPage extends ListPage {
 					type,
 					cost: item.value || 0,
 					weight: Parser.weightValueToNumber(item.weight),
+					ENG_name: item.ENG_name,
 				},
 				{
 					isExcluded,
@@ -329,6 +331,7 @@ class ItemsPage extends ListPage {
 					rarity: item.rarity,
 					attunement: item._attunementCategory !== VeCt.STR_NO_ATTUNEMENT,
 					weight: Parser.weightValueToNumber(item.weight),
+					ENG_name: item.ENG_name,
 				},
 			);
 
