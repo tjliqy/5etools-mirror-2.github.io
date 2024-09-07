@@ -1,7 +1,7 @@
 {
 	"monster": [
 		{
-			"name": "地精帮派成员",
+			"name": "鬼怪帮众",
 			"ENG_name": "Goblin Gang Member",
 			"source": "KKW",
 			"page": 167,
@@ -47,7 +47,7 @@
 			],
 			"passive": 10,
 			"languages": [
-				"通用",
+				"通用语",
 				"地精"
 			],
 			"cr": "1/4",
@@ -56,7 +56,7 @@
 					"name": "迅捷逃逸",
 					"ENG_name": "Nimble Escape",
 					"entries": [
-						"地精可以在其每个回合上将脱离战斗或隐藏作为附赠动作。"
+						"地精可在自己的回合，以一个附赠动作来执行撤离 Disengage 或躲藏 Hide 动作。"
 					]
 				}
 			],
@@ -65,14 +65,14 @@
 					"name": "匕首",
 					"ENG_name": "Dagger",
 					"entries": [
-						"{@atk 近战武器} 命中骰：5，射程5尺，一个目标。{@h}5（{@damage 1d4 + 3}）穿刺伤害。"
+						"{@atk mw} 命中+{@hit 5}，触及 5 尺或射程 20/60 尺，单一目标。伤害：{@h}5（{@damage 1d4 + 3}）的穿刺伤害。"
 					]
 				},
 				{
 					"name": "轻弩",
 					"ENG_name": "Light Crossbow",
 					"entries": [
-						"{@atk 远程武器} {@hit 5} hit，射程80/320 尺，单一目标。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
+						"{@atk rw} 命中+{@hit 5}，触及 5 尺或射程 20/60 尺，单一目标。伤害：{@h}5（{@damage 1d4 + 3}）的穿刺伤害。"
 					]
 				}
 			],
@@ -91,9 +91,9 @@
 				"P"
 			],
 			"miscTags": [
-				"魔法学习(Magic Learning Wheel)",
+				"MLW",
 				"MW",
-				"射程",
+				"RNG",
 				"RW"
 			],
 			"hasToken": true
@@ -150,7 +150,7 @@
 			],
 			"passive": 9,
 			"languages": [
-				"通用",
+				"通用语",
 				"地精"
 			],
 			"cr": "1",
@@ -159,7 +159,7 @@
 					"name": "迅捷逃逸",
 					"ENG_name": "Nimble Escape",
 					"entries": [
-						"克仑可在他的每个回合中可以作为附赠动作使用脱离战斗或隐藏行动。"
+						"克仑可在自己的回合，可以用一个附赠动作来执行撤离 Disengage 或躲藏 Hide 动作。"
 					]
 				}
 			],
@@ -168,30 +168,30 @@
 					"name": "多重攻击",
 					"ENG_name": "Multiattack",
 					"entries": [
-						"克仑可用他的弯刀进行两次攻击。"
+						"克仑可用他的弯刀发动两次攻击。"
 					]
 				},
 				{
 					"name": "弯刀",
 					"ENG_name": "Scimitar",
 					"entries": [
-						"{@atk 近战武器} 命中骰4，射程5尺，单一目标。{@h}5 ({@damage 1d6 + 2}) 挥砍伤害加上2 ({@damage 1d4}) 点毒素伤害。"
+						"{@atk mw} 命中+{@hit 4}，触及 5 尺，单一目标。伤害：{@h}5（{@damage 1d6 + 2}）的挥砍伤害，外加 2（{@damage 1d4}）的毒素伤害。"
 					]
 				},
 				{
 					"name": "轻弩",
 					"ENG_name": "Light Crossbow",
 					"entries": [
-						"{@atk 远程攻击} 命中骰：4，射程80/320 尺，单一目标。{@h}6 ({@damage 1d8 + 2}) 穿刺伤害。"
+						"{@atk rw} 命中+{@hit 4}，射程 80/320尺，单一目标。伤害：{@h}6（{@damage 1d8 + 2}）的穿刺伤害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "借力打力",
+					"name": "攻击重定向",
 					"ENG_name": "Redirect Attack",
 					"entries": [
-						"当克仑可能看到一个生物用攻击瞄准他时，克仑可会选择他5尺范围内的另一个地精。两个地精交换位置，被选择的地精变成目标。"
+						"当克仑可被一个他能看见的生物指定为攻击目标时，他可以指定自己身边 5 尺范围内的另一个地精并与其互换位置，然后被指定的地精将被替换为被攻击目标。"
 					]
 				}
 			],
@@ -215,16 +215,16 @@
 				"S"
 			],
 			"miscTags": [
-				"魔法学习(Magic Learning Wheel)",
+				"MLW",
 				"MW",
-				"射程",
+				"RNG",
 				"RW"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
-			"name": "装载机械",
+			"name": "装载机器",
 			"ENG_name": "Loading Rig",
 			"isNpc": true,
 			"source": "KKW",
@@ -260,7 +260,7 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"盲视60尺（在此半径之外为盲）"
+				"盲视60尺（范围外视为目盲）"
 			],
 			"passive": 6,
 			"immune": [
@@ -280,17 +280,17 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "反魔法敏感",
+					"name": "魔力依赖",
 					"ENG_name": "Antimagic Susceptibility",
 					"entries": [
-						"该装置在反魔法区域时处于{@condition incapacitated}状态。如果被{@spell dispel magic}瞄准，装置必须在施法者的法术豁免DC上成功进行体质豁免投掷，否则将进入{@condition unconscious}状态，持续1分钟。"
+						"这台机械在陷入{@condition 失能}且它位于{@spell 反魔法场}效应范围内时，如果它被指定为{@spell 解除魔法}的目标，则其必须进行一次对抗该法术豁免DC 的体质豁免，豁免失败则陷入 1 分钟的{@condition 昏迷}状态。"
 					]
 				},
 				{
 					"name": "不稳定",
 					"ENG_name": "Unstable",
 					"entries": [
-						"如果机械装置受到损伤，它必须成功通过一个难度为10的体质豁免检定，否则会被{@condition incapacitated}，速度变为0，直到一个生物通过成功的难度为10的智力（{@skill Arcana}）检定作为动作来激活它。"
+						"这台机械受到伤害时，它必须成功通过一次 DC {@dc 10} 的体质豁免，否则其陷入{@condition 失能}状态且其速度降至 0，直到有一生物使用一个动作以一次成功的 DC {@dc 10} 智力（{@skill 奥秘}）检定将其激活。"
 					]
 				}
 			],
@@ -299,19 +299,19 @@
 					"name": "多重攻击",
 					"ENG_name": "Multiattack",
 					"entries": [
-						"盔甲进行两次近战攻击。"
+						"机甲发动两次近战攻击。"
 					]
 				},
 				{
 					"name": "猛击",
 					"ENG_name": "Slam",
 					"entries": [
-						"{@atk 近战武器} 命中：6，射程5尺，一个目标。{@h}7（{@damage 1d6 + 4}）钝击伤害。"
+						"{@atk mw} 命中+{@hit 6}，触及 5 尺，单一目标。伤害：{@h}7（{@damage 1d6 + 4}）的钝击伤害。"
 					]
 				}
 			],
 			"traitTags": [
-				"反魔法敏感"
+				"魔力依赖"
 			],
 			"senseTags": [
 				"B"
