@@ -114,7 +114,7 @@ class PageFilterRaces extends PageFilterBase {
 			header: "杂项Miscellaneous",
 			items: ["基础种族", "关键种族", "Lineage", "修改副本", "重置", "SRD", "基础规则", "传奇", "有图片", "有简介"],
 			isMiscFilter: true,
-			// N.b. "Reprinted" is not red by default, as we assume tastes vary w.r.t. ability score style
+			// N.b. "重置" is not red by default, as we assume tastes vary w.r.t. ability score style
 		});
 	}
 

@@ -28,9 +28,9 @@ class PageFilterDeities extends PageFilterBase {
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Grants Piety Features", "有简介", "有图片", "Reprinted", "SRD", "基础规则", "传奇"],
+			items: ["Grants Piety Features", "有简介", "有图片", "重置", "SRD", "基础规则", "传奇"],
 			displayFn: StrUtil.uppercaseFirst,
-			deselFn: (it) => it === "Reprinted",
+			deselFn: (it) => it === "重置",
 			isMiscFilter: true,
 		});
 	}
@@ -42,7 +42,7 @@ class PageFilterDeities extends PageFilterBase {
 		ent.domains.sort(SortUtil.ascSort);
 
 		ent._fMisc = [];
-		if (ent.reprinted) ent._fMisc.push("Reprinted");
+		if (ent.reprinted) ent._fMisc.push("重置");
 		if (ent.srd) ent._fMisc.push("SRD");
 		if (ent.basicRules) ent._fMisc.push("基础规则");
 		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");

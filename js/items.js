@@ -307,7 +307,7 @@ class ItemsPage extends ListPage {
 							e_({tag: "span", clazz: `ve-col-4`, text: type}),
 							e_({tag: "span", clazz: `ve-col-1-5 ve-text-center`, text: Parser.itemWeightToFull(item, true) || "\u2014"}),
 							e_({tag: "span", clazz: `ve-col-0-6 ve-text-center`, text: item._attunementCategory !== VeCt.STR_NO_ATTUNEMENT ? "×" : ""}),
-							e_({tag: "span", clazz: `ve-col-1-4 ve-text-center`, text: (item.rarity || "").toTitleCase()}),
+							e_({tag: "span", clazz: `ve-col-1-4 ve-text-center`, text: Parser.RARITIES_TO_CN[item.rarity || ""] || (item.rarity || "").toTitleCase()}),
 							e_({
 								tag: "span",
 								clazz: `ve-col-1 ve-text-center ${Parser.sourceJsonToSourceClassname(item.source)} pr-0`,
@@ -329,6 +329,7 @@ class ItemsPage extends ListPage {
 					hash,
 					type,
 					rarity: item.rarity,
+					CN_rarity: Parser.RARITIES_TO_CN[item.rarity] || item.rarity,
 					attunement: item._attunementCategory !== VeCt.STR_NO_ATTUNEMENT,
 					weight: Parser.weightValueToNumber(item.weight),
 					ENG_name: item.ENG_name,

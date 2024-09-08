@@ -716,7 +716,17 @@ Parser.stringToCasedSlug = function (str) {
 };
 
 Parser.ITEM_SPELLCASTING_FOCUS_CLASSES = ["Artificer", "Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"];
-
+Parser.CLASSES_TO_CN = {
+	"Artificer": "奇械师",
+	"Bard": "吟游诗人",
+	"Cleric": "牧师",
+	"Druid": "德鲁伊",
+	"Paladin": "圣武士",
+	"Ranger": "游侠",
+	"Sorcerer": "术士",
+	"Warlock": "邪术师",
+	"Wizard": "法师"
+}
 Parser.itemValueToFull = function (item, opts = {isShortForm: false, isSmallUnits: false}) {
 	return Parser._moneyToFull(item, "value", "valueMult", opts);
 };
@@ -745,7 +755,7 @@ Parser._moneyToFull = function (it, prop, propMult, opts = {isShortForm: false, 
 	if (it[prop] != null) {
 		const {coin, mult} = Parser.getCurrencyAndMultiplier(it[prop], it.currencyConversion);
 		return `${(it[prop] * mult).toLocaleString(undefined, {maximumFractionDigits: 5})}${opts.isSmallUnits ? `<span class="small ml-1">${coin}</span>` : ` ${coin}`}`;
-	} else if (it[propMult] != null) return opts.isShortForm ? `×${it[propMult]}` : `base value ×${it[propMult]}`;
+	} else if (it[propMult] != null) return opts.isShortForm ? `×${it[propMult]}` : `基础加值 ×${it[propMult]}`;
 	return "";
 };
 
@@ -774,7 +784,7 @@ Parser._moneyToFullMultiCurrency = function (it, prop, propMult, {isShortForm, m
 			.join(", ");
 	}
 
-	if (it[propMult]) return isShortForm ? `×${it[propMult]}` : `base value ×${it[propMult]}`;
+	if (it[propMult]) return isShortForm ? `×${it[propMult]}` : `基础价值 ×${it[propMult]}`;
 
 	return "";
 };
@@ -871,18 +881,18 @@ Parser.getDisplayCurrency = function (currency, {isDisplayEmpty = false} = {}) {
 Parser.itemWeightToFull = function (item, isShortForm) {
 	if (item.weight) {
 		// Handle pure integers
-		if (Math.round(item.weight) === item.weight) return `${item.weight} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
+		if (Math.round(item.weight) === item.weight) return `${item.weight} 磅${(item.weightNote ? ` ${item.weightNote}` : "")}`;
 
 		const integerPart = Math.floor(item.weight);
 
 		// Attempt to render the amount as (a number +) a vulgar
 		const vulgarGlyph = Parser.numberToVulgar(item.weight - integerPart, {isFallbackOnFractional: false});
-		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
+		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} 磅${(item.weightNote ? ` ${item.weightNote}` : "")}`;
 
 		// Fall back on decimal pounds or ounces
 		return `${(item.weight < 1 ? item.weight * 16 : item.weight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${item.weight < 1 ? "oz" : "lb"}.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
 	}
-	if (item.weightMult) return isShortForm ? `×${item.weightMult}` : `base weight ×${item.weightMult}`;
+	if (item.weightMult) return isShortForm ? `×${item.weightMult}` : `基础重量 ×${item.weightMult}`;
 	return "";
 };
 
@@ -905,9 +915,9 @@ Parser.itemRechargeToFull = function (recharge) {
 };
 
 Parser.ITEM_MISC_TAG_TO_FULL = {
-	"CF/W": "Creates Food/Water",
-	"CNS": "Consumable",
-	"TT": "Trinket Table",
+	"CF/W": "创造食物/水",
+	"CNS": "消耗品",
+	"TT": "小装饰品",
 };
 Parser.itemMiscTagToFull = function (type) {
 	return Parser._parse_aToB(Parser.ITEM_MISC_TAG_TO_FULL, type);
@@ -1948,13 +1958,26 @@ Parser.weightToFull = function (lbs, isSmallUnit) {
 	const tons = Math.floor(lbs / 2000);
 	lbs = lbs - (2000 * tons);
 	return [
-		tons ? `${tons}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}ton${tons === 1 ? "" : "s"}${isSmallUnit ? `</span>` : ""}` : null,
-		lbs ? `${lbs}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}lb.${isSmallUnit ? `</span>` : ""}` : null,
+		tons ? `${tons}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}吨${tons === 1 ? "" : "s"}${isSmallUnit ? `</span>` : ""}` : null,
+		lbs ? `${lbs}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}磅${isSmallUnit ? `</span>` : ""}` : null,
 	].filter(Boolean).join(", ");
 };
 
 Parser.RARITIES = ["common", "uncommon", "rare", "very rare", "legendary", "artifact"];
 Parser.ITEM_RARITIES = ["none", ...Parser.RARITIES, "varies", "unknown", "unknown (magic)", "other"];
+Parser.RARITIES_TO_CN = {
+	"none": "无",
+	"common": "常见",
+	"uncommon": "不常见",
+	"rare": "珍稀",
+	"very rare": "非常珍惜",
+	"legendary": "传说",
+	"artifact": "神器",
+	"varies": "多种",
+	"unknown": "不明",
+	"unknown (magic)": "不明(魔法)",
+	"other": "其他"
+};
 
 Parser.CAT_ID_CREATURE = 1;
 Parser.CAT_ID_SPELL = 2;

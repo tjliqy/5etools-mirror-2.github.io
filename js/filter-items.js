@@ -2,16 +2,16 @@
 
 class PageFilterEquipment extends PageFilterBase {
 	static _MISC_FILTER_ITEMS = [
-		"Item Group",
-		"Bundle",
+		"物品组别",
+		"套组/一批物品",
 		"SRD",
 		"基础规则",
 		"传奇",
 		"有图片",
 		"有简介",
-		"Reprinted",
-		"Disadvantage on Stealth",
-		"Strength Requirement",
+		"重置",
+		"潜在劣势",
+		"需要力量",
 	];
 
 	static _RE_FOUNDRY_ATTR = /(?:[-+*/]\s*)?@[a-z0-9.]+/gi;
@@ -57,8 +57,8 @@ class PageFilterEquipment extends PageFilterBase {
 			header: "Category",
 			cnHeader:"分类",
 			// items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
-			items: ["基础", "通用变体", "Specific Variant", "其他"],
-			deselFn: (it) => it === "Specific Variant",
+			items: ["基础", "通用变体", "特殊变体", "其他"],
+			deselFn: (it) => it === "特殊变体",
 			itemSortFn: null,
 			...(filterOpts?.["Category"] || {}),
 		});
@@ -77,7 +77,7 @@ class PageFilterEquipment extends PageFilterBase {
 			labelDisplayFn: it => !it ? "None" : Parser.getDisplayCurrency(CurrencyUtil.doSimplifyCoins({cp: it})),
 		});
 		this._weightFilter = new RangeFilter({header: "Weight", cnHeader:"重量", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
-		this._focusFilter = new Filter({header: "Spellcasting Focus", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES]});
+		this._focusFilter = new Filter({header: "Spellcasting Focus",cnHeader:"法器", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES], displayFn: it => Parser.CLASSES_TO_CN[it] || it});
 		this._damageTypeFilter = new Filter({header: "Weapon Damage Type", cnHeader:"武器伤害类型", displayFn: it => Parser.dmgTypeToFull(it).uppercaseFirst(), itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.dmgTypeToFull(a), Parser.dmgTypeToFull(b))});
 		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", cnHeader:"武器伤害骰",items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
 		this._miscFilter = new Filter({
@@ -86,7 +86,7 @@ class PageFilterEquipment extends PageFilterBase {
 			items: [...PageFilterEquipment._MISC_FILTER_ITEMS, ...Object.values(Parser.ITEM_MISC_TAG_TO_FULL)],
 			isMiscFilter: true,
 		});
-		this._poisonTypeFilter = new Filter({header: "Poison Type", cnHeader:"毒药类型", items: ["ingested", "injury", "inhaled", "contact"], displayFn: StrUtil.toTitleCase});
+		this._poisonTypeFilter = new Filter({header: "Poison Type", cnHeader:"毒药类型", items: ["服用", "伤口", "吸入", "接触"], displayFn: StrUtil.toTitleCase});
 		this._masteryFilter = new Filter({header: "Mastery", displayFn: this.constructor._getMasteryDisplay.bind(this)});
 	}
 
@@ -96,17 +96,17 @@ class PageFilterEquipment extends PageFilterBase {
 		item._fProperties = item.property ? item.property.map(p => Renderer.item.getProperty(p).name).filter(n => n) : [];
 
 		item._fMisc = [];
-		if (item._isItemGroup) item._fMisc.push("Item Group");
-		if (item.packContents) item._fMisc.push("Bundle");
+		if (item._isItemGroup) item._fMisc.push("物品组别");
+		if (item.packContents) item._fMisc.push("套组/一批物品");
 		if (item.srd) item._fMisc.push("SRD");
 		if (item.basicRules) item._fMisc.push("基础规则");
 		if (SourceUtil.isLegacySourceWotc(item.source)) item._fMisc.push("传奇");
 		if (this._hasFluff(item)) item._fMisc.push("有简介");
 		if (this._hasFluffImages(item)) item._fMisc.push("有图片");
 		if (item.miscTags) item._fMisc.push(...item.miscTags.map(Parser.itemMiscTagToFull));
-		if (this._isReprinted({reprintedAs: item.reprintedAs, tag: "item", prop: "item", page: UrlUtil.PG_ITEMS})) item._fMisc.push("Reprinted");
-		if (item.stealth) item._fMisc.push("Disadvantage on Stealth");
-		if (item.strength != null) item._fMisc.push("Strength Requirement");
+		if (this._isReprinted({reprintedAs: item.reprintedAs, tag: "item", prop: "item", page: UrlUtil.PG_ITEMS})) item._fMisc.push("重置");
+		if (item.stealth) item._fMisc.push("潜在劣势");
+		if (item.strength != null) item._fMisc.push("需要力量");
 
 		if (item.focus || item.name === "Thieves' Tools" || item.type === "INS" || item.type === "SCF" || item.type === "AT") {
 			item._fFocus = item.focus ? item.focus === true ? [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES] : [...item.focus] : [];
@@ -207,7 +207,7 @@ class PageFilterItems extends PageFilterEquipment {
 		"modern",
 		"renaissance",
 	]);
-	static _FILTER_BASE_ITEMS_ATTUNEMENT = ["Requires Attunement", "Requires Attunement By...", "Attunement Optional", VeCt.STR_NO_ATTUNEMENT];
+	static _FILTER_BASE_ITEMS_ATTUNEMENT = ["需要同调", "需要由...同调", "可选同调", VeCt.STR_NO_ATTUNEMENT];
 
 	// region static
 	static sortItems (a, b, o) {
@@ -250,24 +250,24 @@ class PageFilterItems extends PageFilterEquipment {
 			Object.entries(tagSet)
 				.forEach(([prop, val]) => {
 					switch (prop) {
-						case "background": out.push(`Background: ${val.split("|")[0].toTitleCase()}`); break;
-						case "languageProficiency": out.push(`Language Proficiency: ${val.toTitleCase()}`); break;
-						case "skillProficiency": out.push(`Skill Proficiency: ${val.toTitleCase()}`); break;
-						case "race": out.push(`Race: ${val.split("|")[0].toTitleCase()}`); break;
-						case "creatureType": out.push(`Creature Type: ${val.toTitleCase()}`); break;
-						case "size": out.push(`Size: ${Parser.sizeAbvToFull(val)}`.toTitleCase()); break;
-						case "class": out.push(`Class: ${val.split("|")[0].toTitleCase()}`); break;
-						case "alignment": out.push(`Alignment: ${Parser.alignmentListToFull(val).toTitleCase()}`); break;
+						case "background": out.push(`背景: ${val.split("|")[0].toTitleCase()}`); break;
+						case "languageProficiency": out.push(`语言熟练项: ${val.toTitleCase()}`); break;
+						case "skillProficiency": out.push(`技能熟练项: ${val.toTitleCase()}`); break;
+						case "race": out.push(`种族: ${val.split("|")[0].toTitleCase()}`); break;
+						case "creatureType": out.push(`生物类型: ${val.toTitleCase()}`); break;
+						case "size": out.push(`体型: ${Parser.sizeAbvToFull(val)}`.toTitleCase()); break;
+						case "class": out.push(`职业: ${val.split("|")[0].toTitleCase()}`); break;
+						case "alignment": out.push(`阵营: ${Parser.alignmentListToFull(val).toTitleCase()}`); break;
 
 						case "str":
 						case "dex":
 						case "con":
 						case "int":
 						case "wis":
-						case "cha": out.push(`${Parser.attAbvToFull(prop)}: ${val} or Higher`); break;
+						case "cha": out.push(`${Parser.attAbvToFull(prop)}: ${val} 或更高`); break;
 
-						case "spellcasting": out.push("Spellcaster"); break;
-						case "psionics": out.push("Psionics"); break;
+						case "spellcasting": out.push("施法"); break;
+						case "psionics": out.push("灵能"); break;
 					}
 				});
 		});
@@ -280,7 +280,7 @@ class PageFilterItems extends PageFilterEquipment {
 		super(opts);
 
 		this._tierFilter = new Filter({header: "Tier",cnHeader:"层级", items: ["none", "主要", "次要"], itemSortFn: null, displayFn: StrUtil.toTitleCase});
-		this._attachedSpellsFilter = new SearchableFilter({header: "Attached Spells", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
+		this._attachedSpellsFilter = new SearchableFilter({header: "Attached Spells",cnHeader:"附加法术", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._lootTableFilter = new Filter({
 			header: "Found On",
 			cnHeader:"位于魔法物品表",
@@ -296,26 +296,28 @@ class PageFilterItems extends PageFilterEquipment {
 			cnHeader: "稀有度",
 			items: [...Parser.ITEM_RARITIES],
 			itemSortFn: null,
-			displayFn: StrUtil.toTitleCase,
+			// displayFn: StrUtil.toTitleCase,
+			displayFn: it => Parser.RARITIES_TO_CN[it] || StrUtil.toTitleCase(it)
 		});
 		this._attunementFilter = new Filter({header: "Attunement", cnHeader:"同调", items: [...PageFilterItems._FILTER_BASE_ITEMS_ATTUNEMENT], itemSortFn: PageFilterItems._sortAttunementFilter});
 		this._bonusFilter = new Filter({
 			header: "Bonus",
+			cnHeader: "加值",
 			items: [
-				"Armor Class", "Proficiency Bonus", "Spell Attacks", "Spell Save DC", "Saving Throws",
-				...([...new Array(4)]).map((_, i) => `Weapon Attack and Damage Rolls${i ? ` (+${i})` : ""}`),
-				...([...new Array(4)]).map((_, i) => `Weapon Attack Rolls${i ? ` (+${i})` : ""}`),
-				...([...new Array(4)]).map((_, i) => `Weapon Damage Rolls${i ? ` (+${i})` : ""}`),
+				"护甲类", "熟练项加值", "法术命中", "法术豁免DC", "豁免检定",
+				...([...new Array(4)]).map((_, i) => `武器命中和伤害骰${i ? ` (+${i})` : ""}`),
+				...([...new Array(4)]).map((_, i) => `武器命中骰${i ? ` (+${i})` : ""}`),
+				...([...new Array(4)]).map((_, i) => `武器伤害骰${i ? ` (+${i})` : ""}`),
 			],
 			itemSortFn: null,
 		});
 		this._rechargeTypeFilter = new Filter({header: "Recharge Type",cnHeader:"充能类型", displayFn: Parser.itemRechargeToFull});
-		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Language", "Grants Proficiency", "魔法", "寻常", "Sentient", "Speed Adjustment", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["属性值修正", "充能", "诅咒", "提供语言", "提供熟练项", "魔法", "寻常", "有认知的", "速度修正", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
 		this._baseItemFilter = new Filter({header: "Base Item", cnHeader:"基础物品", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 		this._optionalfeaturesFilter = new Filter({
 			header: "Feature",
-			chHeader: "特性",
+			cnHeader: "特性",
 			displayFn: (it) => {
 				const [name, source] = it.split("|");
 				if (!source) return name.toTitleCase();
@@ -332,17 +334,17 @@ class PageFilterItems extends PageFilterEquipment {
 
 		item._fTier = [item.tier ? item.tier : "none"];
 
-		if (item.curse) item._fMisc.push("Cursed");
+		if (item.curse) item._fMisc.push("诅咒");
 		const isMundane = Renderer.item.isMundane(item);
 		item._fMisc.push(isMundane ? "寻常" : "魔法");
 		item._fIsMundane = isMundane;
-		if (item.ability) item._fMisc.push("Ability Score Adjustment");
-		if (item.modifySpeed) item._fMisc.push("Speed Adjustment");
-		if (item.charges) item._fMisc.push("Charges");
-		if (item.sentient) item._fMisc.push("Sentient");
-		if (item.grantsProficiency) item._fMisc.push("Grants Proficiency");
-		if (item.grantsLanguage) item._fMisc.push("Grants Language");
-		if (item.critThreshold) item._fMisc.push("Expanded Critical Range");
+		if (item.ability) item._fMisc.push("属性值修正");
+		if (item.modifySpeed) item._fMisc.push("速度修正");
+		if (item.charges) item._fMisc.push("充能");
+		if (item.sentient) item._fMisc.push("有认知的");
+		if (item.grantsProficiency) item._fMisc.push("提供熟练项");
+		if (item.grantsLanguage) item._fMisc.push("提供语言");
+		if (item.critThreshold) item._fMisc.push("额外范围");
 
 		const fBaseItemSelf = item._isBaseItem ? `${item.name}__${item.source}`.toLowerCase() : null;
 		item._fBaseItem = [
@@ -352,14 +354,14 @@ class PageFilterItems extends PageFilterEquipment {
 		item._fBaseItemAll = fBaseItemSelf ? [fBaseItemSelf, ...item._fBaseItem] : item._fBaseItem;
 
 		item._fBonus = [];
-		if (item.bonusAc) item._fBonus.push("Armor Class");
-		this._mutateForFilters_bonusWeapon({prop: "bonusWeapon", item, text: "Weapon Attack and Damage Rolls"});
-		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponAttack", item, text: "Weapon Attack Rolls"});
-		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponDamage", item, text: "Weapon Damage Rolls"});
+		if (item.bonusAc) item._fBonus.push("护甲类");
+		this._mutateForFilters_bonusWeapon({prop: "bonusWeapon", item, text: "武器命中和伤害骰"});
+		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponAttack", item, text: "武器命中骰"});
+		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponDamage", item, text: "武器伤害骰"});
 		if (item.bonusWeaponCritDamage) item._fBonus.push("Weapon Critical Damage");
-		if (item.bonusSpellAttack) item._fBonus.push("Spell Attacks");
-		if (item.bonusSpellSaveDc) item._fBonus.push("Spell Save DC");
-		if (item.bonusSavingThrow) item._fBonus.push("Saving Throws");
+		if (item.bonusSpellAttack) item._fBonus.push("法术命中");
+		if (item.bonusSpellSaveDc) item._fBonus.push("法术豁免DC");
+		if (item.bonusSavingThrow) item._fBonus.push("豁免检定");
 		if (item.bonusProficiencyBonus) item._fBonus.push("Proficiency Bonus");
 
 		item._fAttunement = this._getAttunementFilterItems(item);

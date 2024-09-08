@@ -2990,9 +2990,9 @@ Renderer.utils = class {
 		const sourceSub = Renderer.utils.getSourceSubText(it);
 		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, ${it.page}页` : ""}`;
 		const reprintedAsText = Renderer.utils._getReprintedAsHtmlOrText(it, {isText, tag, fnUnpackUid});
-		const addSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "additionalSources", "Additional information from", isText);
+		const addSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "additionalSources", "额外来源于", isText);
 		const otherSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "otherSources", "同时来源于", isText);
-		const externalSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "externalSources", "External sources:", isText);
+		const externalSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "externalSources", "外部来源:", isText);
 
 		const srdText = it.srd ? `${isText ? "" : `<span title="Systems Reference Document">`}SRD规则${isText ? "" : `</span>`}${typeof it.srd === "string" ? ` (as &quot;${it.srd}&quot;)` : ""}` : "";
 		const basicRulesText = it.basicRules ? `基础规则${typeof it.basicRules === "string" ? ` (as &quot;${it.basicRules}&quot;)` : ""}` : "";
@@ -7252,7 +7252,7 @@ Renderer.cultboon = class {
 		if (ent.ability) {
 			benefits.items.push({
 				type: "item",
-				name: "Ability Score Adjustment:",
+				name: "属性值修正:",
 				entry: ent.ability ? ent.ability.entry : "无",
 			});
 		}
@@ -8462,7 +8462,7 @@ Renderer.item = class {
 	static getTypeRarityAndAttunementText (item) {
 		const typeRarity = [
 			item._typeHtml === "other" ? "" : item._typeHtml,
-			(item.rarity && Renderer.item.doRenderRarity(item.rarity) ? item.rarity : ""),
+			(item.rarity && Renderer.item.doRenderRarity(item.rarity) ? (Parser.RARITIES_TO_CN[item.rarity] || item.rarity) : ""),
 		].filter(Boolean).join(", ");
 
 		return [
@@ -8480,9 +8480,9 @@ Renderer.item = class {
 				attunementCat = "需要同调";
 				attunement = "(需要同调)";
 			} else if (item[prop] === "optional") {
-				attunementCat = "Attunement Optional";
+				attunementCat = "可选同调";
 				attunement = "(attunement optional)";
-			} else if (item[prop].toLowerCase().startsWith("by")) {
+			} else if (item[prop].toLowerCase().startsWith("by") || item[prop].startsWith("由") || item[prop].startsWith("只能由")) {
 				attunementCat = "需要由...同调";
 				attunement = `(需要${Renderer.get().render(item[prop])}同调)`;
 			} else {
@@ -8507,7 +8507,7 @@ Renderer.item = class {
 			typeListText.push("刺青");
 		}
 		if (item.staff) {
-			typeHtml.push("staff");
+			typeHtml.push("法杖");
 			typeListText.push("法杖");
 		}
 		if (item.ammo) {
@@ -8523,7 +8523,7 @@ Renderer.item = class {
 			typeListText.push(item.age);
 		}
 		if (item.weaponCategory) {
-			typeHtml.push(`weapon${item.baseItem ? ` (${Renderer.get().render(`{@item ${item.baseItem}}`)})` : ""}`);
+			typeHtml.push(`武器${item.baseItem ? ` (${Renderer.get().render(`{@item ${item.baseItem}}`)})` : ""}`);
 			subTypeHtml.push(`${item.weaponCategory}武器`);
 			typeListText.push(`${item.weaponCategory}武器`);
 			showingBase = true;
@@ -8597,7 +8597,7 @@ Renderer.item = class {
 		}
 
 		if (!isCompact && item.lootTables) {
-			renderStack.push(`<div><span class="bold">Found On: </span>${item.lootTables.sort(SortUtil.ascSortLower).map(tbl => renderer.render(`{@table ${tbl}}`)).join(", ")}</div>`);
+			renderStack.push(`<div><span class="bold">位于: </span>${item.lootTables.sort(SortUtil.ascSortLower).map(tbl => renderer.render(`{@table ${tbl}}`)).join(", ")}</div>`);
 		}
 
 		return renderStack.join("").trim();
@@ -9298,7 +9298,7 @@ Renderer.item = class {
 		if (item.type === "T" || item.type === "AT" || item.type === "INS" || item.type === "GS") { // tools, artisan's tools, instruments, gaming sets
 			Renderer.item._initFullAdditionalEntries(item);
 			item._fullAdditionalEntries.push({type: "wrapper", wrapped: {type: "hr"}, data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
-			item._fullAdditionalEntries.push({type: "wrapper", wrapped: `{@note See the {@variantrule Tool Proficiencies|XGE} entry for more information.}`, data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+			item._fullAdditionalEntries.push({type: "wrapper", wrapped: `{@note 查看{@variantrule 工具熟练项|XGE}来获取更多信息。}`, data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
 		}
 
 		// Add additional sources for all instruments and gaming sets
@@ -9355,9 +9355,10 @@ Renderer.item = class {
 				type: "wrapper",
 				wrapped: {
 					type: "entries",
-					name: "Base items",
+					name: "基础物品",
+					ENG_name: "Base Items",
 					entries: [
-						"This item variant can be applied to the following base items:",
+						"这个变体物品可以应用于以下基础物品:",
 						{
 							type: "list",
 							items: item.variants.map(({base, specificVariant}) => {

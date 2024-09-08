@@ -283,9 +283,9 @@ export class SourceFilter extends Filter {
 		const basicRulesFilter = this._filterBox.filters.find(it => it.isBasicRulesFilter);
 		if (basicRulesFilter) basicRulesFilter.setValue("基础规则", 0);
 
-		// also disable "Reprinted" otherwise some Deities are missing
+		// also disable "重置" otherwise some Deities are missing
 		const reprintedFilter = this._filterBox.filters.find(it => it.isReprintedFilter);
-		if (reprintedFilter) reprintedFilter.setValue("Reprinted", 0);
+		if (reprintedFilter) reprintedFilter.setValue("重置", 0);
 	}
 
 	_doSetPinsBasicRules () {
@@ -299,9 +299,9 @@ export class SourceFilter extends Filter {
 		const srdFilter = this._filterBox.filters.find(it => it.isSrdFilter);
 		if (srdFilter) srdFilter.setValue("SRD", 0);
 
-		// also disable "Reprinted" otherwise some Deities are missing
+		// also disable "重置" otherwise some Deities are missing
 		const reprintedFilter = this._filterBox.filters.find(it => it.isReprintedFilter);
-		if (reprintedFilter) reprintedFilter.setValue("Reprinted", 0);
+		if (reprintedFilter) reprintedFilter.setValue("重置", 0);
 	}
 
 	static getCompleteFilterSources (ent) {

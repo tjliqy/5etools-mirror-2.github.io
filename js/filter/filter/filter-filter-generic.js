@@ -74,7 +74,7 @@ export class Filter extends FilterBase {
 		this._umbrellaItems = Filter._getAsFilterItems(opts.umbrellaItems);
 		this._umbrellaExcludes = Filter._getAsFilterItems(opts.umbrellaExcludes);
 		this._isSortByDisplayItems = !!opts.isSortByDisplayItems;
-		this._isReprintedFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "Reprinted");
+		this._isReprintedFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "重置");
 		this._isSrdFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "SRD");
 		this._isBasicRulesFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "基础规则");
 

@@ -59,7 +59,7 @@ globalThis.VeCt = {
 	URL_PRERELEASE: `https://github.com/TheGiddyLimit/unearthed-arcana`,
 	URL_ROOT_PRERELEASE: `https://raw.githubusercontent.com/TheGiddyLimit/unearthed-arcana/master/`, // As above
 
-	STR_NO_ATTUNEMENT: "No Attunement Required",
+	STR_NO_ATTUNEMENT: "无需同调",
 
 	CR_UNKNOWN: 100001,
 	CR_CUSTOM: 100000,
