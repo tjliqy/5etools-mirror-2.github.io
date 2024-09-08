@@ -281,7 +281,7 @@ export class SourceFilter extends Filter {
 		if (srdFilter) srdFilter.setValue("SRD", 1);
 
 		const basicRulesFilter = this._filterBox.filters.find(it => it.isBasicRulesFilter);
-		if (basicRulesFilter) basicRulesFilter.setValue("Basic Rules", 0);
+		if (basicRulesFilter) basicRulesFilter.setValue("基础规则", 0);
 
 		// also disable "Reprinted" otherwise some Deities are missing
 		const reprintedFilter = this._filterBox.filters.find(it => it.isReprintedFilter);
@@ -294,7 +294,7 @@ export class SourceFilter extends Filter {
 		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._BASIC_RULES_SOURCES.has(k) ? 1 : 0);
 
 		const basicRulesFilter = this._filterBox.filters.find(it => it.isBasicRulesFilter);
-		if (basicRulesFilter) basicRulesFilter.setValue("Basic Rules", 1);
+		if (basicRulesFilter) basicRulesFilter.setValue("基础规则", 1);
 
 		const srdFilter = this._filterBox.filters.find(it => it.isSrdFilter);
 		if (srdFilter) srdFilter.setValue("SRD", 0);

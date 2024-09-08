@@ -53,7 +53,7 @@ export class Filter extends FilterBase {
 	 * @param [opts.umbrellaItems] Items which should, when set active, show everything in the filter. E.g. "All".
 	 * @param [opts.umbrellaExcludes] Items which should ignore the state of any `umbrellaItems`
 	 * @param [opts.isSortByDisplayItems] If items should be sorted by their display value, rather than their internal value.
-	 * @param [opts.isMiscFilter] If this is the Misc. filter (containing "SRD" and "Basic Rules" tags).
+	 * @param [opts.isMiscFilter] If this is the Misc. filter (containing "SRD" and "基础规则" tags).
 	 */
 	constructor (opts) {
 		super(opts);
@@ -76,7 +76,7 @@ export class Filter extends FilterBase {
 		this._isSortByDisplayItems = !!opts.isSortByDisplayItems;
 		this._isReprintedFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "Reprinted");
 		this._isSrdFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "SRD");
-		this._isBasicRulesFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "Basic Rules");
+		this._isBasicRulesFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "基础规则");
 
 		Filter._validateItemNests(this._items, this._nests);
 

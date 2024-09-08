@@ -20,14 +20,14 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 
 		if (typeof lvlMeta === "number") {
 			return new FilterItem({
-				item: `Level ${lvlMeta}`,
+				item: `${lvlMeta} 级`,
 				nest: `(No Class)`,
 			});
 		}
 
 		const className = lvlMeta.class ? lvlMeta.class.name : `(No Class)`;
 		return new FilterItem({
-			item: `${lvlMeta.class ? className : ""}${lvlMeta.subclass ? ` (${lvlMeta.subclass.name})` : ""} Level ${lvlMeta.level}`,
+			item: `${lvlMeta.class ? className : ""}${lvlMeta.subclass ? ` (${lvlMeta.subclass.name})` : ""} ${lvlMeta.level} 级`,
 			nest: className,
 		});
 	}
@@ -38,22 +38,26 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 
 		this._typeFilter = new Filter({
 			header: "Feature Type",
+			cnHeader: "能力类型",
 			items: [],
 			displayFn: Parser.optFeatureTypeToFull,
 			itemSortFn: PageFilterOptionalFeatures._filterFeatureTypeSort,
 		});
 		this._pactFilter = new Filter({
 			header: "Pact Boon",
+			cnHeader: "契约恩赐",
 			items: [],
 			displayFn: Parser.prereqPactToFull,
 		});
 		this._patronFilter = new Filter({
 			header: "Otherworldly Patron",
+			cnHeader: "异界宗主",
 			items: [],
 			displayFn: Parser.prereqPatronToShort,
 		});
 		this._spellFilter = new Filter({
 			header: "Spell",
+			cnHeader: "法术",
 			items: [],
 			displayFn: StrUtil.toTitleCase,
 		});
@@ -63,11 +67,13 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
+			cnHeader: "等级",
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
 			nests: [],
 		});
 		this._prerequisiteFilter = new MultiFilter({
 			header: "Prerequisite",
+			cnHeader: "先决条件",
 			filters: [
 				this._pactFilter,
 				this._patronFilter,
@@ -76,7 +82,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 				this._featureFilter,
 			],
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Has Info", "Has Images", "SRD", "Legacy", "Grants Additional Spells"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous", cnHeader:"杂项", items: ["有简介", "有图片", "SRD", "传奇", "提供额外法术"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (ent) {
@@ -120,10 +126,10 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		ent.featureType.sort((a, b) => SortUtil.ascSortLower(Parser.optFeatureTypeToFull(a), Parser.optFeatureTypeToFull(b)));
 
 		ent._fMisc = ent.srd ? ["SRD"] : [];
-		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("Legacy");
-		if (ent.additionalSpells) ent._fMisc.push("Grants Additional Spells");
-		if (this._hasFluff(ent)) ent._fMisc.push("Has Info");
-		if (this._hasFluffImages(ent)) ent._fMisc.push("Has Images");
+		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");
+		if (ent.additionalSpells) ent._fMisc.push("提供额外法术");
+		if (this._hasFluff(ent)) ent._fMisc.push("有简介");
+		if (this._hasFluffImages(ent)) ent._fMisc.push("有图片");
 	}
 
 	addToFilters (it, isExcluded) {

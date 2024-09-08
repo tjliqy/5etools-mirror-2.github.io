@@ -10,6 +10,7 @@ class PageFilterFeats extends PageFilterBase {
 
 		this._asiFilter = new Filter({
 			header: "Ability Bonus",
+			cnHeader:"属性加值",
 			items: [
 				"str",
 				"dex",
@@ -23,34 +24,52 @@ class PageFilterFeats extends PageFilterBase {
 		});
 		this._categoryFilter = new Filter({
 			header: "Category",
+			cnHeader: "分类",
 			displayFn: StrUtil.toTitleCase,
 		});
 		this._otherPrereqFilter = new Filter({
 			header: "Other",
+			cnHeader: "其他",
+			displayFn: function(tag){
+				switch(tag){
+					case "Ability": 	return "属性值";
+					case "Race": 		return "种族";
+					case "Proficiency": return "熟练";
+					case "Spellcasting":return "施法";
+					case "Background":  return "背景";
+					case "Campaign":    return "战役";
+					case "Feat":        return "专长";
+					case "Psionics":    return "灵能";
+					case "Special":     return "特殊";
+					default: return tag;
+				}
+			},
 			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
+			cnHeader: "等级",
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
 		});
-		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [this._otherPrereqFilter, this._levelFilter]});
+		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite",cnHeader:"先决条件", filters: [this._otherPrereqFilter, this._levelFilter]});
 		this._benefitsFilter = new Filter({
 			header: "Benefits",
+			cnHeader: "增益",
 			items: [
-				"Armor Proficiency",
-				"Language Proficiency",
-				"Skill Proficiency",
-				"Spellcasting",
-				"Tool Proficiency",
-				"Weapon Proficiency",
+				"护甲熟练项",
+				"语言熟练项",
+				"技能熟练项",
+				"施法",
+				"工具熟练项",
+				"武器熟练项",
 			],
 		});
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenceFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Has Info", "Has Images", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["有简介", "有图片", "SRD", "基础规则", "传奇"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (feat) {
@@ -63,29 +82,29 @@ class PageFilterFeats extends PageFilterBase {
 		feat._fPrereqLevel = feat.prerequisite
 			? feat.prerequisite
 				.filter(it => it.level != null)
-				.map(it => `Level ${it.level.level ?? it.level}`)
+				.map(it => `${it.level.level ?? it.level} 级`)
 			: [];
 		feat._fBenifits = [
-			feat.resist ? "Damage Resistance" : null,
+			feat.resist ? "伤害抗性" : null,
 			feat.immune ? "Damage Immunity" : null,
 			feat.conditionImmune ? "Condition Immunity" : null,
-			feat.skillProficiencies ? "Skill Proficiency" : null,
-			feat.additionalSpells ? "Spellcasting" : null,
-			feat.armorProficiencies ? "Armor Proficiency" : null,
-			feat.weaponProficiencies ? "Weapon Proficiency" : null,
-			feat.toolProficiencies ? "Tool Proficiency" : null,
-			feat.languageProficiencies ? "Language Proficiency" : null,
+			feat.skillProficiencies ? "技能熟练项" : null,
+			feat.additionalSpells ? "施法" : null,
+			feat.armorProficiencies ? "护甲熟练项" : null,
+			feat.weaponProficiencies ? "武器熟练项" : null,
+			feat.toolProficiencies ? "工具熟练项" : null,
+			feat.languageProficiencies ? "语言熟练项" : null,
 		].filter(it => it);
 		if (feat.skillToolLanguageProficiencies?.length) {
-			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anySkill")))) feat._fBenifits.push("Skill Proficiency");
-			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyTool")))) feat._fBenifits.push("Tool Proficiency");
-			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyLanguage")))) feat._fBenifits.push("Language Proficiency");
+			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anySkill")))) feat._fBenifits.push("技能熟练项");
+			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyTool")))) feat._fBenifits.push("工具熟练项");
+			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyLanguage")))) feat._fBenifits.push("语言熟练项");
 		}
 		feat._fMisc = feat.srd ? ["SRD"] : [];
-		if (feat.basicRules) feat._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(feat.source)) feat._fMisc.push("Legacy");
-		if (this._hasFluff(feat)) feat._fMisc.push("Has Info");
-		if (this._hasFluffImages(feat)) feat._fMisc.push("Has Images");
+		if (feat.basicRules) feat._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(feat.source)) feat._fMisc.push("传奇");
+		if (this._hasFluff(feat)) feat._fMisc.push("有简介");
+		if (this._hasFluffImages(feat)) feat._fMisc.push("有图片");
 		if (feat.repeatable != null) feat._fMisc.push(feat.repeatable ? "Repeatable" : "Not Repeatable");
 
 		feat._slAbility = ability.asText || VeCt.STR_NONE;
@@ -166,7 +185,7 @@ class ModalFilterFeats extends ModalFilterBase {
 	_$getColumnHeaders () {
 		const btnMeta = [
 			{sort: "name", text: "名称", width: "4"},
-			{sort: "ability", text: "Ability", width: "3"},
+			{sort: "ability", text: "属性值", width: "3"},
 			{sort: "prerequisite", text: "先决条件", width: "3"},
 			{sort: "source", text: "来源", width: "1"},
 		];

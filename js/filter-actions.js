@@ -13,15 +13,15 @@ class PageFilterActions extends PageFilterBase {
 			displayFn: StrUtil.uppercaseFirst,
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._miscFilter = new Filter({header: "杂项", items: ["Optional/Variant Action", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "杂项", items: ["Optional/Variant Action", "SRD", "基础规则", "传奇"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {
 		it._fTime = it.time ? it.time.map(it => it.unit || it) : null;
 		it._fMisc = [];
 		if (it.srd) it._fMisc.push("SRD");
-		if (it.basicRules) it._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("Legacy");
+		if (it.basicRules) it._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
 		if (it.fromVariant) it._fMisc.push("Optional/Variant Action");
 	}
 

@@ -1965,7 +1965,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 							this._doPulseThrottled();
 						});
 
-					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">Feat</div>`) : $(`<button class="btn btn-xs btn-default w-50p">专长</button>`)
+					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">专长</div>`) : $(`<button class="btn btn-xs btn-default w-50p">专长</button>`)
 						.click(() => {
 							this._parent.state[propMode] = "feat";
 							this._doPulseThrottled();

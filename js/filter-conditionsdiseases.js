@@ -16,16 +16,16 @@ class PageFilterConditionsDiseases extends PageFilterBase {
 			displayFn: PageFilterConditionsDiseases.getDisplayProp,
 			deselFn: (it) => it === "disease" || it === "status",
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "Basic Rules", "Legacy", "Has Images", "Has Info"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "基础规则", "传奇", "有图片", "有简介"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {
 		it._fMisc = [];
 		if (it.srd) it._fMisc.push("SRD");
-		if (it.basicRules) it._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("Legacy");
-		if (this._hasFluff(it)) it._fMisc.push("Has Info");
-		if (this._hasFluffImages(it)) it._fMisc.push("Has Images");
+		if (it.basicRules) it._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
+		if (this._hasFluff(it)) it._fMisc.push("有简介");
+		if (this._hasFluffImages(it)) it._fMisc.push("有图片");
 	}
 
 	addToFilters (it, isExcluded) {

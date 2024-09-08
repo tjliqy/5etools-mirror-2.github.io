@@ -13,15 +13,15 @@ class PageFilterCharCreationOptions extends PageFilterBase {
 			displayFn: Parser.charCreationOptionTypeToFull,
 			itemSortFn: PageFilterCharCreationOptions._filterFeatureTypeSort,
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "Legacy", "Has Images", "Has Info"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "传奇", "有图片", "有简介"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {
 		it._fOptionType = Parser.charCreationOptionTypeToFull(it.optionType);
 		it._fMisc = it.srd ? ["SRD"] : [];
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("Legacy");
-		if (this._hasFluff(it)) it._fMisc.push("Has Info");
-		if (this._hasFluffImages(it)) it._fMisc.push("Has Images");
+		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
+		if (this._hasFluff(it)) it._fMisc.push("有简介");
+		if (this._hasFluffImages(it)) it._fMisc.push("有图片");
 	}
 
 	addToFilters (it, isExcluded) {

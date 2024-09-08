@@ -5,10 +5,10 @@ class PageFilterEquipment extends PageFilterBase {
 		"Item Group",
 		"Bundle",
 		"SRD",
-		"Basic Rules",
-		"Legacy",
-		"Has Images",
-		"Has Info",
+		"基础规则",
+		"传奇",
+		"有图片",
+		"有简介",
 		"Reprinted",
 		"Disadvantage on Stealth",
 		"Strength Requirement",
@@ -99,10 +99,10 @@ class PageFilterEquipment extends PageFilterBase {
 		if (item._isItemGroup) item._fMisc.push("Item Group");
 		if (item.packContents) item._fMisc.push("Bundle");
 		if (item.srd) item._fMisc.push("SRD");
-		if (item.basicRules) item._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(item.source)) item._fMisc.push("Legacy");
-		if (this._hasFluff(item)) item._fMisc.push("Has Info");
-		if (this._hasFluffImages(item)) item._fMisc.push("Has Images");
+		if (item.basicRules) item._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(item.source)) item._fMisc.push("传奇");
+		if (this._hasFluff(item)) item._fMisc.push("有简介");
+		if (this._hasFluffImages(item)) item._fMisc.push("有图片");
 		if (item.miscTags) item._fMisc.push(...item.miscTags.map(Parser.itemMiscTagToFull));
 		if (this._isReprinted({reprintedAs: item.reprintedAs, tag: "item", prop: "item", page: UrlUtil.PG_ITEMS})) item._fMisc.push("Reprinted");
 		if (item.stealth) item._fMisc.push("Disadvantage on Stealth");

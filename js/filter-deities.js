@@ -28,7 +28,7 @@ class PageFilterDeities extends PageFilterBase {
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Grants Piety Features", "Has Info", "Has Images", "Reprinted", "SRD", "Basic Rules", "Legacy"],
+			items: ["Grants Piety Features", "有简介", "有图片", "Reprinted", "SRD", "基础规则", "传奇"],
 			displayFn: StrUtil.uppercaseFirst,
 			deselFn: (it) => it === "Reprinted",
 			isMiscFilter: true,
@@ -44,10 +44,10 @@ class PageFilterDeities extends PageFilterBase {
 		ent._fMisc = [];
 		if (ent.reprinted) ent._fMisc.push("Reprinted");
 		if (ent.srd) ent._fMisc.push("SRD");
-		if (ent.basicRules) ent._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("Legacy");
-		if (ent.entries) ent._fMisc.push("Has Info");
-		if (ent.symbolImg) ent._fMisc.push("Has Images");
+		if (ent.basicRules) ent._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");
+		if (ent.entries) ent._fMisc.push("有简介");
+		if (ent.symbolImg) ent._fMisc.push("有图片");
 		if (ent.piety) ent._fMisc.push("Grants Piety Features");
 	}
 

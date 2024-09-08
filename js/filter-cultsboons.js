@@ -14,7 +14,7 @@ class PageFilterCultsBoons extends PageFilterBase {
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Legacy", "Reprinted"],
+			items: ["传奇", "Reprinted"],
 			deselFn: (it) => it === "Reprinted",
 			isMiscFilter: true,
 		});
@@ -23,7 +23,7 @@ class PageFilterCultsBoons extends PageFilterBase {
 	static mutateForFilters (it) {
 		it._fType = it.__prop === "cult" ? "Cult" : it.type ? `Boon, ${it.type}` : "Boon";
 		it._fMisc = [];
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("Legacy");
+		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
 		if (this._isReprinted({reprintedAs: it.reprintedAs, tag: it.__prop, prop: it.__prop, page: UrlUtil.PG_CULTS_BOONS})) it._fMisc.push("Reprinted");
 	}
 

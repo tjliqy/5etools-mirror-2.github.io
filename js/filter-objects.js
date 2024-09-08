@@ -4,15 +4,15 @@ class PageFilterObjects extends PageFilterBase {
 	constructor () {
 		super();
 
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "Legacy", "Has Images", "Has Info", "Has Token"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "传奇", "有图片", "有简介", "Has Token"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (obj) {
 		obj._fMisc = obj.srd ? ["SRD"] : [];
-		if (SourceUtil.isLegacySourceWotc(obj.source)) obj._fMisc.push("Legacy");
+		if (SourceUtil.isLegacySourceWotc(obj.source)) obj._fMisc.push("传奇");
 		if (Renderer.object.hasToken(obj)) obj._fMisc.push("Has Token");
-		if (this._hasFluff(obj)) obj._fMisc.push("Has Info");
-		if (this._hasFluffImages(obj)) obj._fMisc.push("Has Images");
+		if (this._hasFluff(obj)) obj._fMisc.push("有简介");
+		if (this._hasFluffImages(obj)) obj._fMisc.push("有图片");
 	}
 
 	addToFilters (obj, isExcluded) {
