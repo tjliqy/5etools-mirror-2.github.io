@@ -3,7 +3,7 @@
 class PageFilterConditionsDiseases extends PageFilterBase {
 	// region static
 	static getDisplayProp (prop) {
-		return prop === "status" ? "Other" : Parser.getPropDisplayName(prop);
+		return prop === "status" ? "其他" : Parser.getPropDisplayName(prop);
 	}
 	// endregion
 
@@ -12,11 +12,12 @@ class PageFilterConditionsDiseases extends PageFilterBase {
 
 		this._typeFilter = new Filter({
 			header: "Type",
+			cnHeader: "类型",
 			items: ["condition", "disease", "status"],
 			displayFn: PageFilterConditionsDiseases.getDisplayProp,
 			deselFn: (it) => it === "disease" || it === "status",
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "基础规则", "传奇", "有图片", "有简介"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["SRD", "基础规则", "传奇", "有图片", "有简介"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {

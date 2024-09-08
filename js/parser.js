@@ -3721,6 +3721,9 @@ Parser.PROP_TO_DISPLAY_NAME = {
 	"mythic": "Mythic Action",
 	"lairActions": "Lair Action",
 	"regionalEffects": "Regional Effect",
+
+	"condition": "状态",
+	"disease": "疾病"
 };
 Parser.getPropDisplayName = function (prop, {suffix = ""} = {}) {
 	if (Parser.PROP_TO_DISPLAY_NAME[prop]) return `${Parser.PROP_TO_DISPLAY_NAME[prop]}${suffix}`;

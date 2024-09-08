@@ -111,7 +111,8 @@ class PageFilterRaces extends PageFilterBase {
 			displayFnTooltip: it => `${it} 岁`,
 		});
 		this._miscFilter = new Filter({
-			header: "杂项Miscellaneous",
+			header: "Miscellaneous",
+			cnHeader:"杂项",
 			items: ["基础种族", "关键种族", "Lineage", "修改副本", "重置", "SRD", "基础规则", "传奇", "有图片", "有简介"],
 			isMiscFilter: true,
 			// N.b. "重置" is not red by default, as we assume tastes vary w.r.t. ability score style

@@ -13,7 +13,7 @@ class PageFilterCharCreationOptions extends PageFilterBase {
 			displayFn: Parser.charCreationOptionTypeToFull,
 			itemSortFn: PageFilterCharCreationOptions._filterFeatureTypeSort,
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "传奇", "有图片", "有简介"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["SRD", "传奇", "有图片", "有简介"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (it) {
