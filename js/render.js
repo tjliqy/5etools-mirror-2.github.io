@@ -2709,7 +2709,8 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 								thsAmount = "";
 							}
 						}
-						outStack += ch.from[j].uppercaseFirst() + thsAmount + suffix;
+						// outStack += ch.from[j].uppercaseFirst() + thsAmount + suffix;
+						outStack += Parser.ATB_ABV_TO_FULL[ch.from[j]] + thsAmount + suffix;
 					}
 				}
 			}
@@ -3597,10 +3598,10 @@ Renderer.utils = class {
 							return isListMode ? `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}甲` : `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}甲`;
 						}
 						case "weapon": {
-							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `熟练于一个${prof}武器`;
+							return isListMode ? `熟练于${prof}武器` : `熟练于一个${prof}武器`;
 						}
 						case "weaponGroup": {
-							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `${prof.toTitleCase()}武器熟练度`;
+							return isListMode ? `熟练于${prof}武器` : `${prof.toTitleCase()}武器熟练度`;
 						}
 						default: throw new Error(`Unhandled proficiency type: "${profType}"`);
 					}
@@ -3622,7 +3623,7 @@ Renderer.utils = class {
 		}
 
 		static _getHtml_spellcastingPrepared ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "Spellcasting feature from a class that prepares spells";
+			return isListMode ? "施法" : "需要准备法术的 施法Spellcasting 职业特性";
 		}
 
 		static _getHtml_psionics ({v, isListMode, isTextOnly}) {
@@ -5354,7 +5355,7 @@ Renderer.feat = class {
 		if (!abilityObj.choose) {
 			return Object.keys(abilityObj)
 				.filter(k => k !== "max")
-				.map(ab => `Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]},上限为${maxScore}.`)
+				.map(ab => `你的  ${Parser.attAbvToFull(ab)} 增加 ${abilityObj[ab]} 点，上限为${maxScore}.`)
 				.join(" ");
 		}
 

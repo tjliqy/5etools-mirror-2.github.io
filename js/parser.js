@@ -3833,6 +3833,7 @@ Parser.mapGridTypeToFull = function (gridType) {
 };
 
 Parser.LANGUAGES_TO_CN = {
+	"auran":"气族语",
 	"abyssal": "深渊语",
 	"celestial": "天界语",
 	// "Choose":,
@@ -3848,7 +3849,31 @@ Parser.LANGUAGES_TO_CN = {
 	"orc": "兽人语",
 	"other": "其他",
 	"primordial": "原初语",
+	"thieves' cant": "盗贼黑话",
 	"sylvan": "木族语",
 	"undercommon": "地底通用语"
+}
+
+Parser.TOOLS_TO_CN = {
+	"alchemist's supplies":"炼金工具",
+	"artisan's tools":"工匠工具",
+	"brewer's supplies": "酿酒工具",
+	"calligrapher's supplies": "书法工具",
+	"carpenter's tools": "木匠工具",
+	"cartographer's tools":"制图工具",
+	"cook's utensils":"厨师工具",
+	"disguise kit": "易容工具",
+	"forgery kit": "文书伪造工具",
+	"gaming set": "赌博工具",
+	"herbalism kit": "草药工具",
+	"musical instrument": "乐器",
+	"navigator's tools": "领航工具",
+	"poisoner's kit": "制毒工具",
+	"thieves' tools": "盗贼工具",
+	"tinker's tools": "修理工具",
+	"vehicles (air)": "载具(空运)",
+	"vehicles (land)": "载具(陆运)",
+	"vehicles (space)":"载具(航空)",
+	"vehicles (water)":"载具(水运)",
 }
 // endregion

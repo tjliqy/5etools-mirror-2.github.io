@@ -146,15 +146,15 @@ class FilterCommon {
 	/* -------------------------------------------- */
 
 	static _LANG_TO_DISPLAY = {
-		"anyStandard": "Any Standard",
-		"anyExotic": "Any Exotic",
-		"anyLanguage": "Any",
+		"anyStandard": "任意标准语言",
+		"anyExotic": "任意特种语言",
+		"anyLanguage": "任意",
 	};
 
 	static getLanguageProficienciesFilter () {
 		return new Filter({
 			header: "语言熟练项",
-			displayFn: it => this._LANG_TO_DISPLAY[it] || StrUtil.toTitleCase(it),
+			displayFn: it => this._LANG_TO_DISPLAY[it] || Parser.LANGUAGES_TO_CN[it] || StrUtil.toTitleCase(it),
 		});
 	}
 }

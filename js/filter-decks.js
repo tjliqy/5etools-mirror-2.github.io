@@ -6,7 +6,7 @@ class PageFilterDecks extends PageFilterBase {
 
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Has Card Art", "SRD", "Legacy"],
+			items: ["Has Card Art", "SRD", "传奇"],
 			isMiscFilter: true,
 			selFn: it => it === "Has Card Art",
 		});
@@ -15,7 +15,7 @@ class PageFilterDecks extends PageFilterBase {
 	static mutateForFilters (ent) {
 		ent._fMisc = [];
 		if (ent.srd) ent._fMisc.push("SRD");
-		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("Legacy");
+		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");
 		if (ent.hasCardArt) ent._fMisc.push("Has Card Art");
 	}
 

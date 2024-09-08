@@ -3,10 +3,10 @@
 class PageFilterBackgrounds extends PageFilterBase {
 	// TODO(Future) expand/move to `Renderer.generic`
 	static _getToolDisplayText (tool) {
-		if (tool === "anyTool") return "Any Tool";
-		if (tool === "anyArtisansTool") return "Any Artisan's Tool";
-		if (tool === "anyMusicalInstrument") return "Any Musical Instrument";
-		return tool.toTitleCase();
+		if (tool === "anyTool") return "任意工具";
+		if (tool === "anyArtisansTool") return "任意工匠工具";
+		if (tool === "anyMusicalInstrument") return "任意乐器";
+		return Parser.TOOLS_TO_CN[tool] || tool.toTitleCase();
 	}
 
 	constructor () {
@@ -15,13 +15,28 @@ class PageFilterBackgrounds extends PageFilterBase {
 		this._skillFilter = new Filter({header: "技能熟练项", displayFn: StrUtil.toTitleCase});
 		this._prereqFilter = new Filter({
 			header: "先决条件",
+			displayFn: function(tag){
+				switch(tag){
+					case "Ability": 	return "属性值";
+					case "Race": 		return "种族";
+					case "Proficiency": return "熟练";
+					case "Spellcasting":return "施法";
+					case "Background":  return "背景";
+					case "Campaign":    return "战役";
+					case "Feat":        return "专长";
+					case "Psionics":    return "灵能";
+					case "Special":     return "特殊";
+					case "Class":       return "职业";
+					default: return tag;
+				}
+			},
 			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 		});
 		this._toolFilter = new Filter({header: "工具熟练项", displayFn: PageFilterBackgrounds._getToolDisplayText.bind(PageFilterBackgrounds)});
 		this._languageFilter = FilterCommon.getLanguageProficienciesFilter();
 		this._asiFilter = new AbilityScoreFilter({header: "属性值"});
 		this._otherBenefitsFilter = new Filter({header: "其他优势"});
-		this._miscFilter = new Filter({header: "杂项", items: ["Has Info", "Has Images", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "杂项", items: ["有简介", "有图片", "SRD", "基础规则", "传奇"], isMiscFilter: true});
 	}
 
 	static mutateForFilters (bg) {
@@ -65,15 +80,15 @@ class PageFilterBackgrounds extends PageFilterBase {
 
 		bg._fMisc = [];
 		if (bg.srd) bg._fMisc.push("SRD");
-		if (bg.basicRules) bg._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(bg.source)) bg._fMisc.push("Legacy");
-		if (this._hasFluff(bg)) bg._fMisc.push("Has Info");
-		if (this._hasFluffImages(bg)) bg._fMisc.push("Has Images");
+		if (bg.basicRules) bg._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(bg.source)) bg._fMisc.push("传奇");
+		if (this._hasFluff(bg)) bg._fMisc.push("有简介");
+		if (this._hasFluffImages(bg)) bg._fMisc.push("有图片");
 		bg._fOtherBenifits = [];
-		if (bg.feats) bg._fOtherBenifits.push("Feat");
-		if (bg.additionalSpells) bg._fOtherBenifits.push("Additional Spells");
-		if (bg.armorProficiencies) bg._fOtherBenifits.push("Armor Proficiencies");
-		if (bg.weaponProficiencies) bg._fOtherBenifits.push("Weapon Proficiencies");
+		if (bg.feats) bg._fOtherBenifits.push("专长");
+		if (bg.additionalSpells) bg._fOtherBenifits.push("额外法术");
+		if (bg.armorProficiencies) bg._fOtherBenifits.push("护甲熟练项");
+		if (bg.weaponProficiencies) bg._fOtherBenifits.push("武器熟练项");
 		bg._skillDisplay = skillDisplay;
 	}
 
