@@ -1740,7 +1740,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		const $dispShowHide = $(`<div class="cls-nav__disp-toggle"></div>`);
 		const $wrpHeadInner = $$`<div class="cls-nav__head-inner split">
-			<div>Outline</div>
+			<div>概要</div>
 			${$dispShowHide}
 		</div>`
 			.click(() => this._state.isHideOutline = !this._state.isHideOutline);
@@ -2264,7 +2264,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	}
 
 	static _render_$getTrNoContent () {
-		return $(`<tr class="cls-main__msg-no-content"><td colspan="6">Toggle a button to view class and subclass information</td></tr>`);
+		return $(`<tr class="cls-main__msg-no-content"><td colspan="6">切换任一按钮来查看职业和子职信息</td></tr>`);
 	}
 
 	_getDefaultState () { return MiscUtil.copyFast(ClassesPage._DEFAULT_STATE); }

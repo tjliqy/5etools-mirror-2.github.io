@@ -3594,7 +3594,7 @@ Renderer.utils = class {
 				return Object.entries(obj).map(([profType, prof]) => {
 					switch (profType) {
 						case "armor": {
-							return isListMode ? `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}护甲` : `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}护甲`;
+							return isListMode ? `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}甲` : `熟练于${Parser.ARMOR_FULL_TO_CN[prof]}甲`;
 						}
 						case "weapon": {
 							return isListMode ? `熟练于${Parser.weaponFullToAbv(prof)}武器` : `熟练于一个${prof}武器`;
@@ -5473,7 +5473,7 @@ Renderer.class = class {
 			: null;
 	}
 
-	static getRenderedArmorProfs (armorProfs) { return armorProfs.map(a => Renderer.get().render(a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `{@filter ${a}护甲|items|type=${a} armor}` : a)).join(", "); }
+	static getRenderedArmorProfs (armorProfs) { return armorProfs.map(a => Renderer.get().render(a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `{@filter ${Parser.ARMOR_FULL_TO_CN[a]}甲|items|type=${Parser.ARMOR_FULL_TO_CN[a]}甲}` : a)).join(", "); }
 	static getRenderedWeaponProfs (weaponProfs) { return weaponProfs.map(w => Renderer.get().render(w === "简易" || w === "martial" ? `{@filter ${w}武器|items|type=${w}武器}` : w.optional ? `<span class="help help--hover" title="Optional Proficiency">${w.proficiency}</span>` : w)).join(", "); }
 	static getRenderedToolProfs (toolProfs) { return toolProfs.map(it => Renderer.get().render(it)).join(", "); }
 	static getRenderedSkillProfs (skills) { return `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`; }

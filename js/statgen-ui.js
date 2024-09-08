@@ -2356,7 +2356,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 		const $getStgEntity = ({title, $wrpRows, propEntity, propIxEntity}) => {
 			const $stg = $$`<div class="ve-flex-col">
 				<hr class="hr-3 hr--dotted">
-				<h4 class="my-2 bold">${title} Feats</h4>
+				<h4 class="my-2 bold">${title}专长</h4>
 				${$wrpRows}
 			</div>`;
 
@@ -2370,9 +2370,9 @@ StatGenUi.CompAsi = class extends BaseComponent {
 			return $stg;
 		};
 
-		const $stgRace = $getStgEntity({title: "Race", $wrpRows: $wrpRowsRace, propEntity: "race", propIxEntity: "common_ixRace"});
+		const $stgRace = $getStgEntity({title: "种族", $wrpRows: $wrpRowsRace, propEntity: "race", propIxEntity: "common_ixRace"});
 
-		const $stgBackground = $getStgEntity({title: "Background", $wrpRows: $wrpRowsBackground, propEntity: "background", propIxEntity: "common_ixBackground"});
+		const $stgBackground = $getStgEntity({title: "背景", $wrpRows: $wrpRowsBackground, propEntity: "background", propIxEntity: "common_ixBackground"});
 
 		const $iptCountFeatsCustom = ComponentUiUtil.$getIptInt(this._parent, "common_cntFeatsCustom", 0, {min: 0, max: StatGenUi._MAX_CUSTOM_FEATS})
 			.addClass("w-100p ve-text-center");

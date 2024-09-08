@@ -6,10 +6,11 @@ class PageFilterClassesBase extends PageFilterBase {
 
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Reprinted", "Sidekick", "SRD", "Basic Rules", "Legacy"],
-			deselFn: (it) => { return it === "Reprinted" || it === "Sidekick"; },
-			displayFnMini: it => it === "Reprinted" ? "Repr." : it,
-			displayFnTitle: it => it === "Reprinted" ? it : "",
+			cnHeader:"杂项",
+			items: ["重制", "协力者", "SRD", "基础规则", "传奇"],
+			deselFn: (it) => { return it === "重制" || it === "协力者"; },
+			displayFnMini: it => it === "重制" ? "Repr." : it,
+			displayFnTitle: it => it === "重制" ? it : "",
 			isMiscFilter: true,
 		});
 
@@ -52,11 +53,11 @@ class PageFilterClassesBase extends PageFilterBase {
 		];
 
 		cls._fMisc = [];
-		if (cls.isReprinted) cls._fMisc.push("Reprinted");
+		if (cls.isReprinted) cls._fMisc.push("重制");
 		if (cls.srd) cls._fMisc.push("SRD");
-		if (cls.basicRules) cls._fMisc.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(cls.source)) cls._fMisc.push("Legacy");
-		if (cls.isSidekick) cls._fMisc.push("Sidekick");
+		if (cls.basicRules) cls._fMisc.push("基础规则");
+		if (SourceUtil.isLegacySourceWotc(cls.source)) cls._fMisc.push("传奇");
+		if (cls.isSidekick) cls._fMisc.push("协力者");
 
 		cls.subclasses.forEach(sc => {
 			sc.source = sc.source || cls.source; // default subclasses to same source as parent
@@ -64,9 +65,9 @@ class PageFilterClassesBase extends PageFilterBase {
 
 			sc._fMisc = [];
 			if (sc.srd) sc._fMisc.push("SRD");
-			if (sc.basicRules) sc._fMisc.push("Basic Rules");
-			if (SourceUtil.isLegacySourceWotc(sc.source)) sc._fMisc.push("Legacy");
-			if (sc.isReprinted) sc._fMisc.push("Reprinted");
+			if (sc.basicRules) sc._fMisc.push("基础规则");
+			if (SourceUtil.isLegacySourceWotc(sc.source)) sc._fMisc.push("传奇");
+			if (sc.isReprinted) sc._fMisc.push("重制");
 		});
 	}
 

@@ -2543,9 +2543,9 @@ Parser.ARMOR_ABV_TO_FULL = {
 };
 
 Parser.ARMOR_FULL_TO_CN = {
-	"light": "轻型",
-	"medium": "中型",
-	"heavy": "重型"
+	"light": "轻",
+	"medium": "中",
+	"heavy": "重"
 }
 
 Parser.WEAPON_ABV_TO_FULL = {
@@ -3720,12 +3720,12 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"FD": "食物和饮品",
 	"G": "冒险装备",
 	"GS": "gaming set",
-	"HA": "重型护甲",
+	"HA": "重甲",
 	"IDG": "illegal drug",
 	"INS": "乐器",
-	"LA": "轻型护甲",
+	"LA": "轻甲",
 	"M": "近战武器",
-	"MA": "中型护甲",
+	"MA": "中甲",
 	"MNT": "坐骑",
 	"MR": "master rune",
 	"GV": "通用变体",

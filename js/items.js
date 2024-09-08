@@ -397,7 +397,7 @@ class ItemsPage extends ListPage {
 		const $elesMundaneAndMagic = $(`.ele-mundane-and-magic`);
 		$(`.side-label--mundane`).click(() => {
 			const filterValues = this._pageFilter.filterBox.getValues();
-			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "Mundane");
+			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "寻常");
 			this._pageFilter.filterBox.setFromValues({
 				Miscellaneous: {
 					...(filterValues?.Miscellaneous || {}),
@@ -407,7 +407,7 @@ class ItemsPage extends ListPage {
 		});
 		$(`.side-label--magic`).click(() => {
 			const filterValues = this._pageFilter.filterBox.getValues();
-			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "Magic");
+			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "魔法");
 			this._pageFilter.filterBox.setFromValues({
 				Miscellaneous: {
 					...(filterValues?.Miscellaneous || {}),
@@ -453,8 +453,8 @@ class ItemsPage extends ListPage {
 		super._addData(data);
 
 		// populate table labels
-		$(`h3.ele-mundane span.side-label`).text("Mundane");
-		$(`h3.ele-magic span.side-label`).text("Magic");
+		$(`h3.ele-mundane span.side-label`).text("寻常物品");
+		$(`h3.ele-magic span.side-label`).text("魔法物品");
 	}
 
 	_addListItem (listItem) {

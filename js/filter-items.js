@@ -310,7 +310,7 @@ class PageFilterItems extends PageFilterEquipment {
 			itemSortFn: null,
 		});
 		this._rechargeTypeFilter = new Filter({header: "Recharge Type",cnHeader:"充能类型", displayFn: Parser.itemRechargeToFull});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Language", "Grants Proficiency", "Magic", "Mundane", "Sentient", "Speed Adjustment", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Language", "Grants Proficiency", "魔法", "寻常", "Sentient", "Speed Adjustment", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
 		this._baseItemFilter = new Filter({header: "Base Item", cnHeader:"基础物品", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 		this._optionalfeaturesFilter = new Filter({
@@ -334,7 +334,7 @@ class PageFilterItems extends PageFilterEquipment {
 
 		if (item.curse) item._fMisc.push("Cursed");
 		const isMundane = Renderer.item.isMundane(item);
-		item._fMisc.push(isMundane ? "Mundane" : "Magic");
+		item._fMisc.push(isMundane ? "寻常" : "魔法");
 		item._fIsMundane = isMundane;
 		if (item.ability) item._fMisc.push("Ability Score Adjustment");
 		if (item.modifySpeed) item._fMisc.push("Speed Adjustment");
