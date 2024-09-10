@@ -77,6 +77,7 @@ class PageFilterBestiary extends PageFilterBase {
 
 		this._crFilter = new RangeFilter({
 			header: "Challenge Rating",
+			cnHeader: "挑战等级",
 			isLabelled: true,
 			labelSortFn: SortUtil.ascSortCr,
 			labels: [...Parser.CRS, "Unknown", "\u2014"],
@@ -84,6 +85,7 @@ class PageFilterBestiary extends PageFilterBase {
 		});
 		this._sizeFilter = new Filter({
 			header: "Size",
+			cnHeader: "体型",
 			items: [
 				Parser.SZ_TINY,
 				Parser.SZ_SMALL,
@@ -96,87 +98,99 @@ class PageFilterBestiary extends PageFilterBase {
 			displayFn: Parser.sizeAbvToFull,
 			itemSortFn: null,
 		});
-		this._speedFilter = new RangeFilter({header: "Speed", min: 30, max: 30, suffix: " ft"});
-		this._speedTypeFilter = new Filter({header: "Speed Type", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
-		this._strengthFilter = new RangeFilter({header: "Strength", min: 1, max: 30});
-		this._dexterityFilter = new RangeFilter({header: "Dexterity", min: 1, max: 30});
-		this._constitutionFilter = new RangeFilter({header: "Constitution", min: 1, max: 30});
-		this._intelligenceFilter = new RangeFilter({header: "Intelligence", min: 1, max: 30});
-		this._wisdomFilter = new RangeFilter({header: "Wisdom", min: 1, max: 30});
-		this._charismaFilter = new RangeFilter({header: "Charisma", min: 1, max: 30});
+		this._speedFilter = new RangeFilter({header: "Speed", cnHeader: "速度", min: 30, max: 30, suffix: " ft"});
+		this._speedTypeFilter = new Filter({header: "Speed Type", cnHeader: "速度类型", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
+		this._strengthFilter = new RangeFilter({header: "Strength", cnHeader: "力量", min: 1, max: 30});
+		this._dexterityFilter = new RangeFilter({header: "Dexterity", cnHeader: "敏捷", cnHeader:"", min: 1, max: 30});
+		this._constitutionFilter = new RangeFilter({header: "Constitution", cnHeader: "体质", min: 1, max: 30});
+		this._intelligenceFilter = new RangeFilter({header: "Intelligence", cnHeader: "智力", min: 1, max: 30});
+		this._wisdomFilter = new RangeFilter({header: "Wisdom", cnHeader: "感知", min: 1, max: 30});
+		this._charismaFilter = new RangeFilter({header: "Charisma", cnHeader: "魅力", min: 1, max: 30});
 		this._abilityScoreFilter = new MultiFilter({
 			header: "Ability Scores",
+			cnHeader: "属性值",
 			filters: [this._strengthFilter, this._dexterityFilter, this._constitutionFilter, this._intelligenceFilter, this._wisdomFilter, this._charismaFilter],
 			isAddDropdownToggle: true,
 		});
-		this._acFilter = new RangeFilter({header: "Armor Class"});
-		this._averageHpFilter = new RangeFilter({header: "Average Hit Points"});
+		this._acFilter = new RangeFilter({header: "Armor Class", cnHeader: "护甲等级"});
+		this._averageHpFilter = new RangeFilter({header: "Average Hit Points", cnHeader: "平均生命值"});
 		this._typeFilter = new Filter({
 			header: "Type",
+			cnHeader: "生物类型",
 			items: [...Parser.MON_TYPES],
 			displayFn: StrUtil.toTitleCase,
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._tagFilter = new Filter({header: "Tag", displayFn: StrUtil.toTitleCase});
+		this._tagFilter = new Filter({header: "Tag", cnHeader:"类型副标", displayFn: it => Parser.MON_TAG_TO_CN[it] || StrUtil.toTitleCase(it)});
 		this._sidekickTypeFilter = new Filter({
 			header: "Sidekick Type",
+			cnHeader: "协力者类型",
 			items: ["expert", "spellcaster", "warrior"],
 			displayFn: StrUtil.toTitleCase,
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._sidekickTagFilter = new Filter({header: "Sidekick Tag", displayFn: StrUtil.toTitleCase});
+		this._sidekickTagFilter = new Filter({header: "Sidekick Tag", cnHeader: "协力者类型副标", displayFn: StrUtil.toTitleCase});
 		this._alignmentFilter = new Filter({
 			header: "Alignment",
+			cnHeader: "阵营",
 			items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A", "No Alignment"],
 			displayFn: alignment => Parser.alignmentAbvToFull(alignment).toTitleCase(),
 			itemSortFn: null,
 		});
 		this._languageFilter = new Filter({
 			header: "Languages",
+			cnHeader: "语言",
 			displayFn: (k) => Parser.monLanguageTagToFull(k).toTitleCase(),
 			umbrellaItems: ["X", "XX"],
 			umbrellaExcludes: ["CS"],
 		});
 		this._damageTypeFilterBase = new Filter({
 			header: "Damage Inflicted by Traits/Actions",
+			cnHeader: "通过特性/动作造成伤害",
 			displayFn: this.constructor._getDamageTagDisplayText,
 			displayFnMini: tag => `Deals ${this.constructor._getDamageTagDisplayText(tag)} (Trait/Action)`,
 			items: Object.keys(Parser.DMGTYPE_JSON_TO_FULL),
 		});
 		this._damageTypeFilterLegendary = new Filter({
 			header: "Damage Inflicted by Lair Actions/Regional Effects",
+			cnHeader: "通过巢穴动作/区域效应造成伤害",
 			displayFn: this.constructor._getDamageTagDisplayText,
 			displayFnMini: tag => `Deals ${this.constructor._getDamageTagDisplayText(tag)} (Lair/Regional)`,
 			items: Object.keys(Parser.DMGTYPE_JSON_TO_FULL),
 		});
 		this._damageTypeFilterSpells = new Filter({
 			header: "Damage Inflicted by Spells",
+			cnHeader: "通过法术造成伤害",
 			displayFn: this.constructor._getDamageTagDisplayText,
 			displayFnMini: tag => `Deals ${this.constructor._getDamageTagDisplayText(tag)} (Spell)`,
 			items: Object.keys(Parser.DMGTYPE_JSON_TO_FULL),
 		});
-		this._damageTypeFilter = new MultiFilter({header: "Damage Inflicted", filters: [this._damageTypeFilterBase, this._damageTypeFilterLegendary, this._damageTypeFilterSpells]});
+		this._damageTypeFilter = new MultiFilter({header: "Damage Inflicted", cnHeader: "造成伤害", filters: [this._damageTypeFilterBase, this._damageTypeFilterLegendary, this._damageTypeFilterSpells]});
 		this._conditionsInflictedFilterBase = new Filter({
 			header: "Conditions Inflicted by Traits/Actions",
+			cnHeader: "通过特性/动作造成状态",
 			displayFn: this.constructor._getConditionDisplayText,
 			displayFnMini: uid => `Inflicts ${this.constructor._getConditionDisplayText(uid)} (Trait/Action)`,
 			items: [...Parser.CONDITIONS],
 		});
 		this._conditionsInflictedFilterLegendary = new Filter({
 			header: "Conditions Inflicted by Lair Actions/Regional Effects",
+			cnHeader: "通过巢穴动作/区域效应造成状态",
 			displayFn: this.constructor._getConditionDisplayText,
 			displayFnMini: uid => `Inflicts ${this.constructor._getConditionDisplayText(uid)} (Lair/Regional)`,
 			items: [...Parser.CONDITIONS],
 		});
 		this._conditionsInflictedFilterSpells = new Filter({
 			header: "Conditions Inflicted by Spells",
+			cnHeader: "通过法术造成状态",
 			displayFn: this.constructor._getConditionDisplayText,
 			displayFnMini: uid => `Inflicts ${this.constructor._getConditionDisplayText(uid)} (Spell)`,
 			items: [...Parser.CONDITIONS],
 		});
-		this._conditionsInflictedFilter = new MultiFilter({header: "Conditions Inflicted", filters: [this._conditionsInflictedFilterBase, this._conditionsInflictedFilterLegendary, this._conditionsInflictedFilterSpells]});
+		this._conditionsInflictedFilter = new MultiFilter({header: "Conditions Inflicted", cnHeader: "造成状态", filters: [this._conditionsInflictedFilterBase, this._conditionsInflictedFilterLegendary, this._conditionsInflictedFilterSpells]});
 		this._savingThrowForcedFilterBase = new Filter({
 			header: "Saving Throws Required by Traits/Actions",
+			cnHeader: "特性/动作需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
 			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Trait/Action)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
@@ -184,6 +198,7 @@ class PageFilterBestiary extends PageFilterBase {
 		});
 		this._savingThrowForcedFilterLegendary = new Filter({
 			header: "Saving Throws Required by Lair Actions/Regional Effects",
+			cnHeader: "通过巢穴动作/区域效应需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
 			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Lair/Regional)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
@@ -191,54 +206,62 @@ class PageFilterBestiary extends PageFilterBase {
 		});
 		this._savingThrowForcedFilterSpells = new Filter({
 			header: "Saving Throws Required by Spells",
+			cnHeader: "法术需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
 			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Spell)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
 			itemSortFn: null,
 		});
-		this._savingThrowForcedFilter = new MultiFilter({header: "Saving Throw Required", filters: [this._savingThrowForcedFilterBase, this._savingThrowForcedFilterLegendary, this._savingThrowForcedFilterSpells]});
+		this._savingThrowForcedFilter = new MultiFilter({header: "Saving Throw Required", cnHeader:"需要豁免检定", filters: [this._savingThrowForcedFilterBase, this._savingThrowForcedFilterLegendary, this._savingThrowForcedFilterSpells]});
 		this._senseFilter = new Filter({
 			header: "Senses",
+			cnHeader: "感官能力",
 			displayFn: (it) => Parser.monSenseTagToFull(it).toTitleCase(),
 			items: ["B", "D", "SD", "T", "U"],
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._passivePerceptionFilter = new RangeFilter({header: "Passive Perception", min: 10, max: 10});
+		this._passivePerceptionFilter = new RangeFilter({header: "Passive Perception", cnHeader:"被动感知", min: 10, max: 10});
 		this._skillFilter = new Filter({
 			header: "Skills",
+			cnHeader: "技能",
 			displayFn: (it) => it.toTitleCase(),
 			items: Object.keys(Parser.SKILL_TO_ATB_ABV),
 		});
 		this._saveFilter = new Filter({
 			header: "Saves",
+			cnHeader: "豁免",
 			displayFn: Parser.attAbvToFull,
 			items: [...Parser.ABIL_ABVS],
 			itemSortFn: null,
 		});
 		this._environmentFilter = new Filter({
 			header: "Environment",
+			cnHeader: "环境",
 			items: ["arctic", "coastal", "desert", "forest", "grassland", "hill", "mountain", "none", "swamp", "underdark", "underwater", "urban"],
 			displayFn: StrUtil.uppercaseFirst,
 		});
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenceFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._traitFilter = new Filter({
 			header: "Traits",
+			cnHeader: "特性",
 			items: [
 				"Aggressive", "Ambusher", "Amorphous", "Amphibious", "Antimagic Susceptibility", "Brute", "Charge", "Damage Absorption", "Death Burst", "Devil's Sight", "False Appearance", "Fey Ancestry", "Flyby", "Hold Breath", "Illumination", "Immutable Form", "Incorporeal Movement", "Keen Senses", "Legendary Resistances", "Light Sensitivity", "Magic Resistance", "Magic Weapons", "Pack Tactics", "Pounce", "Rampage", "Reckless", "Regeneration", "Rejuvenation", "Shapechanger", "Siege Monster", "Sneak Attack", "Spider Climb", "Sunlight Sensitivity", "Tunneler", "Turn Immunity", "Turn Resistance", "Undead Fortitude", "Water Breathing", "Web Sense", "Web Walker",
 			],
 		});
 		this._actionReactionFilter = new Filter({
 			header: "Actions & Reactions",
+			cnHeader: "动作 & 反应",
 			items: [
 				"Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles",
 			],
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
+			cnHeader: "杂项",
 			items: ["Familiar", ...Object.keys(Parser.MON_MISC_TAG_TO_FULL), "Bonus Actions", "Lair Actions", "Legendary", "Mythic", "Adventure NPC", "Spellcaster", ...Object.values(Parser.ATB_ABV_TO_FULL).map(it => `${PageFilterBestiary.MISC_FILTER_SPELLCASTER}${it}`), "Regional Effects", "Reactions", "重置", "Swarm", "Has Variants", "Modified Copy", "Has Alternate Token", "有简介", "有图片", "Has Token", "Has Recharge", "SRD", "基础规则", "传奇", "AC from Item(s)", "AC from Natural Armor", "AC from Unarmored Defense", "Summoned by Spell", "Summoned by Class"],
 			displayFn: (it) => Parser.monMiscTagToFull(it).uppercaseFirst(),
 			deselFn: (it) => ["Adventure NPC", "重置"].includes(it),
@@ -247,25 +270,29 @@ class PageFilterBestiary extends PageFilterBase {
 		});
 		this._spellcastingTypeFilter = new Filter({
 			header: "Spellcasting Type",
+			cnHeader: "施法类型",
 			items: ["F", "I", "P", "S", "O", "CA", "CB", "CC", "CD", "CP", "CR", "CS", "CL", "CW"],
 			displayFn: Parser.monSpellcastingTagToFull,
 		});
 		this._spellSlotLevelFilter = new RangeFilter({
 			header: "Spell Slot Level",
+			cnHeader: "法术环阶",
 			min: 1,
 			max: 9,
 			displayFn: it => Parser.getOrdinalForm(it),
 		});
-		this._spellKnownFilter = new SearchableFilter({header: "Spells Known", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
+		this._spellKnownFilter = new SearchableFilter({header: "Spells Known",cnHeader:"已知法术", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._equipmentFilter = new SearchableFilter({header: "Equipment", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._dragonAgeFilter = new Filter({
 			header: "Dragon Age",
+			cnHeader: "龙的年龄",
 			items: [...PageFilterBestiary._DRAGON_AGES],
 			itemSortFn: PageFilterBestiary._ascSortDragonAgeFilter,
 			displayFn: (it) => it.toTitleCase(),
 		});
 		this._dragonCastingColor = new Filter({
 			header: "Dragon Casting Color",
+			cnHeader: "龙的颜色",
 			items: [...Renderer.monster.dragonCasterVariant.getAvailableColors()],
 			displayFn: (it) => it.toTitleCase(),
 		});

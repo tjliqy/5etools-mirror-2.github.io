@@ -1556,7 +1556,7 @@ Parser.monTypeToFullObj = function (type) {
 	// handles e.g. "fey"
 	if (typeof type === "string") {
 		out.types = [type];
-		out.asText = type.toTitleCase();
+		out.asText = Parser.monTypeToPlural(type) || type.toTitleCase();
 		out.asTextShort = out.asText;
 		return out;
 	}
@@ -1569,11 +1569,11 @@ Parser.monTypeToFullObj = function (type) {
 
 	if (type.swarmSize) {
 		out.tags.push("swarm");
-		out.asText = `swarm of ${Parser.sizeAbvToFull(type.swarmSize)} ${out.types.map(typ => Parser.monTypeToPlural(typ).toTitleCase()).joinConjunct(", ", " or ")}`;
+		out.asText = `${out.types.map(typ => Parser.monTypeToPlural(typ).toTitleCase()).joinConjunct(", ", " 或 ")}的${Parser.sizeAbvToFull(type.swarmSize)}集群`;
 		out.asTextShort = out.asText;
 		out.swarmSize = type.swarmSize;
 	} else {
-		out.asText = out.types.map(typ => typ.toTitleCase()).joinConjunct(", ", " or ");
+		out.asText = out.types.map(typ => Parser.monTypeToPlural(typ)).joinConjunct(", ", " 或 ");
 		out.asTextShort = out.asText;
 	}
 
@@ -1590,7 +1590,7 @@ Parser.monTypeToFullObj = function (type) {
 	// region Sidekick
 	if (type.sidekickType) {
 		out.typeSidekick = type.sidekickType;
-		if (!type.sidekickHidden) out.asTextSidekick = `${type.sidekickType}`;
+		if (!type.sidekickHidden) out.asTextSidekick = `${Parser.MON_SIDEKICK_TO_CN[type.sidekickType] || type.sidekickType}`;
 
 		const tagMetas = Parser.monTypeToFullObj._getTagMetas(type.sidekickTags);
 		if (tagMetas.length) {
@@ -1609,12 +1609,12 @@ Parser.monTypeToFullObj._getTagMetas = (tags) => {
 			if (typeof tag === "string") { // handles e.g. "Fiend (Devil)"
 				return {
 					filterTag: tag.toLowerCase(),
-					displayTag: tag.toTitleCase(),
+					displayTag: Parser.MON_TAG_TO_CN[tag.toLowerCase()] || tag.toTitleCase(),
 				};
 			} else { // handles e.g. "Humanoid (Chondathan Human)"
 				return {
 					filterTag: tag.tag.toLowerCase(),
-					displayTag: `${tag.prefix} ${tag.tag}`.toTitleCase(),
+					displayTag: `${Parser.MON_TAG_PREFIX_TO_CN[tag.prefix.toLowerCase()] || tag.prefix}${Parser.MON_TAG_TO_CN[tag.tag.toLowerCase()] || tag.tag}`.toTitleCase(),
 				};
 			}
 		})
@@ -2468,21 +2468,20 @@ Parser.ATB_ABV_TO_FULL = {
 	"cha": "魅力",
 };
 
-Parser.TP_ABERRATION = "异怪";
-Parser.TP_BEAST = "野兽";
-Parser.TP_CELESTIAL = "天界生物";
-Parser.TP_CONSTRUCT = "构装体";
-Parser.TP_DRAGON = "龙";
-Parser.TP_ELEMENTAL = "元素";
-Parser.TP_FEY = "精类";
-Parser.TP_FIEND = "邪魔";
-Parser.TP_GIANT = "巨人";
-Parser.TP_HUMANOID = "类人生物";
-Parser.TP_MONSTROSITY = "怪兽";
-Parser.TP_OOZE = "泥怪";
-Parser.TP_PLANT = "植物";
-Parser.TP_UNDEAD = "不死生物";
-Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD];
+Parser.TP_ABERRATION = "aberration";
+Parser.TP_BEAST = "beast";
+Parser.TP_CELESTIAL = "celestial";
+Parser.TP_CONSTRUCT = "construct";
+Parser.TP_DRAGON = "dragon";
+Parser.TP_ELEMENTAL = "elemental";
+Parser.TP_FEY = "fey";
+Parser.TP_FIEND = "fiend";
+Parser.TP_GIANT = "giant";
+Parser.TP_HUMANOID = "humanoid";
+Parser.TP_MONSTROSITY = "monstrosity";
+Parser.TP_OOZE = "ooze";
+Parser.TP_PLANT = "plant";
+Parser.TP_UNDEAD = "undead";
 Parser.MON_TYPE_TO_PLURAL = {};
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_ABERRATION] = "异怪";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_BEAST] = "野兽";
@@ -2498,6 +2497,7 @@ Parser.MON_TYPE_TO_PLURAL[Parser.TP_MONSTROSITY] = "怪兽";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_OOZE] = "泥怪";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_PLANT] = "植物";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_UNDEAD] = "不死生物";
+Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD].map(it => Parser.MON_TYPE_TO_PLURAL[it]);
 
 Parser.SZ_FINE = "F";
 Parser.SZ_DIMINUTIVE = "D";
@@ -3901,5 +3901,136 @@ Parser.TOOLS_TO_CN = {
 	"vehicles (land)": "载具(陆运)",
 	"vehicles (space)":"载具(航空)",
 	"vehicles (water)":"载具(水运)",
+}
+
+Parser.MON_TAG_TO_CN = {
+	"aarakocra": "阿兰寇拉鹰人",
+	"adult chromatic": "成年色彩龙",
+	"angel": "天使",
+	"any": "任意",
+	"any race": "任意种族",
+	"archfey": "至高妖精",
+	"bard": "吟游诗人",
+	"beholder": "眼魔",
+	"bullywug": "狂蛙人",
+	"cattle": "牛",
+	"changeling":"幻身灵",
+	"chromatic": "太古龙",
+	"cleric": "牧师",
+	"cloud giant": "云巨人",
+	"demon": "恶魔",
+	"derro": "德洛人",
+	"devil": "魔鬼",
+	"dinosaur": "恐龙",
+	"dragonborn": "龙裔",
+	"drow": "卓尔",
+	"druid": "德鲁伊",
+	"dwarf": "矮人",
+	"fire giant": "火巨人",
+	"elf": "精灵",
+	"firenewt": "熔螈",
+	"frost giant": "霜巨人",
+	"gallus": "雉族",
+	"gem": "宝石龙",
+	"genasi": "元素裔",
+	"gith": "吉斯人",
+	"gnoll": "豺狼人",
+	"gnome": "侏儒",
+	"goblinoid": "类地精",
+	"grimlock": "石盲蛮族",
+	"goliath": "歌利亚",
+	"grung": "格龙蛙人",
+	"hag": "鬼婆",
+	"half-black dragon": "半黑龙",
+	"half-dragon": "半龙",
+	"half-elf": "半精灵",
+	"half-orc": "半兽人",
+	"halfling": "半身人",
+	"harengon": "兔人",
+	"healer": "治疗者",
+	"hill giant": "山丘巨人",
+	"human": "人类",
+	"inevitable": "制裁者",
+	"kalashtar": "离梦人",
+	"kender": "坎德人",
+	"kenku": "天狗",
+	"kobold": "狗头人",
+	"kraul": "刻洛",
+	"kuo-toa": "寇涛鱼人",
+	"lava child": "熔岩之子",
+	"leonin": "狮族",
+	"lizardfolk": "蜥蜴人",
+	"locathah": "洛卡鱼人",
+	"mage": "魔术师",
+	"meazel": "鬾魊",
+	"medusa": "美杜莎",
+	"merfolk": "人鱼",
+	"metallic": "金属龙",
+	"mind flayer": "夺心魔",
+	"minotaur": "牛头人",
+	"mongrelfolk": "混种人",
+	"monk": "武僧",
+	"moonstone": "月石龙",
+	"nagpa": "那加帕",
+	"orc": "兽人",
+	"paladin": "圣武士",
+	"sahuagin": "沙华鱼人",
+	"quaggoth": "泽地熊人",
+	"saurial": "类蜴人",
+	"shadar-kai": "影灵",
+	"shapechanger": "变形生物",
+	"shifter": "化兽者",
+	"simic hybrid": "析米克混生体",
+	"sorcerer": "术士",
+	"stone giant": "石巨人",
+	"storm giant": "风暴巨人",
+	"swarm": "集群",
+	"tabaxi": "斑猫人",
+	"saurial": "类蜴人",
+	"thri-kreen": "螳螂人",
+	"tiefling": "提夫林",
+	"titan": "泰坦",
+	"tortle": "龟人",
+	"triton": "屈东",
+	"troglodyte": "穴蜥人",
+	"vampire": "吸血鬼",
+	"warforged": "战俑",
+	"warlock": "邪术师",
+	"wizard": "法师",
+	"xvart": "法特怪",
+	"young gem": "青年宝石龙",
+	"yuan-ti": "蛇人",
+	"yugoloth": "尤格罗斯魔",
+	"attacker": "攻击手",
+	"defender": "防御者"
+
+}
+
+Parser.MON_TAG_PREFIX_TO_CN = {
+	"fire" : "火",
+	"water": "水",
+	"earth": "土",
+	"wood": "木",
+	"dusk": "暮",
+	"high": "高",
+	"mountain": "山地",
+	"deep": "地底",
+	"rock": "岩石",
+	"strongheart": "强心",
+	"stout": "敦实",
+	"lightfoot": "轻足",
+	"illuskan": "伊路斯坎",
+	"turami": "图拉米",
+	"tethyrian": "泰瑟尔",
+	"mulan": "穆兰",
+	"damaran": "达马拉",
+	"chondathan": "琼达斯",
+	"shou": "受国",
+}
+
+Parser.MON_SIDEKICK_TO_CN = {
+	"warrior": "武者",
+	"expert": "专家",
+	"spellcaster": "施法者"
 }
 // endregion

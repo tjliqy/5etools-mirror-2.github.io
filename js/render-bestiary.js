@@ -78,20 +78,20 @@ class RenderBestiary {
 		<tr>${options.selSummonClassLevel ? $$`<td colspan="6"><strong>职业等级</strong> ${options.selSummonClassLevel}</td>` : ""}</tr>
 
 		${allTraits?.length ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection({prop: "trait", entries: allTraits})}` : ""}
-		${allActions?.length ? `${this._getRenderedSectionHeader({mon, title: "Actions", prop: "action"})}
+		${allActions?.length ? `${this._getRenderedSectionHeader({mon, title: "动作", prop: "action"})}
 		${RenderBestiary._getRenderedSection({mon, prop: "action", entries: allActions})}` : ""}
-		${allBonusActions?.length ? `${this._getRenderedSectionHeader({mon, title: "Bonus Actions", prop: "bonus"})}
+		${allBonusActions?.length ? `${this._getRenderedSectionHeader({mon, title: "附赠动作", prop: "bonus"})}
 		${RenderBestiary._getRenderedSection({mon, prop: "bonus", entries: allBonusActions})}` : ""}
-		${allReactions?.length ? `${this._getRenderedSectionHeader({mon, title: "Reactions", prop: "reaction"})}
+		${allReactions?.length ? `${this._getRenderedSectionHeader({mon, title: "反应", prop: "reaction"})}
 		${RenderBestiary._getRenderedSection({mon, prop: "reaction", entries: allReactions})}` : ""}
-		${mon.legendary ? `${this._getRenderedSectionHeader({mon, title: "Legendary Actions", prop: "legendary"})}
+		${mon.legendary ? `${this._getRenderedSectionHeader({mon, title: "传奇动作", prop: "legendary"})}
 		${RenderBestiary._getRenderedSection({mon, prop: "legendary", entries: mon.legendary, fnGetHeader: Renderer.monster.getLegendaryActionIntro.bind(Renderer.monster)})}` : ""}
-		${mon.mythic ? `${this._getRenderedSectionHeader({mon, title: "Mythic Actions", prop: "mythic"})}
+		${mon.mythic ? `${this._getRenderedSectionHeader({mon, title: "神话动作", prop: "mythic"})}
 		${RenderBestiary._getRenderedSection({mon, prop: "mythic", entries: mon.mythic})}` : ""}
 
-		${legGroup && legGroup.lairActions ? `<tr><td colspan="6" class="mon__stat-header-underline"><h3 class="mon__sect-header-inner">Lair Actions</h3></td></tr>
+		${legGroup && legGroup.lairActions ? `<tr><td colspan="6" class="mon__stat-header-underline"><h3 class="mon__sect-header-inner">巢穴动作</h3></td></tr>
 		${RenderBestiary._getRenderedSection({prop: "lairaction", entries: legGroup.lairActions, depth: -1})}` : ""}
-		${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6" class="mon__stat-header-underline"><h3 class="mon__sect-header-inner">Regional Effects</h3></td></tr>
+		${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6" class="mon__stat-header-underline"><h3 class="mon__sect-header-inner">区域效应</h3></td></tr>
 		${RenderBestiary._getRenderedSection({prop: "regionaleffect", entries: legGroup.regionalEffects, depth: -1})}` : ""}
 
 		${renderedVariants ? `<tr><td colspan=6>${renderedVariants}</td></tr>` : ""}
@@ -172,7 +172,7 @@ class RenderBestiary {
 			return `<td colspan="3"></td>`;
 		}
 
-		return `<td colspan="3" class="text-right"><strong>Proficiency Bonus</strong> ${mon.pbNote ?? UiUtil.intToBonus(Parser.crToPb(mon.cr), {isPretty: true})}</td>`;
+		return `<td colspan="3" class="text-right"><strong>熟练加值</strong> ${mon.pbNote ?? UiUtil.intToBonus(Parser.crToPb(mon.cr), {isPretty: true})}</td>`;
 	}
 
 	static _$getRenderedCreature_getHtmlSourceAndEnvironment (mon, legGroup) {
@@ -204,7 +204,7 @@ class RenderBestiary {
 
 		const pageTrInner = Renderer.utils.getSourceAndPageTrHtml(srcCpy, {tag: "creature", fnUnpackUid: (uid) => DataUtil.generic.unpackUid(uid, "creature")});
 		if (!mon.environment?.length) return [pageTrInner];
-		return [pageTrInner, `<div class="mb-1 mt-2"><b>Environment:</b> ${Renderer.monster.getRenderedEnvironment(mon.environment)}</div>`];
+		return [pageTrInner, `<div class="mb-1 mt-2"><b>栖息地:</b> ${Renderer.monster.getRenderedEnvironment(mon.environment)}</div>`];
 	}
 
 	static $getRenderedLegendaryGroup (legGroup) {

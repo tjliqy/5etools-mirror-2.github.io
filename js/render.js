@@ -1324,7 +1324,7 @@ globalThis.Renderer = function () {
 		textStack[0] += `<i>${Parser.attackTypeToFull(entry.attackType)}:</i> `;
 		const len = entry.attackEntries.length;
 		for (let i = 0; i < len; ++i) this._recursiveRender(entry.attackEntries[i], textStack, meta);
-		textStack[0] += ` <i>Hit:</i> `;
+		textStack[0] += ` <i>命中：</i> `;
 		const len2 = entry.hitEntries.length;
 		for (let i = 0; i < len2; ++i) this._recursiveRender(entry.hitEntries[i], textStack, meta);
 		this._renderSuffix(entry, textStack, meta, options);
@@ -1751,8 +1751,8 @@ globalThis.Renderer = function () {
 			case "@atk":
 				textStack[0] += `<i>${Renderer.attackTagToFull(text)}</i>`;
 				break;
-			case "@h": textStack[0] += `<i>Hit:</i> `; break;
-			case "@m": textStack[0] += `<i>Miss:</i> `; break;
+			case "@h": textStack[0] += `<i>命中：</i> `; break;
+			case "@m": textStack[0] += `<i>未命中：</i> `; break;
 			case "@color": {
 				const [toDisplay, color] = Renderer.splitTagByPipe(text);
 				const ptColor = this._renderString_renderTag_getBrewColorPart(color);
@@ -2325,7 +2325,7 @@ Renderer.applyAllProperties = function (entries, object = null) {
 
 Renderer.attackTagToFull = function (tagStr) {
 	function renderTag (tags) {
-		return `${tags.includes("m") ? "Melee " : tags.includes("r") ? "Ranged " : tags.includes("g") ? "Magical " : tags.includes("a") ? "Area " : ""}${tags.includes("w") ? "Weapon " : tags.includes("s") ? "Spell " : tags.includes("p") ? "Power " : ""}`;
+		return `${tags.includes("m") ? "近战" : tags.includes("r") ? "远程" : tags.includes("g") ? "魔法" : tags.includes("a") ? "范围" : ""}${tags.includes("w") ? "武器" : tags.includes("s") ? "法术" : tags.includes("p") ? "Power " : ""}`;
 	}
 
 	const tagGroups = tagStr.toLowerCase().split(",").map(it => it.trim()).filter(it => it).map(it => it.split(""));
@@ -2339,7 +2339,7 @@ Renderer.attackTagToFull = function (tagStr) {
 			});
 		}
 	}
-	return `${tagGroups.map(it => renderTag(it)).join(" or ")}Attack:`;
+	return `${tagGroups.map(it => renderTag(it)).join(" 或 ")}攻击:`;
 };
 
 Renderer.splitFirstSpace = function (string) {
@@ -4534,13 +4534,13 @@ Renderer.tag = class {
 	static TagHitText = class extends this._TagBaseAt {
 		tagName = "h";
 
-		_getStripped (tag, text) { return "Hit: "; }
+		_getStripped (tag, text) { return "命中： "; }
 	};
 
 	static TagMissText = class extends this._TagBaseAt {
 		tagName = "m";
 
-		_getStripped (tag, text) { return "Miss: "; }
+		_getStripped (tag, text) { return "未命中： "; }
 	};
 
 	static TagAtk = class extends this._TagBaseAt {
@@ -7317,7 +7317,8 @@ Renderer.monster = class {
 		const name = isUseDisplayName ? (mon._displayName ?? mon.name) : mon.name;
 		const shortName = isUseDisplayName ? (mon._displayShortName ?? mon.shortName) : mon.shortName;
 
-		const prefix = mon.isNamedCreature ? "" : isTitleCase || isSentenceCase ? "The " : "the ";
+		// const prefix = mon.isNamedCreature ? "" : isTitleCase || isSentenceCase ? "The " : "the ";
+		const prefix = ""
 		if (shortName === true) return `${prefix}${name}`;
 		else if (shortName) return `${prefix}${!prefix && isTitleCase ? shortName.toTitleCase() : shortName.toLowerCase()}`;
 
@@ -7346,7 +7347,7 @@ Renderer.monster = class {
 		const legendaryNameTitle = Renderer.monster.getShortName(mon, {isTitleCase: true, isUseDisplayName});
 		return {
 			entries: [
-				`${legendaryNameTitle} can take ${legendaryActions} legendary action${legendaryActions > 1 ? "s" : ""}, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. ${legendaryNameTitle} regains spent legendary actions at the start of its turn.`,
+				`${legendaryNameTitle}拥有${legendaryActions}传奇动作，用来选择执行下列动作项。它每次只可选择执行一个传奇动作项，且必须在另一生物回合结束时执行。${legendaryNameTitle}在其回合开始时恢复所有消耗的传奇动作数。`,
 			],
 		};
 	}
@@ -7692,7 +7693,7 @@ Renderer.monster = class {
 		return `${mon.level ? `${Parser.getOrdinalForm(mon.level)}-level ` : ""}${typeObj.asTextSidekick ? `${typeObj.asTextSidekick}; ` : ""}${Renderer.utils.getRenderedSize(mon.size)}${mon.sizeNote ? ` ${mon.sizeNote}` : ""} ${typeObj.asText}${mon.alignment ? `, ${mon.alignmentPrefix ? Renderer.get().render(mon.alignmentPrefix) : ""}${Parser.alignmentListToFull(mon.alignment).toTitleCase()}` : ""}`;
 	}
 	static getSavesPart (mon) { return `${Object.keys(mon.save || {}).sort(SortUtil.ascSortAtts).map(s => Renderer.monster.getSave(Renderer.get(), s, mon.save[s])).join(", ")}`; }
-	static getSensesPart (mon) { return `${mon.senses ? `${Renderer.utils.getRenderedSenses(mon.senses)}, ` : ""}passive Perception ${mon.passive || "\u2014"}`; }
+	static getSensesPart (mon) { return `${mon.senses ? `${Renderer.utils.getRenderedSenses(mon.senses)}, ` : ""}被动感知 ${mon.passive || "\u2014"}`; }
 
 	static getRenderWithPlugins ({renderer, mon, fn}) {
 		return renderer.withPlugin({
@@ -7790,7 +7791,7 @@ Renderer.monster = class {
 						<th colspan="2">生命值</th>
 						<th colspan="2">速度</th>
 						<th colspan="2">${isShowSpellLevelScaler ? "Spell Level" : isShowClassLevelScaler ? "Class Level" : "Challenge"}</th>
-						${mon.pbNote || Parser.crToNumber(mon.cr) < VeCt.CR_CUSTOM ? `<th colspan="1" title="Proficiency Bonus">PB</th>` : ""}
+						${mon.pbNote || Parser.crToNumber(mon.cr) < VeCt.CR_CUSTOM ? `<th colspan="1" title="熟练加值">PB</th>` : ""}
 						${hasToken && !opts.isCompact ? `<th colspan="1"></th>` : ""}
 					</tr>
 					<tr>
@@ -7908,7 +7909,7 @@ Renderer.monster = class {
 		const absRemaining = Parser.ABIL_ABVS.filter(ab => !seenAbs.has(ab));
 
 		return `<tr>
-			${absRemaining.map(ab => `<th class="ve-col-2 ve-text-center bold">${ab.toUpperCase()}</th>`).join("")}
+			${absRemaining.map(ab => `<th class="ve-col-2 ve-text-center bold">${Parser.ATB_ABV_TO_FULL[ab]}</th>`).join("")}
 		</tr>
 		<tr>
 			${absRemaining.map(ab => `<td class="ve-text-center">${Renderer.utils.getAbilityRoller(mon, ab)}</td>`).join("")}
@@ -7973,7 +7974,7 @@ Renderer.monster = class {
 		if (!mon.skill) return "";
 
 		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
-			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${s.toTitleCase()}|${obj[s]}">${renderer.render(`{@skill ${s.toTitleCase()}}`)} ${Renderer.get().render(`{@skillCheck ${s.replace(/ /g, "_")} ${obj[s]}}`)}</span>`);
+			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${s.toTitleCase()}|${obj[s]}">${renderer.render(`{@skill ${Parser.SKILL_TO_CN[s]}}`)} ${Renderer.get().render(`{@skillCheck ${s.replace(/ /g, "_")} ${obj[s]}}`)}</span>`);
 			return joinWithOr ? toJoin.joinConjunct(", ", " or ") : toJoin.join(", ");
 		}
 

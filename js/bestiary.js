@@ -625,7 +625,7 @@ class BestiaryPage extends ListPageMultiSource {
 		}
 
 		const tabMetaStats = new Renderer.utils.TabButton({
-			label: "Stat Block",
+			label: "资料卡",
 			fnChange: () => {
 				this._$wrpBtnProf.append(this._$btnProf);
 				this._$dispToken.showVe();
@@ -653,7 +653,7 @@ class BestiaryPage extends ListPageMultiSource {
 				const tabMetas = [
 					tabMetaStats,
 					new Renderer.utils.TabButton({
-						label: "Info",
+						label: "简介",
 						fnChange: () => {
 							this._$btnProf = this._$wrpBtnProf.children().length ? this._$wrpBtnProf.children().detach() : this._$btnProf;
 							this._$dispToken.hideVe();
@@ -662,7 +662,7 @@ class BestiaryPage extends ListPageMultiSource {
 						isVisible: hasFluffText,
 					}),
 					new Renderer.utils.TabButton({
-						label: "Images",
+						label: "图片",
 						fnChange: () => {
 							this._$btnProf = this._$wrpBtnProf.children().length ? this._$wrpBtnProf.children().detach() : this._$btnProf;
 							this._$dispToken.hideVe();
