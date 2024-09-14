@@ -61,7 +61,7 @@ class PageFilterBestiary extends PageFilterBase {
 
 	static _getAllImmRest_recurse (it, key, out, conditional) {
 		if (typeof it === "string") {
-			out.push(conditional ? `${it} (Conditional)` : it);
+			out.push(conditional ? `${it} (条件)` : it);
 		} else if (it[key]) {
 			it[key].forEach(nxt => this._getAllImmRest_recurse(nxt, key, out, !!it.cond));
 		}
@@ -126,7 +126,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Sidekick Type",
 			cnHeader: "协力者类型",
 			items: ["expert", "spellcaster", "warrior"],
-			displayFn: StrUtil.toTitleCase,
+			displayFn: it => Parser.MON_SIDEKICK_TO_CN[it] || StrUtil.toTitleCase(it),
 			itemSortFn: SortUtil.ascSortLower,
 		});
 		this._sidekickTagFilter = new Filter({header: "Sidekick Tag", cnHeader: "协力者类型副标", displayFn: StrUtil.toTitleCase});
@@ -249,7 +249,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Traits",
 			cnHeader: "特性",
 			items: [
-				"Aggressive", "Ambusher", "Amorphous", "Amphibious", "Antimagic Susceptibility", "Brute", "Charge", "Damage Absorption", "Death Burst", "Devil's Sight", "False Appearance", "Fey Ancestry", "Flyby", "Hold Breath", "Illumination", "Immutable Form", "Incorporeal Movement", "Keen Senses", "Legendary Resistances", "Light Sensitivity", "Magic Resistance", "Magic Weapons", "Pack Tactics", "Pounce", "Rampage", "Reckless", "Regeneration", "Rejuvenation", "Shapechanger", "Siege Monster", "Sneak Attack", "Spider Climb", "Sunlight Sensitivity", "Tunneler", "Turn Immunity", "Turn Resistance", "Undead Fortitude", "Water Breathing", "Web Sense", "Web Walker",
+				"好斗", "伏击", "无定形", "水陆两栖", "魔力依赖", "残暴", "冲锋", "伤害吸收", "自爆", "魔鬼视界", "拟形", "精类血统", "飞掠", "屏息", "照明", "不变形态", "虚体移动", "敏锐感官", "传奇抗性", "光照敏感", "魔法抗性", "魔法武器", "集群战术", "猛扑", "横行", "鲁莽", "再生", "复生", "变形生物", "攻城怪物", "偷袭", "蛛行", "日照敏感", "掘道者", "免疫驱散", "抵抗驱散", "不死坚韧", "水下呼吸", "蛛网感知", "蛛网行者",
 			],
 		});
 		this._actionReactionFilter = new Filter({

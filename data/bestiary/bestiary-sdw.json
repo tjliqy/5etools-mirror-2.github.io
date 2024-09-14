@@ -68,7 +68,7 @@
 					"name": "好帮手",
 					"ENG_name": "Helpful",
 					"entries": [
-						"专家可以将协助动作作为附赠动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
+						"专家可以将协助动作作为附赠动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对单一目标。"
 					]
 				},
 				{
@@ -98,14 +98,14 @@
 					"name": "短剑",
 					"ENG_name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 8} hit，射程5尺，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害。"
+						"{@atk mw} {@hit 8} hit，触及5尺，单一目标。{@h}7 ({@damage 1d6 + 4}) 穿刺伤害。"
 					]
 				},
 				{
 					"name": "匕首",
 					"ENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 8}命中，触及范围5尺或射程20/60尺，一个目标。{@h}6 ({@damage 1d4 + 4})穿刺伤害。"
+						"{@atk mw,rw} {@hit 8}命中，触及范围5尺或射程20/60尺，单一目标。{@h}6 ({@damage 1d4 + 4})穿刺伤害。"
 					]
 				},
 				{
@@ -201,7 +201,7 @@
 					"name": "啃咬",
 					"ENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中骰：9，射程5尺，一个目标。{@h}22（{@damage 3d10 + 6}）穿刺伤害。"
+						"{@atk mw} 命中骰：9，触及5尺，单一目标。{@h}22（{@damage 3d10 + 6}）穿刺伤害。"
 					]
 				}
 			],
@@ -374,35 +374,35 @@
 					"name": "多重攻击",
 					"ENG_name": "Multiattack",
 					"entries": [
-						"拉玛鲁托斯可以使用她的恐怖凝视。然后她进行三次攻击：一次用她的咬击和两次用她的爪击。"
+						"拉玛鲁托斯可以使用她的骇人威仪。然后她进行三次攻击：一次用她的咬击和两次用她的爪击。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"ENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中骰：12，射程10尺，一个目标。{@h}18（{@damage 2d10 + 7}）穿刺伤害。"
+						"{@atk mw} 命中骰：12，触及10尺，单一目标。{@h}18（{@damage 2d10 + 7}）穿刺伤害。"
 					]
 				},
 				{
 					"name": "爪击",
 					"ENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 12} hit，射程5尺，一个目标。{@h}14 ({@damage 2d6 + 7}) 挥砍伤害。"
+						"{@atk mw} 命中{@hit 12}，射程5尺，单一目标。{@h}14 ({@damage 2d6 + 7}) 点挥砍伤害。"
 					]
 				},
 				{
 					"name": "尾击",
 					"ENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 12}hit，触及范围15尺，单一目标。{@h}16 ({@damage 2d8 + 7})钝击伤害。"
+						"{@atk mw} 命中{@hit 12}，触及15尺，单一目标。{@h}16 ({@damage 2d8 + 7})点钝击伤害。"
 					]
 				},
 				{
 					"name": "骇人威仪",
 					"ENG_name": "Frightful Presence",
 					"entries": [
-						"Lhammaruntosz选择的每个生物，如果距离她120尺以内并且意识到她的存在，必须进行一次DC 17的感知豁免掷骰，否则会在1分钟内变为{@condition frightened}。生物可以在每个回合结束时重复进行豁免掷骰，成功则结束该效果。如果生物的豁免掷骰成功或该效果对其结束，生物在接下来的24小时内对Lhammaruntosz的恐怖存在免疫。"
+						"Lhammaruntosz选择的每个生物，如果距离她120尺以内并且意识到她的存在，必须进行一次DC 17的感知豁免掷骰，否则会在1分钟内变为{@condition frightened}。生物可以在每个回合结束时重复进行豁免掷骰，成功则结束该效果。如果生物的豁免掷骰成功或该效果对其结束，生物在接下来的24小时内对Lhammaruntosz的骇人威仪免疫。"
 					]
 				},
 				{
@@ -413,14 +413,14 @@
 					]
 				},
 				{
-					"name": "闪电吐息：",
+					"name": "闪电吐息",
 					"ENG_name": "Lightning Breath",
 					"entries": [
 						"拉玛鲁托斯在一个90尺长、5尺宽的直线上呼出闪电。在该直线上的每个生物必须进行一次敏捷豁免检定（{@dc 19}），失败时受到66点（{@damage 12d10}）闪电伤害，成功则只受到一半的伤害。"
 					]
 				},
 				{
-					"name": "斥力吐息：",
+					"name": "斥力吐息",
 					"ENG_name": "Repulsion Breath",
 					"entries": [
 						"Lhammaruntosz呼出排斥能量，形成一个30尺的锥形区域。该区域内的每个生物都必须进行一次力量豁免检定（DC 19）。检定失败的生物会被从龙身边推离60尺。"
@@ -444,14 +444,14 @@
 					]
 				},
 				{
-					"name": "尾部攻击",
+					"name": "尾击攻击",
 					"ENG_name": "Tail Attack",
 					"entries": [
 						"Lhammaruntosz 发起尾部攻击。"
 					]
 				},
 				{
-					"name": "翼部攻击（消耗2个行动）",
+					"name": "振翅攻击（消耗2行动）",
 					"ENG_name": "Wing Attack (Costs 2 Actions)",
 					"entries": [
 						"Lhammaruntosz 拍打着翅膀。在 Lhammaruntosz 10 尺范围内的每个生物必须进行一次敏捷豁免（DC 20），否则将受到 14 ({@damage 2d6 + 7}) 点钝击伤害并被击倒{@condition prone}。之后 Lhammaruntosz 可以飞行至其飞行速度的一半。"
@@ -652,7 +652,7 @@
 					"name": "长棍",
 					"ENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 4} hit，射程5尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
+						"{@atk mw} {@hit 4} hit，触及5尺，单一目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
 					]
 				}
 			],
@@ -804,7 +804,7 @@
 					"name": "长棍",
 					"ENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 4} hit，射程5尺，一个目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
+						"{@atk mw} {@hit 4} hit，触及5尺，单一目标。{@h}3 ({@damage 1d6}) 钝击伤害，或者如果用双手使用则为4 ({@damage 1d8}) 钝击伤害。"
 					]
 				}
 			],
@@ -899,7 +899,7 @@
 					"name": "精通重击",
 					"ENG_name": "Improved Critical",
 					"entries": [
-						"战士的攻击骰在掷出19或20时会得到致命一击，使用的是{@dice d20}。"
+						"战士的攻击骰在掷出19或20时会得到重击，使用的是{@dice d20}。"
 					]
 				},
 				{
@@ -965,7 +965,7 @@
 					"name": "长弓",
 					"ENG_name": "Longbow",
 					"entries": [
-						"{@atk rw} 命中骰{@hit 6}，射程150/600尺，一目标。{@h}6（{@damage 1d8 + 2}）穿刺伤害。"
+						"{@atk rw} 命中{@hit 6}，射程150/600尺，一目标。{@h}6（{@damage 1d8 + 2}）穿刺伤害。"
 					]
 				}
 			],

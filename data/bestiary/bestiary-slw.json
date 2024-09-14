@@ -67,7 +67,7 @@
 					"name": "好帮手",
 					"ENG_name": "Helpful",
 					"entries": [
-						"专家可以将协助动作作为附赠动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对一个目标。"
+						"专家可以将协助动作作为附赠动作，接受协助的生物在进行{@dice 1d6}骰的掷骰时获得加值。如果该掷骰是攻击掷骰，生物可以选择不将加值加到掷骰上，然后如果攻击命中，生物可以将加值加到攻击的伤害掷骰上，针对单一目标。"
 					]
 				},
 				{
@@ -90,21 +90,21 @@
 					"name": "短剑",
 					"ENG_name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 6} hit，射程 5 尺，单一目标。{@h}6 ({@damage 1d6 + 3}) 穿刺h。"
+						"{@atk mw} 命中{@hit 6}，触及 5 尺，单一目标。{@h}6 ({@damage 1d6 + 3}) 点穿刺伤害。"
 					]
 				},
 				{
 					"name": "匕首",
 					"ENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 6}命中，射程5尺或20/60尺，单一目标。{@h}5 ({@damage 1d4 + 3})穿刺伤害。"
+						"{@atk mw,rw} 命中{@hit 6}，触及5尺或20/60尺，单一目标。{@h}5 ({@damage 1d4 + 3})穿刺伤害。"
 					]
 				},
 				{
 					"name": "短弓",
 					"ENG_name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 命中6} 命中，射程80/320尺，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
+						"{@atk rw} 命中{@hit 6}，射程80/320尺，单一目标。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
 					]
 				}
 			],
@@ -182,7 +182,7 @@
 					"name": "螫刺",
 					"ENG_name": "Sting",
 					"entries": [
-						"{@atk mw} 命中骰：4，射程5尺，单一生物。{@h}5（{@damage 1d6 + 2}）穿刺伤害，目标必须进行一次{@dc 11}体质豁免，失败则受到10（{@damage 3d6}）毒素伤害，成功则伤害减半。如果毒素伤害使目标生命值降至0点，目标稳定但会{@condition poisoned}1小时，即使恢复生命值，也会在这样被{@condition poisoned}的状态下{@condition paralyzed}。"
+						"{@atk mw} 命中骰：4，触及5尺，单一生物。{@h}5（{@damage 1d6 + 2}）穿刺伤害，目标必须进行一次{@dc 11}体质豁免，失败则受到10（{@damage 3d6}）毒素伤害，成功则伤害减半。如果毒素伤害使目标生命值降至0点，目标稳定但会{@condition poisoned}1小时，即使恢复生命值，也会在这样被{@condition poisoned}的状态下{@condition paralyzed}。"
 					]
 				}
 			],
@@ -318,7 +318,7 @@
 					"name": "长棍",
 					"ENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 3} hit，射程 5 尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
+						"{@atk mw} {@hit 3} hit，触及 5 尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
 					]
 				}
 			],
@@ -459,7 +459,7 @@
 					"name": "长棍",
 					"ENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 3} hit，射程 5 尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
+						"{@atk mw} {@hit 3} hit，触及 5 尺，单一目标。{@h}3 ({@damage 1d6}) 钝击h，或者如果用双手使用则为 4 ({@damage 1d8}) 钝击h。"
 					]
 				}
 			],
@@ -556,7 +556,7 @@
 			"cr": "10",
 			"trait": [
 				{
-					"name": "拟形",
+					"name": "",
 					"ENG_name": "False Appearance",
 					"entries": [
 						"当雕像保持静止时，它与无生命的雕像无法区分。"
@@ -575,19 +575,19 @@
 					"name": "头槌",
 					"ENG_name": "Headbutt",
 					"entries": [
-						"{@atk mw}命中{@hit 8}，射程5尺，一个目标。{@h}11（{@damage 2d6 + 4}）穿刺伤害。"
+						"{@atk mw}命中{@hit 8}，触及5尺，单一目标。{@h}11（{@damage 2d6 + 4}）穿刺伤害。"
 					]
 				},
 				{
 					"name": "闪电刀刃",
 					"ENG_name": "Lightning Bolt Blades",
 					"entries": [
-						"{@atk mw} 命中：8，射程5尺，一个目标。{@h}9（{@damage 2d4 + 4}）挥砍伤害。"
+						"{@atk mw} 命中：8，触及5尺，单一目标。{@h}9（{@damage 2d4 + 4}）挥砍伤害。"
 					]
 				}
 			],
 			"traitTags": [
-				"拟形"
+				""
 			],
 			"senseTags": [
 				"D"
@@ -677,7 +677,7 @@
 					"name": "啃咬",
 					"ENG_name": "Bite",
 					"entries": [
-						"{@atk mw}命中{@hit 5}，射程5尺，一个目标。{@h}7（{@damage 1d8 + 3}）穿刺伤害加上7（{@damage 2d6}）冷冻伤害。"
+						"{@atk mw}命中{@hit 5}，触及5尺，单一目标。{@h}7（{@damage 1d8 + 3}）穿刺伤害加上7（{@damage 2d6}）冷冻伤害。"
 					]
 				},
 				{
@@ -775,7 +775,7 @@
 					"name": "精通重击",
 					"ENG_name": "Improved Critical",
 					"entries": [
-						"战士的攻击检定在d20骰出19或20时获得致命一击。"
+						"战士的攻击检定在d20骰出19或20时获得重击。"
 					]
 				},
 				{
@@ -816,14 +816,14 @@
 					"name": "长剑",
 					"ENG_name": "Longsword",
 					"entries": [
-						"{@atk mw} 命中：6，射程5尺，一个目标。{@h}7（{@damage 1d8 + 3}）挥砍伤害，或者如果用双手使用则为8（{@damage 1d10 + 3}）挥砍伤害。"
+						"{@atk mw} 命中{@hit 6}，触及5尺，单一目标。{@h}7（{@damage 1d8 + 3}）挥砍伤害，或者如果用双手使用则为8（{@damage 1d10 + 3}）挥砍伤害。"
 					]
 				},
 				{
 					"name": "长弓",
 					"ENG_name": "Longbow",
 					"entries": [
-						"{@atk rw} {@hit 5}命中，射程150/600尺，单一目标。{@h}6 ({@damage 1d8 + 2})穿刺伤害。"
+						"{@atk rw} 命中{@hit 5}，射程150/600尺，单一目标。{@h}6 ({@damage 1d8 + 2})穿刺伤害。"
 					]
 				}
 			],
