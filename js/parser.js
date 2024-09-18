@@ -436,7 +436,7 @@ Parser.skillToAbilityAbv = function (skill) {
 
 Parser.SKILL_TO_CN = {
 	"athletics": "运动",
-	"acrobatics": "体操",
+	"acrobatics": "特技",
 	"sleight of hand": "巧手",
 	"stealth": "隐匿",
 	"arcana": "奥秘",
@@ -452,7 +452,7 @@ Parser.SKILL_TO_CN = {
 	"deception": "欺瞒",
 	"intimidation": "威吓",
 	"performance": "表演",
-	"persuasion": "说服",
+	"persuasion": "游说",
 };
 
 Parser.SKILL_TO_SHORT = {
@@ -2497,7 +2497,7 @@ Parser.MON_TYPE_TO_PLURAL[Parser.TP_MONSTROSITY] = "怪兽";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_OOZE] = "泥怪";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_PLANT] = "植物";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_UNDEAD] = "不死生物";
-Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD].map(it => Parser.MON_TYPE_TO_PLURAL[it]);
+Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD].map(it => Parser.MON_TYPE_TO_PLURAL[it] || it);
 
 Parser.SZ_FINE = "F";
 Parser.SZ_DIMINUTIVE = "D";

@@ -464,7 +464,7 @@ class PageFilterSpells extends PageFilterBase {
 			cnHeader: "受术种族",
 			header: "Affects Creature Types",
 			// items: [...Parser.MON_TYPES],
-			items: Parser.MON_TYPES.map(mon=>Parser.MON_TYPE_TO_PLURAL[mon]),
+			items: Parser.MON_TYPES.map(mon=>Parser.MON_TYPE_TO_PLURAL[mon] || mon),
 			displayFn: StrUtil.toTitleCase,
 		});
 	}

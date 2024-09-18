@@ -1848,7 +1848,7 @@ globalThis.Renderer = function () {
 				if (tag === "@recharge") {
 					const [, flagsRaw] = Renderer.splitTagByPipe(text);
 					const flags = flagsRaw ? flagsRaw.split("") : null;
-					textStack[0] += `${flags && flags.includes("m") ? "" : "("}Recharge `;
+					textStack[0] += `${flags && flags.includes("m") ? "" : "("}充能 `;
 					this._recursiveRender(fauxEntry, textStack, meta);
 					textStack[0] += `${flags && flags.includes("m") ? "" : ")"}`;
 				} else {
@@ -7360,7 +7360,7 @@ Renderer.monster = class {
 
 	static getSave (renderer, attr, mod) {
 		if (attr === "special") return renderer.render(mod);
-		return renderer.render(`<span>${attr.uppercaseFirst()} {@savingThrow ${attr} ${mod}}</span>`);
+		return renderer.render(`<span>${Parser.attAbvToFull(attr)} {@savingThrow ${attr} ${mod}}</span>`);
 	}
 
 	static dragonCasterVariant = class {
@@ -7521,9 +7521,10 @@ Renderer.monster = class {
 		}
 
 		static getSpellcasterDetailsPart ({chaMod, maxSpellLevel, spellSaveDc, spellToHit, isSeeSpellsPageNote = false}) {
-			const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "This" : "These"} spells are Cantrips.` : `${chaMod === 1 ? "The" : "Each"} spell's level can be no higher than ${Parser.spLevelToFull(maxSpellLevel)}.`;
+			const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "这个" : "这些"} 法术是戏法。` : `而${chaMod === 1 ? "该" : "这些"}法术的环阶也不能超过 ${Parser.spLevelToFull(maxSpellLevel)}.`;
 
-			return `This dragon can innately cast ${Parser.numberToText(chaMod)} spell${chaMod === 1 ? "" : "s"}, once per day${chaMod === 1 ? "" : " each"}, requiring no material components. ${levelString} The dragon's spell save DC is {@dc ${spellSaveDc}}, and it has {@hit ${spellToHit}} to hit with spell attacks.${isSeeSpellsPageNote ? ` See the {@filter spell page|spells|level=${[...new Array(maxSpellLevel + 1)].map((it, i) => i).join(";")}} for a list of spells the dragon is capable of casting.` : ""}`;
+			// return `This dragon can innately cast ${Parser.numberToText(chaMod)} spell${chaMod === 1 ? "" : "s"}, once per day${chaMod === 1 ? "" : " each"}, requiring no material components. ${levelString} The dragon's spell save DC is {@dc ${spellSaveDc}}, and it has {@hit ${spellToHit}} to hit with spell attacks.${isSeeSpellsPageNote ? ` See the {@filter spell page|spells|level=${[...new Array(maxSpellLevel + 1)].map((it, i) => i).join(";")}} for a list of spells the dragon is capable of casting.` : ""}`;
+			return `这条龙天生可以施展${Parser.numberToText(chaMod)}个法术，${chaMod === 1 ? "" : "每个法术"}每日一次，且不需任何材料成分。 ${levelString} 这条龙的法术豁免是 {@dc ${spellSaveDc}}，且它的法术攻击命中{@hit ${spellToHit}}。${isSeeSpellsPageNote ? `查看{@filter 法术列表页|spells|level=${[...new Array(maxSpellLevel + 1)].map((it, i) => i).join(";")}} 来查看这条龙天生能够施展的法术。` : ""}`;
 		}
 
 		static getVariantEntries (dragon) {
@@ -7534,7 +7535,7 @@ Renderer.monster = class {
 
 			const vFtd = exampleSpellsFtd?.length ? {
 				type: "variant",
-				name: "Dragons as Innate Spellcasters",
+				name: "龙类天生施法者",
 				source: Parser.SRC_FTD,
 				entries: [
 					`${Renderer.monster.dragonCasterVariant.getSpellcasterDetailsPart(meta)}`,
@@ -7548,10 +7549,10 @@ Renderer.monster = class {
 
 			const vBasic = {
 				type: "variant",
-				name: "Dragons as Innate Spellcasters",
+				name: "龙类天生施法者",
 				entries: [
-					"Dragons are innately magical creatures that can master a few spells as they age, using this variant.",
-					`A young or older dragon can innately cast a number of spells equal to its魅力调整值. Each spell can be cast once per day, requiring no material components, and the spell's level can be no higher than one-third the dragon's challenge rating (rounded down). The dragon's bonus to hit with spell attacks is equal to its proficiency bonus + its Charisma bonus. The dragon's spell save DC equals 8 + its proficiency bonus + its魅力调整值.`,
+					"龙作为天生的魔法生物，其随着年龄的增长可能会逐渐掌握一些法术，此时便可以使用该变体。",
+					`一条青年龙或更年长的龙天生可以施展的法术数量等同于其魅力调整值。每个法术每日只能施展一次，且不需任何材料成分，而该法术的环阶也不能超过这条龙挑战等级的三分之一（向下取整）。该龙的法术攻击加值等于其熟练加值＋其魅力调整值。该龙的法术豁免DC等于8＋其熟练加值＋其魅力调整值。`,
 					`{@note ${Renderer.monster.dragonCasterVariant.getSpellcasterDetailsPart({...meta, isSeeSpellsPageNote: true})}${exampleSpellsUnofficial?.length ? ` A selection of examples are shown below:` : ""}}`,
 				],
 			};

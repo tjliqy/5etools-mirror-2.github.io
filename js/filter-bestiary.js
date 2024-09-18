@@ -101,7 +101,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._speedFilter = new RangeFilter({header: "Speed", cnHeader: "速度", min: 30, max: 30, suffix: " ft"});
 		this._speedTypeFilter = new Filter({header: "Speed Type", cnHeader: "速度类型", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
 		this._strengthFilter = new RangeFilter({header: "Strength", cnHeader: "力量", min: 1, max: 30});
-		this._dexterityFilter = new RangeFilter({header: "Dexterity", cnHeader: "敏捷", cnHeader:"", min: 1, max: 30});
+		this._dexterityFilter = new RangeFilter({header: "Dexterity", cnHeader: "敏捷", min: 1, max: 30});
 		this._constitutionFilter = new RangeFilter({header: "Constitution", cnHeader: "体质", min: 1, max: 30});
 		this._intelligenceFilter = new RangeFilter({header: "Intelligence", cnHeader: "智力", min: 1, max: 30});
 		this._wisdomFilter = new RangeFilter({header: "Wisdom", cnHeader: "感知", min: 1, max: 30});
@@ -282,7 +282,7 @@ class PageFilterBestiary extends PageFilterBase {
 			displayFn: it => Parser.getOrdinalForm(it),
 		});
 		this._spellKnownFilter = new SearchableFilter({header: "Spells Known",cnHeader:"已知法术", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
-		this._equipmentFilter = new SearchableFilter({header: "Equipment", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
+		this._equipmentFilter = new SearchableFilter({header: "Equipment", cnHeader: "装备", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
 		this._dragonAgeFilter = new Filter({
 			header: "Dragon Age",
 			cnHeader: "龙的年龄",
