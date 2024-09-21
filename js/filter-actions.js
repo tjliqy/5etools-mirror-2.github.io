@@ -13,15 +13,18 @@ class PageFilterActions extends PageFilterBase {
 			displayFn: StrUtil.uppercaseFirst,
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._miscFilter = new Filter({header: "杂项", items: ["Optional/Variant Action", "SRD", "基础规则", "传奇"], isMiscFilter: true});
+		this._miscFilter = new Filter({
+			header: "杂项",
+			items: ["Optional/Variant Action", "SRD", "基础规则", "传奇"],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 	}
 
 	static mutateForFilters (it) {
 		it._fTime = it.time ? it.time.map(it => it.unit || it) : null;
 		it._fMisc = [];
-		if (it.srd) it._fMisc.push("SRD");
-		if (it.basicRules) it._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
+		this._mutateForFilters_commonMisc(it);
 		if (it.fromVariant) it._fMisc.push("Optional/Variant Action");
 	}
 
@@ -30,6 +33,7 @@ class PageFilterActions extends PageFilterBase {
 
 		this._sourceFilter.addItem(it.source);
 		this._timeFilter.addItem(it._fTime);
+		this._miscFilter.addItem(it._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

@@ -26,18 +26,18 @@ class PageFilterTrapsHazards extends PageFilterBase {
 			displayFn: Parser.trapHazTypeToFull,
 			itemSortFn: PageFilterTrapsHazards.sortFilterType.bind(PageFilterTrapsHazards),
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD", "基础规则", "传奇", "有图片", "有简介"], isMiscFilter: true});
+		this._miscFilter = new Filter({
+			header: "Miscellaneous",
+			items: ["SRD", "基础规则", "传奇", "有图片", "有简介"],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 	}
 
 	static mutateForFilters (it) {
 		it.trapHazType = it.trapHazType || "HAZ";
 
-		it._fMisc = [];
-		if (it.srd) it._fMisc.push("SRD");
-		if (it.basicRules) it._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
-		if (this._hasFluff(it)) it._fMisc.push("有简介");
-		if (this._hasFluffImages(it)) it._fMisc.push("有图片");
+		this._mutateForFilters_commonMisc(it);
 	}
 
 	addToFilters (it, isExcluded) {

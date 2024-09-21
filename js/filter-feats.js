@@ -8,6 +8,12 @@ class PageFilterFeats extends PageFilterBase {
 	constructor () {
 		super();
 
+		this._categoryFilter = new Filter({
+			header: "Category",
+			cnHeader:"分类",
+			displayFn: Parser.featCategoryToFull,
+			items: [...Object.keys(Parser.FEAT_CATEGORY_TO_FULL), "Other"],
+		});
 		this._asiFilter = new Filter({
 			header: "Ability Bonus",
 			cnHeader:"属性加值",
@@ -22,14 +28,10 @@ class PageFilterFeats extends PageFilterBase {
 			displayFn: Parser.attAbvToFull,
 			itemSortFn: null,
 		});
-		this._categoryFilter = new Filter({
-			header: "Category",
-			cnHeader: "分类",
-			displayFn: StrUtil.toTitleCase,
-		});
 		this._otherPrereqFilter = new Filter({
 			header: "Other",
 			cnHeader: "其他",
+			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 			displayFn: function(tag){
 				switch(tag){
 					case "Ability": 	return "属性值";
@@ -44,14 +46,13 @@ class PageFilterFeats extends PageFilterBase {
 					default: return tag;
 				}
 			},
-			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
 			cnHeader: "等级",
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
 		});
-		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite",cnHeader:"先决条件", filters: [this._otherPrereqFilter, this._levelFilter]});
+		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite", cnHeader:"先决条件", filters: [this._otherPrereqFilter, this._levelFilter]});
 		this._benefitsFilter = new Filter({
 			header: "Benefits",
 			cnHeader: "增益",
@@ -67,14 +68,22 @@ class PageFilterFeats extends PageFilterBase {
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenseFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
-		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["有简介", "有图片", "SRD", "基础规则", "传奇"], isMiscFilter: true});
+		this._miscFilter = new Filter({
+			header: "Miscellaneous",
+			cnHeader:"杂项",
+			items: ["有简介", "有图片", "SRD", "基础规则", "传奇"],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 	}
 
 	static mutateForFilters (feat) {
 		const ability = Renderer.getAbilityData(feat.ability);
 		feat._fAbility = ability.asCollection.filter(a => !ability.areNegative.includes(a)); // used for filtering
+
+		feat._fCategory = feat.category || "Other";
 
 		const prereqText = Renderer.utils.prerequisite.getHtml(feat.prerequisite, {isListMode: true}) || VeCt.STR_NONE;
 
@@ -100,14 +109,10 @@ class PageFilterFeats extends PageFilterBase {
 			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyTool")))) feat._fBenifits.push("工具熟练项");
 			if (feat.skillToolLanguageProficiencies.some(it => (it.choose || []).some(x => x.from || [].includes("anyLanguage")))) feat._fBenifits.push("语言熟练项");
 		}
-		feat._fMisc = feat.srd ? ["SRD"] : [];
-		if (feat.basicRules) feat._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(feat.source)) feat._fMisc.push("传奇");
-		if (this._hasFluff(feat)) feat._fMisc.push("有简介");
-		if (this._hasFluffImages(feat)) feat._fMisc.push("有图片");
+		this._mutateForFilters_commonMisc(feat);
 		if (feat.repeatable != null) feat._fMisc.push(feat.repeatable ? "Repeatable" : "Not Repeatable");
 
-		feat._slAbility = ability.asText || VeCt.STR_NONE;
+		feat._slAbility = ability.asTextShort || VeCt.STR_NONE;
 		feat._slPrereq = prereqText;
 
 		FilterCommon.mutateForFilters_damageVulnResImmune_player(feat);
@@ -132,11 +137,11 @@ class PageFilterFeats extends PageFilterBase {
 	async _pPopulateBoxOptions (opts) {
 		opts.filters = [
 			this._sourceFilter,
-			this._asiFilter,
 			this._categoryFilter,
+			this._asiFilter,
 			this._prerequisiteFilter,
 			this._benefitsFilter,
-			this._defenceFilter,
+			this._defenseFilter,
 			this._conditionImmuneFilter,
 			this._miscFilter,
 		];
@@ -146,8 +151,8 @@ class PageFilterFeats extends PageFilterBase {
 		return this._filterBox.toDisplay(
 			values,
 			ft.source,
+			ft._fCategory,
 			ft._fAbility,
-			ft.category,
 			[
 				ft._fPrereqOther,
 				ft._fPrereqLevel,
@@ -184,8 +189,9 @@ class ModalFilterFeats extends ModalFilterBase {
 
 	_$getColumnHeaders () {
 		const btnMeta = [
-			{sort: "name", text: "名称", width: "4"},
-			{sort: "ability", text: "属性值", width: "3"},
+			{sort: "name", text: "名称", width: "3-5"},
+			{sort: "category", text: "分类", width: "1-5"},
+			{sort: "ability", text: "属性值", width: "2"},
 			{sort: "prerequisite", text: "先决条件", width: "3"},
 			{sort: "source", text: "来源", width: "1"},
 		];
@@ -194,7 +200,7 @@ class ModalFilterFeats extends ModalFilterBase {
 
 	async _pLoadAllData () {
 		return [
-			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/feats.json`)).feat,
+			...(await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/feats.json`)).feat,
 			...((await PrereleaseUtil.pGetBrewProcessed()).feat || []),
 			...((await BrewUtil2.pGetBrewProcessed()).feat || []),
 		];
@@ -207,17 +213,18 @@ class ModalFilterFeats extends ModalFilterBase {
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS](feat);
 		const source = Parser.sourceJsonToAbv(feat.source);
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
 			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
 			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="ve-col-4 ${feat._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${feat._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${feat.name}</div>
-			<span class="ve-col-3 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
-				<span class="ve-col-3 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
-			<div class="ve-col-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}${Parser.sourceJsonToMarkerHtml(feat.source)}</div>
+			<div class="ve-col-3-5 px-1 ${feat._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${feat._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${feat.name}</div>
+			<span class="ve-col-1-5 px-1 ve-text-center ${feat.category == null ? "italic" : ""}" ${feat.category ? `title="${Parser.featCategoryToFull(feat.category).qq()}"` : ""}>${feat.category || "\u2014"}</span>
+			<span class="ve-col-2 px-1 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
+			<span class="ve-col-3 px-1 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
+			<div class="ve-col-1 pl-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}${Parser.sourceJsonToMarkerHtml(feat.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
@@ -230,9 +237,9 @@ class ModalFilterFeats extends ModalFilterBase {
 				hash,
 				source,
 				sourceJson: feat.source,
+				category: feat.category || "Other",
 				ability: feat._slAbility,
 				prerequisite: feat._slPrereq,
-				ENG_name: feat.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

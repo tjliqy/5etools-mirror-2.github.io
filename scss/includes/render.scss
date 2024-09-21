@@ -420,7 +420,6 @@ $rgb-inset-border: #656565;
 
 		&b-inset > p {
 			text-indent: var(--w-text-indent-inline-p);
-			margin-bottom: 0;
 
 			&:first-of-type {
 				text-indent: 0;
@@ -436,7 +435,7 @@ $rgb-inset-border: #656565;
 			border-bottom: 2px solid $rgb-inset-border;
 			background-color: #e9ecda;
 
-			> *:last-of-type {
+			> *:last-child {
 				margin-bottom: 0;
 			}
 
@@ -513,9 +512,15 @@ $rgb-inset-border: #656565;
 		&table {
 			width: 100%;
 			margin-bottom: var(--h-mb-p);
+			// Avoid outer `white-space: pre` inflating cells when embedded in e.g. a Markdown render
+			white-space: initial;
 
 			> caption {
 				text-align: left;
+				margin-left: 5px;
+				padding: 0;
+				font-weight: bold;
+				font-size: 1.08em;
 			}
 		}
 
@@ -592,7 +597,7 @@ $rgb-inset-border: #656565;
 			border-bottom: 2px solid $rgb-inset-border;
 			background-color: #ece4da;
 
-			> *:last-of-type {
+			> *:last-child {
 				margin-bottom: 0;
 			}
 		}
@@ -626,13 +631,6 @@ $rgb-inset-border: #656565;
 
 	&-item__ {
 		&type-rarity-attunement {
-			color: vars.$rgb-off-black;
-		}
-	}
-
-	&-spell__ {
-		&level-school-ritual {
-			font-style: italic;
 			color: vars.$rgb-off-black;
 		}
 	}

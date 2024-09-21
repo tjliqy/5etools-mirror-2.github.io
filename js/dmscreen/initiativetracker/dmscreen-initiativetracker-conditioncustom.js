@@ -30,7 +30,7 @@ class _RenderableCollectionConditionsCustomEdit extends RenderableCollectionGene
 				<div class="ve-col-2 px-1 ve-flex-v-center">${$iptColor}</div>
 				<div class="ve-col-5 pr-1 ve-flex-v-center">
 					${$iptTurns}
-					<div class="ve-flex-vh-center btn-group">
+					<div class="ve-flex-vh-center ve-btn-group">
 						${$btnDelete}
 					</div>
 				</div>
@@ -65,7 +65,7 @@ export class InitiativeTrackerConditionCustomEdit extends BaseComponent {
 		});
 		rdState.cbDoClose = doClose;
 
-		const $btnAdd = $(`<button class="btn btn-default btn-xs bb-0 bbr-0 bbl-0" title="Add"><span class="glyphicon glyphicon-plus"></span></button>`)
+		const $btnAdd = $(`<button class="ve-btn ve-btn-default ve-btn-xs bb-0 bbr-0 bbl-0" title="Add"><span class="glyphicon glyphicon-plus"></span></button>`)
 			.on("click", () => {
 				this._state.conditionsCustom = [...this._state.conditionsCustom, InitiativeTrackerConditionUtil.getNewRowState()];
 			});
@@ -78,7 +78,7 @@ export class InitiativeTrackerConditionCustomEdit extends BaseComponent {
 		$$($modalInner)`
 			<div class="ve-flex-col mt-2 h-100 min-h-0">
 				<div class="ve-flex-vh-center w-100 mb-2 bb-1p-trans">
-					<div class="ve-col-5">名称 </div>
+					<div class="ve-col-5">名称</div>
 					<div class="ve-col-2">Color</div>
 					<div class="ve-col-4">Turns</div>
 					<div class="ve-col-1 ve-flex-v-center ve-flex-h-right">${$btnAdd}</div>
@@ -96,7 +96,7 @@ export class InitiativeTrackerConditionCustomEdit extends BaseComponent {
 	}
 
 	_render_$getFooter ({rdState}) {
-		const $btnSave = $(`<button class="btn btn-primary btn-sm w-100">Save</button>`)
+		const $btnSave = $(`<button class="ve-btn ve-btn-primary ve-btn-sm w-100">Save</button>`)
 			.click(() => rdState.cbDoClose(true));
 
 		return $$`<div class="w-100 py-3 no-shrink">

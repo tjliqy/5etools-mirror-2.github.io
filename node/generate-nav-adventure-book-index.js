@@ -17,11 +17,11 @@ const _PROPS_TO_INDEX = [
 
 const _METAS = [
 	{
-		file: `./data/adventures.json`,
+		file: `data/adventures.json`,
 		prop: "adventure",
 	},
 	{
-		file: `./data/books.json`,
+		file: `data/books.json`,
 		prop: "book",
 	},
 ];
@@ -38,5 +38,5 @@ const out = _METAS.mergeMap(({file, prop}) => {
 	};
 });
 
-fs.writeFileSync("./data/generated/gendata-nav-adventure-book-index.json", JSON.stringify(out), "utf8");
+fs.writeFileSync("data/generated/gendata-nav-adventure-book-index.json", JSON.stringify(out), "utf8");
 console.log("Generated navbar adventure/book index.");

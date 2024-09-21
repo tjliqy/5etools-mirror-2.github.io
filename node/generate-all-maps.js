@@ -29,5 +29,5 @@ console.log("Updating maps...");
 	});
 });
 
-fs.writeFileSync("./data/generated/gendata-maps.json", JSON.stringify(out), "utf8");
+fs.writeFileSync("data/generated/gendata-maps.json", JSON.stringify(out), "utf8");
 console.log("Updated maps.");

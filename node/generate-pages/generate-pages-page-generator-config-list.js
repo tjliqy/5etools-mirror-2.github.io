@@ -23,16 +23,21 @@ class _PageGeneratorListBackgrounds extends PageGeneratorListBase {
 	_page = UrlUtil.PG_BACKGROUNDS;
 	_pageTitle = "Backgrounds";
 	_scriptIdentList = "backgrounds";
+	_isHasRenderer = false;
+
+	_isModule = true;
 
 	_btnsList = [
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
-		HtmlGeneratorListButtons.getBtn({width: "6", sortIdent: "skills", text: "Skill Proficiencies"}),
+		HtmlGeneratorListButtons.getBtn({width: "2-5", sortIdent: "name", text: "Name"}),
+		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "ability", text: "Ability"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "skills", text: "Skill Proficiencies"}),
 		HtmlGeneratorListButtons.getBtnSource(),
 	];
 
 	_btnsSublist = [
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
-		HtmlGeneratorListButtons.getBtn({width: "8", sortIdent: "skills", text: "Skills"}),
+		HtmlGeneratorListButtons.getBtn({width: "3", sortIdent: "name", text: "Name"}),
+		HtmlGeneratorListButtons.getBtn({width: "5", sortIdent: "ability", text: "Ability"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "skills", text: "Skills"}),
 	];
 
 	_isPrinterView = true;
@@ -48,6 +53,7 @@ class _PageGeneratorListBestiary extends PageGeneratorListBase {
 	];
 
 	_scriptIdentList = "bestiary";
+	_isHasRenderer = false;
 
 	_scriptsUtilsAdditional = [
 		"utils-tableview.js",
@@ -55,6 +61,7 @@ class _PageGeneratorListBestiary extends PageGeneratorListBase {
 
 	_isModule = true;
 	_isMultisource = true;
+	_isWrpToken = true;
 
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtn({width: "4-2", sortIdent: "name", text: "Name"}),
@@ -205,19 +212,27 @@ class _PageGeneratorListFeats extends PageGeneratorListBase {
 	_page = UrlUtil.PG_FEATS;
 	_pageTitle = "Feats";
 	_scriptIdentList = "feats";
+	_isHasRenderer = false;
+
+	_styleListContainerAdditional = "ve-flex-6";
+	_styleContentWrapperAdditional = "ve-flex-5";
+
+	_isModule = true;
 
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtnPreviewToggle(),
-		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "name", text: "名称"}),
-		HtmlGeneratorListButtons.getBtn({width: "3-5", sortIdent: "ability", text: "能力"}),
-		HtmlGeneratorListButtons.getBtn({width: "3", sortIdent: "prerequisite", text: "先决条件"}),
+		HtmlGeneratorListButtons.getBtn({width: "3-2", sortIdent: "name", text: "Name"}),
+		HtmlGeneratorListButtons.getBtn({width: "1-3", sortIdent: "category", text: "Category"}),
+		HtmlGeneratorListButtons.getBtn({width: "2-5", sortIdent: "ability", text: "Ability"}),
+		HtmlGeneratorListButtons.getBtn({width: "3", sortIdent: "prerequisite", text: "Prerequisite"}),
 		HtmlGeneratorListButtons.getBtnSource(),
 	];
 
 	_btnsSublist = [
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "名称"}),
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "ability", text: "能力"}),
-		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "prerequisite", text: "先决条件"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
+		HtmlGeneratorListButtons.getBtn({width: "2", sortIdent: "ability", text: "Category"}),
+		HtmlGeneratorListButtons.getBtn({width: "2", sortIdent: "ability", text: "Ability"}),
+		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "prerequisite", text: "Prerequisite"}),
 	];
 
 	_isPrinterView = true;
@@ -232,6 +247,9 @@ class _PageGeneratorListItems extends PageGeneratorListBase {
 	];
 
 	_scriptIdentList = "items";
+	_isHasRenderer = false;
+
+	_isModule = true;
 
 	_scriptsUtilsAdditional = [
 		"utils-tableview.js",
@@ -339,10 +357,6 @@ class _PageGeneratorListObjects extends PageGeneratorListBase {
 	_pageTitle = "Objects";
 	_scriptIdentList = "objects";
 
-	_stylesheets = [
-		"objects",
-	];
-
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtn({width: "8", sortIdent: "name", text: "Name"}),
 		HtmlGeneratorListButtons.getBtn({width: "2", sortIdent: "size", text: "Size"}),
@@ -355,14 +369,15 @@ class _PageGeneratorListObjects extends PageGeneratorListBase {
 	];
 
 	_isWrpToken = true;
-
-	_onscrollPageContent = `TokenUtil.handleStatblockScroll(event, this)`;
 }
 
 class _PageGeneratorListOptionalFeatures extends PageGeneratorListBase {
 	_page = UrlUtil.PG_OPT_FEATURES;
 	_pageTitle = "Other Options and Features";
 	_scriptIdentList = "optionalfeatures";
+	_isHasRenderer = false;
+
+	_isModule = true;
 
 	_isPrinterView = true;
 
@@ -431,8 +446,11 @@ class _PageGeneratorListPsionics extends PageGeneratorListBase {
 
 class _PageGeneratorListRaces extends PageGeneratorListBase {
 	_page = UrlUtil.PG_RACES;
-	_pageTitle = "Races";
+	_pageTitle = "Species";
 	_scriptIdentList = "races";
+	_isHasRenderer = false;
+
+	_isModule = true;
 
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
@@ -497,6 +515,7 @@ class _PageGeneratorListSpells extends PageGeneratorListBase {
 	_page = UrlUtil.PG_SPELLS;
 	_pageTitle = "Spells";
 	_scriptIdentList = "spells";
+	_isHasRenderer = false;
 
 	_stylesheets = [
 		"spells",
@@ -505,6 +524,7 @@ class _PageGeneratorListSpells extends PageGeneratorListBase {
 	_styleListContainerAdditional = "ve-flex-7";
 	_styleContentWrapperAdditional = "ve-flex-5";
 
+	_isModule = true;
 	_isMultisource = true;
 
 	_scriptsUtilsAdditional = [
@@ -567,8 +587,8 @@ class _PageGeneratorListTables extends PageGeneratorListBase {
 
 class _PageGeneratorListVariantRules extends PageGeneratorListBase {
 	_page = UrlUtil.PG_VARIANTRULES;
-	_pageTitle = "Optional, Variant, and Expanded Rules";
-	_navbarTitle = "Optional/etc. Rules";
+	_pageTitle = "Rules Glossary";
+	_navbarTitle = "Rules Glossary";
 	_scriptIdentList = "variantrules";
 
 	_btnsList = [
@@ -588,10 +608,6 @@ class _PageGeneratorListVehicles extends PageGeneratorListBase {
 	_pageTitle = "Vehicles";
 	_scriptIdentList = "vehicles";
 
-	_stylesheets = [
-		"vehicles",
-	];
-
 	_btnsList = [
 		HtmlGeneratorListButtons.getBtn({width: "6", sortIdent: "type", text: "Type"}),
 		HtmlGeneratorListButtons.getBtn({width: "4", sortIdent: "name", text: "Name"}),
@@ -604,8 +620,6 @@ class _PageGeneratorListVehicles extends PageGeneratorListBase {
 	];
 
 	_isWrpToken = true;
-
-	_onscrollPageContent = `TokenUtil.handleStatblockScroll(event, this)`;
 }
 
 class _PageGeneratorListClasses extends PageGeneratorListBase {
@@ -619,6 +633,8 @@ class _PageGeneratorListClasses extends PageGeneratorListBase {
 	_stylesheets = [
 		"classes",
 	];
+
+	_isModule = true;
 }
 
 export const PAGE_GENERATORS_LISTPAGE = [

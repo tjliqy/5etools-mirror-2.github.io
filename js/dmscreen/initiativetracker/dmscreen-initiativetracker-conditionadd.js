@@ -4,7 +4,7 @@ import {InitiativeTrackerConditionUtil} from "./dmscreen-initiativetracker-condi
 
 class _UtilConditionsCustomView {
 	static $getBtnCondition ({comp, cbSubmit, cbClick}) {
-		const $btn = $(`<button class="btn btn-default btn-xs dm-init-cond__btn-cond" title="SHIFT to add with &quot;Unlimited&quot; duration; CTRL to add with 1-turn duration; SHIFT+CTRL to add with 10-turn duration."></button>`)
+		const $btn = $(`<button class="ve-btn ve-btn-default ve-btn-xs dm-init-cond__btn-cond" title="SHIFT to add with &quot;Unlimited&quot; duration; CTRL to add with 1-turn duration; SHIFT+CTRL to add with 10-turn duration."></button>`)
 			.on("click", evt => {
 				cbClick({
 					name: comp._state.name,
@@ -104,7 +104,7 @@ export class InitiativeTrackerConditionAdd extends BaseComponent {
 	}
 
 	_render_$getBtnEditCustom ({rdState}) {
-		return $(`<button class="btn btn-default btn-xs" title="Manage Custom Conditions"><span class="glyphicon glyphicon-cog"></span></button>`)
+		return $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="Manage Custom Conditions"><span class="glyphicon glyphicon-cog"></span></button>`)
 			.on("click", async () => {
 				const compEdit = new InitiativeTrackerConditionCustomEdit({conditionsCustom: MiscUtil.copyFast(this._state.conditionsCustom)});
 				await compEdit.pGetShowModalResults();
@@ -181,7 +181,7 @@ export class InitiativeTrackerConditionAdd extends BaseComponent {
 				this._doSubmit({rdState});
 			});
 
-		const $btnSave = $(`<button class="btn btn-default w-100" title="Save as New Custom Condition"><span class="glyphicon glyphicon-floppy-disk"></span></button>`)
+		const $btnSave = $(`<button class="ve-btn ve-btn-default w-100" title="Save as New Custom Condition"><span class="glyphicon glyphicon-floppy-disk"></span></button>`)
 			.click(() => {
 				this._state.conditionsCustom = [
 					...this._state.conditionsCustom,
@@ -195,7 +195,7 @@ export class InitiativeTrackerConditionAdd extends BaseComponent {
 
 		return $$`
 			<div class="ve-flex-v-center mb-2">
-				<div class="small-caps ve-col-5 pr-1">名称 </div>
+				<div class="small-caps ve-col-5 pr-1">名称</div>
 				<div class="small-caps ve-col-2 px-1">Color</div>
 				<div class="small-caps ve-col-4 px-1">Duration</div>
 				<div class="ve-col-1 pl-1">&nbsp;</div>
@@ -210,7 +210,7 @@ export class InitiativeTrackerConditionAdd extends BaseComponent {
 	}
 
 	_render_$getStgSubmit ({rdState}) {
-		const $btnAdd = $(`<button class="btn btn-primary w-100">Set Condition</button>`)
+		const $btnAdd = $(`<button class="ve-btn ve-btn-primary w-100">Set Condition</button>`)
 			.click(() => this._doSubmit({rdState}));
 		return $$`
 			<div class="ve-flex-v-center">

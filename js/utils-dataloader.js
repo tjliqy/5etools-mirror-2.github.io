@@ -150,9 +150,12 @@ class _DataLoaderDereferencerBase {
 		if (page.toLowerCase().endsWith(".html")) throw new Error(`Could not dereference "${page}" content. Dereferencing is only supported for props!`);
 
 		// Prefer content from our active load, where available
-		return entriesWithoutRefs[page]?.[refHash]
+		const out = entriesWithoutRefs[page]?.[refHash]
 			? MiscUtil.copyFast(entriesWithoutRefs[page]?.[refHash])
 			: DataLoader.getFromCache(page, refUnpacked.source, refHash, {isCopy: true});
+		if (!out) return out;
+		out.type ||= "entries";
+		return out;
 	}
 }
 
@@ -180,31 +183,62 @@ class _DataLoaderDereferencerClassSubclassFeatures extends _DataLoaderDereferenc
 	}
 }
 
-class _DataLoaderDereferencerOptionalfeatures extends _DataLoaderDereferencerBase {
-	async _pPreloadRefContentSite () { await DataLoader.pCacheAndGetAllSite(UrlUtil.PG_OPT_FEATURES); }
-	async _pPreloadRefContentPrerelease () { await DataLoader.pCacheAndGetAllPrerelease(UrlUtil.PG_OPT_FEATURES); }
-	async _pPreloadRefContentBrew () { await DataLoader.pCacheAndGetAllBrew(UrlUtil.PG_OPT_FEATURES); }
+/**
+ * @abstract
+ */
+class _DataLoaderDereferencerGenericFeatures extends _DataLoaderDereferencerBase {
+	_page;
+	_tag;
+	_prop;
+
+	async _pPreloadRefContentSite () { await DataLoader.pCacheAndGetAllSite(this._page); }
+	async _pPreloadRefContentPrerelease () { await DataLoader.pCacheAndGetAllPrerelease(this._page); }
+	async _pPreloadRefContentBrew () { await DataLoader.pCacheAndGetAllBrew(this._page); }
+
+	_dereference_mutEntity (toReplaceMeta, cpy) { /* Implement as required */ }
 
 	dereference ({ent, entriesWithoutRefs, toReplaceMeta, ixReplace}) {
-		const refUnpacked = DataUtil.generic.unpackUid(toReplaceMeta.optionalfeature, "optfeature");
-		const refHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES](refUnpacked);
+		const refUnpacked = DataUtil.generic.unpackUid(toReplaceMeta[this._prop], this._tag);
+		const refHash = UrlUtil.URL_TO_HASH_BUILDER[this._page](refUnpacked);
 
 		// Skip blocklisted
-		if (ExcludeUtil.isInitialised && ExcludeUtil.isExcluded(refHash, "optionalfeature", refUnpacked.source, {isNoCount: true})) {
+		if (ExcludeUtil.isInitialised && ExcludeUtil.isExcluded(refHash, this._prop, refUnpacked.source, {isNoCount: true})) {
 			toReplaceMeta.array[toReplaceMeta.ix] = {};
 			return new this.constructor._DereferenceMeta({cntReplaces: 1});
 		}
 
-		const cpy = this._getCopyFromCache({page: "optionalfeature", entriesWithoutRefs, refUnpacked, refHash});
+		const cpy = this._getCopyFromCache({page: this._prop, entriesWithoutRefs, refUnpacked, refHash});
 		if (!cpy) return new this.constructor._DereferenceMeta({cntReplaces: 0});
 
-		delete cpy.featureType;
-		delete cpy.prerequisite;
+		if (!toReplaceMeta?.preserve?.prerequisite) delete cpy.prerequisite;
+		this._dereference_mutEntity(toReplaceMeta, cpy);
+
 		if (toReplaceMeta.name) cpy.name = toReplaceMeta.name;
 		toReplaceMeta.array[toReplaceMeta.ix] = cpy;
 
 		return new this.constructor._DereferenceMeta({cntReplaces: 1});
 	}
+}
+
+class _DataLoaderDereferencerOptionalfeatures extends _DataLoaderDereferencerGenericFeatures {
+	_page = UrlUtil.PG_OPT_FEATURES;
+	_tag = "optfeature";
+	_prop = "optionalfeature";
+
+	_dereference_mutEntity (toReplaceMeta, cpy) {
+		delete cpy.featureType;
+
+		if (toReplaceMeta?.preserve?.consumes && cpy.entries) {
+			const entCost = Renderer.optionalfeature.getCostEntry(cpy);
+			cpy.entries.unshift(entCost);
+		}
+	}
+}
+
+class _DataLoaderDereferencerFeats extends _DataLoaderDereferencerGenericFeatures {
+	_page = UrlUtil.PG_FEATS;
+	_tag = "feat";
+	_prop = "feat";
 }
 
 class _DataLoaderDereferencerItemEntries extends _DataLoaderDereferencerBase {
@@ -252,6 +286,9 @@ class _DataLoaderDereferencer {
 
 		this._REF_TYPE_TO_DEREFERENCER["refOptionalfeature"] =
 			new _DataLoaderDereferencerOptionalfeatures();
+
+		this._REF_TYPE_TO_DEREFERENCER["refFeat"] =
+			new _DataLoaderDereferencerFeats();
 
 		this._REF_TYPE_TO_DEREFERENCER["refItemEntry"] =
 			new _DataLoaderDereferencerItemEntries();
@@ -440,6 +477,7 @@ class _DataLoaderDereferencer {
 						case "refClassFeature": (missingRefSets["classFeature"] = missingRefSets["classFeature"] || new Set()).add(obj.classFeature); break;
 						case "refSubclassFeature": (missingRefSets["subclassFeature"] = missingRefSets["subclassFeature"] || new Set()).add(obj.subclassFeature); break;
 						case "refOptionalfeature": (missingRefSets["optionalfeature"] = missingRefSets["optionalfeature"] || new Set()).add(obj.optionalfeature); break;
+						case "refFeat": (missingRefSets["feat"] = missingRefSets["feat"] || new Set()).add(obj.feat); break;
 						case "refItemEntry": (missingRefSets["itemEntry"] = missingRefSets["itemEntry"] || new Set()).add(obj.itemEntry); break;
 					}
 				},
@@ -699,7 +737,7 @@ class _DataTypeLoaderSingleSource extends _DataTypeLoader {
 	_getSiteIdent ({pageClean, sourceClean}) { return this._filename; }
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		return DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${this._filename}`);
+		return DataUtil.loadJSON(`${Renderer.get().baseUrl}data/${this._filename}`);
 	}
 }
 
@@ -803,6 +841,12 @@ class _DataTypeLoaderLegendaryGroup extends _DataTypeLoaderSingleSource {
 	static PROPS = ["legendaryGroup"];
 
 	_filename = "bestiary/legendarygroups.json";
+}
+
+class _DataTypeLoaderItemProperty extends _DataTypeLoaderSingleSource {
+	static PROPS = ["itemProperty"];
+
+	_filename = "items-base.json";
 }
 
 class _DataTypeLoaderItemEntry extends _DataTypeLoaderSingleSource {
@@ -1025,7 +1069,7 @@ class _DataTypeLoaderCustomMonster extends _DataTypeLoaderMultiSource {
 	_prop = "monster";
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		await DataUtil.monster.pPreloadMeta();
+		await DataUtil.monster.pPreloadLegendaryGroups();
 		return super._pGetSiteData({pageClean, sourceClean});
 	}
 
@@ -1235,6 +1279,8 @@ class _DataTypeLoaderCustomClassesSubclass extends _DataTypeLoaderCustomRawable 
 				const feature = await DataLoader.pCacheAndGet(propFeature, source, hash, {isCopy: true, lockToken2});
 				// Skip over missing links
 				if (!feature) return notFoundUids.push(uid);
+
+				feature.type ||= "entries";
 
 				if (displayText) feature._displayName = displayText;
 				if (featureRef.tableDisplayName) feature._displayNameTable = featureRef.tableDisplayName;
@@ -1509,7 +1555,7 @@ class _DataTypeLoaderCustomQuickref extends _DataTypeLoader {
 	_isBrewAvailable () { return false; }
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/generated/bookref-quick.json`);
+		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/bookref-quick.json`);
 		return {
 			reference: json.reference["bookref-quick"],
 			referenceData: json.data["bookref-quick"],
@@ -1597,12 +1643,12 @@ class _DataTypeLoaderCustomAdventureBook extends _DataTypeLoader {
 	async _pGetSiteData ({pageClean, sourceClean}) {
 		const [prop, propData] = this.constructor.PROPS;
 
-		const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${this._filename}`);
+		const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/${this._filename}`);
 		const contents = index[prop].find(contents => _DataLoaderInternalUtil.getCleanSource({source: contents.source}) === sourceClean);
 
 		if (!contents) return {};
 
-		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}./data/${prop}/${prop}-${UrlUtil.encodeForHash(contents.id.toLowerCase())}.json`);
+		const json = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/${prop}/${prop}-${UrlUtil.encodeForHash(contents.id.toLowerCase())}.json`);
 
 		return {
 			[prop]: [contents],
@@ -1788,6 +1834,7 @@ class DataLoader {
 		_DataTypeLoaderSkill.register({fnRegister});
 		_DataTypeLoaderSense.register({fnRegister});
 		_DataTypeLoaderLegendaryGroup.register({fnRegister});
+		_DataTypeLoaderItemProperty.register({fnRegister});
 		_DataTypeLoaderItemEntry.register({fnRegister});
 		_DataTypeLoaderItemMastery.register({fnRegister});
 		_DataTypeLoaderCitation.register({fnRegister});

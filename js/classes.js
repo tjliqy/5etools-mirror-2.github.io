@@ -1,4 +1,6 @@
-"use strict";
+import {VetoolsConfig} from "./utils-config/utils-config-config.js";
+import {RenderClassesSidebar} from "./render-class.js";
+import {SITE_STYLE__CLASSIC} from "./consts.js";
 
 class UtilClassesPage {
 	static getColorStyleClasses (entry, {isForceStandardSource, prefix, isSubclass} = {}) {
@@ -77,6 +79,7 @@ class UtilClassesPage {
 			isAddLeadingHr = false,
 			isAddTrailingHr = false,
 			isAddSourceNote = false,
+			isIncludeFooterImages = false,
 		},
 	) {
 		entFluff = MiscUtil.copyFast(entFluff);
@@ -131,7 +134,10 @@ class UtilClassesPage {
 				stack += `<div class="py-2"></div>`;
 			}
 
-			this._getFluffLayoutImages(entFluff.images)
+			const images = [
+				...this._getFluffLayoutImages_header(entFluff.images),
+				...(isIncludeFooterImages ? this._getFluffLayoutImages_footer(entFluff.images) : []),
+			]
 				.forEach(ent => stack += Renderer.get().render(ent));
 		}
 
@@ -147,7 +153,38 @@ class UtilClassesPage {
 		};
 	}
 
-	static getRenderedClassFluff (
+	static _getRenderedClassSubclassFluffFooter (
+		{
+			ent,
+			entFluff,
+			isAddLeadingHr = false,
+			isAddTrailingHr = false,
+		},
+	) {
+		entFluff = MiscUtil.copyFast(entFluff);
+
+		const hasFooterImages = (entFluff?.images?.length || 0) > 1;
+
+		let stack = "";
+		Renderer.get().setFirstSection(true);
+
+		if (hasFooterImages) {
+			this._getFluffLayoutImages_footer(entFluff.images)
+				.forEach(ent => stack += Renderer.get().render(ent));
+		}
+
+		if (hasFooterImages) {
+			if (isAddLeadingHr) stack = Renderer.get().render({type: "hr"}) + stack;
+			if (isAddTrailingHr) stack += Renderer.get().render({type: "hr"});
+		}
+
+		return {
+			hasImages: hasFooterImages,
+			rendered: stack || null,
+		};
+	}
+
+	static getRenderedClassFluffHeader (
 		{
 			cls,
 			clsFluff,
@@ -166,6 +203,22 @@ class UtilClassesPage {
 		});
 	}
 
+	static getRenderedClassFluffFooter (
+		{
+			cls,
+			clsFluff,
+			isAddLeadingHr = false,
+			isAddTrailingHr = false,
+		},
+	) {
+		return this._getRenderedClassSubclassFluffFooter({
+			ent: cls,
+			entFluff: clsFluff,
+			isAddLeadingHr,
+			isAddTrailingHr,
+		});
+	}
+
 	static getRenderedSubclassFluff (
 		{
 			sc,
@@ -179,24 +232,29 @@ class UtilClassesPage {
 			depthArr,
 			isAddLeadingHr: true,
 			isAddTrailingHr: true,
+			isIncludeFooterImages: true,
 		});
 	}
 
-	static _getFluffLayoutImages (images) {
-		if (images.length === 1) {
-			return [
-				{
-					maxWidth: "98",
-					maxWidthUnits: "%",
-					...images[0],
-				},
-			];
-		}
+	static _getFluffLayoutImages_header (images) {
+		const [img1] = images;
+
+		return [
+			{
+				maxWidth: "98",
+				maxWidthUnits: "%",
+				...img1,
+			},
+		];
+	}
+
+	static _getFluffLayoutImages_footer (images) {
+		const [, ...rest] = images;
 
 		return [
 			{
 				type: "gallery",
-				images: [...images],
+				images: [...rest],
 			},
 		];
 	}
@@ -682,9 +740,9 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		const hash = UrlUtil.autoEncodeHash(cls);
 		const source = Parser.sourceJsonToAbv(cls.source);
 
-		const $lnk = $(`<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="bold ve-col-8 pl-0">${cls.name}</span>
-			<span class="ve-col-4 ve-text-center ${Parser.sourceJsonToSourceClassname(cls.source)} pr-0" title="${Parser.sourceJsonToFull(cls.source)}" ${Parser.sourceJsonToStyle(cls.source)}>${source}</span>
+		const $lnk = $(`<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="bold ve-col-8 pl-0 pr-1">${cls.name}</span>
+			<span class="ve-col-4 pl-0 pr-1 ve-text-center ${Parser.sourceJsonToSourceClassname(cls.source)} pr-0" title="${Parser.sourceJsonToFull(cls.source)}" ${Parser.sourceJsonToStyle(cls.source)}>${source}</span>
 		</a>`);
 
 		const $ele = $$`<li class="lst__row ve-flex-col ${isExcluded ? "row--blocklisted" : ""}">${$lnk}</li>`;
@@ -745,7 +803,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		}
 
 		const f = this.filterBox.getValues();
-		this._list.filter(item => this._pageFilter.toDisplay(f, item.data.entity, [], null));
+		this._list.filter(item => this._pageFilter.toDisplay(f, item.data.entity));
 
 		if (this._fnOutlineHandleFilterChange) this._fnOutlineHandleFilterChange();
 		if (this._fnTableHandleFilterChange) this._fnTableHandleFilterChange(f);
@@ -786,7 +844,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	}
 
 	async _pDoRender () {
-		// 重置所有 hooks in preparation for rendering
+		// reset all hooks in preparation for rendering
 		this._initHashAndStateSync();
 		this.filterBox
 			.off(FILTER_BOX_EVNT_VALCHANGE)
@@ -991,7 +1049,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		$$`<table class="cls-tbl shadow-big w-100 mb-2">
 			<tbody>
-			<tr><th class="border" colspan="15"></th></tr>
+			<tr><th class="ve-tbl-border" colspan="15"></th></tr>
 			<tr><th class="cls-tbl__disp-name" colspan="15">${cls.name}</th></tr>
 			<tr>
 				<th colspan="3"></th> <!-- spacer to match the 3 default cols (level, prof, features) -->
@@ -999,12 +1057,12 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			</tr>
 			<tr>
 				<th class="cls-tbl__col-level">等级</th>
-				<th class="cls-tbl__col-prof-bonus" style="width:4.5em">熟练项加值</th>
+				<th class="cls-tbl__col-prof-bonus">熟练项加值</th>
 				<th>特性</th>
 				${$tblHeaders}
 			</tr>
 			${metasTblRows.map(it => it.$row)}
-			<tr><th class="border" colspan="15"></th></tr>
+			<tr><th class="ve-tbl-border" colspan="15"></th></tr>
 			</tbody>
 		</table>`.appendTo($wrpTblClass);
 		$wrpTblClass.showVe();
@@ -1030,7 +1088,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		// Render column headers (bottom section)
 		const $tblHeadersGroup = colLabels
 			.map(lbl => {
-				const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header" style="width:2em"></div></th>`)
+				const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header"></div></th>`)
 					.fastSetHtml(Renderer.get().render(lbl));
 				$tblHeaders.push($tblHeader);
 				return $tblHeader;
@@ -1046,11 +1104,11 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			$thGroupHeaderSpellPoints = $(`<th colspan="1" class="cls-tbl__cell-spell-points"></th>`);
 			$tblGroupHeaders.push($thGroupHeaderSpellPoints);
 
-			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" style="width:2em"></div></th>`)
+			$tblHeaderSpellPoints = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header"></div></th>`)
 				.fastSetHtml(Renderer.get().render(`{@variantrule 法术值}`));
 			$tblHeaders.push($tblHeaderSpellPoints);
 
-			$tblHeaderSpellPointsMaxSpellLevel = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header" style="width:2em">法术环阶</div></th>`);
+			$tblHeaderSpellPointsMaxSpellLevel = $(`<th class="cls-tbl__col-generic-center cls-tbl__cell-spell-points"><div class="cls__squash_header">法术环阶</div></th>`);
 			$tblHeaders.push($tblHeaderSpellPointsMaxSpellLevel);
 
 			const $elesDefault = [$thGroupHeader, ...$tblHeadersGroup];
@@ -1254,200 +1312,10 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	}
 
 	_render_renderSidebar () {
-		const $wrpSidebar = $(`#statsprof`).empty();
-		const cls = this.activeClass;
-
-		const $ptsToToggle = [];
-
-		const btnToggleSidebar = e_({
-			tag: "div",
-			clazz: "cls-side__btn-toggle",
-			text: `[\u2012]`,
-			click: () => this._state.isHideSidebar = !this._state.isHideSidebar,
-		});
-		const hkSidebarHidden = () => {
-			btnToggleSidebar.txt(this._state.isHideSidebar ? `[+]` : `[\u2012]`);
-			$ptsToToggle.forEach($e => $e.toggleVe(!this._state.isHideSidebar));
-		};
-		this._addHookBase("isHideSidebar", hkSidebarHidden);
-		// (call the hook later)
-
-		const $btnSendToFoundry = ExtensionUtil.ACTIVE ? $(Renderer.utils.getBtnSendToFoundryHtml({isMb: false})) : null;
-		const dataPartSendToFoundry = `data-page="${UrlUtil.PG_CLASSES}" data-source="${cls.source.qq()}" data-hash="${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](cls).qq()}"`;
-
-		// region Group
-		let $ptGroup = null;
-		if (cls.classGroup) {
-			$ptGroup = $(`<tr></tr>`)
-				.fastSetHtml(`<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">Groups</h5>
-					<div>${cls.classGroup.map(it => it.toTitleCase()).join(", ")}</div>
-				</td>`);
-			$ptsToToggle.push($ptGroup);
-		}
-		// endregion
-
-		// region Requirements
-		const $getRenderedRequirements = (requirements, intro = null) => {
-			const renderPart = (obj, joiner = ", ") => Object.keys(obj).filter(k => Parser.ABIL_ABVS.includes(k)).sort(SortUtil.ascSortAtts).map(k => `${Parser.attAbvToFull(k)} ${obj[k]}`).join(joiner);
-			const orPart = requirements.or ? requirements.or.map(obj => renderPart(obj, " or ")).join("; ") : "";
-			const basePart = renderPart(requirements);
-			const abilityPart = [orPart, basePart].filter(Boolean).join("; ");
-
-			const allEntries = [
-				abilityPart ? `{@b 最低属性值:} ${abilityPart}` : null,
-				...requirements.entries || [],
-			].filter(Boolean);
-
-			return $$`<div>${Renderer.get().setFirstSection(true).render({type: "section", entries: allEntries})}</div>`;
-		};
-
-		let $ptRequirements = null;
-		if (cls.requirements) {
-			const $ptPrereq = $getRenderedRequirements(cls.requirements);
-
-			$ptRequirements = $$`<tr>
-				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">先决条件</h5>
-					${$ptPrereq}
-				</td>
-			</tr>`;
-			$ptsToToggle.push($ptRequirements);
-		}
-		// endregion
-
-		// region HP/hit dice
-		let $ptHp = null;
-		if (cls.hd) {
-			$ptHp = $(`<tr></tr>`)
-				.fastSetHtml(`<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">生命值 Hit Points</h5>
-					<div><strong>生命骰:</strong> ${Renderer.get().render(Renderer.class.getHitDiceEntry(cls.hd))}</div>
-					<div><strong>第一级的生命值:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd)}</div>
-					<div><strong>后续升级生命值:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd)}</div>
-				</td>`);
-			$ptsToToggle.push($ptHp);
-		}
-		// endregion
-
-		// region Starting proficiencies
-		const profs = cls.startingProficiencies || {};
-		// endregion
-
-		// region Starting equipment
-		let $ptEquipment = null;
-		if (cls.startingEquipment) {
-			const equip = cls.startingEquipment;
-			const rendered = [
-				equip.additionalFromBackground ? "<p>你带着以下装备开始游戏，此外该角色还可以从其背景项中获得额外的启始装备:</p>" : "",
-				equip.default && equip.default.length ? `<ul class="pl-4"><li>${equip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>` : "",
-				equip.goldAlternative != null ? `<p>或者,你也可以选择用${Renderer.get().render(equip.goldAlternative)}gp来自行购买装备</p>` : "",
-			].filter(Boolean).join("");
-			const $dispRendered = $(`<div></div>`);
-
-			$ptEquipment = $$`<tr>
-				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">初始装备 Starting Equipment</h5>
-					<div>${$dispRendered}</div>
-				</td>
-			</tr>`;
-			$dispRendered.fastSetHtml(rendered);
-			$ptsToToggle.push($ptEquipment);
-		}
-		// endregion
-
-		// region multiclassing
-		let $ptMulticlassing = null;
-		if (cls.multiclassing) {
-			const mc = cls.multiclassing;
-
-			const htmlMCcPrereqPreText = mc.requirements || mc.requirementsSpecial ? `<div>To qualify for a new class, you must meet the ${mc.requirementsSpecial ? "" : "ability score "}prerequisites for both your current class and your new one.</div>` : "";
-			let $ptMcPrereq = null;
-			if (mc.requirements) {
-				$ptMcPrereq = $getRenderedRequirements(mc.requirements, htmlMCcPrereqPreText);
-			}
-
-			let $ptMcPrereqSpecial = null;
-			if (mc.requirementsSpecial) {
-				$ptMcPrereqSpecial = $$`<div>
-					${mc.requirements ? "" : htmlMCcPrereqPreText}
-					<b>${mc.requirements ? "其他 " : ""}先决条件:</b> ${Renderer.get().render(mc.requirementsSpecial || "")}
-				</div>`;
-			}
-
-			let $ptMcProfsIntro = null;
-			let $ptMcProfsArmor = null;
-			let $ptMcProfsWeapons = null;
-			let $ptMcProfsTools = null;
-			let $ptMcProfsSkills = null;
-			if (mc.proficienciesGained) {
-				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>当你不是以起始等级获得新职业的等级，你只会获得该职业一部分的起始熟练项。</div>`);
-
-				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>护甲:</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor)}</div>`);
-
-				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>武器:</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons)}</div>`);
-
-				if (mc.proficienciesGained.tools) $ptMcProfsTools = $(`<div><b>工具:</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools)}</div>`);
-
-				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>技能:</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills)}</div>`);
-			}
-
-			let $ptMcEntries = null;
-			if (mc.entries) {
-				$ptMcEntries = $(`<div></div>`).fastSetHtml(Renderer.get().setFirstSection(true).render({type: "section", entries: mc.entries}));
-			}
-
-			$ptMulticlassing = $$`<tr>
-				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">兼职 Multiclassing</h5>
-					${$ptMcPrereq}
-					${$ptMcPrereqSpecial}
-					${$ptMcEntries}
-					${$ptMcProfsIntro}
-					${$ptMcProfsArmor}
-					${$ptMcProfsWeapons}
-					${$ptMcProfsTools}
-					${$ptMcProfsSkills}
-				</td>
-			</tr>`;
-			$ptsToToggle.push($ptMulticlassing);
-		}
-		// endregion
-
-		const $ptProfs = $$`<tr>
-			<td colspan="6" class="cls-side__section">
-				<h5 class="cls-side__section-head">熟练项 Proficiencies</h5>
-				<div><b>护甲:</b> <span>${profs.armor ? Renderer.class.getRenderedArmorProfs(profs.armor) : "none"}</span></div>
-				<div><b>武器:</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "none"}</span></div>
-				<div><b>工具:</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "none"}</span></div>
-				<div><b>豁免:</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "none"}</span></div>
-				<div><b>技能:</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "none"}</span></div>
-			</td>
-		</tr>`;
-		$ptsToToggle.push($ptProfs);
-
-		$$`<table class="w-100 stats shadow-big">
-			<tr><th class="border" colspan="6"></th></tr>
-			<tr><th colspan="6">
-				<div class="split-v-center pr-1" ${dataPartSendToFoundry}>
-					<div class="cls-side__name">${cls.name}</div>
-					<div class="ve-flex-v-center">${$btnSendToFoundry}${btnToggleSidebar}</div>
-				</div>
-			</th></tr>
-			${cls.authors ? `<tr><th colspan="6">By ${cls.authors.join(", ")}</th></tr>` : ""}
-
-			${$ptGroup}
-			${$ptRequirements}
-			${$ptHp}
-			${$ptProfs}
-			${$ptEquipment}
-			${$ptMulticlassing}
-
-			<tr><th class="border" colspan="6"></th></tr>
-		</table>`.appendTo($wrpSidebar);
-		$wrpSidebar.showVe();
-
-		MiscUtil.pDefer(hkSidebarHidden);
+		const $wrpSidebar = $(`#statsprof`)
+			.empty()
+			.append(RenderClassesSidebar.getRenderedClassSidebar(this, this.activeClass))
+			.showVe();
 	}
 
 	async _render_pRenderSubclassTabs () {
@@ -1463,7 +1331,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		// region features/fluff
 		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "特性", activeClass: "cls__btn-cf--active", isInverted: true}).title("切换职业特性");
 
-		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="切换职业特性选项/变体">变体</button>`)
+		const $btnToggleFeatureVariants = $(`<button class="ve-btn ve-btn-xs ve-btn-default" title="切换职业特性选项/变体">变体</button>`)
 			.click(() => {
 				const f = this.filterBox.getValues();
 				const isClassFeatureVariantsDisplayed = f[this._pageFilter.optionsFilter.header].isClassFeatureVariant;
@@ -1480,7 +1348,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "简介"}).title("切换职业信息");
 
-		$$`<div class="ve-flex-v-center m-1 btn-group mr-3 no-shrink">${$btnToggleFeatures}${$btnToggleFeatureVariants}${$btnToggleFluff}</div>`.appendTo($wrp);
+		$$`<div class="ve-flex-v-center m-1 ve-btn-group mr-3 no-shrink">${$btnToggleFeatures}${$btnToggleFeatureVariants}${$btnToggleFluff}</div>`.appendTo($wrp);
 		// endregion
 
 		// region subclasses
@@ -1493,7 +1361,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			this._listSubclass.addItem(listItem);
 		});
 
-		const $dispCount = $(`<div class="text-muted m-1 cls-tabs__sc-not-shown ve-flex-vh-center"></div>`);
+		const $dispCount = $(`<div class="ve-muted m-1 cls-tabs__sc-not-shown ve-flex-vh-center"></div>`);
 		this._listSubclass.addItem(new ListItem(
 			-1,
 			$dispCount,
@@ -1507,7 +1375,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				const cntNotShown = this._listSubclass.items.length - this._listSubclass.visibleItems.length;
 				$dispCount.html(cntNotShown ? `<i class="clickable" title="修改筛选条件来查看">(${cntNotShown}个未显示)</i>` : "").click(() => this._doSelectAllSubclasses());
 			} else if (this._listSubclass.items.length > 1) {
-				$dispCount.html(`<i class="clickable" title="修改筛选条件来查看">(${this._listSubclass.items.length - 1}个子职未显示)</i>`).click(() => this._doSelectAllSubclasses());
+				$dispCount.html(`<i class="clickable" title="修改筛选条件来查看。">(${this._listSubclass.items.length - 1}个子职未显示)</i>`).click(() => this._doSelectAllSubclasses());
 			} else $dispCount.html("");
 		});
 
@@ -1533,7 +1401,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 	async _render_pInitSubclassControls ($wrp) {
 		const cls = this.activeClass;
 
-		const $btnSelAll = $(`<button class="btn btn-xs btn-default" title="全选(按SHIFT键筛选常用选项；按CTRL键筛选官方补充内容)"><span class="glyphicon glyphicon-check"></span></button>`)
+		const $btnSelAll = $(`<button class="ve-btn ve-btn-xs ve-btn-default" title="全选(按SHIFT键筛选常用选项；按CTRL键筛选官方补充内容)"><span class="glyphicon glyphicon-check"></span></button>`)
 			.click(evt => {
 				const allStateKeys = cls.subclasses.map(sc => UrlUtil.getStateKeySubclass(sc));
 				if (evt.shiftKey) {
@@ -1621,7 +1489,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${it.name}</option>`));
 		$selFilterPreset.val("-1");
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default" title="重置选择"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		const $btnReset = $(`<button class="ve-btn ve-btn-xs ve-btn-default" title="重置选择"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => {
 				this._proxyAssign("state", "_state", "__state", cls.subclasses.mergeMap(sc => ({[UrlUtil.getStateKeySubclass(sc)]: false})));
 			});
@@ -1631,9 +1499,9 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		// Remove the temporary "hidden" class used to prevent popping
 		this._listSubclass.items.forEach(it => it.ele.showVe());
 
-		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default ve-flex-1" title="显示子职来源"><span class="glyphicon glyphicon-book"></span></button>`)});
+		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="ve-btn ve-btn-xs ve-btn-default ve-flex-1" title="显示子职来源"><span class="glyphicon glyphicon-book"></span></button>`)});
 
-		const $btnShuffle = $(`<button title="随便选一个" class="btn btn-xs btn-default ve-flex-1"><span class="glyphicon glyphicon-random"></span></button>`)
+		const $btnShuffle = $(`<button title="随便选一个?" class="ve-btn ve-btn-xs ve-btn-default ve-flex-1"><span class="glyphicon glyphicon-random"></span></button>`)
 			.click(() => {
 				if (!this._listSubclass.visibleItems.length) return JqueryUtil.doToast({content: "No subclasses to choose from!", type: "warning"});
 
@@ -1656,7 +1524,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 			});
 
 		$$`<div class="ve-flex-v-center m-1 no-shrink">${$selFilterPreset}</div>`.appendTo($wrp);
-		$$`<div class="ve-flex-v-center m-1 btn-group no-shrink">
+		$$`<div class="ve-flex-v-center m-1 ve-btn-group no-shrink">
 			${$btnSelAll}${$btnShuffle}${$btnReset}${$btnToggleSources}
 		</div>`.appendTo($wrp);
 	}
@@ -1688,7 +1556,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		MiscUtil.pDefer(hkSourcesVisible);
 
 		// Initially have these "hidden," to prevent them popping out when we filter them
-		const $btn = $$`<button class="btn btn-default btn-xs ve-flex-v-center m-1 ve-hidden ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}">
+		const $btn = $$`<button class="ve-btn ve-btn-default ve-btn-xs ve-flex-v-center m-1 ve-hidden ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}">
 				${$dispName}
 				${$dispSource}
 			</button>`
@@ -2072,7 +1940,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		if (clsFluff) {
 			const depthArr = [];
 
-			const {hasEntries, rendered} = UtilClassesPage.getRenderedClassFluff({cls, clsFluff, depthArr, isAddTrailingHr: true});
+			const {hasEntries, rendered} = UtilClassesPage.getRenderedClassFluffHeader({cls, clsFluff, depthArr, isAddTrailingHr: true});
 
 			if (rendered) {
 				const $trFluff = $(`<tr class="cls-main__cls-fluff"><td colspan="6"></td></tr>`).fastSetHtml(rendered).appendTo($content);
@@ -2126,6 +1994,11 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 				.appendTo($content);
 		}
 
+		if (clsFluff) {
+			const {rendered} = UtilClassesPage.getRenderedClassFluffFooter({cls, clsFluff, isAddLeadingHr: true});
+			if (rendered) $(`<tr class="cls-main__cls-fluff"><td colspan="6"></td></tr>`).fastSetHtml(rendered).appendTo($content);
+		}
+
 		this._$trNoContent = ClassesPage._render_$getTrNoContent().appendTo($content);
 
 		$content.append(Renderer.utils.getBorderTr());
@@ -2148,6 +2021,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 		},
 	) {
 		const depthArr = [];
+		const styleHint = VetoolsConfig.get("styleSwitcher", "style");
 
 		const toRenderSource = Renderer.findSource(feature);
 		const $trClassFeature = Renderer.get().withPlugin({
@@ -2164,7 +2038,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 					depthArr,
 					({renderer}) => {
 						return $(`<tr data-scroll-id="${ixLvl}-${ixFeature}" data-feature-type="class" class="cls-main__linked-titles"><td colspan="6"></td></tr>`)
-							.fastSetHtml(renderer.render(feature))
+							.fastSetHtml(renderer.render(Renderer.class.getDisplayNamedClassFeatureEntry(feature, styleHint)))
 							.appendTo($content);
 					},
 					{additionalProps: ["isReprinted"], additionalPropsInherited: ["_isStandardSource", "isClassFeatureVariant"]},
@@ -2181,7 +2055,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 		// Add a placeholder feature to display when no subclasses are active
 		const $trSubclassFeature = $(`<tr class="cls-main__sc-feature" data-subclass-none-message="true"><td colspan="6"></td></tr>`)
-			.fastSetHtml(Renderer.get().withDepthTracker([], ({renderer}) => renderer.render({type: "entries", entries: [{name: `{@note 未选择子职业}`, type: "entries", entries: [`{@note <span class="clickable roller" data-jump-select-a-subclass="true">选择一个子职业</span> 来在此处查看特性}`]}]})))
+			.fastSetHtml(Renderer.get().withDepthTracker([], ({renderer}) => renderer.render({type: "entries", entries: [{name: `{@note 未选择子职业}`, type: "entries", entries: [`{@note <span class="clickable roller" data-jump-select-a-subclass="true">选择一个子职业</span> 来在此处查看特性。}`]}]})))
 			.appendTo($content);
 
 		await cls.subclasses.pSerialAwaitMap(async sc => {
@@ -2233,7 +2107,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 					fn: () => {
 						const $trSubclassFeature = $(`<tr class="cls-main__sc-feature" data-subclass-id="${UrlUtil.getStateKeySubclass(sc)}"><td colspan="6"></td></tr>`)
 							.fastSetHtml(
-								Renderer.get().withDepthTracker(depthArr, ({renderer}) => renderer.render(toRender), {additionalProps: ["isReprinted"], additionalPropsInherited: ["_isStandardSource", "isClassFeatureVariant"]}),
+								Renderer.get().withDepthTracker(depthArr, ({renderer}) => renderer.render(Renderer.class.getDisplayNamedSubclassFeatureEntry(toRender, styleHint)), {additionalProps: ["isReprinted"], additionalPropsInherited: ["_isStandardSource", "isClassFeatureVariant"]}),
 							)
 							.appendTo($content);
 					},
@@ -2306,7 +2180,7 @@ ClassesPage.SubclassComparisonBookView = class extends BookModeViewBase {
 	_$getWindowHeaderLhs () {
 		const $out = super._$getWindowHeaderLhs();
 
-		const $btnSelectSubclasses = $(`<button class="btn btn-xs btn-default bl-0 bt-0 btl-0 btr-0 bbr-0 bbl-0 h-20p" title="Select Subclasses"><span class="glyphicon glyphicon-th-list"></span></button>`)
+		const $btnSelectSubclasses = $(`<button class="ve-btn ve-btn-xs ve-btn-default bl-0 bt-0 btl-0 btr-0 bbr-0 bbl-0 h-20p" title="Select Subclasses"><span class="glyphicon glyphicon-th-list"></span></button>`)
 			.click(async () => {
 				const {$modal, doClose} = UiUtil.getShowModal({
 					isEmpty: true,
@@ -2341,7 +2215,7 @@ ClassesPage.SubclassComparisonBookView = class extends BookModeViewBase {
 		const $dispNoneAvailable = $$`<div class="ve-small ve-muted italic">No subclasses are available. Please ${$btnAdjustFilters} first.</div>`;
 
 		const $stg = $$`<div class="ve-flex-col">
-			<div class="mb-2 initial-message">Please select some subclasses:</div>
+			<div class="mb-2 initial-message initial-message--med">请选择一些子职：</div>
 			${$wrpRows}
 			${$dispNoneAvailable}
 		</div>`;
@@ -2372,7 +2246,7 @@ ClassesPage.SubclassComparisonBookView = class extends BookModeViewBase {
 			});
 
 			const subclassStateItemsVisiblePrev = subclassStateItems.filter(li => this._parent.get(li.values.stateKey));
-			const $btnSave = $(`<button class="btn btn-default mr-2">Save</button>`)
+			const $btnSave = $(`<button class="ve-btn ve-btn-default mr-2">Save</button>`)
 				.click(async () => {
 					const nxtState = {isViewActiveScComp: false};
 
@@ -2399,7 +2273,7 @@ ClassesPage.SubclassComparisonBookView = class extends BookModeViewBase {
 				});
 
 			const $btnClose = isCloseButton
-				? $(`<button class="btn btn-default">Close</button>`)
+				? $(`<button class="ve-btn ve-btn-default">Close</button>`)
 					.click(() => {
 						this.setStateClosed();
 					})
@@ -2581,6 +2455,7 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 
 	async _pGetRenderContentMeta ({$wrpContent}) {
 		const cls = this._classPage.activeClass;
+		const styleHint = VetoolsConfig.get("styleSwitcher", "style");
 
 		// Top bar
 		const $pnlMenu = $(`<div class="cls-bkmv__wrp-tabs ve-flex-h-center no-print"></div>`).appendTo($wrpContent);
@@ -2597,10 +2472,10 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 
 		const clsFluff = await Renderer.class.pGetFluff(cls);
 		if (clsFluff) {
-			const {hasEntries, rendered} = UtilClassesPage.getRenderedClassFluff({cls, clsFluff, isRemoveRootName: true});
+			const {hasEntries, rendered} = UtilClassesPage.getRenderedClassFluffHeader({cls, clsFluff, isRemoveRootName: true});
 
 			if (rendered) {
-				renderStack.push(`<tr class="text" data-cls-book-fluff="true"><td colspan="6" class="py-3 px-5">`);
+				renderStack.push(`<tr data-cls-book-fluff="true"><td colspan="6" class="py-3 px-5">`);
 				renderStack.push(rendered);
 				renderStack.push(`</td></tr>`);
 			}
@@ -2608,11 +2483,21 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 
 		Renderer.get().setFirstSection(true);
 
-		renderStack.push(`<tr class="text" data-cls-book-cf="true"><td colspan="6" class="py-3 px-5">`);
+		renderStack.push(`<tr data-cls-book-cf="true"><td colspan="6" class="py-3 px-5">`);
 		cls.classFeatures.forEach(lvl => {
-			lvl.forEach(cf => Renderer.get().recursiveRender(cf, renderStack));
+			lvl.forEach(cf => Renderer.get().recursiveRender(Renderer.class.getDisplayNamedClassFeatureEntry(cf, styleHint), renderStack));
 		});
 		renderStack.push(`</td></tr>`);
+
+		if (clsFluff) {
+			const {rendered} = UtilClassesPage.getRenderedClassFluffFooter({cls, clsFluff});
+
+			if (rendered) {
+				renderStack.push(`<tr data-cls-book-fluff="true"><td colspan="6" class="py-3 px-5">`);
+				renderStack.push(rendered);
+				renderStack.push(`</td></tr>`);
+			}
+		}
 
 		await cls.subclasses
 			.filter(sc => !ClassesPage.isSubclassExcluded_(cls, sc))
@@ -2621,7 +2506,7 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 
 				sc.subclassFeatures.forEach((lvl, ix) => {
 					renderStack.push(`<tr data-cls-book-sc-ix="${ixSubclass}" class="cls-main__sc-feature"><td colspan="6" class="py-3 px-5">`);
-					lvl.forEach(f => Renderer.get().recursiveRender(f, renderStack));
+					lvl.forEach(scf => Renderer.get().recursiveRender(Renderer.class.getDisplayNamedSubclassFeatureEntry(scf, styleHint), renderStack));
 					renderStack.push(`</td></tr>`);
 
 					if (ix !== 0) return;
@@ -2642,7 +2527,7 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 		const $btnToggleCf = $(`<span class="cls-bkmv__btn-tab">特性</span>`).on("click", () => {
 			this._parent.set("isHideFeatures", !this._parent.get("isHideFeatures"));
 		});
-		const $btnToggleInfo = $(`<span class="cls-bkmv__btn-tab">简介</span>`).on("click", () => {
+		const $btnToggleInfo = $(`<span class="cls-bkmv__btn-tab">Info</span>`).on("click", () => {
 			this._parent.set("isShowFluff", !this._parent.get("isShowFluff"));
 		});
 
@@ -2714,3 +2599,5 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 
 const classesPage = new ClassesPage();
 window.addEventListener("load", () => classesPage.pOnLoad());
+
+globalThis.dbg_page = classesPage;

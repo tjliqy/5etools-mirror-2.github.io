@@ -291,7 +291,7 @@ class StatGenUi extends BaseComponent {
 			.change(() => this._$rollIptFormula.removeClass("form-control--error"));
 
 		const lockRoll = new VeLock();
-		const $btnRoll = $(`<button class="btn btn-primary bold">掷骰</button>`)
+		const $btnRoll = $(`<button class="ve-btn ve-btn-primary bold">掷骰</button>`)
 			.click(async () => {
 				try {
 					await lockRoll.pLock();
@@ -301,7 +301,7 @@ class StatGenUi extends BaseComponent {
 				}
 			});
 
-		const $btnRandom = $(`<button class="btn btn-xs btn-default mt-2">随机分配</button>`)
+		const $btnRandom = $(`<button class="ve-btn ve-btn-xs ve-btn-default mt-2">随机分配</button>`)
 			.hideVe()
 			.click(() => {
 				const abs = [...Parser.ABIL_ABVS].shuffle();
@@ -312,7 +312,11 @@ class StatGenUi extends BaseComponent {
 			});
 
 		const $wrpRolled = $(`<div class="ve-flex-v-center mr-auto statgen-rolled__wrp-results py-1"></div>`);
-		const $wrpRolledOuter = $$`<div class="ve-flex-v-center"><div class="mr-2">=</div>${$wrpRolled}</div>`;
+		const $wrpTotal = $(`<div class="ve-muted ve-small italic ve-text-right pr-1 help-subtle" title="The sum total of the above rolls."></div>`);
+		const $wrpRolledOuter = $$`<div class="ve-flex-col">
+			<div class="ve-flex-v-center mb-1"><div class="mr-2">=</div>${$wrpRolled}</div>
+			${$wrpTotal}
+		</div>`;
 
 		const hkRolled = () => {
 			$wrpRolledOuter.toggleVe(this._state.rolled_rolls.length);
@@ -322,6 +326,7 @@ class StatGenUi extends BaseComponent {
 				const cntPrevRolls = this._state.rolled_rolls.slice(0, i).filter(r => r.total === it.total).length;
 				return `<div class="px-3 py-1 help-subtle ve-flex-vh-center" title="${it.text}"><div class="ve-muted">[</div><div class="ve-flex-vh-center statgen-rolled__disp-result">${it.total}${cntPrevRolls ? Parser.numberToSubscript(cntPrevRolls) : ""}</div><div class="ve-muted">]</div></div>`;
 			}));
+			$wrpTotal.text(`总计: ${this._state.rolled_rolls.map(roll => roll.total).sum()}`);
 		};
 		this._addHookBase("rolled_rolls", hkRolled);
 		hkRolled();
@@ -329,9 +334,9 @@ class StatGenUi extends BaseComponent {
 		return $$`<div class="ve-flex-col mb-3 mr-auto">
 			<div class="ve-flex mb-2">
 				<div class="ve-flex-col ve-flex-h-center mr-3">
-					<label class="ve-flex-v-center"><div class="mr-2 no-shrink w-100p">公式：</div>${this._$rollIptFormula}</label>
+					<label class="ve-flex-v-center"><div class="mr-2 no-shrink w-100p">公式:</div>${this._$rollIptFormula}</label>
 
-					${this._isCharacterMode ? null : $$`<label class="ve-flex-v-center mt-2"><div class="mr-2 no-shrink w-100p">掷骰次数：</div>${$iptRollCount}</label>`}
+					${this._isCharacterMode ? null : $$`<label class="ve-flex-v-center mt-2"><div class="mr-2 no-shrink w-100p">掷骰次数:</div>${$iptRollCount}</label>`}
 				</div>
 				${$btnRoll}
 			</div>
@@ -343,7 +348,7 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_render_$getStgArrayHeader () {
-		const $btnRandom = $(`<button class="btn btn-xs btn-default">随机分配</button>`)
+		const $btnRandom = $(`<button class="ve-btn ve-btn-xs ve-btn-default">随机分配</button>`)
 			.click(() => {
 				const abs = [...Parser.ABIL_ABVS].shuffle();
 				abs.forEach((ab, i) => {
@@ -361,7 +366,7 @@ class StatGenUi extends BaseComponent {
 
 	_render_$getStgManualHeader () {
 		return $$`<div class="ve-flex-col mb-3 mr-auto">
-			<div>在下方的"基础"列中输入你想要的属性值。</div>
+			<div>在下方的&quot;基础&quot;列中输入你想要的属性值。</div>
 		</div>`;
 	}
 
@@ -420,10 +425,10 @@ class StatGenUi extends BaseComponent {
 		this._addHookAll("state", hkPoints);
 		hkPoints();
 
-		const $btnReset = $(`<button class="btn btn-default">重置</button>`)
+		const $btnReset = $(`<button class="ve-btn ve-btn-default">重置</button>`)
 			.click(() => this._doReset());
 
-		const $btnRandom = $(`<button class="btn btn-default">随机</button>`)
+		const $btnRandom = $(`<button class="ve-btn ve-btn-default">随机</button>`)
 			.click(() => {
 				this._doReset();
 
@@ -487,7 +492,7 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_render_$getStgPbCustom () {
-		const $btnAddLower = $(`<button class="btn btn-default btn-xs">添加更低的属性值</button>`)
+		const $btnAddLower = $(`<button class="ve-btn ve-btn-default ve-btn-xs">添加更低的属性值</button>`)
 			.click(() => {
 				const prevLowest = this._state.pb_rules[0];
 				const score = prevLowest.entity.score - 1;
@@ -495,7 +500,7 @@ class StatGenUi extends BaseComponent {
 				this._state.pb_rules = [this._getDefaultState_pb_rule(score, cost), ...this._state.pb_rules];
 			});
 
-		const $btnAddHigher = $(`<button class="btn btn-default btn-xs">添加更高的属性值</button>`)
+		const $btnAddHigher = $(`<button class="ve-btn ve-btn-default ve-btn-xs">添加更高的属性值</button>`)
 			.click(() => {
 				const prevHighest = this._state.pb_rules.last();
 				const score = prevHighest.entity.score + 1;
@@ -503,7 +508,7 @@ class StatGenUi extends BaseComponent {
 				this._state.pb_rules = [...this._state.pb_rules, this._getDefaultState_pb_rule(score, cost)];
 			});
 
-		const $btnResetRules = $(`<button class="btn btn-danger btn-xs mr-2">重置</button>`)
+		const $btnResetRules = $(`<button class="ve-btn ve-btn-danger ve-btn-xs mr-2">重置</button>`)
 			.click(() => {
 				this._state.pb_rules = this._getDefaultStatePointBuyCosts().pb_rules;
 			});
@@ -538,11 +543,11 @@ class StatGenUi extends BaseComponent {
 			),
 		]);
 
-		const $btnContext = $(`<button class="btn btn-default btn-xs" title="Menu"><span class="glyphicon glyphicon-option-vertical"></span></button>`)
+		const $btnContext = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="Menu"><span class="glyphicon glyphicon-option-vertical"></span></button>`)
 			.click(evt => ContextUtil.pOpenMenu(evt, menuCustom));
 
 		const $stgCustomCostControls = $$`<div class="ve-flex-col mb-auto ml-2 mobile__ml-0 mobile__mt-3">
-			<div class="btn-group-vertical ve-flex-col mb-2">${$btnAddLower}${$btnAddHigher}</div>
+			<div class="ve-btn-group-vertical ve-flex-col mb-2">${$btnAddLower}${$btnAddHigher}</div>
 			<div class="ve-flex-v-center">
 				${$btnResetRules}
 				${$btnContext}
@@ -709,7 +714,7 @@ class StatGenUi extends BaseComponent {
 		this._addHookActiveTab(hkElesMode);
 		// endregion
 
-		const $btnResetRolledOrArrayOrManual = $(`<button class="btn btn-default btn-xxs relative statgen-shared__btn-reset" title="Reset"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		const $btnResetRolledOrArrayOrManual = $(`<button class="ve-btn ve-btn-default ve-btn-xxs relative statgen-shared__btn-reset" title="重置"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => this._doReset());
 		const hkRolledOrArray = () => $btnResetRolledOrArrayOrManual.toggleVe(this.ixActiveTab === this._IX_TAB_ROLLED || this.ixActiveTab === this._IX_TAB_ARRAY || this.ixActiveTab === this._IX_TAB_MANUAL);
 		this._addHookActiveTab(hkRolledOrArray);
@@ -801,7 +806,7 @@ class StatGenUi extends BaseComponent {
 				{
 					fallbackOnNaN: 0,
 					min: 0,
-					html: `<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number">`,
+					html: `<input class="form-control form-control--minimal statgen-shared__ipt ve-text-right" type="number">`,
 				},
 			);
 
@@ -823,7 +828,7 @@ class StatGenUi extends BaseComponent {
 				0,
 				{
 					fallbackOnNaN: 0,
-					html: `<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number">`,
+					html: `<input class="form-control form-control--minimal statgen-shared__ipt ve-text-right" type="number">`,
 				},
 			);
 
@@ -892,7 +897,7 @@ class StatGenUi extends BaseComponent {
 
 						<div class="ve-flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
-							<div class="my-1 statgen-pb__header ve-flex-vh-center help text-muted" title="此处输入额外/自定义的加值">用户</div>
+							<div class="my-1 statgen-pb__header ve-flex-vh-center help ve-muted" title="此处输入额外/自定义的加值">用户</div>
 							${$wrpsUser}
 						</div>
 
@@ -1009,7 +1014,7 @@ class StatGenUi extends BaseComponent {
 			this._parent[this._propModalFilter].pageFilter.filterBox.on(FILTER_BOX_EVNT_VALCHANGE, () => doApplyFilterToSelEntity());
 			doApplyFilterToSelEntity();
 
-			const $btnFilterForEntity = $(`<button class="btn btn-xs btn-default br-0 pr-2" title="Filter for ${this._title}"><span class="glyphicon glyphicon-filter"></span> 筛选</button>`)
+			const $btnFilterForEntity = $(`<button class="ve-btn ve-btn-xs ve-btn-default br-0 pr-2" title="Filter for ${this._title}"><span class="glyphicon glyphicon-filter"></span> Filter</button>`)
 				.click(async () => {
 					const selected = await this._parent[this._propModalFilter].pGetUserSelection();
 					if (selected == null || !selected.length) return;
@@ -1024,7 +1029,7 @@ class StatGenUi extends BaseComponent {
 				this._parent,
 				this._propIsPreview,
 				{
-					html: `<button class="btn btn-xs btn-default" title="Toggle ${this._title} Preview"><span class="glyphicon glyphicon-eye-open"></span></button>`,
+					html: `<button class="ve-btn ve-btn-xs ve-btn-default" title="Toggle ${this._title} Preview"><span class="glyphicon glyphicon-eye-open"></span></button>`,
 				},
 			);
 			const hkBtnPreviewEntity = () => $btnPreview.toggleVe(this._parent._state[this._propIxEntity] != null && ~this._parent._state[this._propIxEntity]);
@@ -1087,7 +1092,7 @@ class StatGenUi extends BaseComponent {
 			const $stgSel = $$`<div class="ve-flex-col mt-3">
 				<div class="mb-1">选择${this._title}</div>
 				<div class="ve-flex-v-center mb-2">
-					<div class="ve-flex-v-center btn-group w-100 mr-2">${$btnFilterForEntity}${$selEntity}</div>
+					<div class="ve-flex-v-center ve-btn-group w-100 mr-2">${$btnFilterForEntity}${$selEntity}</div>
 					<div>${$btnPreview}</div>
 				</div>
 				${$stgAbilityScoreSet}
@@ -1118,7 +1123,7 @@ class StatGenUi extends BaseComponent {
 			if (Parser.ABIL_ABVS.some(it => fromEntity[it])) {
 				const $wrpsEntity = Parser.ABIL_ABVS.map(ab => {
 					return $$`<div class="my-1 statgen-pb__cell">
-						<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number" readonly value="${fromEntity[ab] || 0}">
+						<input class="form-control form-control--minimal statgen-shared__ipt ve-text-right" type="number" readonly value="${fromEntity[ab] || 0}">
 					</div>`;
 				});
 
@@ -1316,7 +1321,7 @@ class StatGenUi extends BaseComponent {
 				this._parent,
 				"common_isShowTashasRules",
 				{
-					html: `<button class="btn btn-xxs btn-default ve-small p-0 statgen-shared__btn-toggle-tashas-rules ve-flex-vh-center" title="Toggle &quot;Customizing Your Origin&quot; Section"><span class="glyphicon glyphicon-eye-open"></span></button>`,
+					html: `<button class="ve-btn ve-btn-xxs ve-btn-default ve-small p-0 statgen-shared__btn-toggle-tashas-rules ve-flex-vh-center" title="Toggle &quot;Customizing Your Origin&quot; Section"><span class="glyphicon glyphicon-eye-open"></span></button>`,
 				},
 			);
 
@@ -1366,7 +1371,7 @@ class StatGenUi extends BaseComponent {
 
 	_render_isLevelUp ($wrpTab) {
 		const $wrpsExisting = Parser.ABIL_ABVS.map(ab => {
-			const $iptExisting = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number" readonly>`)
+			const $iptExisting = $(`<input class="form-control form-control--minimal statgen-shared__ipt ve-text-right" type="number" readonly>`)
 				.val(this._existingScores[ab]);
 
 			return $$`<label class="my-1 statgen-pb__cell">
@@ -1396,7 +1401,7 @@ class StatGenUi extends BaseComponent {
 						</div>
 
 						<div class="ve-flex-col mr-3">
-							<div class="my-1 statgen-pb__header ve-flex-vh-center help text-muted" title="Input any additional/custom bonuses here">User</div>
+							<div class="my-1 statgen-pb__header ve-flex-vh-center help ve-muted" title="Input any additional/custom bonuses here">User</div>
 							${$wrpsUser}
 						</div>
 
@@ -1428,7 +1433,7 @@ class StatGenUi extends BaseComponent {
 				0,
 				{
 					fallbackOnNaN: 0,
-					html: `<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number">`,
+					html: `<input class="form-control form-control--minimal statgen-shared__ipt ve-text-right" type="number">`,
 				},
 			);
 			return $$`<label class="my-1 statgen-pb__cell">${$ipt}</label>`;
@@ -1959,13 +1964,13 @@ StatGenUi.CompAsi = class extends BaseComponent {
 				if (!this._metasAsi[namespace][ix_]) {
 					this._parent.state[propMode] = this._parent.state[propMode] || (namespace === "ability" ? "asi" : "feat");
 
-					const $btnAsi = namespace !== "ability" ? null : $(`<button class="btn btn-xs btn-default w-50p">属性</button>`)
+					const $btnAsi = namespace !== "ability" ? null : $(`<button class="ve-btn ve-btn-xs ve-btn-default w-50p">属性</button>`)
 						.click(() => {
 							this._parent.state[propMode] = "asi";
 							this._doPulseThrottled();
 						});
 
-					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">专长</div>`) : $(`<button class="btn btn-xs btn-default w-50p">专长</button>`)
+					const $btnFeat = namespace !== "ability" ? $(`<div class="w-100p ve-text-center">Feat</div>`) : $(`<button class="ve-btn ve-btn-xs ve-btn-default w-50p">专长</button>`)
 						.click(() => {
 							this._parent.state[propMode] = "feat";
 							this._doPulseThrottled();
@@ -1977,7 +1982,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 						const $colsAsi = Parser.ABIL_ABVS.map((it, ixAsi) => {
 							const updateDisplay = () => $ipt.val(Number(this._parent.state[propIxAsiPointOne] === ixAsi) + Number(this._parent.state[propIxAsiPointTwo] === ixAsi));
 
-							const $ipt = $(`<input class="form-control form-control--minimal text-right input-xs statgen-shared__ipt" type="number" style="width: 42px;">`)
+							const $ipt = $(`<input class="form-control form-control--minimal ve-text-right input-xs statgen-shared__ipt" type="number" style="width: 42px;">`)
 								.disableSpellcheck()
 								.keydown(evt => { if (evt.key === "Escape") $ipt.blur(); })
 								.change(() => {
@@ -2067,7 +2072,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					hkMode();
 
 					const $row = $$`<div class="ve-flex-v-end py-3 px-1">
-						<div class="btn-group">${$btnAsi}${$btnFeat}</div>
+						<div class="ve-btn-group">${$btnAsi}${$btnFeat}</div>
 						<div class="vr-4"></div>
 						${$stgAsi}
 						${$stgFeat}
@@ -2151,7 +2156,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					hkIxFeat();
 
 					const $row = $$`<div class="ve-flex-v-end py-3 px-1 statgen-asi__row">
-						<div class="btn-group"><div class="w-100p ve-text-center">Feat</div></div>
+						<div class="ve-btn-group"><div class="w-100p ve-text-center">专长</div></div>
 						<div class="vr-4"></div>
 						${$stgFeat}
 					</div>`.appendTo($wrpRowsInner);
@@ -2165,7 +2170,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					hkIxFeat();
 
 					const $row = $$`<div class="ve-flex-v-end py-3 px-1 statgen-asi__row">
-						<div class="btn-group"><div class="w-100p ve-text-center">Feat</div></div>
+						<div class="ve-btn-group"><div class="w-100p ve-text-center">专长</div></div>
 						<div class="vr-4"></div>
 						${$stgFeat}
 					</div>`.appendTo($wrpRowsInner);
@@ -2190,7 +2195,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 		if (featStatic && propIxFeat) throw new Error(`Cannot combine static feat and feat property!`);
 		if (featStatic == null && propIxFeat == null) throw new Error(`Either a static feat or a feat property must be specified!`);
 
-		const $btnChooseFeat = featStatic ? null : $(`<button class="btn btn-xxs btn-default mr-2" title="Choose a Feat"><span class="glyphicon glyphicon-search"></span></button>`)
+		const $btnChooseFeat = featStatic ? null : $(`<button class="ve-btn ve-btn-xxs ve-btn-default mr-2" title="Choose a Feat"><span class="glyphicon glyphicon-search"></span></button>`)
 			.click(async () => {
 				const selecteds = await this._parent.modalFilterFeats.pGetUserSelection();
 				if (selecteds == null || !selecteds.length) return;
@@ -2387,9 +2392,9 @@ StatGenUi.CompAsi = class extends BaseComponent {
 			${$stgBackground}
 
 			<hr class="hr-3 hr--dotted">
-			<h4 class="my-2 bold">额外特性</h4>
+			<h4 class="my-2 bold">Additional Feats</h4>
 			<label class="w-100 ve-flex-v-center mb-2">
-				<div class="mr-2 no-shrink">额外特性个数：</div>${$iptCountFeatsCustom}
+				<div class="mr-2 no-shrink">Number of additional feats:</div>${$iptCountFeatsCustom}
 			</label>
 			${$wrpRowsCustom}
 		`;
@@ -2399,10 +2404,10 @@ StatGenUi.CompAsi = class extends BaseComponent {
 		if (!this._parent.isCharacterMode) {
 			const $iptCountAsi = ComponentUiUtil.$getIptInt(this._parent, "common_cntAsi", 0, {min: 0, max: 20})
 				.addClass("w-100p ve-text-center");
-			return $$`<label class="w-100 ve-flex-v-center mb-2"><div class="mr-2 no-shrink">属性值提升次数：</div>${$iptCountAsi}</label>`;
+			return $$`<label class="w-100 ve-flex-v-center mb-2"><div class="mr-2 no-shrink">属性值提升次数:</div>${$iptCountAsi}</label>`;
 		}
 
-		const $out = $$`<div class="w-100 ve-flex-v-center mb-2 italic ve-muted">没有可以提升的属性值</div>`;
+		const $out = $$`<div class="w-100 ve-flex-v-center mb-2 italic ve-muted">没有可以提升的属性值。</div>`;
 		const hkCntAsis = () => $out.toggleVe(this._parent.state.common_cntAsi === 0);
 		this._parent.addHookBase("common_cntAsi", hkCntAsis);
 		hkCntAsis();
@@ -2582,7 +2587,7 @@ StatGenUi.RenderableCollectionPbRules = class extends RenderableCollectionGeneri
 		parentComp._addHookBase("pb_isCustom", hkIsCustom);
 		hkIsCustom();
 
-		const $btnDelete = $(`<button class="btn btn-xxs btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>`)
+		const $btnDelete = $(`<button class="ve-btn ve-btn-xxs ve-btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>`)
 			.click(() => {
 				if (parentComp.state.pb_rules.length === 1) return; // Never delete the final item
 				parentComp.state.pb_rules = parentComp.state.pb_rules.filter(it => it !== rule);

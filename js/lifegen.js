@@ -99,7 +99,7 @@ async function getPersonDetails (opts) {
 				return resultLast ? resultLast.result : "";
 			})();
 
-			out.unshift(`<i><b title="Generated using the random name tables found in Xanathar's Guide to Everything">名字:</b> ${resultFirst.result}${lastName ? ` ${lastName}` : ""}</i>`);
+			out.unshift(`<i><b title="Generated using the random name tables found in Xanathar's Guide to Everything">Name:</b> ${resultFirst.result}${lastName ? ` ${lastName}` : ""}</i>`);
 		}
 	}
 

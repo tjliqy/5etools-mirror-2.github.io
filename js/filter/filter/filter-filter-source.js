@@ -1,6 +1,6 @@
 import {FilterItem} from "../filter-item.js";
 import {Filter} from "./filter-filter-generic.js";
-import {SOURCE_HEADER} from "../filter-constants.js";
+import {MISC_FILTER_VALUE__BASIC_RULES_2014, MISC_FILTER_VALUE__FREE_RULES_2024, MISC_FILTER_VALUE__SRD_5_1, MISC_FILTER_VALUE__SRD_5_2, PILL_STATE__IGNORE, PILL_STATE__YES, SOURCE_HEADER} from "../filter-constants.js";
 import {PageFilterBase} from "../filter-page-filter-base.js";
 
 export class SourceFilterItem extends FilterItem {
@@ -87,7 +87,7 @@ export class SourceFilter extends Filter {
 	_getHeaderControls_addExtraStateBtns (opts, wrpStateBtnsOuter) {
 		const btnSupplements = e_({
 			tag: "button",
-			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default w-100 ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA/etc.`,
 			html: `核心/资源`,
 			click: evt => this._doSetPinsSupplements({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
@@ -95,7 +95,7 @@ export class SourceFilter extends Filter {
 
 		const btnAdventures = e_({
 			tag: "button",
-			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default w-100 ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			title: `SHIFT to add to existing selection; CTRL to include UA`,
 			html: `冒险`,
 			click: evt => this._doSetPinsAdventures({isIncludeUnofficial: EventUtil.isCtrlMetaKey(evt), isAdditive: evt.shiftKey}),
@@ -103,7 +103,7 @@ export class SourceFilter extends Filter {
 
 		const btnPartnered = e_({
 			tag: "button",
-			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default w-100 ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
 			html: `合作`,
 			click: evt => this._doSetPinsPartnered({isAdditive: evt.shiftKey}),
@@ -111,7 +111,7 @@ export class SourceFilter extends Filter {
 
 		const btnHomebrew = e_({
 			tag: "button",
-			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default w-100 ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			title: `SHIFT to add to existing selection`,
 			html: `自制内容`,
 			click: evt => this._doSetPinsHomebrew({isAdditive: evt.shiftKey}),
@@ -129,11 +129,11 @@ export class SourceFilter extends Filter {
 
 		const actionSelectDisplayMode = new ContextUtil.ActionSelect({
 			values: Object.keys(SourceFilter._PILL_DISPLAY_MODE_LABELS).map(Number),
-			fnGetDisplayValue: val => SourceFilter._PILL_DISPLAY_MODE_LABELS[val] || SourceFilter._PILL_DISPLAY_MODE_LABELS[0],
-			fnOnChange: val => this._meta.pillDisplayMode = val,
+			fnGetDisplayValue: val => SourceFilter._PILL_DISPLAY_MODE_LABELS[val] || SourceFilter._PILL_DISPLAY_MODE_LABELS[SourceFilter._PILL_DISPLAY_MODE__AS_NAMES],
+			fnOnChange: val => this._uiMeta.pillDisplayMode = val,
 		});
-		this._addHook("meta", "pillDisplayMode", () => {
-			actionSelectDisplayMode.setValue(this._meta.pillDisplayMode);
+		this._addHook("uiMeta", "pillDisplayMode", () => {
+			actionSelectDisplayMode.setValue(this._uiMeta.pillDisplayMode);
 		})();
 
 		const menu = ContextUtil.getMenu([
@@ -187,7 +187,7 @@ export class SourceFilter extends Filter {
 		]);
 		const btnBurger = e_({
 			tag: "button",
-			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			html: `<span class="glyphicon glyphicon-option-vertical"></span>`,
 			click: evt => ContextUtil.pOpenMenu(evt, menu),
 			title: "其他选项",
@@ -195,7 +195,7 @@ export class SourceFilter extends Filter {
 
 		const btnOnlyPrimary = e_({
 			tag: "button",
-			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
+			clazz: `ve-btn ve-btn-default w-100 ${opts.isMulti ? "ve-btn-xxs" : "ve-btn-xs"}`,
 			html: `包含引用`,
 			title: `Consider entities as belonging to every source they appear in (i.e. reprints) as well as their primary source`,
 			click: () => this._meta.isIncludeOtherSources = !this._meta.isIncludeOtherSources,
@@ -208,7 +208,7 @@ export class SourceFilter extends Filter {
 
 		e_({
 			tag: "div",
-			clazz: `btn-group mr-2 w-100 ve-flex-v-center mobile__m-1 mobile__mb-2`,
+			clazz: `ve-btn-group mr-2 w-100 ve-flex-v-center mobile__m-1 mobile__mb-2`,
 			children: [
 				btnSupplements,
 				btnAdventures,
@@ -221,30 +221,30 @@ export class SourceFilter extends Filter {
 	}
 
 	_doSetPinsStandard () {
-		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_STANDARD ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_STANDARD ? PILL_STATE__YES : PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsPartnered ({isAdditive = false} = {}) {
 		this._proxyAssignSimple(
 			"state",
 			Object.keys(this._state)
-				.mergeMap(k => ({[k]: SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_PARTNERED ? 1 : isAdditive ? this._state[k] : 0})),
+				.mergeMap(k => ({[k]: SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_PARTNERED ? PILL_STATE__YES : isAdditive ? this._state[k] : PILL_STATE__IGNORE})),
 		);
 	}
 
 	_doSetPinsNonStandard () {
-		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_NON_STANDARD ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_NON_STANDARD ? PILL_STATE__YES : PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsPrerelease () {
-		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_PRERELEASE ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_PRERELEASE ? PILL_STATE__YES : PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsSupplements ({isIncludeUnofficial = false, isAdditive = false} = {}) {
 		this._proxyAssignSimple(
 			"state",
 			Object.keys(this._state)
-				.mergeMap(k => ({[k]: SourceUtil.isCoreOrSupplement(k) && (isIncludeUnofficial || !SourceUtil.isNonstandardSource(k)) ? 1 : isAdditive ? this._state[k] : 0})),
+				.mergeMap(k => ({[k]: SourceUtil.isCoreOrSupplement(k) && (isIncludeUnofficial || !SourceUtil.isNonstandardSource(k)) ? PILL_STATE__YES : isAdditive ? this._state[k] : PILL_STATE__IGNORE})),
 		);
 	}
 
@@ -252,7 +252,7 @@ export class SourceFilter extends Filter {
 		this._proxyAssignSimple(
 			"state",
 			Object.keys(this._state)
-				.mergeMap(k => ({[k]: SourceUtil.isAdventure(k) && (isIncludeUnofficial || !SourceUtil.isNonstandardSource(k)) ? 1 : isAdditive ? this._state[k] : 0})),
+				.mergeMap(k => ({[k]: SourceUtil.isAdventure(k) && (isIncludeUnofficial || !SourceUtil.isNonstandardSource(k)) ? PILL_STATE__YES : isAdditive ? this._state[k] : PILL_STATE__IGNORE})),
 		);
 	}
 
@@ -260,48 +260,60 @@ export class SourceFilter extends Filter {
 		this._proxyAssignSimple(
 			"state",
 			Object.keys(this._state)
-				.mergeMap(k => ({[k]: SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_HOMEBREW ? 1 : isAdditive ? this._state[k] : 0})),
+				.mergeMap(k => ({[k]: SourceUtil.getFilterGroup(k) === SourceUtil.FILTER_GROUP_HOMEBREW ? PILL_STATE__YES : isAdditive ? this._state[k] : PILL_STATE__IGNORE})),
 		);
 	}
 
 	_doSetPinsVanilla () {
-		Object.keys(this._state).forEach(k => this._state[k] = Parser.SOURCES_VANILLA.has(k) ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = Parser.SOURCES_VANILLA.has(k) ? PILL_STATE__YES : PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsNonUa () {
-		Object.keys(this._state).forEach(k => this._state[k] = !SourceUtil.isPrereleaseSource(k) ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = !SourceUtil.isPrereleaseSource(k) ? PILL_STATE__YES : PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsSrd () {
-		SourceFilter._SRD_SOURCES = SourceFilter._SRD_SOURCES || new Set([Parser.SRC_PHB, Parser.SRC_MM, Parser.SRC_DMG]);
+		SourceFilter._SRD_SOURCES = SourceFilter._SRD_SOURCES || new Set([Parser.SRC_PHB, Parser.SRC_MM, Parser.SRC_DMG, Parser.SRC_XPHB]);
 
-		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._SRD_SOURCES.has(k) ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._SRD_SOURCES.has(k) ? PILL_STATE__YES : PILL_STATE__IGNORE);
 
 		const srdFilter = this._filterBox.filters.find(it => it.isSrdFilter);
-		if (srdFilter) srdFilter.setValue("SRD", 1);
+		if (srdFilter) {
+			srdFilter.setValue(MISC_FILTER_VALUE__SRD_5_1, PILL_STATE__YES);
+			srdFilter.setValue(MISC_FILTER_VALUE__SRD_5_2, PILL_STATE__YES);
+		}
 
 		const basicRulesFilter = this._filterBox.filters.find(it => it.isBasicRulesFilter);
-		if (basicRulesFilter) basicRulesFilter.setValue("基础规则", 0);
+		if (basicRulesFilter) {
+			basicRulesFilter.setValue(MISC_FILTER_VALUE__BASIC_RULES_2014, PILL_STATE__IGNORE);
+			basicRulesFilter.setValue(MISC_FILTER_VALUE__FREE_RULES_2024, PILL_STATE__IGNORE);
+		}
 
-		// also disable "重置" otherwise some Deities are missing
+		// also disable "Reprinted" otherwise some Deities are missing
 		const reprintedFilter = this._filterBox.filters.find(it => it.isReprintedFilter);
-		if (reprintedFilter) reprintedFilter.setValue("重置", 0);
+		if (reprintedFilter) reprintedFilter.setValue("重置", PILL_STATE__IGNORE);
 	}
 
 	_doSetPinsBasicRules () {
-		SourceFilter._BASIC_RULES_SOURCES = SourceFilter._BASIC_RULES_SOURCES || new Set([Parser.SRC_PHB, Parser.SRC_MM, Parser.SRC_DMG]);
+		SourceFilter._BASIC_RULES_SOURCES = SourceFilter._BASIC_RULES_SOURCES || new Set([Parser.SRC_PHB, Parser.SRC_MM, Parser.SRC_DMG, Parser.SRC_XPHB]);
 
-		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._BASIC_RULES_SOURCES.has(k) ? 1 : 0);
+		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._BASIC_RULES_SOURCES.has(k) ? PILL_STATE__YES : PILL_STATE__IGNORE);
 
 		const basicRulesFilter = this._filterBox.filters.find(it => it.isBasicRulesFilter);
-		if (basicRulesFilter) basicRulesFilter.setValue("基础规则", 1);
+		if (basicRulesFilter) {
+			basicRulesFilter.setValue(MISC_FILTER_VALUE__BASIC_RULES_2014, PILL_STATE__YES);
+			basicRulesFilter.setValue(MISC_FILTER_VALUE__FREE_RULES_2024, PILL_STATE__YES);
+		}
 
 		const srdFilter = this._filterBox.filters.find(it => it.isSrdFilter);
-		if (srdFilter) srdFilter.setValue("SRD", 0);
+		if (srdFilter) {
+			srdFilter.setValue(MISC_FILTER_VALUE__SRD_5_1, PILL_STATE__IGNORE);
+			srdFilter.setValue(MISC_FILTER_VALUE__SRD_5_2, PILL_STATE__IGNORE);
+		}
 
-		// also disable "重置" otherwise some Deities are missing
+		// also disable "Reprinted" otherwise some Deities are missing
 		const reprintedFilter = this._filterBox.filters.find(it => it.isReprintedFilter);
-		if (reprintedFilter) reprintedFilter.setValue("重置", 0);
+		if (reprintedFilter) reprintedFilter.setValue("Reprinted", PILL_STATE__IGNORE);
 	}
 
 	static getCompleteFilterSources (ent) {
@@ -351,7 +363,7 @@ export class SourceFilter extends Filter {
 
 		const btnCancel = e_({
 			tag: "button",
-			clazz: `btn btn-xs btn-default px-1`,
+			clazz: `ve-btn ve-btn-xs ve-btn-default px-1`,
 			html: "取消",
 			click: () => {
 				grpBtnsInactive.showVe();
@@ -362,7 +374,7 @@ export class SourceFilter extends Filter {
 
 		const btnConfirm = e_({
 			tag: "button",
-			clazz: `btn btn-xs btn-default px-1`,
+			clazz: `ve-btn ve-btn-xs ve-btn-default px-1`,
 			html: "确认",
 			click: () => {
 				grpBtnsInactive.showVe();
@@ -378,7 +390,7 @@ export class SourceFilter extends Filter {
 					.filter(k => SourceUtil.isNonstandardSource(k))
 					.forEach(k => {
 						const sourceDate = Parser.sourceJsonToDate(k);
-						nxtState[k] = allowedDateSet.has(sourceDate) ? 1 : 0;
+						nxtState[k] = allowedDateSet.has(sourceDate) ? PILL_STATE__YES : PILL_STATE__IGNORE;
 					});
 				this._proxyAssign("state", "_state", "__state", nxtState);
 			},
@@ -386,7 +398,7 @@ export class SourceFilter extends Filter {
 
 		const btnShowSlider = e_({
 			tag: "button",
-			clazz: `btn btn-xxs btn-default px-1`,
+			clazz: `ve-btn ve-btn-xxs ve-btn-default px-1`,
 			html: "按日期选择",
 			click: () => {
 				grpBtnsInactive.hideVe();
@@ -416,20 +428,20 @@ export class SourceFilter extends Filter {
 
 		const btnClear = e_({
 			tag: "button",
-			clazz: `btn btn-xxs btn-default px-1`,
+			clazz: `ve-btn ve-btn-xxs ve-btn-default px-1`,
 			html: "清除",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)
 					.filter(k => SourceUtil.isPrereleaseSource(k))
-					.forEach(k => nxtState[k] = 0);
+					.forEach(k => nxtState[k] = PILL_STATE__IGNORE);
 				this._proxyAssign("state", "_state", "__state", nxtState);
 			},
 		});
 
 		const grpBtnsActive = e_({
 			tag: "div",
-			clazz: `ve-flex-v-center btn-group`,
+			clazz: `ve-flex-v-center ve-btn-group`,
 			children: [
 				btnCancel,
 				btnConfirm,
@@ -438,7 +450,7 @@ export class SourceFilter extends Filter {
 
 		const grpBtnsInactive = e_({
 			tag: "div",
-			clazz: `ve-flex-v-center btn-group`,
+			clazz: `ve-flex-v-center ve-btn-group`,
 			children: [
 				btnClear,
 				btnShowSlider,
@@ -472,13 +484,13 @@ export class SourceFilter extends Filter {
 	_doRenderPills_doRenderWrpGroup_getDividerHeaders_groupBrew (group) {
 		const btnClear = e_({
 			tag: "button",
-			clazz: `btn btn-xxs btn-default px-1`,
+			clazz: `ve-btn ve-btn-xxs ve-btn-default px-1`,
 			html: "清除",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)
 					.filter(k => BrewUtil2.hasSourceJson(k))
-					.forEach(k => nxtState[k] = 0);
+					.forEach(k => nxtState[k] = PILL_STATE__IGNORE);
 				this._proxyAssign("state", "_state", "__state", nxtState);
 			},
 		});
@@ -499,7 +511,7 @@ export class SourceFilter extends Filter {
 						children: [
 							e_({
 								tag: "div",
-								clazz: `ve-flex-v-center btn-group`,
+								clazz: `ve-flex-v-center ve-btn-group`,
 								children: [
 									btnClear,
 								],
@@ -551,10 +563,10 @@ export class SourceFilter extends Filter {
 
 		this._getPill_bindHookState({btnPill, item});
 
-		this._addHook("meta", "pillDisplayMode", () => {
-			dispAbbreviation.toggleVe(this._meta.pillDisplayMode !== 0);
-			spc.toggleVe(this._meta.pillDisplayMode === 2);
-			dispName.toggleVe(this._meta.pillDisplayMode !== 1);
+		this._addHook("uiMeta", "pillDisplayMode", () => {
+			dispAbbreviation.toggleVe(this._uiMeta.pillDisplayMode !== SourceFilter._PILL_DISPLAY_MODE__AS_NAMES);
+			spc.toggleVe(this._uiMeta.pillDisplayMode === SourceFilter._PILL_DISPLAY_MODE__AS_BOTH);
+			dispName.toggleVe(this._uiMeta.pillDisplayMode !== SourceFilter._PILL_DISPLAY_MODE__AS_ABVS);
 		})();
 
 		item.searchText = `${Parser.sourceJsonToAbv(item.item || item).toLowerCase()} -- ${displayText.toLowerCase()}`;
@@ -581,15 +593,27 @@ export class SourceFilter extends Filter {
 			...SourceFilter._DEFAULT_META,
 		};
 	}
+
+	getDefaultUiMeta () {
+		return {
+			...super.getDefaultUiMeta(),
+			...SourceFilter._DEFAULT_UI_META,
+		};
+	}
 }
+SourceFilter._PILL_DISPLAY_MODE__AS_NAMES = 0;
+SourceFilter._PILL_DISPLAY_MODE__AS_ABVS = 1;
+SourceFilter._PILL_DISPLAY_MODE__AS_BOTH = 2;
 SourceFilter._DEFAULT_META = {
 	isIncludeOtherSources: false,
-	pillDisplayMode: 0,
+};
+SourceFilter._DEFAULT_UI_META = {
+	pillDisplayMode: SourceFilter._PILL_DISPLAY_MODE__AS_NAMES,
 };
 SourceFilter._PILL_DISPLAY_MODE_LABELS = {
-	"0": "As Names",
-	"1": "As Abbreviations",
-	"2": "As Names Plus Abbreviations",
+	[SourceFilter._PILL_DISPLAY_MODE__AS_NAMES]: "As Names",
+	[SourceFilter._PILL_DISPLAY_MODE__AS_ABVS]: "As Abbreviations",
+	[SourceFilter._PILL_DISPLAY_MODE__AS_BOTH]: "As Names Plus Abbreviations",
 };
 SourceFilter._SRD_SOURCES = null;
 SourceFilter._BASIC_RULES_SOURCES = null;

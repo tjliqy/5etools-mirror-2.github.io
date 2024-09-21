@@ -30,8 +30,8 @@ class PageFilterDeities extends PageFilterBase {
 			header: "Miscellaneous",
 			items: ["Grants Piety Features", "有简介", "有图片", "重置", "SRD", "基础规则", "传奇"],
 			displayFn: StrUtil.uppercaseFirst,
-			deselFn: (it) => it === "重置",
 			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
 	}
 
@@ -41,11 +41,7 @@ class PageFilterDeities extends PageFilterBase {
 		if (!ent.domains) ent.domains = [VeCt.STR_NONE];
 		ent.domains.sort(SortUtil.ascSort);
 
-		ent._fMisc = [];
-		if (ent.reprinted) ent._fMisc.push("重置");
-		if (ent.srd) ent._fMisc.push("SRD");
-		if (ent.basicRules) ent._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");
+		this._mutateForFilters_commonMisc(ent);
 		if (ent.entries) ent._fMisc.push("有简介");
 		if (ent.symbolImg) ent._fMisc.push("有图片");
 		if (ent.piety) ent._fMisc.push("Grants Piety Features");

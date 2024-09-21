@@ -1,7 +1,7 @@
 "use strict";
 
-const MONSTER_STATS_BY_CR_JSON_URL = `data/msbcr.json`;
-const MONSTER_FEATURES_JSON_URL = `data/monsterfeatures.json`;
+const MONSTER_STATS_BY_CR_JSON_URL = "data/msbcr.json";
+const MONSTER_FEATURES_JSON_URL = "data/monsterfeatures.json";
 let msbcr;
 let monsterFeatures;
 

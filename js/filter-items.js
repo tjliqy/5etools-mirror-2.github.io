@@ -56,7 +56,6 @@ class PageFilterEquipment extends PageFilterBase {
 		this._categoryFilter = new Filter({
 			header: "Category",
 			cnHeader:"分类",
-			// items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
 			items: ["基础", "通用变体", "特殊变体", "其他"],
 			deselFn: (it) => it === "特殊变体",
 			itemSortFn: null,
@@ -77,14 +76,15 @@ class PageFilterEquipment extends PageFilterBase {
 			labelDisplayFn: it => !it ? "None" : Parser.getDisplayCurrency(CurrencyUtil.doSimplifyCoins({cp: it})),
 		});
 		this._weightFilter = new RangeFilter({header: "Weight", cnHeader:"重量", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
-		this._focusFilter = new Filter({header: "Spellcasting Focus",cnHeader:"法器", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES], displayFn: it => Parser.CLASSES_TO_CN[it] || it});
+		this._focusFilter = new Filter({header: "Spellcasting Focus", cnHeader:"法器", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES]});
 		this._damageTypeFilter = new Filter({header: "Weapon Damage Type", cnHeader:"武器伤害类型", displayFn: it => Parser.dmgTypeToFull(it).uppercaseFirst(), itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.dmgTypeToFull(a), Parser.dmgTypeToFull(b))});
-		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", cnHeader:"武器伤害骰",items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
+		this._damageDiceFilter = new Filter({header: "Weapon Damage Dice", cnHeader:"武器伤害骰", items: ["1", "1d4", "1d6", "1d8", "1d10", "1d12", "2d6"], itemSortFn: (a, b) => PageFilterEquipment._sortDamageDice(a, b)});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader:"杂项",
 			items: [...PageFilterEquipment._MISC_FILTER_ITEMS, ...Object.values(Parser.ITEM_MISC_TAG_TO_FULL)],
 			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
 		this._poisonTypeFilter = new Filter({header: "Poison Type", cnHeader:"毒药类型", items: ["服用", "伤口", "吸入", "接触"], displayFn: StrUtil.toTitleCase});
 		this._masteryFilter = new Filter({header: "Mastery", displayFn: this.constructor._getMasteryDisplay.bind(this)});
@@ -93,26 +93,21 @@ class PageFilterEquipment extends PageFilterBase {
 	static mutateForFilters (item) {
 		item._fSources = SourceFilter.getCompleteFilterSources(item);
 
-		item._fProperties = item.property ? item.property.map(p => Renderer.item.getProperty(p).name).filter(n => n) : [];
+		item._fProperties = item.property ? item.property.map(p => Renderer.item.getProperty(p)?.name).filter(Boolean) : [];
 
-		item._fMisc = [];
+		this._mutateForFilters_commonMisc(item);
 		if (item._isItemGroup) item._fMisc.push("物品组别");
 		if (item.packContents) item._fMisc.push("套组/一批物品");
-		if (item.srd) item._fMisc.push("SRD");
-		if (item.basicRules) item._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(item.source)) item._fMisc.push("传奇");
-		if (this._hasFluff(item)) item._fMisc.push("有简介");
-		if (this._hasFluffImages(item)) item._fMisc.push("有图片");
 		if (item.miscTags) item._fMisc.push(...item.miscTags.map(Parser.itemMiscTagToFull));
-		if (this._isReprinted({reprintedAs: item.reprintedAs, tag: "item", prop: "item", page: UrlUtil.PG_ITEMS})) item._fMisc.push("重置");
 		if (item.stealth) item._fMisc.push("潜在劣势");
 		if (item.strength != null) item._fMisc.push("需要力量");
 
-		if (item.focus || item.name === "Thieves' Tools" || item.type === "INS" || item.type === "SCF" || item.type === "AT") {
+		const itemTypeAbv = item.type ? DataUtil.itemType.unpackUid(item.type).abbreviation : null;
+		if (item.focus || item.name === "Thieves' Tools" || itemTypeAbv === Parser.ITM_TYP_ABV__INSTRUMENT || itemTypeAbv === Parser.ITM_TYP_ABV__SPELLCASTING_FOCUS || itemTypeAbv === Parser.ITM_TYP_ABV__ARTISAN_TOOL) {
 			item._fFocus = item.focus ? item.focus === true ? [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES] : [...item.focus] : [];
-			if ((item.name === "Thieves' Tools" || item.type === "AT") && !item._fFocus.includes("Artificer")) item._fFocus.push("Artificer");
-			if (item.type === "INS" && !item._fFocus.includes("Bard")) item._fFocus.push("Bard");
-			if (item.type === "SCF") {
+			if ((item.name === "Thieves' Tools" || itemTypeAbv === Parser.ITM_TYP_ABV__ARTISAN_TOOL) && !item._fFocus.includes("Artificer")) item._fFocus.push("Artificer");
+			if (itemTypeAbv === Parser.ITM_TYP_ABV__INSTRUMENT && !item._fFocus.includes("Bard")) item._fFocus.push("Bard");
+			if (itemTypeAbv === Parser.ITM_TYP_ABV__SPELLCASTING_FOCUS) {
 				switch (item.scfType) {
 					case "arcane": {
 						if (!item._fFocus.includes("Sorcerer")) item._fFocus.push("Sorcerer");
@@ -199,10 +194,10 @@ globalThis.PageFilterEquipment = PageFilterEquipment;
 
 class PageFilterItems extends PageFilterEquipment {
 	static _DEFAULT_HIDDEN_TYPES = new Set([
-		Parser.ITEM_TYPE_JSON_TO_ABV["$"],
-		Parser.ITEM_TYPE_JSON_TO_ABV["$A"],
-		Parser.ITEM_TYPE_JSON_TO_ABV["$C"],
-		Parser.ITEM_TYPE_JSON_TO_ABV["$G"],
+		"treasure",
+		"treasure (art object)",
+		"treasure (coinage)",
+		"treasure (gemstone)",
 		"futuristic",
 		"modern",
 		"renaissance",
@@ -312,7 +307,13 @@ class PageFilterItems extends PageFilterEquipment {
 			itemSortFn: null,
 		});
 		this._rechargeTypeFilter = new Filter({header: "Recharge Type",cnHeader:"充能类型", displayFn: Parser.itemRechargeToFull});
-		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["属性值修正", "充能", "诅咒", "提供语言", "提供熟练项", "魔法", "寻常", "有认知的", "速度修正", ...PageFilterEquipment._MISC_FILTER_ITEMS], isMiscFilter: true});
+		this._miscFilter = new Filter({
+			header: "Miscellaneous",
+			cnHeader:"杂项",
+			items: ["属性值修正", "充能", "诅咒", "提供语言", "提供熟练项", "魔法", "寻常", "有认知的", "速度修正", ...PageFilterEquipment._MISC_FILTER_ITEMS],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
 		this._baseItemFilter = new Filter({header: "Base Item", cnHeader:"基础物品", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 		this._optionalfeaturesFilter = new Filter({
@@ -504,16 +505,16 @@ class ModalFilterItems extends ModalFilterBase {
 		const source = Parser.sourceJsonToAbv(item.source);
 		const type = item._typeListText.join(", ");
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
 			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
 			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="ve-col-5 ${item._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${item._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${item.name}</div>
-			<div class="ve-col-5">${type.uppercaseFirst()}</div>
-			<div class="ve-col-1 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${Parser.sourceJsonToStyle(item.source)}>${source}${Parser.sourceJsonToMarkerHtml(item.source)}</div>
+			<div class="ve-col-5 px-1 ${item._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${item._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${item.name}</div>
+			<div class="ve-col-5 px-1">${type.uppercaseFirst()}</div>
+			<div class="ve-col-1 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(item.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${Parser.sourceJsonToStyle(item.source)}>${source}${Parser.sourceJsonToMarkerHtml(item.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

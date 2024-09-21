@@ -13,15 +13,19 @@ class PageFilterCharCreationOptions extends PageFilterBase {
 			displayFn: Parser.charCreationOptionTypeToFull,
 			itemSortFn: PageFilterCharCreationOptions._filterFeatureTypeSort,
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous",cnHeader:"杂项", items: ["SRD", "传奇", "有图片", "有简介"], isMiscFilter: true});
+		this._miscFilter = new Filter({
+			header: "Miscellaneous",
+			cnHeader:"杂项",
+			items: ["SRD", "传奇", "有图片", "有简介"],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 	}
 
 	static mutateForFilters (it) {
 		it._fOptionType = Parser.charCreationOptionTypeToFull(it.optionType);
-		it._fMisc = it.srd ? ["SRD"] : [];
-		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("传奇");
-		if (this._hasFluff(it)) it._fMisc.push("有简介");
-		if (this._hasFluffImages(it)) it._fMisc.push("有图片");
+
+		this._mutateForFilters_commonMisc(it);
 	}
 
 	addToFilters (it, isExcluded) {

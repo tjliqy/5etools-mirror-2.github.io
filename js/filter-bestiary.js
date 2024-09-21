@@ -354,7 +354,7 @@ class PageFilterBestiary extends PageFilterBase {
 			}
 		}
 		if (mon.isNpc) mon._fMisc.push("Adventure NPC");
-		const legGroup = DataUtil.monster.getMetaGroup(mon);
+		const legGroup = DataUtil.monster.getLegendaryGroup(mon);
 		if (legGroup) {
 			if (legGroup.lairActions) mon._fMisc.push("Lair Actions");
 			if (legGroup.regionalEffects) mon._fMisc.push("Regional Effects");
@@ -364,14 +364,11 @@ class PageFilterBestiary extends PageFilterBase {
 		if (mon.variant) mon._fMisc.push("Has Variants");
 		if (mon._isCopy) mon._fMisc.push("Modified Copy");
 		if (mon.altArt) mon._fMisc.push("Has Alternate Token");
-		if (mon.srd) mon._fMisc.push("SRD");
-		if (mon.basicRules) mon._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(mon.source)) mon._fMisc.push("传奇");
+		this._mutateForFilters_commonMisc(mon);
 		if (Renderer.monster.hasToken(mon)) mon._fMisc.push("Has Token");
 		if (mon.mythic) mon._fMisc.push("Mythic");
 		if (this._hasFluff(mon)) mon._fMisc.push("有简介");
 		if (this._hasFluffImages(mon)) mon._fMisc.push("有图片");
-		if (this._isReprinted({reprintedAs: mon.reprintedAs, tag: "creature", prop: "monster", page: UrlUtil.PG_BESTIARY})) mon._fMisc.push("重置");
 		if (this._hasRecharge(mon)) mon._fMisc.push("Has Recharge");
 		if (mon._versionBase_isVersion) mon._fMisc.push("Is Variant");
 		if (mon.summonedBySpell) mon._fMisc.push("Summoned by Spell");
@@ -555,7 +552,7 @@ class PageFilterBestiary extends PageFilterBase {
 			this._sidekickTypeFilter,
 			this._sidekickTagFilter,
 			this._environmentFilter,
-			this._defenceFilter,
+			this._defenseFilter,
 			this._conditionImmuneFilter,
 			this._traitFilter,
 			this._actionReactionFilter,
@@ -671,7 +668,7 @@ class ModalFilterBestiary extends ModalFilterBase {
 			{sort: "name", text: "Name", width: "4"},
 			{sort: "type", text: "Type", width: "4"},
 			{sort: "cr", text: "CR", width: "2"},
-			{sort: "source", text: "来源", width: "1"},
+			{sort: "source", text: "Source", width: "1"},
 		];
 		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}
@@ -696,17 +693,17 @@ class ModalFilterBestiary extends ModalFilterBase {
 		const type = mon._pTypes.asText;
 		const cr = mon._pCr;
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
 			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
 			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="ve-col-4 ${mon._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${mon._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${mon.name}</div>
-			<div class="ve-col-4">${type}</div>
-			<div class="ve-col-2 ve-text-center">${cr}</div>
-			<div class="ve-col-1 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(mon.source)} pr-0" title="${Parser.sourceJsonToFull(mon.source)}" ${Parser.sourceJsonToStyle(mon.source)}>${source}${Parser.sourceJsonToMarkerHtml(mon.source)}</div>
+			<div class="ve-col-4 px-1 ${mon._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${mon._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${mon.name}</div>
+			<div class="ve-col-4 px-1">${type}</div>
+			<div class="ve-col-2 px-1 ve-text-center">${cr}</div>
+			<div class="ve-col-1 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(mon.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(mon.source)}" ${Parser.sourceJsonToStyle(mon.source)}>${source}${Parser.sourceJsonToMarkerHtml(mon.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
@@ -755,7 +752,7 @@ class ListSyntaxBestiary extends ListUiUtil.ListSyntax {
 	];
 
 	_getSearchCacheStats (entity) {
-		const legGroup = DataUtil.monster.getMetaGroup(entity);
+		const legGroup = DataUtil.monster.getLegendaryGroup(entity);
 		if (!legGroup && this.constructor._INDEXABLE_PROPS_ENTRIES.every(it => !entity[it])) return "";
 		const ptrOut = {_: ""};
 		this.constructor._INDEXABLE_PROPS_ENTRIES.forEach(it => this._getSearchCache_handleEntryProp(entity, it, ptrOut));

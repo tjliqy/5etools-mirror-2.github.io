@@ -12,7 +12,7 @@ class IndexPage {
 	static _pOnLoad_initElements () {
 		$(`#current_year`).text((new Date()).getFullYear());
 
-		$(`#version_number`).text(VERSION_NUMBER).attr("href", `https://github.com/5etools-mirror-2/5etools-mirror-2.github.io/releases/latest`);
+		$(`#version_number`).text(VERSION_NUMBER).attr("href", `https://github.com/5etools-mirror-3/5etools-src/releases/latest`);
 
 		$(`#wrp-donate`)
 		.html(`<a><img src="${Renderer.get().getMediaUrl("img", "alipay.jpg")}" alt="支付宝二维码" style="height: 250px;"></a>`)

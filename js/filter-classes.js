@@ -53,21 +53,14 @@ class PageFilterClassesBase extends PageFilterBase {
 		];
 
 		cls._fMisc = [];
-		if (cls.isReprinted) cls._fMisc.push("重制");
-		if (cls.srd) cls._fMisc.push("SRD");
-		if (cls.basicRules) cls._fMisc.push("基础规则");
-		if (SourceUtil.isLegacySourceWotc(cls.source)) cls._fMisc.push("传奇");
+		this._mutateForFilters_commonMisc(cls);
 		if (cls.isSidekick) cls._fMisc.push("协力者");
 
 		cls.subclasses.forEach(sc => {
 			sc.source = sc.source || cls.source; // default subclasses to same source as parent
 			sc.shortName = sc.shortName || sc.name; // ensure shortName
 
-			sc._fMisc = [];
-			if (sc.srd) sc._fMisc.push("SRD");
-			if (sc.basicRules) sc._fMisc.push("基础规则");
-			if (SourceUtil.isLegacySourceWotc(sc.source)) sc._fMisc.push("传奇");
-			if (sc.isReprinted) sc._fMisc.push("重制");
+			this._mutateForFilters_commonMisc(sc);
 		});
 	}
 
@@ -129,49 +122,43 @@ class PageFilterClassesBase extends PageFilterBase {
 
 	static _getIsClassNaturallyDisplayedToDisplayParams (cls) { return [cls._fSources, cls._fMisc]; }
 
-	isAnySubclassDisplayed (values, cls) {
-		return values[this._optionsFilter.header].isDisplayClassIfSubclassActive && (cls.subclasses || [])
-			.some(sc => {
-				if (this._filterBox.toDisplay(
-					values,
-					...this.constructor._getIsSubclassDisplayedToDisplayParams(cls, sc),
-				)) return true;
-
-				return sc.otherSources?.length && sc.otherSources.some(src => this._filterBox.toDisplay(
-					values,
-					...this.constructor._getIsSubclassDisplayedToDisplayParams(cls, sc, src),
-				));
-			});
-	}
-
-	static _getIsSubclassDisplayedToDisplayParams (cls, sc, otherSourcesSource) {
-		return [
-			otherSourcesSource || sc.source,
-			sc._fMisc,
-			null,
-		];
+	isAnySubclassDisplayed (f, cls) {
+		if (!f[this._optionsFilter.header].isDisplayClassIfSubclassActive) return false;
+		return (cls.subclasses || [])
+			.some(sc => this.isSubclassVisible(f, cls, sc));
 	}
 
 	isSubclassVisible (f, cls, sc) {
-		if (this.filterBox.toDisplay(
-			f,
-			...this.constructor._getIsSubclassVisibleToDisplayParams(cls, sc),
-		)) return true;
+		if (
+			this._filterBox.toDisplayByFilters(
+				f,
+				{
+					filter: this._sourceFilter,
+					value: sc.source,
+				},
+				{
+					filter: this._miscFilter,
+					value: sc._fMisc,
+				},
+			)
+		) return true;
 
 		if (!sc.otherSources?.length) return false;
 
-		return sc.otherSources.some(src => this.filterBox.toDisplay(
-			f,
-			...this.constructor._getIsSubclassVisibleToDisplayParams(cls, sc, src.source),
-		));
-	}
-
-	static _getIsSubclassVisibleToDisplayParams (cls, sc, otherSourcesSource) {
-		return [
-			otherSourcesSource || sc.source,
-			sc._fMisc,
-			null,
-		];
+		return sc.otherSources
+			.some(src => {
+				return this._filterBox.toDisplayByFilters(
+					f,
+					{
+						filter: this._sourceFilter,
+						value: src,
+					},
+					{
+						filter: this._miscFilter,
+						value: sc._fMisc,
+					},
+				);
+			});
 	}
 
 	/** Return the first active source we find; use this as a fake source for things we want to force-display. */
@@ -193,6 +180,7 @@ class PageFilterClassesBase extends PageFilterBase {
 			this.isAnySubclassDisplayed(values, cls)
 				? cls._fSourceSubclass
 				: (cls._fSources ?? cls.source),
+			cls._fPrimaryAbility,
 			cls._fMisc,
 			null,
 		];
@@ -210,18 +198,39 @@ class PageFilterClasses extends PageFilterClassesBase {
 		super();
 
 		this._levelFilter = new RangeFilter({
-			header: "特性等级",
+			header: "Feature Level",
 			min: 1,
 			max: 20,
+		});
+		this._primaryAbilityFilter = new Filter({
+			header: "Primary Ability",
+			items: [
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha",
+			],
+			displayFn: Parser.attAbvToFull,
+			itemSortFn: null,
 		});
 	}
 
 	get levelFilter () { return this._levelFilter; }
 
+	static _mutateForFilters_getFilterPrimaryAbility (cls) {
+		if (!cls.primaryAbility?.length) return null;
+		const out = {};
+		cls.primaryAbility.forEach(obj => Object.assign(out, obj));
+		return Object.keys(out);
+	}
+
 	static mutateForFilters (cls) {
 		super.mutateForFilters(cls);
 
 		cls._fLevelRange = this._getClassSubclassLevelArray(cls);
+		cls._fPrimaryAbility = this._mutateForFilters_getFilterPrimaryAbility(cls);
 	}
 
 	/**
@@ -243,6 +252,7 @@ class PageFilterClasses extends PageFilterClassesBase {
 
 		opts.filters = [
 			this._sourceFilter,
+			this._primaryAbilityFilter,
 			this._miscFilter,
 			this._levelFilter,
 			this._optionsFilter,
@@ -253,19 +263,12 @@ class PageFilterClasses extends PageFilterClassesBase {
 		return [cls._fSources, cls._fMisc, cls._fLevelRange];
 	}
 
-	static _getIsSubclassDisplayedToDisplayParams (cls, sc, otherSourcesSource) {
-		return [otherSourcesSource || sc.source, sc._fMisc, cls._fLevelRange];
-	}
-
-	static _getIsSubclassVisibleToDisplayParams (cls, sc, otherSourcesSource) {
-		return [otherSourcesSource || sc.source, sc._fMisc, cls._fLevelRange, null];
-	}
-
 	_getToDisplayParams (values, cls) {
 		return [
 			this.isAnySubclassDisplayed(values, cls)
 				? cls._fSourceSubclass
 				: (cls._fSources ?? cls.source),
+			cls._fPrimaryAbility,
 			cls._fMisc,
 			cls._fLevelRange,
 		];

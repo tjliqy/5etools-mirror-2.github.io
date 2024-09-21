@@ -18,18 +18,27 @@ class PageFilterRewards extends PageFilterBase {
 			itemSortFn: null,
 			displayFn: StrUtil.toTitleCase,
 		});
+		this._miscFilter = new Filter({
+			header: "Miscellaneous",
+			cnHeader: "杂项",
+			items: ["SRD", "基础规则", "传奇", "有图片", "有简介"],
+			isMiscFilter: true,
+			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
+		});
 	}
 
 	static mutateForFilters (it) {
 		it._fRarity = it.rarity || "unknown";
+		this._mutateForFilters_commonMisc(it);
 	}
 
-	addToFilters (reward, isExcluded) {
+	addToFilters (ent, isExcluded) {
 		if (isExcluded) return;
 
-		this._sourceFilter.addItem(reward.source);
-		this._typeFilter.addItem(reward.type);
-		this._rarityFilter.addItem(reward._fRarity);
+		this._sourceFilter.addItem(ent.source);
+		this._typeFilter.addItem(ent.type);
+		this._rarityFilter.addItem(ent._fRarity);
+		this._miscFilter.addItem(ent._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {
@@ -37,6 +46,7 @@ class PageFilterRewards extends PageFilterBase {
 			this._sourceFilter,
 			this._typeFilter,
 			this._rarityFilter,
+			this._miscFilter,
 		];
 	}
 
@@ -46,6 +56,7 @@ class PageFilterRewards extends PageFilterBase {
 			r.source,
 			r.type,
 			r._fRarity,
+			r._fMisc,
 		);
 	}
 }

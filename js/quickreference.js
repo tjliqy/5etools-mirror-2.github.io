@@ -1,7 +1,7 @@
 "use strict";
 
 // NOTE: This file is generated with the Node script `generate-quick-reference.js`
-const JSON_URL = "./data/generated/bookref-quick.json";
+const JSON_URL = "data/generated/bookref-quick.json";
 
 let reference;
 
@@ -12,7 +12,7 @@ window.addEventListener("load", async () => {
 		BookUtil.$dispBook
 			.empty()
 			.append(Renderer.utils.getBorderTr())
-			.append(`<tr><td colspan="6" class="initial-message">Select a section to begin</td></tr>`)
+			.append(`<tr><td colspan="6" class="initial-message initial-message--med">Select a section to begin</td></tr>`)
 			.append(Renderer.utils.getBorderTr());
 	}
 
@@ -29,10 +29,10 @@ function onJsonLoad (data) {
 	BookUtil.contentType = "document";
 
 	BookUtil.isDefaultExpandedContents = true;
-	BookUtil.baseDataUrl = "./data/generated/";
+	BookUtil.baseDataUrl = "data/generated/";
 	BookUtil.bookIndex = reference;
 	BookUtil.referenceId = "bookref-quick";
-	BookUtil.typeTitle = "Quick Reference";
+	BookUtil.typeTitle = "Quick Reference (2014)";
 	BookUtil.initLinkGrabbers();
 	BookUtil.initScrollTopFloat();
 

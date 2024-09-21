@@ -1,6 +1,6 @@
 "use strict";
 
-const JSON_URL = "./data/renderdemo.json";
+const JSON_URL = "data/renderdemo.json";
 const STORAGE_LOCATION = "demoInput";
 
 window.addEventListener("load", async () => {
@@ -73,9 +73,9 @@ async function initDemo (data, rendererType) {
 		renderer.resetHeaderIndex();
 		renderer.recursiveRender(json, renderStack);
 		$out.html(`
-			<tr><th class="border" colspan="6"></th></tr>
-			<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>
-			<tr><th class="border" colspan="6"></th></tr>
+			<tr><th class="ve-tbl-border" colspan="6"></th></tr>
+			<tr><td colspan="6">${renderStack.join("")}</td></tr>
+			<tr><th class="ve-tbl-border" colspan="6"></th></tr>
 		`);
 	}
 
