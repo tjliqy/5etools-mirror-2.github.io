@@ -81,14 +81,14 @@
 								"这个标签的目的是打开指定页面，并使用特定的过滤选项进行预过滤。这里有一个主要的注意事项，使得对于有志于成为JSON翻译专家的人来说使用起来有些棘手\u2014\u2014过滤值使用的是{@i 内部}版本，就像你在数据中找到的那样。例如，..|school=D|.. 会过滤出占卜学派的法术，因为'D'是数据中占卜学派的标识符。尝试使用例如 ..|school=Divination|.. 是不会起作用的。",
 								"这里的'filter_name_X'与下拉菜单中显示的过滤器的字面文本名称相匹配。",
 								"一些标签使用示例：",
-								"{@filter 具有智力加值的种族|种族|属性值（包括亚种）=智力 +任意}",
+								"{@filter 具有智力加值的种族|种族|能力值（包括亚种）=智力+任意}",
 								"{@filter 吟游诗人的戏法和一级法术|spells|level=0;1|class=吟游诗人}",
 								"{@filter 挑战等级为1或更低的野兽|bestiary|challenge rating=[&0;&1]|type=野兽}",
 								"{@filter 力量值达到18或更高的生物|bestiary|力量=[18;]}",
 								"{@filter 占卜和召唤法术|spells|school=D;V}",
 								"{@filter 所有稀有魔法物品|Items|source=|type=|rarity=uncommon|miscellaneous=魔法}",
-								"{@filter 简易近战武器|Items|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand}",
-								"可以设置元选项；用于个别过滤器的内联方式，以及使用'fbmt'来过滤元选项{@filter 过滤器元数据示例|spells|level=1;2=术士~沙子~b1|fbmt=巫师|fbmh=来源}",
+								"{@filter 简易近战武器|Items|source=PHB|category=基础|type=简单武器;近战武器=沙地}",
+								"可以设置元选项；对于个别过滤器内联设置，并使用 'fbmt' 进行过滤元选项 {@filter 过滤器元数据示例|spells|level=1;2=巫师~沙子|fbmt=巫师|fbmh=来源}",
 								"搜索可以设置；{@filter 查看恐龙|bestiary|search=恐龙}",
 								"一个精确的起始实体；{@filter 筛选野兽并显示猫|bestiary|type=野兽|hash=猫_mm}，其中 'hash' 是在查看实体时URL栏中'#'符号之后和任何逗号之前的部分。",
 								{
@@ -137,7 +137,7 @@
 									"type": "list",
 									"items": [
 										"内部链接：{@5etools 这是你的生活|lifegen.html}",
-										"内部\"img\"链接（即，{@link https://github.com/5etools-mirror-2/5etools-img}中的任何内容）：{@5etoolsImg 玩家手册封面|covers/PHB.webp}；{@5etoolsImg 人类圣武士角色卡|pdf/DoSI/Human-Paladin.pdf}",
+										"内部 \"img\" 链接（即，{@link https://github.com/5etools-mirror-3/5etools-img} 中的任何内容）：{@5etoolsImg 玩家手册封面|covers/PHB.webp}；{@5etoolsImg 人类圣武士角色卡|pdf/DoSI/Human-Paladin.pdf}",
 										"外部链接：{@link https://discord.gg/5etools} 或者 {@link 争斗|https://discord.gg/5etools}"
 									]
 								},
@@ -572,17 +572,6 @@
 					"text": "完整的'entry'架构。"
 				},
 				"内部链接也是可能的，但通常由@tags覆盖。查看上面链接的架构以获得完整用法；它非常庞大和复杂，所以我不打算在这里详细说明。",
-				"召唤/其他可选特性：",
-				{
-					"type": "optfeature",
-					"name": "可选特性名称",
-					"ENG_name": "Optional Feature Name",
-					"prerequisite": "可选先决条件，可以包括标签 {@spell 魔能爆}",
-					"entries": [
-						"可选特性文本。"
-					]
-				},
-				"赞助人：",
 				{
 					"type": "inset",
 					"name": "内嵌标题（可选）",
@@ -695,7 +684,7 @@
 										"name": "冲锋",
 										"ENG_name": "Charge",
 										"entries": [
-											"如果独角兽在同一回合至少直线移动20尺朝目标前进，然后用角攻击命中目标，目标将额外受到9点（{@dice 2d8}）穿刺伤害。如果目标是一个生物，它必须在力量豁免投掷上成功，骰值为{@dc 15}，否则会被击倒。"
+											"如果独角兽在同一回合至少直线移动20尺朝目标前进，然后用角攻击命中目标，目标将额外受到9点（{@dice 2d8}）点穿刺伤害。如果目标是一个生物，它必须在力量豁免投掷上成功，骰值为{@dc 15}，否则会被击倒。"
 										]
 									},
 									{
@@ -725,14 +714,14 @@
 										"name": "蹄击",
 										"ENG_name": "Hooves",
 										"entries": [
-											"{@atk mw} {@hit 7}命中，触及5尺，单一目标。命中：11 ({@damage 2d6 + 4}) 钝击伤害。"
+											"{@atk mw} 命中{@hit 7}，触及5尺，单一目标。命中：11 ({@damage 2d6 + 4}) 钝击伤害。"
 										]
 									},
 									{
 										"name": "角号",
 										"ENG_name": "Horn",
 										"entries": [
-											"{@atk mw} 命中：7，触及5尺，单一目标。命中效果：8（{@damage 1d8 + 4}）穿刺伤害。"
+											"{@atk mw} 命中{@hit 7}，触及5尺，单一目标。命中效果：8（{@damage 1d8 + 4}）点穿刺伤害。"
 										]
 									},
 									{

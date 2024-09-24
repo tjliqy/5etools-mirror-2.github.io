@@ -7,6 +7,9 @@
 			"page": 56,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"牧师|XPHB"
+			],
 			"hd": {
 				"number": 1,
 				"faces": 8
@@ -44,7 +47,7 @@
 				"armor": [
 					"light",
 					"medium",
-					"{@item 护盾术|PHB|盾牌}"
+					"shield"
 				],
 				"weapons": [
 					"简易"
@@ -131,7 +134,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item 护盾术|PHB|盾牌}"
+						"shield"
 					]
 				}
 			},
@@ -492,6 +495,494 @@
 			"subclassTitle": "神圣领域",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "牧师",
+			"ENG_name": "Cleric",
+			"source": "XPHB",
+			"page": 68,
+			"freeRules2024": true,
+			"primaryAbility": [
+				{
+					"wis": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"spellcastingAbility": "wis",
+			"casterProgression": "full",
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"shield"
+				],
+				"weapons": [
+					"简易"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"历史",
+								"洞悉",
+								"医药",
+								"游说",
+								"宗教"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"entries": [
+					"{@i 选择A或B：} (A) {@item 链甲衫|XPHB}, {@item 护盾术|XPHB}, {@item 硬头锤|XPHB}, {@item 圣徽|XPHB}, {@item 祭司套组|XPHB}, 7 GP; 或 (B) 90 GP"
+				],
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "链甲衫|xphb"
+							},
+							{
+								"item": "护盾术|xphb"
+							},
+							{
+								"item": "硬头锤|xphb"
+							},
+							{
+								"item": "圣徽|xphb"
+							},
+							{
+								"item": "祭司套组|xphb"
+							},
+							{
+								"value": 1900
+							}
+						],
+						"B": [
+							{
+								"value": 11000
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium",
+						"shield"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"引导神力",
+						"{@filter 戏法|spells|level=0|class=牧师}",
+						"{@filter 准备法术|spells|level=!0|class=牧师}"
+					],
+					"rows": [
+						[
+							0,
+							3,
+							4
+						],
+						[
+							2,
+							3,
+							5
+						],
+						[
+							2,
+							3,
+							6
+						],
+						[
+							2,
+							4,
+							7
+						],
+						[
+							2,
+							4,
+							9
+						],
+						[
+							3,
+							4,
+							10
+						],
+						[
+							3,
+							4,
+							11
+						],
+						[
+							3,
+							4,
+							12
+						],
+						[
+							3,
+							4,
+							14
+						],
+						[
+							3,
+							5,
+							15
+						],
+						[
+							3,
+							5,
+							16
+						],
+						[
+							3,
+							5,
+							16
+						],
+						[
+							3,
+							5,
+							17
+						],
+						[
+							3,
+							5,
+							17
+						],
+						[
+							3,
+							5,
+							18
+						],
+						[
+							3,
+							5,
+							18
+						],
+						[
+							3,
+							5,
+							19
+						],
+						[
+							4,
+							5,
+							20
+						],
+						[
+							4,
+							5,
+							21
+						],
+						[
+							4,
+							5,
+							22
+						]
+					]
+				},
+				{
+					"title": "每个法术等级的准备法术",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=牧师}",
+						"{@filter 2nd|spells|level=2|class=牧师}",
+						"{@filter 3rd|spells|level=3|class=牧师}",
+						"{@filter 4th|spells|level=4|class=牧师}",
+						"{@filter 5th|spells|level=5|class=牧师}",
+						"{@filter 6th|spells|level=6|class=牧师}",
+						"{@filter 7th|spells|level=7|class=牧师}",
+						"{@filter 8th|spells|level=8|class=牧师}",
+						"{@filter 9th|spells|level=9|class=牧师}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"施法|牧师|XPHB|1",
+				"神圣秩序|牧师|XPHB|1",
+				"引导神力|牧师|XPHB|2",
+				{
+					"classFeature": "牧师子职业|牧师|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|牧师|XPHB|4",
+				"焚烧亡灵|牧师|XPHB|5",
+				{
+					"classFeature": "子职业能力|牧师|XPHB|6",
+					"gainSubclassFeature": true
+				},
+				"受祝击|牧师|XPHB|7",
+				"属性值提升|牧师|XPHB|8",
+				"神圣干预|牧师|XPHB|10",
+				"属性值提升|牧师|XPHB|12",
+				"改进后的神圣打击|牧师|XPHB|14",
+				"属性值提升|牧师|XPHB|16",
+				{
+					"classFeature": "子职业能力|牧师|XPHB|17",
+					"gainSubclassFeature": true
+				},
+				"传奇恩惠|牧师|XPHB|19",
+				"当你使用你的神明干预特性时，你可以选择《许愿术》作为你选择的法术。如果你这样做，你完成{@dice 2d4}次长时间的休息之前，不能再使用神明干预特性。|牧师|XPHB|20"
+			],
+			"subclassTitle": "牧师子职业",
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -548,6 +1039,9 @@
 			"page": 60,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"生命|牧师|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -591,6 +1085,9 @@
 			"className": "牧师",
 			"classSource": "PHB",
 			"page": 60,
+			"reprintedAs": [
+				"光明|牧师|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -734,6 +1231,9 @@
 			"className": "牧师",
 			"classSource": "PHB",
 			"page": 62,
+			"reprintedAs": [
+				"诡术|牧师|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -777,6 +1277,9 @@
 			"className": "牧师",
 			"classSource": "PHB",
 			"page": 63,
+			"reprintedAs": [
+				"战争|牧师|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -1567,6 +2070,163 @@
 				"月蚀恶兆|牧师|PHB|月亮|TDCSR|17"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "生命领域",
+			"ENG_name": "Life Domain",
+			"shortName": "生命",
+			"source": "XPHB",
+			"className": "牧师",
+			"classSource": "XPHB",
+			"page": 73,
+			"freeRules2024": true,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"援助术|xphb",
+							"祝福术|xphb",
+							"疗伤术|xphb",
+							"次级复原术|xphb"
+						],
+						"5": [
+							"群体治愈真言|xphb",
+							"回生术|xphb"
+						],
+						"7": [
+							"生命灵光|xphb",
+							"防死结界|xphb"
+						],
+						"9": [
+							"高等复原术|xphb",
+							"群体疗伤术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"生命领域|牧师|XPHB|生命|XPHB|3",
+				"神佑医者|牧师|XPHB|生命|XPHB|6",
+				"极效治疗|牧师|XPHB|生命|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "光明领域",
+			"ENG_name": "Light Domain",
+			"shortName": "光明",
+			"source": "XPHB",
+			"className": "牧师",
+			"classSource": "XPHB",
+			"page": 74,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"燃烧之手|xphb",
+							"妖火|xphb",
+							"月华之光|xphb",
+							"识破隐形|xphb"
+						],
+						"5": [
+							"昼明术|xphb",
+							"火球术|xphb"
+						],
+						"7": [
+							"秘法眼|xphb",
+							"火墙术|xphb"
+						],
+						"9": [
+							"焰击术|xphb",
+							"探知|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"光明领域|牧师|XPHB|光明|XPHB|3",
+				"当你达到牧师等级4和10时，你可以选择从{@filter 牧师法术列表|spells|class=Cleric}中学习另一个你选择的戏法，如牧师特性表中的戏法列所示。|牧师|XPHB|光明|XPHB|6",
+				"光冕|牧师|XPHB|光明|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "诡术领域",
+			"ENG_name": "Trickery Domain",
+			"shortName": "诡术",
+			"source": "XPHB",
+			"className": "牧师",
+			"classSource": "XPHB",
+			"page": 75,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"魅惑人类|xphb",
+							"易容术|xphb",
+							"隐形术|xphb",
+							"行动无踪|xphb"
+						],
+						"5": [
+							"催眠图纹|xphb",
+							"回避侦测|xphb"
+						],
+						"7": [
+							"困惑术|xphb",
+							"任意门|xphb"
+						],
+						"9": [
+							"怪物定身术|xphb",
+							"假象术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"诡术领域|牧师|XPHB|诡术|XPHB|3",
+				"当你创造或移动你的幻象时，你可以与幻象交换位置。|牧师|XPHB|诡术|XPHB|6",
+				"精通分身|牧师|XPHB|诡术|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "战争领域",
+			"ENG_name": "War Domain",
+			"shortName": "战争",
+			"source": "XPHB",
+			"className": "牧师",
+			"classSource": "XPHB",
+			"page": 76,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"神恩|xphb",
+							"魔化武器|xphb",
+							"虔诚护盾|xphb",
+							"灵体武器|xphb"
+						],
+						"5": [
+							"十字军披风|xphb",
+							"灵体卫士|xphb"
+						],
+						"7": [
+							"行动自如|xphb",
+							"石肤术|xphb"
+						],
+						"9": [
+							"湮灭波|xphb",
+							"怪物定身术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"战争领域|牧师|XPHB|战争|XPHB|3",
+				"战争神的赐福|牧师|XPHB|战争|XPHB|6",
+				"战斗化身|牧师|XPHB|战争|XPHB|17"
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -1997,6 +2657,368 @@
 			"entries": [
 				"到达20级后，你的呼唤将自动得到神的回应，无需进行掷骰。"
 			]
+		},
+		{
+			"name": "神圣秩序",
+			"ENG_name": "Divine Order",
+			"source": "XPHB",
+			"page": 70,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你已经将自己奉献给了以下你选择的神圣角色之一。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "防御者",
+							"ENG_name": "Protector",
+							"entries": [
+								"为了战斗而训练，你获得了对军用武器的熟练度以及对重甲的训练。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "神迹术士",
+							"ENG_name": "Thaumaturge",
+							"entries": [
+								"你从{@filter 牧师法术列表|spells|class=牧师}中额外知道一个戏法。此外，你与神性的神秘联系会为你的智力（{@skill 奥秘|XPHB}或{@skill 宗教|XPHB}）检定提供额外的加值。这个加值等于你智慧调整值（最少为+1）。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "XPHB",
+			"page": 70,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你已经学会了通过祈祷和冥想来施放法术。参见{@book 第七章|XPHB|7}以了解施法规则。下面的信息详细说明了你如何使用这些规则来施放牧师法术，这些法术在职业描述后面的{@filter 牧师法术列表|spells|class=牧师}中有所展示。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "戏法",
+							"ENG_name": "Cantrips",
+							"entries": [
+								"你从{@filter 牧师法术列表|spells|class=牧师}中选择知道三个法术伎俩。推荐选择{@spell 神导术|XPHB}、{@spell 圣火术|XPHB}和{@spell 奇术|XPHB}。",
+								"每当你获得一个牧师等级时，你可以从{@filter 牧师法术列表|spells|class=牧师}中选择另一个你选择的法术来替换你的一个法术伎俩。",
+								"当你达到4级和10级牧师时，你可以从{@filter 牧师法术列表|spells|class=牧师}中学习另一个你选择的戏法，如牧师特性表中的戏法列所示。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法能力",
+							"ENG_name": "Spell Slots",
+							"entries": [
+								"牧师特性表显示了你有多少法术位来施放你的1环以上法术。当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已消耗的法术位。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "准备的1级以上法术",
+							"ENG_name": "Prepared Spells of Level 1+",
+							"entries": [
+								"你准备这个特性可用的1级及以上法术列表。开始时，从{@filter 牧师法术列表|spells|class=牧师}中选择四个1级法术。推荐选择{@spell 祝福术|XPHB}、{@spell 疗伤术|XPHB}、{@spell 光导箭|XPHB}和{@spell 虔诚护盾|XPHB}。",
+								"随着你获得牧师等级，你的法术列表上的法术数量会增加，如牧师特性表中的准备法术列所示。每当这个数字增加时，从{@filter 牧师法术列表|spells|class=牧师}中选择额外的法术，直到你的法术列表上的法术数量与表中的数字相匹配。所选法术必须是你拥有法术位的等级。例如，如果你是一名3级牧师，你的准备法术列表可以包括六个1级和2级的法术，以任何组合。",
+								"如果其他牧师特性赋予了你始终准备好的法术，这些法术不计入你使用此特性可以准备的法术数量，但这些法术在其他方面仍计为你的牧师法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "更换你的准备法术",
+							"ENG_name": "Changing Your Prepared Spells",
+							"entries": [
+								"每当你完成一次{@variantrule 长休|XPHB}，你可以更改你的准备法术列表，用你拥有法术位的其他牧师法术替换列表中的任何法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法属性",
+							"ENG_name": "Spellcasting Ability",
+							"entries": [
+								"智慧是你施放牧师法术的法术施放能力。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "法器",
+							"ENG_name": "Spellcasting Focus",
+							"entries": [
+								"你可以使用一个{@item 圣徽|XPHB}作为你的牧师法术的{@variantrule 法器|XPHB}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "XPHB",
+			"page": 70,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你可以直接从外层界引导神能来激发魔法效果。起初，你有两种这样的效果：神圣火花和驱散亡灵，每个效果都在下文有描述。每次你使用这个职业的神术能量时，从这个职业中选择一个神术能量效果来创造。你在更高等级的牧师职业中会获得额外的效果选项。",
+				"你可以使用这个职业的神圣化身能力两次。当你完成一次{@variantrule 短休|XPHB}时，你将恢复一次已消耗的使用次数，当你完成一次{@variantrule 长休|XPHB}时，你将恢复所有已消耗的使用次数。当你达到特定牧师等级时，你将获得额外的使用次数，如牧师特性表中的神圣化身列所示。",
+				"如果神术能量效果需要进行一次豁免投掷，其难度等级等于本职业法术施放特性中的法术豁免DC。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refClassFeature",
+							"classFeature": "神圣火花|牧师|XPHB|2|XPHB"
+						},
+						{
+							"type": "refClassFeature",
+							"classFeature": "驱散不死|牧师|XPHB|2|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "神圣火花",
+			"ENG_name": "Divine Spark",
+			"source": "XPHB",
+			"page": 70,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 2,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一次{@action 魔法|XPHB}动作，你指向距离你30英尺内的另一个生物，并集中神圣能量。掷一个{@dice 1d8}并加上你智慧调整值。你可以将等于该总数的{@variantrule 生命值|XPHB}恢复给该生物，或者迫使该生物进行一次体质豁免检定。如果豁免失败，生物将受到等于该总数的死灵或辐射伤害（由你选择）。如果豁免成功，生物受到的伤害减半（向下取整）。",
+				"当你达到牧师等级7（{@dice 4d8}）、13（{@dice 2d8}）和18（{@dice 3d8}）时，你会额外投掷一个{@dice 4d8}。"
+			]
+		},
+		{
+			"name": "驱散不死",
+			"ENG_name": "Turn Undead",
+			"source": "XPHB",
+			"page": 70,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 2,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你展示你的{@item 圣徽|XPHB}并谴责不死生物。在你周围30英尺内，你选择的每个不死生物必须进行一次智慧豁免。如果生物未能通过豁免，它将获得{@condition 恐慌|XPHB}和{@condition 失能|XPHB}状态，持续1分钟。在这段时间内，它会在它的回合尽可能远离你。如果生物受到任何伤害，你处于{@condition 失能|XPHB}状态，或者你死亡，这种效果会提前结束。"
+			]
+		},
+		{
+			"name": "牧师子职业",
+			"ENG_name": "Cleric Subclass",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你获得了你选择的牧师子类。子类是一种专业化，它在特定的牧师等级时赋予你特性。在你的职业生涯中，你将获得你的子类提供的所有不超过你牧师等级的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"你获得了{@feat 能力值提升|XPHB}特技或另一个你符合资格的{5etools 特技|feats.html}。你在牧师等级8、12和16时再次获得此特性。"
+			]
+		},
+		{
+			"name": "焚烧亡灵",
+			"ENG_name": "Sear Undead",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"每当你使用驱散亡灵时，你可以掷出等于你智慧调整值（最少为{@dice 1d8}）的d8数量，并将这些掷骰结果相加。每个未能通过对抗该次驱散亡灵的豁免检定的亡灵生物将受到等于掷骰总和的辐射伤害。这种伤害不会结束回合效果。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"你获得了来自你牧师子类的特特性。"
+			]
+		},
+		{
+			"name": "受祝击",
+			"ENG_name": "Blessed Strikes",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"神圣的力量在战斗中赋予你力量。你可以选择以下选项之一（如果你从旧版书籍中的牧师子类获得这两个选项中的任何一个，请仅使用你为这个特性选择的选项）。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "神圣打击",
+							"ENG_name": "Divine Strike",
+							"entries": [
+								"在你的每个回合中，每当你使用武器进行攻击检定命中一个生物时，你可以让目标额外承受{@damage 1d8}的死灵或辐射伤害（由你选择）。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "强力施法",
+							"ENG_name": "Potent Spellcasting",
+							"entries": [
+								"将你的智慧调整值加到你用任何牧师戏法造成的伤害上。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "神圣干预",
+			"ENG_name": "Divine Intervention",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"你可以请求你的神明或众神为你干预。作为一个{@action 魔法|XPHB}动作，选择任意一个5环或更低环的牧师法术，该法术施放时不需要{@variantrule 反应|XPHB}。作为同一动作的一部分，你可以在不消耗法术位或需要材料成分的情况下施放该法术。你完成一次{@variantrule 长休|XPHB}之前，不能再使用这个特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "改进后的神圣打击",
+			"ENG_name": "Improved Blessed Strikes",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"你选择的神圣打击选项变得更加强大。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "神圣打击",
+							"ENG_name": "Divine Strike",
+							"entries": [
+								"你的神击术额外伤害增加至{@dice 2d8}。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "强力施法",
+							"ENG_name": "Potent Spellcasting",
+							"entries": [
+								"当你施放一个牧师的戏法并对一个生物造成伤害时，你可以给自己或距离你60英尺内的另一个生物注入活力，获得的{@variantrule 临时生命值|XPHB}数量等于你智慧调整值的两倍。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"你获得了来自你牧师子类的特特性。"
+			]
+		},
+		{
+			"name": "传奇恩惠",
+			"ENG_name": "Epic Boon",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"你获得了一个{@filter 史诗级恩惠特性|专长|category=EB}或你符合资格的另一个{@5etools 专长|feats.html}。推荐选择{@feat 扭曲命运之恩惠|XPHB}。"
+			]
+		},
+		{
+			"name": "当你使用你的神明干预特性时，你可以选择《许愿术》作为你选择的法术。如果你这样做，你完成{@dice 2d4}次长时间的休息之前，不能再使用神明干预特性。",
+			"ENG_name": "Greater Divine Intervention",
+			"source": "XPHB",
+			"page": 71,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"你可以请求更加强大的神明干预。当你使用你的神明干预特性时，在选择法术时你可以选择{@spell 祈愿术|XPHB}。如果你这样做，你将不能再次使用神明干预，直到你完成{@dice 2d4}次长时间的休息。"
+			]
 		}
 	],
 	"subclassFeature": [
@@ -2401,7 +3423,7 @@
 			"header": 2,
 			"entries": [
 				"自2级起，你可以引导神力，驾驭夜幕之力，将敌人的视野笼罩在黑暗之下。",
-				"以一个动作，你展示自己的圣徽，使你周围30尺内的任何光源（不论是平庸光源还是魔法光源）熄灭。此外，任何身处你周围30尺范围内的敌对生物都必须各通过一次体质豁免。豁免失败的生物将陷入{@condition 目盲}，持续等同于你的牧师等级轮。因此目盲的生物可以在每个自己的回合结束时重新进行此豁免，直至豁免成功结束自己的目盲状态。对你而言处于 全身掩护Total Cover 的生物不会受到此特性的影响。"
+				"作为动作，你展示你的圣徽，导致你周围30英尺内的所有普通或魔法光源熄灭。此外，你周围30英尺内的每个敌对生物必须进行一次体质豁免。失败的生物将被{@condition 目盲}，持续轮数等于你的牧师等级。以这种方式致盲的生物在每个回合结束时可以进行新的豁免尝试以解除效果。如果生物对你有{@quickref 掩护||3||全身掩护}，则不会受到影响。"
 			]
 		},
 		{
@@ -2924,7 +3946,7 @@
 			},
 			"entries": [
 				"第2级起，你可以用引导神力特性驱策阳光，以驱逐黑暗并对敌人造成光耀伤害。",
-				"作为一个动作，你可以展示你的圣徽，并驱散你身边30尺内所有源自魔法的黑暗。此外，你身边30尺内每个敌对生物都必须进行一次体质豁免。豁免失败者将受{@dice 2d10}＋你牧师等级 的光耀伤害，豁免成功则伤害减半。相对你处于全身掩护的生物不受该效应影响。"
+				"作为动作，你展示你的圣徽，你周围30英尺内的所有魔法黑暗被驱散。此外，你周围30英尺内的每个敌对生物必须进行一次体质豁免。生物在豁免失败时受到等于{@dice 2d10} + 你的牧师等级的辐射伤害，成功时受到一半的伤害。对你有{@quickref 掩护||3||全身掩护}的生物不会受到影响。"
 			]
 		},
 		{
@@ -5258,7 +6280,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 17级暮光领域特性}",
-				"你创造的暮光会拥抱着你们，保护你们：你和你的盟友处于你暮光圣域的球体内似，将获得 半身掩护half cover。"
+				"你召唤的暮光提供了一个保护性的拥抱：你和你的盟友在由你的暮光庇护所创造的球体内拥有{@quickref 掩护||3||半身掩护}。"
 			]
 		},
 		{
@@ -5384,7 +6406,7 @@
 				"ENG_name": "Channel Divinity"
 			},
 			"entries": [
-				"第2级起，你可以用引导神力特性与一名你能看见的生物（或者你拥有的某一血液样本的原主生物）建立一种超自然连结。这种连结最多存在一小时或者你失去对该特性的{@condition 专注}（如同专注一个法术）。",
+				"从2级开始，你可以使用你的神力通道与你能看见的生物或拥有其血样的生物形成一种超自然的联系。这种联系持续1小时，或者直到你的{@status 专注}被打断（就像集中精神施放法术一样）。",
 				"连结生效期间，只要目标在你10英里之内，你就可以使用一个动作来了解目标与你之间的大致距离和方向，以及它当前的生命值和他陷入的状态。或者你可以使用一个动作来尝试与目标的感官调谐。你受到{@damage 2d6}的黯蚀伤害，同时，目标需要一次进行体质{@quickref 豁免检定|PHB|2|1|豁免检定}（DC等同于你的法术豁免DC）。若豁免成功，连结将结束。若失败，在接下来的你感知调整值分钟内（最少1分钟），你可以选择使用目标的感官视物，或使用目标的感官听物。这段时间内，你会陷入{@condition 目盲}或{@condition 耳聋}（根据你选择的感官）。当调谐结束时，连结就会消失。",
 				"无论豁免结果如何，目标豁免时都会有一阵不舒服的感觉。"
 			]
@@ -5416,7 +6438,7 @@
 					]
 				},
 				"一个被活化的尸体或一个{@condition 昏迷}的生物会在你的回合之后立即行动自己的回合。但你必须命令它，它才能移动与使用动作。它的数据与它活着时或有意识时一样。",
-				"受影响的生物在其每个回合结束时重新进行一次{@quickref 豁免检定|PHB|2|1|豁免检定}，如果成功则结束对自身的影响。对于任何目标而言，你的控制都只能持续1分钟。如果你失去对该特性的{@condition 专注}（如同专注一个法术），它也会提前结束。"
+				"受影响的生物在每个回合结束时进行一次新的{@quickref 豁免检定|PHB|2|1|豁免检定}，如果成功，则结束其自身的效果。对于任何目标，你的控制持续1分钟，或者直到你的{@status 专注}被打断（就像集中精神施放法术一样）。"
 			]
 		},
 		{
@@ -5646,7 +6668,7 @@
 				"ENG_name": "Channel Divinity"
 			},
 			"entries": [
-				"第6级开始，你可以用你的引导神力引动艾桑椎亚月亮中的双重奥秘。通过消耗一次引导神力的使用次数，你就可以在{@condition 专注}于某一法术的情况下施展第二个需要专注法术。两个法术都必须处于你月亮领域法术的列表中。不过，若你需要进行体质{@quickref 豁免检定|PHB|2|1|豁免检定}来保持这两个法术的{@condition 专注}时，你进行的那次豁免将具有{@quickref 优势与劣势|PHB|2|0|劣势}。如果豁免失败，你同时失去对这两个法术的{@condition 专注}。"
+				"从6级开始，你可以使用你的神力通道来召唤Exandria月亮的双重奥秘。通过消耗一次神力通道的使用次数，你可以在已经集中精神于第一个法术的情况下，再施放第二个需要集中精神的法术，只要你同时集中精神的两个法术都在你的月亮领域法术列表上。如果你需要进行一次体质检定来维持你对这两个法术的集中精神，你将以劣势进行这次检定。如果失败，你会失去对这两个法术的集中精神。"
 			]
 		},
 		{
@@ -5951,7 +6973,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"在第1级，你获得偶尔可以感知到不死生物存在的能力，不死生物的存在是对生命自然循环的侮辱。以一个动作，你可以伸张意识来魔法性地侦测周遭的不死生物。直到你的下回合结束前，你可以知晓周围60尺范围内的任何未处于全掩护之下或是没有被预言魔法保护的不死生物。这一感官并不会告诉你生物的能力与身份。",
+				"在1级时，你获得了偶尔感知亡灵存在的能力，亡灵的存在是对自然生命循环的侮辱。作为动作，你可以开启你的意识以魔法方式探测亡灵。直到你的下一个回合结束，你知道任何在你60英尺范围内的亡灵的位置，这些亡灵没有受到{@quickref 掩护||3||全身掩护}，也没有受到占卜魔法的保护。这种感知不会告诉你关于生物的能力或身份的任何信息。",
 				"你可以使用此特性的次数等同于你的感知调整值次（至少1次），在你完成一次长休后你重获全部已被消耗的使用次数。"
 			]
 		},
@@ -6036,6 +7058,612 @@
 			"header": 2,
 			"entries": [
 				"从17级开始，你可以抓住游魂，摄取它的微少生命力来治疗活者的生命。当你周围60尺范围内你可见的敌人死亡时，你或由你选择的你周围60尺内的一个生物可以恢复等同于那个死亡敌人生命骰数量点的生命值。你只有未处于{@condition 失能}状态的情况下才能使用此特性。一旦你使用了此特性，直到你下回合开始前你无法再次使用它。"
+			]
+		},
+		{
+			"name": "生命领域",
+			"ENG_name": "Life Domain",
+			"source": "XPHB",
+			"page": 73,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 抚慰世间伤痛}",
+				"生命领域专注于帮助维持多元宇宙中所有生命的正能量。利用这个领域的牧师是治疗的大师，使用这种生命力量来治愈许多伤害。",
+				"存在本身依赖于与这个领域相关的正能量，因此几乎所有宗教传统的牧师都可能选择它。这个领域特别与农业神祇、治疗或耐力之神以及家庭和社区之神有关。治疗宗教团体也寻求这个领域的魔法。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "生命领域法术|牧师|XPHB|生命|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "生命门徒|牧师|XPHB|生命|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "维系生命|牧师|XPHB|生命|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "生命门徒",
+			"ENG_name": "Disciple of Life",
+			"source": "XPHB",
+			"page": 73,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你使用法术位施放一个法术为生物恢复{@variantrule 生命值|XPHB}时，那个生物在你施放法术的回合还会额外恢复{@variantrule 生命值|XPHB}。额外恢复的{@variantrule 生命值|XPHB}等于2加上法术位的等级。"
+			]
+		},
+		{
+			"name": "生命领域法术",
+			"ENG_name": "Life Domain Spells",
+			"source": "XPHB",
+			"page": 73,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你与这个神性领域的联系确保你始终准备好某些法术。当你达到生命领域法术表中指定的牧师等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "生命领域法术",
+					"colLabels": [
+						"牧师等级",
+						"准备法术"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 援助术|XPHB}, {@spell 祝福术|XPHB}, {@spell 疗伤术|XPHB}, {@spell 次级复原术|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 群体治愈真言|XPHB}, {@spell 回生术|XPHB}"
+						],
+						[
+							"7th",
+							"{@spell 生命灵光|XPHB}, {@spell 防死结界|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 高等复原术|XPHB}, {@spell 群体疗伤术|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "维系生命",
+			"ENG_name": "Preserve Life",
+			"source": "XPHB",
+			"page": 73,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你展示你的{@item 圣徽|XPHB}并消耗一次你的神术能量，以唤起可以恢复等于你牧师等级五倍的{@variantrule 生命值|XPHB}的治疗能量。选择在你30英尺内的{@variantrule 受伤|XPHB}生物（包括你自己），并将这些{@variantrule 生命值|XPHB}在它们之间分配。这个特性可以将一个生物的生命值恢复至不超过其生命值最大值的一半。"
+			]
+		},
+		{
+			"name": "神佑医者",
+			"ENG_name": "Blessed Healer",
+			"source": "XPHB",
+			"page": 74,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"你施放在他人身上的治疗法术也会治愈你自己。在你使用法术位施放一个恢复{@variantrule 生命值|XPHB}给除了你自己以外的一个生物后，你立即恢复{@variantrule 生命值|XPHB}，数值等于2加上法术位的等级。"
+			]
+		},
+		{
+			"name": "极效治疗",
+			"ENG_name": "Supreme Healing",
+			"source": "XPHB",
+			"page": 74,
+			"freeRules2024": true,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "生命",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"当你通常需要掷骰子以通过法术或神力通道恢复生物的{@variantrule 生命值|XPHB}时，不要为治疗掷这些骰子；相反，使用每个骰子可能的最高数值。例如，与其通过法术恢复生物{@dice 2d6}点{@variantrule 生命值|XPHB}，你恢复12点。"
+			]
+		},
+		{
+			"name": "光明领域",
+			"ENG_name": "Light Domain",
+			"source": "XPHB",
+			"page": 74,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 带来光明以驱逐黑暗}",
+				"光明领域强调了神明之力，能够带来炽烈的火焰和启示。掌握这种力量的牧师是被启蒙的灵魂，充满了光辉和他们神明洞察力的力量，肩负着驱散谎言和燃烧黑暗的使命。",
+				"光明领域与真理、警觉、美丽、洞察和更新的神祇相关联。其中一些神祇与太阳有关，或者被视为引导太阳穿越天空的御者。其他一些则是能够穿透欺骗的哨兵。还有一些是美丽和艺术的神祇，他们教导说艺术是灵魂提升的工具。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "光明领域法术|牧师|XPHB|光明|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "破晓之光|牧师|XPHB|光明|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "守御闪光|牧师|XPHB|光明|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "光明领域法术",
+			"ENG_name": "Light Domain Spells",
+			"source": "XPHB",
+			"page": 74,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你与这个神圣领域的联系确保你始终准备好某些法术。当你达到光明领域法术表中指定的牧师等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "光明领域法术",
+					"colLabels": [
+						"牧师等级",
+						"准备法术"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 燃烧之手|XPHB}, {@spell 妖火|XPHB}, {@spell 灼热射线|XPHB}, {@spell 识破隐形|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 昼明术|XPHB}, {@spell 火球术|XPHB}"
+						],
+						[
+							"7th",
+							"{@spell 秘法眼|XPHB}, {@spell 火墙术|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 焰击术|XPHB}, {@spell 探知|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "破晓之光",
+			"ENG_name": "Radiance of the Dawn",
+			"source": "XPHB",
+			"page": 74,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你展示你的{@item 圣徽|XPHB}并消耗一次你的神术能量，从你自己发出一个30英尺的{@variantrule 辐射 [区域效果]|XPHB|辐射}中的闪光。在该区域内的任何魔法{@variantrule 黑暗术|XPHB}\u2014\u2014比如由{@spell 黑暗术|XPHB}法术创造的\u2014\u2014都被驱散。此外，你选择的在该区域内的每个生物必须进行一次体质豁免投掷，失败则受到等于{@dice 2d10}加上你的牧师等级的辐射伤害，成功则受到一半的伤害。"
+			]
+		},
+		{
+			"name": "守御闪光",
+			"ENG_name": "Warding Flare",
+			"source": "XPHB",
+			"page": 74,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"当你看到30英尺范围内的生物进行攻击检定时，你可以采取{@variantrule 反应|XPHB}来施加{@variantrule 劣势|XPHB}于该攻击检定，使其在命中或未命中之前光线闪烁。",
+				"你可以使用这个特性的次数等于你智慧调整值（最少一次）。当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "当你达到牧师等级4和10时，你可以选择从{@filter 牧师法术列表|spells|class=Cleric}中学习另一个你选择的戏法，如牧师特性表中的戏法列所示。",
+			"ENG_name": "Improved Warding Flare",
+			"source": "XPHB",
+			"page": 75,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"当你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}时，你将恢复所有已消耗的防护闪光使用次数。",
+				"此外，每当你使用警戒闪光时，你可以给予触发攻击的目标等同于{@dice 2d6}加上你智慧调整值的{@dice 2d6}。"
+			]
+		},
+		{
+			"name": "光冕",
+			"ENG_name": "Corona of Light",
+			"source": "XPHB",
+			"page": 75,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "光明",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你使得自己散发出持续1分钟或直到你主动结束的日光光环（无需动作）。你在60英尺半径内发出{@variantrule 强光|XPHB}，并在额外的30英尺内发出{@variantrule 微光|XPHB}。在{@variantrule 强光|XPHB}中的敌人在对抗你的{@spell 黎明光辉|XPHB}以及任何造成火焰或辐射伤害的法术的豁免投掷上具有{@variantrule 劣势|XPHB}。",
+				"你可以使用这个特性的次数等于你智慧调整值（最少一次），当你完成一次{@variantrule 长休|XPHB}后，你将恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "诡术领域",
+			"ENG_name": "Trickery Domain",
+			"source": "XPHB",
+			"page": 75,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 制造麻烦，挑战权威}",
+				"诡术领域提供欺骗、幻觉和隐秘的魔法。使用这种魔法的牧师是世界中的破坏力量，他们刺穿虚荣，嘲笑暴君，解放囚犯，蔑视空洞的传统。他们更倾向于使用诡计和恶作剧，而不是直接对抗。",
+				"诡计之神是恶作剧制造者和煽动者，他们对神祇和凡人中被接受的秩序构成了持续的挑战。他们体现了变革和社会动荡的力量，是小偷、恶棍、赌徒、反叛者和解放者的守护神。那些秘密运作的宗教团体，特别是那些寻求破坏压迫性政府或等级制度的团体，也会借助诡法领域的力量。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "领域法术|牧师|XPHB|诡术|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "诡术祝福|牧师|XPHB|诡术|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "幻化分身|牧师|XPHB|诡术|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "诡术祝福",
+			"ENG_name": "Blessing of the Trickster",
+			"source": "XPHB",
+			"page": 75,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你可以选择你自己或一个距离你30英尺内的自愿生物，在敏捷（{@skill 隐匿|XPHB}）检定上获得{@skill 隐匿|XPHB}。这个祝福持续到你完成一次{@variantrule 长休|XPHB}或者你再次使用这个特性为止。"
+			]
+		},
+		{
+			"name": "领域法术",
+			"ENG_name": "Domain Spells",
+			"source": "XPHB",
+			"page": 76,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你与这个神圣领域的联系确保你始终准备好某些法术。当你达到诡法领域法术表中指定的牧师等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "诡术领域法术",
+					"colLabels": [
+						"牧师等级",
+						"准备法术"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 魅惑人类|XPHB}, {@spell 易容术|XPHB}, {@spell 隐形术|XPHB}, {@spell 行动无踪|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 催眠图纹|XPHB}, {@spell 回避侦测|XPHB}"
+						],
+						[
+							"7th",
+							"{@spell 困惑术|XPHB}, {@spell 任意门|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 支配人类|XPHB}, {@spell 篡改记忆|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "幻化分身",
+			"ENG_name": "Invoke Duplicity",
+			"source": "XPHB",
+			"page": 75,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以消耗一次你的神力通道使用次数，在你可以看到的、距离你30英尺内的未被占据的空间中创造一个你自己的完美视觉幻象。这个幻象是无形的，不占据空间。它持续1分钟，但如果提前解散它（无需动作）或者你处于{@condition 失能|XPHB}状态，则会提前结束。幻象是活动的，并且模仿你的表情和手势。在它持续期间，你获得以下好处。",
+				{
+					"type": "entries",
+					"name": "施放法术",
+					"ENG_name": "Cast Spells",
+					"entries": [
+						"你可以像在幻象的空间中一样施放法术，但你必须使用你自己的感觉。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "转移注意",
+					"ENG_name": "Distract",
+					"entries": [
+						"当您和您的幻象都在能够看到幻象的生物5英尺范围内时，由于幻象对目标的干扰，您对该生物的攻击检定具有{@variantrule 优势|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "移动",
+					"ENG_name": "Move",
+					"entries": [
+						"作为一个{@variantrule 附赠动作|XPHB}，你可以将幻象移动至多30英尺到一个你可以看到的、距离你120英尺内的未被占据的空间。"
+					]
+				}
+			]
+		},
+		{
+			"name": "当你创造或移动你的幻象时，你可以与幻象交换位置。",
+			"ENG_name": "Trickster's Transposition",
+			"source": "XPHB",
+			"page": 76,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"每当你采取{@variantrule 额外动作|XPHB}来创建或移动你的{@spell 幻化分身}的幻象时，你可以传送，与幻象交换位置。"
+			]
+		},
+		{
+			"name": "精通分身",
+			"ENG_name": "Improved Duplicity",
+			"source": "XPHB",
+			"page": 76,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "诡术",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"你召唤的幻象在以下方面变得更加强大。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "共享分心",
+							"ENG_name": "Shared Distraction",
+							"entries": [
+								"当你和你的盟友对距离幻象5英尺内的生物进行攻击检定时，攻击检定具有{@variantrule 优势|XPHB}。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "治愈幻象",
+							"ENG_name": "Healing Illusion",
+							"entries": [
+								"当幻象结束时，你或你选择的在它5英尺范围内的一个生物恢复等于你牧师等级数的{@variantrule 生命值|XPHB}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "战争领域",
+			"ENG_name": "War Domain",
+			"source": "XPHB",
+			"page": 76,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 激励勇气与打击敌人}",
+				"战争有多种表现形式。它可以将普通人变成英雄。它可以是绝望和恐怖的，残酷和懦弱的行为掩盖了卓越和勇气的事例。那些利用战争领域魔法的牧师在战斗中表现出色，激励他人为正义而战，或将暴力行为作为祈祷。",
+				"战争领域中的神明守护着战士，并因其伟大的事迹而奖励他们。他们包括荣誉和骑士精神的冠军，以及破坏和掠夺的神明。其他的战神采取更中立的立场，促进战争的所有表现形式，并在任何情况下支持战士。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "领域法术|牧师|XPHB|战争|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战争祭司|牧师|XPHB|战争|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "导引打击|牧师|XPHB|战争|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "领域法术",
+			"ENG_name": "Domain Spells",
+			"source": "XPHB",
+			"page": 77,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你与这个神明领域的联系确保你始终准备好某些法术。当你达到战争领域法术表中指定的牧师等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "战争领域法术",
+					"colLabels": [
+						"牧师等级",
+						"准备法术"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 光导箭|XPHB}, {@spell 魔化武器|XPHB}, {@spell 虔诚护盾|XPHB}, {@spell 灵体武器|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 十字军披风|XPHB}, {@spell 灵体卫士|XPHB}"
+						],
+						[
+							"7th",
+							"{@spell 火焰护盾|XPHB}, {@spell 行动自如|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 怪物定身术|XPHB}, {@spell 钢风斩|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "导引打击",
+			"ENG_name": "Guided Strike",
+			"source": "XPHB",
+			"page": 77,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"当你或距离你30英尺内的生物在攻击检定中失败时，你可以消耗一个你的神圣化身使用次数，给予该检定+10的加值，可能会使其命中。当你使用这个特性来帮助另一个生物的攻击检定时，你必须采取一个{@variantrule 反应|XPHB}来这样做。"
+			]
+		},
+		{
+			"name": "战争祭司",
+			"ENG_name": "War Priest",
+			"source": "XPHB",
+			"page": 77,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"作为一次{@variantrule 附赠动作|XPHB}，你可以使用武器或进行一次{@variantrule 徒手打击|XPHB}。你可以使用这次{@variantrule 附赠动作|XPHB}的次数等于你智慧调整值（最少一次）。当你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}时，你将恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "战争神的赐福",
+			"ENG_name": "War God's Blessing",
+			"source": "XPHB",
+			"page": 77,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"你可以消耗一次你的神力通道使用次数来施放{@spell 虔诚护盾|XPHB}或{@spell 灵体武器|XPHB}，而不是消耗一个法术位。当你以这种方式施放任何一个法术时，该法术不需要{@status 专注|XPHB}。相反，法术持续1分钟，但如果再次施放该法术、你处于{@condition 失能|XPHB}状态，或者你死亡，它就会提前结束。"
+			]
+		},
+		{
+			"name": "战斗化身",
+			"ENG_name": "Avatar of Battle",
+			"source": "XPHB",
+			"page": 77,
+			"className": "牧师",
+			"classSource": "XPHB",
+			"subclassShortName": "战争",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"你对钝击、穿刺和斩击伤害获得{@variantrule 提升抗性|XPHB}。"
 			]
 		}
 	]

@@ -105,7 +105,7 @@
 									"name": "额外选项：更强的异种力量",
 									"ENG_name": "Option: Greater Aberrant Powers",
 									"entries": [
-										"在DM的选择下，拥有异种龙纹专长的角色有机会展现更大的力量。当你达到10级时，这个角色有{@chance 10|10%}的几率获得{@filter 传奇恩惠|Rewards|type=恩惠}（参考{@book 城主指南|DMG}第7章的选项）。如果角色没有得到传奇恩惠，他在下次升级时仍有{@chance 10|10%}的机会获得。",
+										"根据DM的选择，拥有异变龙印特性的角色有机会展现更强大的力量。达到10级时，该角色有{@chance 10}的机会从{@filter 传奇恩惠|Rewards|type=恩惠}第7章中的选项中获得一个{@book 城主指南|DMG}。如果角色未能获得一个恩惠，他们在下次升级时有{@chance 10}的机会。",
 										"如果角色得到了一个传奇恩惠，由DM来决定具体效果或随机决定效果。该角色同时永久性地失去一个生命骰，其最大生命值相应地减少一个生命骰加上其体质调整值（最少减少1）。这一减少无法以任何方法解除。"
 									]
 								}
@@ -116,10 +116,68 @@
 			]
 		},
 		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 202,
+			"freeRules2024": true,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"repeatable": true,
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 2
+					},
+					"hidden": true
+				},
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 2
+					},
+					"hidden": true
+				}
+			],
+			"entries": [
+				"你可以选择一项属性值增加2点，或者选择两项属性值各增加1点。这个特性不能将属性值提高到20以上。",
+				{
+					"type": "entries",
+					"name": "可重复",
+					"ENG_name": "Repeatable",
+					"entries": [
+						"你可以多次选择这个专长。"
+					]
+				}
+			]
+		},
+		{
 			"name": "演员",
 			"ENG_name": "Actor",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"演员|XPHB"
+			],
 			"ability": [
 				{
 					"cha": 1
@@ -132,6 +190,47 @@
 					"items": [
 						"当你试图将自己扮演成另一个人时，你进行魅力（{@skill 欺瞒}）和魅力（{@skill 表演}）检定时具有优势。",
 						"你可以模仿另一个生物的说话口吻和声音。前提是你必须听过被模仿者至少1分钟的说话或发声。对方聆听你的模仿时可以进行一次感知 ({@skill 洞悉})检定，并与你的魅力 ({@skill 欺瞒})检定进行对抗，若对方胜出便会意识到声音是模仿出来的。"
+					]
+				}
+			]
+		},
+		{
+			"name": "演员",
+			"ENG_name": "Actor",
+			"source": "XPHB",
+			"page": 202,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"cha": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"cha": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "模仿术",
+					"ENG_name": "Impersonation",
+					"entries": [
+						"当你伪装成真实或虚构的人物时，你在魅力（{@skill 欺瞒|XPHB}或{@skill 表演|XPHB}）检定上具有优势，以说服他人你就是那个人。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "拟声",
+					"ENG_name": "Mimicry",
+					"entries": [
+						"你可以模仿其他生物的声音，包括语言。听到模仿声音的生物必须成功进行一次智慧（{@skill 洞悉|XPHB}）检定，以判断效果是假的（难度等级8加上你的魅力修正值和熟练加值）。"
 					]
 				}
 			]
@@ -418,6 +517,9 @@
 			"ENG_name": "Alert",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"警觉|XPHB"
+			],
 			"entries": [
 				"经常对危机保持警惕，让你获得下列增益：",
 				{
@@ -428,6 +530,51 @@
 						"你看不到的其他生物对你发动攻击检定时，它们无法因此获得优势。"
 					]
 				}
+			]
+		},
+		{
+			"name": "警觉",
+			"ENG_name": "Alert",
+			"source": "XPHB",
+			"page": 200,
+			"freeRules2024": true,
+			"category": "O",
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "先攻熟练",
+					"ENG_name": "Initiative Proficiency",
+					"entries": [
+						"当你进行先攻检定时，你可以将熟练加值加到检定结果上。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "先攻交换",
+					"ENG_name": "Initiative Swap",
+					"entries": [
+						"在你滚动主动性之后，你可以与同一场战斗中一个愿意的盟友交换主动性。如果你或盟友处于{@condition 失能|XPHB}状态，则无法进行此交换。"
+					]
+				}
+			]
+		},
+		{
+			"name": "箭术",
+			"ENG_name": "Archery",
+			"source": "XPHB",
+			"page": 209,
+			"freeRules2024": true,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"你使用远程武器进行攻击检定时具有+2加值。"
 			]
 		},
 		{
@@ -480,6 +627,9 @@
 			"ENG_name": "Athlete",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"运动员|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -499,6 +649,68 @@
 						"你陷入{@condition 倒地}状态时，起立所需要花费的移动力为5尺",
 						"攀爬无需额外消耗移动力",
 						"你在进行助跑跳高或助跑跳远前只需要进行5尺助跑移动（原为10尺）。"
+					]
+				}
+			]
+		},
+		{
+			"name": "运动员",
+			"ENG_name": "Athlete",
+			"source": "XPHB",
+			"page": 202,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "攀爬速度",
+					"ENG_name": "Climb Speed",
+					"entries": [
+						"你获得了等同于你速度值的攀爬速度。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "跃起",
+					"ENG_name": "Hop Up",
+					"entries": [
+						"当你处于{@condition 倒地|XPHB}状态时，你可以仅使用5英尺移动来恢复正常姿态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "跳跃",
+					"ENG_name": "Jumping",
+					"entries": [
+						"在仅移动5英尺后，你可以进行一次长距离或高距离的奔跑跳跃。"
 					]
 				}
 			]
@@ -571,6 +783,612 @@
 								"该生物具有的一项特殊的感官"
 							]
 						}
+					]
+				}
+			]
+		},
+		{
+			"name": "受祝福的勇士",
+			"ENG_name": "Blessed Warrior",
+			"source": "XPHB",
+			"page": 110,
+			"category": "FS:P",
+			"prerequisite": [
+				{
+					"otherSummary": {
+						"entry": "当你获得2级圣武士\"战斗风格\"特性时",
+						"entrySummary": "特殊"
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=牧师",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"你可以选择学习两个{@filter 牧师戏法|spells|level=0|class=牧师}。推荐选择{@spell 神导术|XPHB}和{@spell 圣火术|XPHB}。这些选定的戏法对你来说是作为骑士法术，并且你施展它们时的施法能力值为魅力。每当你获得骑士等级时，你可以将这些戏法中的一个替换为另一个牧师戏法。"
+			]
+		},
+		{
+			"name": "盲斗",
+			"ENG_name": "Blind Fighting",
+			"source": "XPHB",
+			"page": 209,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"senses": [
+				{
+					"blindsight": 10
+				}
+			],
+			"entries": [
+				"你有范围为10英尺的盲视{@sense 盲视|XPHB}。"
+			]
+		},
+		{
+			"name": "英勇战斗之恩惠",
+			"ENG_name": "Boon of Combat Prowess",
+			"source": "XPHB",
+			"page": 210,
+			"freeRules2024": true,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "无双精准",
+					"ENG_name": "Peerless Aim",
+					"entries": [
+						"当你的攻击检定失败时，你可以改为成功。一旦你使用了这个能力，直到你的下一个回合开始前都无法再次使用。"
+					]
+				}
+			]
+		},
+		{
+			"name": "次元旅行之恩惠",
+			"ENG_name": "Boon of Dimensional Travel",
+			"source": "XPHB",
+			"page": 210,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "闪烁步伐",
+					"ENG_name": "Blink Steps",
+					"entries": [
+						"在你立即采取{@action 攻击|XPHB}动作或{@action 魔法|XPHB}动作之后，你可以传送至多30英尺到一个你能看到的未被占据的空间。"
+					]
+				}
+			]
+		},
+		{
+			"name": "能量抗性赐福",
+			"ENG_name": "Boon of Energy Resistance",
+			"source": "XPHB",
+			"page": 210,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"强酸",
+							"冷冻",
+							"火焰",
+							"闪电",
+							"黯蚀",
+							"毒素",
+							"心灵",
+							"光耀",
+							"雷鸣伤害"
+						],
+						"count": 2
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "能量抗性",
+					"ENG_name": "Energy Resistances",
+					"entries": [
+						"你获得了以下两种伤害类型中选择的抗性：酸蚀、寒冷、火焰、闪电、亡灵、毒素、心灵、圣光或雷鸣。每当你完成一次长休时，你可以更改你的选择。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "能量重定向",
+					"ENG_name": "Energy Redirection",
+					"entries": [
+						"当你受到选择的能量抗性好处之一类型的损害时，你可以采取一个反应将同类型的伤害导向另一个在你60英尺内你能看到的生物，该生物不能处于完全遮蔽状态。如果你这样做，那个生物必须成功通过一次敏捷豁免检定（DC 8加上你的体质修正值和熟练加值）否则将受到等于{@dice 2d12}加上你的体质修正值的伤害。"
+					]
+				}
+			]
+		},
+		{
+			"name": "扭曲命运之恩惠",
+			"ENG_name": "Boon of Fate",
+			"source": "XPHB",
+			"page": 210,
+			"freeRules2024": true,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "改善命运",
+					"ENG_name": "Improve Fate",
+					"entries": [
+						"当你或其他在你60英尺内的生物成功或未成功进行一个{@variantrule D20 检定|XPHB}时，你可以掷{@dice 2d4}并将总和作为加值或减值应用于{@dice d20}掷骰。一旦你使用了这个好处，你就不能再次使用它，直到你滚动主动性或完成一次短休或长休。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "超凡强韧之恩惠",
+			"ENG_name": "Boon of Fortitude",
+			"source": "XPHB",
+			"page": 210,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "强化健康",
+					"ENG_name": "Fortified Health",
+					"entries": [
+						"你的生命值最大值增加40点。此外，每当你恢复生命值时，你可以额外恢复等同于你体质修正值的生命值。一旦你额外恢复了这些生命值，直到你下个回合开始前，你无法再次这样做。"
+					]
+				}
+			]
+		},
+		{
+			"name": "无敌攻势之恩惠",
+			"ENG_name": "Boon of Irresistible Offense",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "克服防御",
+					"ENG_name": "Overcome Defenses",
+					"entries": [
+						"你造成的钝击、穿刺和斩切伤害始终忽略抗性。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "压倒性打击",
+					"ENG_name": "Overwhelming Strike",
+					"entries": [
+						"当你在攻击检定时掷出{@dice d20}的20时，你可以对目标造成额外伤害，额外伤害等于通过这个专长提升的能力值。额外伤害的类型与攻击的类型相同。"
+					]
+				}
+			]
+		},
+		{
+			"name": "恢复能力之恩惠",
+			"ENG_name": "Boon of Recovery",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "最后抵抗",
+					"ENG_name": "Last Stand",
+					"entries": [
+						"当你将被减少到0生命值时，你可以改为降至1生命值，并恢复等于你生命值最大值一半的生命值。一旦你使用了这个好处，你就不能再次使用它，直到你完成一次长休。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "恢复活力",
+					"ENG_name": "Recover Vitality",
+					"entries": [
+						"你有一个包含十个d10的骰池。作为一个bonus action，你可以消耗池中的骰子，掷这些骰子，并恢复等于掷骰总和的生命值。你在完成一次长休时恢复所有消耗的骰子。"
+					]
+				}
+			]
+		},
+		{
+			"name": "技能恩惠",
+			"ENG_name": "Boon of Skill",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"acrobatics": true,
+					"sleight of hand": true,
+					"stealth": true,
+					"arcana": true,
+					"history": true,
+					"investigation": true,
+					"nature": true,
+					"religion": true,
+					"animal handling": true,
+					"insight": true,
+					"medicine": true,
+					"perception": true,
+					"survival": true,
+					"deception": true,
+					"intimidation": true,
+					"performance": true,
+					"persuasion": true
+				}
+			],
+			"expertise": [
+				{
+					"anyProficientSkill": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "全能高手",
+					"ENG_name": "All-Around Adept",
+					"entries": [
+						"你在所有技能上获得熟练。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "专精",
+					"ENG_name": "Expertise",
+					"entries": [
+						"选择一个你尚未精通的技能。你获得了该技能的精通。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "速度爆发之恩惠",
+			"ENG_name": "Boon of Speed",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "逃脱大师",
+					"ENG_name": "Escape Artist",
+					"entries": [
+						"作为一个bonus action，你可以采取{@action 撤离|XPHB}动作，这也将结束你身上的{@condition 擒抱|XPHB}状态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "迅捷",
+					"ENG_name": "Quickness",
+					"entries": [
+						"你的速度增加30英尺。"
+					]
+				}
+			]
+		},
+		{
+			"name": "法术回忆恩赐",
+			"ENG_name": "Boon of Spell Recall",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19,
+					"spellcasting2020": true
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "自由施法",
+					"ENG_name": "Free Casting",
+					"entries": [
+						"每当你使用1-4环法术位施放法术时，掷一个{@dice 1d4}。如果你掷出的数字与法术位等级相同，该法术位没有被消耗。"
+					]
+				}
+			]
+		},
+		{
+			"name": "暗夜精魂之恩惠",
+			"ENG_name": "Boon of the Night Spirit",
+			"source": "XPHB",
+			"page": 211,
+			"freeRules2024": true,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "融入阴影",
+					"ENG_name": "Merge with Shadows",
+					"entries": [
+						"当你处于微光或黑暗中时，你可以作为一个 bonus action 给自己施加 {@condition 隐形|XPHB} 状态。在你采取一个动作、bonus action 或反应后，该状态会立即结束。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "影之形态",
+					"ENG_name": "Shadowy Form",
+					"entries": [
+						"在微光或黑暗中，你对所有伤害（心灵和辐射伤害除外）有抗性。"
+					]
+				}
+			]
+		},
+		{
+			"name": "真实视觉之恩惠",
+			"ENG_name": "Boon of Truesight",
+			"source": "XPHB",
+			"page": 211,
+			"category": "EB",
+			"prerequisite": [
+				{
+					"level": 19
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"max": 30
+				}
+			],
+			"senses": [
+				{
+					"truesight": 60
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "真实视觉",
+					"ENG_name": "Truesight",
+					"entries": [
+						"你拥有60英尺范围内的{@sense 真实视觉|XPHB}。"
 					]
 				}
 			]
@@ -673,9 +1491,66 @@
 			"ENG_name": "Charger",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"冲锋手|XPHB"
+			],
 			"entries": [
 				"当你执行{@action 疾走}动作时，你可以用附赠动作发动一次近战武器攻击，或{@action 推撞}一个生物。",
 				"若你在使用附赠动作前至少直线行走10尺，则该次攻击的伤害掷骰具有+5加值（若你选择近战攻击且命中），或目标被推出至多10尺（若你选择推撞且成功）。"
+			]
+		},
+		{
+			"name": "冲锋手",
+			"ENG_name": "Charger",
+			"source": "XPHB",
+			"page": 202,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "强化冲刺",
+					"ENG_name": "Improved Dash",
+					"entries": [
+						"当你采取{@action 疾走|XPHB}动作时，你的速度在该动作中增加10英尺。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "冲锋攻击",
+					"ENG_name": "Charge Attack",
+					"entries": [
+						"如果你在采取{@action 攻击|XPHB}动作进行近战攻击检定时，至少直线移动了10英尺直接朝向目标，并且击中了它，你可以选择以下效果之一：获得{@dice 1d8}的额外伤害加值，或者如果你的体型不大于目标一个体型级别，可以将目标推动最多10英尺的距离。每个你的回合中只能使用这个好处一次。"
+					]
+				}
 			]
 		},
 		{
@@ -683,6 +1558,9 @@
 			"ENG_name": "Chef",
 			"source": "TCE",
 			"page": 79,
+			"reprintedAs": [
+				"大厨|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -707,6 +1585,60 @@
 						"你获得{@item 厨师工具|PHB}的熟练项，如果你还没有的话。",
 						"作为短休的一部分，只要你手上有原料和{@item 厨师工具|PHB}，你便可以烹饪特制料理。你可以为特定数量的生物准备这种食物，其数量等同于4+你的熟练加值。在本次短休结束时，任何食用了料理并且花费了一个或更多生命骰来恢复生命值的生物恢复额外{@dice 1d8}点生命值。",
 						"在花费一小时精心制作后，或者在完成一次长休时，你可以制作等同于你熟练加值个数的餐点。这些餐点在制作完成后持续八小时。任何食用餐点的生物都能获得等同于你熟练加值的临时生命值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "大厨",
+			"ENG_name": "Chef",
+			"source": "XPHB",
+			"page": 202,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"con",
+							"wis"
+						]
+					}
+				}
+			],
+			"toolProficiencies": [
+				{
+					"cook's utensils": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "厨师工具",
+					"ENG_name": "Cook's Utensils",
+					"entries": [
+						"如果你尚未拥有，你将获得对厨师工具的熟练使用能力。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "补充餐",
+					"ENG_name": "Replenishing Meal",
+					"entries": [
+						"作为短休的一部分，如果你手头上有食材和烹饪工具，你可以烹饪特殊食物。你可以为数量等于4加上你熟练加值的生物准备足够的食物。在短休结束时，任何吃了这些食物并花费一个或多个生命骰来恢复生命值的生物，会额外恢复{@dice 1d8}生命值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "强化治疗",
+					"ENG_name": "Bolstering Treats",
+					"entries": [
+						"如果你有食材和烹饪工具，通过1小时的工作或当你完成一次长休时，你可以制作数量等于你熟练加值的小食品。这些特别的小食品在制作后可以持续8小时。一个生物可以使用一个奖励动作来吃一个这样的小食品，以获得等于你熟练加值的临时生命值。"
 					]
 				}
 			]
@@ -788,10 +1720,110 @@
 			]
 		},
 		{
+			"name": "工匠",
+			"ENG_name": "Crafter",
+			"source": "XPHB",
+			"page": 200,
+			"category": "O",
+			"toolProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"carpenter's tools",
+							"leatherworker's tools",
+							"mason's tools",
+							"potter's tools",
+							"smith's tools",
+							"tinker's tools",
+							"weaver's tools",
+							"woodcarver's tools"
+						],
+						"count": 3
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "工具熟练",
+					"ENG_name": "Tool Proficiency",
+					"entries": [
+						"你从快速制作表中获得三种不同工匠工具的熟练使用能力。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "折扣",
+					"ENG_name": "Discount",
+					"entries": [
+						"每当你购买一件非魔法物品时，你可以享受该物品20%的折扣。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "快速制作",
+					"ENG_name": "Fast Crafting",
+					"entries": [
+						"当你完成一次长休时，你可以制作一件来自快速制作表格的装备，前提是你拥有与该物品相关的工匠工具，并且对这些工具熟练。这个物品持续到你完成下一次长休，届时物品会解体。",
+						{
+							"type": "table",
+							"caption": "快速制作",
+							"colStyles": [
+								"col-3",
+								"col-9"
+							],
+							"colLabels": [
+								"工匠工具",
+								"特制装备"
+							],
+							"rows": [
+								[
+									"{@item 木匠工具|XPHB}",
+									"{@item 梯子|XPHB}, {@item 火把|XPHB}"
+								],
+								[
+									"{@item 皮匠工具|XPHB}",
+									"{@item 弩矢匣|XPHB}, {@item 地图或卷轴匣|XPHB}, {@item 小包|XPHB}"
+								],
+								[
+									"{@item 石匠工具|XPHB}",
+									"{@item 滑轮组|XPHB}"
+								],
+								[
+									"{@item 陶匠工具|XPHB}",
+									"{@item 壶|XPHB}, {@item 油灯|XPHB}"
+								],
+								[
+									"{@item 铁匠工具|XPHB}",
+									"{@item 滚珠轴承|XPHB}, {@item 吊桶|XPHB}, {@item 铁蒺藜|XPHB}, {@item 爪钩|XPHB}, {@item 铁壶|XPHB}"
+								],
+								[
+									"{@item 修理工具|XPHB}",
+									"{@item 铃铛|XPHB}, {@item 铲子|XPHB}, {@item 火绒盒|XPHB}"
+								],
+								[
+									"{@item 织布工具|XPHB}",
+									"{@item 篮子|XPHB}, {@item 绳索|XPHB}, {@item 捕网|XPHB}, {@item 帐篷|XPHB}"
+								],
+								[
+									"{@item 木雕工具|XPHB}",
+									"{@item 短棒|XPHB}, {@item 巨棒|XPHB}, {@item 长棍|XPHB}"
+								]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "强弩专家",
 			"ENG_name": "Crossbow Expert",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"强弩专家|XPHB"
+			],
 			"entries": [
 				"你凭借一系列的用弩修行，获得下列增益：",
 				{
@@ -800,6 +1832,55 @@
 						"你使用拥有熟练项的弩时，忽略其装填属性。",
 						"你在敌对生物５尺范围内发动远程攻击检定时，不会因此而具有劣势。",
 						"当你使用{@action 攻击}动作，并用单手武器攻击时，你可以使用附赠动作来攻击你持有的{@item 手弩|PHB}。"
+					]
+				}
+			]
+		},
+		{
+			"name": "强弩专家",
+			"ENG_name": "Crossbow Expert",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "忽略装载",
+					"ENG_name": "Ignore Loading",
+					"entries": [
+						"你忽略了手弩、重弩和轻弩（在本特性中均称为弩）的装填特性。如果你持有其中之一，即使没有空闲的手，你也可以为它装填弹药。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "近战射击",
+					"ENG_name": "Firing in Melee",
+					"entries": [
+						"与敌人距离5英尺以内不会使你使用十字弓的攻击检定处于劣势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "双持",
+					"ENG_name": "Dual Wielding",
+					"entries": [
+						"当你使用具有轻型特性的额外攻击时，如果该额外攻击是使用具有轻型特性的十字弓进行的，并且你原本没有将能力修正加到该攻击的伤害上，你可以将能力修正加到额外攻击的伤害上。"
 					]
 				}
 			]
@@ -828,6 +1909,9 @@
 			"ENG_name": "Crusher",
 			"source": "TCE",
 			"page": 79,
+			"reprintedAs": [
+				"粉碎者|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -851,10 +1935,72 @@
 			]
 		},
 		{
+			"name": "粉碎者",
+			"ENG_name": "Crusher",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "推动",
+					"ENG_name": "Push",
+					"entries": [
+						"每回合一次，当你用造成钝击伤害的攻击命中一个生物时，如果目标体积不比你大一级，你可以将其移动到一个未被占据的空间，距离为5英尺。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "增强暴击",
+					"ENG_name": "Enhanced Critical",
+					"entries": [
+						"当你对一个生物造成钝击伤害的致命一击时，直到你的下一个回合开始之前，对该生物的攻击检定具有优势。"
+					]
+				}
+			]
+		},
+		{
+			"name": "防御",
+			"ENG_name": "Defense",
+			"source": "XPHB",
+			"page": 209,
+			"freeRules2024": true,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你穿戴轻型、中型或重型护甲时，你的护甲等级获得+1的加值。"
+			]
+		},
+		{
 			"name": "防御式决斗",
 			"ENG_name": "Defensive Duelist",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"防御式决斗|XPHB"
+			],
 			"prerequisite": [
 				{
 					"ability": [
@@ -866,6 +2012,39 @@
 			],
 			"entries": [
 				"当你持用一把已具有熟练项的灵巧武器时，若另一生物对你发动的近战攻击命中你，则你可执行反应并将你的熟练加值添加到本次攻击的AC中，此举还有可能导致本次攻击变为未命中。"
+			]
+		},
+		{
+			"name": "防御式决斗",
+			"ENG_name": "Defensive Duelist",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "格挡",
+					"ENG_name": "Parry",
+					"entries": [
+						"如果你持有一把灵巧武器，当另一生物用近战攻击命中你时，你可以用反应动作将你的熟练加值加到你的护甲等级上，可能会使攻击落空。直到你的下一个回合开始之前，你在对抗近战攻击时获得此加值。"
+					]
+				}
 			]
 		},
 		{
@@ -1124,10 +2303,44 @@
 			]
 		},
 		{
+			"name": "德鲁伊教勇士",
+			"ENG_name": "Druidic Warrior",
+			"source": "XPHB",
+			"page": 120,
+			"category": "FS:R",
+			"prerequisite": [
+				{
+					"otherSummary": {
+						"entry": "当你获得2级游侠\"战斗风格\"特性时",
+						"entrySummary": "特殊"
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=德鲁伊",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"你可以选择学习两个德鲁伊的{@filter 德鲁伊戏法|spells|level=0|class=德鲁伊}。推荐选择{@spell 神导术|XPHB}和{@spell 星界小精灵|XPHB}。这些选定的法术对你而言视为游侠法术，且你使用智慧作为它们的施法能力。每当你获得游侠等级时，你可以将其中一个法术替换为另一个德鲁伊的0级法术。"
+			]
+		},
+		{
 			"name": "双持客",
 			"ENG_name": "Dual Wielder",
 			"source": "PHB",
 			"page": 165,
+			"reprintedAs": [
+				"双持客|XPHB"
+			],
 			"entries": [
 				"你精通双持武器进行作战，并获得下列增益：",
 				{
@@ -1138,6 +2351,77 @@
 						"你可以在正常只能拔出或入鞘一把武器时，同时拔出或入鞘两把单手武器。"
 					]
 				}
+			]
+		},
+		{
+			"name": "双持客",
+			"ENG_name": "Dual Wielder",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "强化双持",
+					"ENG_name": "Enhanced Dual Wielding",
+					"entries": [
+						"当你在你的回合中采取{@action 攻击|XPHB}动作并且使用具有轻型特性的武器攻击时，你可以在同一个回合稍后以不同的武器进行一次额外的攻击作为额外动作，该武器必须是不具有双手特性的近战武器。除非你的能力修正是负数，否则你不将能力修正加到额外攻击的伤害上。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "快速拔枪",
+					"ENG_name": "Quick Draw",
+					"entries": [
+						"你可以在通常只能抽取或收起一把武器的时候，抽取或收起两把没有双手特性的武器。"
+					]
+				}
+			]
+		},
+		{
+			"name": "对决",
+			"ENG_name": "Dueling",
+			"source": "XPHB",
+			"page": 209,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你单手持近战武器且没有持有其他武器时，你对该武器的伤害掷骰获得+2加值。"
 			]
 		},
 		{
@@ -1163,6 +2447,9 @@
 			"ENG_name": "Durable",
 			"source": "PHB",
 			"page": 166,
+			"reprintedAs": [
+				"耐性|XPHB"
+			],
 			"ability": [
 				{
 					"con": 1
@@ -1174,6 +2461,42 @@
 					"type": "list",
 					"items": [
 						"当你掷生命骰恢复生命值时，每粒生命骰可恢复的最小生命值等于你体质调整值的两倍（最小为２）。"
+					]
+				}
+			]
+		},
+		{
+			"name": "耐性",
+			"ENG_name": "Durable",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"con": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "反抗死亡",
+					"ENG_name": "Defy Death",
+					"entries": [
+						"你在死亡豁免检定中具有优势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "迅速恢复",
+					"ENG_name": "Speedy Recovery",
+					"entries": [
+						"作为奖励动作，你可以消耗一个生命骰，掷骰并恢复等于掷骰结果的生命值。"
 					]
 				}
 			]
@@ -1241,6 +2564,9 @@
 			"ENG_name": "Elemental Adept",
 			"source": "PHB",
 			"page": 166,
+			"reprintedAs": [
+				"元素导师|XPHB"
+			],
 			"prerequisite": [
 				{
 					"spellcasting": true
@@ -1250,6 +2576,50 @@
 				"获得该专长时，你选择下列一种伤害类型：强酸、冷冻、火焰、闪电、雷鸣。",
 				"你所施展的法术将忽视你所选择伤害类型的抗性。此外，当你施展法术造成所选类型伤害时，将每粒伤害骰所有1的骰值视为2。",
 				"你可以重复多次选择该专长，但每次都必须选择一种不同的伤害类型。"
+			]
+		},
+		{
+			"name": "元素导师",
+			"ENG_name": "Elemental Adept",
+			"source": "XPHB",
+			"page": 203,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"spellcasting2020": true
+				}
+			],
+			"repeatable": true,
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "能量掌握",
+					"ENG_name": "Energy Mastery",
+					"entries": [
+						"从以下伤害类型中选择一种：酸蚀、寒冷、火焰、闪电或雷鸣。你施放的法术无视对该类型伤害的抗性。此外，当你为施放的法术滚动伤害骰以造成该类型伤害时，你可以将任何伤害骰上的1视为2。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "可重复",
+					"ENG_name": "Repeatable",
+					"entries": [
+						"你可以多次选择这个特性，但每次必须为能量精通选择不同的伤害类型。"
+					]
+				}
 			]
 		},
 		{
@@ -1446,6 +2816,9 @@
 			"ENG_name": "Fey Touched",
 			"source": "TCE",
 			"page": 79,
+			"reprintedAs": [
+				"妖精之触|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -1484,6 +2857,58 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "妖精之触",
+			"ENG_name": "Fey-Touched",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "继承",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"迷踪步|xphb",
+									{
+										"choose": "level=1|school=E;D"
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"你接触费伊荒野的魔法赋予了你以下好处。",
+				{
+					"type": "entries",
+					"name": "仙魔法",
+					"ENG_name": "Fey Magic",
+					"entries": [
+						"从占卜或魅惑学派中选择一个1环法术。你始终准备好了这个法术和雾步术。你可以不消耗法术位来施放这些法术。一旦你以这种方式施放了任一法术，在你完成一次长休之前不能再次以这种方式施放该法术。你也可以使用你拥有的适当等级的法术位来施放这些法术。这些法术的施法能力是由此特性增加的能力。"
+					]
+				}
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "战斗学徒",
@@ -1756,6 +3181,9 @@
 			"source": "PHB",
 			"page": 167,
 			"srd": true,
+			"reprintedAs": [
+				"擒抱者|XPHB"
+			],
 			"prerequisite": [
 				{
 					"ability": [
@@ -1777,10 +3205,93 @@
 			]
 		},
 		{
+			"name": "擒抱者",
+			"ENG_name": "Grappler",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "猛击擒拿",
+					"ENG_name": "Punch and Grab",
+					"entries": [
+						"当你在你的回合中作为攻击动作的一部分用徒手攻击命中一个生物时，你可以同时使用伤害和擒抱选项。每个回合中你只能使用这个好处一次。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "攻击优势",
+					"ENG_name": "Attack Advantage",
+					"entries": [
+						"你对被你{@condition 擒抱|XPHB}的生物进行攻击检定时具有优势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "当你在你的回合中使用具有重武器特性的武器攻击命中一个生物时，你可以使该武器对目标造成额外伤害。额外伤害等于你的熟练加值。",
+					"ENG_name": "Fast Wrestler",
+					"entries": [
+						"如果生物与你体型相同或更小，你移动被你{@condition 擒抱|XPHB}的生物时不需要额外花费移动。"
+					]
+				}
+			]
+		},
+		{
+			"name": "巨武器战斗",
+			"ENG_name": "Great Weapon Fighting",
+			"source": "XPHB",
+			"page": 209,
+			"freeRules2024": true,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你使用双手持有的近战武器进行攻击并掷骰伤害时，你可以将任何1或2的伤害骰视为3。武器必须具有双手或多变特性才能获得此好处。"
+			]
+		},
+		{
 			"name": "巨武器大师",
 			"ENG_name": "Great Weapon Master",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"巨武器大师|XPHB"
+			],
 			"entries": [
 				"你习得将武器重量作为优势的技巧，使你的攻击力大增。你获得下列增益：",
 				{
@@ -1788,6 +3299,47 @@
 					"items": [
 						"你在自己回合内用近战武器造成重击，或将一个生物生命值降至0时，可以用附赠动作发动一次近战武器攻击。",
 						"你在使用具有熟练项的重型武器发动近战攻击前，可以选择让本次攻击检定承受-5减值。若本次攻击命中，则其伤害掷骰获得+10加值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "巨武器大师",
+			"ENG_name": "Great Weapon Master",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"str": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "重型武器精通",
+					"ENG_name": "Heavy Weapon Mastery",
+					"entries": [
+						"当你在你的回合中使用具有重武器特性的武器攻击命中一个生物时，你可以使该武器对目标造成额外伤害。额外伤害等于你的熟练加值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "砍伐者",
+					"ENG_name": "Hew",
+					"entries": [
+						"在你用近战武器打出致命一击或将一个生物的生命值减少到0点之后，你可以立即以额外动作使用同一把武器进行一次攻击。"
 					]
 				}
 			]
@@ -1867,6 +3419,9 @@
 			"ENG_name": "Healer",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"医疗师|XPHB"
+			],
 			"entries": [
 				"你是娴熟的医师，可以快速治疗伤口，让战友迅速重返战斗。你获得下列增益：",
 				{
@@ -1879,10 +3434,40 @@
 			]
 		},
 		{
+			"name": "医疗师",
+			"ENG_name": "Healer",
+			"source": "XPHB",
+			"page": 201,
+			"category": "O",
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "战斗医疗兵",
+					"ENG_name": "Battle Medic",
+					"entries": [
+						"如果你有一个治疗包，你可以消耗一次使用次数，并对距离你5英尺以内的生物进行治疗，作为一个{@action 利用|XPHB}动作。那个生物可以消耗一个生命骰，然后你掷这个骰子。该生物恢复的生命值等于掷骰的结果加上你的熟练加值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "治疗重掷",
+					"ENG_name": "Healing Rerolls",
+					"entries": [
+						"每当你掷骰子以确定你通过法术或此特性的战场医护好处恢复的生命值数量时，如果掷出1，你可以重掷该骰子，并且必须使用新的掷骰结果。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "重甲运用",
 			"ENG_name": "Heavily Armored",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"重甲运用|XPHB"
+			],
 			"prerequisite": [
 				{
 					"proficiency": [
@@ -1913,10 +3498,56 @@
 			]
 		},
 		{
+			"name": "重甲运用",
+			"ENG_name": "Heavily Armored",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"proficiency": [
+						{
+							"armor": "medium"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"con",
+							"str"
+						]
+					}
+				}
+			],
+			"armorProficiencies": [
+				{
+					"heavy": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "护甲训练",
+					"ENG_name": "Armor Training",
+					"entries": [
+						"你获得了重甲的训练。"
+					]
+				}
+			]
+		},
+		{
 			"name": "重甲大师",
 			"ENG_name": "Heavy Armor Master",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"重甲大师|XPHB"
+			],
 			"prerequisite": [
 				{
 					"proficiency": [
@@ -1937,6 +3568,44 @@
 					"type": "list",
 					"items": [
 						"你着装重甲时，非魔法攻击对你造成的钝击、穿刺、挥砍伤害减少３点。"
+					]
+				}
+			]
+		},
+		{
+			"name": "重甲大师",
+			"ENG_name": "Heavy Armor Master",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"proficiency": [
+						{
+							"armor": "heavy"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"con",
+							"str"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "伤害减免",
+					"ENG_name": "Damage Reduction",
+					"entries": [
+						"当你穿着重型护甲时，如果你被攻击命中，该攻击对你造成的钝击、穿刺和斩击伤害会减少等同于你的熟练加值的数量。"
 					]
 				}
 			]
@@ -2194,6 +3863,9 @@
 			"ENG_name": "Inspiring Leader",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"领袖之证|XPHB"
+			],
 			"prerequisite": [
 				{
 					"ability": [
@@ -2209,10 +3881,76 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "领袖之证",
+			"ENG_name": "Inspiring Leader",
+			"source": "XPHB",
+			"page": 204,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"wis": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"cha": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "鼓舞表现",
+					"ENG_name": "Bolstering Performance",
+					"entries": [
+						"当你完成一次短休或长休时，你可以进行一次鼓舞人心的表演：演讲、歌唱或舞蹈。当你这样做时，选择最多六名盟友（包括你自己在内）在你30英尺范围内目睹表演。被选中的生物每个获得临时生命值，数值等于你的角色等级加上你用这个专长提升的能力值的修正值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "拦截",
+			"ENG_name": "Interception",
+			"source": "XPHB",
+			"page": 209,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当一个你可以看到的生物用攻击检定击中距离你5英尺内的另一个生物时，你可以使用反应来减少对目标造成的伤害，减少的数值为{@dice 1d10}加上你的熟练加值。你必须持有盾牌或简易或军用武器才能使用这个反应。"
+			]
+		},
+		{
 			"name": "敏锐心灵",
 			"ENG_name": "Keen Mind",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"敏锐心灵|XPHB"
+			],
 			"ability": [
 				{
 					"int": 1
@@ -2226,6 +3964,60 @@
 						"你始终知道北边的方位。",
 						"你始终知道距离下一次日出或日落还有多久。",
 						"你可以完美复述出一个月内你所听到或看到的任何事。"
+					]
+				}
+			]
+		},
+		{
+			"name": "敏锐心灵",
+			"ENG_name": "Keen Mind",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"int": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"int": 1
+				}
+			],
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"奥秘",
+							"历史",
+							"调查",
+							"自然",
+							"宗教"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "知识检定",
+					"ENG_name": "Lore Knowledge",
+					"entries": [
+						"从以下技能中选择一项：{@skill 奥秘|XPHB}、{@skill 历史|XPHB}、{@skill 调查|XPHB}、{@skill 自然|XPHB}或{@skill 宗教|XPHB}。如果你未熟练掌握所选技能，你将变得熟练，如果你已经熟练，你将获得专精。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "快速学习",
+					"ENG_name": "Quick Study",
+					"entries": [
+						"你可以将{@action 书房|XPHB}动作作为奖励动作来执行。"
 					]
 				}
 			]
@@ -2439,6 +4231,9 @@
 			"ENG_name": "Lightly Armored",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"轻甲运用|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -2461,6 +4256,45 @@
 					"type": "list",
 					"items": [
 						"你获得轻甲的熟练项。"
+					]
+				}
+			]
+		},
+		{
+			"name": "轻甲运用",
+			"ENG_name": "Lightly Armored",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"armorProficiencies": [
+				{
+					"light": true,
+					"shield": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "护甲训练",
+					"ENG_name": "Armor Training",
+					"entries": [
+						"你获得了轻型护甲和盾牌的训练。"
 					]
 				}
 			]
@@ -2496,6 +4330,9 @@
 			"ENG_name": "Lucky",
 			"source": "PHB",
 			"page": 167,
+			"reprintedAs": [
+				"幸运|XPHB"
+			],
 			"entries": [
 				"你的离奇运气让你可以在最危险的时刻化险为夷。",
 				"你获得3点幸运点。当你进行攻击检定、属性检定、豁免检定时，你可以花费1幸运点来骰一个额外的{@dice d20}。你可以选择在掷骰完成后，但结果公布前花费你这1幸运点。此后，你来选择该次攻击检定、属性检定或豁免检定要使用哪粒{@dice d20}的结果。",
@@ -2504,10 +4341,47 @@
 			]
 		},
 		{
+			"name": "幸运",
+			"ENG_name": "Lucky",
+			"source": "XPHB",
+			"page": 201,
+			"category": "O",
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "幸运点",
+					"ENG_name": "Luck Points",
+					"entries": [
+						"你的幸运点数等于你的熟练加值，你可以在以下好处上花费这些点数。当你完成一次长时间的休息后，你将恢复你消耗的幸运点数。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "优势",
+					"ENG_name": "Advantage",
+					"entries": [
+						"当你在进行一个{@dice d20}骰的{@variantrule D20 检定|XPHB}时，你可以花费1点幸运值来获得该次掷骰的优势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "劣势",
+					"ENG_name": "Disadvantage",
+					"entries": [
+						"当一个生物对您进行攻击检定时，您可以花费1点幸运点来给该检定增加劣势。"
+					]
+				}
+			]
+		},
+		{
 			"name": "巫师杀手",
 			"ENG_name": "Mage Slayer",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"巫师杀手|XPHB"
+			],
 			"entries": [
 				"你拥有一套对付施法者的近身战法，并获得下列增益：",
 				{
@@ -2521,10 +4395,54 @@
 			]
 		},
 		{
+			"name": "巫师杀手",
+			"ENG_name": "Mage Slayer",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "专注破除",
+					"ENG_name": "Concentration Breaker",
+					"entries": [
+						"当你对正在进行{@status 专注|XPHB|专注于}的生物造成伤害时，它在进行保持{@status 专注|XPHB|专注于}的豁免检定时具有劣势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "意念守护",
+					"ENG_name": "Guarded Mind",
+					"entries": [
+						"如果你未能通过智力、智慧或魅力豁免检定，你可以选择让自己通过。一旦你使用了这个好处，你就不能再次使用它，直到你完成一次短休或长休。"
+					]
+				}
+			]
+		},
+		{
 			"name": "魔法学徒",
 			"ENG_name": "Magic Initiate",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"魔法学徒|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"name": "吟游诗人法术",
@@ -2678,6 +4596,232 @@
 			]
 		},
 		{
+			"name": "魔法学徒",
+			"ENG_name": "Magic Initiate",
+			"source": "XPHB",
+			"page": 201,
+			"freeRules2024": true,
+			"category": "O",
+			"repeatable": true,
+			"additionalSpells": [
+				{
+					"name": "吟游诗人法术",
+					"ENG_name": "Bard Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=吟游诗人"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=吟游诗人",
+								"count": 2
+							}
+						]
+					}
+				},
+				{
+					"name": "牧师法术",
+					"ENG_name": "Cleric Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=牧师"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=牧师",
+								"count": 2
+							}
+						]
+					}
+				},
+				{
+					"name": "德鲁伊法术",
+					"ENG_name": "Druid Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=德鲁伊"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=德鲁伊",
+								"count": 2
+							}
+						]
+					}
+				},
+				{
+					"name": "术士法术",
+					"ENG_name": "Sorcerer Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=术士"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=术士",
+								"count": 2
+							}
+						]
+					}
+				},
+				{
+					"name": "邪术师法术",
+					"ENG_name": "Warlock Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=邪术师"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=邪术师",
+								"count": 2
+							}
+						]
+					}
+				},
+				{
+					"name": "法师法术",
+					"ENG_name": "Wizard Spells",
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|class=法师"
+									}
+								]
+							}
+						}
+					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=法师",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "两个戏法",
+					"ENG_name": "Two Cantrips",
+					"entries": [
+						"你从牧师、德鲁伊或法师的法术列表中选择两个你选择的戏法。智力、智慧或魅力是你的施法能力的属性（在选择这个专长时选择）。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "1级法术",
+					"ENG_name": "Level 1 Spell",
+					"entries": [
+						"从你为这个特性选择的法术列表中选择一个1环法术。你始终准备好了这个法术。你可以不消耗法术位施放它一次，并且在你完成一次长休后重新获得以这种方式施放它能力。你也可以使用你拥有的任何法术位来施放这个法术。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法术变更",
+					"ENG_name": "Spell Change",
+					"entries": [
+						"每当你获得新的等级时，你可以从所选法术列表中选择一个相同等级的不同法术替换你之前选择的一个法术。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "可重复",
+					"ENG_name": "Repeatable",
+					"entries": [
+						"你可以多次选择这个特性，但每次必须选择不同的法术列表。"
+					]
+				}
+			]
+		},
+		{
 			"name": "战技专家",
 			"ENG_name": "Martial Adept",
 			"source": "PHB",
@@ -2706,10 +4850,51 @@
 			]
 		},
 		{
+			"name": "武器训练",
+			"ENG_name": "Martial Weapon Training",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"weaponProficiencies": [
+				{
+					"martial": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "武器熟练项",
+					"ENG_name": "Weapon Proficiency",
+					"entries": [
+						"你获得军用武器的熟练。"
+					]
+				}
+			]
+		},
+		{
 			"name": "中甲大师",
 			"ENG_name": "Medium Armor Master",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"中甲大师|XPHB"
+			],
 			"prerequisite": [
 				{
 					"proficiency": [
@@ -2726,6 +4911,44 @@
 					"items": [
 						"着装中甲不再使你进行敏捷（{@skill 隐匿}）检定时具有劣势。",
 						"着装中甲时，若你的敏捷在16或以上，你的AC可以增加3点而非2点。"
+					]
+				}
+			]
+		},
+		{
+			"name": "中甲大师",
+			"ENG_name": "Medium Armor Master",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"proficiency": [
+						{
+							"armor": "medium"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "灵巧穿戴者",
+					"ENG_name": "Dexterous Wearer",
+					"entries": [
+						"当你穿着中型护甲时，如果你的敏捷得分为16或更高，你可以在AC上加3而不是2。"
 					]
 				}
 			]
@@ -2768,6 +4991,9 @@
 			"ENG_name": "Mobile",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"迅捷|XPHB"
+			],
 			"entries": [
 				"你十分灵敏而快速。你获得下列增益：",
 				{
@@ -2785,6 +5011,9 @@
 			"ENG_name": "Moderately Armored",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"中甲运用|XPHB"
+			],
 			"prerequisite": [
 				{
 					"proficiency": [
@@ -2808,7 +5037,7 @@
 			"armorProficiencies": [
 				{
 					"medium": true,
-					"shield|phb": true
+					"shield": true
 				}
 			],
 			"entries": [
@@ -2822,10 +5051,56 @@
 			]
 		},
 		{
+			"name": "中甲运用",
+			"ENG_name": "Moderately Armored",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"proficiency": [
+						{
+							"armor": "light"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"armorProficiencies": [
+				{
+					"medium": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "护甲训练",
+					"ENG_name": "Armor Training",
+					"entries": [
+						"你获得了中型护甲的训练。"
+					]
+				}
+			]
+		},
+		{
 			"name": "骑乘战斗",
 			"ENG_name": "Mounted Combatant",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"骑乘战斗|XPHB"
+			],
 			"entries": [
 				"骑乘时的你就像一头怪兽。当正在骑乘且未处于{@condition 失能}时，你获得下列增益：",
 				{
@@ -2834,6 +5109,87 @@
 						"你对比你的坐骑体型更小的未骑乘生物发动近战攻击时，所进行的攻击检定具有优势。",
 						"你可以强迫针对你坐骑的攻击转而针对你自己。",
 						"当你的坐骑受某效应影响而需要进行敏捷豁免来减半伤害时，如果豁免成功则可以不承受伤害，豁免失败则伤害减半。"
+					]
+				}
+			]
+		},
+		{
+			"name": "骑乘战斗",
+			"ENG_name": "Mounted Combatant",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"wis"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "骑乘攻击",
+					"ENG_name": "Mounted Strike",
+					"entries": [
+						"当你骑乘时，对距离你的坐骑5英尺内且体型比你坐骑至少小一个尺寸的未骑乘生物进行攻击检定时，你有优势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "向旁边跃开",
+					"ENG_name": "Leap Aside",
+					"entries": [
+						"如果你的坐骑受到允许它通过敏捷豁免检定来减少一半伤害的效果影响，那么当它成功通过豁免检定时，它不会受到伤害；如果豁免失败，它只会受到一半伤害。要让你的坐骑获得这个好处，你必须骑乘它，且你们都不能处于{@condition 失能|XPHB}状态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "转向",
+					"ENG_name": "Veer",
+					"entries": [
+						"当你骑乘时，如果敌人攻击你的坐骑并且击中了，你可以将这次攻击转移至自己，只要你不处于{@condition 失能|XPHB}状态。"
+					]
+				}
+			]
+		},
+		{
+			"name": "音乐家",
+			"ENG_name": "Musician",
+			"source": "XPHB",
+			"page": 201,
+			"category": "O",
+			"toolProficiencies": [
+				{
+					"anyMusicalInstrument": 3
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "乐器训练",
+					"ENG_name": "Instrument Training",
+					"entries": [
+						"你获得了三种你选择的乐器的熟练度。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "鼓舞之歌",
+					"ENG_name": "Encouraging Song",
+					"entries": [
+						"当你完成一次短休或长休时，你可以用你熟练掌握的乐器演奏一首歌曲，并向听到这首歌的盟友传递英雄灵感。以这种方式影响的盟友数量等于你的熟练加值。"
 					]
 				}
 			]
@@ -2872,6 +5228,9 @@
 			"ENG_name": "Observant",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"观察力|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -2890,6 +5249,71 @@
 					"items": [
 						"某生物在讲话时，若你可以看见目标的嘴且你可以理解其语言，则你就可以依靠读唇来解读目标正在讲什么。",
 						"你的被动感知（{@skill 察觉}）值和被动智力（{@skill 调查}）值带+5加值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "观察力",
+			"ENG_name": "Observant",
+			"source": "XPHB",
+			"page": 205,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"int": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"wis": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis"
+						]
+					}
+				}
+			],
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"洞悉",
+							"调查",
+							"察觉"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "敏锐观察者",
+					"ENG_name": "Keen Observer",
+					"entries": [
+						"从以下技能中选择一项：{@skill 洞悉|XPHB}、{@skill 调查|XPHB}或{@skill 察觉|XPHB}。如果你未熟练掌握所选技能，你将变得熟练，如果你已经熟练，你将获得专精。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "快速搜索",
+					"ENG_name": "Quick Search",
+					"entries": [
+						"你可以将搜索动作作为额外动作来执行。"
 					]
 				}
 			]
@@ -3025,6 +5449,9 @@
 			"ENG_name": "Piercer",
 			"source": "TCE",
 			"page": 80,
+			"reprintedAs": [
+				"穿刺者|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -3048,6 +5475,47 @@
 			]
 		},
 		{
+			"name": "穿刺者",
+			"ENG_name": "Piercer",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "穿刺",
+					"ENG_name": "Puncture",
+					"entries": [
+						"每回合一次，当你用造成穿刺伤害的攻击命中一个生物时，你可以重投其中一个伤害骰。你必须使用重投的结果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "增强暴击",
+					"ENG_name": "Enhanced Critical",
+					"entries": [
+						"当你用造成穿刺伤害的攻击命中一个生物并且造成重击时，你可以在计算穿刺伤害时投一个额外的伤害骰。"
+					]
+				}
+			]
+		},
+		{
 			"name": "位面漫游者",
 			"ENG_name": "Planar Wanderer",
 			"source": "SatO",
@@ -3059,6 +5527,9 @@
 						"外层位面后裔|SatO"
 					]
 				}
+			],
+			"traitTags": [
+				"伤害抗性"
 			],
 			"entries": [
 				"你可以从多元宇宙之中摄取能量，并能在宇宙中的极端环境中生存，还能穿梭于它的无垠世界之中。你获得下列增益：",
@@ -3087,7 +5558,7 @@
 							"name": "传送门感知",
 							"ENG_name": "Portal Sense",
 							"entries": [
-								"你永远知道上一次使用的位面传送门位于你何方，但你与那个传送门必须处于同一位面上。不仅如此，以一个动作，你可以侦测到你周围30尺范围内的任何对你来说未处于完全掩护的传送门的位置。一旦你使用了侦测传送门动作，直到你完成一次长休前你都无法再次使用这一动作。"
+								"当你和最后一个你使用的位面传送门位于同一存在平面时，你知道它的方向。此外，作为一项动作，你可以探测到在你周围30英尺内任何不是在{@quickref 掩护||3||全身掩护}后面的传送门的位置。一旦你通过这项动作探测到一个传送门，直到你完成一次长时间的休息前，你不能再使用这项动作。"
 							]
 						}
 					]
@@ -3100,6 +5571,9 @@
 			"ENG_name": "Poisoner",
 			"source": "TCE",
 			"page": 80,
+			"reprintedAs": [
+				"毒师|XPHB"
+			],
 			"toolProficiencies": [
 				{
 					"poisoner's kit": true
@@ -3118,10 +5592,60 @@
 			]
 		},
 		{
+			"name": "毒师",
+			"ENG_name": "Poisoner",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"dex",
+							"int"
+						]
+					}
+				}
+			],
+			"toolProficiencies": [
+				{
+					"poisoner's kit": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "强效毒素",
+					"ENG_name": "Potent Poison",
+					"entries": [
+						"当你投造成毒素伤害的伤害骰时，无视目标的伤害抗性。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "酿毒",
+					"ENG_name": "Brew Poison",
+					"entries": [
+						"你获得了使用毒药师工具包的熟练度。使用这样的工具包并消耗价值50金币的材料，经过1小时的工作，你可以制造出等于你熟练加值数量的毒药剂量。作为奖励动作，你可以将一剂毒药涂抹在一件武器或弹药上。一旦涂抹，毒药在1分钟或直到你用被涂毒的物品造成伤害（以先到者为准）之前保持效力。当生物受到被涂毒物品的伤害时，该生物必须成功通过一次体质豁免（难度等级8加上由此特性增加的能力值和你的熟练加值），否则受到2d8点毒素伤害并处于{@condition poisoned|XPHB}状态，直到你的下一个回合结束。"
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "长柄武器大师",
 			"ENG_name": "Polearm Master",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"长柄武器大师|XPHB"
+			],
 			"entries": [
 				"你可以用触及武器与敌人近身缠斗。你获得下列增益：",
 				{
@@ -3129,6 +5653,60 @@
 					"items": [
 						"当你采取{@action 攻击}动作，并且只使用{@item 长柄刀|PHB}、{@item 戟|PHB}、{@item 长棍|PHB}，长矛或{@item 矛|PHB}进行攻击时，你可以使用附赠动作用武器的另一端进行近战攻击；这次攻击使用与主要攻击相同的能力调整值。这次攻击的武器伤害骰是{@dice d4}，攻击造成的是钝击伤害。",
 						"当你持握{@item 长柄刀|PHB}，{@item 戟|PHB}，{@item 长矛|PHB}，{@item 长棍|PHB}或{@item 矛|PHB}时，进入你此类武器的触及范围的生物会引发你的借机攻击。"
+					]
+				}
+			]
+		},
+		{
+			"name": "长柄武器大师",
+			"ENG_name": "Polearm Master",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"dex",
+							"str"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "长杆打击",
+					"ENG_name": "Pole Strike",
+					"entries": [
+						"在你采取攻击动作并使用长棍、长矛或具有重型和触及特性的武器攻击后，你可以使用一个额外动作用武器的另一端进行一次近战攻击。该武器造成钝击伤害，且此次攻击的武器伤害骰为一个{@dice d4}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "反应打击",
+					"ENG_name": "Reactive Strike",
+					"entries": [
+						"当你持有长棍、长矛或具有重型和触及特性的武器时，你可以采取反应来做一次近战攻击，攻击进入你用该武器达到的距离范围内的生物。"
 					]
 				}
 			]
@@ -3201,6 +5779,23 @@
 						"选择一种你已具有熟练项的技能。你获得这种技能的专精，这意味着你进行的与技能相关的属性检定中你可以加入双倍的熟练加值。你选择的这个技能必须是未受益于其他的此类双倍熟练特性（例如 专精）的技能。"
 					]
 				}
+			]
+		},
+		{
+			"name": "守护",
+			"ENG_name": "Protection",
+			"source": "XPHB",
+			"page": 209,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当一个你可以看到的生物攻击距离你5英尺范围内的目标（不是你）时，你可以使用反应来用你持有的盾牌进行拦截。如果保持在目标5英尺范围内，你对触发攻击的检定施加劣势，并且直到你的下一个回合开始前，对目标的所有其他攻击检定都施加劣势。"
 			]
 		},
 		{
@@ -3297,6 +5892,9 @@
 			"ENG_name": "Resilient",
 			"source": "PHB",
 			"page": 168,
+			"reprintedAs": [
+				"强健身心|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -3333,6 +5931,59 @@
 					"type": "list",
 					"items": [
 						"你进行所选属性的豁免检定时可以加上你的熟练加值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "强健身心",
+			"ENG_name": "Resilient",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1,
+						"entry": "选择一个你在其中没有豁免检定熟练的属性。将所选属性值增加1，最高不超过20。"
+					}
+				}
+			],
+			"savingThrowProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "豁免检定熟练",
+					"ENG_name": "Saving Throw Proficiency",
+					"entries": [
+						"你获得了所选能力的豁免检定熟练。"
 					]
 				}
 			]
@@ -3425,6 +6076,9 @@
 			"ENG_name": "Ritual Caster",
 			"source": "PHB",
 			"page": 169,
+			"reprintedAs": [
+				"仪式施法者|XPHB"
+			],
 			"prerequisite": [
 				{
 					"ability": [
@@ -3545,6 +6199,106 @@
 				"你习得一些仪式法术，且可以以仪式的方式施展它们。这些法术会记载在一本仪式书上，你进行仪式施法时必须手持这本仪式书。",
 				"当你选择该专长时，你获得一本记载了两个自选1环法术的仪式书。从{@filter 吟游诗人|spells|level=1|class=吟游诗人|components & miscellaneous=仪式}，{@filter 牧师|spells|level=1|class=牧师|components & miscellaneous=仪式}，{@filter 德鲁伊|spells|level=1|class=德鲁伊|components & miscellaneous=仪式}，{@filter 术士|spells|level=1|class=术士|components & miscellaneous=仪式}，{@filter 邪术师|spells|level=1|class=邪术师|components & miscellaneous=仪式}，{@filter 法师|spells|level=1|class=法师|components & miscellaneous=仪式}中选择一个列表。你所选法术必须在所选职业的法术列表里，且所选法术必须有仪式标签。你所选的职业同样决定了这些法术的施法属性：吟游诗人、术士、邪术师用魅力；牧师、德鲁伊用感知；法师用智力。",
 				"当你获得了一份书写形式的法术时（比如{@item 法术卷轴}或法师的法术书），你可以将其法术添加进你的仪式书里。被添加的法术必须在你所选职业的法术列表里，且该法术环阶不能高于你等级的一半（向上取整），而该法术还必须带有仪式标签。将该法术抄进你的仪式书必须消耗每环2小时时间和50gp的金钱。该消耗即是你研究掌握该法术所消耗的材料成分和抄写进仪式书所用的优质墨水等的开销。"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "仪式施法者",
+			"ENG_name": "Ritual Caster",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"int": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"wis": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"cha": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							{
+								"choose": "level=1|components & miscellaneous=仪式",
+								"count": 2
+							}
+						],
+						"5": [
+							{
+								"choose": "level=1|components & miscellaneous=仪式",
+								"count": 1
+							}
+						],
+						"9": [
+							{
+								"choose": "level=1|components & miscellaneous=仪式",
+								"count": 1
+							}
+						],
+						"13": [
+							{
+								"choose": "level=1|components & miscellaneous=仪式",
+								"count": 1
+							}
+						],
+						"17": [
+							{
+								"choose": "level=1|components & miscellaneous=仪式",
+								"count": 1
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "仪式法术",
+					"ENG_name": "Ritual Spells",
+					"entries": [
+						"选择等于你的熟练加值数量的1环法术，这些法术必须带有仪式标签。你始终准备好了这些法术，并可以使用你拥有的任何法术位来施放它们。这些法术的施法能力是由此特性增加的能力。每当你的熟练加值之后增加时，你可以将额外的一个带有仪式标签的1环法术添加到始终准备好的法术中。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "快速仪式",
+					"ENG_name": "Quick Ritual",
+					"entries": [
+						"通过这个好处，你可以使用仪式法术的正常施法时间而非延长的仪式时间来施放一个你已准备的仪式法术。这样做不需要消耗法术位。一旦你以这种方式施放了法术，在你完成一次长休之前不能再使用这个好处。"
+					]
+				}
 			],
 			"hasFluffImages": true
 		},
@@ -3678,8 +6432,22 @@
 			"ENG_name": "Savage Attacker",
 			"source": "PHB",
 			"page": 169,
+			"reprintedAs": [
+				"凶蛮打手|XPHB"
+			],
 			"entries": [
 				"你每回合有一次机会，在掷近战武器攻击的伤害骰时，重掷武器的伤害骰并选用新旧骰值二者之一。"
+			]
+		},
+		{
+			"name": "凶蛮打手",
+			"ENG_name": "Savage Attacker",
+			"source": "XPHB",
+			"page": 201,
+			"freeRules2024": true,
+			"category": "O",
+			"entries": [
+				"你已经训练有素，能够造成特别破坏性的打击。在你的每个回合中，每当你用武器击中目标时，你可以投掷武器的伤害骰子两次，并选择任一结果对目标造成伤害。"
 			]
 		},
 		{
@@ -3875,6 +6643,9 @@
 			"ENG_name": "Sentinel",
 			"source": "PHB",
 			"page": 169,
+			"reprintedAs": [
+				"哨兵|XPHB"
+			],
 			"entries": [
 				"你的掌握的技术让你在击破敌人防御时占尽优势，并获得下列增益：",
 				{
@@ -3883,6 +6654,60 @@
 						"你的借机攻击命中目标时，目标在本回合剩下时间内的移动速度降至0。",
 						"生物即使执行{@action 撤离}动作离开你的触及范围也会引发你的借机攻击。",
 						"处于你周边５尺范围内的生物对除你外的目标发动攻击后（且被攻击者没有这个专长），你可以用你的反应对该攻击者发动一次近战攻击。"
+					]
+				}
+			]
+		},
+		{
+			"name": "哨兵",
+			"ENG_name": "Sentinel",
+			"source": "XPHB",
+			"page": 207,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "守护者",
+					"ENG_name": "Guardian",
+					"entries": [
+						"当一个生物在你5英尺范围内采取{@action 撤离|XPHB}动作，或者用攻击命中了除了你以外的目标时，你可以对该生物进行一次{@action 借机攻击|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "立定",
+					"ENG_name": "Halt",
+					"entries": [
+						"当你对一个生物进行了一次机会攻击并且命中时，在当前回合的剩余时间内该生物的速度变为0。"
 					]
 				}
 			]
@@ -3924,6 +6749,9 @@
 			"ENG_name": "Shadow Touched",
 			"source": "TCE",
 			"page": 80,
+			"reprintedAs": [
+				"幽影界触碰|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -3964,18 +6792,121 @@
 			]
 		},
 		{
+			"name": "幽影界触碰",
+			"ENG_name": "Shadow-Touched",
+			"source": "XPHB",
+			"page": 207,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "继承",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"隐形术|xphb",
+									{
+										"choose": "level=1|school=I;N"
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"你接触幽影界的魔法赋予了你以下好处。",
+				{
+					"type": "entries",
+					"name": "幽影魔法",
+					"ENG_name": "Shadow Magic",
+					"entries": [
+						"从幻术或死灵学派的魔法中选择一个1级法术。你始终准备好了这个法术和隐身术。你可以不消耗法术位来施放这些法术。一旦你以这种方式施放了任何一个法术，你就不能再次以这种方式施放该法术，直到你完成一次长休息。你也可以使用你拥有的适当级别的法术位来施放这些法术。这些法术的施法能力是这个专长提升的能力。"
+					]
+				}
+			]
+		},
+		{
 			"name": "神射手",
 			"ENG_name": "Sharpshooter",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"神射手|XPHB"
+			],
 			"entries": [
 				"你是熟练掌握了远程武器的使用方式，使看似不可能的射击都能成功命中。你获得下列增益：",
 				{
 					"type": "list",
 					"items": [
 						"攻击最大射程内的敌人时，你的远程武器攻击检定不会因为超过常规射程具有劣势。",
-						"你的远程武器攻击忽视半身掩护和四分之三掩护状态。",
+						"你的远程武器攻击无视{@quickref 掩护||3||半身掩护}和{@quickref 掩护||3||四分之三掩护}。",
 						"你用拥有熟练项的远程武器发动攻击前，可以选择使该次攻击的攻击检定承受 -5减值。若本次攻击中，则其伤害掷骰获得 +10加值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "神射手",
+			"ENG_name": "Sharpshooter",
+			"source": "XPHB",
+			"page": 207,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "忽略掩体",
+					"ENG_name": "Bypass Cover",
+					"entries": [
+						"你使用武器进行的远程攻击无视半掩体和四分之三掩体。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "近战射击",
+					"ENG_name": "Firing in Melee",
+					"entries": [
+						"与敌人距离5英尺以内不会使你使用远程武器的攻击检定具有劣势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "远程射击",
+					"ENG_name": "Long Shots",
+					"entries": [
+						"使用远程武器进行远距离攻击不会使你的攻击检定具有劣势。"
 					]
 				}
 			]
@@ -3985,6 +6916,9 @@
 			"ENG_name": "Shield Master",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"盾牌大师|XPHB"
+			],
 			"entries": [
 				"你的盾牌不只可以用于防御，还可以用来攻击。你在持用{@item 护盾术|PHB}时获得下列增益：",
 				{
@@ -3998,10 +6932,54 @@
 			]
 		},
 		{
+			"name": "盾牌大师",
+			"ENG_name": "Shield Master",
+			"source": "XPHB",
+			"page": 207,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"proficiency": [
+						{
+							"armor": "shield"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"str": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "盾击",
+					"ENG_name": "Shield Bash",
+					"entries": [
+						"如果你在进行{@action 攻击|XPHB}动作时攻击一个与你距离5英尺以内的生物，并且用近战武器命中，你可以立即使用你装备的盾牌猛击目标，迫使目标进行一次力量豁免（难度等级8加上你的力量修正和熟练加值）。如果目标豁免失败，你可以选择将目标从你身边推开5英尺，或者使其处于{@condition 倒地|XPHB}状态（由你选择）。每个你的回合中只能使用这个好处一次。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "以反应动作，你可以使用你的盾牌挡在你和来源之间，如果你成功通过敏捷豁免检定，你可以不受伤害，如果你使用盾牌，可以不受原本应该减半的伤害。",
+					"ENG_name": "Interpose Shield",
+					"entries": [
+						"如果你受到允许你进行敏捷豁免以只受到一半伤害的效果影响，你可以使用反应来在豁免成功且持有盾牌的情况下不受伤害。"
+					]
+				}
+			]
+		},
+		{
 			"name": "技艺专家",
 			"ENG_name": "Skill Expert",
 			"source": "TCE",
 			"page": 80,
+			"reprintedAs": [
+				"技艺专家|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -4060,10 +7038,68 @@
 			]
 		},
 		{
+			"name": "技艺专家",
+			"ENG_name": "Skill Expert",
+			"source": "XPHB",
+			"page": 207,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"skillProficiencies": [
+				{
+					"any": 1
+				}
+			],
+			"expertise": [
+				{
+					"anyProficientSkill": 1
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "技能熟练项",
+					"ENG_name": "Skill Proficiency",
+					"entries": [
+						"你可以选择一个技能并获得该技能的熟练度。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "专精",
+					"ENG_name": "Expertise",
+					"entries": [
+						"选择一个你熟练但未达到专精的技能。你对该技能获得专精。"
+					]
+				}
+			]
+		},
+		{
 			"name": "熟习",
 			"ENG_name": "Skilled",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"熟习|XPHB"
+			],
 			"skillToolLanguageProficiencies": [
 				{
 					"choose": [
@@ -4082,10 +7118,46 @@
 			]
 		},
 		{
+			"name": "熟习",
+			"ENG_name": "Skilled",
+			"source": "XPHB",
+			"page": 201,
+			"freeRules2024": true,
+			"category": "O",
+			"repeatable": true,
+			"skillToolLanguageProficiencies": [
+				{
+					"choose": [
+						{
+							"from": [
+								"任意技能",
+								"任意工具"
+							],
+							"count": 3
+						}
+					]
+				}
+			],
+			"entries": [
+				"你获得任意三项技能或工具的熟练度。",
+				{
+					"type": "entries",
+					"name": "可重复",
+					"ENG_name": "Repeatable",
+					"entries": [
+						"你可以多次选择这个专长。"
+					]
+				}
+			]
+		},
+		{
 			"name": "隐伏者",
 			"ENG_name": "Skulker",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"隐伏者|XPHB"
+			],
 			"prerequisite": [
 				{
 					"ability": [
@@ -4108,10 +7180,67 @@
 			]
 		},
 		{
+			"name": "隐伏者",
+			"ENG_name": "Skulker",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"senses": [
+				{
+					"blindsight": 10
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "盲视",
+					"ENG_name": "Blindsight",
+					"entries": [
+						"你有范围为10英尺的盲视{@sense 盲视|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "战争迷雾",
+					"ENG_name": "Fog of War",
+					"entries": [
+						"你在战斗中利用战场的混乱，获得优势，这适用于你在战斗中作为{@skill 隐匿|XPHB}动作进行的任何敏捷（{@action 躲藏|XPHB}）检定。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "狙击手",
+					"ENG_name": "Sniper",
+					"entries": [
+						"如果你在隐藏状态下进行攻击检定并且检定失败，进行攻击检定不会暴露你的位置。"
+					]
+				}
+			]
+		},
+		{
 			"name": "挥砍者",
 			"ENG_name": "Slasher",
 			"source": "TCE",
 			"page": 81,
+			"reprintedAs": [
+				"挥砍者|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -4130,6 +7259,47 @@
 					"items": [
 						"每回合一次，当你用造成挥砍伤害的攻击命中一个生物时，你可以使其速度降低10尺，直到你的下回合开始。",
 						"当你用造成挥砍伤害的攻击命中一个生物并造成重击时，你将其重伤，使其所作的攻击检定具有劣势，直至你的下回合开始。"
+					]
+				}
+			]
+		},
+		{
+			"name": "挥砍者",
+			"ENG_name": "Slasher",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "割腱",
+					"ENG_name": "Hamstring",
+					"entries": [
+						"每回合一次，当你用攻击命中一个生物并造成斩击伤害时，你可以将该生物的速度减少10英尺，直到你的下一个回合开始。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "增强暴击",
+					"ENG_name": "Enhanced Critical",
+					"entries": [
+						"当你对一个生物造成一个锐器伤害的致命攻击时，直到你的下一个回合开始之前，它在攻击检定上具有劣势。"
 					]
 				}
 			]
@@ -4170,7 +7340,7 @@
 							"name": "旋涡灵光",
 							"ENG_name": "Maelstrom Aura",
 							"entries": [
-								"以一个附赠动作，你将自己笼罩在魔法性的狂风与雷电灵光之中，灵光以你为中心，向任意方向延展10尺（无法穿过全掩护）。灵光持续到你的下一个回合开始，若你陷入 失能，它会提前结束。灵光激活期间，你获得闪电伤害与雷鸣伤害的抗性。此外，任何以你为目标的攻击检定都将具有劣势，且每当一个生物在灵光下开始其回合，你都可以迫使其进行一次力量豁免（DC为8+你的熟练加值+本专长提升属性的调整值）。豁免失败时，该生物的速度将被减半直至它们的下一回合开始。你可以使用这一附赠动作的次数等同于你的熟练加值次，在完成一次长休后你恢复所有已消耗的使用次数。"
+								"作为一个附赠动作，你将自己包围在一种魔法风和闪电的光环中，光环从你向每个方向延伸10英尺，但不会穿过{@quickref 掩护||3||全身掩护}。光环持续到你的下一个回合开始或直到你失去能力。当光环激活时，你对闪电和雷鸣伤害有抗性。此外，对你进行的攻击检定具有劣势，并且每当另一生物在其回合开始时处于光环内，你可以迫使该生物进行力量豁免投掷（DC等于8 + 你的熟练加值 + 这个特性增加的能力值修正）。如果豁免失败，生物的速度在它的下一个回合开始前减半。你可以使用这个附赠动作的次数等于你的熟练加值，并且当你完成一次长时间的休息后，你将恢复所有已使用的使用次数。"
 							]
 						}
 					]
@@ -4200,10 +7370,75 @@
 			]
 		},
 		{
+			"name": "迅捷",
+			"ENG_name": "Speedy",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"con": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"dex",
+							"con"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "速度提升",
+					"ENG_name": "Speed Increase",
+					"entries": [
+						"你的移动速度增加10尺。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "跨越困难地形",
+					"ENG_name": "Dash over Difficult Terrain",
+					"entries": [
+						"当你在你的回合中采取{@action 疾走|XPHB}动作时，该回合内困难地形不会使你的移动额外花费。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "敏捷移动",
+					"ENG_name": "Agile Movement",
+					"entries": [
+						"对你的攻击机会攻击具有劣势。"
+					]
+				}
+			]
+		},
+		{
 			"name": "法术射手",
 			"ENG_name": "Spell Sniper",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"法术射手|XPHB"
+			],
 			"prerequisite": [
 				{
 					"spellcasting": true
@@ -4295,8 +7530,59 @@
 					"type": "list",
 					"items": [
 						"当你施展需要进行攻击检定的法术时，则该法术的施法距离加倍。",
-						"你的远程法术攻击忽视半身掩护和四分之三掩护状态。",
+						"你的远程法术攻击无视{@quickref 掩护||3||半身掩护}和{@quickref 掩护||3||四分之三掩护}。",
 						"你习得一个需要进行攻击检定的戏法。从{@filter 吟游诗人|spells|level=0|class=吟游诗人|spell attack=m;r;o}、{@filter 牧师|spells|level=0|class=牧师|spell attack=m;r;o}、{@filter 德鲁伊|spells|level=0|class=德鲁伊|spell attack=m;r;o}、{@filter 术士|spells|level=0|class=术士|spell attack=m;r;o}、{@filter 邪术师|spells|level=0|class=邪术师|spell attack=m;r;o}、{@filter 法师|spells|level=0|class=法师|spell attack=m;r;o}中选择其一，并从其相应的法术列表里选择该戏法。你施展该戏法的施法属性取决于你选择的职业：吟游诗人、术士、邪术师用魅力；牧师、德鲁伊用感知；法师用智力。"
+					]
+				}
+			]
+		},
+		{
+			"name": "法术射手",
+			"ENG_name": "Spell Sniper",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"spellcasting2020": true
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "忽略掩体",
+					"ENG_name": "Bypass Cover",
+					"entries": [
+						"你的法术攻击检定忽略半覆盖和四分之三覆盖。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "近战施法",
+					"ENG_name": "Casting in Melee",
+					"entries": [
+						"在距离敌人5英尺范围内不会对你的法术攻击检定造成劣势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "射程增加",
+					"ENG_name": "Increased Range",
+					"entries": [
+						"当你施放一个射程至少为10英尺且需要你进行攻击检定的法术时，你可以将法术的射程增加60英尺。"
 					]
 				}
 			]
@@ -5101,6 +8387,9 @@
 			"ENG_name": "Tavern Brawler",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"斗殴高手|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -5125,10 +8414,60 @@
 			]
 		},
 		{
+			"name": "斗殴高手",
+			"ENG_name": "Tavern Brawler",
+			"source": "XPHB",
+			"page": 202,
+			"category": "O",
+			"weaponProficiencies": [
+				{
+					"improvised": true
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "简易武器术",
+					"ENG_name": "Enhanced Unarmed Strike",
+					"entries": [
+						"当你用徒手攻击命中并造成伤害时，你可以造成等同于{@dice 1d4}加上你的力量修正值的钝击伤害，而不是徒手攻击的正常伤害。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "伤害重掷",
+					"ENG_name": "Damage Rerolls",
+					"entries": [
+						"每当你为徒手攻击掷伤害骰时，如果掷出了1，你可以重掷该骰，并且必须使用新的掷骰结果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "简易武器术",
+					"ENG_name": "Improvised Weaponry",
+					"entries": [
+						"你熟练使用临时武器。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "推动",
+					"ENG_name": "Push",
+					"entries": [
+						"当你在你的回合中作为攻击动作的一部分用徒手攻击命中一个生物时，你可以对目标造成伤害，并且将其推开5英尺。每个回合中你只能使用这个好处一次。"
+					]
+				}
+			]
+		},
+		{
 			"name": "念动力",
 			"ENG_name": "Telekinetic",
 			"source": "TCE",
 			"page": 81,
+			"reprintedAs": [
+				"念动力|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -5163,10 +8502,65 @@
 			]
 		},
 		{
+			"name": "念动力",
+			"ENG_name": "Telekinetic",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "继承",
+					"known": {
+						"_": [
+							"法师之手|xphb#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "微动术",
+					"ENG_name": "Minor Telekinesis",
+					"entries": [
+						"你学会了法术《法师之手》。你可以在不使用语言或肢体动作成分的情况下施放它，你可以使幽灵手变为隐形状态，并且当你施放它时，它的范围以及它与你的距离都增加了30英尺。这个法术的施法能力是这个专长提升的属性。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "心灵遥控推击",
+					"ENG_name": "Telekinetic Shove",
+					"entries": [
+						"作为一个附加动作，你可以心灵遥控地推动一个你能看到的、距离自己30英尺内的生物。当你这样做时，目标必须成功通过一次力量豁免检定（DC 8加上这个专长提升的属性值的修正值以及你的熟练加值），否则会被移动5英尺向你靠近或远离。"
+					]
+				}
+			]
+		},
+		{
 			"name": "心灵感应",
 			"ENG_name": "Telepathic",
 			"source": "TCE",
 			"page": 81,
+			"reprintedAs": [
+				"心灵感应|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -5206,6 +8600,62 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "心灵感应",
+			"ENG_name": "Telepathic",
+			"source": "XPHB",
+			"page": 208,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "继承",
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									"侦测思想|xphb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "心灵感应术",
+					"ENG_name": "Telepathic Utterance",
+					"entries": [
+						"你可以与任何你能看到的、距离自己60英尺内的生物进行心灵感应交流。你的心灵感应话语使用你所知的语言，并且只有当该生物也懂这种语言时，它才能理解你的话。你的交流不会赋予生物以心灵感应的方式回应你的能力。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "侦测思想",
+					"ENG_name": "Detect Thoughts",
+					"entries": [
+						"你始终准备好了心灵感应法术（Detect Thoughts）。你可以不消耗法术位或法术材料来施放它，但你在再次以这种方式施放它之前必须完成一次长休。你也可以使用你拥有的适当等级的法术位来施放它。你施放这个法术的法术施放能力是这个特性增加的能力。"
+					]
+				}
+			]
+		},
+		{
 			"name": "武器投掷大师",
 			"ENG_name": "Thrown Arms Master",
 			"source": "TDCSR",
@@ -5234,12 +8684,79 @@
 			]
 		},
 		{
+			"name": "投掷武器战斗",
+			"ENG_name": "Thrown Weapon Fighting",
+			"source": "XPHB",
+			"page": 210,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你使用具有投掷特性的武器进行远程攻击检定时，你对伤害骰获得+2的加值。"
+			]
+		},
+		{
 			"name": "健壮",
 			"ENG_name": "Tough",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"健壮|XPHB"
+			],
 			"entries": [
 				"获得该专长时，你的生命值上限增加你当前等级两倍的数值。并且在你随后每次升级时，生命值上限都会额外加2。"
+			]
+		},
+		{
+			"name": "健壮",
+			"ENG_name": "Tough",
+			"source": "XPHB",
+			"page": 202,
+			"category": "O",
+			"entries": [
+				"当你获得这个专长时，你的生命值上限会增加等同于你角色等级两倍的数值。之后每当你提升角色等级，你的生命值上限额外增加2点生命值。"
+			]
+		},
+		{
+			"name": "双武器战斗",
+			"ENG_name": "Two-Weapon Fighting",
+			"source": "XPHB",
+			"page": 210,
+			"freeRules2024": true,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你因使用具有轻型特性的武器而获得额外攻击时，如果你尚未将其加到伤害中，你可以将能力调整值加到该攻击的伤害上。"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "徒手战斗",
+			"ENG_name": "Unarmed Fighting",
+			"source": "XPHB",
+			"page": 210,
+			"category": "FS",
+			"prerequisite": [
+				{
+					"feature": [
+						"战斗风格"
+					]
+				}
+			],
+			"entries": [
+				"当你用你的徒手攻击命中目标并造成伤害时，你可以造成等同于{@dice 1d6}加上你的力量调整值的钝击伤害，而不是徒手攻击的正常伤害。如果你在进行攻击检定时没有持有任何武器或盾牌，那么{@dice d6}变为{@dice d8}。",
+				"在每个你的回合开始时，你可以对一个被你{@condition 擒抱|XPHB}的生物造成{@condition 擒抱|XPHB}点钝击伤害。"
 			]
 		},
 		{
@@ -5336,6 +8853,9 @@
 			"ENG_name": "War Caster",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"战地施法者|XPHB"
+			],
 			"prerequisite": [
 				{
 					"spellcasting": true
@@ -5354,10 +8874,64 @@
 			]
 		},
 		{
+			"name": "战地施法者",
+			"ENG_name": "War Caster",
+			"source": "XPHB",
+			"page": 209,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"spellcasting2020": true
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "专注",
+					"ENG_name": "Concentration",
+					"entries": [
+						"你在进行体质豁免检定以维持{@status 专注|XPHB}时具有优势。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "反制法术",
+					"ENG_name": "Reactive Spell",
+					"entries": [
+						"当一个生物离开你的触及范围而引发你的{@action 借机攻击|XPHB}时，你可以使用反应来进行一次法术施放，而不是进行{@action 借机攻击|XPHB}。该法术必须有一个动作的施法时间，并且只能针对那个生物。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "身体动作要件",
+					"ENG_name": "Somatic Components",
+					"entries": [
+						"即使你的一只手或两只手都持有武器或盾牌，你仍然可以进行法术的肢体成分。"
+					]
+				}
+			]
+		},
+		{
 			"name": "武器大师",
 			"ENG_name": "Weapon Master",
 			"source": "PHB",
 			"page": 170,
+			"reprintedAs": [
+				"武器训练|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -5386,6 +8960,40 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "武器大师",
+			"ENG_name": "Weapon Master",
+			"source": "XPHB",
+			"page": 209,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
+				}
+			],
+			"entries": [
+				"你获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "精通特性",
+					"ENG_name": "Mastery Property",
+					"entries": [
+						"你对武器的训练使你能够使用一种你选择的简单或军用武器的掌握特性，前提是你熟练掌握它。每当你完成一次长休时，你可以将武器种类更改为另一种符合条件的武器。"
+					]
+				}
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "木精灵魔法",

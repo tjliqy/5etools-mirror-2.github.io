@@ -6,6 +6,9 @@
 			"source": "PHB",
 			"page": 82,
 			"srd": true,
+			"reprintedAs": [
+				"圣武士|XPHB"
+			],
 			"hd": {
 				"number": 1,
 				"faces": 10
@@ -34,7 +37,7 @@
 					"light",
 					"medium",
 					"heavy",
-					"{@item 护盾术|PHB|盾牌}"
+					"shield"
 				],
 				"weapons": [
 					"简易",
@@ -60,7 +63,7 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) 一把{@filter 军用武器|items|source=PHB|category=基础|type=军用武器}和一面{@item 护盾术|PHB} ，或 (b) 两把{@filter 军用武器|items|source=PHB|category=基础|type=军用武器}",
-					"（a）五支{@item 标枪|PHB|标枪}或（b）任意{@filter 简易近战武器|items|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand}",
+					"(a) 五把 {@item 标枪|PHB|标枪} 或 (b) 任何 {@filter 简易近战武器|items|source=PHB|category=基础|type=简单武器;近战武器=沙地}",
 					"(a) 一个{@item 祭司套组|PHB}或 (b) 一个{@item 探索套组|PHB}",
 					"{@item 链甲|PHB} 和一个 {@item 圣徽|PHB}"
 				],
@@ -120,7 +123,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item 护盾术|PHB|盾牌}"
+						"shield"
 					],
 					"weapons": [
 						"简易",
@@ -322,6 +325,413 @@
 			"subclassTitle": "神圣誓言",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "圣武士",
+			"ENG_name": "Paladin",
+			"source": "XPHB",
+			"page": 108,
+			"primaryAbility": [
+				{
+					"str": true,
+					"cha": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"wis",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "1/3",
+			"preparedSpells": "<$level$> / 2 + <$cha_mod$>",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"2": [
+							"至圣斩|xphb"
+						],
+						"5": [
+							"寻获坐骑|xphb"
+						]
+					}
+				}
+			],
+			"featProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"category": [
+						"FS",
+						"FS:P"
+					],
+					"progression": {
+						"2": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"heavy",
+					"shield"
+				],
+				"weapons": [
+					"简易",
+					"军用"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"运动",
+								"洞悉",
+								"威吓",
+								"医药",
+								"游说",
+								"宗教"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"entries": [
+					"{@i 选择A或B：} (A) {@item 链甲|XPHB}, {@item 护盾术|XPHB}, {@item 长剑|XPHB}, 6 {@item 标枪|XPHB|标枪}, {@item 圣徽|XPHB}, {@item 祭司套组|XPHB}, 和9金币；或 (B) 150金币。"
+				],
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "链甲|xphb"
+							},
+							{
+								"item": "护盾术|xphb"
+							},
+							{
+								"item": "长剑|xphb"
+							},
+							{
+								"item": "标枪|xphb",
+								"quantity": 6
+							},
+							{
+								"item": "圣徽|xphb"
+							},
+							{
+								"item": "祭司套组|xphb"
+							},
+							{
+								"value": 900
+							}
+						],
+						"B": [
+							{
+								"value": 15000
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium",
+						"shield"
+					],
+					"weapons": [
+						"军用"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"引导神力",
+						"准备法术"
+					],
+					"rows": [
+						[
+							0,
+							2
+						],
+						[
+							0,
+							3
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							5
+						],
+						[
+							2,
+							6
+						],
+						[
+							2,
+							6
+						],
+						[
+							2,
+							7
+						],
+						[
+							2,
+							7
+						],
+						[
+							2,
+							9
+						],
+						[
+							2,
+							9
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							12
+						],
+						[
+							3,
+							12
+						],
+						[
+							3,
+							14
+						],
+						[
+							3,
+							14
+						],
+						[
+							3,
+							15
+						],
+						[
+							3,
+							15
+						]
+					]
+				},
+				{
+					"title": "每环法术位",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=圣武士}",
+						"{@filter 2nd|spells|level=2|class=圣武士}",
+						"{@filter 3rd|spells|level=3|class=圣武士}",
+						"{@filter 4th|spells|level=4|class=圣武士}",
+						"{@filter 5th|spells|level=5|class=圣武士}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"圣疗|圣武士|XPHB|1",
+				"施法|圣武士|XPHB|1",
+				"武器精通|圣武士|XPHB|1",
+				"战斗风格|圣武士|XPHB|2",
+				"神力打击|圣武士|XPHB|2",
+				"引导神力|圣武士|XPHB|3",
+				{
+					"classFeature": "圣武士子职业|圣武士|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|圣武士|XPHB|4",
+				"额外攻击|圣武士|XPHB|5",
+				"忠诚坐骑|圣武士|XPHB|5",
+				"守护灵光|圣武士|XPHB|6",
+				{
+					"classFeature": "子职特性|圣武士|XPHB|7",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|圣武士|XPHB|8",
+				"驱逐仇敌|圣武士|XPHB|9",
+				"勇气灵光|圣武士|XPHB|10",
+				"你的武器攻击附加光辉能量，对命中的敌人造成额外的光辉伤害。|圣武士|XPHB|11",
+				"属性值提升|圣武士|XPHB|12",
+				"恢复触摸|圣武士|XPHB|14",
+				{
+					"classFeature": "子职特性|圣武士|XPHB|15",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|圣武士|XPHB|16",
+				"灵光扩展|圣武士|XPHB|18",
+				"传奇恩惠|圣武士|XPHB|19",
+				{
+					"classFeature": "子职特性|圣武士|XPHB|20",
+					"gainSubclassFeature": true
+				}
+			],
+			"subclassTitle": "圣武士子职业",
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -334,6 +744,9 @@
 			"classSource": "PHB",
 			"page": 85,
 			"srd": true,
+			"reprintedAs": [
+				"奉献|圣武士|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -375,6 +788,9 @@
 			"className": "圣武士",
 			"classSource": "PHB",
 			"page": 86,
+			"reprintedAs": [
+				"古贤|圣武士|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -416,6 +832,9 @@
 			"className": "圣武士",
 			"classSource": "PHB",
 			"page": 87,
+			"reprintedAs": [
+				"复仇|圣武士|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -629,6 +1048,9 @@
 					"page": 29
 				}
 			],
+			"reprintedAs": [
+				"荣耀|圣武士|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"prepared": {
@@ -747,6 +1169,174 @@
 				"神话浪客|圣武士|PHB|远洋|TDCSR|20"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "奉献之誓",
+			"ENG_name": "Oath of Devotion",
+			"shortName": "奉献",
+			"source": "XPHB",
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"page": 113,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"防护善恶|xphb",
+							"虔诚护盾|xphb"
+						],
+						"5": [
+							"援助术|xphb",
+							"诚实之域|xphb"
+						],
+						"9": [
+							"希望信标|xphb",
+							"解除魔法|xphb"
+						],
+						"13": [
+							"行动自如|xphb",
+							"信仰守卫|xphb"
+						],
+						"17": [
+							"通神术|xphb",
+							"焰击术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"奉献之誓|圣武士|XPHB|奉献|XPHB|3",
+				"奉献灵光|圣武士|XPHB|奉献|XPHB|7",
+				"防护打击|圣武士|XPHB|奉献|XPHB|15",
+				"至圣光轮|圣武士|XPHB|奉献|XPHB|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "荣耀之誓",
+			"ENG_name": "Oath of Glory",
+			"shortName": "荣耀",
+			"source": "XPHB",
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"page": 114,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"光导箭|xphb",
+							"英雄气概|xphb"
+						],
+						"5": [
+							"强化属性|xphb",
+							"魔化武器|xphb"
+						],
+						"9": [
+							"加速术|xphb",
+							"防护能量伤害|xphb"
+						],
+						"13": [
+							"强迫术|xphb",
+							"行动自如|xphb"
+						],
+						"17": [
+							"通晓传奇|xphb",
+							"尤兰德的高贵气质|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"荣耀之誓|圣武士|XPHB|荣耀|XPHB|3",
+				"你的移动速度增加10英尺。此外，每当一个盟友在该回合第一次进入你的防护灵光范围内或在其回合开始时位于该范围内，该盟友的移动速度也会增加10英尺，直到他们下一个回合结束。|圣武士|XPHB|荣耀|XPHB|7",
+				"辉煌防御|圣武士|XPHB|荣耀|XPHB|15",
+				"现世传说|圣武士|XPHB|荣耀|XPHB|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "古贤之誓",
+			"ENG_name": "Oath of the Ancients",
+			"shortName": "古贤",
+			"source": "XPHB",
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"page": 115,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"诱捕打击|xphb",
+							"动物交谈|xphb"
+						],
+						"5": [
+							"迷踪步|xphb",
+							"月华之光|xphb"
+						],
+						"9": [
+							"植物滋长|xphb",
+							"防护能量伤害|xphb"
+						],
+						"13": [
+							"冰风暴|xphb",
+							"石肤术|xphb"
+						],
+						"17": [
+							"问道自然|xphb",
+							"树跃术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"古贤之誓|圣武士|XPHB|古贤|XPHB|3",
+				"守御灵光|圣武士|XPHB|古贤|XPHB|7",
+				"不灭哨卫|圣武士|XPHB|古贤|XPHB|15",
+				"上古斗士|圣武士|XPHB|古贤|XPHB|20"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "复仇之誓",
+			"ENG_name": "Oath of Vengeance",
+			"shortName": "复仇",
+			"source": "XPHB",
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"page": 116,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"灾祸术|xphb",
+							"猎人印记|xphb"
+						],
+						"5": [
+							"人类定身术|xphb",
+							"迷踪步|xphb"
+						],
+						"9": [
+							"加速术|xphb",
+							"防护能量伤害|xphb"
+						],
+						"13": [
+							"放逐术|xphb",
+							"任意门|xphb"
+						],
+						"17": [
+							"怪物定身术|xphb",
+							"探知|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"复仇之誓|圣武士|XPHB|复仇|XPHB|3",
+				"坚韧复仇|圣武士|XPHB|复仇|XPHB|7",
+				"复仇之魂|圣武士|XPHB|复仇|XPHB|15",
+				"复仇天使|圣武士|XPHB|复仇|XPHB|20"
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -760,7 +1350,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"强大的邪恶存在于你有如带毒的香气，而强大的善良光环于你则如仙乐般悠扬。你可以使用一个动作扩展你的意识，以侦测此类势力。直到你下回合结束前，你可以对身边60尺范围内进行感测，任何未对你处在全身掩护状态的天界生物、邪魔或不死生物都将被你定位。你感应到范围内生物的种类（天界生物、邪魔、不死生物），不过并不能精确指明（比如\"吸血鬼伯爵施特拉德·冯·扎洛维奇Vampire Count Strahd von Zarovich\"）。在同样的范围内，你也可以侦测任何受到{@spell 圣居}一类的法术祝福或亵渎的地点或物件。",
+				"强烈的邪恶在你感知中如同恶臭，而强大的善良则如同天堂音乐在你耳中回响。你可以采取行动开启你的感知来探测这些力量。直到你的下一个回合结束，你知道任何60英尺范围内的天界生物、恶魔或不死生物的位置，前提是它们不在{@quickref 掩护||3||全身掩护}后面。你知道你感知到的生物的类型（天界、恶魔或不死生物），但不知道它的身份（例如吸血鬼伯爵斯特拉德·冯·扎罗维奇）。在相同的半径内，你也能感知到任何被祝福或亵渎的地方或物品，就像使用{@spell 圣居}法术一样。",
 				"该特性的可用次数等于1＋你的魅力调整值。而已消耗的特性使用次数，则可以通过完成一次长休进行恢复。"
 			]
 		},
@@ -1185,6 +1775,385 @@
 			"level": 20,
 			"entries": [
 				"在20级时获得所选圣誓的相应特性。"
+			]
+		},
+		{
+			"name": "圣疗",
+			"ENG_name": "Lay on Hands",
+			"source": "XPHB",
+			"page": 109,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你的祝福之触可以治愈伤口。你拥有一个治疗力量池，当你完成一个{@variantrule 长休|XPHB}时会重新补充。借助这个力量池，你可以总共恢复等于你圣武士等级五倍的{@variantrule 生命值|XPHB}。",
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以触摸一个生物（可以是你自己）并从治疗力量池中汲取力量，恢复该生物一定数量的{@variantrule 生命值|XPHB}，数量最多为池中剩余的最大值。",
+				"你也可以消耗5点治疗力量池中的{@variantrule 生命值|XPHB}来移除生物的{@condition 中毒|XPHB}状态；这些点数不会同时恢复生物的{@variantrule 生命值|XPHB}。"
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "XPHB",
+			"page": 109,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你已经学会了通过祈祷和冥想来施放法术。参见{@book 第七章|XPHB|7}了解施法规则。以下信息详细说明了你如何使用这些规则来施放圣武士法术，这些法术在职业描述后面的{@filter 圣武士法术列表|spells|class=圣武士}中有所展示。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "施法能力",
+							"ENG_name": "Spell Slots",
+							"entries": [
+								"圣武士特性表显示了你有多少法术位可以用来施放1级及以上的法术。当你完成一个{@variantrule 长休|XPHB}时，你会恢复所有已消耗的法术位。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "准备的1级以上法术",
+							"ENG_name": "Prepared Spells of Level 1+",
+							"entries": [
+								"你准备了这个特性允许你施放的1级及以上法术列表。开始时，选择两个1级圣武士法术。推荐选择英勇和灼热打击。",
+								"随着你获得圣武士等级，你的法术列表上的法术数量会增加，如圣武士特性表中的准备法术列所示。每当这个数量增加时，选择额外的圣武士法术，直到你的法术列表上的法术数量与圣武士特性表中的数字相匹配。所选法术必须是你有法术位的等级。例如，如果你是5级圣武士，你的准备法术列表可以包括六个1级或2级的圣武士法术，以任何组合。",
+								"如果其他圣武士特性赋予你始终准备好的法术，这些法术不计入你使用此特性可以准备的法术数量，但这些法术在其他方面对你来说仍然算作圣武士法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "更换你的准备法术",
+							"ENG_name": "Changing Your Prepared Spells",
+							"entries": [
+								"每当你完成一个{@variantrule 长休|XPHB}时，你可以用另一个你有法术位的圣武士法术替换你法术列表中的一个法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法属性",
+							"ENG_name": "Spellcasting Ability",
+							"entries": [
+								"魅力是你的圣武士法术的施法能力。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "法器",
+							"ENG_name": "Spellcasting Focus",
+							"entries": [
+								"你可以使用一个{@item 圣徽|XPHB}作为你的圣武士法术的{@variantrule 法器|XPHB}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "武器精通",
+			"ENG_name": "Weapon Mastery",
+			"source": "XPHB",
+			"page": 110,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你在武器训练中使你能够使用你熟练的两种武器的精通属性，例如{@item 长剑|XPHB|长剑}和{@item 标枪|XPHB|标枪}。",
+				"每当你完成一个{@variantrule 长休|XPHB}时，你可以改变你选择的武器种类。例如，你可以切换到使用{@item 戟|XPHB|长戟}和{@item 链枷|XPHB|链枷}的精通属性。"
+			]
+		},
+		{
+			"name": "战斗风格",
+			"ENG_name": "Fighting Style",
+			"source": "XPHB",
+			"page": 110,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你获得了一个你选择的{@filter 战斗风格专长|专长|category=FS}。你可以选择下面的选项，而不是选择那些特性之一。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refFeat",
+							"feat": "受祝福的勇士|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "神力打击",
+			"ENG_name": "Paladin's Smite",
+			"source": "XPHB",
+			"page": 110,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你始终准备好了{@spell 至圣斩|XPHB}法术。此外，你可以不消耗法术位来施放它，但你必须在再次以这种方式施放它之前完成一个{@variantrule 长休|XPHB}。"
+			]
+		},
+		{
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
+			"source": "XPHB",
+			"page": 110,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你可以直接从外层位面引导神力，用它来激发魔法效果。你从以下一种效果开始：神圣感应，其描述如下。其他圣武士特性提供了额外的神力通道效果选项。每次你使用这个职业的神力通道时，你选择从这个职业中创造哪种效果。",
+				"你可以使用这个职业的神力通道两次。当你完成一个{@variantrule 短休|XPHB}时，你会恢复一个已使用的使用次数，当你完成一个{@variantrule 长休|XPHB}时，你会恢复所有已使用的使用次数。当你达到圣武士等级11时，你会额外获得一次使用次数。",
+				"如果神术能量效果需要进行一次豁免投掷，其难度等级等于本职业法术施放特性中的法术豁免DC。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refClassFeature",
+							"classFeature": "神圣感知|圣武士|XPHB|3|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "神圣感知",
+			"ENG_name": "Divine Sense",
+			"source": "XPHB",
+			"page": 110,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以开启你的感知来探测天界生物、邪魔和不死生物。在接下来的10分钟或直到你获得{@condition 失能|XPHB}状态之前，你知道任何这些类型的生物在你60英尺范围内的位置，以及它的生物类型。在同一半径内，你还能探测到任何被神圣化或亵渎的地方或物体，就像使用了{@spell 圣居|XPHB}法术一样。"
+			]
+		},
+		{
+			"name": "圣武士子职业",
+			"ENG_name": "Paladin Subclass",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你获得了一个你选择的圣武士子职业。子职业是一种专业化，它在特定的圣武士等级时赋予你特性。在你的职业生涯中，你将获得你的子职业的每个特性，这些特性的等级不高于你的圣武士等级。",
+				{
+					"type": "inset",
+					"name": "背弃誓言",
+					"ENG_name": "Breaking Your Oath",
+					"entries": [
+						"圣武士努力保持最高的行为标准，但即使是最专注的圣武士也可能犯错。有时圣武士会违反他们的誓言。",
+						"一个违背誓言的圣武士通常会寻求宽恕，通过整夜的守夜作为悔改的象征或进行禁食。在宽恕仪式之后，圣武士重新开始。",
+						"如果你的圣武士毫无悔意地违反了他们的誓言，请与你的地下城主（DM）交谈。你的圣武士可能需要选择一个更合适的子职业，甚至放弃这个职业并选择另一个职业。"
+					]
+				}
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性或另一个你符合资格的{@5etools 专长|feats.html}。你在圣武士等级8、12和16时再次获得此特性。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"每当你在你回合中采取{@action 攻击|XPHB}动作时，你可以进行两次攻击而不是一次。"
+			]
+		},
+		{
+			"name": "忠诚坐骑",
+			"ENG_name": "Faithful Steed",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"你可以召唤一个超自然的坐骑。你始终准备好了{@spell 寻获坐骑|XPHB}法术。",
+				"你也可以不消耗法术位来施放这个法术一次，当你完成一个{@variantrule 长休|XPHB}时，你会恢复这样做的能力。"
+			]
+		},
+		{
+			"name": "守护灵光",
+			"ENG_name": "Aura of Protection",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"你散发出一个保护性的无形灵光，这是一个源自你的10英尺{@variantrule 辐射 [区域效果]|XPHB|辐射}。当你处于{@condition 失能|XPHB}状态时，灵光处于非激活状态。",
+				"你和你的盟友在灵光范围内获得等于你魅力调整值的豁免检定加值（最小加值为+1）。",
+				"如果有另一个圣武士在场，一个生物一次只能从一种防护灵光中获益；当处于多个灵光范围内时，生物选择哪一个灵光。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"你从你的圣武士子职业中获得了一个特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "驱逐仇敌",
+			"ENG_name": "Abjure Foes",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 9,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你可以消耗一次这个职业的神力通道使用次数来用敬畏压倒敌人。当你展示你的{@item 圣徽|XPHB}或武器时，你可以选择你60英尺范围内，你能看到的等于你魅力调整值数量的生物（最少一个生物）。每个目标必须成功通过一次智慧豁免检定，否则将获得{@condition 恐慌|XPHB}状态，持续1分钟或直到它受到任何伤害。以这种方式处于{@condition 恐慌|XPHB}状态的目标在其回合内只能做以下一件事：移动、采取动作或采取{@variantrule 附赠动作|XPHB}。"
+			]
+		},
+		{
+			"name": "勇气灵光",
+			"ENG_name": "Aura of Courage",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"在你防护灵光范围内，你和你的盟友对{@condition 恐慌|XPHB}状态具有{@condition 恐慌|XPHB}。如果处于{@condition 恐慌|XPHB}状态的盟友进入灵光范围，那么在该范围内该状态对该盟友无影响。"
+			]
+		},
+		{
+			"name": "你的武器攻击附加光辉能量，对命中的敌人造成额外的光辉伤害。",
+			"ENG_name": "Radiant Strikes",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"你的攻击现在携带超自然力量。当你使用近战武器或{@variantrule 徒手打击|XPHB}的攻击检定命中目标时，目标会额外受到{@damage 1d8}点光辉伤害。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "恢复触摸",
+			"ENG_name": "Restoring Touch",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"当你对一个生物使用援手法术时，你还可以移除生物的一个或多个以下状态：{@condition 目盲|XPHB}、{@condition 魅惑|XPHB}、{@condition 耳聋|XPHB}、{@condition 恐慌|XPHB}、{@condition 麻痹|XPHB}或{@condition 震慑|XPHB}。你必须从援手法术的治疗池中消耗5个{@variantrule 生命值|XPHB}来移除每一个这样的状态；这些点数不会同时恢复生物的{@variantrule 生命值|XPHB}。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"你从你的圣武士子职业中获得了一个特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "灵光扩展",
+			"ENG_name": "Aura Expansion",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"你的防护灵光现在是一个30英尺的{@variantrule 辐射 [区域效果]|XPHB|辐射}。"
+			]
+		},
+		{
+			"name": "传奇恩惠",
+			"ENG_name": "Epic Boon",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"你获得了一个你选择的{@filter 史诗级恩惠特性|专长|category=EB}或另一个你符合资格的{@5etools 专长|feats.html}。推荐选择{@feat 真实视觉之恩惠|XPHB}。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 111,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"你从你的圣武士子职业中获得了一个特性。"
 			]
 		}
 	],
@@ -3412,7 +4381,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"从7级起，只要你未处于 {@condition 失能}，你会弥漫出一阵浩荡的灵光。灵光以你为中心的向周围扩散10尺，但无法穿透全掩护。",
+				"从7级开始，当你没有处于{@condition 失能}状态时，你会持续散发出一种威胁性的气场。这个气场从你身上向每个方向延伸10英尺，但不会穿过{@quickref 掩护||3||全身掩护}。",
 				"若一个生物对你感到{@condition 恐慌}，且其处于此灵光内时，其速度降为0。若它在灵光内开始其回合，它还将受到等同于你圣武士等级一半的心灵伤害。",
 				"第18级起，该灵光的作用范围扩展至30尺。"
 			]
@@ -3712,6 +4681,694 @@
 					]
 				},
 				"当你对某一生物发动了攻击、施展了法术、或以此特性以外的方式对其造成了伤害，那么此特性将对该生物无效。这一无效将持续到你完成一次长休前，完成长休后，此特性将能再次对那些生物生效"
+			]
+		},
+		{
+			"name": "自然之怒",
+			"ENG_name": "Nature's Wrath",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你可以消耗一次你的神力通道使用次数来召唤幽灵藤蔓围绕附近的生物。在你自己15英尺范围内，你选择的每个生物必须成功通过一次力量豁免检定，否则将获得{@condition 束缚|XPHB}状态，持续1分钟。处于{@condition 束缚|XPHB}状态的生物在自己的每个回合结束时重复检定，成功则结束自身的此效果。"
+			]
+		},
+		{
+			"name": "古贤之誓",
+			"ENG_name": "Oath of the Ancients",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 维护世界上的生命与光明}",
+				"古代誓言与最初的精灵一样古老。发誓遵守这一誓言的圣武士珍视光明；他们对世界上美丽和赋予生命的事物的热爱超过了对荣誉、勇气和正义原则的尊重。他们经常在盔甲和衣物上装饰生长物的图案\u2014\u2014叶子、鹿角或花朵\u2014\u2014以反映他们对保护生命和光明的承诺。",
+				"这些圣武士共享以下信条：",
+				{
+					"type": "list",
+					"items": [
+						"点燃希望之光。",
+						"庇护生命。",
+						"享受艺术和欢笑。"
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "古贤圣誓法术|圣武士|XPHB|古贤|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "自然之怒|圣武士|XPHB|古贤|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "古贤圣誓法术",
+			"ENG_name": "Oath of the Ancients Spells",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你誓言的魔法确保你始终准备好某些法术；当你达到古代誓言法术表中指定的圣武士等级时，你将始终准备好列表中的法术。",
+				{
+					"type": "table",
+					"caption": "古贤圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 诱捕打击|XPHB}, {@spell 动物交谈|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 迷踪步|XPHB}, {@spell 月华之光|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 植物滋长|XPHB}, {@spell 防护能量伤害|XPHB}"
+						],
+						[
+							"13th",
+							"{@spell 冰风暴|XPHB}, {@spell 石肤术|XPHB}"
+						],
+						[
+							"17th",
+							"{@spell 问道自然|XPHB}, {@spell 树跃术|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "守御灵光",
+			"ENG_name": "Aura of Warding",
+			"source": "XPHB",
+			"page": 116,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"古老魔法沉重地笼罩着你，形成了一个诡异的守护，减弱来自物质位面之外的能量；你和你的盟友在你的保护光环内对死灵、心灵和辐射伤害具有{@variantrule 提升抗性|XPHB}。"
+			]
+		},
+		{
+			"name": "不灭哨卫",
+			"ENG_name": "Undying Sentinel",
+			"source": "XPHB",
+			"page": 116,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"当你的生命值降至0点而不是直接死亡时，你可以将生命值降至1点，并恢复等于你圣武士等级三倍的生命值。一旦你使用这个特性，就不能再次使用，直到你完成一个{@variantrule 长休|XPHB}。",
+				"此外，你不能被魔法老化，你的外貌老化也会停止。"
+			]
+		},
+		{
+			"name": "上古斗士",
+			"ENG_name": "Elder Champion",
+			"source": "XPHB",
+			"page": 116,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "古贤",
+			"subclassSource": "XPHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以将你的保护光环注入原始力量，获得以下好处，持续1分钟或直到你结束它们（无需动作）。一旦你使用这个特性，你就不能再次使用它，直到你完成一个{@variantrule 长休|XPHB}。你也可以通过消耗一个5级法术位（无需动作）来恢复使用它。",
+				{
+					"type": "entries",
+					"name": "削弱反抗",
+					"ENG_name": "Diminish Defiance",
+					"entries": [
+						"光环内的敌人在对你的法术和神力通道选项的豁免投掷中具有{@variantrule 劣势|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "再生",
+					"ENG_name": "Regeneration",
+					"entries": [
+						"在每个你的回合开始时，你恢复10点{@variantrule 生命值|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "迅捷法术",
+					"ENG_name": "Swift Spells",
+					"entries": [
+						"每当你施放一个施法时间为动作的法术时，你可以使用一个{@variantrule 附赠动作|XPHB}来施放它。"
+					]
+				}
+			]
+		},
+		{
+			"name": "奉献之誓",
+			"ENG_name": "Oath of Devotion",
+			"source": "XPHB",
+			"page": 113,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 维护正义与秩序的理念}",
+				"《奉献誓言》将圣武士束缚于正义与秩序的理念。这些圣武士符合身披闪耀盔甲的骑士典型形象。他们以最高的行为标准要求自己，而有些人\u2014\u2014无论好坏\u2014\u2014也以同样的标准要求世界。",
+				"许多宣誓此誓言的人致力于法律与善良之神，并以他们的神的信条作为个人奉献的衡量标准。其他人则以天使为理想，并将天使翅膀的形象融入他们的头盔或纹章中。",
+				"这些圣武士共享以下信条：",
+				{
+					"type": "list",
+					"items": [
+						"让你的话语成为你的承诺。",
+						"保护弱者，永不畏惧行动。",
+						"让你的荣誉行为成为榜样。"
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奉献圣誓法术|圣武士|XPHB|奉献|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "神圣武器|圣武士|XPHB|奉献|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "奉献圣誓法术",
+			"ENG_name": "Oath of Devotion Spells",
+			"source": "XPHB",
+			"page": 113,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你的誓言魔法确保你始终准备好某些法术；当你达到《奉献誓言法术表》中指定的圣武士等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "奉献圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 防护善恶|XPHB}, {@spell 虔诚护盾|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 援助术|XPHB}, {@spell 诚实之域|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 希望信标|XPHB}, {@spell 解除魔法|XPHB}"
+						],
+						[
+							"13th",
+							"{@spell 行动自如|XPHB}, {@spell 信仰守卫|XPHB}"
+						],
+						[
+							"17th",
+							"{@spell 通神术|XPHB}, {@spell 焰击术|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "神圣武器",
+			"ENG_name": "Sacred Weapon",
+			"source": "XPHB",
+			"page": 113,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"当你采取{@action 攻击|XPHB}动作时，你可以消耗一次你的神力通道使用次数，为你持有的一件近战武器注入正能量。在10分钟或直到你再次使用这个特性的时间里，你可以将你的魅力修正值加到你用该武器进行的攻击检定上（最小加值为+1），并且每次你用它命中时，你可以让它造成其正常的伤害类型或辐射伤害。",
+				"该武器还会在20英尺半径内发出{@variantrule 明亮光照|XPHB}，并在该范围之外的20英尺内发出{@variantrule 微光光照|XPHB}。",
+				"你可以提前结束这个效果（无需动作）。如果你没有携带这个武器，这个效果也会结束。"
+			]
+		},
+		{
+			"name": "奉献灵光",
+			"ENG_name": "Aura of Devotion",
+			"source": "XPHB",
+			"page": 114,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"你和你的盟友在你的保护光环内对{@condition 魅惑|XPHB}状态具有{@condition 魅惑|XPHB}。如果一个处于{@condition 魅惑|XPHB}状态的盟友进入光环，那么在光环内该状态对那个盟友没有效果。"
+			]
+		},
+		{
+			"name": "防护打击",
+			"ENG_name": "Smite of Protection",
+			"source": "XPHB",
+			"page": 114,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"你的魔法打击现在散发出保护性能量。每当你施放{@spell 至圣斩|XPHB}时，你和你的盟友在你的保护光环内具有{@variantrule 掩护|XPHB|半身掩护}。光环在你下一个回合开始前都具有这个好处。"
+			]
+		},
+		{
+			"name": "至圣光轮",
+			"ENG_name": "Holy Nimbus",
+			"source": "XPHB",
+			"page": 114,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "奉献",
+			"subclassSource": "XPHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以将你的保护光环注入神圣力量，获得以下好处，持续10分钟或直到你结束它们（无需动作）。一旦你使用这个特性，你就不能再次使用它，直到你完成一个{@variantrule 长休|XPHB}。你也可以通过消耗一个5级法术位（无需动作）来恢复使用它。",
+				{
+					"type": "entries",
+					"name": "神圣护佑",
+					"ENG_name": "Holy Ward",
+					"entries": [
+						"你在任何被恶魔或亡灵强迫进行的豁免投掷中具有{@variantrule 优势|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "光耀伤害",
+					"ENG_name": "Radiant Damage",
+					"entries": [
+						"每当一个敌人在光环内开始它的回合时，该生物会受到等于你的魅力修正值加上你的{@variantrule 熟练项|XPHB}的辐射伤害。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "阳光",
+					"ENG_name": "Sunlight",
+					"entries": [
+						"这个光环充满了阳光般的{@variantrule 明亮光照|XPHB}。"
+					]
+				}
+			]
+		},
+		{
+			"name": "鼓舞一击",
+			"ENG_name": "Inspiring Smite",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"在你施放{@spell 至圣斩|XPHB}之后，你可以消耗一次你的神力通道使用次数，并将{@variantrule 临时生命值|XPHB}分配给30英尺内的你选择的生物，包括你自己。总共的{@variantrule 临时生命值|XPHB}数量等于{@dice 2d8}加上你的圣武士等级，你可以随意分配给选定的生物。"
+			]
+		},
+		{
+			"name": "荣耀之誓",
+			"ENG_name": "Oath of Glory",
+			"source": "XPHB",
+			"page": 114,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 努力达到英雄主义的高峰}",
+				"选择荣耀誓言的圣武士相信，他们和他们的同伴注定要通过英雄行为来实现荣耀。他们勤奋训练，并鼓励他们的同伴，以便在命运召唤时，他们都已经准备好。",
+				"这些圣武士共享以下信条：",
+				{
+					"type": "list",
+					"items": [
+						"努力以你的事迹为人所知。",
+						"勇敢面对困难。",
+						"激励他人追求荣耀。"
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "荣耀之誓法术|圣武士|XPHB|荣耀|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "鼓舞一击|圣武士|XPHB|荣耀|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "绝伦健将|圣武士|XPHB|荣耀|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "荣耀之誓法术",
+			"ENG_name": "Oath of Glory Spells",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你的誓言魔法确保你始终准备好某些法术；当你达到《荣耀誓言法术表》中指定的圣武士等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "荣耀之誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 光导箭|XPHB}, {@spell 英雄气概|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 强化属性|XPHB}, {@spell 魔化武器|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 加速术|XPHB}, {@spell 防护能量伤害|XPHB}"
+						],
+						[
+							"13th",
+							"{@spell 强迫术|XPHB}, {@spell 行动自如|XPHB}"
+						],
+						[
+							"17th",
+							"{@spell 通晓传奇|XPHB}, {@spell 尤兰德的高贵气质|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "绝伦健将",
+			"ENG_name": "Peerless Athlete",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以消耗一次你的神力通道使用次数来增强你的运动能力。在1小时内，你在力量（{@skill 特技|XPHB}）和敏捷（{@skill 运动|XPHB}）检定中具有{@skill 特技|XPHB}，你的跳远和跳高的距离增加10英尺（这额外的距离正常消耗移动力）。"
+			]
+		},
+		{
+			"name": "你的移动速度增加10英尺。此外，每当一个盟友在该回合第一次进入你的防护灵光范围内或在其回合开始时位于该范围内，该盟友的移动速度也会增加10英尺，直到他们下一个回合结束。",
+			"ENG_name": "Aura of Alacricity",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"此外，每当一个盟友在回合中首次进入你的保护光环，或者在光环中开始他们的回合时，该盟友的{@variantrule 速度|XPHB}增加10英尺，直到他们下一个回合结束。"
+			]
+		},
+		{
+			"name": "辉煌防御",
+			"ENG_name": "Glorious Defense",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"你可以将防御转化为突然的攻击。当你或你能看到的10英尺内的另一个生物被攻击检定命中时，你可以使用{@variantrule 反应|XPHB}来为目标对抗该次攻击的AC提供加值，可能使其未命中。这个加值等于你的魅力修正值（最少为+1）。如果攻击未命中，如果攻击者在你的武器范围内，你可以作为这个{@variantrule 反应|XPHB}的一部分对攻击者进行一次武器攻击。",
+				"你可以使用这个特性的次数等于你的魅力修正值（最少一次），当你完成一个{@variantrule 长休|XPHB}时，你恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "现世传说",
+			"ENG_name": "Living Legend",
+			"source": "XPHB",
+			"page": 115,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "荣耀",
+			"subclassSource": "XPHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"你可以用关于你伟大事迹的传说\u2014\u2014无论是真实的还是夸张的\u2014\u2014来激发自己。作为一个{@variantrule 附赠动作|XPHB}，你获得以下好处，持续10分钟。一旦你使用这个特性，你就不能再次使用它，直到你完成一个{@variantrule 长休|XPHB}。你也可以通过消耗一个5级法术位（无需动作）来恢复使用它。",
+				{
+					"type": "entries",
+					"name": "魅力的",
+					"ENG_name": "Charismatic",
+					"entries": [
+						"你被赋予了超凡的存在，所有魅力检定中具有{@variantrule 优势|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "豁免投掷重投",
+					"ENG_name": "Saving Throw Reroll",
+					"entries": [
+						"如果你未能通过一次豁免投掷，你可以使用{@variantrule 反应|XPHB}来重投。你必须使用这次新的投掷结果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "无误打击",
+					"ENG_name": "Unerring Strike",
+					"entries": [
+						"在你的每个回合中，每当你使用武器进行攻击检定并失败时，你可以使这次攻击命中。"
+					]
+				}
+			]
+		},
+		{
+			"name": "复仇之誓",
+			"ENG_name": "Oath of Vengeance",
+			"source": "XPHB",
+			"page": 116,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 不惜一切代价惩罚作恶者}",
+				"《复仇誓言》是对那些犯下严重邪恶行为的人进行惩罚的庄严承诺。当邪恶的军队屠杀无助的村民时，当一个暴君违抗神的意志时，当一个盗贼公会变得过于暴力时，当一条龙在乡间肆虐时\u2014\u2014在这样的时候，圣武士会站出来并发誓要通过《复仇誓言》来纠正错误。",
+				"这些圣武士共享以下信条：",
+				{
+					"type": "list",
+					"items": [
+						"对邪恶毫不留情。",
+						"打击不公正及其原因。",
+						"帮助那些受到不公正伤害的人。"
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "复仇圣誓法术|圣武士|XPHB|复仇|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "仇敌誓言|圣武士|XPHB|复仇|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "复仇圣誓法术",
+			"ENG_name": "Oath of Vengeance Spells",
+			"source": "XPHB",
+			"page": 116,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你的誓言魔法确保你始终准备好某些法术；当你达到《复仇誓言法术表》中指定的圣武士等级时，你将始终准备好列出的法术。",
+				{
+					"type": "table",
+					"caption": "复仇圣誓法术",
+					"colLabels": [
+						"圣武士等级",
+						"spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell 灾祸术|XPHB}, {@spell 猎人印记|XPHB}"
+						],
+						[
+							"5th",
+							"{@spell 人类定身术|XPHB}, {@spell 迷踪步|XPHB}"
+						],
+						[
+							"9th",
+							"{@spell 加速术|XPHB}, {@spell 防护能量伤害|XPHB}"
+						],
+						[
+							"13th",
+							"{@spell 放逐术|XPHB}, {@spell 任意门|XPHB}"
+						],
+						[
+							"17th",
+							"{@spell 怪物定身术|XPHB}, {@spell 探知|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "仇敌誓言",
+			"ENG_name": "Vow of Enmity",
+			"source": "XPHB",
+			"page": 117,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "引导神力",
+				"ENG_name": "Channel Divinity"
+			},
+			"entries": [
+				"当你采取{@action 攻击|XPHB}动作时，你可以消耗一次你的神力通道使用次数，对30英尺内你能看到的一个生物发出敌意誓言。在接下来的1分钟内或直到你再次使用这个特性，你对那个生物的攻击检定具有{@variantrule 优势|XPHB}。",
+				"如果生物在誓言结束前降至0{@variantrule 生命值|XPHB}，你可以将誓言转移到30英尺内的另一个生物上（无需动作）。"
+			]
+		},
+		{
+			"name": "坚韧复仇",
+			"ENG_name": "Relentless Avenger",
+			"source": "XPHB",
+			"page": 117,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"你的超自然专注帮助你封锁敌人的退路。当你通过{@action 借机攻击|XPHB|借机攻击}命中一个生物时，你可以将该生物的{@variantrule 反应|XPHB}降低至0，直到当前回合结束。然后，你可以在同一个{@variantrule 反应|XPHB}中移动至多你{@variantrule 反应|XPHB}的一半。这次移动不会引发{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
+			"name": "复仇之魂",
+			"ENG_name": "Soul of Vengeance",
+			"source": "XPHB",
+			"page": 117,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"当受到你《敌意誓言》效果影响的生物在攻击检定中命中或未命中后，你可以使用{@variantrule 反应|XPHB}对那个生物进行一次近战攻击，如果它在你的攻击范围内。"
+			]
+		},
+		{
+			"name": "复仇天使",
+			"ENG_name": "Avenging Angel",
+			"source": "XPHB",
+			"page": 117,
+			"className": "圣武士",
+			"classSource": "XPHB",
+			"subclassShortName": "复仇",
+			"subclassSource": "XPHB",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你获得以下好处，持续10分钟或直到你结束它们（无需动作）。一旦你使用这个特性，你就不能再次使用它，直到你完成一个{@variantrule 长休|XPHB}。你也可以通过消耗一个5级法术位来恢复使用它（无需动作）。",
+				{
+					"type": "entries",
+					"name": "飞行",
+					"ENG_name": "Flight",
+					"entries": [
+						"你的背部长出幽灵般的翅膀，拥有{@variantrule 飞行速度|XPHB}60英尺，并且可以悬停。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "恐怖灵光",
+					"ENG_name": "Frightful Aura",
+					"entries": [
+						"每当一个敌人在你的防护灵光范围内开始其回合时，该生物必须成功通过一次智慧豁免检定，否则将获得{@condition 恐慌|XPHB}状态，持续1分钟或直到它受到任何伤害。对处于{@condition 恐慌|XPHB}状态的生物进行的{@condition 恐慌|XPHB}检定具有{@variantrule 优势|XPHB}。"
+					]
+				}
 			]
 		}
 	]

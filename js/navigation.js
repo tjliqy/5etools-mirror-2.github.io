@@ -46,7 +46,7 @@ class NavBar {
 		this._addElement_li(null, "index.html", "首页", {isRoot: true});
 
 		this._addElement_dropdown(null, NavBar._CAT_RULES);
-		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Rules Glossary");
+		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "规则术语表");
 		this._addElement_li(NavBar._CAT_RULES, "tables.html", "表格");
 		this._addElement_divider(NavBar._CAT_RULES);
 		this._addElement_dropdown(NavBar._CAT_RULES, NavBar._CAT_BOOKS, {isSide: true, page: "books.html"});

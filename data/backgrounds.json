@@ -12,6 +12,9 @@
 			"page": 127,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"侍僧|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"insight": true,
@@ -261,6 +264,138 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "侍僧",
+			"ENG_name": "Acolyte",
+			"source": "XPHB",
+			"page": 178,
+			"freeRules2024": true,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"int",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"int",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"religion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "书本|xphb",
+							"displayName": "祈祷书"
+						},
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "圣徽|xphb"
+						},
+						{
+							"item": "羊皮纸|xphb",
+							"quantity": 10
+						},
+						{
+							"item": "长袍|xphb"
+						},
+						{
+							"value": 800
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "智力，智慧，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 魔法学徒|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 洞悉|XPHB}, {@skill 宗教|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 书法工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 书法工具|XPHB}，{@item 书本|XPHB|祈祷书}，{@item 圣徽|XPHB}，{@item 羊皮纸|XPHB|羊皮纸（10张）}，{@item 法袍|xphb}，8GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "人类学家",
@@ -610,7 +745,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "{@item 制图工具|PHB} 或 {@item 领航工具|PHB}"
+							"entry": "{@item 制图工具|PHB} 或 {@item navigator's tools|PHB}"
 						},
 						{
 							"type": "item",
@@ -859,6 +994,130 @@
 			"hasFluff": true
 		},
 		{
+			"name": "工匠",
+			"ENG_name": "Artisan",
+			"source": "XPHB",
+			"page": 179,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"int"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"int"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"crafter|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"investigation": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"anyArtisansTool": 1
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "工匠工具|xphb"
+						},
+						{
+							"item": "小包|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 3200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，敏捷，智力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 工匠|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 调查|XPHB}, {@skill 游说|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "选择一种工匠工具|XPHB"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 工匠工具|XPHB}（同上），2个{@item 小包|XPHB|口袋}，{@item 旅行者服装|XPHB}，32GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "阿沙里人",
 			"ENG_name": "Ashari",
 			"source": "TDCSR",
@@ -939,7 +1198,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套 {@item 旅行者服装|PHB}、一根雕刻着你部落符号的手杖、一套 {@item 草药工具|PHB}，以及一个装有10 gp的{@item 小包|PHB}"
+							"entry": "一套 {@item 旅行者服装|PHB}、一根雕刻着你部落符号的手杖、一套 {@item herbalism kit|PHB}，以及一个装有10 gp的{@item 小包|PHB}"
 						}
 					]
 				},
@@ -1400,7 +1659,7 @@
 					"ENG_name": "Feature: Echoes of Victory",
 					"type": "entries",
 					"entries": [
-						"你已经在曾经主办你的运动胜利的地区赢得了观众、运动员和教练的钦佩。当你访问离你长大的地方100英里以内的任何居民点时，你有{@chance 50|50%}的机会在那里找到仰慕你、愿意提供信息或临时住所的人。",
+						"你在举办过你过去体育胜利的地区，赢得了观众、运动员和教练的钦佩。当你访问你成长地100英里范围内的任何定居点时，有{@chance 50}的几率你可以在那里找到钦佩你的人，他们愿意提供信息或临时住所。",
 						"在冒险之间，你可能会参加足够维持舒适生活方式的体育活动，如{@book 专业实践|PHB|8|专业实践}第8章\"{@book 玩家手册|PHB}\"中的闲暇活动所述。"
 					],
 					"data": {
@@ -2840,7 +3099,7 @@
 							"type": "item",
 							"name": "工具熟练项",
 							"ENG_name": "Tool Proficiencies",
-							"entry": "{@item 易容工具|PHB}, 一种类型的 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 或者 {@filter 乐器|items|source=PHB|miscellaneous=寻常|type=乐器}"
+							"entry": "{@item 易容工具|PHB}, 一种类型的 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=gaming set} 或者 {@filter 乐器|items|source=PHB|miscellaneous=寻常|type=乐器}"
 						},
 						{
 							"type": "item",
@@ -3147,13 +3406,13 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "{@item 易容工具|PHB}，以及一种类型的{@filter 工匠工具|items|source=PHB|miscellaneous=寻常|type=工匠工具}或{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}"
+							"entry": "{@item 易容工具|PHB}，以及一种类型的{@filter 工匠工具|items|source=PHB|miscellaneous=寻常|type=工匠工具}或{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}"
 						},
 						{
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "{@item 易容工具|PHB}, {@item 普通服装|PHB}, 一个病毒之泪{@item 徽章|PHB}, 由摄政王签署的自由代理令状，一套你熟练的{@filter 工匠工具|items|source=PHB|miscellaneous=寻常|type=工匠工具}或者{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，以及一个装有15金币的{@item 小包|PHB}（服务报酬）。"
+							"entry": "{@item 易容工具|PHB}, {@item 普通服装|PHB}, 一个病毒之泪{@item 徽章|PHB}, 由摄政王签署的自由代理令状，一套你熟练的{@filter 工匠工具|items|source=PHB|miscellaneous=寻常|type=工匠工具}或者{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，以及一个装有15金币的{@item 小包|PHB}（服务报酬）。"
 						}
 					]
 				},
@@ -3444,7 +3703,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}"
 						},
 						{
 							"type": "item",
@@ -4325,6 +4584,9 @@
 			"ENG_name": "Charlatan",
 			"source": "PHB",
 			"page": 128,
+			"reprintedAs": [
+				"骗子|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"deception": true,
@@ -4393,7 +4655,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套 {@item 高档服装|PHB}，一套{@item 易容工具|PHB}，一些你自选的行骗道具（十个装满五颜六色液体的塞口瓶子，一套作弊骰子，一套暗号纸牌，或者一枚捏造的公爵玺戒），以及一个装有15 gp的{@item 小包|PHB}"
+							"entry": "一套 {@item 高档服装|PHB}，一套{@item disguise kit|PHB}，一些你自选的行骗道具（十个装满五颜六色液体的塞口瓶子，一套作弊骰子，一套暗号纸牌，或者一枚捏造的公爵玺戒），以及一个装有15 gp的{@item 小包|PHB}"
 						}
 					]
 				},
@@ -4619,6 +4881,129 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "骗子",
+			"ENG_name": "Charlatan",
+			"source": "XPHB",
+			"page": 180,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"sleight of hand": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "forgery kit|xphb"
+						},
+						{
+							"item": "服装|xphb"
+						},
+						{
+							"item": "高档服装|xphb"
+						},
+						{
+							"value": 1500
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "敏捷，体质，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 熟习|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 欺瞒|XPHB}, {@skill 巧手|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 文书伪造工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 文书伪造工具|XPHB}, {@item 服装|XPHB}, {@item 高档服装|XPHB}, 15GP; 或 (B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "城市守卫",
@@ -4866,7 +5251,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "{@item 易容工具|PHB}, {@item 文书伪造工具|PHB},或{@item 盗贼工具|PHB} （任选其一）"
+							"entry": "{@item 易容工具|PHB}, {@item forgery kit|PHB},或{@item thieves' tools|PHB} （任选其一）"
 						},
 						{
 							"type": "item",
@@ -5055,7 +5440,7 @@
 								],
 								[
 									"5",
-									"我无法使用劣质、临时凑合的{@item 盗贼工具|PHB}。我需要与我的工作有关的一切事物都完美无缺。"
+									"我无法使用劣质、临时凑合的{@item thieves' tools|PHB}。我需要与我的工作有关的一切事物都完美无缺。"
 								],
 								[
 									"6",
@@ -5918,6 +6303,9 @@
 			"source": "PHB",
 			"page": 129,
 			"basicRules": true,
+			"reprintedAs": [
+				"罪犯|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"deception": true,
@@ -5960,7 +6348,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种类型的{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@item 盗贼工具|PHB}"
+							"entry": "一种类型的{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@item thieves' tools|PHB}"
 						},
 						{
 							"type": "item",
@@ -6200,6 +6588,138 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "罪犯",
+			"ENG_name": "Criminal",
+			"source": "XPHB",
+			"page": 180,
+			"freeRules2024": true,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"int"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"int"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"alert|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"sleight of hand": true,
+					"stealth": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"thieves' tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "匕首|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "thieves' tools|xphb"
+						},
+						{
+							"item": "撬棍|xphb"
+						},
+						{
+							"item": "小包|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "敏捷，体质，智力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 警觉|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 巧手|XPHB}, {@skill 隐匿|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 盗贼工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 匕首|XPHB（2把匕首），盗贼工具|XPHB，撬棍|XPHB，口袋|XPHB（2个口袋），旅行者服装|XPHB，16GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "自定义背景",
@@ -7173,7 +7693,7 @@
 								[
 									"3",
 									"黑拳士兵",
-									"{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 或 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+									"{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=gaming set} 或 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 								],
 								[
 									"4",
@@ -7193,12 +7713,12 @@
 								[
 									"7",
 									"罪犯",
-									"{@item 盗贼工具|PHB}, {@item 文书伪造工具|PHB}, 或者 {@item 易容工具|PHB}"
+									"{@item thieves' tools|PHB}, {@item forgery kit|PHB}, 或者 {@item 易容工具|PHB}"
 								],
 								[
 									"8",
 									"无技能劳动者",
-									"{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}"
+									"{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=gaming set}"
 								]
 							]
 						}
@@ -7696,6 +8216,9 @@
 			"ENG_name": "Entertainer",
 			"source": "PHB",
 			"page": 130,
+			"reprintedAs": [
+				"艺人|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"acrobatics": true,
@@ -7988,6 +8511,136 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "艺人",
+			"ENG_name": "Entertainer",
+			"source": "XPHB",
+			"page": 180,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"musician|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"performance": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"musical instrument": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "musical instrument|xphb"
+						},
+						{
+							"item": "服装|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "镜子|xphb"
+						},
+						{
+							"item": "香水|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1100
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，敏捷，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 音乐家|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 特技|XPHB}, {@skill 表演|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "选择一种{@item 乐器|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 乐器|XPHB（与上述相同），服装|XPHB（2套服装），镜子|XPHB，香水|XPHB，旅行者服装|XPHB，11GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "无面者",
@@ -8706,7 +9359,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "任一{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器} 或{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，由你选择，很可能是你祖国本土的东西"
+							"entry": "任一{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器} 或{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，由你选择，很可能是你祖国本土的东西"
 						},
 						{
 							"type": "item",
@@ -8718,7 +9371,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套 {@item 旅行者服装|PHB}，任一你熟练的{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}或 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} ，来自你家乡的粗糙地图，描绘了你在费伦的位置，一件价值10 gp的小型珠宝，其风格体现了你家乡的工艺，以及一个装有5 gp的{@item 小包|PHB}"
+							"entry": "一套 {@item 旅行者服装|PHB}，任一你熟练的{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}或 {@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} ，来自你家乡的粗糙地图，描绘了你在费伦的位置，一件价值10 gp的小型珠宝，其风格体现了你家乡的工艺，以及一个装有5 gp的{@item 小包|PHB}"
 						}
 					]
 				},
@@ -8936,6 +9589,138 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "农民",
+			"ENG_name": "Farmer",
+			"source": "XPHB",
+			"page": 180,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"con",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"con",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"tough|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"animal handling": true,
+					"nature": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"carpenter's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "镰刀|xphb"
+						},
+						{
+							"item": "carpenter's tools|xphb"
+						},
+						{
+							"item": "医疗包|xphb"
+						},
+						{
+							"item": "铁壶|xphb"
+						},
+						{
+							"item": "铲子|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 3000
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，体质，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 健壮|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 驯兽|XPHB}, {@skill 自然|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 木匠工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 镰刀|XPHB，木匠工具|XPHB，治疗工具包|XPHB，铁锅|XPHB，铲子|XPHB，30GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "精界迷失者",
@@ -9983,7 +10768,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一套 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}"
+							"entry": "一套 {@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}"
 						},
 						{
 							"type": "item",
@@ -9995,7 +10780,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，一个幸运符，一套{@item 高档服装|PHB}，以及一个腰带{@item 小包|PHB} ，内含15 gp"
+							"entry": "一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，一个幸运符，一套{@item 高档服装|PHB}，以及一个腰带{@item 小包|PHB} ，内含15 gp"
 						}
 					]
 				},
@@ -11316,13 +12101,13 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}, {@item 盗贼工具|PHB}"
+							"entry": "一种 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}, {@item thieves' tools|PHB}"
 						},
 						{
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套 {@item 高档服装|PHB}，一个{@item 易容工具|PHB}，一个你选择的 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，一枚描绘笑脸的镀金戒指，以及一个装有15 gp的 {@item 小包|PHB}"
+							"entry": "一套 {@item 高档服装|PHB}，一个{@item disguise kit|PHB}，一个你选择的 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，一枚描绘笑脸的镀金戒指，以及一个装有15 gp的 {@item 小包|PHB}"
 						}
 					]
 				},
@@ -11908,7 +12693,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一个古鲁族徽章，一个{@item 狩猎陷阱|PHB}，一个{@item 草药工具|PHB}，一只野猪的头骨，一件兽皮斗篷，一套{@item 旅行者服装|PHB}，以及一个装有10金币（俄佐立1-齐诺硬币）的腰带{@item 小包|PHB}"
+							"entry": "一个古鲁族徽章，一个{@item 狩猎陷阱|PHB}，一个{@item herbalism kit|PHB}，一只野猪的头骨，一件兽皮斗篷，一套{@item 旅行者服装|PHB}，以及一个装有10金币（俄佐立1-齐诺硬币）的腰带{@item 小包|PHB}"
 						}
 					]
 				},
@@ -12260,6 +13045,281 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "警卫",
+			"ENG_name": "Guard",
+			"source": "XPHB",
+			"page": 181,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"alert|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "矛|xphb"
+						},
+						{
+							"item": "轻弩|xphb"
+						},
+						{
+							"item": "弩矢|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "附盖提灯|xphb"
+						},
+						{
+							"item": "手铐|xphb"
+						},
+						{
+							"item": "箭袋|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，智力，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 警觉|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 运动|XPHB}, {@skill 察觉|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "选择一种游戏套装|XPHB"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 矛|XPHB}, {@item 轻弩|XPHB}, 20 {@item 弩失|XPHB|弩箭}, {@item 赌具|XPHB}（同上）, {@item 附盖提灯|XPHB}, {@item 镣铐|XPHB}, {@item 箭袋|XPHB}, {@item 旅行者服装|XPHB}, 12GP; 或 (B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "向导",
+			"ENG_name": "Guide",
+			"source": "XPHB",
+			"page": 181,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"stealth": true,
+					"survival": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"cartographer's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "短弓|xphb"
+						},
+						{
+							"item": "箭|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "cartographer's tools|xphb"
+						},
+						{
+							"item": "铺盖|xphb"
+						},
+						{
+							"item": "箭袋|xphb"
+						},
+						{
+							"item": "帐篷|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 300
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "敏捷，体质，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 魔法学徒}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 隐匿|XPHB}, {@skill 生存|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 制图工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 短弓|XPHB，箭|XPHB（20支箭），制图工具|XPHB，铺盖卷|XPHB，箭袋|XPHB，帐篷|XPHB，旅行者服装|XPHB，3GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "公会工匠",
@@ -12662,7 +13722,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@filter vehicles (water)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=载具(水上)}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@filter vehicles (water)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=载具(水上)}"
 						},
 						{
 							"type": "item",
@@ -13285,6 +14345,9 @@
 			"ENG_name": "Hermit",
 			"source": "PHB",
 			"page": 134,
+			"reprintedAs": [
+				"隐士|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"medicine": true,
@@ -13347,7 +14410,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一个装满了你的学习或祈祷笔记的{@item 地图或卷轴匣|PHB|卷轴匣}，一条冬季 {@item 毯子|PHB}，一套{@item 普通服装|PHB}，一个{@item 草药工具|PHB}，以及5 gp"
+							"entry": "一个装满了你的学习或祈祷笔记的{@item 地图或卷轴匣|PHB|卷轴匣}，一条冬季 {@item 毯子|PHB}，一套{@item 普通服装|PHB}，一个{@item herbalism kit|PHB}，以及5 gp"
 						}
 					]
 				},
@@ -13582,6 +14645,142 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "隐士",
+			"ENG_name": "Hermit",
+			"source": "XPHB",
+			"page": 182,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"healer|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"medicine": true,
+					"religion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"herbalism kit": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "长棍|xphb"
+						},
+						{
+							"item": "herbalism kit|xphb"
+						},
+						{
+							"item": "铺盖|xphb"
+						},
+						{
+							"item": "书本|xphb"
+						},
+						{
+							"item": "油灯|xphb"
+						},
+						{
+							"item": "灯油(扁瓶装)|xphb",
+							"quantity": 3
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "体质，智慧，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 医疗师|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 医药|XPHB}, {@skill 宗教|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 草药工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 长棍|XPHB，草药工具包|XPHB，铺盖卷|XPHB，书籍|XPHB（哲学），油灯|XPHB，油|XPHB（3瓶），旅行者服装|XPHB，16GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "希尔斯法商人",
@@ -13909,7 +15108,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一个{@item 文书伪造工具|PHB}，一套{@item 普通服装|PHB}，一个腰带{@item 小包|PHB}，以及5 gp"
+							"entry": "一个{@item forgery kit|PHB}，一套{@item 普通服装|PHB}，一个腰带{@item 小包|PHB}，以及5 gp"
 						}
 					]
 				},
@@ -14228,23 +15427,23 @@
 					"rows": [
 						[
 							"坎尼瑟",
-							"{@item 炼金工具|PHB} 和 {@item 修理工具|PHB}"
+							"{@item 炼金工具|PHB} 和 {@item tinker's tools|PHB}"
 						],
 						[
 							"德内斯",
-							"一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						],
 						[
 							"加兰达",
-							"{@item 酿酒工具|PHB} 和 {@item 厨师工具|PHB}"
+							"{@item 酿酒工具|PHB} 和 {@item cook's utensils|PHB}"
 						],
 						[
 							"乔拉斯科",
-							"{@item 炼金工具|PHB} 和 {@item 草药工具|PHB}"
+							"{@item 炼金工具|PHB} 和 {@item herbalism kit|PHB}"
 						],
 						[
 							"昆达拉克",
-							"{@item 盗贼工具|PHB} 和 {@item 修理工具|PHB}"
+							"{@item 盗贼工具|PHB} 和 {@item tinker's tools|PHB}"
 						],
 						[
 							"利兰达尔",
@@ -14252,11 +15451,11 @@
 						],
 						[
 							"梅达尼",
-							"{@item 易容工具|PHB} 和 {@item 盗贼工具|PHB}"
+							"{@item 易容工具|PHB} 和 {@item thieves' tools|PHB}"
 						],
 						[
 							"奥里恩",
-							"一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						],
 						[
 							"菲亚兰",
@@ -14264,11 +15463,11 @@
 						],
 						[
 							"西维斯",
-							"{@item 书法工具|PHB}和{@item 文书伪造工具|PHB}"
+							"{@item 书法工具|PHB}和{@item forgery kit|PHB}"
 						],
 						[
 							"萨拉斯克",
-							"一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}和{@item 盗贼工具|PHB}"
+							"一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}和{@item thieves' tools|PHB}"
 						],
 						[
 							"图拉尼",
@@ -14276,7 +15475,7 @@
 						],
 						[
 							"瓦达利斯",
-							"{@item 草药工具|PHB} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"{@item herbalism kit|PHB} 和 {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						]
 					]
 				},
@@ -14587,13 +15786,13 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "你可以选择一套 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 或者一件 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
+							"entry": "你可以选择一套 {@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} 或者一件 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
 						},
 						{
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "你的遗产，一套 {@item 旅行者服装|PHB}，你为这个背景的工具熟练度选择的工具（({@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 或{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器})，以及一个装有15 gp的{@item 小包|PHB}"
+							"entry": "你的遗产，一套 {@item 旅行者服装|PHB}，你为这个背景的工具熟练度选择的工具（({@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} 或{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器})，以及一个装有15 gp的{@item 小包|PHB}"
 						}
 					]
 				},
@@ -14718,13 +15917,13 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						},
 						{
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一个简单的益智盒，一个包含五位神明基本教义的卷轴，一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，一套{@item 普通服装|PHB}，以及一个腰带{@item 小包|PHB}，内含15金币。如果你在战役开始前完成了任何试炼，你还会拥有你获得的任何护身符"
+							"entry": "一个简单的益智盒，一个包含五位神明基本教义的卷轴，一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，一套{@item 普通服装|PHB}，以及一个腰带{@item 小包|PHB}，内含15金币。如果你在战役开始前完成了任何试炼，你还会拥有你获得的任何护身符"
 						}
 					]
 				},
@@ -15443,7 +16642,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						},
 						{
 							"type": "item",
@@ -16313,7 +17512,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "你可以选择一套 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} 或者一件 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
+							"entry": "你可以选择一套 {@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} 或者一件 {@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
 						},
 						{
 							"type": "item",
@@ -16555,48 +17754,7 @@
 							"name": "衡鉴饰品",
 							"ENG_name": "Lorehold Trinkets",
 							"entries": [
-								"当你创建角色投掷起始饰品时，你能投掷衡 {@item 饰品|PHB|小饰品表} 而不是{@book 玩家手册|PHB}。",
-								{
-									"type": "table",
-									"caption": "衡鉴饰品",
-									"colLabels": [
-										"d6",
-										"饰品"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"一张带有多个同心圆的地图，这些同心圆能在页面上转动"
-										],
-										[
-											"2",
-											"一个装饰着琥珀的谜笼"
-										],
-										[
-											"3",
-											"一个有凹痕的黄铜罗盘，里面有一根红色指针"
-										],
-										[
-											"4",
-											"一个破损塑像的头，其中寄宿着一位尖刻的智者的意识"
-										],
-										[
-											"5",
-											"一张羊皮纸，压印着浮凸的可触文字，散发着红光"
-										],
-										[
-											"6",
-											"一柄破匕首，有着波浪形剑刃，蛇一样弯曲的剑柄"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"当你创建角色时，你可以在《Lorehold Trinkets》表上掷一次骰子，而不是在《玩家手册》中的《小饰品》表上掷骰子，以获取你的起始小饰品。"
 							]
 						}
 					]
@@ -17707,13 +18865,13 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						},
 						{
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "你公司的制服（相当于{@item 旅行者服装|PHB}的质量），你军衔的标志，你选择的一套{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具} ，以及一个装有你上一次工资余额的{@item 小包|PHB}（10金币）。"
+							"entry": "你公司的制服（相当于{@item 旅行者服装|PHB}的质量），你军衔的标志，你选择的一套{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set} ，以及一个装有你上一次工资余额的{@item 小包|PHB}（10金币）。"
 						}
 					]
 				},
@@ -17739,6 +18897,130 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "商人",
+			"ENG_name": "Merchant",
+			"source": "XPHB",
+			"page": 182,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"lucky|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"animal handling": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"navigator's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "navigator's tools|xphb"
+						},
+						{
+							"item": "小包|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 2200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "体质，智力，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 幸运|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 驯兽|XPHB}, {@skill 游说|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 领航工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 航海工具|XPHB，口袋|XPHB（2个口袋），旅行者服装|XPHB，22GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "穆尔马斯特贵族",
@@ -18016,6 +19298,9 @@
 			"source": "PHB",
 			"page": 135,
 			"basicRules": true,
+			"reprintedAs": [
+				"贵族|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"history": true,
@@ -18062,7 +19347,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}"
 						},
 						{
 							"type": "item",
@@ -18255,6 +19540,129 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "贵族",
+			"ENG_name": "Noble",
+			"source": "XPHB",
+			"page": 183,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"Skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"history": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "高档服装|xphb"
+						},
+						{
+							"item": "香水|xphb"
+						},
+						{
+							"value": 2900
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，智力，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 熟习|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 历史|XPHB}, {@skill 游说|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "选择一种游戏套装|XPHB"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 赌具|XPHB}（同上）, {@item 高档服装|XPHB}, {@item 香水|XPHB}, 29GP; 或 (B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "欧佐夫议员",
@@ -20405,48 +21813,7 @@
 							"name": "粹丽饰品",
 							"ENG_name": "Prismari Trinkets",
 							"entries": [
-								"当你创建角色投掷起始饰品时，你能投掷{@item 饰品|PHB|小饰品表}而不是{@book 玩家手册|PHB}中的饰品表。",
-								{
-									"type": "table",
-									"caption": "粹丽饰品",
-									"colLabels": [
-										"d6",
-										"饰品"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"一副玫瑰色的眼镜，配有闪闪发光的边框"
-										],
-										[
-											"2",
-											"一个被瓶塞堵住的玻璃瓶，当打开时，会播放一首吵杂的管弦乐"
-										],
-										[
-											"3",
-											"一个小瓶子，里面装着四分之一的漂浮水微粒"
-										],
-										[
-											"4",
-											"一条装水彩颜料的子弹带"
-										],
-										[
-											"5",
-											"一个镶有水晶的头饰，而且这块水晶还劈啪作响地发出无害闪电"
-										],
-										[
-											"6",
-											"一根彩虹色的羽毛笔"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"当你创建角色时，你可以在《Prismari Trinket》表上掷一次骰子，而不是在《玩家手册》中的《小饰品》表上掷骰子，以获取你的起始小饰品。"
 							]
 						}
 					]
@@ -20666,48 +22033,7 @@
 							"name": "量析饰品",
 							"ENG_name": "Quandrix Trinkets",
 							"entries": [
-								"当你创建角色投掷起始饰品时，你能投掷 {@item 饰品|PHB|小饰品表}而不是 {@book 玩家手册|PHB}中的饰品表。",
-								{
-									"type": "table",
-									"caption": "量析饰品",
-									"colLabels": [
-										"d6",
-										"饰品"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"一株小小的多肉植物，装在一个正十二面体的陶罐里"
-										],
-										[
-											"2",
-											"一顶蓝色的针织帽，看起来有点像是一个自己折叠起来的瓶子"
-										],
-										[
-											"3",
-											"一个从绿宝石雕刻而来的超立方体模型，展现出第四维度"
-										],
-										[
-											"4",
-											"一张皱巴巴的试卷，内容关于重力操纵，上面写着不及格，后面跟着一位著名的量析教授的名字"
-										],
-										[
-											"5",
-											"一个蓝色四面体，当连拍两次时，会投射出一节录制的老旧数学讲座"
-										],
-										[
-											"6",
-											"一个圆形面包卷切割器，使用者能在不举刀的情况下将两面都涂上黄油"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"当你创建角色时，你可以在《数量学院小饰品》表上掷一次骰子，而不是在《玩家手册》中的《小饰品》表上掷骰子，以决定你的起始小饰品。"
 							]
 						}
 					]
@@ -22034,7 +23360,7 @@
 							"entry": "一个破裂的沙漏，一套生锈的镣铐，一个半空的瓶子，一个狩猎陷阱，一套游戏套装（与您选择的熟练度相匹配），一套旅行者服装，以及一个包含13 gp的小包"
 						},
 						{
-							"type": "entries",
+							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
 							"entries": [
@@ -22355,6 +23681,9 @@
 			"source": "PHB",
 			"page": 137,
 			"basicRules": true,
+			"reprintedAs": [
+				"智者|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"arcana": true,
@@ -22644,10 +23973,144 @@
 			"hasFluff": true
 		},
 		{
+			"name": "智者",
+			"ENG_name": "Sage",
+			"source": "XPHB",
+			"page": 183,
+			"freeRules2024": true,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"arcana": true,
+					"history": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "长棍|xphb"
+						},
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "书本|xphb"
+						},
+						{
+							"item": "羊皮纸|xphb",
+							"quantity": 8
+						},
+						{
+							"item": "法袍|xphb"
+						},
+						{
+							"value": 800
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "体质，智力，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 魔法学徒|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 奥秘|XPHB}, {@skill 历史|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 书法工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 长棍|XPHB，书法家工具|XPHB，书籍|XPHB（历史），羊皮纸|XPHB（8张），长袍|XPHB，8GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "水手",
 			"ENG_name": "Sailor",
 			"source": "PHB",
 			"page": 139,
+			"reprintedAs": [
+				"水手|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"athletics": true,
@@ -22884,6 +24347,261 @@
 			"hasFluff": true
 		},
 		{
+			"name": "水手",
+			"ENG_name": "Sailor",
+			"source": "XPHB",
+			"page": 184,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"tavern brawler|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"navigator's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "匕首|xphb"
+						},
+						{
+							"item": "navigator's tools|xphb"
+						},
+						{
+							"item": "绳索|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 2000
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，敏捷，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 斗殴高手|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 特技|XPHB}, {@skill 察觉|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 领航工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 匕首|XPHB，航海工具|XPHB，绳索|XPHB，旅行者服装|XPHB，20GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "书记员",
+			"ENG_name": "Scribe",
+			"source": "XPHB",
+			"page": 184,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"investigation": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "高档服装|xphb"
+						},
+						{
+							"item": "油灯|xphb"
+						},
+						{
+							"item": "灯油(扁瓶装)|xphb"
+						},
+						{
+							"item": "羊皮纸|xphb"
+						},
+						{
+							"value": 2300
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "敏捷，智力，智慧"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 熟习|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 调查|XPHB}, {@skill 察觉|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 书法工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) 书法家工具|XPHB，精致服装|XPHB，油灯|XPHB，油|XPHB（3瓶），羊皮纸|XPHB（12张），23GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "秘密身份",
 			"ENG_name": "Secret Identity",
 			"source": "ALRageOfDemons",
@@ -22937,7 +24655,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套{@item 易容工具|PHB}，一套{@item 文书伪造工具|PHB}，一套{@item 普通服装|PHB}，一个腰带{@item 小包|PHB}，5 gp"
+							"entry": "一套{@item disguise kit|PHB}，一套{@item forgery kit|PHB}，一套{@item 普通服装|PHB}，一个腰带{@item 小包|PHB}，5 gp"
 						}
 					]
 				},
@@ -23657,7 +25375,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一个{@item 文书伪造工具|PHB}，一个没有开口的透明阴影圆柱，一个{@item 玺戒|PHB}，一套{@item 高档服装|PHB}，以及15 gp"
+							"entry": "一个{@item forgery kit|PHB}，一个没有开口的透明阴影圆柱，一个{@item 玺戒|PHB}，一套{@item 高档服装|PHB}，以及15 gp"
 						}
 					]
 				},
@@ -23914,7 +25632,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套备受喜爱的{@item 木匠工具|PHB}，一本空白的{@item 书本|PHB}，{@item 墨水(1盎司/瓶)|PHB|1盎司墨水}，一支{@item 黑色墨水|PHB}，一套{@item 旅行者服装|PHB}，以及一个装有10 gp的皮革{@item 小包|PHB}"
+							"entry": "一套备受喜爱的{@item carpenter's tools|PHB}，一本空白的{@item 书本|PHB}，{@item 墨水(1盎司/瓶)|PHB|1盎司墨水}，一支{@item 黑色墨水|PHB}，一套{@item 旅行者服装|PHB}，以及一个装有10 gp的皮革{@item 小包|PHB}"
 						}
 					]
 				},
@@ -24344,48 +26062,7 @@
 							"name": "银毫饰品",
 							"ENG_name": "Silverquill Trinkets",
 							"entries": [
-								"当你创建角色投掷起始饰品时，你能投掷{@item 饰品|PHB|小饰品表}而不是 {@book 玩家手册|PHB}中的饰品表。",
-								{
-									"type": "table",
-									"caption": "银毫饰品",
-									"colLabels": [
-										"d6",
-										"饰品"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"一本黑色皮革笔记本，里面写满了未完成的诗"
-										],
-										[
-											"2",
-											"一套学习卡，详细记录着不同的俗语以及其含义"
-										],
-										[
-											"3",
-											"一个使任何液体喝起来都变甜的水壶一个水罐，任何从里面流出来的液体尝起来都是甜的"
-										],
-										[
-											"4",
-											"一张伪造的许可证，让拥有者得以接近斯翠海文图书馆中的特别馆藏。"
-										],
-										[
-											"5",
-											"一枚时髦的银色别针，和一套讲述邪术师的小说有关联"
-										],
-										[
-											"6",
-											"一叠小羊皮纸，每一张都附了魔能够贴在任意平面上，而且能被轻易的撕下"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"当你创建角色时，你可以在《银羽小饰品》表上掷一次骰子，而不是在《玩家手册》中的《小饰品》表上掷骰子，以决定你的起始小饰品。"
 							]
 						}
 					]
@@ -25198,6 +26875,9 @@
 			"source": "PHB",
 			"page": 140,
 			"basicRules": true,
+			"reprintedAs": [
+				"士兵|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"athletics": true,
@@ -25253,7 +26933,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}, {@filter vehicles (land)|items|source=玩家手册；伤害手册|miscellaneous=寻常|type=陆地交通工具}"
 						},
 						{
 							"type": "item",
@@ -25495,6 +27175,143 @@
 			"hasFluff": true
 		},
 		{
+			"name": "士兵",
+			"ENG_name": "Soldier",
+			"source": "XPHB",
+			"page": 185,
+			"freeRules2024": true,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"con"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"con"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"savage attacker|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"intimidation": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "矛|xphb"
+						},
+						{
+							"item": "短弓|xphb"
+						},
+						{
+							"item": "箭|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "医疗包|xphb"
+						},
+						{
+							"item": "箭袋|xphb"
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1400
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "力量，敏捷，体质"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 凶蛮打手|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 运动|XPHB}, {@skill 威吓|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "选择一种游戏套装|XPHB"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 矛|XPHB}, {@item 短弓|XPHB}, {@item 箭|XPHB|20支箭}, {@item 赌具|XPHB}（同上）, {@item 医疗包|XPHB}, {@item 箭袋|XPHB}, {@item 旅行者服装|XPHB}, 14GP; 或 (B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "斯托亚诺夫囚犯",
 			"ENG_name": "Stojanow Prisoner",
 			"source": "ALCurseOfStrahd",
@@ -25544,7 +27361,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，盗贼工具"
+							"entry": "一种{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，盗贼工具"
 						},
 						{
 							"type": "item",
@@ -26910,7 +28727,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "从{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}，一种{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，以及{@item 盗贼工具|PHB}这三项中选择两项"
+							"entry": "从{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}，一种{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，以及{@item thieves' tools|PHB}这三项中选择两项"
 						},
 						{
 							"type": "item",
@@ -28346,7 +30163,7 @@
 							"type": "item",
 							"name": "工具熟练",
 							"ENG_name": "Tool Proficiencies:",
-							"entry": "一种类型的{@filter 赌具|items|source=PHB|miscellaneous=寻常|type=赌具}或{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
+							"entry": "一种类型的{@filter gaming set|items|source=PHB|miscellaneous=寻常|type=gaming set}或{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}"
 						},
 						{
 							"type": "item",
@@ -28379,6 +30196,140 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "流浪者",
+			"ENG_name": "Wayfarer",
+			"source": "XPHB",
+			"page": 185,
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"lucky|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"stealth": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"thieves' tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "匕首|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "thieves' tools|xphb"
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "铺盖|xphb"
+						},
+						{
+							"item": "小包|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "旅行者服装|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性值：",
+							"ENG_name": "Ability Scores:",
+							"entry": "敏捷，智慧，魅力"
+						},
+						{
+							"type": "item",
+							"name": "特长：",
+							"ENG_name": "Feat:",
+							"entry": "{@feat 幸运|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "技能熟练项：",
+							"ENG_name": "Skill Proficiencies:",
+							"entry": "{@skill 洞悉|XPHB}, {@skill 隐匿|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "工具熟练度：",
+							"ENG_name": "Tool Proficiency:",
+							"entry": "{@item 盗贼工具|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "装备：",
+							"ENG_name": "Equipment:",
+							"entry": "选择A或B：(A) {@item 匕首|XPHB|2把匕首}，{@item 盗贼工具|XPHB}，{@item 赌具|XPHB}（任意），{@item 铺盖|XPHB}，{@item 小包|XPHB|2个口袋}，{@item 旅行者服装|XPHB}，16GP；或(B) 50GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "白石城步枪团",
@@ -29219,7 +31170,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一套{@item 易容工具|PHB}或一件由你选择的{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，一套卡牌，一套嘉年华制服或{@item 表演服装|PHB|服装}，一件{@item 精类领域小饰品|WBtW|精类领域小饰品})，和一个装着8gp的{@item 小包|PHB}。"
+							"entry": "一套{@item disguise kit|PHB}或一件由你选择的{@filter musical instrument|items|source=PHB|miscellaneous=寻常|type=乐器}，一套卡牌，一套嘉年华制服或{@item 表演服装|PHB|服装}，一件{@item 精类领域小饰品|WBtW|精类领域小饰品})，和一个装着8gp的{@item 小包|PHB}。"
 						}
 					]
 				},
@@ -29589,7 +31540,7 @@
 							"type": "item",
 							"name": "装备：",
 							"ENG_name": "Equipment:",
-							"entry": "一瓶{@item 墨水(1盎司/瓶)|PHB|一瓶黑色墨水}，一根{@item 黑色墨水|PHB}，一本 {@item 铁壶|PHB}，一个 {@item 草药工具|PHB}，一套草药工具，一套校服，一个装有 15gp的 {@item 小包|PHB} 。"
+							"entry": "一瓶{@item 墨水(1盎司/瓶)|PHB|一瓶黑色墨水}，一根{@item 黑色墨水|PHB}，一本 {@item 铁壶|PHB}，一个 {@item herbalism kit|PHB}，一套草药工具，一套校服，一个装有 15gp的 {@item 小包|PHB} 。"
 						}
 					]
 				},
@@ -29698,48 +31649,7 @@
 							"name": "靡华饰品",
 							"ENG_name": "Witherbloom Trinkets",
 							"entries": [
-								"当你创建角色投掷起始饰品时，你能投掷 {@item 饰品|PHB|小饰品表}表而不是{@book 玩家手册|PHB}。",
-								{
-									"type": "table",
-									"caption": "靡华饰品",
-									"colLabels": [
-										"d6",
-										"饰品"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"一张黑色的鸟型面具，装饰着绿色的发光螺纹"
-										],
-										[
-											"2",
-											"一套兔骨"
-										],
-										[
-											"3",
-											"一双厚重的及膝高筒防水胶靴，上面沾有肥料和苔藓"
-										],
-										[
-											"4",
-											"一条黏滑的绿色触手，时不时会晃动一下"
-										],
-										[
-											"5",
-											"一本防水笔记本"
-										],
-										[
-											"6",
-											"一条项链，上面有五个小瓶，每个瓶子里都装着发光的白色液体"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"创建角色时，你可以在《玩家手册》中的{@item 小玩意|phb|小玩意表格}上掷一次骰子，而不是在{@item Witherbloom Trinket|SCC|枯萎之花小玩意}表格上掷骰子，以决定你的起始小玩意。"
 							]
 						}
 					]

@@ -1,10 +1,11 @@
 {
 	"monster": [
 		{
-			"name": "Aberrant Spirit",
+			"name": "异怪灵魄",
+			"ENG_name": "Aberrant Spirit",
 			"source": "XPHB",
 			"page": 322,
-			"summonedBySpell": "Summon Aberration|XPHB",
+			"summonedBySpell": "异怪召唤术|XPHB",
 			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
@@ -15,17 +16,17 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level"
+					"special": "11 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "40 + 10 for each spell level above 4"
+				"special": "40 + 4级以上每级法术加10"
 			},
 			"speed": {
 				"walk": 30,
 				"fly": {
 					"number": 30,
-					"condition": "(hover; beholderkin only)"
+					"condition": "（悬浮；仅限贝勒布）"
 				},
 				"canHover": true
 			},
@@ -36,66 +37,73 @@
 			"wis": 10,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"languages": [
-				"Deep Speech",
-				"understands the languages you know"
+				"深潜语",
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Regeneration (Slaad Only)",
+					"name": "再生（仅限史拉蟾）",
+					"ENG_name": "Regeneration (Slaad Only)",
 					"entries": [
-						"The spirit regains 5 Hit Points at the start of its turn if it has at least 1 Hit Point."
+						"如果灵体至少有1点生命值，则在其回合开始时恢复5点生命值。"
 					]
 				},
 				{
-					"name": "Whispering Aura (Mind Flayer Only)",
+					"name": "低语灵光（仅限心灵蠕虫）",
+					"ENG_name": "Whispering Aura (Mind Flayer Only)",
 					"entries": [
-						"At the start of each of the spirit's turns, the spirit emits psionic energy if it doesn't have the {@condition Incapacitated|XPHB} condition. Wisdom Saving Throw: DC equals your spell save DC, each creature (other than you) within 5 feet of the spirit. {@actSaveFail} {@damage 2d6} Psychic damage."
+						"在灵体的每个回合开始时，如果它没有处于{@condition 无力|XPHB}状态，则会释放灵能。智慧豁免：DC等于你的法术豁免DC，灵体5英尺内的每个生物（除了你）。{@actSaveFail} {@damage 2d6} 心灵伤害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of attacks equal to half this spell's level (round down)."
+						"灵体进行的攻击次数等于这个法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Claw (Slaad Only)",
+					"name": "爪击（仅限史莱姆）",
+					"ENG_name": "Claw (Slaad Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d10 + 3 + summonSpellLevel} Slashing damage, and the target can't regain Hit Points until the start of the spirit's next turn."
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 触及5英尺。{@h}{@damage 1d10 + 3 + summonSpellLevel} 斩击伤害，目标直到灵体的下一回合开始前无法恢复生命值。"
 					]
 				},
 				{
-					"name": "Eye Ray (Beholderkin Only)",
+					"name": "眼波射线Eye Ray（仅限类眼魔）",
+					"ENG_name": "Eye Ray (Beholderkin Only)",
 					"entries": [
-						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, range 150 ft. {@h}{@damage 1d8 + 3 + summonSpellLevel} Psychic damage."
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 射程150英尺。{@h}{@damage 1d8 + 3 + summonSpellLevel} 心灵伤害。"
 					]
 				},
 				{
-					"name": "Psychic Slam (Mind Flayer Only)",
+					"name": "心灵冲击（仅限心灵蠕虫）",
+					"ENG_name": "Psychic Slam (Mind Flayer Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 3 + summonSpellLevel} Psychic damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d8 + 3 + 召唤法术等级} 心灵伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Aberrant Spirit",
+				"name": "异怪灵魄",
+				"ENG_name": "Aberrant Spirit",
 				"source": "XPHB"
 			},
 			"traitTags": [
-				"Regeneration"
+				"再生"
 			],
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"languageTags": [
 				"DS"
@@ -111,22 +119,23 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Aberrant Spirit (Beholderkin)",
+					"name": "异常灵（贝赫尔金）",
+					"ENG_name": "Aberrant Spirit (Beholderkin)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Claw (Slaad Only)",
-									"Psychic Slam (Mind Flayer Only)"
+									"爪击（仅限史莱姆）",
+									"心灵冲击（仅限心灵蠕虫）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Eye Ray (Beholderkin Only)",
-									"with": "Eye Ray"
+									"rename": "眼波射线Eye Ray（仅限类眼魔）",
+									"with": "眼波射线"
 								}
 							}
 						]
@@ -135,7 +144,7 @@
 						"walk": 30,
 						"fly": {
 							"number": 30,
-							"condition": "(hover)"
+							"condition": "(悬浮)"
 						},
 						"canHover": true
 					},
@@ -149,21 +158,22 @@
 					]
 				},
 				{
-					"name": "Aberrant Spirit (Slaad)",
+					"name": "异怪灵（斯拉德）",
+					"ENG_name": "Aberrant Spirit (Slaad)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Whispering Aura (Mind Flayer Only)"
+									"低语灵光（仅限心灵蠕虫）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Regeneration (Slaad Only)",
-									"with": "Regeneration"
+									"rename": "再生（仅限史拉蟾）",
+									"with": "再生"
 								}
 							}
 						],
@@ -171,15 +181,15 @@
 							{
 								"mode": "removeArr",
 								"names": [
-									"Eye Ray (Beholderkin Only)",
-									"Psychic Slam (Mind Flayer Only)"
+									"眼波射线Eye Ray（仅限类眼魔）",
+									"心灵冲击（仅限心灵蠕虫）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Claw (Slaad Only)",
-									"with": "Claw"
+									"rename": "爪击（仅限史莱姆）",
+									"with": "爪击"
 								}
 							}
 						]
@@ -188,7 +198,7 @@
 						"walk": 30
 					},
 					"traitTags": [
-						"Regeneration"
+						"再生"
 					],
 					"damageTags": [
 						"S"
@@ -198,21 +208,22 @@
 					]
 				},
 				{
-					"name": "Aberrant Spirit (Star Spawn)",
+					"name": "异变之魂（星种）",
+					"ENG_name": "Aberrant Spirit (Star Spawn)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Regeneration (Slaad Only)"
+									"再生（仅限史拉蟾）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Whispering Aura (Mind Flayer Only)",
-									"with": "Whispering Aura"
+									"rename": "低语灵光（仅限心灵蠕虫）",
+									"with": "暗语灵光"
 								}
 							}
 						],
@@ -220,15 +231,15 @@
 							{
 								"mode": "removeArr",
 								"names": [
-									"Eye Ray (Beholderkin Only)",
-									"Claw (Slaad Only)"
+									"眼波射线Eye Ray（仅限类眼魔）",
+									"爪击（仅限史莱姆）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Psychic Slam (Mind Flayer Only)",
-									"with": "Psychic Slam"
+									"rename": "心灵冲击（仅限心灵蠕虫）",
+									"with": "心灵冲击"
 								}
 							}
 						]
@@ -237,7 +248,7 @@
 						"walk": 30
 					},
 					"traitTags": [
-						"Regeneration"
+						"再生"
 					],
 					"damageTags": [
 						"Y"
@@ -249,10 +260,11 @@
 			]
 		},
 		{
-			"name": "Animated Object",
+			"name": "你使一个你可以在范围内看到的物体活化。选择最多十个在你范围内的非魔法物体，且这些物体没有被穿戴或携带。中型目标算作两个物体，大型目标算作四个物体，巨型目标算作八个物体。你不能活化任何大于巨型的物体。每个目标活化并变成你控制下的生物，直到法术结束或直到它降到0生命值。\n作为额外动作，如果你控制的生物在你500英尺范围内，你可以在精神上指挥任何你用这个法术创造的生物（如果你控制多个生物，你可以同时指挥它们，给它们每个发出相同的命令）。你决定生物在下一个回合将采取什么行动，以及它将移动到哪里，或者你可以发出一个通用命令，比如守卫特定的房间或走廊。如果你没有发出命令，生物只会防御自己对抗敌对生物。一旦给出命令，生物会继续遵循它直到任务完成。\n当你使用6级或更高级别的法术位施放这个法术时，你可以为每个5级以上的法术位额外活化两个物体。",
+			"ENG_name": "Animated Object",
 			"source": "XPHB",
 			"page": 240,
-			"summonedBySpell": "Animate Objects|XPHB",
+			"summonedBySpell": "活化物件|XPHB",
 			"summonedBySpellLevel": 5,
 			"size": [
 				"T",
@@ -269,7 +281,7 @@
 				15
 			],
 			"hp": {
-				"special": "10 (Medium or smaller), 20 (Large), 40 (Huge)"
+				"special": "10（中型或更小）, 20（大型）, 40（巨型）"
 			},
 			"speed": {
 				"walk": 30
@@ -281,23 +293,25 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"盲视 30 尺"
 			],
 			"passive": 6,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"action": [
 				{
-					"name": "Slam",
+					"name": "猛击",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 1d4 + 3} + your spellcasting ability modifier (Medium or smaller), {@damage 2d6 + 3} + your spellcasting ability modifier (Large), or {@damage 2d12 + 3} + your spellcasting ability modifier (Huge)."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}力场伤害等于{@damage 1d4 + 3} + 你的施法能力调整值（中型或更小）, {@damage 2d6 + 3} + 你的施法能力调整值（大型）, 或者{@damage 2d12 + 3} + 你的施法能力调整值（巨型）。"
 					]
 				}
 			],
 			"token": {
-				"name": "Animated Object",
+				"name": "你使一个你可以在范围内看到的物体活化。选择最多十个在你范围内的非魔法物体，且这些物体没有被穿戴或携带。中型目标算作两个物体，大型目标算作四个物体，巨型目标算作八个物体。你不能活化任何大于巨型的物体。每个目标活化并变成你控制下的生物，直到法术结束或直到它降到0生命值。\n作为额外动作，如果你控制的生物在你500英尺范围内，你可以在精神上指挥任何你用这个法术创造的生物（如果你控制多个生物，你可以同时指挥它们，给它们每个发出相同的命令）。你决定生物在下一个回合将采取什么行动，以及它将移动到哪里，或者你可以发出一个通用命令，比如守卫特定的房间或走廊。如果你没有发出命令，生物只会防御自己对抗敌对生物。一旦给出命令，生物会继续遵循它直到任务完成。\n当你使用6级或更高级别的法术位施放这个法术时，你可以为每个5级以上的法术位额外活化两个物体。",
+				"ENG_name": "Animated Object",
 				"source": "XPHB"
 			},
 			"senseTags": [
@@ -309,46 +323,52 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Animated Object (Huge)",
+					"name": "活化物件(巨型)",
+					"ENG_name": "Animated Object (Huge)",
 					"source": "XPHB",
 					"hp": {
 						"special": "40"
 					},
 					"action": [
 						{
-							"name": "Slam",
+							"name": "猛击",
+							"ENG_name": "Slam",
 							"entries": [
-								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 2d12 + 3} + your spellcasting ability modifier."
+								"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}力场伤害等于{@damage 2d12 + 3} + 你的施法能力调整值。"
 							]
 						}
 					]
 				},
 				{
-					"name": "Animated Object (Large)",
+					"name": "活化物体(大型)",
+					"ENG_name": "Animated Object (Large)",
 					"source": "XPHB",
 					"hp": {
 						"special": "20"
 					},
 					"action": [
 						{
-							"name": "Slam",
+							"name": "猛击",
+							"ENG_name": "Slam",
 							"entries": [
-								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 2d6 + 3} + your spellcasting ability modifier."
+								"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}力场伤害等于{@damage 2d6 + 3} + 你的施法能力调整值。"
 							]
 						}
 					]
 				},
 				{
-					"name": "Animated Object (Medium or Smaller)",
+					"name": "活化物体（中型或更小）",
+					"ENG_name": "Animated Object (Medium or Smaller)",
 					"source": "XPHB",
 					"hp": {
 						"special": "10"
 					},
 					"action": [
 						{
-							"name": "Slam",
+							"name": "猛击",
+							"ENG_name": "Slam",
 							"entries": [
-								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 1d4 + 3} + your spellcasting ability modifier."
+								"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}力场伤害等于{@damage 1d4 + 3} + 你的施法能力调整值。"
 							]
 						}
 					]
@@ -356,7 +376,8 @@
 			]
 		},
 		{
-			"name": "Ape",
+			"name": "猿",
+			"ENG_name": "Ape",
 			"source": "XPHB",
 			"page": 346,
 			"size": [
@@ -391,26 +412,30 @@
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The ape makes two Fist attacks."
+						"猿发动两次拳击。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳击",
+					"ENG_name": "Fist",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Bludgeoning damage."
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}5 ({@damage 1d4 + 3}) 钝击伤害。"
 					]
 				},
 				{
-					"name": "Rock {@recharge}",
+					"name": "岩石{@recharge}",
+					"ENG_name": "Rock {@recharge}",
 					"entries": [
-						"{@atkr r} {@hit 5}, range 25/50 ft. {@h}10 ({@damage 2d6 + 3}) Bludgeoning damage."
+						"{@atkr r} {@hit 5}, 射程25/50英尺。{@h}10 ({@damage 2d6 + 3}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Ape",
+				"name": "猿",
+				"ENG_name": "Ape",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -418,7 +443,7 @@
 				"path": "bestiary/ape.mp3"
 			},
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"B"
@@ -430,7 +455,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Badger",
+			"name": "獾",
+			"ENG_name": "Badger",
 			"source": "XPHB",
 			"page": 346,
 			"size": [
@@ -461,26 +487,28 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 13,
 			"resist": [
-				"poison"
+				"毒素"
 			],
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "0",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 2}，射程5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Badger",
+				"name": "獾",
+				"ENG_name": "Badger",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -499,7 +527,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Bat",
+			"name": "蝙蝠",
+			"ENG_name": "Bat",
 			"source": "XPHB",
 			"page": 346,
 			"size": [
@@ -527,20 +556,22 @@
 			"wis": 12,
 			"cha": 4,
 			"senses": [
-				"blindsight 60 ft."
+				"盲视 60 尺"
 			],
 			"passive": 11,
 			"cr": "0",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4} to hit, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 4}命中，触及范围5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Bat",
+				"name": "蝙蝠",
+				"ENG_name": "Bat",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -559,10 +590,11 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Beast of the Land",
+			"name": "大地野兽",
+			"ENG_name": "Beast of the Land",
 			"source": "XPHB",
 			"page": 123,
-			"summonedByClass": "Ranger|XPHB",
+			"summonedByClass": "游侠|XPHB",
 			"size": [
 				"M"
 			],
@@ -572,11 +604,11 @@
 			],
 			"ac": [
 				{
-					"special": "13 plus your Wisdom modifier"
+					"special": "13加上你智慧调整值"
 				}
 			],
 			"hp": {
-				"special": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)"
+				"special": "5加上你的游侠等级的五倍（该生物的生命骰（d8s）数量等于你的游侠等级）"
 			},
 			"speed": {
 				"walk": 40,
@@ -589,26 +621,28 @@
 			"wis": 14,
 			"cha": 11,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Primal Bond",
+					"name": "原初联结",
+					"ENG_name": "Primal Bond",
 					"entries": [
-						"Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+						"将你的熟练加值加到野兽进行的任何能力检定或豁免检定上。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beast's Strike",
+					"name": "野兽之击",
+					"ENG_name": "Beast's Strike",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d8 + 2} plus your Wisdom modifier Bludgeoning, Piercing, or Slashing damage (your choice when you summon the beast). If the beast moved at least 20 feet straight toward the target before the hit, the target takes an extra {@damage 1d6} damage of the same type, and the target has the {@condition Prone|XPHB} condition if it is a Large or smaller creature."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@dice 1d8 + 2} 加上你的智慧调整值的钝击、穿刺或斩击伤害（你召唤该生物时选择）。如果该生物在命中前直线移动至少20英尺直接向目标靠近，则目标额外受到{@damage 1d6}同类型伤害，并且如果是大型或更小的生物，则处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
@@ -616,14 +650,15 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			]
 		},
 		{
-			"name": "Beast of the Sea",
+			"name": "海洋野兽",
+			"ENG_name": "Beast of the Sea",
 			"source": "XPHB",
 			"page": 124,
-			"summonedByClass": "Ranger|XPHB",
+			"summonedByClass": "游侠|XPHB",
 			"size": [
 				"M"
 			],
@@ -633,11 +668,11 @@
 			],
 			"ac": [
 				{
-					"special": "13 plus your Wisdom modifier"
+					"special": "13加上你智慧调整值"
 				}
 			],
 			"hp": {
-				"special": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)"
+				"special": "5加上你的游侠等级的五倍（该生物的生命骰（d8s）数量等于你的游侠等级）"
 			},
 			"speed": {
 				"walk": 5,
@@ -650,50 +685,54 @@
 			"wis": 14,
 			"cha": 11,
 			"senses": [
-				"darkvision 90 ft."
+				"黑暗视觉 90 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"The beast can breathe air and water."
+						"该生物可以在空气和水中呼吸。"
 					]
 				},
 				{
-					"name": "Primal Bond",
+					"name": "原初联结",
+					"ENG_name": "Primal Bond",
 					"entries": [
-						"Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+						"将你的熟练加值加到野兽进行的任何能力检定或豁免检定上。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beast's Strike",
+					"name": "野兽之击",
+					"ENG_name": "Beast's Strike",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d6 + 2} plus your Wisdom modifier Bludgeoning or Piercing damage (your choice when you summon the beast), and the target has the {@condition Grappled|XPHB} condition (escape DC equals your spell save DC)."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@dice 1d6 + 2} 加上你的智慧调整值的钝击或穿刺伤害（你召唤该生物时选择），目标处于{@condition Grappled|XPHB}状态（逃脱DC等于你的法术豁免DC）。"
 					]
 				}
 			],
 			"traitTags": [
-				"Amphibious"
+				"水陆两栖"
 			],
 			"miscTags": [
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled"
+				"被擒抱"
 			]
 		},
 		{
-			"name": "Beast of the Sky",
+			"name": "天空野兽",
+			"ENG_name": "Beast of the Sky",
 			"source": "XPHB",
 			"page": 124,
-			"summonedByClass": "Ranger|XPHB",
+			"summonedByClass": "游侠|XPHB",
 			"size": [
 				"S"
 			],
@@ -703,11 +742,11 @@
 			],
 			"ac": [
 				{
-					"special": "13 plus your Wisdom modifier"
+					"special": "13加上你智慧调整值"
 				}
 			],
 			"hp": {
-				"special": "4 plus four times your Ranger level (the beast has a number of Hit Dice [d6s] equal to your Ranger level)"
+				"special": "4加上你的游侠等级的四倍（该生物的生命骰（d6s）数量等于你的游侠等级）"
 			},
 			"speed": {
 				"walk": 10,
@@ -720,47 +759,51 @@
 			"wis": 14,
 			"cha": 11,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Flyby",
+					"name": "飞掠",
+					"ENG_name": "Flyby",
 					"entries": [
-						"The beast doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+						"当野兽飞出敌人的攻击范围时，它不会引发借机攻击。"
 					]
 				},
 				{
-					"name": "Primal Bond",
+					"name": "原初联结",
+					"ENG_name": "Primal Bond",
 					"entries": [
-						"Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+						"将你的熟练加值加到野兽进行的任何能力检定或豁免检定上。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beast's Strike",
+					"name": "野兽之击",
+					"ENG_name": "Beast's Strike",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d4 + 3} plus your Wisdom modifier Slashing damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@dice 1d4 + 3} 加上你的智慧调整值的斩击伤害。"
 					]
 				}
 			],
 			"traitTags": [
-				"Flyby"
+				"飞掠"
 			],
 			"miscTags": [
 				"MA"
 			]
 		},
 		{
-			"name": "Bestial Spirit",
+			"name": "野兽灵魄",
+			"ENG_name": "Bestial Spirit",
 			"source": "XPHB",
 			"page": 323,
-			"summonedBySpell": "Summon Beast|XPHB",
+			"summonedBySpell": "野兽召唤术|XPHB",
 			"summonedBySpellLevel": 2,
 			"size": [
 				"S"
@@ -771,25 +814,25 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level"
+					"special": "11 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2"
+				"special": "20（仅限气元素）或30（仅限地元素和水元素）+ 每超过2级的法术等级增加5"
 			},
 			"speed": {
 				"walk": 30,
 				"climb": {
 					"number": 30,
-					"condition": "(land only)"
+					"condition": "（仅限陆地）"
 				},
 				"fly": {
 					"number": 60,
-					"condition": "(air only)"
+					"condition": "（仅限空气）"
 				},
 				"swim": {
 					"number": 30,
-					"condition": "(water only)"
+					"condition": "（仅限水）"
 				}
 			},
 			"str": 18,
@@ -799,54 +842,59 @@
 			"wis": 14,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Flyby (Air Only)",
+					"name": "飞掠（仅限空）",
+					"ENG_name": "Flyby (Air Only)",
 					"entries": [
-						"The spirit doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+						"当灵体飞离敌人的触及范围时，不会引发借机攻击。"
 					]
 				},
 				{
-					"name": "Pack Tactics (Land and Water Only)",
+					"name": "集群战术（仅限陆与水）",
+					"ENG_name": "Pack Tactics (Land and Water Only)",
 					"entries": [
-						"The spirit has Advantage on an attack roll against a creature if at least one of the spirit's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+						"如果灵体的至少一个盟友在目标生物的5英尺范围内，并且该盟友没有处于{@condition 失能|XPHB}状态，则灵体对目标生物的攻击检定具有优势。"
 					]
 				},
 				{
-					"name": "Water Breathing (Water Only)",
+					"name": "水下呼吸（仅限水）",
+					"ENG_name": "Water Breathing (Water Only)",
 					"entries": [
-						"The spirit can breathe only underwater."
+						"该灵体只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of Rend attacks equal to half this spell's level (round down)."
+						"该灵体进行的撕裂攻击次数等于法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 4 + summonSpellLevel} Piercing damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d8 + 4 + 召唤法术等级} 穿刺伤害。"
 					]
 				}
 			],
 			"traitTags": [
-				"Flyby",
-				"Pack Tactics",
-				"Water Breathing"
+				"飞掠",
+				"集群战术",
+				"水下呼吸"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"P"
@@ -856,105 +904,109 @@
 			],
 			"_versions": [
 				{
-					"name": "Bestial Spirit (Air)",
+					"name": "野兽之魂（空气）",
+					"ENG_name": "Bestial Spirit (Air)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Water Breathing (Water Only)",
-									"Pack Tactics (Land and Water Only)"
+									"水下呼吸（仅限水）",
+									"集群战术（仅限陆与水）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Flyby (Air Only)",
-									"with": "Flyby"
+									"rename": "飞掠（仅限空）",
+									"with": "飞掠"
 								}
 							}
 						]
 					},
 					"hp": {
-						"special": "20 + 5 for each spell level above 2"
+						"special": "20 + 每超过2级的法术等级增加5"
 					},
 					"speed": {
 						"walk": 30,
 						"fly": 60
 					},
 					"traitTags": [
-						"Flyby"
+						"飞掠"
 					]
 				},
 				{
-					"name": "Bestial Spirit (Land)",
+					"name": "野性灵（陆地）",
+					"ENG_name": "Bestial Spirit (Land)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Water Breathing (Water Only)",
-									"Flyby (Air Only)"
+									"水下呼吸（仅限水）",
+									"飞掠（仅限空）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Pack Tactics (Land and Water Only)",
-									"with": "Pack Tactics"
+									"rename": "集群战术（仅限陆与水）",
+									"with": "集群战术"
 								}
 							}
 						]
 					},
 					"hp": {
-						"special": "30 + 5 for each spell level above 2"
+						"special": "30 + 每超过2级的法术等级增加5"
 					},
 					"speed": {
 						"walk": 30,
 						"climb": 30
 					},
 					"traitTags": [
-						"Pack Tactics"
+						"集群战术"
 					]
 				},
 				{
-					"name": "Bestial Spirit (Water)",
+					"name": "野兽之魂（水）",
+					"ENG_name": "Bestial Spirit (Water)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Flyby (Air Only)"
+									"飞掠（仅限空）"
 								]
 							},
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Pack Tactics (Land and Water Only)",
-									"with": "Pack Tactics"
+									"rename": "集群战术（仅限陆与水）",
+									"with": "集群战术"
 								}
 							}
 						]
 					},
 					"hp": {
-						"special": "30 + 5 for each spell level above 2"
+						"special": "30 + 每超过2级的法术等级增加5"
 					},
 					"speed": {
 						"walk": 30,
 						"swim": 30
 					},
 					"traitTags": [
-						"Pack Tactics",
-						"Water Breathing"
+						"集群战术",
+						"水下呼吸"
 					]
 				}
 			]
 		},
 		{
-			"name": "Black Bear",
+			"name": "黑熊",
+			"ENG_name": "Black Bear",
 			"source": "XPHB",
 			"page": 346,
 			"size": [
@@ -986,26 +1038,29 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 15,
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The bear makes two Rend attacks."
+						"熊进行两次撕裂攻击。"
 					]
 				},
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage."
+						"{@atkr m} {@hit 4}, 触及范围5英尺。{@h}5 ({@damage 1d6 + 2}) 斩击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Black Bear",
+				"name": "黑熊",
+				"ENG_name": "Black Bear",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1016,7 +1071,7 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"S"
@@ -1027,7 +1082,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Boar",
+			"name": "野猪",
+			"ENG_name": "Boar",
 			"source": "XPHB",
 			"page": 347,
 			"size": [
@@ -1057,22 +1113,25 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Bloodied Fury",
+					"name": "流血之怒",
+					"ENG_name": "Bloodied Fury",
 					"entries": [
-						"While Bloodied, the boar has Advantage on attack rolls."
+						"当野猪处于流血状态时，其攻击检定具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Gore",
+					"name": "角撞",
+					"ENG_name": "Gore",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Piercing damage. If the boar moved at least 20 feet straight toward the target immediately before the hit, the target takes an extra 3 ({@damage 1d6}) Piercing damage and, if it is Large or smaller, has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 3}, 触及范围5英尺。{@h}4 ({@damage 1d6 + 1}) 穿刺伤害。如果野猪在命中前直线移动至少20英尺直接向目标靠近，则目标额外受到3 ({@damage 1d6}) 穿刺伤害，并且如果是大型或更小，则处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Boar",
+				"name": "野猪",
+				"ENG_name": "Boar",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1086,12 +1145,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Brown Bear",
+			"name": "棕熊",
+			"ENG_name": "Brown Bear",
 			"source": "XPHB",
 			"page": 347,
 			"size": [
@@ -1122,35 +1182,39 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "1",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The bear makes one Bite attack and one Claw attack."
+						"熊进行一次咬击和一次爪击。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage."
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪击",
+					"ENG_name": "Claw",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Slashing damage, and the target has the {@condition Prone|XPHB} condition if it is Huge or smaller."
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}5 ({@damage 1d4 + 3}) 斩击伤害，如果是大型或更小的目标，则处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Brown Bear",
+				"name": "棕熊",
+				"ENG_name": "Brown Bear",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1161,7 +1225,7 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"P",
@@ -1171,12 +1235,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Camel",
+			"name": "骆驼",
+			"ENG_name": "Camel",
 			"source": "XPHB",
 			"page": 347,
 			"size": [
@@ -1203,20 +1268,22 @@
 			"wis": 11,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Bludgeoning damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}4 ({@damage 1d4 + 2}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Camel",
+				"name": "骆驼",
+				"ENG_name": "Camel",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1235,7 +1302,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Cat",
+			"name": "猫",
+			"ENG_name": "Cat",
 			"source": "XPHB",
 			"page": 347,
 			"size": [
@@ -1267,20 +1335,22 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"cr": "0",
 			"action": [
 				{
-					"name": "Scratch",
+					"name": "抓击",
+					"ENG_name": "Scratch",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Slashing damage."
+						"{@atkr m} {@hit 4}, 触及范围5英尺。{@h}1 斩击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Cat",
+				"name": "猫",
+				"ENG_name": "Cat",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1299,10 +1369,11 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Celestial Spirit",
+			"name": "天界灵魄",
+			"ENG_name": "Celestial Spirit",
 			"source": "XPHB",
 			"page": 323,
-			"summonedBySpell": "Summon Celestial|XPHB",
+			"summonedBySpell": "天界召唤术|XPHB",
 			"summonedBySpellLevel": 5,
 			"size": [
 				"L"
@@ -1313,11 +1384,11 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level + 2 (Defender only)"
+					"special": "11 + 该法术的等级 + 2（仅限防卫者）"
 				}
 			],
 			"hp": {
-				"special": "40 + 10 for each spell level above 5"
+				"special": "40 + 每超过5级的法术等级增加10"
 			},
 			"speed": {
 				"walk": 30,
@@ -1330,53 +1401,58 @@
 			"wis": 14,
 			"cha": 16,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"resist": [
-				"radiant"
+				"光耀"
 			],
 			"conditionImmune": [
-				"charmed",
-				"frightened"
+				"魅惑",
+				"恐慌"
 			],
 			"languages": [
-				"Celestial",
-				"understands the languages you know"
+				"天界语",
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of attacks equal to half this spell's level (round down)."
+						"灵体进行的攻击次数等于这个法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Radiant Bow (Avenger Only)",
+					"name": "光耀之弓（仅限复仇圣灵）",
+					"ENG_name": "Radiant Bow (Avenger Only)",
 					"entries": [
-						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, range 600 ft. {@h}{@damage 2d6 + 2 + summonSpellLevel} Radiant damage."
+						"{@atkr r} {@hit 你的法术攻击加值等于你的法术攻击修正}, 射程600英尺。{@h}{@damage 2d6 + 2 + 召唤法术等级} 辐射伤害。"
 					]
 				},
 				{
-					"name": "Radiant Mace (Defender Only)",
+					"name": "光耀之锤（仅限守护圣灵）",
+					"ENG_name": "Radiant Mace (Defender Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d10 + 3 + summonSpellLevel} Radiant damage, and the spirit can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains {@dice 1d10} Temporary Hit Points."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d10 + 3 + 召唤法术等级} 辐射伤害，并且灵体可以选择它自己或者它在目标10英尺内可见的另一个生物。被选择的生物获得{@dice 1d10}临时生命值。"
 					]
 				},
 				{
-					"name": "Healing Touch (1/Day)",
+					"name": "治愈之触（1/日）",
+					"ENG_name": "Healing Touch (1/Day)",
 					"entries": [
-						"The spirit touches another creature. The target regains Hit Points equal to {@dice 2d8 + summonSpellLevel}."
+						"灵体触碰另一个生物。目标恢复的生命值等于{@dice 2d8 + 召唤法术等级}。"
 					]
 				}
 			],
 			"token": {
-				"name": "Celestial Spirit",
+				"name": "天界灵魄",
+				"ENG_name": "Celestial Spirit",
 				"source": "XPHB"
 			},
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"R"
@@ -1389,26 +1465,27 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Celestial Spirit (Avenger)",
+					"name": "天界灵（复仇者）",
+					"ENG_name": "Celestial Spirit (Avenger)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Radiant Bow (Avenger Only)",
-									"with": "Radiant Bow"
+									"rename": "光耀之弓（仅限复仇圣灵）",
+									"with": "光辉之弓"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Radiant Mace (Defender Only)"
+								"names": "光耀之锤（仅限守护圣灵）"
 							}
 						]
 					},
 					"ac": [
 						{
-							"special": "11 + the spell's level"
+							"special": "11 + 法术等级"
 						}
 					],
 					"miscTags": [
@@ -1417,26 +1494,27 @@
 					]
 				},
 				{
-					"name": "Celestial Spirit (Defender)",
+					"name": "天界之魂（守卫者）",
+					"ENG_name": "Celestial Spirit (Defender)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Radiant Mace (Defender Only)",
-									"with": "Radiant Mace"
+									"rename": "光耀之锤（仅限守护圣灵）",
+									"with": "光辉权杖"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Radiant Bow (Avenger Only)"
+								"names": "光耀之弓（仅限复仇圣灵）"
 							}
 						]
 					},
 					"ac": [
 						{
-							"special": "13 + the spell's level"
+							"special": "13 + 该法术的等级"
 						}
 					],
 					"miscTags": [
@@ -1447,7 +1525,8 @@
 			]
 		},
 		{
-			"name": "Constrictor Snake",
+			"name": "蟒蛇",
+			"ENG_name": "Constrictor Snake",
 			"source": "XPHB",
 			"page": 348,
 			"size": [
@@ -1479,26 +1558,29 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft."
+				"盲视 10 尺"
 			],
 			"passive": 12,
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage."
+						"{@atkr m} {@hit 4}, 触及范围5英尺。{@h}6 ({@damage 1d8 + 2}) 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Constrict",
+					"name": "绞缠",
+					"ENG_name": "Constrict",
 					"entries": [
-						"{@actSave str} {@dc 12}, one Medium or smaller creature the snake can see within 5 feet. {@actSaveFail} 7 ({@damage 3d4}) Bludgeoning damage, and the target has the {@condition Grappled|XPHB} condition (escape {@dc 12})."
+						"{@actSave str} {@dc 12}, 蛇可以看到的5英尺内的一只中型或更小的生物。{@actSaveFail} 7 ({@damage 3d4}) 钝击伤害，目标处于{@condition Grappled|XPHB}状态（逃脱{@dc 12}）。"
 					]
 				}
 			],
 			"token": {
-				"name": "Constrictor Snake",
+				"name": "蟒蛇",
+				"ENG_name": "Constrictor Snake",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -1516,14 +1598,15 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled"
+				"被擒抱"
 			]
 		},
 		{
-			"name": "Construct Spirit",
+			"name": "构装灵魄",
+			"ENG_name": "Construct Spirit",
 			"source": "XPHB",
 			"page": 324,
-			"summonedBySpell": "Summon Construct|XPHB",
+			"summonedBySpell": "构装召唤术|XPHB",
 			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
@@ -1534,11 +1617,11 @@
 			],
 			"ac": [
 				{
-					"special": "13 + the spell's level"
+					"special": "13 + 该法术的等级"
 				}
 			],
 			"hp": {
-				"special": "40 + 15 for each spell level above 4"
+				"special": "40 + 每超过4级的法术等级增加15"
 			},
 			"speed": {
 				"walk": 30
@@ -1550,65 +1633,71 @@
 			"wis": 11,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"resist": [
-				"poison"
+				"毒素"
 			],
 			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"poisoned"
+				"魅惑",
+				"力竭",
+				"恐慌",
+				"麻痹",
+				"中毒"
 			],
 			"languages": [
-				"Understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Heated Body (Metal Only)",
+					"name": "灼热之躯（仅限金属）",
+					"ENG_name": "Heated Body (Metal Only)",
 					"entries": [
-						"A creature that hits the spirit with a melee attack or that starts its turn in a grapple with the spirit takes {@damage 1d10} Fire damage."
+						"用近战攻击击中灵体或在其回合开始时与灵体进行肉搏的生物会受到{@damage 1d10}火焰伤害。"
 					]
 				},
 				{
-					"name": "Stony Lethargy (Stone Only)",
+					"name": "石迷昏眠（仅限石）",
+					"ENG_name": "Stony Lethargy (Stone Only)",
 					"entries": [
-						"When a creature starts its turn within 10 feet of the spirit, the spirit can target it with magical energy if the spirit can see it. Wisdom Saving Throw: DC equals your spell save DC, the target. {@actSaveFail} Until the start of its next turn, the target can't make Opportunity Attacks, and its Speed is halved."
+						"当一个生物在其回合开始时处于灵体10英尺范围内，如果灵体可以看到它，灵体可以用魔法能量对其进行攻击。智慧豁免检定：DC等于你的法术豁免DC，目标生物。{@actSaveFail} 在其下一个回合开始之前，目标不能进行借机攻击，且其速度减半。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+						"该灵体进行的猛击攻击次数等于法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛击",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 4 + summonSpellLevel} Bludgeoning damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d8 + 4 + 召唤法术等级} 钝击伤害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Berserk Lashing (Clay Only)",
+					"name": "狂怒乱击（仅限粘土）",
+					"ENG_name": "Berserk Lashing (Clay Only)",
 					"entries": [
-						"{@actTrigger} The spirit takes damage from a creature. {@actResponse} The spirit makes a Slam attack against that creature if possible, or the spirit moves up to half its Speed toward that creature without provoking Opportunity Attacks."
+						"{@actTrigger} 灵体受到来自生物的伤害。{@actResponse} 如果可能，灵体对那个生物进行猛击攻击，或者灵体朝着那个生物移动至多一半的速度而不引起借机攻击。"
 					]
 				}
 			],
 			"token": {
-				"name": "Construct Spirit",
+				"name": "构装灵魄",
+				"ENG_name": "Construct Spirit",
 				"source": "XPHB"
 			},
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"B",
@@ -1620,15 +1709,16 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Construct Spirit (Clay)",
+					"name": "构造灵（黏土）",
+					"ENG_name": "Construct Spirit (Clay)",
 					"source": "XPHB",
 					"_mod": {
 						"reaction": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Berserk Lashing (Clay Only)",
-									"with": "Berserk Lashing"
+									"rename": "狂怒乱击（仅限粘土）",
+									"with": "狂暴猛击"
 								}
 							}
 						]
@@ -1639,40 +1729,42 @@
 					]
 				},
 				{
-					"name": "Construct Spirit (Metal)",
+					"name": "构装生物之魂（金属）",
+					"ENG_name": "Construct Spirit (Metal)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Heated Body (Metal Only)",
-									"with": "Heated Body"
+									"rename": "灼热之躯（仅限金属）",
+									"with": "灼热之躯"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Stony Lethargy (Stone Only)"
+								"names": "石迷昏眠（仅限石）"
 							}
 						]
 					},
 					"reaction": null
 				},
 				{
-					"name": "Construct Spirit (Stone)",
+					"name": "构装生物之灵（石）",
+					"ENG_name": "Construct Spirit (Stone)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Stony Lethargy (Stone Only)",
-									"with": "Stony Lethargy"
+									"rename": "石迷昏眠（仅限石）",
+									"with": "石肤昏睡"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Heated Body (Metal Only)"
+								"names": "灼热之躯（仅限金属）"
 							}
 						]
 					},
@@ -1684,7 +1776,8 @@
 			]
 		},
 		{
-			"name": "Crab",
+			"name": "蟹",
+			"ENG_name": "Crab",
 			"source": "XPHB",
 			"page": 348,
 			"size": [
@@ -1715,28 +1808,31 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"盲视 30 尺"
 			],
 			"passive": 9,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"The crab can breathe air and water."
+						"这只螃蟹可以在空气和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claw",
+					"name": "爪击",
+					"ENG_name": "Claw",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}1 Bludgeoning damage."
+						"{@atkr m} {@hit 2}, 触及范围5英尺。{@h}1 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Crab",
+				"name": "蟹",
+				"ENG_name": "Crab",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1744,7 +1840,7 @@
 				"path": "bestiary/crab.mp3"
 			},
 			"traitTags": [
-				"Amphibious"
+				"水陆两栖"
 			],
 			"senseTags": [
 				"B"
@@ -1758,7 +1854,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Crocodile",
+			"name": "鳄鱼",
+			"ENG_name": "Crocodile",
 			"source": "XPHB",
 			"page": 348,
 			"size": [
@@ -1792,22 +1889,25 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Hold Breath",
+					"name": "屏息",
+					"ENG_name": "Hold Breath",
 					"entries": [
-						"The crocodile can hold its breath for 1 hour."
+						"鳄鱼可以屏住呼吸1小时。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage. If the target is Medium or smaller, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}). While {@condition Grappled|XPHB}, the target has the {@condition Restrained|XPHB} condition."
+						"{@atkr m} {@hit 4}, 触及范围5英尺。{@h}6 ({@damage 1d8 + 2}) 穿刺伤害。如果目标是中型或更小，它将处于{@condition Grappled|XPHB}状态（逃脱{@dc 12}）。处于{@condition Grappled|XPHB}状态时，目标同时处于{@condition Restrained|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Crocodile",
+				"name": "鳄鱼",
+				"ENG_name": "Crocodile",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1815,7 +1915,7 @@
 				"path": "bestiary/crocodile.mp3"
 			},
 			"traitTags": [
-				"Hold Breath"
+				"屏息"
 			],
 			"damageTags": [
 				"P"
@@ -1824,13 +1924,14 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled",
-				"restrained"
+				"被擒抱",
+				"束缚"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Dire Wolf",
+			"name": "恐狼",
+			"ENG_name": "Dire Wolf",
 			"source": "XPHB",
 			"page": 348,
 			"size": [
@@ -1861,31 +1962,34 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 15,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Pack Tactics",
+					"name": "集群战术",
+					"ENG_name": "Pack Tactics",
 					"entries": [
-						"The wolf has Advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+						"如果狼的至少一个盟友在目标生物的5英尺范围内，并且该盟友没有处于{@condition 失能|XPHB}状态，则狼对目标生物的攻击检定具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Piercing damage, and the target has the {@condition Prone|XPHB} condition if it is Huge or smaller."
+						"{@atkr m} {@hit 5}, 触及5英尺。{@h}8 ({@damage 1d10 + 3}) 穿刺伤害，如果目标是巨型或更小，则目标处于{@condition 倒地|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Dire Wolf",
+				"name": "恐狼",
+				"ENG_name": "Dire Wolf",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -1893,7 +1997,7 @@
 				"path": "bestiary/dire-wolf.mp3"
 			},
 			"traitTags": [
-				"Pack Tactics"
+				"集群战术"
 			],
 			"senseTags": [
 				"D"
@@ -1905,15 +2009,16 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Draconic Spirit",
+			"name": "龙类灵魄",
+			"ENG_name": "Draconic Spirit",
 			"source": "XPHB",
 			"page": 325,
-			"summonedBySpell": "Summon Dragon|XPHB",
+			"summonedBySpell": "召唤龙|XPHB",
 			"summonedBySpellLevel": 5,
 			"size": [
 				"L"
@@ -1924,11 +2029,11 @@
 			],
 			"ac": [
 				{
-					"special": "14 + the spell's level"
+					"special": "14 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "50 + 10 for each spell level above 5"
+				"special": "50 + 5级以上每级法术加10"
 			},
 			"speed": {
 				"walk": 30,
@@ -1942,62 +2047,67 @@
 			"wis": 14,
 			"cha": 14,
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 60 ft."
+				"盲视 30 尺",
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"resist": [
-				"acid",
-				"cold",
-				"fire",
-				"lightning",
-				"poison"
+				"强酸",
+				"冷冻",
+				"火焰",
+				"闪电",
+				"毒素"
 			],
 			"conditionImmune": [
-				"charmed",
-				"frightened",
-				"poisoned"
+				"魅惑",
+				"恐慌",
+				"中毒"
 			],
 			"languages": [
-				"Draconic",
-				"understands the languages you know"
+				"龙语",
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Shared Resistances",
+					"name": "共享抗性",
+					"ENG_name": "Shared Resistances",
 					"entries": [
-						"When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends."
+						"当你召唤这个灵体时，选择它的一个抗性。在法术结束前，你对所选的伤害类型有抗性。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+						"该灵体进行的撕裂攻击次数等于法术等级的一半（向下取整），并且它使用呼吸武器。"
 					]
 				},
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 10 feet. {@h}{@damage 1d6 + 4 + summonSpellLevel} Piercing damage."
+						"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 触及10英尺。{@h}{@damage 1d6 + 4 + summonSpellLevel} 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Breath Weapon",
+					"name": "吐息武器",
+					"ENG_name": "Breath Weapon",
 					"entries": [
-						"{@actSave dex} DC equals your spell save DC, each creature in a 30-foot Cone. {@actSaveFail} {@damage 2d6} damage of a type this spirit has Resistance to (your choice when you cast the spell). {@actSaveSuccess} Half damage."
+						"{@actSave dex} DC等于你的法术豁免DC，30英尺锥形区域内的每个生物。{@actSaveFail} 此灵体有抗性的某种类型的伤害{@damage 2d6}（你施法时选择）。{@actSaveSuccess} 伤害减半。"
 					]
 				}
 			],
 			"token": {
-				"name": "Draconic Spirit",
+				"name": "龙类灵魄",
+				"ENG_name": "Draconic Spirit",
 				"source": "XPHB"
 			},
 			"actionTags": [
-				"Breath Weapon",
-				"Multiattack"
+				"吐息武器",
+				"多重攻击"
 			],
 			"damageTags": [
 				"P"
@@ -2008,7 +2118,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Draft Horse",
+			"name": "驮用马",
+			"ENG_name": "Draft Horse",
 			"source": "XPHB",
 			"page": 349,
 			"size": [
@@ -2038,14 +2149,16 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄击",
+					"ENG_name": "Hooves",
 					"entries": [
-						"{@atkr m} {@hit 6}, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) Bludgeoning damage."
+						"{@atkr m} {@hit 6}, 触及5英尺。{@h}6 ({@damage 1d4 + 4}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Draft Horse",
+				"name": "驮用马",
+				"ENG_name": "Draft Horse",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -2061,10 +2174,11 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Elemental Spirit",
+			"name": "元素灵魄",
+			"ENG_name": "Elemental Spirit",
 			"source": "XPHB",
 			"page": 325,
-			"summonedBySpell": "Summon Elemental|XPHB",
+			"summonedBySpell": "元素召唤术|XPHB",
 			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
@@ -2075,25 +2189,25 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level"
+					"special": "11 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "50 + 10 for each spell level above 4"
+				"special": "50 + 4级以上每级法术加10"
 			},
 			"speed": {
 				"walk": 40,
 				"burrow": {
 					"number": 40,
-					"condition": "(earth only)"
+					"condition": "（仅限土元素）"
 				},
 				"fly": {
 					"number": 40,
-					"condition": "(hover; air only)"
+					"condition": "（悬浮；仅限空中）"
 				},
 				"swim": {
 					"number": 40,
-					"condition": "(water only)"
+					"condition": "（仅限水）"
 				},
 				"canHover": true
 			},
@@ -2104,107 +2218,112 @@
 			"wis": 10,
 			"cha": 16,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"resist": [
 				{
 					"resist": [
-						"lightning",
-						"thunder"
+						"闪电",
+						"雷鸣伤害"
 					],
 					"cond": true,
-					"note": "(Air only)"
+					"note": "（仅限空气）"
 				},
 				{
 					"resist": [
-						"piercing",
-						"slashing"
+						"穿刺",
+						"斩击"
 					],
 					"cond": true,
-					"note": "(Earth only)"
+					"note": "（仅限地面）"
 				},
 				{
 					"resist": [
-						"acid"
+						"强酸"
 					],
 					"cond": true,
-					"note": "(Water only)"
+					"note": "（仅限水）"
 				}
 			],
 			"immune": [
-				"poison",
+				"毒素",
 				{
 					"immune": [
-						"fire"
+						"火焰"
 					],
 					"cond": true,
-					"note": "(Fire only)"
+					"note": "（仅限火焰）"
 				}
 			],
 			"conditionImmune": [
-				"exhaustion",
-				"paralyzed",
-				"petrified",
-				"poisoned"
+				"力竭",
+				"麻痹",
+				"石化",
+				"中毒"
 			],
 			"languages": [
-				"Primordial",
-				"understands the languages you know"
+				"原初语",
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Amorphous Form (Air, Fire, and Water Only)",
+					"name": "不定形态（仅限于气、火和水）",
+					"ENG_name": "Amorphous Form (Air, Fire, and Water Only)",
 					"entries": [
-						"The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain."
+						"灵体可以通过宽度仅为1英寸的空间移动，而不会将其视为困难地形。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+						"该灵体进行的猛击攻击次数等于法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛击",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d10 + 4 + summonSpellLevel} Bludgeoning (Earth only), Cold (Water only), Lightning (Air only), or Fire (Fire only) damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@dice 1d10 + 4 + 召唤法术等级} 钝击（仅限土元素）、寒冷（仅限水元素）、闪电（仅限气元素）或火焰（仅限火元素）伤害。"
 					]
 				}
 			],
 			"traitTags": [
-				"Amorphous"
+				"无定形"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"miscTags": [
 				"MA"
 			],
 			"_versions": [
 				{
-					"name": "Elemental Spirit (Air)",
+					"name": "元素灵（风）",
+					"ENG_name": "Elemental Spirit (Air)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Amorphous Form (Air, Fire, and Water Only)",
-									"with": "Amorphous Form"
+									"rename": "不定形态（仅限于气、火和水）",
+									"with": "不定形形态"
 								}
 							}
 						],
 						"action": {
 							"mode": "replaceArr",
-							"replace": "Slam",
+							"replace": "猛击",
 							"items": {
-								"name": "Slam",
+								"name": "猛击",
+								"ENG_name": "Slam",
 								"entries": [
-									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+									"{@atk m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d10 + 4 + 召唤法术等级} 钝击伤害。"
 								]
 							}
 						}
@@ -2213,32 +2332,34 @@
 						"walk": 40,
 						"fly": {
 							"number": 40,
-							"condition": "(hover)"
+							"condition": "(悬浮)"
 						},
 						"canHover": true
 					},
 					"resist": [
-						"lightning",
-						"thunder"
+						"闪电",
+						"雷鸣伤害"
 					],
 					"immune": [
-						"poison"
+						"毒素"
 					],
 					"damageTags": [
 						"B"
 					]
 				},
 				{
-					"name": "Elemental Spirit (Earth)",
+					"name": "元素之灵（土）",
+					"ENG_name": "Elemental Spirit (Earth)",
 					"source": "XPHB",
 					"_mod": {
 						"action": {
 							"mode": "replaceArr",
-							"replace": "Slam",
+							"replace": "猛击",
 							"items": {
-								"name": "Slam",
+								"name": "猛击",
+								"ENG_name": "Slam",
 								"entries": [
-									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+									"{@atk m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d10 + 4 + 召唤法术等级} 钝击伤害。"
 								]
 							}
 						}
@@ -2248,11 +2369,11 @@
 						"burrow": 40
 					},
 					"resist": [
-						"piercing",
-						"slashing"
+						"穿刺",
+						"斩击"
 					],
 					"immune": [
-						"poison"
+						"毒素"
 					],
 					"trait": null,
 					"damageTags": [
@@ -2260,25 +2381,27 @@
 					]
 				},
 				{
-					"name": "Elemental Spirit (Fire)",
+					"name": "元素灵（火）",
+					"ENG_name": "Elemental Spirit (Fire)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Amorphous Form (Air, Fire, and Water Only)",
-									"with": "Amorphous Form"
+									"rename": "不定形态（仅限于气、火和水）",
+									"with": "不定形形态"
 								}
 							}
 						],
 						"action": {
 							"mode": "replaceArr",
-							"replace": "Slam",
+							"replace": "猛击",
 							"items": {
-								"name": "Slam",
+								"name": "猛击",
+								"ENG_name": "Slam",
 								"entries": [
-									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Fire damage."
+									"{@atk m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d10 + 4 + 召唤法术等级} 火焰伤害。"
 								]
 							}
 						}
@@ -2287,33 +2410,35 @@
 						"walk": 40
 					},
 					"immune": [
-						"poison",
-						"fire"
+						"毒素",
+						"火焰"
 					],
 					"damageTags": [
 						"F"
 					]
 				},
 				{
-					"name": "Elemental Spirit (Water)",
+					"name": "元素精灵（水）",
+					"ENG_name": "Elemental Spirit (Water)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Amorphous Form (Air, Fire, and Water Only)",
-									"with": "Amorphous Form"
+									"rename": "不定形态（仅限于气、火和水）",
+									"with": "不定形形态"
 								}
 							}
 						],
 						"action": {
 							"mode": "replaceArr",
-							"replace": "Slam",
+							"replace": "猛击",
 							"items": {
-								"name": "Slam",
+								"name": "猛击",
+								"ENG_name": "Slam",
 								"entries": [
-									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+									"{@atk m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d10 + 4 + 召唤法术等级} 钝击伤害。"
 								]
 							}
 						}
@@ -2323,10 +2448,10 @@
 						"swim": 40
 					},
 					"resist": [
-						"acid"
+						"强酸"
 					],
 					"immune": [
-						"poison"
+						"毒素"
 					],
 					"damageTags": [
 						"B"
@@ -2335,7 +2460,8 @@
 			]
 		},
 		{
-			"name": "Elephant",
+			"name": "象",
+			"ENG_name": "Elephant",
 			"source": "XPHB",
 			"page": 349,
 			"size": [
@@ -2363,33 +2489,37 @@
 			"cha": 6,
 			"passive": 10,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "4",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The elephant makes two Gore attacks."
+						"大象进行两次冲刺攻击。"
 					]
 				},
 				{
-					"name": "Gore",
+					"name": "角撞",
+					"ENG_name": "Gore",
 					"entries": [
-						"{@atkr m} {@hit 8}, reach 5 ft. {@h}15 ({@damage 2d8 + 6}) Piercing damage. If the elephant moved at least 20 feet straight toward the target immediately before the hit, the target also has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 8}, 触及范围5英尺。{@h}15 ({@damage 2d8 + 6}) 穿刺伤害。如果大象在命中前直线移动至少20英尺直接向目标靠近，则目标也会处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
 			"bonus": [
 				{
-					"name": "Trample",
+					"name": "践踏",
+					"ENG_name": "Trample",
 					"entries": [
-						"{@actSave dex} {@dc 16}, one creature within 5 feet that has the {@condition Prone|XPHB} condition. {@actSaveFail} 17 ({@damage 2d10 + 6}) Bludgeoning damage. {@actSaveSuccess} Half damage."
+						"{@actSave dex} {@dc 16}, 5英尺内的一只处于{@condition Prone|XPHB}状态的生物。{@actSaveFail} 17 ({@damage 2d10 + 6}) 钝击伤害。{@actSaveSuccess} 伤害减半。"
 					]
 				}
 			],
 			"token": {
-				"name": "Elephant",
+				"name": "象",
+				"ENG_name": "Elephant",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -2397,7 +2527,7 @@
 				"path": "bestiary/elephant.mp3"
 			},
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"B",
@@ -2407,12 +2537,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Elk",
+			"name": "麋鹿",
+			"ENG_name": "Elk",
 			"source": "XPHB",
 			"page": 349,
 			"size": [
@@ -2442,20 +2573,22 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Ram",
+					"name": "攻城槌",
+					"ENG_name": "Ram",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage. If the elk moved at least 20 feet straight toward the target immediately before the hit, the target takes an extra 3 ({@damage 1d6}) Bludgeoning damage and, if it is Huge or smaller, has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}6 ({@damage 1d6 + 3}) 钝击伤害。如果麋鹿在命中前直线移动至少20英尺直接向目标靠近，则目标额外受到3 ({@damage 1d6}) 钝击伤害，并且如果是大型或更小，则处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Elk",
+				"name": "麋鹿",
+				"ENG_name": "Elk",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -2472,14 +2605,15 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			]
 		},
 		{
-			"name": "Fey Spirit",
+			"name": "妖精灵魄",
+			"ENG_name": "Fey Spirit",
 			"source": "XPHB",
 			"page": 326,
-			"summonedBySpell": "Summon Fey|XPHB",
+			"summonedBySpell": "精类召唤术|XPHB",
 			"summonedBySpellLevel": 3,
 			"size": [
 				"S"
@@ -2490,11 +2624,11 @@
 			],
 			"ac": [
 				{
-					"special": "12 + the spell's level"
+					"special": "12 + 该法术的等级"
 				}
 			],
 			"hp": {
-				"special": "30 + 10 for each spell level above 3"
+				"special": "30 + 每超过3级的法术等级增加10"
 			},
 			"speed": {
 				"walk": 30,
@@ -2507,56 +2641,62 @@
 			"wis": 11,
 			"cha": 16,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"languages": [
-				"Sylvan",
-				"understands the languages you know"
+				"木族语",
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of Fey Blade attacks equal to half this spell's level (round down)."
+						"该灵体进行的仙灵之刃攻击次数等于法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Fey Blade",
+					"name": "仙灵之刃",
+					"ENG_name": "Fey Blade",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 2d6 + 3 + summonSpellLevel} Force damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 2d6 + 3 + 召唤法术等级} 力场伤害。"
 					]
 				}
 			],
 			"bonus": [
 				{
-					"name": "Fey Step",
+					"name": "妖精步",
+					"ENG_name": "Fey Step",
 					"entries": [
-						"The spirit magically teleports up to 30 feet to an unoccupied space it can see. Then one of the following effects occurs, based on the spirit's chosen mood:",
+						"该灵体可以魔法地传送至它可见的未被占据的空间，距离最多30英尺。然后根据灵体选择的心情，发生以下效果之一：",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
-									"name": "Fuming",
+									"name": "愤怒",
+									"ENG_name": "Fuming",
 									"type": "item",
 									"entries": [
-										"The spirit has Advantage on the next attack roll it makes before the end of this turn."
+										"在本回合结束前，灵体下一次进行的攻击检定具有优势。"
 									]
 								},
 								{
-									"name": "Mirthful",
+									"name": "欢欣",
+									"ENG_name": "Mirthful",
 									"type": "item",
 									"entries": [
-										"{@actSave wis} DC equals your spell save DC, one creature the spirit can see within 10 feet of itself. {@actSaveFail} The target is {@condition Charmed|XPHB} by you and the spirit for 1 minute or until the target takes any damage."
+										"{@actSave wis} DC等于你的法术豁免DC，灵体可见范围内10英尺内的一只生物。{@actSaveFail} 目标被你和灵体{@condition Charmed|XPHB}1分钟，或直到目标受到任何伤害。"
 									]
 								},
 								{
-									"name": "Tricksy",
+									"name": "诡诈",
+									"ENG_name": "Tricksy",
 									"type": "item",
 									"entries": [
-										"The spirit fills a 10-foot Cube within 5 feet of it with magical Darkness, which lasts until the end of its next turn."
+										"灵体在其周围5英尺内填充一个10英尺的立方体空间，用魔法黑暗覆盖，直到其下回合结束。"
 									]
 								}
 							]
@@ -2565,14 +2705,15 @@
 				}
 			],
 			"token": {
-				"name": "Fey Spirit",
+				"name": "妖精灵魄",
+				"ENG_name": "Fey Spirit",
 				"source": "XPHB"
 			},
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"languageTags": [
 				"S"
@@ -2584,42 +2725,48 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"charmed"
+				"魅惑"
 			],
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Fey Spirit (Fuming)",
+					"name": "精类之魂（喷烟）",
+					"ENG_name": "Fey Spirit (Fuming)",
 					"source": "XPHB",
 					"bonus": [
 						{
-							"name": "Fey Step",
+							"name": "妖精步",
+							"ENG_name": "Fey Step",
 							"entries": [
-								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. The spirit has Advantage on the next attack roll it makes before the end of this turn."
+								"该灵体可以魔法地传送至它可见的未被占据的空间，距离最多30英尺。在本回合结束前，灵体下一次进行的攻击检定具有优势。"
 							]
 						}
 					]
 				},
 				{
-					"name": "Fey Spirit (Mirthful)",
+					"name": "精类灵（欢乐）",
+					"ENG_name": "Fey Spirit (Mirthful)",
 					"source": "XPHB",
 					"bonus": [
 						{
-							"name": "Fey Step",
+							"name": "妖精步",
+							"ENG_name": "Fey Step",
 							"entries": [
-								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. {@actSave wis} DC equals your spell save DC, one creature the spirit can see within 10 feet of itself. {@actSaveFail} The target is {@condition Charmed|XPHB} by you and the spirit for 1 minute or until the target takes any damage."
+								"该灵体可以魔法地传送至它可见的未被占据的空间，距离最多30英尺。{@actSave wis} DC等于你的法术豁免DC，灵体可见范围内10英尺内的一只生物。{@actSaveFail} 目标被你和灵体{@condition Charmed|XPHB}1分钟，或直到目标受到任何伤害。"
 							]
 						}
 					]
 				},
 				{
-					"name": "Fey Spirit (Tricksy)",
+					"name": "仙灵（调皮）",
+					"ENG_name": "Fey Spirit (Tricksy)",
 					"source": "XPHB",
 					"bonus": [
 						{
-							"name": "Fey Step",
+							"name": "妖精步",
+							"ENG_name": "Fey Step",
 							"entries": [
-								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. The spirit fills a 10-foot Cube within 5 feet of it with magical Darkness, which lasts until the end of its next turn."
+								"该灵体可以魔法地传送至它可见的未被占据的空间，距离最多30英尺。灵体在其周围5英尺内填充一个10英尺的立方体空间，用魔法黑暗覆盖，直到其下回合结束。"
 							]
 						}
 					]
@@ -2627,10 +2774,11 @@
 			]
 		},
 		{
-			"name": "Fiendish Spirit",
+			"name": "邪魔灵魄",
+			"ENG_name": "Fiendish Spirit",
 			"source": "XPHB",
 			"page": 327,
-			"summonedBySpell": "Summon Fiend|XPHB",
+			"summonedBySpell": "邪魔召唤术|XPHB",
 			"summonedBySpellLevel": 6,
 			"size": [
 				"L"
@@ -2641,21 +2789,21 @@
 			],
 			"ac": [
 				{
-					"special": "12 + the spell's level"
+					"special": "12 + 该法术的等级"
 				}
 			],
 			"hp": {
-				"special": "50 (Demon only) or 40 (Devil only) or 60 (Yugoloth only) + 15 for each spell level above 6"
+				"special": "50（仅限恶魔）或40（仅限魔鬼）或60（仅限尤格罗斯）+ 每超过6级的法术等级增加15"
 			},
 			"speed": {
 				"walk": 40,
 				"climb": {
 					"number": 40,
-					"condition": "(demon only)"
+					"condition": "（仅限恶魔）"
 				},
 				"fly": {
 					"number": 60,
-					"condition": "(devil only)"
+					"condition": "（仅限恶魔）"
 				}
 			},
 			"str": 13,
@@ -2665,81 +2813,89 @@
 			"wis": 10,
 			"cha": 16,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"resist": [
-				"fire"
+				"火焰"
 			],
 			"immune": [
-				"poison"
+				"毒素"
 			],
 			"conditionImmune": [
-				"poisoned"
+				"中毒"
 			],
 			"languages": [
-				"Abyssal",
-				"Infernal",
-				"Telepathy 60 ft."
+				"深渊语",
+				"炼狱语",
+				"心灵感应 60 尺"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Death Throes (Demon Only)",
+					"name": "焚身爆（仅限恶魔）",
+					"ENG_name": "Death Throes (Demon Only)",
 					"entries": [
-						"When the spirit drops to 0 Hit Points or the spell ends, the spirit explodes. Dexterity Saving Throw: DC equals your spell save DC, each creature in a 10-foot Emanation originating from the spirit. {@actSaveFail} {@dice 2d10} plus this spell's level Fire damage. {@actSaveSuccess} Half damage."
+						"当灵体降至0生命值或法术结束时，灵体会爆炸。敏捷豁免检定：DC等于你的法术豁免DC，每个在灵体起源的10英尺范围内的生物。{@actSaveFail} {@dice 2d10} 加上本法术等级的火焰伤害。{@actSaveSuccess} 伤害减半。"
 					]
 				},
 				{
-					"name": "Devil's Sight (Devil Only)",
+					"name": "魔鬼视界（仅限魔鬼）",
+					"ENG_name": "Devil's Sight (Devil Only)",
 					"entries": [
-						"Magical Darkness doesn't impede the spirit's Darkvision."
+						"魔法黑暗不会阻碍灵体的黑暗视觉。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The spirit has Advantage on saving throws against spells and other magical eff ects."
+						"该灵体对法术和其他魔法效果的豁免检定具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of attacks equal to half this spell's level (round down)."
+						"灵体进行的攻击次数等于这个法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Bite (Demon Only)",
+					"name": "啃咬（仅限于恶魔）",
+					"ENG_name": "Bite (Demon Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d12 + 3 + summonSpellLevel} Necrotic damage."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d12 + 3 + 召唤法术等级} 坏死伤害。"
 					]
 				},
 				{
-					"name": "Claws (Yugoloth Only)",
+					"name": "爪击（仅限于尤格罗斯魔）",
+					"ENG_name": "Claws (Yugoloth Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 3 + summonSpellLevel} Slashing damage. Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see."
+						"{@atkr m} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺。{@h}{@damage 1d8 + 3 + 召唤法术等级} 斩击伤害。攻击命中或未命中后，灵体可以立即传送至其可见的未被占据的空间，距离最多30英尺。"
 					]
 				},
 				{
-					"name": "Fiery Strike (Devil Only)",
+					"name": "火焰打击（仅限恶魔）",
+					"ENG_name": "Fiery Strike (Devil Only)",
 					"entries": [
-						"{@atkr m,r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. or range 150 ft. {@h}{@damage 2d6 + 3 + summonSpellLevel} Fire damage."
+						"{@atkr m,r} {@hit 你的法术攻击加值等于你的法术攻击修正}, 触及范围5英尺或射程150英尺。{@h}{@damage 2d6 + 3 + 召唤法术等级} 火焰伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Fiendish Spirit",
+				"name": "邪魔灵魄",
+				"ENG_name": "Fiendish Spirit",
 				"source": "XPHB"
 			},
 			"traitTags": [
-				"Death Burst",
-				"Devil's Sight",
-				"Magic Resistance"
+				"临终苦难",
+				"魔鬼视界",
+				"魔法抗性"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"F",
@@ -2753,113 +2909,116 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Fiendish Spirit (Demon)",
+					"name": "恶魔之魂",
+					"ENG_name": "Fiendish Spirit (Demon)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Death Throes (Demon Only)",
-									"with": "Death Throes"
+									"rename": "焚身爆（仅限恶魔）",
+									"with": "临终苦难"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Devil's Sight (Devil Only)"
+								"names": "魔鬼视界（仅限魔鬼）"
 							}
 						],
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Bite (Demon Only)",
-									"with": "Bite"
+									"rename": "啃咬（仅限于恶魔）",
+									"with": "啃咬"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Claws (Yugoloth Only)",
-									"Fiery Strike (Devil Only)"
+									"爪击（仅限于尤格罗斯魔）",
+									"火焰打击（仅限恶魔）"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "50 + 15 for each spell level above 6"
+						"special": "50 + 每超过6级的法术等级增加15"
 					},
 					"speed": {
 						"walk": 40,
 						"climb": 40
 					},
 					"traitTags": [
-						"Death Burst",
-						"Magic Resistance"
+						"临终苦难",
+						"魔法抗性"
 					],
 					"damageTags": [
 						"F"
 					]
 				},
 				{
-					"name": "Fiendish Spirit (Devil)",
+					"name": "恶魔之魂",
+					"ENG_name": "Fiendish Spirit (Devil)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Devil's Sight (Devil Only)",
-									"with": "Devil's Sight"
+									"rename": "魔鬼视界（仅限魔鬼）",
+									"with": "魔鬼视界"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Death Throes (Demon Only)"
+								"names": "焚身爆（仅限恶魔）"
 							}
 						],
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Fiery Strike (Devil Only)",
-									"with": "Fiery Strike"
+									"rename": "火焰打击（仅限恶魔）",
+									"with": "火焰打击"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Bite (Demon Only)",
-									"Claws (Yugoloth Only)"
+									"啃咬（仅限于恶魔）",
+									"爪击（仅限于尤格罗斯魔）"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "40 + 15 for each spell level above 6"
+						"special": "40 + 每超过6级的法术等级增加15"
 					},
 					"speed": {
 						"walk": 40,
 						"fly": 60
 					},
 					"traitTags": [
-						"Devil's Sight",
-						"Magic Resistance"
+						"魔鬼视界",
+						"魔法抗性"
 					],
 					"damageTags": [
 						"N"
 					]
 				},
 				{
-					"name": "Fiendish Spirit (Yugoloth)",
+					"name": "恶魔灵（尤格罗斯）",
+					"ENG_name": "Fiendish Spirit (Yugoloth)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Death Throes (Demon Only)",
-									"Devil's Sight (Devil Only)"
+									"焚身爆（仅限恶魔）",
+									"魔鬼视界（仅限魔鬼）"
 								]
 							}
 						],
@@ -2867,27 +3026,27 @@
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Claws (Yugoloth Only)",
-									"with": "Claws"
+									"rename": "爪击（仅限于尤格罗斯魔）",
+									"with": "爪击"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Bite (Demon Only)",
-									"Fiery Strike (Devil Only)"
+									"啃咬（仅限于恶魔）",
+									"火焰打击（仅限恶魔）"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "60 + 15 for each spell level above 6"
+						"special": "60 + 每超过6级的法术等级增加15"
 					},
 					"speed": {
 						"walk": 40
 					},
 					"traitTags": [
-						"Magic Resistance"
+						"魔法抗性"
 					],
 					"damageTags": [
 						"F"
@@ -2896,7 +3055,8 @@
 			]
 		},
 		{
-			"name": "Frog",
+			"name": "青蛙",
+			"ENG_name": "Frog",
 			"source": "XPHB",
 			"page": 349,
 			"size": [
@@ -2928,34 +3088,38 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 11,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"The frog can breathe air and water."
+						"这只青蛙可以呼吸空气和水。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定起跳",
+					"ENG_name": "Standing Leap",
 					"entries": [
-						"The frog's Long Jump is up to 10 feet and its High Jump is up to 5 feet with or without a running start."
+						"青蛙的立定跳远可达10英尺，立定跳高可达5英尺，无论是否有助跑。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 3}, 触及范围5英尺。{@h}1 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Frog",
+				"name": "青蛙",
+				"ENG_name": "Frog",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -2963,7 +3127,7 @@
 				"path": "bestiary/frog.mp3"
 			},
 			"traitTags": [
-				"Amphibious"
+				"水陆两栖"
 			],
 			"senseTags": [
 				"D"
@@ -2977,7 +3141,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Giant Badger",
+			"name": "巨獾",
+			"ENG_name": "Giant Badger",
 			"source": "XPHB",
 			"page": 350,
 			"size": [
@@ -3008,23 +3173,25 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"resist": [
-				"poison"
+				"毒素"
 			],
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}6 ({@damage 2d4 + 1}) Piercing damage."
+						"{@atkr m} {@hit 3}, 触及范围5英尺。{@h}6 ({@damage 2d4 + 1}) 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Badger",
+				"name": "獾",
+				"ENG_name": "Badger",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3043,7 +3210,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Giant Crab",
+			"name": "巨蟹",
+			"ENG_name": "Giant Crab",
 			"source": "XPHB",
 			"page": 350,
 			"size": [
@@ -3074,28 +3242,31 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"盲视 30 尺"
 			],
 			"passive": 9,
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"The crab can breathe air and water."
+						"这只螃蟹可以在空气和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claw",
+					"name": "爪击",
+					"ENG_name": "Claw",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Bludgeoning damage. If the target is Medium or smaller, it has the {@condition Grappled|XPHB} condition (escape {@dc 11}). The crab has two claws, each of which can grapple one target."
+						"{@atkr m} {@hit 3}, 触及范围5英尺。{@h}4 ({@damage 1d6 + 1}) 钝击伤害。如果目标是中型或更小，它将处于{@condition Grappled|XPHB}状态（逃脱{@dc 11}）。螃蟹有两个爪子，每个爪子都可以抓住一个目标。"
 					]
 				}
 			],
 			"token": {
-				"name": "Giant Crab",
+				"name": "巨蟹",
+				"ENG_name": "Giant Crab",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3103,7 +3274,7 @@
 				"path": "bestiary/giant-crab.mp3"
 			},
 			"traitTags": [
-				"Amphibious"
+				"水陆两栖"
 			],
 			"senseTags": [
 				"B"
@@ -3115,12 +3286,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled"
+				"被擒抱"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Giant Goat",
+			"name": "巨山羊",
+			"ENG_name": "Giant Goat",
 			"source": "XPHB",
 			"page": 350,
 			"size": [
@@ -3151,20 +3323,22 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Ram",
+					"name": "攻城槌",
+					"ENG_name": "Ram",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage. If the goat moved at least 20 feet straight toward the target immediately before the hit, the target takes an extra 5 ({@damage 2d4}) Bludgeoning damage and, if it is Huge or smaller, has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}6 ({@damage 1d6 + 3}) 钝击伤害。如果山羊在命中前直线移动至少20英尺直接向目标靠近，则目标额外受到5 ({@damage 2d4}) 钝击伤害，并且如果是大型或更小，则处于{@condition Prone|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Giant Goat",
+				"name": "巨山羊",
+				"ENG_name": "Giant Goat",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -3181,14 +3355,15 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			]
 		},
 		{
-			"name": "Giant Insect",
+			"name": "巨虫术",
+			"ENG_name": "Giant Insect",
 			"source": "XPHB",
 			"page": 279,
-			"summonedBySpell": "Giant Insect|XPHB",
+			"summonedBySpell": "巨虫术|XPHB",
 			"summonedBySpellLevel": 4,
 			"size": [
 				"L"
@@ -3199,18 +3374,18 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level"
+					"special": "11 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "30 + 10 for each spell level above 4"
+				"special": "30 + 每超过4级的法术等级增加10"
 			},
 			"speed": {
 				"walk": 40,
 				"climb": 40,
 				"fly": {
 					"number": 40,
-					"condition": "(Wasp only)"
+					"condition": "（仅限黄蜂）"
 				}
 			},
 			"str": 17,
@@ -3220,54 +3395,59 @@
 			"wis": 14,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
 					"entries": [
-						"The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+						"该昆虫能够攀爬困难的表面，包括天花板，而无需进行能力检定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The insect makes a number of attacks equal to half this spell's level (round down)."
+						"该昆虫进行的攻击次数等于法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Poison Jab",
+					"name": "毒刺攻击",
+					"ENG_name": "Poison Jab",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 10 ft. {@h}{@dice 1d6 + 3 + summonSpellLevel} Piercing damage plus {@damage 1d4} Poison damage."
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 触及10英尺。{@h}{@dice 1d6 + 3 + summonSpellLevel} 穿刺伤害加上{@damage 1d4} 毒素伤害。"
 					]
 				},
 				{
-					"name": "Web Bolt (Spider Only)",
+					"name": "蛛网箭（仅限蜘蛛）",
+					"ENG_name": "Web Bolt (Spider Only)",
 					"entries": [
-						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, range 60 ft. {@h}{@dice 1d10 + 3 + summonSpellLevel} Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn."
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 射程60英尺。{@h}{@dice 1d10 + 3 + summonSpellLevel} 钝击伤害，目标的速度在昆虫下一回合开始前降至0。"
 					]
 				}
 			],
 			"bonus": [
 				{
-					"name": "Venomous Spew (Centipede Only)",
+					"name": "毒液喷溅（仅限蜈蚣）",
+					"ENG_name": "Venomous Spew (Centipede Only)",
 					"entries": [
-						"{@actSave con} Your spell save DC, one creature the insect can see within 10 feet. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the start of the insect's next turn."
+						"{@actSave con} 你的法术豁免DC，昆虫可以看到的10英尺内的一只生物。{@actSaveFail} 目标直到昆虫下一回合开始时处于{@condition 中毒|XPHB}状态。"
 					]
 				}
 			],
 			"traitTags": [
-				"Spider Climb"
+				"蛛行术"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"I",
@@ -3279,18 +3459,19 @@
 				"RCH"
 			],
 			"conditionInflict": [
-				"poisoned"
+				"中毒"
 			],
 			"_versions": [
 				{
-					"name": "Giant Insect (Centipede)",
+					"name": "巨型昆虫（蜈蚣）",
+					"ENG_name": "Giant Insect (Centipede)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Web Bolt (Spider Only)"
+									"蛛网箭（仅限蜘蛛）"
 								]
 							}
 						]
@@ -3301,15 +3482,16 @@
 					}
 				},
 				{
-					"name": "Giant Insect (Spider)",
+					"name": "巨型昆虫（蜘蛛）",
+					"ENG_name": "Giant Insect (Spider)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Web Bolt (Spider Only)",
-									"with": "Web Bolt"
+									"rename": "蛛网箭（仅限蜘蛛）",
+									"with": "蛛网箭"
 								}
 							}
 						]
@@ -3321,14 +3503,15 @@
 					"bonus": null
 				},
 				{
-					"name": "Giant Insect (Wasp)",
+					"name": "巨型昆虫（黄蜂）",
+					"ENG_name": "Giant Insect (Wasp)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "removeArr",
 								"names": [
-									"Web Bolt (Spider Only)"
+									"蛛网箭（仅限蜘蛛）"
 								]
 							}
 						]
@@ -3343,7 +3526,8 @@
 			]
 		},
 		{
-			"name": "Giant Seahorse",
+			"name": "巨型海马",
+			"ENG_name": "Giant Seahorse",
 			"source": "XPHB",
 			"page": 350,
 			"size": [
@@ -3374,34 +3558,38 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
+					"ENG_name": "Water Breathing",
 					"entries": [
-						"The seahorse can breathe only underwater."
+						"海马只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Ram",
+					"name": "攻城槌",
+					"ENG_name": "Ram",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Bludgeoning damage, or the seahorse deals 11 ({@damage 2d8 + 2}) Bludgeoning damage if it moved at least 20 feet straight toward the target immediately before the hit."
+						"{@atkr m} {@hit 4}, 触及5英尺。{@h}9 ({@damage 2d6 + 2}) 钝击伤害，或者如果海马在命中目标前直线移动至少20英尺，则造成11 ({@damage 2d8 + 2}) 钝击伤害。"
 					]
 				}
 			],
 			"bonus": [
 				{
-					"name": "Bubble Dash",
+					"name": "泡沫冲刺",
+					"ENG_name": "Bubble Dash",
 					"entries": [
-						"While underwater, the seahorse moves up to half its Swim Speed without provoking Opportunity Attacks."
+						"在水中，海马以不超过其游泳速度的一半移动时，不会引发机会攻击。"
 					]
 				}
 			],
 			"token": {
-				"name": "Giant Seahorse",
+				"name": "巨型海马",
+				"ENG_name": "Giant Seahorse",
 				"source": "XPHB"
 			},
 			"traitTags": [
-				"Water Breathing"
+				"水下呼吸"
 			],
 			"damageTags": [
 				"B"
@@ -3412,7 +3600,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Giant Spider",
+			"name": "巨蜘蛛",
+			"ENG_name": "Giant Spider",
 			"source": "XPHB",
 			"page": 351,
 			"size": [
@@ -3444,43 +3633,48 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 14,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
 					"entries": [
-						"The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+						"蜘蛛可以攀爬困难的表面，包括沿着天花板，而无需进行能力检查。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛网行者",
+					"ENG_name": "Web Walker",
 					"entries": [
-						"The spider ignores movement restrictions caused by webs, and it knows the location of any other creature in contact with the same web."
+						"蜘蛛无视由蛛网引起的移动限制，并且它知道与同一蛛网接触的任何其他生物的位置。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} +5 , reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+						"{@atkr m} +5, 触及5英尺。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害加上7 ({@damage 2d6}) 毒素伤害。"
 					]
 				},
 				{
-					"name": "Web {@recharge 5}",
+					"name": "蛛网 {@recharge 5}",
+					"ENG_name": "Web {@recharge 5}",
 					"entries": [
-						"{@actSave dex} {@dc 13}, one creature the spider can see within 60 feet. {@actSaveFail} The target has the {@condition Restrained|XPHB} condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)."
+						"{@actSave dex} {@dc 13}, 蜘蛛可以看到的60英尺内的一只生物。{@actSaveFail} 目标被蛛网束缚（AC 10; HP 5; 火伤害易损；对毒素和心灵伤害免疫）直到蛛网被破坏。"
 					]
 				}
 			],
 			"token": {
-				"name": "Giant Spider",
+				"name": "巨蜘蛛",
+				"ENG_name": "Giant Spider",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3488,8 +3682,8 @@
 				"path": "bestiary/giant-spider.mp3"
 			},
 			"traitTags": [
-				"Spider Climb",
-				"Web Walker"
+				"蛛行术",
+				"蛛网行者"
 			],
 			"senseTags": [
 				"D"
@@ -3502,12 +3696,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"restrained"
+				"束缚"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Giant Weasel",
+			"name": "巨鼬",
+			"ENG_name": "Giant Weasel",
 			"source": "XPHB",
 			"page": 351,
 			"size": [
@@ -3540,20 +3735,22 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+						"{@atkr m} {@hit 5}, 触及5英尺。{@h}5 ({@damage 1d4 + 3}) 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Giant Weasel",
+				"name": "巨鼬",
+				"ENG_name": "Giant Weasel",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3572,7 +3769,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Goat",
+			"name": "山羊",
+			"ENG_name": "Goat",
 			"source": "XPHB",
 			"page": 351,
 			"size": [
@@ -3603,20 +3801,22 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 12,
 			"cr": "0",
 			"action": [
 				{
-					"name": "Ram",
+					"name": "攻城槌",
+					"ENG_name": "Ram",
 					"entries": [
-						"{@atkr m} {@hit 2} to hit, reach 5 ft. {@h}1 Bludgeoning damage, or the goat deals 2 ({@damage 1d4}) Bludgeoning damage if it moved at least 20 feet straight toward the target immediately before the hit."
+						"{@atkr m} {@hit 2} 命中，触及5英尺。{@h}1 钝击伤害，或者如果山羊在命中目标前直线移动至少20英尺，则造成2 ({@damage 1d4}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Goat",
+				"name": "山羊",
+				"ENG_name": "Goat",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -3634,7 +3834,8 @@
 			]
 		},
 		{
-			"name": "Hawk",
+			"name": "鹰",
+			"ENG_name": "Hawk",
 			"source": "XPHB",
 			"page": 352,
 			"size": [
@@ -3668,14 +3869,16 @@
 			"cr": "0",
 			"action": [
 				{
-					"name": "Talons",
+					"name": "禽爪",
+					"ENG_name": "Talons",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}1 Slashing damage."
+						"{@atkr m} {@hit 5}, 触及5英尺。{@h}1斩击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Hawk",
+				"name": "鹰",
+				"ENG_name": "Hawk",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3691,7 +3894,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Imp",
+			"name": "小魔鬼",
+			"ENG_name": "Imp",
 			"source": "XPHB",
 			"page": 352,
 			"size": [
@@ -3730,71 +3934,77 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"黑暗视觉 120 尺"
 			],
 			"passive": 11,
 			"resist": [
-				"cold"
+				"冷冻"
 			],
 			"immune": [
-				"fire",
-				"poison"
+				"火焰",
+				"毒素"
 			],
 			"conditionImmune": [
-				"poisoned"
+				"中毒"
 			],
 			"languages": [
-				"Common",
-				"Infernal"
+				"通用语",
+				"炼狱语"
 			],
 			"cr": "1",
 			"spellcasting": [
 				{
-					"name": "Invisibility",
+					"name": "隐形术",
+					"ENG_name": "Invisibility",
 					"type": "spellcasting",
 					"headerEntries": [
-						"The imp casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+						"小恶魔对自己施放{@spell 隐形术|XPHB}，不需要法术成分，并使用魅力作为施法能力。"
 					],
 					"will": [
-						"{@spell Invisibility|XPHB}"
+						"{@spell 隐形术|XPHB}"
 					],
 					"ability": "cha",
-					"displayAs": "action",
+					"displayAs": "动作",
 					"hidden": [
-						"will"
+						"意志"
 					]
 				}
 			],
 			"trait": [
 				{
-					"name": "Devil's Sight",
+					"name": "魔鬼视界",
+					"ENG_name": "Devil's Sight",
 					"entries": [
-						"Magical Darkness doesn't impede the imp's Darkvision."
+						"魔法黑暗不会妨碍小恶魔的黑暗视觉。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The imp has Advantage on saving throws against spells and other magical effects."
+						"小恶魔在对抗法术和其他魔法效果的豁免投掷上具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Sting",
+					"name": "螫刺",
+					"ENG_name": "Sting",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害加上7 ({@damage 2d6}) 毒素伤害。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "变形",
+					"ENG_name": "Change Shape",
 					"entries": [
-						"The imp changes into a form that resembles a rat (Speed 20 ft.), a raven (20 ft., Fly 60 ft.), or a spider (20 ft., Climb 20 ft.), or it returns to its true form. Its statistics are the same in each form, except for its Speed. Any equipment it's wearing or carrying isn't transformed. The imp reverts to its true form if it dies."
+						"小恶魔变成类似老鼠（速度20英尺）、乌鸦（20英尺，飞行60英尺）或蜘蛛（20英尺，攀爬20英尺）的形态，或者它恢复到它的真身。每种形态下它的属性值相同，除了速度。它穿戴或携带的任何装备不会被转变。如果小恶魔死亡，它会恢复到真身。"
 					]
 				}
 			],
 			"token": {
-				"name": "Imp",
+				"name": "小魔鬼",
+				"ENG_name": "Imp",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3802,14 +4012,14 @@
 				"path": "bestiary/imp.mp3"
 			},
 			"traitTags": [
-				"Devil's Sight",
-				"Magic Resistance"
+				"魔鬼视界",
+				"魔法抗性"
 			],
 			"senseTags": [
 				"SD"
 			],
 			"actionTags": [
-				"Shapechanger"
+				"变形生物"
 			],
 			"languageTags": [
 				"C",
@@ -3825,7 +4035,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Lion",
+			"name": "狮子",
+			"ENG_name": "Lion",
 			"source": "XPHB",
 			"page": 352,
 			"size": [
@@ -3856,46 +4067,52 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Pack Tactics",
+					"name": "集群战术",
+					"ENG_name": "Pack Tactics",
 					"entries": [
-						"The lion has Advantage on an attack roll against a creature if at least one of the lion's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+						"如果至少有一个狮子的盟友在生物的5英尺范围内，并且该盟友没有处于{@condition 失能|XPHB}状态，狮子对生物的攻击检定具有优势。"
 					]
 				},
 				{
-					"name": "Running Leap",
+					"name": "助跑起跳",
+					"ENG_name": "Running Leap",
 					"entries": [
-						"With a 10-foot running start, the lion can Long Jump up to 25 feet."
+						"借助10尺的助跑，狮子可以远跳至25尺。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The lion makes two Rend attacks. It can replace one of these attacks with a use of Roar."
+						"狮子进行两次撕咬攻击。它可以将其中一次攻击替换为使用咆哮。"
 					]
 				},
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Slashing damage."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}7 ({@damage 1d8 + 3}) 斩击伤害。"
 					]
 				},
 				{
-					"name": "Roar",
+					"name": "咆哮 (3/日)",
+					"ENG_name": "Roar",
 					"entries": [
-						"{@actSave wis} {@dc 11}, one creature within 15 feet. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the start of the lion's next turn."
+						"{@actSave wis} {@dc 11}，15英尺内的生物。{@actSaveFail} 目标在狮子的下一个回合开始前处于{@condition 恐惧|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Lion",
+				"name": "狮子",
+				"ENG_name": "Lion",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -3903,13 +4120,13 @@
 				"path": "bestiary/lion.mp3"
 			},
 			"traitTags": [
-				"Pack Tactics"
+				"集群战术"
 			],
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"S"
@@ -3918,12 +4135,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"frightened"
+				"恐慌"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Lizard",
+			"name": "蜥蜴",
+			"ENG_name": "Lizard",
 			"source": "XPHB",
 			"page": 353,
 			"size": [
@@ -3951,28 +4169,31 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 9,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
 					"entries": [
-						"The lizard can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+						"蜥蜴可以攀爬困难的表面，包括沿着天花板，而不需要进行能力检定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 2}，射程5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Lizard",
+				"name": "蜥蜴",
+				"ENG_name": "Lizard",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -3980,7 +4201,7 @@
 				"path": "bestiary/lizard.mp3"
 			},
 			"traitTags": [
-				"Spider Climb"
+				"蛛行术"
 			],
 			"senseTags": [
 				"D"
@@ -3993,7 +4214,8 @@
 			]
 		},
 		{
-			"name": "Mastiff",
+			"name": "獒犬",
+			"ENG_name": "Mastiff",
 			"source": "XPHB",
 			"page": 353,
 			"size": [
@@ -4023,20 +4245,22 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 15,
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Piercing damage, and the target has the {@condition Prone|XPHB} condition if it is Large or smaller."
+						"{@atkr m} {@hit 3}，射程5英尺。{@h}4 ({@damage 1d6 + 1}) 穿刺伤害，如果目标是大型或更小，则目标处于{@condition 倒地|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Mastiff",
+				"name": "獒犬",
+				"ENG_name": "Mastiff",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4053,12 +4277,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Mule",
+			"name": "骡子",
+			"ENG_name": "Mule",
 			"source": "XPHB",
 			"page": 353,
 			"size": [
@@ -4088,22 +4313,25 @@
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Beast of Burden",
+					"name": "驼兽",
+					"ENG_name": "Beast of Burden",
 					"entries": [
-						"The mule counts as one size larger for the purpose of determining its carrying capacity."
+						"骡子在确定其承载能力时被视为大一号。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄击",
+					"ENG_name": "Hooves",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Bludgeoning damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}4 ({@damage 1d4 + 2}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Mule",
+				"name": "骡子",
+				"ENG_name": "Mule",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4111,7 +4339,7 @@
 				"path": "bestiary/mule.mp3"
 			},
 			"traitTags": [
-				"Beast of Burden"
+				"驼兽"
 			],
 			"damageTags": [
 				"B"
@@ -4122,7 +4350,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Octopus",
+			"name": "章鱼",
+			"ENG_name": "Octopus",
 			"source": "XPHB",
 			"page": 353,
 			"size": [
@@ -4151,45 +4380,50 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Compression",
+					"name": "压缩",
+					"ENG_name": "Compression",
 					"entries": [
-						"The octopus can move through a space as narrow as 1 inch without spending extra movement to do so."
+						"章鱼可以不额外花费移动力通过1英寸窄的空间。"
 					]
 				},
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
+					"ENG_name": "Water Breathing",
 					"entries": [
-						"The octopus can breathe only underwater."
+						"章鱼只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "触须",
+					"ENG_name": "Tentacles",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Bludgeoning damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}1钝击伤害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Ink Cloud (1/Day)",
+					"name": "墨云（每日1次）",
+					"ENG_name": "Ink Cloud (1/Day)",
 					"entries": [
-						"{@actTrigger} A creature ends its turn within 5 feet of the octopus while underwater. {@actResponse} The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink."
+						"{@actTrigger} 一个生物在水下结束其回合时位于章鱼5英尺范围内。{@actResponse} 章鱼释放墨水，墨水填充一个以自身为中心的5英尺立方体，章鱼移动至多其游泳速度。这个立方体在1分钟内被严重遮蔽，或者直到强流或其他类似效果将墨水驱散。"
 					]
 				}
 			],
 			"token": {
-				"name": "Octopus",
+				"name": "章鱼",
+				"ENG_name": "Octopus",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4197,13 +4431,13 @@
 				"path": "bestiary/octopus.mp3"
 			},
 			"traitTags": [
-				"Water Breathing"
+				"水下呼吸"
 			],
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
-				"Tentacles"
+				"触须"
 			],
 			"damageTags": [
 				"B"
@@ -4214,10 +4448,11 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Otherworldly Steed",
+			"name": "超凡坐骑",
+			"ENG_name": "Otherworldly Steed",
 			"source": "XPHB",
 			"page": 273,
-			"summonedBySpell": "Find Steed|XPHB",
+			"summonedBySpell": "寻获坐骑|XPHB",
 			"summonedBySpellLevel": 2,
 			"size": [
 				"L"
@@ -4236,17 +4471,17 @@
 			],
 			"ac": [
 				{
-					"special": "10 + 1 per spell level"
+					"special": "10 + 每法术等级1"
 				}
 			],
 			"hp": {
-				"special": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)"
+				"special": "5 + 每法术等级10（坐骑拥有的生命骰[10面骰]数量等于法术的等级）"
 			},
 			"speed": {
 				"walk": 60,
 				"fly": {
 					"number": 60,
-					"condition": "(requires level 4+ spell)"
+					"condition": "（需要4级或更高级别的法术）"
 				}
 			},
 			"str": 18,
@@ -4257,47 +4492,53 @@
 			"cha": 8,
 			"passive": 11,
 			"languages": [
-				"telepathy 1 mile (works only with you)"
+				"心灵感应1英里（仅与你有效）"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Life Bond",
+					"name": "生命联结",
+					"ENG_name": "Life Bond",
 					"entries": [
-						"When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it."
+						"当你从1级或更高级别的法术中恢复生命值时，如果你在它5英尺范围内，坐骑也会恢复相同数量的生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Otherworldly Slam",
+					"name": "异界冲击",
+					"ENG_name": "Otherworldly Slam",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@dice 1d8 + summonSpellLevel} of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage."
+						"{@atkr m} {@hitYourSpellAttack 你的法术攻击加值等于你的法术攻击修正}，射程5英尺。{@h}{@dice 1d8 + summonSpellLevel} 圣光（天界生物）、心灵（仙灵）或亡灵（恶魔）伤害。"
 					]
 				}
 			],
 			"bonus": [
 				{
-					"name": "Fell Glare (Fiend Only; Recharges after a Long Rest)",
+					"name": "堕落凝视（仅限恶魔；长休后重置）",
+					"ENG_name": "Fell Glare (Fiend Only; Recharges after a Long Rest)",
 					"entries": [
-						"{@actSave wis} DC equals your spell save DC, one creature within 60 feet the steed can see. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the end of your next turn."
+						"{@actSave wis} DC等于你的法术豁免DC，坐骑可以看到的60英尺内的生物。{@actSaveFail} 目标在你的下一个回合结束前处于{@condition 恐惧|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Fey Step (Fey Only; Recharges after a Long Rest)",
+					"name": "仙灵步（仅限仙灵；长休后重置）",
+					"ENG_name": "Fey Step (Fey Only; Recharges after a Long Rest)",
 					"entries": [
-						"The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself."
+						"这匹坐骑带着它的骑手传送到你选择的未被占据的空间，距离它最多60英尺。"
 					]
 				},
 				{
-					"name": "Healing Touch (Celestial Only; Recharges after a Long Rest)",
+					"name": "治疗之触（仅限天界生物；长休后重置）",
+					"ENG_name": "Healing Touch (Celestial Only; Recharges after a Long Rest)",
 					"entries": [
-						"One creature within 5 feet of the steed regains a number of Hit Points equal to {@dice 2d8 + summonSpellLevel}."
+						"5英尺内的生物恢复的生命值点数等于{@dice 2d8 + 召唤法术等级}。"
 					]
 				}
 			],
 			"token": {
-				"name": "Otherworldly Steed",
+				"name": "超凡坐骑",
+				"ENG_name": "Otherworldly Steed",
 				"source": "XPHB"
 			},
 			"languageTags": [
@@ -4307,12 +4548,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"frightened"
+				"恐慌"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Owl",
+			"name": "猫头鹰",
+			"ENG_name": "Owl",
 			"source": "XPHB",
 			"page": 354,
 			"size": [
@@ -4344,28 +4586,31 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"黑暗视觉 120 尺"
 			],
 			"passive": 15,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Flyby",
+					"name": "飞掠",
+					"ENG_name": "Flyby",
 					"entries": [
-						"The owl doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+						"当猫头鹰飞出敌人的射程时，它不会引发借机攻击。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Talons",
+					"name": "禽爪",
+					"ENG_name": "Talons",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}1 Slashing damage."
+						"{@atkr m} {@hit 3}，射程5英尺。{@h}1斩击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Owl",
+				"name": "猫头鹰",
+				"ENG_name": "Owl",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -4373,7 +4618,7 @@
 				"path": "bestiary/owl.mp3"
 			},
 			"traitTags": [
-				"Flyby"
+				"飞掠"
 			],
 			"senseTags": [
 				"SD"
@@ -4386,7 +4631,8 @@
 			]
 		},
 		{
-			"name": "Panther",
+			"name": "黑豹",
+			"ENG_name": "Panther",
 			"source": "XPHB",
 			"page": 354,
 			"size": [
@@ -4418,32 +4664,36 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 14,
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The panther makes one Pounce attack and uses Prowl."
+						"黑豹进行一次猛扑攻击，并使用潜行。"
 					]
 				},
 				{
-					"name": "Pounce",
+					"name": "猛扑",
+					"ENG_name": "Pounce",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage, or the panther deals 7 ({@damage 2d4 + 2}) Slashing damage if it had Advantage on the attack roll."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}4 ({@damage 1d4 + 2}) 斩击伤害，或者如果黑豹在攻击检定中具有优势，则它造成7 ({@damage 2d4 + 2}) 斩击伤害。"
 					]
 				},
 				{
-					"name": "Prowl",
+					"name": "潜行",
+					"ENG_name": "Prowl",
 					"entries": [
-						"The panther moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the panther can take the Hide action."
+						"黑豹可以移动至多其速度的一半，且不引发借机攻击。在这次移动结束后，黑豹可以采取隐蔽行动。"
 					]
 				}
 			],
 			"token": {
-				"name": "Panther",
+				"name": "黑豹",
+				"ENG_name": "Panther",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -4454,7 +4704,7 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"S"
@@ -4464,7 +4714,8 @@
 			]
 		},
 		{
-			"name": "Pony",
+			"name": "矮种马",
+			"ENG_name": "Pony",
 			"source": "XPHB",
 			"page": 354,
 			"size": [
@@ -4494,14 +4745,16 @@
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄击",
+					"ENG_name": "Hooves",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Bludgeoning damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}4 ({@damage 1d4 + 2}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Pony",
+				"name": "矮种马",
+				"ENG_name": "Pony",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4517,7 +4770,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Pseudodragon",
+			"name": "伪龙",
+			"ENG_name": "Pseudodragon",
 			"source": "XPHB",
 			"page": 354,
 			"size": [
@@ -4550,44 +4804,49 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"盲视 10 尺",
+				"黑暗视觉 60 尺"
 			],
 			"passive": 15,
 			"languages": [
-				"understands Common and Draconic but can't speak"
+				"能理解通用语和龙语，但不能说话"
 			],
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The pseudodragon has Advantage on saving throws against spells and other magical effects."
+						"伪龙在对抗法术和其他魔法效果的豁免投掷上有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The pseudodragon makes two Bite attacks."
+						"伪龙进行两次咬击攻击。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}4 ({@damage 1d4 + 2}) 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Sting",
+					"name": "螫刺",
+					"ENG_name": "Sting",
 					"entries": [
-						"{@actSave con} {@dc 12}, one creature the pseudodragon can see within 5 feet. {@actSaveFail} 5 ({@damage 2d4}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition for 1 hour. Failure by 5 or More: The {@condition Poisoned|XPHB} target also has the {@condition Unconscious|XPHB} condition until it takes damage or another creature takes an action to shake it awake."
+						"{@actSave con} {@dc 12}，伪龙可以看到的5英尺内的生物。{@actSaveFail} 5 ({@damage 2d4}) 毒素伤害，并且目标处于{@condition 中毒|XPHB}状态1小时。失败5点或更多：{@condition 中毒|XPHB}的目标还处于{@condition 昏迷|XPHB}状态，直到它受到伤害或另一个生物采取行动将其摇醒。"
 					]
 				}
 			],
 			"token": {
-				"name": "Pseudodragon",
+				"name": "伪龙",
+				"ENG_name": "Pseudodragon",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4595,14 +4854,14 @@
 				"path": "bestiary/pseudodragon.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"魔法抗性"
 			],
 			"senseTags": [
 				"B",
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"languageTags": [
 				"C",
@@ -4617,13 +4876,14 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"poisoned",
-				"unconscious"
+				"中毒",
+				"昏迷"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Quasit",
+			"name": "夸塞魔",
+			"ENG_name": "Quasit",
 			"source": "XPHB",
 			"page": 355,
 			"size": [
@@ -4659,72 +4919,78 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"黑暗视觉 120 尺"
 			],
 			"passive": 10,
 			"resist": [
-				"cold",
-				"fire",
-				"lightning"
+				"冷冻",
+				"火焰",
+				"闪电"
 			],
 			"immune": [
-				"poison"
+				"毒素"
 			],
 			"conditionImmune": [
-				"poisoned"
+				"中毒"
 			],
 			"languages": [
-				"Abyssal",
-				"Common"
+				"深渊语",
+				"通用语"
 			],
 			"cr": "1",
 			"spellcasting": [
 				{
-					"name": "Invisibility",
+					"name": "隐形术",
+					"ENG_name": "Invisibility",
 					"type": "spellcasting",
 					"headerEntries": [
-						"The quasit casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+						"夸塞魔对自己施放{@spell 隐形术|XPHB}，不需要法术成分，并使用魅力作为施法能力。"
 					],
 					"will": [
-						"{@spell Invisibility|XPHB}"
+						"{@spell 隐形术|XPHB}"
 					],
 					"ability": "cha",
-					"displayAs": "action",
+					"displayAs": "动作",
 					"hidden": [
-						"will"
+						"意志"
 					]
 				}
 			],
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The quasit has Advantage on saving throws against spells and other magical effects."
+						"夸塞魔对法术和其他魔法效果的豁免检定具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Slashing damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the quasit's next turn."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}5 ({@damage 1d4 + 3}) 斩击伤害，并且目标在夸塞魔的下一个回合开始前处于{@condition 中毒|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "变形",
+					"ENG_name": "Change Shape",
 					"entries": [
-						"The quasit changes into a form that resembles a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its statistics are the same in each form, except for its Speed. Any equipment it's wearing or carrying isn't transformed. The quasit reverts to its true form if it dies."
+						"夸塞魔变成类似蝙蝠（速度10英尺，飞行40英尺）、蜈蚣（40英尺，攀爬40英尺）或蟾蜍（40英尺，游泳40英尺）的形态，或者它恢复到它的真身。每种形态下它的属性值相同，除了速度。它穿戴或携带的任何装备不会被转变。如果夸塞魔死亡，它会恢复到真身。"
 					]
 				},
 				{
-					"name": "Scare (1/Day)",
+					"name": "恐吓（每日1次）",
+					"ENG_name": "Scare (1/Day)",
 					"entries": [
-						"{@actSave wis} {@dc 10}, one creature within 20 feet. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically"
+						"{@actSave wis} {@dc 10}，20英尺内的生物。{@actSaveFail} 目标处于{@condition 恐惧|XPHB}状态。在它的每个回合结束时，目标重复豁免，成功则结束效果。1分钟后，它自动成功。"
 					]
 				}
 			],
 			"token": {
-				"name": "Quasit",
+				"name": "夸塞魔",
+				"ENG_name": "Quasit",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4732,13 +4998,13 @@
 				"path": "bestiary/quasit.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"魔法抗性"
 			],
 			"senseTags": [
 				"SD"
 			],
 			"actionTags": [
-				"Shapechanger"
+				"变形生物"
 			],
 			"languageTags": [
 				"AB",
@@ -4751,13 +5017,14 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"frightened",
-				"poisoned"
+				"恐慌",
+				"中毒"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Rat",
+			"name": "老鼠",
+			"ENG_name": "Rat",
 			"source": "XPHB",
 			"page": 355,
 			"size": [
@@ -4788,28 +5055,31 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 12,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Agile",
+					"name": "敏捷",
+					"ENG_name": "Agile",
 					"entries": [
-						"The rat doesn't provoke Opportunity Attacks when it moves out of an enemy's reach."
+						"当老鼠从敌人的触及范围内移动时，它不会引发借机攻击。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 2}，射程5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Rat",
+				"name": "老鼠",
+				"ENG_name": "Rat",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -4827,7 +5097,8 @@
 			]
 		},
 		{
-			"name": "Raven",
+			"name": "渡鸦",
+			"ENG_name": "Raven",
 			"source": "XPHB",
 			"page": 355,
 			"size": [
@@ -4861,22 +5132,25 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Mimicry",
+					"name": "拟声",
+					"ENG_name": "Mimicry",
 					"entries": [
-						"The raven can mimic simple sounds it has heard, such as a whisper or chitter. A hearer can discern the sounds are imitations with a successful {@dc 10} Wisdom ({@skill Insight|XPHB}) check."
+						"乌鸦可以模仿它听到的简单声音，比如耳语或啁啾。听者可以通过成功的{@dc 10} 智慧({@skill 洞悉|XPHB})检定来辨别这些声音是模仿的。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beak",
+					"name": "喙啄",
+					"ENG_name": "Beak",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Raven",
+				"name": "渡鸦",
+				"ENG_name": "Raven",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -4884,7 +5158,7 @@
 				"path": "bestiary/raven.mp3"
 			},
 			"traitTags": [
-				"Mimicry"
+				"拟声"
 			],
 			"damageTags": [
 				"P"
@@ -4894,7 +5168,8 @@
 			]
 		},
 		{
-			"name": "Reef Shark",
+			"name": "礁鲨",
+			"ENG_name": "Reef Shark",
 			"source": "XPHB",
 			"page": 356,
 			"size": [
@@ -4925,37 +5200,41 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"盲视 30 尺"
 			],
 			"passive": 12,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Pack Tactics",
+					"name": "集群战术",
+					"ENG_name": "Pack Tactics",
 					"entries": [
-						"The shark has Advantage on an attack roll against a creature if at least one of the shark's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+						"如果至少有一个鲨鱼的盟友在生物的5英尺范围内，并且该盟友没有处于{@condition 失能|XPHB}状态，鲨鱼对生物的攻击检定具有优势。"
 					]
 				},
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
+					"ENG_name": "Water Breathing",
 					"entries": [
-						"The shark can breathe only underwater."
+						"鲨鱼只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d4 + 2}) Piercing damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}7 ({@damage 2d4 + 2}) 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Reef Shark",
+				"name": "礁鲨",
+				"ENG_name": "Reef Shark",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -4963,8 +5242,8 @@
 				"path": "bestiary/reef-shark.mp3"
 			},
 			"traitTags": [
-				"Pack Tactics",
-				"Water Breathing"
+				"集群战术",
+				"水下呼吸"
 			],
 			"senseTags": [
 				"B"
@@ -4978,7 +5257,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Riding Horse",
+			"name": "乘用马",
+			"ENG_name": "Riding Horse",
 			"source": "XPHB",
 			"page": 356,
 			"size": [
@@ -5008,14 +5288,16 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄击",
+					"ENG_name": "Hooves",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Bludgeoning damage."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}7 ({@damage 1d8 + 3}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Riding Horse",
+				"name": "乘用马",
+				"ENG_name": "Riding Horse",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5031,7 +5313,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Scorpion",
+			"name": "蝎子",
+			"ENG_name": "Scorpion",
 			"source": "XPHB",
 			"page": 356,
 			"size": [
@@ -5058,23 +5341,25 @@
 			"wis": 8,
 			"cha": 2,
 			"senses": [
-				"blindsight 10 ft."
+				"盲视 10 尺"
 			],
 			"passive": 9,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "0",
 			"action": [
 				{
-					"name": "Sting",
+					"name": "螫刺",
+					"ENG_name": "Sting",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}1 Piercing damage plus 3 ({@damage 1d6}) Poison damage."
+						"{@atkr m} {@hit 2}，射程5英尺。{@h}1穿刺伤害加上3 ({@damage 1d6}) 毒素伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Scorpion",
+				"name": "蝎子",
+				"ENG_name": "Scorpion",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5094,7 +5379,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Skeleton",
+			"name": "骷髅",
+			"ENG_name": "Skeleton",
 			"source": "XPHB",
 			"page": 356,
 			"size": [
@@ -5122,39 +5408,42 @@
 			"wis": 8,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 9,
 			"immune": [
-				"poison"
+				"毒素"
 			],
 			"vulnerable": [
-				"bludgeoning"
+				"钝击"
 			],
 			"conditionImmune": [
-				"exhaustion",
-				"poisoned"
+				"力竭",
+				"中毒"
 			],
 			"languages": [
-				"understands the languages it knew in life but can't speak"
+				"理解它生前所知的语言，但不能说话"
 			],
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短剑",
+					"ENG_name": "Shortsword",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Shortbow",
+					"name": "短弓",
+					"ENG_name": "Shortbow",
 					"entries": [
-						"{@atkr r} {@hit 5}, range 80/320 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+						"{@atkr r} {@hit 5}，射程80/320英尺。{@h}6 ({@damage 1d6 + 3}) 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Skeleton",
+				"name": "骷髅",
+				"ENG_name": "Skeleton",
 				"source": "MM"
 			},
 			"soundClip": {
@@ -5162,8 +5451,8 @@
 				"path": "bestiary/skeleton.mp3"
 			},
 			"attachedItems": [
-				"shortbow|phb",
-				"shortsword|phb"
+				"短弓|phb",
+				"短剑|phb"
 			],
 			"senseTags": [
 				"D"
@@ -5183,7 +5472,8 @@
 			]
 		},
 		{
-			"name": "Slaad Tadpole",
+			"name": "史拉蟾蝌蚪",
+			"ENG_name": "Slaad Tadpole",
 			"source": "XPHB",
 			"page": 357,
 			"size": [
@@ -5215,38 +5505,41 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 7,
 			"resist": [
-				"acid",
-				"cold",
-				"fire",
-				"lightning",
-				"thunder"
+				"强酸",
+				"冷冻",
+				"火焰",
+				"闪电",
+				"雷鸣伤害"
 			],
 			"languages": [
-				"understands Slaad but can't speak"
+				"能理解斯拉德语，但不能说话"
 			],
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The slaad has Advantage on saving throws against spells and other magical effects."
+						"蜥蜴人在对抗法术和其他魔法效果的豁免检定上具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Slaad Tadpole",
+				"name": "史拉蟾蝌蚪",
+				"ENG_name": "Slaad Tadpole",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5254,7 +5547,7 @@
 				"path": "bestiary/slaad-tadpole.mp3"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"魔法抗性"
 			],
 			"senseTags": [
 				"D"
@@ -5272,7 +5565,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Sphinx of Wonder",
+			"name": "奇迹斯芬克斯",
+			"ENG_name": "Sphinx of Wonder",
 			"source": "XPHB",
 			"page": 357,
 			"size": [
@@ -5306,49 +5600,53 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 11,
 			"resist": [
-				"necrotic",
-				"psychic",
-				"radiant"
+				"黯蚀",
+				"心灵",
+				"光耀"
 			],
 			"languages": [
-				"Celestial",
-				"Common"
+				"天界语",
+				"通用语"
 			],
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"The sphinx has Advantage on saving throws against spells and other magical effects."
+						"斯芬克斯对法术和其他魔法效果的豁免掷骰具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Rend",
+					"name": "撕裂",
+					"ENG_name": "Rend",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Slashing damage plus 7 ({@damage 2d6}) Radiant damage."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}5 ({@damage 1d4 + 3}) 斩击伤害加上7 ({@damage 2d6}) 圣光伤害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Burst of Ingenuity (2/Day)",
+					"name": "突发奇想（每日2次）",
+					"ENG_name": "Burst of Ingenuity (2/Day)",
 					"entries": [
-						"{@actTrigger} The sphinx or another creature within 30 feet makes an ability check or a saving throw. {@actResponse} The sphinx adds 2 to the roll."
+						"{@actTrigger} 斯芬克斯或30英尺内的其他生物进行能力检定或豁免掷骰。{@actResponse} 斯芬克斯在掷骰结果上加2。"
 					]
 				}
 			],
 			"token": {
-				"name": "Sphinx of Wonder",
+				"name": "奇迹斯芬克斯",
+				"ENG_name": "Sphinx of Wonder",
 				"source": "XPHB"
 			},
 			"traitTags": [
-				"Magic Resistance"
+				"魔法抗性"
 			],
 			"senseTags": [
 				"D"
@@ -5367,7 +5665,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Spider",
+			"name": "蜘蛛",
+			"ENG_name": "Spider",
 			"source": "XPHB",
 			"page": 357,
 			"size": [
@@ -5398,34 +5697,38 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"黑暗视觉 30 尺"
 			],
 			"passive": 10,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行术",
+					"ENG_name": "Spider Climb",
 					"entries": [
-						"The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+						"蜘蛛可以攀爬困难的表面，包括沿着天花板，而无需进行能力检查。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛网行者",
+					"ENG_name": "Web Walker",
 					"entries": [
-						"The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web."
+						"蜘蛛无视由蛛网引起的移动限制，并且蜘蛛知道任何其他与同一蛛网接触的生物的位置。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Piercing damage plus 2 ({@damage 1d4}) Poison damage."
+						"{@atkr m} {@hit 4}，射程5英尺。{@h}1穿刺伤害加上2 ({@damage 1d4}) 毒素伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Spider",
+				"name": "蜘蛛",
+				"ENG_name": "Spider",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5433,8 +5736,8 @@
 				"path": "bestiary/spider.mp3"
 			},
 			"traitTags": [
-				"Spider Climb",
-				"Web Walker"
+				"蛛行术",
+				"蛛网行者"
 			],
 			"senseTags": [
 				"D"
@@ -5449,7 +5752,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Sprite",
+			"name": "小妖精",
+			"ENG_name": "Sprite",
 			"source": "XPHB",
 			"page": 358,
 			"size": [
@@ -5483,50 +5787,55 @@
 			},
 			"passive": 13,
 			"languages": [
-				"Common",
-				"Elvish",
-				"Sylvan"
+				"通用语",
+				"精灵语",
+				"木族语"
 			],
 			"cr": "1/4",
 			"spellcasting": [
 				{
-					"name": "Invisibility",
+					"name": "隐形术",
+					"ENG_name": "Invisibility",
 					"type": "spellcasting",
 					"headerEntries": [
-						"The sprite casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+						"小精灵对自己施放{@spell 隐形术|XPHB}，不需要法术成分，并使用魅力作为施法能力。"
 					],
 					"will": [
-						"{@spell Invisibility|XPHB}"
+						"{@spell 隐形术|XPHB}"
 					],
 					"ability": "cha",
-					"displayAs": "action",
+					"displayAs": "动作",
 					"hidden": [
-						"will"
+						"意志"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Needle Sword",
+					"name": "针剑",
+					"ENG_name": "Needle Sword",
 					"entries": [
-						"{@atkr m} {@hit 6}, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) Piercing damage."
+						"{@atkr m} {@hit 6}，射程5英尺。{@h}6 ({@damage 1d4 + 4}) 穿刺伤害。"
 					]
 				},
 				{
-					"name": "Enchanting Bow",
+					"name": "迷人之弓",
+					"ENG_name": "Enchanting Bow",
 					"entries": [
-						"{@atkr r} {@hit 6}, range 40/160 ft. {@h}1 Piercing damage, and the target has the {@condition Charmed|XPHB} condition until the start of the sprite's next turn."
+						"{@atkr r} {@hit 6}，射程40/160英尺。{@h}1穿刺伤害，并且目标在小精灵的下一个回合开始前处于{@condition 魅惑|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Heart Sight",
+					"name": "心灵视界",
+					"ENG_name": "Heart Sight",
 					"entries": [
-						"{@actSave cha} {@dc 10}, one creature within 5 feet the sprite can see. Celestials, Fiends, and Undead automatically fail the save. {@actSaveFail} The sprite knows the target's emotions and alignment."
+						"{@actSave cha} {@dc 10}，小精灵可以看到的5英尺内的生物。天界生物、恶魔和亡灵自动豁免失败。{@actSaveFail} 小精灵知道目标的情绪和阵营。"
 					]
 				}
 			],
 			"token": {
-				"name": "Sprite",
+				"name": "小妖精",
+				"ENG_name": "Sprite",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5546,12 +5855,13 @@
 				"RA"
 			],
 			"conditionInflict": [
-				"charmed"
+				"魅惑"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Tiger",
+			"name": "老虎",
+			"ENG_name": "Tiger",
 			"source": "XPHB",
 			"page": 358,
 			"size": [
@@ -5582,32 +5892,36 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"cr": "1",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The tiger makes one Pounce attack and uses Prowl."
+						"老虎进行一次猛扑攻击，并使用潜行。"
 					]
 				},
 				{
-					"name": "Pounce",
+					"name": "猛扑",
+					"ENG_name": "Pounce",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage. If the tiger had Advantage on the attack roll, the target takes an extra 3 ({@damage 1d6}) Slashing damage and, if it is Huge or smaller, has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 5}，射程5英尺。{@h}6 ({@damage 1d6 + 3}) 斩击伤害。如果老虎在攻击检定中具有优势，目标将额外受到3 ({@damage 1d6}) 斩击伤害，并且如果是大型或更小的生物，会处于{@condition 倒地|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Prowl",
+					"name": "潜行",
+					"ENG_name": "Prowl",
 					"entries": [
-						"The tiger moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the tiger can take the Hide action."
+						"老虎可以移动至多其速度的一半，且不引发借机攻击。在这次移动结束后，老虎可以采取隐蔽行动。"
 					]
 				}
 			],
 			"token": {
-				"name": "Tiger",
+				"name": "老虎",
+				"ENG_name": "Tiger",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -5618,7 +5932,7 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"S"
@@ -5627,15 +5941,16 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Undead Spirit",
+			"name": "不死灵魄",
+			"ENG_name": "Undead Spirit",
 			"source": "XPHB",
 			"page": 328,
-			"summonedBySpell": "Summon Undead|XPHB",
+			"summonedBySpell": "亡灵召唤术|XPHB",
 			"summonedBySpellLevel": 3,
 			"size": [
 				"M"
@@ -5646,17 +5961,17 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the spell's level"
+					"special": "11 + 法术等级"
 				}
 			],
 			"hp": {
-				"special": "30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3"
+				"special": "30（仅限幽灵和腐臭）或20（仅限骨骼）+ 每超过3级的法术等级加10"
 			},
 			"speed": {
 				"walk": 30,
 				"fly": {
 					"number": 40,
-					"condition": "(hover; ghostly only)"
+					"condition": "（悬浮；仅限幽灵）"
 				},
 				"canHover": true
 			},
@@ -5667,75 +5982,82 @@
 			"wis": 10,
 			"cha": 9,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 10,
 			"immune": [
-				"necrotic",
-				"poison"
+				"黯蚀",
+				"毒素"
 			],
 			"conditionImmune": [
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"poisoned"
+				"力竭",
+				"恐慌",
+				"麻痹",
+				"中毒"
 			],
 			"languages": [
-				"understands the languages you know"
+				"理解你所知道的语言"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
-					"name": "Festering Aura (Putrid Only)",
+					"name": "腐灭灵光（仅限腐尸）",
+					"ENG_name": "Festering Aura (Putrid Only)",
 					"entries": [
-						"{@actSave con} DC equals your spell save DC, any creature (other than you) that starts its turn within a 5-foot Emanation originating from the spirit. {@actSaveFail} The creature has the {@condition Poisoned|XPHB} condition until the start of its next turn."
+						"{@actSave con} DC等于你的法术豁免DC，任何生物（除了你）在它的回合开始时处于来自灵体的5英尺范围内的辐射区域。{@actSaveFail} 该生物直到它的下一个回合开始时处于{@condition 中毒|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Incorporeal Passage (Ghostly Only)",
+					"name": "虚体移动（仅限于虚灵）",
+					"ENG_name": "Incorporeal Passage (Ghostly Only)",
 					"entries": [
-						"The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes {@damage 1d10} Force damage for every 5 feet traveled."
+						"这个灵体可以像穿过困难地形一样穿过其他生物和物体。如果它在某个物体内部结束回合，它会被传送到最近的未被占据的空间，并根据移动的英尺数每5英尺受到{@damage 1d10}力能伤害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
 					"entries": [
-						"The spirit makes a number of attacks equal to half this spell's level (round down)."
+						"灵体进行的攻击次数等于这个法术等级的一半（向下取整）。"
 					]
 				},
 				{
-					"name": "Deathly Touch (Ghostly Only)",
+					"name": "致死之触（仅限于虚灵）",
+					"ENG_name": "Deathly Touch (Ghostly Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d8 + 3 + summonSpellLevel} Necrotic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn."
+						"{@atkr m} {@hitYourSpellAttack 你的法术攻击加值等于你的法术攻击修正}，射程5英尺。{@h}{@damage 1d8 + 3 + summonSpellLevel} 亡灵伤害，并且目标在其下个回合结束前处于{@condition 惊恐|XPHB}状态。"
 					]
 				},
 				{
-					"name": "Grave Bolt (Skeletal Only)",
+					"name": "暗澹箭（仅限于骷髅）",
+					"ENG_name": "Grave Bolt (Skeletal Only)",
 					"entries": [
-						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, range 150 ft. {@h}{@damage 2d4 + 3 + summonSpellLevel} Necrotic damage."
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 射程150英尺。{@h}{@damage 2d4 + 3 + summonSpellLevel} 坏死伤害。"
 					]
 				},
 				{
-					"name": "Rotting Claw (Putrid Only)",
+					"name": "腐烂爪击（仅限于腐尸）。",
+					"ENG_name": "Rotting Claw (Putrid Only)",
 					"entries": [
-						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}{@damage 1d6 + 3 + summonSpellLevel} Slashing damage. If the target has the {@condition Poisoned|XPHB} condition, it has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, 触及5英尺。{@h}{@damage 1d6 + 3 + summonSpellLevel} 斩击伤害。如果目标处于{@condition 中毒|XPHB}状态，则直到其下一回合结束前处于{@condition 麻痹|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Undead Spirit",
+				"name": "不死灵魄",
+				"ENG_name": "Undead Spirit",
 				"source": "XPHB"
 			},
 			"traitTags": [
-				"Incorporeal Movement"
+				"虚体移动"
 			],
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"多重攻击"
 			],
 			"damageTags": [
 				"N",
@@ -5747,54 +6069,55 @@
 				"RA"
 			],
 			"conditionInflict": [
-				"frightened",
-				"paralyzed",
-				"poisoned"
+				"恐慌",
+				"麻痹",
+				"中毒"
 			],
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Undead Spirit (Ghostly)",
+					"name": "不死之魂（幽灵形态）",
+					"ENG_name": "Undead Spirit (Ghostly)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Incorporeal Passage (Ghostly Only)",
-									"with": "Incorporeal Passage"
+									"rename": "虚体移动（仅限于虚灵）",
+									"with": "无形通道"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Festering Aura (Putrid Only)"
+								"names": "腐灭灵光（仅限腐尸）"
 							}
 						],
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Deathly Touch (Ghostly Only)",
-									"with": "Deathly Touch"
+									"rename": "致死之触（仅限于虚灵）",
+									"with": "死亡之触"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Grave Bolt (Skeletal Only)",
-									"Rotting Claw (Putrid Only)"
+									"暗澹箭（仅限于骷髅）",
+									"腐烂爪击（仅限于腐尸）。"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "30 + 10 for each spell level above 3"
+						"special": "30 + 每超过3级的法术等级增加10"
 					},
 					"speed": {
 						"walk": 30,
 						"fly": {
 							"number": 40,
-							"condition": "(hover)"
+							"condition": "(悬浮)"
 						},
 						"canHover": true
 					},
@@ -5802,45 +6125,46 @@
 						"N"
 					],
 					"conditionInflict": [
-						"frightened"
+						"恐慌"
 					]
 				},
 				{
-					"name": "Undead Spirit (Putrid)",
+					"name": "不死之魂（腐臭）",
+					"ENG_name": "Undead Spirit (Putrid)",
 					"source": "XPHB",
 					"_mod": {
 						"trait": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Festering Aura (Putrid Only)",
-									"with": "Festering Aura"
+									"rename": "腐灭灵光（仅限腐尸）",
+									"with": "腐化光环"
 								}
 							},
 							{
 								"mode": "removeArr",
-								"names": "Incorporeal Passage (Ghostly Only)"
+								"names": "虚体移动（仅限于虚灵）"
 							}
 						],
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Rotting Claw (Putrid Only)",
-									"with": "Rotting Claw"
+									"rename": "腐烂爪击（仅限于腐尸）。",
+									"with": "腐烂之爪"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Deathly Touch (Ghostly Only)",
-									"Grave Bolt (Skeletal Only)"
+									"致死之触（仅限于虚灵）",
+									"暗澹箭（仅限于骷髅）"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "30 + 10 for each spell level above 3"
+						"special": "30 + 每超过3级的法术等级增加10"
 					},
 					"speed": {
 						"walk": 30
@@ -5851,33 +6175,34 @@
 						"S"
 					],
 					"conditionInflict": [
-						"paralyzed",
-						"poisoned"
+						"麻痹",
+						"中毒"
 					]
 				},
 				{
-					"name": "Undead Spirit (Skeletal)",
+					"name": "不死之魂（骷髅）",
+					"ENG_name": "Undead Spirit (Skeletal)",
 					"source": "XPHB",
 					"_mod": {
 						"action": [
 							{
 								"mode": "renameArr",
 								"renames": {
-									"rename": "Grave Bolt (Skeletal Only)",
-									"with": "Grave Bolt"
+									"rename": "暗澹箭（仅限于骷髅）",
+									"with": "坟墓之箭"
 								}
 							},
 							{
 								"mode": "removeArr",
 								"names": [
-									"Deathly Touch (Ghostly Only)",
-									"Rotting Claw (Putrid Only)"
+									"致死之触（仅限于虚灵）",
+									"腐烂爪击（仅限于腐尸）。"
 								]
 							}
 						]
 					},
 					"hp": {
-						"special": "20 + 10 for each spell level above 3"
+						"special": "3级以上每级法术加10，基础20"
 					},
 					"speed": {
 						"walk": 30
@@ -5892,7 +6217,8 @@
 			]
 		},
 		{
-			"name": "Venomous Snake",
+			"name": "毒蛇",
+			"ENG_name": "Venomous Snake",
 			"source": "XPHB",
 			"page": 358,
 			"size": [
@@ -5920,20 +6246,22 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"blindsight 10 ft."
+				"盲视 10 尺"
 			],
 			"passive": 10,
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage plus 3 ({@damage 1d6}) Poison damage."
+						"{@atkr m} {@hit 4}, 触及5英尺。{@h}4 ({@damage 1d4 + 2}) 穿刺伤害加上3 ({@damage 1d6}) 毒素伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Poisonous Snake",
+				"name": "毒蛇",
+				"ENG_name": "Poisonous Snake",
 				"source": "MM"
 			},
 			"senseTags": [
@@ -5948,7 +6276,8 @@
 			]
 		},
 		{
-			"name": "Warhorse",
+			"name": "战马",
+			"ENG_name": "Warhorse",
 			"source": "XPHB",
 			"page": 359,
 			"size": [
@@ -5978,14 +6307,16 @@
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄击",
+					"ENG_name": "Hooves",
 					"entries": [
-						"{@atkr m} {@hit 6}, reach 5 ft. {@h}9 ({@damage 2d4 + 4}) Bludgeoning damage. If the horse moved at least 20 feet straight toward the target immediately before the hit, the target takes an extra 5 ({@damage 2d4}) Bludgeoning damage and, if it is Huge or smaller, has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 6}, 触及5英尺。{@h}9 ({@damage 2d4 + 4}) 钝击伤害。如果马在命中目标前直线移动至少20英尺，则目标额外受到5 ({@damage 2d4}) 钝击伤害，并且如果是巨型或更小，则处于{@condition 倒地|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Warhorse",
+				"name": "战马",
+				"ENG_name": "Warhorse",
 				"source": "XPHB"
 			},
 			"damageTags": [
@@ -5995,12 +6326,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Weasel",
+			"name": "鼬鼠",
+			"ENG_name": "Weasel",
 			"source": "XPHB",
 			"page": 359,
 			"size": [
@@ -6033,23 +6365,25 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 13,
 			"languages": [
-				"None"
+				"none"
 			],
 			"cr": "0",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}1 Piercing damage."
+						"{@atkr m} {@hit 5}, 触及5英尺。{@h}1穿刺伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Weasel",
+				"name": "鼬鼠",
+				"ENG_name": "Weasel",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -6068,7 +6402,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Wolf",
+			"name": "狼",
+			"ENG_name": "Wolf",
 			"source": "XPHB",
 			"page": 359,
 			"size": [
@@ -6099,28 +6434,31 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 15,
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Pack Tactics",
+					"name": "集群战术",
+					"ENG_name": "Pack Tactics",
 					"entries": [
-						"The wolf has Advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+						"如果至少有一只狼的盟友在生物5英尺范围内，并且盟友没有处于{@condition 失能|XPHB}状态，则狼对生物的攻击检定具有优势。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage, and the target has the {@condition Prone|XPHB} condition if it is Medium or smaller."
+						"{@atkr m} {@hit 4}, 触及5英尺。{@h}5 ({@damage 1d6 + 2}) 穿刺伤害，如果目标是中等大小或更小，则目标处于{@condition 倒地|XPHB}状态。"
 					]
 				}
 			],
 			"token": {
-				"name": "Wolf",
+				"name": "狼",
+				"ENG_name": "Wolf",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -6128,7 +6466,7 @@
 				"path": "bestiary/wolf.mp3"
 			},
 			"traitTags": [
-				"Pack Tactics"
+				"集群战术"
 			],
 			"senseTags": [
 				"D"
@@ -6140,12 +6478,13 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"prone"
+				"倒地"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Zombie",
+			"name": "僵尸",
+			"ENG_name": "Zombie",
 			"source": "XPHB",
 			"page": 359,
 			"size": [
@@ -6173,38 +6512,41 @@
 			"wis": 6,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗视觉 60 尺"
 			],
 			"passive": 8,
 			"immune": [
-				"poison"
+				"毒素"
 			],
 			"conditionImmune": [
-				"exhaustion",
-				"poisoned"
+				"力竭",
+				"中毒"
 			],
 			"languages": [
-				"understands the languages it knew in life but can't speak"
+				"理解它生前所知的语言，但不能说话"
 			],
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Undead Fortitude",
+					"name": "不死坚韧",
+					"ENG_name": "Undead Fortitude",
 					"entries": [
-						"If damage reduces the zombie to 0 Hit Points, it must make a Constitution saving throw with a DC of 5 plus the damage taken unless the damage is Radiant or from a Critical Hit. On a successful save, the zombie drops to 1 Hit Point instead."
+						"如果伤害使僵尸的生命值降至0，则它必须进行一次体质豁免投掷，难度等级为5加上所受伤害，除非伤害是圣光或来自致命一击。如果豁免成功，僵尸的生命值降至1点。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Slam",
+					"name": "猛击",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Bludgeoning damage."
+						"{@atkr m} {@hit 3}, 触及5英尺。{@h}4 ({@damage 1d6 + 1}) 钝击伤害。"
 					]
 				}
 			],
 			"token": {
-				"name": "Zombie",
+				"name": "僵尸",
+				"ENG_name": "Zombie",
 				"source": "XPHB"
 			},
 			"soundClip": {
@@ -6212,7 +6554,7 @@
 				"path": "bestiary/zombie.mp3"
 			},
 			"traitTags": [
-				"Undead Fortitude"
+				"不死坚韧"
 			],
 			"senseTags": [
 				"D"

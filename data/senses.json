@@ -7,8 +7,20 @@
 			"page": 183,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"盲视|XPHB"
+			],
 			"entries": [
 				"具有盲视感官的怪物在不依赖视觉的情况下，依然可以感觉一定的半径范围。没有眼睛的生物，如软泥怪ooze是典型的盲视物种。从另种意义来讲，使用回声定位以及高敏感官的生物也视为具有盲视感官，如蝙蝠bat和真龙true dragons。"
+			]
+		},
+		{
+			"name": "盲视",
+			"ENG_name": "Blindsight",
+			"source": "XPHB",
+			"page": 361,
+			"entries": [
+				"如果你拥有盲视能力，你可以在特定范围内不依赖物理视觉进行感知。在该范围内，即使处于{@variantrule 掩护|XPHB|全身掩护}状态，或者受到{@condition 目盲|XPHB}状态影响，或者处于{@variantrule 黑暗术|XPHB}中，你也能看见任何物体。此外，在该范围内，你甚至能看到具有{@condition 隐形|XPHB}状态的物体。"
 			]
 		},
 		{
@@ -18,8 +30,20 @@
 			"page": 183,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"黑暗视觉|XPHB"
+			],
 			"entries": [
 				"具有黑暗视觉的怪物在黑暗中可以看清一定的半径范围。该生物在微光环境中视物时视为处于明亮光照环境，而在黑暗环境时则视为处于微光光照环境中，因此对该生物来说，黑暗区域是轻微遮蔽的。该生物无法在黑暗环境中分辨颜色，只能看见以灰度显现的形状。许多生活在地底的生物都具有黑暗视觉。"
+			]
+		},
+		{
+			"name": "黑暗视觉",
+			"ENG_name": "Darkvision",
+			"source": "XPHB",
+			"page": 365,
+			"entries": [
+				"如果你拥有黑暗视觉，你可以在指定范围内将{@variantrule 微光光照|XPHB}视为{@variantrule 明亮光照|XPHB}，将{@variantrule 黑暗术|XPHB}视为{@variantrule 微光光照|XPHB}。在那种{@variantrule 黑暗术|XPHB}中，你只能将颜色辨别为灰色的阴影。"
 			]
 		},
 		{
@@ -29,8 +53,21 @@
 			"page": 9,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"颤动感知|XPHB"
+			],
 			"entries": [
 				"具有颤动感知的怪物可以对一定半径范围内的、与其自身接触同一地面或物质的震动源进行精确感知。颤动感知无法探知飞行生物和虚体生物。许多掘穴生物如掘地虫ankheg和土巨怪umber hulk 都具有颤动感知。"
+			]
+		},
+		{
+			"name": "颤动感知",
+			"ENG_name": "Tremorsense",
+			"source": "XPHB",
+			"page": 377,
+			"entries": [
+				"具有震感能力的生物可以在特定范围内精确定位生物和移动物体的位置，前提是具有震感能力的生物和它正在探测的任何物体都与相同的表面（如地面、墙壁或天花板）或相同的液体接触。",
+				"震感感知无法探测空中的生物或物体，它不被视为一种视觉形式。"
 			]
 		},
 		{
@@ -40,8 +77,66 @@
 			"page": 183,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"真实视觉|XPHB"
+			],
 			"entries": [
 				"具有真实视觉的怪物在一定半径范围内，可以看透魔法或非魔法产生的黑暗，可以看见隐形的生物与物品，可以自动侦查出视觉幻象并直接通过其豁免检定，还可以直接看穿变形生物或用魔法进行变形时的真实形态。此外，该怪物还可以看到同样范围内以太位面的情况。"
+			]
+		},
+		{
+			"name": "真实视觉",
+			"ENG_name": "Truesight",
+			"source": "XPHB",
+			"page": 377,
+			"entries": [
+				"如果你拥有真实视觉，你的视野在指定范围内得到增强。在该范围内，你的视野可以穿透以下情况：",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "黑暗术",
+							"ENG_name": "Darkness",
+							"entries": [
+								"你可以在正常和魔法造成的{@variantrule 黑暗术|XPHB}中看见。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "隐形术",
+							"ENG_name": "Invisibility",
+							"entries": [
+								"你可以看到具有{@condition 隐形|XPHB}状态的生物和物体。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "视觉幻觉",
+							"ENG_name": "Visual Illusions",
+							"entries": [
+								"视觉幻觉对你来说是透明的，你对它们的{@variantrule 豁免检定|XPHB|豁免检定}自动成功。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "变形",
+							"ENG_name": "Transformations",
+							"entries": [
+								"你能够识别出任何被魔法变形的生物或物体的真实形态。"
+							]
+						},
+						{
+							"type": "item",
+							"name": "以太位面",
+							"ENG_name": "Ethereal Plane",
+							"entries": [
+								"你能够看到以太位面。"
+							]
+						}
+					]
+				}
 			]
 		}
 	]

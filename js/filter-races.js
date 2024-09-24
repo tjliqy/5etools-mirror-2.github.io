@@ -106,7 +106,7 @@ class PageFilterRaces extends PageFilterBase {
 		});
 		this._creatureTypeFilter = new Filter({
 			header: "Creature Type",
-			cnHeader: "生物类型"
+			cnHeader: "生物类型",
 			items: Parser.MON_TYPES,
 			displayFn: StrUtil.toTitleCase,
 			itemSortFn: SortUtil.ascSortLower,

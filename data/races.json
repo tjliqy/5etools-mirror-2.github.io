@@ -224,6 +224,9 @@
 			"ENG_name": "Aasimar",
 			"source": "DMG",
 			"page": 286,
+			"reprintedAs": [
+				"阿斯莫|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -335,6 +338,9 @@
 			"ENG_name": "Aasimar",
 			"source": "MPMM",
 			"page": 7,
+			"reprintedAs": [
+				"阿斯莫|XPHB"
+			],
 			"lineage": "VRGR",
 			"size": [
 				"S",
@@ -516,7 +522,8 @@
 				}
 			],
 			"reprintedAs": [
-				"阿斯莫|MPMM"
+				"阿斯莫|MPMM",
+				"阿斯莫|XPHB"
 			],
 			"size": [
 				"M"
@@ -618,6 +625,119 @@
 						"你可以说、读、写通用语和天界语。"
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "阿斯莫",
+			"ENG_name": "Aasimar",
+			"source": "XPHB",
+			"page": 186,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"resist": [
+				"黯蚀",
+				"光耀"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"known": {
+						"1": [
+							"光亮术|xphb#c"
+						]
+					}
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约4-7英尺高）或小型（约2-4英尺高），在你选择这个物种时确定"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "天界抗性",
+					"ENG_name": "Celestial Resistance",
+					"entries": [
+						"你对死灵伤害和辐射伤害具有{@variantrule 提升抗性|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为60英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "治愈之手",
+					"ENG_name": "Healing Hands",
+					"entries": [
+						"作为一个{@action 魔法|XPHB}动作，你触摸一个生物并投掷等于你{@variantrule 熟练项|XPHB|熟练加值}数量的d4骰子。该生物恢复等于投掷总和的{@variantrule 生命值|XPHB}。一旦你使用这个特性，直到你完成一个{@variantrule 长休|XPHB}之前，你不能再使用它。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "光之使者",
+					"ENG_name": "Light Bearer",
+					"entries": [
+						"你知晓{@spell 光亮术|XPHB}这个戏法。你施展它的施法能力为魅力。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "天界启示",
+					"ENG_name": "Celestial Revelation",
+					"entries": [
+						"当你达到角色等级3时，你可以使用以下选项之一进行变形（每次变形时选择一个选项），作为一个{@variantrule 附赠动作|XPHB}。变形持续1分钟，或者直到你结束它（无需动作）。一旦你变形，直到你完成一个{@variantrule 长休|XPHB}之前，你不能再变形。",
+						"在你的每个回合中，只要变形效果未结束，当你通过攻击或法术对其造成伤害时，你可以对一个目标造成额外伤害。额外伤害等于你的{@variantrule 熟练项|XPHB|熟练加值}，额外伤害的类型要么是亡灵伤害（对于亡灵之幕），要么是圣光伤害（对于天界之翼和圣光之核）。",
+						"这里是变形选项：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "天界之翼",
+									"ENG_name": "Heavenly Wings",
+									"entries": [
+										"两个幽灵般的翅膀暂时从你的背部生长出来。直到变形结束，你的飞行速度等于你的基础移动速度。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "内在光辉",
+									"ENG_name": "Inner Radiance",
+									"entries": [
+										"炽热的光芒暂时从你的眼睛和嘴巴中放射出来。在此期间，你在10英尺范围内散发{@variantrule 明亮光照|XPHB}，在额外的10英尺范围内散发{@variantrule 微光光照|XPHB}，并且在你每个回合结束时，每个在你10英尺范围内的生物都会受到等于你{@variantrule 熟练项|XPHB|熟练加值}的辐射伤害。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "死灵环绕",
+									"ENG_name": "Necrotic Shroud",
+									"entries": [
+										"你的眼睛短暂地变成黑暗的池水，无羽的翅膀暂时从你的背部长出。你盟友之外的生物如果在你10英尺范围内，必须成功通过一次魅力豁免检定（DC 8加上你的魅力调整值和{@variantrule 熟练项|XPHB|熟练加值}），否则直到你下一个回合结束都会处于{@condition 恐慌|XPHB}状态。"
+									]
+								}
+							]
+						}
+					]
 				}
 			],
 			"hasFluff": true,
@@ -783,7 +903,9 @@
 			},
 			"darkvision": 60,
 			"traitTags": [
-				"修整强化"
+				"修整强化",
+				"工具熟练",
+				"武器熟练项"
 			],
 			"skillProficiencies": [
 				{
@@ -2467,6 +2589,9 @@
 			"source": "PHB",
 			"page": 32,
 			"srd": true,
+			"reprintedAs": [
+				"龙裔|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -2633,6 +2758,261 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "龙裔",
+			"ENG_name": "Dragonborn",
+			"source": "XPHB",
+			"page": 187,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约5-7英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "龙族血统",
+					"ENG_name": "Draconic Ancestry",
+					"entries": [
+						"你的血统源自一个龙族始祖。从龙族祖先表中选择龙的种类。你的选择会影响你的呼吸武器和{@variantrule 伤害|XPHB} {@variantrule 提升抗性|XPHB}特性以及你的外貌。",
+						{
+							"type": "table",
+							"caption": "龙族血统",
+							"colLabels": [
+								"龙",
+								"伤害类型"
+							],
+							"colStyles": [
+								"col-6",
+								"col-6"
+							],
+							"rows": [
+								[
+									"黑",
+									"强酸"
+								],
+								[
+									"蓝",
+									"闪电"
+								],
+								[
+									"黄铜",
+									"火焰"
+								],
+								[
+									"青铜",
+									"闪电"
+								],
+								[
+									"赤铜",
+									"强酸"
+								],
+								[
+									"金",
+									"火焰"
+								],
+								[
+									"绿",
+									"毒素"
+								],
+								[
+									"红",
+									"火焰"
+								],
+								[
+									"银",
+									"冷冻"
+								],
+								[
+									"白",
+									"冷冻"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "吐息武器",
+					"ENG_name": "Breath Weapon",
+					"entries": [
+						"在你的回合中，当你采取{@action 攻击|XPHB}动作时，你可以将你的一次攻击替换为一次魔法能量的喷吐，形成一个15英尺的{@variantrule 锥形 [区域效果]|XPHB|锥状}或一个30英尺长、5英尺宽的{@variantrule 线 [区域效果]|XPHB|线状}（每次选择形状）。在该区域内的每个生物必须进行一次敏捷豁免检定（DC 8加上你的体质调整值和{@variantrule 熟练项|XPHB|熟练加值}）。未通过豁免的生物将受到{@damage 1d10}点由你的龙族血统特性决定的伤害类型。成功通过豁免的生物受到的伤害减半。当你达到角色等级5（{@dice 4d10}）、11（{@dice 2d10}）和17（{@dice 3d10}）时，此伤害会分别增加{@dice 4d10}。",
+						"你可以使用这个呼吸武器的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，并且在你完成一次{@variantrule 长休|XPHB}后恢复所有已使用的的次数。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "伤害抗性",
+					"ENG_name": "Damage Resistance",
+					"entries": [
+						"你对由你的龙族血统特性决定的伤害类型具有{@variantrule 提升抗性|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为60英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "龙族飞行",
+					"ENG_name": "Draconic Flight",
+					"entries": [
+						"当你达到角色等级5时，你可以引导龙族魔法来获得临时飞行能力。作为一个{@variantrule 附赠动作|XPHB}，你的背部长出幽灵般的翅膀，持续时间为10分钟，或者直到你收回翅膀（无需动作）或者处于{@condition 失能|XPHB}状态。在那段时间里，你的{@variantrule 飞行速度|XPHB}等同于你的{@variantrule 速度|XPHB}。你的翅膀看起来是由与你的气息武器相同的能量构成的。一旦你使用这个特性，你必须在完成一次{@variantrule 长休|XPHB}后才能再次使用它。"
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"_abstract": {
+						"name": "龙裔 ({{color}})",
+						"ENG_name": "Dragonborn ({{color}})",
+						"source": "XPHB",
+						"_mod": {
+							"entries": [
+								{
+									"mode": "removeArr",
+									"names": "龙族血统"
+								},
+								{
+									"mode": "replaceArr",
+									"replace": "吐息武器",
+									"items": {
+										"type": "entries",
+										"name": "吐息武器",
+										"ENG_name": "Breath Weapon",
+										"entries": [
+											"在你的回合中，当你采取{@action 攻击|XPHB}动作时，你可以将你的一次攻击替换为一次魔法能量的喷吐，形成一个15英尺的{@variantrule 锥形 [区域效果]|XPHB|锥状}或一个30英尺长、5英尺宽的{@variantrule 线 [区域效果]|XPHB|线状}（每次选择形状）。在该区域内的每个生物必须进行一次敏捷豁免检定（DC 8加上你的体质调整值和{@variantrule 熟练项|XPHB|熟练加值}）。未通过豁免的生物将受到{@damage 1d10}点{{damageType}}伤害。成功通过豁免的生物受到的伤害减半。当你达到角色等级5（{@dice 4d10}）、11（{@dice 2d10}）和17（{@dice 3d10}）时，此伤害会分别增加{@dice 4d10}。",
+											"你可以使用这个呼吸武器的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，并且在你完成一次{@variantrule 长休|XPHB}后恢复所有已使用的的次数。"
+										]
+									}
+								},
+								{
+									"mode": "replaceArr",
+									"replace": "伤害抗性",
+									"items": {
+										"type": "entries",
+										"name": "伤害抗性",
+										"ENG_name": "Damage Resistance",
+										"entries": [
+											"你对{{damageType}}伤害具有{@variantrule 提升抗性|XPHB}。"
+										]
+									}
+								}
+							]
+						}
+					},
+					"_implementations": [
+						{
+							"_variables": {
+								"color": "黑",
+								"damageType": "强酸"
+							},
+							"resist": [
+								"强酸"
+							]
+						},
+						{
+							"_variables": {
+								"color": "蓝",
+								"damageType": "闪电"
+							},
+							"resist": [
+								"闪电"
+							]
+						},
+						{
+							"_variables": {
+								"color": "黄铜",
+								"damageType": "火焰"
+							},
+							"resist": [
+								"火焰"
+							]
+						},
+						{
+							"_variables": {
+								"color": "青铜",
+								"damageType": "闪电"
+							},
+							"resist": [
+								"闪电"
+							]
+						},
+						{
+							"_variables": {
+								"color": "赤铜",
+								"damageType": "强酸"
+							},
+							"resist": [
+								"强酸"
+							]
+						},
+						{
+							"_variables": {
+								"color": "金",
+								"damageType": "火焰"
+							},
+							"resist": [
+								"火焰"
+							]
+						},
+						{
+							"_variables": {
+								"color": "绿",
+								"damageType": "毒素"
+							},
+							"resist": [
+								"毒素"
+							]
+						},
+						{
+							"_variables": {
+								"color": "红",
+								"damageType": "火焰"
+							},
+							"resist": [
+								"火焰"
+							]
+						},
+						{
+							"_variables": {
+								"color": "银",
+								"damageType": "冷冻"
+							},
+							"resist": [
+								"冷冻"
+							]
+						},
+						{
+							"_variables": {
+								"color": "白",
+								"damageType": "冷冻"
+							},
+							"resist": [
+								"冷冻"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
 			"name": "龙裔 (彩色系)",
@@ -3304,6 +3684,9 @@
 			"page": 18,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"矮人|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -3422,6 +3805,69 @@
 						"你能够说、读、写通用语和矮人语。矮人语中充满了硬辅音和喉音，这使得矮人在讲其他语言时也会带上这些特点。"
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "矮人",
+			"ENG_name": "Dwarf",
+			"source": "XPHB",
+			"page": 188,
+			"freeRules2024": true,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 120,
+			"resist": [
+				"毒素"
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约4-5英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为120英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "矮人体魄",
+					"ENG_name": "Dwarven Resilience",
+					"entries": [
+						"你对毒素伤害有{@variantrule 提升抗性|XPHB}。你在尝试避免或结束{@condition 中毒|XPHB}状态的豁免检定中具有{@condition 中毒|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "矮人刚毅",
+					"ENG_name": "Dwarven Toughness",
+					"entries": [
+						"你的{@variantrule 生命值|XPHB|生命值}最大值增加1点，每当你提升等级时，它再次增加1点。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "石中精妙",
+					"ENG_name": "Stonecunning",
+					"entries": [
+						"作为一个{@variantrule 附赠动作|XPHB}，你获得范围为60英尺的{@sense 颤动感知|XPHB}，持续10分钟。你必须在石头表面或触摸石头表面才能使用这个{@sense 颤动感知|XPHB}。石头可以是天然的或加工过的。",
+						"你可以使用这个{@variantrule 附赠动作|XPHB}的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}后，你将恢复所有已消耗的使用次数。"
+					]
 				}
 			],
 			"hasFluff": true,
@@ -3661,6 +4107,9 @@
 			"page": 21,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"精灵|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -3754,6 +4203,289 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "精灵",
+			"ENG_name": "Elf",
+			"source": "XPHB",
+			"page": 189,
+			"freeRules2024": true,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"洞悉",
+							"察觉",
+							"生存"
+						]
+					}
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约5-6英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为60英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "精灵血统",
+					"ENG_name": "Elven Lineage",
+					"entries": [
+						"你属于一个赋予你超自然能力的血统。从精灵血统表中选择一个血统。你获得该血统等级1的益处。",
+						"当你达到角色等级3和5时，你学会了一个更高级别的法术，如表中所示。这个法术总是准备好的。你可以不消耗法术位施展它一次，当你完成一次{@variantrule 长休|XPHB}后，你将恢复以这种方式施展它的能力。你也可以使用你拥有的任何适当等级的法术位来施展该法术。",
+						"智力、智慧或魅力是你使用这个特性施放的法术的施法能力（在选择血统时选择该能力）。",
+						{
+							"type": "table",
+							"caption": "精灵血统",
+							"colLabels": [
+								"血统",
+								"1层",
+								"第3层",
+								"5级"
+							],
+							"colStyles": [
+								"col-2",
+								"col-6",
+								"col-2",
+								"col-2"
+							],
+							"rows": [
+								[
+									"卓尔",
+									"你的黑暗视觉范围增加到120英尺。你也知晓{@spell 舞光术|XPHB}这个戏法。",
+									"{@spell 妖火|XPHB}",
+									"{@spell 黑暗术|XPHB}"
+								],
+								[
+									"高等精灵",
+									"你知晓戏法：{@spell 魔法伎俩|XPHB}。每当你完成一次长休后，你可以将这个戏法替换为巫师法术列表中的任意一个不同法术。",
+									"{@spell 侦测魔法|XPHB}",
+									"{@spell 迷踪步|XPHB}"
+								],
+								[
+									"木精灵",
+									"你的速度提高到35英尺。你还会使用{@spell 德鲁伊伎俩|XPHB}戏法。",
+									"{@spell 大步奔行|XPHB}",
+									"{@spell 行动无踪|XPHB}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "精类血统",
+					"ENG_name": "Fey Ancestry",
+					"entries": [
+						"你在豁免投掷上具有{@variantrule 优势|XPHB}，以避免或结束{@condition 魅惑|XPHB}状态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "敏锐感官",
+					"ENG_name": "Keen Senses",
+					"entries": [
+						"你在{@skill 洞悉|XPHB}、{@skill 察觉|XPHB}或{@skill 生存|XPHB}技能上拥有熟练加值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "出神",
+					"ENG_name": "Trance",
+					"entries": [
+						"你不需要睡眠，魔法也不能让你入睡。如果你在类似恍惚的冥想中度过这些时间，你可以在4小时内完成一次{@variantrule 长休|XPHB}，在此期间你保持意识。"
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "黑暗精灵血统",
+					"ENG_name": "Elf; Drow Lineage",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "精灵血统",
+							"items": {
+								"name": "卓尔精灵血统",
+								"ENG_name": "Elven Lineage (Drow)",
+								"type": "entries",
+								"entries": [
+									"你是赋予你超自然能力的血统的一部分。你的黑暗视觉范围增加到120英尺。你还会使用{@spell 舞光术|XPHB}戏法。",
+									"当你达到角色等级3时，你学会了{@spell 妖火|XPHB}法术。当你达到角色等级5时，你也学会了{@spell 黑暗术|XPHB}法术。这些法术始终在你的准备法术中，你可以不消耗法术位各施展这些法术一次。一旦你使用此特性施展了这些法术中的任意一个，你就不能再次使用它来施展该法术，直到你完成一次{@variantrule 长休|XPHB}。你也可以使用你拥有的任何适当等级的法术位来施展这个法术。",
+									"智力、智慧或魅力是你使用这个特性施放的法术的施法能力（在选择血统时选择该能力）。"
+								]
+							}
+						}
+					},
+					"darkvision": 120,
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"妖火|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"黑暗术|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"舞光术|xphb#c"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "精灵；高等精灵血统",
+					"ENG_name": "Elf; High Elf Lineage",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "精灵血统",
+							"items": {
+								"name": "高精灵血统",
+								"ENG_name": "Elven Lineage (High Elf)",
+								"type": "entries",
+								"entries": [
+									"你属于一个赋予你超自然能力的血统。你知晓{@spell 魔法伎俩|XPHB}这个戏法。每当你完成一次长休后，你可以将这个戏法替换为巫师法术列表中的一个不同的{@filter 巫师法术列表中的戏法|spells|level=0|class=法师}。",
+									"当你达到角色等级3时，你学会了侦测魔法法术。当你达到角色等级5时，你也学会了雾步法术。这些法术总是准备好的，你可以不消耗法术位各施展一次。一旦你使用这个特性施展了这些法术中的任何一个，你就不能再次使用这个特性来施展那个法术，直到你完成一次长休。你也可以使用你拥有的任何适当等级的法术位来施展该法术。",
+									"智力、智慧或魅力是你使用这个特性施放的法术的施法能力（在选择血统时选择该能力）。"
+								]
+							}
+						}
+					},
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"侦测魔法|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"迷踪步|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": "level=0|class=法师"
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "精灵；木精灵血统",
+					"ENG_name": "Elf; Wood Elf Lineage",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "精灵血统",
+							"items": {
+								"name": "木精灵血统",
+								"ENG_name": "Elven Lineage (Wood Elf)",
+								"type": "entries",
+								"entries": [
+									"你属于一个赋予你超自然能力的血统。你的速度增加到35英尺。你也知晓德鲁伊法术的戏法。",
+									"当你达到角色等级3时，你学会了{@spell 大步奔行|XPHB}法术。当你达到角色等级5时，你也学会了{@spell 行动无踪|XPHB}法术。这些法术始终在你的准备法术中，你可以不消耗法术位各施展这些法术一次。一旦你使用此特性施展了这些法术中的任意一个，你就不能再次使用它来施展该法术，直到你完成一次{@variantrule 长休|XPHB}。你也可以使用你拥有的任何适当等级的法术位来施展这个法术。",
+									"智力、智慧或魅力是你使用这个特性施放的法术的施法能力（在选择血统时选择该能力）。"
+								]
+							}
+						}
+					},
+					"speed": 35,
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"大步奔行|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"行动无踪|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"德鲁伊伎俩|xphb#c"
+								]
+							}
+						}
+					]
+				}
+			]
 		},
 		{
 			"name": "精灵 (卡拉德许)",
@@ -4422,7 +5154,7 @@
 					"ENG_name": "Militia Training",
 					"type": "entries",
 					"entries": [
-						"您在{@filter 简易武器|Items|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand}上具有熟练度。"
+						"你熟练于{@filter 简易武器|Items|source=PHB|category=基础|type=简单武器;近战武器=沙地}。"
 					]
 				},
 				{
@@ -4888,6 +5620,9 @@
 			"source": "PHB",
 			"page": 35,
 			"srd": true,
+			"reprintedAs": [
+				"侏儒|XPHB"
+			],
 			"size": [
 				"S"
 			],
@@ -4964,6 +5699,160 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "侏儒",
+			"ENG_name": "Gnome",
+			"source": "XPHB",
+			"page": 191,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"小型（约3-4英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为60英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "侏儒狡猾",
+					"ENG_name": "Gnomish Cunning",
+					"entries": [
+						"你在智力、智慧和魅力豁免投掷上具有{@variantrule 优势|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "侏儒血统",
+					"ENG_name": "Gnomish Lineage",
+					"entries": [
+						"你属于一个赋予你超自然能力的血统。选择以下选项之一；无论你选择哪一个，智力、智慧或魅力是你使用此特性施展法术的施法能力（在选择血统时选择能力）：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "森林侏儒",
+									"ENG_name": "Forest Gnome",
+									"entries": [
+										"你知晓Minor {@variantrule 幻觉|XPHB|幻术}法术。你总是准备好了动物交谈法术。你可以不消耗法术位施展该法术，施展次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}后，你将恢复所有消耗的使用次数。你也可以使用你拥有的任何法术位来施展这个法术。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "岩侏儒",
+									"ENG_name": "Rock Gnome",
+									"entries": [
+										"你知道{@spell 修复|XPHB}和{@spell 戏法|XPHB}这两个戏法。此外，你可以花费10分钟施放{@spell 戏法|XPHB}来创造一个微型钟表装置（AC 5，1 生命值），例如玩具、点火器或音乐盒。当你创造这个装置时，你通过选择{@spell 戏法|XPHB}中的一个效果来确定它的功能；该装置会在你或其他生物采取{@variantrule 附赠动作|XPHB}触摸它时产生那个效果。如果所选效果中有选项，则你在创造装置时为其选择其中一个选项。例如，如果你选择了法术的点燃-熄灭效果，你决定该装置是点燃还是熄灭火焰；该装置不会同时做到两者。你同时只能有这样三个装置存在，每个装置在创造后8小时或当你以一个{action 使用|XPHB}动作触摸它拆除它时解体。"
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "侏儒；森林侏儒血统",
+					"ENG_name": "Gnome; Forest Gnome Lineage",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "侏儒血统",
+							"items": {
+								"name": "森林侏儒血统",
+								"ENG_name": "Gnomish Lineage (Forest Gnome)",
+								"type": "entries",
+								"entries": [
+									"你知晓{@spell 次级幻影|XPHB}这个戏法。你的法术准备中始终包括{@spell 动物交谈|XPHB}法术。你可以不消耗法术位施展这个法术的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，并且在你完成一次{@variantrule 长休|XPHB}后恢复所有消耗的使用次数。你也可以使用任何你拥有的法术位来施展这个法术。"
+								]
+							}
+						}
+					},
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"pb": [
+											"动物交谈|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"次级幻影|xphb#c"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "地侏；岩石地侏血统",
+					"ENG_name": "Gnome; Rock Gnome Lineage",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "侏儒血统",
+							"items": {
+								"name": "岩石侏儒血统",
+								"ENG_name": "Gnomish Lineage (Rock Gnome)",
+								"type": "entries",
+								"entries": [
+									"你知道{@spell 修复|XPHB}和{@spell 戏法|XPHB}这两个戏法。此外，你可以花费10分钟施放{@spell 戏法|XPHB}来创造一个微型钟表装置（AC 5，1 生命值），例如玩具、点火器或音乐盒。当你创造这个装置时，你通过选择{@spell 戏法|XPHB}中的一个效果来确定它的功能；该装置会在你或其他生物采取{@variantrule 附赠动作|XPHB}触摸它时产生那个效果。如果所选效果中有选项，则你在创造装置时为其选择其中一个选项。例如，如果你选择了法术的点燃-熄灭效果，你决定该装置是点燃还是熄灭火焰；该装置不会同时做到两者。你同时只能有这样三个装置存在，每个装置在创造后8小时或当你以一个{action 使用|XPHB}动作触摸它拆除它时解体。"
+								]
+							}
+						}
+					},
+					"additionalSpells": [
+						{
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"修复术|xphb#c",
+									"魔法伎俩|xphb#c"
+								]
+							}
+						}
+					]
+				}
+			]
 		},
 		{
 			"name": "侏儒 (地底)",
@@ -5513,6 +6402,9 @@
 			"ENG_name": "Goliath",
 			"source": "MPMM",
 			"page": 21,
+			"reprintedAs": [
+				"歌利亚|XPHB"
+			],
 			"lineage": "VRGR",
 			"size": [
 				"M"
@@ -5578,7 +6470,8 @@
 				}
 			],
 			"reprintedAs": [
-				"歌利亚|MPMM"
+				"歌利亚|MPMM",
+				"歌利亚|XPHB"
 			],
 			"size": [
 				"M"
@@ -5683,6 +6576,312 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "歌利亚",
+			"ENG_name": "Goliath",
+			"source": "XPHB",
+			"page": 192,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 35,
+			"traitTags": [
+				"强力构筑"
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约7-8英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "巨人血统",
+					"ENG_name": "Giant Ancestry",
+					"entries": [
+						"你是巨人的后裔。从以下好处中选择一个\u2014\u2014一个来自你祖先的超自然恩惠；你可以使用所选的好处的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "云之漫步（云巨人）",
+									"ENG_name": "Cloud's Jaunt (Cloud Giant)",
+									"entries": [
+										"作为一个{@variantrule 附赠动作|XPHB}，你可以魔法传送至你能看到的未被占据的空间，最远30英尺。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "火焰巨人的灼烧（火焰巨人）",
+									"ENG_name": "Fire's Burn (Fire Giant)",
+									"entries": [
+										"当你用攻击骰命中一个目标并且对其造成伤害时，你还可以对该目标造成{@damage 1d10}火焰伤害。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "霜之寒气（霜巨人）",
+									"ENG_name": "Frost's Chill (Frost Giant)",
+									"entries": [
+										"当你使用攻击检定命中目标并对其造成伤害时，你还可以使该目标受到{@damage 1d6}点寒冷伤害，并将其{@variantrule 速度|XPHB}减少10英尺，直到你的下个回合开始。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "丘陵巨人血统",
+									"ENG_name": "Hill's Tumble (Hill Giant)",
+									"entries": [
+										"当你用攻击骰命中一个大型或更小的生物并且对其造成伤害时，你可以给该目标施加{@condition 倒地|XPHB}状态。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "石之忍耐（石巨人）",
+									"ENG_name": "Stone's Endurance (Stone Giant)",
+									"entries": [
+										"当你受到伤害时，你可以采取{@variantrule 反应|XPHB}来掷{@dice 1d12}。将你的体质调整值加到所掷的数字上，并将受到的伤害减少该总数。"
+									]
+								},
+								{
+									"type": "item",
+									"name": "风暴巨人的雷霆（风暴巨人）",
+									"ENG_name": "Storm's Thunder (Storm Giant)",
+									"entries": [
+										"当你从60英尺范围内的生物那里受到伤害时，你可以采取{@variantrule 反应|XPHB}对该生物造成{@damage 1d8}雷鸣伤害。"
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "大型形态",
+					"ENG_name": "Large Form",
+					"entries": [
+						"从角色等级5开始，只要你身处足够大的空间，就可以将你的体型变更为大型，作为一个{@variantrule 附赠动作|XPHB}。这种变形持续10分钟，或者直到你结束它（无需动作）。在这段时间内，你在力量检定上拥有{@variantrule 优势|XPHB}，并且你的{@variantrule 速度|XPHB}增加10英尺。一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 长休|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "强力构筑",
+					"ENG_name": "Powerful Build",
+					"entries": [
+						"当你尝试通过能力检定来结束{@condition 擒抱|XPHB}状态时，你拥有{@condition 擒抱|XPHB}。在决定你的携带能力时，你也被视为大一号。"
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "歌利亚；云巨人血统",
+					"ENG_name": "Goliath; Cloud Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "云雾漫步（云巨人血统）",
+								"ENG_name": "Giant Ancestry (Cloud)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "云巨人的短途旅行",
+												"ENG_name": "Cloud's Jaunt",
+												"entries": [
+													"作为一个{@variantrule 附赠动作|XPHB}，你可以魔法传送至你能看到的未被占据的空间，最远30英尺。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "火巨人血统",
+					"ENG_name": "Goliath; Fire Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "巨人血统（火）",
+								"ENG_name": "Giant Ancestry (Fire)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "火焰灼烧",
+												"ENG_name": "Fire's Burn",
+												"entries": [
+													"当你用攻击骰命中一个目标并且对其造成伤害时，你还可以对该目标造成{@damage 1d10}火焰伤害。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "歌利亚；冰霜巨人血统",
+					"ENG_name": "Goliath; Frost Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "霜巨人血统",
+								"ENG_name": "Giant Ancestry (Frost)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "霜冻之寒",
+												"ENG_name": "Frost's Chill",
+												"entries": [
+													"当你使用攻击检定命中目标并对其造成伤害时，你还可以使该目标受到{@damage 1d6}点寒冷伤害，并将其{@variantrule 速度|XPHB}减少10英尺，直到你的下个回合开始。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "高卢人；丘陵巨人血统",
+					"ENG_name": "Goliath; Hill Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "巨人血统（丘陵）",
+								"ENG_name": "Giant Ancestry (Hill)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "丘陵翻滚",
+												"ENG_name": "Hill's Tumble",
+												"entries": [
+													"当你用攻击骰命中一个大型或更小的生物并且对其造成伤害时，你可以给该目标施加{@condition 倒地|XPHB}状态。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "歌利亚；石之巨人血统",
+					"ENG_name": "Goliath; Stone Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "巨人血统（石之巨人）",
+								"ENG_name": "Giant Ancestry (Stone)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "石头的耐力",
+												"ENG_name": "Stone's Endurance",
+												"entries": [
+													"当你受到伤害时，你可以采取{@variantrule 反应|XPHB}来掷{@dice 1d12}。将你的体质调整值加到所掷的数字上，并将受到的伤害减少该总数。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				},
+				{
+					"name": "风暴巨人血统",
+					"ENG_name": "Goliath; Storm Giant Ancestry",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "巨人血统",
+							"items": {
+								"name": "巨人血统（风暴）",
+								"ENG_name": "Giant Ancestry (Storm)",
+								"type": "entries",
+								"entries": [
+									"你是巨人的后裔，赋予了你一个超自然的恩惠；你可以使用这个恩惠的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已使用的加值：",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "风暴之雷",
+												"ENG_name": "Storm's Thunder",
+												"entries": [
+													"当你从60英尺范围内的生物那里受到伤害时，你可以采取{@variantrule 反应|XPHB}对该生物造成{@damage 1d8}雷鸣伤害。"
+												]
+											}
+										]
+									}
+								]
+							}
+						}
+					}
+				}
+			]
+		},
+		{
 			"name": "石盲蛮族",
 			"ENG_name": "Grimlock",
 			"source": "DMG",
@@ -5717,7 +6916,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "敏锐听觉和嗅觉",
+					"name": "敏锐嗅听觉",
 					"ENG_name": "Keen Hearing and Smell",
 					"entries": [
 						"你在依赖听觉或嗅觉的感知（{@skill 察觉}）检定时拥有优势。"
@@ -6139,6 +7338,9 @@
 			"page": 26,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"半身人|XPHB"
+			],
 			"size": [
 				"S"
 			],
@@ -6215,6 +7417,64 @@
 						"你能够说、读、写通用语和半身人语。虽然半身人语不是甚么秘密语言，但半身人很厌恶将它教给外人。他们很少书写，因此没有丰富的文学典藏。但他们有非常丰富的口述传统。几乎所有半身人都会说通用语，以便跟居住地或旅途上遇见的人进行交流。"
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "半身人",
+			"ENG_name": "Halfling",
+			"source": "XPHB",
+			"page": 193,
+			"freeRules2024": true,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"小型（约2-3英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "勇敢",
+					"ENG_name": "Brave",
+					"entries": [
+						"你在进行豁免投掷以避免或结束{@condition 恐慌|XPHB}状态时具有{@condition 恐慌|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "半身人灵巧",
+					"ENG_name": "Halfling Nimbleness",
+					"entries": [
+						"你可以穿过任何比你大一号的生物所占据的空间，但你不能在同一个空间中停留。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "幸运",
+					"ENG_name": "Luck",
+					"entries": [
+						"当你在{@variantrule D20 检定|XPHB}的{@variantrule D20 检定|XPHB}上掷出1时，你可以重掷骰子，并且必须使用新的掷骰结果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "天生善匿",
+					"ENG_name": "Naturally Stealthy",
+					"entries": [
+						"即使你只是被一个至少比你大一号的生物遮挡，你也可以采取{@action 躲藏|XPHB}行动。"
+					]
 				}
 			],
 			"hasFluff": true,
@@ -6687,7 +7947,7 @@
 					"name": "生物类型",
 					"ENG_name": "Creature Type",
 					"entries": [
-						"你是人型生物。对于任何需要你是地精类的前提条件或效果，你也被认为是地精类。"
+						"你是一个人形生物。对于任何需要你是地精类生物的先决条件或效果，你也被视为地精类生物。"
 					]
 				},
 				{
@@ -6868,6 +8128,9 @@
 			"page": 29,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"人类|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -6916,6 +8179,70 @@
 						"你能够说、读、写通用语和一门额外的自选语言。在与他人交流时，人类通常会主动去学习对方的语言，其中也包括了一些晦涩的方言。他们还喜欢在说话时夹杂其他语言的腔调，如兽人粗口，精灵乐调，矮人军号，等等。"
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "人类",
+			"ENG_name": "Human",
+			"source": "XPHB",
+			"page": 194,
+			"freeRules2024": true,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"feats": [
+				{
+					"anyFromCategory": {
+						"category": "O",
+						"count": 1
+					}
+				}
+			],
+			"skillProficiencies": [
+				{
+					"any": 1
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中等体型（约4-7英尺高）或小型（约2-4英尺高），在你选择这个物种时确定"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "机智",
+					"ENG_name": "Resourceful",
+					"entries": [
+						"每当你完成一次{@variantrule 长休|XPHB}时，你获得{@variantrule 长休|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "熟练",
+					"ENG_name": "Skillful",
+					"entries": [
+						"你可以选择一个技能并获得该技能的熟练度。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "两用",
+					"ENG_name": "Versatile",
+					"entries": [
+						"你获得了一个你选择的{@filter 起源特技|专长|category=o}。"
+					]
 				}
 			],
 			"hasFluff": true,
@@ -7969,7 +9296,7 @@
 							"mode": "replaceArr",
 							"replace": "狗头人传承",
 							"items": {
-								"name": "地精遗产（狡猾）",
+								"name": "狗头人遗产（狡猾）",
 								"ENG_name": "Kobold Legacy (Craftiness)",
 								"type": "entries",
 								"entries": [
@@ -8002,7 +9329,7 @@
 					"additionalSpells": null
 				},
 				{
-					"name": "地精；龙族魔法",
+					"name": "狗头人；龙族魔法",
 					"ENG_name": "Kobold; Draconic Sorcery",
 					"source": "MPMM",
 					"_mod": {
@@ -8074,7 +9401,7 @@
 					"name": "体型",
 					"ENG_name": "Size",
 					"entries": [
-						"地精的身高在2到3尺之间，体重在25到35磅之间。你的体型是小型。"
+						"狗头人的身高在2到3尺之间，体重在25到35磅之间。你的体型是小型。"
 					]
 				},
 				{
@@ -9702,6 +11029,9 @@
 			"ENG_name": "Orc",
 			"source": "DMG",
 			"page": 282,
+			"reprintedAs": [
+				"兽人|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -9754,6 +11084,9 @@
 			"ENG_name": "Orc",
 			"source": "EGW",
 			"page": 178,
+			"reprintedAs": [
+				"兽人|XPHB"
+			],
 			"_copy": {
 				"name": "兽人",
 				"ENG_name": "Orc",
@@ -9837,7 +11170,8 @@
 			"source": "ERLW",
 			"page": 31,
 			"reprintedAs": [
-				"兽人|MPMM"
+				"兽人|MPMM",
+				"兽人|XPHB"
 			],
 			"size": [
 				"M"
@@ -9957,6 +11291,9 @@
 			"ENG_name": "Orc",
 			"source": "MPMM",
 			"page": 28,
+			"reprintedAs": [
+				"兽人|XPHB"
+			],
 			"lineage": "VRGR",
 			"size": [
 				"M"
@@ -10010,7 +11347,8 @@
 			"source": "VGM",
 			"page": 120,
 			"reprintedAs": [
-				"兽人|MPMM"
+				"兽人|MPMM",
+				"兽人|XPHB"
 			],
 			"size": [
 				"M"
@@ -10115,6 +11453,57 @@
 						"你可以说、读、写通用语和兽人语。"
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "兽人",
+			"ENG_name": "Orc",
+			"source": "XPHB",
+			"page": 195,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 120,
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中型（约6-7英尺高）"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "肾上腺素激增",
+					"ENG_name": "Adrenaline Rush",
+					"entries": [
+						"你可以将{@action 疾走|XPHB}动作作为{@variantrule 附赠动作|XPHB}进行。当你这样做时，你获得的{@variantrule 临时生命值|XPHB}数量等于你的{@variantrule 熟练项|XPHB|熟练加值}。",
+						"你可以使用这个特性的次数等于你的{@variantrule 熟练项|XPHB|熟练加值}，当你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}时，你恢复所有已使用的加值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为120英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "坚韧不屈",
+					"ENG_name": "Relentless Endurance",
+					"entries": [
+						"当你被减少到0{@variantrule 生命值|XPHB}但不是直接被杀死时，你可以改为降到1{@variantrule 生命值|XPHB|生命值}。一旦你使用了这个特性，你就不能再次这么做，直到你完成一次{@variantrule 长休|XPHB}。"
+					]
 				}
 			],
 			"hasFluff": true,
@@ -10440,7 +11829,7 @@
 					"ENG_name": "Woodland Hunter",
 					"type": "entries",
 					"entries": [
-						"你的精准度允许你将四分之三覆盖视为半覆盖，将半覆盖视为无覆盖。"
+						"你的精准使你可以将{@quickref 掩护||3||四分之三掩护}视为{@quickref 掩护||3||半身掩护}，将{@quickref 掩护||3||半身掩护}视为无遮蔽。"
 					]
 				},
 				{
@@ -10788,7 +12177,7 @@
 					"name": "海洋之子",
 					"ENG_name": "Child of the Sea",
 					"entries": [
-						"你可以在空气和水中呼吸，并且你对冷冻伤害具有抗性。"
+						"你可以在空气和水中呼吸，并且对寒冷伤害有抗性。"
 					]
 				},
 				{
@@ -11868,6 +13257,9 @@
 			"source": "PHB",
 			"page": 42,
 			"srd": true,
+			"reprintedAs": [
+				"提夫林|XPHB"
+			],
 			"size": [
 				"M"
 			],
@@ -11983,6 +13375,283 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "提夫林",
+			"ENG_name": "Tiefling",
+			"source": "XPHB",
+			"page": 197,
+			"creatureTypes": [
+				"类人生物"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"darkvision": 60,
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"奇术|xphb#c"
+						]
+					}
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "体型：",
+				"ENG_name": "Size:",
+				"entries": [
+					"中型（约4-7英尺高）或小型（约3-4英尺高），在选择这个物种时选择"
+				]
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你有范围为60英尺的{@sense 黑暗视觉|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "恶魔遗产",
+					"ENG_name": "Fiendish Legacy",
+					"entries": [
+						"你继承了一种遗产，它赋予了你超自然的能力。从恶魔遗产表中选择一种遗产。你获得了所选遗产的1级好处。",
+						"当你达到角色等级3和5时，你学会了更高级别的法术，如下表所示。你始终准备好了这些法术。你可以在不消耗法术位的情况下各施放一次，当你完成一次{@variantrule 长休|XPHB}后，你将重新获得以这种方式施放它（们）的能力。你也可以使用你拥有的适当等级的法术位来施放这些法术。对于你使用这个特性施放的法术，智力、智慧或魅力是你施法能力的属性（在选择遗产时选择该属性）。",
+						{
+							"type": "table",
+							"caption": "恶魔遗产",
+							"colLabels": [
+								"遗产",
+								"1层",
+								"第3层",
+								"5级"
+							],
+							"colStyles": [
+								"col-2",
+								"col-6",
+								"col-2",
+								"col-2"
+							],
+							"rows": [
+								[
+									"深渊语",
+									"你对毒素伤害有抗性。你还会使用{@spell 毒气喷溅|XPHB}戏法。",
+									"{@spell 致病射线|XPHB}",
+									"{@spell 人类定身术|XPHB}"
+								],
+								[
+									"地府的",
+									"你对死灵伤害有抗性。你还会使用{@spell 冻寒之触|XPHB}戏法。",
+									"{@spell 虚假生命|XPHB}",
+									"{@spell 衰弱射线|XPHB}"
+								],
+								[
+									"炼狱语",
+									"你对火焰伤害有抗性。你还会使用{@spell 火焰箭|XPHB}戏法。",
+									"{@spell 炼狱叱喝|XPHB}",
+									"{@spell 黑暗术|XPHB}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "超凡存在",
+					"ENG_name": "Otherworldly Presence",
+					"entries": [
+						"你知晓{@spell 奇术|XPHB}戏法。当你使用这个特性施放它时，该法术使用你用于你的恶魔遗产特性的相同法术施放能力。"
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "提夫林；深渊遗产",
+					"ENG_name": "Tiefling; Abyssal Legacy",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "恶魔遗产",
+							"items": {
+								"name": "深渊遗产（Abyssal）",
+								"ENG_name": "Fiendish Legacy (Abyssal)",
+								"type": "entries",
+								"entries": [
+									"你继承了一种遗产，它赋予了你超自然的能力。你对毒素伤害有{@variantrule 提升抗性|XPHB}。你还会使用{@spell 毒气喷溅|XPHB}戏法。",
+									"当你达到角色等级3时，你学会了{@spell 致病射线|XPHB}法术。当你达到角色等级5时，你还学会了{@spell 人类定身术|XPHB}法术。你始终准备好了这些法术，并且可以在不消耗法术位的情况下各施放一次。一旦你使用这个特性施放了这些法术中的任何一个，你就不能再次使用它施放该法术，直到你完成一次{@variantrule 长休|XPHB}。你也可以使用你拥有的适当等级的法术位来施放这个法术。",
+									"智力、智慧或魅力是你使用这个特性施放法术的施法能力（在选择遗产时选择能力）。"
+								]
+							}
+						}
+					},
+					"darkvision": 120,
+					"resist": [
+						"毒素"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"致病射线|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"人类定身术|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"奇术|xphb#c",
+									"毒气喷溅|xphb#c"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "你是一个赋予了你超自然能力的遗产的接受者。你对火焰伤害有{@variantrule Resistance|XPHB}。你还会使用{@spell Fire Bolt|XPHB}法术。",
+					"ENG_name": "Tiefling; Chthonic Legacy",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "恶魔遗产",
+							"items": {
+								"name": "你继承了一种遗产，它赋予了你超自然能力。你对死灵伤害有{@variantrule Resistance|XPHB}。你还会使用{@spell Chill Touch|XPHB}法术。",
+								"ENG_name": "Fiendish Legacy (Chthonic)",
+								"type": "entries",
+								"entries": [
+									"你是一份遗产的继承人，这份遗产赋予了你超自然能力。你对死灵伤害有{@variantrule 提升抗性|XPHB}。你还会使用{@spell 冻寒之触|XPHB}法术。",
+									"当你达到角色等级3时，你学会了{@spell 虚假生命|XPHB}法术。当你达到角色等级5时，你也学会了{@spell 衰弱射线|XPHB}法术。这些法术始终在你的准备法术中，你可以不消耗法术位各施展这些法术一次。一旦你使用此特性施展了这些法术中的任意一个，你就不能再次使用它来施展该法术，直到你完成一次{@variantrule 长休|XPHB}。你也可以使用你拥有的任何适当等级的法术位来施展这个法术。",
+									"智力、智慧或魅力是你使用这个特性施放法术的施法能力（在选择遗产时选择能力）。"
+								]
+							}
+						}
+					},
+					"resist": [
+						"黯蚀"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"虚假生命|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"衰弱射线|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"奇术|xphb#c",
+									"冻寒之触|xphb#c"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "提夫林；地狱传承",
+					"ENG_name": "Tiefling; Infernal Legacy",
+					"source": "XPHB",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "恶魔遗产",
+							"items": {
+								"name": "地狱传承（恶魔）",
+								"ENG_name": "Fiendish Legacy (Infernal)",
+								"type": "entries",
+								"entries": [
+									"你是一份遗产的继承人，这份遗产赋予了你超自然能力。你对火焰伤害有{@variantrule 提升抗性|XPHB}。你还会使用{@spell 火焰箭|XPHB}法术。",
+									"当你达到角色等级3时，你学会了{@spell 炼狱叱喝|XPHB}法术。当你达到角色等级5时，你也学会了{@spell 黑暗术|XPHB}法术。这些法术始终在你的准备法术中，你可以不消耗法术位各施展这些法术一次。一旦你使用此特性施展了这些法术中的任意一个，你就不能再次使用它来施展该法术，直到你完成一次{@variantrule 长休|XPHB}。你也可以使用你拥有的任何适当等级的法术位来施展这个法术。",
+									"智力、智慧或魅力是你使用这个特性施放法术的施法能力（在选择遗产时选择能力）。"
+								]
+							}
+						}
+					},
+					"resist": [
+						"火焰"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"炼狱叱喝|xphb"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"黑暗术|xphb"
+										]
+									}
+								}
+							},
+							"ability": {
+								"choose": [
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"known": {
+								"1": [
+									"奇术|xphb#c",
+									"火焰箭|xphb#c"
+								]
+							}
+						}
+					]
+				}
+			]
 		},
 		{
 			"name": "龟人",
@@ -15723,7 +17392,7 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "气",
+			"name": "Air",
 			"ENG_name": "Air",
 			"source": "EEPC",
 			"raceName": "元素裔",
@@ -15963,7 +17632,7 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "气",
+			"name": "Air",
 			"ENG_name": "Air",
 			"source": "MPMM",
 			"raceName": "元素裔",

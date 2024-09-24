@@ -6,6 +6,9 @@
 			"source": "PHB",
 			"page": 76,
 			"srd": true,
+			"reprintedAs": [
+				"武僧|XPHB"
+			],
 			"hd": {
 				"number": 1,
 				"faces": 8
@@ -494,6 +497,498 @@
 			"subclassTitle": "修行宗派",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "武僧",
+			"ENG_name": "Monk",
+			"source": "XPHB",
+			"page": 100,
+			"primaryAbility": [
+				{
+					"dex": true,
+					"wis": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"str",
+				"dex"
+			],
+			"startingProficiencies": {
+				"weapons": [
+					"简易",
+					"具有轻型（Light）属性的武术武器"
+				],
+				"weaponProficiencies": [
+					{
+						"simple": true,
+						"all": {
+							"fromFilter": "type=军用武器|属性=轻"
+						}
+					}
+				],
+				"tools": [
+					"选择一种类型的{@item 工匠工具|XPHB}或{@item 乐器|XPHB}。"
+				],
+				"toolProficiencies": [
+					{
+						"anyArtisansTool": 1
+					},
+					{
+						"anyMusicalInstrument": 1
+					}
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"特技",
+								"运动",
+								"历史",
+								"洞悉",
+								"宗教",
+								"隐匿"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"entries": [
+					"{@i 选择A或B：} (A) {@item 矛|XPHB}，5 {@item 匕首|XPHB|匕首}，选择上述工具熟练度的{@item 工匠工具|XPHB}或{@item 乐器|XPHB}，{@item 探索套组|XPHB}，以及11 GP；或 (B) 50 GP。"
+				],
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "矛|xphb"
+							},
+							{
+								"item": "匕首|xphb",
+								"quantity": 5
+							},
+							{
+								"equipmentTypes": [
+									"乐器",
+									"工匠工具"
+								]
+							},
+							{
+								"item": "探索套组|xphb"
+							},
+							{
+								"value": 1100
+							}
+						],
+						"B": [
+							{
+								"value": 5000
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"武艺",
+						"戒律点数",
+						"无甲移动"
+					],
+					"rows": [
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							0,
+							{
+								"type": "bonusSpeed",
+								"value": 0
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							2,
+							{
+								"type": "bonusSpeed",
+								"value": 10
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							3,
+							{
+								"type": "bonusSpeed",
+								"value": 10
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							4,
+							{
+								"type": "bonusSpeed",
+								"value": 10
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							5,
+							{
+								"type": "bonusSpeed",
+								"value": 10
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							6,
+							{
+								"type": "bonusSpeed",
+								"value": 15
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							7,
+							{
+								"type": "bonusSpeed",
+								"value": 15
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							8,
+							{
+								"type": "bonusSpeed",
+								"value": 15
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							9,
+							{
+								"type": "bonusSpeed",
+								"value": 15
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							10,
+							{
+								"type": "bonusSpeed",
+								"value": 20
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							11,
+							{
+								"type": "bonusSpeed",
+								"value": 20
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							12,
+							{
+								"type": "bonusSpeed",
+								"value": 20
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							13,
+							{
+								"type": "bonusSpeed",
+								"value": 20
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							14,
+							{
+								"type": "bonusSpeed",
+								"value": 25
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							15,
+							{
+								"type": "bonusSpeed",
+								"value": 25
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							16,
+							{
+								"type": "bonusSpeed",
+								"value": 25
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							17,
+							{
+								"type": "bonusSpeed",
+								"value": 25
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							18,
+							{
+								"type": "bonusSpeed",
+								"value": 30
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							19,
+							{
+								"type": "bonusSpeed",
+								"value": 30
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							20,
+							{
+								"type": "bonusSpeed",
+								"value": 30
+							}
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"武艺|武僧|XPHB|1",
+				"无甲防御|武僧|XPHB|1",
+				"禅宗专注力|武僧|XPHB|2",
+				"无甲移动|武僧|XPHB|2",
+				"超凡代谢|武僧|XPHB|2",
+				"偏转攻击|武僧|XPHB|3",
+				{
+					"classFeature": "武僧子职业|武僧|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|武僧|XPHB|4",
+				"轻身坠|武僧|XPHB|4",
+				"额外攻击|武僧|XPHB|5",
+				"震慑拳|武僧|XPHB|5",
+				"强化打击|武僧|XPHB|6",
+				{
+					"classFeature": "子职特性|武僧|XPHB|6",
+					"gainSubclassFeature": true
+				},
+				"反射闪避|武僧|XPHB|7",
+				"属性值提升|武僧|XPHB|8",
+				"灵巧移动|武僧|XPHB|9",
+				"强化专注|武僧|XPHB|10",
+				"自我恢复|武僧|XPHB|10",
+				{
+					"classFeature": "子职特性|武僧|XPHB|11",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|武僧|XPHB|12",
+				"拨挡能量|武僧|XPHB|13",
+				"纪律生存者|武僧|XPHB|14",
+				"完美专注|武僧|XPHB|15",
+				"属性值提升|武僧|XPHB|16",
+				{
+					"classFeature": "子职特性|武僧|XPHB|17",
+					"gainSubclassFeature": true
+				},
+				"优越防御|武僧|XPHB|18",
+				"传奇恩惠|武僧|XPHB|19",
+				"身心合一|武僧|XPHB|20"
+			],
+			"subclassTitle": "武僧子职业",
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -505,6 +1000,9 @@
 			"className": "武僧",
 			"classSource": "PHB",
 			"page": 80,
+			"reprintedAs": [
+				"暗影|武僧|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"known": {
@@ -543,6 +1041,9 @@
 			"className": "武僧",
 			"classSource": "PHB",
 			"page": 80,
+			"reprintedAs": [
+				"元素|武僧|XPHB|XPHB"
+			],
 			"spellcastingAbility": "wis",
 			"optionalfeatureProgression": [
 				{
@@ -580,6 +1081,9 @@
 			"classSource": "PHB",
 			"page": 79,
 			"srd": true,
+			"reprintedAs": [
+				"散打|武僧|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"innate": {
@@ -690,6 +1194,9 @@
 			"className": "武僧",
 			"classSource": "PHB",
 			"page": 49,
+			"reprintedAs": [
+				"命流|武僧|XPHB|XPHB"
+			],
 			"subclassFeatures": [
 				"命流宗|武僧||命流|TCE|3",
 				"生死之触|武僧||命流|TCE|6",
@@ -748,6 +1255,90 @@
 				"衰弱连击|武僧|PHB|钴魂|TDCSR|17"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "慈悲战士",
+			"ENG_name": "Warrior of Mercy",
+			"shortName": "命流",
+			"source": "XPHB",
+			"className": "武僧",
+			"classSource": "XPHB",
+			"page": 104,
+			"subclassFeatures": [
+				"慈悲战士|武僧|XPHB|命流|XPHB|3",
+				"生死之触|武僧|XPHB|命流|XPHB|6",
+				"活杀自在|武僧|XPHB|命流|XPHB|11",
+				"命极之手|武僧|XPHB|命流|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "影武者",
+			"ENG_name": "Warrior of Shadow",
+			"shortName": "暗影",
+			"source": "XPHB",
+			"className": "武僧",
+			"classSource": "XPHB",
+			"page": 105,
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"次级幻影|xphb#c"
+						]
+					},
+					"innate": {
+						"3": {
+							"resource": {
+								"1": [
+									"黑暗术|xphb"
+								]
+							}
+						}
+					},
+					"resourceName": "聚焦点",
+					"ability": "wis"
+				}
+			],
+			"subclassFeatures": [
+				"影武者|武僧|XPHB|暗影|XPHB|3",
+				"暗影步|武僧|XPHB|暗影|XPHB|6",
+				"改进的暗影步|武僧|XPHB|暗影|XPHB|11",
+				"幽影斗篷|武僧|XPHB|暗影|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "元素战士",
+			"ENG_name": "Warrior of the Elements",
+			"shortName": "元素",
+			"source": "XPHB",
+			"className": "武僧",
+			"classSource": "XPHB",
+			"page": 106,
+			"subclassFeatures": [
+				"元素战士|武僧|XPHB|元素|XPHB|3",
+				"元素爆发|武僧|XPHB|元素|XPHB|6",
+				"元素之步|武僧|XPHB|元素|XPHB|11",
+				"元素之巅|武僧|XPHB|元素|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "空手战士的专注",
+			"ENG_name": "Warrior of the Open Hand",
+			"shortName": "散打",
+			"source": "XPHB",
+			"className": "武僧",
+			"classSource": "XPHB",
+			"page": 107,
+			"subclassFeatures": [
+				"空手战士的专注|武僧|XPHB|散打|XPHB|3",
+				"混元体|武僧|XPHB|散打|XPHB|6",
+				"迅捷步伐|武僧|XPHB|散打|XPHB|11",
+				"渗透劲|武僧|XPHB|散打|XPHB|17"
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -761,7 +1352,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"你修行的武艺让你使用徒手打击和武僧武器时得心应手。武僧武器包括 {@item 短剑|PHB|短剑}和所有{@filter 不含双手与重型属性的简易近战武器|items|source=PHB|category=基础|type=简易武器;近战武器=u~u~sand|property=!重型;!双手}。",
+				"你练习武术使你精通使用空手攻击和武僧武器的战斗风格，这些武器包括短剑和任何不具有双手或重型属性的简单近战武器。",
 				"未着装任何护甲也没持用{@item 护盾术|PHB}时，如果你徒手或只持用武僧武器，则你发动的攻击拥有下列增益：",
 				{
 					"type": "list",
@@ -1287,6 +1878,447 @@
 			"entries": [
 				"第20级起，若你骰先攻时身上未有储备的气，则你获得4点气。"
 			]
+		},
+		{
+			"name": "武艺",
+			"ENG_name": "Martial Arts",
+			"source": "XPHB",
+			"page": 101,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你练习的武术使你掌握了使用你的{@variantrule 徒手打击|XPHB}和武僧武器的战斗风格，具体如下：",
+				{
+					"type": "list",
+					"items": [
+						"{@filter 简易近战武器|items|type=简单武器;近战武器=沙地}",
+						"{@filter 具有轻型属性的武术武器|items|type=军用武器|属性=轻}"
+					]
+				},
+				"当你未装备武器或仅使用武僧武器并且未穿戴护甲或持有{@item 护盾术|XPHB}时，你将获得以下好处。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "额外空手攻击",
+							"ENG_name": "Bonus Unarmed Strike",
+							"entries": [
+								"你可以将一次{@variantrule 徒手打击|XPHB}作为{@variantrule 附赠动作|XPHB}进行。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "你可以掷{@dice 1d6}来代替你的{@variantrule 空手攻击|XPHB}或武僧武器的正常伤害。随着你武僧等级的提升，这个骰子会有所变化，如武僧特性表中的武术列所示。",
+							"ENG_name": "Martial Arts Die",
+							"entries": [
+								"你可以掷{@dice 1d6}来代替你的{@variantrule 徒手打击|XPHB}或武僧武器的正常伤害。随着你武僧等级的提升，这个骰子会有所变化，如武僧特性表中的武术列所示。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "敏捷攻击",
+							"ENG_name": "Dexterous Attacks",
+							"entries": [
+								"你可以使用你的敏捷修正值代替力量修正值来决定你的空手攻击和武僧武器的攻击和伤害检定。此外，当你使用你的{@variantrule 空手攻击|XPHB}的{@action 擒抱|XPHB}或{@action 推搡|XPHB}选项时，你可以使用你的敏捷修正值代替力量修正值来决定豁免掷骰的难度等级（DC）。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "无甲防御",
+			"ENG_name": "Unarmored Defense",
+			"source": "XPHB",
+			"page": 101,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"当你不穿戴护甲或不持用{@item 护盾术|XPHB}时，你的基本{@variantrule 护甲等级|XPHB}等于10加上你的敏捷和智慧修正值。"
+			]
+		},
+		{
+			"name": "禅宗专注力",
+			"ENG_name": "Monk's Focus",
+			"source": "XPHB",
+			"page": 101,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你的专注和武术训练使你能够利用自己内在的一股非凡能量。这股能量由专注点表示。你的武僧等级决定了你拥有的点数，如武僧特性表中的专注点列所示。",
+				"你可以消耗这些点来增强或激发某些武僧特性。你开始时知道三个这样的特性：连击、耐心防御和风行步，每个特性都在下面详细说明。",
+				"当你消耗一个专注点时，它在你完成一个{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}之前不可用，长休结束时你将恢复所有消耗的点数。",
+				"一些使用专注点的特性要求你的目标进行一次豁免掷骰。豁免掷骰的难度等级（DC）等于8加上你的智慧修正和{@variantrule 熟练项|XPHB}。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "疾风连击",
+							"ENG_name": "Flurry of Blows",
+							"entries": [
+								"你可以消耗1点专注点，作为{@variantrule 附赠动作|XPHB}进行两次空手攻击。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "坚强防御",
+							"ENG_name": "Patient Defense",
+							"entries": [
+								"你可以将{@action 撤离|XPHB}动作作为{@variantrule 附赠动作|XPHB}。或者，你可以消耗1点专注点，将{@action 撤离|XPHB}和{@action 回避|XPHB}动作作为{@variantrule 附赠动作|XPHB}。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "飞檐走壁",
+							"ENG_name": "Step of the Wind",
+							"entries": [
+								"你可以将{@action 疾走|XPHB}动作作为{@variantrule 附赠动作|XPHB}。或者，你可以消耗1点专注点，将{@action 撤离|XPHB}和{@action 疾走|XPHB}动作作为{@variantrule 附赠动作|XPHB}，并且你本回合的跳跃距离翻倍。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "无甲移动",
+			"ENG_name": "Unarmored Movement",
+			"source": "XPHB",
+			"page": 102,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"当你不穿戴护甲或不持用{@item 护盾术|XPHB}时，你的速度增加10英尺。当你达到特定的武僧等级时，这个加值会增加，如武僧特性表所示。"
+			]
+		},
+		{
+			"name": "超凡代谢",
+			"ENG_name": "Uncanny Metabolism",
+			"source": "XPHB",
+			"page": 102,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"当你掷{@variantrule 先攻|XPHB}时，你可以恢复所有已消耗的专注点。当你这样做时，掷你的武术骰，恢复的{@variantrule 生命值|XPHB}数量等于你的武僧等级加上掷骰的结果。",
+				"一旦你使用了这个特性，在你完成一次{@variantrule 长休|XPHB}之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "偏转攻击",
+			"ENG_name": "Deflect Attacks",
+			"source": "XPHB",
+			"page": 102,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"当一次攻击检定击中你，且其伤害包括钝击、穿刺或斩击伤害时，你可以采取一个{@variantrule 反应|XPHB}来减少该攻击对你的总伤害。减少量等于{@dice 1d10}加上你的敏捷修正和武僧等级。",
+				"如果你将伤害减少到0，你可以消耗1点专注点来转移部分攻击的力量。如果你这样做，选择一个你可以看到的生物，如果攻击是近战攻击，则该生物必须在你5英尺范围内；如果攻击是远程攻击，则该生物必须在你60英尺范围内，并且不能在你的视线中有{@variantrule 掩护|XPHB|全身掩护}。那个生物必须进行一次敏捷豁免，否则将受到等于你的武术骰两次掷骰加上你的敏捷修正的伤害。伤害类型与攻击造成的伤害类型相同。"
+			]
+		},
+		{
+			"name": "武僧子职业",
+			"ENG_name": "Monk Subclass",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你获得了你选择的武僧子类。子类是一种专业化，它在特定的武僧等级时赋予你特性。在你的职业生涯中，你将获得你的子类中所有等级不高于你的武僧等级的特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"你获得了{@feat 能力值提升|XPHB}专长，或者你符合资格的另一个{5etools 专长|feats.html}。你在武僧等级8、12和16时再次获得这个特性。"
+			]
+		},
+		{
+			"name": "轻身坠",
+			"ENG_name": "Slow Fall",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"当你坠落时，你可以采取一个{@variantrule 反应|XPHB}来减少因坠落受到的伤害，减少量等于你的武僧等级的五倍。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"每当你在你回合中采取{@action 攻击|XPHB}动作时，你可以进行两次攻击而不是一次。"
+			]
+		},
+		{
+			"name": "震慑拳",
+			"ENG_name": "Stunning Strike",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"在你的回合中，每当你使用武僧武器或{@variantrule 徒手打击|XPHB}击中一个生物时，你可以消耗1点专注点尝试进行一次眩晕攻击。目标必须进行一次体质豁免。如果豁免失败，目标将处于{@condition 震慑|XPHB}状态，直到你的下个回合开始。如果豁免成功，目标的{@variantrule 速度|XPHB}减半，直到你的下个回合开始，并且在你的下个回合开始前对目标进行的下一次攻击检定具有{@variantrule 优势|XPHB}。"
+			]
+		},
+		{
+			"name": "强化打击",
+			"ENG_name": "Empowered Strikes",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"每当你使用你的{@variantrule 徒手打击|XPHB}造成伤害时，你可以选择让它造成力量伤害或其正常的伤害类型。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"你获得了来自你的武僧子类的特有特性。"
+			]
+		},
+		{
+			"name": "反射闪避",
+			"ENG_name": "Evasion",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"当你受到允许你进行敏捷豁免以只承受一半伤害的效果影响时，如果你成功通过豁免，你不会受到伤害；如果失败，你只承受一半的伤害。",
+				"如果你处于{@condition 失能|XPHB}，你不会从这个特性中受益。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "灵巧移动",
+			"ENG_name": "Acrobatic Movement",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"当你不穿戴护甲或不持用{@item 护盾术|XPHB}时，你可以在回合中沿着垂直表面移动，或在液体上移动而不会掉落。"
+			]
+		},
+		{
+			"name": "强化专注",
+			"ENG_name": "Heightened Focus",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"你的连击、耐心防御和风行步获得以下好处。",
+				{
+					"type": "entries",
+					"name": "",
+					"ENG_name": "",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "疾风连击",
+							"ENG_name": "Flurry of Blows",
+							"entries": [
+								"你可以消耗1点专注点来使用连击，并用它进行三次空手攻击，而不是两次。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "坚强防御",
+							"ENG_name": "Patient Defense",
+							"entries": [
+								"当你消耗一个专注点来使用耐心防御时，你获得的{@variantrule 临时生命值|XPHB}数量等于你的武术骰两次掷骰的结果之和。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "飞檐走壁",
+							"ENG_name": "Step of the Wind",
+							"entries": [
+								"当你消耗一个专注点来使用风行步时，你可以选择一个距离你5英尺内且体型为大型或更小的自愿生物。你将该生物随你一起移动，直到你的回合结束。该生物的移动不会引发{@action 借机攻击|XPHB|借机攻击}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "自我恢复",
+			"ENG_name": "Self-Restoration",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"凭借强大的意志力，你可以在每个回合结束时从自己身上移除以下条件之一：{@condition 魅惑|XPHB}、{@condition 恐慌|XPHB}或{@condition 中毒|XPHB}。",
+				"此外，不进食和饮水不会让你获得{@condition 力竭|XPHB}等级。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"你获得了来自你的武僧子类的特有特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "拨挡能量",
+			"ENG_name": "Deflect Energy",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"现在你可以使用你的偏转攻击特性来抵御任何类型的伤害攻击，而不仅仅是钝击、穿刺或斩击伤害。"
+			]
+		},
+		{
+			"name": "纪律生存者",
+			"ENG_name": "Disciplined Survivor",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"你的身体和精神纪律使你在所有豁免投掷上获得熟练度。",
+				"此外，每当你进行一次豁免投掷并失败时，你可以消耗1个专注点来重新投掷，并且你必须使用新的投掷结果。"
+			]
+		},
+		{
+			"name": "完美专注",
+			"ENG_name": "Perfect Focus",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"当你进行{@variantrule 先攻|XPHB}掷骰并且不使用超常代谢时，如果你有3个或更少的专注点，你恢复已消耗的专注点直到你拥有4个。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"你获得了来自你的武僧子类的特有特性。"
+			]
+		},
+		{
+			"name": "优越防御",
+			"ENG_name": "Superior Defense",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"在你的回合开始时，你可以消耗3个专注点来增强自己抵御伤害的能力，持续1分钟或者直到你处于{@condition 失能|XPHB}状态。在这段时间里，除了力量伤害外，你对所有伤害都有{@variantrule 提升抗性|XPHB}。"
+			]
+		},
+		{
+			"name": "传奇恩惠",
+			"ENG_name": "Epic Boon",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"你获得了一个{@filter 史诗级恩惠特性|专长|category=EB}，或者你符合条件选择的另一个{@5etools 专长|feats.html}。推荐选择{@feat 无敌攻势之恩惠|XPHB}。"
+			]
+		},
+		{
+			"name": "身心合一",
+			"ENG_name": "Body and Mind",
+			"source": "XPHB",
+			"page": 103,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"你已经将你的身体和心灵提升到了新的高度。你的敏捷和智慧评分增加了4点，最高可达25。"
+			]
 		}
 	],
 	"subclassFeature": [
@@ -1489,7 +2521,7 @@
 							"type": "item",
 							"name": "盲视",
 							"ENG_name": "Blindsight",
-							"entry": "你获得10尺{@sense 盲视}。在盲视范围内，即使你{@condition 目盲}或处于黑暗中，你仍可以清晰地看到任何不处于全身掩护的事物。而且，你可以在盲视范围内看到{@condition 隐形}生物，除非此生物对你躲藏成功。"
+							"entry": "你获得了10英尺范围内的{@sense 盲视}。在这个范围内，你可以有效看到任何不是在{@quickref 掩护||3||全身掩护}后面的东西，即使你处于{@condition 目盲}状态或在黑暗中。此外，你可以在这个范围内看到{@condition 隐形}生物，除非该生物成功地避开了你的视线。"
 						},
 						{
 							"type": "item",
@@ -2829,7 +3861,7 @@
 			"header": 2,
 			"entries": [
 				"从11级起，你得到创造出一个光球，以此引发一场毁灭性爆炸的能力。以一个动作，你可以魔法性地创造一个法球，并将其向150尺内你选择的任意一点投掷出去。法球在那里瞬间扩张成一个光芒四射的区域。",
-				"以目标点为中心，半径20尺范围内的所有生物必须立即通过一次体质豁免，豁免失败将受到{@damage 2d6}的光耀伤害。若生物处于完全掩护下，且那掩体不透光，那么它不需要为此进行豁免。",
+				"那个20英尺半径球体内的每个生物都必须成功通过一次体质豁免投掷，否则会受到{@damage 2d6}点辐射伤害。如果生物在不透明的{@quickref 掩护||3||全身掩护}后面，则不需要进行豁免投掷。",
 				"你可以花费气以提高这枚光球的威力。每消耗一点气都能使这一球体的伤害上升{@dice 2d6}，你最多为此消耗3点气。"
 			]
 		},
@@ -2907,6 +3939,532 @@
 			"level": 3,
 			"entries": [
 				"你可以在你的回合中使用一次附赠动作使你的剑圣武器远程攻击变得更为致命。当你这样做时，你用剑圣武器发动的远程攻击所命中的任何目标将会额外受到{@damage 1d4}点与该武器伤害类型相同的伤害。这一增益会一直持续到当前回合结束。"
+			]
+		},
+		{
+			"name": "元素同调",
+			"ENG_name": "Elemental Attunement",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"在你的回合开始时，你可以消耗1个专注点来为自己注入元素能量。这种能量持续10分钟，或者直到你处于{@condition 失能|XPHB}（无力）状态。当此特性处于激活状态时，你获得以下好处。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "触及",
+							"ENG_name": "Reach",
+							"entries": [
+								"当你进行{@variantrule 徒手打击|XPHB}时，你触及的范围比正常情况多出10英尺，因为元素能量从你身上延伸出去。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "元素打击",
+							"ENG_name": "Elemental Strikes",
+							"entries": [
+								"每当你用你的{@variantrule 徒手打击|XPHB}击中目标时，你可以选择让它造成酸、冷、火、闪电或雷伤害，而不是其正常的伤害类型。当你用它造成这些类型中的一种时，你还可以迫使目标进行一次力量豁免投掷。如果豁免失败，你可以将目标沿着元素能量的漩涡移动最多10英尺，朝向你或远离你。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "操纵元素",
+			"ENG_name": "Manipulate Elements",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你知道{@spell 元素主义|XPHB}法术。智慧是你的法术施放能力。"
+			]
+		},
+		{
+			"name": "元素战士",
+			"ENG_name": "Warrior of the Elements",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 挥舞元素力量的打击和爆发}",
+				"元素战士们利用元素位面的力量。通过他们超自然的专注力，这些僧侣短暂地驯服了元素混沌的能量，以在战斗中和战斗外增强自己。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "元素同调|武僧|XPHB|元素|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "操纵元素|武僧|XPHB|元素|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "元素爆发",
+			"ENG_name": "Elemental Burst",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"作为一个{@action 魔法|XPHB}动作，你可以消耗2个专注点来在距离你120英尺内的某个点为中心的20英尺半径{@variantrule 球体 [区域效果]|XPHB|球状}内爆发元素能量。选择一种伤害类型：酸、冷、火、闪电或雷。",
+				"在{@variantrule 球体 [区域效果]|XPHB|球状}内的每个生物都必须进行一次敏捷豁免投掷。未成功豁免的生物将受到所选择类型的伤害，伤害值为你的武术骰点数的三次掷骰之和。成功豁免的生物受到的伤害减半。"
+			]
+		},
+		{
+			"name": "元素之步",
+			"ENG_name": "Stride of the Elements",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"当你的元素协调处于激活状态时，你还拥有等同于你的{@variantrule 飞行速度|XPHB}的{@variantrule 游泳速度|XPHB}和{@variantrule 速度|XPHB}。"
+			]
+		},
+		{
+			"name": "元素之巅",
+			"ENG_name": "Elemental Epitome",
+			"source": "XPHB",
+			"page": 106,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "元素",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"在你的元素协调激活时，你还获得以下好处。",
+				{
+					"type": "entries",
+					"name": "伤害抗性",
+					"ENG_name": "Damage Resistance",
+					"entries": [
+						"你获得了以下伤害类型中选择一种的{@variantrule 提升抗性|XPHB}：酸、冷、火、闪电或雷。在你的每个回合开始时，你可以更改这个选择。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "破坏步伐",
+					"ENG_name": "Destructive Stride",
+					"entries": [
+						"当你使用你的风行步时，你的速度在本回合结束前增加20英尺。在这段时间内，你选择的任何生物在你进入其5英尺范围内的空间时，会受到等同于你的武术骰点数的一次伤害。伤害类型可以是你选择的酸、冷、火、闪电或雷。一个生物每回合只能受到这一次伤害。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "强化打击",
+					"ENG_name": "Empowered Strikes",
+					"entries": [
+						"在你的每个回合中，每当你用{@variantrule 徒手打击|XPHB}击中目标时，你可以造成额外的伤害，额外伤害等于你的武术骰点数。额外伤害的类型与那次攻击造成的伤害类型相同。"
+					]
+				}
+			]
+		},
+		{
+			"name": "慈悲战士",
+			"ENG_name": "Warrior of Mercy",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 操纵生命与死亡的力量}",
+				"慈悲战士操纵他人的生命力量。这些僧侣是流浪的医生，但他们会给敌人带来迅速的终结。他们经常戴着面具，以无面的生命与死亡使者的身份出现。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "夺命之手|武僧|XPHB|命流|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "予命之手|武僧|XPHB|命流|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "命流之器|武僧|XPHB|命流|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "夺命之手",
+			"ENG_name": "Hand of Harm",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "聚焦点",
+				"ENG_name": "Focus Point"
+			},
+			"entries": [
+				"每回合一次，当你用{@variantrule 徒手打击|XPHB}击中一个生物并造成伤害时，你可以消耗1个专注点来额外造成等同于你的武术骰点数加上你智慧调整值的亡灵伤害。"
+			]
+		},
+		{
+			"name": "予命之手",
+			"ENG_name": "Hand of Healing",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"consumes": {
+				"name": "聚焦点",
+				"ENG_name": "Focus Point"
+			},
+			"entries": [
+				"作为一个{@action Magic|XPHB}动作，你可以消耗1个专注点来触摸一个生物，并恢复等同于你的武术骰点数加上你智慧调整值的{@variantrule Hit Points|XPHB}。当你使用你的\"狂风暴雨\"时，你可以将一次{@variantrule Unarmed Strike|XPHB}替换为使用这个特性，而不需要为治疗消耗专注点。"
+			]
+		},
+		{
+			"name": "命流之器",
+			"ENG_name": "Implements of Mercy",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你获得了{@skill 洞悉|XPHB}（洞察）和{@skill 医药|XPHB}（医疗）技能的熟练度，以及{@item 草药工具|XPHB}（草药工具包）的熟练度。"
+			]
+		},
+		{
+			"name": "生死之触",
+			"ENG_name": "Physician's Touch",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"你的\"伤害之手\"和\"治愈之手\"得到了如下的改进。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "夺命之手",
+							"ENG_name": "Hand of Harm",
+							"entries": [
+								"当你对一个生物使用\"伤害之手\"时，你还可以使得该生物获得{@condition 中毒|XPHB}（中毒）状态，直到你的下一个回合结束。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "予命之手",
+							"ENG_name": "Hand of Healing",
+							"entries": [
+								"当你使用\"治愈之手\"时，你还可以结束你治疗的生物身上的以下一种状态：{@condition 目盲|XPHB}（失明）、{@condition 耳聋|XPHB}（失聪）、{@condition 麻痹|XPHB}（瘫痪）、{@condition 中毒|XPHB}（中毒）或{@condition 震慑|XPHB}（昏迷）。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "活杀自在",
+			"ENG_name": "Flurry of Healing and Harm",
+			"source": "XPHB",
+			"page": 104,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"当你使用\"狂风暴雨\"时，你可以将每次的{@variantrule Unarmed Strike|XPHB}替换为使用\"治愈之手\"，并且不需要消耗\"治愈之手\"的专注点。",
+				"此外，当你使用\"狂风暴雨\"进行{@variantrule 徒手打击|XPHB}并造成伤害时，你可以在不消耗\"伤害之手\"专注点的情况下使用该攻击附带\"伤害之手\"。你每回合仍然只能使用一次\"伤害之手\"。",
+				"你可以使用这些好处的次数总共等于你智慧调整值（最少一次）。当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "命极之手",
+			"ENG_name": "Hand of Ultimate Mercy",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "命流",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"consumes": {
+				"name": "聚焦点",
+				"ENG_name": "Focus Point",
+				"amount": 5
+			},
+			"entries": [
+				"你对生命能量的掌握开启了终极仁慈之门。作为一个{@action 魔法|XPHB}动作，你可以触摸在过去24小时内死亡的生物的尸体，并消耗5个专注点。然后，该生物以等同于{@variantrule 生命值|XPHB}加上你智慧调整值的{@dice 4d10}数量复活。如果生物死亡时带有以下任何状态，复活时这些状态将被移除：{@condition 目盲|XPHB}、{@condition 耳聋|XPHB}、{@condition 麻痹|XPHB}、{@condition 中毒|XPHB}和{@condition 震慑|XPHB}。",
+				"一旦你使用了这个特性，在你完成一次{@variantrule 长休|XPHB}之前，你不能再使用它。"
+			]
+		},
+		{
+			"name": "散打技巧",
+			"ENG_name": "Open Hand Technique",
+			"source": "XPHB",
+			"page": 107,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "散打",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"每当你用你的\"狂风暴雨\"攻击击中一个生物时，你可以对那个目标施加以下效果之一。",
+				{
+					"type": "entries",
+					"name": "使混乱；使头脑糊涂",
+					"ENG_name": "Addle",
+					"entries": [
+						"目标直到其下一回合开始前不能进行{@action 借机攻击|XPHB|借机攻击}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "推动",
+					"ENG_name": "Push",
+					"entries": [
+						"目标必须成功进行一次力量豁免投掷，否则会被推向远离你最多15英尺的位置。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "推翻",
+					"ENG_name": "Topple",
+					"entries": [
+						"目标必须成功进行一次敏捷豁免投掷，否则会受到{@condition 倒地|XPHB}（倒地）状态。"
+					]
+				}
+			]
+		},
+		{
+			"name": "空手战士的专注",
+			"ENG_name": "Warrior of the Open Hand",
+			"source": "XPHB",
+			"page": 107,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "散打",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 精通徒手格斗技巧}",
+				"开掌战士是徒手格斗的大师。他们学习推动和绊倒对手的技巧，并操纵自己的能量以保护自己免受伤害。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "散打技巧|武僧|XPHB|散打|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "混元体",
+			"ENG_name": "Wholeness of Body",
+			"source": "XPHB",
+			"page": 107,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "散打",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"你获得了自我治疗的能力。作为一个{@variantrule 附赠动作|XPHB}，你可以掷你的武术骰。你恢复的{@variantrule 生命值|XPHB}数量等于掷出的数字加上你智慧调整值（至少恢复1{@variantrule 生命值|XPHB|生命值}）。",
+				"你可以使用这个特性的次数等于你智慧调整值（最少一次），当你完成一次{@variantrule 长休|XPHB}后，你将恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "迅捷步伐",
+			"ENG_name": "Fleet Step",
+			"source": "XPHB",
+			"page": 107,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "散打",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"当你采取除了风行步之外的{@variantrule 附赠动作|XPHB}时，你也可以在那个{@variantrule 附赠动作|XPHB}之后立即使用风行步。"
+			]
+		},
+		{
+			"name": "渗透劲",
+			"ENG_name": "Quivering Palm",
+			"source": "XPHB",
+			"page": 107,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "散打",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"你获得了在某人体内设置致命振动的能力。当你用{@variantrule 徒手打击|XPHB}击中一个生物时，你可以消耗4个专注点来启动这些难以察觉的振动，它们持续的天数等于你的僧侣等级。除非你采取行动结束它们，否则振动是无害的。或者，当你在你的回合采取{@action 攻击|XPHB}动作时，你可以放弃一次攻击来结束振动。要结束振动，你和目标必须存在于相同的存在层面上。当你结束振动时，目标必须进行一次体质豁免投掷，在失败的情况下受到{@damage 10d12}点力量伤害，成功的情况下受到一半的伤害。",
+				"你一次只能有一个生物受到这个特性的效果影响。你可以无害地结束振动（无需动作）。"
+			]
+		},
+		{
+			"name": "暗影技艺",
+			"ENG_name": "Shadow Arts",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "暗影",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你已经学会了借助影界的魔力，获得了以下好处。",
+				{
+					"type": "entries",
+					"name": "黑暗术",
+					"ENG_name": "Darkness",
+					"entries": [
+						"你可以消耗1个专注点来施放{@spell Darkness|XPHB}法术，无需法术材料。当你使用这个特性施放它时，你可以在法术区域内看见。当法术持续存在时，你可以在每个你的回合开始时将其区域移动到距离你60英尺内的某个空间。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
+					"entries": [
+						"你获得了范围为60英尺的{@sense 黑暗视觉|XPHB}。如果你已经拥有{@sense 黑暗视觉|XPHB}，其范围增加60英尺。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "暗影幻象",
+					"ENG_name": "Shadowy Figments",
+					"entries": [
+						"你知晓{@spell 次级幻影|XPHB}。智慧是你的法术豁免属性。"
+					]
+				}
+			]
+		},
+		{
+			"name": "影武者",
+			"ENG_name": "Warrior of Shadow",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "暗影",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 利用影力进行隐匿和诡计}",
+				"影之战士修炼隐匿和诡计，利用影界的力量。他们适应于黑暗之中，能够将周围变得昏暗以隐藏自己，从阴影跳至阴影，并且能够采取一种幽灵般的形态。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "暗影技艺|武僧|XPHB|暗影|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "暗影步",
+			"ENG_name": "Shadow Step",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "暗影",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"当你完全处于{@variantrule 微光光照|XPHB}或{@variantrule 黑暗术|XPHB}中时，你可以使用一个{@variantrule 附赠动作|XPHB}传送至你能看到的、同样处于{@variantrule 微光光照|XPHB}或{@variantrule 黑暗术|XPHB}中的、未被占据的空间，传送距离最多60英尺。在当前回合结束前，你对下一次进行的近战攻击具有{@variantrule 优势|XPHB}。"
+			]
+		},
+		{
+			"name": "改进的暗影步",
+			"ENG_name": "Improved Shadow Step",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "暗影",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"你可以借助你与影界的联系来增强你的传送能力。当你使用你的暗影步时，你可以消耗1点专注点来取消该特性使用中你必须在微光或黑暗中开始和结束的要求。作为这个{@variantrule 额外动作|XPHB}的一部分，你可以在传送后立即进行一次{@variantrule 空手攻击|XPHB}。"
+			]
+		},
+		{
+			"name": "幽影斗篷",
+			"ENG_name": "Cloak of Shadows",
+			"source": "XPHB",
+			"page": 105,
+			"className": "武僧",
+			"classSource": "XPHB",
+			"subclassShortName": "暗影",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"作为完全处于{@variantrule 黑暗术|XPHB}或{@variantrule 微光光照|XPHB}中的{@variantrule 黑暗术|XPHB}动作，你可以消耗3点专注点来用阴影笼罩自己，持续1分钟，直到你处于{@condition 失能|XPHB}，或者直到你的回合结束于{@variantrule 明亮光照|XPHB}中。在被这些阴影笼罩时，你获得以下好处。",
+				{
+					"type": "entries",
+					"name": "隐形术",
+					"ENG_name": "Invisibility",
+					"entries": [
+						"你处于{@condition 隐形|XPHB}状态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "部分虚体",
+					"ENG_name": "Partially Incorporeal",
+					"entries": [
+						"你可以穿过被占据的空间，就好像它们是{@variantrule 困难地形|XPHB}。如果你的回合在这样一个空间结束，你会被挤到你最后所在的未被占据的空间。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "影舞风暴",
+					"ENG_name": "Shadow Flurry",
+					"entries": [
+						"你可以不消耗任何专注点来使用你的连击。"
+					]
+				}
 			]
 		}
 	]

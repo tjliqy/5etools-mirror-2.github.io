@@ -552,7 +552,7 @@ class PageFilterBestiary extends PageFilterBase {
 			this._sidekickTypeFilter,
 			this._sidekickTagFilter,
 			this._environmentFilter,
-			this._defenseFilter,
+			this._defenceFilter,
 			this._conditionImmuneFilter,
 			this._traitFilter,
 			this._actionReactionFilter,

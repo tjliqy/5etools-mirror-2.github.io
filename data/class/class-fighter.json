@@ -7,6 +7,9 @@
 			"page": 70,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"战士|XPHB"
+			],
 			"hd": {
 				"number": 1,
 				"faces": 10
@@ -32,7 +35,7 @@
 					"light",
 					"medium",
 					"heavy",
-					"{@item 护盾术|PHB|盾牌}"
+					"shield"
 				],
 				"weapons": [
 					"简易",
@@ -125,7 +128,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item 护盾术|PHB|盾牌}"
+						"shield"
 					],
 					"weapons": [
 						"简易",
@@ -176,6 +179,281 @@
 			"subclassTitle": "武术范型",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "战士",
+			"ENG_name": "Fighter",
+			"source": "XPHB",
+			"page": 90,
+			"freeRules2024": true,
+			"primaryAbility": [
+				{
+					"str": true
+				},
+				{
+					"dex": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"str",
+				"con"
+			],
+			"featProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"category": [
+						"FS"
+					],
+					"progression": {
+						"1": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"heavy",
+					"shield"
+				],
+				"weapons": [
+					"简易",
+					"军用"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"特技",
+								"驯兽",
+								"运动",
+								"历史",
+								"洞悉",
+								"威吓",
+								"游说",
+								"察觉",
+								"生存"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"entries": [
+					"{@i 选择A、B或C：} (A) {@item 链甲|XPHB}、{@item 巨剑|XPHB}、{@item 链枷|XPHB}、8 {@item 标枪|XPHB|标枪}、{@item 地城套组|XPHB}，和4 GP；(B) {@item 镶钉皮甲|XPHB}、{@item 弯刀|XPHB}、{@item 短剑|XPHB}、{@item 长弓|XPHB}、{@item 箭(20)|XPHB|20支箭}、{@item 箭袋|XPHB}、{@item 地城套组|XPHB}，和11 GP；或 (C) 155 GP"
+				],
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "链甲|xphb"
+							},
+							{
+								"item": "巨剑|xphb"
+							},
+							{
+								"item": "链枷|xphb"
+							},
+							{
+								"item": "标枪|xphb",
+								"quantity": 8
+							},
+							{
+								"item": "地城套组|xphb"
+							},
+							{
+								"value": 400
+							}
+						],
+						"B": [
+							{
+								"item": "镶钉皮甲|xphb"
+							},
+							{
+								"item": "弯刀|xphb"
+							},
+							{
+								"item": "短剑|xphb"
+							},
+							{
+								"item": "长弓|xphb"
+							},
+							{
+								"item": "箭矢|xphb"
+							},
+							{
+								"item": "箭袋|xphb"
+							},
+							{
+								"item": "地城套组|xphb"
+							},
+							{
+								"value": 1100
+							}
+						],
+						"C": [
+							{
+								"value": 15500
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium",
+						"shield"
+					],
+					"weapons": [
+						"军用"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"回气",
+						"武器精通"
+					],
+					"rows": [
+						[
+							"2",
+							"3"
+						],
+						[
+							"2",
+							"3"
+						],
+						[
+							"2",
+							"3"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"战斗风格|战士|XPHB|1",
+				"回气|战士|XPHB|1",
+				"武器精通|战士|XPHB|1",
+				"动作如潮|战士|XPHB|2",
+				"战术头脑|战士|XPHB|2",
+				{
+					"classFeature": "战士子类|战士|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士|XPHB|4",
+				"额外攻击|战士|XPHB|5",
+				"战术转换|战士|XPHB|5",
+				"属性值提升|战士|XPHB|6",
+				{
+					"classFeature": "子职业能力|战士|XPHB|7",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士|XPHB|8",
+				"不屈|战士|XPHB|9",
+				"战术大师|战士|XPHB|9",
+				{
+					"classFeature": "子职业能力|战士|XPHB|10",
+					"gainSubclassFeature": true
+				},
+				"两次额外攻击|战士|XPHB|11",
+				"属性值提升|战士|XPHB|12",
+				"不屈|战士|XPHB|13",
+				"研究型攻击|战士|XPHB|13",
+				"属性值提升|战士|XPHB|14",
+				{
+					"classFeature": "子职业能力|战士|XPHB|15",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|战士|XPHB|16",
+				"动作如潮|战士|XPHB|17",
+				"不屈|战士|XPHB|17",
+				{
+					"classFeature": "子职业能力|战士|XPHB|18",
+					"gainSubclassFeature": true
+				},
+				"传奇恩惠|战士|XPHB|19",
+				"三次额外攻击|战士|XPHB|20"
+			],
+			"subclassTitle": "战士子类",
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -187,6 +465,9 @@
 			"className": "战士",
 			"classSource": "PHB",
 			"page": 73,
+			"reprintedAs": [
+				"战斗大师|战士|XPHB|XPHB"
+			],
 			"optionalfeatureProgression": [
 				{
 					"name": "战技",
@@ -225,6 +506,9 @@
 			"page": 72,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"勇士|战士|XPHB|XPHB"
+			],
 			"optionalfeatureProgression": [
 				{
 					"name": "战斗风格",
@@ -253,6 +537,9 @@
 			"className": "战士",
 			"classSource": "PHB",
 			"page": 74,
+			"reprintedAs": [
+				"奥法骑士|战士|XPHB|XPHB"
+			],
 			"spellcastingAbility": "int",
 			"casterProgression": "1/3",
 			"cantripProgression": [
@@ -713,6 +1000,9 @@
 			"className": "战士",
 			"classSource": "PHB",
 			"page": 42,
+			"reprintedAs": [
+				"灵能武士|战士|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"innate": {
@@ -767,6 +1057,501 @@
 				"符文大师|战士||符文骑士|TCE|15",
 				"额外已知符文|战士||符文骑士|TCE|15",
 				"符文主宰|战士||符文骑士|TCE|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "战斗大师",
+			"ENG_name": "Battle Master",
+			"shortName": "战斗大师",
+			"source": "XPHB",
+			"className": "战士",
+			"classSource": "XPHB",
+			"page": 93,
+			"optionalfeatureProgression": [
+				{
+					"name": "战技",
+					"ENG_name": "Maneuvers",
+					"featureType": [
+						"MV:B"
+					],
+					"progression": {
+						"3": 3,
+						"7": 5,
+						"10": 7,
+						"15": 9
+					}
+				}
+			],
+			"subclassFeatures": [
+				"战斗大师|战士|XPHB|战斗大师|XPHB|3",
+				"知己知彼|战士|XPHB|战斗大师|XPHB|7",
+				"精通卓越战技|战士|XPHB|战斗大师|XPHB|10",
+				"坚韧|战士|XPHB|战斗大师|XPHB|15",
+				"终极战斗优越|战士|XPHB|战斗大师|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "勇士",
+			"ENG_name": "Champion",
+			"shortName": "勇士",
+			"source": "XPHB",
+			"className": "战士",
+			"classSource": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"featProgression": [
+				{
+					"name": "战斗风格",
+					"ENG_name": "Fighting Style",
+					"category": [
+						"FS"
+					],
+					"progression": {
+						"7": 1
+					}
+				}
+			],
+			"subclassFeatures": [
+				"勇士|战士|XPHB|勇士|XPHB|3",
+				"额外战斗风格|战士|XPHB|勇士|XPHB|7",
+				"英勇战士|战士|XPHB|勇士|XPHB|10",
+				"高效重击|战士|XPHB|勇士|XPHB|15",
+				"生还者|战士|XPHB|勇士|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "奥法骑士",
+			"ENG_name": "Eldritch Knight",
+			"shortName": "奥法骑士",
+			"source": "XPHB",
+			"className": "战士",
+			"classSource": "XPHB",
+			"page": 96,
+			"spellcastingAbility": "int",
+			"casterProgression": "1/3",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"spellsKnownProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=法师"
+							},
+							{
+								"all": "level=1|class=法师"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=法师"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=法师"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=法师"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "奥法骑士",
+							"ENG_name": "Eldritch Knight",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 已准备的法术|spells|subclass=战士;奥法骑士}"
+					],
+					"rows": [
+						[
+							0
+						],
+						[
+							0
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							8
+						],
+						[
+							8
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							13
+						]
+					]
+				},
+				{
+					"title": "每环法术位",
+					"subclasses": [
+						{
+							"name": "奥法骑士",
+							"ENG_name": "Eldritch Knight",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 1st|spells|level=1|subclass=战士;奥法骑士}",
+						"{@filter 2nd|spells|level=2|subclass=战士;奥法骑士}",
+						"{@filter 3rd|spells|level=3|subclass=战士;奥法骑士}",
+						"{@filter 4th|spells|level=4|subclass=战士;奥法骑士}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"奥法骑士|战士|XPHB|奥法骑士|XPHB|3",
+				"战争魔法|战士|XPHB|奥法骑士|XPHB|7",
+				"秘法打击|战士|XPHB|奥法骑士|XPHB|10",
+				"秘法冲锋|战士|XPHB|奥法骑士|XPHB|15",
+				"精通战争魔法|战士|XPHB|奥法骑士|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "灵能武士",
+			"ENG_name": "Psi Warrior",
+			"shortName": "灵能武士",
+			"source": "XPHB",
+			"className": "战士",
+			"classSource": "XPHB",
+			"page": 98,
+			"additionalSpells": [
+				{
+					"innate": {
+						"18": {
+							"daily": {
+								"1": [
+									"心灵遥控|xphb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "灵能武士",
+							"ENG_name": "Psi Warrior",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@tip 骰子大小|灵能能量骰大小}",
+						"{@tip 数量|灵能能量骰数量}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice 十二面骰}",
+							12
+						],
+						[
+							"{@dice 十二面骰}",
+							12
+						],
+						[
+							"{@dice 十二面骰}",
+							12
+						],
+						[
+							"{@dice 十二面骰}",
+							12
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"灵能武士|战士|XPHB|灵能武士|XPHB|3",
+				"念力熟练|战士|XPHB|灵能武士|XPHB|7",
+				"意念守护|战士|XPHB|灵能武士|XPHB|10",
+				"壁垒之力|战士|XPHB|灵能武士|XPHB|15",
+				"念力宗师|战士|XPHB|灵能武士|XPHB|18"
 			],
 			"hasFluffImages": true
 		}
@@ -1160,6 +1945,339 @@
 			"level": 20,
 			"entries": [
 				"第11级后，你在自己回合内执行 {@action 攻击}动作的次数增加到四次。"
+			]
+		},
+		{
+			"name": "战斗风格",
+			"ENG_name": "Fighting Style",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你已经磨练了你的战斗技能，并获得了你选择的{@filter 战斗风格专长|专长|category=FS}。推荐选择{@feat 防御|XPHB}。",
+				"每当你获得战士等级时，你可以用不同的{@filter 战斗风格专长|专长|category=FS}替换你选择的专长。"
+			]
+		},
+		{
+			"name": "回气",
+			"ENG_name": "Second Wind",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你拥有一个有限的身体和精神耐力源泉，你可以利用它。作为{@variantrule 附赠动作|XPHB}，你可以使用它来恢复等于{@dice 1d10}加上你的战士等级的{@dice 1d10}。",
+				"你可以使用这个特性两次。当你完成一次{@variantrule 短休|XPHB}时，你恢复一个已消耗的使用次数，当你完成一次{@variantrule 长休|XPHB}时，你恢复所有已消耗的使用次数。",
+				"当你达到某些战士等级时，你获得这个特性的更多使用次数，如战士特性表中的第二次风列所示。"
+			]
+		},
+		{
+			"name": "武器精通",
+			"ENG_name": "Weapon Mastery",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你在武器训练方面使你能够使用你选择的三种简单或军用武器的精通属性。每当你完成一次{@variantrule 长休|XPHB}时，你可以练习武器演练并改变其中一个武器选择。",
+				"当你达到某些战士等级时，你获得了使用更多种类武器的精通属性的能力，如战士特性表中的{@variantrule 武器|XPHB}精通列所示。"
+			]
+		},
+		{
+			"name": "动作如潮",
+			"ENG_name": "Action Surge",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你可以在一瞬间超越自己的正常极限。在你的回合中，你可以采取一个额外的动作，除了{@action 魔法|XPHB}动作。",
+				"一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}。从17级开始，你可以在休息前使用它两次，但每个回合只能使用一次。"
+			]
+		},
+		{
+			"name": "战术头脑",
+			"ENG_name": "Tactical Mind",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你无论在战场上还是战场外都擅长战术。当你未能通过能力检定时，你可以消耗一次你的第二次风来推动自己走向成功。而不是恢复{@variantrule 生命值|XPHB}，你掷一个{@dice 1d10}骰子，并将掷出的数字加到能力检定上，可能会将其转变为成功。如果检定仍然失败，这次第二次风不会被消耗。"
+			]
+		},
+		{
+			"name": "战士子类",
+			"ENG_name": "Fighter Subclass",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你获得了你选择的战士子类。子类是一种专业化，它在特定的战士等级时赋予你特性。在你的职业生涯中，你将获得你的子类提供的每个特性，这些特性的等级不会超过你的战士等级。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"你获得了{@feat 能力值提升|XPHB}专长，或者你符合条件选择的另一个{5etools 专长|feats.html}。你在战士等级6、8、12、14和16时再次获得这个特性。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"每当你在你回合中采取{@action 攻击|XPHB}动作时，你可以进行两次攻击而不是一次。"
+			]
+		},
+		{
+			"name": "战术转换",
+			"ENG_name": "Tactical Shift",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"每当你使用{@variantrule 附赠动作|XPHB}激活你的第二次风时，你可以移动至多你{@variantrule 速度|XPHB}的一半，而不会激起{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"你获得了来自你的战士子类的特技。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "不屈",
+			"ENG_name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"如果你未能通过一次豁免检定，你可以使用等同于你的战士等级的加值重新掷骰。你必须使用新的掷骰结果，并且直到你完成一次{@variantrule 长休|XPHB}后，你才能再次使用这个特性。",
+				"从13级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性两次；从17级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性三次。"
+			]
+		},
+		{
+			"name": "战术大师",
+			"ENG_name": "Tactical Master",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"当你使用你可以使用的精通属性的武器攻击时，你可以将该属性替换为{@itemMastery 推动|XPHB}、{@itemMastery 棍棒（Sap）是一种通常由木头制成的简易武器，用于近战攻击。在某些游戏中，如《龙与地下城》（Dungeons & Dragons），棍棒可能具有特定的游戏机制或规则。|XPHB}或{@itemMastery 缓慢术|XPHB}属性进行那次攻击。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"你获得了来自你的战士子类的特技。"
+			]
+		},
+		{
+			"name": "两次额外攻击",
+			"ENG_name": "Two Extra Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"每当你在自己回合采取{@action 攻击|XPHB}动作时，你可以进行三次攻击而不是一次。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "不屈",
+			"ENG_name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"如果你未能通过一次豁免检定，你可以使用等同于你的战士等级的加值重新掷骰。你必须使用新的掷骰结果，并且直到你完成一次{@variantrule 长休|XPHB}后，你才能再次使用这个特性。",
+				"从13级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性两次；从17级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性三次。"
+			]
+		},
+		{
+			"name": "研究型攻击",
+			"ENG_name": "Studied Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"你研究你的对手并从你每次攻击中学习。如果你对一个生物进行攻击检定并失误，在你的下一个回合结束前对那个生物的下一次攻击检定中你拥有{@variantrule 优势|XPHB}。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"你获得了来自你的战士子类的特技。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "动作如潮",
+			"ENG_name": "Action Surge",
+			"source": "XPHB",
+			"page": 91,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"你可以在一瞬间超越自己的正常极限。在你的回合中，你可以采取一个额外的动作，除了{@action 魔法|XPHB}动作。",
+				"一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}。从17级开始，你可以在休息前使用它两次，但每个回合只能使用一次。"
+			]
+		},
+		{
+			"name": "不屈",
+			"ENG_name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"如果你未能通过一次豁免检定，你可以使用等同于你的战士等级的加值重新掷骰。你必须使用新的掷骰结果，并且直到你完成一次{@variantrule 长休|XPHB}后，你才能再次使用这个特性。",
+				"从13级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性两次；从17级开始，你可以在一次{@variantrule 长休|XPHB}之前使用这个特性三次。"
+			]
+		},
+		{
+			"name": "子职业能力",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"你获得了来自你的战士子类的特技。"
+			]
+		},
+		{
+			"name": "传奇恩惠",
+			"ENG_name": "Epic Boon",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"你获得了一个{@filter 史诗赐福专长|feats|category=EB}或你符合条件选择的另一个{5etools 专长|feats.html}。推荐选择{@feat 战斗精通赐福|XPHB}。如果你的攻击命中且未击中，在你的下一个回合结束前对那个生物的下一次攻击检定中你拥有{@variantrule 优势|XPHB}。"
+			]
+		},
+		{
+			"name": "三次额外攻击",
+			"ENG_name": "Three Extra Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "战士",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"每当你在自己回合采取{@action 攻击|XPHB}动作时，你可以进行四次攻击而不是一次。"
 			]
 		}
 	],
@@ -2320,7 +3438,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 15级灵能武士特性}",
-				"你可以使用念力庇护你自己和其他人。你可以使用一个附赠动作选择数个30尺范围内你可见生物（可以包括你），其数量等同于你的智力调整值（最少1个生物）。每个被选中的生物获得一分钟 半掩护half cover 的保护，该保护将会在你{@condition 失能}时提前结束。",
+				"你可以用心灵动能保护自己和他人。作为一个额外动作，你可以选择你能看到的、距离你30英尺内的生物，数量最多等于你的智力修正值（最少一个生物）。每个被选中的生物在1分钟内或直到你失去能力时受到{@quickref Cover||3||半掩体}保护。",
 				"当你使用此附赠动作后，直到你完成一次长休为止你都不能再次使用它。你也可以消耗一枚灵能骰来再次使用它。"
 			]
 		},
@@ -3156,6 +4274,776 @@
 			"level": 7,
 			"entries": [
 				"当你使用灵能打击对一个目标造成伤害时，你可以使目标进行一次力量豁免来对抗DC等于8+你的熟练加值+你的智力调整值。如果豁免失败，你可以将目标击倒（{@condition 倒地}）或者将其在任意方向水平移动至多10英尺。"
+			]
+		},
+		{
+			"name": "战斗大师",
+			"ENG_name": "Battle Master",
+			"source": "XPHB",
+			"page": 93,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 精通复杂的战斗策略}",
+				"战斗大师是战斗艺术的学生，学习历代传承下来的武术技巧。最杰出的战斗大师是全面发展的人物，他们将自己的精心磨练的战斗技能与历史、理论和艺术领域的学术研究结合起来。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "卓越战技|战士|XPHB|战斗大师|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战争学徒|战士|XPHB|战斗大师|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战技选项|战士|XPHB|战斗大师|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "卓越战技",
+			"ENG_name": "Combat Superiority",
+			"source": "XPHB",
+			"page": 93,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你在战场上的经验已经磨练了你的战斗技巧。你学会了由一种叫做优势骰子的特殊骰子驱动的机动。",
+				{
+					"type": "entries",
+					"name": "战技",
+					"ENG_name": "Maneuvers",
+					"entries": [
+						"你从本子职业描述后面\"机动选项\"部分中选择三个你选择的机动。许多机动以某种方式增强攻击。每个攻击中你只能使用一个机动。",
+						"当你达到7级、10级和15级战士时，你将学习两个你选择的额外机动。每次你学习新的机动时，你也可以用一个不同的机动替换你已知的一个机动。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "卓越骰",
+					"ENG_name": "Superiority Dice",
+					"entries": [
+						"你拥有四个优势骰子，它们是d8骰子。使用优势骰子时会消耗它。当你完成短休或长休后，你会恢复所有消耗的优势骰子。",
+						"当你达到7级战士（总共五个优势骰子）和15级战士（总共六个优势骰子）时，你会获得额外的优势骰子。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "豁免检定",
+					"ENG_name": "Saving Throws",
+					"entries": [
+						"如果一个机动需要进行豁免投掷，难度等级等于8加上你的力量或敏捷修正值（你选择）以及熟练加值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "战技选项",
+			"ENG_name": "Maneuver Options",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"机动按照字母顺序在这里呈现。",
+				{
+					"type": "options",
+					"count": 3,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "伏击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "换位诈术|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "指挥官奇袭|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "领导风范|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "缴械攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "扰乱打击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "灵巧步法|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "诡诈攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "挑衅攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "突刺攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "灵动攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "恐吓攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "格挡|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "精准攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "推撞攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "重整旗鼓|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "反击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "横扫攻击|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "战术预估|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "摔绊攻击|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "战争学徒",
+			"ENG_name": "Student of War",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你获得了一种你选择的工匠工具的熟练度，并且你获得了从1级战士可用技能中你选择的一项技能的熟练度。"
+			]
+		},
+		{
+			"name": "知己知彼",
+			"ENG_name": "Know Your Enemy",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"作为一个奖励动作，你可以感知到你30英尺范围内你可以看到的生物的某些优势和弱点；你知道那个生物是否具有任何免疫、抗性或弱点，如果生物具有这些特性，你将知道它们是什么。",
+				"一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 长休|XPHB}。你也可以通过消耗一个优越骰（无需动作）来恢复特性的使用。"
+			]
+		},
+		{
+			"name": "精通卓越战技",
+			"ENG_name": "Improved Combat Superiority",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"你的优势骰子变为一个d10骰子。"
+			]
+		},
+		{
+			"name": "坚韧",
+			"ENG_name": "Relentless",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"每个回合一次，当你使用一个机动时，你可以掷一个1d8骰子，并使用掷出的数字代替消耗一个优势骰子。"
+			]
+		},
+		{
+			"name": "终极战斗优越",
+			"ENG_name": "Ultimate Combat Superiority",
+			"source": "XPHB",
+			"page": 94,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "战斗大师",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"你的优越骰变为一个{@dice d12}。"
+			]
+		},
+		{
+			"name": "勇士",
+			"ENG_name": "Champion",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 追求战斗中的肉体卓越}",
+				"冠军专注于在无情追求胜利的过程中发展战斗技巧。冠军将严格的训练与身体上的卓越结合，以造成毁灭性的打击，承受危险，并赢得荣耀。无论是在体育竞技还是血腥的战斗中，冠军都力求成为胜利者的桂冠。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "精通重击|战士|XPHB|勇士|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "运动健将|战士|XPHB|勇士|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "精通重击",
+			"ENG_name": "Improved Critical",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你使用武器和徒手攻击的攻击检定在掷出19或20时可以造成暴击。"
+			]
+		},
+		{
+			"name": "运动健将",
+			"ENG_name": "Remarkable Athlete",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"得益于你的运动能力，你在主动权骰和力量（运动）检定上拥有优势。",
+				"此外，在你成功进行{@variantrule 重击|XPHB}后，你可以移动至多一半你的{@variantrule 速度|XPHB}，而不会激起{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
+			"name": "额外战斗风格",
+			"ENG_name": "Additional Fighting Style",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"你可以选择获得另一个{@filter 战斗风格专长|专长|category=FS}。"
+			]
+		},
+		{
+			"name": "英勇战士",
+			"ENG_name": "Heroic Warrior",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"战斗的激情驱使你走向胜利。在战斗中，每当你的回合开始时，如果你没有英勇灵感，你可以给自己赋予一次英勇灵感。"
+			]
+		},
+		{
+			"name": "高效重击",
+			"ENG_name": "Superior Critical",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"你现在使用武器攻击和徒手攻击时，可以在掷出18到20的骰子时获得一次暴击。"
+			]
+		},
+		{
+			"name": "生还者",
+			"ENG_name": "Survivor",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "勇士",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"你在战斗中达到韧性的顶峰，赋予你以下好处。",
+				{
+					"type": "entries",
+					"name": "反抗死亡",
+					"ENG_name": "Defy Death",
+					"entries": [
+						"你在死亡豁免投掷上具有{@variantrule 优势|XPHB}。此外，当你在死亡豁免投掷上掷出18-20时，你获得掷出20的额外效果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "英勇鼓舞",
+					"ENG_name": "Heroic Rally",
+					"entries": [
+						"在你的每个回合开始时，如果你处于重伤状态并且至少有1点生命值，你将恢复等于5加上你体质修正值的生命值。"
+					]
+				}
+			]
+		},
+		{
+			"name": "奥法骑士",
+			"ENG_name": "Eldritch Knight",
+			"source": "XPHB",
+			"page": 96,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 用奥法魔法支援战斗技能}",
+				"奥术骑士将所有战士共有的武艺精通与对魔法的仔细研究结合起来。他们的法术既补充又扩展了他们的战斗技能，提供了额外的保护来加强他们的盔甲，并且还允许他们用爆炸性魔法同时与多个敌人交战。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "施法|战士|XPHB|奥法骑士|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "武器联结|战士|XPHB|奥法骑士|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "XPHB",
+			"page": 96,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你已经学会施放法术。关于施法规则，参见{@book 第七章|XPHB|7}。以下信息详细说明了作为奥术骑士你如何使用这些规则。",
+				{
+					"type": "entries",
+					"name": "戏法",
+					"ENG_name": "Cantrips",
+					"entries": [
+						"你从{@filter 巫师法术列表|spells|class=Wizard}中选择两个你心仪的戏法（参见该职业部分的列表）。推荐选择{@spell 冰霜射线|XPHB}和{@spell 震撼触碰|XPHB}。每当你获得战士等级时，你可以选择从{@filter 巫师法术列表|spells|class=Wizard}中替换这些戏法中的一个为你选择的另一个戏法。",
+						"当你达到战士等级10时，你可以选择学习另一个巫师戏法。"
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "施法能力",
+							"ENG_name": "Spell Slots",
+							"entries": [
+								"《奥术骑士施法表》显示了你用来施放1级及以上法术的法术位数量。当你完成一个{@variantrule 长休|XPHB}时，你恢复所有已消耗的法术位。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "准备的1级以上法术",
+							"ENG_name": "Prepared Spells of Level 1+",
+							"entries": [
+								"你准备这个特性可用的1级及以上法术列表。首先，从{@filter 法师法术列表|spells|class=法师}中选择三个1级法术。推荐选择{@spell 燃烧之手|XPHB}、{@spell 跳跃术|XPHB}和{@spell 护盾术|XPHB}。",
+								"随着你获得战士等级，你的法术列表中的法术数量会增加，如《奥术骑士施法表》中的准备法术栏所示。每当这个数量增加时，从{@filter 法师法术列表|spells|class=法师}中选择额外的法术，直到你的法术列表中的法术数量与表格中的数字相匹配。所选法术必须是你有法术位的等级。例如，如果你是一名7级战士，你的准备法术列表可以包括五个1级和2级的巫师法术，可以任意组合。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "更换你的准备法术",
+							"ENG_name": "Changing your Prepared Spells",
+							"entries": [
+								"每当你获得战士等级时，你可以用你拥有法术位的另一个巫师法术替换你的法术列表中的一个法术。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "施法属性",
+							"ENG_name": "Spellcasting Ability",
+							"entries": [
+								"智力是你施放巫师法术的能力值。"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "法器",
+							"ENG_name": "Spellcasting Focus",
+							"entries": [
+								"你可以使用一个{@item 奥术法器|XPHB}作为你巫师法术的{@variantrule 法器|XPHB}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "武器联结",
+			"ENG_name": "Weapon Bond",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"你学习了一个仪式，该仪式在你和一件武器之间创建一个魔法绑定。你需要花费1小时来完成这个仪式，可以在{@variantrule 短休|XPHB}期间进行。仪式期间，武器必须在你的触及范围内，仪式结束时，你触摸武器并建立绑定。如果另一个战士已经与该武器绑定，或者该武器是一个别人已经调谐的魔法物品，绑定则会失败。",
+				"一旦你将武器与自己绑定，除非处于{@condition 失能|XPHB}状态，否则你无法被缴械。如果该武器在同一存在位面上，你可以通过一个{@variantrule 附赠动作|XPHB}召唤该武器，使其瞬间传送到你的手中。",
+				"你可以拥有多达两个绑定武器，但每次只能通过一个{@variantrule 附赠动作|XPHB}召唤其中之一。如果你试图与第三个武器建立绑定，你必须与另外两个中的一个解除绑定。"
+			]
+		},
+		{
+			"name": "战争魔法",
+			"ENG_name": "War Magic",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"当你在你的回合采取{@action 攻击|XPHB}动作时，你可以将其中的一次攻击替换为施放一个施法时间为一个动作的巫师戏法。"
+			]
+		},
+		{
+			"name": "秘法打击",
+			"ENG_name": "Eldritch Strike",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"你学会了如何使你的武器攻击削弱一个生物抵抗你法术的能力。当你使用武器攻击命中一个生物时，在下一个回合结束前，该生物对你施放的下一个法术的豁免投掷具有{@variantrule 劣势|XPHB}。"
+			]
+		},
+		{
+			"name": "秘法冲锋",
+			"ENG_name": "Arcane Charge",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"当你使用你的{@variantrule 动作|XPHB}时，你可以传送至多30英尺到一个你能看到的未被占据的空间。你可以在额外动作之前或之后进行传送。"
+			]
+		},
+		{
+			"name": "精通战争魔法",
+			"ENG_name": "Improved War Magic",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "奥法骑士",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"当你在你的回合采取{@action 攻击|XPHB}动作时，你可以将其中的两次攻击替换为施放一个1级或2级的巫师法术，该法术的施法时间为一个动作。"
+			]
+		},
+		{
+			"name": "灵能武士",
+			"ENG_name": "Psi Warrior",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 以灵能力量增强肉体力量}",
+				"灵能战士唤醒他们心灵的力量以增强他们的肉体力量。他们利用这种灵能力量来强化他们的武器攻击，用念力能量进行猛击，并创造出精神力场的屏障。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "灵能力量|战士|XPHB|灵能武士|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "灵能力量",
+			"ENG_name": "Psionic Power",
+			"source": "XPHB",
+			"page": 98,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"consumes": {
+				"name": "灵能骰",
+				"ENG_name": "Psionic Energy Die"
+			},
+			"entries": [
+				"你内在蕴藏着一股灵能的源泉。它由你的灵能骰表示，这些骰子为你从这个子类中获得的能力提供能量。灵能战士能量骰表格显示了当你达到特定战士等级时，这些骰子的尺寸和数量。",
+				{
+					"type": "table",
+					"caption": "灵能战士能量骰",
+					"colLabels": [
+						"战士等级",
+						"骰子大小",
+						"数量"
+					],
+					"colStyles": [
+						"col-4 text-center",
+						"col-4 text-center",
+						"col-4 text-center"
+					],
+					"rows": [
+						[
+							"3",
+							"{@dice D6}",
+							"4"
+						],
+						[
+							"5",
+							"{@dice D8}",
+							"6"
+						],
+						[
+							"9",
+							"{@dice D8}",
+							"8"
+						],
+						[
+							"11",
+							"{@dice D10}",
+							"8"
+						],
+						[
+							"13",
+							"{@dice D10}",
+							"10"
+						],
+						[
+							"17",
+							"{@dice 十二面骰}",
+							"12"
+						]
+					]
+				},
+				"这个子类的任何特性，如果使用了灵能骰，仅使用这个子类中的骰子。你的一些能力会消耗灵能骰，具体消耗情况在能力的描述中指定，如果所有你的灵能骰都已消耗，你就不能使用需要消耗骰子的能力。",
+				"当你完成一个{@variantrule 短休|XPHB}时，你恢复一个已消耗的灵能骰；当你完成一个{@variantrule 长休|XPHB}时，你恢复所有已消耗的灵能骰。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "庇护力场",
+							"ENG_name": "Protective Field",
+							"entries": [
+								"当你或你能在30英尺范围内看到的另一个生物受到伤害时，你可以采取一个{@variantrule 反应|XPHB}来消耗一个灵能骰，掷骰，并减少受到的伤害，减少的数值等于掷骰的结果加上你的智力调整值（最小减少1），因为你创造了一个瞬间的念力盾牌。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "灵能打击",
+							"ENG_name": "Psionic Strike",
+							"entries": [
+								"你可以用灵能力量推动你的武器。在你的每个回合中，每当你使用武器攻击并击中距离你30英尺内的目标并对其造成伤害后，你可以消耗一个灵能能量骰，掷出它，并对目标造成等于掷出数字加上你的智力调整值的力场伤害。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "念力控物",
+							"ENG_name": "Telekinetic Movement",
+							"entries": [
+								"你可以用你的意念移动物体或生物。作为{@action 魔法|XPHB}动作，选择一个你能看到的，距离你30英尺内的目标；目标必须是一个大型或更小的松散物体，或者是除了你之外的一个愿意的生物。你将目标传送到你能看到的30英尺内的未被占据的空间。或者，如果目标是一个微小的物体，你可以将它传送到或从你的手中传送走。",
+								"一旦你采取了这个动作，你就不能再次这样做，直到你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}，除非你消耗一个灵能能量骰（无需动作）来恢复它的使用。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "念力熟练",
+			"ENG_name": "Telekinetic Adept",
+			"source": "XPHB",
+			"page": 99,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"你已经掌握了使用念力异能的新方式，如下所示。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "灵力跃动",
+							"ENG_name": "Psi-Powered Leap",
+							"entries": [
+								"作为{@variantrule 附赠动作|XPHB}，你获得等于你{@variantrule 速度|XPHB}两倍的{@variantrule 速度|XPHB}，持续到当前回合结束。一旦你使用了这个{@variantrule 附赠动作|XPHB}，你不能再次使用它，直到你完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}，除非你消耗一个灵能能量骰（无需动作）来恢复它的使用。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "念力突刺",
+							"ENG_name": "Telekinetic Thrust",
+							"entries": [
+								"当你使用灵能攻击对目标造成伤害时，你可以迫使目标进行一次力量豁免投掷（{@dc 8}加上你的智力调整值和{@variantrule 熟练项|XPHB}加值）。若豁免失败，你可以使目标处于{@condition 倒地|XPHB}状态，或者将其水平移动最多10英尺。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "意念守护",
+			"ENG_name": "Guarded Mind",
+			"source": "XPHB",
+			"page": 99,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"你对心灵伤害具有{@variantrule 提升抗性|XPHB}。此外，如果你在回合开始时处于{@condition 魅惑|XPHB}或{@condition 恐慌|XPHB}状态，你可以消耗一个灵能骰（无需动作）并结束所有赋予你这些状态的效果。"
+			]
+		},
+		{
+			"name": "壁垒之力",
+			"ENG_name": "Bulwark of Force",
+			"source": "XPHB",
+			"page": 99,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"你可以用心灵动能保护自己和他人。作为{@variantrule 附赠动作|XPHB}，你可以选择自己周围30英尺内，数量最多等于你的智力调整值（最少一个生物）的生物。每个被选择的生物获得{@variantrule 掩护|XPHB|半身掩护}，持续1分钟或直到你处于{@condition 失能|XPHB}状态。",
+				"一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 长休|XPHB}，除非你消耗一个灵能能量骰（无需动作）来恢复它的使用。"
+			]
+		},
+		{
+			"name": "念力宗师",
+			"ENG_name": "Telekinetic Master",
+			"source": "XPHB",
+			"page": 99,
+			"className": "战士",
+			"classSource": "XPHB",
+			"subclassShortName": "灵能武士",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"你始终准备着{@spell 心灵遥控|XPHB}法术。通过这个特性，你可以无需法术位或材料成分来施放它，施放此法术的能力值为智力。在你维持{@status 专注|XPHB}的每个回合中，包括施放它的回合，你可以作为{@variantrule 附赠动作|XPHB}进行一次武器攻击。",
+				"一旦你使用这个特性施放了法术，你就不能再次以这种方式施放，直到你完成一次{@variantrule 长休|XPHB}，除非你消耗一个灵能能量骰（无需动作）来恢复它的使用。"
 			]
 		}
 	]

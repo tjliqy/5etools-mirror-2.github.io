@@ -59,6 +59,9 @@
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"攻击|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -80,12 +83,54 @@
 			]
 		},
 		{
+			"name": "攻击",
+			"ENG_name": "Attack",
+			"source": "XPHB",
+			"page": 361,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取攻击动作时，你可以使用武器或进行一次{@variantrule 徒手打击|XPHB}进行一次攻击检定。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "装备和卸下武器",
+							"ENG_name": "Equipping and Unequipping Weapons",
+							"entries": [
+								"当你作为这个动作的一部分进行攻击时，你可以装备或卸下一件武器。你可以在攻击之前或之后这样做。如果你在攻击前装备武器，你不需要在那次攻击中使用它。装备武器包括从鞘中拔出或拾起它。卸下武器包括收起、存放或丢弃它。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "攻击间移动",
+							"ENG_name": "Moving Between Attacks",
+							"entries": [
+								"如果你在自己的回合移动，并且拥有诸如额外攻击这样的特性，它允许你在进行攻击动作时进行多次攻击，你可以使用部分或全部移动来在这些攻击之间移动。"
+							]
+						}
+					]
+				}
+			],
+			"seeAlsoAction": [
+				"双武器战斗|XPHB"
+			]
+		},
+		{
 			"name": "施展法术",
 			"ENG_name": "Cast a Spell",
 			"source": "PHB",
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"魔法|XPHB"
+			],
 			"time": [
 				"不同"
 			],
@@ -118,6 +163,9 @@
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"疾走|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -127,6 +175,22 @@
 			"entries": [
 				"执行疾走动作时，你可以在本回合里获得额外的移动力。其数值等于你的速度，适用的调整值也会包括其中。例如，当你的速度为30尺时，你执行疾走动作后可以移动最多60尺。",
 				"你速度的增减对这额外的移动力有同样的影响。比如，当你的30尺速度被减到15尺时，你执行疾走动作后则只可以移动最多30尺。"
+			]
+		},
+		{
+			"name": "疾走",
+			"ENG_name": "Dash",
+			"source": "XPHB",
+			"page": 365,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取冲刺行动时，你在当前回合获得额外的移动力。增加的数值等于应用任何修正值后的你的{@variantrule 速度|XPHB}。例如，如果你的{@variantrule 速度|XPHB}为30英尺，采取冲刺行动时你可以在回合内移动高达60英尺。如果你的{@variantrule 速度|XPHB}从30英尺减少到15英尺，采取冲刺行动时你在这个回合内可以移动高达30英尺。",
+				"如果你有特殊速度，比如{@variantrule 飞行速度|XPHB}或{@variantrule 游泳速度|XPHB}，当你采取这个动作时，你可以使用那个速度代替你的{@variantrule 速度|XPHB}。每次采取这个动作时，你选择使用哪种速度。"
 			]
 		},
 		{
@@ -156,6 +220,9 @@
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"撤离|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -167,12 +234,30 @@
 			]
 		},
 		{
+			"name": "撤离",
+			"ENG_name": "Disengage",
+			"source": "XPHB",
+			"page": 366,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"如果你采取了脱离战斗动作，你在当前回合剩余时间内的移动不会引发{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
 			"name": "回避",
 			"ENG_name": "Dodge",
 			"source": "PHB",
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"回避|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -184,12 +269,31 @@
 			]
 		},
 		{
+			"name": "回避",
+			"ENG_name": "Dodge",
+			"source": "XPHB",
+			"page": 366,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"如果你采取闪避行动，你将获得以下好处：直到你的下一个回合开始，任何对你进行的攻击检定如果你能看到攻击者则有{@variantrule 劣势|XPHB}，并且你在进行敏捷{@variantrule 豁免检定|XPHB|豁免检定}时有{@variantrule 优势|XPHB}。",
+				"如果你处于{@condition 失能|XPHB}或你的{@variantrule 速度|XPHB}为0，你将失去这些好处。"
+			]
+		},
+		{
 			"name": "装备或卸除盾牌",
 			"ENG_name": "Don or Doff a Shield",
 			"source": "PHB",
 			"page": 146,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"装备或卸除盾牌|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -201,17 +305,49 @@
 			]
 		},
 		{
+			"name": "装备或卸除盾牌",
+			"ENG_name": "Don or Doff a Shield",
+			"source": "XPHB",
+			"page": 219,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"{@item 护盾术|XPHB}可以作为动作装备或卸下。"
+			]
+		},
+		{
 			"name": "终止专注",
 			"ENG_name": "End Concentration",
 			"source": "PHB",
 			"page": 203,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"终止专注|XPHB"
+			],
 			"time": [
 				"自由"
 			],
 			"entries": [
 				"需要{@status 专注}的法术会在其持续时间条目中说明，同时还会指明为其保持专注情况下法术能持续时间的上限。你可以随时终止你的{@status 专注}（无需动作）。"
+			]
+		},
+		{
+			"name": "终止专注",
+			"ENG_name": "End Concentration",
+			"source": "XPHB",
+			"page": 363,
+			"freeRules2024": true,
+			"time": [
+				"自由"
+			],
+			"entries": [
+				"一些法术和其他效果需要集中精神才能保持激活，具体说明在它们的描述中。你可以随时结束集中精神（无需动作）。"
 			]
 		},
 		{
@@ -221,6 +357,9 @@
 			"page": 195,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"从擒抱中逃脱|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -235,12 +374,34 @@
 			]
 		},
 		{
+			"name": "从擒抱中逃脱",
+			"ENG_name": "Escape a Grapple",
+			"source": "XPHB",
+			"page": 367,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"一个被擒抱的生物可以使用它的行动来进行力量（{@skill 运动|XPHB}）或敏捷（{@skill 特技|XPHB}）检定，对抗擒抱的逃脱DC，成功则结束自身上的{@variantrule 状况|XPHB|状况}。如果擒抱者处于{@variantrule 状况|XPHB|状况}状态，或者被擒抱目标与擒抱者之间的距离超出了擒抱的范围，{@variantrule 状况|XPHB|状况}也会结束。"
+			]
+		},
+		{
 			"name": "擒抱",
 			"ENG_name": "Grapple",
 			"source": "PHB",
 			"page": 195,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				{
+					"uid": "徒手打击|XPHB",
+					"tag": "变体规则"
+				}
+			],
 			"time": [
 				{
 					"number": 1,
@@ -287,6 +448,9 @@
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"协助|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -299,12 +463,51 @@
 			]
 		},
 		{
+			"name": "协助",
+			"ENG_name": "Help",
+			"source": "XPHB",
+			"page": 368,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取帮助动作时，你可以做以下事情之一。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "协助能力检定",
+							"ENG_name": "Assist an Ability Check",
+							"entries": [
+								"选择你的一个技能或工具熟练项，以及一个足够接近的盟友，以便在他们进行能力检定时，你可以通过口头或身体上的方式协助他们。在下一个选择的技能或工具的能力检定中，该盟友获得{@variantrule 优势|XPHB}。如果盟友在你的下一个回合开始前未使用此优势，则此好处过期。DM有最终决定权，判断你的协助是否可行。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "协助攻击检定",
+							"ENG_name": "Assist an Attack Roll",
+							"entries": [
+								"你暂时分散了距离你S英尺内的一个敌人的注意力，给予你的一个盟友对该敌人下一次攻击检定的{@variantrule 优势|XPHB}。这个好处在你下一个回合开始时到期。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "躲藏",
 			"ENG_name": "Hide",
 			"source": "PHB",
 			"page": 192,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"躲藏|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -313,6 +516,23 @@
 			],
 			"entries": [
 				"执行躲藏动作时，你进行一次敏捷（{@skill 隐匿}）检定以尝试躲藏，遵循{@book 第七章|phb|7|躲藏}中躲藏的规则。检定成功，则你会获得一些增益，详请参看后文\"{@book 看不见的敌人|PHB|9|看不见的敌人}\"。"
+			]
+		},
+		{
+			"name": "躲藏",
+			"ENG_name": "Hide",
+			"source": "XPHB",
+			"page": 368,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"通过使用隐藏动作，你尝试隐藏自己。要做到这一点，你必须在{@variantrule 掩护|XPHB|三季度掩体或全掩体}状态下或在{@skill 隐匿|XPHB}后面，并且必须在任何敌人的视线之外，成功通过一次敏捷（{@variantrule 重度遮蔽|XPHB}）检定，难度等级为{@variantrule 掩护|XPHB|三季度掩体或全掩体}；如果你能看到一个生物，你可以判断它是否能看到你。",
+				"在成功的检定后，你会获得{@condition 隐形|XPHB}状态。记下你检定的总和，这是其他生物通过智慧（{@skill 察觉|XPHB}）检定来发现你的难度等级。",
+				"在你发出比耳语更响的声音、敌人发现你、你进行攻击检定，或你施放含有言语成分的法术之后，该条件立即结束。"
 			]
 		},
 		{
@@ -343,12 +563,122 @@
 			"source": "PHB",
 			"page": 193,
 			"basicRules": true,
+			"reprintedAs": [
+				"即兴发挥的一次动作|XPHB"
+			],
 			"time": [
 				"不同"
 			],
 			"entries": [
 				"你的角色可以执行本章未说明的动作，例如破门、威吓、探知魔防弱点、求和等。可执行动作的唯一限制是你的想像力以及角色的属性值。参考{@book 第七章|phb|7|属性值与调整值}中关于属性值的说明以启发你的想像力。",
 				"你想作出一次规则没有说明的动作时，DM会告诉你该动作是否可行，以及你是否需要进行什么检定去决定动作的成败。"
+			]
+		},
+		{
+			"name": "即兴发挥的一次动作",
+			"ENG_name": "Improvising an Action",
+			"source": "XPHB",
+			"page": 15,
+			"freeRules2024": true,
+			"time": [
+				"不同"
+			],
+			"entries": [
+				"玩家角色和怪物也可以执行其他动作中未涵盖的事情。许多职业特性和其他能力提供了额外的动作选项，你还可以即兴发挥其他动作。当你描述规则中未详细说明的动作时，地下城主会告诉你该动作是否可能，以及是否需要进行某种类型的{@variantrule D20 检定|XPHB}。"
+			]
+		},
+		{
+			"name": "影响力",
+			"ENG_name": "Influence",
+			"source": "XPHB",
+			"page": 369,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"通过影响动作，你试图说服一个怪物去做某事。描述或扮演你是如何与怪物沟通的。你是尝试欺骗、恐吓、娱乐还是温和地说服？然后，DM将根据你的互动确定怪物是否愿意、不愿意或犹豫；这一决定将确定是否需要进行能力检查，如下所述。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "自愿的",
+							"ENG_name": "Willing",
+							"entries": [
+								"如果你的驱使与怪物的意愿相符，就不需要进行能力检定；怪物会以它喜欢的方式满足你的请求。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "不情愿的",
+							"ENG_name": "Unwilling",
+							"entries": [
+								"如果你的催促对怪物来说是令人厌恶的，或者与其阵营相悖，就不需要进行能力检查；它不会遵从。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "犹豫的",
+							"ENG_name": "Hesitant",
+							"entries": [
+								"如果你敦促怪物去做它犹豫不决的事情，你必须进行能力检定，这受到怪物态度的影响：漠不关心、友好或敌对，每种态度都在这个词汇表中定义。影响检定表建议根据你与怪物的互动方式进行哪种能力检定。DM选择检定，其默认难度等级等于15或怪物的智力得分，以较高者为准。成功检定意味着怪物按照你的敦促行事。如果检定失败，你必须等待24小时（或由DM设定的持续时间）后才能再次以相同的方式敦促它。"
+							]
+						},
+						{
+							"type": "table",
+							"caption": "影响检查",
+							"colLabels": [
+								"属性检定",
+								"互动"
+							],
+							"colStyles": [
+								"col-4",
+								"col-8"
+							],
+							"rows": [
+								[
+									"魅力（{@skill 欺瞒|XPHB}）",
+									"欺骗能理解你的怪物"
+								],
+								[
+									"魅力（{@skill 威吓|XPHB}）",
+									"恐吓一个怪物"
+								],
+								[
+									"魅力（{@skill 表演|XPHB}）",
+									"逗乐一个怪物"
+								],
+								[
+									"魅力（{@skill 游说|XPHB}）",
+									"说服能理解你的怪物"
+								],
+								[
+									"智慧（{@skill 驯兽|XPHB}）",
+									"温和地哄诱野兽或怪物"
+								]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "魔法",
+			"ENG_name": "Magic",
+			"source": "XPHB",
+			"page": 371,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取施法动作时，你施放一个施法时间为动作的法术，或者使用需要施法动作来激活的特性或魔法物品。",
+				"如果你施放了一个施法时间为1分钟或更长的法术，你必须在施法的每一回合都采取魔法行动，并且在此期间必须保持{@status 专注|XPHB}。如果你的{@status 专注|XPHB}被打断，法术就会失败，但你不会消耗法术位。"
 			]
 		},
 		{
@@ -372,6 +702,9 @@
 			"page": 195,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"借机攻击|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -382,6 +715,21 @@
 				"在混战中，每人都会注意把握机会攻击任何试图逃开或经过身边的敌人。这种攻击即为借机攻击。",
 				"当敌人离开你的触及范围，而你又可以看见他时，你可以发动一次借机攻击。你需要用你的反应对引起你注意的生物发动一次近战攻击。该攻击发生在该生物离开你触及范围之前的一瞬间，并且打断它的移动。",
 				"你可以用{@action 撤离}动作来避免触发借机攻击。而当你进行传送，或当某人某事迫使你进行移动（且没有花费你的移动力、动作、或反应）时，你也不会因此触发借机攻击。例如，如果有爆炸将你推出敌人的触及范围，或者地心引力令你坠离时，你都不会引发借机攻击。"
+			]
+		},
+		{
+			"name": "借机攻击",
+			"ENG_name": "Opportunity Attack",
+			"source": "XPHB",
+			"page": 371,
+			"time": [
+				{
+					"number": 1,
+					"unit": "反应"
+				}
+			],
+			"entries": [
+				"当一个你可以看到的生物使用它的行动、其{@variantrule 附赠动作|XPHB}、其{@variantrule 反应|XPHB}或它的其中一种速度离开你的触及范围时，你可以进行一次机会攻击。进行机会攻击时，采取一个{@variantrule 反应|XPHB}用武器或进行一次{@variantrule 徒手打击|XPHB}对挑衅的生物进行一次近战攻击。攻击发生在生物离开你的触及范围之前。"
 			]
 		},
 		{
@@ -466,6 +814,9 @@
 			"page": 193,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"预备|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -481,12 +832,33 @@
 			]
 		},
 		{
+			"name": "预备",
+			"ENG_name": "Ready",
+			"source": "XPHB",
+			"page": 372,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"你采取准备动作来等待一个特定的情况发生后再行动。这样做，你可以在你的回合采取这个动作，这让你可以在下一个回合开始前通过采取反应动作来行动。",
+				"首先，你决定什么可感知的情况将触发你的{@variantrule 反应|XPHB}。然后，你选择你将对那个触发器采取的行动，或者你选择以你的{@variantrule 速度|XPHB}移动以回应它。例子包括\"如果邪教徒踏上陷阱门，我会拉动打开它的杠杆\"，以及\"如果僵尸走到我旁边，我会走开。\"",
+				"当触发条件发生时，你可以在触发条件结束后立即采取你的反应动作，或者忽略该触发条件。",
+				"当你准备一个法术时，你像平常一样施放它（消耗施放它所需的资源），但保留它的能量，当触发条件发生时，你可以使用你的{@variantrule 反应|XPHB}来释放它。要准备法术，法术的施法时间必须是动作，并且保持法术的魔法需要{@status 专注|XPHB}，你可以维持到你的下一个回合开始。如果你的{@status 专注|XPHB}被打破，法术就会消散，不会生效。"
+			]
+		},
+		{
 			"name": "搜索",
 			"ENG_name": "Search",
 			"source": "PHB",
 			"page": 193,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"搜索|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -498,12 +870,63 @@
 			]
 		},
 		{
+			"name": "搜索",
+			"ENG_name": "Search",
+			"source": "XPHB",
+			"page": 373,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取搜索动作时，你会进行一次智慧检定以发现不明显的事物。搜索表格建议了在你采取这个动作时，根据你试图检测的内容，哪些技能是适用的。",
+				{
+					"type": "table",
+					"caption": "搜索",
+					"colLabels": [
+						"技能",
+						"要侦测的事物"
+					],
+					"colStyles": [
+						"col-4",
+						"col-8"
+					],
+					"rows": [
+						[
+							"{@skill 洞悉|XPHB}",
+							"生物的心理状态"
+						],
+						[
+							"{@skill 医药|XPHB}",
+							"生物的疾病或死亡原因"
+						],
+						[
+							"{@skill 察觉|XPHB}",
+							"隐蔽的生物或物体"
+						],
+						[
+							"{@skill 生存|XPHB}",
+							"踪迹或食物"
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "推撞",
 			"ENG_name": "Shove",
 			"source": "PHB",
 			"page": 195,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				{
+					"uid": "徒手打击|XPHB",
+					"tag": "变体规则"
+				}
+			],
 			"time": [
 				{
 					"number": 1,
@@ -542,6 +965,9 @@
 			"page": 197,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"协助|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -551,6 +977,56 @@
 			"entries": [
 				"你可以用你的动作对一名{@condition 昏迷}的目标进行急救，并试图让其伤势稳定。进行一次DC10的感知（{@skill 医药}）检定，以判定你的努力是否成功。",
 				"伤势稳定的生物不需要再进行死亡豁免，但依然保持0生命值，以及持续{@condition 昏迷}状态。如果再受到任何伤害，则其伤势也会再次加重，从而需要继续掷死亡豁免。如果伤势稳定的生物一直没有接受治疗，则他在{@dice 1d4}小时后恢复1点生命值。"
+			]
+		},
+		{
+			"name": "书房",
+			"ENG_name": "Study",
+			"source": "XPHB",
+			"page": 375,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"当你采取研究行动时，你会进行一次智力检定，以研究你的记忆、一本书、一个线索或另一个知识来源，并回想起关于它的一个重要信息。",
+				"知识领域表建议了哪些技能适用于各种知识领域。",
+				{
+					"type": "table",
+					"caption": "知识领域",
+					"colLabels": [
+						"技能",
+						"区域"
+					],
+					"colStyles": [
+						"col-3",
+						"col-9"
+					],
+					"rows": [
+						[
+							"{@skill 奥秘|XPHB}",
+							"法术、魔法物品、邪术符号、魔法传统、存在位面以及某些生物（畸变怪、构装体、元素生物、精类和怪物）"
+						],
+						[
+							"{@skill 历史|XPHB}",
+							"历史事件和人物、古老文明、战争，以及某些生物（巨人和类人生物）"
+						],
+						[
+							"{@skill 调查|XPHB}",
+							"陷阱、密码、谜语和机关"
+						],
+						[
+							"{@skill 自然|XPHB}",
+							"地形、植物、天气以及某些生物（野兽、龙、软泥怪和植物）"
+						],
+						[
+							"{@skill 宗教|XPHB}",
+							"神祇、宗教等级制度和仪式、圣徽、邪教组织，以及某些生物（天界生物、恶魔和亡灵）"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -583,6 +1059,9 @@
 			"page": 195,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"双武器战斗|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -598,12 +1077,34 @@
 			]
 		},
 		{
+			"name": "双武器战斗",
+			"ENG_name": "Two-Weapon Fighting",
+			"source": "XPHB",
+			"page": 213,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "附赠动作"
+				}
+			],
+			"entries": [
+				"当你在你的回合中采取{@action 攻击|XPHB}动作并使用轻型武器攻击时，你可以在同一个回合稍后以{@variantrule 附赠动作|XPHB}进行一次额外攻击。那次额外攻击必须使用不同的轻型武器，并且你不会将你的力量或敏捷修正值加到额外攻击的伤害上，除非该修正值是负数。例如，你可以使用一只手的{@item 短剑|XPHB}和另一只手的{@item 匕首|XPHB}通过{@action 攻击|XPHB}动作和{@variantrule 附赠动作|XPHB}进行攻击，但除非你的力量或敏捷修正值是负数，否则你不会将其加到{@variantrule 附赠动作|XPHB}的伤害骰上。"
+			],
+			"seeAlsoAction": [
+				"攻击|XPHB"
+			]
+		},
+		{
 			"name": "使用物件",
 			"ENG_name": "Use an Object",
 			"source": "PHB",
 			"page": 193,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"利用|XPHB"
+			],
 			"time": [
 				{
 					"number": 1,
@@ -612,6 +1113,21 @@
 			],
 			"entries": [
 				"你通常会在做某件事的同时顺便跟一个物件进行互动（例如攻击同时拔出剑）。而某些物件的互动则会需要用动作完成，此时则需要你执行使用物件动作。当你想在一回合内操作多于一个物件时，也可以用该动作使用第二个物件。"
+			]
+		},
+		{
+			"name": "利用",
+			"ENG_name": "Utilize",
+			"source": "XPHB",
+			"page": 377,
+			"time": [
+				{
+					"number": 1,
+					"unit": "动作"
+				}
+			],
+			"entries": [
+				"你通常在进行其他动作的同时与一个物体互动，例如当你在进行攻击动作时拔出剑。当一个物体需要一个动作来使用时，你采取利用动作。"
 			]
 		},
 		{

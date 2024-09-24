@@ -6,6 +6,9 @@
 			"source": "PHB",
 			"page": 51,
 			"srd": true,
+			"reprintedAs": [
+				"吟游诗人|XPHB"
+			],
 			"hd": {
 				"number": 1,
 				"faces": 8
@@ -579,6 +582,758 @@
 			"subclassTitle": "吟游诗人学院",
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "吟游诗人",
+			"ENG_name": "Bard",
+			"source": "XPHB",
+			"page": 58,
+			"primaryAbility": [
+				{
+					"cha": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"dex",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "full",
+			"preparedSpellsProgression": [
+				4,
+				5,
+				6,
+				7,
+				9,
+				10,
+				11,
+				12,
+				14,
+				15,
+				16,
+				16,
+				17,
+				17,
+				18,
+				18,
+				19,
+				20,
+				21,
+				22
+			],
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"additionalSpells": [
+				{
+					"name": "魔法奥秘",
+					"ENG_name": "Magical Secrets",
+					"expanded": {
+						"s5": [
+							{
+								"all": "level=1;2;3;4;5|class=牧师；德鲁伊；法师"
+							}
+						],
+						"s6": [
+							{
+								"all": "level=6|class=牧师；德鲁伊；法师"
+							}
+						],
+						"s7": [
+							{
+								"all": "level=7|class=牧师；德鲁伊；法师"
+							}
+						],
+						"s8": [
+							{
+								"all": "level=8|class=牧师；德鲁伊；法师"
+							}
+						],
+						"s9": [
+							{
+								"all": "level=9|class=牧师；德鲁伊；法师"
+							}
+						]
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light"
+				],
+				"weapons": [
+					"简易"
+				],
+				"tools": [
+					"选择三种{@item 乐器|XPHB|乐器}"
+				],
+				"toolProficiencies": [
+					{
+						"anyMusicalInstrument": 3
+					}
+				],
+				"skills": [
+					{
+						"any": 3
+					}
+				]
+			},
+			"startingEquipment": {
+				"entries": [
+					"{@i 选择A或B：} (A) {@item 皮甲|XPHB}，2 {@item 匕首|XPHB}，你选择的{@item 乐器|XPHB}，{@item 艺人套组|XPHB}，19 GP；或 (B) 90 GP"
+				],
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "皮甲|xphb"
+							},
+							{
+								"item": "匕首|xphb",
+								"quantity": 2
+							},
+							{
+								"equipmentType": "乐器"
+							},
+							{
+								"item": "艺人套组|xphb"
+							},
+							{
+								"value": 1900
+							}
+						],
+						"B": [
+							{
+								"value": 9000
+							}
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"light"
+					],
+					"tools": [
+						"选择一件{@item 乐器|XPHB}"
+					],
+					"toolProficiencies": [
+						{
+							"anyMusicalInstrument": 1
+						}
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"运动",
+									"特技",
+									"巧手",
+									"隐匿",
+									"奥秘",
+									"历史",
+									"调查",
+									"自然",
+									"宗教",
+									"驯兽",
+									"洞悉",
+									"医药",
+									"察觉",
+									"生存",
+									"欺瞒",
+									"威吓",
+									"表演",
+									"游说"
+								],
+								"count": 1
+							}
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"吟游诗人的灵感骰",
+						"{@filter 戏法|spells|level=0|class=吟游诗人}",
+						"{@filter 准备法术|spells|level=!0|class=吟游诗人}"
+					],
+					"rows": [
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							2,
+							4
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							2,
+							5
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							2,
+							6
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							},
+							3,
+							7
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							3,
+							9
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							3,
+							10
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							3,
+							11
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							3,
+							12
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 8
+									}
+								],
+								"rollable": true
+							},
+							3,
+							14
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							4,
+							15
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							4,
+							16
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							4,
+							16
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							4,
+							17
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								],
+								"rollable": true
+							},
+							4,
+							17
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							18
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							18
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							19
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							20
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							21
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 12
+									}
+								],
+								"rollable": true
+							},
+							4,
+							22
+						]
+					]
+				},
+				{
+					"title": "每个法术等级的准备法术",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=吟游诗人}",
+						"{@filter 2nd|spells|level=2|class=吟游诗人}",
+						"{@filter 3rd|spells|level=3|class=吟游诗人}",
+						"{@filter 4th|spells|level=4|class=吟游诗人}",
+						"{@filter 5th|spells|level=5|class=吟游诗人}",
+						"{@filter 6th|spells|level=6|class=吟游诗人}",
+						"{@filter 7th|spells|level=7|class=吟游诗人}",
+						"{@filter 8th|spells|level=8|class=吟游诗人}",
+						"{@filter 9th|spells|level=9|class=吟游诗人}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"诗人激励|吟游诗人|XPHB|1",
+				"施法|吟游诗人|XPHB|1",
+				"专精|吟游诗人|XPHB|2",
+				"万事通|吟游诗人|XPHB|2",
+				{
+					"classFeature": "吟游诗人子类|吟游诗人|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|吟游诗人|XPHB|4",
+				"激励之源|吟游诗人|XPHB|5",
+				{
+					"classFeature": "子职特性|吟游诗人|XPHB|6",
+					"gainSubclassFeature": true
+				},
+				"反迷惑|吟游诗人|XPHB|7",
+				"属性值提升|吟游诗人|XPHB|8",
+				"专精|吟游诗人|XPHB|9",
+				"魔法奥秘|吟游诗人|XPHB|10",
+				"属性值提升|吟游诗人|XPHB|12",
+				{
+					"classFeature": "子职特性|吟游诗人|XPHB|14",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|吟游诗人|XPHB|16",
+				"先发激励|吟游诗人|XPHB|18",
+				"传奇恩惠|吟游诗人|XPHB|19",
+				"创世之言|吟游诗人|XPHB|20"
+			],
+			"subclassTitle": "吟游诗人子类",
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -591,6 +1346,9 @@
 			"classSource": "PHB",
 			"page": 54,
 			"srd": true,
+			"reprintedAs": [
+				"逸闻|吟游诗人|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"name": "额外魔法奥秘",
@@ -621,6 +1379,9 @@
 			"className": "吟游诗人",
 			"classSource": "PHB",
 			"page": 55,
+			"reprintedAs": [
+				"勇气|吟游诗人|XPHB|XPHB"
+			],
 			"subclassFeatures": [
 				"勇气学院|吟游诗人||勇气||3",
 				"额外攻击|吟游诗人||勇气||6",
@@ -635,6 +1396,9 @@
 			"className": "吟游诗人",
 			"classSource": "PHB",
 			"page": 14,
+			"reprintedAs": [
+				"迷惑|吟游诗人|XPHB|XPHB"
+			],
 			"additionalSpells": [
 				{
 					"innate": {
@@ -700,6 +1464,20 @@
 			"className": "吟游诗人",
 			"classSource": "PHB",
 			"page": 36,
+			"optionalfeatureProgression": [
+				{
+					"name": "旅行者的技艺簿",
+					"ENG_name": "Traveler's Tricks",
+					"featureType": [
+						"TT"
+					],
+					"progression": {
+						"3": 2,
+						"6": 1,
+						"14": 1
+					}
+				}
+			],
 			"subclassFeatures": [
 				"旅路学院|吟游诗人||旅路|HWCS|3",
 				"招牌技艺|吟游诗人||旅路|HWCS|6",
@@ -786,6 +1564,99 @@
 				"临头厄运|吟游诗人|PHB|悲剧|TDCSR|6",
 				"盛极必衰 (14级)|吟游诗人|PHB|悲剧|TDCSR|14",
 				"悲怆光轮|吟游诗人|PHB|悲剧|TDCSR|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "舞蹈学院",
+			"ENG_name": "College of Dance",
+			"shortName": "跳舞",
+			"source": "XPHB",
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"page": 64,
+			"subclassFeatures": [
+				"舞蹈学院|吟游诗人|XPHB|跳舞|XPHB|3",
+				"激励移动|吟游诗人|XPHB|跳舞|XPHB|6",
+				"在第六级时，你可以使用你的协同步伐能力。当你进行主动性检定时，如果你没有处于无力状态，你可以花费一个吟游诗人灵感骰。当你这样做时，投掷你的吟游诗人灵感骰，选择你周围60英尺内（你可以选择自己）的生物数量，数量等于你的 Charisma 调整值（最少一个生物）。每个生物的主动性检定获得等于投掷结果的加值。|吟游诗人|XPHB|跳舞|XPHB|6",
+				"引导回避|吟游诗人|XPHB|跳舞|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "迷惑学院",
+			"ENG_name": "College of Glamour",
+			"shortName": "迷惑",
+			"source": "XPHB",
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"page": 65,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"魅惑人类|xphb",
+							"镜影术|xphb"
+						],
+						"6": [
+							"命令术|xphb"
+						]
+					},
+					"innate": {
+						"6": [
+							"命令术|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"迷惑学院|吟游诗人|XPHB|迷惑|XPHB|3",
+				"统御光环|吟游诗人|XPHB|迷惑|XPHB|6",
+				"绝对统御|吟游诗人|XPHB|迷惑|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "逸闻学院",
+			"ENG_name": "College of Lore",
+			"shortName": "逸闻",
+			"source": "XPHB",
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"page": 66,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"6": [
+							{
+								"choose": "level=0;1;2;3|class=牧师；德鲁伊；法师"
+							},
+							{
+								"choose": "level=0;1;2;3|class=牧师；德鲁伊；法师"
+							}
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"逸闻学院|吟游诗人|XPHB|逸闻|XPHB|3",
+				"魔法发现|吟游诗人|XPHB|逸闻|XPHB|6",
+				"超凡技艺|吟游诗人|XPHB|逸闻|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "勇气学院",
+			"ENG_name": "College of Valor",
+			"shortName": "勇气",
+			"source": "XPHB",
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"page": 67,
+			"subclassFeatures": [
+				"勇气学院|吟游诗人|XPHB|勇气|XPHB|3",
+				"额外攻击|吟游诗人|XPHB|勇气|XPHB|6",
+				"战斗魔法|吟游诗人|XPHB|勇气|XPHB|14"
 			],
 			"hasFluffImages": true
 		}
@@ -1244,6 +2115,321 @@
 			"entries": [
 				"第20级起，你骰先攻时若没有可用的诗人激励次数，则你获得一次使用次数。"
 			]
+		},
+		{
+			"name": "诗人激励",
+			"ENG_name": "Bardic Inspiration",
+			"source": "XPHB",
+			"page": 59,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你可以通过言语、音乐或舞蹈超自然地激励他人。这种激励由你的吟游激励骰表示，这是一个{@dice d6}。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "使用吟游诗人激励",
+							"ENG_name": "Using Bardic Inspiration",
+							"entries": [
+								"作为一个{@variantrule 附赠动作|XPHB}，你可以激励一个在你60英尺范围内且能看到或听到你的其他生物。那个生物获得你的一个吟游激励骰。一个生物一次只能拥有一个吟游激励骰。",
+								"在接下来的一小时内，当生物在{@variantrule D20 检定|XPHB}中失败时，生物可以掷一次吟游诗人激励骰子，并将掷出的数字加到{@dice d20}上，可能会将失败转变为成功。掷一次吟游诗人激励骰子后即表示该骰子已被使用。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "使用次数",
+							"ENG_name": "Number of Uses",
+							"entries": [
+								"你可以赋予他人吟游激励骰的次数等于你的魅力修正值（最少一次），当你完成一次长休时，你将恢复所有已消耗的使用次数。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "升环施法效应",
+							"ENG_name": "At Higher Levels",
+							"entries": [
+								"当你达到某些吟游诗人等级时，你的吟游诗人激励骰子会发生变化，如吟游诗人特性表中的吟游骰子列所示。骰子在5级时变为{@dice d8}，在10级时变为{@dice d10}，在15级时变为{@dice d12}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "XPHB",
+			"page": 59,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"你已经学会了通过你的吟游诗人艺术来施放法术。参见{@book 第七章|XPHB|7}了解施法规则。以下信息详细说明了你如何使用这些规则来施放吟游诗人法术，这些法术在本职业描述后面的{@filter 吟游诗人法术列表|spells|class=吟游诗人}中有所展示。",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "戏法",
+							"ENG_name": "Cantrips",
+							"entries": [
+								"你从{@filter 吟游诗人法术列表|spells|class=Bard}中选择知道两个戏法。推荐选择{@spell 舞光术}和{@spell 恶意嘲讽}。",
+								"每当你获得一个吟游诗人等级时，你可以从{@filter 吟游诗人法术列表|spells|class=吟游诗人}中选择另一个法术来替换你的一个已有的戏法。",
+								"当你达到吟游诗人等级4和10时，你可以从{@filter 吟游诗人法术列表|spells|class=吟游诗人}中选择另一个你选择的戏法，如吟游诗人特性表中的戏法列所示。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法能力",
+							"ENG_name": "Spell Slots",
+							"entries": [
+								"吟游诗人特性表显示了你有多少法术位来施放你的1级以上法术。当你完成一次长休时，你将恢复所有已消耗的法术位。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "准备的1级以上法术",
+							"ENG_name": "Prepared Spells of Level 1+",
+							"entries": [
+								"你准备这个特性可用的1级以上法术列表。开始时，从{@filter 吟游诗人法术列表|spells|class=吟游诗人}中选择四个1级法术。推荐选择{@spell 魅惑人类|XPHB}、{@spell 七彩喷射|XPHB}、{@spell 不谐低语|XPHB}和{@spell 治愈真言|XPHB}。",
+								"随着你获得吟游诗人等级，你的法术列表中的法术数量会增加，如吟游诗人特性表中的准备法术列所示。每当这个数字增加时，从{@filter 吟游诗人法术列表|spells|class=吟游诗人}中选择额外的法术，直到你的法术列表中的法术数量与表中的数字相匹配。所选法术必须是你有法术位的等级。例如，如果你是一个3级的吟游诗人，你的准备法术列表可以包括六个1级和2级的法术，以任何组合。",
+								"如果另一个吟游诗人特性赋予你始终准备好的法术，这些法术不计入你使用此特性可以准备的法术数量，但这些法术在其他方面对你来说算作吟游诗人法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "更换你的准备法术",
+							"ENG_name": "Changing Your Prepared Spells",
+							"entries": [
+								"每当你获得一个吟游诗人等级时，你可以用你拥有法术位的另一个吟游诗人法术替换你的法术列表中的一个法术。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "施法属性",
+							"ENG_name": "Spellcasting Ability",
+							"entries": [
+								"魅力是你的吟游诗人法术的施法能力。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "法器",
+							"ENG_name": "Spellcasting Focus",
+							"entries": [
+								"你可以使用一个{@item 乐器|XPHB}作为你的吟游诗人法术的{@variantrule 法器|XPHB}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "专精",
+			"ENG_name": "Expertise",
+			"source": "XPHB",
+			"page": 60,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你获得了你选择的两个技能熟练的{@variantrule 专精|XPHB}。如果你有熟练的话，推荐选择{@skill 表演|XPHB}和{@skill 游说|XPHB}。",
+				"在吟游诗人等级9时，你获得另外两项你选择的技能专长上的{@variantrule 专精|XPHB}。"
+			]
+		},
+		{
+			"name": "万事通",
+			"ENG_name": "Jack of All Trades",
+			"source": "XPHB",
+			"page": 60,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"你可以将你的{@variantrule 熟练项|XPHB}的一半（向下取整）加到任何使用你没有熟练的技能的属性检定上，且这个检定没有其他方式使用你的{@variantrule 熟练项|XPHB}。",
+				"例如，如果你进行一个力量（{@skill 运动|XPHB}）检定，并且你没有{@skill 运动|XPHB}熟练，你可以将你的{@variantrule 熟练项|XPHB}的一半加到检定上。",
+				{
+					"type": "inset",
+					"name": "吟游诗人的曲目",
+					"ENG_name": "A Bard's Repertoire",
+					"entries": [
+						"你的吟游诗人在歌颂古代英雄事迹时会敲击鼓吗？在低吟浪漫曲调时弹奏鲁特琴？表演激动人心的咏叹调？朗诵经典悲剧中戏剧性的独白？用民间舞蹈的节奏协调盟友在战斗中的移动？创作俏皮的打油诗？",
+						"当你扮演一个吟游诗人时，考虑你偏爱的艺术表演风格，你可能会唤起的情绪，以及激发你自己创作的主题。你的诗歌是受到自然美景的启发，还是对失落的沉思？你更喜欢崇高的赞美诗还是喧闹的酒馆歌曲？你是否倾向于为逝去者哀悼，或是庆祝喜悦？你是跳欢快的吉格舞，还是表演复杂的解释性舞蹈？你是专注于一种表演风格，还是努力掌握它们全部？"
+					]
+				}
+			]
+		},
+		{
+			"name": "吟游诗人子类",
+			"ENG_name": "Bard Subclass",
+			"source": "XPHB",
+			"page": 60,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"你获得了你选择的吟游诗人子类别。子类别是一种专业化，它在特定的吟游诗人等级时赋予你特性。在你的职业生涯中，你将获得你的子类别的每个特性，这些特性的等级不高于你的吟游诗人等级。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}专长，或者你符合资格的另一个{@5etools 专长|feats.html}。你在吟游诗人等级8、12和16时再次获得这个特性。"
+			]
+		},
+		{
+			"name": "激励之源",
+			"ENG_name": "Font of Inspiration",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"现在，当你完成一次短休或长休时，你将恢复所有已消耗的吟游激励使用次数。",
+				"此外，你可以消耗一个法术位（无需动作）来恢复一次已消耗的吟游激励使用次数。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"你从你的吟游诗人子类别中获得一个特性。"
+			]
+		},
+		{
+			"name": "反迷惑",
+			"ENG_name": "Countercharm",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"你可以使用音乐符号或力量之词来扰乱影响心智的效果。如果你或距离你30英尺内的生物未能通过对抗施加了{@condition 魅惑|XPHB}或{@condition 恐慌|XPHB}状态的效果的豁免投掷，你可以采取{@variantrule 反应|XPHB}来使豁免投掷被重投，并且新的投掷具有{@variantrule 优势|XPHB}。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "专精",
+			"ENG_name": "Expertise",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"你获得了你选择的两项技能熟练度的{@variantrule 专精|XPHB}。"
+			]
+		},
+		{
+			"name": "魔法奥秘",
+			"ENG_name": "Magical Secrets",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"你已经从各种魔法传统中学到了秘密。每当你达到吟游诗人等级（包括这个等级）并且吟游诗人特性表中的已准备法术数量增加时，你可以选择任何你的新准备法术，这些法术可以来自吟游诗人、牧师、德鲁伊和{@filter 法师法术列表|spells|class=法师}，所选法术对你来说算作吟游诗人法术（请参阅各职业部分以获取其法术列表）。此外，每当你替换这个职业的准备法术时，你可以用那些列表中的法术替换它。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "子职特性",
+			"ENG_name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"你从你的吟游诗人子类别中获得一个特性。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"你获得了{@feat 属性值提升|XPHB}特性，或者你符合条件选择的另一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "先发激励",
+			"ENG_name": "Superior Inspiration",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"当你进行{@variantrule 先攻|XPHB}骰时，你恢复已消耗的吟游诗人灵感使用次数，直到你拥有两次使用次数，如果你的使用次数少于该数值。"
+			]
+		},
+		{
+			"name": "传奇恩惠",
+			"ENG_name": "Epic Boon",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"你获得了一个{@filter 史诗级恩惠特性|专长|category=EB}，或者你符合资格的另一个{@5etools 专长|feats.html}。推荐选择{@feat 法术回忆恩赐|XPHB}。"
+			]
+		},
+		{
+			"name": "创世之言",
+			"ENG_name": "Words of Creation",
+			"source": "XPHB",
+			"page": 61,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"你已经掌握了创造之词中的两个：生命与死亡之词。因此，你始终准备着{@spell 律令医疗|XPHB}和{@spell 律令死亡|XPHB}这两个法术。当你施放任何一个法术时，如果另一个生物在第一个目标的10英尺范围内，你可以将其作为第二个目标。"
+			]
 		}
 	],
 	"subclassFeature": [
@@ -1269,7 +2455,7 @@
 							"type": "list",
 							"items": [
 								"你获得任意一套 {@filter 赌具|items|source=PHB|miscellaneous=寻常|type=gaming set} （由你选择）的熟练项",
-								"你获得任意一把 {@filter 军用武器|items|source=PHB|category=基础|type=军用武器;近战武器=u~u~sand}（由你选择）的熟练项",
+								"你获得一种你选择的{@filter 军用武器|items|source=PHB|category=基础|type=武术武器；近战武器=沙地}的熟练度",
 								"你获得{@item 草药工具|PHB|草药工具}的熟练项",
 								"你获得{@item 盗贼工具|PHB}的熟练项",
 								"你获得任意一项技能（由你选择）的熟练项",
@@ -1301,120 +2487,50 @@
 					"name": "旅者技艺选项",
 					"ENG_name": "Traveler's Trick Options",
 					"entries": [
-						"旅行者的技艺簿Traveler's Tricks 特性能让你在特定等级时从下列能力中选择并习得若干选项。此处提供的选项以首字母顺序排列，每个选项都与另一个职业有关。此外，那些标有星号（*）的选项是魔法效应。",
+						"旅行者的诡计特性允许你在特定等级时选择它的选项。这些选项按字母顺序呈现在这里。每一个都与不同的职业相关联。",
 						"不像传统的吟游诗人能力，使用这些能力所需要的是过人的技能或勇气，而沿途学习并精进这些技艺需要你的知识和学习能力。感知属性将左右你旅者技艺的效应有多强大，以及这些效应有多难对付。因此，若某个旅者技艺选项需要豁免，该旅者技艺选项的豁免DC等于 8+你的熟练加值+你的感知调整值。",
 						{
 							"type": "options",
 							"entries": [
 								{
-									"type": "entries",
-									"name": "反射闪避教程",
-									"ENG_name": "Acrobatics Lessons",
-									"entries": [
-										"一名狡猾的游荡者曾经给予了你一些关于闪躲与避险的指导。当你或你周围60尺范围内的一个盟友进行一次敏捷豁免时，你可以消耗一次诗人激励的使用次数，投掷你的诗人激励骰，并将骰值加入到那次豁免检定上。盟友必须可以听见你或看见你才能受益于此特性。",
-										"达到第6级之后，豁免成功时，如果此次豁免的效应是一次\"豁免成功只受到半数伤害\"的效应，那么技艺目标豁免成功将不受任何伤害。",
-										"达到第14级之后，即使技艺目标的豁免失败，它所受的伤害也会减半。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "反射闪避教程|HWCS"
 								},
 								{
-									"type": "entries",
-									"name": "武器运用教程",
-									"ENG_name": "Armed Combat Lessons",
-									"entries": [
-										"一名老练的战士教会了你如何利用一些简单的战斗姿态，使你更好运用你手中的武器。当你获得这一旅者技艺时，从以下{@b 战斗风格}中选择一项：",
-										{
-											"type": "list",
-											"items": [
-												"箭术Archery：你使用远程武器进行攻击检定时具有+2加值。",
-												"对决Dueling：单手持用一把近战武器，且并未同时持用其他武器时，你使用该武器进行攻击的伤害掷骰获得+2加值。",
-												"巨武器战斗Great Weapon Fighting：当你双手持用一把近战武器发动攻击时，如果你的伤害掷骰掷出1或2，则可以选择重掷。不过哪怕其仍是1或2，你都必须接受重掷的数值。此外，该武器必须具有双手或两用属性。",
-												"双武器战斗Two-Weapon Fighting：使用双持武器战斗时，你可以将相应属性调整值加到第二次攻击的伤害上。"
-											]
-										},
-										"当你进行一次武器攻击时，你可以消耗一次诗人激励的使用次数，并将你的诗人激励骰加入到此次攻击的攻击检定或伤害掷骰中。此外，你还将获得前文你所选择的那一项战斗风格的增益，持续10分钟。",
-										"达到第6级之后，你学会了如何调整你的姿态发起连续的攻击，以此形成一串致命的连击。当你处于战斗风格增益期间，你在你的回合中执行攻击动作时可以发动两次攻击（而非原本的一次）。",
-										"达到第14级之后，你学会了如何利用战斗姿态掩盖自己的防御弱点。当你处于战斗风格增益期间，你的AC获得+1加值。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "武器运用教程|HWCS"
 								},
 								{
-									"type": "entries",
-									"name": "伤口包扎术",
-									"ENG_name": "Bind the Wound",
-									"entries": [
-										"一位久经沙场的圣武士教给你了一系列战中急救措施的基础知识。当你或你周围5尺范围内的盟友接受到任何形式的治疗时，你可以使用你的反应，消耗一次诗人激励的使用次数，使这次治疗获得等同于 激励骰骰出结果+你的感知调整值（至少+1） 点额外治疗。为便于迅速包扎目标的伤口，你必须空出一只手才能使用此技艺。",
-										"达到第6级之后，你习得了如何辨别草药。使用此技艺提供额外治疗的同时，你还可以移除技艺目标正遭受的一项特定负面状态（中毒Poisoned 或 麻痹Paralyzed）。",
-										"达到第14级之后，你发掘到了战场急救的真正诀窍。你还可以移除此技艺目标正遭受的一项疾病。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "伤口包扎术|HWCS"
 								},
 								{
-									"type": "entries",
-									"name": "拳击教程",
-									"ENG_name": "Boxing Lessons",
-									"entries": [
-										"一名悟道的武僧很乐意向你分享拳击与化劲的基本武艺。执行{@action 攻击}动作后，你可以消耗一次诗人激励的使用次数，迅速对你触及范围内的一个（或多个）生物发起两次徒手打击。以此发动的这些徒手打击的攻击检定与伤害掷骰中你可以使用的你的敏捷调整值，以代替力量调整值；此外，这些徒手打击所使用的伤害骰与你的诗人激励骰相同。",
-										"达到第6级之后，你终于掌握如何利用武艺之中的\"化劲\"功法。本回合内，你不会引发任何{@action 借机攻击|PHB|借机攻击}。",
-										"达到第14级之后，你的刻苦练习终于得到了回报，现在开始你可以在你的攻击中注入\"气\"。当你用这些徒手打击命中目标时，你可以尝试对其进行震慑打击。迫使目标通过一次体质豁免，若豁免失败将陷入震慑状态，持续直至你的下一回合结束为止。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "拳击教程|HWCS"
 								},
 								{
-									"type": "entries",
-									"name": "林地之精咒唤术*",
-									"ENG_name": "Conjure Woodland Spirit*",
-									"entries": [
-										"一名慈祥的德鲁伊与你分享了森林魔法的秘密。以一个动作，你可以消耗一次诗人激励的使用次数，在你周围60尺范围内的一处你可见的、未被占据的空间中咒唤出一位森林守卫。守卫的体型为大型，外表如同一只灵体凶猛大猫。任何进入或离开守卫周围空间的敌人都必须进行一次感知豁免，豁免失败时将受到等同于你诗人激励骰的魔法挥砍伤害。维持森林守卫需要你的专注，至多可持续存在10分钟。",
-										"达到第6级之后，你与守卫灵体之间的联系更为紧固。任何受到守卫灵体伤害的生物速度会降至0，持续直至该回合结束。",
-										"达到第14级之后，任何体型不超过大型的生物若受到守护灵体的伤害，该生物还会被守护灵体定在原地，陷入 束缚 状态，持续直至你的专注结束。被束缚的生物可以用自己的动作进行一次力量（{@skill 运动}）检定，对抗你旅者技艺的豁免DC来尝试挣脱束缚。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "林地之精咒唤术|HWCS|林地之精咒唤术*"
 								},
 								{
-									"type": "entries",
-									"name": "暗黑交易*",
-									"ENG_name": "Dark Bargain*",
-									"entries": [
-										"你遇到了一名憔悴的邪术师，并与它达成了一场阴暗的交易。当你选择此技艺时，从邪术师的职业特性中选择一个{@filter 魔能祈唤|optionalfeatures|type=EI}（必须是满足先决条件的祈唤）。你可以消耗一次诗人激励的次数，获得那个暗黑祈唤的魔能增益，持续10分钟。为此，你需要投掷你的诗人激励骰，并受到等同于骰值的黯蚀伤害。",
-										"达到第6级之后，你学会了如何加深你与你曾遇到的那名邪术师的契约。你可以选择受到双倍于骰出数值的黯蚀伤害，使祈唤的效果持续1小时。",
-										"达到第14级之后，你与那名邪术师的契约解锁了恐怖的新能力。当你达到14级时，从邪术师的法术列表中选择一个7环或更低环阶的法术。在魔能增益期间，你可以在不消耗任何法术位的情况下施展一次所选法术（如果你后续还想使用它，你就必须消耗你拥有最高环阶的法术位来施展它）。作为代价，施展所选法术时，你会额外受到等同于该法术环阶两倍的黯蚀伤害。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "暗黑交易|HWCS|暗黑交易*"
 								},
 								{
-									"type": "entries",
-									"name": "塑能教程*",
-									"ENG_name": "Evocation Lessons*",
-									"entries": [
-										"一名尊敬的法师与你分享了塑能魔法的秘密。当你选择此技艺时，选择一个你可以施展的伤害性法术。当你施展所选法术时，你可以消耗一次诗人激励的使用次数，将其伤害类型改为强酸、冷冻、火焰、闪电、或雷鸣伤害（在你施展法术时选择）。此外，投掷你的诗人激励骰，该法术造成的伤害增加 骰出数值+你的感知调整值（至少+1） 点。",
-										"达到第6级时，你可以将你在此技艺中选择的法术改为另一个你已知的法术",
-										"达到第14级时，你可以将你在此技艺中选择的法术改为另一个你已知的法术。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "塑能教程|HWCS|塑能教程*"
 								},
 								{
-									"type": "entries",
-									"name": "狩猎教程*",
-									"ENG_name": "Hunting Lessons*",
-									"entries": [
-										"一名熟练的游侠教会了你如何利用你的魔法来找寻猎物身上的弱点。你可以消耗一次诗人激励的使用次数，将你周围90尺范围内能看到的一个生物作为你的猎物。此技艺需要你为其保持专注，至多可持续1小时。期间，你对猎物发动的所有武器攻击都会造成等同于你的吟游诗人激励骰的额外伤害。",
-										"达到第6级之后，你将这一技艺磨练至得以轻松追踪猎物的程度。技艺效应期间，只要你与猎物同处一个位面，你就能得知你与目标的大致方向与距离。",
-										"达到第14级之后，只要你的专注未中断，此技艺就可以持续至多24小时。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "狩猎教程|HWCS|狩猎教程*"
 								},
 								{
-									"type": "entries",
-									"name": "鲁莽战术",
-									"ENG_name": "Reckless Tactics",
-									"entries": [
-										"一名顽强的野蛮人曾教导你，终有一天你会遇到必须不顾自身安危而冲入战斗的时候。当你用具有重型、双手、或两用属性的近战武器发动攻击时，你可以消耗一次诗人激励的使用次数，使本次攻击具有优势。此外，投掷你的诗人激励骰，这次攻击的伤害掷骰获得等同于 骰出数值+你的感知调整值（至少+1） 的加值。使用此技艺后，本轮内任何以你为目标发起的攻击均具有优势。",
-										"达到第6级之后，你通过练习学会了如何放弃一切去造成更高的伤害。你还可以令本次攻击的攻击检定承受-5的减值。如果此次攻击命中，在攻击的伤害掷骰上获得+10加值。",
-										"达到第14级之后，你的经验教会了你如何真正的全力以赴。若你在发起这次攻击前，的同一回合回合中没有进行过移动，你可以自愿将你的速度降为0（持续直至你的下个回合为止），对你周围5尺范围内的任意数量的生物发动此次攻击，不过你需要对每个目标进行单独的攻击检定。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "鲁莽战术|HWCS"
 								},
 								{
-									"type": "entries",
-									"name": "守御技艺*",
-									"ENG_name": "Warding Trick*",
-									"entries": [
-										"一名温和尔雅的牧师教会了你如何引导魔力，将其转化为一层保护它人的守御面纱。以一个动作，你可以消耗一次诗人激励的使用次数，投掷你的诗人激励骰，并给予你周围60尺范围内你可见的一名盟友等同于 骰出数值+你的感知调整值（至少+1） 点的临时生命值。此技艺创造的守御面纱需要你为其保持专注，至多可持续10分钟。",
-										"达到第6级之后，你的练习令你习得了如何编织出可以对那些伤害你盟友的人进行反击的守御面纱。任何对具有此技艺临时生命值的盟友造成伤害的生物都必须通过一次感知豁免。豁免失败时该生物将会受到等同于你的诗人激励骰的光耀伤害。",
-										"达到第14级之后，你习得了使你编织出的守御防护能力更上一层楼的方法。技艺效应期间，在每轮之中你的回合开始时，目标都会重新获得等同于 你的诗人激励骰+你的感知调整值（至少+1） 点临时生命值。这些新的临时生命值会取代那些之前的临时生命值。"
-									]
+									"type": "refOptionalfeature",
+									"optionalfeature": "守御技艺|HWCS|守御技艺*"
 								}
 							]
 						}
@@ -2167,7 +3283,10 @@
 							"12",
 							"夺魂故事 Tale of the Mind-Bender。你从某个超凡的存在那里唤起了一则超越人的理解能力的寓言。目标必须成功通过一次智力豁免，否则受到相当于3个你的诗人激励骰的掷骰结果的心灵伤害，并被{@condition 震慑}直到其下一个回合结束。"
 						]
-					]
+					],
+					"data": {
+						"tableInclude": true
+					}
 				}
 			]
 		},
@@ -2578,6 +3697,393 @@
 			"level": 3,
 			"entries": [
 				"你可以消耗一次诗人激励的次数，并使该武器对你命中的目标造成额外伤害，伤害等于你的激励骰投掷结果。你周围5尺范围内由你选择的其他可见生物也将受到这一额外伤害。"
+			]
+		},
+		{
+			"name": "舞蹈学院",
+			"ENG_name": "College of Dance",
+			"source": "XPHB",
+			"page": 64,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "跳舞",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 与宇宙和谐共舞}",
+				"舞蹈学院的吟游诗人知道，创世之词并不仅仅包含在言语或歌曲中；这些词语通过天体的运动表达出来，并在最小生物的动作中流动。这些吟游诗人练习一种与旋转的宇宙和谐相处的方式，强调敏捷、速度和优雅。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "炫目舞步|吟游诗人|XPHB|跳舞|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "炫目舞步",
+			"ENG_name": "Dazzling Footwork",
+			"source": "XPHB",
+			"page": 64,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "跳舞",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"当你未穿戴护甲或未持用{@item 护盾术|XPHB}时，你获得以下好处。",
+				{
+					"type": "entries",
+					"name": "舞蹈大师",
+					"ENG_name": "Dance Virtuoso",
+					"entries": [
+						"在任何涉及你跳舞的魅力（{@skill 表演|XPHB}）检定中，你具有{@skill 表演|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "无甲防御",
+					"ENG_name": "Unarmored Defense",
+					"entries": [
+						"你的基本{@variantrule 护甲等级|XPHB}等于10加上你的敏捷和魅力调整值。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "敏捷打击",
+					"ENG_name": "Agile Strikes",
+					"entries": [
+						"当你作为动作、{@variantrule 反应|XPHB}或{@variantrule 附赠动作|XPHB}的一部分消耗你的吟游诗人灵感时，你可以作为那部分动作、{@variantrule 反应|XPHB}或{@variantrule 附赠动作|XPHB}的一部分进行一次{@variantrule 反应|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "吟游诗人的灵感伤害",
+					"ENG_name": "Bardic Damage",
+					"entries": [
+						"你可以使用敏捷而不是力量来进行你的徒手打击攻击骰。当你使用{@variantrule 徒手打击|XPHB}造成伤害时，你可以造成等于你的吟游诗人灵感骰的一次掷骰加上你的敏捷调整值的钝击伤害，而不是打击的正常伤害。这次掷骰不会消耗骰子。"
+					]
+				}
+			]
+		},
+		{
+			"name": "激励移动",
+			"ENG_name": "Inspiring Movement",
+			"source": "XPHB",
+			"page": 64,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "跳舞",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"当一个你能看见的敌人在其回合结束时位于你5英尺范围内，你可以使用{@variantrule 反应|XPHB}并消耗一次你的吟游诗人灵感来移动至多你的{@variantrule 速度|XPHB}的一半。然后，你选择的一个盟友可以在其{@variantrule 反应|XPHB}中移动至多他们{@variantrule 速度|XPHB}的一半。",
+				"这个特性的移动不会引发{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
+			"name": "在第六级时，你可以使用你的协同步伐能力。当你进行主动性检定时，如果你没有处于无力状态，你可以花费一个吟游诗人灵感骰。当你这样做时，投掷你的吟游诗人灵感骰，选择你周围60英尺内（你可以选择自己）的生物数量，数量等于你的 Charisma 调整值（最少一个生物）。每个生物的主动性检定获得等于投掷结果的加值。",
+			"ENG_name": "Tandem Footwork",
+			"source": "XPHB",
+			"page": 64,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "跳舞",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"当你进行{@variantrule 先攻|XPHB}骰时，如果你没有处于{@condition 失能|XPHB}，你可以消耗一次你的吟游诗人灵感。当你这样做时，掷你的吟游诗人灵感骰；你和每个距离你30英尺以内、能够看到你或听到你的盟友，其{@variantrule 先攻|XPHB}骰将获得等于掷出的数字的加值。"
+			]
+		},
+		{
+			"name": "引导回避",
+			"ENG_name": "Leading Evasion",
+			"source": "XPHB",
+			"page": 65,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "跳舞",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"当你受到允许你进行敏捷豁免以只承受一半伤害的效果影响时，如果你成功通过豁免，你将不承受任何伤害；如果失败，则只承受一半伤害。如果任何距离你5英尺以内的生物正在进行相同的敏捷豁免，你可以让他们在那次豁免中分享这一效果。",
+				"如果你处于{@condition 失能|XPHB}，你不能使用这个特性。"
+			]
+		},
+		{
+			"name": "迷惑学院",
+			"ENG_name": "College of Glamour",
+			"source": "XPHB",
+			"page": 65,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "迷惑",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 编织迷人的费伊魔法}",
+				"魅力学院的起源可以追溯到费伊荒野的迷人魔法。研究这种魔法的吟游诗人将美丽与恐怖的线索编织进他们的歌曲和故事中，而他们中最强大的人甚至可以用超凡的威严来掩盖自己。他们的表演激起了对遗忘的纯真的渴望，唤起了长期持有的恐惧的无意识记忆，并牵动了即使是最铁石心肠的听众的情感。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "迷惑魔法|吟游诗人|XPHB|迷惑|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "激励光环|吟游诗人|XPHB|迷惑|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "迷惑魔法",
+			"ENG_name": "Beguiling Magic",
+			"source": "XPHB",
+			"page": 65,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "迷惑",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你总是准备好了{@spell 魅惑人类|XPHB}和{@spell 镜影术|XPHB}法术。",
+				"此外，在使用法术位施放魅惑或幻象法术后，你可以选择一个你60英尺范围内可以看到的生物，使其进行一次对抗你法术豁免DC的智慧豁免检定。如果豁免失败，目标将获得{@condition 魅惑|XPHB}或{@condition 恐慌|XPHB}状态（由你选择），持续1分钟。目标在其每个回合结束时重复进行豁免检定，成功则结束该效果。",
+				"一旦你使用了这个好处，你就不能再次使用它，直到你完成一次{@variantrule 长休|XPHB}。你也可以通过消耗一次你的吟游诗人灵感（无需动作）来恢复它的使用次数。"
+			]
+		},
+		{
+			"name": "激励光环",
+			"ENG_name": "Mantle of Inspiration",
+			"source": "XPHB",
+			"page": 65,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "迷惑",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你可以将仙界魔法编织进歌曲或舞蹈中，以激发他人的活力。作为一个{@variantrule 附赠动作|XPHB}，你可以消耗一次吟游诗人灵感的使用次数，掷一次吟游诗人灵感骰。当你这样做时，选择你60英尺范围内的若干其他生物，数量最多等于你的魅力修正值（至少一个生物）。每个被选中的生物获得等于吟游诗人灵感骰掷出数字两倍的{@variantrule 临时生命值|XPHB}，然后每个生物可以使用它的{@variantrule 反应|XPHB}移动至其{@variantrule 速度|XPHB}，而不会激起{@action 借机攻击|XPHB|借机攻击}。"
+			]
+		},
+		{
+			"name": "统御光环",
+			"ENG_name": "Mantle of Majesty",
+			"source": "XPHB",
+			"page": 65,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "迷惑",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"你始终准备好了{@spell 命令术|XPHB}法术。",
+				"作为一个{@variantrule 附赠动作|XPHB}，你不消耗法术位便施放{@spell 命令术|XPHB}，并在1分钟内或直到你的{@status 专注|XPHB}结束前呈现出超自然的外表。在此期间，你可以不消耗法术位将{@spell 命令术|XPHB}作为{@variantrule 附赠动作|XPHB}施放。",
+				"任何被你{@condition 魅惑|XPHB}的生物在对抗你使用此特性施放的{@spell 命令术|XPHB}时自动失败其豁免投掷。",
+				"一旦你使用了这个特性，你就不能再次使用它，直到你完成一次{@variantrule 长休|XPHB}。你也可以通过消耗一个3环或更高等级的法术位（无需动作）来恢复使用它。"
+			]
+		},
+		{
+			"name": "绝对统御",
+			"ENG_name": "Unbreakable Majesty",
+			"source": "XPHB",
+			"page": 66,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "迷惑",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"作为一个{@variantrule 附赠动作|XPHB}，你可以在1分钟内或直到你处于{@condition 失能|XPHB}状态之前，展现出一种魔法般的庄严气质。在此期间，每当任何生物在一回合中首次对你进行攻击检定时，攻击者必须通过一次魅力豁免检定，对抗你的法术豁免DC，否则攻击将被判定为未命中，因为生物在你的威严面前退缩。",
+				"一旦你展现出这种威严的存在，你必须在完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}后才能再次这样做。"
+			]
+		},
+		{
+			"name": "逸闻学院",
+			"ENG_name": "College of Lore",
+			"source": "XPHB",
+			"page": 66,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "逸闻",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 探索魔法知识的深渊}",
+				"博学士学院的吟游诗人从多种来源收集法术和秘密，如学术著作、神秘仪式和民间故事。学院的成员们在图书馆和大学聚集，相互分享他们的知识。他们也会在节日或国家事务中聚会，在那里他们可以揭露腐败，解开谎言，并嘲笑自大的权威人物。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "附赠熟练项|吟游诗人|XPHB|逸闻|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "语出惊人|吟游诗人|XPHB|逸闻|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "附赠熟练项",
+			"ENG_name": "Bonus Proficiencies",
+			"source": "XPHB",
+			"page": 66,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "逸闻",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你获得了三项你选择的技能的熟练度。"
+			]
+		},
+		{
+			"name": "语出惊人",
+			"ENG_name": "Cutting Words",
+			"source": "XPHB",
+			"page": 66,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "逸闻",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你学会了如何运用你的智慧来超自然地分散、迷惑他人，以及其他削弱他人信心和能力的方法。当你能看到的60英尺范围内的生物进行伤害骰或成功进行能力检定或攻击检定时，你可以采取{@variantrule 反应|XPHB}来消耗你的吟游诗人灵感骰的一个使用次数；掷你的吟游诗人灵感骰，并将掷出的数字从生物的骰上减去，减少伤害或可能将成功转变为失败。"
+			]
+		},
+		{
+			"name": "魔法发现",
+			"ENG_name": "Magical Discoveries",
+			"source": "XPHB",
+			"page": 66,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "逸闻",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"你可以选择学习两个法术。这些法术可以来自牧师、德鲁伊或{@filter 法师法术列表|spells|class=法师}，或它们的任意组合（请参阅各职业部分以查看其法术列表）。你选择的法术必须是戏法或你有法术位的法术，如吟游诗人特性表所示。",
+				"你总是准备好了选定的法术，并且每当你获得一个吟游诗人等级时，你可以用另一个符合这些要求的法术替换其中一个法术。"
+			]
+		},
+		{
+			"name": "超凡技艺",
+			"ENG_name": "Peerless Skill",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "逸闻",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"当你进行能力检定或攻击检定并失败时，你可以消耗一次吟游诗人灵感；掷一次吟游诗人灵感骰，并将掷出的数字加到{@dice d20}上，可能会将失败转变为成功。如果本来就失败了，吟游诗人灵感不会被消耗。"
+			]
+		},
+		{
+			"name": "勇气学院",
+			"ENG_name": "College of Valor",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "勇气",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i 歌颂古代英雄的事迹}",
+				"勇气学院的吟游诗人是大胆的说书人，他们的故事保存了过去伟大英雄的记忆。这些吟游诗人在高耸的大厅里或围绕巨大的篝火旁的人群前歌唱强者的事迹。他们亲自去见证重大事件，以确保这些事件的记忆不会消逝。通过他们的歌曲，他们激励新一代达到与古代英雄同样的成就高度。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战斗激励|吟游诗人|XPHB|勇气|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "军事训练|吟游诗人|XPHB|勇气|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "战斗激励",
+			"ENG_name": "Combat Inspiration",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "勇气",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你可以运用你的智慧来扭转战斗的局势。拥有来自你的吟游诗人灵感骰的生物可以使用它来产生以下效果之一。",
+				{
+					"type": "entries",
+					"name": "防御",
+					"ENG_name": "Defense",
+					"entries": [
+						"当生物被攻击检定命中时，该生物可以使用其{@variantrule 反应|XPHB}来掷一次吟游诗人灵感骰，并将其掷出的数值加到其对该攻击的AC上，可能会使攻击落空。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "冒犯",
+					"ENG_name": "Offense",
+					"entries": [
+						"在生物用攻击检定击中目标后，生物可以掷一次吟游激励骰，并将掷出的数字加到对目标的攻击伤害上。"
+					]
+				}
+			]
+		},
+		{
+			"name": "军事训练",
+			"ENG_name": "Martial Training",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "勇气",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"你获得了武术武器的熟练度，以及中等装甲和盾牌的训练。",
+				"此外，你可以使用简单或军用武器作为{@variantrule 法器|XPHB}来施放你的{@filter 吟游诗人法术列表|spells|class=吟游诗人}中的法术。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "勇气",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"每当你在你回合中采取{@action 攻击|XPHB}动作时，你可以进行两次攻击而不是一次。",
+				"此外，你可以用一个动作时间施放的一个你的戏法来代替其中一次攻击。"
+			]
+		},
+		{
+			"name": "战斗魔法",
+			"ENG_name": "Battle Magic",
+			"source": "XPHB",
+			"page": 67,
+			"className": "吟游诗人",
+			"classSource": "XPHB",
+			"subclassShortName": "勇气",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"在你施放一个施法时间为动作的法术之后，你可以作为一个{@variantrule 附赠动作|XPHB}进行一次武器攻击。"
 			]
 		}
 	]
