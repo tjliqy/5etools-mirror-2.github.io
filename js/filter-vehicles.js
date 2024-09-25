@@ -25,7 +25,7 @@ class PageFilterVehicles extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader: "杂项",
-			items: ["SRD", "传奇", "有图片", "有简介", "Has Token"],
+			items: ["传奇", "有图片", "有简介", "Has Token"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -79,6 +79,7 @@ class PageFilterVehicles extends PageFilterBase {
 		this._acFilter.addItem(it._fAc);
 		this._hpFilter.addItem(it._fHp);
 		this._creatureCapacityFilter.addItem(it._fCreatureCapacity);
+		this._miscFilter.addItem(it._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

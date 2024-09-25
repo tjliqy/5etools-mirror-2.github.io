@@ -2069,22 +2069,32 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 
 			scLvlFeatures.forEach((scFeature, ixScFeature) => {
 				const depthArr = [];
+				const isFirstFeature = !ixScFeature && ptrIsFirstSubclassLevel._ === true;
 
-				const ptDate = ptrIsFirstSubclassLevel._ === true && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
+				const isEditionMismatch = cls.edition && sc.edition && cls.edition !== sc.edition;
+				const ptMismatchedEdition = isFirstFeature && isEditionMismatch
+					? Renderer.get().render(`{@note This subclass is from a different game edition. For a given subclass feature, you may gain that feature at a different level from the one specified in the subclass feature.}`)
+					: "";
+				const ptDate = isFirstFeature && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
 					? Renderer.get().render(`{@note This subclass was published on ${DatetimeUtil.getDateStr({date: new Date(Parser.sourceJsonToDate(sc.source))})}.}`)
 					: "";
-				const ptSources = ptrIsFirstSubclassLevel._ === true && sc.otherSources ? `{@note {@b 子职业 来源:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
+				const ptSources = isFirstFeature && sc.otherSources ? `{@note {@b 子职业 来源:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
+				const ptReprinted = isFirstFeature && sc.reprintedAs ? `{@note ${Renderer.utils.getReprintedAsHtml(sc)}.}` : "";
 				const toRender = MiscUtil.copyFast(scFeature);
 
-				if (ptDate && toRender.entries) toRender.entries.unshift(ptDate);
-				if (ptSources && toRender.entries) toRender.entries.push(ptSources);
+				if (toRender.entries) {
+					if (ptMismatchedEdition) toRender.entries.unshift(ptMismatchedEdition);
+					if (ptDate) toRender.entries.unshift(ptDate);
+					if (ptSources) toRender.entries.push(ptSources);
+					if (ptReprinted) toRender.entries.push(ptReprinted);
+				}
 
 				// region Prefix subclass feature names with the subclass name, which can be shown if multiple
 				//   subclasses are shown.
 				let hasNamePluginRun = false;
 				Renderer.get()
 					.addPlugin("entries_namePrefix", (commonArgs, {input: entry}) => {
-						if (ptrIsFirstSubclassLevel._ === true || !entry.name) return;
+						if (isFirstFeature || !entry.name) return;
 
 						if (hasNamePluginRun) return;
 						hasNamePluginRun = true;
@@ -2107,7 +2117,7 @@ class ClassesPage extends MixinComponentGlobalState(MixinBaseComponent(MixinProx
 					fn: () => {
 						const $trSubclassFeature = $(`<tr class="cls-main__sc-feature" data-subclass-id="${UrlUtil.getStateKeySubclass(sc)}"><td colspan="6"></td></tr>`)
 							.fastSetHtml(
-								Renderer.get().withDepthTracker(depthArr, ({renderer}) => renderer.render(Renderer.class.getDisplayNamedSubclassFeatureEntry(toRender, styleHint)), {additionalProps: ["isReprinted"], additionalPropsInherited: ["_isStandardSource", "isClassFeatureVariant"]}),
+								Renderer.get().withDepthTracker(depthArr, ({renderer}) => renderer.render(Renderer.class.getDisplayNamedSubclassFeatureEntry(toRender, {styleHint, isEditionMismatch})), {additionalProps: ["isReprinted"], additionalPropsInherited: ["_isStandardSource", "isClassFeatureVariant"]}),
 							)
 							.appendTo($content);
 					},
@@ -2504,9 +2514,11 @@ ClassesPage.ClassBookView = class extends BookModeViewBase {
 			.pSerialAwaitMap(async (sc, ixSubclass) => {
 				const scFluff = await Renderer.subclass.pGetFluff(sc);
 
+				const isEditionMismatch = cls.edition && sc.edition && cls.edition !== sc.edition;
+
 				sc.subclassFeatures.forEach((lvl, ix) => {
 					renderStack.push(`<tr data-cls-book-sc-ix="${ixSubclass}" class="cls-main__sc-feature"><td colspan="6" class="py-3 px-5">`);
-					lvl.forEach(scf => Renderer.get().recursiveRender(Renderer.class.getDisplayNamedSubclassFeatureEntry(scf, styleHint), renderStack));
+					lvl.forEach(scf => Renderer.get().recursiveRender(Renderer.class.getDisplayNamedSubclassFeatureEntry(scf, {styleHint, isEditionMismatch}), renderStack));
 					renderStack.push(`</td></tr>`);
 
 					if (ix !== 0) return;

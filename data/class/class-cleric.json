@@ -1,4 +1,10 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"subclass",
+			"subclassFeature"
+		]
+	},
 	"class": [
 		{
 			"name": "牧师",
@@ -1767,8 +1773,12 @@
 			"source": "HWCS",
 			"className": "牧师",
 			"classSource": "PHB",
-			"page": 39,
-			"additionalSpells": [
+			"subclassShortName": "Death",
+			"subclassSource": "DMG",
+			"level": 1,
+			"entries": [
+				"The Death domain is concerned with the forces that cause death, as well as the negative energy that gives rise to undead creatures. Deities such as {@deity Chemosh|Dragonlance}, {@deity Myrkul}, and {@deity Wee Jas|Greyhawk} are patrons of necromancers, death knights, liches, mummy lords, and vampires. Gods of the Death domain also embody murder ({@deity Anubis|Egyptian}, {@deity Bhaal}, and Pyremius), pain ({@deity Iuz|Greyhawk} or {@deity Loviatar}), disease or poison ({@deity Incabulos|Greyhawk}, {@deity Talona}, or {@deity Morgion|Dragonlance}), and the underworld ({@deity Hades|Greek} and {@deity Hel|Norse}).",
+				"At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
 				{
 					"prepared": {
 						"1": [
@@ -1791,7 +1801,15 @@
 							"群体疗伤术",
 							"拉瑞心灵联结"
 						]
-					}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiency|Cleric||Death|DMG|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Reaper|Cleric||Death|DMG|1"
 				}
 			],
 			"subclassFeatures": [
@@ -1901,8 +1919,12 @@
 			"source": "TCE",
 			"className": "牧师",
 			"classSource": "PHB",
-			"page": 32,
-			"additionalSpells": [
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"entries": [
+				"The community domain focuses on the ties that bind all people together. These are the ties of family and friendship, the ties to ancestors, as well as the ties between elders and the next generation with whom they share their wisdom. The power of the Gods of community is in the security of home and hearth, and the joy of good company. Many such gods teach the value of tradition and simple ways of living in harmony with the natural world. They also tend towards the rule of law, not as a kind of great bureaucracy, but as sacred traditions passed from generation to generation. Some gods advocate the removal of harsh or disruptive forces to this order, and proper sanctions for the violation of the goodwill that any community ought to provide.",
+				"Clerics of such gods value unity, and praise the strength that can be gained when people support each other.",
 				{
 					"prepared": {
 						"1": [
@@ -1925,7 +1947,11 @@
 							"高等复原术",
 							"拉瑞心灵联结"
 						]
-					}
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blessing of the Hearth|Cleric||Community|HWCS|1"
 				}
 			],
 			"subclassFeatures": [
@@ -5608,8 +5634,8 @@
 						"spells"
 					],
 					"colStyles": [
-						"col-2 text-center",
-						"col-10"
+						"col-6 text-center",
+						"col-6 text-center"
 					],
 					"rows": [
 						[
@@ -5632,6 +5658,48 @@
 							"9th",
 							"{@spell 通神术}, {@spell 支配人类}"
 						]
+					]
+				},
+				{
+					"name": "Domain Spells",
+					"type": "entries",
+					"entries": [
+						"{@i 1st-level Peace Domain feature}",
+						"You gain domain spells at the cleric levels listed in the Peace Domain Spells table. See the Divine Domain class feature for how domain spells work.",
+						{
+							"type": "table",
+							"caption": "Peace Domain Spells",
+							"colLabels": [
+								"Cleric Level",
+								"Spells"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell heroism}, {@spell sanctuary}"
+								],
+								[
+									"3rd",
+									"{@spell aid}, {@spell warding bond}"
+								],
+								[
+									"5th",
+									"{@spell beacon of hope}, {@spell sending}"
+								],
+								[
+									"7th",
+									"{@spell aura of purity}, {@spell Otiluke's resilient sphere}"
+								],
+								[
+									"9th",
+									"{@spell greater restoration}, {@spell Rary's telepathic bond}"
+								]
+							]
+						}
 					]
 				},
 				{
@@ -6035,6 +6103,7 @@
 			"subclassShortName": "暮光",
 			"subclassSource": "TCE",
 			"level": 1,
+			"header": 1,
 			"entries": [
 				"在光明隐没，黑暗显现的迷离境界中，人们结束了白天的工作并开始休息。这是平静之时，这是欢愉之时，这是暮光之时。尽管令人恐惧之物潜伏于黑暗之中，但莫要惊慌，因为暮光之神们将抵挡这些夜之恐怖。",
 				"侍奉于暮光之神们\u2014\u2014暮光神祇表格中给了例子\u2014\u2014的牧师为渴望安睡之人带来慰籍，并将为保护他们而前往迫近的黑暗。他们将保证夜晚不再令人恐惧，而会令人舒适。",
@@ -6083,7 +6152,44 @@
 							"半身人"
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity: Crimson Bond",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 2nd level, you can use your Channel Divinity to form a supernatural bond with a creature you can see, or with a creature for which you possess a blood sample. This bond lasts for 1 hour or until your {@status concentration} is broken (as if concentrating on a spell).",
+				"While the bond is in effect, you can use an action to learn the target's approximate distance and direction from you, as well as its current hit points and any conditions affecting it, as long as the target is within 10 miles of you. Alternatively, you can use your action to attempt to connect with the target's senses. You take {@damage 2d6} necrotic damage and the target makes a Constitution {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC. On a successful save, the bond ends. On a failure, you can choose to either see or hear through the target's senses for a number of minutes equal to your Wisdom modifier (minimum 1 minute). During this time, you are {@condition blinded} or {@condition deafened} (respectively) with regard to your own senses. When the connection ends, the bond is lost.",
+				"Regardless of the outcome, the target feels a wave of unease pass over it when it makes this save."
+			]
+		},
+		{
+			"name": "Channel Divinity: Blood Puppet",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 6th level, you can use your Channel Divinity to briefly control a creature's actions\u2014whether that creature is living or dead. As an action, you target a Large or smaller creature or corpse within 60 feet of you that has blood. A creature you target must succeed on a Wisdom {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC or become {@condition charmed} by you. An {@condition unconscious} creature automatically fails its {@quickref saving throws|PHB|2|1|saving throw}, and isn't {@condition incapacitated} while you control its actions. A corpse targeted by this effect gains a semblance of life that you control.",
+				"On the affected creature or animated corpse's turn, you can command it (no action required) to move up to half its speed and use its action to do one of the following:",
 				{
 					"name": "领域法术",
 					"ENG_name": "Domain Spells",
@@ -6229,6 +6335,9 @@
 			"subclassSource": "TCE",
 			"level": 6,
 			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"{@i 6级暮光领域特性}",
 				"你使用夜晚的神秘力量来飞上空中。当你处于微光光照或黑暗中时，你能以一个附赠动作用魔法使自己获得等于自身步行速度的飞行速度，持续1分钟。你可以使用此特性的次数等同于你的熟练加值，当你完成一次长休时重获全部已消耗的使用次数。"
@@ -6468,6 +6577,9 @@
 			"subclassSource": "TDCSR",
 			"level": 8,
 			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"第8级起，你能让自己造成的物理伤口大量失血。你在每个自己回合一次，可以在用武器攻击命中某生物时，使该攻击额外造成{@damage 1d8}的黯蚀伤害。"
 			]
@@ -6943,7 +7055,7 @@
 					"type": "refSubclassFeature",
 					"subclassFeature": "坟墓之眼|牧师||坟墓|XGE|1"
 				}
-			]
+			}
 		},
 		{
 			"name": "生死轮回",
@@ -7087,7 +7199,7 @@
 					"type": "refSubclassFeature",
 					"subclassFeature": "维系生命|牧师|XPHB|生命|XPHB|3"
 				}
-			]
+			}
 		},
 		{
 			"name": "生命门徒",
@@ -7149,7 +7261,7 @@
 						]
 					]
 				}
-			]
+			}
 		},
 		{
 			"name": "维系生命",

@@ -1918,8 +1918,7 @@
 						"from": [
 							"str",
 							"con"
-						],
-						"amount": 1
+						]
 					}
 				}
 			],
@@ -3186,11 +3185,30 @@
 			],
 			"prerequisite": [
 				{
+					"level": 4,
 					"ability": [
 						{
 							"str": 13
 						}
 					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -3954,6 +3972,19 @@
 			"ability": [
 				{
 					"int": 1
+				}
+			],
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"arcana",
+							"history",
+							"investigation",
+							"nature",
+							"religion"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -5016,6 +5047,7 @@
 			],
 			"prerequisite": [
 				{
+					"level": 4,
 					"proficiency": [
 						{
 							"armor": "light"
@@ -5029,8 +5061,7 @@
 						"from": [
 							"str",
 							"dex"
-						],
-						"amount": 1
+						]
 					}
 				}
 			],
@@ -5577,6 +5608,76 @@
 			"toolProficiencies": [
 				{
 					"poisoner's kit": true
+				}
+			],
+			"entries": [
+				"You gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Potent Poison",
+					"entries": [
+						"When you make a damage roll that deals Poison damage, it ignores Resistance to Poison damage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Brew Poison",
+					"entries": [
+						"You gain proficiency with the Poisoner's Kit. With 1 hour of work using such a kit and expending 50 GP worth of materials, you can create a number of poison doses equal to your Proficiency Bonus. As a Bonus Action, you can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute or until you deal damage with the {@condition poisoned} item, whichever is shorter. When a creature takes damage from the {@condition poisoned} item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus) or take {@damage 2d8} Poison damage and have the {@condition Poisoned|XPHB} condition until the end of your next turn."
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Polearm Master",
+			"source": "PHB",
+			"page": 168,
+			"reprintedAs": [
+				"Polearm Master|XPHB"
+			],
+			"entries": [
+				"You can keep your enemies at bay with reach weapons. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you take the {@action Attack} action and attack with only a {@item glaive|phb}, {@item halberd|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, you can use a bonus action to make a melee attack with the opposite end of the weapon; this attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a {@dice d4}, and the attack deals bludgeoning damage.",
+						"While you are wielding a {@item glaive|phb}, {@item halberd|phb}, {@item pike|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, other creatures provoke an opportunity attack from you when they enter the reach you have with that weapon."
+					]
+				}
+			]
+		},
+		{
+			"name": "Polearm Master",
+			"source": "XPHB",
+			"page": 206,
+			"category": "G",
+			"prerequisite": [
+				{
+					"level": 4,
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				},
+				{
+					"level": 4,
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"dex",
+							"str"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -6990,8 +7091,7 @@
 							"int",
 							"wis",
 							"cha"
-						],
-						"amount": 1
+						]
 					}
 				}
 			],

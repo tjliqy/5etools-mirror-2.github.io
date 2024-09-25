@@ -12,8 +12,8 @@ class PageFilterBackgrounds extends PageFilterBase {
 	constructor () {
 		super();
 
-		this._asiFilter = new AbilityScoreFilter({header: "Ability Scores",cnHeader: "属性值"});
-		this._skillFilter = new Filter({header: "技能熟练项", displayFn: StrUtil.toTitleCase});
+		this._asiFilter = new AbilityScoreFilter({header: "Ability Scores", cnHeader: "属性值"});
+		this._skillFilter = new Filter({header: "Skill Proficiencies", cnHeader:"技能熟练项", displayFn: StrUtil.toTitleCase});
 		this._prereqFilter = new Filter({
 			header: "Prerequisite",
 			cnHeader:"先决条件",
@@ -40,7 +40,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader: "杂项",
-			items: ["有简介", "有图片", "SRD", "基础规则", "传奇"],
+			items: ["有简介", "有图片", "传奇"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -85,7 +85,6 @@ class PageFilterBackgrounds extends PageFilterBase {
 		});
 		bg._fLangs = languages;
 
-		bg._fMisc = [];
 		this._mutateForFilters_commonMisc(bg);
 		bg._fOtherBenifits = [];
 		if (bg.feats) bg._fOtherBenifits.push("专长");
@@ -94,7 +93,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 		if (bg.weaponProficiencies) bg._fOtherBenifits.push("武器熟练项");
 		bg._skillDisplay = skillDisplay;
 
-		const ability = Renderer.getAbilityData(bg.ability);
+		const ability = Renderer.getAbilityData(bg.ability, {isOnlyShort: true, isBackgroundShortForm: bg.edition === "one"});
 		bg._slAbility = ability.asTextShort || VeCt.STR_NONE;
 	}
 
@@ -108,6 +107,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 		this._toolFilter.addItem(bg._fTools);
 		this._languageFilter.addItem(bg._fLangs);
 		this._otherBenefitsFilter.addItem(bg._fOtherBenifits);
+		this._miscFilter.addItem(bg._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

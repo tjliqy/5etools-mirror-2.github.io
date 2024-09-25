@@ -14,8 +14,8 @@ class PageFilterActions extends PageFilterBase {
 			itemSortFn: SortUtil.ascSortLower,
 		});
 		this._miscFilter = new Filter({
-			header: "杂项",
-			items: ["Optional/Variant Action", "SRD", "基础规则", "传奇"],
+			header: "Miscellaneous",
+			items: ["Optional/Variant Action", "Legacy"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -23,7 +23,6 @@ class PageFilterActions extends PageFilterBase {
 
 	static mutateForFilters (it) {
 		it._fTime = it.time ? it.time.map(it => it.unit || it) : null;
-		it._fMisc = [];
 		this._mutateForFilters_commonMisc(it);
 		if (it.fromVariant) it._fMisc.push("Optional/Variant Action");
 	}

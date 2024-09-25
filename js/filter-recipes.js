@@ -44,7 +44,7 @@ class PageFilterRecipes extends PageFilterBase {
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["SRD", "传奇"],
+			items: ["传奇"],
 			isMiscFilter: true,
 			displayFn: PageFilterRecipes._miscTagToFull,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),

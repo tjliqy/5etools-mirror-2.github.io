@@ -16,7 +16,7 @@ class PageFilterCharCreationOptions extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader:"杂项",
-			items: ["SRD", "传奇", "有图片", "有简介"],
+			items: ["传奇", "有图片", "有简介"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -33,6 +33,7 @@ class PageFilterCharCreationOptions extends PageFilterBase {
 
 		this._sourceFilter.addItem(it.source);
 		this._typeFilter.addItem(it._fOptionType);
+		this._miscFilter.addItem(it._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

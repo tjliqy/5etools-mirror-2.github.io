@@ -3052,8 +3052,8 @@
 								"伤害类型"
 							],
 							"colStyles": [
-								"col-6 text-center",
-								"col-6 text-center"
+								"col-6",
+								"col-6"
 							],
 							"rows": [
 								[
@@ -3187,7 +3187,10 @@
 			"name": "龙裔 (宝石)",
 			"ENG_name": "Dragonborn (Gem)",
 			"source": "FTD",
-			"page": 11,
+			"page": 10,
+			"reprintedAs": [
+				"Dragonborn|XPHB"
+			],
 			"lineage": "VRGR",
 			"size": [
 				"M"
@@ -3380,6 +3383,9 @@
 			"ENG_name": "Dragonborn (Metallic)",
 			"source": "FTD",
 			"page": 12,
+			"reprintedAs": [
+				"Dragonborn|XPHB"
+			],
 			"lineage": "VRGR",
 			"size": [
 				"M"
@@ -4200,9 +4206,7 @@
 					],
 					"type": "entries"
 				}
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			]
 		},
 		{
 			"name": "精灵",
@@ -5355,6 +5359,10 @@
 			"ENG_name": "Gith",
 			"source": "MTF",
 			"page": 96,
+			"reprintedAs": [
+				"Githyanki|MPMM",
+				"Githzerai|MPMM"
+			],
 			"size": [
 				"M"
 			],
@@ -6516,9 +6524,85 @@
 			},
 			"entries": [
 				{
+					"name": "Age",
+					"type": "entries",
+					"entries": [
+						"Goliaths have lifespans comparable to humans. They enter adulthood in their late teens and usually live less than a century."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"Goliaths are between 7 and 8 feet tall and weigh between 280 and 340 pounds. Your size is Medium."
+					]
+				},
+				{
+					"name": "Natural Athlete",
+					"entries": [
+						"You have proficiency in the {@skill Athletics} skill."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Stone's Endurance",
+					"entries": [
+						"You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a {@dice d12}. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Powerful Build",
+					"entries": [
+						"You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Mountain Born",
+					"entries": [
+						"You have resistance to cold damage. You're also acclimated to high altitude, including elevations above 20,000 feet."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Languages",
+					"entries": [
+						"You can speak, read, and write Common and Giant."
+					],
+					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goliath",
+			"source": "XPHB",
+			"page": 192,
+			"creatureTypes": [
+				"humanoid"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 35,
+			"traitTags": [
+				"Powerful Build"
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "Size:",
+				"entries": [
+					"Medium (about 7-8 feet tall)"
+				]
+			},
+			"entries": [
+				{
 					"name": "年龄",
 					"ENG_name": "Age",
 					"type": "entries",
+					"name": "Giant Ancestry",
 					"entries": [
 						"巨人的寿命与人类相当。他们在十几岁末进入成年，通常寿命不到一个世纪。"
 					]
@@ -6571,9 +6655,7 @@
 					],
 					"type": "entries"
 				}
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			]
 		},
 		{
 			"name": "歌利亚",
@@ -8132,34 +8214,36 @@
 				"人类|XPHB"
 			],
 			"size": [
+				"S",
 				"M"
 			],
 			"speed": 30,
-			"heightAndWeight": {
-				"baseHeight": 56,
-				"heightMod": "2d10",
-				"baseWeight": 110,
-				"weightMod": "2d4"
-			},
-			"age": {
-				"mature": 20,
-				"max": 100
-			},
-			"languageProficiencies": [
+			"feats": [
 				{
-					"common": true,
-					"anyStandard": 1
+					"anyFromCategory": {
+						"category": "O",
+						"count": 1
+					}
 				}
 			],
-			"soundClip": {
-				"type": "internal",
-				"path": "races/human.mp3"
+			"skillProficiencies": [
+				{
+					"any": 1
+				}
+			],
+			"sizeEntry": {
+				"type": "item",
+				"name": "Size:",
+				"entries": [
+					"Medium (about 4-7 feet tall) or Small (about 2-4 feet tall), chosen when you select this species"
+				]
 			},
 			"entries": [
 				{
 					"name": "年龄",
 					"ENG_name": "Age",
 					"type": "entries",
+					"name": "Resourceful",
 					"entries": [
 						"人类不到20岁成年，而很少活过100 岁。"
 					]
@@ -15192,6 +15276,10 @@
 			"raceName": "阿斯莫",
 			"raceSource": "VGM",
 			"page": 105,
+			"reprintedAs": [
+				"Aasimar|MPMM",
+				"Aasimar|XPHB"
+			],
 			"ability": [
 				{
 					"str": 1
@@ -15219,6 +15307,10 @@
 			"raceName": "阿斯莫",
 			"raceSource": "VGM",
 			"page": 105,
+			"reprintedAs": [
+				"Aasimar|MPMM",
+				"Aasimar|XPHB"
+			],
 			"ability": [
 				{
 					"wis": 1
@@ -15246,6 +15338,10 @@
 			"raceName": "阿斯莫",
 			"raceSource": "VGM",
 			"page": 105,
+			"reprintedAs": [
+				"Aasimar|MPMM",
+				"Aasimar|XPHB"
+			],
 			"ability": [
 				{
 					"con": 1
@@ -15484,6 +15580,9 @@
 			"raceSource": "PHB",
 			"page": 32,
 			"srd": true,
+			"reprintedAs": [
+				"Dragonborn|XPHB"
+			],
 			"hasFluff": true,
 			"hasFluffImages": true,
 			"_versions": [
@@ -16227,6 +16326,9 @@
 			"page": 20,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"Dwarf|XPHB"
+			],
 			"ability": [
 				{
 					"wis": 1
@@ -16369,6 +16471,9 @@
 			"raceSource": "PHB",
 			"page": 20,
 			"basicRules": true,
+			"reprintedAs": [
+				"Dwarf|XPHB"
+			],
 			"ability": [
 				{
 					"str": 2
@@ -16409,6 +16514,9 @@
 			"raceName": "精灵",
 			"raceSource": "PHB",
 			"page": 24,
+			"reprintedAs": [
+				"Elf|XPHB"
+			],
 			"ability": [
 				{
 					"cha": 1
@@ -16624,6 +16732,9 @@
 			"page": 23,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"Elf|XPHB"
+			],
 			"speed": 30,
 			"ability": [
 				{
@@ -17017,6 +17128,9 @@
 			"raceSource": "PHB",
 			"page": 24,
 			"basicRules": true,
+			"reprintedAs": [
+				"Elf|XPHB"
+			],
 			"speed": 35,
 			"ability": [
 				{
@@ -18304,6 +18418,9 @@
 			"raceName": "侏儒",
 			"raceSource": "PHB",
 			"page": 37,
+			"reprintedAs": [
+				"Gnome|XPHB"
+			],
 			"ability": [
 				{
 					"dex": 1
@@ -18473,6 +18590,9 @@
 			"raceSource": "PHB",
 			"page": 37,
 			"srd": true,
+			"reprintedAs": [
+				"Gnome|XPHB"
+			],
 			"ability": [
 				{
 					"con": 1
@@ -19647,6 +19767,9 @@
 			"page": 28,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"Halfling|XPHB"
+			],
 			"ability": [
 				{
 					"cha": 1
@@ -19959,6 +20082,9 @@
 			"raceSource": "PHB",
 			"page": 28,
 			"basicRules": true,
+			"reprintedAs": [
+				"Halfling|XPHB"
+			],
 			"ability": [
 				{
 					"con": 1
@@ -19987,6 +20113,9 @@
 			"page": 29,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"Human|XPHB"
+			],
 			"ability": [
 				{
 					"str": 1,
@@ -20619,6 +20748,9 @@
 			"raceSource": "PHB",
 			"page": 31,
 			"basicRules": true,
+			"reprintedAs": [
+				"Human|XPHB"
+			],
 			"ability": [
 				{
 					"choose": {
@@ -21658,6 +21790,9 @@
 			"raceSource": "PHB",
 			"page": 42,
 			"srd": true,
+			"reprintedAs": [
+				"Tiefling|XPHB"
+			],
 			"hasFluff": true,
 			"hasFluffImages": true
 		},

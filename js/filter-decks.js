@@ -6,7 +6,7 @@ class PageFilterDecks extends PageFilterBase {
 
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Has Card Art", "SRD", "传奇"],
+			items: ["Has Card Art", "传奇"],
 			isMiscFilter: true,
 			selFn: it => it === "Has Card Art",
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
@@ -22,6 +22,7 @@ class PageFilterDecks extends PageFilterBase {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(ent.source);
+		this._miscFilter.addItem(ent._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

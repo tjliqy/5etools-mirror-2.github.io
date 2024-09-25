@@ -21,7 +21,7 @@ class PageFilterRewards extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader: "杂项",
-			items: ["SRD", "基础规则", "传奇", "有图片", "有简介"],
+			items: ["传奇", "有图片", "有简介"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});

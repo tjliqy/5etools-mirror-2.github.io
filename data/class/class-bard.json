@@ -1,4 +1,9 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"subclass"
+		]
+	},
 	"class": [
 		{
 			"name": "吟游诗人",
@@ -1334,9 +1339,7 @@
 			"subclassTitle": "吟游诗人子类",
 			"hasFluff": true,
 			"hasFluffImages": true
-		}
-	],
-	"subclass": [
+		},
 		{
 			"name": "逸闻学院",
 			"ENG_name": "College of Lore",
@@ -1356,10 +1359,27 @@
 					"known": {
 						"6": [
 							{
-								"choose": "level=0;1;2;3"
-							},
+								"all": "level=1;2;3;4;5|class=Cleric;Druid;Wizard"
+							}
+						],
+						"s6": [
 							{
-								"choose": "level=0;1;2;3"
+								"all": "level=6|class=Cleric;Druid;Wizard"
+							}
+						],
+						"s7": [
+							{
+								"all": "level=7|class=Cleric;Druid;Wizard"
+							}
+						],
+						"s8": [
+							{
+								"all": "level=8|class=Cleric;Druid;Wizard"
+							}
+						],
+						"s9": [
+							{
+								"all": "level=9|class=Cleric;Druid;Wizard"
 							}
 						]
 					}
@@ -1406,6 +1426,48 @@
 							"命令术"
 						]
 					}
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"light"
+					],
+					"tools": [
+						"Choose one {@item Musical Instrument|XPHB}"
+					],
+					"toolProficiencies": [
+						{
+							"anyMusicalInstrument": 1
+						}
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"athletics",
+									"acrobatics",
+									"sleight of hand",
+									"stealth",
+									"arcana",
+									"history",
+									"investigation",
+									"nature",
+									"religion",
+									"animal handling",
+									"insight",
+									"medicine",
+									"perception",
+									"survival",
+									"deception",
+									"intimidation",
+									"performance",
+									"persuasion"
+								],
+								"count": 1
+							}
+						}
+					]
 				}
 			],
 			"subclassFeatures": [
@@ -1497,6 +1559,7 @@
 			"className": "吟游诗人",
 			"classSource": "PHB",
 			"page": 28,
+			"edition": "classic",
 			"subclassFeatures": [
 				"创造学院|吟游诗人||创造|TCE|3",
 				"活化表演|吟游诗人||创造|TCE|6",
@@ -1514,8 +1577,20 @@
 			"page": 29,
 			"otherSources": [
 				{
-					"source": "MOT",
-					"page": 28
+					"prepared": {
+						"3": [
+							"charm person|xphb",
+							"mirror image|xphb"
+						],
+						"6": [
+							"command|xphb"
+						]
+					},
+					"innate": {
+						"6": [
+							"command|xphb"
+						]
+					}
 				}
 			],
 			"subclassFeatures": [
@@ -4084,6 +4159,367 @@
 			"header": 2,
 			"entries": [
 				"在你施放一个施法时间为动作的法术之后，你可以作为一个{@variantrule 附赠动作|XPHB}进行一次武器攻击。"
+			]
+		},
+		{
+			"name": "College of Dance",
+			"source": "XPHB",
+			"page": 64,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Dance",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Move in Harmony with the Cosmos}",
+				"Bards of the College of Dance know that the Words of Creation can't be contained within speech or song; the words are uttered by the movements of celestial bodies and flow through the motions of the smallest creatures. These Bards practice a way of being in harmony with the whirling cosmos that emphasizes agility, speed, and grace.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dazzling Footwork|Bard|XPHB|Dance|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Dazzling Footwork",
+			"source": "XPHB",
+			"page": 64,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Dance",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"While you aren't wearing armor or wielding a {@item Shield|XPHB}, you gain the following benefits.",
+				{
+					"type": "entries",
+					"name": "Dance Virtuoso",
+					"entries": [
+						"You have {@variantrule Advantage|XPHB} on any Charisma ({@skill Performance|XPHB}) check you make that involves you dancing."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Unarmored Defense",
+					"entries": [
+						"Your base {@variantrule Armor Class|XPHB} equals 10 plus your Dexterity and Charisma modifiers."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Agile Strikes",
+					"entries": [
+						"When you expend a use of your Bardic Inspiration as part of an action, a {@variantrule Bonus Action|XPHB}, or a {@variantrule Reaction|XPHB}, you can make one {@variantrule Unarmed Strike|XPHB} as part of that action, {@variantrule Bonus Action|XPHB}, or {@variantrule Reaction|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bardic Damage",
+					"entries": [
+						"You can use Dexterity instead of Strength for the attack rolls of your Unarmed Strikes. When you deal damage with an {@variantrule Unarmed Strike|XPHB}, you can deal Bludgeoning damage equal to a roll of your Bardic Inspiration die plus your Dexterity modifier, instead of the strike's normal damage. This roll doesn't expend the die."
+					]
+				}
+			]
+		},
+		{
+			"name": "Inspiring Movement",
+			"source": "XPHB",
+			"page": 64,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Dance",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"When an enemy you can see ends its turn within 5 feet of you, you can take a {@variantrule Reaction|XPHB} and expend one use of your Bardic Inspiration to move up to half your {@variantrule Speed|XPHB}. Then one ally of your choice within 30 feet of you can also move up to half their {@variantrule Speed|XPHB} using their {@variantrule Reaction|XPHB}.",
+				"None of this feature's movement provokes {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+			]
+		},
+		{
+			"name": "Tandem Footwork",
+			"source": "XPHB",
+			"page": 64,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Dance",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"When you roll {@variantrule Initiative|XPHB}, you can expend one use of your Bardic Inspiration if you don't have the {@condition Incapacitated|XPHB} condition. When you do so, roll your Bardic Inspiration die; you and each ally within 30 feet of you who can see or hear you gains a bonus to {@variantrule Initiative|XPHB} equal to the number rolled."
+			]
+		},
+		{
+			"name": "Leading Evasion",
+			"source": "XPHB",
+			"page": 65,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Dance",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. If any creatures within 5 feet of you are making the same Dexterity saving throw, you can share this benefit with them for that save.",
+				"You can't use this feature if you have the {@condition Incapacitated|XPHB} condition."
+			]
+		},
+		{
+			"name": "College of Glamour",
+			"source": "XPHB",
+			"page": 65,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Weave Beguiling Fey Magic}",
+				"The College of Glamour traces its origins to the beguiling magic of the Feywild. Bards who study this magic weave threads of beauty and terror into their songs and stories, and the mightiest among them can cloak themselves in otherworldly majesty. Their performances stir up wistful longing for forgotten innocence, evoke unconscious memories of long-held fears, and tug at the emotions of even the most hard-hearted listeners.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Beguiling Magic|Bard|XPHB|Glamour|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Mantle of Inspiration|Bard|XPHB|Glamour|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Beguiling Magic",
+			"source": "XPHB",
+			"page": 65,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You always have the {@spell Charm Person|XPHB} and {@spell Mirror Image|XPHB} spells prepared.",
+				"In addition, immediately after you cast an Enchantment or Illusion spell using a spell slot, you can cause a creature you can see within 60 feet of yourself to make a Wisdom saving throw against your spell save DC. On a failed save, the target has the {@condition Charmed|XPHB} or {@condition Frightened|XPHB} condition (your choice) for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+				"Once you use this benefit, you can't use it again until you finish a {@variantrule Long Rest|XPHB}. You can also restore your use of it by expending one use of your Bardic Inspiration (no action required)."
+			]
+		},
+		{
+			"name": "Mantle of Inspiration",
+			"source": "XPHB",
+			"page": 65,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You can weave fey magic into a song or dance to fill others with vigor. As a {@variantrule Bonus Action|XPHB}, you can expend a use of Bardic Inspiration, rolling a Bardic Inspiration die. When you do so, choose a number of other creatures within 60 feet of yourself, up to a number equal to your Charisma modifier (minimum of one creature). Each of those creatures gains a number of {@variantrule Temporary Hit Points|XPHB} equal to two times the number rolled on the Bardic Inspiration die, and then each can use its {@variantrule Reaction|XPHB} to move up to its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+			]
+		},
+		{
+			"name": "Mantle of Majesty",
+			"source": "XPHB",
+			"page": 65,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"You always have the {@spell Command|XPHB} spell prepared.",
+				"As a {@variantrule Bonus Action|XPHB}, you cast {@spell Command|XPHB} without expending a spell slot, and you take on an unearthly appearance for 1 minute or until your {@status Concentration|XPHB} ends. During this time, you can cast {@spell Command|XPHB} as a {@variantrule Bonus Action|XPHB} without expending a spell slot.",
+				"Any creature {@condition Charmed|XPHB} by you automatically fails its saving throw against the {@spell Command|XPHB} you cast with this feature.",
+				"Once you use this feature, you can't use it again until you finish a {@variantrule Long Rest|XPHB}. You can also restore your use of it by expending a level 3+ spell slot (no action required)."
+			]
+		},
+		{
+			"name": "Unbreakable Majesty",
+			"source": "XPHB",
+			"page": 66,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"As a {@variantrule Bonus Action|XPHB}, you can assume a magically majestic presence for 1 minute or until you have the {@condition Incapacitated|XPHB} condition. For the duration, whenever any creature hits you with an attack roll for the first time on a turn, the attacker must succeed on a Charisma saving throw against your spell save DC, or the attack misses instead, as the creature recoils from your majesty.",
+				"Once you assume this majestic presence, you can't do so again until you finish a {@variantrule Short Rest|XPHB|Short} or {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "College of Lore",
+			"source": "XPHB",
+			"page": 66,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Plumb the Depths of Magical Knowledge}",
+				"Bards of the College of Lore collect spells and secrets from diverse sources, such as scholarly tomes, mystical rites, and peasant tales. The college's members gather in libraries and universities to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Bard|XPHB|Lore|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Cutting Words|Bard|XPHB|Lore|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "XPHB",
+			"page": 66,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You gain proficiency with three skills of your choice."
+			]
+		},
+		{
+			"name": "Cutting Words",
+			"source": "XPHB",
+			"page": 66,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You learn to use your wit to supernaturally distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of yourself makes a damage roll or succeeds on an ability check or attack roll, you can take a {@variantrule Reaction|XPHB} to expend one use of your Bardic Inspiration; roll your Bardic Inspiration die, and subtract the number rolled from the creature's roll, reducing the damage or potentially turning the success into a failure."
+			]
+		},
+		{
+			"name": "Magical Discoveries",
+			"source": "XPHB",
+			"page": 66,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"You learn two spells of your choice. These spells can come from the {@filter Cleric|spells|class=Cleric}, {@filter Druid|spells|class=Druid}, or {@filter Wizard spell list|spells|class=Wizard} or any combination thereof (see a class's section for its spell list). A spell you choose must be a cantrip or a spell for which you have spell slots, as shown in the Bard Features table.",
+				"You always have the chosen spells prepared, and whenever you gain a Bard level, you can replace one of the spells with another spell that meets these requirements."
+			]
+		},
+		{
+			"name": "Peerless Skill",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"When you make an ability check or attack roll and fail, you can expend one use of Bardic Inspiration; roll the Bardic Inspiration die, and add the number rolled to the {@dice d20}, potentially turning a failure into a success. On a failure, the Bardic Inspiration isn't expended."
+			]
+		},
+		{
+			"name": "College of Valor",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Sing the Deeds of Ancient Heroes}",
+				"Bards of the College of Valor are daring storytellers whose tales preserve the memory of the great heroes of the past. These Bards sing the deeds of the mighty in vaulted halls or to crowds gathered around great bonfires. They travel to witness great events firsthand and to ensure that the memory of these events doesn't pass away. With their songs, they inspire new generations to reach the same heights of accomplishment as the heroes of old.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Combat Inspiration|Bard|XPHB|Valor|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Martial Training|Bard|XPHB|Valor|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Combat Inspiration",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You can use your wit to turn the tide of battle. A creature that has a Bardic Inspiration die from you can use it for one of the following effects.",
+				{
+					"type": "entries",
+					"name": "Defense",
+					"entries": [
+						"When the creature is hit by an attack roll, that creature can use its {@variantrule Reaction|XPHB} to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, potentially causing the attack to miss."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Offense",
+					"entries": [
+						"Immediately after the creature hits a target with an attack roll, the creature can roll the Bardic Inspiration die and add the number rolled to the attack's damage against the target."
+					]
+				}
+			]
+		},
+		{
+			"name": "Martial Training",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You gain proficiency with Martial weapons and training with Medium armor and Shields.",
+				"In addition, you can use a Simple or Martial weapon as a {@variantrule Spellcasting Focus|XPHB} to cast spells from your {@filter Bard spell list|spells|class=Bard}."
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"You can attack twice instead of once whenever you take the {@action Attack|XPHB} action on your turn.",
+				"In addition, you can cast one of your cantrips that has a casting time of an action in place of one of those attacks."
+			]
+		},
+		{
+			"name": "Battle Magic",
+			"source": "XPHB",
+			"page": 67,
+			"className": "Bard",
+			"classSource": "XPHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"After you cast a spell that has a casting time of an action, you can make one attack with a weapon as a {@variantrule Bonus Action|XPHB}."
 			]
 		}
 	]

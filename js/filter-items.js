@@ -4,8 +4,6 @@ class PageFilterEquipment extends PageFilterBase {
 	static _MISC_FILTER_ITEMS = [
 		"物品组别",
 		"套组/一批物品",
-		"SRD",
-		"基础规则",
 		"传奇",
 		"有图片",
 		"有简介",

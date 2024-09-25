@@ -85,7 +85,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader:"杂项",
-			items: ["有简介", "有图片", "SRD", "传奇", "提供额外法术"],
+			items: ["有简介", "有图片", "传奇", "提供额外法术"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -144,6 +144,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		this._patronFilter.addItem(it._fPrereqPatron);
 		this._spellFilter.addItem(it._fprereqSpell);
 		this._featureFilter.addItem(it._fprereqFeature);
+		this._miscFilter.addItem(it._fMisc);
 
 		(it._fPrereqLevel || []).forEach(it => {
 			this._levelFilter.addNest(it.nest, {isHidden: true});

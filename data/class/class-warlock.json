@@ -1,4 +1,10 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"subclass",
+			"subclassFeature"
+		]
+	},
 	"class": [
 		{
 			"name": "邪术师",
@@ -1014,6 +1020,7 @@
 			"className": "邪术师",
 			"classSource": "PHB",
 			"page": 55,
+			"edition": "classic",
 			"additionalSpells": [
 				{
 					"expanded": {
@@ -1056,6 +1063,7 @@
 			"className": "邪术师",
 			"classSource": "PHB",
 			"page": 72,
+			"edition": "classic",
 			"additionalSpells": [
 				{
 					"expanded": {
@@ -1108,6 +1116,7 @@
 			"className": "邪术师",
 			"classSource": "PHB",
 			"page": 73,
+			"edition": "classic",
 			"additionalSpells": [
 				{
 					"name": "土巨灵",
@@ -1242,6 +1251,7 @@
 			"className": "邪术师",
 			"classSource": "PHB",
 			"page": 30,
+			"edition": "classic",
 			"additionalSpells": [
 				{
 					"expanded": {
@@ -1481,6 +1491,8 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
+			"subclassShortName": "Archfey",
+			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
 				"你的法术力量源于你的奥秘研究和宗主的魔法馈赠。参考{@book 第十章|PHB|10}的施法规则，以及{@book 第十一章|PHB|11}的{@filter 邪术士法术列表|spells|class=邪术师}。",
@@ -1553,7 +1565,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 2,
+			"subclassShortName": "Archfey",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
 			"entries": [
 				"你在神秘学识的研习过程中发掘出魔能祈唤的方式，这些禁忌的知识残章让你获得了持久的魔法能力。",
 				"第2级时，你获得两种自选的魔能祈唤（祈唤的具体内容见{@filter 可选特性|optionalfeatures|Feature Type=EI}）。在获得更高的邪术师等级后你还可以习得其它的魔能祈唤，具体数据见\"邪术师职业表\"中\"已知祈唤\"一栏。",
@@ -1565,17 +1580,65 @@
 			"name": "魔契恩泽",
 			"ENG_name": "Pact Boon",
 			"source": "PHB",
-			"page": 105,
+			"page": 108,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archfey",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn {@condition invisible} and teleport up to 60 feet to an unoccupied space you can see. You remain {@condition invisible} until the start of your next turn or until you attack or cast a spell.",
+				"Once you use this feature, you can't use it again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Beguiling Defenses",
+			"source": "PHB",
+			"page": 108,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archfey",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being {@condition charmed}, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be {@condition charmed} by you for 1 minute or until the creature takes any damage."
+			]
+		},
+		{
+			"name": "Dark Delirium",
+			"source": "PHB",
+			"page": 108,
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archfey",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute or until your {@status concentration} is broken (as if you are {@status concentration||concentrating} on a spell). This effect ends early if the creature takes any damage.",
+				"Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.",
+				"You must finish a short or long rest before you can use this feature again."
+			]
+		},
+		{
+			"name": "The Fiend",
+			"source": "PHB",
+			"page": 109,
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 3,
+			"subclassShortName": "Fiend",
+			"subclassSource": "PHB",
+			"level": 1,
 			"entries": [
 				"第3级时，你的宗主赋予你一份馈赠作为你忠诚服务的回馈。你可以从下列特性中自选其一。",
 				{
-					"type": "options",
-					"count": 1,
+					"type": "entries",
+					"name": "Expanded Spell List",
 					"entries": [
+						"The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "链之魔契"
@@ -1593,6 +1656,10 @@
 							"optionalfeature": "符之魔契|TCE"
 						}
 					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dark One's Blessing|Warlock||Fiend||1"
 				}
 			]
 		},
@@ -1600,11 +1667,14 @@
 			"name": "属性值提升",
 			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
-			"page": 105,
+			"page": 109,
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 4,
+			"subclassShortName": "Fiend",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
 			"entries": [
 				"当你达到4级时，你可以选择一项属性值提升2点，或选择两项属性各提升1点。不过你不能通过此特性让属性超过20。",
 				"如果你的DM允许使用专长，你也可以选择一个{@5etools 专长|feats.html}。"
@@ -1617,8 +1687,10 @@
 			"page": 70,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 4,
-			"isClassFeatureVariant": true,
+			"subclassShortName": "Fiend",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
 			"entries": [
 				"{@i 4级邪术师 {@variantrule 可选职业特性|tce|可选特性}}",
 				"每当你的邪术师达到了可以获得属性值提升的等级，你可以做以下的一件事来代表你在奥秘研究当中重点的转变。",
@@ -1637,11 +1709,14 @@
 			"name": "异界宗主特性",
 			"ENG_name": "Otherworldly Patron feature",
 			"source": "PHB",
-			"page": 105,
+			"page": 109,
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 6,
+			"subclassShortName": "Fiend",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
 			"entries": [
 				"在第6级时，你获得相应的职业特性。"
 			]
@@ -1650,11 +1725,14 @@
 			"name": "属性值提升",
 			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
-			"page": 105,
+			"page": 109,
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 8,
+			"subclassShortName": "Fiend",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
 			"entries": [
 				"当你达到第8级时，你可以选择一项属性值提升2点，或选择两项属性各提升1点。不过你不能通过该特性让属性超过20。",
 				"如果你的DM允许使用专长，你也可以选择一个{@5etools 专长|feats.html}。"
@@ -1668,7 +1746,9 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 10,
+			"subclassShortName": "Great Old One",
+			"subclassSource": "PHB",
+			"level": 1,
 			"entries": [
 				"在第10级时，你获得相应的职业特性。"
 			]
@@ -1681,7 +1761,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 11,
+			"subclassShortName": "Great Old One",
+			"subclassSource": "PHB",
+			"level": 1,
+			"header": 1,
 			"entries": [
 				"第11级时，你的宗主赋予你一种称为秘法的魔法奥秘。你可以选择一个{@filter 邪术师法术列表中的6环法术|spells|level=6|class=邪术师}作为你的玄奥秘法。",
 				"你施展秘法时无需消耗法术位，而消耗掉的秘法可以通过完成一次长休进行恢复。",
@@ -1696,7 +1779,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 12,
+			"subclassShortName": "Great Old One",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
 			"entries": [
 				"当你达到第12级时，你可以选择一项属性值提升2点，或选择两项属性各提升1点。不过你不能通过该特性让属性超过20。",
 				"如果你的DM允许使用专长，你也可以选择一个{@5etools 专长|feats.html}。"
@@ -1710,7 +1796,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 13,
+			"subclassShortName": "Great Old One",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
 			"entries": [
 				"第11级时，你的宗主赋予你一种称为秘法的魔法奥秘。你可以选择一个{@filter 邪术师法术列表中的7环法术|spells|level=7|class=邪术师}作为你的玄奥秘法。",
 				"你施展秘法时无需消耗法术位，而消耗掉的秘法可以通过完成一次长休进行恢复。"
@@ -1724,7 +1813,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
+			"subclassShortName": "Great Old One",
+			"subclassSource": "PHB",
 			"level": 14,
+			"header": 2,
 			"entries": [
 				"在第14级时，你获得相应的职业特性。"
 			]
@@ -1737,7 +1829,9 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 15,
+			"subclassShortName": "Undying",
+			"subclassSource": "SCAG",
+			"level": 1,
 			"entries": [
 				"第11级时，你的宗主赋予你一种称为秘法的魔法奥秘。你可以选择一个{@filter 8级邪术士法术列表中的法术|spells|level=8|class=邪术师}作为你的玄奥秘法。",
 				"你施展秘法时无需消耗法术位，而消耗掉的秘法可以通过完成一次长休进行恢复。"
@@ -1751,7 +1845,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 16,
+			"subclassShortName": "Undying",
+			"subclassSource": "SCAG",
+			"level": 1,
+			"header": 1,
 			"entries": [
 				"当你达到16级时，你可以选择一项属性值提升2点，或选择两项属性各提升1点。不过你不能通过此特性让属性超过20。",
 				"如果你的DM允许使用专长，你也可以选择一个{@5etools 专长|feats.html}。"
@@ -1765,7 +1862,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 17,
+			"subclassShortName": "Undying",
+			"subclassSource": "SCAG",
+			"level": 6,
+			"header": 2,
 			"entries": [
 				"第11级时，你的宗主赋予你一种称为秘法的魔法奥秘。你可以选择一个{@filter 邪术师法术列表中的9环法术|spells|level=9|class=邪术师}作为你的玄奥秘法。",
 				"你施展秘法时无需消耗法术位，而消耗掉的秘法可以通过完成一次长休进行恢复。"
@@ -1779,7 +1879,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 19,
+			"subclassShortName": "Undying",
+			"subclassSource": "SCAG",
+			"level": 10,
+			"header": 2,
 			"entries": [
 				"当你达到19级时，你可以选择一项属性值提升2点，或选择两项属性各提升1点。不过你不能通过此特性让属性超过20。",
 				"如果你的DM允许使用专长，你也可以选择一个{@5etools 专长|feats.html}。"
@@ -1793,7 +1896,10 @@
 			"srd": true,
 			"className": "邪术师",
 			"classSource": "PHB",
-			"level": 20,
+			"subclassShortName": "Undying",
+			"subclassSource": "SCAG",
+			"level": 14,
+			"header": 2,
 			"entries": [
 				"第20级时，你可以利用储备的魔力祈求你的宗主为你恢复已消耗的法术位。你可以花1分钟祈求宗主的帮助，恢复所有你已消耗的契约魔法法术位。使用该特性恢复法术位后，你必须完成一次长休才能再次使用该特性。"
 			]
@@ -2463,8 +2569,12 @@
 								"spells"
 							],
 							"colStyles": [
-								"col-2 text-center",
-								"col-10"
+								"col-1 text-center",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2",
+								"col-2-2"
 							],
 							"rows": [
 								[
@@ -3167,8 +3277,7 @@
 				},
 				"当你触碰器皿时，你可以用以下方式使用它：",
 				{
-					"type": "options",
-					"style": "list-hang-notitle",
+					"type": "entries",
 					"entries": [
 						{
 							"type": "refSubclassFeature",

@@ -7,7 +7,7 @@ class PageFilterClassesBase extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader:"杂项",
-			items: ["重制", "协力者", "SRD", "基础规则", "传奇"],
+			items: ["重制", "协力者", "传奇"],
 			deselFn: (it) => { return it === "重制" || it === "协力者"; },
 			displayFnMini: it => it === "重制" ? "Repr." : it,
 			displayFnTitle: it => it === "重制" ? it : "",
@@ -52,7 +52,6 @@ class PageFilterClassesBase extends PageFilterBase {
 			]),
 		];
 
-		cls._fMisc = [];
 		this._mutateForFilters_commonMisc(cls);
 		if (cls.isSidekick) cls._fMisc.push("协力者");
 
@@ -91,6 +90,7 @@ class PageFilterClassesBase extends PageFilterBase {
 		// Note that we assume that, for fluff from a given source, a class/subclass will exist from that source.
 		//   This allows us to skip loading the class/subclass fluff in order to track the fluff's sources.
 		this._sourceFilter.addItem(cls.source);
+		this._miscFilter.addItem(cls._fMisc);
 
 		cls.classFeatures.forEach(lvlFeatures => lvlFeatures.forEach(feature => this._addEntrySourcesToFilter(feature)));
 
@@ -98,6 +98,7 @@ class PageFilterClassesBase extends PageFilterBase {
 			const isScExcluded = (subclassExclusions[sc.source] || {})[sc.name] || false;
 			if (!isScExcluded) {
 				this._sourceFilter.addItem(sc.source);
+				this._miscFilter.addItem(sc._fMisc);
 				sc.subclassFeatures.forEach(lvlFeatures => lvlFeatures.forEach(feature => this._addEntrySourcesToFilter(feature)));
 			}
 		});

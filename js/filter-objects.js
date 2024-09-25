@@ -7,7 +7,7 @@ class PageFilterObjects extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader: "杂项",
-			items: ["SRD", "传奇", "有图片", "有简介", "Has Token"],
+			items: ["传奇", "有图片", "有简介", "Has Token"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -22,6 +22,7 @@ class PageFilterObjects extends PageFilterBase {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(obj.source);
+		this._miscFilter.addItem(obj._fMisc);
 	}
 
 	async _pPopulateBoxOptions (opts) {

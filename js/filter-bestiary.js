@@ -72,8 +72,8 @@ class PageFilterBestiary extends PageFilterBase {
 	static _getAbilitySaveDisplayText (abl) { return `${abl.uppercaseFirst()} Save`; }
 	// endregion
 
-	constructor () {
-		super();
+	constructor (opts) {
+		super(opts);
 
 		this._crFilter = new RangeFilter({
 			header: "Challenge Rating",
@@ -243,7 +243,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenseFilter = new MultiFilter({header: "Damage", cnHeader:"伤害", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._traitFilter = new Filter({
 			header: "Traits",
@@ -262,7 +262,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader: "杂项",
-			items: ["Familiar", ...Object.keys(Parser.MON_MISC_TAG_TO_FULL), "Bonus Actions", "Lair Actions", "Legendary", "Mythic", "Adventure NPC", "Spellcaster", ...Object.values(Parser.ATB_ABV_TO_FULL).map(it => `${PageFilterBestiary.MISC_FILTER_SPELLCASTER}${it}`), "Regional Effects", "Reactions", "重置", "Swarm", "Has Variants", "Modified Copy", "Has Alternate Token", "有简介", "有图片", "Has Token", "Has Recharge", "SRD", "基础规则", "传奇", "AC from Item(s)", "AC from Natural Armor", "AC from Unarmored Defense", "Summoned by Spell", "Summoned by Class"],
+			items: ["Familiar", ...Object.keys(Parser.MON_MISC_TAG_TO_FULL), "Bonus Actions", "Lair Actions", "Legendary", "Mythic", "Adventure NPC", "Spellcaster", ...Object.values(Parser.ATB_ABV_TO_FULL).map(it => `${PageFilterBestiary.MISC_FILTER_SPELLCASTER}${it}`), "Regional Effects", "Reactions", "重置", "Swarm", "Has Variants", "Modified Copy", "Has Alternate Token", "有简介", "有图片", "Has Token", "Has Recharge", "传奇", "AC from Item(s)", "AC from Natural Armor", "AC from Unarmored Defense", "Summoned by Spell", "Summoned by Class"],
 			displayFn: (it) => Parser.monMiscTagToFull(it).uppercaseFirst(),
 			deselFn: (it) => ["Adventure NPC", "重置"].includes(it),
 			itemSortFn: PageFilterBestiary.ascSortMiscFilter,
@@ -334,7 +334,8 @@ class PageFilterBestiary extends PageFilterBase {
 				mon[propF] = typeof mon[ab] !== "number" ? null : mon[ab];
 			});
 
-		mon._fMisc = [...mon.miscTags || []];
+		this._mutateForFilters_commonMisc(mon);
+		mon._fMisc.push(...mon.miscTags || []);
 		for (const it of (mon.trait || [])) {
 			if (it.name && it.name.startsWith("Unarmored Defense")) mon._fMisc.push("AC from Unarmored Defense");
 		}
@@ -364,7 +365,6 @@ class PageFilterBestiary extends PageFilterBase {
 		if (mon.variant) mon._fMisc.push("Has Variants");
 		if (mon._isCopy) mon._fMisc.push("Modified Copy");
 		if (mon.altArt) mon._fMisc.push("Has Alternate Token");
-		this._mutateForFilters_commonMisc(mon);
 		if (Renderer.monster.hasToken(mon)) mon._fMisc.push("Has Token");
 		if (mon.mythic) mon._fMisc.push("Mythic");
 		if (this._hasFluff(mon)) mon._fMisc.push("有简介");
@@ -525,6 +525,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._spellKnownFilter.addItem(mon._fSpellsKnown);
 		this._equipmentFilter.addItem(mon._fEquipment);
 		if (mon._versionBase_isVersion) this._miscFilter.addItem("Is Variant");
+		this._miscFilter.addItem(mon._fMisc);
 		this._damageTypeFilterBase.addItem(mon.damageTags);
 		this._damageTypeFilterLegendary.addItem(mon.damageTagsLegendary);
 		this._damageTypeFilterSpells.addItem(mon.damageTagsSpell);
@@ -552,7 +553,7 @@ class PageFilterBestiary extends PageFilterBase {
 			this._sidekickTypeFilter,
 			this._sidekickTagFilter,
 			this._environmentFilter,
-			this._defenceFilter,
+			this._defenseFilter,
 			this._conditionImmuneFilter,
 			this._traitFilter,
 			this._actionReactionFilter,

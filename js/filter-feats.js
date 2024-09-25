@@ -73,7 +73,7 @@ class PageFilterFeats extends PageFilterBase {
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			cnHeader:"杂项",
-			items: ["有简介", "有图片", "SRD", "基础规则", "传奇"],
+			items: ["有简介", "有图片", "传奇"],
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
@@ -94,6 +94,7 @@ class PageFilterFeats extends PageFilterBase {
 				.map(it => `${it.level.level ?? it.level} 级`)
 			: [];
 		feat._fBenifits = [
+			...(feat.traitTags || []),
 			feat.resist ? "伤害抗性" : null,
 			feat.immune ? "Damage Immunity" : null,
 			feat.conditionImmune ? "Condition Immunity" : null,
