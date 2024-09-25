@@ -120,7 +120,7 @@ async function getPersonDetails (opts) {
 			else return rollSuppRace().result;
 		})() : rollSuppRace().result;
 
-		out.unshift(`<i><b>Race:</b> ${race}</i>`);
+		out.unshift(`<i><b>Species:</b> ${race}</i>`);
 		const gender = opts.gender ? opts.gender : rollUnofficialGender().result;
 		out.unshift(`<i><b>Gender:</b> ${gender}</i>`);
 
@@ -700,9 +700,9 @@ async function pSectParents () {
 	}
 
 	if (selRace === "Other") {
-		$parents.html(concatSentences(`<b>Race:</b> Other ${fmtChoice(`${race}; generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table`, true)}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>Species:</b> Other ${fmtChoice(`${race}; generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table`, true)}`, knowParentsStr, parentage));
 	} else {
-		$parents.html(concatSentences(`<b>Race:</b> ${race}${selRace === "Random" ? ` ${fmtChoice("generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table", true)}` : ""}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>Species:</b> ${race}${selRace === "Random" ? ` ${fmtChoice("generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table", true)}` : ""}`, knowParentsStr, parentage));
 	}
 
 	if (knowParents) {
@@ -798,7 +798,7 @@ function sectFamily () {
 	$family.empty();
 	$family.append(`<b>Family:</b> ${GenUtil.getFromTable(FAMILY, RNG(100)).result}<br>`);
 	let famIndex = 1;
-	const $btnSuppFam = $(`<button class="btn btn-xs btn-default btn-supp-fam no-print"></button>`).on("click", async () => {
+	const $btnSuppFam = $(`<button class="ve-btn ve-btn-xs ve-btn-default ve-btn-supp-fam no-print"></button>`).on("click", async () => {
 		const supDetails = await getPersonDetails();
 		const $wrpRes = $(`<div class="life__output-wrp-border p-3 my-2"></div>`);
 		$wrpRes.append(`<h5 class="mt-0">Family Member Roll ${famIndex++}</h5>`);
@@ -873,7 +873,7 @@ function sectLifeEvents () {
 
 		doRollAndDisplay();
 
-		const $btnReroll = $(`<button class="btn btn-default btn-xxs">Reroll</button>`)
+		const $btnReroll = $(`<button class="ve-btn ve-btn-default ve-btn-xxs">Reroll</button>`)
 			.click(() => doRollAndDisplay({isScrollIntoView: true}));
 
 		const $wrpEvent = $$`<div class="ve-flex-col">

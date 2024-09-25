@@ -1,5 +1,6 @@
 import {ConfigSettingsGroup} from "./util-config-settings-group.js";
 import {ConfigSettingBoolean, ConfigSettingEnum, ConfigSettingExternal} from "./utils-config-setting-base.js";
+import {SITE_STYLE__CLASSIC, SITE_STYLE__ONE, SITE_STYLE_DISPLAY} from "../consts.js";
 
 const settingsGroupStyleSwitcher = new ConfigSettingsGroup({
 	groupId: "styleSwitcher",
@@ -15,6 +16,19 @@ const settingsGroupStyleSwitcher = new ConfigSettingsGroup({
 				_getEleExternal () { return StyleSwitcher.getSelStyle(); }
 			}
 		)(),
+		new ConfigSettingEnum({
+			configId: "style",
+			name: `<span>Style <span class="ve-small">(see also: <a class="https://2014.5e.tools" rel="noopener noreferrer" target="_blank">2014.5e.tools</a>)</span></span>`,
+			help: `The styling to be applied when rendering specific information (stat blocks, etc.). Does not affect what content is available, only how it is displayed. See also: https://2014.5e.tools.`,
+			isRowLabel: true,
+			isReloadRequired: true,
+			default: SITE_STYLE__ONE,
+			values: [
+				SITE_STYLE__CLASSIC,
+				SITE_STYLE__ONE,
+			],
+			fnDisplay: it => SITE_STYLE_DISPLAY[it] || it,
+		}),
 		new (
 			class extends ConfigSettingExternal {
 				_configId = "isWideMode";

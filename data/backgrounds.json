@@ -11,6 +11,9 @@
 			"page": 127,
 			"srd": true,
 			"basicRules": true,
+			"reprintedAs": [
+				"Acolyte|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"insight": true,
@@ -255,6 +258,133 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Acolyte",
+			"source": "XPHB",
+			"page": 178,
+			"freeRules2024": true,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"int",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"int",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"religion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "book|xphb",
+							"displayName": "Book (Prayers)"
+						},
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "holy symbol|xphb"
+						},
+						{
+							"item": "parchment|xphb",
+							"quantity": 10
+						},
+						{
+							"item": "robes|xphb"
+						},
+						{
+							"value": 800
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Intelligence, Wisdom, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Magic Initiate|XPHB} (Cleric)"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Insight|XPHB}, {@skill Religion|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Calligrapher's Supplies|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Calligrapher's Supplies|XPHB}, {@item Book|XPHB|Book (prayers)}, {@item Holy Symbol|XPHB}, {@item Parchment|XPHB|Patchment (10 sheets)}, {@item Robe|xphb}, 8 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Anthropologist",
@@ -838,6 +968,125 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Artisan",
+			"source": "XPHB",
+			"page": 179,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"int"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"int"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"crafter|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"investigation": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"anyArtisansTool": 1
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "artisan's tools|xphb"
+						},
+						{
+							"item": "pouch|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 3200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Dexterity, Intelligence"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Crafter|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Investigation|XPHB}, {@skill Persuasion|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "Choose one kind of {@item Artisan's Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Artisan's Tools|XPHB} (same as above), 2 {@item Pouch|XPHB|Pouches}, {@item Traveler's Clothes|XPHB}, 32 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Ashari",
 			"source": "TDCSR",
 			"page": 180,
@@ -1356,7 +1605,7 @@
 					"name": "Feature: Echoes of Victory",
 					"type": "entries",
 					"entries": [
-						"You have attracted admiration among spectators, fellow athletes, and trainers in the region that hosted your past athletic victories. When visiting any settlement within 100 miles of where you grew up, there is a {@chance 50|50 percent} chance you can find someone there who admires you and is willing to provide information or temporary shelter.",
+						"You have attracted admiration among spectators, fellow athletes, and trainers in the region that hosted your past athletic victories. When visiting any settlement within 100 miles of where you grew up, there is a {@chance 50} chance you can find someone there who admires you and is willing to provide information or temporary shelter.",
 						"Between adventures, you might compete in athletic events sufficient enough to maintain a comfortable lifestyle, as per the \"{@book Practicing a Profession|PHB|8|Practicing a Profession}\" downtime activity in chapter 8 of the {@book Player's Handbook|PHB}."
 					],
 					"data": {
@@ -4179,6 +4428,9 @@
 			"name": "Charlatan",
 			"source": "PHB",
 			"page": 128,
+			"reprintedAs": [
+				"Charlatan|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"deception": true,
@@ -4467,6 +4719,124 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Charlatan",
+			"source": "XPHB",
+			"page": 180,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"sleight of hand": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "forgery kit|xphb"
+						},
+						{
+							"item": "costume|xphb"
+						},
+						{
+							"item": "fine clothes|xphb"
+						},
+						{
+							"value": 1500
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Dexterity, Constitution, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Skilled|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Deception|XPHB}, {@skill Sleight of Hand|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Forgery Kit|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Forgery Kit|XPHB}, {@item Costume|XPHB}, {@item Fine Clothes|XPHB}, 15 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "City Watch",
@@ -5706,6 +6076,9 @@
 			"source": "PHB",
 			"page": 129,
 			"basicRules": true,
+			"reprintedAs": [
+				"Criminal|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"deception": true,
@@ -5982,6 +6355,133 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Criminal",
+			"source": "XPHB",
+			"page": 180,
+			"freeRules2024": true,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"int"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"int"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"alert|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"sleight of hand": true,
+					"stealth": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"thieves' tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "dagger|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "thieves' tools|xphb"
+						},
+						{
+							"item": "crowbar|xphb"
+						},
+						{
+							"item": "pouch|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Dexterity, Constitution, Intelligence"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Alert|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Sleight of Hand|XPHB}, {@skill Stealth|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Thieves' Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Dagger|XPHB|2 Daggers}, {@item Thieves' Tools|XPHB}, {@item Crowbar|XPHB}, {@item Pouch|XPHB|2 Pouches}, {@item Traveler's Clothes|XPHB}, 16 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Custom Background",
@@ -7436,6 +7936,9 @@
 			"name": "Entertainer",
 			"source": "PHB",
 			"page": 130,
+			"reprintedAs": [
+				"Entertainer|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"acrobatics": true,
@@ -7722,6 +8225,131 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Entertainer",
+			"source": "XPHB",
+			"page": 180,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"musician|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"performance": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"musical instrument": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "musical instrument|xphb"
+						},
+						{
+							"item": "costume|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "mirror|xphb"
+						},
+						{
+							"item": "perfume|xphb"
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1100
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Dexterity, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Musician|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Acrobatics|XPHB}, {@skill Performance|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "Choose one kind of {@item Musical Instrument|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Musical Instrument|XPHB} (same as above), {@item Costume|XPHB|2 Costumes}, {@item Mirror|XPHB}, {@item Perfume|XPHB}, {@item Traveler's Clothes|XPHB}, 11 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Faceless",
@@ -8641,6 +9269,133 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Farmer",
+			"source": "XPHB",
+			"page": 180,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"con",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"con",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"tough|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"animal handling": true,
+					"nature": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"carpenter's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "sickle|xphb"
+						},
+						{
+							"item": "carpenter's tools|xphb"
+						},
+						{
+							"item": "healer's kit|xphb"
+						},
+						{
+							"item": "iron pot|xphb"
+						},
+						{
+							"item": "shovel|xphb"
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 3000
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Constitution, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Tough|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Animal Handling|XPHB}, {@skill Nature|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Carpenter's Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Sickle|XPHB}, {@item Carpenter's Tools|XPHB}, {@item Healer's Kit|XPHB}, {@item Iron Pot|XPHB}, {@item Shovel|XPHB}, 30 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Feylost",
@@ -11879,6 +12634,271 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Guard",
+			"source": "XPHB",
+			"page": 181,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"alert|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "spear|xphb"
+						},
+						{
+							"item": "light crossbow|xphb"
+						},
+						{
+							"item": "crossbow bolt|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "hooded lantern|xphb"
+						},
+						{
+							"item": "manacles|xphb"
+						},
+						{
+							"item": "quiver|xphb"
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Intelligence, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Alert|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Athletics|XPHB}, {@skill Perception|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "Choose one kind of {@item Gaming Set|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Spear|XPHB}, {@item Light Crossbow|XPHB}, 20 {@item Bolt|XPHB|Bolts}, {@item Gaming Set|XPHB} (same as above), {@item Hooded Lantern|XPHB}, {@item Manacles|XPHB}, {@item Quiver|XPHB}, {@item Traveler's Clothes|XPHB}, 12 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Guide",
+			"source": "XPHB",
+			"page": 181,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"con",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"stealth": true,
+					"survival": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"cartographer's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "shortbow|xphb"
+						},
+						{
+							"item": "arrow|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "cartographer's tools|xphb"
+						},
+						{
+							"item": "bedroll|xphb"
+						},
+						{
+							"item": "quiver|xphb"
+						},
+						{
+							"item": "tent|xphb"
+						},
+						{
+							"item": "traveller's clothes|xphb"
+						},
+						{
+							"value": 300
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Dexterity, Constitution, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Magic Initiate|XPHB} (Druid)"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Stealth|XPHB}, {@skill Survival|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Cartographer's Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Shortbow|XPHB}, {@item Arrow|XPHB|20 Arrows}, {@item Cartographer's Tools|XPHB}, {@item Bedroll|XPHB}, {@item Quiver|XPHB}, {@item Tent|XPHB}, {@item Traveler's Clothes|XPHB}, 3 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Guild Artisan",
 			"source": "PHB",
 			"page": 132,
@@ -12878,6 +13898,9 @@
 			"name": "Hermit",
 			"source": "PHB",
 			"page": 134,
+			"reprintedAs": [
+				"Hermit|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"medicine": true,
@@ -13168,6 +14191,137 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Hermit",
+			"source": "XPHB",
+			"page": 182,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"healer|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"medicine": true,
+					"religion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"herbalism kit": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "quarterstaff|xphb"
+						},
+						{
+							"item": "herbalism kit|xphb"
+						},
+						{
+							"item": "bedroll|xphb"
+						},
+						{
+							"item": "book|xphb"
+						},
+						{
+							"item": "lamp|xphb"
+						},
+						{
+							"item": "oil (flask)|xphb",
+							"quantity": 3
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Constitution, Wisdom, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Healer|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Medicine|XPHB}, {@skill Religion|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Herbalism Kit|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Quarterstaff|XPHB}, {@item Herbalism Kit|XPHB}, {@item Bedroll|XPHB}, {@item Book|XPHB} (philosophy), {@item Lamp|XPHB}, {@item Oil|XPHB} (3 flasks), {@item Traveler's Clothes|XPHB}, 16 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hillsfar Merchant",
@@ -16048,48 +17202,7 @@
 							"type": "entries",
 							"name": "Lorehold Trinkets",
 							"entries": [
-								"When you make your character, you may roll once on the Lorehold Trinkets table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket.",
-								{
-									"type": "table",
-									"caption": "Lorehold Trinkets",
-									"colLabels": [
-										"d6",
-										"Trinket"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"A map made of concentric circles that can be rotated around the page"
-										],
-										[
-											"2",
-											"A puzzle box bedecked with amber"
-										],
-										[
-											"3",
-											"A dented brass compass with a red needle"
-										],
-										[
-											"4",
-											"The head of a broken statue that houses the consciousness of a snarky sage"
-										],
-										[
-											"5",
-											"A sheet of parchment embossed with tactile lettering, glowing red"
-										],
-										[
-											"6",
-											"A broken dagger with a wavy blade and a serpentine hilt"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"When you make your character, you may roll once on the {@item Lorehold Trinket|SCC|Lorehold Trinkets} table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket."
 							]
 						}
 					]
@@ -17195,6 +18308,125 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Merchant",
+			"source": "XPHB",
+			"page": 182,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"lucky|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"animal handling": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"navigator's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "navigator's tools|xphb"
+						},
+						{
+							"item": "pouch|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 2200
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Constitution, Intelligence, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Lucky|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Animal Handling|XPHB}, {@skill Persuasion|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Navigator's Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Navigator's Tools|XPHB}, {@item Pouch|XPHB|2 Pouches}, {@item Traveler's Clothes|XPHB}, 22 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Mulmaster Aristocrat",
 			"source": "ALElementalEvil",
 			"page": 5,
@@ -17459,6 +18691,9 @@
 			"source": "PHB",
 			"page": 135,
 			"basicRules": true,
+			"reprintedAs": [
+				"Noble|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"history": true,
@@ -17692,6 +18927,124 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Noble",
+			"source": "XPHB",
+			"page": 183,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"int",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"Skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"history": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "fine clothes|xphb"
+						},
+						{
+							"item": "perfume|xphb"
+						},
+						{
+							"value": 2900
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Intelligence, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Skilled|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill History|XPHB}, {@skill Persuasion|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "Choose one kind of {@item Gaming Set|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Gaming Set|XPHB} (same as above), {@item Fine Clothes|XPHB}, {@item Perfume|XPHB}, 29 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Orzhov Representative",
@@ -19770,48 +21123,7 @@
 							"type": "entries",
 							"name": "Prismari Trinkets",
 							"entries": [
-								"When you make your character, you may roll once on the Prismari Trinkets table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket.",
-								{
-									"type": "table",
-									"caption": "Prismari Trinkets",
-									"colLabels": [
-										"d6",
-										"Trinket"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"A pair of rose-tinted glasses with glittery frames"
-										],
-										[
-											"2",
-											"A stoppered glass bottle that, when opened, plays a brassy orchestral piece"
-										],
-										[
-											"3",
-											"A quartet of hovering water motes in a vial"
-										],
-										[
-											"4",
-											"A bandolier of watercolor paints"
-										],
-										[
-											"5",
-											"A tiara capped with a crystal that crackles with harmless lightning"
-										],
-										[
-											"6",
-											"An iridescent quill"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"When you make your character, you may roll once on the {@item Prismari Trinket|SCC|Prismari Trinkets} table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket."
 							]
 						}
 					]
@@ -20022,48 +21334,7 @@
 							"type": "entries",
 							"name": "Quandrix Trinkets",
 							"entries": [
-								"When you make your character, you may roll once on the Quandrix Trinkets table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket.",
-								{
-									"type": "table",
-									"caption": "Quandrix Trinkets",
-									"colLabels": [
-										"d6",
-										"Trinket"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"A small succulent in a dodecahedral clay pot"
-										],
-										[
-											"2",
-											"A blue knit hat that looks a bit like a bottle folding in on itself"
-										],
-										[
-											"3",
-											"A model hypercube carved from green crystal, showcasing the fourth dimension"
-										],
-										[
-											"4",
-											"A crumpled test on the theory of gravity manipulation, with a failing grade on the front and the name of a famous Quandrix professor"
-										],
-										[
-											"5",
-											"A blue tetrahedron that, when tapped twice, projects a recording of an old mathematics lecture"
-										],
-										[
-											"6",
-											"A round bread roll cut so that someone could spread butter on both halves without ever lifting the knife"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"When you make your character, you may roll once on the {@item Quandrix Trinket|SCC|Quandrix Trinkets} table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket."
 							]
 						}
 					]
@@ -21351,7 +22622,7 @@
 							"entry": "A cracked {@item hourglass|PHB}, a set of rusty {@item manacles|PHB}, a half-empty bottle, a {@item hunting trap|PHB}, a {@item gaming set|PHB} (matching your chosen proficiency), a set of {@item traveler's clothes|PHB}, and a {@item pouch|PHB} containing 13 gp"
 						},
 						{
-							"type": "entries",
+							"type": "item",
 							"name": "Tool Proficiencies:",
 							"entries": [
 								"One {@filter gaming set|items|source=phb|miscellaneous=mundane|type=gaming set} of your choice (such as playing cards or three-dragon ante cards)"
@@ -21657,6 +22928,9 @@
 			"source": "PHB",
 			"page": 137,
 			"basicRules": true,
+			"reprintedAs": [
+				"Sage|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"arcana": true,
@@ -21940,9 +23214,138 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Sage",
+			"source": "XPHB",
+			"page": 183,
+			"freeRules2024": true,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"con",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"magic initiate|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"arcana": true,
+					"history": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "quarterstaff|xphb"
+						},
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "book|xphb"
+						},
+						{
+							"item": "parchment|xphb",
+							"quantity": 8
+						},
+						{
+							"item": "robe|xphb"
+						},
+						{
+							"value": 800
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Constitution, Intelligence, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Magic Initiate|XPHB} (Wizard)"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Arcana|XPHB}, {@skill History|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Calligrapher's Supplies|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Quarterstaff|XPHB}, {@item Calligrapher's Supplies|XPHB}, {@item Book|XPHB} (history), {@item Parchment|XPHB} (8 sheets), {@item Robe|XPHB}, 8 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Sailor",
 			"source": "PHB",
 			"page": 139,
+			"reprintedAs": [
+				"Sailor|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"athletics": true,
@@ -22172,6 +23575,251 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Sailor",
+			"source": "XPHB",
+			"page": 184,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"tavern brawler|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"acrobatics": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"navigator's tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "dagger|xphb"
+						},
+						{
+							"item": "navigator's tools|xphb"
+						},
+						{
+							"item": "rope|xphb"
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 2000
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Dexterity, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Tavern Brawler|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Acrobatics|XPHB}, {@skill Perception|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Navigator's Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Dagger|XPHB}, {@item Navigator's Tools|XPHB}, {@item Rope|XPHB}, {@item Traveler's Clothes|XPHB}, 20 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scribe",
+			"source": "XPHB",
+			"page": 184,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"int",
+								"wis"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"int",
+								"wis"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"skilled|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"investigation": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"calligrapher's supplies": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "calligrapher's supplies|xphb"
+						},
+						{
+							"item": "fine clothes|xphb"
+						},
+						{
+							"item": "lamp|xphb"
+						},
+						{
+							"item": "oil (flask)|xphb"
+						},
+						{
+							"item": "parchment|xphb"
+						},
+						{
+							"value": 2300
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Dexterity, Intelligence, Wisdom"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Skilled|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Investigation|XPHB}, {@skill Perception|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Calligrapher's Supplies|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Calligrapher's Supplies|XPHB}, {@item Fine Clothes|XPHB}, {@item Lamp|XPHB}, {@item Oil|XPHB} (3 flasks), {@item Parchment|XPHB} (12 sheets), 23 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Secret Identity",
@@ -23592,48 +25240,7 @@
 							"type": "entries",
 							"name": "Silverquill Trinkets",
 							"entries": [
-								"When you make your character, you may roll once on the Silverquill Trinkets table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket.",
-								{
-									"type": "table",
-									"caption": "Silverquill Trinkets",
-									"colLabels": [
-										"d6",
-										"Trinket"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"A black leather notebook filled with half-finished poems"
-										],
-										[
-											"2",
-											"A set of flashcards detailing different colloquialisms and their meanings"
-										],
-										[
-											"3",
-											"A canteen that makes any liquid drunk from it taste sweet"
-										],
-										[
-											"4",
-											"A forged permission slip granting access to the special archives of Strixhaven's libraries"
-										],
-										[
-											"5",
-											"A stylish silver pin that references a famous series of novels about warlocks"
-										],
-										[
-											"6",
-											"A stack of small pieces of parchment, each enchanted to stick to whatever surface it's pressed against and peel off easily"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"When you make your character, you may roll once on the {@item Silverquill Trinket|SCC|Silverquill Trinkets} table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket."
 							]
 						}
 					]
@@ -24428,6 +26035,9 @@
 			"source": "PHB",
 			"page": 140,
 			"basicRules": true,
+			"reprintedAs": [
+				"Soldier|XPHB"
+			],
 			"skillProficiencies": [
 				{
 					"athletics": true,
@@ -24717,6 +26327,138 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Soldier",
+			"source": "XPHB",
+			"page": 185,
+			"freeRules2024": true,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"con"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"str",
+								"dex",
+								"con"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"savage attacker|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"intimidation": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"gaming set": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "spear|xphb"
+						},
+						{
+							"item": "shortbow|xphb"
+						},
+						{
+							"item": "arrow|xphb",
+							"quantity": 20
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "healer's kit|xphb"
+						},
+						{
+							"item": "quiver|xphb"
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1400
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Strength, Dexterity, Constitution"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Savage Attacker|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Athletics|XPHB}, {@skill Intimidation|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "Choose one kind of {@item Gaming Set|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Spear|XPHB}, {@item Shortbow|XPHB}, {@item Arrow|XPHB|20 Arrows}, {@item Gaming Set|XPHB} (same as above), {@item Healer's Kit|XPHB}, {@item Quiver|XPHB}, {@item Traveler's Clothes|XPHB}, 14 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Stojanow Prisoner",
@@ -27478,6 +29220,135 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Wayfarer",
+			"source": "XPHB",
+			"page": 185,
+			"edition": "one",
+			"ability": [
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								2,
+								1
+							]
+						}
+					}
+				},
+				{
+					"choose": {
+						"weighted": {
+							"from": [
+								"dex",
+								"wis",
+								"cha"
+							],
+							"weights": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			],
+			"feats": [
+				{
+					"lucky|xphb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"stealth": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"toolProficiencies": [
+				{
+					"thieves' tools": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"a": [
+						{
+							"item": "dagger|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "thieves' tools|xphb"
+						},
+						{
+							"item": "gaming set|xphb"
+						},
+						{
+							"item": "bedroll|xphb"
+						},
+						{
+							"item": "pouch|xphb",
+							"quantity": 2
+						},
+						{
+							"item": "traveler's clothes|xphb"
+						},
+						{
+							"value": 1600
+						}
+					],
+					"b": [
+						{
+							"value": 5000
+						}
+					]
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Ability Scores:",
+							"entry": "Dexterity, Wisdom, Charisma"
+						},
+						{
+							"type": "item",
+							"name": "Feat:",
+							"entry": "{@feat Lucky|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Insight|XPHB}, {@skill Stealth|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiency:",
+							"entry": "{@item Thieves' Tools|XPHB}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "Choose A or B: (A) {@item Dagger|XPHB|2 Daggers}, {@item Thieves' Tools|XPHB}, {@item Gaming Set|XPHB} (any), {@item Bedroll|XPHB}, {@item Pouch|XPHB|2 Pouches}, {@item Traveler's Clothes|XPHB}, 16 GP; or (B) 50 GP"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Whitestone Rifle Corps",
 			"source": "TDCSR",
 			"page": 187,
@@ -28755,48 +30626,7 @@
 							"type": "entries",
 							"name": "Witherbloom Trinkets",
 							"entries": [
-								"When you make your character, you may roll once on the Witherbloom Trinkets table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket.",
-								{
-									"type": "table",
-									"caption": "Witherbloom Trinkets",
-									"colLabels": [
-										"d6",
-										"Trinket"
-									],
-									"colStyles": [
-										"col-2 text-center",
-										"col-10"
-									],
-									"rows": [
-										[
-											"1",
-											"A black bird-shaped mask, trimmed with glowing green thread"
-										],
-										[
-											"2",
-											"A set of rabbit bones"
-										],
-										[
-											"3",
-											"A pair of thick knee-high waders, stained with muck and moss"
-										],
-										[
-											"4",
-											"A slimy green tentacle, which occasionally wriggles"
-										],
-										[
-											"5",
-											"A notebook containing waterproof paper"
-										],
-										[
-											"6",
-											"A necklace of five small vials, each filled with luminescent white liquid"
-										]
-									],
-									"data": {
-										"tableInclude": true
-									}
-								}
+								"When you make your character, you may roll once on the {@item Witherbloom Trinket|SCC|Witherbloom Trinkets} table, instead of on the {@item trinket|phb|Trinkets table} in the {@book Player's Handbook|PHB}, for your starting trinket."
 							]
 						}
 					]
