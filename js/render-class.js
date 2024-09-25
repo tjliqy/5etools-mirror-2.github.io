@@ -101,7 +101,7 @@ class _RenderClassesSidebarImplBase {
 		const abilityPart = [orPart, basePart].filter(Boolean).join("; ");
 
 		const allEntries = [
-			abilityPart ? `{@b Ability Score Minimum:} ${abilityPart}` : null,
+			abilityPart ? `{@b 最低属性值:} ${abilityPart}` : null,
 			...requirements.entries || [],
 		]
 			.filter(Boolean);
@@ -148,28 +148,28 @@ class _RenderClassesSidebarImplBase {
 		const ptMcPrereqSpecial = mc.requirementsSpecial
 			? `<div>
 				${htmlMCcPrereqPreText}
-				<b>${htmlMCcPrereqPreText ? "Other " : ""}Prerequisites:</b> ${renderer.render(mc.requirementsSpecial || "")}
+				<b>${htmlMCcPrereqPreText ? "Other " : ""}先决条件:</b> ${renderer.render(mc.requirementsSpecial || "")}
 			</div>`
 			: "";
 
 		const ptMcProfsIntro = mc.requirements && mc.proficienciesGained
-			? `<div>When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies.</div>`
+			? `<div>当你不是以起始等级获得新职业的等级，你只会获得该职业一部分的起始熟练项目。</div>`
 			: "";
 
 		const ptMcProfsArmor = mc.proficienciesGained?.armor
-			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "Armor" : "Armor Training"}:</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor, {styleHint: this._style})}</div>`
+			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "护甲" : "护甲受训"}:</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor, {styleHint: this._style})}</div>`
 			: "";
 
 		const ptMcProfsWeapons = mc.proficienciesGained?.weapons
-			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "Weapons" : "Weapon Proficiencies"}:</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons, {styleHint: this._style})}</div>`
+			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "武器" : "武器熟练"}:</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons, {styleHint: this._style})}</div>`
 			: "";
 
 		const ptMcProfsTools = mc.proficienciesGained?.tools
-			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "Tools" : "Tool Proficiencies"}:</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools, {styleHint: this._style})}</div>`
+			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "工具" : "工具熟练"}:</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools, {styleHint: this._style})}</div>`
 			: "";
 
 		const ptMcProfsSkills = mc.proficienciesGained?.skills
-			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "Skills" : "Skill Proficiencies"}:</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills, {styleHint: this._style})}</div>`
+			? `<div><b>${this._style === SITE_STYLE__CLASSIC ? "技能" : "技能熟练"}:</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills, {styleHint: this._style})}</div>`
 			: "";
 
 		const ptsProfs = this._style === SITE_STYLE__CLASSIC
@@ -193,7 +193,7 @@ class _RenderClassesSidebarImplBase {
 		const ele = e_({
 			tag: "tr",
 			html: `<td class="cls-side__section" colspan="6">
-				<h5 class="cls-side__section-head">Multiclassing</h5>
+				<h5 class="cls-side__section-head">兼职</h5>
 				${ptMcPrereq}
 				${ptMcPrereqSpecial}
 				${ptMcEntries}
@@ -266,7 +266,7 @@ class _RenderClassesSidebarImplClassic extends _RenderClassesSidebarImplBase {
 
 		const ele = ee`<tr>
 			<td class="cls-side__section" colspan="6">
-				<h5 class="cls-side__section-head">Starting Equipment</h5>
+				<h5 class="cls-side__section-head">起始装备</h5>
 				<div>${eleDisp}</div>
 			</td>
 		</tr>`;
@@ -380,7 +380,7 @@ class _RenderClassesSidebarImplOne extends _RenderClassesSidebarImplBase {
 		const ele = e_({
 			tag: "tr",
 			html: `<td colspan="6" class="cls-side__section">
-				<h5 class="cls-side__section-head">Core Traits</h5>
+				<h5 class="cls-side__section-head">核心特质</h5>
 				${pts}
 			</td>`,
 		});

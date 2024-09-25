@@ -18,6 +18,7 @@ export class FilterBase extends BaseComponent {
 
 		this.header = opts.header;
 		this._headerHelp = opts.headerHelp;
+		this.cnHeader = opts.cnHeader;
 
 		this.__meta = {...this.getDefaultMeta()};
 		this._meta = this._getProxy("meta", this.__meta);
@@ -30,7 +31,7 @@ export class FilterBase extends BaseComponent {
 	}
 
 	_getRenderedHeader () {
-		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help-subtle"` : ""}>${this.header}</span>`;
+		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help-subtle"` : ""}>${this.cnHeader || this.header}</span>`;
 	}
 
 	set filterBox (it) { this._filterBox = it; }

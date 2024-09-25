@@ -199,11 +199,13 @@ class PageFilterClasses extends PageFilterClassesBase {
 
 		this._levelFilter = new RangeFilter({
 			header: "Feature Level",
+			cnHeader: "特性等级",
 			min: 1,
 			max: 20,
 		});
 		this._primaryAbilityFilter = new Filter({
 			header: "Primary Ability",
+			cnHeader:"主要属性",
 			items: [
 				"str",
 				"dex",

@@ -2686,7 +2686,7 @@ Renderer.getAbilityData._doRenderOuter = function (abObj) {
 			: areIncrease.concat(areReduce).joinConjunct(", ", isAny ? "; " : " 和 ");
 
 		toConvertToText.push(`${startText}${ptAreaIncrease}`);
-		toConvertToShortText.push(`${isAny ? "任意组合 " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` 从 ${w.from.map(it => it.uppercaseFirst()).join("/")}中`}`);
+		toConvertToShortText.push(`${isAny ? "任意组合 " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` 从 ${w.from.map(it => Parser.attAbvToFull(it) || it.uppercaseFirst()).join("/")} 中选`}`);
 	}
 
 	function handleAbilitiesChooseFrom () {
@@ -2995,7 +2995,7 @@ Renderer.utils = class {
 			})
 			.join("; ");
 
-		return `Reprinted as ${ptReprinted}`;
+		return `重印为 ${ptReprinted}`;
 	}
 
 	static getSourceAndPageHtml (it) { return this._getSourceAndPageHtmlOrText(it); }
@@ -3019,7 +3019,7 @@ Renderer.utils = class {
 			: it.basicRules
 				? `基础规则 (2014)${typeof it.basicRules === "string" ? ` (as &quot;${it.basicRules}&quot;)` : ""}`
 				: "";
-		const srdAndBasicRulesText = (srdText || basicRulesText) ? `Available in ${[srdText, basicRulesText].filter(it => it).join(" 和 ")}` : "";
+		const srdAndBasicRulesText = (srdText || basicRulesText) ? `可用于 ${[srdText, basicRulesText].filter(it => it).join(" 和 ")}` : "";
 
 		return `${[baseText, addSourceText, reprintedAsText, otherSourceText, srdAndBasicRulesText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || srdAndBasicRulesText || externalSourceText) ? "." : ""}`;
 	}
@@ -3340,11 +3340,12 @@ Renderer.utils = class {
 
 		static _getShortClassName (className) {
 			// remove all the vowels except the first
-			const ixFirstVowel = /[aeiou]/.exec(className).index;
-			const start = className.slice(0, ixFirstVowel + 1);
-			let end = className.slice(ixFirstVowel + 1);
-			end = end.replace(/[aeiou]/g, "");
-			return `${start}${end}`.toTitleCase();
+			// const ixFirstVowel = /[aeiou]/.exec(className).index;
+			// const start = className.slice(0, ixFirstVowel + 1);
+			// let end = className.slice(ixFirstVowel + 1);
+			// end = end.replace(/[aeiou]/g, "");
+			// return `${start}${end}`.toTitleCase();
+			return className;
 		}
 
 		/**
@@ -3471,14 +3472,14 @@ Renderer.utils = class {
 				if (isListMode) return `Lvl ${v}`;
 
 				if (styleHint === "classic") return `${Parser.getOrdinalForm(v)}级`;
-				return `Level ${v}+`;
+				return `等级 ${v}+`;
 			}
 
 			if (!v.class && !v.subclass) {
 				if (isListMode) return `Lvl ${v.level}`;
 
 				if (styleHint === "classic") return `${Parser.getOrdinalForm(v.level)}级`;
-				return `Level ${v.level}+`;
+				return `等级 ${v.level}+`;
 			}
 
 			const isLevelVisible = v.level !== 1; // Hide the "implicit" 1st level.
@@ -3498,7 +3499,7 @@ Renderer.utils = class {
 				? ""
 				: styleHint === "classic"
 					? `${Parser.getOrdinalForm(v.level)}级`
-					: `Level ${v.level}+`;
+					: `${v.level}级+`;
 
 			return [ptLevel, classPart].filter(Boolean).join(" ");
 		}
@@ -3569,7 +3570,7 @@ Renderer.utils = class {
 					.map(it => Renderer.item.getType(it, {isIgnoreMissing: true}))
 					.filter(Boolean)
 					.map(it => it.name?.toTitleCase())
-					.joinConjunct(", ", " and ");
+					.joinConjunct(", ", " 和 ");
 		}
 
 		static _getHtml_itemProperty ({v, isListMode}) {
@@ -3586,7 +3587,7 @@ Renderer.utils = class {
 						.map(it => Renderer.item.getProperty(it, {isIgnoreMissing: true}))
 						.filter(Boolean)
 						.map(it => it.name?.toTitleCase())
-						.joinConjunct(", ", " and ")
+						.joinConjunct(", ", " 和 ")
 					} Property`
 				);
 		}
@@ -5758,13 +5759,13 @@ Renderer.feat = class {
 		if (abilityObj.choose.weighted) {
 			const ptsWeight = abilityObj.choose.weighted.weights
 				.map((adj, i) => `${i === 0 ? "an" : "another"} ability score to ${adj > 0 ? "increase" : "decrease"} by ${Math.abs(adj)}`)
-				.joinConjunct(", ", " and ");
+				.joinConjunct(", ", " 和 ");
 
 			if (abilityObj.choose.weighted.from.length === 6) {
 				return `Choose ${ptsWeight}.`;
 			}
 
-			const ptAbils = abilityObj.choose.weighted.from.map(abv => Parser.attAbvToFull(abv)).joinConjunct(", ", " and ");
+			const ptAbils = abilityObj.choose.weighted.from.map(abv => Parser.attAbvToFull(abv)).joinConjunct(", ", " 和 ");
 			return `Choose ${ptsWeight} from among ${ptAbils}.`;
 		}
 
@@ -6042,8 +6043,8 @@ Renderer.class = class {
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
 		return styleHint === "classic"
-			? `${clsHd.number * clsHd.faces} + your Constitution modifier`
-			: `${clsHd.number * clsHd.faces} + Con. modifier`;
+			? `${clsHd.number * clsHd.faces} + 你的体质调整值`
+			: `${clsHd.number * clsHd.faces} + 体质调整值`;
 	}
 
 	/**
@@ -6058,7 +6059,7 @@ Renderer.class = class {
 
 		return styleHint === "classic"
 			? `${Renderer.get().render(Renderer.class.getHitDiceEntry(clsHd, {styleHint}))} (or ${((clsHd.number * clsHd.faces) / 2 + 1)}) + your Constitution modifier per ${className} level after 1st`
-			: `${Renderer.get().render(Renderer.class.getHitDiceEntry(clsHd, {styleHint}))} + your Con. modifier, or, ${((clsHd.number * clsHd.faces) / 2 + 1)} + your Con. modifier`;
+			: `${Renderer.get().render(Renderer.class.getHitDiceEntry(clsHd, {styleHint}))} + 你的体质调整值, 或 ${((clsHd.number * clsHd.faces) / 2 + 1)} + 你的体质调整值`;
 	}
 
 	/* -------------------------------------------- */
@@ -6074,14 +6075,14 @@ Renderer.class = class {
 			.segregate(it => ["light", "medium", "heavy"].includes(it));
 
 		const ptsArmor = profsArmor
-			.map((a, i, arr) => Renderer.get().render(`{@filter ${styleHint === "classic" ? a : a.toTitleCase()}${styleHint === "classic" || i === arr.length - 1 ? " armor" : ""}|items|type=${a} armor}`));
+			.map((a, i, arr) => Renderer.get().render(`{@filter ${styleHint === "classic" ? a : (Parser.ARMOR_FULL_TO_CN[a] || a.toTitleCase())}甲|items|type=${Parser.ARMOR_FULL_TO_CN[a] || a}甲}`));
 
 		const ptsOther = profsOther
 			.map(a => {
 				if (a.full) return Renderer.get().render(a.full);
 				if (a === "shield") {
-					if (styleHint === "classic") Renderer.get().render(`{@item shield|PHB|shields}`);
-					return Renderer.get().render(`{@item shield|XPHB|Shields}`);
+					if (styleHint === "classic") Renderer.get().render(`{@item 盾牌|PHB|盾牌}`);
+					return Renderer.get().render(`{@item 盾牌|XPHB|盾牌}`);
 				}
 				return Renderer.get().render(a);
 			});
@@ -6095,10 +6096,10 @@ Renderer.class = class {
 		}
 
 		return [
-			ptsArmor.joinConjunct(", ", " and "),
+			ptsArmor.joinConjunct(", ", " 和 "),
 			...ptsOther,
 		]
-			.joinConjunct(", ", " and ");
+			.joinConjunct(", ", " 和 ");
 	}
 
 	/**
@@ -6125,7 +6126,7 @@ Renderer.class = class {
 			...ptsOther,
 		];
 
-		return styleHint === "classic" ? pts.join(", ") : pts.joinConjunct(", ", " and ");
+		return styleHint === "classic" ? pts.join(", ") : pts.joinConjunct(", ", " 和 ");
 	}
 
 	/**
@@ -6134,7 +6135,7 @@ Renderer.class = class {
 	 */
 	static getRenderedToolProfs (toolProfs, {styleHint = null} = {}) {
 		const pts = toolProfs.map(it => Renderer.get().render(it));
-		return styleHint === "classic" ? pts.join(", ") : pts.joinConjunct(", ", " and ");
+		return styleHint === "classic" ? pts.join(", ") : pts.joinConjunct(", ", " 和 ");
 	}
 
 	/**
@@ -6157,11 +6158,11 @@ Renderer.class = class {
 				return Object.entries(abilObj)
 					.filter(([, v]) => v)
 					.map(([k]) => Parser.attAbvToFull(k))
-					.joinConjunct(", ", " and ");
+					.joinConjunct(", ", " 和 ");
 			})
-			.joinConjunct(", ", " or ");
+			.joinConjunct(", ", " 或 ");
 
-		return `<div><b>Primary Ability:</b> <span>${pts}</span></div>`;
+		return `<div><b>主要属性:</b> <span>${pts}</span></div>`;
 	}
 
 	static getHtmlPtHitPoints (cls, {renderer = null, styleHint = null}) {
@@ -6170,15 +6171,15 @@ Renderer.class = class {
 		renderer ||= Renderer.get();
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		return `<div><strong>Hit Point Die:</strong> ${renderer.render(Renderer.class.getHitDiceEntry(cls.hd, {styleHint}))} per ${cls.name} level</div>
-		<div><strong>Hit Points at Level 1:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd, {styleHint})}</div>
-		<div><strong>Hit Points per ${cls.name} Level:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, {styleHint})}</div>`;
+		return `<div><strong>生命值骰:</strong> ${renderer.render(Renderer.class.getHitDiceEntry(cls.hd, {styleHint}))} 每${cls.name}等级</div>
+		<div><strong>等级1的生命值:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd, {styleHint})}</div>
+		<div><strong>生命值 每${cls.name}等级:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, {styleHint})}</div>`;
 	}
 
 	static getHtmlPtSavingThrows (cls) {
 		if (!cls.proficiency) return "";
 
-		return `<div><b>Saving Throw Proficiencies:</b> <span>${cls.proficiency.map(p => Parser.attAbvToFull(p))}</span></div>`;
+		return `<div><b>豁免熟练:</b> <span>${cls.proficiency.map(p => Parser.attAbvToFull(p))}</span></div>`;
 	}
 
 	static getHtmlPtSkills (cls, {styleHint = null}) {
@@ -6186,7 +6187,7 @@ Renderer.class = class {
 
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		return `<div><b>Skill Proficiencies:</b> <span>${Renderer.class.getRenderedSkillProfs(cls.startingProficiencies.skills, {styleHint})}</span></div>`;
+		return `<div><b>技能熟练:</b> <span>${Renderer.class.getRenderedSkillProfs(cls.startingProficiencies.skills, {styleHint})}</span></div>`;
 	}
 
 	static getHtmlPtWeaponProficiencies (cls, {styleHint = null}) {
@@ -6194,7 +6195,7 @@ Renderer.class = class {
 
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		return `<div><b>Weapon Proficiencies:</b> <span>${Renderer.class.getRenderedWeaponProfs(cls.startingProficiencies.weapons, {styleHint})}</span></div>`;
+		return `<div><b>武器熟练:</b> <span>${Renderer.class.getRenderedWeaponProfs(cls.startingProficiencies.weapons, {styleHint})}</span></div>`;
 	}
 
 	static getHtmlPtToolProficiencies (cls, {styleHint = null}) {
@@ -6202,7 +6203,7 @@ Renderer.class = class {
 
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		return `<div><b>Tool Proficiencies:</b> <span>${Renderer.class.getRenderedToolProfs(cls.startingProficiencies.tools, {styleHint})}</span></div>`;
+		return `<div><b>工具熟练:</b> <span>${Renderer.class.getRenderedToolProfs(cls.startingProficiencies.tools, {styleHint})}</span></div>`;
 	}
 
 	static getHtmlPtArmorProficiencies (cls, {styleHint = null}) {
@@ -6210,7 +6211,7 @@ Renderer.class = class {
 
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		return `<div><b>Armor Training:</b> <span>${Renderer.class.getRenderedArmorProfs(cls.startingProficiencies.armor, {styleHint})}</span></div>`;
+		return `<div><b>护甲受训:</b> <span>${Renderer.class.getRenderedArmorProfs(cls.startingProficiencies.armor, {styleHint})}</span></div>`;
 	}
 
 	static getHtmlPtStartingEquipment (cls, {renderer = null, styleHint = null}) {
@@ -6227,9 +6228,9 @@ Renderer.class = class {
 
 	static _getHtmlPtStartingEquipment_default ({equip, renderer}) {
 		return [
-			equip.additionalFromBackground ? "<p>You start with the following items, plus anything provided by your background.</p>" : "",
+			equip.additionalFromBackground ? "<p>你起始携带下列物品，以及任何你背景所提供的东西。</p>" : "",
 			equip.default && equip.default.length ? `<ul class="pl-4"><li>${equip.default.map(it => renderer.render(it)).join("</li><li>")}</ul>` : "",
-			equip.goldAlternative != null ? `<p>Alternatively, you may start with ${renderer.render(equip.goldAlternative)} gp to buy your own equipment.</p>` : "",
+			equip.goldAlternative != null ? `<p>或者，你可以选择起始拥有 ${renderer.render(equip.goldAlternative)} gp 以自行购买装备。</p>` : "",
 		]
 			.filter(Boolean)
 			.join("");
@@ -6248,7 +6249,7 @@ Renderer.class = class {
 		return renderer.render({
 			type: "entries",
 			entries: [
-				`{@b Starting Equipment:} ${firstEntry}`,
+				`{@b 起始装备:} ${firstEntry}`,
 				...otherEntries,
 			],
 		});
@@ -6258,7 +6259,7 @@ Renderer.class = class {
 
 	static getDisplayNamedClassFeatureEntry (ent, styleHint) {
 		if (styleHint === "classic" || !ent.level || !ent.name) return ent;
-		return {_displayName: `Level ${ent.level}: ${ent._displayName || ent.name}`, ...ent};
+		return {_displayName: `等级 ${ent.level}: ${ent._displayName || ent.name}`, ...ent};
 	}
 
 	static getDisplayNamedSubclassFeatureEntry (ent, styleHint) {
@@ -6268,7 +6269,7 @@ Renderer.class = class {
 		cpy.entries = cpy.entries
 			.map(ent => {
 				if (ent.type !== "entries" || !ent.name) return ent;
-				return {_displayName: `Level ${ent.level}: ${ent._displayName || ent.name}`, ...ent};
+				return {_displayName: `等级 ${ent.level}: ${ent._displayName || ent.name}`, ...ent};
 			});
 		return cpy;
 	}
@@ -6666,12 +6667,12 @@ Renderer.spell = class {
 
 	static getHtmlPtCastingTime (spell, {styleHint = null} = {}) {
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
-		return `<b>Casting Time:</b> ${Parser.spTimeListToFull(spell.time, spell.meta, {styleHint})}`;
+		return `<b>施法时间:</b> ${Parser.spTimeListToFull(spell.time, spell.meta, {styleHint})}`;
 	}
 
-	static getHtmlPtRange (spell) { return `<b>Range:</b> ${Parser.spRangeToFull(spell.range)}`; }
-	static getHtmlPtComponents (spell) { return `<b>Components:</b> ${Parser.spComponentsToFull(spell.components, spell.level)}`; }
-	static getHtmlPtDuration (spell) { return `<b>Duration:</b> ${Parser.spDurationToFull(spell.duration)}`; }
+	static getHtmlPtRange (spell) { return `<b>射程:</b> ${Parser.spRangeToFull(spell.range)}`; }
+	static getHtmlPtComponents (spell) { return `<b>构材:</b> ${Parser.spComponentsToFull(spell.components, spell.level)}`; }
+	static getHtmlPtDuration (spell) { return `<b>持续时间:</b> ${Parser.spDurationToFull(spell.duration)}`; }
 
 	/* -------------------------------------------- */
 
@@ -7471,10 +7472,10 @@ Renderer.race = class {
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
 		const entsAttributes = [
-			ent.abilityEntry || (ent.ability ? {type: "item", name: "Ability Scores:", entry: Renderer.getAbilityData(ent.ability).asText} : null),
+			ent.abilityEntry || (ent.ability ? {type: "item", name: "属性值:", entry: Renderer.getAbilityData(ent.ability).asText} : null),
 			ent.creatureTypesEntry || (this._getRaceRenderableEntriesMeta_creatureType({ent, styleHint})),
-			ent.sizeEntry || (ent.size ? {type: "item", name: "Size:", entry: Renderer.utils.getRenderedSize(ent.size || [Parser.SZ_VARIES])} : null),
-			ent.speedEntry || (ent.speed != null ? {type: "item", name: "Speed:", entry: Parser.getSpeedString(ent, {isLongForm: true})} : null),
+			ent.sizeEntry || (ent.size ? {type: "item", name: "体型:", entry: Renderer.utils.getRenderedSize(ent.size || [Parser.SZ_VARIES])} : null),
+			ent.speedEntry || (ent.speed != null ? {type: "item", name: "速度:", entry: Parser.getSpeedString(ent, {isLongForm: true})} : null),
 		]
 			.filter(Boolean);
 
@@ -7491,11 +7492,11 @@ Renderer.race = class {
 	static _getRaceRenderableEntriesMeta_creatureType ({ent, styleHint}) {
 		const types = ent.creatureTypes || [Parser.TP_HUMANOID];
 
-		if (styleHint !== "classic") return {type: "item", name: "Creature Type:", entry: Parser.raceCreatureTypesToFull(types)};
+		if (styleHint !== "classic") return {type: "item", name: "生物类型:", entry: Parser.raceCreatureTypesToFull(types)};
 
 		const typesFilt = (ent.creatureTypes || []).filter(it => `${it}`.toLowerCase() !== Parser.TP_HUMANOID);
 		if (!typesFilt.length) return null;
-		return {type: "item", name: "Creature Type:", entry: Parser.raceCreatureTypesToFull(typesFilt)};
+		return {type: "item", name: "生物类型:", entry: Parser.raceCreatureTypesToFull(typesFilt)};
 	}
 
 	/* -------------------------------------------- */
@@ -7719,7 +7720,7 @@ Renderer.race = class {
 						entries: [
 							{
 								type: "entries",
-								name: "Traits",
+								name: "特质",
 								entries: [
 									...MiscUtil.copyFast(baseRace.entries),
 								],
@@ -9703,7 +9704,7 @@ Renderer.monster = class {
 
 		const ptHeaders = Array.from(
 			{length: 12},
-			(_, i) => `<div class="ve-muted ve-text-center small-caps">${i % 4 === 2 ? "mod" : i % 4 === 3 ? "save" : ""}</div>`,
+			(_, i) => `<div class="ve-muted ve-text-center small-caps">${i % 4 === 2 ? "调整" : i % 4 === 3 ? "豁免" : ""}</div>`,
 		)
 			.join("");
 
@@ -12081,7 +12082,7 @@ Renderer.vehicle = class {
 	}
 
 	static _getTraitSection (renderer, veh) {
-		return veh.trait ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner">Traits</h3></td></tr>
+		return veh.trait ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner">特质</h3></td></tr>
 		<tr><td colspan="6" class="pt-2 pb-2">
 		${Renderer.monster.getOrderedTraits(veh, renderer).map(it => it.rendered || renderer.render(it, 2)).join("")}
 		</td></tr>` : "";
@@ -13094,7 +13095,7 @@ Renderer.generic = class {
 								collectionSet.add(this._summariseProfs_getCollectionKey(s, anyAlt));
 								return this._summariseProfs_getEntry({str: s, isShort, hoverTag});
 							});
-						return `${isShort ? `${i === 0 ? "C" : "c"}hoose ` : ""}${v.count || 1} ${isShort ? `of` : `from`} ${chooseProfs.joinConjunct(", ", " or ")}`;
+						return `从${chooseProfs.joinConjunct(", ", " 或 ")}中选择${v.count || 1}个`;
 					}
 
 					collectionSet.add(this._summariseProfs_getCollectionKey(k, anyAlt));
@@ -13112,7 +13113,7 @@ Renderer.generic = class {
 				.map(profGroup => handleProfGroup(profGroup)),
 		]
 			.filter(Boolean)
-			.join(` <i>or</i> `);
+			.join(` <i>或</i> `);
 
 		return {summary, collection: [...collectionSet].sort(SortUtil.ascSortLower)};
 	}

@@ -1987,7 +1987,7 @@ class ListPage {
 
 	/* -------------------------------------------- */
 
-	_tabTitleStats = "Traits";
+	_tabTitleStats = "特质";
 
 	async _pDoLoadHash ({id, lockToken}) {
 		this._$pgContent.empty();

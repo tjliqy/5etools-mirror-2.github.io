@@ -1014,7 +1014,7 @@ class StatGenUi extends BaseComponent {
 			this._parent[this._propModalFilter].pageFilter.filterBox.on(FILTER_BOX_EVNT_VALCHANGE, () => doApplyFilterToSelEntity());
 			doApplyFilterToSelEntity();
 
-			const $btnFilterForEntity = $(`<button class="ve-btn ve-btn-xs ve-btn-default br-0 pr-2" title="Filter for ${this._title}"><span class="glyphicon glyphicon-filter"></span> Filter</button>`)
+			const $btnFilterForEntity = $(`<button class="ve-btn ve-btn-xs ve-btn-default br-0 pr-2" title="Filter for ${this._title}"><span class="glyphicon glyphicon-filter"></span> 筛选</button>`)
 				.click(async () => {
 					const selected = await this._parent[this._propModalFilter].pGetUserSelection();
 					if (selected == null || !selected.length) return;

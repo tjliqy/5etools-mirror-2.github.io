@@ -226,7 +226,7 @@ export class FilterBox extends ProxyBase {
 
 		if (this._$wrpFormTop || this._$btnOpen) {
 			if (!this._$btnOpen) {
-				this._$btnOpen = $(`<button class="ve-btn ve-btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
+				this._$btnOpen = $(`<button class="ve-btn ve-btn-default ${this._isCompact ? "px-2" : ""}">筛选</button>`)
 					.prependTo(this._$wrpFormTop);
 			} else if (!this._$btnOpen.parent().length) {
 				this._$btnOpen.prependTo(this._$wrpFormTop);

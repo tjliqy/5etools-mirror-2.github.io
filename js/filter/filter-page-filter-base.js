@@ -122,14 +122,14 @@ export class PageFilterBase {
 		if (ent.srd52) ent._fMisc.push(MISC_FILTER_VALUE__SRD_5_2);
 		if (ent.freeRules2024) ent._fMisc.push(MISC_FILTER_VALUE__FREE_RULES_2024);
 
-		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("Legacy");
+		if (SourceUtil.isLegacySourceWotc(ent.source)) ent._fMisc.push("传奇");
 
-		if (ent.isReprinted) ent._fMisc.push("Reprinted");
+		if (ent.isReprinted) ent._fMisc.push("重置");
 
-		if (this._hasFluff(ent)) ent._fMisc.push("Has Info");
-		if (this._hasFluffImages(ent)) ent._fMisc.push("Has Images");
+		if (this._hasFluff(ent)) ent._fMisc.push("有简介");
+		if (this._hasFluffImages(ent)) ent._fMisc.push("有图片");
 
-		if (this._isReprinted(ent)) ent._fMisc.push("Reprinted");
+		if (this._isReprinted(ent)) ent._fMisc.push("重印");
 	}
 	// endregion
 }

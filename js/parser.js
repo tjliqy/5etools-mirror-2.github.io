@@ -326,7 +326,7 @@ Parser.raceCreatureTypesToFull = function (creatureTypes) {
 				.map(sub => Parser.monTypeToFullObj(sub).asText)
 				.joinConjunct(", ", " or ");
 		})
-		.joinConjunct(hasSubOptions ? "; " : ", ", " and ");
+		.joinConjunct(hasSubOptions ? "; " : ", ", " 和 ");
 };
 
 Parser.crToXp = function (cr, {isDouble = false} = {}) {
@@ -1239,8 +1239,8 @@ Parser.spMetaToFull = function (meta) {
 };
 
 Parser._spLevelSchoolMetaToFull_level = ({level, styleHint}) => {
-	if (styleHint === "classic") return level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}-level`;
-	return level === 0 ? Parser.spLevelToFull(level) : `Level ${level}`;
+	if (styleHint === "classic") return level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}环`;
+	return level === 0 ? Parser.spLevelToFull(level) : `${level}环`;
 };
 
 Parser._spLevelSchoolMetaToFull_levelSchool = ({level, school, styleHint, ptLevel}) => {
@@ -1550,7 +1550,7 @@ Parser.spRangeToFull._renderPoint = function (range) {
 		case Parser.UNT_YARDS:
 		case Parser.UNT_MILES:
 		default:
-			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : dist.type}`;
+			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : Parser.spDistanceTypeToFull(dist.type)}`;
 	}
 };
 Parser.spRangeToFull._renderArea = function (range) {
@@ -1560,9 +1560,9 @@ Parser.spRangeToFull._renderArea = function (range) {
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
 		case Parser.RNG_SPHERE: return " 半径";
-		case Parser.RNG_HEMISPHERE: return `-半径 ${range.type}`;
+		case Parser.RNG_HEMISPHERE: return `-半径 ${Parser.spRangeTypeToFull(range.type)}`;
 		case Parser.RNG_CYLINDER: return "-半径";
-		default: return ` ${range.type}`;
+		default: return ` ${Parser.spRangeTypeToFull(range.type)}`;
 	}
 };
 
@@ -1656,7 +1656,7 @@ Parser.spDurationToFull = function (dur) {
 				case "instant":
 					return `即效${ptCondition}`;
 				case "timed":
-					return `${d.concentration ? "专注，" : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}${ptCondition}`;
+					return `${d.concentration ? "专注，" : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${Parser.timeToCn(d.duration.type)}${ptCondition}`;
 				case "permanent": {
 					if (!d.ends) return `永久${ptCondition}`;
 
@@ -1942,7 +1942,7 @@ Parser.getFullImmRes = function (toParse, {isPlainText = false, isTitleCase = fa
 			const toJoin = val[prop].length === Parser.DMG_TYPES.length && CollectionUtil.deepEquals(Parser.DMG_TYPES, val[prop])
 				? ["all damage"[isTitleCase ? "toTitleCase" : "toString"]()]
 				: val[prop].map(nxt => render(nxt, depth + 1));
-			stack.push(renderString(depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " and ")));
+			stack.push(renderString(depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " 和 ")));
 		}
 
 		if (val.note) stack.push(renderString(val.note));

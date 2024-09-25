@@ -211,7 +211,7 @@ class _RenderBestiaryImplBase {
 	}
 
 	_getCommonHtmlParts_speed ({mon, isInlinedToken}) {
-		return `<tr><td colspan="6"><div ${this._style !== "classic" && isInlinedToken ? `class="stats__wrp-avoid-token"` : ""}><strong>Speed</strong> ${Parser.getSpeedString(mon)}</div></td></tr>`;
+		return `<tr><td colspan="6"><div ${this._style !== "classic" && isInlinedToken ? `class="stats__wrp-avoid-token"` : ""}><strong>速度</strong> ${Parser.getSpeedString(mon)}</div></td></tr>`;
 	}
 
 	/* ----- */
@@ -223,51 +223,51 @@ class _RenderBestiaryImplBase {
 	/* ----- */
 
 	_getCommonHtmlParts_skills ({mon, renderer}) {
-		return mon.skill ? `<tr><td colspan="6"><strong>Skills</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : "";
+		return mon.skill ? `<tr><td colspan="6"><strong>技能</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : "";
 	}
 
 	_getCommonHtmlParts_vulnerabilities ({mon}) {
-		const label = this._style === "classic" ? "Damage Vulnerabilities" : "Vulnerabilities";
+		const label = this._style === "classic" ? "伤害易伤" : "易伤";
 		return mon.vulnerable ? `<tr><td colspan="6"><strong>${label}</strong> ${Parser.getFullImmRes(mon.vulnerable, {isTitleCase: this._style !== "classic"})}</td></tr>` : "";
 	}
 
 	_getCommonHtmlParts_resistances ({mon}) {
-		const label = this._style === "classic" ? "Damage Resistances" : "Resistances";
+		const label = this._style === "classic" ? "伤害抗性" : "抗性";
 		return mon.resist ? `<tr><td colspan="6"><strong>${label}</strong> ${Parser.getFullImmRes(mon.resist, {isTitleCase: this._style !== "classic"})}</td></tr>` : "";
 	}
 
 	_getCommonHtmlParts_senses ({mon}) {
-		return `<tr><td colspan="6"><strong>Senses</strong> ${Renderer.monster.getSensesPart(mon, {isTitleCase: this._style !== "classic"})}</td></tr>`;
+		return `<tr><td colspan="6"><strong>感知</strong> ${Renderer.monster.getSensesPart(mon, {isTitleCase: this._style !== "classic"})}</td></tr>`;
 	}
 
 	_getCommonHtmlParts_languages ({mon}) {
-		return `<tr><td colspan="6"><strong>Languages</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>`;
+		return `<tr><td colspan="6"><strong>语言</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>`;
 	}
 
 	/* ----- */
 
 	_getCommonHtmlParts_actions ({mon, entsAction}) {
-		return `${entsAction?.length ? `${this._getRenderedSectionHeader({mon, title: "Actions", prop: "action"})}
+		return `${entsAction?.length ? `${this._getRenderedSectionHeader({mon, title: "动作", prop: "action"})}
 		${this._getRenderedSection({mon, prop: "action", entries: entsAction})}` : ""}`;
 	}
 
 	_getCommonHtmlParts_bonusActions ({mon, entsBonusAction}) {
-		return `${entsBonusAction?.length ? `${this._getRenderedSectionHeader({mon, title: "Bonus Actions", prop: "bonus"})}
+		return `${entsBonusAction?.length ? `${this._getRenderedSectionHeader({mon, title: "附赠动作", prop: "bonus"})}
 		${this._getRenderedSection({mon, prop: "bonus", entries: entsBonusAction})}` : ""}`;
 	}
 
 	_getCommonHtmlParts_reactions ({mon, entsReaction}) {
-		return `${entsReaction?.length ? `${this._getRenderedSectionHeader({mon, title: "Reactions", prop: "reaction"})}
+		return `${entsReaction?.length ? `${this._getRenderedSectionHeader({mon, title: "反应", prop: "reaction"})}
 		${this._getRenderedSection({mon, prop: "reaction", entries: entsReaction})}` : ""}`;
 	}
 
 	_getCommonHtmlParts_legendaryActions ({mon}) {
-		return `${mon.legendary ? `${this._getRenderedSectionHeader({mon, title: "Legendary Actions", prop: "legendary"})}
+		return `${mon.legendary ? `${this._getRenderedSectionHeader({mon, title: "传奇动作", prop: "legendary"})}
 		${this._getRenderedSection({mon, prop: "legendary", entries: mon.legendary, fnGetHeader: Renderer.monster.getLegendaryActionIntro.bind(Renderer.monster)})}` : ""}`;
 	}
 
 	_getCommonHtmlParts_mythicActions ({mon}) {
-		return `${mon.mythic ? `${this._getRenderedSectionHeader({mon, title: "Mythic Actions", prop: "mythic"})}
+		return `${mon.mythic ? `${this._getRenderedSectionHeader({mon, title: "神话动作", prop: "mythic"})}
 		${this._getRenderedSection({mon, prop: "mythic", entries: mon.mythic})}` : ""}`;
 	}
 
@@ -382,21 +382,21 @@ class _RenderBestiaryImplClassic extends _RenderBestiaryImplBase {
 	/* ----- */
 
 	_getHtmlParts_armorClass ({mon, renderer, isInlinedToken}) {
-		return `<tr><td colspan="6"><div ${isInlinedToken ? `class="stats__wrp-avoid-token"` : ""}><strong>Armor Class</strong> ${mon.ac == null ? "\u2014" : Parser.acToFull(mon.ac, {renderer})}</div></td></tr>`;
+		return `<tr><td colspan="6"><div ${isInlinedToken ? `class="stats__wrp-avoid-token"` : ""}><strong>护甲类型</strong> ${mon.ac == null ? "\u2014" : Parser.acToFull(mon.ac, {renderer})}</div></td></tr>`;
 	}
 
 	/* ----- */
 
 	_getHtmlParts_savingThrows ({mon}) {
-		return mon.save ? `<tr><td colspan="6"><strong>Saving Throws</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : "";
+		return mon.save ? `<tr><td colspan="6"><strong>豁免掷骰</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : "";
 	}
 
 	_getHtmlParts_damageImmunities ({mon}) {
-		return mon.immune ? `<tr><td colspan="6"><strong>Damage Immunities</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : "";
+		return mon.immune ? `<tr><td colspan="6"><strong>伤害免疫</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : "";
 	}
 
 	_getHtmlParts_conditionImmunities ({mon}) {
-		return mon.conditionImmune ? `<tr><td colspan="6"><strong>Condition Immunities</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : "";
+		return mon.conditionImmune ? `<tr><td colspan="6"><strong>条件免疫</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : "";
 	}
 
 	/* ----- */
@@ -404,7 +404,7 @@ class _RenderBestiaryImplClassic extends _RenderBestiaryImplBase {
 	_getHtmlParts_pb ({mon}) {
 		const ptPb = Renderer.monster.getPbPart(mon);
 		if (!ptPb) return `<td colspan="3"></td>`;
-		return `<td colspan="3" class="ve-text-right"><strong>Proficiency Bonus</strong> ${ptPb}</td>`;
+		return `<td colspan="3" class="ve-text-right"><strong>熟练加值</strong> ${ptPb}</td>`;
 	}
 
 	/* ----- */
@@ -589,13 +589,13 @@ class _RenderBestiaryImplOne extends _RenderBestiaryImplBase {
 	_getHtmlParts_immunities ({mon}) {
 		const pt = Renderer.monster.getImmunitiesCombinedPart(mon);
 		if (!pt) return "";
-		return `<tr><td colspan="6"><strong>Immunities</strong> ${pt}</td></tr>`;
+		return `<tr><td colspan="6"><strong>免疫</strong> ${pt}</td></tr>`;
 	}
 
 	/* ----- */
 
 	_getHtmlParts_traits ({mon, entsTrait}) {
-		return `${entsTrait?.length ? `${this._getRenderedSectionHeader({mon, title: "Traits", prop: "trait"})}
+		return `${entsTrait?.length ? `${this._getRenderedSectionHeader({mon, title: "特质", prop: "trait"})}
 		${this._getRenderedSection({prop: "trait", entries: entsTrait})}` : ""}`;
 	}
 

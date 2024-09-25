@@ -50,6 +50,7 @@ class PageFilterRaces extends PageFilterBase {
 		this._speedFilter = new Filter({header: "速度Speed", items: ["攀爬", "飞行", "游泳", "步行 (快)", "步行", "步行 (慢)"]});
 		this._traitFilter = new Filter({
 			header: "Traits",
+			cnHeader:"特质",
 			items: [
 				"两栖",
 				"护甲熟练项",
@@ -152,8 +153,8 @@ class PageFilterRaces extends PageFilterBase {
 		if (r._isCopy) r._fMisc.push("修改副本");
 		if (r.lineage) r._fMisc.push("血缘");
 
-		const ability = r.ability ? Renderer.getAbilityData(r.ability, {isOnlyShort: true, isCurrentLineage: r.lineage === "VRGR"}) : {asTextShort: "None"};
-		r._slAbility = ability.asTextShort || VeCt.STR_NONE;
+		const ability = r.ability ? Renderer.getAbilityData(r.ability, {isOnlyShort: true, isCurrentLineage: r.lineage === "VRGR"}) : {asTextShort: "无"};
+		r._slAbility = ability.asText || ability.asTextShort || VeCt.STR_NONE;
 
 		if (r.age?.mature != null && r.age?.max != null) r._fAge = [r.age.mature, r.age.max];
 		else if (r.age?.mature != null) r._fAge = r.age.mature;

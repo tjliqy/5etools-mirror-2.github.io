@@ -247,7 +247,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._traitFilter = new Filter({
 			header: "Traits",
-			cnHeader: "特性",
+			cnHeader: "特质",
 			items: [
 				"好斗", "伏击", "无定形", "水陆两栖", "魔力依赖", "残暴", "冲锋", "伤害吸收", "自爆", "魔鬼视界", "拟形", "精类血统", "飞掠", "屏息", "照明", "不变形态", "虚体移动", "敏锐感官", "传奇抗性", "光照敏感", "魔法抗性", "魔法武器", "集群战术", "猛扑", "横行", "鲁莽", "再生", "复生", "变形生物", "攻城怪物", "偷袭", "蛛行", "日照敏感", "掘道者", "免疫驱散", "抵抗驱散", "不死坚韧", "水下呼吸", "蛛网感知", "蛛网行者",
 			],
