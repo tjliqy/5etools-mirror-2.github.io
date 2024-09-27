@@ -64,8 +64,8 @@ class _SpellSourceUtil {
 				filterExpression: spellItem.all,
 				valuesOverride: {
 					"Components & Miscellaneous": {
-						"Legacy": 0,
-						"Reprinted": 0,
+						"传奇": 0,
+						"重置": 0,
 					},
 				},
 			})
@@ -78,8 +78,8 @@ class _SpellSourceUtil {
 					filterExpression: spellItem.choose,
 					valuesOverride: {
 						"Components & Miscellaneous": {
-							"Legacy": 0,
-							"Reprinted": 0,
+							"传奇": 0,
+							"重置": 0,
 						},
 					},
 				})

@@ -21,7 +21,7 @@ Parser._parse_bToA = function (abMap, b, fallback) {
 };
 
 Parser.attrChooseToFull = function (attList) {
-	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])} modifier`;
+	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])} 调整值`;
 	else {
 		const attsTemp = [];
 		for (let i = 0; i < attList.length; ++i) {
@@ -1119,21 +1119,24 @@ Parser.skillProficienciesToFull = function (skillProficiencies, {styleHint = nul
 			const chObj = skProf.choose;
 			const count = chObj.count ?? 1;
 			if (chObj.from.length === 18) {
-				chooseStack.push(`choose any ${!chObj.count || chObj.count === 1 ? "skill" : chObj.count}`);
+				ptChoose = styleHint === "classic"
+					? `choose any ${count === 1 ? "skill" : chObj.count}`
+					: `选择 ${chObj.count}个`;
 			} else {
-				chooseStack.push(`choose ${chObj.count || 1} from ${chObj.from.map(it => Renderer.get().render(`{@skill ${it.toTitleCase()}}`)).joinConjunct(", ", " and ")}`);
+				ptChoose = styleHint === "classic"
+					? `choose ${count} from ${chObj.from.map(it => Renderer.get().render(`{@skill ${it.toTitleCase()}|${ptSource}}`)).joinConjunct(", ", " 和 ")}`
+					: Renderer.get().render(`{@i Choose ${count}:} ${chObj.from.map(it => `{@skill ${it.toTitleCase()}|${ptSource}}`).joinConjunct(", ", " 或 ")}`);
 			}
 		}
 
 		const base = baseStack.joinConjunct(", ", " and ");
-		const choose = chooseStack.join(""); // this should currently only ever be 1-length
 
-		if (baseStack.length && chooseStack.length) return `${base}; and ${choose}`;
+		if (baseStack.length && ptChoose.length) return `${base}; and ${ptChoose}`;
 		else if (baseStack.length) return base;
 		else if (ptChoose.length) return ptChoose;
 	}
 
-	return skillProficiencies.map(renderSingle).join(" <i>or</i> ");
+	return skillProficiencies.map(renderSingle).join(` <i>or</i> `);
 };
 
 // sp-prefix functions are for parsing spell data, and shared with the roll20 script
@@ -3103,6 +3106,7 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN_SPELLJAMMER] = "Dungeon Master's Sc
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HF] = "Heroes' Feast";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFFotM] = "Heroes' Feast: Flavors of the Multiverse";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFStCM] = "Heroes' Feast: Saving the Childrens Menu";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PaF] = "Puncheons and Flagons";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CM] = "Candlekeep Mysteries";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH] = Parser.NRH_NAME;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH_TCMC] = `${Parser.NRH_NAME}: The Candy Mountain Caper`;
