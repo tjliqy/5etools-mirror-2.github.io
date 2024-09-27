@@ -2818,7 +2818,7 @@ class InputUiUtil {
 
 		let title = opts.title;
 		if (!title) {
-			if (opts.count != null) title = `Choose ${Parser.numberToText(opts.count).uppercaseFirst()}`;
+			if (opts.count != null) title = `选择 ${Parser.numberToText(opts.count).uppercaseFirst()}个`;
 			else if (opts.min != null && opts.max != null) title = `Choose Between ${Parser.numberToText(opts.min).uppercaseFirst()} and ${Parser.numberToText(opts.max).uppercaseFirst()} Options`;
 			else if (opts.min != null) title = `Choose At Least ${Parser.numberToText(opts.min).uppercaseFirst()}`;
 			else title = `Choose At Most ${Parser.numberToText(opts.max).uppercaseFirst()}`;
