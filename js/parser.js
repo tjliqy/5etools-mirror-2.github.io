@@ -1786,7 +1786,7 @@ Parser.monCrToFull = function (cr, {xp = null, isMythic = false} = {}) {
 	}
 };
 
-Parser.getFullImmRes = function (toParse, {isPlainText = false} = {}) {
+Parser.getFullImmRes = function (toParse, {isPlainText = false, isTitleCase = false} = {}) {
 	if (!toParse?.length) return "";
 
 	let maxDepth = 0;
