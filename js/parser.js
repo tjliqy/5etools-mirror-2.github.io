@@ -1238,7 +1238,7 @@ Parser.spMetaToFull = function (meta) {
 };
 
 Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
-	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}-level`;
+	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}`;
 	const levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)} ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}`;
 
 	const metaArr = Parser.spMetaToArr(meta);
@@ -1291,20 +1291,20 @@ Parser.RNG_UNLIMITED = "unlimited";
 Parser.RNG_UNLIMITED_SAME_PLANE = "plane";
 Parser.RNG_TOUCH = "touch";
 Parser.SP_RANGE_TYPE_TO_FULL = {
-	[Parser.RNG_SPECIAL]: "Special",
+	[Parser.RNG_SPECIAL]: "特殊",
 	[Parser.RNG_POINT]: "Point",
-	[Parser.RNG_LINE]: "Line",
-	[Parser.RNG_CUBE]: "Cube",
-	[Parser.RNG_CONE]: "Cone",
-	[Parser.RNG_RADIUS]: "Radius",
+	[Parser.RNG_LINE]: "线型",
+	[Parser.RNG_CUBE]: "立方体",
+	[Parser.RNG_CONE]: "锥形",
+	[Parser.RNG_RADIUS]: "半径",
 	[Parser.RNG_SPHERE]: "Sphere",
-	[Parser.RNG_HEMISPHERE]: "Hemisphere",
+	[Parser.RNG_HEMISPHERE]: "半球体",
 	[Parser.RNG_CYLINDER]: "Cylinder",
-	[Parser.RNG_SELF]: "Self",
+	[Parser.RNG_SELF]: "自身",
 	[Parser.RNG_SIGHT]: "Sight",
-	[Parser.RNG_UNLIMITED]: "Unlimited",
+	[Parser.RNG_UNLIMITED]: "无限",
 	[Parser.RNG_UNLIMITED_SAME_PLANE]: "Unlimited on the same plane",
-	[Parser.RNG_TOUCH]: "Touch",
+	[Parser.RNG_TOUCH]: "触及",
 };
 
 Parser.spRangeTypeToFull = function (range) {
@@ -1519,27 +1519,27 @@ Parser.spDurationToFull = function (dur) {
 	const outParts = dur.map(d => {
 		switch (d.type) {
 			case "special":
-				return "Special";
+				return "特殊";
 			case "instant":
-				return `Instantaneous${d.condition ? ` (${d.condition})` : ""}`;
+				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "Concentration, " : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
+				return `${d.concentration ? "专注, " : ""}至多${d.duration.amount}${Parser.spTimeUnitToFull( d.duration.type)}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
 					hasSubOr = hasSubOr || endsToJoin.length > 1;
-					return `Until ${endsToJoin.joinConjunct(", ", " or ")}`;
+					return `直到 ${endsToJoin.joinConjunct(", ", " 或 ")}`;
 				} else {
-					return "Permanent";
+					return "永久";
 				}
 			}
 		}
 	});
-	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " or ")}${dur.length > 1 ? " (see below)" : ""}`;
+	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " 或 ")}${dur.length > 1 ? " (see below)" : ""}`;
 };
 
 Parser.DURATION_TYPES = [
-	{type: "instant", full: "Instantaneous"},
+	{type: "instant", full: "即效"},
 	{type: "timed", hasAmount: true},
 	{type: "permanent", hasEnds: true},
 	{type: "special"},
@@ -1992,12 +1992,12 @@ Parser.prereqPatronToShort = function (patron) {
 };
 
 Parser.FEAT_CATEGORY_TO_FULL = {
-	"G": "General",
-	"O": "Origin",
-	"FS": "Fighting Style",
-	"FS:P": "Fighting Style Replacement (Paladin)",
-	"FS:R": "Fighting Style Replacement (Ranger)",
-	"EB": "Epic Boon",
+	"G": "通用",
+	"O": "起源",
+	"FS": "战斗风格",
+	"FS:P": "可选战斗风格 (圣武士)",
+	"FS:R": "可选战斗风格 (游侠)",
+	"EB": "传奇恩惠",
 };
 
 Parser.featCategoryToFull = (category) => {
@@ -2554,13 +2554,13 @@ Parser.SP_TM_HRS = "hour";
 Parser.SP_TM_SPECIAL = "special";
 Parser.SP_TIME_SINGLETONS = [Parser.SP_TM_ACTION, Parser.SP_TM_B_ACTION, Parser.SP_TM_REACTION, Parser.SP_TM_ROUND];
 Parser.SP_TIME_TO_FULL = {
-	[Parser.SP_TM_ACTION]: "Action",
-	[Parser.SP_TM_B_ACTION]: "Bonus Action",
-	[Parser.SP_TM_REACTION]: "Reaction",
-	[Parser.SP_TM_ROUND]: "Rounds",
-	[Parser.SP_TM_MINS]: "Minutes",
-	[Parser.SP_TM_HRS]: "Hours",
-	[Parser.SP_TM_SPECIAL]: "Special",
+	[Parser.SP_TM_ACTION]: "动作",
+	[Parser.SP_TM_B_ACTION]: "附赠动作",
+	[Parser.SP_TM_REACTION]: "反应",
+	[Parser.SP_TM_ROUND]: "轮",
+	[Parser.SP_TM_MINS]: "分钟",
+	[Parser.SP_TM_HRS]: "小时",
+	[Parser.SP_TM_SPECIAL]: "特殊",
 };
 Parser.spTimeUnitToFull = function (timeUnit) {
 	return Parser._parse_aToB(Parser.SP_TIME_TO_FULL, timeUnit);
@@ -2595,15 +2595,15 @@ Parser.spTimeToShort = function (time, isHtml) {
 		: `${time.number} ${isHtml ? `<span class="ve-small">` : ""}${Parser.spTimeUnitToAbv(time.unit)}${isHtml ? `</span>` : ""}${time.condition ? "*" : ""}`;
 };
 
-Parser.SKL_ABJ = "Abjuration";
-Parser.SKL_EVO = "Evocation";
-Parser.SKL_ENC = "Enchantment";
-Parser.SKL_ILL = "Illusion";
-Parser.SKL_DIV = "Divination";
-Parser.SKL_NEC = "Necromancy";
-Parser.SKL_TRA = "Transmutation";
-Parser.SKL_CON = "Conjuration";
-Parser.SKL_PSI = "Psionic";
+Parser.SKL_ABJ = "防护";
+Parser.SKL_EVO = "塑能";
+Parser.SKL_ENC = "惑控";
+Parser.SKL_ILL = "幻术";
+Parser.SKL_DIV = "预言";
+Parser.SKL_NEC = "死灵";
+Parser.SKL_TRA = "变化";
+Parser.SKL_CON = "咒法";
+Parser.SKL_PSI = "灵能";
 
 Parser.SP_SCHOOL_ABV_TO_FULL = {};
 Parser.SP_SCHOOL_ABV_TO_FULL[Parser.SKL_ABV_ABJ] = Parser.SKL_ABJ;

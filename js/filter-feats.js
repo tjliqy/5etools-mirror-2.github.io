@@ -12,7 +12,7 @@ class PageFilterFeats extends PageFilterBase {
 			header: "Category",
 			cnHeader:"分类",
 			displayFn: Parser.featCategoryToFull,
-			items: [...Object.keys(Parser.FEAT_CATEGORY_TO_FULL), "Other"],
+			items: [...Object.keys(Parser.FEAT_CATEGORY_TO_FULL), "其他"],
 		});
 		this._asiFilter = new Filter({
 			header: "Ability Bonus",
@@ -83,7 +83,7 @@ class PageFilterFeats extends PageFilterBase {
 		const ability = Renderer.getAbilityData(feat.ability);
 		feat._fAbility = ability.asCollection.filter(a => !ability.areNegative.includes(a)); // used for filtering
 
-		feat._fCategory = feat.category || "Other";
+		feat._fCategory = feat.category || "其他";
 
 		const prereqText = Renderer.utils.prerequisite.getHtml(feat.prerequisite, {isListMode: true}) || VeCt.STR_NONE;
 

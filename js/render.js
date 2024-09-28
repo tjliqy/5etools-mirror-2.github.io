@@ -3795,8 +3795,8 @@ Renderer.utils = class {
 								return styleHint === "classic" ? `Proficiency with ${prof}s` : `${prof.toTitleCase()} Training`;
 							}
 
-							if (isListMode) return styleHint === "classic" ? `Prof ${Parser.armorFullToAbv(prof)} armor` : `${Parser.armorFullToAbv(prof).toTitleCase()} Armor Trai.`;
-							return styleHint === "classic" ? `Proficiency with ${prof} armor` : `${prof.toTitleCase()} Armor Training`;
+							if (isListMode) return styleHint === "classic" ? `${Parser.ARMOR_FULL_TO_CN[prof] ||prof.toTitleCase()}甲熟练项` : `${Parser.ARMOR_FULL_TO_CN[prof] ||prof.toTitleCase()}甲受训`;
+							return styleHint === "classic" ? `${Parser.ARMOR_FULL_TO_CN[prof] ||prof.toTitleCase()}甲熟练项` : `${Parser.ARMOR_FULL_TO_CN[prof] ||prof.toTitleCase()}甲受训`;
 						}
 						case "weapon": {
 							return isListMode ? `Prof ${Parser.weaponFullToAbv(prof)} weapon` : `Proficiency with a ${prof} weapon`;
@@ -3812,20 +3812,20 @@ Renderer.utils = class {
 		}
 
 		static _getHtml_spellcasting ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
+			return isListMode ? "施法能力" : "The ability to cast at least one spell";
 		}
 
 		static _getHtml_spellcasting2020 ({v, isListMode, styleHint}) {
-			if (isListMode) return "Spellcasting";
+			if (isListMode) return "施法能力";
 			return styleHint === "classic" ? "Spellcasting or Pact Magic feature" : "Spellcasting or Pact Magic Feature";
 		}
 
 		static _getHtml_spellcastingFeature ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "Spellcasting Feature";
+			return isListMode ? "施法能力" : "施法能力";
 		}
 
 		static _getHtml_spellcastingPrepared ({v, isListMode}) {
-			return isListMode ? "Spellcasting" : "Spellcasting feature from a class that prepares spells";
+			return isListMode ? "施法能力" : "Spellcasting feature from a class that prepares spells";
 		}
 
 		static _getHtml_psionics ({v, isListMode, isTextOnly}) {
@@ -5880,7 +5880,7 @@ Renderer.feat = class {
 	static _mergeAbilityIncrease_getListItemItem (abilityObj) {
 		return {
 			type: "item",
-			name: "Ability Score Increase.",
+			name: "属性值提升",
 			entry: Renderer.feat._mergeAbilityIncrease_getText(abilityObj),
 		};
 	}
@@ -5891,7 +5891,7 @@ Renderer.feat = class {
 		if (!abilityObj.choose) {
 			return Object.keys(abilityObj)
 				.filter(k => k !== "max")
-				.map(ab => `Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]}, to a maximum of ${maxScore}.`)
+				.map(ab => `你的 ${Parser.attAbvToFull(ab)} 增加 ${abilityObj[ab]}点，上限为${maxScore}。`)
 				.join(" ");
 		}
 
@@ -5915,7 +5915,7 @@ Renderer.feat = class {
 		}
 
 		const abbChoicesText = abilityObj.choose.from.map(it => Parser.attAbvToFull(it)).joinConjunct(", ", " or ");
-		return `Increase your ${abbChoicesText} by ${abilityObj.choose.amount ?? 1}, to a maximum of ${maxScore}.`;
+		return `你的 ${abbChoicesText} 增加 ${abilityObj.choose.amount ?? 1}点，上限为${maxScore}。`;
 	}
 
 	static initFullEntries (feat) {
@@ -5943,7 +5943,7 @@ Renderer.feat = class {
 		if (~ixFirstEntry) {
 			feat._fullEntries.splice(ixFirstEntry, 0, {
 				"type": "entries",
-				"name": "Ability Score Increase",
+				"name": "属性值提升",
 				"entries": abilsToDisplay.map(abilObj => Renderer.feat._mergeAbilityIncrease_getListItemText(abilObj)),
 			});
 			return;
@@ -5965,7 +5965,7 @@ Renderer.feat = class {
 	}
 
 	static getJoinedCategoryPrerequisites (category, rdPrereqs) {
-		const ptCategory = category ? `${Parser.featCategoryToFull(category)}${["FS:P", "FS:R"].includes(category) ? "" : ` Feat`}` : "";
+		const ptCategory = category ? `${Parser.featCategoryToFull(category)}${["FS:P", "FS:R"].includes(category) ? "" : ` 专长`}` : "";
 
 		return ptCategory && rdPrereqs
 			? `${ptCategory} (${rdPrereqs})`
