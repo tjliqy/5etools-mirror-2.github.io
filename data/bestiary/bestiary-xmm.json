@@ -38,6 +38,438 @@
 			}
 		},
 		{
+			"name": "闪现犬",
+			"ENG_name": "Blink Dog",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 17,
+			"con": 12,
+			"int": 10,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"闪现犬",
+				"懂木族语但不能说"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, 触及5英尺。{@h}5 ({@damage 1d4 + 3}) 穿刺伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "传送 {@recharge 4}",
+					"ENG_name": "Teleport {@recharge 4}",
+					"entries": [
+						"这只狗传送至它能看到的40英尺内的未被占据的空间。"
+					]
+				}
+			],
+			"token": {
+				"name": "闪现犬",
+				"ENG_name": "Blink Dog",
+				"source": "MM"
+			},
+			"languageTags": [
+				"CS",
+				"OTH",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			]
+		},
+		{
+			"name": "巨魔战士",
+			"ENG_name": "Bugbear Warrior",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 8,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"黑暗视觉 60 尺"
+			],
+			"passive": 10,
+			"languages": [
+				"通用语",
+				"地精"
+			],
+			"cr": "1",
+			"gear": [
+				"兽皮甲|xphb",
+				{
+					"item": "轻锤|xphb",
+					"quantity": 3
+				}
+			],
+			"trait": [
+				{
+					"name": "绑架",
+					"ENG_name": "Abduct",
+					"entries": [
+						"地精的移动速度在它移动一个被{@condition 擒抱|XPHB}的生物时不会减半。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "徒手打击",
+					"ENG_name": "Unarmed Strike",
+					"entries": [
+						"{@atkr m} {@hit 4}, 触及范围10英尺。{@h}6 ({@damage 1d8 + 2}) 钝击伤害，如果目标是中型或更小的生物，则处于{@condition 被擒|XPHB}状态（逃脱{@dc 12}）。直到这个{@condition 被擒|XPHB}状态结束，熊地精不能对另一个目标进行徒手攻击。"
+					]
+				},
+				{
+					"name": "轻锤",
+					"ENG_name": "Light Hammer",
+					"entries": [
+						"{@atkr m,r} +4 （如果目标被地精熊{@condition Grappled|XPHB}，则具有优势），触及范围10英尺或射程20/60英尺。{@h}9 ({@damage 3d4 + 2}) 钝击伤害。"
+					]
+				}
+			],
+			"token": {
+				"name": "熊地精",
+				"ENG_name": "Bugbear",
+				"source": "MM"
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RA",
+				"RCH",
+				"THW"
+			],
+			"conditionInflict": [
+				"被擒抱"
+			]
+		},
+		{
+			"name": "恶霸蛙沼泽贤者",
+			"ENG_name": "Bullywug Bog Sage",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 16,
+			"save": {
+				"con": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"stealth": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"狂蛙人",
+				"通用语"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "法术施放（术士）",
+					"ENG_name": "Spellcasting (Sorcerer)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"牛蛙怪施放以下法术之一，使用魅力作为施法能力（法术豁免{@dc 13}）："
+					],
+					"will": [
+						"{@spell 舞光术|XPHB}",
+						"{@spell 致病射线|XPHB} (2级版本)"
+					],
+					"daily": {
+						"1": [
+							"{@spell 浓酸球|XPHB}"
+						],
+						"2e": [
+							"{@spell 云雾术|XPHB}",
+							"{@spell 油腻术|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "动作"
+				}
+			],
+			"trait": [
+				{
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
+					"entries": [
+						"流氓蛙能呼吸空气和水。"
+					]
+				},
+				{
+					"name": "与青蛙和蟾蜍交谈",
+					"ENG_name": "Speak with Frogs and Toads",
+					"entries": [
+						"当使用恶霸蛙的语言说话时，恶霸蛙能够与青蛙和蟾蜍沟通简单的概念。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"牛蛙怪进行两次腐臭法杖攻击。"
+					]
+				},
+				{
+					"name": "腐臭法杖",
+					"ENG_name": "Putrid Staff",
+					"entries": [
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}7 ({@damage 1d8 + 3}) 钝击伤害加上10 ({@damage 3d6}) 毒素伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "跳跃",
+					"ENG_name": "Leap",
+					"entries": [
+						"牛蛙怪可以通过花费10英尺的移动距离跳至高达30英尺。"
+					]
+				}
+			],
+			"token": {
+				"name": "狂蛙人",
+				"ENG_name": "Bullywug",
+				"source": "MM"
+			},
+			"traitTags": [
+				"水陆两栖"
+			],
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"B",
+				"I"
+			],
+			"damageTagsSpell": [
+				"A",
+				"I"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"中毒",
+				"倒地"
+			],
+			"savingThrowForcedSpell": [
+				"敏捷"
+			]
+		},
+		{
+			"name": "恶霸蛙战士",
+			"ENG_name": "Bullywug Warrior",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 40
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 13,
+			"int": 7,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"stealth": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"狂蛙人",
+				"通用语"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "水陆两栖",
+					"ENG_name": "Amphibious",
+					"entries": [
+						"流氓蛙能呼吸空气和水。"
+					]
+				},
+				{
+					"name": "与青蛙和蟾蜍交谈",
+					"ENG_name": "Speak with Frogs and Toads",
+					"entries": [
+						"当使用恶霸蛙的语言说话时，恶霸蛙能够与青蛙和蟾蜍沟通简单的概念。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "昆虫形细剑",
+					"ENG_name": "Insectile Rapier",
+					"entries": [
+						"{@atkr m} {@hit 4}, 触及范围5英尺。{@h}6 ({@damage 1d8 + 2}) 穿刺伤害加上2 ({@damage 1d4}) 毒素伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "跳跃",
+					"ENG_name": "Leap",
+					"entries": [
+						"牛蛙怪可以通过花费10英尺的移动距离跳至高达30英尺。"
+					]
+				}
+			],
+			"token": {
+				"name": "狂蛙人",
+				"ENG_name": "Bullywug",
+				"source": "MM"
+			},
+			"traitTags": [
+				"水陆两栖"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA",
+				"MLW"
+			]
+		},
+		{
 			"name": "妖鬼",
 			"ENG_name": "Ghast",
 			"source": "XMM",
@@ -68,6 +500,148 @@
 			}
 		},
 		{
+			"name": "魔法师",
+			"ENG_name": "Mage",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 81,
+				"formula": "18d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 11,
+			"languages": [
+				"通用语和任意三种语言"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "施法",
+					"ENG_name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"法师使用智力作为施法能力（法术豁免{@dc 14}）来施放以下法术之一："
+					],
+					"will": [
+						"{@spell 侦测魔法|XPHB}",
+						"{@spell 光亮术|XPHB}",
+						"{@spell 法师护甲|XPHB}（包含在上面）",
+						"{@spell 法师之手|XPHB}",
+						"{@spell 魔法伎俩|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell 寒冰锥|XPHB}"
+						],
+						"2e": [
+							"{@spell 火球术|XPHB}",
+							"{@spell 飞行术|XPHB}",
+							"{@spell 暗示术|XPHB}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "动作"
+				}
+			],
+			"action": [
+				{
+					"name": "多重攻击",
+					"ENG_name": "Multiattack",
+					"entries": [
+						"法师进行三次奥术爆发攻击。"
+					]
+				},
+				{
+					"name": "奥术爆发",
+					"ENG_name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, 触及5英尺或射程120英尺 {@h}16 ({@damage 3d10}) 力量伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "反制法术（每日1次）",
+					"ENG_name": "Counterspell (1/Day)",
+					"entries": [
+						"法师对那个法术的触发做出反应，使用相同的施法能力施放{@spell 法术反制|XPHB}。"
+					]
+				},
+				{
+					"name": "盾牌（每日2次）",
+					"ENG_name": "Shield (2/Day)",
+					"entries": [
+						"法师在触发该法术时施放{@spell 护盾术|XPHB}，使用相同的法术施放能力。"
+					]
+				}
+			],
+			"token": {
+				"name": "魔法师",
+				"ENG_name": "Mage",
+				"source": "MM"
+			},
+			"actionTags": [
+				"多重攻击"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflictSpell": [
+				"魅惑"
+			],
+			"savingThrowForcedSpell": [
+				"体质",
+				"敏捷",
+				"感知"
+			]
+		},
+		{
 			"name": "木乃伊",
 			"ENG_name": "Mummy",
 			"source": "XMM",
@@ -96,6 +670,79 @@
 				"ENG_name": "Wight",
 				"source": "MM"
 			}
+		},
+		{
+			"name": "座狼",
+			"ENG_name": "Worg",
+			"source": "XMM",
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d10 + 4"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 13,
+			"int": 7,
+			"wis": 11,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 尺"
+			],
+			"passive": 14,
+			"languages": [
+				"地精",
+				"座狼"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "啃咬",
+					"ENG_name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, 触及范围5英尺。{@h}7 ({@damage 1d8 + 3}) 穿刺伤害，并且在狼人下一个回合开始前，对目标的下一次攻击检定具有优势。"
+					]
+				}
+			],
+			"token": {
+				"name": "座狼",
+				"ENG_name": "Worg",
+				"source": "MM"
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"GO",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			]
 		}
 	]
 }

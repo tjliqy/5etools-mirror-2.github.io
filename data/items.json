@@ -10007,6 +10007,20 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "隐形斗篷",
+			"ENG_name": "Cloak of Invisibility",
+			"source": "UtHftLH",
+			"rarity": "legendary",
+			"reqAttune": true,
+			"wondrous": true,
+			"recharge": "拂晓",
+			"rechargeAmount": "{@dice 1d3}",
+			"charges": 3,
+			"entries": [
+				"这件斗篷有3次充能，每天黎明时恢复{@dice 1d3}次已消耗的充能。当你穿戴这件斗篷时，你可以采取一个{@action 魔法|XPHB}动作，将斗篷的兜帽拉过你的头部，并消耗1次充能，使自己获得{@condition 隐形|XPHB}状态，持续1小时。如果你将兜帽拉下（无需动作）或停止穿戴兜帽，效果会提前结束。"
+			]
+		},
+		{
 			"name": "万众时尚斗篷",
 			"ENG_name": "Cloak of Many Fashions",
 			"source": "XGE",
@@ -23188,6 +23202,110 @@
 			]
 		},
 		{
+			"name": "多头法术帽",
+			"ENG_name": "Hat of Many Spells",
+			"source": "UtHftLH",
+			"rarity": "very rare",
+			"reqAttune": "由法师",
+			"reqAttuneTags": [
+				{
+					"class": "法师"
+				}
+			],
+			"wondrous": true,
+			"focus": [
+				"法师"
+			],
+			"entries": [
+				"这顶尖顶帽具有以下特性。",
+				{
+					"type": "entries",
+					"name": "法器",
+					"ENG_name": "Spellcasting Focus",
+					"entries": [
+						"当你拿着这顶帽子时，你可以将其作为{@variantrule 法器|XPHB}来为你的法师法术施法。你使用这顶帽子施放的任何法术都会获得一个特殊的肢体动作成分：你必须把手伸进帽子里，然后\"拉\"出法术。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "未知法术",
+					"ENG_name": "Unknown Spell",
+					"entries": [
+						"当你持有这顶帽子时，你可以尝试施放一个你不知道的1级或更高级别的法术。这个法术必须在法师法术列表中，必须是你能够施放的等级，并且它的材料成分不能超过1000金币。一旦你决定了要施放的法术，你必须消耗一个与法术等级相同的法术位。然后，为了确定你是否成功施放了法术，进行一次智力（{@skill 奥秘|XPHB}）检定（难度等级为10加上法术等级）。如果检定成功，你将使用正常的施法时间施放法术，并且在完成一次{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}之前，你不能再使用这个特性。如果检定失败，你未能施放法术，而是会发生一个随机效果，由以下表格决定。",
+						"从帽子中施放的任何法术都使用你的法术豁免DC和法术攻击加值。",
+						{
+							"type": "table",
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"colLabels": [
+								"1d100",
+								"效果"
+							],
+							"rows": [
+								[
+									"01-50",
+									"你随机施放一个法术，由掷骰子{@dice 1d10}决定：掷出{@b 1}时，{@spell 变巨/缩小术|XPHB}（变大效果）；掷出{@b 2}时，{@spell 变巨/缩小术|XPHB}（缩小效果）；掷出{@b 3}时，{@spell 妖火|XPHB}；掷出{@b 4}时，{@spell 火球术|XPHB}；掷出{@b 5}时，{@spell 造风术|XPHB}；掷出{@b 6}时，{@spell 隐形术|XPHB}（对自己施放）；掷出{@b 7}时，{@spell 闪电束|XPHB}；掷出{@b 8}时，{@spell 魅影之力|XPHB}；掷出{@b 9}时，{@spell 变形术|XPHB}；掷出{@b 10}时，{@spell 臭云术|XPHB}。"
+								],
+								[
+									"51-55",
+									"你直到你的下一个回合结束时处于{@condition 震慑|XPHB}状态，认为刚刚发生了一些了不起的事情。"
+								],
+								[
+									"56-60",
+									"一群无害的蝴蝶群在你自己30英尺范围内的10英尺{@variantrule 立方体 [区域效果]|XPHB|立方}内飞舞。这群蝴蝶在1分钟后散去。"
+								],
+								[
+									"61-65",
+									"你从帽子里拿出一个非魔法物品。掷骰子{@dice 1d4}来决定物品：如果是{@b 1}，一瓶酸液；如果是{@b 2}，一瓶炼金术士之火；如果是{@b 3}，一根撬棍；如果是{@b 4}，一支点燃的火把。"
+								],
+								[
+									"66-70",
+									"你遭受了一次\"魔法疾病\"的发作，并且获得了{@condition 中毒|XPHB}状态，持续1小时。"
+								],
+								[
+									"71-75",
+									"你直到你的下一个回合结束时处于{@condition 石化|XPHB}状态。"
+								],
+								[
+									"76-80",
+									"你从帽子里拿出一个非魔法物品。掷骰子{@dice 1d4}来决定物品：如果是{@b 1}，一个{@item 匕首|XPHB}；如果是{@b 2}，一根一端系有{@item 爪钩|XPHB}的{@item 爪钩|XPHB}；如果是{@b 3}，一袋{@item 铁蒺藜|XPHB}；如果是{@b 4}，一颗价值50金币的宝石。"
+								],
+								[
+									"81-85",
+									"一个生物出现在离你尽可能近的未被占据的空间。这个生物不受你的控制，并且会像它通常那样行动，并且在1小时后或当它降至0{@variantrule 生命值|XPHB}时消失。掷{@dice 1d4}来决定生物：如果是{@b 1}，一个{@creature 骆驼|XPHB}；如果是{@b 2}，一条{@creature 蟒蛇|XPHB}；如果是{@b 3}，一头{@creature 象|XPHB}；如果是{@b 4}，一头{@creature 骡|XPHB}。"
+								],
+								[
+									"86-90",
+									"一个{@variantrule 敌对（态度）|XPHB|敌对的}的{@creature 蝙蝠群|XPHB}从帽子里飞出来，占据了你的空间，并攻击你。"
+								],
+								[
+									"91-95",
+									"一个垂直的，直径10英尺的双向传送门在距离你30英尺内的未被占据的空间中打开，通往另一个存在层面，并在你下一个回合结束前保持开启。传送门通往何处由DM决定。"
+								],
+								[
+									"96-00",
+									"你从帽子里抽出一个魔法物品。掷骰子{@dice 1d6}来确定物品的稀有度：如果是{@b 1-3}，{@filter 常见|Items|rarity=Common}；如果是{@b 4-5}，{@filter 不常见|Items|rarity=Uncommon}；如果是{@b 6}，{@filter 罕见|Items|rarity=Rare}。如果1小时内没有被消耗或摧毁，DM选择的物品将会消失。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedSpells": [
+				"变巨/缩小术|xphb",
+				"妖火|xphb",
+				"火球术|xphb",
+				"造风术|xphb",
+				"隐形术|xphb",
+				"闪电束|xphb",
+				"魅影之力|xphb",
+				"变形术|xphb",
+				"臭云术|xphb"
+			]
+		},
+		{
 			"name": "杂虫帽",
 			"ENG_name": "Hat of Vermin",
 			"source": "XGE",
@@ -26231,7 +26349,7 @@
 			"rarity": "none",
 			"value": 2,
 			"entries": [
-				"使用墨水，墨水笔用来书写或绘画。"
+				"使用{@item 墨水|XPHB}，墨水笔用来书写或绘画。"
 			]
 		},
 		{
@@ -27321,7 +27439,7 @@
 			"weight": 0.5,
 			"value": 10,
 			"entries": [
-				"铁钉以十根为一捆出售。作为一次{@action 利用|XPHB}动作，你可以使用钝器，比如轻锤，将铁钉锤入木头、土壤或类似的材料中。你可以这样做来卡住门，或者将{@item 绳索|XPHB}或{@item 链之魔契|XPHB}绑在铁钉上。"
+				"铁钉以十根一捆的形式出售。作为一个{@action 利用|XPHB}动作，你可以使用钝器，比如{@item 轻锤|XPHB}，将钉子锤入木头、土壤或类似的材料。你可以这样做来卡住门或将{@item 绳索|XPHB}或{@item 链之魔契|XPHB}绑在钉子上。"
 			]
 		},
 		{
@@ -27335,7 +27453,7 @@
 			"weight": 5,
 			"value": 100,
 			"entries": [
-				"铁钉以十根为一捆出售。作为一次{@action 利用|XPHB}动作，你可以使用钝器，比如轻锤，将铁钉锤入木头、土壤或类似的材料中。你可以这样做来卡住门，或者将{@item 绳索|XPHB}或{@item 链之魔契|XPHB}绑在铁钉上。"
+				"铁钉以十根一捆的形式出售。作为一个{@action 利用|XPHB}动作，你可以使用钝器，比如{@item 轻锤|XPHB}，将钉子锤入木头、土壤或类似的材料。你可以这样做来卡住门或将{@item 绳索|XPHB}或{@item 链之魔契|XPHB}绑在钉子上。"
 			],
 			"packContents": [
 				{
@@ -28898,7 +29016,7 @@
 			"weight": 1,
 			"value": 50,
 			"entries": [
-				"一盏灯使用油作为燃料，发出15英尺半径内的明亮光照，并在额外30英尺范围内发出微光。"
+				"油灯使用{@item 灯油|XPHB}作为燃料，投射一个15英尺半径内的{@variantrule 明亮光照|XPHB}，并且额外30英尺范围内投射{@variantrule 微光光照|XPHB}。"
 			],
 			"hasFluffImages": true
 		},
@@ -33756,6 +33874,37 @@
 			],
 			"seeAlsoVehicle": [
 				"夜蛛|AAG"
+			]
+		},
+		{
+			"name": "尼科的钉头锤",
+			"ENG_name": "Niko's Mace",
+			"source": "UtHftLH",
+			"baseItem": "硬头锤|xphb",
+			"type": "M",
+			"rarity": "very rare",
+			"reqAttune": "由施法者",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"weight": 4,
+			"weaponCategory": "简易",
+			"mastery": [
+				"棍棒（Sap）是一种通常由木头制成的简易武器，用于近战攻击。在某些游戏中，如《龙与地下城》（Dungeons & Dragons），棍棒可能具有特定的游戏机制或规则。|XPHB"
+			],
+			"dmg1": "1d6",
+			"dmgType": "B",
+			"bonusWeaponAttack": "+9",
+			"recharge": "拂晓",
+			"rechargeAmount": "{@dice 1d6}",
+			"charges": 6,
+			"entries": [
+				"这把钉头锤有6次充能，每天黎明时恢复{@dice 1d6}次消耗的充能。持有钉头锤时，你可以消耗1次充能来施放{@spell 天界召唤术|XPHB}（法术攻击命中加9）。"
+			],
+			"attachedSpells": [
+				"天界召唤术|xphb"
 			]
 		},
 		{
@@ -39044,6 +39193,63 @@
 			]
 		},
 		{
+			"name": "杂技演员的长棍",
+			"ENG_name": "Quarterstaff of the Acrobat",
+			"source": "UtHftLH",
+			"reprintedAs": [
+				"长棍|XPHB"
+			],
+			"baseItem": "长棍|xphb",
+			"type": "M",
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 4,
+			"weaponCategory": "简易",
+			"property": [
+				"V|XPHB",
+				"T|XPHB"
+			],
+			"mastery": [
+				"推翻|XPHB"
+			],
+			"dmg1": "1d6",
+			"dmgType": "B",
+			"dmg2": "1d8",
+			"bonusWeapon": "+2",
+			"bonusAc": "+5",
+			"staff": true,
+			"entries": [
+				"你使用这把魔法武器进行攻击检定和伤害检定时，有+2的加值。",
+				"持有这件武器时，你可以让它发出绿色的光芒，照亮10英尺范围内，这可以作为一个额外动作，或者在你掷出先攻骰之后，或者你可以作为一个额外动作熄灭光芒。",
+				"持有这件武器时，你可以采取一个{@variantrule 附赠动作|XPHB}来改变其形态，将其变成一根6英寸的短棍（便于携带）或一根10英尺的{@item 长杆|XPHB}，或者恢复成{@item 长棍|XPHB}；武器只会延伸到周围空间允许的范围。",
+				"在某些形态下，武器具有以下额外属性。",
+				{
+					"type": "entries",
+					"name": "杂技协助（仅限长棍和十英尺杆形态）",
+					"ENG_name": "Acrobatic Assist (Quarterstaff and 10-Foot Pole Forms Only)",
+					"entries": [
+						"持有这件武器时，你在敏捷（{@skill 特技|XPHB}）检定上具有{@skill 特技|XPHB}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "攻击偏转（仅限长棍形态）",
+					"ENG_name": "Attack Deflection (Quarterstaff Form Only)",
+					"entries": [
+						"当你在持有武器时被攻击击中，你可以使用{@variantrule 反应|XPHB}来旋转武器，获得+5的{@variantrule 护甲等级|XPHB}加成，以对抗触发攻击，可能会使攻击落空。在完成{@variantrule 短休|XPHB|短}或{@variantrule 长休|XPHB}之前，你不能再次使用这个特性。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "远程武器（仅限长棍形态）",
+					"ENG_name": "Ranged Weapon (Quarterstaff Form Only)",
+					"entries": [
+						"这把武器具有投掷特性，正常射程为30英尺，长射程为120英尺。使用该武器进行远程攻击后，它会立即飞回你的手中。"
+					]
+				}
+			]
+		},
+		{
 			"name": "石英",
 			"ENG_name": "Quartz",
 			"source": "DMG",
@@ -44295,6 +44501,38 @@
 			]
 		},
 		{
+			"name": "骑士之盾",
+			"ENG_name": "Shield of the Cavalier",
+			"source": "UtHftLH",
+			"baseItem": "护盾术|xphb",
+			"type": "S",
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 6,
+			"ac": 2,
+			"bonusAc": "+2",
+			"entries": [
+				"持有这个盾牌时，你的{@variantrule 护甲等级|XPHB}有+2的加值。这个加值是盾牌正常护甲等级加值之外的。",
+				"盾牌在持有时具有以下额外属性。",
+				{
+					"type": "entries",
+					"name": "强力冲击",
+					"ENG_name": "Forceful Bash",
+					"entries": [
+						"当你进行{@action 攻击|XPHB}时，你可以使用盾牌对距离你5英尺内的某个目标进行一次攻击检定。将你的{@variantrule 熟练项|XPHB|熟练加值}和力量调整值应用于攻击检定。命中时，盾牌对目标造成等于{@dice 2d6 + 2}加上你的力量调整值的力场伤害，如果目标是一个生物，你可以将其推向远离你10英尺的方向。如果该生物的体型比你小或相同，你还可以将其击倒，使其处于{@condition 倒地|XPHB}状态。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "庇护力场",
+					"ENG_name": "Protective Field",
+					"entries": [
+						"作为{@variantrule 反应|XPHB}，当你或你能看到的5英尺内的盟友被攻击或对区域效果进行豁免检定时，你可以使用盾牌创造一个从你开始的5英尺不动的{@variantrule 辐射[区域效果]|XPHB|辐射}。当{@variantrule 辐射[区域效果]|XPHB|辐射}出现时，任何没有完全包含在内的生物或物体会被推到最近的未被占据的空间外。触发{@variantrule 反应|XPHB}的攻击或区域效果对{@variantrule 辐射[区域效果]|XPHB|辐射}内的生物和物体没有效果，它持续的时间取决于你维持{status 专注|XPHB}的时间，最长可达1分钟。没有任何东西可以进入或离开{@variantrule 辐射[区域效果]|XPHB|辐射}。在{@variantrule 辐射[区域效果]|XPHB|辐射}内的生物或物体不能被来自外部的攻击或效果伤害，同样，{@variantrule 辐射[区域效果]|XPHB|辐射}内的生物也不能伤害外部的任何东西。一旦使用了这个特性，直到下一个黎明之前都不能再次使用。"
+					]
+				}
+			]
+		},
+		{
 			"name": "隐藏领主的盾牌",
 			"ENG_name": "Shield of the Hidden Lord",
 			"source": "BGDIA",
@@ -46741,6 +46979,7 @@
 			"freeRules2024": true,
 			"type": "SC|XPHB",
 			"rarity": "common",
+			"value": 3000,
 			"entries": [
 				"法术卷轴（戏法）是一件带有戏法法术文字的魔法物品，由卷轴的创造者决定。如果该法术在你的职业法术列表上，你可以阅读卷轴并使用其正常的施法时间施放法术，而无需提供任何材料成分。",
 				"如果法术需要进行豁免投掷或攻击检定，法术豁免DC为13，攻击加值为{@hit 5}。卷轴在施法完成后会解体。"
@@ -46758,6 +46997,7 @@
 			"freeRules2024": true,
 			"type": "SC|XPHB",
 			"rarity": "common",
+			"value": 5000,
 			"entries": [
 				"一级法术卷轴（Level 1）是一件带有一级法术文字的魔法物品，由卷轴的创造者决定。如果该法术在你的职业法术列表上，你可以阅读卷轴并使用其正常的施法时间施放法术，而无需提供任何材料成分。",
 				"如果法术需要进行豁免投掷或攻击检定，法术豁免DC为13，攻击加值为{@hit 5}。卷轴在施法完成后会解体。"
@@ -52451,6 +52691,45 @@
 			],
 			"ammoType": "文艺复兴子弹",
 			"hasFluffImages": true
+		},
+		{
+			"name": "雷霆巨棍",
+			"ENG_name": "Thunderous Greatclub",
+			"source": "UtHftLH",
+			"baseItem": "巨棒|xphb",
+			"type": "M",
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 10,
+			"weaponCategory": "简易",
+			"property": [
+				"2H|XPHB"
+			],
+			"mastery": [
+				"推动|XPHB"
+			],
+			"dmg1": "1d8",
+			"dmgType": "B",
+			"entries": [
+				"当你与这把魔法武器共鸣时，你的力量值为20，除非你的力量值已经等于或超过这个数值。这把武器对任何被它击中的生物造成额外的{@damage 1d8}雷击伤害，对任何被它击中且没有被穿戴或携带的物体造成额外的{@damage 3d8}雷击伤害。",
+				"该武器具有以下附加属性。",
+				{
+					"type": "entries",
+					"name": "雷鸣般的掌声",
+					"ENG_name": "Clap of Thunder",
+					"entries": [
+						"作为《玩家手册》（XPHB）中的一个魔法动作，你可以将武器击打在坚硬表面上，以产生一个可被300英尺内听到的响亮雷鸣声。你还会创造一个30英尺的雷鸣能量锥形区域。在锥形区域内的每个生物必须通过一次DC 15的力量豁免检定，否则会处于{@condition 倒地|XPHB}状态。锥形区域内的非魔法物品，如果没有被穿戴或携带，会受到{@damage 3d8}雷鸣伤害。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "地震术",
+					"ENG_name": "Earthquake",
+					"entries": [
+						"作为《玩家手册》中的魔法动作，你可以将武器击打地面，在冲击点为中心的50英尺半径范围内产生强烈的地震扰动。该区域内与地面接触的建筑物受到50点钝击伤害，该区域内地面上的每个生物必须进行一次DC 20的敏捷豁免投掷，否则会处于{@condition 倒地|XPHB}状态。如果该生物同时处于{@status 专注|XPHB|专注}状态，它必须进行一次DC 20的体质豁免投掷，否则其{@status 专注|XPHB}状态会被打破。此外，你可以在区域内的任何地方使地面上出现一个30英尺深、10英尺宽的裂缝。任何位于裂缝开口处的生物必须进行一次DC 20的敏捷豁免投掷，未通过则掉入裂缝，通过则随裂缝边缘移动。任何位于裂缝开口处的建筑物会坍塌进裂缝中。一旦你使用了这个特性，直到下一个黎明之前都不能再次使用。"
+					]
+				}
+			]
 		},
 		{
 			"name": "涌潮者三叉戟",
