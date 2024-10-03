@@ -2977,6 +2977,7 @@ Renderer.utils = class {
 		opts = opts || {};
 
 		const name = it._displayName || it.name;
+		const eng_name = it.ENG_name;
 
 		let dataPart = `data-name="${name.qq()}"`;
 		let pageLinkPart;
@@ -3001,6 +3002,8 @@ Renderer.utils = class {
 				<div class="split-v-end">
 					<div class="ve-flex-v-center">
 						<h1 class="stats__h-name copyable m-0" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this)">${opts.prefix || ""}${name}${opts.suffix || ""}</h1>
+						<h3 class="stats__h-name copyable m-0" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this)">${eng_name}</h3>
+
 						${opts.controlRhs || ""}
 						${!IS_VTT && ExtensionUtil.ACTIVE && opts.page ? Renderer.utils.getBtnSendToFoundryHtml() : ""}
 					</div>
