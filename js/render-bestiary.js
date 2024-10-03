@@ -274,12 +274,12 @@ class _RenderBestiaryImplBase {
 	/* ----- */
 
 	_getCommonHtmlParts_lairActions ({legGroup}) {
-		return `${legGroup && legGroup.lairActions ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner stats__sect-header-inner--non-statblock">Lair Actions</h3></td></tr>
+		return `${legGroup && legGroup.lairActions ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner stats__sect-header-inner--non-statblock">巢穴动作</h3></td></tr>
 		${this._getRenderedSection({prop: "lairaction", entries: legGroup.lairActions, depth: -1})}` : ""}`;
 	}
 
 	_getCommonHtmlParts_regionalEffects ({legGroup}) {
-		return `${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner stats__sect-header-inner--non-statblock">Regional Effects</h3></td></tr>
+		return `${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6"><h3 class="stats__sect-header-inner stats__sect-header-inner--non-statblock">区域效应</h3></td></tr>
 		${this._getRenderedSection({prop: "regionaleffect", entries: legGroup.regionalEffects, depth: -1})}` : ""}`;
 	}
 
@@ -333,7 +333,7 @@ class _RenderBestiaryImplBase {
 
 		const pageTrInner = Renderer.utils.getSourceAndPageTrHtml(srcCpy);
 		if (!mon.environment?.length) return [pageTrInner];
-		return [pageTrInner, `<div><b>Environment:</b> ${Renderer.monster.getRenderedEnvironment(mon.environment)}</div>`];
+		return [pageTrInner, `<div><b>环境:</b> ${Renderer.monster.getRenderedEnvironment(mon.environment)}</div>`];
 	}
 
 	/* -------------------------------------------- */
@@ -573,7 +573,7 @@ class _RenderBestiaryImplOne extends _RenderBestiaryImplBase {
 		return `<tr><td colspan="6">
 			<div class="split-v-center ${isInlinedToken ? `stats__wrp-avoid-token` : ""}">
 				<div><strong title="Armor Class">AC</strong> ${mon.ac == null ? "\u2014" : Parser.acToFull(mon.ac, {renderer})}</div>
-				<div><strong>Initiative</strong> ${Renderer.monster.getInitiativePart(mon)}</div>
+				<div><strong>先攻</strong> ${Renderer.monster.getInitiativePart(mon)}</div>
 			</div>
 		</td></tr>`;
 	}

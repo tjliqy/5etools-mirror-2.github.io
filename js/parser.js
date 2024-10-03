@@ -259,7 +259,7 @@ Parser.getSpeedString = (ent, {isMetric = false, isSkipZeroWalk = false, isLongF
 
 	const unit = isMetric
 		? Parser.metric.getMetricUnit({originalUnit: "ft.", isShortForm: !isLongForm})
-		: isLongForm ? "feet" : "ft.";
+		: isLongForm ? "尺" : "尺";
 	if (typeof ent.speed === "object") {
 		const stack = [];
 		let joiner = ", ";
@@ -283,8 +283,17 @@ Parser._getSpeedString_addSpeedMode = ({ent, prop, stack, isMetric, isSkipZeroWa
 	if (ent.speed[prop] || (!isSkipZeroWalk && prop === "walk")) Parser._getSpeedString_addSpeed({prop, speed: ent.speed[prop] || 0, isMetric, unit, stack, styleHint});
 	if (ent.speed.alternate && ent.speed.alternate[prop]) ent.speed.alternate[prop].forEach(speed => Parser._getSpeedString_addSpeed({prop, speed, isMetric, unit, stack, styleHint}));
 };
+
+Parser.SPEED_TO_CN = {
+	"climb": "攀爬",
+	"fly": "飞行",
+	"hover": "悬浮",
+	"swim": "游泳",
+	"walk": "步行",
+	"burrow": "掘穴"
+}
 Parser._getSpeedString_addSpeed = ({prop, speed, isMetric, unit, stack, styleHint}) => {
-	const ptName = prop === "walk" ? "" : `${prop[styleHint === "classic" ? "toString" : "toTitleCase"]()} `;
+	const ptName = prop === "walk" ? "" : `${Parser.SPEED_TO_CN[prop] || (styleHint === "classic" ? prop.toString() : prop.toTitleCase())} `;
 	const ptValue = Parser._getSpeedString_getVal({prop, speed, isMetric});
 	const ptUnit = speed === true ? "" : ` ${unit}`;
 	const ptCondition = Parser._getSpeedString_getCondition({speed});
@@ -2665,7 +2674,8 @@ Parser.MON_TYPE_TO_PLURAL[Parser.TP_MONSTROSITY] = "怪兽";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_OOZE] = "泥怪";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_PLANT] = "植物";
 Parser.MON_TYPE_TO_PLURAL[Parser.TP_UNDEAD] = "不死生物";
-Parser.MON_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD].map(it => Parser.MON_TYPE_TO_PLURAL[it] || it);
+Parser.MON_EN_TYPES = [Parser.TP_ABERRATION, Parser.TP_BEAST, Parser.TP_CELESTIAL, Parser.TP_CONSTRUCT, Parser.TP_DRAGON, Parser.TP_ELEMENTAL, Parser.TP_FEY, Parser.TP_FIEND, Parser.TP_GIANT, Parser.TP_HUMANOID, Parser.TP_MONSTROSITY, Parser.TP_OOZE, Parser.TP_PLANT, Parser.TP_UNDEAD];
+Parser.MON_TYPES = Parser.MON_EN_TYPES.map(it => Parser.MON_TYPE_TO_PLURAL[it] || it);
 
 Parser.SZ_FINE = "F";
 Parser.SZ_DIMINUTIVE = "D";
@@ -2991,21 +3001,21 @@ Parser.MisMVX_PREFIX = "错位怪物";
 Parser.AA_PREFIX = "Adventure Atlas: ";
 
 Parser.SOURCE_JSON_TO_FULL = {};
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CoS] = "Curse of Strahd";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_DMG] = "Dungeon Master's Guide";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_EEPC] = "Elemental Evil Player's Companion";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_EET] = "Elemental Evil: Trinkets";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HotDQ] = "Hoard of the Dragon Queen";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_LMoP] = "Lost Mine of Phandelver";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_MM] = "Monster Manual";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_OotA] = "Out of the Abyss";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PHB] = "Player's Handbook";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PotA] = "Princes of the Apocalypse";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RoT] = "The Rise of Tiamat";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RoTOS] = "The Rise of Tiamat Online Supplement";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCAG] = "Sword Coast Adventurer's Guide";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SKT] = "Storm King's Thunder";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_ToA] = "Tomb of Annihilation";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CoS] = "施特拉德的诅咒";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_DMG] = "地下城主指南";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_EEPC] = "元素邪妄玩家扩展";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_EET] = "邪恶元素小饰品";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HotDQ] = "龙后的宝山";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_LMoP] = "凡戴尔的失落矿坑";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_MM] = "怪物图鉴";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_OotA] = "逃离深渊";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PHB] = "玩家手册";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PotA] = "毁灭亲王";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RoT] = "提亚马特的崛起";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_RoTOS] = "提亚马特的崛起 在线增刊";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCAG] = "剑湾冒险者指南";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SKT] = "风暴君王之雷霆";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_ToA] = "湮灭之墓";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TLK] = "The Lost Kenku";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_ToD] = "龙族暴政";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TTP] = "龟人扩充包";
@@ -3100,19 +3110,19 @@ Parser.SOURCE_JSON_TO_FULL[Parser.SRC_DoDk] = "Dungeons of Drakkenheim";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HWCS] = "Humblewood Campaign Setting";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HWAitW] = "Humblewood: Adventure in the Wood";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_ToB1_2023] = "Tome of Beasts 1 (2023 Edition)";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XPHB] = "Player's Handbook (2024)";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XDMG] = "Dungeon Master's Guide (2024)";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XMM] = "Monster Manual (2024)";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XPHB] = "玩家手册(2024)";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XDMG] = "地下城城主指南(2024)";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_XMM] = "怪物图鉴(2024)";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_TD] = "Tarot Deck";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN] = "Dungeon Master's Screen";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN_WILDERNESS_KIT] = "Dungeon Master's Screen: Wilderness Kit";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN_DUNGEON_KIT] = "Dungeon Master's Screen: Dungeon Kit";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_SCREEN_SPELLJAMMER] = "Dungeon Master's Screen: Spelljammer";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HF] = "Heroes' Feast";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HF] = "英雄盛宴";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFFotM] = "Heroes' Feast: Flavors of the Multiverse";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFStCM] = "Heroes' Feast: Saving the Childrens Menu";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_HFStCM] = "英雄盛宴：救救孩子的菜谱";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_PaF] = "Puncheons and Flagons";
-Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CM] = "Candlekeep Mysteries";
+Parser.SOURCE_JSON_TO_FULL[Parser.SRC_CM] = "烛堡秘辛";
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH] = Parser.NRH_NAME;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH_TCMC] = `${Parser.NRH_NAME}: The Candy Mountain Caper`;
 Parser.SOURCE_JSON_TO_FULL[Parser.SRC_NRH_AVitW] = `${Parser.NRH_NAME}: A Voice in the Wilderness`;
@@ -4199,6 +4209,10 @@ Parser.MON_TAG_PREFIX_TO_CN = {
 Parser.MON_SIDEKICK_TO_CN = {
 	"warrior": "武者",
 	"expert": "专家",
-	"spellcaster": "施法者"
+	"spellcaster": "施法者",
+	"attacker": "攻击手",
+	"defender": "防御者",
+	"healer": "治疗者",
+	"mage": "魔术师"
 }
 // endregion

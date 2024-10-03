@@ -1860,8 +1860,8 @@ globalThis.Renderer = function () {
 			case "@actSaveFail": textStack[0] += `<i>Failure:</i>`; break;
 			case "@actTrigger": textStack[0] += `<i>Trigger:</i>`; break;
 			case "@actResponse": textStack[0] += `<i>Response:</i>`; break;
-			case "@h": textStack[0] += `<i>命中：:</i> `; break;
-			case "@m": textStack[0] += `<i>未命中：:</i> `; break;
+			case "@h": textStack[0] += `<i>命中：</i> `; break;
+			case "@m": textStack[0] += `<i>未命中：</i> `; break;
 			case "@color": {
 				const [toDisplay, color] = Renderer.splitTagByPipe(text);
 				const ptColor = this._renderString_renderTag_getBrewColorPart(color);
@@ -9205,7 +9205,8 @@ Renderer.monster = class {
 		const name = isUseDisplayName ? (mon._displayName ?? mon.name) : mon.name;
 		const shortName = isUseDisplayName ? (mon._displayShortName ?? mon.shortName) : mon.shortName;
 
-		const prefix = mon.isNamedCreature ? "" : isTitleCase || isSentenceCase ? "The " : "the ";
+		// const prefix = mon.isNamedCreature ? "" : isTitleCase || isSentenceCase ? "The " : "the ";
+		const prefix = ""
 		if (shortName === true) return `${prefix}${name}`;
 		else if (shortName) return `${prefix}${!prefix && isTitleCase ? shortName.toTitleCase() : shortName.toLowerCase()}`;
 
@@ -9234,7 +9235,7 @@ Renderer.monster = class {
 		const legendaryNameTitle = Renderer.monster.getShortName(mon, {isTitleCase: true, isUseDisplayName});
 		return {
 			entries: [
-				`${legendaryNameTitle} can take ${legendaryActions} legendary action${legendaryActions > 1 ? "s" : ""}, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. ${legendaryNameTitle} regains spent legendary actions at the start of its turn.`,
+				`${legendaryNameTitle}可以执行 ${legendaryActions} 个传奇动作，从以下选项中选择。 每次只能使用一个传奇动作选项，并且只能在另一个生物的回合结束时使用。${legendaryNameTitle}在其回合开始时重获所有传奇动作。`,
 			],
 		};
 	}
@@ -9900,7 +9901,7 @@ Renderer.monster = class {
 				const ptSave = renderer.render(`{@savingThrow ${abv} ${mon.save?.[abv] == null ? Parser.getAbilityModNumber(ptScore) : mon.save[abv]}}`);
 
 				return [
-					`<div class="bold small-caps ve-text-right stats__disp-as-score stats__disp-as-score--label stats__disp-as-score--${styleName}">${abv.toTitleCase()}</div>`,
+					`<div class="bold small-caps ve-text-right stats__disp-as-score stats__disp-as-score--label stats__disp-as-score--${styleName}">${Parser.attAbvToFull(abv) || abv.toTitleCase()}</div>`,
 					`<div class="ve-text-center stats__disp-as-score stats__disp-as-score--${styleName}">${ptScore}</div>`,
 					`<div class="ve-text-center stats__disp-as-bonus stats__disp-as-bonus--${styleName}">${ptBonus}</div>`,
 					`<div class="ve-text-center stats__disp-as-bonus stats__disp-as-bonus--${styleName} ${i % 3 !== 2 ? "mr-2" : ""}">${ptSave}</div>`,

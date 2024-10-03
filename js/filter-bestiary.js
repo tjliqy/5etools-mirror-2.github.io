@@ -69,7 +69,7 @@ class PageFilterBestiary extends PageFilterBase {
 
 	static _getDamageTagDisplayText (tag) { return Parser.dmgTypeToFull(tag).toTitleCase(); }
 	static _getConditionDisplayText (uid) { return uid.split("|")[0].toTitleCase(); }
-	static _getAbilitySaveDisplayText (abl) { return `${abl.uppercaseFirst()} Save`; }
+	static _getAbilitySaveDisplayText (abl) { return `${abl.uppercaseFirst()}豁免`; }
 	// endregion
 
 	constructor (opts) {
@@ -99,7 +99,7 @@ class PageFilterBestiary extends PageFilterBase {
 			itemSortFn: null,
 		});
 		this._speedFilter = new RangeFilter({header: "Speed", cnHeader: "速度", min: 30, max: 30, suffix: " ft"});
-		this._speedTypeFilter = new Filter({header: "Speed Type", cnHeader: "速度类型", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
+		this._speedTypeFilter = new Filter({header: "Speed Type", cnHeader: "速度类型", items: [...Parser.SPEED_MODES, "hover"], displayFn: it => Parser.SPEED_TO_CN[it] || StrUtil.uppercaseFirst(it)});
 		this._strengthFilter = new RangeFilter({header: "Strength", cnHeader: "力量", min: 1, max: 30});
 		this._dexterityFilter = new RangeFilter({header: "Dexterity", cnHeader: "敏捷", min: 1, max: 30});
 		this._constitutionFilter = new RangeFilter({header: "Constitution", cnHeader: "体质", min: 1, max: 30});
@@ -117,8 +117,8 @@ class PageFilterBestiary extends PageFilterBase {
 		this._typeFilter = new Filter({
 			header: "Type",
 			cnHeader: "生物类型",
-			items: [...Parser.MON_TYPES],
-			displayFn: StrUtil.toTitleCase,
+			items: [...Parser.MON_EN_TYPES],
+			displayFn: Parser.monTypeToPlural,
 			itemSortFn: SortUtil.ascSortLower,
 		});
 		this._tagFilter = new Filter({header: "Tag", cnHeader:"类型副标", displayFn: it => Parser.MON_TAG_TO_CN[it] || StrUtil.toTitleCase(it)});
@@ -129,7 +129,7 @@ class PageFilterBestiary extends PageFilterBase {
 			displayFn: it => Parser.MON_SIDEKICK_TO_CN[it] || StrUtil.toTitleCase(it),
 			itemSortFn: SortUtil.ascSortLower,
 		});
-		this._sidekickTagFilter = new Filter({header: "Sidekick Tag", cnHeader: "协力者类型副标", displayFn: StrUtil.toTitleCase});
+		this._sidekickTagFilter = new Filter({header: "Sidekick Tag", cnHeader: "协力者类型副标", displayFn:it => Parser.MON_SIDEKICK_TO_CN[it] || StrUtil.toTitleCase(it)});
 		this._alignmentFilter = new Filter({
 			header: "Alignment",
 			cnHeader: "阵营",
@@ -192,7 +192,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Saving Throws Required by Traits/Actions",
 			cnHeader: "特性/动作需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
-			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Trait/Action)`,
+			displayFnMini: abl => `需要${this.constructor._getAbilitySaveDisplayText(abl)} (特性/动作)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
 			itemSortFn: null,
 		});
@@ -200,7 +200,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Saving Throws Required by Lair Actions/Regional Effects",
 			cnHeader: "通过巢穴动作/区域效应需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
-			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Lair/Regional)`,
+			displayFnMini: abl => `需要${this.constructor._getAbilitySaveDisplayText(abl)} (巢穴动作/区域效应)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
 			itemSortFn: null,
 		});
@@ -208,7 +208,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Saving Throws Required by Spells",
 			cnHeader: "法术需要的豁免检定",
 			displayFn: this.constructor._getAbilitySaveDisplayText,
-			displayFnMini: abl => `Requires ${this.constructor._getAbilitySaveDisplayText(abl)} (Spell)`,
+			displayFnMini: abl => `需要${this.constructor._getAbilitySaveDisplayText(abl)} (法术)`,
 			items: Parser.ABIL_ABVS.map(abl => Parser.attAbvToFull(abl).toLowerCase()),
 			itemSortFn: null,
 		});
@@ -237,7 +237,7 @@ class PageFilterBestiary extends PageFilterBase {
 		this._environmentFilter = new Filter({
 			header: "Environment",
 			cnHeader: "环境",
-			items: ["arctic", "coastal", "desert", "forest", "grassland", "hill", "mountain", "none", "swamp", "underdark", "underwater", "urban"],
+			items: ["丘陵", "城镇", "山地", "幽暗地域", "极地", "森林", "水下", "沼泽", "海岸", "草地", "荒漠", "none"],
 			displayFn: StrUtil.uppercaseFirst,
 		});
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
@@ -256,7 +256,7 @@ class PageFilterBestiary extends PageFilterBase {
 			header: "Actions & Reactions",
 			cnHeader: "动作 & 反应",
 			items: [
-				"Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles",
+				// "Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles",
 			],
 		});
 		this._miscFilter = new Filter({
