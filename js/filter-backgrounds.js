@@ -44,6 +44,23 @@ class PageFilterBackgrounds extends PageFilterBase {
 			isMiscFilter: true,
 			deselFn: PageFilterBase.defaultMiscellaneousDeselFn.bind(PageFilterBase),
 		});
+		this._featsFilter = new SearchableFilter({header: "Feats", itemSortFn: SortUtil.ascSortLower});
+	}
+
+	static _mutateForFilters_getFilterFeats (bg) {
+		if (!bg.feats?.length) return null;
+		return bg.feats
+			.flatMap(obj => {
+				return Object.entries(obj)
+					.filter(([, v]) => v)
+					.map(([k, v]) => {
+						switch (k) {
+							case "any": return "(Any)";
+							case "anyFromCategory": return `(Any from ${Parser.featCategoryToFull(v.category)} Category)`;
+							default: return k.split("|")[0].toTitleCase();
+						}
+					});
+			});
 	}
 
 	static mutateForFilters (bg) {
@@ -95,6 +112,8 @@ class PageFilterBackgrounds extends PageFilterBase {
 
 		const ability = Renderer.getAbilityData(bg.ability, {isOnlyShort: true, isBackgroundShortForm: bg.edition === "one"});
 		bg._slAbility = ability.asTextShort || VeCt.STR_NONE;
+
+		bg._fFeats = this._mutateForFilters_getFilterFeats(bg);
 	}
 
 	addToFilters (bg, isExcluded) {
@@ -108,6 +127,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 		this._languageFilter.addItem(bg._fLangs);
 		this._otherBenefitsFilter.addItem(bg._fOtherBenifits);
 		this._miscFilter.addItem(bg._fMisc);
+		this._featsFilter.addItem(bg._fFeats);
 	}
 
 	async _pPopulateBoxOptions (opts) {
@@ -120,6 +140,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 			this._languageFilter,
 			this._otherBenefitsFilter,
 			this._miscFilter,
+			this._featsFilter,
 		];
 	}
 
@@ -134,6 +155,7 @@ class PageFilterBackgrounds extends PageFilterBase {
 			bg._fLangs,
 			bg._fOtherBenifits,
 			bg._fMisc,
+			bg._fFeats,
 		);
 	}
 }

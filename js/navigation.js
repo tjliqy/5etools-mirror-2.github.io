@@ -102,7 +102,6 @@ class NavBar {
 		// this._addElement_divider(NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "blocklist.html", "内容黑名单");
 		this._addElement_li(NavBar._CAT_UTILITIES, "manageprerelease.html", "Prerelease Content Manager");
-		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "自制内容生成器");
 		this._addElement_li(NavBar._CAT_UTILITIES, "managebrew.html", "管理所有自制内容");
 		this._addElement_buttonSplit(
 			NavBar._CAT_UTILITIES,
@@ -135,6 +134,7 @@ class NavBar {
 		this._addElement_li(NavBar._CAT_UTILITIES, "inittrackerplayerview.html", "先攻追踪器:玩家视图");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "renderdemo.html", "渲染器 Demo");
+		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "Homebrew Builder");
 		this._addElement_li(NavBar._CAT_UTILITIES, "makecards.html", "RPG 卡片 JSON 生成器");
 		this._addElement_li(NavBar._CAT_UTILITIES, "converter.html", "文本转换器");
 		this._addElement_divider(NavBar._CAT_UTILITIES);

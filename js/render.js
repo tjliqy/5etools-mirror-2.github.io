@@ -479,6 +479,9 @@ globalThis.Renderer = function () {
 				// misc
 				case "code": this._renderCode(entry, textStack, meta, options); break;
 				case "hr": this._renderHr(entry, textStack, meta, options); break;
+
+				// raw
+				case "wrappedHtml": textStack[0] += entry.html; break;
 			}
 
 			meta._typeStack.pop();
@@ -944,12 +947,12 @@ globalThis.Renderer = function () {
 			const len = entry.entries.length;
 			for (let i = 0; i < len; ++i) {
 				meta.depth = 2;
-				const toRender = i === 0 ? {type: "inlineBlock", entries: [headerSpan, entry.entries[i]]} : entry.entries[i];
+				const toRender = i === 0 ? {type: "inlineBlock", entries: [{type: "wrappedHtml", html: headerSpan}, entry.entries[i]]} : entry.entries[i];
 				this._recursiveRender(toRender, textStack, meta, {prefix: "<p>", suffix: "</p>"});
 			}
 			meta.depth = cacheDepth;
 		} else {
-			this._recursiveRender({type: "inlineBlock", entries: [headerSpan]}, textStack, meta, {prefix: "<p>", suffix: "</p>"});
+			this._recursiveRender({type: "inlineBlock", entries: [{type: "wrappedHtml", html: headerSpan}]}, textStack, meta, {prefix: "<p>", suffix: "</p>"});
 		}
 		textStack[0] += `</${this.wrapperTag}>`;
 	};
@@ -1408,11 +1411,11 @@ globalThis.Renderer = function () {
 		if (entry.entries) {
 			const len = entry.entries.length;
 			for (let i = 0; i < len; ++i) {
-				const toRender = i === 0 ? {type: "inlineBlock", entries: [headerSpan, entry.entries[i]]} : entry.entries[i];
+				const toRender = i === 0 ? {type: "inlineBlock", entries: [{type: "wrappedHtml", html: headerSpan}, entry.entries[i]]} : entry.entries[i];
 				this._recursiveRender(toRender, textStack, meta, {prefix: "<p>", suffix: "</p>"});
 			}
 		} else {
-			this._recursiveRender({type: "inlineBlock", entries: [headerSpan]}, textStack, meta, {prefix: "<p>", suffix: "</p>"});
+			this._recursiveRender({type: "inlineBlock", entries: [{type: "wrappedHtml", html: headerSpan}]}, textStack, meta, {prefix: "<p>", suffix: "</p>"});
 		}
 		textStack[0] += `</${this.wrapperTag}>`;
 
@@ -2961,7 +2964,7 @@ Renderer.utils = class {
 	}
 
 	/**
-	 * @param it Entity to render the name row for.
+	 * @param ent Entity to render the name row for.
 	 * @param [opts] Options object.
 	 * @param [opts.prefix] Prefix to display before the name.
 	 * @param [opts.suffix] Suffix to display after the name.
@@ -2973,28 +2976,27 @@ Renderer.utils = class {
 	 * @param [opts.extensionData] Additional data to pass to listening extensions when the send button is clicked.
 	 * @param [opts.isEmbeddedEntity] True if this is an embedded entity, i.e. one from a `"dataX"` entry.
 	 */
-	static getNameTr (it, opts) {
+	static getNameTr (ent, opts) {
 		opts = opts || {};
 
-		const name = it._displayName || it.name;
+		const name = ent._displayName || ent.name;
 		const eng_name = it.ENG_name;
+		const pageLinkPart = SourceUtil.getAdventureBookSourceHref(ent.source, ent.page);
 
 		let dataPart = `data-name="${name.qq()}"`;
-		let pageLinkPart;
 		if (opts.page) {
-			const hash = UrlUtil.URL_TO_HASH_BUILDER[opts.page](it);
-			dataPart += ` data-page="${opts.page}" data-source="${it.source.escapeQuotes()}" data-hash="${hash.escapeQuotes()}" ${opts.extensionData != null ? `data-extension='${JSON.stringify(opts.extensionData).escapeQuotes()}'` : ""}`;
-			pageLinkPart = SourceUtil.getAdventureBookSourceHref(it.source, it.page);
+			const hash = UrlUtil.URL_TO_HASH_BUILDER[opts.page](ent);
+			dataPart += ` data-page="${opts.page}" data-source="${ent.source.escapeQuotes()}" data-hash="${hash.escapeQuotes()}" ${opts.extensionData != null ? `data-extension='${JSON.stringify(opts.extensionData).escapeQuotes()}'` : ""}`;
 
 			// Enable Rivet import for entities embedded in entries
-			if (opts.isEmbeddedEntity) ExtensionUtil.addEmbeddedToCache(opts.page, it.source, hash, it);
+			if (opts.isEmbeddedEntity) ExtensionUtil.addEmbeddedToCache(opts.page, ent.source, hash, ent);
 		}
 
 		const tagPartSourceStart = `<${pageLinkPart ? `a href="${Renderer.get().baseUrl}${pageLinkPart}"` : "span"}`;
 		const tagPartSourceEnd = `</${pageLinkPart ? "a" : "span"}>`;
 
-		const ptBrewSourceLink = Renderer.utils._getNameTr_getPtPrereleaseBrewSourceLink({ent: it, brewUtil: PrereleaseUtil})
-			|| Renderer.utils._getNameTr_getPtPrereleaseBrewSourceLink({ent: it, brewUtil: BrewUtil2});
+		const ptBrewSourceLink = Renderer.utils._getNameTr_getPtPrereleaseBrewSourceLink({ent: ent, brewUtil: PrereleaseUtil})
+			|| Renderer.utils._getNameTr_getPtPrereleaseBrewSourceLink({ent: ent, brewUtil: BrewUtil2});
 
 		// Add data-page/source/hash attributes for external script use (e.g. Rivet)
 		const $ele = $$`<tr>
@@ -3008,9 +3010,9 @@ Renderer.utils = class {
 						${!IS_VTT && ExtensionUtil.ACTIVE && opts.page ? Renderer.utils.getBtnSendToFoundryHtml() : ""}
 					</div>
 					<div class="stats__wrp-h-source ${opts.isInlinedToken ? `stats__wrp-h-source--token` : ""} ve-flex-v-baseline">
-						${tagPartSourceStart} class="help-subtle stats__h-source-abbreviation ${it.source ? `${Parser.sourceJsonToSourceClassname(it.source)}" title="${Parser.sourceJsonToFull(it.source)}${Renderer.utils.getSourceSubText(it)}` : ""}" ${Parser.sourceJsonToStyle(it.source)}>${it.source ? Parser.sourceJsonToAbv(it.source) : ""}${tagPartSourceEnd}
+						${tagPartSourceStart} class="help-subtle stats__h-source-abbreviation ${ent.source ? `${Parser.sourceJsonToSourceClassname(ent.source)}" title="${Parser.sourceJsonToFull(ent.source)}${Renderer.utils.getSourceSubText(ent)}` : ""}" ${Parser.sourceJsonToStyle(ent.source)}>${ent.source ? Parser.sourceJsonToAbv(ent.source) : ""}${tagPartSourceEnd}
 
-						${Renderer.utils.isDisplayPage(it.page) ? ` ${tagPartSourceStart} class="rd__stats-name-page ml-1" title="Page ${it.page}">p${it.page}${tagPartSourceEnd}` : ""}
+						${Renderer.utils.isDisplayPage(ent.page) ? ` ${tagPartSourceStart} class="rd__stats-name-page ml-1" title="Page ${ent.page}">p${ent.page}${tagPartSourceEnd}` : ""}
 
 						${ptBrewSourceLink}
 					</div>
@@ -3365,10 +3367,11 @@ Renderer.utils = class {
 	 * @param entity Entity to build tab for (e.g. a monster; an item)
 	 * @param pFnGetFluff Function which gets the entity's fluff.
 	 * @param $headerControls
+	 * @param page
 	 */
-	static async pBuildFluffTab ({isImageTab, $content, entity, $headerControls, pFnGetFluff} = {}) {
+	static async pBuildFluffTab ({isImageTab, $content, entity, $headerControls, pFnGetFluff, page} = {}) {
 		$content.append(Renderer.utils.getBorderTr());
-		$content.append(Renderer.utils.getNameTr(entity, {controlRhs: $headerControls, asJquery: true}));
+		$content.append(Renderer.utils.getNameTr(entity, {controlRhs: $headerControls, asJquery: true, page}));
 		const $td = $(`<td colspan="6" class="pb-3"></td>`);
 		$$`<tr>${$td}</tr>`.appendTo($content);
 		$content.append(Renderer.utils.getBorderTr());
@@ -3699,12 +3702,12 @@ Renderer.utils = class {
 			return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render(v));
 		}
 
-		static _getHtml_race ({v, isListMode, isTextOnly}) {
+		static _getHtml_race ({v, isListMode, isTextOnly, styleHint}) {
 			const parts = v.map((it, i) => {
 				if (isListMode) {
 					return `${it.name.toTitleCase()}${it.subrace != null ? ` (${it.subrace})` : ""}`;
 				} else {
-					const raceName = it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : i === 0 ? it.name.toTitleCase() : it.name;
+					const raceName = it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : (i === 0 || styleHint !== "classic") ? it.name.toTitleCase() : it.name;
 					return `${raceName}${it.subrace != null ? ` (${it.subrace})` : ""}`;
 				}
 			});
@@ -3716,7 +3719,7 @@ Renderer.utils = class {
 				if (isListMode) {
 					return `${it.name.toTitleCase()}`;
 				} else {
-					return it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : i === 0 ? it.name.toTitleCase() : it.name;
+					return it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : (i === 0 || styleHint !== "classic") ? it.name.toTitleCase() : it.name;
 				}
 			});
 			return isListMode ? parts.join("/") : parts.joinConjunct(", ", " or ");
@@ -6315,7 +6318,7 @@ Renderer.class = class {
 
 		return `<div><strong>生命值骰:</strong> ${renderer.render(Renderer.class.getHitDiceEntry(cls.hd, {styleHint}))} 每${cls.name}等级</div>
 		<div><strong>等级1的生命值:</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd, {styleHint})}</div>
-		<div><strong>生命值 每${cls.name}等级:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, {styleHint})}</div>`;
+		<div><strong>生命值 每额外${cls.name}等级:</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, {styleHint})}</div>`;
 	}
 
 	static getHtmlPtSavingThrows (cls) {
@@ -6417,6 +6420,7 @@ Renderer.class = class {
 		cpy.entries = cpy.entries
 			.map(ent => {
 				if (ent.type !== "entries" || !ent.name) return ent;
+				if (!ent.level) return ent;
 				return {_displayName: `等级 ${ent.level}: ${ent._displayName || ent.name}`, ...ent};
 			});
 		return cpy;
@@ -9586,11 +9590,17 @@ Renderer.monster = class {
 		return `${mon.level ? `${Parser.getOrdinalForm(mon.level)}-level ` : ""}${typeObj.asTextSidekick ? `${typeObj.asTextSidekick}; ` : ""}${Renderer.utils.getRenderedSize(mon.size)}${mon.sizeNote ? ` ${mon.sizeNote}` : ""} ${typeObj.asText}${mon.alignment ? `, ${mon.alignmentPrefix ? Renderer.get().render(mon.alignmentPrefix) : ""}${Parser.alignmentListToFull(mon.alignment).toTitleCase()}` : ""}`;
 	}
 
+	static _getInitiativePart_passive ({mon, initPassive}) {
+		if (!mon.initiative?.advantageMode) return initPassive;
+		const ptTitle = `This creature has ${mon.initiative?.advantageMode === "adv" ? "Advantage" : "Disadvantage"} on Initiative.`;
+		return `<span title="${ptTitle.qq()}" class="help-subtle">${initPassive}</span>`;
+	}
+
 	static getInitiativePart (mon) {
 		const initBonus = this._getInitiativeBonus({mon});
 		const initPassive = this._getInitiativePassive({mon, initBonus});
 		if (initBonus == null || initPassive == null) return "\u2014";
-		return `${Renderer.get().render(`{@initiative ${initBonus}}`)} (${initPassive})`;
+		return `${Renderer.get().render(`{@initiative ${initBonus}}`)} (${this._getInitiativePart_passive({mon, initPassive})})`;
 	}
 
 	static _getInitiativeBonus ({mon}) {
@@ -9631,8 +9641,6 @@ Renderer.monster = class {
 	static getChallengeRatingPart (mon, {styleHint = null, isPlainText = false} = {}) {
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
-		if (mon.cr == null) return "\u2014";
-
 		switch (styleHint) {
 			case "classic": return this._getChallengeRatingPart_classic({mon, isPlainText});
 			case "one": return this._getChallengeRatingPart_one({mon, isPlainText});
@@ -9641,6 +9649,8 @@ Renderer.monster = class {
 	}
 
 	static _getChallengeRatingPart_classic ({mon, isPlainText = false} = {}) {
+		if (mon.cr == null) return "\u2014";
+
 		const getBasicCrRender = (cr, {xp = null, isMythic = false} = {}) => {
 			if (Parser.crToNumber(cr) >= VeCt.CR_CUSTOM) return `${cr}${xp != null ? ` (${xp} XP)` : ""}`;
 
@@ -9657,18 +9667,21 @@ Renderer.monster = class {
 	}
 
 	static _getChallengeRatingPart_one ({mon, isPlainText = false} = {}) {
-		if (Parser.crToNumber(mon.cr) >= VeCt.CR_CUSTOM) return mon.cr;
+		const crBase = mon.cr?.cr ?? mon.cr;
+		const xpBase = mon.cr?.xp ?? (crBase ? Parser.crToXp(crBase) : 0);
 
-		const crBase = mon.cr.cr ?? mon.cr;
+		const ptsXp = Parser.crToNumber(mon.cr) >= VeCt.CR_CUSTOM
+			? [
+				xpBase,
+			]
+			// TODO(ODND) speculative text; revise
+			: [
+				xpBase,
+				mon.mythic ? `${xpBase * 2} as a mythic encounter` : null,
+			]
+				.filter(Boolean);
 
-		// TODO(ODND) speculative text; revise
-		const ptsXp = [
-			Parser.crToXp(crBase),
-			mon.mythic ? `${Parser.crToXp(crBase, {isDouble: true})} as a mythic encounter` : null,
-		]
-			.filter(Boolean);
-
-		if (typeof mon.cr !== "string") {
+		if (mon.cr != null && typeof mon.cr !== "string") {
 			if (mon.cr.lair) ptsXp.push(`${Parser.crToXp(mon.cr.lair)} in lair`);
 			if (mon.cr.coven) ptsXp.push(`${Parser.crToXp(mon.cr.coven)} when part of a coven`);
 		}
@@ -9682,7 +9695,7 @@ Renderer.monster = class {
 			.filter(Boolean)
 			.join("; ");
 
-		return `${crBase}${ptParens ? ` (${ptParens})` : ""}`;
+		return `${crBase || "None"}${ptParens ? ` (${ptParens})` : ""}`;
 	}
 
 	/* -------------------------------------------- */
@@ -13185,8 +13198,8 @@ Renderer.generic = class {
 		"vehicles (space)",
 	];
 
-	static FEATURE__LANGUAGES_ALL = Parser.LANGUAGES_ALL.map(it => it.toLowerCase());
-	static FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ = {
+	static _FEATURE__LANGUAGES_ALL = Parser.LANGUAGES_ALL.map(it => it.toLowerCase());
+	static _FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ = {
 		from: [
 			...Parser.LANGUAGES_STANDARD
 				.map(it => ({
@@ -13230,7 +13243,7 @@ Renderer.generic = class {
 	// region Should mirror the schema
 	static _SKILL_TOOL_LANGUAGE_KEYS__SKILL_ANY = new Set(["anySkill"]);
 	static _SKILL_TOOL_LANGUAGE_KEYS__TOOL_ANY = new Set(["anyTool", "anyArtisansTool"]);
-	static _SKILL_TOOL_LANGUAGE_KEYS__LANGAUGE_ANY = new Set(["anyLanguage", "anyStandardLanguage", "anyExoticLanguage"]);
+	static _SKILL_TOOL_LANGUAGE_KEYS__LANGAUGE_ANY = new Set(["anyLanguage", "anyStandardLanguage", "anyExoticLanguage", "anyRareLanguage"]);
 	// endregion
 
 	static getSkillSummary ({skillProfs, skillToolLanguageProfs, isShort = false}) {
@@ -13260,7 +13273,7 @@ Renderer.generic = class {
 		return this._summariseProfs({
 			profGroupArr: languageProfs,
 			skillToolLanguageProfs,
-			setValid: new Set(this.FEATURE__LANGUAGES_ALL),
+			setValid: new Set(this._FEATURE__LANGUAGES_ALL),
 			setValidAny: this._SKILL_TOOL_LANGUAGE_KEYS__LANGAUGE_ANY,
 			anyAlt: "anyLanguage",
 			isShort,
@@ -13334,7 +13347,12 @@ Renderer.generic = class {
 
 	/* -------------------------------------------- */
 
-	static getMappedAnyProficiency ({keyAny, countRaw}) {
+	/**
+	 * @param keyAny
+	 * @param countRaw
+	 * @param {?object} mappedAnyObjects
+	 */
+	static getMappedAnyProficiency ({keyAny, countRaw, mappedAnyObjects = null}) {
 		const mappedCount = !isNaN(countRaw) ? Number(countRaw) : 1;
 		if (mappedCount <= 0) return null;
 
@@ -13365,18 +13383,43 @@ Renderer.generic = class {
 			};
 			case "anyLanguage": return {
 				name: mappedCount === 1 ? `Any Language` : `Any ${mappedCount} Languages`,
-				from: this.FEATURE__LANGUAGES_ALL
-					.map(it => ({name: it, prop: "languageProficiencies"})),
+				...(
+					mappedAnyObjects?.[keyAny]
+					|| {
+						from: this._FEATURE__LANGUAGES_ALL
+							.map(it => ({name: it, prop: "languageProficiencies"})),
+					}
+				),
 				count: mappedCount,
 			};
 			case "anyStandardLanguage": return {
 				name: mappedCount === 1 ? `Any Standard Language` : `Any ${mappedCount} Standard Languages`,
-				...MiscUtil.copyFast(this.FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ), // Use a generic choice object, as rules state DM can allow choosing any
+				...(
+					mappedAnyObjects?.[keyAny]
+					|| {
+						...MiscUtil.copyFast(this._FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ), // Use a generic choice object, as rules state DM can allow choosing any
+					}
+				),
 				count: mappedCount,
 			};
 			case "anyExoticLanguage": return {
 				name: mappedCount === 1 ? `Any Exotic Language` : `Any ${mappedCount} Exotic Languages`,
-				...MiscUtil.copyFast(this.FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ), // Use a generic choice object, as rules state DM can allow choosing any
+				...(
+					mappedAnyObjects?.[keyAny]
+					|| {
+						...MiscUtil.copyFast(this._FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ), // Use a generic choice object, as rules state DM can allow choosing any
+					}
+				),
+				count: mappedCount,
+			};
+			case "anyRareLanguage": return {
+				name: mappedCount === 1 ? `Any Rare Language` : `Any ${mappedCount} Rare Languages`,
+				...(
+					mappedAnyObjects?.[keyAny]
+					|| {
+						...MiscUtil.copyFast(this._FEATURE__LANGUAGES_STANDARD__CHOICE_OBJ), // Emulate the 2014 choice rulings
+					}
+				),
 				count: mappedCount,
 			};
 			case "anySavingThrow": return {
@@ -13410,6 +13453,35 @@ Renderer.generic = class {
 		if (ent.tokenHref) return Renderer.utils.getEntryMediaUrl(ent, "tokenHref", "img");
 		if (isIgnoreImplicit) return null;
 		return Renderer.get().getMediaUrl("img", `${mediaDir}/${ent.source}/${Parser.nameToTokenName(ent.ENG_name)}.webp`);
+	}
+};
+
+Renderer.redirect = class {
+	static _VERSION_REDIRECT_LOOKUP = null;
+
+	static async pGetRedirectByHash (page, hash) {
+		const redirectLookup = await (
+			this._VERSION_REDIRECT_LOOKUP ||= DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-tag-redirects.json`)
+		);
+
+		const fromLookup = MiscUtil.get(redirectLookup, page, hash);
+		if (!fromLookup) return null;
+
+		const hashNxt = fromLookup.hash || fromLookup;
+		const pageNxt = fromLookup.page || page;
+		const decodedNxt = await UrlUtil.pAutoDecodeHash(hashNxt, {page: pageNxt});
+		return {page: pageNxt, hash: hashNxt, source: decodedNxt.source || source, name: decodedNxt.name};
+	}
+
+	static async pGetRedirectByUid (prop, uid) {
+		const page = UrlUtil.PROP_TO_PAGE[prop];
+		if (!page) throw new Error(`Unhandled prop "${prop}"`);
+
+		const tag = Parser.getPropTag(prop);
+		const unpacked = DataUtil.proxy.unpackUid(prop, uid, tag, {isLower: true});
+		const hash = UrlUtil.URL_TO_HASH_BUILDER[prop](unpacked);
+
+		return this.pGetRedirectByHash(page, hash);
 	}
 };
 
@@ -13700,24 +13772,14 @@ Renderer.hover = class {
 		if (!isAllowRedirect || preloadId || customHashId) return null;
 		if (VetoolsConfig.get("styleSwitcher", "style") === "classic") return null;
 
-		const redirectLookup = await (
-			this._VERSION_REDIRECT_LOOKUP ||= DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-tag-redirects.json`)
-		);
-
-		const fromLookup = MiscUtil.get(redirectLookup, page, hash);
-		if (!fromLookup) return null;
-
-		const hashNxt = fromLookup.hash || fromLookup;
-		const pageNxt = fromLookup.page || page;
-		const decodedNxt = await UrlUtil.pAutoDecodeHash(hashNxt, {page: pageNxt});
-		return {page: pageNxt, hash: hashNxt, source: decodedNxt.source || source};
+		return Renderer.redirect.pGetRedirectByHash(page, hash);
 	}
 
 	// (Baked into render strings)
 	static handleInlineMouseOver (evt, ele, entry, opts) {
 		Renderer.hover._doInit();
 
-		entry = entry || JSON.parse(ele.dataset.vetEntry);
+		entry = entry || JSON.parse(ele.getAttribute("data-vet-entry"));
 
 		let meta = Renderer.hover._handleGenericMouseOverStart({evt, ele});
 		if (meta == null) return;

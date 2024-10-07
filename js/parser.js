@@ -735,7 +735,14 @@ Parser.itemValueToFull = function (item, opts = { isShortForm: false, isSmallUni
 	return Parser._moneyToFull(item, "value", "valueMult", opts);
 };
 
-Parser.itemValueToFullMultiCurrency = function (item, opts = { isShortForm: false, isSmallUnits: false }) {
+/**
+ * @param item
+ * @param [opts]
+ * @param {?boolean} [opts.isShortForm]
+ * @param {?boolean} [opts.isSmallUnits]
+ * @param {?number} [opts.multiplier]
+ */
+Parser.itemValueToFullMultiCurrency = function (item, opts = {isShortForm: false, isSmallUnits: false, multiplier: null}) {
 	return Parser._moneyToFullMultiCurrency(item, "value", "valueMult", opts);
 };
 
@@ -1523,27 +1530,30 @@ Parser.spEndTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_END_TYPE_TO_FULL, type);
 };
 
-Parser.spDurationToFull = function (dur) {
+Parser.spDurationToFull = function (dur, {isPlainText = false} = {}) {
 	let hasSubOr = false;
-	const outParts = dur.map(d => {
-		switch (d.type) {
-			case "special":
-				return "特殊";
-			case "instant":
-				return `即效${d.condition ? ` (${d.condition})` : ""}`;
-			case "timed":
-				return `${d.concentration ? "专注, " : ""}至多${d.duration.amount}${Parser.spTimeUnitToFull( d.duration.type)}`;
-			case "permanent": {
-				if (d.ends) {
+
+	const outParts = dur
+		.map(d => {
+			const ptCondition = d.condition ? ` (${d.condition})` : "";
+
+			switch (d.type) {
+				case "special":
+					if (d.concentration) return `${isPlainText ? "专注" : Renderer.get().render(`{@status 专注}`)}${ptCondition}`;
+					return `特殊${ptCondition}`;
+				case "instant":
+					return `即效${ptCondition}`;
+				case "timed":
+					return `${d.concentration ? `${isPlainText ? "专注" : Renderer.get().render(`{@status 专注}`)}, ` : ""}至多${d.duration.amount}}${Parser.spTimeUnitToFull( d.duration.type)}`;
+				case "permanent": {
+					if (!d.ends) return `永久${ptCondition}`;
+
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
 					hasSubOr = hasSubOr || endsToJoin.length > 1;
 					return `直到 ${endsToJoin.joinConjunct(", ", " 或 ")}`;
-				} else {
-					return "永久";
 				}
 			}
-		}
-	});
+		});
 	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " 或 ")}${dur.length > 1 ? " (see below)" : ""}`;
 };
 
@@ -1925,6 +1935,7 @@ Parser.MON_LANGUAGE_TAG_TO_FULL = {
 	"C": "Common",
 	"CE": "Celestial",
 	"CS": "不能说已知语言",
+	"CSL": "Common Sign Language",
 	"D": "Dwarvish",
 	"DR": "Draconic",
 	"DS": "Deep Speech",

@@ -9,7 +9,7 @@ class PageFilterRaces extends PageFilterBase {
 		lProfs.forEach(lProfGroup => {
 			Object.keys(lProfGroup)
 				.forEach(k => {
-					if (!["choose", "any", "anyStandard", "anyExotic","自选","任意"].includes(k)) outSet.add(Parser.LANGUAGES_TO_CN[k]);
+					if (!["choose", "any", "anyStandard", "anyExotic", "anyRare"].includes(k)) outSet.add(Parser.LANGUAGES_TO_CN[k]);
 					else outSet.add("自选");
 				});
 		});

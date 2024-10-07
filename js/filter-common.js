@@ -148,6 +148,7 @@ class FilterCommon {
 	static _LANG_TO_DISPLAY = {
 		"anyStandard": "任意标准语言",
 		"anyExotic": "任意特种语言",
+		"anyRare": "任意稀有语言",
 		"anyLanguage": "任意",
 	};
 

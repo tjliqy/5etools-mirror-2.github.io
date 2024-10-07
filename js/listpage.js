@@ -1429,25 +1429,7 @@ class ListPage {
 		$btn = $btn || this._getOrTabRightButton(`link-export`, `magnet`);
 		$btn.addClass("ve-btn-copy-effect")
 			.off("click")
-			.on("click", async evt => {
-				let url = window.location.href;
-
-				if (EventUtil.isCtrlMetaKey(evt)) {
-					await MiscUtil.pCopyTextToClipboard(this._filterBox.getFilterTag({isAddSearchTerm: true}));
-					JqueryUtil.showCopiedEffect($btn);
-					return;
-				}
-
-				const parts = this._filterBox.getSubHashes({isAddSearchTerm: true, isAllowNonExtension: true});
-				parts.unshift(url);
-
-				if (evt.shiftKey && this._sublistManager) {
-					parts.push(await this._sublistManager.pGetHashPartExport());
-				}
-
-				await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
-				JqueryUtil.showCopiedEffect($btn);
-			})
+			.on("click", evt => this._pHandleClick_doCopyFilterLink(evt, {$btn, isAllowNonExtension: true}))
 			.title("复制筛选链接 (SHIFT adds list; CTRL copies @filter tag)");
 	}
 
@@ -1839,6 +1821,11 @@ class ListPage {
 				"上传钉选列表(SHIFT for Add Only)",
 				evt => this._sublistManager.pHandleClick_upload({isAdditive: evt.shiftKey}),
 			),
+			null,
+			new ContextUtil.Action(
+				"Copy Link to Filters (Extensible)",
+				evt => this._pHandleClick_doCopyFilterLink(evt),
+			),
 		];
 
 		if (opts.sendToBrew) {
@@ -1893,6 +1880,29 @@ class ListPage {
 				evt.preventDefault();
 				await ContextUtil.pOpenMenu(evt, menu);
 			});
+	}
+
+	async _pHandleClick_doCopyFilterLink (evt, {$btn = null, isAllowNonExtension = false} = {}) {
+		const url = new URL(window.location.href);
+		url.hash ||= globalThis.HASH_BLANK;
+
+		if (EventUtil.isCtrlMetaKey(evt)) {
+			await MiscUtil.pCopyTextToClipboard(this._filterBox.getFilterTag({isAddSearchTerm: true}));
+			if ($btn) JqueryUtil.showCopiedEffect($btn);
+			else JqueryUtil.doToast("Copied!");
+			return;
+		}
+
+		const parts = this._filterBox.getSubHashes({isAddSearchTerm: true, isAllowNonExtension});
+		parts.unshift(url.toString());
+
+		if (evt.shiftKey && this._sublistManager) {
+			parts.push(await this._sublistManager.pGetHashPartExport());
+		}
+
+		await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
+		if ($btn) JqueryUtil.showCopiedEffect($btn);
+		else JqueryUtil.doToast("Copied!");
 	}
 
 	async _handleGenericContextMenuClick_pDoMassPopout (evt, ele, selection) {
