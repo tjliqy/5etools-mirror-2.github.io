@@ -29,6 +29,7 @@ export class UtilsAdditionalSpells {
 
 					// No migration required
 					case "name":
+					case "ENG_name":
 					case "ability":
 					case "resourceName": break;
 
